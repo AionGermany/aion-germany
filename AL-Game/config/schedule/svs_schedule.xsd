@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="svs" type="svs"/>
+	<xs:element name="svs_schedule" type="svsSchedule"/>
+	<xs:complexType name="svsSchedule">
+		<xs:sequence>
+			<xs:element ref="svs" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="svs">
+		<xs:sequence>
+			<xs:element name="svsTime" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required"/>
+	</xs:complexType>
+</xs:schema>

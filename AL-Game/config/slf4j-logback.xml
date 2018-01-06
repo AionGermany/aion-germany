@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<configuration>
+    <property name="logFolder" value="log/"/>
+    <appender name="app_console" class="ch.qos.logback.core.FileAppender">
+        <filter class="com.aionl.slf4j.filters.ConsoleFilter"></filter>
+        <file>${logFolder}/console.log</file>
+        <encoder>
+            <Pattern>%date %-5level [%thread] %logger [%file:%line] %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="out_console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="com.aionl.slf4j.filters.ConsoleFilter"></filter>
+        <encoder>
+            <Pattern>%date{HH:mm:ss.SSS} %-5level[%thread]: - %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_admincmd" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/adminaudit.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_ai" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/aidebug.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_audit" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/audit.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_autogroup" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/autogroup.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_chat" class="ch.qos.logback.core.FileAppender">
+        <filter class="com.aionl.slf4j.filters.ChatLogFilter"></filter>
+        <file>${logFolder}/chat.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_craft" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/craft.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_exchange" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/exchange.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_gconnection" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/gameconnections.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_gmitemrestriction" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/gm_item_restriction.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_instance" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/instance.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_item" class="ch.qos.logback.core.FileAppender">
+        <filter class="com.aionl.slf4j.filters.ItemFilter"></filter>
+        <file>${logFolder}/item.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_item2" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/item_htmls.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_kill" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/kill.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_mail" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/mail.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_playertransfer" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/playertransfer.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_quest" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/quests.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_siege" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/siege.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_sysmail" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/sysmail.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_auction" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/auction.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="out_error" class="ch.qos.logback.core.FileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${logFolder}/error.log</file>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="out_warn" class="ch.qos.logback.core.FileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${logFolder}/warn.log</file>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <logger name="ADMINAUDIT_LOG" additivity="false">
+        <appender-ref ref="app_admincmd"/>
+    </logger>
+    <logger name="AUDIT_LOG">
+        <appender-ref ref="app_audit"/>
+    </logger>
+    <logger name="AUTOGROUP_LOG">
+        <appender-ref ref="app_autogroup"/>
+    </logger>
+    <logger name="CHAT_LOG" additivity="false">
+        <appender-ref ref="app_chat"/>
+    </logger>
+    <logger name="CRAFT_LOG" additivity="false">
+        <appender-ref ref="app_craft"/>
+    </logger>
+    <logger name="EXCHANGE_LOG">
+        <appender-ref ref="app_exchange"/>
+    </logger>
+    <logger name="GAMECONNECTION_LOG">
+        <appender-ref ref="app_gconnection"/>
+    </logger>
+    <logger name="INGAMESHOP_LOG">
+        <appender-ref ref="app_ingameshop"/>
+    </logger>
+    <logger name="ITEM_LOG" additivity="false">
+        <appender-ref ref="app_item"/>
+    </logger>
+    <logger name="ITEM_HTML_LOG">
+        <appender-ref ref="app_item2"/>
+    </logger>
+    <logger name="KILL_LOG">
+        <appender-ref ref="app_kill"/>
+    </logger>
+    <logger name="MAIL_LOG">
+        <appender-ref ref="app_mail"/>
+    </logger>
+    <logger name="SIEGE_LOG">
+        <appender-ref ref="app_siege"/>
+    </logger>
+    <logger name="SYSMAIL_LOG">
+        <appender-ref ref="app_sysmail"/>
+    </logger>
+    <logger name="HOUSE_AUCTION_LOG">
+        <appender-ref ref="app_auction"/>
+    </logger>
+    <logger name="ai">
+        <appender-ref ref="app_ai"/>
+    </logger>
+    <logger name="com.aionemu.gameserver.ai2">
+        <appender-ref ref="app_ai"/>
+    </logger>
+    <logger name="INSTANCE_LOG" additivity="false">
+        <appender-ref ref="app_instance"/>
+    </logger>
+    <logger name="QUEST_LOG" additivity="false">
+        <appender-ref ref="app_quest"/>
+    </logger>
+    <logger name="GMITEMRESTRICTION">
+        <appender-ref ref="app_gmitemrestriction"/>
+    </logger>
+    <logger name="PLAYERTRANSFER">
+        <appender-ref ref="app_playertransfer"/>
+    </logger>
+    <root>
+        <level value="info"/>
+        <appender-ref ref="app_console"/>
+        <appender-ref ref="out_console"/>
+        <appender-ref ref="out_error"/>
+        <appender-ref ref="out_warn"/>
+    </root>
+</configuration>
