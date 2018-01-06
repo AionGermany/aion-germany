@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AL-Game" default="dist" basedir=".">
+
+	<description></description>
+
+	<property name="jre" location="${java.home}/lib"/>
+	<property name="src" location="src"/>
+	<property name="config" location="config"/>
+	<property name="lib" location="libs"/>
+	<property name="build" location="build"/>
+	<property name="build.classes" location="${build}/classes"/>
+	<property name="build.dist" location="${build}/dist"/>
+	<property name="build.dist.gs" location="${build.dist}/AL-Game"/>
+
+	<path id="bootclasspath">
+		<fileset dir="${lib}">
+			<include name="jsr166-1.7.0.jar"/>
+		</fileset>
+		<fileset dir="${jre}">
+			<include name="rt.jar"/>
+			<include name="jce.jar"/>
+		</fileset>
+	</path>
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="clean" description="Removes build directory.">
+		<delete dir="${build}" />
+	</target>
+
+	<target name="init" depends="clean" description="Create the output directories.">
+		<mkdir dir="${build}" />
+		<mkdir dir="${build.classes}" />
+	</target>
+
+	<target name="compile" depends="init" description="Compile the source.">
+		<javac destdir="${build.classes}" optimize="on" debug="on" nowarn="off" source="1.7" target="1.7" includeantruntime="false">
+			<compilerarg value="-encoding"/>
+			<compilerarg value="UTF8"/>
+			<src path="${src}"/>
+			<bootclasspath refid="bootclasspath"/>
+			<classpath refid="classpath"/>
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile" description="Create the jar file">
+		<tstamp>
+			<format property="date" pattern="dd-MM-yyyy-HH:mm" />
+		</tstamp>
+		<jar destfile="${build}/AL-Game_clean.jar">
+			<fileset dir="${build.classes}" />
+			<manifest>
+				<attribute name="Main-Class" value="com.aionemu.gameserver.GameServer" />
+				<attribute name="Revision" value="${revision}" />
+				<attribute name="Date" value="${date}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="yguard" depends="jar">
+		<taskdef name="yguard" classname="com.yworks.yguard.YGuardTask" classpath="..\AL-Tools\Ant\lib\yguard.jar"/>
+		<yguard>
+			<inoutpair in="${build}/AL-Game_clean.jar" out="${build}/AL-Game.jar"/>
+			<externalclasses>
+				<pathelement location="${lib}\al-commons.jar"/>
+				<pathelement location="${lib}\bonecp-0.7.1.RELEASE.jar"/>
+				<pathelement location="${lib}\c3p0-0.9.1.1.jar"/>
+				<pathelement location="${lib}\cglib-nodep-2.2.jar"/>
+				<pathelement location="${lib}\commons-io-2.4.jar"/>
+				<pathelement location="${lib}\commons-lang-2.6.jar"/>
+				<pathelement location="${lib}\guava-13.0.1.jar"/>
+				<pathelement location="${lib}\hamcrest-all-1.3.jar"/>
+				<pathelement location="${lib}\javac-1.6.jar"/>
+				<pathelement location="${lib}\javassist-3.15.0-GA.jar"/>
+				<pathelement location="${lib}\javolution-5.5.1.jar"/>
+				<pathelement location="${lib}\joda-time-2.1.jar"/>
+				<pathelement location="${lib}\jsr305-3.0.1.jar"/>
+                <pathelement location="${lib}\junit-4.11.jar"/>
+                <pathelement location="${lib}\lambdaj-2.4.jar"/>
+				<pathelement location="${lib}\logback-classic-1.1.2.jar"/>
+				<pathelement location="${lib}\logback-core-1.1.2.jar"/>
+				<pathelement location="${lib}\mysql-connector-java-5.1.33.jar"/>
+				<pathelement location="${lib}\objenesis-1.2.jar"/>
+				<pathelement location="${lib}\quartz-2.1.7.jar"/>
+				<pathelement location="${lib}\slf4j-api-1.6.4.jar"/>
+				<pathelement location="${lib}\trove4j-3.0.3.jar"/>
+				<pathelement location="${lib}xercesImpl-2.8.1.jar"/>
+			</externalclasses>
+			<shrink>
+				<property name="error-checking" value="pedantic"/>
+				<keep sourcefile="false" linenumbertable="false" localvariabletable="false" localvariabletypetable="false" runtimevisibleannotations="true" runtimevisibleparameterannotations="true" runtimeinvisibleannotations="true" runtimeinvisibleparameterannotations="true">
+					<class classes="public" methods="public" fields="public">
+						<patternset>
+							<include name="com.aionemu.gameserver.**"/>
+							<include name="com.aionemu.gameserver.**.*$$*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.clientpackets.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_ATREIAN_PASSPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FAST_TRACK_MOVE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FATIGUE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FLAG_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_GAMEGUARD"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_HOTSPOT_TELEPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT_ANIMATION"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_RESULT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_WINDOW"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE"/>
+							<exclude name="com.aionemu.gameserver.services.InvasionRaidService"/>
+							<exclude name="com.aionemu.gameserver.services.instance.LivePartyConcertHall"/>
+							<exclude name="com.aionemu.gameserver.services.FastTrackService"/>
+							<exclude name="com.aionemu.gameserver.services.DialogService"/>
+							<exclude name="com.aionemu.gameserver.services.player.PlayerEnterWorldService"/>
+							<exclude name="com.aionemu.gameserver.services.item.ItemPurificationService"/>
+							<exclude name="com.aionemu.gameserver.services.raid.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.ServerPacketsOpcodes"/>
+							<exclude name="com.aionemu.gameserver.network.factories.AionPacketHandlerFactory"/>
+							<exclude name="com.aionemu.gameserver.network.Crypt"/>
+							<exclude name="com.aionemu.gameserver.network.EncryptionKeyPair"/>
+							<exclude name="com.aionemu.gameserver.network.aion.AionPacketHandler"/>
+							<exclude name="com.aionemu.gameserver.network.aion.gmhandler.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.iteminfo.*"/>
+							<exclude name="com.aionemu.gameserver.network.loginserver.LoginServerConnection"/>
+						</patternset>
+					</class>
+					<class methods="protected" fields="protected">
+						<patternset>
+							<include name="com.aionemu.gameserver.**"/>
+							<include name="com.aionemu.gameserver.**.*$$*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.clientpackets.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_ATREIAN_PASSPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FAST_TRACK_MOVE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FATIGUE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FLAG_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_GAMEGUARD"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_HOTSPOT_TELEPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT_ANIMATION"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_RESULT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_WINDOW"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE"/>
+							<exclude name="com.aionemu.gameserver.services.InvasionRaidService"/>
+							<exclude name="com.aionemu.gameserver.services.instance.LivePartyConcertHall"/>
+							<exclude name="com.aionemu.gameserver.services.FastTrackService"/>
+							<exclude name="com.aionemu.gameserver.services.DialogService"/>
+							<exclude name="com.aionemu.gameserver.services.player.PlayerEnterWorldService"/>
+							<exclude name="com.aionemu.gameserver.services.item.ItemPurificationService"/>
+							<exclude name="com.aionemu.gameserver.services.raid.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.ServerPacketsOpcodes"/>
+							<exclude name="com.aionemu.gameserver.network.factories.AionPacketHandlerFactory"/>
+							<exclude name="com.aionemu.gameserver.network.Crypt"/>
+							<exclude name="com.aionemu.gameserver.network.EncryptionKeyPair"/>
+							<exclude name="com.aionemu.gameserver.network.aion.AionPacketHandler"/>
+							<exclude name="com.aionemu.gameserver.network.aion.gmhandler.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.iteminfo.*"/>
+							<exclude name="com.aionemu.gameserver.network.loginserver.LoginServerConnection"/>
+
+						</patternset>
+					</class>
+					<class methods="private" fields="private">
+						<patternset>
+							<include name="com.aionemu.gameserver.**"/>
+							<include name="com.aionemu.gameserver.**.*$$*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.clientpackets.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_ATREIAN_PASSPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FAST_TRACK_MOVE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FATIGUE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FLAG_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_GAMEGUARD"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_HOTSPOT_TELEPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT_ANIMATION"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_RESULT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_WINDOW"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE"/>
+							<exclude name="com.aionemu.gameserver.services.InvasionRaidService"/>
+							<exclude name="com.aionemu.gameserver.services.instance.LivePartyConcertHall"/>
+							<exclude name="com.aionemu.gameserver.services.FastTrackService"/>
+							<exclude name="com.aionemu.gameserver.services.DialogService"/>
+							<exclude name="com.aionemu.gameserver.services.player.PlayerEnterWorldService"/>
+							<exclude name="com.aionemu.gameserver.services.item.ItemPurificationService"/>
+							<exclude name="com.aionemu.gameserver.services.raid.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.ServerPacketsOpcodes"/>
+							<exclude name="com.aionemu.gameserver.network.factories.AionPacketHandlerFactory"/>
+							<exclude name="com.aionemu.gameserver.network.Crypt"/>
+							<exclude name="com.aionemu.gameserver.network.EncryptionKeyPair"/>
+							<exclude name="com.aionemu.gameserver.network.aion.AionPacketHandler"/>
+							<exclude name="com.aionemu.gameserver.network.aion.gmhandler.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.iteminfo.*"/>
+							<exclude name="com.aionemu.gameserver.network.loginserver.LoginServerConnection"/>
+						</patternset>
+					</class>
+				</keep>
+			</shrink>
+			<rename mainclass="com.aionemu.gameserver.GameServer" logfile="jar-yguard.xml" conservemanifest="false" replaceClassNameStrings="true">
+				<property name="error-checking" value="pedantic"/>
+				<keep sourcefile="false" linenumbertable="false" localvariabletable="false" localvariabletypetable="false" runtimevisibleannotations="true" runtimevisibleparameterannotations="true" runtimeinvisibleannotations="true" runtimeinvisibleparameterannotations="true">
+					<class classes="public" methods="public" fields="public">
+						<patternset>
+							<include name="com.aionemu.gameserver.**"/>
+							<include name="com.aionemu.gameserver.**.*$$*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.clientpackets.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_ATREIAN_PASSPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FAST_TRACK_MOVE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FATIGUE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FLAG_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_GAMEGUARD"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_HOTSPOT_TELEPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT_ANIMATION"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_RESULT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_WINDOW"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE"/>
+							<exclude name="com.aionemu.gameserver.services.InvasionRaidService"/>
+							<exclude name="com.aionemu.gameserver.services.instance.LivePartyConcertHall"/>
+							<exclude name="com.aionemu.gameserver.services.FastTrackService"/>
+							<exclude name="com.aionemu.gameserver.services.DialogService"/>
+							<exclude name="com.aionemu.gameserver.services.player.PlayerEnterWorldService"/>
+							<exclude name="com.aionemu.gameserver.services.item.ItemPurificationService"/>
+							<exclude name="com.aionemu.gameserver.services.raid.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.ServerPacketsOpcodes"/>
+							<exclude name="com.aionemu.gameserver.network.factories.AionPacketHandlerFactory"/>
+							<exclude name="com.aionemu.gameserver.network.Crypt"/>
+							<exclude name="com.aionemu.gameserver.network.EncryptionKeyPair"/>
+							<exclude name="com.aionemu.gameserver.network.aion.AionPacketHandler"/>
+							<exclude name="com.aionemu.gameserver.network.aion.gmhandler.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.iteminfo.*"/>
+							<exclude name="com.aionemu.gameserver.network.loginserver.LoginServerConnection"/>
+						</patternset>
+					</class>
+					<class methods="protected" fields="protected">
+						<patternset>
+							<include name="com.aionemu.gameserver.**"/>
+							<include name="com.aionemu.gameserver.**.*$$*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.clientpackets.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_ATREIAN_PASSPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FAST_TRACK_MOVE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FATIGUE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FLAG_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_GAMEGUARD"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_HOTSPOT_TELEPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT_ANIMATION"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_RESULT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_WINDOW"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE"/>
+							<exclude name="com.aionemu.gameserver.services.InvasionRaidService"/>
+							<exclude name="com.aionemu.gameserver.services.instance.LivePartyConcertHall"/>
+							<exclude name="com.aionemu.gameserver.services.FastTrackService"/>
+							<exclude name="com.aionemu.gameserver.services.DialogService"/>
+							<exclude name="com.aionemu.gameserver.services.player.PlayerEnterWorldService"/>
+							<exclude name="com.aionemu.gameserver.services.item.ItemPurificationService"/>
+							<exclude name="com.aionemu.gameserver.services.raid.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.ServerPacketsOpcodes"/>
+							<exclude name="com.aionemu.gameserver.network.factories.AionPacketHandlerFactory"/>
+							<exclude name="com.aionemu.gameserver.network.Crypt"/>
+							<exclude name="com.aionemu.gameserver.network.EncryptionKeyPair"/>
+							<exclude name="com.aionemu.gameserver.network.aion.AionPacketHandler"/>
+							<exclude name="com.aionemu.gameserver.network.aion.gmhandler.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.iteminfo.*"/>
+							<exclude name="com.aionemu.gameserver.network.loginserver.LoginServerConnection"/>
+						</patternset>
+					</class>
+					<class methods="private" fields="private">
+						<patternset>
+							<include name="com.aionemu.gameserver.**"/>
+							<include name="com.aionemu.gameserver.**.*$$*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.clientpackets.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_ATREIAN_PASSPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FAST_TRACK_MOVE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FATIGUE"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_FLAG_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_GAMEGUARD"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_HOTSPOT_TELEPORT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_CRAFT_ANIMATION"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_RESULT"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_MAGIC_MORPH_WINDOW"/>
+							<exclude name="com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE"/>
+							<exclude name="com.aionemu.gameserver.services.InvasionRaidService"/>
+							<exclude name="com.aionemu.gameserver.services.instance.LivePartyConcertHall"/>
+							<exclude name="com.aionemu.gameserver.services.FastTrackService"/>
+							<exclude name="com.aionemu.gameserver.services.DialogService"/>
+							<exclude name="com.aionemu.gameserver.services.player.PlayerEnterWorldService"/>
+							<exclude name="com.aionemu.gameserver.services.item.ItemPurificationService"/>
+							<exclude name="com.aionemu.gameserver.services.raid.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.ServerPacketsOpcodes"/>
+							<exclude name="com.aionemu.gameserver.network.factories.AionPacketHandlerFactory"/>
+							<exclude name="com.aionemu.gameserver.network.Crypt"/>
+							<exclude name="com.aionemu.gameserver.network.EncryptionKeyPair"/>
+							<exclude name="com.aionemu.gameserver.network.aion.AionPacketHandler"/>
+							<exclude name="com.aionemu.gameserver.network.aion.gmhandler.*"/>
+							<exclude name="com.aionemu.gameserver.network.aion.iteminfo.*"/>
+							<exclude name="com.aionemu.gameserver.network.loginserver.LoginServerConnection"/>
+						</patternset>
+					</class>
+				</keep>
+			</rename>
+		</yguard>
+	</target>
+
+	<target name="dist" depends="yguard">
+		<mkdir dir="${build.dist}" />
+		<mkdir dir="${build.dist.gs}" />
+		<mkdir dir="${build.dist.gs}/config" />
+		<mkdir dir="${build.dist.gs}/data" />
+		<mkdir dir="${build.dist.gs}/libs" />
+		<mkdir dir="${build.dist.gs}/sql" />	
+
+		<copy todir="${build.dist.gs}/libs">
+			<fileset dir="${build}">
+				<include name="AL-Game.jar"/>
+			</fileset>
+		</copy>
+
+		<copy todir="${build.dist.gs}/libs">
+			<fileset dir="${lib}">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+
+		<copy todir="${build.dist.gs}">
+			<fileset dir="dist">
+				<include name="*.*"/>
+			</fileset>
+		</copy>
+
+		<copy todir="${build.dist.gs}/config">
+			<fileset dir="config">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+
+		<copy todir="${build.dist.gs}/data">
+			<fileset dir="data">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+
+		<copy todir="${build.dist.gs}/sql">
+			<fileset dir="sql">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+
+		<zip destfile="${build}/AL-Game.zip" basedir="${build.dist}" />
+	</target>
+
+</project>

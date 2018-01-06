@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<configuration>
+	<property name="logFolder" value="log/"/>
+	<appender name="app_unkpk" class="ch.qos.logback.core.FileAppender">
+		<file>${logFolder}/unk_packets.log</file>
+		<append>true</append>
+		<encoder>
+			<Pattern>%date %message%n</Pattern>
+		</encoder>
+	</appender>
+	<appender name="app_login_audit" class="ch.qos.logback.core.FileAppender">
+		<file>${logFolder}/cm_login.log</file>
+		<append>true</append>
+		<encoder>
+			<Pattern>%date %message%n</Pattern>
+		</encoder>
+	</appender>
+	<appender name="app_console" class="com.aionl.slf4j.conversion.TruncateToZipFileAppender">
+		<file>${logFolder}/console.log</file>
+		<encoder>
+			<Pattern>%date{HH:mm:ss.SSS} %-5level[%thread]: %logger [%file:%line] - %message%n</Pattern>
+		</encoder>
+	</appender>
+	<appender name="out_console" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>DENY</onMatch>
+			<onMismatch>ACCEPT</onMismatch>
+		</filter>
+		<encoder>
+			<Pattern>%date{HH:mm:ss.SSS} %-5level[%thread]: - %message%n</Pattern>
+		</encoder>
+	</appender>
+	<appender name="out_error" class="ch.qos.logback.core.FileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<file>${logFolder}/error.log</file>
+		<append>true</append>
+		<encoder>
+			<Pattern>%date %message%n</Pattern>
+		</encoder>
+	</appender>
+	<logger name="com.aionl.network.mmocore.handler.ClientPacketHandler" level="debug" additivity="false"> <!-- unknown packets -->
+		<appender-ref ref="app_unkpk"/>
+	</logger>
+	<logger name="com.aionemu.loginserver.network.aion.clientpackets.CM_LOGIN" level="debug" additivity="false"> <!-- server logins -->
+		<appender-ref ref="app_login_audit"/>
+	</logger>
+	<root>
+		<level value="info"/>
+		<appender-ref ref="app_console"/>
+		<appender-ref ref="out_console"/>
+		<appender-ref ref="out_error"/>
+	</root>
+</configuration>

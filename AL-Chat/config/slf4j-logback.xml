@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<configuration>
+	<property name="logFolder" value="log/"/>
+	<appender name="app_console" class="ch.qos.logback.core.FileAppender">
+		<file>${logFolder}/console.log</file>
+		<encoder>
+			<Pattern>%date{HH:mm:ss.SSS} %-5level[%thread]: %logger [%file:%line] - %message%n</Pattern>
+		</encoder>
+	</appender>
+	<appender name="out_console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%date{HH:mm:ss.SSS} %-5level[%thread]: - %message%n</Pattern>
+		</encoder>
+	</appender>
+	<appender name="app_chat" class="ch.qos.logback.core.FileAppender">
+		<filter class="com.aionl.slf4j.filters.ChatLogFilter"></filter>
+		<file>${logFolder}/chat.log</file>
+		<append>true</append>
+		<encoder>
+			<Pattern>%date %message%n</Pattern>
+		</encoder>
+	</appender>
+	<logger name="CHAT_LOG" additivity="false">
+		<appender-ref ref="app_chat"/>
+	</logger>
+	<root>
+		<level value="info"/>
+		<appender-ref ref="app_console"/>
+		<appender-ref ref="out_console"/>
+	</root>
+</configuration>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AL-Login" default="dist" basedir=".">
+        
+    <description></description>
+	
+	<property name="jre" location="${java.home}/lib"/>
+    <property name="src" location="src"/>
+    <property name="lib" location="libs"/>
+    <property name="build" location="build"/>
+    <property name="build.classes" location="${build}/classes"/>
+    <property name="build.dist" location="${build}/dist"/>
+	<property name="build.dist.ls" location="${build.dist}/AL-Login"/>
+    
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean" description="Removes build directory.">
+		<delete dir="${build}" />
+	</target>
+	<target name="init" depends="clean" description="Create the output directories.">
+		<mkdir dir="${build}" />
+		<mkdir dir="${build.classes}" />
+	</target>
+	<target name="compile" depends="init" description="Compile the source.">
+		<javac destdir="${build.classes}" optimize="on" debug="on"
+			nowarn="off" source="1.7" target="1.7" includeantruntime="false">
+			<src path="${src}" />
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+	<target name="jar" depends="compile" description="Create the jar file">
+		<jar destfile="${build}/AL-Login.jar">
+            <fileset dir="${build.classes}"/>
+            <manifest>
+                <attribute name="Main-Class" value="loginserver.LoginServer"/>
+            	<attribute name="Revision" value="${revision}"/>
+            	<attribute name="Date" value="${date}"/>
+            </manifest>
+        </jar>
+	</target>
+ 
+    <target name="dist" depends="jar">
+    	<mkdir dir="${build.dist}" />
+    	<mkdir dir="${build.dist.ls}" />
+    	<mkdir dir="${build.dist.ls}/config" />
+    	<mkdir dir="${build.dist.ls}/data" />
+    	<mkdir dir="${build.dist.ls}/libs" />
+    	<mkdir dir="${build.dist.ls}/sql" />
+    	
+		<copy todir="${build.dist.ls}/libs">
+            <fileset dir="${build}">
+				<include name="AL-Login.jar"/>
+			</fileset>
+		</copy>
+    	
+		<copy todir="${build.dist.ls}/libs">
+			<fileset dir="${lib}">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+
+        <copy todir="${build.dist.ls}">
+            <fileset dir="dist">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+    	
+    	<copy todir="${build.dist.ls}/config">
+			<fileset dir="config">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+    		
+        <copy todir="${build.dist.ls}/data">
+            <fileset dir="data">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${build.dist.ls}/sql">
+            <fileset dir="sql">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+		<zip destfile="${build}/AL-Login.zip" basedir="${build.dist}" />
+	</target>
+</project>

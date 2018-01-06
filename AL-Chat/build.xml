@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AL-Chat" default="dist" basedir=".">
+        
+    <description></description>
+	
+	<property name="jre" location="${java.home}/lib"/>
+    <property name="src" location="src"/>
+    <property name="lib" location="libs"/>
+    <property name="build" location="build"/>
+    <property name="build.classes" location="${build}/classes"/>
+    <property name="build.dist" location="${build}/dist"/>
+	<property name="build.dist.cs" location="${build.dist}/AL-Chat"/>
+    
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean" description="Removes build directory.">
+		<delete dir="${build}" />
+	</target>
+	<target name="init" depends="clean" description="Create the output directories.">
+		<mkdir dir="${build}" />
+		<mkdir dir="${build.classes}" />
+	</target>
+	<target name="compile" depends="init" description="Compile the source.">
+		<javac destdir="${build.classes}" optimize="on" debug="on"
+			nowarn="off" source="1.7" target="1.7" includeantruntime="false">
+			<src path="${src}" />
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+	<target name="jar" depends="compile" description="Create the jar file">
+		<jar destfile="${build}/AL-Chat.jar">
+            <fileset dir="${build.classes}"/>
+            <manifest>
+                <attribute name="Main-Class" value="chatserver.ChatServer"/>
+            	<attribute name="Revision" value="${revision}"/>
+            	<attribute name="Date" value="${date}"/>
+            </manifest>
+        </jar>
+	</target>
+ 
+    <target name="dist" depends="jar">
+    	<mkdir dir="${build.dist}" />
+    	<mkdir dir="${build.dist.cs}" />
+    	<mkdir dir="${build.dist.cs}/config" />
+    	<mkdir dir="${build.dist.cs}/libs" />
+    	
+		<copy todir="${build.dist.cs}/libs">
+            <fileset dir="${build}">
+				<include name="AL-Chat.jar"/>
+			</fileset>
+		</copy>
+    	
+		<copy todir="${build.dist.cs}/libs">
+			<fileset dir="${lib}">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+
+        <copy todir="${build.dist.cs}">
+            <fileset dir="dist">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+    	
+    	<copy todir="${build.dist.cs}/config">
+			<fileset dir="config">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+
+		<zip destfile="${build}/AL-Chat.zip" basedir="${build.dist}" />
+	</target>
+</project>
