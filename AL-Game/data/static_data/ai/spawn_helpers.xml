@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ai_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ai.xsd">
+    <!-- Ferocious Warg -->
+    <ai npcId="217980">
+        <summons>
+            <percentage percent="50">
+                <!-- Summoned Baby Warg -->
+                <summonGroup npcId="282791" count="1" distance="5"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Ferocious Warg -->
+    <ai npcId="217981">
+        <summons>
+            <percentage percent="50">
+                <!-- Summoned Baby Warg -->
+                <summonGroup npcId="282791" count="1" distance="5"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="211715">
+        <summons>
+            <percentage percent="90" skillId="18389">
+                <summonGroup npcId="280333" minCount="2" maxCount="5" distance="10" schedule="4"/>
+            </percentage>
+            <percentage percent="70" skillId="18389">
+                <summonGroup npcId="280333" minCount="2" maxCount="5" distance="10" schedule="4"/>
+            </percentage>
+            <percentage percent="40" skillId="18389">
+                <summonGroup npcId="280333" minCount="2" maxCount="5" distance="10" schedule="4"/>
+            </percentage>
+            <percentage percent="25" skillId="18390"/>
+        </summons>
+    </ai>
+    <ai npcId="211908">
+        <summons>
+            <percentage percent="75">
+                <summonGroup npcId="280771" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="280771" count="2" distance="10"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="212648">
+        <summons>
+            <percentage percent="50">
+                <summonGroup npcId="280739" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="280739" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="280739" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="20">
+                <summonGroup npcId="280739" count="2" distance="10"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="212874">
+        <summons>
+            <percentage percent="80">
+                <summonGroup npcId="280472" x="2938.67" y="883.34" z="369.814" h="79" count="1"/>
+                <summonGroup npcId="280469" x="2929.45" y="888.97" z="369.793" h="88" count="1"/>
+                <summonGroup npcId="280472" x="2923.81" y="876.97" z="369.561" h="36" count="1"/>
+                <summonGroup npcId="280472" x="2927" y="870" z="369.51" h="44" count="1"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="280472" x="2938.67" y="883.34" z="369.814" h="79" count="1"/>
+                <summonGroup npcId="280469" x="2929.45" y="888.97" z="369.793" h="88" count="1"/>
+                <summonGroup npcId="280472" x="2923.81" y="876.97" z="369.561" h="36" count="1"/>
+                <summonGroup npcId="280472" x="2927" y="870" z="369.51" h="44" count="1"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="280469" x="2956.56" y="858.68" z="368.89" h="92" count="1"/>
+                <summonGroup npcId="280472" x="2951.7" y="879.04" z="368" h="118" count="1"/>
+                <summonGroup npcId="280469" x="2928.45" y="850.91" z="368.222" h="61" count="1"/>
+                <summonGroup npcId="280469" x="2913.81" y="872.17" z="368.17" h="67" count="1"/>
+            </percentage>
+            <percentage percent="20">
+                <summonGroup npcId="280469" x="2956.56" y="858.68" z="368.89" h="92" count="1"/>
+                <summonGroup npcId="280472" x="2951.7" y="879.04" z="368" h="118" count="1"/>
+                <summonGroup npcId="280469" x="2928.45" y="850.91" z="368.222" h="61" count="1"/>
+                <summonGroup npcId="280469" x="2913.81" y="872.17" z="368.17" h="67" count="1"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="212875">
+        <summons>
+            <percentage percent="80">
+                <summonGroup npcId="280481" count="4" distance="10"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="280481" count="4" distance="10"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="280481" count="4" distance="10"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="213738">
+        <summons>
+            <percentage percent="75">
+                <summonGroup npcId="280705" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="55">
+                <summonGroup npcId="280706" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="35">
+                <summonGroup npcId="280707" count="4" distance="10"/>
+            </percentage>
+            <percentage percent="15">
+                <summonGroup npcId="280715" count="1" distance="10"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="213780">
+        <summons>
+            <percentage percent="75">
+                <summonGroup npcId="280685" count="3" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="280686" count="4" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="214158">
+        <summons>
+            <percentage percent="99">
+                <summonGroup npcId="296348" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="214159">
+        <summons>
+            <percentage percent="50">
+                <summonGroup npcId="296348" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="20">
+                <summonGroup npcId="296348" count="1" distance="2"/>
+                <summonGroup npcId="296349" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="214163">
+        <summons>
+            <percentage percent="75">
+                <summonGroup npcId="296347" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="20">
+                <summonGroup npcId="296347" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="214668">
+        <summons>
+            <percentage percent="50">
+                <summonGroup npcId="281053" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="25">
+                <summonGroup npcId="281053" count="2" distance="2"/>
+                <summonGroup npcId="281054" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="281054" count="3" distance="2"/>
+                <summonGroup npcId="281053" count="3" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="214669">
+        <summons>
+            <percentage percent="75">
+                <summonGroup npcId="280975" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="281053" count="2" distance="2"/>
+                <summonGroup npcId="281054" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="25">
+                <summonGroup npcId="281053" count="2" distance="2"/>
+                <summonGroup npcId="281054" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="281054" count="3" distance="2"/>
+                <summonGroup npcId="281053" count="3" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="215480">
+        <summons>
+            <percentage percent="75">
+                <summonGroup npcId="282006" count="3" distance="2"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="282007" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="282006" count="4" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="282006" count="4" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="214843">
+        <summons>
+            <percentage percent="60" skillId="17456" isIndividual="true"/>
+            <percentage percent="57" skillId="18376" isIndividual="true"/>
+            <percentage percent="30" skillId="17530" isIndividual="true"/>
+            <percentage percent="29">
+                <summonGroup npcId="214832" count="1" distance="3"/>
+                <summonGroup npcId="215226" count="1" distance="3"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="215070">
+        <summons>
+            <percentage percent="99">
+                <summonGroup npcId="281327" x="762.2455" y="516.8624" z="1012.30087" count="1"/>
+                <summonGroup npcId="281327" x="763.9433" y="498.5264" z="1012.30087" count="1"/>
+            </percentage>
+            <percentage percent="95" skillId="18552" isIndividual="true"/>
+            <percentage percent="85" skillId="18552" isIndividual="true"/>
+            <percentage percent="75" skillId="18552" isIndividual="true"/>
+            <percentage percent="74">
+                <summonGroup npcId="281327" x="736.8599" y="530.53937" z="1011.692" count="1"/>
+                <summonGroup npcId="281327" x="750.1387" y="528.2361" z="1011.859" count="1"/>
+                <summonGroup npcId="281327" x="736.3838" y="486.08447" z="1011.692" count="1"/>
+                <summonGroup npcId="281327" x="750.47107" y="488.26205" z="1011.859" count="1"/>
+            </percentage>
+            <percentage percent="70" skillId="18552" isIndividual="true"/>
+            <percentage percent="55" skillId="18552" isIndividual="true"/>
+            <percentage percent="50" skillId="18552" isIndividual="true"/>
+            <percentage percent="40" skillId="18552" isIndividual="true"/>
+            <percentage percent="30" skillId="18552" isIndividual="true"/>
+            <percentage percent="25" skillId="18552" isIndividual="true"/>
+            <percentage percent="20" skillId="18552" isIndividual="true"/>
+            <percentage percent="15" skillId="18552" isIndividual="true"/>
+            <percentage percent="10" skillId="18552" isIndividual="true"/>
+            <percentage percent="5" skillId="18552" isIndividual="true"/>
+        </summons>
+    </ai>
+    <ai npcId="215078">
+        <summons>
+            <percentage percent="50">
+                <summonGroup npcId="281253" count="1" distance="10"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="215081">
+        <summons>
+            <percentage percent="80" skillId="18191" isIndividual="true"/>
+            <percentage percent="55" skillId="18191" isIndividual="true"/>
+            <percentage percent="30" skillId="18191" isIndividual="true"/>
+            <percentage percent="5" skillId="18191" isIndividual="true"/>
+        </summons>
+    </ai>
+	<ai npcId="215782">
+		<summons>
+			<percentage percent="99">
+				<summonGroup npcId="281384" count="1" distance="3"/>
+			</percentage>
+			<percentage percent="75">
+				<summonGroup npcId="281524" count="2" distance="3"/>
+			</percentage>
+			<percentage percent="30">
+				<summonGroup npcId="281524" count="2" distance="3"/>
+			</percentage>
+			<percentage percent="10">
+				<summonGroup npcId="281524" count="2" distance="3"/>
+			</percentage>
+		</summons>
+	</ai>
+	<ai npcId="215793">
+		<summons>
+			<percentage percent="95">
+				<summonGroup npcId="281501" x="633.7391" y="553.618" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281502" x="639.51807" y="554.0348" z="131.28926" h="90" count="1"/>
+			</percentage>
+			<percentage percent="80">
+				<summonGroup npcId="281501" x="633.7391" y="553.618" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281501" x="639.51807" y="554.0348" z="131.28926" h="90" count="1"/>
+			</percentage>
+			<percentage percent="65">
+				<summonGroup npcId="281503" x="655.4943" y="489.93198" z="131.07106" h="75" count="1"/>
+				<summonGroup npcId="281501" x="615.8353" y="488.20294" z="131.07106" h="106" count="1"/>
+			</percentage>
+			<percentage percent="45">
+				<summonGroup npcId="281504" x="655.4943" y="489.93198" z="131.07106" h="75" count="1"/>
+				<summonGroup npcId="281502" x="615.8353" y="488.20294" z="131.07106" h="106" count="1"/>
+			</percentage>
+			<percentage percent="35">
+				<summonGroup npcId="281501" x="633.7391" y="553.618" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281502" x="636.39575" y="553.9965" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281502" x="639.51807" y="554.0348" z="131.28926" h="90" count="1"/>
+			</percentage>
+			<percentage percent="25">
+				<summonGroup npcId="281501" x="633.7391" y="553.618" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281502" x="636.39575" y="553.9965" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281503" x="639.51807" y="554.0348" z="131.28926" h="90" count="1"/>
+			</percentage>
+			<percentage percent="15">
+				<summonGroup npcId="281503" x="655.4943" y="489.93198" z="131.07106" h="75" count="1"/>
+				<summonGroup npcId="281501" x="615.8353" y="488.20294" z="131.07106" h="106" count="1"/>
+				<summonGroup npcId="281504" x="636.39575" y="553.9965" z="131.28926" h="90" count="1"/>
+			</percentage>
+			<percentage percent="5">
+				<summonGroup npcId="281504" x="633.7391" y="553.618" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281503" x="639.51807" y="554.0348" z="131.28926" h="90" count="1"/>
+				<summonGroup npcId="281501" x="655.4943" y="489.93198" z="131.07106" h="75" count="1"/>
+				<summonGroup npcId="281502" x="615.8353" y="488.20294" z="131.07106" h="106" count="1"/>
+			</percentage>
+		</summons>
+	</ai>
+    <ai npcId="216922">
+        <summons>
+            <percentage percent="50">
+                <summonGroup npcId="282041" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="216968">
+        <summons>
+            <percentage percent="99">
+                <summonGroup npcId="282103" x="358.44" y="172.71" z="147.38" count="1"/>
+                <summonGroup npcId="282104" x="354.7" y="176.5" z="147.38" count="1"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="216991">
+        <summons>
+            <percentage percent="100">
+                <summonGroup npcId="216993" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="216992">
+        <summons>
+            <percentage percent="100">
+                <summonGroup npcId="216993" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217000">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="217110" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="217110" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="217110" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217028">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="217109" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="217109" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="217109" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="253706">
+        <summons>
+            <percentage percent="25">
+                <summonGroup npcId="290026" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217847">
+        <summons>
+            <percentage percent="40">
+                <summonGroup npcId="217846" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217819">
+        <summons>
+            <percentage percent="40">
+                <summonGroup npcId="217804" count="3" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217737">
+        <summons>
+            <percentage percent="80">
+                <summonGroup npcId="217738" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="217738" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="217738" count="2" distance="10"/>
+            </percentage>
+            <percentage percent="20">
+                <summonGroup npcId="217738" count="2" distance="10"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="216950">
+        <summons>
+            <percentage percent="90" skillId="19152" isIndividual="true"/>
+            <percentage percent="80" skillId="19152" isIndividual="true"/>
+            <percentage percent="70" skillId="19152" isIndividual="true"/>
+            <percentage percent="60" skillId="19152" isIndividual="true"/>
+            <percentage percent="50" skillId="19152" isIndividual="true"/>
+            <percentage percent="40" skillId="19152" isIndividual="true"/>
+            <percentage percent="30" skillId="19152" isIndividual="true"/>
+            <percentage percent="20" skillId="19152" isIndividual="true"/>
+            <percentage percent="10" skillId="19152" isIndividual="true"/>
+        </summons>
+    </ai>
+    <ai npcId="217750">
+        <summons>
+            <percentage percent="50">
+                <summonGroup npcId="217752" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="217752" count="3" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="216516">
+        <summons>
+            <percentage percent="80">
+                <summonGroup npcId="281945" count="3" distance="5" schedule="12"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="281946" count="3" distance="5" schedule="12"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="281947" count="3" distance="5" schedule="12"/>
+            </percentage>
+            <percentage percent="20">
+                <summonGroup npcId="281948" count="3" distance="5" schedule="12"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217238">
+        <summons>
+            <percentage percent="80" skillId="19454" isIndividual="true"/>
+            <percentage percent="60" skillId="19454" isIndividual="true"/>
+            <percentage percent="40" skillId="19454" isIndividual="true"/>
+            <percentage percent="20" skillId="19454" isIndividual="true"/>
+        </summons>
+    </ai>
+    <ai npcId="217233">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="282429" x="307.949" y="731.030" z="201.364" h="93" count="1"/>
+                <summonGroup npcId="282429" x="304.200" y="729.456" z="201.411" h="91" count="1"/>
+                <summonGroup npcId="282299" x="304.200" y="729.456" z="201.411" h="91" count="1"/>
+            </percentage>
+            <percentage percent="80">
+                <summonGroup npcId="282299" x="303.179" y="750.443" z="201.516" h="92" count="1"/>
+                <summonGroup npcId="282429" x="304.701" y="729.782" z="201.392" h="92" count="1"/>
+                <summonGroup npcId="282429" x="295.066" y="734.855" z="200.998" h="86" count="1"/>
+                <summonGroup npcId="282429" x="304.701" y="729.782" z="201.392" h="91" count="1"/>
+                <summonGroup npcId="282299" x="307.719" y="730.936" z="201.373" h="93" count="1"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="282299" x="295.066" y="734.855" z="200.998" h="86" count="1"/>
+                <summonGroup npcId="282429" x="302.825" y="755.631" z="202.576" h="92" count="1"/>
+                <summonGroup npcId="282429" x="301.983" y="754.085" z="202.106" h="90" count="1"/>
+                <summonGroup npcId="282429" x="298.856" y="737.841" z="200.240" h="88" count="1"/>
+                <summonGroup npcId="282299" x="309.734" y="731.239" z="201.446" h="94" count="1"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="282429" x="302.866" y="750.763" z="201.526" h="91" count="1"/>
+                <summonGroup npcId="282299" x="310.791" y="731.592" z="201.529" h="95" count="1"/>
+                <summonGroup npcId="282429" x="292.384" y="736.668" z="200.702" h="84" count="1"/>
+                <summonGroup npcId="282429" x="301.175" y="752.805" z="201.813" h="89" count="1"/>
+                <summonGroup npcId="282299" x="305.152" y="744.028" z="201.032" h="93" count="1"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217277">
+        <summons>
+            <percentage percent="90" skillId="19507">
+                <summonGroup npcId="282304" count="2" distance="5"/>
+                <summonGroup npcId="282302" count="1" distance="5"/>
+            </percentage>
+            <percentage percent="70" skillId="19507">
+                <summonGroup npcId="282304" count="2" distance="5"/>
+                <summonGroup npcId="282302" count="1" distance="5"/>
+            </percentage>
+            <percentage percent="60" skillId="19507">
+                <summonGroup npcId="282305" count="1" distance="5"/>
+                <summonGroup npcId="282302" count="3" distance="5"/>
+            </percentage>
+            <percentage percent="45" skillId="19507">
+                <summonGroup npcId="282302" count="4" distance="5"/>
+                <summonGroup npcId="282306" count="1" distance="5"/>
+            </percentage>
+            <percentage percent="30" skillId="19508">
+                <summonGroup npcId="282303" count="5" distance="5"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="219941">
+        <summons>
+            <percentage percent="90" skillId="19152" isIndividual="true"/>
+            <percentage percent="80" skillId="19152" isIndividual="true"/>
+            <percentage percent="70" skillId="19152" isIndividual="true"/>
+            <percentage percent="60" skillId="19152" isIndividual="true"/>
+            <percentage percent="50" skillId="19152" isIndividual="true"/>
+            <percentage percent="40" skillId="19152" isIndividual="true"/>
+            <percentage percent="30" skillId="19152" isIndividual="true"/>
+            <percentage percent="20" skillId="19152" isIndividual="true"/>
+            <percentage percent="10" skillId="19152" isIndividual="true"/>
+        </summons>
+    </ai>
+    <ai npcId="218162">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218163">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217862">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217863">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218164">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218165">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217893">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="217894">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218106">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218107">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218108">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218109">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218354">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218355">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="218148">
+        <summons>
+            <percentage percent="30">
+                <summonGroup npcId="282527" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <ai npcId="213747">
+        <summons>
+            <percentage percent="80">
+                <summonGroup npcId="280712" count="3" distance="10"/>
+            </percentage>
+            <percentage percent="60">
+                <summonGroup npcId="280712" count="3" distance="10"/>
+            </percentage>
+            <percentage percent="40">
+                <summonGroup npcId="280712" count="3" distance="10"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Chief Gunner Usuraki (Steel Rose Deck 4.3) -->
+    <ai npcId="230742">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="231018" count="2" distance="5"/>
+                <summonGroup npcId="231018" count="2" distance="5"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="231018" count="2" distance="5"/>
+                <summonGroup npcId="231018" count="2" distance="5"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="231018" count="2" distance="5"/>
+                <summonGroup npcId="231018" count="2" distance="5"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="231018" count="2" distance="5"/>
+                <summonGroup npcId="231018" count="2" distance="5"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="231018" count="2" distance="5"/>
+                <summonGroup npcId="231018" count="2" distance="5"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Staff Officer Grazda (Idian Depths 4.3) -->
+    <ai npcId="230996">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284209" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284210" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284211" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284212" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284213" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Queen Serusia (Idian Depths 4.3) -->
+    <ai npcId="231003">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284278" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284278" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284278" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284278" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284278" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Granu (Katalam 4.3) -->
+    <ai npcId="231474">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284254" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284254" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284254" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284254" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284254" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Tarak (Katalam 4.3) -->
+    <ai npcId="231476">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284290" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284291" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284292" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284293" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284294" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Persus (Katalam 4.3) -->
+    <ai npcId="231479">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284261" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284261" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284261" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284261" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284261" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Eremion's Ghost (Katalam 4.3) -->
+    <ai npcId="231480">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284296" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284297" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284298" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284299" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284300" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Kutra (Katalam 4.3) -->
+    <ai npcId="231501">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284221" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284223" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284221" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284224" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284221" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Atrakan (Danaria 4.3) -->
+    <ai npcId="231502">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284288" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284288" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284288" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284288" count="1" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284288" count="1" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Quartz Branch Beberun (Danaria 4.3) -->
+    <ai npcId="231504">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284253" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284253" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284253" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284253" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284253" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Kratica The Berserker (Danaria 4.3) -->
+    <ai npcId="231506">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284258" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284258" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284258" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284258" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284258" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+    <!-- Kesra The Vile (Danaria 4.3) -->
+    <ai npcId="231520">
+        <summons>
+            <percentage percent="90">
+                <summonGroup npcId="284214" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="70">
+                <summonGroup npcId="284215" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="50">
+                <summonGroup npcId="284216" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="30">
+                <summonGroup npcId="284217" count="2" distance="2"/>
+            </percentage>
+            <percentage percent="10">
+                <summonGroup npcId="284218" count="2" distance="2"/>
+            </percentage>
+        </summons>
+    </ai>
+</ai_templates>

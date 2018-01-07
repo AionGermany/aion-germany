@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!-- 68 Quests listed -->
+    <!--
+        [BEGIN] SUMMARY
+               18800 [XML] [Housing] The Living Is Easy
+               18801 [XML] [Housing] Heart of Rock
+               18802 [SCRIPT] [Housing] And A Home for Every Daeva
+               18805 [SCRIPT] Going Thrifting
+               18806 [SCRIPT] No Accounting for Taste
+               18807 [SCRIPT] Blessed Be Thy Hame
+               18808 [SCRIPT] Foolproof Packaging
+               18809 [SCRIPT] Daeva on the Ride
+               18810 [XML] Taltaros' Proxy
+               18812 [XML] Pink Is the Color
+               18813 [XML] Exquisite Shugo Reproduction
+               18814 [XML] Sprigg Up The House
+               18815 [XML] A Spirerinerk Original
+               18816 [XML] And the Leaves That Are Green
+               18817 [XML] Gauon's Fiery Flowers
+               18818 [XML] [Daily] Extract One, Pearl Two
+               18819 [XML] [Daily] It Came From The Sky
+               18820 [XML] [Daily] Gardener's Delight
+               18821 [SCRIPT] [Daily] Almost Forgot My Blessings
+               18822 [XML] Decorative Letters
+               18823 [XML] Wall Letters
+               18824 [XML] Hanging Letters
+               18825 [XML] Painted Letters
+               18826 [SCRIPT] [Daily] Today's Find
+               18827 [XML] [Housing] Unlock The Future
+               18828 [SCRIPT] [Housing] User Friendly?
+               18829 [XML] [Housing] Furnishing The Emptiness
+               18830 [SCRIPT] [Housing] Moving In
+               18831 [XML] [Housing] Nothing Wrong With Free
+               18832 [SCRIPT] [Housing] Imagining A Quiet Life
+               18833 [SCRIPT] [Daily] Leafy Cutting
+               18834 [XML] [Daily] Compost Pick-Up
+               18835 [SCRIPT] [Daily] Stem Cutting
+               18836 [XML] [Daily] Compost Program
+               18837 [SCRIPT] [Daily] Eye Cutting
+               18838 [XML] [Daily] Bridgeside Compost
+               18840 [XML] Leaves of Four Seasons
+               18841 [XML] Leaves of Four Seasons
+               18842 [XML] Leaves of Four Seasons
+               18843 [XML] Homeowners Anonymous
+               18844 [XML] [Daily] Fertile Deal
+               18846 [XML] Free Gift Just For Visiting!
+               18847 [SCRIPT] Housewarming
+               18849 [XML] [Relic Bundle Reward] Ancient Goblet
+               18850 [XML] [Relic Bundle Reward] Ancient Crown
+               50007 [XML] [Event/Daily] Cranky Grankers
+               50008 [SCRIPT] [Event/Daily] Solorius Shugo Slackers!
+               50009 [SCRIPT] [Event/Daily] 'Tis The Season...
+               50010 [TODO] [Event] Lover or Loner?
+               50019 [TODO] [Event/Daily] Sweetie Choco Wuv-ums
+               50020 [TODO] [Event/Daily] Extra-Bitter Chocolate
+               50021 [TODO] [Event/Daily] Candygeddon
+               50022 [TODO] [Event/Daily] Shove-l It
+               50023 [TODO] [Event] Elyos Perseverance
+               50024 [TODO] [Event] What's a Heart Worth
+               50025 [TODO] [Event] Half a Heart
+               50026 [TODO] [Event] Fragmented Blessings
+               50027 [TODO] [Event/Weekly] Seeking Soul Vigor
+               50028 [TODO] [Event/Weekly] Seeking Life Essence
+               50029 [TODO] [Event/Daily] Alchemist's Experiment
+               50030 [TODO] [Event/Repeat] Alchemist's Trade
+               80269 [SCRIPT] [Event/Daily] Tasty Treats
+               80298 [TODO] [Event] Lover or Loner?
+               80299 [TODO] [Event] Lover or Loner?
+               80300 [TODO] [Event/Daily] Sweetie Choco Wuv-ums
+               80301 [TODO] [Event/Daily] Extra-Bitter Chocolate
+               80302 [TODO] [Event/Daily] Candygeddon
+               80303 [TODO] [Event/Daily] Shove-l It
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="18800" start_npc_ids="798458" end_npc_ids="830365"/>
+    <report_to id="18801" start_npc_ids="830001" end_npc_ids="830005"/>
+    <report_to id="18810" start_npc_ids="830034" end_npc_ids="830070"/>
+    <report_to id="18827" start_npc_ids="830069" end_npc_ids="810017 810018 810019 810020 810021"/>
+    <report_to id="18829" start_npc_ids="810017 810018 810019 810020 810021" end_npc_ids="830584"/>
+    <report_to id="18831" start_npc_ids="830645" end_npc_ids="810017 810018 810019 810020 810021"/>
+    <report_to id="18843" start_npc_ids="830365" end_npc_ids="830194"/>
+    <report_to id="18846" start_npc_ids="830205" end_npc_ids="798455"/>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="18812" start_npc_ids="830522"/>
+    <item_collecting id="18813" start_npc_ids="830522"/>
+    <item_collecting id="18814" start_npc_ids="830522"/>
+    <item_collecting id="18815" start_npc_ids="830522"/>
+    <item_collecting id="18816" start_npc_ids="830196"/>
+    <item_collecting id="18817" start_npc_ids="830196"/>
+    <item_collecting id="18818" start_npc_ids="830208"/>
+    <item_collecting id="18819" start_npc_ids="830210"/>
+    <item_collecting id="18820" start_npc_ids="830203"/>
+    <item_collecting id="18822" start_npc_ids="830523"/>
+    <item_collecting id="18823" start_npc_ids="830523"/>
+    <item_collecting id="18824" start_npc_ids="830523"/>
+    <item_collecting id="18825" start_npc_ids="830523"/>
+    <item_collecting id="18834" start_npc_ids="830655"/>
+    <item_collecting id="18836" start_npc_ids="830655"/>
+    <item_collecting id="18838" start_npc_ids="830655"/>
+    <item_collecting id="18840" start_npc_ids="830196"/>
+    <item_collecting id="18841" start_npc_ids="830196"/>
+    <item_collecting id="18842" start_npc_ids="830196"/>
+    <item_collecting id="18844" start_npc_ids="830192"/>
+    <item_collecting id="50007" start_npc_ids="831032 831038"/>
+    <relic_rewards id="18849" start_npc_ids="831252" relic_var1="186000058" relic_var2="186000057" relic_var3="186000056" relic_var4="186000055" relic_count="10"/>
+    <relic_rewards id="18850" start_npc_ids="831210" relic_var1="186000054" relic_var2="186000053" relic_var3="186000052" relic_var4="186000051" relic_count="10"/>
+    <!-- ITEM ORDERS QUESTS -->
+    <item_order start_item_id="182213202" end_npc_id="830655" id="18833"/>
+    <item_order start_item_id="182213203" end_npc_id="830655" id="18835"/>
+    <item_order start_item_id="182213204" end_npc_id="830655" id="18837"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="instance_exits">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="instance_exit" type="InstanceExit" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="InstanceExit">
+        <xs:attribute name="instance_id" type="xs:int"/>
+        <xs:attribute name="exit_world" type="xs:int"/>
+        <xs:attribute name="race" type="Race" default="PC_ALL"/>
+        <xs:attribute name="x" type="xs:float"/>
+        <xs:attribute name="y" type="xs:float"/>
+        <xs:attribute name="z" type="xs:float"/>
+        <xs:attribute name="h" type="xs:byte" use="optional" default="0"/>
+    </xs:complexType>
+</xs:schema>

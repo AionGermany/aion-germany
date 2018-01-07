@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="packets.xsd" delay="2000">
+    <!--
+    Information:
+            * To send this mapping use admin command '//send demo'.
+            * Each packet is sent with delay {packets#delay} between them.
+            * Each packet part can be repeated many times by specifying attribute {part#repeat}
+                    i.e. <part type="c" value="0x00" repeat="29"/>
+    -->
+    <!-- Example: send first SM_MESSAGE packet -->
+    <!-- Format: ccdhS -->
+    <packet opcode="0x1B">
+        <part type="c" value="0x19"/>
+        <!-- chat type: ANNOUNCEMENTS -->
+        <part type="c" value="0x00"/>
+        <part type="d" value="${objectId}"/>
+        <!-- write sender objectId -->
+        <part type="h" value="0x00"/>
+        <part type="s" value="Hello, World!"/>
+    </packet>
+    <!--
+    Example: send second SM_MESSAGE packet.
+    Packet will be sent after {packets#delay} milliseconds.
+    -->
+    <packet opcode="0x1B">
+        <part type="c" value="0x19"/>
+        <part type="c" value="0x00"/>
+        <part type="d" value="${objectId}"/>
+        <part type="h" value="0x00"/>
+        <part type="s" value="New message!"/>
+    </packet>
+</packets>

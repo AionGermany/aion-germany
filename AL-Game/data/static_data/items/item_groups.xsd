@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="item_groups">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="craft_materials" type="CraftItemGroup"/>
+                <xs:element minOccurs="0" name="craft_shop" type="CraftItemGroup"/>
+                <xs:element minOccurs="0" name="craft_bundles" type="CraftRecipeGroup"/>
+                <xs:element minOccurs="0" name="craft_recipes" type="CraftRecipeGroup"/>
+                <xs:element minOccurs="0" name="manastones_common" type="ManastoneGroup"/>
+                <xs:element minOccurs="0" name="manastones_rare" type="ManastoneGroup"/>
+                <xs:element minOccurs="0" name="medals" type="MedalGroup"/>
+                <xs:element minOccurs="0" name="food_common" type="FoodGroup"/>
+                <xs:element minOccurs="0" name="food_rare" type="FoodGroup"/>
+                <xs:element minOccurs="0" name="food_legendary" type="FoodGroup"/>
+                <xs:element minOccurs="0" name="medicine_common" type="MedicineGroup"/>
+                <xs:element minOccurs="0" name="medicine_rare" type="MedicineGroup"/>
+                <xs:element minOccurs="0" name="medicine_legendary" type="MedicineGroup"/>
+                <xs:element minOccurs="0" name="ores_rare" type="OreGroup"/>
+                <xs:element minOccurs="0" name="ores_legendary" type="OreGroup"/>
+                <xs:element minOccurs="0" name="ores_unique" type="OreGroup"/>
+                <xs:element minOccurs="0" name="ores_epic" type="OreGroup"/>
+                <xs:element minOccurs="0" name="gather_rare" type="GatherGroup"/>
+                <xs:element minOccurs="0" name="enchants" type="EnchantGroup"/>
+                <xs:element minOccurs="0" name="boss_rare" type="BossGroup"/>
+                <xs:element minOccurs="0" name="boss_legendary" type="BossGroup"/>
+                <xs:element minOccurs="0" name="feed_fluid" type="FeedFluidGroup"/>
+                <xs:element minOccurs="0" name="feed_armor" type="FeedArmorGroup"/>
+                <xs:element minOccurs="0" name="feed_thorn" type="FeedThornGroup"/>
+                <xs:element minOccurs="0" name="feed_bone" type="FeedBoneGroup"/>
+                <xs:element minOccurs="0" name="feed_balaur_material" type="FeedBalaurGroup"/>
+                <xs:element minOccurs="0" name="feed_soul" type="FeedSoulGroup"/>
+                <xs:element minOccurs="0" name="feed_exclude" type="FeedExcludeGroup"/>
+                <xs:element minOccurs="0" name="stinking_junk" type="StinkingJunkGroup"/>
+                <xs:element minOccurs="0" name="feed_healthy_all" type="HealthyFoodAllGroup"/>
+                <xs:element minOccurs="0" name="feed_healthy_spicy" type="HealthyFoodSpicyGroup"/>
+                <xs:element minOccurs="0" name="feed_powder_biscuit" type="AetherPowderBiscuitGroup"/>
+                <xs:element minOccurs="0" name="feed_crystal_biscuit" type="AetherCrystalBiscuitGroup"/>
+                <xs:element minOccurs="0" name="feed_gem_biscuit" type="AetherGemBiscuitGroup"/>
+                <xs:element minOccurs="0" name="poppy_snack" type="PoppySnackGroup"/>
+                <xs:element minOccurs="0" name="tasty_poppy_snack" type="PoppySnackTastyGroup"/>
+                <xs:element minOccurs="0" name="nutritious_poppy_snack" type="PoppySnackNutritiousGroup"/>
+                <xs:element minOccurs="0" name="feed_shugo_event_coin" type="ShugoEventCoinGroup"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:complexType name="BonusItemGroup" abstract="true">
+        <xs:attribute name="bonusType" type="BonusType" use="required"/>
+        <xs:attribute default="0" name="chance" type="xs:float" use="optional"/>
+    </xs:complexType> 
+  
+    <xs:complexType name="FeedItemGroup" abstract="true">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="ItemRaceEntry"/>
+        </xs:sequence>
+        <xs:attribute name="group" type="ItemGroupIndex"/>
+    </xs:complexType>
+  
+    <xs:complexType name="CraftItemGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="CraftItem"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="CraftRecipeGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="CraftRecipe"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="CraftReward" abstract="true">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="skill" type="xs:int"/>
+        <xs:attribute name="race" type="ItemRace" use="optional"/>
+    </xs:complexType>
+  
+    <xs:complexType name="CraftItem">
+        <xs:complexContent mixed="false">
+            <xs:extension base="CraftReward">
+                <xs:attribute name="minLevel" type="xs:int" use="required"/>
+                <xs:attribute name="maxLevel" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="CraftRecipe">
+        <xs:complexContent mixed="false">
+            <xs:extension base="CraftReward">
+                <xs:attribute name="level" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="ManastoneGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="ItemRaceEntry"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="MedalGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="MedalReward"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="MedicineGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="IdLevelReward"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FoodGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="IdLevelReward"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="OreGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="ItemRaceEntry"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="GatherGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="ItemRaceEntry"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="EnchantGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="IdLevelReward"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="BossGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="BonusItemGroup">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="ItemRaceEntry"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FeedFluidGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FeedArmorGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FeedThornGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FeedBalaurGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FeedBoneGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FeedSoulGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="FeedExcludeGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="StinkingJunkGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="HealthyFoodAllGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="HealthyFoodSpicyGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="AetherPowderBiscuitGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="AetherCrystalBiscuitGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="AetherGemBiscuitGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="PoppySnackGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="PoppySnackTastyGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PoppySnackNutritiousGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="ShugoEventCoinGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FeedItemGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="ItemRaceEntry">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="race" type="ItemRace" use="optional"/>
+    </xs:complexType>
+  
+    <xs:complexType name="IdLevelReward">
+        <xs:complexContent mixed="false">
+            <xs:extension base="ItemRaceEntry">
+                <xs:attribute name="level" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="MedalReward">
+        <xs:complexContent mixed="false">
+            <xs:extension base="IdLevelReward">
+                <xs:attribute name="count" type="xs:int" use="required"/>
+                <xs:attribute name="chance" type="xs:float" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:simpleType name="BonusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="BOSS"/>
+            <xs:enumeration value="COIN"/>
+            <xs:enumeration value="ENCHANT"/>
+            <xs:enumeration value="FOOD"/>
+            <xs:enumeration value="FORTRESS"/>
+            <xs:enumeration value="GATHER"/>
+            <xs:enumeration value="GOODS"/>
+            <xs:enumeration value="ISLAND"/>
+            <xs:enumeration value="LUNAR"/>
+            <xs:enumeration value="MAGICAL"/>
+            <xs:enumeration value="MANASTONE"/>
+            <xs:enumeration value="MASTER_RECIPE"/>
+            <xs:enumeration value="MATERIAL"/>
+            <xs:enumeration value="MEDAL"/>
+            <xs:enumeration value="MEDICINE"/>
+            <xs:enumeration value="MOVIE"/>
+            <xs:enumeration value="RECIPE"/>
+            <xs:enumeration value="REDEEM"/>
+            <xs:enumeration value="RIFT"/>
+            <xs:enumeration value="TASK"/>
+			<xs:enumeration value="UNKNOWN"/>
+            <xs:enumeration value="WINTER"/>
+        </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:simpleType name="ItemRace">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PC_ALL"/>
+            <xs:enumeration value="ELYOS"/>
+            <xs:enumeration value="ASMODIANS"/>
+        </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:simpleType name="ItemGroupIndex">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="JUNK"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

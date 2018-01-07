@@ -1,0 +1,2451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest_scripts>
+    <!-- Steel Chisel Supplies -->
+    <work_order id="5000" start_npc_ids="203788 830062" recipe_id="155004001">
+        <give_component item_id="182290000" count="4"/>
+    </work_order>
+    <!-- Steel Screw Supplies -->
+    <work_order id="5001" start_npc_ids="203788 830062" recipe_id="155004002">
+        <give_component item_id="182290001" count="16"/>
+    </work_order>
+    <!-- Steel Hammer Supplies -->
+    <work_order id="5002" start_npc_ids="203788 830062" recipe_id="155004003">
+        <give_component item_id="182290002" count="16"/>
+    </work_order>
+    <!-- Steel Wrench Supplies -->
+    <work_order id="5003" start_npc_ids="203788 830062" recipe_id="155004004">
+        <give_component item_id="182290003" count="24"/>
+    </work_order>
+    <!-- Steel Shovel Supplies -->
+    <work_order id="5004" start_npc_ids="203788 830062" recipe_id="155004005">
+        <give_component item_id="182290004" count="16"/>
+    </work_order>
+    <!-- Steel Grill Supplies -->
+    <work_order id="5005" start_npc_ids="203788 830062" recipe_id="155004006">
+        <give_component item_id="182290005" count="32"/>
+    </work_order>
+    <!-- Steel Polearm Blade Repair -->
+    <work_order id="5006" start_npc_ids="203788 830062" recipe_id="155004007">
+        <give_component item_id="182290006" count="16"/>
+    </work_order>
+    <!-- Steel Pick Supplies -->
+    <work_order id="5007" start_npc_ids="203788 830062" recipe_id="155004008">
+        <give_component item_id="182290007" count="16"/>
+    </work_order>
+    <!-- Steel Throwing Knife Supplies -->
+    <work_order id="5008" start_npc_ids="203788 830062" recipe_id="155004009">
+        <give_component item_id="182290008" count="8"/>
+    </work_order>
+    <!-- Steel Ladder Supplies -->
+    <work_order id="5009" start_npc_ids="203788 830062" recipe_id="155004010">
+        <give_component item_id="182290009" count="32"/>
+    </work_order>
+    <!-- Steel Dagger Repair -->
+    <work_order id="5010" start_npc_ids="203788 830062" recipe_id="155004011">
+        <give_component item_id="182290010" count="12"/>
+    </work_order>
+    <!-- Titanium Arrowhead Supplies -->
+    <work_order id="5011" start_npc_ids="203788 830062" recipe_id="155004012">
+        <give_component item_id="182290011" count="12"/>
+    </work_order>
+    <!-- Titanium Dagger Mount Supplies -->
+    <work_order id="5012" start_npc_ids="203788 830062" recipe_id="155004013">
+        <give_component item_id="182290012" count="12"/>
+    </work_order>
+    <!-- Prison Shackle Supplies -->
+    <work_order id="5013" start_npc_ids="203788 830062" recipe_id="155004014">
+        <give_component item_id="182290013" count="36"/>
+    </work_order>
+    <!-- Titanium Sword Blade Supplies -->
+    <work_order id="5014" start_npc_ids="203788 830062" recipe_id="155004015">
+        <give_component item_id="182290014" count="12"/>
+    </work_order>
+    <!-- Titanium Greatsword Repair -->
+    <work_order id="5015" start_npc_ids="203788 830062" recipe_id="155004016">
+        <give_component item_id="182290015" count="12"/>
+        <give_component item_id="182290246" count="36"/>
+    </work_order>
+    <!-- Pipe Joint Supplies -->
+    <work_order id="5016" start_npc_ids="203788 830062" recipe_id="155004017">
+        <give_component item_id="182290016" count="36"/>
+    </work_order>
+    <!-- Titanium Saw Blade Supplies -->
+    <work_order id="5017" start_npc_ids="203788 830062" recipe_id="155004018">
+        <give_component item_id="182290017" count="24"/>
+    </work_order>
+    <!-- Structural Support Pillar Supplies -->
+    <work_order id="5018" start_npc_ids="203788 830062" recipe_id="155004019">
+        <give_component item_id="182290018" count="48"/>
+    </work_order>
+    <!-- Machine Blade Supplies -->
+    <work_order id="5019" start_npc_ids="203788 830062" recipe_id="155004020">
+        <give_component item_id="182290019" count="36"/>
+    </work_order>
+    <!-- Explorer's Mace Repair -->
+    <work_order id="5020" start_npc_ids="203788 830062" recipe_id="155004021">
+        <give_component item_id="182290020" count="16"/>
+        <give_component item_id="182290247" count="64"/>
+    </work_order>
+    <!-- Explorer's Sword Repair -->
+    <work_order id="5021" start_npc_ids="203788 830062" recipe_id="155004022">
+        <give_component item_id="182290021" count="16"/>
+    </work_order>
+    <!-- Penetrating Javelin Supplies -->
+    <work_order id="5022" start_npc_ids="203788 830062" recipe_id="155004023">
+        <give_component item_id="182290022" count="32"/>
+    </work_order>
+    <!-- Legion Flagstaff Supplies -->
+    <work_order id="5023" start_npc_ids="203788 830062" recipe_id="155004024">
+        <give_component item_id="182290023" count="48"/>
+    </work_order>
+    <!-- Adamantium Polearm Blade Supplies -->
+    <work_order id="5024" start_npc_ids="203788 830062" recipe_id="155004025">
+        <give_component item_id="182290024" count="16"/>
+    </work_order>
+    <!-- Heiron Dagger Repair -->
+    <work_order id="5025" start_npc_ids="203788 830062" recipe_id="155004026">
+        <give_component item_id="182290025" count="16"/>
+        <give_component item_id="182290248" count="48"/>
+    </work_order>
+    <!-- Adamantium Gun Barrel Supplies -->
+    <work_order id="5026" start_npc_ids="203788 830062" recipe_id="155004027">
+        <give_component item_id="182290026" count="48"/>
+        <give_component item_id="182290249" count="48"/>
+    </work_order>
+    <!-- Crossbow Bolt Supplies -->
+    <work_order id="5027" start_npc_ids="203788 830062" recipe_id="155004028">
+        <give_component item_id="182290027" count="48"/>
+    </work_order>
+    <!-- Adamantium Dagger Repair -->
+    <work_order id="5028" start_npc_ids="203788 830062" recipe_id="155004029">
+        <give_component item_id="182290028" count="16"/>
+    </work_order>
+    <!-- Heiron Polearm Repair -->
+    <work_order id="5029" start_npc_ids="203788 830062" recipe_id="155004030">
+        <give_component item_id="182290029" count="16"/>
+    </work_order>
+    <!-- Sentinel's Sword Repair -->
+    <work_order id="5030" start_npc_ids="203788 830062" recipe_id="155004031">
+        <give_component item_id="182290030" count="20"/>
+        <give_component item_id="182290250" count="40"/>
+    </work_order>
+    <!-- Blue Fleet Dagger Repair -->
+    <work_order id="5031" start_npc_ids="203788 830062" recipe_id="155004032">
+        <give_component item_id="182290031" count="20"/>
+    </work_order>
+    <!-- Legionary's Greatsword Repair -->
+    <work_order id="5032" start_npc_ids="203788 830062" recipe_id="155004033">
+        <give_component item_id="182290032" count="20"/>
+    </work_order>
+    <!-- Guardian's Mace Repair -->
+    <work_order id="5033" start_npc_ids="203788 830062" recipe_id="155004034">
+        <give_component item_id="182290033" count="20"/>
+    </work_order>
+    <!-- Squad Leader's Polearm Repair -->
+    <work_order id="5034" start_npc_ids="203788 830062" recipe_id="155004035">
+        <give_component item_id="182290034" count="20"/>
+        <give_component item_id="182290251" count="20"/>
+    </work_order>
+    <!-- Zephyr Dagger Repair -->
+    <work_order id="5035" start_npc_ids="203788 830062" recipe_id="155004036">
+        <give_component item_id="182290035" count="20"/>
+        <give_component item_id="182290252" count="20"/>
+    </work_order>
+    <!-- Battle Polearm Repair -->
+    <work_order id="5036" start_npc_ids="203788 830062" recipe_id="155004037">
+        <give_component item_id="182290036" count="20"/>
+    </work_order>
+    <!-- Guardsman's Greatsword Repair -->
+    <work_order id="5037" start_npc_ids="203788 830062" recipe_id="155004038">
+        <give_component item_id="182290037" count="20"/>
+    </work_order>
+    <!-- Sanctum Mace Repair -->
+    <work_order id="5038" start_npc_ids="203788 830062" recipe_id="155004039">
+        <give_component item_id="182290038" count="20"/>
+    </work_order>
+    <!-- Centurion's Sword Repair -->
+    <work_order id="5039" start_npc_ids="203788 830062" recipe_id="155004040">
+        <give_component item_id="182290039" count="20"/>
+    </work_order>
+    <!-- Steps Toward Weaponsmithing Expert -->
+    <work_order id="5040" start_npc_ids="203788 830062" recipe_id="155004041">
+        <give_component item_id="182290040" count="24"/>
+        <give_component item_id="182290253" count="24"/>
+    </work_order>
+    <!-- Metal Plate Supplies -->
+    <work_order id="5100" start_npc_ids="203790 830060" recipe_id="155004042">
+        <give_component item_id="182290041" count="4"/>
+    </work_order>
+    <!-- Steel Box Supplies -->
+    <work_order id="5101" start_npc_ids="203790 830060" recipe_id="155004043">
+        <give_component item_id="182290042" count="8"/>
+    </work_order>
+    <!-- Info Board Supplies -->
+    <work_order id="5102" start_npc_ids="203790 830060" recipe_id="155004044">
+        <give_component item_id="182290043" count="8"/>
+    </work_order>
+    <!-- Storage Drum Supplies -->
+    <work_order id="5103" start_npc_ids="203790 830060" recipe_id="155004045">
+        <give_component item_id="182290044" count="8"/>
+    </work_order>
+    <!-- Folding Cot Supplies -->
+    <work_order id="5104" start_npc_ids="203790 830060" recipe_id="155004046">
+        <give_component item_id="182290045" count="8"/>
+    </work_order>
+    <!-- Personal Locker Supplies -->
+    <work_order id="5105" start_npc_ids="203790 830060" recipe_id="155004047">
+        <give_component item_id="182290046" count="16"/>
+    </work_order>
+    <!-- Kettle Supplies -->
+    <work_order id="5106" start_npc_ids="203790 830060" recipe_id="155004048">
+        <give_component item_id="182290047" count="8"/>
+    </work_order>
+    <!-- Machine Sawteeth Supplies -->
+    <work_order id="5107" start_npc_ids="203790 830060" recipe_id="155004049">
+        <give_component item_id="182290048" count="8"/>
+    </work_order>
+    <!-- Safety Helmet Supplies -->
+    <work_order id="5108" start_npc_ids="203790 830060" recipe_id="155004050">
+        <give_component item_id="182290049" count="8"/>
+    </work_order>
+    <!-- File Safe Supplies -->
+    <work_order id="5109" start_npc_ids="203790 830060" recipe_id="155004051">
+        <give_component item_id="182290050" count="8"/>
+    </work_order>
+    <!-- Durable Steel Spaulders Repair -->
+    <work_order id="5110" start_npc_ids="203790 830060" recipe_id="155004052">
+        <give_component item_id="182290051" count="12"/>
+    </work_order>
+    <!-- Frying Pan Supplies -->
+    <work_order id="5111" start_npc_ids="203790 830060" recipe_id="155004053">
+        <give_component item_id="182290052" count="12"/>
+    </work_order>
+    <!-- Ball Bearings Supplies -->
+    <work_order id="5112" start_npc_ids="203790 830060" recipe_id="155004054">
+        <give_component item_id="182290053" count="12"/>
+    </work_order>
+    <!-- Washtub Supplies -->
+    <work_order id="5113" start_npc_ids="203790 830060" recipe_id="155004055">
+        <give_component item_id="182290054" count="12"/>
+    </work_order>
+    <!-- Cabinet Supplies -->
+    <work_order id="5114" start_npc_ids="203790 830060" recipe_id="155004056">
+        <give_component item_id="182290055" count="24"/>
+    </work_order>
+    <!-- Titanium Handguards Repair -->
+    <work_order id="5115" start_npc_ids="203790 830060" recipe_id="155004057">
+        <give_component item_id="182290056" count="12"/>
+    </work_order>
+    <!-- Titanium Water Pipe Supplies -->
+    <work_order id="5116" start_npc_ids="203790 830060" recipe_id="155004058">
+        <give_component item_id="182290057" count="12"/>
+    </work_order>
+    <!-- Cooking Cauldron Supplies -->
+    <work_order id="5117" start_npc_ids="203790 830060" recipe_id="155004059">
+        <give_component item_id="182290058" count="36"/>
+    </work_order>
+    <!-- Portable Brazier Supplies -->
+    <work_order id="5118" start_npc_ids="203790 830060" recipe_id="155004060">
+        <give_component item_id="182290059" count="48"/>
+    </work_order>
+    <!-- Molded Seat Supplies -->
+    <work_order id="5119" start_npc_ids="203790 830060" recipe_id="155004061">
+        <give_component item_id="182290060" count="24"/>
+    </work_order>
+    <!-- Titanium Shield Repair -->
+    <work_order id="5120" start_npc_ids="203790 830060" recipe_id="155004062">
+        <give_component item_id="182290061" count="16"/>
+        <give_component item_id="182290254" count="16"/>
+    </work_order>
+    <!-- Corrugated Sheet Supplies -->
+    <work_order id="5121" start_npc_ids="203790 830060" recipe_id="155004063">
+        <give_component item_id="182290062" count="32"/>
+    </work_order>
+    <!-- Support Rails Supplies -->
+    <work_order id="5122" start_npc_ids="203790 830060" recipe_id="155004064">
+        <give_component item_id="182290063" count="64"/>
+    </work_order>
+    <!-- Adamantium Chausses Repair -->
+    <work_order id="5123" start_npc_ids="203790 830060" recipe_id="155004065">
+        <give_component item_id="182290064" count="16"/>
+        <give_component item_id="182290255" count="32"/>
+    </work_order>
+    <!-- Adamantium Sabatons Repair -->
+    <work_order id="5124" start_npc_ids="203790 830060" recipe_id="155004066">
+        <give_component item_id="182290065" count="16"/>
+        <give_component item_id="182290256" count="16"/>
+    </work_order>
+    <!-- Adamantium Hauberk Repair -->
+    <work_order id="5125" start_npc_ids="203790 830060" recipe_id="155004067">
+        <give_component item_id="182290066" count="16"/>
+        <give_component item_id="182290257" count="48"/>
+    </work_order>
+    <!-- Mobile Tower Supplies -->
+    <work_order id="5126" start_npc_ids="203790 830060" recipe_id="155004068">
+        <give_component item_id="182290067" count="48"/>
+        <give_component item_id="182290258" count="16"/>
+    </work_order>
+    <!-- Barricade Supplies -->
+    <work_order id="5127" start_npc_ids="203790 830060" recipe_id="155004069">
+        <give_component item_id="182290068" count="16"/>
+        <give_component item_id="182290259" count="48"/>
+    </work_order>
+    <!-- Adamantium Shoulderplates Repair -->
+    <work_order id="5128" start_npc_ids="203790 830060" recipe_id="155004070">
+        <give_component item_id="182290069" count="16"/>
+        <give_component item_id="182290260" count="16"/>
+    </work_order>
+    <!-- Adamantium Breastplate Repair -->
+    <work_order id="5129" start_npc_ids="203790 830060" recipe_id="155004071">
+        <give_component item_id="182290070" count="16"/>
+        <give_component item_id="182290261" count="32"/>
+    </work_order>
+    <!-- Sentinel's Shield Repair -->
+    <work_order id="5130" start_npc_ids="203790 830060" recipe_id="155004072">
+        <give_component item_id="182290071" count="20"/>
+        <give_component item_id="182290262" count="40"/>
+    </work_order>
+    <!-- Blue Fleet Handguards Repair [310p] -->
+    <work_order id="5131" start_npc_ids="203790 830060" recipe_id="155004073">
+        <give_component item_id="182290072" count="20"/>
+    </work_order>
+    <!-- Legionary's Shoulderplates Repair -->
+    <work_order id="5132" start_npc_ids="203790 830060" recipe_id="155004074">
+        <give_component item_id="182290073" count="20"/>
+    </work_order>
+    <!-- Guardian's Greaves Repair -->
+    <work_order id="5133" start_npc_ids="203790 830060" recipe_id="155004075">
+        <give_component item_id="182290074" count="20"/>
+        <give_component item_id="182290263" count="40"/>
+    </work_order>
+    <!-- Squad Leader's Helm Repair -->
+    <work_order id="5134" start_npc_ids="203790 830060" recipe_id="155004076">
+        <give_component item_id="182290075" count="20"/>
+        <give_component item_id="182290264" count="40"/>
+    </work_order>
+    <!-- Guardian's Shield Repair -->
+    <work_order id="5135" start_npc_ids="203790 830060" recipe_id="155004077">
+        <give_component item_id="182290076" count="20"/>
+        <give_component item_id="182290265" count="20"/>
+    </work_order>
+    <!-- Battle Hauberk Repair -->
+    <work_order id="5136" start_npc_ids="203790 830060" recipe_id="155004078">
+        <give_component item_id="182290077" count="20"/>
+        <give_component item_id="182290266" count="40"/>
+    </work_order>
+    <!-- Zephyr Sabatons Repair -->
+    <work_order id="5137" start_npc_ids="203790 830060" recipe_id="155004079">
+        <give_component item_id="182290078" count="20"/>
+    </work_order>
+    <!-- Guardsman's Chain Hood Repair -->
+    <work_order id="5138" start_npc_ids="203790 830060" recipe_id="155004080">
+        <give_component item_id="182290079" count="20"/>
+        <give_component item_id="182290267" count="20"/>
+    </work_order>
+    <!-- Centurion's Breastplate Repair -->
+    <work_order id="5139" start_npc_ids="203790 830060" recipe_id="155004081">
+        <give_component item_id="182290080" count="20"/>
+        <give_component item_id="182290268" count="40"/>
+    </work_order>
+    <!-- Steps Toward Armorsmithing Expert -->
+    <work_order id="5140" start_npc_ids="203790 830060" recipe_id="155004082">
+        <give_component item_id="182290081" count="24"/>
+        <give_component item_id="182290269" count="48"/>
+    </work_order>
+    <!-- Medical Gauze -->
+    <work_order id="5200" start_npc_ids="203793 830052" recipe_id="155004083">
+        <give_component item_id="182290082" count="8"/>
+    </work_order>
+    <!-- Simple Cloth Sack Supplies -->
+    <work_order id="5201" start_npc_ids="203793 830052" recipe_id="155004084">
+        <give_component item_id="182290083" count="8"/>
+    </work_order>
+    <!-- Leather Wallet Supplies -->
+    <work_order id="5202" start_npc_ids="203793 830052" recipe_id="155004085">
+        <give_component item_id="182290084" count="16"/>
+    </work_order>
+    <!-- Absorbant Ruko Towel Supplies -->
+    <work_order id="5203" start_npc_ids="203793 830052" recipe_id="155004086">
+        <give_component item_id="182290085" count="8"/>
+    </work_order>
+    <!-- Thin Leather Slippers Supplies -->
+    <work_order id="5204" start_npc_ids="203793 830052" recipe_id="155004087">
+        <give_component item_id="182290086" count="8"/>
+    </work_order>
+    <!-- Work Apron -->
+    <work_order id="5205" start_npc_ids="203793 830052" recipe_id="155004088">
+        <give_component item_id="182290087" count="8"/>
+    </work_order>
+    <!-- Thin Boots Mend -->
+    <work_order id="5206" start_npc_ids="203793 830052" recipe_id="155004089">
+        <give_component item_id="182290088" count="8"/>
+    </work_order>
+    <!-- Thermal Underwear -->
+    <work_order id="5207" start_npc_ids="203793 830052" recipe_id="155004090">
+        <give_component item_id="182290089" count="16"/>
+    </work_order>
+    <!-- Leather Tent Floor Supplies -->
+    <work_order id="5208" start_npc_ids="203793 830052" recipe_id="155004091">
+        <give_component item_id="182290090" count="8"/>
+    </work_order>
+    <!-- Padded Vest Supplies -->
+    <work_order id="5209" start_npc_ids="203793 830052" recipe_id="155004092">
+        <give_component item_id="182290091" count="24"/>
+    </work_order>
+    <!-- Thin Leather Helmet Mend -->
+    <work_order id="5210" start_npc_ids="203793 830052" recipe_id="155004093">
+        <give_component item_id="182290092" count="12"/>
+    </work_order>
+    <!-- Leather Bracelet Supplies -->
+    <work_order id="5211" start_npc_ids="203793 830052" recipe_id="155004094">
+        <give_component item_id="182290093" count="24"/>
+    </work_order>
+    <!-- Combat Sleeping Bag Supplies -->
+    <work_order id="5212" start_npc_ids="203793 830052" recipe_id="155004095">
+        <give_component item_id="182290094" count="36"/>
+    </work_order>
+    <!-- Soft Pillow Supplies -->
+    <work_order id="5213" start_npc_ids="203793 830052" recipe_id="155004096">
+        <give_component item_id="182290095" count="12"/>
+    </work_order>
+    <!-- Leather Sword Frog Supplies -->
+    <work_order id="5214" start_npc_ids="203793 830052" recipe_id="155004097">
+        <give_component item_id="182290096" count="12"/>
+    </work_order>
+    <!-- Fess Leggings Mend -->
+    <work_order id="5215" start_npc_ids="203793 830052" recipe_id="155004098">
+        <give_component item_id="182290097" count="12"/>
+    </work_order>
+    <!-- Thick Winter Leather Cloak Supplies -->
+    <work_order id="5216" start_npc_ids="203793 830052" recipe_id="155004099">
+        <give_component item_id="182290098" count="12"/>
+    </work_order>
+    <!-- Bolt of Fess Armor Lining Supplies -->
+    <work_order id="5217" start_npc_ids="203793 830052" recipe_id="155004100">
+        <give_component item_id="182290099" count="24"/>
+    </work_order>
+    <!-- Leather Quiver Supplies -->
+    <work_order id="5218" start_npc_ids="203793 830052" recipe_id="155004101">
+        <give_component item_id="182290100" count="24"/>
+    </work_order>
+    <!-- Fess Pauldrons Mend -->
+    <work_order id="5219" start_npc_ids="203793 830052" recipe_id="155004102">
+        <give_component item_id="182290101" count="12"/>
+    </work_order>
+    <!-- Soft Vambrace Mend -->
+    <work_order id="5220" start_npc_ids="203793 830052" recipe_id="155004103">
+        <give_component item_id="182290102" count="16"/>
+    </work_order>
+    <!-- Medical Mask Supplies -->
+    <work_order id="5221" start_npc_ids="203793 830052" recipe_id="155004104">
+        <give_component item_id="182290103" count="16"/>
+    </work_order>
+    <!-- Field Jacket Supplies -->
+    <work_order id="5222" start_npc_ids="203793 830052" recipe_id="155004105">
+        <give_component item_id="182290104" count="48"/>
+    </work_order>
+    <!-- Sobi Gloves Mend -->
+    <work_order id="5223" start_npc_ids="203793 830052" recipe_id="155004106">
+        <give_component item_id="182290105" count="16"/>
+        <give_component item_id="182290270" count="32"/>
+    </work_order>
+    <!-- Leather Tent Supplies -->
+    <work_order id="5224" start_npc_ids="203793 830052" recipe_id="155004107">
+        <give_component item_id="182290106" count="64"/>
+    </work_order>
+    <!-- Sobi Tunic Mend -->
+    <work_order id="5225" start_npc_ids="203793 830052" recipe_id="155004108">
+        <give_component item_id="182290107" count="16"/>
+    </work_order>
+    <!-- Bow Thimble Supplies -->
+    <work_order id="5226" start_npc_ids="203793 830052" recipe_id="155004109">
+        <give_component item_id="182290108" count="32"/>
+    </work_order>
+    <!-- Sobi Belt Mend -->
+    <work_order id="5227" start_npc_ids="203793 830052" recipe_id="155004110">
+        <give_component item_id="182290109" count="16"/>
+    </work_order>
+    <!-- Commander's Leather Coat Supplies -->
+    <work_order id="5228" start_npc_ids="203793 830052" recipe_id="155004111">
+        <give_component item_id="182290110" count="48"/>
+    </work_order>
+    <!-- Sobi Leggings Mend -->
+    <work_order id="5229" start_npc_ids="203793 830052" recipe_id="155004112">
+        <give_component item_id="182290111" count="16"/>
+        <give_component item_id="182290271" count="48"/>
+    </work_order>
+    <!-- Strong Boots Mend -->
+    <work_order id="5230" start_npc_ids="203793 830052" recipe_id="155004113">
+        <give_component item_id="182290112" count="20"/>
+        <give_component item_id="182290272" count="40"/>
+    </work_order>
+    <!-- Blue Fleet Wristband Mend -->
+    <work_order id="5231" start_npc_ids="203793 830052" recipe_id="155004114">
+        <give_component item_id="182290113" count="20"/>
+    </work_order>
+    <!-- Soul Healer's Leggings Mend -->
+    <work_order id="5232" start_npc_ids="203793 830052" recipe_id="155004115">
+        <give_component item_id="182290114" count="20"/>
+        <give_component item_id="182290273" count="40"/>
+    </work_order>
+    <!-- Heiron Vambrace Mend -->
+    <work_order id="5233" start_npc_ids="203793 830052" recipe_id="155004116">
+        <give_component item_id="182290115" count="20"/>
+        <give_component item_id="182290274" count="20"/>
+    </work_order>
+    <!-- Priest's Tunic Mend -->
+    <work_order id="5234" start_npc_ids="203793 830052" recipe_id="155004117">
+        <give_component item_id="182290116" count="20"/>
+        <give_component item_id="182290275" count="20"/>
+    </work_order>
+    <!-- Zephyr Breeches Mend -->
+    <work_order id="5235" start_npc_ids="203793 830052" recipe_id="155004118">
+        <give_component item_id="182290117" count="20"/>
+    </work_order>
+    <!-- Battle Leggings Mend -->
+    <work_order id="5236" start_npc_ids="203793 830052" recipe_id="155004119">
+        <give_component item_id="182290118" count="20"/>
+        <give_component item_id="182290276" count="40"/>
+    </work_order>
+    <!-- Guardsman's Vambrace Mend -->
+    <work_order id="5237" start_npc_ids="203793 830052" recipe_id="155004120">
+        <give_component item_id="182290119" count="20"/>
+    </work_order>
+    <!-- Sanctum Tunic Mend -->
+    <work_order id="5238" start_npc_ids="203793 830052" recipe_id="155004121">
+        <give_component item_id="182290120" count="20"/>
+        <give_component item_id="182290277" count="40"/>
+    </work_order>
+    <!-- Centurion's Leather Belt Mend -->
+    <work_order id="5239" start_npc_ids="203793 830052" recipe_id="155004122">
+        <give_component item_id="182290121" count="20"/>
+        <give_component item_id="182290278" count="40"/>
+    </work_order>
+    <!-- Steps Toward Tailoring Expert -->
+    <work_order id="5240" start_npc_ids="203793 830052" recipe_id="155004123">
+        <give_component item_id="182290122" count="24"/>
+        <give_component item_id="182290279" count="48"/>
+    </work_order>
+    <!-- Wooden Staff Completion -->
+    <work_order id="5300" start_npc_ids="203792 830056" recipe_id="155004124">
+        <give_component item_id="182290123" count="4"/>
+    </work_order>
+    <!-- Wooden Tableware Supplies -->
+    <work_order id="5301" start_npc_ids="203792 830056" recipe_id="155004125">
+        <give_component item_id="182290124" count="8"/>
+    </work_order>
+    <!-- Wooden Cutting Board Supplies -->
+    <work_order id="5302" start_npc_ids="203792 830056" recipe_id="155004126">
+        <give_component item_id="182290125" count="8"/>
+    </work_order>
+    <!-- Silver Fork Supplies -->
+    <work_order id="5303" start_npc_ids="203792 830056" recipe_id="155004127">
+        <give_component item_id="182290126" count="8"/>
+    </work_order>
+    <!-- Tent Support Supplies -->
+    <work_order id="5304" start_npc_ids="203792 830056" recipe_id="155004128">
+        <give_component item_id="182290127" count="16"/>
+    </work_order>
+    <!-- Wooden Box Supplies -->
+    <work_order id="5305" start_npc_ids="203792 830056" recipe_id="155004129">
+        <give_component item_id="182290128" count="8"/>
+    </work_order>
+    <!-- Silver Candlestick Supplies -->
+    <work_order id="5306" start_npc_ids="203792 830056" recipe_id="155004130">
+        <give_component item_id="182290129" count="16"/>
+    </work_order>
+    <!-- Betua Chair Supplies -->
+    <work_order id="5307" start_npc_ids="203792 830056" recipe_id="155004131">
+        <give_component item_id="182290130" count="16"/>
+    </work_order>
+    <!-- Betua Table Supplies -->
+    <work_order id="5308" start_npc_ids="203792 830056" recipe_id="155004132">
+        <give_component item_id="182290131" count="24"/>
+    </work_order>
+    <!-- Betua Practice Sword Supplies -->
+    <work_order id="5309" start_npc_ids="203792 830056" recipe_id="155004133">
+        <give_component item_id="182290132" count="8"/>
+    </work_order>
+    <!-- Silver Earrings Repair -->
+    <work_order id="5310" start_npc_ids="203792 830056" recipe_id="155004134">
+        <give_component item_id="182290133" count="12"/>
+    </work_order>
+    <!-- Wooden Rake Supplies -->
+    <work_order id="5311" start_npc_ids="203792 830056" recipe_id="155004135">
+        <give_component item_id="182290134" count="24"/>
+    </work_order>
+    <!-- Koa Wooden Door Supplies -->
+    <work_order id="5312" start_npc_ids="203792 830056" recipe_id="155004136">
+        <give_component item_id="182290135" count="36"/>
+    </work_order>
+    <!-- Gold Dog Tag Supplies -->
+    <work_order id="5313" start_npc_ids="203792 830056" recipe_id="155004137">
+        <give_component item_id="182290136" count="12"/>
+    </work_order>
+    <!-- Rose Quartz Necklace Repair -->
+    <work_order id="5314" start_npc_ids="203792 830056" recipe_id="155004138">
+        <give_component item_id="182290137" count="48"/>
+    </work_order>
+    <!-- Koa Tool Handle Repair -->
+    <work_order id="5315" start_npc_ids="203792 830056" recipe_id="155004139">
+        <give_component item_id="182290138" count="48"/>
+    </work_order>
+    <!-- Golden Decoration Supplies -->
+    <work_order id="5316" start_npc_ids="203792 830056" recipe_id="155004140">
+        <give_component item_id="182290139" count="24"/>
+    </work_order>
+    <!-- Wood Cabinet Supplies -->
+    <work_order id="5317" start_npc_ids="203792 830056" recipe_id="155004141">
+        <give_component item_id="182290140" count="24"/>
+        <give_component item_id="182290280" count="24"/>
+    </work_order>
+    <!-- Wooden Ladder Supplies -->
+    <work_order id="5318" start_npc_ids="203792 830056" recipe_id="155004142">
+        <give_component item_id="182290141" count="36"/>
+    </work_order>
+    <!-- Drum Supplies -->
+    <work_order id="5319" start_npc_ids="203792 830056" recipe_id="155004143">
+        <give_component item_id="182290142" count="24"/>
+    </work_order>
+    <!-- Koa Bowstave -->
+    <work_order id="5320" start_npc_ids="203792 830056" recipe_id="155004144">
+        <give_component item_id="182290143" count="64"/>
+        <give_component item_id="182290281" count="16"/>
+    </work_order>
+    <!-- Wooden Bed Supplies -->
+    <work_order id="5321" start_npc_ids="203792 830056" recipe_id="155004145">
+        <give_component item_id="182290144" count="64"/>
+    </work_order>
+    <!-- Mailbox Supplies -->
+    <work_order id="5322" start_npc_ids="203792 830056" recipe_id="155004146">
+        <give_component item_id="182290145" count="32"/>
+    </work_order>
+    <!-- Aquamarine Ring Repair -->
+    <work_order id="5323" start_npc_ids="203792 830056" recipe_id="155004147">
+        <give_component item_id="182290146" count="16"/>
+        <give_component item_id="182290282" count="16"/>
+    </work_order>
+    <!-- Hanging Shelf Supplies -->
+    <work_order id="5324" start_npc_ids="203792 830056" recipe_id="155004148">
+        <give_component item_id="182290147" count="32"/>
+    </work_order>
+    <!-- Ulmus Staff Repair -->
+    <work_order id="5325" start_npc_ids="203792 830056" recipe_id="155004149">
+        <give_component item_id="182290148" count="16"/>
+        <give_component item_id="182290283" count="32"/>
+    </work_order>
+    <!-- Balaur Training Dummy Supplies -->
+    <work_order id="5326" start_npc_ids="203792 830056" recipe_id="155004150">
+        <give_component item_id="182290149" count="48"/>
+        <give_component item_id="182290284" count="48"/>
+    </work_order>
+    <!-- Wooden Mallet Supplies -->
+    <work_order id="5327" start_npc_ids="203792 830056" recipe_id="155004151">
+        <give_component item_id="182290150" count="32"/>
+        <give_component item_id="182290285" count="32"/>
+    </work_order>
+    <!-- Platinum Earrings Repair -->
+    <work_order id="5328" start_npc_ids="203792 830056" recipe_id="155004152">
+        <give_component item_id="182290151" count="32"/>
+    </work_order>
+    <!-- Ulmus Bow Repair -->
+    <work_order id="5329" start_npc_ids="203792 830056" recipe_id="155004153">
+        <give_component item_id="182290152" count="16"/>
+    </work_order>
+    <!-- Blue Fleet Ring Repair [310p] -->
+    <work_order id="5330" start_npc_ids="203792 830056" recipe_id="155004154">
+        <give_component item_id="182290153" count="20"/>
+    </work_order>
+    <!-- Casting Mold Supplies -->
+    <work_order id="5331" start_npc_ids="203792 830056" recipe_id="155004155">
+        <give_component item_id="182290154" count="40"/>
+    </work_order>
+    <!-- Egrasi Barricade Supplies -->
+    <work_order id="5332" start_npc_ids="203792 830056" recipe_id="155004156">
+        <give_component item_id="182290155" count="40"/>
+        <give_component item_id="182290286" count="40"/>
+    </work_order>
+    <!-- Ruby Necklace Repair -->
+    <work_order id="5333" start_npc_ids="203792 830056" recipe_id="155004157">
+        <give_component item_id="182290156" count="20"/>
+        <give_component item_id="182290287" count="20"/>
+    </work_order>
+    <!-- Heiron Bow Repair -->
+    <work_order id="5334" start_npc_ids="203792 830056" recipe_id="155004158">
+        <give_component item_id="182290157" count="20"/>
+    </work_order>
+    <!-- Battle Staff Repair -->
+    <work_order id="5335" start_npc_ids="203792 830056" recipe_id="155004159">
+        <give_component item_id="182290158" count="20"/>
+    </work_order>
+    <!-- Mithril Earrings Repair -->
+    <work_order id="5336" start_npc_ids="203792 830056" recipe_id="155004160">
+        <give_component item_id="182290159" count="20"/>
+    </work_order>
+    <!-- Priest's Headband Repair -->
+    <work_order id="5337" start_npc_ids="203792 830056" recipe_id="155004161">
+        <give_component item_id="182290160" count="20"/>
+        <give_component item_id="182290288" count="40"/>
+    </work_order>
+    <!-- Sanctum Staff Repair -->
+    <work_order id="5338" start_npc_ids="203792 830056" recipe_id="155004162">
+        <give_component item_id="182290161" count="20"/>
+    </work_order>
+    <!-- Centurion's Necklace Repair -->
+    <work_order id="5339" start_npc_ids="203792 830056" recipe_id="155004163">
+        <give_component item_id="182290162" count="20"/>
+        <give_component item_id="182290289" count="40"/>
+    </work_order>
+    <!-- Steps Toward Handicrafting Expert -->
+    <work_order id="5340" start_npc_ids="203792 830056" recipe_id="155004164">
+        <give_component item_id="182290163" count="24"/>
+    </work_order>
+    <!-- Lamplight Supplies -->
+    <work_order id="5400" start_npc_ids="203786 830054" recipe_id="155004165">
+        <give_component item_id="182290164" count="4"/>
+    </work_order>
+    <!-- Military Compass Supplies -->
+    <work_order id="5401" start_npc_ids="203786 830054" recipe_id="155004166">
+        <give_component item_id="182290165" count="8"/>
+    </work_order>
+    <!-- Healing Tea Supplies -->
+    <work_order id="5402" start_npc_ids="203786 830054" recipe_id="155004167">
+        <give_component item_id="182290166" count="8"/>
+    </work_order>
+    <!-- Magical Hourglass Supplies -->
+    <work_order id="5403" start_npc_ids="203786 830054" recipe_id="155004168">
+        <give_component item_id="182290167" count="8"/>
+    </work_order>
+    <!-- Sleeping Pill Supplies -->
+    <work_order id="5404" start_npc_ids="203786 830054" recipe_id="155004169">
+        <give_component item_id="182290168" count="8"/>
+    </work_order>
+    <!-- Everburning Candle Supplies -->
+    <work_order id="5405" start_npc_ids="203786 830054" recipe_id="155004170">
+        <give_component item_id="182290169" count="16"/>
+    </work_order>
+    <!-- Antibiotic Supplies -->
+    <work_order id="5406" start_npc_ids="203786 830054" recipe_id="155004171">
+        <give_component item_id="182290170" count="8"/>
+    </work_order>
+    <!-- Improved Recovery Potion Supplies -->
+    <work_order id="5407" start_npc_ids="203786 830054" recipe_id="155004172">
+        <give_component item_id="182290171" count="8"/>
+    </work_order>
+    <!-- Military Soap Supplies -->
+    <work_order id="5408" start_npc_ids="203786 830054" recipe_id="155004173">
+        <give_component item_id="182290172" count="8"/>
+    </work_order>
+    <!-- Molting Remedy Supplies -->
+    <work_order id="5409" start_npc_ids="203786 830054" recipe_id="155004174">
+        <give_component item_id="182290173" count="8"/>
+    </work_order>
+    <!-- Verteron Orb Repair -->
+    <work_order id="5410" start_npc_ids="203786 830054" recipe_id="155004175">
+        <give_component item_id="182290174" count="12"/>
+    </work_order>
+    <!-- Disinfectant Supplies -->
+    <work_order id="5411" start_npc_ids="203786 830054" recipe_id="155004176">
+        <give_component item_id="182290175" count="12"/>
+    </work_order>
+    <!-- Digestive Aid Supplies -->
+    <work_order id="5412" start_npc_ids="203786 830054" recipe_id="155004177">
+        <give_component item_id="182290176" count="12"/>
+    </work_order>
+    <!-- Mana Treatment Lozenge Supplies -->
+    <work_order id="5413" start_npc_ids="203786 830054" recipe_id="155004178">
+        <give_component item_id="182290177" count="12"/>
+    </work_order>
+    <!-- Energizing Tea Supplies -->
+    <work_order id="5414" start_npc_ids="203786 830054" recipe_id="155004179">
+        <give_component item_id="182290178" count="24"/>
+        <give_component item_id="182290290" count="12"/>
+    </work_order>
+    <!-- Cultivator's Spellbook Repair -->
+    <work_order id="5415" start_npc_ids="203786 830054" recipe_id="155004180">
+        <give_component item_id="182290179" count="12"/>
+        <give_component item_id="182290291" count="48"/>
+    </work_order>
+    <!-- Antidote Supplies -->
+    <work_order id="5416" start_npc_ids="203786 830054" recipe_id="155004181">
+        <give_component item_id="182290180" count="12"/>
+        <give_component item_id="182290292" count="12"/>
+    </work_order>
+    <!-- Cold Remedy Supplies -->
+    <work_order id="5417" start_npc_ids="203786 830054" recipe_id="155004182">
+        <give_component item_id="182290181" count="12"/>
+        <give_component item_id="182290293" count="12"/>
+    </work_order>
+    <!-- Siege Weapon Gunpowder Supplies -->
+    <work_order id="5418" start_npc_ids="203786 830054" recipe_id="155004183">
+        <give_component item_id="182290182" count="12"/>
+    </work_order>
+    <!-- Eltnen Orb Repair -->
+    <work_order id="5419" start_npc_ids="203786 830054" recipe_id="155004184">
+        <give_component item_id="182290183" count="12"/>
+        <give_component item_id="182290294" count="12"/>
+    </work_order>
+    <!-- Eltnen Spellbook Repair -->
+    <work_order id="5420" start_npc_ids="203786 830054" recipe_id="155004185">
+        <give_component item_id="182290184" count="16"/>
+        <give_component item_id="182290295" count="64"/>
+    </work_order>
+    <!-- Pain Ointment Supplies -->
+    <work_order id="5421" start_npc_ids="203786 830054" recipe_id="155004186">
+        <give_component item_id="182290185" count="32"/>
+        <give_component item_id="182290296" count="16"/>
+    </work_order>
+    <!-- Antidoze Supplies -->
+    <work_order id="5422" start_npc_ids="203786 830054" recipe_id="155004187">
+        <give_component item_id="182290186" count="32"/>
+        <give_component item_id="182290297" count="16"/>
+    </work_order>
+    <!-- Antifracture Lozenge Supplies -->
+    <work_order id="5423" start_npc_ids="203786 830054" recipe_id="155004188">
+        <give_component item_id="182290187" count="32"/>
+    </work_order>
+    <!-- Explorer's Spellbook Repair -->
+    <work_order id="5424" start_npc_ids="203786 830054" recipe_id="155004189">
+        <give_component item_id="182290188" count="16"/>
+        <give_component item_id="182290298" count="48"/>
+    </work_order>
+    <!-- Explorer's Orb Repair -->
+    <work_order id="5425" start_npc_ids="203786 830054" recipe_id="155004190">
+        <give_component item_id="182290189" count="16"/>
+        <give_component item_id="182290299" count="48"/>
+    </work_order>
+    <!-- Paralyzing Poison Supplies -->
+    <work_order id="5426" start_npc_ids="203786 830054" recipe_id="155004191">
+        <give_component item_id="182290190" count="16"/>
+        <give_component item_id="182290300" count="16"/>
+    </work_order>
+    <!-- Daevanion Mist Detector Supplies -->
+    <work_order id="5427" start_npc_ids="203786 830054" recipe_id="155004192">
+        <give_component item_id="182290191" count="48"/>
+        <give_component item_id="182290301" count="32"/>
+    </work_order>
+    <!-- Air Mine Repair -->
+    <work_order id="5428" start_npc_ids="203786 830054" recipe_id="155004193">
+        <give_component item_id="182290192" count="48"/>
+        <give_component item_id="182290302" count="32"/>
+    </work_order>
+    <!-- Heiron Orb Repair -->
+    <work_order id="5429" start_npc_ids="203786 830054" recipe_id="155004194">
+        <give_component item_id="182290193" count="16"/>
+        <give_component item_id="182290303" count="48"/>
+    </work_order>
+    <!-- Heiron Spellbook Repair -->
+    <work_order id="5430" start_npc_ids="203786 830054" recipe_id="155004195">
+        <give_component item_id="182290194" count="20"/>
+        <give_component item_id="182290304" count="60"/>
+    </work_order>
+    <!-- Krall Language Potion Supplies -->
+    <work_order id="5431" start_npc_ids="203786 830054" recipe_id="155004196">
+        <give_component item_id="182290195" count="40"/>
+    </work_order>
+    <!-- Gate Restoration Stone Repair -->
+    <work_order id="5432" start_npc_ids="203786 830054" recipe_id="155004197">
+        <give_component item_id="182290196" count="20"/>
+    </work_order>
+    <!-- Rift Suppressant Supplies -->
+    <work_order id="5433" start_npc_ids="203786 830054" recipe_id="155004198">
+        <give_component item_id="182290197" count="40"/>
+    </work_order>
+    <!-- Priest's Spellbook Repair -->
+    <work_order id="5434" start_npc_ids="203786 830054" recipe_id="155004199">
+        <give_component item_id="182290198" count="20"/>
+        <give_component item_id="182290305" count="60"/>
+    </work_order>
+    <!-- Battle Orb Repair -->
+    <work_order id="5435" start_npc_ids="203786 830054" recipe_id="155004200">
+        <give_component item_id="182290199" count="20"/>
+        <give_component item_id="182290306" count="40"/>
+    </work_order>
+    <!-- Arlion Trap Repair -->
+    <work_order id="5436" start_npc_ids="203786 830054" recipe_id="155004201">
+        <give_component item_id="182290200" count="20"/>
+        <give_component item_id="182290307" count="20"/>
+    </work_order>
+    <!-- Obelisk Repair -->
+    <work_order id="5437" start_npc_ids="203786 830054" recipe_id="155004202">
+        <give_component item_id="182290201" count="20"/>
+        <give_component item_id="182290308" count="40"/>
+    </work_order>
+    <!-- Teleport Statue Repair -->
+    <work_order id="5438" start_npc_ids="203786 830054" recipe_id="155004203">
+        <give_component item_id="182290202" count="20"/>
+        <give_component item_id="182290309" count="40"/>
+    </work_order>
+    <!-- Warning System Repair -->
+    <work_order id="5439" start_npc_ids="203786 830054" recipe_id="155004204">
+        <give_component item_id="182290203" count="20"/>
+        <give_component item_id="182290310" count="40"/>
+    </work_order>
+    <!-- Steps Toward Alchemy Expert -->
+    <work_order id="5440" start_npc_ids="203786 830054" recipe_id="155004205">
+        <give_component item_id="182290204" count="24"/>
+        <give_component item_id="182290311" count="48"/>
+    </work_order>
+    <!-- Gritty Inina Supplies -->
+    <work_order id="5500" start_npc_ids="203784 830058" recipe_id="155004206">
+        <give_component item_id="182290205" count="4"/>
+    </work_order>
+    <!-- Salted Cypri Supplies -->
+    <work_order id="5501" start_npc_ids="203784 830058" recipe_id="155004207">
+        <give_component item_id="182290206" count="8"/>
+    </work_order>
+    <!-- Kukuru Dumpling Skin Supplies -->
+    <work_order id="5502" start_npc_ids="203784 830058" recipe_id="155004208">
+        <give_component item_id="182290207" count="8"/>
+    </work_order>
+    <!-- Liguri Spaghetti Supplies -->
+    <work_order id="5503" start_npc_ids="203784 830058" recipe_id="155004209">
+        <give_component item_id="182290208" count="8"/>
+    </work_order>
+    <!-- Seedless Rubus Supplies -->
+    <work_order id="5504" start_npc_ids="203784 830058" recipe_id="155004210">
+        <give_component item_id="182290209" count="8"/>
+    </work_order>
+    <!-- Worg Gravy Supplies -->
+    <work_order id="5505" start_npc_ids="203784 830058" recipe_id="155004211">
+        <give_component item_id="182290210" count="8"/>
+    </work_order>
+    <!-- Mela Candy Supplies -->
+    <work_order id="5506" start_npc_ids="203784 830058" recipe_id="155004212">
+        <give_component item_id="182290211" count="8"/>
+    </work_order>
+    <!-- Shelled Venera Supplies -->
+    <work_order id="5507" start_npc_ids="203784 830058" recipe_id="155004213">
+        <give_component item_id="182290212" count="8"/>
+    </work_order>
+    <!-- Caprauna Juice Supplies -->
+    <work_order id="5508" start_npc_ids="203784 830058" recipe_id="155004214">
+        <give_component item_id="182290213" count="8"/>
+    </work_order>
+    <!-- Abex Cheese Supplies -->
+    <work_order id="5509" start_npc_ids="203784 830058" recipe_id="155004215">
+        <give_component item_id="182290214" count="8"/>
+    </work_order>
+    <!-- Salad Dressing Supplies -->
+    <work_order id="5510" start_npc_ids="203784 830058" recipe_id="155004216">
+        <give_component item_id="182290215" count="12"/>
+    </work_order>
+    <!-- Minced Crasaur Meat Supplies -->
+    <work_order id="5511" start_npc_ids="203784 830058" recipe_id="155004217">
+        <give_component item_id="182290216" count="12"/>
+    </work_order>
+    <!-- Seasoned Back Ribs Supplies -->
+    <work_order id="5512" start_npc_ids="203784 830058" recipe_id="155004218">
+        <give_component item_id="182290217" count="12"/>
+    </work_order>
+    <!-- Wiki Juice Supplies -->
+    <work_order id="5513" start_npc_ids="203784 830058" recipe_id="155004219">
+        <give_component item_id="182290218" count="12"/>
+    </work_order>
+    <!-- Stuffed Lapia Supplies -->
+    <work_order id="5514" start_npc_ids="203784 830058" recipe_id="155004220">
+        <give_component item_id="182290219" count="12"/>
+    </work_order>
+    <!-- Chopped Ruta for Frying Supplies -->
+    <work_order id="5515" start_npc_ids="203784 830058" recipe_id="155004221">
+        <give_component item_id="182290220" count="12"/>
+    </work_order>
+    <!-- Seasoned Spiner Leg Meat Supplies -->
+    <work_order id="5516" start_npc_ids="203784 830058" recipe_id="155004222">
+        <give_component item_id="182290221" count="12"/>
+    </work_order>
+    <!-- Bacora Caviar Supplies -->
+    <work_order id="5517" start_npc_ids="203784 830058" recipe_id="155004223">
+        <give_component item_id="182290222" count="12"/>
+    </work_order>
+    <!-- Omblic Sauce Supplies -->
+    <work_order id="5518" start_npc_ids="203784 830058" recipe_id="155004224">
+        <give_component item_id="182290223" count="12"/>
+    </work_order>
+    <!-- Zeyla Rice Supplies -->
+    <work_order id="5519" start_npc_ids="203784 830058" recipe_id="155004225">
+        <give_component item_id="182290224" count="12"/>
+    </work_order>
+    <!-- Zeyla Spaghetti Supplies -->
+    <work_order id="5520" start_npc_ids="203784 830058" recipe_id="155004226">
+        <give_component item_id="182290225" count="16"/>
+    </work_order>
+    <!-- Seasoned Pleuro Gills Supplies -->
+    <work_order id="5521" start_npc_ids="203784 830058" recipe_id="155004227">
+        <give_component item_id="182290226" count="16"/>
+    </work_order>
+    <!-- Seasoned Tipolid Meat Supplies -->
+    <work_order id="5522" start_npc_ids="203784 830058" recipe_id="155004228">
+        <give_component item_id="182290227" count="16"/>
+    </work_order>
+    <!-- Frozen Tipolid Patty -->
+    <work_order id="5523" start_npc_ids="203784 830058" recipe_id="155004229">
+        <give_component item_id="182290228" count="16"/>
+    </work_order>
+    <!-- Battered Griffon Wing Supplies -->
+    <work_order id="5524" start_npc_ids="203784 830058" recipe_id="155004230">
+        <give_component item_id="182290229" count="16"/>
+        <give_component item_id="182290312" count="16"/>
+    </work_order>
+    <!-- Canned Meon Smoothie Supplies -->
+    <work_order id="5525" start_npc_ids="203784 830058" recipe_id="155004231">
+        <give_component item_id="182290230" count="16"/>
+    </work_order>
+    <!-- Dried Perial Seed Supplies -->
+    <work_order id="5526" start_npc_ids="203784 830058" recipe_id="155004232">
+        <give_component item_id="182290231" count="16"/>
+    </work_order>
+    <!-- Ground Triora Soup Supplies -->
+    <work_order id="5527" start_npc_ids="203784 830058" recipe_id="155004233">
+        <give_component item_id="182290232" count="16"/>
+    </work_order>
+    <!-- Battered Megrim Supplies -->
+    <work_order id="5528" start_npc_ids="203784 830058" recipe_id="155004234">
+        <give_component item_id="182290233" count="16"/>
+    </work_order>
+    <!-- Frillneck Gravy Supplies -->
+    <work_order id="5529" start_npc_ids="203784 830058" recipe_id="155004235">
+        <give_component item_id="182290234" count="16"/>
+    </work_order>
+    <!-- Ormea Sherbet Supplies -->
+    <work_order id="5530" start_npc_ids="203784 830058" recipe_id="155004236">
+        <give_component item_id="182290235" count="20"/>
+    </work_order>
+    <!-- Egrasi Sap Supplies -->
+    <work_order id="5531" start_npc_ids="203784 830058" recipe_id="155004237">
+        <give_component item_id="182290236" count="20"/>
+    </work_order>
+    <!-- Tange Seed Powder Supplies -->
+    <work_order id="5532" start_npc_ids="203784 830058" recipe_id="155004238">
+        <give_component item_id="182290237" count="20"/>
+    </work_order>
+    <!-- Litrea Seasoning Supplies -->
+    <work_order id="5533" start_npc_ids="203784 830058" recipe_id="155004239">
+        <give_component item_id="182290238" count="20"/>
+    </work_order>
+    <!-- Seasoned Zigi Dough Supplies -->
+    <work_order id="5534" start_npc_ids="203784 830058" recipe_id="155004240">
+        <give_component item_id="182290239" count="20"/>
+    </work_order>
+    <!-- Seasoned Esosa Supplies -->
+    <work_order id="5535" start_npc_ids="203784 830058" recipe_id="155004241">
+        <give_component item_id="182290240" count="20"/>
+    </work_order>
+    <!-- Sanctum Natural Food Supplies -->
+    <work_order id="5536" start_npc_ids="203784 830058" recipe_id="155004242">
+        <give_component item_id="182290241" count="20"/>
+        <give_component item_id="182290313" count="20"/>
+    </work_order>
+    <!-- Verteron Energizing Tea Supplies -->
+    <work_order id="5537" start_npc_ids="203784 830058" recipe_id="155004243">
+        <give_component item_id="182290242" count="20"/>
+        <give_component item_id="182290314" count="20"/>
+    </work_order>
+    <!-- Mixed Seafood Soup Supplies -->
+    <work_order id="5538" start_npc_ids="203784 830058" recipe_id="155004244">
+        <give_component item_id="182290243" count="20"/>
+        <give_component item_id="182290315" count="20"/>
+    </work_order>
+    <!-- Crasaur Ribs Supplies -->
+    <work_order id="5539" start_npc_ids="203784 830058" recipe_id="155004245">
+        <give_component item_id="182290244" count="20"/>
+    </work_order>
+    <!-- Steps Toward Cooking Expert -->
+    <work_order id="5540" start_npc_ids="203784 830058" recipe_id="155004246">
+        <give_component item_id="182290245" count="24"/>
+        <give_component item_id="182290316" count="24"/>
+    </work_order>
+    <!-- Wooden Shelf Supply -->
+    <work_order id="5541" start_npc_ids="798450 798454" recipe_id="155004247">
+        <give_component item_id="182290563" count="4"/>
+    </work_order>
+    <!-- Storage Box Supply -->
+    <work_order id="5542" start_npc_ids="798450 798454" recipe_id="155004248">
+        <give_component item_id="182290564" count="8"/>
+    </work_order>
+    <!-- Lunch Counter Supply -->
+    <work_order id="5543" start_npc_ids="798450 798454" recipe_id="155004249">
+        <give_component item_id="182290565" count="8"/>
+    </work_order>
+    <!-- Field Bed Supply -->
+    <work_order id="5544" start_npc_ids="798450 798454" recipe_id="155004250">
+        <give_component item_id="182290566" count="8"/>
+    </work_order>
+    <!-- Round Rug Supply -->
+    <work_order id="5545" start_npc_ids="798450 798454" recipe_id="155004251">
+        <give_component item_id="182290567" count="8"/>
+    </work_order>
+    <!-- Dining Chair Repair -->
+    <work_order id="5546" start_npc_ids="798450 798454" recipe_id="155004252">
+        <give_component item_id="182290568" count="8"/>
+    </work_order>
+    <!-- Wooden Frame Supply -->
+    <work_order id="5547" start_npc_ids="798450 798454" recipe_id="155004253">
+        <give_component item_id="182290569" count="8"/>
+    </work_order>
+    <!-- Small Candle Supply -->
+    <work_order id="5548" start_npc_ids="798450 798454" recipe_id="155004254">
+        <give_component item_id="182290570" count="8"/>
+    </work_order>
+    <!-- Wooden Table Supply -->
+    <work_order id="5549" start_npc_ids="798450 798454" recipe_id="155004255">
+        <give_component item_id="182290571" count="8"/>
+    </work_order>
+    <!-- Small Gourd Bottle Supply -->
+    <work_order id="5550" start_npc_ids="798450 798454" recipe_id="155004256">
+        <give_component item_id="182290572" count="8"/>
+    </work_order>
+    <!-- Side Table Light Supply -->
+    <work_order id="5551" start_npc_ids="798450 798454" recipe_id="155004257">
+        <give_component item_id="182290573" count="12"/>
+    </work_order>
+    <!-- Topaz Display Cabinet Supply -->
+    <work_order id="5552" start_npc_ids="798450 798454" recipe_id="155004258">
+        <give_component item_id="182290574" count="12"/>
+    </work_order>
+    <!-- Silver Side Table Supply -->
+    <work_order id="5553" start_npc_ids="798450 798454" recipe_id="155004259">
+        <give_component item_id="182290575" count="12"/>
+    </work_order>
+    <!-- Bed with Fiber Blanket Supply -->
+    <work_order id="5554" start_npc_ids="798450 798454" recipe_id="155004260">
+        <give_component item_id="182290576" count="12"/>
+    </work_order>
+    <!-- Thin Curtain Supply -->
+    <work_order id="5555" start_npc_ids="798450 798454" recipe_id="155004261">
+        <give_component item_id="182290577" count="12"/>
+    </work_order>
+    <!-- Rubashi Scented Candle Supply -->
+    <work_order id="5556" start_npc_ids="798450 798454" recipe_id="155004262">
+        <give_component item_id="182290578" count="12"/>
+    </work_order>
+    <!-- Mithril Frame Supply -->
+    <work_order id="5557" start_npc_ids="798450 798454" recipe_id="155004263">
+        <give_component item_id="182290579" count="12"/>
+    </work_order>
+    <!-- Moonstone Fishbowl Supply -->
+    <work_order id="5558" start_npc_ids="798450 798454" recipe_id="155004264">
+        <give_component item_id="182290580" count="12"/>
+    </work_order>
+    <!-- Built-in Closet Supply -->
+    <work_order id="5559" start_npc_ids="798450 798454" recipe_id="155004265">
+        <give_component item_id="182290581" count="12"/>
+    </work_order>
+    <!-- Bunk Bed Supply -->
+    <work_order id="5560" start_npc_ids="798450 798454" recipe_id="155004266">
+        <give_component item_id="182290582" count="12"/>
+    </work_order>
+    <!-- Merchant's Tent Repair -->
+    <work_order id="5561" start_npc_ids="798450 798454" recipe_id="155004267">
+        <give_component item_id="182290583" count="16"/>
+    </work_order>
+    <!-- Wall-mounted Fishbowl Repair -->
+    <work_order id="5562" start_npc_ids="798450 798454" recipe_id="155004268">
+        <give_component item_id="182290584" count="16"/>
+    </work_order>
+    <!-- Amalil Bloom Supply -->
+    <work_order id="5563" start_npc_ids="798450 798454" recipe_id="155004269">
+        <give_component item_id="182290585" count="16"/>
+    </work_order>
+    <!-- Paisley Carpet Supply -->
+    <work_order id="5564" start_npc_ids="798450 798454" recipe_id="155004270">
+        <give_component item_id="182290586" count="16"/>
+    </work_order>
+    <!-- Round Cabinet Supply -->
+    <work_order id="5565" start_npc_ids="798450 798454" recipe_id="155004271">
+        <give_component item_id="182290587" count="16"/>
+        <give_component item_id="182290604" count="16"/>
+    </work_order>
+    <!-- Adamantium Dining Table Repair -->
+    <work_order id="5566" start_npc_ids="798450 798454" recipe_id="155004272">
+        <give_component item_id="182290588" count="16"/>
+    </work_order>
+    <!-- Light Bulb for Standing Lamp Supply -->
+    <work_order id="5567" start_npc_ids="798450 798454" recipe_id="155004273">
+        <give_component item_id="182290589" count="16"/>
+    </work_order>
+    <!-- Built-in Bookshelf Repair -->
+    <work_order id="5568" start_npc_ids="798450 798454" recipe_id="155004274">
+        <give_component item_id="182290590" count="16"/>
+    </work_order>
+    <!-- Watchman's Bed Repair -->
+    <work_order id="5569" start_npc_ids="798450 798454" recipe_id="155004275">
+        <give_component item_id="182290591" count="16"/>
+    </work_order>
+    <!-- Adamantite Music Box Repair -->
+    <work_order id="5570" start_npc_ids="798450 798454" recipe_id="155004276">
+        <give_component item_id="182290592" count="16"/>
+    </work_order>
+    <!-- Commander's Round Table Repair -->
+    <work_order id="5571" start_npc_ids="798450 798454" recipe_id="155004277">
+        <give_component item_id="182290593" count="20"/>
+    </work_order>
+    <!-- Wardrobe of the Blue Fleet Repair -->
+    <work_order id="5572" start_npc_ids="798450 798454" recipe_id="155004278">
+        <give_component item_id="182290594" count="20"/>
+    </work_order>
+    <!-- Legionary's Achievement Furniture Repair -->
+    <work_order id="5573" start_npc_ids="798450 798454" recipe_id="155004279">
+        <give_component item_id="182290595" count="20"/>
+    </work_order>
+    <!-- Protectorate's Partition Repair -->
+    <work_order id="5574" start_npc_ids="798450 798454" recipe_id="155004280">
+        <give_component item_id="182290596" count="20"/>
+    </work_order>
+    <!-- Priest's Table Repair -->
+    <work_order id="5575" start_npc_ids="798450 798454" recipe_id="155004281">
+        <give_component item_id="182290597" count="20"/>
+    </work_order>
+    <!-- Temple Rack Repair -->
+    <work_order id="5576" start_npc_ids="798450 798454" recipe_id="155004282">
+        <give_component item_id="182290598" count="20"/>
+    </work_order>
+    <!-- Battle Accessory Repair -->
+    <work_order id="5577" start_npc_ids="798450 798454" recipe_id="155004283">
+        <give_component item_id="182290599" count="20"/>
+        <give_component item_id="182290605" count="20"/>
+    </work_order>
+    <!-- Guardsman's Shelf Repair -->
+    <work_order id="5578" start_npc_ids="798450 798454" recipe_id="155004284">
+        <give_component item_id="182290600" count="20"/>
+        <give_component item_id="182290606" count="20"/>
+    </work_order>
+    <!-- Sanctum's Display Cabinet Repair -->
+    <work_order id="5579" start_npc_ids="798450 798454" recipe_id="155004285">
+        <give_component item_id="182290601" count="20"/>
+        <give_component item_id="182290607" count="20"/>
+    </work_order>
+    <!-- Centurion's Chair Repair -->
+    <work_order id="5580" start_npc_ids="798450 798454" recipe_id="155004286">
+        <give_component item_id="182290602" count="20"/>
+    </work_order>
+    <!-- Beginning of the Construction Expert -->
+    <work_order id="5581" start_npc_ids="798450 798454" recipe_id="155004287">
+        <give_component item_id="182290603" count="24"/>
+        <give_component item_id="182290608" count="24"/>
+    </work_order>
+    <!-- Steel Chisel Supplies -->
+    <work_order id="6000" start_npc_ids="204104 830146" recipe_id="155009001">
+        <give_component item_id="182291000" count="4"/>
+    </work_order>
+    <!-- Steel Screw Supplies -->
+    <work_order id="6001" start_npc_ids="204104 830146" recipe_id="155009002">
+        <give_component item_id="182291001" count="16"/>
+    </work_order>
+    <!-- Steel Hammer Supplies -->
+    <work_order id="6002" start_npc_ids="204104 830146" recipe_id="155009003">
+        <give_component item_id="182291002" count="16"/>
+    </work_order>
+    <!-- Steel Wrench Supplies -->
+    <work_order id="6003" start_npc_ids="204104 830146" recipe_id="155009004">
+        <give_component item_id="182291003" count="24"/>
+    </work_order>
+    <!-- Steel Shovel Supplies -->
+    <work_order id="6004" start_npc_ids="204104 830146" recipe_id="155009005">
+        <give_component item_id="182291004" count="16"/>
+    </work_order>
+    <!-- Steel Grill Supplies -->
+    <work_order id="6005" start_npc_ids="204104 830146" recipe_id="155009006">
+        <give_component item_id="182291005" count="32"/>
+    </work_order>
+    <!-- Steel Polearm Blade Repair -->
+    <work_order id="6006" start_npc_ids="204104 830146" recipe_id="155009007">
+        <give_component item_id="182291006" count="16"/>
+    </work_order>
+    <!-- Steel Pick Supplies -->
+    <work_order id="6007" start_npc_ids="204104 830146" recipe_id="155009008">
+        <give_component item_id="182291007" count="16"/>
+    </work_order>
+    <!-- Steel Throwing Knife Supplies -->
+    <work_order id="6008" start_npc_ids="204104 830146" recipe_id="155009009">
+        <give_component item_id="182291008" count="8"/>
+    </work_order>
+    <!-- Steel Ladder Supplies -->
+    <work_order id="6009" start_npc_ids="204104 830146" recipe_id="155009010">
+        <give_component item_id="182291009" count="32"/>
+    </work_order>
+    <!-- Steel Dagger Repair -->
+    <work_order id="6010" start_npc_ids="204104 830146" recipe_id="155009011">
+        <give_component item_id="182291010" count="12"/>
+    </work_order>
+    <!-- Titanium Arrowhead Supplies -->
+    <work_order id="6011" start_npc_ids="204104 830146" recipe_id="155009012">
+        <give_component item_id="182291011" count="12"/>
+    </work_order>
+    <!-- Titanium Dagger Mount Supplies -->
+    <work_order id="6012" start_npc_ids="204104 830146" recipe_id="155009013">
+        <give_component item_id="182291012" count="12"/>
+    </work_order>
+    <!-- Prison Shackle Supplies -->
+    <work_order id="6013" start_npc_ids="204104 830146" recipe_id="155009014">
+        <give_component item_id="182291013" count="36"/>
+    </work_order>
+    <!-- Titanium Sword Blade Supplies -->
+    <work_order id="6014" start_npc_ids="204104 830146" recipe_id="155009015">
+        <give_component item_id="182291014" count="12"/>
+    </work_order>
+    <!-- Titanium Greatsword Repair -->
+    <work_order id="6015" start_npc_ids="204104 830146" recipe_id="155009016">
+        <give_component item_id="182291015" count="12"/>
+        <give_component item_id="182291246" count="36"/>
+    </work_order>
+    <!-- Pipe Joint Supplies -->
+    <work_order id="6016" start_npc_ids="204104 830146" recipe_id="155009017">
+        <give_component item_id="182291016" count="36"/>
+    </work_order>
+    <!-- Titanium Saw Blade Supplies -->
+    <work_order id="6017" start_npc_ids="204104 830146" recipe_id="155009018">
+        <give_component item_id="182291017" count="24"/>
+    </work_order>
+    <!-- Structural Support Pillar Supplies -->
+    <work_order id="6018" start_npc_ids="204104 830146" recipe_id="155009019">
+        <give_component item_id="182291018" count="48"/>
+    </work_order>
+    <!-- Machine Blade Supplies -->
+    <work_order id="6019" start_npc_ids="204104 830146" recipe_id="155009020">
+        <give_component item_id="182291019" count="36"/>
+    </work_order>
+    <!-- Invader's Mace Repair -->
+    <work_order id="6020" start_npc_ids="204104 830146" recipe_id="155009021">
+        <give_component item_id="182291020" count="16"/>
+        <give_component item_id="182291247" count="64"/>
+    </work_order>
+    <!-- Invader's Sword Repair -->
+    <work_order id="6021" start_npc_ids="204104 830146" recipe_id="155009022">
+        <give_component item_id="182291021" count="16"/>
+    </work_order>
+    <!-- Penetrating Javelin Supplies -->
+    <work_order id="6022" start_npc_ids="204104 830146" recipe_id="155009023">
+        <give_component item_id="182291022" count="32"/>
+    </work_order>
+    <!-- Legion Flagstaff Supplies -->
+    <work_order id="6023" start_npc_ids="204104 830146" recipe_id="155009024">
+        <give_component item_id="182291023" count="48"/>
+    </work_order>
+    <!-- Adamantium Polearm Blade Supplies -->
+    <work_order id="6024" start_npc_ids="204104 830146" recipe_id="155009025">
+        <give_component item_id="182291024" count="16"/>
+    </work_order>
+    <!-- Beluslan Dagger Repair -->
+    <work_order id="6025" start_npc_ids="204104 830146" recipe_id="155009026">
+        <give_component item_id="182291025" count="16"/>
+        <give_component item_id="182291248" count="48"/>
+    </work_order>
+    <!-- Adamantium Gun Barrel Supplies -->
+    <work_order id="6026" start_npc_ids="204104 830146" recipe_id="155009027">
+        <give_component item_id="182291026" count="48"/>
+        <give_component item_id="182291249" count="48"/>
+    </work_order>
+    <!-- Crossbow Bolt Supplies -->
+    <work_order id="6027" start_npc_ids="204104 830146" recipe_id="155009028">
+        <give_component item_id="182291027" count="48"/>
+    </work_order>
+    <!-- Adamantium Dagger Repair -->
+    <work_order id="6028" start_npc_ids="204104 830146" recipe_id="155009029">
+        <give_component item_id="182291028" count="16"/>
+    </work_order>
+    <!-- Beluslan Polearm Repair -->
+    <work_order id="6029" start_npc_ids="204104 830146" recipe_id="155009030">
+        <give_component item_id="182291029" count="16"/>
+    </work_order>
+    <!-- Sentinel's Sword Repair -->
+    <work_order id="6030" start_npc_ids="204104 830146" recipe_id="155009031">
+        <give_component item_id="182291030" count="20"/>
+        <give_component item_id="182291250" count="40"/>
+    </work_order>
+    <!-- Archon Dagger Repair -->
+    <work_order id="6031" start_npc_ids="204104 830146" recipe_id="155009032">
+        <give_component item_id="182291031" count="20"/>
+    </work_order>
+    <!-- Legionary's Greatsword Repair -->
+    <work_order id="6032" start_npc_ids="204104 830146" recipe_id="155009033">
+        <give_component item_id="182291032" count="20"/>
+    </work_order>
+    <!-- Guardian's Mace Repair -->
+    <work_order id="6033" start_npc_ids="204104 830146" recipe_id="155009034">
+        <give_component item_id="182291033" count="20"/>
+    </work_order>
+    <!-- Squad Leader's Polearm Repair -->
+    <work_order id="6034" start_npc_ids="204104 830146" recipe_id="155009035">
+        <give_component item_id="182291034" count="20"/>
+        <give_component item_id="182291251" count="20"/>
+    </work_order>
+    <!-- Executor's Dagger Repair -->
+    <work_order id="6035" start_npc_ids="204104 830146" recipe_id="155009036">
+        <give_component item_id="182291035" count="20"/>
+        <give_component item_id="182291252" count="20"/>
+    </work_order>
+    <!-- Vengeance Polearm Repair -->
+    <work_order id="6036" start_npc_ids="204104 830146" recipe_id="155009037">
+        <give_component item_id="182291036" count="20"/>
+    </work_order>
+    <!-- Guardsman's Greatsword Repair -->
+    <work_order id="6037" start_npc_ids="204104 830146" recipe_id="155009038">
+        <give_component item_id="182291037" count="20"/>
+    </work_order>
+    <!-- Pandaemonium Mace Repair -->
+    <work_order id="6038" start_npc_ids="204104 830146" recipe_id="155009039">
+        <give_component item_id="182291038" count="20"/>
+    </work_order>
+    <!-- Centurion's Sword Repair -->
+    <work_order id="6039" start_npc_ids="204104 830146" recipe_id="155009040">
+        <give_component item_id="182291039" count="20"/>
+    </work_order>
+    <!-- Steps Toward Weaponsmithing Expert -->
+    <work_order id="6040" start_npc_ids="204104 830146" recipe_id="155009041">
+        <give_component item_id="182291040" count="24"/>
+        <give_component item_id="182291253" count="24"/>
+    </work_order>
+    <!-- Metal Plate Supplies -->
+    <work_order id="6100" start_npc_ids="204106 830144" recipe_id="155009042">
+        <give_component item_id="182291041" count="4"/>
+    </work_order>
+    <!-- Steel Box Supplies -->
+    <work_order id="6101" start_npc_ids="204106 830144" recipe_id="155009043">
+        <give_component item_id="182291042" count="8"/>
+    </work_order>
+    <!-- Info Board Supplies -->
+    <work_order id="6102" start_npc_ids="204106 830144" recipe_id="155009044">
+        <give_component item_id="182291043" count="8"/>
+    </work_order>
+    <!-- Storage Drum Supplies -->
+    <work_order id="6103" start_npc_ids="204106 830144" recipe_id="155009045">
+        <give_component item_id="182291044" count="8"/>
+    </work_order>
+    <!-- Folding Cot Supplies -->
+    <work_order id="6104" start_npc_ids="204106 830144" recipe_id="155009046">
+        <give_component item_id="182291045" count="8"/>
+    </work_order>
+    <!-- Personal Locker Supplies -->
+    <work_order id="6105" start_npc_ids="204106 830144" recipe_id="155009047">
+        <give_component item_id="182291046" count="16"/>
+    </work_order>
+    <!-- Kettle Supplies -->
+    <work_order id="6106" start_npc_ids="204106 830144" recipe_id="155009048">
+        <give_component item_id="182291047" count="8"/>
+    </work_order>
+    <!-- Machine Sawteeth Supplies -->
+    <work_order id="6107" start_npc_ids="204106 830144" recipe_id="155009049">
+        <give_component item_id="182291048" count="8"/>
+    </work_order>
+    <!-- Safety Helmet Supplies -->
+    <work_order id="6108" start_npc_ids="204106 830144" recipe_id="155009050">
+        <give_component item_id="182291049" count="8"/>
+    </work_order>
+    <!-- File Safe Supplies -->
+    <work_order id="6109" start_npc_ids="204106 830144" recipe_id="155009051">
+        <give_component item_id="182291050" count="8"/>
+    </work_order>
+    <!-- Durable Steel Spaulders Repair -->
+    <work_order id="6110" start_npc_ids="204106 830144" recipe_id="155009052">
+        <give_component item_id="182291051" count="12"/>
+    </work_order>
+    <!-- Frying Pan Supplies -->
+    <work_order id="6111" start_npc_ids="204106 830144" recipe_id="155009053">
+        <give_component item_id="182291052" count="12"/>
+    </work_order>
+    <!-- Ball Bearings Supplies -->
+    <work_order id="6112" start_npc_ids="204106 830144" recipe_id="155009054">
+        <give_component item_id="182291053" count="12"/>
+    </work_order>
+    <!-- Washtub Supplies -->
+    <work_order id="6113" start_npc_ids="204106 830144" recipe_id="155009055">
+        <give_component item_id="182291054" count="12"/>
+    </work_order>
+    <!-- Cabinet Supplies -->
+    <work_order id="6114" start_npc_ids="204106 830144" recipe_id="155009056">
+        <give_component item_id="182291055" count="24"/>
+    </work_order>
+    <!-- Titanium Handguards Repair -->
+    <work_order id="6115" start_npc_ids="204106 830144" recipe_id="155009057">
+        <give_component item_id="182291056" count="12"/>
+    </work_order>
+    <!-- Titanium Water Pipe Supplies -->
+    <work_order id="6116" start_npc_ids="204106 830144" recipe_id="155009058">
+        <give_component item_id="182291057" count="12"/>
+    </work_order>
+    <!-- Cooking Cauldron Supplies -->
+    <work_order id="6117" start_npc_ids="204106 830144" recipe_id="155009059">
+        <give_component item_id="182291058" count="36"/>
+    </work_order>
+    <!-- Portable Brazier Supplies -->
+    <work_order id="6118" start_npc_ids="204106 830144" recipe_id="155009060">
+        <give_component item_id="182291059" count="48"/>
+    </work_order>
+    <!-- Molded Seat Supplies -->
+    <work_order id="6119" start_npc_ids="204106 830144" recipe_id="155009061">
+        <give_component item_id="182291060" count="24"/>
+    </work_order>
+    <!-- Titanium Shield Repair -->
+    <work_order id="6120" start_npc_ids="204106 830144" recipe_id="155009062">
+        <give_component item_id="182291061" count="16"/>
+        <give_component item_id="182291254" count="16"/>
+    </work_order>
+    <!-- Corrugated Sheet Supplies -->
+    <work_order id="6121" start_npc_ids="204106 830144" recipe_id="155009063">
+        <give_component item_id="182291062" count="32"/>
+    </work_order>
+    <!-- Support Rails Supplies -->
+    <work_order id="6122" start_npc_ids="204106 830144" recipe_id="155009064">
+        <give_component item_id="182291063" count="64"/>
+    </work_order>
+    <!-- Adamantium Chausses Repair -->
+    <work_order id="6123" start_npc_ids="204106 830144" recipe_id="155009065">
+        <give_component item_id="182291064" count="16"/>
+        <give_component item_id="182291255" count="32"/>
+    </work_order>
+    <!-- Adamantium Sabatons Repair -->
+    <work_order id="6124" start_npc_ids="204106 830144" recipe_id="155009066">
+        <give_component item_id="182291065" count="16"/>
+        <give_component item_id="182291256" count="16"/>
+    </work_order>
+    <!-- Adamantium Hauberk Repair -->
+    <work_order id="6125" start_npc_ids="204106 830144" recipe_id="155009067">
+        <give_component item_id="182291066" count="16"/>
+        <give_component item_id="182291257" count="48"/>
+    </work_order>
+    <!-- Mobile Tower Supplies -->
+    <work_order id="6126" start_npc_ids="204106 830144" recipe_id="155009068">
+        <give_component item_id="182291067" count="48"/>
+        <give_component item_id="182291258" count="16"/>
+    </work_order>
+    <!-- Barricade Supplies -->
+    <work_order id="6127" start_npc_ids="204106 830144" recipe_id="155009069">
+        <give_component item_id="182291068" count="16"/>
+        <give_component item_id="182291259" count="48"/>
+    </work_order>
+    <!-- Adamantium Shoulderplates Repair -->
+    <work_order id="6128" start_npc_ids="204106 830144" recipe_id="155009070">
+        <give_component item_id="182291069" count="16"/>
+        <give_component item_id="182291260" count="16"/>
+    </work_order>
+    <!-- Adamantium Breastplate Repair -->
+    <work_order id="6129" start_npc_ids="204106 830144" recipe_id="155009071">
+        <give_component item_id="182291070" count="16"/>
+        <give_component item_id="182291261" count="32"/>
+    </work_order>
+    <!-- Sentinel's Shield Repair -->
+    <work_order id="6130" start_npc_ids="204106 830144" recipe_id="155009072">
+        <give_component item_id="182291071" count="20"/>
+        <give_component item_id="182291262" count="40"/>
+    </work_order>
+    <!-- Repair Vengeance Handguards -->
+    <work_order id="6131" start_npc_ids="204106 830144" recipe_id="155009073">
+        <give_component item_id="182291072" count="20"/>
+    </work_order>
+    <!-- Legionary's Shoulderplates Repair -->
+    <work_order id="6132" start_npc_ids="204106 830144" recipe_id="155009074">
+        <give_component item_id="182291073" count="20"/>
+    </work_order>
+    <!-- Guardian's Greaves Repair -->
+    <work_order id="6133" start_npc_ids="204106 830144" recipe_id="155009075">
+        <give_component item_id="182291074" count="20"/>
+        <give_component item_id="182291263" count="40"/>
+    </work_order>
+    <!-- Squad Leader's Helm Repair -->
+    <work_order id="6134" start_npc_ids="204106 830144" recipe_id="155009076">
+        <give_component item_id="182291075" count="20"/>
+        <give_component item_id="182291264" count="40"/>
+    </work_order>
+    <!-- Archon Shield Repair -->
+    <work_order id="6135" start_npc_ids="204106 830144" recipe_id="155009077">
+        <give_component item_id="182291076" count="20"/>
+        <give_component item_id="182291265" count="20"/>
+    </work_order>
+    <!-- Fenris's Hauberk Repair -->
+    <work_order id="6136" start_npc_ids="204106 830144" recipe_id="155009078">
+        <give_component item_id="182291077" count="20"/>
+        <give_component item_id="182291266" count="40"/>
+    </work_order>
+    <!-- Executor's Sabatons Repair -->
+    <work_order id="6137" start_npc_ids="204106 830144" recipe_id="155009079">
+        <give_component item_id="182291078" count="20"/>
+    </work_order>
+    <!-- Guardsman's Chain Hood Repair -->
+    <work_order id="6138" start_npc_ids="204106 830144" recipe_id="155009080">
+        <give_component item_id="182291079" count="20"/>
+        <give_component item_id="182291267" count="20"/>
+    </work_order>
+    <!-- Centurion's Breastplate Repair -->
+    <work_order id="6139" start_npc_ids="204106 830144" recipe_id="155009081">
+        <give_component item_id="182291080" count="20"/>
+        <give_component item_id="182291268" count="40"/>
+    </work_order>
+    <!-- Steps Toward Armorsmithing Expert -->
+    <work_order id="6140" start_npc_ids="204106 830144" recipe_id="155009082">
+        <give_component item_id="182291081" count="24"/>
+        <give_component item_id="182291269" count="48"/>
+    </work_order>
+    <!-- Medical Gauze -->
+    <work_order id="6200" start_npc_ids="204110 830136" recipe_id="155009083">
+        <give_component item_id="182291082" count="8"/>
+    </work_order>
+    <!-- Simple Cloth Sack Supplies -->
+    <work_order id="6201" start_npc_ids="204110 830136" recipe_id="155009084">
+        <give_component item_id="182291083" count="8"/>
+    </work_order>
+    <!-- Leather Wallet Supplies -->
+    <work_order id="6202" start_npc_ids="204110 830136" recipe_id="155009085">
+        <give_component item_id="182291084" count="16"/>
+    </work_order>
+    <!-- Absorbant Tikel Towel Supplies -->
+    <work_order id="6203" start_npc_ids="204110 830136" recipe_id="155009086">
+        <give_component item_id="182291085" count="8"/>
+    </work_order>
+    <!-- Thin Leather Slippers Supplies -->
+    <work_order id="6204" start_npc_ids="204110 830136" recipe_id="155009087">
+        <give_component item_id="182291086" count="8"/>
+    </work_order>
+    <!-- Work Apron -->
+    <work_order id="6205" start_npc_ids="204110 830136" recipe_id="155009088">
+        <give_component item_id="182291087" count="8"/>
+    </work_order>
+    <!-- Thin Boots Mend -->
+    <work_order id="6206" start_npc_ids="204110 830136" recipe_id="155009089">
+        <give_component item_id="182291088" count="8"/>
+    </work_order>
+    <!-- Thermal Underwear -->
+    <work_order id="6207" start_npc_ids="204110 830136" recipe_id="155009090">
+        <give_component item_id="182291089" count="16"/>
+    </work_order>
+    <!-- Leather Tent Floor Supplies -->
+    <work_order id="6208" start_npc_ids="204110 830136" recipe_id="155009091">
+        <give_component item_id="182291090" count="8"/>
+    </work_order>
+    <!-- Padded Vest Supplies -->
+    <work_order id="6209" start_npc_ids="204110 830136" recipe_id="155009092">
+        <give_component item_id="182291091" count="24"/>
+    </work_order>
+    <!-- Thin Leather Helmet Mend -->
+    <work_order id="6210" start_npc_ids="204110 830136" recipe_id="155009093">
+        <give_component item_id="182291092" count="12"/>
+    </work_order>
+    <!-- Leather Bracelet Supplies -->
+    <work_order id="6211" start_npc_ids="204110 830136" recipe_id="155009094">
+        <give_component item_id="182291093" count="24"/>
+    </work_order>
+    <!-- Combat Sleeping Bag Supplies -->
+    <work_order id="6212" start_npc_ids="204110 830136" recipe_id="155009095">
+        <give_component item_id="182291094" count="36"/>
+    </work_order>
+    <!-- Soft Pillow Supplies -->
+    <work_order id="6213" start_npc_ids="204110 830136" recipe_id="155009096">
+        <give_component item_id="182291095" count="12"/>
+    </work_order>
+    <!-- Leather Sword Frog Supplies -->
+    <work_order id="6214" start_npc_ids="204110 830136" recipe_id="155009097">
+        <give_component item_id="182291096" count="12"/>
+    </work_order>
+    <!-- Twisp Leggings Mend -->
+    <work_order id="6215" start_npc_ids="204110 830136" recipe_id="155009098">
+        <give_component item_id="182291097" count="12"/>
+    </work_order>
+    <!-- Thick Winter Leather Cloak Supplies -->
+    <work_order id="6216" start_npc_ids="204110 830136" recipe_id="155009099">
+        <give_component item_id="182291098" count="12"/>
+    </work_order>
+    <!-- Twisp Armor Lining Supplies -->
+    <work_order id="6217" start_npc_ids="204110 830136" recipe_id="155009100">
+        <give_component item_id="182291099" count="24"/>
+    </work_order>
+    <!-- Leather Quiver Supplies -->
+    <work_order id="6218" start_npc_ids="204110 830136" recipe_id="155009101">
+        <give_component item_id="182291100" count="24"/>
+    </work_order>
+    <!-- Twisp Pauldrons Mend -->
+    <work_order id="6219" start_npc_ids="204110 830136" recipe_id="155009102">
+        <give_component item_id="182291101" count="12"/>
+    </work_order>
+    <!-- Soft Vambrace Mend -->
+    <work_order id="6220" start_npc_ids="204110 830136" recipe_id="155009103">
+        <give_component item_id="182291102" count="16"/>
+    </work_order>
+    <!-- Medical Mask Supplies -->
+    <work_order id="6221" start_npc_ids="204110 830136" recipe_id="155009104">
+        <give_component item_id="182291103" count="16"/>
+    </work_order>
+    <!-- Field Jacket Supplies -->
+    <work_order id="6222" start_npc_ids="204110 830136" recipe_id="155009105">
+        <give_component item_id="182291104" count="48"/>
+    </work_order>
+    <!-- Xilix Gloves Mend -->
+    <work_order id="6223" start_npc_ids="204110 830136" recipe_id="155009106">
+        <give_component item_id="182291105" count="16"/>
+        <give_component item_id="182291270" count="32"/>
+    </work_order>
+    <!-- Leather Tent Supplies -->
+    <work_order id="6224" start_npc_ids="204110 830136" recipe_id="155009107">
+        <give_component item_id="182291106" count="64"/>
+    </work_order>
+    <!-- Xilix Tunic Mend -->
+    <work_order id="6225" start_npc_ids="204110 830136" recipe_id="155009108">
+        <give_component item_id="182291107" count="16"/>
+    </work_order>
+    <!-- Bow Thimble Supplies -->
+    <work_order id="6226" start_npc_ids="204110 830136" recipe_id="155009109">
+        <give_component item_id="182291108" count="32"/>
+    </work_order>
+    <!-- Xilix Belt Mend -->
+    <work_order id="6227" start_npc_ids="204110 830136" recipe_id="155009110">
+        <give_component item_id="182291109" count="16"/>
+    </work_order>
+    <!-- Commander's Leather Coat Supplies -->
+    <work_order id="6228" start_npc_ids="204110 830136" recipe_id="155009111">
+        <give_component item_id="182291110" count="48"/>
+    </work_order>
+    <!-- Xilix Leggings Mend -->
+    <work_order id="6229" start_npc_ids="204110 830136" recipe_id="155009112">
+        <give_component item_id="182291111" count="16"/>
+        <give_component item_id="182291271" count="48"/>
+    </work_order>
+    <!-- Strong Boots Mend -->
+    <work_order id="6230" start_npc_ids="204110 830136" recipe_id="155009113">
+        <give_component item_id="182291112" count="20"/>
+        <give_component item_id="182291272" count="40"/>
+    </work_order>
+    <!-- Fenris's Wristband Mend -->
+    <work_order id="6231" start_npc_ids="204110 830136" recipe_id="155009114">
+        <give_component item_id="182291113" count="20"/>
+    </work_order>
+    <!-- Soul Healer's Leggings Mend -->
+    <work_order id="6232" start_npc_ids="204110 830136" recipe_id="155009115">
+        <give_component item_id="182291114" count="20"/>
+        <give_component item_id="182291273" count="40"/>
+    </work_order>
+    <!-- Beluslan Vambrace Mend -->
+    <work_order id="6233" start_npc_ids="204110 830136" recipe_id="155009116">
+        <give_component item_id="182291115" count="20"/>
+        <give_component item_id="182291274" count="20"/>
+    </work_order>
+    <!-- Priest's Tunic Mend -->
+    <work_order id="6234" start_npc_ids="204110 830136" recipe_id="155009117">
+        <give_component item_id="182291116" count="20"/>
+        <give_component item_id="182291275" count="20"/>
+    </work_order>
+    <!-- Executor's Breeches Mend -->
+    <work_order id="6235" start_npc_ids="204110 830136" recipe_id="155009118">
+        <give_component item_id="182291117" count="20"/>
+    </work_order>
+    <!-- Vengeance Leggings Mend -->
+    <work_order id="6236" start_npc_ids="204110 830136" recipe_id="155009119">
+        <give_component item_id="182291118" count="20"/>
+        <give_component item_id="182291276" count="40"/>
+    </work_order>
+    <!-- Guardsman's Vambrace Mend -->
+    <work_order id="6237" start_npc_ids="204110 830136" recipe_id="155009120">
+        <give_component item_id="182291119" count="20"/>
+    </work_order>
+    <!-- Pandaemonium Tunic Mend -->
+    <work_order id="6238" start_npc_ids="204110 830136" recipe_id="155009121">
+        <give_component item_id="182291120" count="20"/>
+        <give_component item_id="182291277" count="40"/>
+    </work_order>
+    <!-- Centurion's Leather Belt Mend -->
+    <work_order id="6239" start_npc_ids="204110 830136" recipe_id="155009122">
+        <give_component item_id="182291121" count="20"/>
+        <give_component item_id="182291278" count="40"/>
+    </work_order>
+    <!-- Steps Toward Tailoring Expert -->
+    <work_order id="6240" start_npc_ids="204110 830136" recipe_id="155009123">
+        <give_component item_id="182291122" count="24"/>
+        <give_component item_id="182291279" count="48"/>
+    </work_order>
+    <!-- Wooden Staff Completion -->
+    <work_order id="6300" start_npc_ids="204108 830140" recipe_id="155009124">
+        <give_component item_id="182291123" count="4"/>
+    </work_order>
+    <!-- Wooden Tableware Supplies -->
+    <work_order id="6301" start_npc_ids="204108 830140" recipe_id="155009125">
+        <give_component item_id="182291124" count="8"/>
+    </work_order>
+    <!-- Wooden Cutting Board Supplies -->
+    <work_order id="6302" start_npc_ids="204108 830140" recipe_id="155009126">
+        <give_component item_id="182291125" count="8"/>
+    </work_order>
+    <!-- Silver Fork Supplies -->
+    <work_order id="6303" start_npc_ids="204108 830140" recipe_id="155009127">
+        <give_component item_id="182291126" count="8"/>
+    </work_order>
+    <!-- Tent Support Supplies -->
+    <work_order id="6304" start_npc_ids="204108 830140" recipe_id="155009128">
+        <give_component item_id="182291127" count="16"/>
+    </work_order>
+    <!-- Wooden Box Supplies -->
+    <work_order id="6305" start_npc_ids="204108 830140" recipe_id="155009129">
+        <give_component item_id="182291128" count="8"/>
+    </work_order>
+    <!-- Silver Candlestick Supplies -->
+    <work_order id="6306" start_npc_ids="204108 830140" recipe_id="155009130">
+        <give_component item_id="182291129" count="16"/>
+    </work_order>
+    <!-- Tecoma Chair Supplies -->
+    <work_order id="6307" start_npc_ids="204108 830140" recipe_id="155009131">
+        <give_component item_id="182291130" count="16"/>
+    </work_order>
+    <!-- Tecoma Table Supplies -->
+    <work_order id="6308" start_npc_ids="204108 830140" recipe_id="155009132">
+        <give_component item_id="182291131" count="24"/>
+    </work_order>
+    <!-- Tecoma Practice Sword Supplies -->
+    <work_order id="6309" start_npc_ids="204108 830140" recipe_id="155009133">
+        <give_component item_id="182291132" count="8"/>
+    </work_order>
+    <!-- Silver Earrings Repair -->
+    <work_order id="6310" start_npc_ids="204108 830140" recipe_id="155009134">
+        <give_component item_id="182291133" count="12"/>
+    </work_order>
+    <!-- Wooden Rake Supplies -->
+    <work_order id="6311" start_npc_ids="204108 830140" recipe_id="155009135">
+        <give_component item_id="182291134" count="24"/>
+    </work_order>
+    <!-- Wrud Wooden Door Supplies -->
+    <work_order id="6312" start_npc_ids="204108 830140" recipe_id="155009136">
+        <give_component item_id="182291135" count="36"/>
+    </work_order>
+    <!-- Gold Dog Tag Supplies -->
+    <work_order id="6313" start_npc_ids="204108 830140" recipe_id="155009137">
+        <give_component item_id="182291136" count="12"/>
+    </work_order>
+    <!-- Rose Quartz Necklace Repair -->
+    <work_order id="6314" start_npc_ids="204108 830140" recipe_id="155009138">
+        <give_component item_id="182291137" count="48"/>
+    </work_order>
+    <!-- Wrud Tool Handle Repair -->
+    <work_order id="6315" start_npc_ids="204108 830140" recipe_id="155009139">
+        <give_component item_id="182291138" count="48"/>
+    </work_order>
+    <!-- Golden Decoration Supplies -->
+    <work_order id="6316" start_npc_ids="204108 830140" recipe_id="155009140">
+        <give_component item_id="182291139" count="24"/>
+    </work_order>
+    <!-- Wood Cabinet Supplies -->
+    <work_order id="6317" start_npc_ids="204108 830140" recipe_id="155009141">
+        <give_component item_id="182291140" count="24"/>
+        <give_component item_id="182291280" count="24"/>
+    </work_order>
+    <!-- Wooden Ladder Supplies -->
+    <work_order id="6318" start_npc_ids="204108 830140" recipe_id="155009142">
+        <give_component item_id="182291141" count="36"/>
+    </work_order>
+    <!-- Drum Supplies -->
+    <work_order id="6319" start_npc_ids="204108 830140" recipe_id="155009143">
+        <give_component item_id="182291142" count="24"/>
+    </work_order>
+    <!-- Wrud Bowstave -->
+    <work_order id="6320" start_npc_ids="204108 830140" recipe_id="155009144">
+        <give_component item_id="182291143" count="64"/>
+        <give_component item_id="182291281" count="16"/>
+    </work_order>
+    <!-- Wooden Bed Supplies -->
+    <work_order id="6321" start_npc_ids="204108 830140" recipe_id="155009145">
+        <give_component item_id="182291144" count="64"/>
+    </work_order>
+    <!-- Mailbox Supplies -->
+    <work_order id="6322" start_npc_ids="204108 830140" recipe_id="155009146">
+        <give_component item_id="182291145" count="32"/>
+    </work_order>
+    <!-- Aquamarine Ring Repair -->
+    <work_order id="6323" start_npc_ids="204108 830140" recipe_id="155009147">
+        <give_component item_id="182291146" count="16"/>
+        <give_component item_id="182291282" count="16"/>
+    </work_order>
+    <!-- Hanging Shelf Supplies -->
+    <work_order id="6324" start_npc_ids="204108 830140" recipe_id="155009148">
+        <give_component item_id="182291147" count="32"/>
+    </work_order>
+    <!-- Salix Staff Repair -->
+    <work_order id="6325" start_npc_ids="204108 830140" recipe_id="155009149">
+        <give_component item_id="182291148" count="16"/>
+        <give_component item_id="182291283" count="32"/>
+    </work_order>
+    <!-- Balaur Training Dummy Supplies -->
+    <work_order id="6326" start_npc_ids="204108 830140" recipe_id="155009150">
+        <give_component item_id="182291149" count="48"/>
+        <give_component item_id="182291284" count="48"/>
+    </work_order>
+    <!-- Wooden Mallet Supplies -->
+    <work_order id="6327" start_npc_ids="204108 830140" recipe_id="155009151">
+        <give_component item_id="182291150" count="32"/>
+        <give_component item_id="182291285" count="32"/>
+    </work_order>
+    <!-- Platinum Earrings Repair -->
+    <work_order id="6328" start_npc_ids="204108 830140" recipe_id="155009152">
+        <give_component item_id="182291151" count="32"/>
+    </work_order>
+    <!-- Salix Bow Repair -->
+    <work_order id="6329" start_npc_ids="204108 830140" recipe_id="155009153">
+        <give_component item_id="182291152" count="16"/>
+    </work_order>
+    <!-- Fenris's Ring Repair -->
+    <work_order id="6330" start_npc_ids="204108 830140" recipe_id="155009154">
+        <give_component item_id="182291153" count="20"/>
+    </work_order>
+    <!-- Casting Mold Supplies -->
+    <work_order id="6331" start_npc_ids="204108 830140" recipe_id="155009155">
+        <give_component item_id="182291154" count="40"/>
+    </work_order>
+    <!-- Asvata Barricade Supplies -->
+    <work_order id="6332" start_npc_ids="204108 830140" recipe_id="155009156">
+        <give_component item_id="182291155" count="40"/>
+        <give_component item_id="182291286" count="40"/>
+    </work_order>
+    <!-- Ruby Necklace Repair -->
+    <work_order id="6333" start_npc_ids="204108 830140" recipe_id="155009157">
+        <give_component item_id="182291156" count="20"/>
+        <give_component item_id="182291287" count="20"/>
+    </work_order>
+    <!-- Beluslan Bow Repair -->
+    <work_order id="6334" start_npc_ids="204108 830140" recipe_id="155009158">
+        <give_component item_id="182291157" count="20"/>
+    </work_order>
+    <!-- Vengeance Staff Repair -->
+    <work_order id="6335" start_npc_ids="204108 830140" recipe_id="155009159">
+        <give_component item_id="182291158" count="20"/>
+    </work_order>
+    <!-- Mithril Earrings Repair -->
+    <work_order id="6336" start_npc_ids="204108 830140" recipe_id="155009160">
+        <give_component item_id="182291159" count="20"/>
+    </work_order>
+    <!-- Priest's Headband Repair -->
+    <work_order id="6337" start_npc_ids="204108 830140" recipe_id="155009161">
+        <give_component item_id="182291160" count="20"/>
+        <give_component item_id="182291288" count="40"/>
+    </work_order>
+    <!-- Pandaemonium Staff Repair -->
+    <work_order id="6338" start_npc_ids="204108 830140" recipe_id="155009162">
+        <give_component item_id="182291161" count="20"/>
+    </work_order>
+    <!-- Centurion's Necklace Repair -->
+    <work_order id="6339" start_npc_ids="204108 830140" recipe_id="155009163">
+        <give_component item_id="182291162" count="20"/>
+        <give_component item_id="182291289" count="40"/>
+    </work_order>
+    <!-- Steps Toward Handicrafting Expert -->
+    <work_order id="6340" start_npc_ids="204108 830140" recipe_id="155009164">
+        <give_component item_id="182291163" count="24"/>
+    </work_order>
+    <!-- Lamplight Supplies -->
+    <work_order id="6400" start_npc_ids="204102 830138" recipe_id="155009165">
+        <give_component item_id="182291164" count="4"/>
+    </work_order>
+    <!-- Military Compass Supplies -->
+    <work_order id="6401" start_npc_ids="204102 830138" recipe_id="155009166">
+        <give_component item_id="182291165" count="8"/>
+    </work_order>
+    <!-- Healing Tea Supplies -->
+    <work_order id="6402" start_npc_ids="204102 830138" recipe_id="155009167">
+        <give_component item_id="182291166" count="8"/>
+    </work_order>
+    <!-- Magical Hourglass Supplies -->
+    <work_order id="6403" start_npc_ids="204102 830138" recipe_id="155009168">
+        <give_component item_id="182291167" count="8"/>
+    </work_order>
+    <!-- Sleeping Pill Supplies -->
+    <work_order id="6404" start_npc_ids="204102 830138" recipe_id="155009169">
+        <give_component item_id="182291168" count="8"/>
+    </work_order>
+    <!-- Everburning Candle Supplies -->
+    <work_order id="6405" start_npc_ids="204102 830138" recipe_id="155009170">
+        <give_component item_id="182291169" count="16"/>
+    </work_order>
+    <!-- Antibiotic Supplies -->
+    <work_order id="6406" start_npc_ids="204102 830138" recipe_id="155009171">
+        <give_component item_id="182291170" count="8"/>
+    </work_order>
+    <!-- Improved Recovery Potion Supplies -->
+    <work_order id="6407" start_npc_ids="204102 830138" recipe_id="155009172">
+        <give_component item_id="182291171" count="8"/>
+    </work_order>
+    <!-- Military Soap Supplies -->
+    <work_order id="6408" start_npc_ids="204102 830138" recipe_id="155009173">
+        <give_component item_id="182291172" count="8"/>
+    </work_order>
+    <!-- Molting Remedy Supplies -->
+    <work_order id="6409" start_npc_ids="204102 830138" recipe_id="155009174">
+        <give_component item_id="182291173" count="8"/>
+    </work_order>
+    <!-- Basfelt Orb Repair -->
+    <work_order id="6410" start_npc_ids="204102 830138" recipe_id="155009175">
+        <give_component item_id="182291174" count="12"/>
+    </work_order>
+    <!-- Disinfectant Supplies -->
+    <work_order id="6411" start_npc_ids="204102 830138" recipe_id="155009176">
+        <give_component item_id="182291175" count="12"/>
+    </work_order>
+    <!-- Digestive Aid Supplies -->
+    <work_order id="6412" start_npc_ids="204102 830138" recipe_id="155009177">
+        <give_component item_id="182291176" count="12"/>
+    </work_order>
+    <!-- Mana Treatment Lozenge Supplies -->
+    <work_order id="6413" start_npc_ids="204102 830138" recipe_id="155009178">
+        <give_component item_id="182291177" count="12"/>
+    </work_order>
+    <!-- Energizing Tea Supplies -->
+    <work_order id="6414" start_npc_ids="204102 830138" recipe_id="155009179">
+        <give_component item_id="182291178" count="24"/>
+        <give_component item_id="182291290" count="12"/>
+    </work_order>
+    <!-- Looter's Spellbook Repair -->
+    <work_order id="6415" start_npc_ids="204102 830138" recipe_id="155009180">
+        <give_component item_id="182291179" count="12"/>
+        <give_component item_id="182291291" count="48"/>
+    </work_order>
+    <!-- Antidote Supplies -->
+    <work_order id="6416" start_npc_ids="204102 830138" recipe_id="155009181">
+        <give_component item_id="182291180" count="12"/>
+        <give_component item_id="182291292" count="12"/>
+    </work_order>
+    <!-- Cold Remedy Supplies -->
+    <work_order id="6417" start_npc_ids="204102 830138" recipe_id="155009182">
+        <give_component item_id="182291181" count="12"/>
+        <give_component item_id="182291293" count="12"/>
+    </work_order>
+    <!-- Siege Weapon Gunpowder Supplies -->
+    <work_order id="6418" start_npc_ids="204102 830138" recipe_id="155009183">
+        <give_component item_id="182291182" count="12"/>
+    </work_order>
+    <!-- Morheim Orb Repair -->
+    <work_order id="6419" start_npc_ids="204102 830138" recipe_id="155009184">
+        <give_component item_id="182291183" count="12"/>
+        <give_component item_id="182291294" count="12"/>
+    </work_order>
+    <!-- Morheim Spellbook Repair -->
+    <work_order id="6420" start_npc_ids="204102 830138" recipe_id="155009185">
+        <give_component item_id="182291184" count="16"/>
+        <give_component item_id="182291295" count="64"/>
+    </work_order>
+    <!-- Pain Ointment Supplies -->
+    <work_order id="6421" start_npc_ids="204102 830138" recipe_id="155009186">
+        <give_component item_id="182291185" count="32"/>
+        <give_component item_id="182291296" count="16"/>
+    </work_order>
+    <!-- Antidoze Supplies -->
+    <work_order id="6422" start_npc_ids="204102 830138" recipe_id="155009187">
+        <give_component item_id="182291186" count="32"/>
+        <give_component item_id="182291297" count="16"/>
+    </work_order>
+    <!-- Antifracture Lozenge Supplies -->
+    <work_order id="6423" start_npc_ids="204102 830138" recipe_id="155009188">
+        <give_component item_id="182291187" count="32"/>
+    </work_order>
+    <!-- Invader's Spellbook Repair -->
+    <work_order id="6424" start_npc_ids="204102 830138" recipe_id="155009189">
+        <give_component item_id="182291188" count="16"/>
+        <give_component item_id="182291298" count="48"/>
+    </work_order>
+    <!-- Invader's Orb Repair -->
+    <work_order id="6425" start_npc_ids="204102 830138" recipe_id="155009190">
+        <give_component item_id="182291189" count="16"/>
+        <give_component item_id="182291299" count="48"/>
+    </work_order>
+    <!-- Paralyzing Poison Supplies -->
+    <work_order id="6426" start_npc_ids="204102 830138" recipe_id="155009191">
+        <give_component item_id="182291190" count="16"/>
+        <give_component item_id="182291300" count="16"/>
+    </work_order>
+    <!-- Daevanion Mist Detector Supplies -->
+    <work_order id="6427" start_npc_ids="204102 830138" recipe_id="155009192">
+        <give_component item_id="182291191" count="48"/>
+        <give_component item_id="182291301" count="32"/>
+    </work_order>
+    <!-- Air Mine Repair -->
+    <work_order id="6428" start_npc_ids="204102 830138" recipe_id="155009193">
+        <give_component item_id="182291192" count="48"/>
+        <give_component item_id="182291302" count="32"/>
+    </work_order>
+    <!-- Beluslan Orb Repair -->
+    <work_order id="6429" start_npc_ids="204102 830138" recipe_id="155009194">
+        <give_component item_id="182291193" count="16"/>
+        <give_component item_id="182291303" count="48"/>
+    </work_order>
+    <!-- Beluslan Spellbook Repair -->
+    <work_order id="6430" start_npc_ids="204102 830138" recipe_id="155009195">
+        <give_component item_id="182291194" count="20"/>
+        <give_component item_id="182291304" count="60"/>
+    </work_order>
+    <!-- Mau Language Potion Supplies -->
+    <work_order id="6431" start_npc_ids="204102 830138" recipe_id="155009196">
+        <give_component item_id="182291195" count="40"/>
+    </work_order>
+    <!-- Gate Restoration Stone Repair -->
+    <work_order id="6432" start_npc_ids="204102 830138" recipe_id="155009197">
+        <give_component item_id="182291196" count="20"/>
+    </work_order>
+    <!-- Rift Suppressant Supplies -->
+    <work_order id="6433" start_npc_ids="204102 830138" recipe_id="155009198">
+        <give_component item_id="182291197" count="40"/>
+    </work_order>
+    <!-- Priest's Spellbook Repair -->
+    <work_order id="6434" start_npc_ids="204102 830138" recipe_id="155009199">
+        <give_component item_id="182291198" count="20"/>
+        <give_component item_id="182291305" count="60"/>
+    </work_order>
+    <!-- Vengeance Orb Repair -->
+    <work_order id="6435" start_npc_ids="204102 830138" recipe_id="155009200">
+        <give_component item_id="182291199" count="20"/>
+        <give_component item_id="182291306" count="40"/>
+    </work_order>
+    <!-- Arlion Trap Repair -->
+    <work_order id="6436" start_npc_ids="204102 830138" recipe_id="155009201">
+        <give_component item_id="182291200" count="20"/>
+        <give_component item_id="182291307" count="20"/>
+    </work_order>
+    <!-- Obelisk Repair -->
+    <work_order id="6437" start_npc_ids="204102 830138" recipe_id="155009202">
+        <give_component item_id="182291201" count="20"/>
+        <give_component item_id="182291308" count="40"/>
+    </work_order>
+    <!-- Teleport Statue Repair -->
+    <work_order id="6438" start_npc_ids="204102 830138" recipe_id="155009203">
+        <give_component item_id="182291202" count="20"/>
+        <give_component item_id="182291309" count="40"/>
+    </work_order>
+    <!-- Warning System Repair -->
+    <work_order id="6439" start_npc_ids="204102 830138" recipe_id="155009204">
+        <give_component item_id="182291203" count="20"/>
+        <give_component item_id="182291310" count="40"/>
+    </work_order>
+    <!-- Steps Toward Alchemy Expert -->
+    <work_order id="6440" start_npc_ids="204102 830138" recipe_id="155009205">
+        <give_component item_id="182291204" count="24"/>
+        <give_component item_id="182291311" count="48"/>
+    </work_order>
+    <!-- Gritty Conide Supplies -->
+    <work_order id="6500" start_npc_ids="204100 830142" recipe_id="155009206">
+        <give_component item_id="182291205" count="4"/>
+    </work_order>
+    <!-- Salted Pujery Supplies -->
+    <work_order id="6501" start_npc_ids="204100 830142" recipe_id="155009207">
+        <give_component item_id="182291206" count="8"/>
+    </work_order>
+    <!-- Briga Dumpling Skin Supplies -->
+    <work_order id="6502" start_npc_ids="204100 830142" recipe_id="155009208">
+        <give_component item_id="182291207" count="8"/>
+    </work_order>
+    <!-- Krimer Spaghetti Supplies -->
+    <work_order id="6503" start_npc_ids="204100 830142" recipe_id="155009209">
+        <give_component item_id="182291208" count="8"/>
+    </work_order>
+    <!-- Seedless Otombliss Supplies -->
+    <work_order id="6504" start_npc_ids="204100 830142" recipe_id="155009210">
+        <give_component item_id="182291209" count="8"/>
+    </work_order>
+    <!-- Karnif Gravy Supplies -->
+    <work_order id="6505" start_npc_ids="204100 830142" recipe_id="155009211">
+        <give_component item_id="182291210" count="8"/>
+    </work_order>
+    <!-- Raydam Candy Supplies -->
+    <work_order id="6506" start_npc_ids="204100 830142" recipe_id="155009212">
+        <give_component item_id="182291211" count="8"/>
+    </work_order>
+    <!-- Blicora Temple Supplies -->
+    <work_order id="6507" start_npc_ids="204100 830142" recipe_id="155009213">
+        <give_component item_id="182291212" count="8"/>
+    </work_order>
+    <!-- Ringa Juice Supplies -->
+    <work_order id="6508" start_npc_ids="204100 830142" recipe_id="155009214">
+        <give_component item_id="182291213" count="8"/>
+    </work_order>
+    <!-- Honey Syrup Supplies -->
+    <work_order id="6509" start_npc_ids="204100 830142" recipe_id="155009215">
+        <give_component item_id="182291214" count="8"/>
+    </work_order>
+    <!-- Salad Dressing Supplies -->
+    <work_order id="6510" start_npc_ids="204100 830142" recipe_id="155009216">
+        <give_component item_id="182291215" count="12"/>
+    </work_order>
+    <!-- Minced Crasaur Meat Supplies -->
+    <work_order id="6511" start_npc_ids="204100 830142" recipe_id="155009217">
+        <give_component item_id="182291216" count="12"/>
+    </work_order>
+    <!-- Seasoned Kurin Back Ribs Supplies -->
+    <work_order id="6512" start_npc_ids="204100 830142" recipe_id="155009218">
+        <give_component item_id="182291217" count="12"/>
+    </work_order>
+    <!-- Vinna Juice Supplies -->
+    <work_order id="6513" start_npc_ids="204100 830142" recipe_id="155009219">
+        <give_component item_id="182291218" count="12"/>
+    </work_order>
+    <!-- Stuffed Gadill Supplies -->
+    <work_order id="6514" start_npc_ids="204100 830142" recipe_id="155009220">
+        <give_component item_id="182291219" count="12"/>
+    </work_order>
+    <!-- Chikra Frying Powder Supplies -->
+    <work_order id="6515" start_npc_ids="204100 830142" recipe_id="155009221">
+        <give_component item_id="182291220" count="12"/>
+    </work_order>
+    <!-- Seasoned Spiner Leg Meat Supplies -->
+    <work_order id="6516" start_npc_ids="204100 830142" recipe_id="155009222">
+        <give_component item_id="182291221" count="12"/>
+    </work_order>
+    <!-- Dorado Caviar Supplies -->
+    <work_order id="6517" start_npc_ids="204100 830142" recipe_id="155009223">
+        <give_component item_id="182291222" count="12"/>
+    </work_order>
+    <!-- Kirka Sauce Supplies -->
+    <work_order id="6518" start_npc_ids="204100 830142" recipe_id="155009224">
+        <give_component item_id="182291223" count="12"/>
+    </work_order>
+    <!-- Rogen Rice Supplies -->
+    <work_order id="6519" start_npc_ids="204100 830142" recipe_id="155009225">
+        <give_component item_id="182291224" count="12"/>
+    </work_order>
+    <!-- Rogen Spaghetti Supplies -->
+    <work_order id="6520" start_npc_ids="204100 830142" recipe_id="155009226">
+        <give_component item_id="182291225" count="16"/>
+    </work_order>
+    <!-- Seasoned Jardine Gills Supplies -->
+    <work_order id="6521" start_npc_ids="204100 830142" recipe_id="155009227">
+        <give_component item_id="182291226" count="16"/>
+    </work_order>
+    <!-- Seasoned Abex Meat Supplies -->
+    <work_order id="6522" start_npc_ids="204100 830142" recipe_id="155009228">
+        <give_component item_id="182291227" count="16"/>
+    </work_order>
+    <!-- Frozen Abex Patty -->
+    <work_order id="6523" start_npc_ids="204100 830142" recipe_id="155009229">
+        <give_component item_id="182291228" count="16"/>
+    </work_order>
+    <!-- Battered Gryphu Wing Supplies -->
+    <work_order id="6524" start_npc_ids="204100 830142" recipe_id="155009230">
+        <give_component item_id="182291229" count="16"/>
+        <give_component item_id="182291312" count="16"/>
+    </work_order>
+    <!-- Canned Brommel Smoothie Supplies -->
+    <work_order id="6525" start_npc_ids="204100 830142" recipe_id="155009231">
+        <give_component item_id="182291230" count="16"/>
+    </work_order>
+    <!-- Dried Scolopen Tail Supplies -->
+    <work_order id="6526" start_npc_ids="204100 830142" recipe_id="155009232">
+        <give_component item_id="182291231" count="16"/>
+    </work_order>
+    <!-- Zeller Powder Soup Supplies -->
+    <work_order id="6527" start_npc_ids="204100 830142" recipe_id="155009233">
+        <give_component item_id="182291232" count="16"/>
+    </work_order>
+    <!-- Battered Megrim Supplies -->
+    <work_order id="6528" start_npc_ids="204100 830142" recipe_id="155009234">
+        <give_component item_id="182291233" count="16"/>
+    </work_order>
+    <!-- Pecku Gravy Supplies -->
+    <work_order id="6529" start_npc_ids="204100 830142" recipe_id="155009235">
+        <give_component item_id="182291234" count="16"/>
+    </work_order>
+    <!-- Pressa Sherbet Supplies -->
+    <work_order id="6530" start_npc_ids="204100 830142" recipe_id="155009236">
+        <give_component item_id="182291235" count="20"/>
+    </work_order>
+    <!-- Asvata Sap Supplies -->
+    <work_order id="6531" start_npc_ids="204100 830142" recipe_id="155009237">
+        <give_component item_id="182291236" count="20"/>
+    </work_order>
+    <!-- Merone Seed Powder Supplies -->
+    <work_order id="6532" start_npc_ids="204100 830142" recipe_id="155009238">
+        <give_component item_id="182291237" count="20"/>
+    </work_order>
+    <!-- Almeha Seasoning Supplies -->
+    <work_order id="6533" start_npc_ids="204100 830142" recipe_id="155009239">
+        <give_component item_id="182291238" count="20"/>
+    </work_order>
+    <!-- Seasoned Vigen Dough Supplies -->
+    <work_order id="6534" start_npc_ids="204100 830142" recipe_id="155009240">
+        <give_component item_id="182291239" count="20"/>
+    </work_order>
+    <!-- Seasoned Esosa Supplies -->
+    <work_order id="6535" start_npc_ids="204100 830142" recipe_id="155009241">
+        <give_component item_id="182291240" count="20"/>
+    </work_order>
+    <!-- Morheim Natural Food Supplies -->
+    <work_order id="6536" start_npc_ids="204100 830142" recipe_id="155009242">
+        <give_component item_id="182291241" count="20"/>
+        <give_component item_id="182291313" count="20"/>
+    </work_order>
+    <!-- Beluslan Energizing Tea Supplies -->
+    <work_order id="6537" start_npc_ids="204100 830142" recipe_id="155009243">
+        <give_component item_id="182291242" count="20"/>
+        <give_component item_id="182291314" count="20"/>
+    </work_order>
+    <!-- Mixed Seafood Soup Supplies -->
+    <work_order id="6538" start_npc_ids="204100 830142" recipe_id="155009244">
+        <give_component item_id="182291243" count="20"/>
+        <give_component item_id="182291315" count="20"/>
+    </work_order>
+    <!-- Crestlich Ribs Supplies -->
+    <work_order id="6539" start_npc_ids="204100 830142" recipe_id="155009245">
+        <give_component item_id="182291244" count="20"/>
+    </work_order>
+    <!-- Steps Toward Cooking Expert -->
+    <work_order id="6540" start_npc_ids="204100 830142" recipe_id="155009246">
+        <give_component item_id="182291245" count="24"/>
+        <give_component item_id="182291316" count="24"/>
+    </work_order>
+    <!-- Wooden Shelf Supply -->
+    <work_order id="6541" start_npc_ids="798452 798456" recipe_id="155009247">
+        <give_component item_id="182291563" count="4"/>
+    </work_order>
+    <!-- Storage Box Supply -->
+    <work_order id="6542" start_npc_ids="798452 798456" recipe_id="155009248">
+        <give_component item_id="182291564" count="8"/>
+    </work_order>
+    <!-- Lunch Counter Supply -->
+    <work_order id="6543" start_npc_ids="798452 798456" recipe_id="155009249">
+        <give_component item_id="182291565" count="8"/>
+    </work_order>
+    <!-- Field Bed Supply -->
+    <work_order id="6544" start_npc_ids="798452 798456" recipe_id="155009250">
+        <give_component item_id="182291566" count="8"/>
+    </work_order>
+    <!-- Round Rug Supply -->
+    <work_order id="6545" start_npc_ids="798452 798456" recipe_id="155009251">
+        <give_component item_id="182291567" count="8"/>
+    </work_order>
+    <!-- Dining Chair Repair -->
+    <work_order id="6546" start_npc_ids="798452 798456" recipe_id="155009252">
+        <give_component item_id="182291568" count="8"/>
+    </work_order>
+    <!-- Wooden Frame Supply -->
+    <work_order id="6547" start_npc_ids="798452 798456" recipe_id="155009253">
+        <give_component item_id="182291569" count="8"/>
+    </work_order>
+    <!-- Small Candle Supply -->
+    <work_order id="6548" start_npc_ids="798452 798456" recipe_id="155009254">
+        <give_component item_id="182291570" count="8"/>
+    </work_order>
+    <!-- Wooden Table Supply -->
+    <work_order id="6549" start_npc_ids="798452 798456" recipe_id="155009255">
+        <give_component item_id="182291571" count="8"/>
+    </work_order>
+    <!-- Small Gourd Bottle Supply -->
+    <work_order id="6550" start_npc_ids="798452 798456" recipe_id="155009256">
+        <give_component item_id="182291572" count="8"/>
+    </work_order>
+    <!-- Side Table Light Supply -->
+    <work_order id="6551" start_npc_ids="798452 798456" recipe_id="155009257">
+        <give_component item_id="182291573" count="12"/>
+    </work_order>
+    <!-- Topaz Display Cabinet Supply -->
+    <work_order id="6552" start_npc_ids="798452 798456" recipe_id="155009258">
+        <give_component item_id="182291574" count="12"/>
+    </work_order>
+    <!-- Silver Side Table Supply -->
+    <work_order id="6553" start_npc_ids="798452 798456" recipe_id="155009259">
+        <give_component item_id="182291575" count="12"/>
+    </work_order>
+    <!-- Bed with Fiber Blanket Supply -->
+    <work_order id="6554" start_npc_ids="798452 798456" recipe_id="155009260">
+        <give_component item_id="182291576" count="12"/>
+    </work_order>
+    <!-- Thin Curtain Supply -->
+    <work_order id="6555" start_npc_ids="798452 798456" recipe_id="155009261">
+        <give_component item_id="182291577" count="12"/>
+    </work_order>
+    <!-- Rabano Scented Candle Supply -->
+    <work_order id="6556" start_npc_ids="798452 798456" recipe_id="155009262">
+        <give_component item_id="182291578" count="12"/>
+    </work_order>
+    <!-- Mithril Frame Supply -->
+    <work_order id="6557" start_npc_ids="798452 798456" recipe_id="155009263">
+        <give_component item_id="182291579" count="12"/>
+    </work_order>
+    <!-- Moonstone Fishbowl Supply -->
+    <work_order id="6558" start_npc_ids="798452 798456" recipe_id="155009264">
+        <give_component item_id="182291580" count="12"/>
+    </work_order>
+    <!-- Built-in Closet Supply -->
+    <work_order id="6559" start_npc_ids="798452 798456" recipe_id="155009265">
+        <give_component item_id="182291581" count="12"/>
+    </work_order>
+    <!-- Bunk Bed Supply -->
+    <work_order id="6560" start_npc_ids="798452 798456" recipe_id="155009266">
+        <give_component item_id="182291582" count="12"/>
+    </work_order>
+    <!-- Merchant's Tent Repair -->
+    <work_order id="6561" start_npc_ids="798452 798456" recipe_id="155009267">
+        <give_component item_id="182291583" count="16"/>
+    </work_order>
+    <!-- Wall-mounted Fishbowl Repair -->
+    <work_order id="6562" start_npc_ids="798452 798456" recipe_id="155009268">
+        <give_component item_id="182291584" count="16"/>
+    </work_order>
+    <!-- Calamot Bloom Supply -->
+    <work_order id="6563" start_npc_ids="798452 798456" recipe_id="155009269">
+        <give_component item_id="182291585" count="16"/>
+    </work_order>
+    <!-- Paisley Carpet Supply -->
+    <work_order id="6564" start_npc_ids="798452 798456" recipe_id="155009270">
+        <give_component item_id="182291586" count="16"/>
+    </work_order>
+    <!-- Round Cabinet Supply -->
+    <work_order id="6565" start_npc_ids="798452 798456" recipe_id="155009271">
+        <give_component item_id="182291587" count="16"/>
+        <give_component item_id="182291604" count="16"/>
+    </work_order>
+    <!-- Adamantium Dining Table Repair -->
+    <work_order id="6566" start_npc_ids="798452 798456" recipe_id="155009272">
+        <give_component item_id="182291588" count="16"/>
+    </work_order>
+    <!-- Light Bulb for Standing Lamp Supply -->
+    <work_order id="6567" start_npc_ids="798452 798456" recipe_id="155009273">
+        <give_component item_id="182291589" count="16"/>
+    </work_order>
+    <!-- Built-in Bookshelf Repair -->
+    <work_order id="6568" start_npc_ids="798452 798456" recipe_id="155009274">
+        <give_component item_id="182291590" count="16"/>
+    </work_order>
+    <!-- Watchman's Bed Repair -->
+    <work_order id="6569" start_npc_ids="798452 798456" recipe_id="155009275">
+        <give_component item_id="182291591" count="16"/>
+    </work_order>
+    <!-- Adamantite Music Box Repair -->
+    <work_order id="6570" start_npc_ids="798452 798456" recipe_id="155009276">
+        <give_component item_id="182291592" count="16"/>
+    </work_order>
+    <!-- Commander's Round Table Repair -->
+    <work_order id="6571" start_npc_ids="798452 798456" recipe_id="155009277">
+        <give_component item_id="182291593" count="20"/>
+    </work_order>
+    <!-- Wardrobe of the Blue Fleet Repair -->
+    <work_order id="6572" start_npc_ids="798452 798456" recipe_id="155009278">
+        <give_component item_id="182291594" count="20"/>
+    </work_order>
+    <!-- Legionary's Achievement Furniture Repair -->
+    <work_order id="6573" start_npc_ids="798452 798456" recipe_id="155009279">
+        <give_component item_id="182291595" count="20"/>
+    </work_order>
+    <!-- Protectorate's Partition Repair -->
+    <work_order id="6574" start_npc_ids="798452 798456" recipe_id="155009280">
+        <give_component item_id="182291596" count="20"/>
+    </work_order>
+    <!-- Priest's Table Repair -->
+    <work_order id="6575" start_npc_ids="798452 798456" recipe_id="155009281">
+        <give_component item_id="182291597" count="20"/>
+    </work_order>
+    <!-- Temple Rack Repair -->
+    <work_order id="6576" start_npc_ids="798452 798456" recipe_id="155009282">
+        <give_component item_id="182291598" count="20"/>
+    </work_order>
+    <!-- Battle Accessory Repair -->
+    <work_order id="6577" start_npc_ids="798452 798456" recipe_id="155009283">
+        <give_component item_id="182291599" count="20"/>
+        <give_component item_id="182291605" count="20"/>
+    </work_order>
+    <!-- Guardsman's Shelf Repair -->
+    <work_order id="6578" start_npc_ids="798452 798456" recipe_id="155009284">
+        <give_component item_id="182291600" count="20"/>
+        <give_component item_id="182291606" count="20"/>
+    </work_order>
+    <!-- Pandaemonium Display Cabinet Repair -->
+    <work_order id="6579" start_npc_ids="798452 798456" recipe_id="155009285">
+        <give_component item_id="182291601" count="20"/>
+        <give_component item_id="182291607" count="20"/>
+    </work_order>
+    <!-- Centurion's Chair Repair -->
+    <work_order id="6580" start_npc_ids="798452 798456" recipe_id="155009286">
+        <give_component item_id="182291602" count="20"/>
+    </work_order>
+    <!-- Beginning of the Construction Expert -->
+    <work_order id="6581" start_npc_ids="798452 798456" recipe_id="155009287">
+        <give_component item_id="182291603" count="24"/>
+        <give_component item_id="182291608" count="24"/>
+    </work_order>
+</quest_scripts>

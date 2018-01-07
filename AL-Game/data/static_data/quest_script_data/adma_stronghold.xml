@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+                3116 [XML] Fissure Problems
+                3117 [XML] [Group] Unfortunate Lady
+                3118 [XML] [Coin/Group] Stop Lord Lannok
+                3119 [XML] [Group] Bleeding the Undead
+                3120 [XML] [Group] Wanted, Dead
+                3122 [SCRIPT] [Instanced Dungeon/Group] Spiteful Domination
+                4091 [XML] A Family's Memento
+                4092 [XML] Lukmann's Justice
+                4093 [XML] The Unforgivable One
+                4094 [XML] Adma's Trove
+                4095 [XML] Imowen's Request
+                4112 [XML] [Coin/Group] Lord of Darkness
+                4120 [XML] Vengeful Spirit Consolation
+                4122 [SCRIPT] [Instanced Dungeon/Group] Domination of Spite
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to_many id="3116" start_npc_ids="798155" end_npc_ids="800420">
+        <npc_infos npc_id="798163" var="0" quest_dialog="1352"/>
+        <npc_infos npc_id="800420" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="3117" start_npc_ids="800420" end_npc_ids="798165"/>
+    <item_collecting id="3119" start_npc_ids="800420" end_npc_ids="798163"/>
+    <item_collecting id="4091" start_npc_ids="205225"/>
+    <item_collecting id="4092" start_npc_ids="205225"/>
+    <item_collecting id="4094" start_npc_ids="205225" action_item_ids="700433 700434 700435 700436"/>
+    <item_collecting id="4095" start_npc_ids="205206"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="3118" start_npc_ids="800420" end_npc_ids="798155">
+        <monster var="0" npc_ids="214696" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="3120" start_npc_ids="800420" end_npc_ids="798165">
+        <monster var="0" npc_ids="214698" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4093" start_npc_ids="205225">
+        <monster var="0" npc_ids="214696" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4112" start_npc_ids="205163">
+        <monster var="0" npc_ids="214696" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt id="4120" start_npc_ids="205150" end_npc_ids="282370">
+        <monster var="0" npc_ids="214698" end_var="1"/>
+    </monster_hunt>
+</quest_scripts>

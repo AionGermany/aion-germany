@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="220020000">
+        <base_spawn id="21"> <!-- Musphel Outpost -->
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="1575.1108" y="1671.2319" z="214.7500" h="90"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231556" handler="BOSS">
+                    <spot x="1582.8768" y="1677.6371" z="214.75" h="73"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231608" handler="ATTACKER">
+                    <spot x="1583.0913" y="1676.093" z="217.84393" h="30"/>
+                </spawn>
+                <!-- Elyos Morheim Inspector -->
+                <spawn npc_id="231618" handler="ATTACKER">
+                    <spot x="1529.5321" y="1661.5712" z="217.01698"/>
+                </spawn>
+                <!-- Morheim Infiltrator -->
+                <spawn npc_id="232063">
+                    <spot x="1567.1627" y="1677.2025" z="214.75" h="75"/>
+                    <spot x="1578.4486" y="1660.1093" z="214.75" h="90"/>
+                    <spot x="1563.3074" y="1658.9733" z="213.89331" h="75"/>
+                    <spot x="1556.2483" y="1664.379" z="214.83289" h="75"/>
+                </spawn>
+                <!-- Aition General Goods Merchant -->
+                <spawn npc_id="801168">
+                    <spot x="1583.4044" y="1667.53" z="214.75" h="37"/>
+                </spawn>
+                <!-- Mikon Warehouse Manager -->
+                <spawn npc_id="801169">
+                    <spot x="1573.5592" y="1677.3947" z="214.75" h="90"/>
+                </spawn>
+                <!-- Lamakus Administration Officer -->
+                <spawn npc_id="801170">
+                    <spot x="1590.8715" y="1669.8474" z="214.66992" h="75"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ASMODIANS">
+                <!-- Asmodians Territory -->
+                <spawn npc_id="701800">
+                    <spot x="1575.1108" y="1671.2319" z="214.7500" h="90"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231557" handler="BOSS">
+                    <spot x="1582.8768" y="1677.6371" z="214.75" h="73"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231608" handler="ATTACKER">
+                    <spot x="1583.0913" y="1676.093" z="217.84393" h="30"/>
+                </spawn>
+                <!-- Asmodian Morheim Inspector -->
+                <spawn npc_id="231619" handler="ATTACKER">
+                    <spot x="1529.5321" y="1661.5712" z="217.01698"/>
+                </spawn>
+                <!-- Morheim Defender -->
+                <spawn npc_id="232066">
+                    <spot x="1567.1627" y="1677.2025" z="214.75" h="75"/>
+                    <spot x="1578.4486" y="1660.1093" z="214.75" h="90"/>
+                    <spot x="1563.3074" y="1658.9733" z="213.89331" h="75"/>
+                    <spot x="1556.2483" y="1664.379" z="214.83289" h="75"/>
+                </spawn>
+                <!-- Ingolfur General Goods Merchant -->
+                <spawn npc_id="801171">
+                    <spot x="1583.4044" y="1667.53" z="214.75" h="37"/>
+                </spawn>
+                <!-- Thialfarr Warehouse Manager -->
+                <spawn npc_id="801172">
+                    <spot x="1573.5592" y="1677.3947" z="214.75" h="90"/>
+                </spawn>
+                <!-- Kalfar Administration Officer -->
+                <spawn npc_id="801173">
+                    <spot x="1590.8715" y="1669.8474" z="214.66992" h="75"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Lepharist Territory -->
+                <spawn npc_id="701796">
+                    <spot x="1575.1108" y="1671.2319" z="214.75" h="90"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231555" handler="BOSS">
+                    <spot x="1582.8768" y="1677.6371" z="214.75" h="73"/>
+                </spawn>
+                <!-- Lepharist Vanguard -->
+                <spawn npc_id="231600" handler="ATTACKER">
+                    <spot x="1529.5321" y="1661.5712" z="217.01698"/>
+                </spawn>
+                <!-- Lepharist Protector -->
+                <spawn npc_id="231574" respawn_time="295">
+                    <spot x="1567.1627" y="1677.2025" z="214.75" h="75"/>
+                    <spot x="1578.4486" y="1660.1093" z="214.75" h="90"/>
+                    <spot x="1563.3074" y="1658.9733" z="213.89331" h="75"/>
+                    <spot x="1556.2483" y="1664.379" z="214.83289" h="75"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+        <base_spawn id="22"> <!-- Mist Mane Defense Post -->
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="2040.7191" y="730.4035" z="246.0000" h="34"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231559" handler="BOSS">
+                    <spot x="2031.0299" y="724.32764" z="246.0" h="9"/>
+                </spawn>
+                <!-- Mist Mane Assassin -->
+                <spawn npc_id="231609" handler="ATTACKER">
+                    <spot x="2031.8993" y="722.44824" z="246.84393" h="30"/>
+                </spawn>
+                <!-- Elyos Morheim Inspector -->
+                <spawn npc_id="231620" handler="ATTACKER">
+                    <spot x="2091.5439" y="725.64075" z="247.51697" h="60"/>
+                </spawn>
+                <!-- Morheim Defender -->
+                <spawn npc_id="232064">
+                    <spot x="2037.8074" y="736.70166" z="246.0" h="7"/>
+                    <spot x="2049.646" y="737.9488" z="245.90645" h="15"/>
+                    <spot x="2052.887" y="727.1743" z="245.62378" h="0"/>
+                    <spot x="2051.634" y="717.68634" z="246.35123" h="0"/>
+                </spawn>
+                <!-- Albinus General Goods Merchant -->
+                <spawn npc_id="801174">
+                    <spot x="2033.5592" y="731.14465" z="246.0" h="113"/>
+                </spawn>
+                <!-- Diagoras Warehouse Manager -->
+                <spawn npc_id="801175">
+                    <spot x="2039.0592" y="720.64465" z="246.0437" h="30"/>
+                </spawn>
+                <!-- Boethus Administration Officer -->
+                <spawn npc_id="801176">
+                    <spot x="2035.8092" y="734.89465" z="246.0"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ASMODIANS">
+                <!-- Asmodians Territory -->
+                <spawn npc_id="701800">
+                    <spot x="2040.7191" y="730.4035" z="246.0000" h="34"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231560" handler="BOSS">
+                    <spot x="2031.0299" y="724.32764" z="246.0" h="9"/>
+                </spawn>
+                <!-- Mist Mane Assassin -->
+                <spawn npc_id="231609" handler="ATTACKER">
+                    <spot x="2031.8993" y="722.44824" z="246.84393" h="30"/>
+                </spawn>
+                <!-- Asmodian Morheim Inspector -->
+                <spawn npc_id="231621" handler="ATTACKER">
+                    <spot x="2091.5439" y="725.64075" z="247.51697" h="60"/>
+                </spawn>
+                <!-- Morheim Defender -->
+                <spawn npc_id="232067">
+                    <spot x="2037.8074" y="736.70166" z="246.0" h="7"/>
+                    <spot x="2049.646" y="737.9488" z="245.90645" h="15"/>
+                    <spot x="2052.887" y="727.1743" z="245.62378" h="0"/>
+                    <spot x="2051.634" y="717.68634" z="246.35123" h="0"/>
+                </spawn>
+                <!-- Naddoddr General Goods Merchant -->
+                <spawn npc_id="801177">
+                    <spot x="2033.5592" y="731.14465" z="246.0" h="113"/>
+                </spawn>
+                <!-- Narkel Warehouse Manager -->
+                <spawn npc_id="801178">
+                    <spot x="2039.0592" y="720.64465" z="246.0437" h="30"/>
+                </spawn>
+                <!-- Nibelr Administration Officer -->
+                <spawn npc_id="801179">
+                    <spot x="2035.8092" y="734.89465" z="246.0"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Mau Territory -->
+                <spawn npc_id="701798">
+                    <spot x="2040.7191" y="730.4035" z="246" h="34"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231558" handler="BOSS">
+                    <spot x="2031.0299" y="724.32764" z="246" h="9"/>
+                </spawn>
+                <!-- Mist Mane Vanguard -->
+                <spawn npc_id="231601" handler="ATTACKER">
+                    <spot x="2091.5439" y="725.64075" z="247.51697" h="60"/>
+                </spawn>
+                <!-- Mist Mane Protector -->
+                <spawn npc_id="231577" respawn_time="295">
+                    <spot x="2052.8870" y="727.1743" z="245.699"/>
+                    <spot x="2051.6340" y="717.6863" z="246.2235"/>
+                    <spot x="2037.8074" y="736.7017" z="246" h="6"/>
+                    <spot x="2049.6460" y="737.9488" z="245.8756" h="15"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+    </spawn_map>
+</spawns>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae_static_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="static_data.xsd">
+    <!--
+    This file is an entry point for all xml data files.
+
+    Server when starting is reading this file and using XmlMerger is including other
+    files according to the <import> tags, output file is saved in /cache/static_data.xml
+
+    XmlMerger creates one big xml file, which is later parsed by XmlDataLoader.
+    This way, we can have whole static data within many xml files.
+
+    How to use <import> tags:
+
+    Most basic version is to type:
+        <import file="some_file.xml"/>
+    Merger will just include content of the some_file.xml (omitting attributes of root node)
+    Instead of some_file.xml we can type name of directory, then all xml files in that
+    directory ( and deeper - recursively ) will be loaded.
+
+    We can add optional attribute "skipRoot":
+        <import file="some_file.xml" skipRoot="true"/>
+    This way xml will be included, but without root node.
+    It'll be used to split for example npc_data.xml into few files.
+    How this would look like:
+
+    We've got ( for example ) 2 xml files with npc_data definitions:
+
+    npc_data_f1.xml:
+        <?xml version="1.0" encoding="UTF-8"?>
+    <npc_data xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="static_data.xsd">
+        <npc id="1" name="Npc_N1"/>
+    </npc_data>
+
+    npc_data_f2.xml:
+        <?xml version="1.0" encoding="UTF-8"?>
+    <npc_data xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="static_data.xsd">
+        <npc id="2" name="Npc_N2"/>
+    </npc_data>
+
+    In static_data.xml we would have to put:
+
+    <npc_data>
+        <import file="npc_data_f1.xml" skipRoot="true"/>
+        <import file="npc_data_f2.xml" skipRoot="true"/>
+    </npc_data>
+
+    In the merged file we'll have:
+    <npc_data>
+        <npc id="1" name="Npc_N1"/>
+        <npc id="2" name="Npc_N2"/>
+    </npc_data>
+
+    So, not important things (like schema declarations) were removed and
+    root nodes were also removed - because of it we had to put <import> tags
+    within <npc_data/> tag.
+
+    static_data.xsd schema file must be valid for use both:
+            * by merged xml file ( because it'll be used for validation when loading)
+            * by every single xml file ( IDE will use it to validate xml files, when editing)
+    -->
+    <ai_templates>
+        <import file="ai" skipRoot="true"/>
+    </ai_templates>
+    <import file="bind_points/bind_points.xml"/>
+    <import file="chests/chest_templates.xml"/>
+    <import file="decomposable_items/decomposable_items.xml"/>
+    <import file="assembled_npcs/assembled_npcs.xml"/>
+    <import file="fly_rings/fly_rings.xml"/>
+    <import file="gatherables/gatherable_templates.xml"/>
+    <import file="goodslists/goodslists.xml"/>
+    <import file="guides/guide.xml"/>
+    <import file="instance_cooltimes/instance_cooltimes.xml"/>
+    <import file="item_sets/item_sets.xml"/>
+    <import file="items/item_restriction_cleanups.xml"/>
+    <import file="items/item_templates.xml"/>
+    <import file="items/item_random_bonuses.xml"/>
+    <import file="items/item_groups.xml"/>
+    <import file="items/assembly_items.xml"/>
+    <import file="npc_factions/npc_factions.xml"/>
+    <import file="npc_skills/npc_skills.xml"/>
+    <npc_templates>
+        <import file="npcs" skipRoot="true"/>
+    </npc_templates>
+    <pet_skill_templates>
+        <import file="pet_skills" skipRoot="true"/>
+    </pet_skill_templates>
+    <import file="pets/pets.xml"/>
+    <import file="pets/minions.xml"/>
+    <pet_feed>
+        <import file="pets/pet_feed.xml" skipRoot="true"/>
+    </pet_feed>
+    <dopings>
+        <import file="pets/pet_doping.xml" skipRoot="true"/>
+    </dopings>
+    <import file="quest_data/quest_data.xml"/>
+    <quest_scripts>
+        <import file="quest_script_data" skipRoot="true"/>
+    </quest_scripts>
+    <import file="recipe/recipe_templates.xml"/>
+    <import file="luna/luna_templates.xml"/>
+    <import file="locations/rift/rift_locations.xml"/>
+    <import file="roads/roads.xml"/>
+    <import file="locations/siege/siege_locations.xml"/>
+    <import file="locations/siege/siege_shields.xml"/>
+    <skill_tree>
+        <import file="skill_tree" skipRoot="true"/>
+    </skill_tree>
+    <import file="skills/skill_templates.xml"/>
+    <import file="skills/motion_times.xml"/>
+    <spawns>
+        <import file="spawns" skipRoot="true"/>
+    </spawns>
+    <import file="staticdoors/staticdoor_templates.xml"/>
+    <player_stats_templates>
+        <import file="stats/player" skipRoot="true"/>
+    </player_stats_templates>
+    <summon_stats_templates>
+        <import file="stats/summon" skipRoot="true"/>
+    </summon_stats_templates>
+    <import file="tribe/tribe_relations.xml"/>
+    <import file="vortex/dimensional_vortex.xml"/>
+    <import file="warehouse_expander/warehouse_expander.xml"/>
+    <zones>
+        <import file="zones" skipRoot="true"/>
+    </zones>
+    <import file="npc_teleporter.xml"/>
+    <import file="npc_trade_list.xml"/>
+	<import file="player_appearances.xml"/>
+    <npc_walker>
+        <import file="npc_walker" skipRoot="true"/>
+    </npc_walker>
+    <import file="walker_versions.xml"/>
+    <import file="player_experience_table.xml"/>
+    <import file="player_initial_data.xml"/>
+    <import file="player_titles.xml"/>
+    <import file="teleport_location.xml"/>
+    <import file="world_maps.xml"/>
+    <import file="weather_table.xml"/>
+    <import file="flypath_template.xml"/>
+    <import file="windstreams/windstreams.xml"/>
+    <import file="cosmetic_items/cosmetic_items.xml"/>
+    <import file="npc_shouts/npc_shouts.xml"/>
+    <npc_drops>
+        <import file="npc_drops" skipRoot="true"/>
+    </npc_drops>
+    <import file="auto_group/auto_group.xml"/>
+    <events_config>
+        <import file="events_config/events_config.xml" skipRoot="true"/>
+    </events_config>
+    <import file="polymorph_panels/polymorph_panels.xml"/>
+    <import file="instance_bonusattr/instance_bonusattr.xml"/>
+    <import file="housing/housing_objects.xml"/>
+    <import file="ride/ride.xml"/>
+    <import file="robot/robot.xml"/>
+    <import file="instance_exit/instance_exit.xml"/>
+    <import file="portals/portal_loc.xml"/>
+    <import file="portals/portal_template2.xml"/>
+	<import file="portals/conquest_portals.xml"/>
+    <import file="housing/houses.xml"/>
+    <import file="housing/house_buildings.xml"/>
+    <import file="housing/house_parts.xml"/>
+    <import file="housing/house_npcs.xml"/>
+    <import file="housing/scripts.xml"/>
+    <import file="mail_templates.xml"/>
+    <import file="mesh_materials/material_templates.xml"/>
+    <import file="quest_data/challenge_tasks.xml"/>
+    <town_spawns_data>
+        <import file="town_spawns" skipRoot="true"/>
+    </town_spawns_data>
+    <import file="locations/base/base_locations.xml"/>
+    <import file="locations/beritra/beritra_invasion.xml"/>
+	<import file="locations/svs/svs.xml"/>
+	<import file="locations/rvr/rvr.xml"/>
+    <import file="skills/skill_charge.xml"/>
+    <import file="items/item_purifications.xml"/>
+    <import file="decomposable_items/decomposable_selectitems.xml"/>
+    <import file="items/enchant_templates.xml"/>
+	<import file="items/enchant_tables.xml"/>
+    <import file="items/item_multi_returns.xml"/>
+    <import file="hotspot_teleporter.xml"/>
+    <import file="events_config/atreian_passports.xml"/>
+    <import file="stats/absolute_stats.xml"/>
+    <import file="arcadelist.xml"/>   
+	<import file="hidden_stigma_tree/hidden_stigma_tree.xml"/>
+	<import file="world_buff/world_buffs.xml"/>
+    <import file="service_bonusattr/service_bonusattr.xml"/>
+    <import file="service_bonusattr/players_bonus.xml"/>
+    <import file="service_bonusattr/f2p_bonusattr.xml"/>
+    <pet_bonusattrs>
+        <import file="pets/pet_buff.xml" skipRoot="true"/>
+    </pet_bonusattrs>
+    <merchants>
+        <import file="pets/pet_merchant.xml" skipRoot="true"/>
+    </merchants>
+	<panel_cps>
+		<import file="creativity/panel_cps.xml" skipRoot="true"/>
+	</panel_cps>
+	<abyss_ops>
+		<import file="abyss_op/abyss_ops.xml" skipRoot="true"/>
+	</abyss_ops>
+	<import file="locations/abyss_landing/landing_locations.xml"/>
+	<import file="locations/abyss_landing/landing_special_locations.xml"/>
+	<import file="abyss_bonusattr/abyss_bonusattr.xml"/>
+	<import file="abyss_bonusattr/abyss_groupattr.xml"/>
+	<luna_consume_rewards>
+		<import file="luna/luna_consume_rewards.xml" skipRoot="true"/>
+	</luna_consume_rewards>
+	<import file="monster_book/monster_books.xml"/>
+	<import file="events_config/boost_events.xml"/>
+</ae_static_data>

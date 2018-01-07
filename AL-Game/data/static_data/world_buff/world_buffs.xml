@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<world_buffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="world_buffs.xsd">
+	<world_buff_map id="210070000"> <!-- Cygnea -->
+		<world_buff skill_ids="20664" type="NPC" npc_tribe="LF5_GUARD_01_LIGHT LF5_GUARD_02_LIGHT LF5_GUARD_03_LIGHT LF5_GUARD_04_LIGHT PROTECTGUARD_LIGHT"/>
+	</world_buff_map>
+	<world_buff_map id="210090000"> <!-- Idian_Depths -->
+        <world_buff skill_ids="20656" type="NPC" npc_tribe="TIAMATREMNANT_LIZARD"/>
+        <world_buff skill_ids="20656" type="NPC" npc_ids="230944 230945 230946 230947"/>
+		<world_buff skill_ids="20700" type="NPC" npc_tribe="TIAMATREMNANT_DRAKAN"/>
+		<world_buff skill_ids="20701" type="NPC" npc_ids="230898"/>
+	</world_buff_map>
+	<world_buff_map id="220100000"> <!-- Idian_Depths -->
+        <world_buff skill_ids="20656" type="NPC" npc_tribe="TIAMATREMNANT_LIZARD"/>
+        <world_buff skill_ids="20656" type="NPC" npc_ids="230944 230945 230946 230947"/>
+		<world_buff skill_ids="20700" type="NPC" npc_tribe="TIAMATREMNANT_DRAKAN"/>
+		<world_buff skill_ids="20701" type="NPC" npc_ids="230898"/>
+	</world_buff_map>
+	<world_buff_map id="220080000"> <!-- Enshar -->
+		<world_buff skill_ids="20664" type="NPC" npc_tribe="DF5_GUARD_01_DARK DF5_GUARD_02_DARK DF5_GUARD_03_DARK DF5_GUARD_04_DARK PROTECTGUARD_DARK"/>
+	</world_buff_map>	
+	<world_buff_map id="301110000"> <!-- Danuar Reliquary -->
+		<world_buff skill_ids="21181" type="NPC" npc_ids="231104 284384 284383"/>
+		<world_buff skill_ids="21181 21146" type="NPC" npc_ids="231105"/>
+	</world_buff_map>
+	<world_buff_map id="300800000"> <!-- Infinity Shard -->
+		<world_buff skill_ids="21371" type="NPC" npc_ids="231074 231078 231082 231086"/>
+	</world_buff_map>
+	<world_buff_map id="300590000"> <!-- Ophidan Bridge -->
+		<world_buff skill_ids="21438" type="NPC" npc_ids="231050"/>
+		<world_buff skill_ids="20700" type="NPC" npc_tribe="IDF5U1_VRITRA"/>
+	</world_buff_map>
+	<world_buff_map id="301120000"> <!-- Kamar Battlefield -->
+		<world_buff skill_ids="20251" type="NPC" npc_ids="233260"/>
+	</world_buff_map>
+	<world_buff_map id="301130000"> <!-- Sauro Supply Base -->
+		<world_buff skill_ids="20700" type="NPC" npc_tribe="VRITRASUPPORT AGRRESSIVEFRIENDLYVRITRA"/>
+		<world_buff skill_ids="20251" type="NPC" npc_ids="230792 233277 233286"/>
+	</world_buff_map>
+	<world_buff_map id="300480000"> <!-- Sealed Danuar Mysticarium -->
+		<world_buff skill_ids="20700" type="NPC" npc_tribe="VRITRA"/>
+	</world_buff_map>
+	<world_buff_map id="301140000"> <!-- Seized Danuar Sanctuary -->
+		<world_buff skill_ids="20962" type="NPC" npc_tribe="IDF5U2_SHULACK"/>
+		<world_buff skill_ids="20700" type="NPC" npc_tribe="IDF5U2_VRITRA"/>
+		<world_buff skill_ids="20251" type="NPC" npc_ids="233414 233072 233125"/>
+	</world_buff_map>	
+</world_buffs>

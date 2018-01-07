@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 21:29 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!-- 95 Quests listed -->
+    <!--
+        [BEGIN] SUMMARY
+               15613 [TODO] [Spy] The Best Decision
+               20525 [SCRIPT] Peregran's Request
+               20526 [SCRIPT] The Secret Order
+               20527 [SCRIPT] The Secret Document
+               20528 [SCRIPT] The Protection Artefact
+               20529 [SCRIPT] The Corridor
+               25500 [SCRIPT] Defence of the Red Dawn Plains
+               25501 [SCRIPT] [Spy] Scouting the Immortal Light Refuge
+               25502 [XML] Crystal of Immortal Light
+               25503 [SCRIPT] Defence of the Swamp of Silence
+               25504 [SCRIPT] [Spy] Scouting the Twilight Garden
+               25505 [XML] Remove the Guardian Traps
+               25506 [SCRIPT] Defence of the Feather Branch Forest
+               25507 [SCRIPT] [Spy] Scouting the Gorge of Fallacy
+               25508 [XML] The Dead Have No Voice
+               25509 [SCRIPT] Defence of Sphiro's Territory
+               25510 [SCRIPT] [Spy] Scouting the Coast of the Doomed
+               25511 [XML] An Unpleasant Task
+               25512 [SCRIPT] Defence of the Cursed Gorge
+               25513 [SCRIPT] [Spy] Scouting the Colourful Swamp
+               25514 [SCRIPT] Free the Shadowbringer Scouts
+               25515 [SCRIPT] [Group] Defence of the Calyda Canyon
+               25516 [SCRIPT] [Spy/Group] Scouting the Wind Valley
+               25517 [XML] [Group] Calydon Totems
+               25518 [SCRIPT] Defence of the Plateau of Retribution
+               25519 [SCRIPT] [Spy] Scouting the Forest of Silence
+               25520 [SCRIPT] Flight Hindrance
+               25521 [SCRIPT] Defence of the Forest of Illusions
+               25522 [SCRIPT] [Spy] Scouting the Forest of Life
+               25523 [XML] Wild Aether Grass
+               25524 [SCRIPT] Defence of the Ruins of History
+               25525 [SCRIPT] [Spy] Scouting the Aether Temple
+               25526 [XML] Illusion Flowers
+               25527 [SCRIPT] Defence of the Sea of Life
+               25528 [SCRIPT] [Spy] Scouting the Storm Plateau
+               25529 [SCRIPT] Lost Souls
+               25530 [SCRIPT] [Group] Defence of the Black Mane Mountains
+               25531 [SCRIPT] [Spy/Group] Scouting the Krall Aether Mine
+               25532 [XML] [Group] Aether Ore of the Inception
+               25533 [SCRIPT] Defence of Saphora Forest
+               25534 [SCRIPT] [Spy] Scouting the Mushroom Gorge
+               25535 [XML] Mysterious Flowers
+               25536 [SCRIPT] [Group] Defence of the Zenzen Territory
+               25537 [SCRIPT] [Spy/Group] Scouting Tarha Village
+               25538 [XML] [Group] Zenzen Liqueur
+               25540 [XML] Nielon's Special Design
+               25548 [SCRIPT] Gift from Azphel's Crucible member
+               25550 [XML] Nosra and Ancient Atreia
+               25551 [SCRIPT] Nosra Transport Mode 1
+               25552 [SCRIPT] Nosra Transport Mode 2
+               25553 [SCRIPT] Nosra Transport Mode 3
+               25554 [SCRIPT] Nosra Transport Mode 4
+               25560 [SCRIPT] [Weekly/Group] Heavenly Light Scout
+               25561 [SCRIPT] [Weekly/Alliance] Danger Ahead
+               25562 [SCRIPT] [Weekly/Alliance] Shadows Over Nosra
+               25563 [TODO] [Weekly] Broken Guardian Medallion
+               25565 [SCRIPT] [Emergency Command] Defend Azphel's Temple
+               25566 [SCRIPT] [Emergency Command] Support for the Esterra Invasion
+               25570 [SCRIPT] [Weekly] On Feather Branch Hill By Day
+               25571 [SCRIPT] [Weekly] Morning Awakening
+               25572 [SCRIPT] [Weekly] Thorny Vines in the Daylight
+               25573 [SCRIPT] [Weekly/Group] Nocturnal Intruders
+               25574 [SCRIPT] [Weekly] Fair Winds
+               25575 [SCRIPT] [Weekly] Diurnal Rocks
+               25576 [SCRIPT] [Weekly] Nightly Awakening
+               25577 [SCRIPT] [Weekly] Nocturnal Goings On
+               25578 [SCRIPT] [Weekly/Group] Nocturnal Battle Cry
+               25579 [SCRIPT] [Weekly] Flowers of the Night
+               25580 [SCRIPT] [Spy/Daily] Disrupt the Elysean Research
+               25590 [SCRIPT] [Daily] Report on the Fragments of the Tower of Eternity
+               25595 [SCRIPT] [Spy/Daily] Attack on Esterra
+               25596 [SCRIPT] [Emergency Command] Nosra Defence
+               25601 [SCRIPT] [Alliance] The Legend of Sphiro
+               25602 [SCRIPT] [Group] Why The Forest Is Dying
+               25604 [SCRIPT] Prison Camp of Silence
+               25605 [SCRIPT] [Alliance] Daevas Trapped In Time
+               25606 [SCRIPT] [Group] A Woman's Sad Memories
+               25608 [SCRIPT] [Group] Sugar Sweet
+               25620 [SCRIPT] [Weekly/Group] Urughal
+               25621 [SCRIPT] [Weekly/Group] Kadunal
+               25622 [SCRIPT] [Weekly/Group] Ghost Hunt
+               25623 [SCRIPT] [Weekly/Group] Kurubi
+               25632 [SCRIPT] [Group/Daily] Ancient Creatures in the Cursed Gorge
+               25634 [SCRIPT] [Group/Daily] Ancient Creatures on the Plateau of Retribution
+               25637 [SCRIPT] [Group/Daily] Ancient Creatures in the Sea of Life
+               25639 [SCRIPT] [Group/Daily] Ancient Creatures in Saphora Forest
+               25640 [SCRIPT] [Daily] Strange Creatures in Nosra
+               25665 [XML] Ancient Guardians of the Red Dawn Plains
+               25666 [XML] Primordial Creatures
+               80930 [TODO] The Red Dawn Plains
+               80931 [TODO] The Swamp of Silence
+               80932 [TODO] Mission in the Swamp
+               80936 [SCRIPT] [Emergency Command] Renewed Defence of Nosra
+               80937 [SCRIPT] [Spy/Daily] Renewed Attack on Esterra
+               80938 [SCRIPT] [Spy/Daily] Repeated Attack on Esterra
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="25502" start_npc_ids="806101" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703063"/> 
+    <item_collecting id="25505" start_npc_ids="806102" start_dialog_id="4762" start_dialog_id2="1011"/> 
+    <item_collecting id="25508" start_npc_ids="806103" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703076"/> 
+    <item_collecting id="25511" start_npc_ids="806104" start_dialog_id="4762" start_dialog_id2="1011"/> 
+    <item_collecting id="25517" start_npc_ids="806106" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703079"/> 
+    <item_collecting id="25523" start_npc_ids="806108" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703081"/>
+    <item_collecting id="25526" start_npc_ids="806109" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703082"/>
+    <item_collecting id="25532" start_npc_ids="806111" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703084"/>
+    <item_collecting id="25535" start_npc_ids="806112" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703085"/>
+    <item_collecting id="25538" start_npc_ids="806255" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703295"/>
+    <item_collecting id="25540" start_npc_ids="806135" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <item_collecting id="25665" start_npc_ids="806101" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <item_collecting id="25666" start_npc_ids="806102" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

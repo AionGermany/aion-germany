@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="220040000">
+        <base_spawn id="31"> <!-- Malek Pass Outpost -->
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="1183.7771" y="1180.2456" z="220.26535" h="62"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231568" handler="BOSS">
+                    <spot x="1187.7131" y="1187.0514" z="220.60065" h="75"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231612" handler="ATTACKER">
+                    <spot x="1188.1368" y="1185.0122" z="222.5406" h="30"/>
+                </spawn>
+                <!-- Elyos Beluslan Inspector -->
+                <spawn npc_id="231626" handler="ATTACKER">
+                    <spot x="1167.5692" y="1136.7671" z="213.72476" h="23"/>
+                </spawn>
+                <!-- Beluslan Infiltrator -->
+                <spawn npc_id="231582">
+                    <spot x="1200.8473" y="1191.2474" z="221.62296" h="7"/>
+                    <spot x="1205.0042" y="1179.4363" z="222.04346" h="15"/>
+                    <spot x="1165.8435" y="1181.0968" z="220.13297" h="60"/>
+                    <spot x="1180.7029" y="1167.583" z="218.72638" h="90"/>
+                </spawn>
+                <!-- Andron General Goods Merchant -->
+                <spawn npc_id="801194">
+                    <spot x="1188.512" y="1174.2815" z="220.22015" h="45"/>
+                </spawn>
+                <!-- Nerva Warehouse Manager -->
+                <spawn npc_id="801195">
+                    <spot x="1191.438" y="1177.3093" z="220.36131" h="45"/>
+                </spawn>
+                <!-- Hipias Administration Officer -->
+                <spawn npc_id="801196">
+                    <spot x="1180.8138" y="1187.6956" z="220.40698" h="90"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ASMODIANS">
+                <!-- Asmodians Territory -->
+                <spawn npc_id="701800">
+                    <spot x="1183.7771" y="1180.2456" z="220.26535" h="62"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231569" handler="BOSS">
+                    <spot x="1187.7131" y="1187.0514" z="220.60065" h="75"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231612" handler="ATTACKER">
+                    <spot x="1188.1368" y="1185.0122" z="222.5406" h="30"/>
+                </spawn>
+                <!-- Asmodian Beluslan Inspector -->
+                <spawn npc_id="231627" handler="ATTACKER">
+                    <spot x="1167.5692" y="1136.7671" z="213.72476" h="23"/>
+                </spawn>
+                <!-- Beluslan Protector -->
+                <spawn npc_id="231587">
+                    <spot x="1200.8473" y="1191.2474" z="221.62296" h="7"/>
+                    <spot x="1205.0042" y="1179.4363" z="222.04346" h="15"/>
+                    <spot x="1165.8435" y="1181.0968" z="220.13297" h="60"/>
+                    <spot x="1180.7029" y="1167.583" z="218.72638" h="90"/>
+                </spawn>
+                <!-- Herd General Goods Merchant -->
+                <spawn npc_id="801197">
+                    <spot x="1188.512" y="1174.2815" z="220.22015" h="45"/>
+                </spawn>
+                <!-- Wulfgar Warehouse Manager -->
+                <spawn npc_id="801198">
+                    <spot x="1191.438" y="1177.3093" z="220.36131" h="45"/>
+                </spawn>
+                <!-- Thorkel Administration Officer -->
+                <spawn npc_id="801199">
+                    <spot x="1180.8138" y="1187.6956" z="220.40698" h="90"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Lepharist Territory -->
+                <spawn npc_id="701796">
+                    <spot x="1183.7771" y="1180.2456" z="220.26535" h="62"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231567" handler="BOSS">
+                    <spot x="1188.1079" y="1186.8939" z="220.64056" h="75"/>
+                </spawn>
+                <!-- Lepharist Vanguard -->
+                <spawn npc_id="231604" handler="ATTACKER">
+                    <spot x="1167.5692" y="1136.7671" z="213.72476" h="23"/>
+                </spawn>
+                <!-- Lepharist Protector -->
+                <spawn npc_id="231576" respawn_time="295">
+                    <spot x="1200.8473" y="1191.2474" z="221.62296" h="7"/>
+                    <spot x="1205.0042" y="1179.4363" z="222.04346" h="15"/>
+                    <spot x="1165.8435" y="1181.0968" z="220.13297" h="60"/>
+                    <spot x="1180.7029" y="1167.583" z="218.72638" h="90"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+        <base_spawn id="32"> <!-- Hoarfrost Watchpost -->
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="2324.546" y="2462.534" z="606.39764" h="21"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231571" handler="BOSS">
+                    <spot x="2320.4512" y="2454.916" z="606.9718" h="21"/>
+                </spawn>
+                <!-- Hoarfrost Assassin -->
+                <spawn npc_id="231613" handler="ATTACKER">
+                    <spot x="2320.4512" y="2454.916" z="606.9718" h="21"/>
+                </spawn>
+                <!-- Elyos Beluslan Inspector -->
+                <spawn npc_id="231628" handler="ATTACKER">
+                    <spot x="2353.061" y="2480.9773" z="604.29822" h="75"/>
+                </spawn>
+                <!-- Beluslan Infiltrator -->
+                <spawn npc_id="231585">
+                    <spot x="2336.7224" y="2467.5344" z="603.50836" h="15"/>
+                    <spot x="2333.3171" y="2471.5857" z="604.06323" h="7"/>
+                    <spot x="2323.32" y="2475.676" z="606.99255" h="15"/>
+                    <spot x="2331.6184" y="2460.4734" z="604.57153" h="103"/>
+                </spawn>
+                <!-- Iophon General Goods Merchant -->
+                <spawn npc_id="801200">
+                    <spot x="2316.4744" y="2458.1094" z="606.98303" h="105"/>
+                </spawn>
+                <!-- Alectas Warehouse Manager -->
+                <spawn npc_id="801201">
+                    <spot x="2314.7976" y="2454.953" z="607.25073" h="1"/>
+                </spawn>
+                <!-- Caelinus Administration Officer -->
+                <spawn npc_id="801202">
+                    <spot x="2319.447" y="2460.1604" z="606.98303" h="15"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ASMODIANS">
+                <!-- Asmodians Territory -->
+                <spawn npc_id="701800">
+                    <spot x="2324.546" y="2462.534" z="606.39764" h="21"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231572" handler="BOSS">
+                    <spot x="2320.4512" y="2454.916" z="606.9718" h="21"/>
+                </spawn>
+                <!-- Hoarfrost Assassin -->
+                <spawn npc_id="231613" handler="ATTACKER">
+                    <spot x="2320.4512" y="2454.916" z="606.9718" h="21"/>
+                </spawn>
+                <!-- Asmodian Beluslan Inspector -->
+                <spawn npc_id="231629" handler="ATTACKER">
+                    <spot x="2353.061" y="2480.9773" z="604.29822" h="75"/>
+                </spawn>
+                <!-- Beluslan Protector -->
+                <spawn npc_id="231590">
+                    <spot x="2320.4854" y="2465.554" z="606.8211" h="15"/>
+                    <spot x="2333.3171" y="2471.5857" z="604.1707" h="6"/>
+                    <spot x="2336.7224" y="2467.5344" z="603.27423" h="15"/>
+                    <spot x="2323.32" y="2475.676" z="606.56036" h="15"/>
+                </spawn>
+                <!-- Sigrid General Goods Merchant -->
+                <spawn npc_id="801204">
+                    <spot x="2328.1843" y="2461.485" z="605.5038" h="15"/>
+                </spawn>
+                <!-- Manlius Warehouse Manager -->
+                <spawn npc_id="801205">
+                    <spot x="2319.447" y="2460.1604" z="607.1626" h="15"/>
+                </spawn>
+                <!-- Mofrig Administration Officer -->
+                <spawn npc_id="801206">
+                    <spot x="2316.4744" y="2458.1094" z="607.0657" h="105"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Krall Territory -->
+                <spawn npc_id="701797">
+                    <spot x="2324.546" y="2462.534" z="606.39764" h="21"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231570" handler="BOSS">
+                    <spot x="2320.632" y="2455.0588" z="606.9605" h="15"/>
+                </spawn>
+                <!-- Hoarfrost Vanguard -->
+                <spawn npc_id="231605" handler="ATTACKER">
+                    <spot x="2353.061" y="2480.9773" z="604.29822" h="75"/>
+                </spawn>
+                <!-- Hoarfrost Protector -->
+                <spawn npc_id="231578" respawn_time="295">
+                    <spot x="2336.7224" y="2467.5344" z="603.27423" h="15"/>
+                    <spot x="2333.3171" y="2471.5857" z="604.1707" h="6"/>
+                    <spot x="2320.4854" y="2465.554" z="606.8211" h="15"/>
+                    <spot x="2323.32" y="2475.676" z="606.56036" h="15"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+    </spawn_map>
+</spawns>

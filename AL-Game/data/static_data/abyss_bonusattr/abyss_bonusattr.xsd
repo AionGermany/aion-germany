@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+	<xs:include schemaLocation="../modifiers.xsd"/>
+	<xs:element name="abyss_bonusattrs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="abyss_bonusattr" type="AbyssRaceServiceAttr" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AbyssRaceServiceAttr">
+		<xs:sequence>
+			<xs:element name="bonus_attr" type="AbyssPenaltyAttr" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="buff_id" type="xs:int" use="required"/>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+		<xs:attribute name="race" type="Race" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="AbyssPenaltyAttr">
+		<xs:attribute name="stat" type="modifiersenum" use="required"/>
+		<xs:attribute name="func" type="StatFunc" use="required"/>
+		<xs:attribute name="value" type="xs:int" use="required"/>
+	</xs:complexType>
+</xs:schema>

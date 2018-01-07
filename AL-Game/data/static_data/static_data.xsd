@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="ai/ai.xsd"/>
+    <xs:include schemaLocation="bind_points/bind_points.xsd"/>
+    <xs:include schemaLocation="chests/chest_templates.xsd"/>
+    <xs:include schemaLocation="decomposable_items/decomposable_items.xsd"/>
+    <xs:include schemaLocation="assembled_npcs/assembled_npcs.xsd"/>
+    <xs:include schemaLocation="fly_rings/fly_rings.xsd"/>
+    <xs:include schemaLocation="gatherables/gatherable_templates.xsd"/>
+    <xs:include schemaLocation="goodslists/goodslists.xsd"/>
+    <xs:include schemaLocation="guides/guide.xsd"/>
+    <xs:include schemaLocation="instance_cooltimes/instance_cooltimes.xsd"/>
+    <xs:include schemaLocation="item_sets/item_sets.xsd"/>
+    <xs:include schemaLocation="items/item_restriction_cleanups.xsd"/>
+    <xs:include schemaLocation="items/item_templates.xsd"/>
+    <xs:include schemaLocation="items/item_random_bonuses.xsd"/>
+    <xs:include schemaLocation="items/item_groups.xsd"/>
+    <xs:include schemaLocation="items/assembly_items.xsd"/>
+    <xs:include schemaLocation="npc_factions/npc_factions.xsd"/>
+    <xs:include schemaLocation="npc_skills/npc_skills.xsd"/>
+    <xs:include schemaLocation="npcs/npcs.xsd"/>
+    <xs:include schemaLocation="pet_skills/pet_skills.xsd"/>
+    <xs:include schemaLocation="pets/pets.xsd"/>
+    <xs:include schemaLocation="pets/minions.xsd"/>
+    <xs:include schemaLocation="pets/pet_feed.xsd"/>
+    <xs:include schemaLocation="pets/pet_doping.xsd"/>
+    <xs:include schemaLocation="quest_data/quest_data.xsd"/>
+    <xs:include schemaLocation="quest_script_data/quest_script_data.xsd"/>
+    <xs:include schemaLocation="recipe/recipe_templates.xsd"/>
+    <xs:include schemaLocation="luna/luna_templates.xsd"/>
+    <xs:include schemaLocation="locations/rift/rift_locations.xsd"/>
+    <xs:include schemaLocation="roads/roads.xsd"/>
+    <xs:include schemaLocation="locations/siege/siege_locations.xsd"/>
+    <xs:include schemaLocation="locations/siege/siege_shields.xsd"/>
+    <xs:include schemaLocation="skill_tree/skill_tree.xsd"/>
+    <xs:include schemaLocation="skills/skills.xsd"/>
+    <xs:include schemaLocation="skills/motion_times.xsd"/>
+    <xs:include schemaLocation="spawns/spawns.xsd"/>
+    <xs:include schemaLocation="staticdoors/staticdoor_templates.xsd"/>
+    <xs:include schemaLocation="stats/stats.xsd"/>
+    <xs:include schemaLocation="tribe/tribe_relations.xsd"/>
+    <xs:include schemaLocation="vortex/dimensional_vortex.xsd"/>
+    <xs:include schemaLocation="warehouse_expander/warehouse_expander.xsd"/>
+    <xs:include schemaLocation="zones/zones.xsd"/>
+    <xs:include schemaLocation="global_types.xsd"/>
+    <xs:include schemaLocation="import.xsd"/>
+    <xs:include schemaLocation="npc_teleporter.xsd"/>
+    <xs:include schemaLocation="npc_trade_list.xsd"/>
+	<xs:include schemaLocation="player_appearances.xsd"/>
+    <xs:include schemaLocation="npc_walker/npc_walker.xsd"/>
+    <xs:include schemaLocation="walker_versions.xsd"/>
+    <xs:include schemaLocation="player_experience_table.xsd"/>
+    <xs:include schemaLocation="player_initial_data.xsd"/>
+    <xs:include schemaLocation="player_titles.xsd"/>
+    <xs:include schemaLocation="teleport_location.xsd"/>
+    <xs:include schemaLocation="world_maps.xsd"/>
+    <xs:include schemaLocation="weather_table.xsd"/>
+    <xs:include schemaLocation="flypath_template.xsd"/>
+    <xs:include schemaLocation="windstreams/windstreams.xsd"/>
+    <xs:include schemaLocation="cosmetic_items/cosmetic_items.xsd"/>
+    <xs:include schemaLocation="npc_shouts/npc_shouts.xsd"/>
+    <xs:include schemaLocation="npc_drops/npc_drops.xsd"/>
+    <xs:include schemaLocation="auto_group/auto_group.xsd"/>
+    <xs:include schemaLocation="events_config/events_config.xsd"/>
+    <xs:include schemaLocation="polymorph_panels/polymorph_panels.xsd"/>
+    <xs:include schemaLocation="instance_bonusattr/instance_bonusattr.xsd"/>
+    <xs:include schemaLocation="housing/housing_objects.xsd"/>
+    <xs:include schemaLocation="ride/ride.xsd"/>
+    <xs:include schemaLocation="robot/robot.xsd"/>
+    <xs:include schemaLocation="instance_exit/instance_exit.xsd"/>
+    <xs:include schemaLocation="portals/portal_loc.xsd"/>
+    <xs:include schemaLocation="portals/portal_template2.xsd"/>
+	<xs:include schemaLocation="portals/conquest_portals.xsd"/>
+    <xs:include schemaLocation="housing/houses.xsd"/>
+    <xs:include schemaLocation="housing/house_parts.xsd"/>
+    <xs:include schemaLocation="housing/house_npcs.xsd"/>
+    <xs:include schemaLocation="housing/scripts.xsd"/>
+    <xs:include schemaLocation="mail_templates.xsd"/>
+    <xs:include schemaLocation="mesh_materials/material_templates.xsd"/>
+    <xs:include schemaLocation="quest_data/challenge_tasks.xsd"/>
+    <xs:include schemaLocation="town_spawns/town_spawns.xsd"/>
+    <xs:include schemaLocation="locations/base/base_locations.xsd"/>
+    <xs:include schemaLocation="locations/beritra/beritra_invasion.xsd"/>
+	<xs:include schemaLocation="locations/svs/svs.xsd"/>
+	<xs:include schemaLocation="locations/rvr/rvr.xsd"/>
+    <xs:include schemaLocation="skills/skill_charge.xsd"/>
+    <xs:include schemaLocation="items/item_purifications.xsd"/>
+    <xs:include schemaLocation="decomposable_items/decomposable_selectitems.xsd"/>
+    <xs:include schemaLocation="items/enchant_templates.xsd"/>
+    <xs:include schemaLocation="items/enchant_tables.xsd"/>
+    <xs:include schemaLocation="items/item_multi_returns.xsd"/> 
+    <xs:include schemaLocation="hotspot_teleporter.xsd"/>
+    <xs:include schemaLocation="events_config/atreian_passports.xsd"/>
+    <xs:include schemaLocation="stats/absolute_stats.xsd"/>
+    <xs:include schemaLocation="arcadelist.xsd"/> 
+	<xs:include schemaLocation="hidden_stigma_tree/hidden_stigma_tree.xsd"/>
+	<xs:include schemaLocation="world_buff/world_buffs.xsd"/>
+    <xs:include schemaLocation="service_bonusattr/service_bonusattr.xsd"/>
+    <xs:include schemaLocation="service_bonusattr/players_bonus.xsd"/>
+    <xs:include schemaLocation="service_bonusattr/f2p_bonusattr.xsd"/>
+    <xs:include schemaLocation="pets/pet_buff.xsd"/>
+    <xs:include schemaLocation="pets/pet_merchant.xsd"/>
+	<xs:include schemaLocation="creativity/panel_cps.xsd"/>
+    <xs:include schemaLocation="abyss_op/abyss_ops.xsd"/>
+	<xs:include schemaLocation="locations/abyss_landing/landing_locations.xsd"/>
+	<xs:include schemaLocation="locations/abyss_landing/landing_special_locations.xsd"/>
+	<xs:include schemaLocation="abyss_bonusattr/abyss_bonusattr.xsd"/>
+	<xs:include schemaLocation="abyss_bonusattr/abyss_groupattr.xsd"/>
+	<xs:include schemaLocation="luna/luna_consume_rewards.xsd"/>
+	<xs:include schemaLocation="monster_book/monster_books.xsd"/>
+	<xs:include schemaLocation="events_config/boost_events.xsd"/>
+    <xs:element name="ae_static_data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="ai_templates" minOccurs="0"/>
+                <xs:element ref="bind_points" minOccurs="0"/>
+                <xs:element ref="chest_templates" minOccurs="0"/>
+                <xs:element ref="decomposable_items" minOccurs="0"/>
+                <xs:element ref="assembled_npcs" minOccurs="0"/>
+                <xs:element ref="fly_rings" minOccurs="0"/>
+                <xs:element ref="gatherable_templates" minOccurs="0"/>
+                <xs:element ref="goodslists" minOccurs="0"/>
+                <xs:element ref="guides" minOccurs="0"/>
+                <xs:element ref="instance_cooltimes" minOccurs="0"/>
+                <xs:element ref="item_sets" minOccurs="0"/>
+                <xs:element ref="item_restriction_cleanups" minOccurs="0"/>
+                <xs:element ref="item_templates" minOccurs="0"/>
+                <xs:element ref="random_bonuses" minOccurs="0"/>
+                <xs:element ref="item_groups" minOccurs="0"/>
+                <xs:element ref="assembly_items" minOccurs="0"/>
+                <xs:element ref="npc_factions" minOccurs="0"/>
+                <xs:element ref="npc_skill_templates" minOccurs="0"/>
+                <xs:element ref="npc_templates" minOccurs="0"/>
+                <xs:element ref="pet_skill_templates" minOccurs="0"/>
+                <xs:element ref="pets" minOccurs="0"/>
+                <xs:element ref="minions" minOccurs="0"/>
+                <xs:element ref="pet_feed" minOccurs="0"/>
+                <xs:element ref="dopings" minOccurs="0"/>
+                <xs:element ref="quests" minOccurs="0"/>
+                <xs:element ref="quest_scripts" minOccurs="0"/>
+                <xs:element ref="recipe_templates" minOccurs="0"/>
+                <xs:element ref="luna_templates" minOccurs="0"/>
+                <xs:element ref="rift_locations" minOccurs="0"/>
+                <xs:element ref="roads" minOccurs="0"/>
+                <xs:element ref="siege_locations" minOccurs="0"/>
+                <xs:element ref="shields" minOccurs="0"/>
+                <xs:element ref="skill_tree" minOccurs="0"/>
+                <xs:element ref="skill_data" minOccurs="0"/>
+                <xs:element ref="motion_times" minOccurs="0"/>
+                <xs:element ref="spawns" minOccurs="0"/>
+                <xs:element ref="staticdoor_templates" minOccurs="0"/>
+                <xs:element ref="player_stats_templates" minOccurs="0"/>
+                <xs:element ref="summon_stats_templates" minOccurs="0"/>
+                <xs:element ref="tribe_relations" minOccurs="0"/>
+                <xs:element ref="dimensional_vortex" minOccurs="0"/>
+                <xs:element ref="warehouse_expander" minOccurs="0"/>
+                <xs:element ref="zones" minOccurs="0"/>
+                <xs:element ref="npc_teleporter" minOccurs="0"/>
+                <xs:element ref="npc_trade_list" minOccurs="0"/>
+				<xs:element ref="players" minOccurs="0"/>
+                <xs:element ref="npc_walker" minOccurs="0"/>
+                <xs:element ref="walker_versions" minOccurs="0"/>
+                <xs:element ref="player_experience_table" minOccurs="0"/>
+                <xs:element ref="player_initial_data" minOccurs="0"/>
+                <xs:element ref="player_titles" minOccurs="0"/>
+                <xs:element ref="teleport_location" minOccurs="0"/>
+                <xs:element ref="world_maps" minOccurs="0"/>
+                <xs:element ref="weather" minOccurs="0"/>
+                <xs:element ref="flypath_template" minOccurs="0"/>
+                <xs:element ref="windstreams" minOccurs="0"/>
+                <xs:element ref="cosmetic_items" minOccurs="0"/>
+                <xs:element ref="npc_shouts" minOccurs="0"/>
+                <xs:element ref="npc_drops" minOccurs="0"/>
+                <xs:element ref="auto_groups" minOccurs="0"/>
+                <xs:element ref="events_config" minOccurs="0"/>
+                <xs:element ref="polymorph_panels" minOccurs="0"/>
+                <xs:element ref="instance_bonusattrs" minOccurs="0"/>
+                <xs:element ref="housing_objects" minOccurs="0"/>
+                <xs:element ref="rides" minOccurs="0"/>
+                <xs:element ref="robots" minOccurs="0"/>
+                <xs:element ref="instance_exits" minOccurs="0"/>
+                <xs:element ref="portal_locs" minOccurs="0"/>
+                <xs:element ref="portal_templates2" minOccurs="0"/>
+				<xs:element ref="portals_conquest" minOccurs="0"/>
+                <xs:element ref="house_lands" minOccurs="0"/>
+                <xs:element ref="buildings" minOccurs="0"/>
+                <xs:element ref="house_parts" minOccurs="0"/>
+                <xs:element ref="house_npcs" minOccurs="0"/>
+                <xs:element ref="lboxes" minOccurs="0"/>
+                <xs:element ref="mails" minOccurs="0"/>
+                <xs:element ref="material_templates" minOccurs="0"/>
+                <xs:element ref="challenge_tasks" minOccurs="0"/>
+                <xs:element ref="town_spawns_data" minOccurs="0"/>
+                <xs:element ref="base_locations" minOccurs="0"/>
+                <xs:element ref="beritra_invasion" minOccurs="0"/>
+                <xs:element ref="svs" minOccurs="0"/>
+                <xs:element ref="rvr" minOccurs="0"/>
+                <xs:element ref="skill_charge" minOccurs="0"/>
+                <xs:element ref="item_purifications" minOccurs="0"/>
+                <xs:element ref="decomposable_selectitems" minOccurs="0"/>
+                <xs:element ref="enchant_templates" minOccurs="0"/>
+                <xs:element ref="enchant_tables" minOccurs="0"/>
+                <xs:element ref="item_multi_returns" minOccurs="0"/>
+                <xs:element ref="hotspot_teleport" minOccurs="0"/>
+                <xs:element ref="atreian_passports" minOccurs="0"/>
+                <xs:element ref="absolute_stats" minOccurs="0"/>
+                <xs:element ref="arcadelist" minOccurs="0"/>       
+				<xs:element ref="hidden_stigma_tree" minOccurs="0"/>
+                <xs:element ref="world_buffs" minOccurs="0"/>
+                <xs:element ref="service_bonusattrs" minOccurs="0"/>
+                <xs:element ref="players_service_bonusattrs" minOccurs="0"/>
+                <xs:element ref="f2p_bonus" minOccurs="0"/>
+                <xs:element ref="pet_bonusattrs" minOccurs="0"/>
+                <xs:element ref="merchants" minOccurs="0"/>
+				<xs:element ref="panel_cps" minOccurs="0"/>
+				<xs:element ref="abyss_ops" minOccurs="0"/>
+				<xs:element ref="landing" minOccurs="0"/>
+				<xs:element ref="landing_special" minOccurs="0"/>
+				<xs:element ref="abyss_bonusattrs" minOccurs="0"/>
+				<xs:element ref="abyss_groupattrs" minOccurs="0"/>
+				<xs:element ref="luna_consume_rewards" minOccurs="0"/>
+				<xs:element ref="monster_books" minOccurs="0"/>
+				<xs:element ref="boost_events" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

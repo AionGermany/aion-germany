@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:include schemaLocation="../modifiers.xsd"/>
+    <xs:element name="item_sets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="itemset" type="ItemSet" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ItemSet">
+        <xs:sequence>
+            <xs:element name="itempart" type="ItemPart" minOccurs="1" maxOccurs="10"/>
+            <xs:element name="partbonus" type="PartBonus" minOccurs="1" maxOccurs="5"/>
+            <xs:element name="fullbonus" type="FullBonus" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="id" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="ItemPart">
+        <xs:attribute name="itemid" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="PartBonus">
+        <xs:sequence>
+            <xs:element name="modifiers" type="Modifiers"/>
+        </xs:sequence>
+        <xs:attribute name="count" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="FullBonus">
+        <xs:sequence>
+            <xs:element name="modifiers" type="Modifiers"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

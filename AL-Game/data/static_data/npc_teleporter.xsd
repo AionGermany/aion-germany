@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="global_types.xsd"/>
+    <xs:element name="npc_teleporter" type="Data"/>
+    <xs:complexType name="Data">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="teleporter_template" type="Template" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Template">
+        <xs:sequence>
+            <xs:element name="locations" type="Locations" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="npc_ids" type="IntListType" use="required"/>
+        <xs:attribute name="teleportId" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="Locations">
+        <xs:sequence>
+            <xs:element name="telelocation" type="TeleportLocation" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TeleportLocation">
+        <xs:attribute name="loc_id" type="xs:int" use="required"/>
+        <xs:attribute name="teleportid" type="xs:int"/>
+        <xs:attribute name="price" type="xs:int"/>
+        <xs:attribute name="pricePvp" type="xs:int"/>
+        <xs:attribute name="required_quest" type="xs:int"/>
+        <xs:attribute name="type" type="TeleportType" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="TeleportType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FLIGHT"/>
+            <xs:enumeration value="REGULAR"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

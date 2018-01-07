@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    30201 [SCRIPT] Supplies Party
+                    30202 [SCRIPT] Suspicious Ceremony
+                    30203 [SCRIPT] Halt the Ceremony!
+                    30204 [XML] Pilomenes' Advice
+                    30205 [XML] A Monument Rubbed
+                    30206 [XML] Dragonbound Diaries
+                    30207 [SCRIPT] Soul Invocation Ceremony
+                    30208 [SCRIPT] The Truth Hurts
+                    30209 [XML] The Ancient Document
+                    30210 [SCRIPT] Written in Blood
+                    30211 [SCRIPT] The Rod and the Orb
+                    30212 [XML] The Orb and the Rod
+                    30213 [SCRIPT] Magical Essence
+                    30214 [XML] Decree of Valor
+                    30215 [XML] To Help a Hushblade
+                    30222 [SCRIPT] A Guard's Curse
+                    30223 [XML] The Plaguebearer
+                    30224 [XML] Grave Robber's Lament
+                    30225 [XML] Lupukin's Request
+                    30226 [XML] Priest Kailaus's New Nightmare
+                    30227 [SCRIPT] To Liberate Souls
+                    30228 [XML] Teressa's Request
+                    30229 [XML] The Tricky Spirit
+                    30230 [XML] The Elusive Spirit
+                    30231 [XML] Eluding Success
+                    30232 [XML] Fire Down Below
+                    30233 [XML] An Old Flame
+                    30234 [XML] The Captain's Curse
+                    30235 [SCRIPT] New Sword
+                    30236 [SCRIPT] New Greatsword
+                    30237 [SCRIPT] New Polearm
+                    30238 [SCRIPT] New Staff
+                    30239 [SCRIPT] New Spellbook
+                    30240 [SCRIPT] New Orb
+                    30241 [SCRIPT] New Bow
+                    30242 [SCRIPT] New Dagger
+                    30243 [SCRIPT] New Mace
+                    30244 [XML] Cleansing the Temple
+                    30245 [XML] Nightshades' Last Days
+                    30246 [SCRIPT] Your Oath to Outremus
+                    30247 [SCRIPT] New Pistol
+                    30248 [SCRIPT] New AetherCannon
+                    30249 [SCRIPT] New Harp
+                    30301 [SCRIPT] Tracking Supplies
+                    30302 [SCRIPT] Mysterious Motives
+                    30303 [SCRIPT] The Fall of Isbariya
+                    30304 [XML] Herka's Advice
+                    30305 [XML] Aye, That's the Rubbing
+                    30306 [XML] Library Legends
+                    30307 [SCRIPT] Soul Summoning
+                    30308 [SCRIPT] Summon Respondent Utra
+                    30309 [XML] A Difficult Restoration
+                    30310 [SCRIPT] Rank and Bile
+                    30311 [SCRIPT] A Quartz Is a Quartz
+                    30312 [XML] Rooting for Power
+                    30313 [SCRIPT] Opening the Prison
+                    30314 [XML] Servant of Gelkmaros
+                    30315 [XML] Benefactor of Gelkmaros
+                    30322 [XML] Vanquishing Ahbana
+                    30323 [XML] Avoid like the Plaguebearer
+                    30324 [XML] Dorakiki's Demise
+                    30325 [XML] Do It for the Little Shulacks
+                    30326 [XML] Dream a Little Dream
+                    30327 [SCRIPT] Mired Souls
+                    30328 [XML] Watery Wish
+                    30329 [XML] Earthly Eagerness
+                    30330 [XML] Windy Wanting
+                    30331 [XML] Fiery Focus
+                    30332 [XML] Freeing the Flames
+                    30333 [XML] The Key to Freedom
+                    30334 [XML] Liberate Taros's Soul
+                    30335 [SCRIPT] Improved Sword
+                    30336 [SCRIPT] Improved Greatsword
+                    30337 [SCRIPT] Improved Polearm
+                    30338 [SCRIPT] Improved Staff
+                    30339 [SCRIPT] Improved Spellbook
+                    30340 [SCRIPT] Improved Orb
+                    30341 [SCRIPT] Improved Bow
+                    30342 [SCRIPT] Improved Dagger
+                    30343 [SCRIPT] Improved Mace
+                    30344 [XML] Punish Beshmundir Balaur
+                    30345 [XML] Hunting Nightshades
+                    30346 [SCRIPT] A Solemn Promise
+                    30347 [SCRIPT] Improved Pistol
+                    30348 [SCRIPT] Improved Aethercannon
+                    30349 [SCRIPT] Improved Harp
+                    !!! Missing 30141 & 30350  !!!
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="30204" start_npc_ids="798926" end_npc_ids="798941"/>
+    <report_to id="30209" start_npc_ids="798941" end_npc_ids="203837"/>
+    <report_to id="30304" start_npc_ids="799225" end_npc_ids="799322"/>
+    <report_to id="30309" start_npc_ids="799322" end_npc_ids="204225"/>
+    <report_to id="30316" start_npc_ids="799322" end_npc_ids="799208"/>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="30205" start_npc_ids="798941" action_item_ids="700745 700746 700747 700748"/>
+    <item_collecting id="30206" start_npc_ids="798941" action_item_ids="700750"/>
+    <item_collecting id="30212" start_npc_ids="798941"/>
+    <item_collecting id="30214" start_npc_ids="798927"/>
+    <item_collecting id="30215" start_npc_ids="798928"/>
+    <item_collecting id="30223" start_npc_ids="799031"/>
+    <item_collecting id="30225" start_npc_ids="216527"/>
+    <item_collecting id="30226" start_npc_ids="798946"/>
+    <item_collecting id="30228" start_npc_ids="798934"/>
+    <item_collecting id="30229" start_npc_ids="798934"/>
+    <item_collecting id="30230" start_npc_ids="798934"/>
+    <item_collecting id="30231" start_npc_ids="798934"/>
+    <item_collecting id="30233" start_npc_ids="798934"/>
+    <item_collecting id="30305" start_npc_ids="799322" action_item_ids="700754 700755 700756 700757"/>
+    <item_collecting id="30306" start_npc_ids="799322" action_item_ids="700750"/>
+    <item_collecting id="30312" start_npc_ids="799322"/>
+    <item_collecting id="30314" start_npc_ids="799226"/>
+    <item_collecting id="30315" start_npc_ids="799226"/>
+    <item_collecting id="30323" start_npc_ids="799335"/>
+    <item_collecting id="30325" start_npc_ids="216527"/>
+    <item_collecting id="30326" start_npc_ids="799244"/>
+    <item_collecting id="30328" start_npc_ids="799321"/>
+    <item_collecting id="30329" start_npc_ids="799321"/>
+    <item_collecting id="30330" start_npc_ids="799321"/>
+    <item_collecting id="30331" start_npc_ids="799321"/>
+    <item_collecting id="30333" start_npc_ids="799321"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="30224" start_npc_ids="799051">
+        <monster var="0" npc_ids="216250" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30232" start_npc_ids="798934">
+        <monster var="0" npc_ids="216168" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30234" start_npc_ids="798979">
+        <monster var="0" npc_ids="216248" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30244" start_npc_ids="798926">
+        <monster var="0" npc_ids="216184 216185 216187 216188 216202 216266 216268 216283" end_var="20"/>
+        <monster var="1" npc_ids="216215 216296" end_var="10"/>
+        <monster var="2" npc_ids="216198 216279 216232 216233 216234 216235 216236 216237 216317" end_var="40"/>
+    </monster_hunt>
+    <monster_hunt id="30245" start_npc_ids="798926">
+        <monster var="0" npc_ids="216228 216229 216230 216231 216232 216310 216312" end_var="12"/>
+    </monster_hunt>
+    <monster_hunt id="30322" start_npc_ids="799278">
+        <monster var="0" npc_ids="216158 216239" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30324" start_npc_ids="799262">
+        <monster var="0" npc_ids="216250" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30332" start_npc_ids="799321">
+        <monster var="0" npc_ids="216168" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30334" start_npc_ids="799278">
+        <monster var="0" npc_ids="216248" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30344" start_npc_ids="799225">
+        <monster var="0" npc_ids="216184 216185 216187 216188 216202 216266 216268 216283" end_var="20"/>
+        <monster var="1" npc_ids="216215 216296" end_var="10"/>
+        <monster var="2" npc_ids="216198 216279 216232 216233 216234 216235 216236 216237 216317" end_var="40"/>
+    </monster_hunt>
+    <monster_hunt id="30345" start_npc_ids="799225">
+        <monster var="0" npc_ids="216228 216229 216230 216231 216232 216310 216312" end_var="12"/>
+    </monster_hunt>
+</quest_scripts>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    11290 [XML] Thwarted Expedition
+                    21292 [XML] Thwarted Assignment
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="11290" start_npc_ids="207045">
+        <monster var="0" npc_ids="218673 218671 218674" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="21292" start_npc_ids="207045">
+        <monster var="0" npc_ids="218673 218671 218674" end_var="5"/>
+    </monster_hunt>
+</quest_scripts>

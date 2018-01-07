@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:include schemaLocation="../items/item_groups.xsd"/>
+    <xs:element name="quests" type="Quests"/>
+    <xs:complexType name="Quests">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="quest" type="Quest" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Quest">
+        <xs:sequence>
+            <xs:element name="collect_items" type="CollectItems" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="inventory_items" type="InventoryItems" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="rewards" type="Rewards" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="bonus" type="QuestBonuses" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="extended_rewards" type="Rewards" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="quest_drop" type="QuestDrop" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="quest_kill" type="QuestKill" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="start_conditions" type="QuestStartConditions" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="class_permitted" type="ClassListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="gender_permitted" type="Gender" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="quest_work_items" type="QuestWorkItems" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="fighter_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="knight_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ranger_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="assassin_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="wizard_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="elementalist_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="priest_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="chanter_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="bard_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="gunner_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="rider_selectable_reward" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="category_name" type="xs:string"/>
+        <xs:attribute name="nameId" type="xs:int"/>
+        <xs:attribute name="minlevel_permitted" type="xs:int"/>
+        <xs:attribute name="maxlevel_permitted" type="xs:int" default="0"/>
+        <xs:attribute name="rank" type="xs:int" default="0"/>
+        <xs:attribute name="max_repeat_count" type="xs:int" default="1"/>
+        <xs:attribute name="cannot_share" type="xs:boolean" default="false"/>
+        <xs:attribute name="cannot_giveup" type="xs:boolean" default="false"/>
+		<xs:attribute name="can_report" type="xs:boolean" default="false"/>
+        <xs:attribute name="use_class_reward" type="xs:int" default="0"/>
+        <xs:attribute name="race_permitted" type="Race"/>
+        <xs:attribute name="combineskill" type="xs:int"/>
+        <xs:attribute name="combine_skillpoint" type="xs:int"/>
+        <xs:attribute name="timer" type="xs:boolean" default="false"/>
+        <xs:attribute name="category" type="QuestCategory" default="QUEST"/>
+        <xs:attribute name="extra_category" type="QuestExtraCategory" default="NONE"/>
+        <xs:attribute name="repeat_cycle" type="WeekDays"/>
+        <xs:attribute name="npcfaction_id" type="xs:int"/>
+        <xs:attribute name="mentor_type" type="QuestMentorType"/>
+        <xs:attribute name="mentor" type="xs:boolean"/>
+        <xs:attribute name="target" type="QuestTarget" default="NONE"/>
+        <xs:attribute name="quest_cooltime" type="xs:int" use="optional"/>
+        <xs:attribute name="titleId" type="xs:int" default="0"/>
+    </xs:complexType>
+    <xs:complexType name="CollectItems">
+        <xs:sequence>
+            <xs:element name="collect_item" type="CollectItem" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="InventoryItems">
+        <xs:sequence>
+            <xs:element name="inventory_item" type="InventoryItem" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="QuestDrop">
+        <xs:attribute name="npc_id" type="xs:int"/>
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="chance" type="xs:int" default="100"/>
+        <xs:attribute name="drop_each_member" type="xs:int"/>
+        <xs:attribute name="collecting_step" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="QuestKill">
+        <xs:attribute name="seq" type="xs:int" use="required"/>
+        <xs:attribute name="npc_ids" type="IntListType"/>
+    </xs:complexType>
+    <xs:complexType name="Rewards">
+        <xs:sequence>
+            <xs:element name="selectable_reward_item" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="reward_item" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="gold" type="xs:int"/>
+        <xs:attribute name="exp" type="xs:int"/>
+        <xs:attribute name="dp" type="xs:int"/>
+        <xs:attribute name="reward_abyss_point" type="xs:int"/>
+        <xs:attribute name="reward_glory_point" type="xs:int"/>
+        <xs:attribute name="reward_abyss_op_point" type="xs:int"/>
+        <xs:attribute name="expBoost" type="xs:int"/>
+        <xs:attribute name="title" type="xs:int"/>
+        <xs:attribute name="extend_inventory" type="xs:int"/>
+        <xs:attribute name="extend_stigma" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="QuestBonuses">
+        <xs:attribute name="type" type="BonusType" use="required"/>
+        <xs:attribute name="level" type="xs:int" use="optional"/>
+        <xs:attribute name="skill" type="xs:int" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="CollectItem">
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="count" type="xs:int" default="1"/>
+    </xs:complexType>
+    <xs:complexType name="InventoryItem">
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="count" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="QuestWorkItems">
+        <xs:sequence>
+            <xs:element name="quest_work_item" type="QuestItems" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="QuestItems">
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="count" type="xs:int" default="1"/>
+    </xs:complexType>
+    <xs:simpleType name="NumberListType">
+        <xs:list itemType="xs:int"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="QuestMentorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="MENTOR"/>
+            <xs:enumeration value="MENTE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="QuestTarget">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="AREA"/>
+            <xs:enumeration value="LEAGUE"/>
+            <xs:enumeration value="ALLIANCE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Gender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MALE"/>
+            <xs:enumeration value="FEMALE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClassListType">
+        <xs:list itemType="playerClass"/>
+    </xs:simpleType>
+    <xs:complexType name="QuestStartConditions">
+        <xs:sequence>
+            <xs:element name="finished" type="FinishedQuest" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="unfinished" type="NumberListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="noacquired" type="NumberListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="acquired" type="NumberListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="equipped" type="NumberListType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FinishedQuest">
+        <xs:attribute name="quest_id" type="xs:int"/>
+        <xs:attribute name="reward" type="xs:int" default="0"/>
+    </xs:complexType>
+    <xs:simpleType name="QuestCategory">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="QUEST"/>
+            <xs:enumeration value="MISSION"/>
+            <xs:enumeration value="SEEN_MARKER"/>
+            <xs:enumeration value="SIGNIFICANT"/>
+            <xs:enumeration value="IMPORTANT"/>
+            <xs:enumeration value="NON_COUNT"/>
+            <xs:enumeration value="TASK"/>
+            <xs:enumeration value="FACTION"/>
+            <xs:enumeration value="EVENT"/>
+            <xs:enumeration value="CHALLENGE_TASK"/>
+            <xs:enumeration value="PUBLIC"/>
+            <xs:enumeration value="LEGION"/>
+            <xs:enumeration value="PRIMARY"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="QuestExtraCategory">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="COIN_QUEST"/>
+            <xs:enumeration value="DRACONIC_RECIPE_QUEST"/>
+            <xs:enumeration value="DEVANION_QUEST"/>
+            <xs:enumeration value="GOLD_QUEST"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="WeekDays">
+        <xs:list itemType="QuestRepeatCycle"/>
+    </xs:simpleType>
+    <xs:simpleType name="QuestRepeatCycle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ALL"/>
+            <xs:enumeration value="MON"/>
+            <xs:enumeration value="TUE"/>
+            <xs:enumeration value="WED"/>
+            <xs:enumeration value="THU"/>
+            <xs:enumeration value="FRI"/>
+            <xs:enumeration value="SAT"/>
+            <xs:enumeration value="SUN"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

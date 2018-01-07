@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    80212 [XML] [Growth] Training Camp Trouble
+                    80213 [XML] [Growth] Hearts of Fire
+                    80214 [XML] [Growth] Aether Intervention     
+                    80215 [XML] [Growth] Bioweapon Interference
+                    80217 [XML] [Growth] To Dark Poeta!
+                    80218 [XML] [Growth] Dark Poeta Encore
+                    80219 [XML] [Growth] Dark Poeta Finale
+                    80220 [XML] [Growth] Dark Poeta Finale
+                    80221 [XML] [Growth] Nochsana Infiltration
+                    80222 [SCRIPT] [Growth] Heartburn
+                    80223 [XML] [Growth] Mist Mane Oww
+                    80224 [XML] [Growth] Bad Bakarma
+                    80226 [XML] [Growth] A Test in Dark Poeta
+                    80227 [XML] [Growth] A Second Test in Dark Poeta
+                    80228 [XML] [Growth] Final Test in Dark Poeta
+                    80229 [XML] [Growth] Final Test in Dark Poeta
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="80212" start_npc_ids="831030">
+        <monster var="0" npc_ids="290161" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="80215" start_npc_ids="831024">
+        <monster var="0" npc_ids="213776" end_var="3"/>
+        <monster var="0" npc_ids="213778" end_var="3"/>
+        <monster var="0" npc_ids="213802" end_var="3"/>
+        <monster var="0" npc_ids="213779" end_var="3"/>
+        <monster var="0" npc_ids="213780" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="80217" start_npc_ids="831024">
+        <monster var="0" npc_ids="214904" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="80218" start_npc_ids="831024">
+        <monster var="0" npc_ids="214904" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="80219" start_npc_ids="831024">
+        <monster var="0" npc_ids="214904" end_var="6"/>
+    </monster_hunt>
+    <monster_hunt id="80220" start_npc_ids="831024">
+        <monster var="0" npc_ids="214904" end_var="6"/>
+    </monster_hunt>
+    <monster_hunt id="80221" start_npc_ids="831028">
+        <monster var="0" npc_ids="290161" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="80223" start_npc_ids="831028">
+        <monster var="0" npc_ids="211615 212556 212724 212725 212726 212727" end_var="100"/>
+        <monster var="0" npc_ids="212728 212729 212730 212731 212732 212733" end_var="100"/>
+        <monster var="0" npc_ids="212734 212735 212736 212737 212738 212739" end_var="100"/>
+        <monster var="0" npc_ids="212740 212741 212742 212743 212744 212809" end_var="100"/>
+        <monster var="0" npc_ids="212865 212866 212867 212979" end_var="100"/>
+    </monster_hunt>
+    <monster_hunt id="80224" start_npc_ids="831027">
+        <monster var="0" npc_ids="213776" end_var="3"/>
+        <monster var="0" npc_ids="213778" end_var="3"/>
+        <monster var="0" npc_ids="213802" end_var="3"/>
+        <monster var="0" npc_ids="213779" end_var="3"/>
+        <monster var="0" npc_ids="213780" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="80226" start_npc_ids="831027">
+        <monster var="0" npc_ids="214904" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="80227" start_npc_ids="831027">
+        <monster var="0" npc_ids="214904" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="80228" start_npc_ids="831027">
+        <monster var="0" npc_ids="214904" end_var="6"/>
+    </monster_hunt>
+    <monster_hunt id="80229" start_npc_ids="831027">
+        <monster var="0" npc_ids="214904" end_var="6"/>
+    </monster_hunt>
+</quest_scripts>

@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="../import.xsd"/>
+	<xs:include schemaLocation="../modifiers.xsd"/>
+	<xs:include schemaLocation="../items/item_templates.xsd"/>
+	<xs:element name="skill_data" type="skillData"/>
+	<xs:complexType name="skillData">
+		<xs:sequence>
+			<xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="skill_template" type="SkillTemplate" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SkillTemplate">
+		<xs:sequence>
+			<xs:element name="properties" type="Properties" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="startconditions" type="Conditions" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="useconditions" type="Conditions" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="endconditions" type="Conditions" minOccurs="0" maxOccurs="1" />
+			<xs:element name="useequipmentconditions" type="Conditions" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="effects" type="Effects" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="actions" type="Actions" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="periodicactions" type="PeriodicActions" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="motion" type="Motion" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="counter_skill" type="xs:string"/>
+		<xs:attribute name="penalty_skill_id" type="skillId"/>
+		<xs:attribute name="skill_id" type="skillId" use="required"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="nameId" type="xs:int"/>
+		<xs:attribute name="name_desc" type="xs:string"/>
+		<xs:attribute name="stack" type="xs:string"/>
+		<xs:attribute name="cooldownId" type="xs:int"/>
+		<xs:attribute name="lvl" type="xs:int"/>
+		<xs:attribute name="skilltype" type="skillType" use="required"/>
+		<xs:attribute name="attacktype" type="attackType"/>
+		<xs:attribute name="skillsubtype" type="skillSubType" use="required"/>
+		<xs:attribute name="conflict_id" type="xs:int"/>
+		<xs:attribute name="tslot" type="TargetSlot"/>
+		<xs:attribute name="tslot_level" use="optional" type="xs:int" default="0"/>
+		<xs:attribute name="dispel_category" type="DispelCategoryType" use="optional" default="NONE"/>
+		<xs:attribute name="req_dispel_level" type="xs:int" use="optional"/>
+		<xs:attribute name="activation" type="activationAttribute" use="required"/>
+		<xs:attribute name="stigma" type="StigmaType"/>
+		<xs:attribute name="ammospeed" type="xs:int"/>
+		<xs:attribute name="duration" type="xs:int" use="required"/>
+		<xs:attribute name="toggle_timer" type="xs:int"/>
+		<xs:attribute name="cooldown" type="xs:int" use="optional" default="0"/>
+		<xs:attribute name="pvp_damage" type="xs:int"/>
+		<xs:attribute name="pvp_duration" type="xs:int"/>
+		<xs:attribute name="chain_skill_prob" type="xs:int" use="optional" default="0"/>
+		<xs:attribute name="cancel_rate" type="xs:int" use="optional" default="0"/>
+		<xs:attribute name="stance" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="avatar" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="ground" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="unpottable" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="remove_flyend" type="xs:boolean"/>
+		<xs:attribute name="noremoveatdie" type="xs:boolean"/>
+		<xs:attribute name="boost_casting_time" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="Effects">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="root" type="RootEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="stun" type="StunEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sleep" type="SleepEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="snare" type="SnareEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="absolutesnare" type="AbsoluteSnareEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="slow" type="SlowEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="absoluteslow" type="AbsoluteSlowEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="poison" type="PoisonEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="bleed" type="BleedEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="stumble" type="StumbleEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="spin" type="SpinEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="stagger" type="StaggerEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="openaerial" type="OpenAerialEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="closeaerial" type="CloseAerialEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="bind" type="BindEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="shield" type="ShieldEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mpshield" type="MPShieldEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispel" type="DispelEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statup" type="StatupEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statboost" type="StatboostEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="weaponstatboost" type="WeaponStatboostEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="wpnmastery" type="WeaponMasteryEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="statdown" type="StatdownEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="spellatk" type="SpellAttackEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="deform" type="DeformEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="shapechange" type="ShapeChangeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="polymorph" type="PolymorphEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="hide" type="HideEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="search" type="SearchEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="healinstant" type="HealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mphealinstant" type="MPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="xphealinstant" type="XPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dphealinstant" type="DPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fphealinstant" type="FPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skillatk" type="SkillAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="spellatkinstant" type="SpellAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dash" type="DashEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="backdash" type="BackDashEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="delaydamage" type="DelayedSpellAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="return" type="ReturnEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="prochealinstant" type="ProcHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="procmphealinstant" type="ProcMPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="procdphealinstant" type="ProcDPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="procfphealinstant" type="ProcFPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="carvesignet" type="CarveSignetEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="signet" type="SignetEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="signetburst" type="SignetBurstEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="silence" type="SilenceEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="curse" type="CurseEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="blind" type="BlindEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="disease" type="DiseaseEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boosthate" type="BoostHateEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="hostileup" type="HostileUpEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="paralyze" type="ParalyzeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="confuse" type="ConfuseEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="alwaysresist" type="AlwaysResistEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="alwaysblock" type="AlwaysBlockEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="alwaysparry" type="AlwaysParryEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="alwaysdodge" type="AlwaysDodgeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispeldebuffphysical" type="DispelDebuffPhysicalEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispeldebuff" type="DispelDebuffEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="switchhpmp" type="SwitchHpMpEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="aura" type="AuraEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summon" type="SummonEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fear" type="FearEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="resurrect" type="ResurrectEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispeldebuffmental" type="DispelDebuffMentalEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="reflector" type="ReflectorEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="returnpoint" type="ReturnPointEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="provoker" type="ProvokerEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="spellatkdraininstant" type="SpellAtkDrainInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="onetimeboostskillattack" type="OneTimeBoostSkillAttackEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="onetimeboostskillcritical" type="OneTimeBoostSkillCriticalEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="armormastery" type="ArmorMasteryEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="weaponstatup" type="WeaponStatupEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boostskillcastingtime" type="BoostSkillCastingTimeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summontrap" type="SummonTrapEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summongroupgate" type="SummonGroupGateEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summonservant" type="SummonServantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skillatkdraininstant" type="SkillAtkDrainInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="petorderunsummon" type="PetOrderUnSummonEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="petorderuseultraskill" type="PetOrderUseUltraSkillEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boostheal" type="BoostHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispelbuff" type="DispelBuffEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="procatk_instant" type="ProcAtkInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skilllauncher" type="SkillLauncherEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="pulled" type="PulledEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="movebehind" type="MoveBehindEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="rebirth" type="RebirthEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boostskillcost" type="BoostSkillCostEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="protect" type="ProtectEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="resurrectbase" type="ResurrectBaseEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="magiccounteratk" type="MagicCounterAtkEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="recallinstant" type="RecallInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="randommoveloc" type="RandomMoveLocEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summonhoming" type="SummonHomingEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispelbuffcounteratk" type="DispelBuffCounterAtkEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="xpboost" type="XPBoostEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fpatkinstant" type="FpAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fpatk" type="FpAttackEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="onetimeboostheal" type="OneTimeBoostHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="deboostheal" type="DeboostHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summonskillarea" type="SummonSkillAreaEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="resurrectpos" type="ResurrectPositionalEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nofly" type="NoFlyEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nofpconsum" type="NoFPConsumEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="healcastoronatk" type="HealCastorOnAttackedEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="wpndual" type="WeaponDualEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="invulnerablewing" type="InvulnerableWingEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="shieldmastery" type="ShieldMasteryEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="simpleroot" type="SimpleRootEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dptransfer" type="DPTransferEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mpattack" type="MpAttackEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boostdroprate" type="BoostDropRateEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="spellatkdrain" type="SpellAtkDrainEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="extendedaurarange" type="ExtendAuraRangeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="changehateonattacked" type="ChangeHateOnAttackedEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="healcastorontargetdead" type="HealCastorOnTargetDeadEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="noreducespellatk" type="NoReduceSpellATKInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mpattackinstant" type="MpAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="condskilllauncher" type="CondSkillLauncherEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fall" type="FallEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="evade" type="EvadeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="buffbind" type="BuffBindEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="buffsilence" type="BuffSilenceEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="buffsleep" type="BuffSleepEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="buffstun" type="BuffStunEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="heal" type="HealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mpheal" type="MPHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fpheal" type="FPHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dpheal" type="DPHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summontotem" type="SummonTotemEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boostspellattack" type="BoostSpellAttackEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="switchhostile" type="SwitchHostileEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="noresurrectpenalty" type="NoResurrectPenaltyEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="hipass" type="HiPassEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nodeathpenalty" type="NoDeathPenaltyEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="caseheal" type="CaseHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="procvphealinstant" type="ProcVPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summonhousegate" type="SummonHouseGateEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summonbindinggroupgate" type="SummonBindingGroupGateEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="convertheal" type="ConvertHealEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sanctuary" type="SanctuaryEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="subtypeextendduration" type="SubTypeExtendDurationEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="subtypeboostresist" type="SubTypeBoostResistEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispelnpcbuff" type="DispelNpcBuffEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dispelnpcdebuff" type="DispelNpcDebuffEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="deathblow" type="DeathBlowEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="delayedskill" type="DelayedSkillEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="delayedfpatk_instant" type="DelayedFpAtkInstantEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="drboost" type="DRBoostEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="apboost" type="APBoostEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skillxpboost" type="SkillXPBoostEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="summonfunctionalnpc" type="SummonFunctionalNpcEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="targetteleport" type="TargetTeleportEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="flyoff" type="FlyOffEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="escape" type="EscapeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skillcooltimereset" type="SkillCooltimeResetEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="riderobot" type="RideRobotEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="absstatbuff" type="AbsoluteStatToPCBuff" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="absstatdebuff" type="AbsoluteStatToPCDebuff" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="stunalways" type="StunAlwaysEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="targetchange" type="TargetChangeEffect" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Properties">
+		<xs:attribute name="awr" type="xs:boolean"/>
+		<xs:attribute name="target_maxcount" type="xs:int"/>
+		<xs:attribute name="target_distance" type="xs:int"/>
+		<xs:attribute name="target_type" type="TargetRangeAttribute"/>
+		<xs:attribute name="target_relation" type="TargetRelationAttribute"/>
+		<xs:attribute name="first_target_range" type="xs:int"/>
+		<xs:attribute name="first_target" type="FirstTargetAttribute"/>
+		<xs:attribute name="target_status" type="StatusList"/>
+		<xs:attribute name="revision_distance" type="xs:int"/>
+		<xs:attribute name="effective_range" type="xs:int" />
+		<xs:attribute name="effective_dist" type="xs:int" />
+		<xs:attribute name="effective_angle" type="xs:int" />
+		<xs:attribute name="effective_altitude" type="xs:int" />
+		<xs:attribute default="NONE" name="direction" type="Directions"/>
+		<xs:attribute name="target_species" type="TargetSpeciesAttribute" default="ALL"/>
+	</xs:complexType>
+	<xs:complexType name="Actions">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="itemuse" type="ItemUseAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mpuse" type="MpUseAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="hpuse" type="HpUseAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dpuse" type="DpUseAction" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PeriodicActions">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="hpuse" type="HpUsePeriodicAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mpuse" type="MpUsePeriodicAction" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="checktime" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="Motion">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="speed" type="xs:int" use="optional" default="100"/>
+		<xs:attribute name="instant_skill" type="xs:boolean" use="optional" default="false"/>
+	</xs:complexType>
+	<xs:complexType name="ActionModifiers">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="backdamage" type="BackDamageModifier" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="frontdamage" type="FrontDamageModifier" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="abnormaldamage" type="AbnormalDamageModifier" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="targetrace" type="TargetRaceDamageModifier" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="targetclass" type="TargetClassDamageModifier" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Action" abstract="true"/>
+	<xs:complexType name="PeriodicAction" abstract="true"/>
+	<xs:complexType name="Effect" abstract="true">
+		<xs:sequence>
+			<xs:element name="subeffect" type="SubEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="modifiers" type="ActionModifiers" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="change" type="Change" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="conditions" type="Conditions" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="subconditions" type="Conditions" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="hopa" type="xs:int"/>
+		<xs:attribute name="hopb" type="xs:int"/>
+		<xs:attribute name="hoptype" type="HopType"/>
+		<xs:attribute name="critadddmg1" type="xs:int"/>
+		<xs:attribute name="critadddmg2" type="xs:int"/>
+		<xs:attribute name="critprobmod2" type="xs:int"/>
+		<xs:attribute name="preeffect_prob" type="xs:int"/>
+		<xs:attribute name="preeffect" type="xs:string"/>
+		<xs:attribute name="element" type="SkillElement"/>
+		<xs:attribute name="hittypeprob2" type="xs:int" use="optional" default="100"/>
+		<xs:attribute name="hittype" type="HitType" use="optional" default="EVERYHIT"/>
+		<xs:attribute name="mrresist" type="xs:boolean" default="true"/>
+		<xs:attribute name="accmod1" type="xs:int"/>
+		<xs:attribute name="accmod2" type="xs:int"/>
+		<xs:attribute name="noresist" type="xs:boolean" default="false"/>
+		<xs:attribute name="basiclvl" type="xs:int"/>
+		<xs:attribute name="e" type="xs:int"/>
+		<xs:attribute name="effectid" type="xs:int"/>
+		<xs:attribute name="randomtime" type="xs:int"/>
+		<xs:attribute name="duration1" type="xs:int"/>
+		<xs:attribute name="duration2" type="xs:int"/>
+		<xs:attribute name="onfly" type="xs:boolean" default="false"/>
+		<xs:attribute name="delta" type="xs:int"/>
+		<xs:attribute name="value" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="Property" abstract="true"/>
+	<xs:complexType name="ActionModifier" abstract="true">
+		<xs:attribute name="value" type="xs:int" use="required"/>
+		<xs:attribute name="delta" type="xs:int"/>
+		<xs:attribute name="mode" type="StatFunc"/>
+	</xs:complexType>
+	<xs:complexType name="SubEffect">
+		<xs:attribute name="skill_id" type="skillId" use="required"/>
+		<xs:attribute name="chance" type="xs:int"/>
+		<xs:attribute name="addeffect" type="xs:boolean"/>
+	</xs:complexType>
+	<!-- ACTIONS -->
+	<xs:complexType name="ItemUseAction">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:attribute name="itemid" type="xs:int" use="required"/>
+				<xs:attribute name="count" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MpUseAction">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:attribute name="value" type="xs:int" use="required"/>
+				<xs:attribute name="delta" type="xs:int"/>
+				<xs:attribute name="ratio" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HpUseAction">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:attribute name="value" type="xs:int" use="required"/>
+				<xs:attribute name="delta" type="xs:int"/>
+                <xs:attribute name="ratio" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DpUseAction">
+		<xs:complexContent>
+			<xs:extension base="Action">
+				<xs:attribute name="value" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Periodic Actions -->
+	<xs:complexType name="HpUsePeriodicAction">
+		<xs:complexContent>
+			<xs:extension base="PeriodicAction">
+				<xs:attribute name="value" type="xs:int" use="required"/>
+				<xs:attribute name="delta" type="xs:int" use="optional"/>
+                <xs:attribute name="ratio" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MpUsePeriodicAction">
+		<xs:complexContent>
+			<xs:extension base="PeriodicAction">
+				<xs:attribute name="value" type="xs:int" use="required"/>
+				<xs:attribute name="ratio" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ACTION MODIFIERS -->
+	<xs:complexType name="BackDamageModifier">
+		<xs:complexContent>
+			<xs:extension base="ActionModifier">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FrontDamageModifier">
+		<xs:complexContent>
+			<xs:extension base="ActionModifier">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbnormalDamageModifier">
+		<xs:complexContent>
+			<xs:extension base="ActionModifier">
+				<xs:attribute name="state" type="AbnormalState" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TargetRaceDamageModifier">
+		<xs:complexContent>
+			<xs:extension base="ActionModifier">
+				<xs:attribute name="race" type="Race" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TargetClassDamageModifier">
+		<xs:complexContent>
+			<xs:extension base="ActionModifier">
+				<xs:attribute name="class" type="playerClass" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- EFFECTS -->
+	<xs:complexType name="AbstractOverTimeEffect" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="shared" type="xs:boolean"/>
+				<xs:attribute name="checktime" type="xs:int"/>
+				<xs:attribute name="percent" type="xs:boolean" default="false"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HideEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="bufcount" type="xs:int"/>
+				<xs:attribute name="type" type="xs:int"/>
+				<xs:attribute name="state" type="CreatureVisualState"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SearchEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			 <xs:attribute name="state" type="CreatureSeeState"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:sequence minOccurs="0" maxOccurs="1">
+					<xs:element name="effectids" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="effecttype" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="slottype" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="dispeltype" type="DispelType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RootEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			 <xs:attribute name="resistchance" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StunEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SleepEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SnareEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbsoluteSnareEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SlowEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbsoluteSlowEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StumbleEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StaggerEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SpinEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BindEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="OpenAerialEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CloseAerialEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ShieldEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="percent" type="xs:boolean"/>
+				<xs:attribute name="hitdelta" type="xs:int"/>
+				<xs:attribute name="hitvalue" type="xs:int"/>
+				<xs:attribute name="radius" type="xs:int"/>
+				<xs:attribute name="minradius" type="xs:int"/>
+				<xs:attribute name="condrace" type="Race"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+    <xs:complexType name="MPShieldEffect">
+        <xs:complexContent>
+            <xs:extension base="ShieldEffect">
+                <xs:attribute name="mp_value" type="xs:int"/>
+                <xs:attribute name="mp_delta" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	<xs:complexType name="ProtectEffect">
+		<xs:complexContent>
+			<xs:extension base="ShieldEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReflectorEffect">
+		<xs:complexContent>
+			<xs:extension base="ShieldEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		<xs:complexType name="ProvokerEffect">
+		<xs:complexContent>
+			<xs:extension base="ShieldEffect">
+				<xs:attribute name="provoke_target" type="ProvokeTarget"/>
+				<xs:attribute name="skill_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SpellAttackEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BleedEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SwitchHpMpEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PoisonEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BuffEffect" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="maxstat" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StatupEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StatboostEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WeaponStatboostEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WeaponStatupEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BoostSkillCastingTimeEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BoostHealEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WeaponMasteryEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+				<xs:attribute name="weapon" type="weaponType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ArmorMasteryEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+				<xs:attribute name="armor" type="armorType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StatdownEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TransformEffect" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="model" type="xs:int" use="required"/>
+				<xs:attribute name="type" type="TransformType" default="NONE"/>
+				<xs:attribute name="panelid" type="xs:int"/>
+				<xs:attribute name="state" type="AbnormalState" default="BUFF" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PolymorphEffect">
+		<xs:complexContent>
+			<xs:extension base="TransformEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ShapeChangeEffect">
+		<xs:complexContent>
+			<xs:extension base="TransformEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DeformEffect">
+		<xs:complexContent>
+			<xs:extension base="TransformEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcMPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcDPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcFPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbstractHealEffect" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="percent" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="XPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DamageEffect" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="mode" type="StatFunc"/>
+				<xs:attribute name="shared" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillAttackInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="rnddmg" type="xs:int"/>
+				<xs:attribute name="cannotmiss" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SpellAttackInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="twice" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DashEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BackDashEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="distance" type="xs:float"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CarveSignetEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="prob" type="xs:int"/>
+        		<xs:attribute name="signetlvlstart" type="xs:int"/>
+				<xs:attribute name="signetlvl" type="xs:int" use="required"/>
+				<xs:attribute name="signetid" type="xs:int" use="required"/>
+				<xs:attribute name="signet" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SignetEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SignetBurstEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="signet" type="xs:string" use="required"/>
+				<xs:attribute name="signetlvl" type="xs:int" use="required"/>
+				<xs:attribute name="absorb" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DelayedSpellAttackInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="delay" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="DamageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PHYSICAL"/>
+			<xs:enumeration value="MAGICAL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ReturnEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EscapeEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SilenceEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CurseEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BlindEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DiseaseEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BoostHateEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HostileUpEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ParalyzeEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConfuseEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AlwaysResistEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AlwaysBlockEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AlwaysParryEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AlwaysDodgeEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TargetChangeEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+    <xs:complexType name="StunAlwaysEffect">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	<xs:complexType name="AbstractDispelEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="dpower" type="xs:int"/>
+				<xs:attribute name="power" type="xs:int"/>
+				<xs:attribute name="dispel_level" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelDebuffPhysicalEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractDispelEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ResurrectBaseEffect">
+		<xs:complexContent>
+			<xs:extension base="ResurrectEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelDebuffEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractDispelEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelBuffEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractDispelEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcAtkInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AuraEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="distance_z" type="xs:int"/>
+				<xs:attribute name="distance" type="xs:int"/>
+				<xs:attribute name="skill_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="npc_id" type="xs:int"/>
+				<xs:attribute name="time" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonTrapEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonEffect">
+				<xs:attribute name="skill_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonGroupGateEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonServantEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonEffect">
+				<xs:attribute name="skill_id" type="xs:int"/>
+				<xs:attribute name="hp_ratio" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonHomingEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonEffect">
+			    <xs:attribute name="skill_id" type="xs:int"/>
+				<xs:attribute name="npc_count" type="xs:int"/>
+				<xs:attribute name="attack_count" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonFunctionalNpcEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonEffect">
+				<xs:attribute name="owner" type="SummonOwner"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonSkillAreaEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonServantEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonTotemEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonServantEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RecallInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillLauncherEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="skill_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FearEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			 <xs:attribute name="resistchance" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ResurrectEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			 <xs:attribute name="skill_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelDebuffMentalEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractDispelEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReturnPointEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SpellAtkDrainInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="hp_percent" type="xs:int"/>
+				<xs:attribute name="mp_percent" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SpellAtkDrainEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractOverTimeEffect">
+				<xs:attribute name="hp_percent" type="xs:int"/>
+				<xs:attribute name="mp_percent" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillAtkDrainInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="hp_percent" type="xs:int"/>
+				<xs:attribute name="mp_percent" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		<xs:complexType name="PetOrderUnSummonEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="release" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PetOrderUseUltraSkillEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="ultra_skill" type="xs:int"/>
+				<xs:attribute name="release" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="OneTimeBoostSkillAttackEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="count" type="xs:int"/>
+				<xs:attribute name="type" type="skillType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="OneTimeBoostSkillCriticalEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+				<xs:attribute name="count" type="xs:int"/>
+				<xs:attribute name="percent" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PulledEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MoveBehindEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RebirthEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="resurrect_percent" type="xs:int"/>
+				<xs:attribute name="skill_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BoostSkillCostEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="percent" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MagicCounterAtkEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="percent" type="xs:int"/>
+				<xs:attribute name="maxdmg" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelBuffCounterAtkEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="dpower" type="xs:int"/>
+				<xs:attribute name="power" type="xs:int"/>
+				<xs:attribute name="dispel_level" type="xs:int"/>
+				<xs:attribute name="hitdelta" type="xs:int"/>
+				<xs:attribute name="hitvalue" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FpAttackEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractOverTimeEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FpAttackInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="percent" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DeboostHealEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="OneTimeBoostHealEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ResurrectPositionalEffect">
+		<xs:complexContent>
+			<xs:extension base="ResurrectEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NoFlyEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NoFPConsumEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="InvulnerableWingEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SimpleRootEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DPTransferEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HealCastorOnAttackedEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect">
+				<xs:attribute name="type" type="HealType" use="required"/>
+				<xs:attribute name="range" type="xs:float" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WeaponDualEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ShieldMasteryEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MpAttackEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractOverTimeEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ChangeHateOnAttackedEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="value1" type="xs:int" use="required"/>
+				<xs:attribute name="value2" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HealCastorOnTargetDeadEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect">
+			  <xs:attribute name="type" type="HealType" use="required"/>
+				<xs:attribute name="range" type="xs:float" use="required"/>
+				<xs:attribute name="healparty" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NoReduceSpellATKInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="percent" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MpAttackInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect">
+				<xs:attribute name="percent" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CondSkillLauncherEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="skill_id" type="xs:int" use="required"/>
+				<xs:attribute name="type" type="HealType" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FallEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HealOverTimeEffect" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="AbstractOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HealEffect">
+		<xs:complexContent>
+			<xs:extension base="HealOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MPHealEffect">
+		<xs:complexContent>
+			<xs:extension base="HealOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DPHealEffect">
+		<xs:complexContent>
+			<xs:extension base="HealOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FPHealEffect">
+		<xs:complexContent>
+			<xs:extension base="HealOverTimeEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EvadeEffect">
+		<xs:complexContent>
+			<xs:extension base="DispelEffect">
+			 <xs:attribute name="dispel_level" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BuffBindEffect">
+		<xs:complexContent>
+			<xs:extension base="BindEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BuffSilenceEffect">
+		<xs:complexContent>
+			<xs:extension base="SilenceEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BuffSleepEffect">
+		<xs:complexContent>
+			<xs:extension base="SleepEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BuffStunEffect">
+		<xs:complexContent>
+			<xs:extension base="StunEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BoostSpellAttackEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SwitchHostileEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConvertHealEffect">
+		<xs:complexContent>
+			<xs:extension base="ShieldEffect">
+				<xs:attribute name="type" type="HealType"/>
+				<xs:attribute name="hitpercent" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SanctuaryEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SubTypeExtendDurationEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SubTypeBoostResistEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelNpcBuffEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractDispelEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DispelNpcDebuffEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractDispelEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DeathBlowEffect">
+		<xs:complexContent>
+			<xs:extension base="DamageEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DelayedSkillEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="skill_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DelayedFpAtkInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="percent" type="xs:boolean"/>
+				<xs:attribute name="delay" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DRBoostEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="APBoostEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillXPBoostEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RandomMoveLocEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="distance" type="xs:float"/>
+				<xs:attribute name="direction" type="xs:float"/>
+				<xs:attribute name="up" type="xs:float"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="XPBoostEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BoostDropRateEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ExtendAuraRangeEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NoDeathPenaltyEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NoResurrectPenaltyEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="HiPassEffect">
+		<xs:complexContent>
+			<xs:extension base="BuffEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CaseHealEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect">
+				<xs:attribute name="cond_value" type="xs:int"/>
+				<xs:attribute name="type" type="HealType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcVPHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect">
+				<xs:attribute name="value2" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonHouseGateEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonGroupGateEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonBindingGroupGateEffect">
+		<xs:complexContent>
+			<xs:extension base="SummonGroupGateEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TargetTeleportEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="same_map" type="xs:boolean" use="required"/>
+				<xs:attribute name="distance" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FlyOffEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="distance" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillCooltimeResetEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="first_cd" type="xs:int" use="required"/>
+				<xs:attribute name="last_cd" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RideRobotEffect">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbstractAbsoluteStatEffect" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="Effect">
+				<xs:attribute name="statsetid" type="xs:int" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbsoluteStatToPCBuff">
+		<xs:complexContent>
+			<xs:extension base="AbstractAbsoluteStatEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbsoluteStatToPCDebuff">
+		<xs:complexContent>
+			<xs:extension base="AbstractAbsoluteStatEffect">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- MISC -->
+	<xs:simpleType name="TransformType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AVATAR"/>
+			<xs:enumeration value="FORM1"/>
+			<xs:enumeration value="FORM2"/>
+			<xs:enumeration value="FORM3"/>
+			<xs:enumeration value="FORM4"/>
+			<xs:enumeration value="FORM5"/>
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="PC"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TargetAttribute">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NPC"/>
+			<xs:enumeration value="PC"/>
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Change">
+		<xs:sequence>
+			<xs:element name="conditions" type="Conditions"	minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="stat" type="modifiersenum" use="required"/>
+		<xs:attribute name="func" type="StatFunc" use="required"/>
+		<xs:attribute name="value" type="xs:string" use="required"/>
+		<xs:attribute name="delta" type="xs:int"/>
+		<xs:attribute name="unchecked" type="xs:boolean" default="false"/>
+	</xs:complexType>
+	<xs:simpleType name="TargetSlot">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="BUFF"/>
+			<xs:enumeration value="DEBUFF"/>
+			<xs:enumeration value="SPEC"/>
+			<xs:enumeration value="SPEC2"/>
+			<xs:enumeration value="BOOST"/>
+			<xs:enumeration value="NOSHOW"/>
+			<xs:enumeration value="CHANT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DispelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EFFECTID"/>
+			<xs:enumeration value="EFFECTIDRANGE"/>
+			<xs:enumeration value="EFFECTTYPE"/>
+			<xs:enumeration value="SLOTTYPE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="attackType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EVERYHIT"/>
+			<xs:enumeration value="PHYSICAL_SKILL"/>
+			<xs:enumeration value="MAGICAL_SKILL"/>
+			<xs:enumeration value="ALL_SKILL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="skillType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="PHYSICAL"/>
+			<xs:enumeration value="MAGICAL"/>
+			<xs:enumeration value="ALL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="skillSubType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="ATTACK"/>
+			<xs:enumeration value="CHANT"/>
+			<xs:enumeration value="HEAL"/>
+			<xs:enumeration value="BUFF"/>
+			<xs:enumeration value="DEBUFF"/>
+			<xs:enumeration value="SUMMON"/>
+			<xs:enumeration value="SUMMONHOMING"/>
+			<xs:enumeration value="SUMMONTRAP"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="activationAttribute">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="ACTIVE"/>
+			<xs:enumeration value="PROVOKED"/>
+			<xs:enumeration value="MAINTAIN"/>
+			<xs:enumeration value="TOGGLE"/>
+			<xs:enumeration value="PASSIVE"/>
+			<xs:enumeration value="CHARGE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FirstTargetAttribute">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="TARGETORME"/>
+			<xs:enumeration value="ME"/>
+			<xs:enumeration value="MYPET"/>
+			<xs:enumeration value="MYMASTER"/>
+			<xs:enumeration value="TARGET"/>
+			<xs:enumeration value="PASSIVE"/>
+			<xs:enumeration value="TARGET_MYPARTY_NONVISIBLE"/>
+			<xs:enumeration value="POINT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TargetRangeAttribute">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="ONLYONE"/>
+			<xs:enumeration value="PARTY"/>
+			<xs:enumeration value="AREA"/>
+			<xs:enumeration value="PARTY_WITHPET"/>
+			<xs:enumeration value="POINT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Directions">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE" />
+			<xs:enumeration value="FRONT" />
+			<xs:enumeration value="BACK" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TargetRelationAttribute">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="ENEMY"/>
+			<xs:enumeration value="MYPARTY"/>
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="FRIEND"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TargetSpeciesAttribute">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="PC"/>
+			<xs:enumeration value="NPC"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="skillId">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="60000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StatFunc">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ADD"/>
+			<xs:enumeration value="PERCENT"/>
+			<xs:enumeration value="REPLACE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HealType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HP"/>
+			<xs:enumeration value="MP"/>
+			<xs:enumeration value="DP"/>
+			<xs:enumeration value="FP"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StigmaType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="BASIC"/>
+			<xs:enumeration value="ADVANCED"/>
+			<xs:enumeration value="MAJOR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SkillElement">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FIRE"/>
+			<xs:enumeration value="WIND"/>
+			<xs:enumeration value="WATER"/>
+			<xs:enumeration value="EARTH"/>
+			<xs:enumeration value="DARK"/>
+			<xs:enumeration value="LIGHT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HopType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DAMAGE"/>
+			<xs:enumeration value="SKILLLV"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HitType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EVERYHIT"/>
+			<xs:enumeration value="NMLATK"/>
+			<xs:enumeration value="MAHIT"/>
+			<xs:enumeration value="PHHIT"/>
+			<xs:enumeration value="SKILL"/>
+			<xs:enumeration value="BACKATK"/>
+			<xs:enumeration value="FEAR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ProvokeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ATTACK"/>
+			<xs:enumeration value="ATTACKED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ProvokeTarget">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ME"/>
+			<xs:enumeration value="OPPONENT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StatusList">
+		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="SummonOwner">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PRIVATE"/>
+			<xs:enumeration value="GROUP"/>
+			<xs:enumeration value="LEGION"/>
+			<xs:enumeration value="ALLIANCE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DispelCategoryType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="BUFF"/>
+			<xs:enumeration value="DEBUFF_MENTAL"/>
+			<xs:enumeration value="DEBUFF_PHYSICAL"/>
+			<xs:enumeration value="EXTRA"/>
+			<xs:enumeration value="NEVER"/>
+			<xs:enumeration value="NPC_BUFF"/>
+			<xs:enumeration value="NPC_DEBUFF_PHYSICAL"/>
+			<xs:enumeration value="STUN"/>
+			<xs:enumeration value="DEBUFF"/>
+		</xs:restriction>
+	</xs:simpleType>
+  <xs:simpleType name="CreatureVisualState">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HIDE1"/>
+			<xs:enumeration value="HIDE2"/>
+			<xs:enumeration value="HIDE3"/>
+			<xs:enumeration value="HIDE5"/>
+			<xs:enumeration value="HIDE10"/>
+			<xs:enumeration value="HIDE13"/>
+			<xs:enumeration value="HIDE20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CreatureSeeState">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SEARCH1"/>
+			<xs:enumeration value="SEARCH2"/>
+			<xs:enumeration value="SEARCH5"/>
+			<xs:enumeration value="SEARCH10"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

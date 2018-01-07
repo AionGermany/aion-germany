@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="110070000">
+		<svs_spawn id="2">
+			<svs_type pstate="SVS">
+				<!-- Advance Corridor For Commanders -->
+				<spawn npc_id="730940">
+			        <spot x="503.6243" y="460.20236" z="134.31577" h="119" static_id="257"/>
+				</spawn>
+				<!-- Advance Corridor For Contributors -->
+				<spawn npc_id="730942">
+			        <spot x="490.26151" y="409.85049" z="129.93066" h="119" static_id="256"/>
+				</spawn>
+				<!-- Walk Of Honor -->
+				<spawn npc_id="731193">
+			        <spot x="518.14166" y="409.96689" z="129.38919" h="119" static_id="252"/>
+				</spawn>
+                <!-- Carley ||| GAb1_Carley_E -->
+                <spawn npc_id="802540">
+                    <spot x="494.658" y="409.10992" z="126.78955" h="90"/>
+                </spawn>
+                <!-- Astarin ||| GAb1_Astarin_E -->
+                <spawn npc_id="802541">
+                    <spot x="512.7709" y="409.0675" z="126.78956" h="90"/>
+                </spawn>
+			</svs_type>
+			<svs_type pstate="PEACE">
+			</svs_type>
+		</svs_spawn>
+    </spawn_map>
+</spawns>

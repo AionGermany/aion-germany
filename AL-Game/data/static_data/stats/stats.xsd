@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="player_stats_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="player_stats" type="playerStatsTemplateType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="summon_stats_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="summon_stats" type="summonStatsTemplateType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="playerStatsTemplateType">
+        <xs:sequence>
+            <xs:element name="stats_template" type="playerStatsTemplate" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="class" type="playerClass" use="required"/>
+        <xs:attribute name="level" type="xs:byte" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="playerStatsTemplate">
+        <xs:complexContent>
+            <xs:extension base="statsTemplate">
+                <xs:attribute name="power" type="xs:int" use="required"/>
+                <xs:attribute name="health" type="xs:int" use="required"/>
+                <xs:attribute name="agility" type="xs:int" use="required"/>
+                <xs:attribute name="accuracy" type="xs:int" use="required"/>
+                <xs:attribute name="knowledge" type="xs:int" use="required"/>
+                <xs:attribute name="will" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="summonStatsTemplateType">
+        <xs:sequence>
+            <xs:element name="stats_template" type="summonStatsTemplate" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="npc_id_light" type="xs:int"/>
+        <xs:attribute name="npc_id_dark" type="xs:int"/>
+        <xs:attribute name="level" type="xs:byte" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="summonStatsTemplate">
+        <xs:complexContent>
+            <xs:extension base="statsTemplate">
+                <xs:attribute name="pdefense" type="xs:int" use="required"/>
+                <xs:attribute name="mresist" type="xs:int" use="required"/>
+                <xs:attribute name="mcrit" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="statsTemplate" abstract="true">
+        <xs:sequence>
+            <xs:element name="speeds" type="CreatureSpeeds" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="maxHp" type="xs:int" use="required"/>
+        <xs:attribute name="maxMp" type="xs:int"/>
+        <xs:attribute name="evasion" type="xs:int"/>
+        <xs:attribute name="block" type="xs:int"/>
+        <xs:attribute name="parry" type="xs:int"/>
+        <xs:attribute name="main_hand_attack" type="xs:int"/>
+        <xs:attribute name="main_hand_accuracy" type="xs:int"/>
+        <xs:attribute name="main_hand_crit_rate" type="xs:int"/>
+        <xs:attribute name="magic_accuracy" type="xs:int"/>
+        <xs:attribute name="crit_spell" type="xs:int"/>
+        <xs:attribute name="strike_resist" type="xs:int"/>
+        <xs:attribute name="spell_resist" type="xs:int"/>	
+    </xs:complexType>
+    <xs:complexType name="CreatureSpeeds">
+        <xs:attribute name="walk" type="xs:float"/>
+        <xs:attribute name="group_walk" type="xs:float"/>
+        <xs:attribute name="run" type="xs:float"/>
+        <xs:attribute name="run_fight" type="xs:float"/>
+        <xs:attribute name="group_run_fight" type="xs:float"/>
+        <xs:attribute name="fly" type="xs:float"/>
+    </xs:complexType>
+</xs:schema>

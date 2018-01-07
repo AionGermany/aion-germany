@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="210040000">
+        <base_spawn id="51"> <!-- Kishar Outpost -->
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="2117.1177" y="1475.6171" z="135.9242" h="45"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231562" handler="BOSS">
+                    <spot x="2118.7683" y="1466.9141" z="136.66391" h="39"/>
+                </spawn>
+                <!-- Kishar Assassin -->
+                <spawn npc_id="231610" handler="ATTACKER">
+                    <spot x="2118.8901" y="1468.6146" z="138.57967" h="90"/>
+                </spawn>
+                <!-- Elyos Heiron Inspector -->
+                <spawn npc_id="231622" handler="ATTACKER">
+                    <spot x="2106.4204" y="1505.787" z="133.4227" h="97"/>
+                </spawn>
+                <!-- Heiron Sentinel -->
+                <spawn npc_id="231583">
+                    <spot x="2103.0276" y="1468.8651" z="136.5206" h="60"/>
+                    <spot x="2107.003" y="1484.3868" z="132.54826" h="45"/>
+                    <spot x="2114.584" y="1488.7769" z="133.8219" h="30"/>
+                    <spot x="2128.4412" y="1484.6045" z="136.6227" h="23"/>
+                </spawn>
+                <!-- Anaxilas General Goods Merchant -->
+                <spawn npc_id="801180">
+                    <spot x="2125.8938" y="1475.2031" z="136.32527" h="45"/>
+                </spawn>
+                <!-- Chares Warehouse Manager -->
+                <spawn npc_id="801181">
+                    <spot x="2113.5986" y="1466.5072" z="136.22552" h="30"/>
+                </spawn>
+                <!-- Dinon Administration Officer -->
+                <spawn npc_id="801182">
+                    <spot x="2122.8694" y="1471.4498" z="137.00826" h="45"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ASMODIANS">
+                <!-- Asmodians Territory -->
+                <spawn npc_id="701800">
+                    <spot x="2117.1177" y="1475.6171" z="135.9242" h="45"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231563" handler="BOSS">
+                    <spot x="2118.7683" y="1466.9141" z="136.66391" h="39"/>
+                </spawn>
+                <!-- Kishar Assassin -->
+                <spawn npc_id="231610" handler="ATTACKER">
+                    <spot x="2118.8901" y="1468.6146" z="138.57967" h="90"/>
+                </spawn>
+                <!-- Asmodian Heiron Inspector -->
+                <spawn npc_id="231623" handler="ATTACKER">
+                    <spot x="2106.4204" y="1505.787" z="133.4227" h="97"/>
+                </spawn>
+                <!-- Heiron Infiltrator -->
+                <spawn npc_id="231588">
+                    <spot x="2103.0276" y="1468.8651" z="136.5206" h="60"/>
+                    <spot x="2107.003" y="1484.3868" z="132.54826" h="45"/>
+                    <spot x="2114.584" y="1488.7769" z="133.8219" h="30"/>
+                    <spot x="2128.4412" y="1484.6045" z="136.6227" h="23"/>
+                </spawn>
+                <!-- Rasiv General Goods Merchant -->
+                <spawn npc_id="801183">
+                    <spot x="2125.8938" y="1475.2031" z="136.32527" h="45"/>
+                </spawn>
+                <!-- Tullusso Warehouse Manager -->
+                <spawn npc_id="801184">
+                    <spot x="2113.5986" y="1466.5072" z="136.22552" h="30"/>
+                </spawn>
+                <!-- Gudrun Administration Officer -->
+                <spawn npc_id="801185">
+                    <spot x="2122.8694" y="1471.4498" z="137.00826" h="45"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Krall Territory -->
+                <spawn npc_id="701797">
+                    <spot x="2117.1177" y="1475.6171" z="135.9242" h="45"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231561" handler="BOSS">
+                    <spot x="2118.7683" y="1466.9141" z="136.66391" h="39"/>
+                </spawn>
+                <!-- Kishar Vanguard (Shieldcaptain) -->
+                <spawn npc_id="231602" handler="ATTACKER">
+                    <spot x="2106.4204" y="1505.787" z="133.4227" h="97"/>
+                </spawn>
+                <!-- Kishar Protector -->
+                <spawn npc_id="231580" respawn_time="295">
+                    <spot x="2103.0276" y="1468.8651" z="136.5206" h="60"/>
+                    <spot x="2107.003" y="1484.3868" z="132.54826" h="45"/>
+                    <spot x="2114.584" y="1488.7769" z="133.8219" h="30"/>
+                    <spot x="2128.4412" y="1484.6045" z="136.6227" h="23"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+        <base_spawn id="52"> <!-- Research Center Outpost -->
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="417.0642" y="914.8626" z="122.5000" h="1"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231565" handler="BOSS">
+                    <spot x="416.5205" y="906.30505" z="122.5" h="38"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231611" handler="ATTACKER">
+                    <spot x="414.64871" y="906.14154" z="123.28967"/>
+                </spawn>
+                <!-- Elyos Heiron Inspector -->
+                <spawn npc_id="231624" handler="ATTACKER">
+                    <spot x="389.71191" y="937.07147" z="122.33408" h="113"/>
+                </spawn>
+                <!-- Heiron Sentinel -->
+                <spawn npc_id="231584">
+                    <spot x="430.37482" y="915.1075" z="122.5" h="15"/>
+                    <spot x="405.0679" y="921.23444" z="122.26764" h="45"/>
+                    <spot x="409.64694" y="924.7297" z="122.40442" h="45"/>
+                    <spot x="433.39557" y="924.4421" z="122.75288" h="15"/>
+                </spawn>
+                <!-- Brasidas General Goods Merchant -->
+                <spawn npc_id="801186">
+                    <spot x="425.60388" y="911.7546" z="122.5" h="45"/>
+                </spawn>
+                <!-- Kalamis Warehouse Manager -->
+                <spawn npc_id="801187">
+                    <spot x="411.3014" y="909.3447" z="122.5" h="45"/>
+                </spawn>
+                <!-- Kariton Administration Officer -->
+                <spawn npc_id="801188">
+                    <spot x="427.2339" y="914.0154" z="122.5" h="45"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ASMODIANS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701800">
+                    <spot x="417.0642" y="914.8626" z="122.5000" h="1"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231566" handler="BOSS">
+                    <spot x="416.5205" y="906.30505" z="122.5" h="38"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231611" handler="ATTACKER">
+                    <spot x="414.64871" y="906.14154" z="123.28967"/>
+                </spawn>
+                <!-- Asmodian Heiron Inspector -->
+                <spawn npc_id="231625" handler="ATTACKER">
+                    <spot x="389.71191" y="937.07147" z="122.33408" h="113"/>
+                </spawn>
+                <!-- Heiron Infiltrator -->
+                <spawn npc_id="231589">
+                    <spot x="430.37482" y="915.1075" z="122.5" h="15"/>
+                    <spot x="405.0679" y="921.23444" z="122.26764" h="45"/>
+                    <spot x="409.64694" y="924.7297" z="122.40442" h="45"/>
+                    <spot x="433.39557" y="924.4421" z="122.75288" h="15"/>
+                </spawn>
+                <!-- Tostein General Goods Merchant -->
+                <spawn npc_id="801190">
+                    <spot x="425.60388" y="911.7546" z="122.5" h="45"/>
+                </spawn>
+                <!-- Morig Warehouse Manager -->
+                <spawn npc_id="801191">
+                    <spot x="411.3014" y="909.3447" z="122.5" h="45"/>
+                </spawn>
+                <!-- Lithrasir Administration Officer -->
+                <spawn npc_id="801192">
+                    <spot x="427.2339" y="914.0154" z="122.5" h="45"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Lepharist Territory -->
+                <spawn npc_id="701796">
+                    <spot x="417.0642" y="914.8626" z="122.5000" h="1"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231564" handler="BOSS">
+                    <spot x="416.5205" y="906.30505" z="122.5" h="38"/>
+                </spawn>
+                <!-- Lepharist Vanguard (Shieldcaptain) -->
+                <spawn npc_id="231603" handler="ATTACKER">
+                    <spot x="389.71191" y="937.07147" z="122.33408" h="113"/>
+                </spawn>
+                <!-- Lepharist Protector -->
+                <spawn npc_id="231575" respawn_time="295">
+                    <spot x="430.37482" y="915.1075" z="122.5" h="15"/>
+                    <spot x="405.0679" y="921.23444" z="122.26764" h="45"/>
+                    <spot x="409.64694" y="924.7297" z="122.40442" h="45"/>
+                    <spot x="433.39557" y="924.4421" z="122.75288" h="15"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+    </spawn_map>
+</spawns>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (x64) (http://www.altova.com) by Magenik (aion-engine.net) -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+      [BEGIN] SUMMARY
+                            17000 [XML] [Group] Guardian Deity General of the Nochsana Training Camp
+                            17001 [XML] [Group] Anuhart Attack
+                            17002 [XML] [Group] Raksha's Arrogance
+                            17003 [XML] [Group] Run Off with Kromede
+                            17004 [XML] [Group] Temple of the Ferocious Ruler
+                            17005 [XML] [Alliance] Zadra's Darkness
+                            17006 [XML] [Group] Surrender of the Adma Stronghold
+                            17007 [XML] [Group] Underground Great Blacksmith
+                            17008 [XML] [Alliance] Sand Lord's Oppression
+                            17009 [XML] [Group] Bakarma's Bad Reputation
+                            17010 [XML] [Group] Demise of the Sealed Temple
+                            17011 [XML] [Group] Brigade General of the Rentus Base
+                            17012 [XML] [Daily] Fierce Fight in the Abyss
+                            17013 [XML] [Daily] Fierce Fight in Balaurea
+                            17014 [XML] [Daily] Duel with the Asmodians
+                            17015 [XML] [League] Fierce Fight in the Base of the Abyss
+                            17016 [XML] [League] Fierce Fight in the Top of the Abyss
+                            17017 [XML] [League] Guardian Deity General of the Core of the Abyss
+                            17018 [XML] [League] Inggison Fortress Operation
+                            17019 [XML] [League] Duel with the Alter Ego
+                            27000 [XML] [Group] Guardian Deity General of the Nochsana Training Camp
+                            27001 [XML] [Group] Esras' Fate
+                            27002 [XML] [Group] Raksha's Arrogance
+                            27003 [XML] [Group] Run Off with Kromede
+                            27004 [XML] [Group] Temple of the Ferocious Ruler
+                            27005 [XML] [Alliance] Zadra's Darkness
+                            27006 [XML] [Group] Surrender of the Adma Stronghold
+                            27007 [XML] [Group] Underground Great Blacksmith
+                            27008 [XML] [Alliance] Sand Lord's Oppression
+                            27009 [XML] [Group] Bakarma's Bad Reputation
+                            27010 [XML] [Group] Demise of the Sealed Temple
+                            27011 [XML] [Group] Brigade General of the Rentus Base
+                            27012 [XML] [Daily] Fierce Fight in the Abyss
+                            27013 [XML] [Daily] Fierce Fight in Balaurea
+                            27014 [XML] [Daily] Duel with the Asmodians
+                            27015 [XML] [League] Fierce Fight in the Base of the Abyss
+                            27016 [XML] [League] Fierce Fight in the Top of the Abyss
+                            27017 [XML] [League] Guardian Deity General of the Core of the Abyss
+                            27018 [XML] [League] Inggison Fortress Operation
+                            27019 [XML] [League] Duel with the Alter Ego
+                    [END] SUMMARY
+    -->
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="17000" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="256693"/>
+    </monster_hunt>
+    <monster_hunt id="17001" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="213780 236929"/>
+    </monster_hunt>
+    <monster_hunt id="17002" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="217647"/>
+    </monster_hunt>
+    <monster_hunt id="17003" start_npc_ids="0" end_npc_ids="800447"> <!-- 4.9 - 5.1 -->
+        <monster var="0" end_var="1" npc_ids="214621 214621"/>
+    </monster_hunt>
+    <monster_hunt id="17004" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="215783"/>
+    </monster_hunt>
+    <monster_hunt id="17005" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="217242"/>
+    </monster_hunt>
+    <monster_hunt id="17006" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="214696"/>
+    </monster_hunt>
+    <monster_hunt id="17007" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="215795"/>
+    </monster_hunt>
+    <monster_hunt id="17008" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="218782"/>
+    </monster_hunt>
+    <monster_hunt id="17009" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="213780"/>
+    </monster_hunt>
+    <monster_hunt id="17010" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="216183 216183"/>
+    </monster_hunt>
+    <monster_hunt id="17011" start_npc_ids="0" end_npc_ids="800447">
+        <monster var="0" end_var="1" npc_ids="217313"/>
+    </monster_hunt>
+    <kill_in_world id="17012" start_npc_ids="0" end_npc_ids="800446" worlds="400010000" amount="5"/>
+    <kill_in_world id="17013" start_npc_ids="0" end_npc_ids="800445" worlds="220070000 210050000" amount="5"/>
+    <kill_in_world id="17014" start_npc_ids="0" end_npc_ids="800447" worlds="0" amount="5"/>
+    <monster_hunt id="17015" start_npc_ids="0" end_npc_ids="800446">
+        <monster var="0" end_var="1" npc_ids="263006 263011 263306 263311 264506 264511"/>
+    </monster_hunt>
+    <monster_hunt id="17016" start_npc_ids="0" end_npc_ids="800446">
+        <monster var="0" end_var="1" npc_ids="266306 266311 270806 270811 267806 267811 269006 269011 269906 269911"/>
+    </monster_hunt>
+    <monster_hunt id="17017" start_npc_ids="0" end_npc_ids="800446">
+        <monster var="0" end_var="1" npc_ids="260006 260011"/>
+    </monster_hunt>
+    <monster_hunt id="17018" start_npc_ids="0" end_npc_ids="800445">
+        <monster var="0" end_var="1" npc_ids="257005 257010 257305 257310"/>
+    </monster_hunt>
+    <monster_hunt id="17019" start_npc_ids="0" end_npc_ids="800445">
+        <monster var="0" end_var="1" npc_ids="259011 259211 259411 259611"/>
+    </monster_hunt>
+    <monster_hunt id="27000" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="256693"/>
+    </monster_hunt>
+    <monster_hunt id="27001" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="214028"/>
+    </monster_hunt>
+    <monster_hunt id="27002" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="217475"/>
+    </monster_hunt>
+    <monster_hunt id="27003" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="214621 214621"/>
+    </monster_hunt>
+    <monster_hunt id="27004" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="215783"/>
+    </monster_hunt>
+    <monster_hunt id="27005" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="217242"/>
+    </monster_hunt>
+    <monster_hunt id="27006" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="214669"/>
+    </monster_hunt>
+    <monster_hunt id="27007" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="215795"/>
+    </monster_hunt>
+    <monster_hunt id="27008" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="218782"/>
+    </monster_hunt>
+    <monster_hunt id="27009" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="213780"/>
+    </monster_hunt>
+    <monster_hunt id="27010" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="216183 216183"/>
+    </monster_hunt>
+    <monster_hunt id="27011" start_npc_ids="0" end_npc_ids="800452">
+        <monster var="0" end_var="1" npc_ids="217313"/>
+    </monster_hunt>
+    <kill_in_world id="27012" start_npc_ids="0" end_npc_ids="800451" worlds="400010000" amount="5"/>
+    <kill_in_world id="27013" start_npc_ids="0" end_npc_ids="800450" worlds="220070000 210050000" amount="5"/>
+    <kill_in_world id="27014" start_npc_ids="0" end_npc_ids="800452" worlds="0" amount="5"/>
+    <monster_hunt id="27015" start_npc_ids="0" end_npc_ids="800451">
+        <monster var="0" end_var="1" npc_ids="263001 263011 263301 263311 264501 264511"/>
+    </monster_hunt>
+    <monster_hunt id="27016" start_npc_ids="0" end_npc_ids="800451">
+        <monster var="0" end_var="1" npc_ids="266301 266311 270801 270811 267801 267811 269001 269011 269901 269911"/>
+    </monster_hunt>
+    <monster_hunt id="27017" start_npc_ids="0" end_npc_ids="800451">
+        <monster var="0" end_var="1" npc_ids="260001 260011"/>
+    </monster_hunt>
+    <monster_hunt id="27018" start_npc_ids="0" end_npc_ids="800450">
+        <monster var="0" end_var="1" npc_ids="257600 257610 257900 257910"/>
+    </monster_hunt>
+    <monster_hunt id="27019" start_npc_ids="0" end_npc_ids="800450">
+        <monster var="0" end_var="1" npc_ids="259011 259211 259411 259611"/>
+    </monster_hunt>
+    <!-- SAME QUEST AS ELEMENTIS_FOREST DO NOT REWRITE -->
+</quest_scripts>

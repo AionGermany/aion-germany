@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="../import.xsd"/>
+	<xs:element name="luna_templates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="luna_template" type="LunaTemplate" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="LunaTemplate">
+		<xs:sequence>
+			<xs:element name="luna_component_panel_1" type="LunaComponent" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="luna_component_panel_2" type="LunaComponent" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="luna_component_panel_3" type="LunaComponent" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="luna_component_panel_4" type="LunaComponent" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="luna_component_panel_5" type="LunaComponent" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="quantity" type="xs:int"/>
+		<xs:attribute name="productid" type="xs:int"/>
+		<xs:attribute name="race" type="Race"/>
+		<xs:attribute name="itemid" type="xs:int"/>
+		<xs:attribute name="nameid" type="xs:int"/>
+		<xs:attribute name="id" type="xs:int"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="group" type="xs:int"/>
+		<xs:attribute name="success_rate" type="xs:int" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="LunaComponent">
+		<xs:sequence>
+			<xs:element name="luna_component" type="LunaComponentElement" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LunaComponentElement">
+		<xs:attribute name="itemid" type="xs:int"/>
+		<xs:attribute name="quantity" type="xs:int"/>
+	</xs:complexType>
+</xs:schema>

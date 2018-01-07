@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="../../modifiers.xsd"/>
+	<xs:include schemaLocation="../stats/stats.xsd"/>
+	<xs:include schemaLocation="../import.xsd"/>
+	<xs:element name="minions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="minion" type="MinionTemplate" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="MinionTemplate">	
+		<xs:sequence>
+			<xs:element name="modifiers" type="Modifiers" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="actions" type="MinionsActions" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="minionstats" type="MinionStatsTemplate" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="bound" type="MinionBoundRadius" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="evolved" type="MinionEvolved" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="nameid" type="xs:int"/>
+		<xs:attribute name="grade" type="xs:string"/>		
+		<xs:attribute name="level" type="xs:int"/>		
+		<xs:attribute name="growthPoints" type="xs:int"/>
+		<xs:attribute name="growthMax" type="xs:int"/>
+		<xs:attribute name="growthCost" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="MinionBoundRadius">
+		<xs:attribute name="front" type="xs:float"/>
+		<xs:attribute name="side" type="xs:float"/>
+		<xs:attribute name="upper" type="xs:float"/>
+	</xs:complexType>
+	<xs:complexType name="MinionStatsTemplate">
+		<xs:attribute name="run_speed" type="xs:float"/>
+		<xs:attribute name="walk_speed" type="xs:float"/>
+		<xs:attribute name="height" type="xs:float"/>
+		<xs:attribute name="altitude" type="xs:float"/>
+	</xs:complexType>
+	<xs:complexType name="MinionEvolved">
+		<xs:attribute name="itemId" type="xs:int"/>
+		<xs:attribute name="evolvedNum" type="xs:int"/>
+		<xs:attribute name="evolvedCost" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="MinionsActions">
+		<xs:sequence>
+			<xs:element name="skill" type="MinionSkill" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MinionSkill">
+		<xs:attribute name="skill_id" type="xs:int"/>
+		<xs:attribute name="energyCost" type="xs:int"/>
+	</xs:complexType>
+</xs:schema>

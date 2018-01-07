@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 21:29 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               10525 [SCRIPT] Weda's Request
+               10526 [SCRIPT] The Secret Order
+               10527 [SCRIPT] The Secret Document
+               10528 [SCRIPT] The Protection Artefact
+               10529 [SCRIPT] The Corridor
+               15500 [SCRIPT] Defence of the Immortal Light Refuge
+               15501 [SCRIPT] [Spy] Scouting the Red Dawn Plains
+               15502 [XML] Crystal of Immortal Light
+               15503 [SCRIPT] Defence of the Twilight Garden
+               15504 [SCRIPT] [Spy] Scouting the Swamp of Silence
+               15505 [TODO] Remove the Archon Traps
+               15506 [SCRIPT] Defence of the Gorge of Fallacy
+               15507 [SCRIPT] [Spy] Scouting the Feather Branch Forest
+               15508 [XML] The Dead Have No Voice
+               15509 [SCRIPT] Defence of the Coast of the Doomed
+               15510 [SCRIPT] [Spy] Scouting out Sphiro's Territory
+               15511 [XML] Magical Ingredients
+               15512 [SCRIPT] Defence of the Colourful Swamp
+               15513 [SCRIPT] [Spy] Scouting the Cursed Gorge
+               15514 [XML] Wild Aether Grass
+               15515 [SCRIPT] [Group] Defence of the Wind Valley
+               15516 [SCRIPT] [Spy/Group] Scouting out Calyda Canyon
+               15517 [XML] [Group] Strigik Totem
+               15518 [SCRIPT] Defence of the Forest of Silence
+               15519 [SCRIPT] [Spy] Defence of the Plateau of Retribution
+               15520 [SCRIPT] Rescue of the Heavenly Light Scouts
+               15521 [SCRIPT] Defence of the Forest of Life
+               15522 [SCRIPT] [Spy] Scouting the Forest of Illusions
+               15523 [XML] Records of Petralith
+               15524 [SCRIPT] Defence of the Aether Temple
+               15525 [SCRIPT] [Spy] Scouting the Ruins of History
+               15526 [XML] Get Generator Cores
+               15527 [SCRIPT] Defence of the Storm Plateau
+               15528 [SCRIPT] [Spy] Defence of the Sea of Life
+               15529 [SCRIPT] Lord of the Sky
+               15530 [SCRIPT] [Group] Defence of the Krall Aether Mine
+               15531 [SCRIPT] [Spy/Group] Scouting the Black Mane Mountains
+               15532 [XML] [Group] Aether Ore of Beginning
+               15533 [SCRIPT] Defence of the Mushroom Gorge
+               15534 [SCRIPT] [Spy] Scouting the Saphora Forest
+               15535 [XML] Strange Blue Mushroom
+               15536 [SCRIPT] [Group] Defence of the Tarha Village
+               15537 [SCRIPT] [Spy/Group] Scouting the Zenzen Territory
+               15538 [TODO] [Group] Mumuki Weapon
+               15540 [XML] Orpheus' Special Design
+               15548 [SCRIPT] Holy gift from Ariel's Refuge
+               15550 [SCRIPT] Esterra and Ancient Atreia
+               15551 [SCRIPT] Esterra Transport Mode 1
+               15552 [SCRIPT] Esterra Transport Mode 2
+               15553 [SCRIPT] Esterra Transport Mode 3
+               15554 [SCRIPT] Esterra Transport Mode 4
+               15560 [SCRIPT] [Weekly/Group] Shadowbringer Scout
+               15561 [SCRIPT] [Weekly/Alliance] Danger Ahead
+               15562 [SCRIPT] [Weekly/Alliance] Shadows Over Esterra
+               15563 [TODO] [Weekly] Broken Archon Medallion
+               15565 [SCRIPT] [Emergency Command] Defence of Ariel's Refuge
+               15566 [SCRIPT] [Emergency Command] Support for the Nosra Invasion
+               15570 [SCRIPT] [Weekly] Nocturnal Nonsense
+               15571 [SCRIPT] [Weekly] Ruler of the Night
+               15572 [SCRIPT] [Weekly] Night Rainsong
+               15573 [SCRIPT] [Weekly/Group] Attacks by Daylight
+               15574 [SCRIPT] [Weekly] In the Evening Twilight
+               15575 [SCRIPT] [Weekly] When The Trees Awaken By Day
+               15576 [SCRIPT] [Weekly] The Temple By Night
+               15577 [SCRIPT] [Weekly] Morning on the Plateau
+               15578 [SCRIPT] [Weekly/Group] When the Krall Go To Sleep in the Evening
+               15579 [SCRIPT] [Weekly] Early Birds
+               15580 [SCRIPT] [Spy/Daily] Disrupt the Asmodians' Research
+               15590 [SCRIPT] [Daily] Report on the Fragments of the Tower of Eternity
+               15595 [SCRIPT] [Spy/Daily] Attack on Nosra
+               15596 [SCRIPT] [Emergency Command] Esterra Defence
+               15601 [SCRIPT] [Alliance] Nasqui's Records
+               15602 [SCRIPT] [Group] Rules of the Wild
+               15604 [SCRIPT] [Group] The Danger in the Shadows
+               15605 [SCRIPT] [Alliance] Primordial Creature
+               15606 [SCRIPT] [Group] Strong Winds
+               15608 [SCRIPT] [Group] Investigating the Spores
+               15620 [SCRIPT] [Weekly/Group] Gerkan
+               15621 [SCRIPT] [Weekly/Group] Shadow Sheluk
+               15622 [SCRIPT] [Weekly/Group] Bartir
+               15623 [SCRIPT] [Weekly/Group] Tenaklu
+               15632 [SCRIPT] [Group/Daily] Ancient Creatures in the Colourful Swamp
+               15634 [SCRIPT] [Group/Daily] Ancient Creatures in the Forest of Silence
+               15637 [SCRIPT] [Group/Daily] Ancient Creatures on the Storm Plateau
+               15639 [SCRIPT] [Group/Daily] Ancient Creatures in the Mushroom Gorge
+               15640 [SCRIPT] [Daily] Strange Creatures in Esterra
+               15665 [XML] Living Fossils
+               15666 [XML] Guardian of the Ancient Garden of Light
+               80927 [TODO] The Immortal Light Refuge
+               80928 [TODO] The Twilight Garden
+               80929 [TODO] Garden Work
+               80933 [SCRIPT] [Emergency Command] Renewed Defence of Esterra
+               80934 [SCRIPT] [Spy/Daily] Renewed Attack on Nosra
+               80935 [SCRIPT] [Spy/Daily] Repeated Attack on Nosra
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+	<item_collecting id="15502" start_npc_ids="806089" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703063"/>
+	<item_collecting id="15505" start_npc_ids="806090" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="15508" start_npc_ids="806091" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703065"/> 
+	<item_collecting id="15511" start_npc_ids="806092" start_dialog_id="4762" start_dialog_id2="1011"/> 
+	<item_collecting id="15514" start_npc_ids="806093" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703067"/>  
+	<item_collecting id="15517" start_npc_ids="806094" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703068"/> 
+	<item_collecting id="15523" start_npc_ids="806096" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703070"/> 
+	<item_collecting id="15526" start_npc_ids="806097" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703071"/> 
+	<item_collecting id="15532" start_npc_ids="806099" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703073"/>
+	<item_collecting id="15535" start_npc_ids="806100" start_dialog_id="4762" start_dialog_id2="1011"/> 
+	<item_collecting id="15538" start_npc_ids="806254" start_dialog_id="4762" start_dialog_id2="1011" action_item_ids="703294"/>
+	<item_collecting id="15540" start_npc_ids="806134" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="15665" start_npc_ids="806089" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="15666" start_npc_ids="806090" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

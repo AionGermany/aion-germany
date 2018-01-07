@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="rides">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="ride_info" type="RideInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="RideType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="RideInfo">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="bounds" type="Bounds"/>
+        </xs:sequence>
+        <xs:attribute name="cost_fp" type="xs:int"/>
+        <xs:attribute name="start_fp" type="xs:int"/>
+        <xs:attribute default="0" name="sprint_speed" type="xs:float" use="optional"/>
+        <xs:attribute default="0" name="fly_speed" type="xs:float" use="optional"/>
+        <xs:attribute name="move_speed" type="xs:float"/>
+        <xs:attribute name="type" type="RideType"/>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="Bounds">
+        <xs:attribute name="altitude" type="xs:float"/>
+        <xs:attribute name="upper" type="xs:float"/>
+        <xs:attribute name="side" type="xs:float"/>
+        <xs:attribute name="front" type="xs:float"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <xs:element name="npc_shouts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="shout_group" type="ShoutGroup"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ShoutGroup">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="shout_npcs" type="ShoutList"/>
+        </xs:sequence>
+        <xs:attribute name="client_ai" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="ShoutList">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="shout" type="NpcShout"/>
+        </xs:sequence>
+        <xs:attribute name="npc_ids" type="NpcList" use="required"/>
+        <xs:attribute name="restrict_world" type="xs:int" use="optional" default="0"/>
+    </xs:complexType>
+    <xs:complexType name="NpcShout">
+        <xs:attribute name="string_id" type="xs:int" use="required"/>
+        <xs:attribute name="when" type="ShoutEventType" use="required"/>
+        <xs:attribute name="pattern" type="xs:string" use="optional"/>
+        <xs:attribute name="param" type="xs:string" use="optional"/>
+        <xs:attribute name="type" type="ShoutType" use="optional" default="BROADCAST"/>
+        <xs:attribute name="skill_no" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="poll_delay" type="xs:int" use="optional" default="0"/>
+    </xs:complexType>
+    <xs:simpleType name="NpcList">
+        <xs:list itemType="xs:int"/>
+    </xs:simpleType>
+    <xs:simpleType name="ShoutType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BROADCAST"/>
+            <xs:enumeration value="SAY"/>
+            <xs:enumeration value="HEAR"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ShoutEventType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="IDLE"/>
+            <xs:enumeration value="ATTACKED"/>
+            <xs:enumeration value="ATTACK_BEGIN"/>
+            <xs:enumeration value="ATTACK_END"/>
+            <xs:enumeration value="ATTACK_K"/>
+            <xs:enumeration value="SUMMON_ATTACK"/>
+            <xs:enumeration value="CASTING"/>
+            <xs:enumeration value="CAST_K"/>
+            <xs:enumeration value="DIED"/>
+            <xs:enumeration value="HELP"/>
+            <xs:enumeration value="HELPCALL"/>
+            <xs:enumeration value="WALK_WAYPOINT"/>
+            <xs:enumeration value="START"/>
+            <xs:enumeration value="WAKEUP"/>
+            <xs:enumeration value="SLEEP"/>
+            <xs:enumeration value="RESET_HATE"/>
+            <xs:enumeration value="UNK_ACC"/>
+            <xs:enumeration value="WALK_DIRECTION"/>
+            <xs:enumeration value="STATUP"/>
+            <xs:enumeration value="SWITCH_TARGET"/>
+            <xs:enumeration value="SEE"/>
+            <xs:enumeration value="PLAYER_MAGIC"/>
+            <xs:enumeration value="PLAYER_SNARE"/>
+            <xs:enumeration value="PLAYER_DEBUFF"/>
+            <xs:enumeration value="PLAYER_SKILL"/>
+            <xs:enumeration value="PLAYER_SLAVE"/>
+            <xs:enumeration value="PLAYER_BLOW"/>
+            <xs:enumeration value="PLAYER_PULL"/>
+            <xs:enumeration value="PLAYER_PROVOKE"/>
+            <xs:enumeration value="PLAYER_CAST"/>
+            <xs:enumeration value="GOD_HELP"/>
+            <xs:enumeration value="LEAVE"/>
+            <xs:enumeration value="BEFORE_DESPAWN"/>
+            <xs:enumeration value="ATTACK_DEADLY"/>
+            <xs:enumeration value="WIN"/>
+            <xs:enumeration value="ENEMY_DIED"/>
+            <xs:enumeration value="ENTER_BATTLE"/>
+            <xs:enumeration value="LEAVE_BATTLE"/>
+            <xs:enumeration value="DEFORM_SKILL"/>
+            <xs:enumeration value="ATTACK_HITPOINT"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xsd:schema>

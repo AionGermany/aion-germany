@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Formatting rules:
+       mail name parameter is the sender from the packet
+       template name is for searching required mail template
+       sender currently is just for an information
+       other mail parts are joined together using "," separator
+
+       if any part contains parameters, they are appended after each part,
+       also joined using "," separator.
+       if the part id is 0, it is ommitted; in such case only parameters
+       are appended.
+       thus, if id is 0, and no parameters exist, the part is completely
+       not used.
+-->
+<mails>
+    <!-- For $$ABYSS_REWARD_MAIL -->
+    <!--
+            resultid:
+                    defender - Defense Reward Notice
+                    protect - Defending Legion Reward Notice
+                    defense - Reward Statement
+                    occupy - Siege Reward Notice
+                    empty - Official Announcement
+                    fail - Official Announcement
+            fieldabyss_reward:
+                    sender: Inggison HQ, Gelkmaros HQ
+                    resultid - defender, protect, defense, occupy, empty, fail
+            abyss_reward:
+                    sender: Sanctum Headquarters, Pandaemonium Headquarters
+                    resultid - defender, protect, defense, occupy, empty, fail
+            fieldboss_reward:
+                    sender: Inggison HQ, Gelkmaros HQ
+                    resultid: occupy
+            ldf4b_reward: 
+                    sender: Tiamaranta Headquarters
+                    resultid: occupy
+    -->
+    <mail name="$$ABYSS_REWARD_MAIL">
+        <template name="" race="PC_ALL">
+            <sender id="0"/>
+            <title id="0">
+                <param id="siegelocid"/>
+                <param id="resultid"/>
+                <param id="raceid"/>
+            </title>
+            <header id="0"/>
+            <body id="0">
+                <param id="datetime"/>
+                <param id="rankid"/>
+            </body>
+            <tail id="0"/>
+        </template>
+    </mail>
+
+    <mail name="$$HS_OVERDUE_1ST">
+        <template name="" race="PC_ALL">
+            <sender id="904143"/>
+            <!-- House Administration -->
+            <title id="904144"/>
+            <!-- Notice of Overdue Maintenance Fee -->
+            <header id="904145"/>
+            <body id="904146"/>
+            <tail id="904147">
+                <param id="datetime"/>
+                <param id="address"/>
+            </tail>
+        </template>
+    </mail>
+    <mail name="$$HS_OVERDUE_2ND">
+        <template name="" race="PC_ALL">
+            <sender id="904148"/>
+            <!-- House Administration -->
+            <title id="904149"/>
+            <!-- Final Notice of Overdue Maintenance Fee -->
+            <header id="904150"/>
+            <body id="904151"/>
+            <tail id="904152">
+                <param id="datetime"/>
+                <param id="address"/>
+            </tail>
+        </template>
+    </mail>
+    <mail name="$$HS_OVERDUE_3RD">
+        <template name="" race="PC_ALL">
+            <sender id="904153"/>
+            <!-- House Administration -->
+            <title id="904154"/>
+            <!-- Notice of House Impoundment -->
+            <header id="904155"/>
+            <body id="904156"/>
+            <tail id="904157">
+                <param id="datetime"/>
+                <param id="address"/>
+            </tail>
+        </template>
+    </mail>
+
+    <mail name="$$HS_AUCTION_MAIL">
+        <template name="" race="ASMODIANS">
+            <sender id="903901"/>
+            <!-- Pernon Administration -->
+            <title id="0"> <!-- Depends on the resultid -->
+                <param id="resultid"/>
+                <param id="raceid"/>
+            </title>
+            <header id="0"/>
+            <!-- 903903 -->
+            <body id="0"> <!-- 903904 -->
+                <param id="datetime"/>
+                <param id="address"/>
+            </body>
+            <tail id="0"/>
+        </template>
+        <template name="" race="ELYOS">
+            <sender id="903401"/>
+            <!-- Oriel Administration -->
+            <title id="0"> <!-- Depends on the resultid -->
+                <param id="resultid"/>
+                <param id="raceid"/>
+            </title>
+            <header id="0"/>
+            <body id="0">
+                <param id="datetime"/>
+                <param id="address"/>
+            </body>
+            <tail id="0"/>
+        </template>
+    </mail>
+
+    <mail name="$$CASH_ITEM_MAIL">
+        <template name="" race="PC_ALL">
+            <sender id="901526"/>
+            <!-- Black Cloud -->
+            <title id="0">
+                <param id="itemid"/>
+                <param id="count"/>
+            </title>
+            <header id="0"/>
+            <body id="0"> <!-- 901527 -->
+                <param id="unk1"/>
+                <param id="purchasedate"/>
+            </body>
+            <tail id="0"/>
+        </template>
+    </mail>
+
+    <mail name="$$VNDR_BUY_MAIL">
+        <template name="" race="PC_ALL">
+            <sender id="0"/>
+            <!-- 903075: Trade Broker -->
+            <title id="0"/>
+            <!-- 903076: Buy -->
+            <header id="0"/>
+            <body id="0"/>
+            <!-- 903077 -->
+            <tail id="0"/>
+        </template>
+    </mail>
+    <mail name="$$VNDR_RETURN_MAIL">
+        <template name="" race="PC_ALL">
+            <sender id="1300724"/>
+            <!-- Trade Broker -->
+            <title id="0"/>
+            <!-- 160020: The sales period has ended. -->
+            <header id="0"/>
+            <body id="0"/>
+            <!-- 1300725 -->
+            <tail id="0"/>
+        </template>
+    </mail>
+    <mail name="$$VENDOR_RETURN_MAIL">
+        <template name="" race="PC_ALL">
+            <sender id="1300724"/>
+            <!-- Trade Broker -->
+            <title id="0"/>
+            <!-- 160020: The sales period has ended. -->
+            <header id="0"/>
+            <body id="0"/>
+            <!-- 1300725 -->
+            <tail id="0"/>
+        </template>
+    </mail>
+
+    <mail name="$$HS_OVERDUE_FIRST">
+        <template name="" race="PC_ALL">
+            <sender id="903793"/>
+            <!-- House Administration -->
+            <title id="903794"/>
+            <!-- Notice of Overdue Maintenance Fee -->
+            <header id="903795"/>
+            <body id="903796"/>
+            <tail id="903797">
+                <param id="datetime"/>
+                <param id="address"/>
+            </tail>
+        </template>
+    </mail>
+    <mail name="$$HS_OVERDUE_SECOND">
+        <template name="" race="PC_ALL">
+            <sender id="903798"/>
+            <!-- House Administration -->
+            <title id="903799"/>
+            <!-- Second Notice of Overdue Maintenance Fee -->
+            <header id="903800"/>
+            <body id="903801"/>
+            <tail id="903802">
+                <param id="datetime"/>
+                <param id="address"/>
+            </tail>
+        </template>
+    </mail>
+    <mail name="$$HS_OVERDUE_FINAL">
+        <template name="" race="PC_ALL">
+            <sender id="903990"/>
+            <!-- House Administration -->
+            <title id="903991"/>
+            <!-- Notice of House Impoundment -->
+            <header id="903992"/>
+            <body id="903993"/>
+            <tail id="903994">
+                <param id="datetime"/>
+                <param id="address"/>
+            </tail>
+        </template>
+    </mail>
+</mails>

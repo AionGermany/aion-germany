@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="chest_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="chest" type="Chest" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Chest">
+        <xs:sequence>
+            <xs:element name="keyitem" type="KeyItem" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="npcid" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="KeyItem">
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="itemid" type="xs:int"/>
+        <xs:attribute name="quantity" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

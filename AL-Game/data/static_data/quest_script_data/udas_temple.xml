@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    30002 [XML] Goal of the Dragonbound
+                    30003 [SCRIPT] Secret of the Udas Temple
+                    30005 [SCRIPT] Heal Me, Kill Me
+                    30010 [XML] Poison Coating
+                    30102 [XML] Secret of the Dragonbound
+                    30103 [SCRIPT] Lair of the Dragonbound
+                    30105 [XML] Suppressing the Dragonbound
+                    30110 [XML] Swimming in Poison
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="30002" start_npc_ids="799029"/>
+    <item_collecting id="30008" start_npc_ids="799029" action_item_ids="700566"/>
+    <item_collecting id="30009" start_npc_ids="799029"/>
+    <item_collecting id="30010" start_npc_ids="799031" action_item_ids="700567"/>
+    <item_collecting id="30013" start_npc_ids="799030"/>
+    <item_collecting id="30014" start_npc_ids="799030"/>
+    <item_collecting id="30102" start_npc_ids="799333"/>
+    <item_collecting id="30108" start_npc_ids="799333" action_item_ids="700566"/>
+    <item_collecting id="30110" start_npc_ids="799335" action_item_ids="700567"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="30033" start_npc_ids="799031">
+        <monster var="0" npc_ids="215848 215849" end_var="10"/>
+    </monster_hunt>
+    <monster_hunt id="30105" start_npc_ids="799333">
+        <monster var="0" npc_ids="215808 281366 216335 216343 215857 216351 216327 281367 215814" end_var="25"/>
+        <monster var="0" npc_ids="281368 215858 216344 215809 216336 216352 216328 281369 215815" end_var="25"/>
+    </monster_hunt>
+</quest_scripts>

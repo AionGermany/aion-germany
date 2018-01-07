@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../modifiers.xsd"/>
+    <xs:element name="random_bonuses">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="random_bonus" type="RandomBonus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="RandomBonus">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="modifiers" type="Modifiers"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="type" type="StatBonusType" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="StatBonusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="INVENTORY"/>
+            <xs:enumeration value="POLISH"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

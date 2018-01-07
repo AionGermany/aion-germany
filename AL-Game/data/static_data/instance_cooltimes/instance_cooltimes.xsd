@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="instance_cooltimes" type="InstanceCooltimes"/>
+    <xs:complexType name="InstanceCooltimes">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="instance_cooltime" type="InstanceCooltime" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="InstanceCooltime">
+        <xs:sequence>
+            <xs:element name="type" type="InstanceCoolTimeType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="typevalue" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="ent_cool_time" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="indun_type" type="InstanceType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="max_member_light" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="max_member_dark" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="enter_min_level_light" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="enter_max_level_light" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="enter_min_level_dark" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="enter_max_level_dark" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="alarm_unit_score" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="can_enter_mentor" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="enter_guild" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="maxcount" type="xs:int" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="worldId" type="xs:int" use="required"/>
+        <xs:attribute name="race" type="Race" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="InstanceCoolTimeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RELATIVE"/>
+            <xs:enumeration value="WEEKLY"/>
+            <xs:enumeration value="DAILY"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="InstanceType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NORMAL"/>
+            <xs:enumeration value="BATTLEFIELD"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

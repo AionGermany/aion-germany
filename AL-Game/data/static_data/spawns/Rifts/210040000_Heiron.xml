@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="210040000">
+        <!-- Rift -->
+        <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Heiron -->
+            <spot x="2564.8743" y="509.5843" z="387.0" h="30" anchor="HEIRON_AM"/>
+            <spot x="1311.5281" y="1495.4662" z="115.0" h="86" anchor="HEIRON_BM"/>
+            <spot x="1174.9716" y="663.67017" z="135.0" h="53" anchor="HEIRON_CM"/>
+            <spot x="655.1439" y="1889.0497" z="115.1" h="93" anchor="HEIRON_DM"/>
+            <spot x="738.3385" y="2480.146" z="140.5" h="43" anchor="HEIRON_EM"/>
+            <spot x="533.527" y="560.1405" z="143.1" h="0" anchor="HEIRON_FM"/>
+            <spot x="2788.3176" y="2115.3208" z="141.07913" h="50" anchor="HEIRON_GM"/>
+        </spawn>
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Heiron -->
+            <spot x="892.1585" y="958.55774" z="140.1" h="66" anchor="HEIRON_AS"/>
+            <spot x="424.20813" y="2666.1064" z="118.0" h="33" anchor="HEIRON_BS"/>
+            <spot x="1840.1969" y="2652.0205" z="148.0" h="96" anchor="HEIRON_CS"/>
+            <spot x="892.1585" y="958.55774" z="140.1" h="66" anchor="HEIRON_DS"/>
+            <spot x="2053.9697" y="417.1973" z="232.0" h="16" anchor="HEIRON_ES"/>
+            <spot x="356.69928" y="349.3129" z="133.1" h="3" anchor="HEIRON_FS"/>
+            <spot x="1923.3081" y="2663.7046" z="140.5" h="106" anchor="HEIRON_GS"/>
+        </spawn>
+
+        <!-- HEIRON_AS -->
+        <rift_spawn id="2240">
+        </rift_spawn>
+        <!-- HEIRON_BS -->
+        <rift_spawn id="2241">
+        </rift_spawn>
+        <!-- HEIRON_CS -->
+        <rift_spawn id="2242">
+        </rift_spawn>
+        <!-- HEIRON_DS -->
+        <rift_spawn id="2243">
+        </rift_spawn>
+        <!-- HEIRON_ES -->
+        <rift_spawn id="2244">
+        </rift_spawn>
+        <!-- HEIRON_FS -->
+        <rift_spawn id="2245">
+        </rift_spawn>
+        <!-- HEIRON_GS -->
+        <rift_spawn id="2246">
+        </rift_spawn>
+    </spawn_map>
+</spawns>

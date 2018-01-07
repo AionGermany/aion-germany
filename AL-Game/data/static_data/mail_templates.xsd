@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+
+    <xs:element name="mails">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="mail" type="SysMail"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="SysMail">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="template" type="MailTemplate"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="StringParamList">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="param">
+                <xs:complexType>
+                    <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MailPart" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="StringParamList">
+                <xs:attribute name="id" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Sender">
+        <xs:complexContent>
+            <xs:extension base="MailPart">
+                <xs:attribute fixed="SENDER" name="type" type="MailPartType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Title">
+        <xs:complexContent>
+            <xs:extension base="MailPart">
+                <xs:attribute fixed="TITLE" name="type" type="MailPartType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Header">
+        <xs:complexContent>
+            <xs:extension base="MailPart">
+                <xs:attribute fixed="HEADER" name="type" type="MailPartType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Body">
+        <xs:complexContent>
+            <xs:extension base="MailPart">
+                <xs:attribute fixed="BODY" name="type" type="MailPartType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Tail">
+        <xs:complexContent>
+            <xs:extension base="MailPart">
+                <xs:attribute fixed="TAIL" name="type" type="MailPartType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MailTemplate">
+        <xs:all>
+            <xs:element name="sender">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="Sender"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="title">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="Title"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="header">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="Header"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="body">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="Body"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="tail">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="Tail"/>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="race" type="Race" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="MailPartType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SENDER"/>
+            <xs:enumeration value="TITLE"/>
+            <xs:enumeration value="HEADER"/>
+            <xs:enumeration value="BODY"/>
+            <xs:enumeration value="TAIL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

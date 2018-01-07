@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="challenge_tasks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="task" type="ChallengeTask"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ChallengeTask">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="quest" type="ChallengeQuest"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="contrib" type="ContributionReward"/>
+            <xs:element minOccurs="1" maxOccurs="1" name="reward" type="ChallengeReward"/>
+        </xs:sequence>
+        <xs:attribute name="repeat" type="xs:boolean" use="optional"/>
+        <xs:attribute name="town_residence" type="xs:boolean" use="optional"/>
+        <xs:attribute name="name_id" type="xs:int"/>
+        <xs:attribute name="max_level" type="xs:int" use="required"/>
+        <xs:attribute name="min_level" type="xs:int" use="required"/>
+        <xs:attribute name="prev_task" type="xs:int" use="optional"/>
+        <xs:attribute name="race" type="Race" use="required"/>
+        <xs:attribute name="type" type="ChallengeType" use="required"/>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="ChallengeQuest">
+        <xs:attribute name="score" type="xs:int" use="required"/>
+        <xs:attribute name="repeat_count" type="xs:int" use="required"/>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="ContributionReward">
+        <xs:attribute name="item_count" type="xs:int" use="required"/>
+        <xs:attribute name="reward_id" type="xs:int" use="required"/>
+        <xs:attribute name="number" type="xs:int" use="required"/>
+        <xs:attribute name="rank" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="ChallengeReward">
+        <xs:attribute name="msg_id" type="xs:int" use="optional"/>
+        <xs:attribute name="value" type="xs:int" use="optional"/>
+        <xs:attribute name="type" type="RewardType" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="ChallengeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="LEGION"/>
+            <xs:enumeration value="TOWN"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RewardType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="POINT"/>
+            <xs:enumeration value="SPAWN"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

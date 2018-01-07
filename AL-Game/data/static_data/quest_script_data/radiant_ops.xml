@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-02-14 12:47 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               35505 [XML] [Spy/Daily] Operation: Gelkmaros
+               35508 [XML] [Daily] Zero Tolerance Policy
+               35509 [XML] [Daily] Zero Tolerance or Less
+               35510 [XML] [Daily] Battle against the Asmodians
+               35511 [XML] [Spy/Daily] The Vengar Infiltration
+               35512 [XML] [Daily] War against the Asmodians
+               35513 [XML] [Spy/Daily] March into Vengar
+               35514 [TODO] [Daily] Battle against the Asmodians
+               35515 [TODO] [Spy/Daily] March into Nosra
+               38001 [SCRIPT] Radiant Ops Recruitment
+               38004 [UNUSED] Radiant Ops Recruitment
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <!-- HUNTING QUESTS -->
+    <kill_in_world id="35505" end_npc_ids="799825 799826" worlds="220070000" amount="5"/>
+    <kill_in_world id="35508" end_npc_ids="799831" worlds="0" amount="5"/>
+    <kill_in_world id="35509" end_npc_ids="799825 799826" worlds="0" amount="5"/>
+    <kill_in_world id="35510" end_npc_ids="804940" worlds="0" amount="5"/>
+    <kill_in_world id="35511" end_npc_ids="804940" worlds="220080000" amount="5"/>
+    <kill_in_world id="35512" end_npc_ids="804940" worlds="0" amount="5"/>
+    <kill_in_world id="35513" end_npc_ids="804940" worlds="220080000" amount="5"/>
+</quest_scripts>

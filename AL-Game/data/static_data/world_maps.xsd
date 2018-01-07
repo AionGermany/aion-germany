@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="world_maps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="map">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element minOccurs="0" maxOccurs="1" name="ai_info" type="AiInfo"/>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string"/>
+                        <xs:attribute name="id" type="xs:int" use="required"/>
+                        <xs:attribute name="twin_count" type="xs:int"/>
+                        <xs:attribute name="beginner_twin_count" type="xs:int"/>
+                        <xs:attribute name="max_user" type="xs:int"/>
+                        <xs:attribute name="prison" type="xs:boolean"/>
+                        <xs:attribute name="instance" type="xs:boolean"/>
+                        <xs:attribute name="water_level" type="xs:int" use="required"/>
+                        <xs:attribute name="death_level" type="xs:int" use="required"/>
+                        <xs:attribute name="world_type" type="worldType"/>
+                        <xs:attribute name="world_size" type="xs:int" use="required"/>
+                        <xs:attribute name="except_buff" type="xs:boolean"/>
+                        <xs:attribute name="flags" type="AttributeList" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="AiInfo">
+        <xs:attribute default="50" name="chase_target" type="xs:int"/>
+        <xs:attribute default="200" name="chase_home" type="xs:int"/>
+    </xs:complexType>
+    <xs:simpleType name="worldType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ASMODAE"/>
+            <xs:enumeration value="ELYSEA"/>
+            <xs:enumeration value="BALAUREA"/>
+            <xs:enumeration value="ABYSS"/>
+            <xs:enumeration value="NONE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ZoneAttributes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BIND"/>
+            <xs:enumeration value="RECALL"/>
+            <xs:enumeration value="GLIDE"/>
+            <xs:enumeration value="FLY"/>
+            <xs:enumeration value="RIDE"/>
+            <xs:enumeration value="FLY_RIDE"/>
+            <xs:enumeration value="PVP"/>
+            <xs:enumeration value="DUEL_SAME_RACE"/>
+            <xs:enumeration value="DUEL_OTHER_RACE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AttributeList">
+        <xs:list itemType="ZoneAttributes"/>
+    </xs:simpleType>
+</xs:schema>

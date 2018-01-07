@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    4001 [SCRIPT] Check on the Settlers
+                    4002 [XML] Samples for Study
+                    4003 [XML] The Fields are Infested
+                    4004 [SCRIPT] The Seeds of Hope
+                    4005 [XML] Scarecrow's Request
+                    4006 [XML] Frightcorn-ucopia
+                    4007 [XML] Clearing the Fields
+                    4008 [XML] Plague-spreading Porgus
+                    4009 [XML] Pollution Solution
+                    4010 [XML] If I Only Had a Master
+                    4011 [SCRIPT] An Old Settler's Letter
+                    4012 [SCRIPT] Troublesome Promise
+                    4013 [XML] Obstacle to Cultivation
+                    4014 [XML] The Lingering Ghost
+                    4015 [SCRIPT] The Missing Laborers
+                    4016 [XML] The Elyos of Brusthonin
+                    4017 [XML] The Ikelus Manhunt
+                    4018 [XML] Scared of Undeads
+                    4019 [XML] Everyone Has a Secret
+                    4020 [SCRIPT] Parica's Special Order
+                    4031 [XML] Carnivores Run Amok
+                    4032 [XML] Mission of the Reaper Squad
+                    4033 [SCRIPT] A Bloom in Brusthonin
+                    4034 [XML] Baltasar's Wish
+                    4035 [XML] Forest Decon
+                    4036 [SCRIPT] Heirnir Wants to Rest
+                    4037 [XML] Something For Heirnir
+                    4038 [SCRIPT] Alas, Poor Groznak
+                    4039 [XML] Elim's Goodwill
+                    4040 [XML] The Alpha Alitaur
+                    4041 [XML] Retrieving the Contaminated Seeds
+                    4042 [SCRIPT] Message in a Bottle
+                    4043 [XML] Wrath of Sahnu
+                    4044 [XML] Lost Gift
+                    4045 [XML] Ginseng Gone Wild
+                    4046 [XML] BuBu Mep's Wedding Preparation
+                    4047 [XML] A Thing for Ginseng
+                    4048 [XML] I Hate Brohum
+                    4049 [XML] For the BuBu Tribe
+                    4050 [XML] Brohum's Ornamental Bow
+                    4051 [SCRIPT] Bukmir's Worry
+                    4052 [SCRIPT] Bukmir's Old Friend
+                    4053 [SCRIPT] Glossy Hoe
+                    4054 [XML] Horn of Purification
+                    4055 [XML] Jackdaw's Request
+                    4056 [XML] Captain's Hat
+                    4057 [XML] Lost Compass
+                    4058 [XML] Petrahulk: Smash!
+                    4059 [XML] Contamination Sample
+                    4060 [SCRIPT] The Zombie's Descendant
+                    4061 [XML] Purification of Soul
+                    4062 [XML] For the Future Settlers
+                    4063 [XML] Mopping up the Brohum
+                    4074 [SCRIPT] Gain or Lose
+                    4075 [XML] Southern Region Status Report
+                    4076 [XML] Plant for Filling
+                    4077 [SCRIPT] Porgus Roundup
+                    4078 [SCRIPT] A Light Through the Trees
+                    4079 [XML] Unforgivable Balaur
+                    4080 [XML] Wandering Undead
+                    4081 [XML] Unusual Ingredients
+                    4082 [SCRIPT] Gathering the Herb Pouches
+                    4083 [XML] Those Pesky Mosks
+                    4084 [XML] A Bribe for the Chieftain
+                    4085 [XML] I Wanna Pecku
+                    4086 [XML] The Bribed Chieftain
+                    4087 [SCRIPT] No Ordinary Branch
+                    4088 [XML] Jackdaw's Liquor
+                    4089 [XML] Lobnites on the Half-Shell
+                    4090 [XML] Return to Aether's Flow
+                    4096 [XML] Cleansing the Water
+                    4097 [XML] For Virhu
+                    4098 [XML] A True Rest
+                    4099 [XML] Abandoned Mithril
+                    4100 [XML] Warehouse Keeper's Greed
+                    4101 [SCRIPT] Elim of Brusthonin
+                    4102 [XML] Incessant Pain
+                    4103 [XML] Big Mother Sauramam
+                    4104 [XML] Elim's Smile
+                    4105 [XML] Banes's Epochal Work
+                    4106 [XML] They're Bugging Me
+                    4107 [XML] Quit Bugging Me!
+                    4108 [XML] Safari in Sudorville
+                    4111 [XML] A Case of the Snufflers
+                    9801 [TODO] NC Specialities Day
+                    24200 [XML] Induction to Brusthonin
+                    24201 [SCRIPT] History, Mystery
+                    24202 [TODO] Let Me In, Let Me In
+                    24203 [TODO] Secret of Contamination
+                    39000 [XML] Jump In Brusthonin
+                    39001 [XML] Griffon Aid
+                    39002 [XML] Triple Kill
+                    39003 [XML] A Lesson to Learn
+                    39004 [XML] Breakout
+                    39005 [XML] Artillery Strike
+                    39006 [XML] A Handful of Problems
+                    39010 [TODO] War 2.0
+                    49007 [XML] Stop the Elyos Infiltration
+                    49008 [XML] Prevent an Elyos Attack
+                    49009 [XML] Kill Nevma!
+                    80148 [XML] [Event] Forlorn in Brusthonin
+                    80149 [TODO] [Event] Warped Rift Securing
+                    80265 [TODO] [Event] Fantastic Birthday Banquet
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="4010" start_npc_ids="730104" end_npc_ids="205142"/>
+    <report_to id="4075" start_npc_ids="205128" end_npc_ids="205151"/>
+    <report_to id="4086" start_npc_ids="205164" end_npc_ids="205170" item_id="182209045"/>
+    <report_to id="4088" start_npc_ids="798063" end_npc_ids="205203" item_id="182209047"/>
+    <report_to id="4097" start_npc_ids="205158" end_npc_ids="730104"/>
+    <report_to id="4104" start_npc_ids="205193" end_npc_ids="205159"/>
+	<report_to id="24200" start_npc_ids="204702" end_npc_ids="205150"/>
+    <report_to_many id="39000" start_npc_ids="800165" end_npc_ids="800500">
+        <npc_infos var="0" npc_id="800501" quest_dialog="1352"/>
+        <npc_infos npc_id="800500" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="39003" start_npc_ids="800500" end_npc_ids="800504">
+        <npc_infos var="0" npc_id="800512" quest_dialog="1352"/>
+        <npc_infos npc_id="800504" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="4002" start_npc_ids="205126"/>
+    <item_collecting id="4006" start_npc_ids="205121" action_item_ids="700341"/>
+    <item_collecting id="4009" start_npc_ids="205122"/>
+    <item_collecting id="4016" start_npc_ids="205130"/>
+    <item_collecting id="4019" start_npc_ids="205127"/>
+    <item_collecting id="4034" start_npc_ids="205156"/>
+    <item_collecting id="4035" start_npc_ids="205151" action_item_ids="700383"/>
+    <item_collecting id="4037" start_npc_ids="205190" end_npc_ids="205187"/>
+    <item_collecting id="4041" start_npc_ids="205193"/>
+    <item_collecting id="4044" start_npc_ids="205171" action_item_ids="700384"/>
+    <item_collecting id="4045" start_npc_ids="205165" action_item_ids="700385"/>
+    <item_collecting id="4046" start_npc_ids="205172" action_item_ids="700386"/>
+    <item_collecting id="4050" start_npc_ids="205166" end_npc_ids="205172"/>
+    <item_collecting id="4054" start_npc_ids="205199" end_npc_ids="205193"/>
+    <item_collecting id="4056" start_npc_ids="205203"/>
+    <item_collecting id="4057" start_npc_ids="205203"/>
+    <item_collecting id="4059" start_npc_ids="205204"/>
+    <item_collecting id="4061" start_npc_ids="205160"/>
+    <item_collecting id="4062" start_npc_ids="205205"/>
+    <item_collecting id="4063" start_npc_ids="205184"/>
+    <item_collecting id="4076" start_npc_ids="205158"/>
+    <item_collecting id="4080" start_npc_ids="205156"/>
+    <item_collecting id="4081" start_npc_ids="205190"/>
+    <item_collecting id="4084" start_npc_ids="205170" end_npc_ids="205164"/>
+    <item_collecting id="4085" start_npc_ids="205170" end_npc_ids="205164"/>
+    <item_collecting id="4089" start_npc_ids="205203"/>
+    <item_collecting id="4090" start_npc_ids="205205"/>
+    <item_collecting id="4098" start_npc_ids="205190" end_npc_ids="205187"/>
+    <item_collecting id="4099" start_npc_ids="205149" action_item_ids="700451"/>
+    <item_collecting id="4100" start_npc_ids="205149"/>
+    <item_collecting id="4105" start_npc_ids="205146"/>
+    <item_collecting id="80148" start_npc_ids="830244"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="4003" start_npc_ids="205131">
+        <monster var="0" npc_ids="213849 213850" end_var="5"/>
+        <monster var="1" npc_ids="213853 213896" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="4005" start_npc_ids="730103">
+        <monster var="0" npc_ids="213847 213848" end_var="10"/>
+    </monster_hunt>
+    <monster_hunt id="4007" start_npc_ids="205128">
+        <monster var="0" npc_ids="213859 213860" end_var="11"/>
+        <monster var="1" npc_ids="213861 213862" end_var="11"/>
+    </monster_hunt>
+    <monster_hunt id="4008" start_npc_ids="205131">
+        <monster var="0" end_var="10" npc_ids="213865 213866"/>
+    </monster_hunt>
+    <monster_hunt id="4013" start_npc_ids="205123">
+        <monster var="0" npc_ids="213879 213880" end_var="5"/>
+        <monster var="1" npc_ids="213884" end_var="3"/>
+        <monster var="2" npc_ids="213883" end_var="3"/>
+        <monster var="3" npc_ids="213881 213882" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="4014" start_npc_ids="205128">
+        <monster var="0" npc_ids="213930" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4017" start_npc_ids="205130">
+        <monster var="0" npc_ids="213931" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4018" start_npc_ids="205132">
+        <monster var="0" npc_ids="213867 213868" end_var="20"/>
+        <monster var="1" npc_ids="213869 213870" end_var="15"/>
+    </monster_hunt>
+    <monster_hunt id="4031" start_npc_ids="205151">
+        <monster var="0" npc_ids="214365 214366" end_var="5"/>
+        <monster var="1" npc_ids="214369 214370" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="4032" start_npc_ids="205152">
+        <monster var="0" npc_ids="214376 214377" end_var="6"/>
+        <monster var="1" npc_ids="214378 214379" end_var="6"/>
+    </monster_hunt>
+    <monster_hunt id="4039" start_npc_ids="205193">
+        <monster var="0" npc_ids="214413 214414" end_var="8"/>
+        <monster var="1" npc_ids="214415 215861" end_var="4"/>
+    </monster_hunt>
+    <monster_hunt id="4040" start_npc_ids="205193">
+        <monster var="0" npc_ids="214588" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4043" start_npc_ids="205192">
+        <monster var="0" npc_ids="214435 214436" end_var="6"/>
+        <monster var="1" npc_ids="214437 214438" end_var="6"/>
+    </monster_hunt>
+    <monster_hunt id="4047" start_npc_ids="205167">
+        <monster var="0" npc_ids="214589" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4048" start_npc_ids="205166">
+        <monster var="0" npc_ids="214457 214458" end_var="5"/>
+        <monster var="1" npc_ids="214460 214461" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="4049" start_npc_ids="205166">
+        <monster var="0" npc_ids="214463 214464" end_var="5"/>
+        <monster var="1" npc_ids="214465 214466" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="4055" start_npc_ids="205203">
+        <monster var="0" npc_ids="214480 214481" end_var="4"/>
+        <monster var="1" npc_ids="214478 214479" end_var="8"/>
+    </monster_hunt>
+    <monster_hunt id="4058" start_npc_ids="205204">
+        <monster var="0" npc_ids="214497 214498" end_var="12"/>
+    </monster_hunt>
+    <monster_hunt id="4079" start_npc_ids="205156">
+        <monster var="0" npc_ids="214404 214405" end_var="5"/>
+        <monster var="1" npc_ids="214402 214403" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="4083" start_npc_ids="205195">
+        <monster var="0" npc_ids="214411 214412" end_var="12"/>
+    </monster_hunt>
+    <monster_hunt id="4096" start_npc_ids="205201">
+        <monster var="0" npc_ids="214550 214551" end_var="10"/>
+    </monster_hunt>
+    <monster_hunt id="4102" start_npc_ids="205193">
+        <monster var="0" npc_ids="214416 214417" end_var="6"/>
+        <monster var="1" npc_ids="214418" end_var="6"/>
+    </monster_hunt>
+    <monster_hunt id="4103" start_npc_ids="205193">
+        <monster var="0" npc_ids="215381" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4106" start_npc_ids="205156">
+        <monster var="0" npc_ids="214363 214364" end_var="5"/>
+        <monster var="1" npc_ids="214406 214407" end_var="4"/>
+        <monster var="2" npc_ids="214409 214410" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="4107" start_npc_ids="205156">
+        <monster var="0" npc_ids="214363 214364" end_var="5"/>
+        <monster var="1" npc_ids="214406 214407" end_var="4"/>
+        <monster var="2" npc_ids="214409 214410" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="4108" start_npc_ids="205151">
+        <monster var="0" npc_ids="214366 214365" end_var="5"/>
+        <monster var="1" npc_ids="214369 214370" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="4111" start_npc_ids="730103">
+        <monster var="0" npc_ids="213847 213848" end_var="10"/>
+    </monster_hunt>
+    <monster_hunt id="39001" start_npc_ids="800500">
+        <monster var="0" npc_ids="209445 209446 209447 209448 209449" end_var="32"/>
+    </monster_hunt>
+    <monster_hunt id="39002" start_npc_ids="800500">
+        <monster var="0" npc_ids="209477" end_var="1"/>
+        <monster var="1" npc_ids="209478" end_var="1"/>
+        <monster var="2" npc_ids="209476" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="39004" start_npc_ids="800504" end_npc_ids="800500">
+        <monster var="0" npc_ids="701490" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="39005" start_npc_ids="0" end_npc_ids="800500" invasion_world="220050000">
+        <monster var="0" npc_ids="209470" end_var="2"/>
+    </monster_hunt>
+    <monster_hunt id="49007" start_npc_ids="0" end_npc_ids="800502" invasion_world="220050000">
+        <monster var="0" npc_ids="209440 209441 209442 209443 209444" end_var="15"/>
+    </monster_hunt>
+    <monster_hunt id="49009" start_npc_ids="0" end_npc_ids="800502" invasion_world="220050000">
+        <monster var="0" npc_ids="800504" end_var="1"/>
+    </monster_hunt>
+    <kill_in_world id="39006" end_npc_ids="800500" worlds="220050000" amount="5" invasion_world="220050000"/>
+    <kill_in_world id="49008" end_npc_ids="800502" worlds="220050000" amount="5" invasion_world="220050000"/>
+</quest_scripts>

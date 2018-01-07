@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               18600 [SCRIPT] [Instance]  Scoring Some Bad Stigma
+               18601 [SCRIPT] [Instance]  Nightmare on My Street
+               18602 [SCRIPT] [Instance]  Nightmare in Shining Armor
+               18604 [SCRIPT] [Instance]  Meeting with Rotan
+               18605 [XML] [Instance] Nightmares
+               18606 [XML] [Instance] Salvation
+               18607 [XML] [Instance] Dream Fragment
+               18608 [XML] [Instance] The Weeping Sword
+               18609 [XML] [Instance] The Weeping Warhammer
+               18610 [XML] [Instance] The Weeping Dagger
+               18611 [XML] [Instance] The Weeping Jewel
+               18612 [XML] [Instance] The Weeping Magic Tome
+               18613 [XML] [Instance] The Weeping Greatsword
+               18614 [XML] [Instance] The Weeping Spear
+               18615 [XML] [Instance] The Weeping Staff
+               18616 [XML] [Instance] The Weeping Bow
+               18617 [XML] [Instance/Cash] The End of the Nightmare
+               18618 [XML] [Instance] Kaliga's Collection
+               18619 [XML] [Instance] Kaliga's Collection
+               18620 [XML] [Instance] Kaliga's Collection
+               18621 [XML] [Instance] Kaliga's Collection
+               18622 [XML] [Instance] Kaliga's Collection
+               18623 [XML] [Instance] Kaliga's Collection
+               18624 [XML] [Instance] Kaliga's Collection
+               18625 [XML] [Instance] Kaliga's Collection
+               18626 [XML] [Instance] Kaliga's Collection
+               18627 [XML] [Instance] Kaliga's Collection
+               18628 [XML] [Instance] The Burning Sword
+               18629 [XML] [Instance] The Burning Warhammer
+               18630 [XML] [Instance] The Burning Dagger
+               18631 [XML] [Instance] The Burning Jewel
+               18632 [XML] [Instance] The Burning Magic Tome
+               18633 [XML] [Instance] The Burning Greatsword
+               18634 [XML] [Instance] The Burning Spear
+               18635 [XML] [Instance] The Burning Staff
+               18636 [XML] [Instance] The Burning Bow
+               18643 [XML] [Instance] Kaliga's Collection
+               18644 [XML] [Instance] Kaliga's Collection
+               18645 [XML] [Instance] Kaliga's Collection
+               18648 [XML] [Instance] Kaliga's Collection
+               28600 [SCRIPT] [Instance]  Suspicious Errand
+               28601 [SCRIPT] [Instance]  Nightmares and Dreamscapes
+               28602 [SCRIPT] [Instance]  Into the Unknown
+               28604 [SCRIPT] [Instance] Corpse Robbing
+               28605 [XML] [Instance] Restless Sleep
+               28606 [XML] [Instance] An Honourable Death
+               28607 [XML] [Instance] A Smith's Dream
+               28608 [XML] [Instance] The Weeping Sword
+               28609 [XML] [Instance] The Weeping Warhammer
+               28610 [XML] [Instance] The Weeping Dagger
+               28611 [XML] [Instance] The Weeping Jewel
+               28612 [XML] [Instance] The Weeping Magic Tome
+               28613 [XML] [Instance] The Weeping Greatsword
+               28614 [XML] [Instance] The Weeping Spear
+               28615 [XML] [Instance] The Weeping Staff
+               28616 [XML] [Instance] The Weeping Bow
+               28617 [XML] [Instance/Cash] Kaliga's End
+               28618 [XML] [Instance] Kaliga's Collection
+               28619 [XML] [Instance] Kaliga's Collection
+               28620 [XML] [Instance] Kaliga's Collection
+               28621 [XML] [Instance] Kaliga's Collection
+               28622 [XML] [Instance] Kaliga's Collection
+               28623 [XML] [Instance] Kaliga's Collection
+               28624 [XML] [Instance] Kaliga's Collection
+               28625 [XML] [Instance] Kaliga's Collection
+               28626 [XML] [Instance] Kaliga's Collection
+               28627 [XML] [Instance] Kaliga's Collection
+               28628 [XML] [Instance] The Burning Sword
+               28629 [XML] [Instance] The Burning Warhammer
+               28630 [XML] [Instance] The Burning Dagger
+               28631 [XML] [Instance] The Burning Jewel
+               28632 [XML] [Instance] The Burning Magic Tome
+               28633 [XML] [Instance] The Burning Greatsword
+               28634 [XML] [Instance] The Burning Spear
+               28635 [XML] [Instance] The Burning Staff
+               28636 [XML] [Instance] The Burning Bow
+               28643 [XML] [Instance] Kaliga's Collection
+               28644 [XML] [Instance] Kaliga's Collection
+               28645 [XML] [Instance] Kaliga's Collection
+               28648 [XML] [Instance] Kaliga's Collection
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="18618" start_npc_ids="730326"/>
+    <item_collecting id="18619" start_npc_ids="730327"/>
+    <item_collecting id="18620" start_npc_ids="730328"/>
+    <item_collecting id="18621" start_npc_ids="730329"/>
+    <item_collecting id="18622" start_npc_ids="730330"/>
+    <item_collecting id="18623" start_npc_ids="730331"/>
+    <item_collecting id="18624" start_npc_ids="730332"/>
+    <item_collecting id="18625" start_npc_ids="730333"/>
+    <item_collecting id="18626" start_npc_ids="730334"/>
+    <item_collecting id="18628" start_npc_ids="205232"/>
+    <item_collecting id="18629" start_npc_ids="205232"/>
+    <item_collecting id="18630" start_npc_ids="205232"/>
+    <item_collecting id="18631" start_npc_ids="205232"/>
+    <item_collecting id="18632" start_npc_ids="205232"/>
+    <item_collecting id="18633" start_npc_ids="205232"/>
+    <item_collecting id="18634" start_npc_ids="205232"/>
+    <item_collecting id="18635" start_npc_ids="205232"/>
+    <item_collecting id="18636" start_npc_ids="205232"/>
+    <item_collecting id="18637" start_npc_ids="205232"/>
+    <item_collecting id="18638" start_npc_ids="205232"/>
+    <item_collecting id="18639" start_npc_ids="205232"/>
+    <item_collecting id="18640" start_npc_ids="205232"/>
+    <item_collecting id="18641" start_npc_ids="205232"/>
+    <item_collecting id="18642" start_npc_ids="205232"/>
+    <item_collecting id="18646" start_npc_ids="205232"/>
+    <item_collecting id="18647" start_npc_ids="205232"/>
+    <item_collecting id="18643" start_npc_ids="730775"/>
+    <item_collecting id="18644" start_npc_ids="730776"/>
+    <item_collecting id="18645" start_npc_ids="730777"/>
+    <item_collecting id="18648" start_npc_ids="730887"/>
+    <item_collecting id="18627" start_npc_ids="730335"/>
+    <item_collecting id="28608" start_npc_ids="205237"/>
+    <item_collecting id="28609" start_npc_ids="205237"/>
+    <item_collecting id="28610" start_npc_ids="205237"/>
+    <item_collecting id="28611" start_npc_ids="205237"/>
+    <item_collecting id="28612" start_npc_ids="205237"/>
+    <item_collecting id="28613" start_npc_ids="205237"/>
+    <item_collecting id="28614" start_npc_ids="205237"/>
+    <item_collecting id="28615" start_npc_ids="205237"/>
+    <item_collecting id="28616" start_npc_ids="205237"/>
+    <item_collecting id="28618" start_npc_ids="730326"/>
+    <item_collecting id="28619" start_npc_ids="730327"/>
+    <item_collecting id="28620" start_npc_ids="730328"/>
+    <item_collecting id="28621" start_npc_ids="730329"/>
+    <item_collecting id="28622" start_npc_ids="730330"/>
+    <item_collecting id="28623" start_npc_ids="730331"/>
+    <item_collecting id="28624" start_npc_ids="730332"/>
+    <item_collecting id="28625" start_npc_ids="730333"/>
+    <item_collecting id="28626" start_npc_ids="730334"/>
+    <item_collecting id="28627" start_npc_ids="730335"/>
+    <item_collecting id="28628" start_npc_ids="205237"/>
+    <item_collecting id="28629" start_npc_ids="205237"/>
+    <item_collecting id="28630" start_npc_ids="205237"/>
+    <item_collecting id="28631" start_npc_ids="205237"/>
+    <item_collecting id="28632" start_npc_ids="205237"/>
+    <item_collecting id="28633" start_npc_ids="205237"/>
+    <item_collecting id="28634" start_npc_ids="205237"/>
+    <item_collecting id="28635" start_npc_ids="205237"/>
+    <item_collecting id="28636" start_npc_ids="205237"/>
+    <item_collecting id="28637" start_npc_ids="205237"/>
+    <item_collecting id="28638" start_npc_ids="205237"/>
+    <item_collecting id="28639" start_npc_ids="205237"/>
+    <item_collecting id="28640" start_npc_ids="205237"/>
+    <item_collecting id="28641" start_npc_ids="205237"/>
+    <item_collecting id="28642" start_npc_ids="205237"/>
+    <item_collecting id="28643" start_npc_ids="730775"/>
+    <item_collecting id="28644" start_npc_ids="730776"/>
+    <item_collecting id="28645" start_npc_ids="730777"/>
+    <item_collecting id="28646" start_npc_ids="205237"/>
+    <item_collecting id="28647" start_npc_ids="205237"/>
+    <item_collecting id="28648" start_npc_ids="730887"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

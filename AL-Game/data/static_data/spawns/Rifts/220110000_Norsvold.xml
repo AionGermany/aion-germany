@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="220110000">
+        <!-- Rift -->
+        <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Norsvold -->
+            <spot x="1540.2615" y="2419.861" z="194.62973" anchor="NORSVOLD_AM"/> <!-- checked -->
+            <spot x="1383.7539" y="1424.8082" z="212.43254" h="90" anchor="NORSVOLD_BM"/> <!-- checked -->
+        </spawn>
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Norsvold -->
+            <spot x="1192.2842" y="1424.8529" z="229.55647" anchor="NORSVOLD_AS"/> <!-- checked -->
+            <spot x="1327.077" y="2066.8145" z="205.10735" anchor="NORSVOLD_BS"/> <!-- checked -->
+        </spawn>
+
+        <!-- NORSVOLD_AS -->
+        <rift_spawn id="2179">
+        </rift_spawn>
+        <!-- NORSVOLD_BS -->
+        <rift_spawn id="2180">
+        </rift_spawn>
+    </spawn_map>
+</spawns>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="lboxes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="lbox" type="LBox"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="id" type="xs:int"/>
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="desc" type="xs:string"/>
+    <xs:element name="script" type="xs:string"/>
+    <xs:element name="icon" type="xs:int"/>
+    <xs:complexType name="LBox">
+        <xs:sequence>
+            <xs:element ref="id"/>
+            <xs:element ref="name"/>
+            <xs:element ref="desc"/>
+            <xs:element ref="script"/>
+            <xs:element ref="icon"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

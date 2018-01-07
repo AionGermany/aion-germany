@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="guides">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="guide" type="GuideTemplate" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="GuideTemplate">
+        <xs:sequence>
+            <xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="reward_info" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="select" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="survey" type="SurveyTemplate" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="classType" type="playerClass" use="optional"/>
+        <xs:attribute name="title" type="xs:string" use="required"/>
+        <xs:attribute name="race" type="Race" use="required"/>
+        <xs:attribute name="level" type="xs:int" use="required"/>
+        <xs:attribute name="rewardCount" type="xs:int" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="SurveyTemplate">
+        <xs:attribute name="itemId" type="xs:int" use="required"/>
+        <xs:attribute name="count" type="xs:long" use="required"/>
+    </xs:complexType>
+</xs:schema>

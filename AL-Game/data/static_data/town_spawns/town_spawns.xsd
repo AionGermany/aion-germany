@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="town_spawns_data" type="TownSpawnsData"/>
+
+    <xs:complexType name="TownSpawnsData">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="spawn_map" type="TownSpawnMap" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TownSpawnMap">
+        <xs:sequence>
+            <xs:element name="town_spawn" type="TownSpawn" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="map_id" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="TownSpawn">
+        <xs:sequence>
+            <xs:element name="town_level" type="TownLevel" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="town_id" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="TownLevel">
+        <xs:sequence>
+            <xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="level" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

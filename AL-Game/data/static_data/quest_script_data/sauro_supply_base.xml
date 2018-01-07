@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               18911 [XML] [Group] Killing Spree
+               18912 [XML] [Group] Slay Sheba, Blind Beritra
+               18913 [XML] [Group] What Sheba Hath Wrought
+               18914 [XML] [Group] Hunks of Junk
+               18915 [XML] [Group] Sauro: The Final Assault
+               18916 [XML] [Group] For the Folks Back Home
+               18917 [TODO] Don't Wait, Infiltrate
+               28911 [XML] [Group] Doomed Commanders
+               28912 [XML] [Group] Unlock the Mystery Box
+               28913 [XML] [Group] Alas, Poor Shugo, Nyerk
+               28914 [XML] [Group] Prototype of Destruction
+               28915 [XML] [Group] Demolition Mania
+               28916 [XML] [Group] Precious Seal
+               28917 [TODO] When One Door Closes
+        [END] SUMMARY
+    -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="18913" start_npc_ids="801945"/>
+    <item_collecting id="18914" start_npc_ids="801945"/>
+    <item_collecting id="18916" start_npc_ids="801944"/>
+    <item_collecting id="28913" start_npc_ids="801947"/>
+    <item_collecting id="28914" start_npc_ids="801947"/>
+    <item_collecting id="28916" start_npc_ids="801946"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="18911" start_npc_ids="801945">
+        <monster var="0" npc_ids="230849" end_var="1"/>
+        <monster var="1" npc_ids="230851" end_var="1"/>
+        <monster var="2" npc_ids="230850" end_var="1"/>
+        <monster var="3" npc_ids="230852" end_var="1"/>
+        <monster var="4" npc_ids="230853" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="18912" start_npc_ids="801945">
+        <monster var="0" npc_ids="230847" end_var="5"/>
+        <monster var="1" npc_ids="230858" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="18915" start_npc_ids="801945">
+        <monster var="0" npc_ids="230787 230793 230799" end_var="20"/>
+        <monster var="0" npc_ids="230805 230811 230815 230821" end_var="20"/>
+    </monster_hunt>
+    <monster_hunt id="28911" start_npc_ids="801947">
+        <monster var="0" npc_ids="230849" end_var="1"/>
+        <monster var="1" npc_ids="230851" end_var="1"/>
+        <monster var="2" npc_ids="230850" end_var="1"/>
+        <monster var="3" npc_ids="230852" end_var="1"/>
+        <monster var="4" npc_ids="230853" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28912" start_npc_ids="801947">
+        <monster var="0" npc_ids="230847" end_var="5"/>
+        <monster var="1" npc_ids="230858" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28915" start_npc_ids="801947">
+        <monster var="0" npc_ids="230787 230793 230799" end_var="20"/>
+        <monster var="0" npc_ids="230805 230811 230815 230821" end_var="20"/>
+    </monster_hunt>
+</quest_scripts>

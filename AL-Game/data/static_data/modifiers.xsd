@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="items/item_templates.xsd"/>
+    <xs:include schemaLocation="skills/skills.xsd"/>
+    <xs:complexType name="Modifiers">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="add" type="SimpleModifier" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="sub" type="SimpleModifier" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="rate" type="SimpleModifier" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="set" type="SimpleModifier" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="mean" type="MeanModifier" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="chance" type="xs:float" default="100"/>
+    </xs:complexType>
+    <xs:complexType name="Modifier">
+        <xs:attribute name="name" type="modifiersenum"/>
+        <xs:attribute name="bonus" type="xs:boolean" default="false" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="SimpleModifier">
+        <xs:complexContent>
+            <xs:extension base="Modifier">
+                <xs:sequence>
+                    <xs:element name="conditions" type="Conditions" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+                <xs:attribute name="value" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="MeanModifier">
+        <xs:complexContent>
+            <xs:extension base="Modifier">
+                <xs:attribute name="min" type="xs:int"/>
+                <xs:attribute name="max" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="modifiersenum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MAXDP"/>
+            <xs:enumeration value="MAXHP"/>
+            <xs:enumeration value="MAXMP"/>
+            <xs:enumeration value="REGEN_HP"/>
+            <xs:enumeration value="REGEN_MP"/>
+            <xs:enumeration value="AGILITY"/>
+            <xs:enumeration value="BLOCK"/>
+            <xs:enumeration value="EVASION"/>
+            <xs:enumeration value="CONCENTRATION"/>
+            <xs:enumeration value="WILL"/>
+            <xs:enumeration value="HEALTH"/>
+            <xs:enumeration value="ACCURACY"/>
+            <xs:enumeration value="KNOWLEDGE"/>
+            <xs:enumeration value="PARRY"/>
+            <xs:enumeration value="POWER"/>
+            <xs:enumeration value="SPEED"/>
+            <xs:enumeration value="ALLSPEED"/>
+            <xs:enumeration value="HIT_COUNT"/>
+            <xs:enumeration value="ATTACK_RANGE"/>
+            <xs:enumeration value="ATTACK_SPEED"/>
+            <xs:enumeration value="PHYSICAL_ATTACK"/>
+            <xs:enumeration value="PHYSICAL_ACCURACY"/>
+            <xs:enumeration value="PHYSICAL_CRITICAL"/>
+            <xs:enumeration value="PHYSICAL_DEFENSE"/>
+            <xs:enumeration value="MAIN_HAND_ACCURACY"/>
+            <xs:enumeration value="MAIN_HAND_CRITICAL"/>
+            <xs:enumeration value="MAIN_HAND_POWER"/>
+            <xs:enumeration value="OFF_HAND_ACCURACY"/>
+            <xs:enumeration value="OFF_HAND_CRITICAL"/>
+            <xs:enumeration value="OFF_HAND_POWER"/>
+            <xs:enumeration value="MAGICAL_ATTACK"/>
+            <xs:enumeration value="MAGICAL_ACCURACY"/>
+            <xs:enumeration value="MAGICAL_CRITICAL"/>
+            <xs:enumeration value="MAGICAL_RESIST"/>
+            <xs:enumeration value="MAX_DAMAGES"/>
+            <xs:enumeration value="MIN_DAMAGES"/>
+            <xs:enumeration value="EARTH_RESISTANCE"/>
+            <xs:enumeration value="FIRE_RESISTANCE"/>
+            <xs:enumeration value="WIND_RESISTANCE"/>
+            <xs:enumeration value="WATER_RESISTANCE"/>
+            <xs:enumeration value="DARK_RESISTANCE"/>
+            <xs:enumeration value="LIGHT_RESISTANCE"/>
+            <xs:enumeration value="BOOST_MAGICAL_SKILL"/>
+            <xs:enumeration value="BOOST_SPELL_ATTACK"/>
+            <xs:enumeration value="BOOST_CASTING_TIME_HEAL"/>
+            <xs:enumeration value="BOOST_CASTING_TIME_ATTACK"/>
+            <xs:enumeration value="BOOST_CASTING_TIME_TRAP"/>
+            <xs:enumeration value="BOOST_CASTING_TIME_SKILL"/>
+            <xs:enumeration value="BOOST_CASTING_TIME_SUMMON"/>
+            <xs:enumeration value="BOOST_CASTING_TIME_SUMMONHOMING"/>
+            <xs:enumeration value="BOOST_CASTING_TIME"/>
+            <xs:enumeration value="BOOST_CHARGE_TIME"/>
+            <xs:enumeration value="BOOST_HATE"/>
+            <xs:enumeration value="FLY_TIME"/>
+            <xs:enumeration value="FLY_SPEED"/>
+            <xs:enumeration value="DAMAGE_REDUCE"/>
+            <xs:enumeration value="DAMAGE_REDUCE_MAX"/>
+            <xs:enumeration value="BLEED_RESISTANCE"/>
+            <xs:enumeration value="BLIND_RESISTANCE"/>
+            <xs:enumeration value="CHARM_RESISTANCE"/>
+            <xs:enumeration value="CONFUSE_RESISTANCE"/>
+            <xs:enumeration value="CURSE_RESISTANCE"/>
+            <xs:enumeration value="DEFORM_RESISTANCE"/>
+            <xs:enumeration value="DISEASE_RESISTANCE"/>
+            <xs:enumeration value="FEAR_RESISTANCE"/>
+            <xs:enumeration value="OPENAREIAL_RESISTANCE"/>
+            <xs:enumeration value="PARALYZE_RESISTANCE"/>
+            <xs:enumeration value="PERIFICATION_RESISTANCE"/>
+            <xs:enumeration value="POISON_RESISTANCE"/>
+            <xs:enumeration value="PULLED_RESISTANCE"/>
+            <xs:enumeration value="ROOT_RESISTANCE"/>
+            <xs:enumeration value="SILENCE_RESISTANCE"/>
+            <xs:enumeration value="SLEEP_RESISTANCE"/>
+            <xs:enumeration value="SLOW_RESISTANCE"/>
+            <xs:enumeration value="SNARE_RESISTANCE"/>
+            <xs:enumeration value="SPIN_RESISTANCE"/>
+            <xs:enumeration value="STAGGER_RESISTANCE"/>
+            <xs:enumeration value="STUMBLE_RESISTANCE"/>
+            <xs:enumeration value="STUN_RESISTANCE"/>
+            <xs:enumeration value="SILENCE_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="PARALYZE_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="STAGGER_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="STUMBLE_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="STUN_RESISTANCE_PENETRATION"/>
+            <!-- New -->
+            <xs:enumeration value="REGEN_FP"/>
+            <xs:enumeration value="HEAL_BOOST"/>
+            <xs:enumeration value="ALLRESIST"/>
+            <xs:enumeration value="STUNLIKE_RESISTANCE"/>
+            <xs:enumeration value="ELEMENTAL_RESISTANCE_DARK"/>
+            <xs:enumeration value="ELEMENTAL_RESISTANCE_LIGHT"/>
+            <xs:enumeration value="MAGICAL_CRITICAL_RESIST"/>
+            <xs:enumeration value="MAGICAL_CRITICAL_DAMAGE_REDUCE"/>
+            <xs:enumeration value="PHYSICAL_CRITICAL_RESIST"/>
+            <xs:enumeration value="PHYSICAL_CRITICAL_DAMAGE_REDUCE"/>
+            <!-- Strange -->
+            <xs:enumeration value="ERFIRE"/>
+            <xs:enumeration value="ERAIR"/>
+            <xs:enumeration value="EREARTH"/>
+            <xs:enumeration value="ERWATER"/>
+            <xs:enumeration value="ABNORMAL_RESISTANCE_ALL"/>
+            <xs:enumeration value="ALLPARA"/>
+            <xs:enumeration value="KNOWIL"/>
+            <xs:enumeration value="AGIDEX"/>
+            <xs:enumeration value="STRVIT"/>
+            <!-- Experience Boost -->
+            <xs:enumeration value="BOOST_HUNTING_XP_RATE"/>
+            <xs:enumeration value="BOOST_GROUP_HUNTING_XP_RATE"/>
+            <xs:enumeration value="BOOST_QUEST_XP_RATE"/>
+            <xs:enumeration value="BOOST_CRAFTING_XP_RATE"/>
+            <xs:enumeration value="BOOST_COOKING_XP_RATE"/>
+            <xs:enumeration value="BOOST_WEAPONSMITHING_XP_RATE"/>
+            <xs:enumeration value="BOOST_ARMORSMITHING_XP_RATE"/>
+            <xs:enumeration value="BOOST_TAILORING_XP_RATE"/>
+            <xs:enumeration value="BOOST_ALCHEMY_XP_RATE"/>
+            <xs:enumeration value="BOOST_HANDICRAFTING_XP_RATE"/>
+            <xs:enumeration value="BOOST_MENUISIER_XP_RATE"/>
+            <xs:enumeration value="BOOST_GATHERING_XP_RATE"/>
+            <xs:enumeration value="BOOST_AETHERTAPPING_XP_RATE"/>
+            <xs:enumeration value="BOOST_ESSENCETAPPING_XP_RATE"/>
+            <!-- Drop Rate Boost -->
+            <xs:enumeration value="BOOST_DROP_RATE"/>
+            <!-- Mantra Range Boost -->
+            <xs:enumeration value="BOOST_MANTRA_RANGE"/>
+            <!-- 3.5 -->
+            <xs:enumeration value="BOOST_COOKING_XP_RATE"/>
+            <xs:enumeration value="BOOST_WEAPONSMITHING_XP_RATE"/>
+            <xs:enumeration value="BOOST_ARMORSMITHING_XP_RATE"/>
+            <xs:enumeration value="BOOST_TAILORING_XP_RATE"/>
+            <xs:enumeration value="BOOST_ALCHEMY_XP_RATE"/>
+            <xs:enumeration value="BOOST_HANDICRAFTING_XP_RATE"/>
+            <xs:enumeration value="BOOST_MENUISIER_XP_RATE"/>
+            <xs:enumeration value="BOOST_GATHERING_XP_RATE"/>
+            <xs:enumeration value="BOOST_AETHERTAPPING_XP_RATE"/>
+            <xs:enumeration value="BOOST_ESSENCETAPPING_XP_RATE"/>
+            <xs:enumeration value="BOOST_DROP_RATE"/>
+            <xs:enumeration value="DR_BOOST"/>
+            <xs:enumeration value="AP_BOOST"/>
+            <!-- 3.0 -->
+            <xs:enumeration value="MAGICAL_DEFEND"/>
+            <xs:enumeration value="MAGIC_SKILL_BOOST_RESIST"/>
+            <xs:enumeration value="POISON_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="BLEED_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="SLEEP_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="ROOT_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="BLIND_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="CHARM_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="DISEASE_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="FEAR_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="SPIN_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="CURSE_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="CONFUSE_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="PERIFICATION_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="OPENAREIAL_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="SNARE_RESISTANCE_PENETRATION"/>
+            <xs:enumeration value="SLOW_RESISTANCE_PENETRATION"/>
+            <!-- Effects Boosts and Deboosts -->
+            <xs:enumeration value="HEAL_SKILL_BOOST"/>
+            <xs:enumeration value="HEAL_SKILL_DEBOOST"/>
+            <!-- Boost duration of Buff skills -->
+            <xs:enumeration value="BOOST_DURATION_BUFF"/>
+            <!-- Boost resist of Debuff skills -->
+            <xs:enumeration value="BOOST_RESIST_DEBUFF"/>
+            <!-- 3.5 -->
+            <xs:enumeration value="ELEMENTAL_FIRE"/>
+
+            <!-- AP & Drop Boost -->
+            <xs:enumeration value="AP_BOOST"/>
+            <xs:enumeration value="DR_BOOST"/>
+            <!-- 4.8/4.9 -->
+            <xs:enumeration value="AP_REDUCE_RATE"/>
+            <xs:enumeration value="ENCHANT_BOOST"/>
+            <xs:enumeration value="AUTHORIZE_BOOST"/>
+            <xs:enumeration value="INDUN_DROP_BOOST"/>
+            <xs:enumeration value="DEATH_PENALTY_REDUCE"/>
+            <xs:enumeration value="ENCHANT_OPTION_BOOST"/>
+
+            <!-- PvP and PvE -->
+            <xs:enumeration value="PVP_PHYSICAL_ATTACK"/>
+            <xs:enumeration value="PVP_PHYSICAL_DEFEND"/>
+            <xs:enumeration value="PVP_MAGICAL_ATTACK"/>
+            <xs:enumeration value="PVP_MAGICAL_DEFEND"/>
+            <xs:enumeration value="PVP_ATTACK_RATIO"/>
+            <xs:enumeration value="PVP_ATTACK_RATIO_MAGICAL"/>
+            <xs:enumeration value="PVP_ATTACK_RATIO_PHYSICAL"/>
+            <xs:enumeration value="PVE_ATTACK_RATIO"/>
+            <xs:enumeration value="PVE_ATTACK_RATIO_MAGICAL"/>
+            <xs:enumeration value="PVE_ATTACK_RATIO_PHYSICAL"/>
+            <xs:enumeration value="PVP_DEFEND_RATIO"/>
+            <xs:enumeration value="PVP_DEFEND_RATIO_PHYSICAL"/>
+            <xs:enumeration value="PVP_DEFEND_RATIO_MAGICAL"/>
+            <xs:enumeration value="PVE_DEFEND_RATIO"/>
+            <xs:enumeration value="PVE_DEFEND_RATIO_PHYSICAL"/>
+            <xs:enumeration value="PVE_DEFEND_RATIO_MAGICAL"/>
+            <!-- AP and drop boost -->
+            <xs:enumeration value="AP_BOOST"/>
+            <xs:enumeration value="DR_BOOST"/>
+            <!-- 4.5 -->
+            <xs:enumeration value="PROC_REDUCE_RATE"/>
+            <xs:enumeration value="BIND_RESISTANCE"/>
+            <xs:enumeration value="PHYSICAL_DAMAGE"/>
+            <xs:enumeration value="MAGICAL_DAMAGE"/>
+            <xs:enumeration value="PHYSICAL_CRITICAL_REDUCE_RATE"/>
+            <xs:enumeration value="PVPATTACKRATIO_MAGICAL"/>
+            <xs:enumeration value="MAGICAL_CRITICAL_REDUCE_RATE"/>
+            <xs:enumeration value="PVPATTACKRATIO_PHYSICAL"/>
+            <xs:enumeration value="UNK_STAT"/>
+            <!-- 4.7 -->
+            <xs:enumeration value="PVP_DODGE"/>
+			<xs:enumeration value="PVP_EVASION"/>
+            <xs:enumeration value="PVP_BLOCK"/>
+            <xs:enumeration value="PVP_PARRY"/>
+            <xs:enumeration value="PVP_HIT_ACCURACY"/>
+			<xs:enumeration value="PVP_PHYSICAL_ACCURACY"/>
+            <xs:enumeration value="PVP_MAGICAL_RESIST"/>
+			<xs:enumeration value="PVP_MAGICAL_ACCURACY"/>
+            <xs:enumeration value="PVP_MAGICAL_HIT_ACCURACY"/>
+            <xs:enumeration value="BLOCK_PENETRATION"/>
+            <!-- 5.0 -->
+            <xs:enumeration value="FLYBOOST_SPEED"/>
+            <xs:enumeration value="PRECISION"/>
+			<!-- new for f2p and event boost -->
+			<xs:enumeration value="ORDALIE_REWARD"/>
+			<!-- 5.6 -->
+			<xs:enumeration value="HIDDEN_PVE_ATTACK_RATIO"/>
+			<xs:enumeration value="HIDDEN_PVE_DEFEND_RATIO"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- conditions -->
+
+    <xs:complexType name="Conditions">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Condition" abstract="true"/>
+    <xs:complexType name="MpCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="value" type="xs:int" use="required"/>
+                <xs:attribute name="delta" type="xs:int"/>
+                <xs:attribute name="ratio" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="HpCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="value" type="xs:int" use="required"/>
+                <xs:attribute name="delta" type="xs:int"/>
+                <xs:attribute name="ratio" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="DpCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="value" type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PlayerMovedCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="allow" type="xs:boolean" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="TargetCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="value" type="TargetAttribute" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ArrowCheckCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RobotCheckCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="OnFlyCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="WeaponCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="weapon" type="WeaponList"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ArmorCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="armor" type="armorType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="NoFlyingCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="AbnormalStateCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="value" type="AbnormalState"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ChargeCondition" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="value" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ItemChargeCondition">
+        <xs:complexContent>
+            <xs:extension base="ChargeCondition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ChargeWeaponCondition">
+        <xs:complexContent>
+            <xs:extension base="ChargeCondition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ChargeArmorCondition">
+        <xs:complexContent>
+            <xs:extension base="ChargeCondition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PolishChargeCondition">
+        <xs:complexContent>
+            <xs:extension base="ChargeCondition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="SkillChargeCondition">
+        <xs:complexContent>
+            <xs:extension base="ChargeCondition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="TargetFlyingCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="restriction" type="FlyingRestriction"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="SelfFlyingCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="restriction" type="FlyingRestriction"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="FlyingRestriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ALL"/>
+            <xs:enumeration value="FLY"/>
+            <xs:enumeration value="GROUND"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="CombatCheckCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ChainCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="selfcount" type="xs:int"/>
+                <xs:attribute name="precount" type="xs:int"/>
+                <xs:attribute name="time" type="xs:int"/>
+                <xs:attribute name="precategory" type="xs:string"/>
+                <xs:attribute name="category" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="BackCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="FrontCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="FormCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="value" type="TransformType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LeftHandCondition">
+        <xs:complexContent>
+            <xs:extension base="Condition">
+                <xs:attribute name="type" type="LeftHandSlot"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="AbnormalState">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BUFF"/>
+            <xs:enumeration value="POISON"/>
+            <xs:enumeration value="BLEED"/>
+            <xs:enumeration value="PARALYZE"/>
+            <xs:enumeration value="SLEEP"/>
+            <xs:enumeration value="ROOT"/>
+            <xs:enumeration value="BLIND"/>
+            <xs:enumeration value="UNK"/>
+            <xs:enumeration value="DISEASE"/>
+            <xs:enumeration value="SILENCE"/>
+            <xs:enumeration value="FEAR"/>
+            <xs:enumeration value="CURSE"/>
+            <xs:enumeration value="CHAOS"/>
+            <xs:enumeration value="STUN"/>
+            <xs:enumeration value="PETRIFICATION"/>
+            <xs:enumeration value="STUMBLE"/>
+            <xs:enumeration value="STAGGER"/>
+            <xs:enumeration value="OPENAERIAL"/>
+            <xs:enumeration value="SNARE"/>
+            <xs:enumeration value="SLOW"/>
+            <xs:enumeration value="SPIN"/>
+            <xs:enumeration value="BIND"/>
+            <xs:enumeration value="DEFORM"/>
+            <xs:enumeration value="CLOSEAERIAL"/>
+            <xs:enumeration value="NOFLY"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="LeftHandSlot">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SHIELD"/>
+            <xs:enumeration value="DUAL"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

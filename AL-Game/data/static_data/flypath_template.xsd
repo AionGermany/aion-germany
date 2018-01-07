@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="flypath_template">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="flypath_location" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence/>
+                        <xs:attribute name="id" type="xs:short" use="required"/>
+                        <xs:attribute name="sx" type="xs:float" use="required"/>
+                        <xs:attribute name="sy" type="xs:float" use="required"/>
+                        <xs:attribute name="sz" type="xs:float" use="required"/>
+                        <xs:attribute name="sworld" type="xs:int" use="required"/>
+                        <xs:attribute name="ex" type="xs:float" use="required"/>
+                        <xs:attribute name="ey" type="xs:float" use="required"/>
+                        <xs:attribute name="ez" type="xs:float" use="required"/>
+                        <xs:attribute name="eworld" type="xs:int" use="required"/>
+                        <xs:attribute name="time" type="xs:float" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

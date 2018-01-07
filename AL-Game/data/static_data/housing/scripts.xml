@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lboxes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="scripts.xsd">
+    <lbox>
+        <id>101</id>
+        <name><![CDATA[New Script]]></name>
+        <desc><![CDATA[Enter the description.]]></desc>
+        <script><![CDATA[function OnInit()
+    -- Create the initialization script.
+end
+]]></script>
+        <icon>1</icon>
+    </lbox>
+    <lbox>
+        <id>102</id>
+        <name><![CDATA[Greeting]]></name>
+        <desc><![CDATA[The butler will say a greeting to an approaching visitor.]]></desc>
+        <script><![CDATA[-- You can customize the butler's greeting to match every visitor.
+-- Enter the character name in the table below, along with the greeting text and sound for the character's visit.
+
+helloTable = { 
+                   ["[kvalue:Name1;Character Name1;str]"] = {"[kvalue:Greeting1;, Hello;str]",    [kvalue:Greet SFX 1;H.Percussion.fx2;fx] },
+                   ["[kvalue:Name2;Character Name2;str]"] = {"[kvalue:Greeting2;, Hi;str]",    [kvalue:Greet SFX 2;H.Percussion.fx11;fx] },
+                   ["[kvalue:Name3;Character Name3;str]"] = {"[kvalue:Greeting3;, Come on in;str]",  [kvalue:Greet SFX 3;H.Percussion.fx6;fx] },
+                 };
+
+-- Check for a character's presence in helloTable, and either use a default greeting or the character appropriate greeting.
+function GetHelloString(desc)
+    if (helloTable[desc] == nil) then
+        return desc.."[kvalue:Default Greet;, Hello, dear.;str]";
+    end
+        return helloTable[desc][1];
+end
+
+function GetHelloSound(desc)
+    if (helloTable[desc] == nil) then
+        return [kvalue:Default SFX;H.Percussion.fx9;fx];
+    end
+        return helloTable[desc][2];
+end
+
+-- Called on function initialization.
+function OnInit()
+
+    -- With the SetSensor command, you can customize the distance the butler recognizes a user.
+    -- The butler recognizes the user inside the radius of the first variable.
+    -- The butler does not respond if the user is outside the second variable.
+    -- For the following code, the butler recognizes a user when he/she comes within a 3m radius.
+    -- Again, the butler does not respond when a user passes a 30m radius.
+    H.SetSensor(3, 30);
+
+end
+
+-- Calls when a user enters a distance range that the butler can recognize.
+function OnUserEntered(desc)
+
+    -- With the PlaySound command, options can be set to play music or a label.
+    -- The first variable is to set channels and the second one sets music score.
+    -- This line sets 2 labels for channel no. 0.
+    H.PlaySound(0, "r[1]r[2]");
+
+    -- Play the effect sound for the respective visitors.
+    if (GetHelloSound(desc) ~= nil) then
+        -- The SetPercussion command is used for customizing sounds.
+        H.SetPercussion(1, GetHelloSound(desc));
+        -- "x" refers to SetPercussion, enabling the preset sound.
+        H.PlaySound(1, "x");
+    end
+
+    -- The butler starts an animation.
+    -- The first variable "0" refers to the butler.
+    -- The second variable "1" refers to label no. [1] in the PlaySound command.
+    -- The third variable is a motion with a waving hand.
+    H.StartAnimation(0, 1, [kvalue:Greet Motion;H.Emotion.wave;moti]);
+
+    -- The butler speaks through a speech bubble.
+    -- The first variable "2" refers to the label no. [2] in the PlaySound command.
+    -- Enter the dialog message of the butler in the second variable.
+    H.Say(2, GetHelloString(desc));
+end
+
+-- Available Motions for Setup:
+--    point, sleep, angry, blush, dance, clap, comfort, drink, eat, laugh, kneel, no, 
+--    otl, pat, plead, ready, sad, slap, surprise, taunt, thanks, thunder,
+--    useup, victory, yes, wave, boo, charge, dislike, panic, salute, smile,
+--    sorry, think, blueflag, twoflag, whiteflag, sing, jump]]></script>
+        <icon>4</icon>
+    </lbox>
+    <lbox>
+        <id>116</id>
+        <name><![CDATA[Simonerk Says]]></name>
+        <desc><![CDATA[Enter the text "Simonerk Says" in the chat window to play the game with the butler.]]></desc>
+        <script>
+            <![CDATA[
+-- You modify how the game is played by changing the command text strings shown below.
+g_flagTable = { 
+  { "[kvalue:Command1;Simonerk says Lift the Blue Flag;str]",			  [kvalue:Motion1;H.Emotion.blueflag;moti]  },
+  { "[kvalue:Command2;Simonerk says Don't lift the white flag, lift the blue flag!;str]", [kvalue:Motion2;H.Emotion.blueflag;moti]  },
+  { "[kvalue:Command3;Simonerk says Lift the white flag;str]",			  [kvalue:Motion3;H.Emotion.whiteflag;moti] },
+  { "[kvalue:Command4;Simonerk says Don't lift the blue flag, lift the white flag!;str]", [kvalue:Motion4;H.Emotion.whiteflag;moti]  },
+  { "[kvalue:Command5;Simonerk says Lift both flags;str]",			  [kvalue:Motion5;H.Emotion.twoflag;moti]   }, 
+  { "[kvalue:Command6;Simonerk says Don't lift the blue flag, lift both flags!;str]", [kvalue:Motion6;H.Emotion.twoflag;moti]  },
+  { "[kvalue:Command7;Simonerk says Don't lift the white flag, lift both flags!;str]", [kvalue:Motion7;H.Emotion.twoflag;moti]  },
+};
+
+-- Called on script initialization.
+g_playerName = "";
+function OnInit()
+    H.SetSensor(20, 30);
+
+    -- Activates the OnSoundPlay function
+    H.EnableSoundCallback(1);
+	
+	g_playerName = H.GetPlayerName();
+end
+
+g_userTable       = {};
+g_failTable       = {};
+g_curFlagCount    = 0;
+g_curFlagMotion   = "";
+g_inGame          = 0;
+g_hostGame        = 0;
+
+function StartGame()
+    g_inGame          = 1;
+    for k,v in pairs(g_userTable) do g_userTable[k] = 0 end;
+    for k,v in pairs(g_failTable) do g_userTable[k] = 0 end;
+    g_failTable       = {};
+    g_curFlagCount    = 0;
+    g_curFlagMotion   = "";
+    math.randomseed(H.GetGameTime());
+	H.Say(1, "Get ready for Simonerk Says!");
+    H.PlaySound(1, "r[1]rrrrr x[2]rrrrr x[3]rrrrr x[4]rrrrr x[5]rrrrr x[6]rrrrr x[7]");
+    if (g_hostGame == 1) then
+      H.Broadcast("Ready", 0, 0);
+    end
+end
+
+function AddUser(desc)
+    g_userTable[desc] = 0;
+end
+
+function OnBroadcasted(fromUser, msg, param1, param2)
+    -- Confirm game participation if multiple players are in the house
+    if (msg == "Ready") then
+	    if (g_hostGame == 0 and g_playerName ~= fromUser) then
+	      H.Broadcast("Join", 0, 0);
+	    end
+	  elseif (msg == "Join") then
+	    if (g_hostGame == 1 and g_playerName ~= fromUser) then
+	      AddUser(fromUser);
+	    end
+
+    -- Win/Lose text display and sound effects	    
+	  elseif (string.find(msg, "Win")) then
+	    H.SayNoBalloon(1, msg.sub(msg, 8, -1) .. " won!");
+	    if (string.find(msg, g_playerName)) then
+	      H.SetPercussion(5, H.Percussion.fx7);
+	      H.PlaySound(5, "x");
+	    end
+	  elseif (string.find(msg, "Lose")) then
+      H.SayNoBalloon(1, msg.sub(msg, 8, -1) .. " lost!");
+	    if (string.find(msg, g_playerName)) then
+	      H.SetPercussion(5, H.Percussion.fx4);
+	      H.PlaySound(5, "x");
+      end
+	  end
+end
+
+function EndGame()
+    for k,v in pairs(g_userTable) do
+      H.SayAllNoBalloon(1, "You won the game, "..k);
+    end
+    for k,v in pairs(g_failTable) do
+      H.SayAllNoBalloon(1, "You lost the game, "..k);
+    end
+    H.PlaySound(4, "r[1]");
+    g_hostGame        = 0;
+    g_inGame          = 0;
+end
+
+function FailUser(desc)
+  H.Broadcast("lost" .. desc, 0, 0);
+  g_failTable[desc] = 1;
+end
+
+function OutFailedUsers()
+  for k, v in pairs(g_failTable) do
+    g_userTable[k] = nil;
+  end
+end
+
+function CheckPlayerFlag()
+  for k, v in pairs(g_userTable) do
+    if (v ~= g_curFlagCount) then
+      FailUser(k);
+    end
+  end
+  OutFailedUsers();
+end
+
+-- Called when the player uses an emote.
+function OnUserEmotion(motion, desc)
+  if (motion == H.Emotion.blueflag or motion == H.Emotion.whiteflag or motion == H.Emotion.twoflag) then
+	  if (g_hostGame == 1) then
+	      if (g_userTable[desc] ~= nil) then
+	        if (motion == g_curFlagMotion) then
+            H.Broadcast("success" .. desc, 0, 0);
+	          g_userTable[desc] = g_curFlagCount;
+	        else
+	          FailUser(desc);
+	          OutFailedUsers();
+	        end
+	      end
+	  end  
+	  H.PlaySound(2, "r[1]");
+	end
+end
+
+function SetRandomFlagType()  
+  randVal = math.random(#g_flagTable);
+  g_curFlagMotion = g_flagTable[randVal][2];
+  randFlagName    = g_flagTable[randVal][1];
+  g_curFlagCount  = g_curFlagCount+1;
+
+  H.AlertAll(1, randFlagName);
+  H.PlaySound(3, "r[1]");
+end
+
+function GetUserCount()
+  count = 0;
+  for k,v in pairs(g_userTable) do count = count + 1; end
+  return count;
+end
+
+-- Called when the music plays
+function OnSoundPlay(channel, note, len, label)
+  if (g_hostGame == 1) then
+      if ((1 < label) and (label < 7)) then
+        CheckPlayerFlag();
+        if (GetUserCount() == 0) then
+          EndGame();
+        else
+          SetRandomFlagType();
+        end
+      end
+      if (label == 7) then
+        CheckPlayerFlag();
+        EndGame();
+      end
+  else
+      if (label == 7) then
+        g_inGame          = 0;
+      end
+  end
+end
+
+function OnUserEntered(desc)
+  AddUser(desc);
+end
+
+function OnUserSay(str, desc)
+  if (string.find(str, "Simonerk Says")) then
+    if (g_inGame == 0) then
+      if (desc == g_playerName) then
+        g_hostGame        = 1;
+      end
+      StartGame();
+    end
+  end
+end
+]]></script>
+        <icon>6</icon>
+    </lbox>
+    <lbox>
+        <id>117</id>
+        <name><![CDATA[Table Jump]]></name>
+        <desc>
+            <![CDATA[Enter "Table Jump" in the chat window to start a game of Jump on the Glowing Furniture.  Designate each piece of furniture you want to use as an Outlet by clicking on a number in the Outlet window and then clicking on the piece of furniture you want to use. ]]></desc>
+        <script><![CDATA[constStageNum        = 10;
+constTableNum         = 6;
+constTableNumPerStage = 2;     -- About one-third of constTableNum is good enough.
+
+gsReady  = 0;
+gsInGame = 1;
+
+isHost      = false;
+gameState   = gsReady;
+outletState = {};
+userScore   = {};
+
+function OnInit()
+  if (constTableNum < 3) then constTableNum = 3; end
+  if (constTableNum > 9) then constTableNum = 9; end
+  H.SetOutletCount(constTableNum);
+  H.EnableSoundCallback(true);
+end
+
+function OnPlayerSay(str)
+  if (string.find(str, "Table Jump")) then
+    isHost = true;
+    H.Broadcast("BeginGame", 0, 0);
+  end
+end
+
+function BeginGameHost()
+  if (gameState == gsReady) then
+    gameState = gsInGame;
+    
+	  -- Initialize
+	  for i = 1, constTableNum do
+	    outletState[i] = 0;
+	  end
+	  
+	  math.randomseed(H.GetGameTime());
+	  
+	  -- String for correct synchronization
+	  local str = "";
+	  for i = 1, constStageNum do
+	    str = str .. "r1r1[" .. i .. "]";
+	  end
+	  
+	  H.PlaySound(0, str);
+	
+	  -- Initialize the first Table
+		for i = 1, constTableNum do
+	    H.Broadcast("SetOutletState", i, 0);
+		end
+	
+	  -- Initialize the score
+	  userScore   = {};
+	
+	  -- Start
+	  H.SayAll(-1, "Start the Table Jump ===========");
+	end
+end
+
+function EndGameHost()
+  if (gameState == gsInGame) then
+	  H.SayAll(-1, "Game Over");
+	  H.SayAll(-1, "================");
+	  for k, v in pairs(userScore) do
+	    if (k) then
+	      H.SayAll(-1, k .. ": " .. (v or 0));
+	    end
+	  end
+	  H.SayAll(-1, "================");
+	  isHost      = false;
+	  gameState   = gsReady;
+	end
+end 
+
+function BeginGameGuest()
+  if (gameState == gsReady) then
+    gameState = gsInGame;
+    
+	  for i = 1, constTableNum do
+	    outletState[i] = 0;
+	  end
+	  
+	  local str = "";
+	  for i = 1, constStageNum do
+	    str = str .. "r1r1"
+	  end
+	  str = str .. "r1[" .. constStageNum .. "]";    -- Gives additional time
+	  
+	  H.PlaySound(0, str);
+	end
+end
+
+function newStage()
+  -- Enables you to select a new table.
+	local i = 1;
+	local count = 0;
+	repeat
+	  local newTable = math.random(constTableNum);
+	  local state = outletState[newTable]
+	  if (state == nil or state == 0) then
+	    outletState[newTable] = 100;
+	    count = count + 1;
+	  end
+	  i = i + 1;
+	until count >= constTableNumPerStage or i > 100;
+	
+	-- notify another client.
+	for i = 1, constTableNum do
+	  if (outletState[i] == 1 or outletState[i] == 2) then
+	    H.Broadcast("SetOutletState", i, 0);
+	  elseif (outletState[i] == 100) then
+	    outletState[i] = 1;
+	    H.Broadcast("SetOutletState", i, 1);
+	  end
+	end
+end
+
+function OnSoundPlay(channel, note, len, label)
+  if (isHost and channel == 0 and label > 0) then
+    newStage();
+  end
+  
+  if (label == constStageNum) then
+    if (isHost) then
+      H.Broadcast("EndGame", 0, 0);
+    else
+      gameState   = gsReady;
+    end
+  end
+end
+
+function OnBroadcasted(fromUser, msg, outletIndex, state)
+  if (msg == "SetOutletState") then
+    -- 0: Initialize, 1: highlight, 2: Score
+    if (isHost and state == 2 and outletState[outletIndex] ~= 1) then
+      return;
+    end
+      
+	  outletState[outletIndex] = state;
+	  if (state == 0 or state == 2) then
+	    H.GlowNow(outletIndex, -1, 0, 0, 0);
+	    H.SetPosNow(outletIndex, 0, 0, -0.3, 0.5);
+	  elseif (state == 1) then
+	    H.GlowNow(outletIndex, 100, 0, 0, 255);
+	    H.SetPosNow(outletIndex, 0, 0, 0, 0.5);
+	  end
+	  
+	  if (state == 2) then
+			-- If it is a host, it gives marks.
+			if (isHost) then
+			  userScore[fromUser] = userScore[fromUser] and (userScore[fromUser]+1) or 1;
+			  H.SayAll(-1, "Score:".. fromUser);
+			end
+
+			-- SFX
+			H.SetPercussion(1, H.Percussion.fx2);
+			H.PlaySound(1, "x");
+    end
+
+	elseif (msg == "BeginGame") then
+     if (isHost) then
+	     BeginGameHost();
+     else
+       BeginGameGuest();
+     end
+     
+   elseif (msg == "EndGame") then
+		if (isHost) then
+		  EndGameHost();
+		else
+		  gameState   = gsReady;
+		end
+		
+		-- Go where the glowing table is
+		for i = 1, constTableNum do
+		  H.SetPosNow(i, 0, 0, 0, 0.5);
+		  H.GlowNow(i, -1, 0, 0, 0);
+		end
+	end
+
+end
+
+function OnPlayerJumpEnd(outletIndex)
+  if (outletState[outletIndex] == 1) then
+    H.Broadcast("SetOutletState", outletIndex, 2);
+    H.GlowNow(outletIndex, 1, 255, 0, 0);
+  end
+end
+]]></script>
+        <icon>5</icon>
+    </lbox>
+    <lbox>
+        <id>103</id>
+        <name><![CDATA[Play Song]]></name>
+        <desc><![CDATA[Add the action to the butler’s right click menu to play a song.]]></desc>
+        <script>
+            <![CDATA[-- Prompts on script initialization.
+function OnInit()
+
+    -- Add the right-click menu to the butler.
+    -- The first variable is the name of the menu.
+    -- The second variable is the menu's unique ID.
+    -- This value is used in the OnMenu() function.
+    H.RegisterMenu("Play Song", 1);
+
+end
+
+-- Right-click the butler and choose the menu to open it.
+-- menuNum is the unique ID set in the RegisterMenu.
+function OnMenu(menuNum)
+
+    -- Checks if the unique ID is "Play Song."
+    if (menuNum == 1) then
+
+        H.SetInstrument(2, H.Instrument.accordion);  -- Sets the musical instruments.
+        H.PlaySound(2, "t250 o6 b2 b2 f# f# a2 a2 g2 e2 f# f# g2 f# f# f# f# c# c# d2 e2 f# f# o5 b2 b2 b2 a# a# a# a# b2 o6 c# c# f# e d a# b r o4 b");
+
+        H.SetInstrument(1, H.Instrument.aguitar);
+        H.PlaySound(1, "t250 o4 e b o5 e g e o4 b a# o5 c# e g e o4 a# a o5 e a e b e o4 g o5 d g f# e d o4 e b o5 e g e o4 b g b o5 g f# e o4 b f# o5 c# e f# e g# a# a# f# e d c# o4 b r o3 b");
+
+        H.SetInstrument(0, H.Instrument.abass);
+        H.PlaySound(0, "t250 o3 e2 e2 e2 a# a# a# a# a# a# a2 a2 a2 g2 g2 g2 e2 e2 e2 g2 g2 g2 f# f# f# f# f# f# a# a# o4 f# e d c# o3 b r b r");
+
+        H.SetPercussion(3, H.Percussion.hihatclose);  -- Sets the percussion instruments.
+        H.PlaySound(3, "t250 x_ r x_ r r r r r x_ r x_ r x_ r x_ r r r r r x_ r r r x_ r x_ r r r r r x_ r x_ r x_ r x_ r r r r r x_ r r x_ ");
+
+        H.SetPercussion(4, H.Percussion.tambourine);
+        H.PlaySound(4, "t250 r r r r r r r r r r r r r r r r r r r r r r x_ r r r r r r r r r r r r r r r r r r r r r r r r r x_r");
+
+        H.SetPercussion(5, H.Percussion.hihatopen);
+        H.PlaySound(5, "t250 r r r r x_ r r r r r r r r r r r x_ r r r r r r r r r r r x_r r r r r r r r r r r x_r r r r r x_");
+
+        H.SetPercussion(6, H.Percussion.triangle);
+        H.PlaySound(6, "t250 r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r x_");
+
+    end
+end
+
+-- Note that the musical scale is transposed.  Middle C actually equates to o4 (fourth octave) g, so the scale below is adjusted to reflect that
+-- Musical Scale: (Fourth Octave) Do (g), Re (a), Mi (b), (Fifth Octave) Fa (c), Sol (d), La (e), Ti (f#)
+-- Length of Musical Notes: Half note (2) Quarter note (4), Eighth note (8), Sixteenth note (16), Whole notes are the default.
+-- Other Commands: Rest (r), Octave (o), Volume (v), Tempo (t), Percussion Beat (x), Sustain Note (_), Sharp Note (#)
+-- Musical Instrument: 
+--        List of Instruments in SetInstrument(): The default setting is a piano.
+--            H.Instrument.abass (Acoustic Bass), H.Instrument.ebass (Electric Bass),
+--            H.Instrument.aguitar (Acoustic Guitar), H.Instrument.accordion (Accordion)
+--        List of Instruments in SetPercussion(): The default setting is a tambourine.
+--            H.Percussion.tambourine (Tambourine)  H.Percussion.triangle (Triangle)
+--            H.Percussion.cymbal (Cymbal) H.Percussion.hihatclose (Closed Hi-Hat)
+--            H.Percussion.hihatopen (Open Hi-Hat) H.Percussion.kick (Kick Drum)
+--            H.Percussion.snare (Snare) H.Percussion.tomtom1 (Tom-tom 1)
+--            H.Percussion.tomtom2 (Tom-tom 2) H.Percussion.tomtom3 (Tom-tom 3)
+--            H.Percussion.fx1 - H.Percussion.fx20 (Effect Sound 1 - 20)]]></script>
+        <icon>2</icon>
+    </lbox>
+    <lbox>
+        <id>119</id>
+        <name><![CDATA[Scales]]></name>
+        <desc>
+            <![CDATA[Add the action to the butler’s right click menu and choose it to play some simple scales and Mary Had a Little Lamb]]></desc>
+        <script>
+            <![CDATA[-- Prompts on script initialization.
+function OnInit()
+
+    -- Add the right-click menu to the butler.
+    -- The first variable is the name of the menu.
+    -- The second variable is the menu's unique ID.
+    -- This value is used in the OnMenu() function.
+    H.RegisterMenu("Play Scales", 1);
+
+end
+
+-- Right-click the butler and choose the menu to open it.
+-- menuNum is the unique ID set in the RegisterMenu.
+function OnMenu(menuNum)
+
+    -- Checks if the unique ID is "Scales."
+    if (menuNum == 1) then
+
+        H.SetInstrument();
+        H.PlaySound(1, "t250  o4 g_ a_ b_ o5 c_ d_ e_ f#_ g_ g_ f#_ e_ d_ c_ o4_ b_ a_ g_ r r r r r r r r b4 a4 g4 a4 b4 b4 b2 a4 a4 a2 b4 o5 d4 d2 o4 b4 a4 g4 a4 b4 b4 b4 b4 a4 a4 b4 a4 g");
+
+    end
+end
+
+-- Note that the musical scale is transposed.  Middle C actually equates to o4 (fourth octave) g, so the scale below is adjusted to reflect that
+-- Musical Scale: (Fourth Octave) Do (g), Re (a), Mi (b), (Fifth Octave) Fa (c), Sol (d), La (e), Ti (f#)
+-- Length of Musical Notes: Half note (2) Quarter note (4), Eighth note (8), Sixteenth note (16), Whole notes are the default.
+-- Other Commands: Rest (r), Octave (o), Volume (v), Tempo (t), Percussion Beat (x), Sustain Note (_), Sharp Note (#)
+-- Musical Instrument: 
+--        List of Instruments in SetInstrument(): The default setting is a piano.
+--            H.Instrument.abass (Acoustic Bass), H.Instrument.ebass (Electric Bass),
+--            H.Instrument.aguitar (Acoustic Guitar), H.Instrument.accordion (Accordion)
+--        List of Instruments in SetPercussion(): The default setting is a tambourine.
+--            H.Percussion.tambourine (Tambourine)  H.Percussion.triangle (Triangle)
+--            H.Percussion.cymbal (Cymbal) H.Percussion.hihatclose (Closed Hi-Hat)
+--            H.Percussion.hihatopen (Open Hi-Hat) H.Percussion.kick (Kick Drum)
+--            H.Percussion.snare (Snare) H.Percussion.tomtom1 (Tom-tom 1)
+--            H.Percussion.tomtom2 (Tom-tom 2) H.Percussion.tomtom3 (Tom-tom 3)
+--            H.Percussion.fx1 - H.Percussion.fx20 (Effect Sound 1 - 20)]]>
+        </script>
+        <icon>2</icon>
+    </lbox>
+    <lbox>
+        <id>104</id>
+        <name><![CDATA[SFX Song]]></name>
+        <desc>
+            <![CDATA[Add the action to the butler’s right click menu to play a song using Aion sound effects for percussion.]]></desc>
+        <script>
+            <![CDATA[-- Script initialization
+function OnInit()
+
+    -- Add the right-click menu to the butler.
+    -- The first variable is the name of the menu.
+    -- The second variable is the menu's unique ID.
+    -- This value is used in the OnMenu() function.
+    H.RegisterMenu("Play SFX", 1);
+
+end
+
+-- Right-click the butler and choose the menu to open it.
+-- menuNum is the unique ID set in the RegisterMenu.
+function OnMenu(menuNum)
+
+    -- Checks if the unique ID is "Play SFX."
+    if (menuNum == 1) then
+
+        H.SetInstrument(2, H.Instrument.accordion);  -- Sets a musical instrument.
+        H.PlaySound(2, "t250 o6 b2 b2 f# f# a2 a2 g2 e2 f# f# g2 f# f# f# f# c# c# d2 e2 f# f# o5 b2 b2 b2 a# a# a# a# b2 o6 c# c# f# e d a# b r o4 b");
+
+        H.SetInstrument(1, H.Instrument.aguitar);
+        H.PlaySound(1, "t250 o4 e b o5 e g e o4 b a# o5 c# e g e o4 a# a o5 e a e b e o4 g o5 d g f# e d o4 e b o5 e g e o4 b g b o5 g f# e o4 b f# o5 c# e f# e g# a# a# f# e d c# o4 b r o3 b");
+
+        H.SetInstrument(0, H.Instrument.abass);
+        H.PlaySound(0, "t250 o3 e2 e2 e2 a# a# a# a# a# a# a2 a2 a2 g2 g2 g2 e2 e2 e2 g2 g2 g2 f# f# f# f# f# f# a# a# o4 f# e d c# o3 b r b r");
+
+        H.SetPercussion(3, H.Percussion.hihatclose);  -- Sets a percussion instrument.
+        H.PlaySound(3, "t250 x_ r x_ r r r r r x_ r x_ r x_ r x_ r r r r r x_ r r r x_ r x_ r r r r r x_ r x_ r x_ r x_ r r r r r x_ r r x_ ");
+
+        H.SetPercussion(4, H.Percussion.fx2);
+        H.PlaySound(4, "t250 r r r r r r r r r r r r r r r r r r r r r r x_ r r r r r r r r r r r r r r r r r r r r r r r r r x_r");
+
+        H.SetPercussion(5, H.Percussion.fx9);
+        H.PlaySound(5, "t250 r r r r x_ r r r r r r r r r r r x_ r r r r r r r r r r r x_r r r r r r r r r r r x_r r r r r x_");
+
+        H.SetPercussion(6, H.Percussion.fx13);
+        H.PlaySound(6, "t250 r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r x_");
+
+    end
+end
+
+-- Note that the musical scale is transposed.  Middle C actually equates to o4 (fourth octave) g, so the scale below is adjusted to reflect that
+-- Musical Scale: (Fourth Octave) Do (g), Re (a), Mi (b), (Fifth Octave) Fa (c), Sol (d), La (e), Ti (f#)
+-- Length of Musical Notes: Half note (2) Quarter note (4), Eighth note (8), Sixteenth note (16), Whole notes are the default.
+-- Other Commands: Rest (r), Octave (o), Volume (v), Tempo (t), Percussion Beat (x), Sustain Note (_), Sharp Note (#)
+-- Musical Instrument: 
+--        List of Instruments in SetInstrument(): The default setting is a piano.
+--            H.Instrument.abass (Acoustic Bass), H.Instrument.ebass (Electric Bass),
+--            H.Instrument.aguitar (Acoustic Guitar), H.Instrument.accordion (Accordion)
+--        List of Instruments in SetPercussion(): The default setting is a tambourine.
+--            H.Percussion.tambourine (Tambourine)  H.Percussion.triangle (Triangle)
+--            H.Percussion.cymbal (Cymbal) H.Percussion.hihatclose (Closed Hi-Hat)
+--            H.Percussion.hihatopen (Open Hi-Hat) H.Percussion.kick (Kick Drum)
+--            H.Percussion.snare (Snare) H.Percussion.tomtom1 (Tom-tom 1)
+--            H.Percussion.tomtom2 (Tom-tom 2) H.Percussion.tomtom3 (Tom-tom 3)
+--            H.Percussion.fx1 - H.Percussion.fx20 (Effect Sound 1 - 20)]]>
+        </script>
+        <icon>5</icon>
+    </lbox>
+    <lbox>
+        <id>105</id>
+        <name><![CDATA[Laughing]]></name>
+        <desc><![CDATA[Enter "Giggle" inside the house and the butler will laugh.]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+end
+
+-- Checked when a user is chatting
+function OnUserSay(str)
+
+    -- Enter "Giggle" and the butler laughs.
+    if (string.find(str, "Giggle")) then
+
+        -- The first variable "0" refers to the butler.
+        -- The second variable "1" refers to the label no. [1] in the PlaySound command.
+        -- The third variable sets the butler's emote as 'laughing'.
+        H.StartAnimation(0, 1, H.Emotion.laugh);
+
+        -- When label no. [1] is played, the above motion will activate.
+        H.PlaySound(0, "r[1]");
+
+    end
+end]]></script>
+        <icon>3</icon>
+    </lbox>
+    <lbox>
+        <id>106</id>
+        <name><![CDATA[Dance]]></name>
+        <desc><![CDATA[Dance at home and the butler will start singing.]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+end
+
+-- Starts when the player uses an emote.
+function OnUserEmotion(motion)
+
+  -- See if the emote is "dance."
+  if (motion == H.Emotion.dance) then
+
+        -- The first variable "0" refers to the butler.
+        -- The second variable "1" refers to the label no. [1] in the PlaySound command.
+        -- The third variable sets the butler's motion to 'singing'.
+        H.StartAnimation(0, 1, H.Emotion.sing);
+
+        -- When label no. [1] is played, the above motion will activate.
+        H.PlaySound(2, "t250 o5 a[1] g f r e r d r g1");
+
+        H.SetInstrument(1, H.Instrument.accordion);
+        H.PlaySound(1, "t250 o4 c o3 b a r g r f r e e e2 e2");
+
+        H.SetInstrument(0, H.Instrument.abass);
+        H.PlaySound(0, "t250 o4 c[1] c o2 a# r a r g r o3 c r o2 c2 c2");
+
+        H.SetPercussion(3, H.Percussion.hihatclose);
+        H.PlaySound(3, "t250 x_ r r r x_ r x_ r ");
+
+        H.SetPercussion(4, H.Percussion.tambourine);
+        H.PlaySound(4, "t250 r r x_");
+
+        H.SetPercussion(5, H.Percussion.cymbal);
+        H.PlaySound(5, "t250 r r r r r r r r x_");
+  end
+end]]></script>
+        <icon>6</icon>
+    </lbox>
+    <lbox>
+        <id>107</id>
+        <name><![CDATA[Move Cube]]></name>
+        <desc><![CDATA[Enter "Move" inside the house and the furniture designated as the outlet starts moving. (Except for PC)
+(Only designate Cube Accents or decorative letters as the outlet. Other furniture is fixed in position.
+You can buy a Cube Accent from [pos:Garkinerk (Furniture Merchant);700010000 1177.3 1937.6 0.0 0] if you're Elyos, or from [pos:Hopurunerk (Furniture Merchant);710010000 1082.8 1405.4 0.0 0] if you're Asmodian.)]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+
+    -- Activates when the player enters a 4m radius of the butler.
+    H.SetSensor(4, 4);
+
+    -- Set the number of outlets to 1.
+    -- Right-click the outlet icon to choose the outlet.
+    H.SetOutletCount(1);
+end
+
+-- Starts while the user is chatting.
+function OnUserSay(str)
+
+  -- Enter "Move" to move the selected furniture.
+  if (string.find(str, "Move")) then
+  
+    -- [1]. Set the label equal to [2].
+    H.PlaySound(0, "r2[1] r2[2]");
+
+    --The target furniture will move upward.
+    -- SetPos uses the following variables: (Target outlet, delay (in seconds), X-direction, Y-Direction, Height, time (in seconds) to wait before returning to start position.
+    H.SetPos(H.Outlet.outlet1, 1, 0, 0, 0.5, 1);
+
+    -- The outlet installation will move upward more.
+    H.SetPos(H.Outlet.outlet1, 2, 0, 0, 1, 1);
+  end
+end
+]]></script>
+        <icon>4</icon>
+    </lbox>
+    <lbox>
+        <id>108</id>
+        <name><![CDATA[Flashlight]]></name>
+        <desc><![CDATA[Add the action to the butler’s right click menu to make the furniture designated as the outlet light up.
+(HQ Shader Quality: Needs to be set as High)
+]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+
+    -- Add the right-click menu to the butler.
+    -- The first variable is the name of the menu.
+    -- The second variable is the menu's unique ID.
+    -- This value is used in the OnMenu() function.
+    H.RegisterMenu("Shine", 2);
+
+    -- Set the number of outlets to 1.
+    H.SetOutletCount(1);
+end
+
+-- Right-click the butler and choose the menu to open it.
+-- menuNum is the unique ID set in the RegisterMenu.
+function OnMenu(menuNum)
+
+    -- Examines if the unique ID is "Shine."
+    if (menuNum ~= 2) then
+      return;
+    end
+
+    -- The first variable refers to the outlet no. 1.
+    -- The second variable refers to the label no. [1] in the PlaySound command.
+    -- The third variable means it lights up for 1 second.
+    -- The fourth variable will be set as red (R),
+    -- The fifth variable as green (G),
+    -- The sixth variable will be set as blue (B).
+    -- Some installations won't change colors.
+    H.Glow( H.Outlet.outlet1, 1, 1, 255, 0, 0);
+
+    -- Sets the label no. [1].
+    H.PlaySound(0, "r2[1]");
+end
+]]></script>
+        <icon>5</icon>
+    </lbox>
+    <lbox>
+        <id>109</id>
+        <name><![CDATA[Jump Items]]></name>
+        <desc><![CDATA[Enter "Jump" while inside the house to make the designated item jump.
+(Only house staff, Cube Accents, and decorative letters should be selected as the outlet. Other installations are fixed in position.)]]></desc>
+        <script>
+            <![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+
+    -- Set the number of outlets to 1.
+    -- Right-click the outlet icon to choose the outlet.
+    H.SetOutletCount(1);
+end
+
+-- Starts when the user is chatting.
+function OnUserSay(str)
+
+    -- Say "Jump" and the furniture designated as the outlet starts to jump.
+    if (string.find(str, "Jump")) then
+        
+        -- Sets the label no. [1].
+        H.PlaySound(0, "r2[1]");
+
+        -- The outlet installation at label no. [1] will jump.
+        -- The first variable refers to outlet no. 1.
+        -- The second variable refers to label no. [1] in the PlaySound command.
+        -- The third variable sets the height.
+        H.Jump(H.Outlet.outlet1, 1, 1);
+    end
+end]]></script>
+        <icon>1</icon>
+    </lbox>
+    <lbox>
+        <id>110</id>
+        <name><![CDATA[Look At]]></name>
+        <desc><![CDATA[Enter "Butler" inside the house and the butler looks at the speaker.]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+end
+
+-- Starts when the user is chatting.
+-- The first variable refers to what is said while chatting, while the second variable shows the username.
+function OnUserSay(str, username)
+
+    -- Say "Butler" and the butler will look at the speaker.
+    if (string.find(str, "Butler")) then
+
+        -- The first variable is the label.
+        -- The second variable is the name of the target.
+        -- The third variable is the duration.
+        -- Do as follows, and the butler looks at the target with the same name.
+        -- as the desc for 2 seconds from the label no. [1].
+        -- When the PlaySound ends, it returns to the original setting regardless of the set time.
+        H.Target(1, username, 2); 
+
+        -- Set the label no. [1].
+        H.PlaySound(0, "r2[1] r2");
+
+    end
+end]]></script>
+        <icon>4</icon>
+    </lbox>
+    <lbox>
+        <id>111</id>
+        <name><![CDATA[Blue Flag White Flag]]></name>
+        <desc>
+            <![CDATA[When you say "Blue Flag" or "White Flag" inside the house, the butler will hold up a blue or white flag.]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+end
+
+-- Starts when the user is chatting.
+function OnUserSay(str)
+
+    -- Say "White Flag" and the butler will raise a white flag.
+    if (string.find(str, "White Flag")) then
+
+        -- The first variable 0 refers to the butler.
+        -- The second variable 1 refers to label no. [1].
+        -- Set the white flag motion in the third variable.
+        H.StartAnimation(0, 1, H.Emotion.whiteflag);
+
+        -- Sets the label no. [1] in the channel no. 0.
+        H.PlaySound(0, "r[1]");
+
+    -- Say "Blue Flag" and the butler will raise a blue flag.
+    elseif (string.find(str, "Blue Flag")) then
+        H.StartAnimation(0, 1, H.Emotion.blueflag);
+        H.PlaySound(0, "r[1]");
+
+    elseif (string.find(str, "Both Flags")) then
+        H.StartAnimation(0, 1, H.Emotion.twoflag);
+        H.PlaySound(0, "r[1]");
+
+    end     
+end]]></script>
+        <icon>5</icon>
+    </lbox>
+    <lbox>
+        <id>112</id>
+        <name><![CDATA[Party Time]]></name>
+        <desc>
+            <![CDATA[Do the "Victory" motion or say "Begin" in chat inside the house. The butler starts to clap his hands, the installation designated as the outlet shines, and the melody is played.]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+
+    -- Sets the number of outlets to 1.
+    -- Right-click the outlet icon to choose the outlet.
+    H.SetOutletCount(5);
+end
+
+function PartyTime()
+
+    -- The first variable "0" refers to the butler.
+    -- The second variable "1" refers to label no. [1] in the PlaySound command.
+    -- The third variable sets the butler's emote to 'clapping'.
+    H.StartAnimation(0, 1, H.Emotion.clap);
+
+    -- The first variable refers to outlet no. 1.
+    -- The second variable refers to label no. [2] in the PlaySound command.
+    -- The third variable means it lights up for 1 second.
+    -- The fourth variable will be set as red (R),
+    -- The fifth variable as green (G),
+    -- The sixth variable will be set as blue (B).
+    -- Some installations won't change colors.
+    H.Glow( H.Outlet.outlet1, 2, 1, 0, 0, 255);
+
+    -- Red light flickers in label no. [3].
+    H.Glow( H.Outlet.outlet1, 3, 1, 255, 0, 0);
+
+    H.Glow( H.Outlet.outlet2, 4, 1, 0, 0, 255);
+    H.Glow( H.Outlet.outlet2, 5, 1, 255, 0, 0);
+    H.Glow( H.Outlet.outlet3, 6, 1, 0, 0, 255);
+    H.Glow( H.Outlet.outlet3, 7, 1, 255, 0, 0);
+    H.Glow( H.Outlet.outlet4, 8, 1, 0, 0, 255);
+    H.Glow( H.Outlet.outlet4, 9, 1, 255, 0, 0);
+    H.Glow( H.Outlet.outlet5, 10, 1, 0, 0, 255);
+    H.Glow( H.Outlet.outlet5, 11, 1, 255, 0, 0);
+
+    H.SetPercussion(1, H.Percussion.kick);            -- The channel no. 1 will be set as the Kick sound.
+    H.SetPercussion(2, H.Percussion.snare);
+    H.SetPercussion(3, H.Percussion.hihatclose);
+    H.SetPercussion(4, H.Percussion.hihatopen);
+    H.SetPercussion(5, H.Percussion.cymbal);
+    H.SetPercussion(6, H.Percussion.tomtom1);
+    H.SetPercussion(7, H.Percussion.tomtom2);
+    H.SetPercussion(0, H.Percussion.tomtom3);
+
+    -- The following show a music score encoded in x, _, and r:
+    H.PlaySound(1, "r[1]r   r   r   x[2] _ r[3]   r   _ x x[4] r16 x[5] r16 x r r    x[6]_ r[7]  r _x  x[8] x x[9] x x[10] x x[11] x r r r r"); -- Kick
+    H.PlaySound(2, "r   r   r   r   r   r   x _ r   r   r   x _ r        r  r  x_ r  r   r   x _ r                    r r r r"); -- Snare
+    H.PlaySound(3, "r   r   r   r   x x x x x x x x x x x x x x _ x      x x x x x x x x x x x x x x x _      r r r r"); -- hit close
+    H.PlaySound(4, "x _ x _ x _ x _ r   r   r   r   r   r   r   x _      r   r   r   r   r   r   r   _ x              r r r r"); -- hihatopen
+    H.PlaySound(5, "r   r   r   r   x _ r   r   r   r   r   r   r        x _ r   r   r   r   r   r   r                 x_r r r");
+    H.PlaySound(6, "r   r   _ x r   r   r   r   r   r   r   _ x r        r   r   r   r   r r x x x x                  r r r r");
+    H.PlaySound(7, "r   r   r _ x   r   r   r   r   r   r   r _ x        r   r   r   r   r x x x x r                  r r r r");
+    H.PlaySound(0, "r   r   r _ r16 x16 r r r   r   r   r   r _ r16 x16  r   r   r   r   x x x x r   r           r r r r");
+
+end
+
+
+-- Starts when the player uses an emote.
+function OnUserEmotion(motion)
+
+  -- See if the emote is "victory."
+  if (motion == H.Emotion.victory) then
+    PartyTime()
+  end
+end
+
+
+-- Starts when the user is chatting
+function OnUserSay(str)
+
+    -- Say "Begin" and PartyTime() will be brought up.
+    if (string.find(str, "Begin")) then
+       PartyTime()
+    end
+end]]></script>
+        <icon>6</icon>
+    </lbox>
+    <lbox>
+        <id>113</id>
+        <name><![CDATA[Disco]]></name>
+        <desc>
+            <![CDATA[Say "Light" inside the house and the installation designated as the outlet starts responding with light according to the given melody.]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+
+    -- Sets the number of outlets to 7.
+    -- Right-click the outlet icon to choose the outlet.
+    H.SetOutletCount(7);
+    
+    -- Activates the OnSoundPlay function.
+    H.EnableSoundCallback(1)
+end
+
+function PlayNow()
+    H.SetPercussion(1, H.Percussion.kick);
+    H.SetPercussion(2, H.Percussion.snare);
+    H.SetPercussion(3, H.Percussion.hihatclose);
+    H.SetPercussion(4, H.Percussion.hihatopen);
+    H.SetPercussion(5, H.Percussion.fx5);
+    H.SetPercussion(6, H.Percussion.fx14);
+    H.SetPercussion(7, H.Percussion.fx18);
+    H.SetPercussion(0, H.Percussion.fx11);
+    H.PlaySound(1, "t150 x_rrx_r_x_xrx_rrx_ r_x_xrx_rrrrx_rrx_rrrrx");
+    H.PlaySound(2, "t150 rrx_r rrx_r rrx_r rrx_r rrx__x rrx_r rrx__x rrx_r ");
+    H.PlaySound(3, "t150 x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x"); -- hit close
+    H.PlaySound(4, "t150 rrrrrr_xr rrrr _xr_xr rrrr rrr_x");
+    H.PlaySound(5, "t150 _xrrrrrr_x_xrrrrr_x_rxrrrrrrr_x");
+    H.PlaySound(6, "t150 r_xrrrr_xrr_xrrrrr_xrrrrrrrrrx");
+    H.PlaySound(7, "t150 rrr_x_xrrrrrr_x_xrrrrx_rrrrrrrrrr_x");
+    H.PlaySound(0, "t150 rrrrrrrrrrrrrrrrx");
+end
+
+-- Starts when the user is chatting.
+function OnUserSay(str)
+
+  -- Say "Light" and PlayNow() will be brought up.
+  if (string.find(str, "Light")) then
+     PlayNow()
+  end
+end
+
+-- Starts when the music plays.
+function OnSoundPlay(channel, note, len, label)
+    if (note == 'x') then
+        H.GlowNow( H.Outlet.outlet0+channel, 0.1, 0, 0, 255);
+    end
+end
+]]></script>
+        <icon>3</icon>
+    </lbox>
+    <lbox>
+        <id>114</id>
+        <name><![CDATA[Flag Dance]]></name>
+        <desc>
+            <![CDATA[Enter "Flag" inside the house and the butler starts responding by raising a blue flag and white flag according to the given melody.]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+
+    -- Sets the number of outlets to 3.
+    -- Right-click the outlet icon to choose the outlet.
+    H.SetOutletCount(3);
+    
+    -- Activates the OnSoundPlay function.
+    H.EnableSoundCallback(1)
+end
+
+function PlayNow()
+    H.SetPercussion(1, H.Percussion.kick);
+    H.SetPercussion(2, H.Percussion.snare);
+    H.SetPercussion(3, H.Percussion.hihatclose);
+    H.SetPercussion(4, H.Percussion.hihatopen);
+    H.SetPercussion(5, H.Percussion.fx5);
+    H.SetPercussion(6, H.Percussion.fx14);
+    H.SetPercussion(7, H.Percussion.fx18);
+    H.SetPercussion(0, H.Percussion.fx11);
+    H.PlaySound(1, "t150 x_rrx_r_x_xrx_rrx_ r_x_xrx_rrrrx_rrx_rrrrx");
+    H.PlaySound(2, "t150 rrx_r rrx_r rrx_r rrx_r rrx__x rrx_r rrx__x rrx_r ");
+    H.PlaySound(3, "t150 x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x_ x"); -- hit close
+    H.PlaySound(4, "t150 rrrrrr_xr rrrr _xr_xr rrrr rrr_x");
+    H.PlaySound(5, "t150 _xrrrrrr_x_xrrrrr_x_rxrrrrrrr_x");
+    H.PlaySound(6, "t150 r_xrrrr_xrr_xrrrrr_xrrrrrrrrrx");
+    H.PlaySound(7, "t150 rrr_x_xrrrrrr_x_xrrrrx_rrrrrrrrrr_x");
+    H.PlaySound(0, "t150 rrrrrrrrrrrrrrrrx");
+end
+
+-- Called when the user is chatting.
+function OnUserSay(str)
+
+  -- Say "Flag" and PlayNow() will be brought up.
+  if (string.find(str, "Flag")) then
+     PlayNow()
+  end
+end
+
+-- Called when the music plays.
+function OnSoundPlay(channel, note, len, label)
+    if (note == 'x') then
+        if (channel == 1) then
+           H.StartAnimationNow(H.Outlet.outlet1, H.Emotion.whiteflag);
+        end
+        if (channel == 2) then
+           H.StartAnimationNow(H.Outlet.outlet1, H.Emotion.blueflag);
+        end
+        if (channel == 3) then
+           H.StartAnimationNow(H.Outlet.outlet2, H.Emotion.whiteflag);
+        end
+        if (channel == 4) then
+           H.StartAnimationNow(H.Outlet.outlet2, H.Emotion.blueflag);
+        end
+        if (channel == 5) then
+           H.StartAnimationNow(H.Outlet.outlet3, H.Emotion.whiteflag);
+        end
+        if (channel == 6) then
+           H.StartAnimationNow(H.Outlet.outlet3, H.Emotion.blueflag);
+        end
+    end
+end
+]]></script>
+        <icon>2</icon>
+    </lbox>
+    <lbox>
+        <id>115</id>
+        <name><![CDATA[Box Dance]]></name>
+        <desc><![CDATA[Add the action to the butler’s right click menu to play melodies and to move the designated outlet installation.
+(Designate only the Cube Accents or decorative letters as the outlet. Other installations are fixed in position.
+You can buy a Cube Accent from [pos:Garkinerk (Furniture Merchant);700010000 1177.3 1937.6 0.0 0] if you're Elyos, or from [pos:Hopurunerk (Furniture Merchant);710010000 1082.8 1405.4 0.0 0] if you're Asmodian.)]]></desc>
+        <script><![CDATA[-- Starts when the house script is initialized.
+function OnInit()
+
+    -- Add the right-click menu to the butler.
+    -- The first variable is the name of the menu.
+    -- The second variable is the menu's unique ID.
+    -- This value is used in the OnMenu() function.
+    H.RegisterMenu("Box Dance", 1);
+
+    -- Sets the number of outlets to 14.
+    H.SetOutletCount(14);
+end
+
+-- Right-click the butler and choose the menu to open it.
+-- menuNum is the unique ID set in the RegisterMenu.
+function OnMenu(menuNum)
+
+    -- Examines if the unique ID of the menu is "Live Box."
+    if (menuNum ~= 1) then
+      return;
+    end
+
+    -- Sets the label number from [1] to [4].
+    H.PlaySound(0, "t130 r2[1] r2 r2 r2[2] r2 r2 r2[3] r2 r2 r2[4]");    
+    
+    H.SetInstrument(1, H.Instrument.aguitar);
+    H.PlaySound(1, "t130 o5 e f# g o6 c o5 d# e f# b e f# g o6 c o5 d# e f# b o5 g8 f8# g8 o4 b8 o5 e g a8 o4 a8 o5 g8 o4 b8 o5 d8# o4 b8 g8 d8# e");
+    
+    H.PlaySound(2, "t130 o6 c8 o5 g8 f8# e8 o6 c8 o5 g8 f8# e8 o6 c8 o5 b8 f8# d8# o6 c8 o5 b8 f8# d8# o6 c8 o5 g8 f8# e8 o6 c8 o5 g8 f8# e8 o6 c8 o5 b8 f8# d8# o6 c8 o5 b8 f8# d8# e8 f8# g8 b8 o6 e8 f8# g8 f8# d8# o5 a8 g8 d8# o4 b8 r8 d8# r8 e");
+
+    H.SetInstrument(3, H.Instrument.accordion);
+    H.PlaySound(3, "t130 v15 r r8 o4 g8 o5 c8 d8 e8 g8 b2 f2# r r8 o4 g8 o5 c8 d8 e8 g8 b2 d# f# b8 r8 b g8 r8 g o6 c8 r8 o5 a8 r8 d8# r8 o4 b8 r8 o5 e");
+
+    H.PlaySound(4, "t130 x_ r x_ r x_ r x_ r x_ r x_ r x_ r x_ r     x_ x_ x_ r    x_ r x_ x_ x_ ");
+
+    H.SetPercussion(5, H.Percussion.hihatopen);
+    H.PlaySound(5, "t130 rrrr rrrx_ rrrr rrrx_ rrrx_ ");
+
+    H.SetPercussion(6, H.Percussion.fx10);
+    H.PlaySound(6, "t130 rrrr rrrr rrrr rrrr rrrr rrrr x");
+    
+    H.SetPercussion(7, H.Percussion.fx15);
+    H.PlaySound(7, "t130 rrrr rrrr rrrr rrrr rrrr rx");
+
+    -- The first variable is the outlet.
+    -- The second variable refers to the label no. [1] in the PlaySound command.
+    -- The third through fifth variables refer to the scale of motions by X, Y, and Z.
+    -- The sixth variable is the time when motions were made.
+    H.SetPos(H.Outlet.outlet1, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet2, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet3, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet4, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet5, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet6, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet7, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet8, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet9, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet10, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet11, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet12, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet13, 1, 0, 0, 0.5, 1);
+    H.SetPos(H.Outlet.outlet14, 1, 0, 0, 0.5, 1);
+
+    -- You can use 1 in place of H.Outlet.outlet1.
+    H.SetPos(1, 2, 1, 0, 0.5, 1);
+    H.SetPos(2, 2, 0, 1, 0.5, 1);
+    H.SetPos(3, 2, 0, 0, 1.5, 1);
+    H.SetPos(4, 2, 1, 0, 0.5, 1);
+    H.SetPos(5, 2, 0, 1, 0.5, 1);
+    H.SetPos(6, 2, 0, 0, 1.5, 1);
+    H.SetPos(7, 2, 1, 0, 0.5, 1);
+    H.SetPos(8, 2, 0, 1, 0.5, 1);
+    H.SetPos(9, 2, 0, 0, 1.5, 1);
+    H.SetPos(10, 2, 1, 0, 0.5, 1);
+    H.SetPos(11, 2, 0, 1, 0.5, 1);
+    H.SetPos(12, 2, 0, 0, 1.5, 1);
+    H.SetPos(13, 2, 1, 0, 0.5, 1);
+    H.SetPos(14, 2, 0, 1, 0.5, 1);
+
+    H.SetPos(1, 3, 1, 1, 0.5, 1);
+    H.SetPos(2, 3, 0, 1, 1.5, 1);
+    H.SetPos(3, 3, 1, 0, 1.5, 1);
+    H.SetPos(4, 3, 1, 1, 0.5, 1);
+    H.SetPos(5, 3, 0, 1, 1.5, 1);
+    H.SetPos(6, 3, 1, 0, 1.5, 1);
+    H.SetPos(7, 3, 1, 1, 0.5, 1);
+    H.SetPos(8, 3, 0, 1, 1.5, 1);
+    H.SetPos(9, 3, 1, 0, 1.5, 1);
+    H.SetPos(10, 3, 1, 1, 0.5, 1);
+    H.SetPos(11, 3, 0, 1, 1.5, 1);
+    H.SetPos(12, 3, 1, 0, 1.5, 1);
+    H.SetPos(13, 3, 1, 1, 0.5, 1);
+    H.SetPos(14, 3, 0, 1, 1.5, 1);
+
+    H.SetPos(1, 4, 0, 0, 2, 1);
+    H.SetPos(2, 4, 0, 0, 2, 1);
+    H.SetPos(3, 4, 0, 0, 2, 1);
+    H.SetPos(4, 4, 0, 0, 2, 1);
+    H.SetPos(5, 4, 0, 0, 2, 1);
+    H.SetPos(6, 4, 0, 0, 2, 1);
+    H.SetPos(7, 4, 0, 0, 2, 1);
+    H.SetPos(8, 4, 0, 0, 2, 1);
+    H.SetPos(9, 4, 0, 0, 2, 1);
+    H.SetPos(10, 4, 0, 0, 2, 1);
+    H.SetPos(11, 4, 0, 0, 2, 1);
+    H.SetPos(12, 4, 0, 0, 2, 1);
+    H.SetPos(13, 4, 0, 0, 2, 1);
+    H.SetPos(14, 4, 0, 0, 2, 1);
+	
+end]]></script>
+        <icon>6</icon>
+    </lbox>
+    <lbox>
+        <id>118</id>
+        <name><![CDATA[Jukebox]]></name>
+        <desc><![CDATA[Plays one of the songs in the Jukebox Playlist when a character enters a house.
+A player can control the Jukebox by entering commands in the chat window such as "Next," "Previous," "Current," "Pause," "Play," or "Volume 60."]]></desc>
+        <script><![CDATA[-- The song that is played varies for each visitor.
+-- Enter the character's name and the index (the order of songs in the playlist) to be played when that character visits in the table below.
+
+songTable = {
+                   ["[kvalue:Name1;Character Name1;str]"] = 2,
+                   ["[kvalue:Name2;Character Name2;str]"] = 3,
+                   ["[kvalue:Name3;Character Name3;str]"] = 6,
+                 };
+
+g_playerName = "";
+function OnInit()
+    g_playerName = H.GetPlayerName();
+end
+
+-- Called when the Jukebox is ready after a user enters the house.
+function OnJukeBoxReady(desc)
+    if (songTable[desc] ~= nil) then
+
+        -- Plays a set song based on the visitor.
+        H.PlayJukeBoxSong(songTable[desc]);
+
+    end
+end
+
+-- A user can control the Jukebox via chat.
+function OnUserSay(str, desc)
+
+    if (desc ~= g_playerName) then
+        return;
+    end
+
+    if (string.find(str, "Next")) then
+         H.PlayJukeBoxNextSong();
+    elseif (string.find(str, "Previous")) then
+         H.PlayJukeBoxPrevSong();
+    elseif (string.find(str, "Play")) then
+         H.ResumeJukeBoxSong();
+    elseif (string.find(str, "Pause")) then
+         H.PauseJukeBoxSong();
+    elseif (string.find(str, "Current")) then
+         H.ReplayJukeBoxSong();
+    elseif (string.find(str, "Volume")) then
+        local index = string.match(str, "Volume ([%d]+)");
+        H.SetJukeBoxVolume(tonumber(index));
+    end
+
+end
+
+-- Available Jukebox Controls:
+-- Jukebox Controls are available once per second.
+--    H.PlayJukeBoxSong(index);  ->   Plays the song of the corresponding index.
+--    H.PlayJukeBoxNextSong();   ->   Plays the next song.
+--    H.PlayJukeBoxNextSong();   ->   Plays the previous song.
+--    H.PauseJukeBoxSong();      ->   Pauses the Jukebox.
+--    H.ResumeJukeBoxSong();   ->   Resumes playing the paused Jukebox.
+--    H.ReplayJukeBoxSong();     ->   Replays the current song from the beginning.
+--    H.SetJukeBoxVolume();      ->   Adjusts the volume of the Jukebox. (0~100)
+]]></script>
+        <icon>1</icon>
+    </lbox>
+</lboxes>

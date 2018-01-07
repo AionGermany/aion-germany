@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="house_npcs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="house"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="house">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="2" maxOccurs="3" name="spawn" type="HouseSpawn"/>
+            </xs:sequence>
+            <xs:attribute name="address" type="xs:int" use="required"/>
+        </xs:complexType>
+        <xs:key name="SpawnTypeUnique">
+            <xs:selector xpath="spawn"/>
+            <xs:field xpath="@type"/>
+        </xs:key>
+    </xs:element>
+    <xs:simpleType name="SpawnType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MANAGER"/>
+            <xs:enumeration value="TELEPORT"/>
+            <xs:enumeration value="SIGN"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="HouseSpawn">
+        <xs:attribute name="x" type="xs:float" use="required"/>
+        <xs:attribute name="y" type="xs:float" use="required"/>
+        <xs:attribute name="z" type="xs:float" use="required"/>
+        <xs:attribute name="static_id" type="xs:int" use="optional"/>
+        <xs:attribute default="0" name="h" type="xs:byte" use="optional"/>
+        <xs:attribute name="type" type="SpawnType" use="required"/>
+    </xs:complexType>
+</xs:schema>

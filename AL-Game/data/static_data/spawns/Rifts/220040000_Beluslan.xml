@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="220040000">
+        <!-- Rift -->
+        <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Beluslan -->
+            <spot x="225.6342" y="170.77917" z="241.96542" h="15" anchor="BELUSLAN_AM"/>
+            <spot x="1367.263" y="735.7268" z="275.70038" h="60" anchor="BELUSLAN_BM"/>
+            <spot x="719.6485" y="2245.344" z="246.01453" h="60" anchor="BELUSLAN_CM"/>
+            <spot x="2079.159" y="206.10281" z="383.34128" h="43" anchor="BELUSLAN_DM"/>
+            <spot x="2828.555" y="579.58344" z="510.71582" h="30" anchor="BELUSLAN_EM"/>
+            <spot x="2737.1965" y="2601.1516" z="656.5635" h="100" anchor="BELUSLAN_FM"/>
+            <spot x="1570.566" y="2011.0516" z="582.37976" h="0" anchor="BELUSLAN_GM"/>
+        </spawn>
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Beluslan -->
+            <spot x="2163.5671" y="448.52655" z="377.82684" h="76" anchor="BELUSLAN_AS"/>
+            <spot x="361.86078" y="1947.044" z="212.30112" h="60" anchor="BELUSLAN_BS"/>
+            <spot x="100.63" y="1090.15" z="297.91437" h="15" anchor="BELUSLAN_CS"/>
+            <spot x="1614.4794" y="649.5148" z="367.9494" h="100" anchor="BELUSLAN_DS"/>
+            <spot x="548.9459" y="1602.8561" z="222.6411" h="30" anchor="BELUSLAN_ES"/>
+            <spot x="548.9459" y="1602.8561" z="222.6411" h="30" anchor="BELUSLAN_FS"/>
+            <spot x="2806.1157" y="1106.9415" z="375.61755" h="60" anchor="BELUSLAN_GS"/>
+        </spawn>
+
+        <!-- BELUSLAN_AS -->
+        <rift_spawn id="2140">
+        </rift_spawn>
+        <!-- BELUSLAN_BS -->
+        <rift_spawn id="2141">
+        </rift_spawn>
+        <!-- BELUSLAN_CS -->
+        <rift_spawn id="2142">
+        </rift_spawn>
+        <!-- BELUSLAN_DS -->
+        <rift_spawn id="2143">
+        </rift_spawn>
+        <!-- BELUSLAN_ES -->
+        <rift_spawn id="2144">
+        </rift_spawn>
+        <!-- BELUSLAN_FS -->
+        <rift_spawn id="2145">
+        </rift_spawn>
+        <!-- BELUSLAN_GS -->
+        <rift_spawn id="2146">
+        </rift_spawn>
+    </spawn_map>
+</spawns>

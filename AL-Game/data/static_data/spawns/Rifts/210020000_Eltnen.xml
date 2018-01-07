@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="210020000">
+        <!-- Rift -->
+        <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Eltnen -->
+            <spot x="225.58" y="2943.8079" z="156.6" h="95" anchor="ELTNEN_AM"/>
+            <spot x="768.2929" y="1881.095" z="265.3" h="96" anchor="ELTNEN_BM"/>
+            <spot x="1639.8922" y="1724.0564" z="345.2" h="0" anchor="ELTNEN_CM"/>
+            <spot x="1038.22" y="49.59" z="318.8" h="30" anchor="ELTNEN_DM"/>
+            <spot x="1532.4562" y="485.70743" z="363.7" h="53" anchor="ELTNEN_EM"/>
+            <spot x="2210.184" y="2604.5667" z="271.63" h="0" anchor="ELTNEN_FM"/>
+            <spot x="2176.1428" y="557.24414" z="435.3" h="8" anchor="ELTNEN_GM"/>
+        </spawn>
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Eltnen -->
+            <spot x="606.48694" y="99.37573" z="309.9367" h="15" anchor="ELTNEN_AS"/>
+            <spot x="738.9574" y="2740.4644" z="245.9" h="75" anchor="ELTNEN_BS"/>
+            <spot x="1404.92" y="2419.2434" z="288.5" h="30" anchor="ELTNEN_CS"/>
+            <spot x="1426.9784" y="415.58115" z="366.6" h="13" anchor="ELTNEN_DS"/>
+            <spot x="2510.2478" y="679.28174" z="352.9" h="45" anchor="ELTNEN_GS"/>
+            <spot x="2474.9888" y="640.9338" z="365.9" h="30" anchor="ELTNEN_ES"/>
+            <spot x="2429.667" y="2253.0938" z="271.2" h="44" anchor="ELTNEN_FS"/>
+        </spawn>
+
+        <!-- ELTNEN_AS -->
+        <rift_spawn id="2220">
+        </rift_spawn>
+        <!-- ELTNEN_BS -->
+        <rift_spawn id="2221">
+        </rift_spawn>
+        <!-- ELTNEN_CS -->
+        <rift_spawn id="2222">
+        </rift_spawn>
+        <!-- ELTNEN_DS -->
+        <rift_spawn id="2223">
+        </rift_spawn>
+        <!-- ELTNEN_ES -->
+        <rift_spawn id="2224">
+        </rift_spawn>
+        <!-- ELTNEN_FS -->
+        <rift_spawn id="2225">
+        </rift_spawn>
+        <!-- ELTNEN_GS -->
+        <rift_spawn id="2226">
+        </rift_spawn>
+    </spawn_map>
+</spawns>

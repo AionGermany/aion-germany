@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siege_locations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="siege_locations.xsd">
+    <siege_location id="0" type="UNDERPASS" world="210050000" name_id="0"/>
+    <siege_location id="0" type="UNDERPASS" world="220070000" name_id="0"/>
+    <siege_location id="1" type="INDUN" world="210040000" name_id="0"/>
+    <siege_location id="2" type="INDUN" world="220040000" name_id="0"/>
+    <siege_location id="3" type="INDUN" world="210020000" name_id="0"/>
+    <siege_location id="3" type="INDUN" world="220020000" name_id="0"/>
+    <siege_location id="4" type="INDUN" world="210040000" name_id="0"/>
+    <siege_location id="5" type="INDUN" world="220040000" name_id="0"/>
+    <siege_location id="6" type="INDUN" world="210060000" name_id="0"/>
+    <siege_location id="7" type="INDUN" world="220050000" name_id="0"/>
+    <siege_location id="8" type="INDUN" world="400010000" name_id="0"/>
+    <siege_location id="8" type="INDUN" world="400010000" name_id="0"/>
+    <siege_location id="9" type="INDUN" world="210040000" name_id="0"/>
+    <siege_location id="9" type="INDUN" world="220040000" name_id="0"/>
+    <siege_location id="18" type="INDUN" world="120010000" name_id="0"/>
+    <siege_location id="18" type="INDUN" world="110010000" name_id="0"/>
+    <siege_location id="25" type="INDUN" world="210040000" name_id="0"/>
+    <siege_location id="28" type="INDUN" world="600010000" name_id="0"/>
+    <siege_location id="45" type="INDUN" world="210040000" name_id="0"/>
+    <siege_location id="45" type="INDUN" world="220040000" name_id="0"/>
+    <siege_location id="46" type="INDUN" world="220030000" name_id="0"/>
+    <siege_location id="46" type="INDUN" world="210030000" name_id="0"/>
+    <!-- Siel's Western Fortress -->
+    <siege_location id="1131" type="FORTRESS" world="400010000" name_id="801823" occupy_count="1" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="5" repair_cooltime="30"/>
+        <artifact_activation itemid="188020000" count="1" skill="12147" repeat_count="1" repeat_interval="1" cd="3600"/>
+        <siege_reward top="12" itemid="186000096" m_count="3"/>
+        <siege_reward top="20" itemid="186000030" m_count="3"/>
+        <siege_reward top="30" itemid="186000030" m_count="2"/>
+        <siege_reward top="40" itemid="186000031" m_count="3"/>
+        <legion_reward itemid="186000096" m_count="3"/>
+        <legion_reward itemid="186000030" m_count="20"/>
+        <legion_reward itemid="186000031" m_count="60"/>
+        <legion_reward itemid="188051893" m_count="1"/>
+        <legion_reward itemid="122001519" m_count="1"/>
+        <luna_boost_price itemid="182400001"/>
+        <luna_teleport_price itemid="182400001"/>
+        <luna_reward itemid="186000147" l_count="3"/>
+        <luna_teleport race="ELYOS" world_id="400010000" x="2616" y="1874" z="1460" h="2616"/>
+        <luna_teleport race="ASMODIANS" world_id="400010000" x="2750" y="2043" z="1521" h="2750"/>
+    </siege_location>
+    <!-- Siel's Eastern Fortress -->
+    <siege_location id="1132" type="FORTRESS" world="400010000" name_id="801825" occupy_count="1" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="5" repair_cooltime="30"/>
+        <artifact_activation itemid="188020000" count="1" skill="12148" repeat_count="1" repeat_interval="1" cd="3600"/>
+        <siege_reward top="12" itemid="186000096" m_count="3"/>
+        <siege_reward top="20" itemid="186000030" m_count="3"/>
+        <siege_reward top="30" itemid="186000030" m_count="2"/>
+        <siege_reward top="40" itemid="186000031" m_count="3"/>
+        <legion_reward itemid="186000096" m_count="3"/>
+        <legion_reward itemid="186000030" m_count="20"/>
+        <legion_reward itemid="186000031" m_count="60"/>
+        <legion_reward itemid="188051893" m_count="1"/>
+        <legion_reward itemid="122001520" m_count="1"/>
+        <luna_boost_price itemid="182400001"/>
+        <luna_teleport_price itemid="182400001"/>
+        <luna_reward itemid="186000147" l_count="3"/>
+        <luna_teleport race="ELYOS" world_id="400010000" x="2222" y="2810" z="1541" h="2222"/>
+        <luna_teleport race="ASMODIANS" world_id="400010000" x="1985" y="2798" z="1497" h="1985"/>
+    </siege_location>
+    <siege_location id="1133" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="2" skill="12043" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <siege_location id="1134" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="2" skill="12043" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <siege_location id="1135" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="1" skill="12042" repeat_count="1" repeat_interval="1" cd="900"/>
+    </siege_location>
+    <!-- Sulfur Fortress -->
+    <siege_location id="1141" type="FORTRESS" world="400010000" name_id="801827" occupy_count="1" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="5" repair_cooltime="30"/>
+        <artifact_activation itemid="188020000" count="1" skill="12149" repeat_count="1" repeat_interval="1" cd="3600"/>
+        <siege_reward top="12" itemid="186000096" m_count="3"/>
+        <siege_reward top="20" itemid="186000030" m_count="3"/>
+        <siege_reward top="30" itemid="186000030" m_count="2"/>
+        <siege_reward top="40" itemid="186000031" m_count="3"/>
+        <legion_reward itemid="186000096" m_count="3"/>
+        <legion_reward itemid="188051893" m_count="1"/>
+        <legion_reward itemid="122001521" m_count="1"/>
+        <luna_boost_price itemid="182400001"/>
+        <luna_teleport_price itemid="182400001"/>
+        <luna_reward itemid="186000147" l_count="3"/>
+        <luna_teleport race="ELYOS" world_id="400010000" x="933" y="587" z="1463" h="933"/>
+        <luna_teleport race="ASMODIANS" world_id="400010000" x="756" y="952" z="1507" h="756"/>
+    </siege_location>
+    <siege_location id="1142" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="2" skill="12043" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <siege_location id="1143" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="1" skill="12042" repeat_count="1" repeat_interval="1" cd="900"/>
+    </siege_location>
+    <siege_location id="1144" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="1" skill="12045" repeat_count="1" repeat_interval="1" cd="900"/>
+    </siege_location>
+    <siege_location id="1145" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="2" skill="12057" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <siege_location id="1146" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020000" count="2" skill="8387" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <!-- Krotan Refuge -->
+    <siege_location id="1221" type="FORTRESS" world="400010000" name_id="801831" occupy_count="1" buff_idA="8884" buff_idE="8875" siege_duration="3300" influence="8">
+        <door_repair itemid="188030000" repair_fee="5" repair_cooltime="30"/>
+        <artifact_activation itemid="188020000" count="1" skill="12152" repeat_count="1" repeat_interval="1" cd="5400"/>
+        <siege_reward top="18" itemid="186000096" m_count="3"/>
+        <siege_reward top="30" itemid="186000030" m_count="3"/>
+        <siege_reward top="45" itemid="186000030" m_count="2"/>
+        <siege_reward top="60" itemid="186000031" m_count="3"/>
+        <legion_reward itemid="186000096" m_count="3"/>
+        <legion_reward itemid="188051893" m_count="1"/>
+        <legion_reward itemid="122001524" m_count="1"/>
+        <luna_boost_price itemid="182400001"/>
+        <luna_teleport_price itemid="182400001"/>
+        <luna_reward itemid="186000242" l_count="10"/>
+        <luna_teleport race="ELYOS" world_id="400010000" x="1684" y="1017" z="2986" h="1684"/>
+        <luna_teleport race="ASMODIANS" world_id="400010000" x="1172" y="1038" z="2938" h="1172"/>
+    </siege_location>
+    <siege_location id="1224" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="4" skill="12091" repeat_count="5" repeat_interval="3" cd="2700"/>
+    </siege_location>
+    <!-- Kysis Fortress -->
+    <siege_location id="1231" type="FORTRESS" world="400010000" name_id="801833" occupy_count="1" buff_idA="8884" buff_idE="8875" siege_duration="3300" influence="8">
+        <door_repair itemid="188030000" repair_fee="5" repair_cooltime="30"/>
+        <artifact_activation itemid="188020000" count="1" skill="12153" repeat_count="1" repeat_interval="1" cd="5400"/>
+        <siege_reward top="12" itemid="186000242" m_count="3"/>
+        <siege_reward top="40" itemid="186000242" m_count="2"/>
+        <siege_reward top="40" itemid="186000242" m_count="1"/>
+        <siege_reward top="100" itemid="186000147" m_count="2"/>
+        <legion_reward itemid="186000096" m_count="3"/>
+        <legion_reward itemid="188051893" m_count="1"/>
+        <legion_reward itemid="122001525" m_count="1"/>
+        <luna_boost_price itemid="182400001"/>
+        <luna_teleport_price itemid="182400001"/>
+        <luna_reward itemid="186000242" l_count="10"/>
+        <luna_teleport race="ELYOS" world_id="400010000" x="2016" y="1480" z="2862" h="2016"/>
+        <luna_teleport race="ASMODIANS" world_id="400010000" x="1897" y="2030" z="3006" h="1897"/>
+    </siege_location>
+    <!-- Miren Fortress -->
+    <siege_location id="1241" type="FORTRESS" world="400010000" name_id="801835" occupy_count="1" buff_idA="8884" buff_idE="8875" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="5" repair_cooltime="30"/>
+        <artifact_activation itemid="188020000" count="1" skill="12154" repeat_count="1" repeat_interval="1" cd="5400"/>
+        <siege_reward top="12" itemid="186000242" m_count="3"/>
+        <siege_reward top="40" itemid="186000242" m_count="2"/>
+        <siege_reward top="40" itemid="186000242" m_count="1"/>
+        <siege_reward top="100" itemid="186000147" m_count="2"/>
+        <legion_reward itemid="186000096" m_count="3"/>
+        <legion_reward itemid="188051893" m_count="1"/>
+        <legion_reward itemid="122001526" m_count="1"/>
+        <luna_boost_price itemid="182400001"/>
+        <luna_teleport_price itemid="182400001"/>
+        <luna_reward itemid="186000242" l_count="10"/>
+        <luna_teleport race="ELYOS" world_id="400010000" x="1158" y="1629" z="2021" h="1158"/>
+        <luna_teleport race="ASMODIANS" world_id="400010000" x="1338" y="1995" z="2955" h="1338"/>
+    </siege_location>
+    <siege_location id="1401" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12159" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <siege_location id="1402" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12159" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <siege_location id="1403" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12159" repeat_count="1" repeat_interval="1" cd="2700"/>
+    </siege_location>
+    <!-- Kaldor Sieges -->
+    <siege_location id="7011" type="FORTRESS" world="600090000" name_id="808285" buff_id="12179" occupy_count="2" siege_duration="3600" influence="8">
+        <siege_reward top="10" itemid="186000096" m_count="1"/>
+        <siege_reward top="10" itemid="188052121" m_count="1"/>
+        <siege_reward top="20" itemid="186000096" m_count="1"/>
+        <siege_reward top="30" itemid="186000096" m_count="1"/>
+        <siege_reward top="40" itemid="186000096" m_count="1"/>
+        <legion_reward itemid="188052121" m_count="1"/>
+        <legion_reward itemid="186000096" m_count="50"/>
+        <luna_reward itemid="186000242" l_count="10"/>
+    </siege_location>
+    <siege_location id="7012" type="ARTIFACT" world="600090000" influence="1">
+        <artifact_activation itemid="188020002" count="4" skill="12183" repeat_count="5" repeat_interval="3" cd="900"/>
+    </siege_location>
+    <siege_location id="7013" type="ARTIFACT" world="600090000" influence="1">
+        <artifact_activation itemid="188020002" count="2" skill="12182" repeat_count="5" repeat_interval="3" cd="600"/>
+    </siege_location>
+    <siege_location id="7014" type="ARTIFACT" world="600090000" influence="1">
+        <artifact_activation itemid="188020002" count="2" skill="12182" repeat_count="5" repeat_interval="3" cd="600"/>
+    </siege_location>
+    <!-- Pangea Sieges -->
+    <siege_location id="10111" type="FORTRESS" world="400020000" name_id="808317" buff_id="339" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="75" repair_cooltime="30"/>
+        <siege_reward top="10" itemid="186000096" m_count="1"/>
+        <siege_reward top="10" itemid="188052121" m_count="1"/>
+        <siege_reward top="20" itemid="186000096" m_count="1"/>
+        <siege_reward top="30" itemid="186000096" m_count="1"/>
+        <siege_reward top="40" itemid="186000096" m_count="1"/>
+        <legion_reward itemid="188052121" m_count="1"/>
+        <legion_reward itemid="186000096" m_count="50"/>
+    </siege_location>
+    <siege_location id="10211" type="FORTRESS" world="400040000" name_id="808347" buff_id="339" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="75" repair_cooltime="30"/>
+        <siege_reward top="10" itemid="186000096" m_count="1"/>
+        <siege_reward top="10" itemid="188052121" m_count="1"/>
+        <siege_reward top="20" itemid="186000096" m_count="1"/>
+        <siege_reward top="30" itemid="186000096" m_count="1"/>
+        <siege_reward top="40" itemid="186000096" m_count="1"/>
+        <legion_reward itemid="188052121" m_count="1"/>
+        <legion_reward itemid="186000096" m_count="50"/>
+    </siege_location>
+    <siege_location id="10311" type="FORTRESS" world="400050000" name_id="808349" buff_id="339" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="75" repair_cooltime="30"/>
+        <siege_reward top="10" itemid="186000096" m_count="1"/>
+        <siege_reward top="10" itemid="188052121" m_count="1"/>
+        <siege_reward top="20" itemid="186000096" m_count="1"/>
+        <siege_reward top="30" itemid="186000096" m_count="1"/>
+        <siege_reward top="40" itemid="186000096" m_count="1"/>
+        <legion_reward itemid="188052121" m_count="1"/>
+        <legion_reward itemid="186000096" m_count="50"/>
+    </siege_location>
+    <siege_location id="10411" type="FORTRESS" world="400060000" name_id="808351" buff_id="339" siege_duration="3600" influence="8">
+        <door_repair itemid="188030000" repair_fee="75" repair_cooltime="30"/>
+        <siege_reward top="10" itemid="186000096" m_count="1"/>
+        <siege_reward top="10" itemid="188052121" m_count="1"/>
+        <siege_reward top="20" itemid="186000096" m_count="1"/>
+        <siege_reward top="30" itemid="186000096" m_count="1"/>
+        <siege_reward top="40" itemid="186000096" m_count="1"/>
+        <legion_reward itemid="188052121" m_count="1"/>
+        <legion_reward itemid="186000096" m_count="50"/>
+    </siege_location>
+</siege_locations>

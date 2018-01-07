@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="abyss_ops">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="abyss_op" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence/>
+                        <xs:attribute name="type" type="AbyssOpType" use="required"/>
+						<xs:attribute name="id" type="xs:int" use="required"/>
+						<xs:attribute name="race" type="Race" default="PC_ALL"/>
+						<xs:attribute name="npc_id" type="xs:int"/>
+						<xs:attribute name="points" type="xs:int"/>
+                        <xs:attribute name="group_id" type="xs:int"/>
+						<xs:attribute name="siege_id" type="xs:int"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="AbyssOpType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BASE"/>
+			<xs:enumeration value="OBJECT"/>
+			<xs:enumeration value="ARTIFACT"/>
+			<xs:enumeration value="FORTRESS"/>
+			<xs:enumeration value="WORLD_RAID"/>
+			<xs:enumeration value="INIT_OBJECT"/>
+			<xs:enumeration value="RAID_OBJECT"/>
+			<xs:enumeration value="FORTRESS_RAID"/>
+			<xs:enumeration value="OWNERSHIP_OBJECT"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

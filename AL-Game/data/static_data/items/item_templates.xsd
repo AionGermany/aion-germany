@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="../skill_tree/skill_tree.xsd"/>
+	<xs:include schemaLocation="../global_types.xsd"/>
+	<xs:include schemaLocation="../modifiers.xsd"/>
+	<xs:element name="item_templates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="item_template" type="ItemTemplate" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Godstone">
+		<xs:attribute name="skillid" type="xs:int"/>
+		<xs:attribute name="skilllvl" type="xs:int"/>
+		<xs:attribute name="probability" type="xs:int"/>
+		<xs:attribute name="probabilityleft" type="xs:int"/>
+		<xs:attribute name="breakprob" type="xs:int"/>
+		<xs:attribute name="breakcount" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="Stigma">
+		<xs:sequence>
+			<xs:element name="require_skill" type="RequireSkill" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="skill" type="StigmaSkillList"/>
+		<xs:attribute name="kinah" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="WeaponStats">
+		<xs:attribute name="min_damage" type="xs:int"/>
+		<xs:attribute name="max_damage" type="xs:int"/>
+		<xs:attribute name="attack_speed" type="xs:int"/>
+		<xs:attribute name="physical_critical" type="xs:int"/>
+		<xs:attribute name="physical_accuracy" type="xs:int"/>
+		<xs:attribute name="parry" type="xs:int"/>
+		<xs:attribute name="magical_accuracy" type="xs:int"/>
+		<xs:attribute name="boost_magical_skill" type="xs:int"/>
+		<xs:attribute name="attack_range" type="xs:int"/>
+		<xs:attribute name="hit_count" type="xs:int"/>
+		<xs:attribute name="reduce_max" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="TradeinList">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="tradein_item" type="TradeinItem" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="ap" type="xs:int" default="0" use="optional"/>
+		<xs:attribute name="price" type="xs:int" default="0" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="TradeinItem">
+		<xs:attribute name="id" type="itemId"/>
+		<xs:attribute name="count" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="Acquisition">
+		<xs:attribute name="ap" type="xs:int" default="0" use="optional"/>
+		<xs:attribute name="count" type="xs:int" default="0" use="optional"/>
+		<xs:attribute name="item" type="xs:int" default="0" use="optional"/>
+		<xs:attribute name="type" type="acquisitionType"/>
+	</xs:complexType>
+	<xs:complexType name="Disposition">
+		<xs:attribute name="id" type="itemId" use="required"/>
+		<xs:attribute name="count" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ExtraInventory">
+		<xs:attribute name="id" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Improvement">
+		<xs:attribute name="way" type="xs:int" use="required"/>
+		<xs:attribute name="price2" type="xs:int"/>
+		<xs:attribute name="price1" type="xs:int"/>
+		<xs:attribute name="burn_defend" type="xs:int"/>
+		<xs:attribute name="burn_attack" type="xs:int"/>
+		<xs:attribute name="level" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="Idian">
+		<xs:attribute name="burn_defend" type="xs:int"/>
+		<xs:attribute name="burn_attack" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="UseLimits">
+		<xs:attribute name="guild_level" type="xs:int" use="optional"/>
+		<xs:attribute name="ownership_world" type="xs:int" use="optional"/>
+		<xs:attribute name="usearea" type="xs:string" use="optional"/>
+		<xs:attribute name="rank_max" type="xs:int" use="optional"/>
+		<xs:attribute name="rank_min" type="xs:int" use="optional"/>
+		<xs:attribute name="ride_usable" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="gender" type="xs:string" use="optional"/>
+		<xs:attribute name="usedelayid" type="xs:int"/>
+		<xs:attribute name="usedelay" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="AssembledItem">
+		<xs:attribute name="id" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="RequireSkill">
+		<xs:attribute name="skillIds" type="IntListType"/>
+	</xs:complexType>
+	<xs:complexType name="ItemTemplate">
+		<xs:sequence>
+			<xs:element name="modifiers" type="Modifiers" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="actions" type="ItemActions" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="godstone" type="Godstone" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="stigma" type="Stigma" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="weapon_stats" type="WeaponStats" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tradein_list" type="TradeinList" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="acquisition" type="Acquisition" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="disposition" type="Disposition" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="improve" type="Improvement" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="uselimits" type="UseLimits" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="inventory" type="ExtraInventory" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="idian" type="Idian" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="activate_count" type="xs:int" use="optional"/>
+		<xs:attribute name="activate_combat" type="xs:boolean" use="optional"/>
+		<xs:attribute name="activate_target" type="ItemActivateTarget" use="optional"/>
+		<xs:attribute name="expire_time" type="xs:int" use="optional"/>
+		<xs:attribute name="temp_exchange_time" type="xs:int" use="optional"/>
+		<xs:attribute name="s_slots" type="xs:int" use="optional"/>
+		<xs:attribute name="option_slot_bonus" type="xs:int" use="optional"/>
+		<xs:attribute name="attack_gap" type="xs:float" use="optional"/>
+		<xs:attribute name="slot" type="xs:int" use="optional"/>
+		<xs:attribute name="m_slots" type="xs:int"/>
+		<xs:attribute name="max_enchant" type="xs:int"/>
+		<xs:attribute name="max_enchant_bonus" type="xs:int"/>
+		<xs:attribute name="exceed_enchant" type="xs:boolean" default="false"/>
+		<xs:attribute name="return_alias" type="xs:string"/>
+		<xs:attribute name="return_world" type="xs:int"/>
+		<xs:attribute name="equipment_type" type="equipType"/>
+		<xs:attribute name="weapon_boost" type="xs:int"/>
+		<xs:attribute name="attack_type" type="ItemAttackType"/>
+		<xs:attribute name="desc" type="xs:int"/>
+		<xs:attribute name="name_desc" type="xs:string"/>
+		<xs:attribute name="restrict_max" type="xs:string"/>
+		<xs:attribute name="restrict" type="xs:string"/>
+		<xs:attribute name="rnd_bonus" type="xs:int"/>
+		<xs:attribute name="rnd_count" type="xs:int"/>
+		<xs:attribute name="bonus_apply" type="xs:string"/>
+		<xs:attribute name="race" type="itemRace"/>
+		<xs:attribute name="price" type="xs:int"/>
+		<xs:attribute name="luna_price" type="xs:int"/>
+		<xs:attribute name="quality" type="itemQuality"/>
+		<xs:attribute name="category" type="Category"/>
+		<xs:attribute name="item_type" type="itemType"/>
+		<xs:attribute name="max_stack_count" type="xs:int"/>
+		<xs:attribute name="armor_type" type="armorType"/>
+		<xs:attribute name="weapon_type" type="weaponType"/>
+		<xs:attribute name="mask" type="xs:int"/>
+		<xs:attribute name="level" type="xs:int"/>
+		<xs:attribute name="id" type="itemId" use="required"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="robot_id" type="xs:int" use="optional"/>
+		<xs:attribute name="pack_count" type="xs:int" use="optional"/>
+		<xs:attribute name="max_authorize" type="xs:int" use="optional"/>
+		<xs:attribute name="authorize_condition" type="xs:int" use="optional"/>
+		<xs:attribute name="authorize_name" type="xs:int" use="optional"/>
+		<xs:attribute name="oversea_only" type="xs:int" use="optional"/>
+		<xs:attribute name="enchant_skill" type="xs:string"/>
+		<xs:attribute name="highreform_groupset" type="xs:int" use="optional"/> <!-- TODO -->
+		<xs:attribute name="minion_ticket" type="xs:boolean" use="optional"/>
+		<xs:attribute name="is_cash_contract" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="itemSlot">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MAIN_HAND"/>
+			<xs:enumeration value="SUB_HAND"/>
+			<xs:enumeration value="HAND_MAIN_OR_SUB"/>
+			<xs:enumeration value="HELMET"/>
+			<xs:enumeration value="TORSO"/>
+			<xs:enumeration value="GLOVES"/>
+			<xs:enumeration value="BOOTS"/>
+			<xs:enumeration value="EARRINGS_LEFT"/>
+			<xs:enumeration value="EARRINGS_RIGHT"/>
+			<xs:enumeration value="EARRING_RIGHT_OR_LEFT"/>
+			<xs:enumeration value="RING_LEFT"/>
+			<xs:enumeration value="RING_RIGHT"/>
+			<xs:enumeration value="RING_RIGHT_OR_LEFT"/>
+			<xs:enumeration value="NECKLACE"/>
+			<xs:enumeration value="SHOULDER"/>
+			<xs:enumeration value="PANTS"/>
+			<xs:enumeration value="POWER_SHARD_RIGHT"/>
+			<xs:enumeration value="POWER_SHARD_LEFT"/>
+			<xs:enumeration value="SHARD_RIGHT_OR_LEFT"/>
+			<xs:enumeration value="WINGS"/>
+			<xs:enumeration value="WAIST"/>
+			<xs:enumeration value="TORSO_GLOVE_FOOT_SHOULDER_LEG"/>
+			<xs:enumeration value="PLUME"/>
+			<xs:enumeration value="BRACELET"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="AbstractItemAction" abstract="true"/>
+	<xs:complexType name="ItemActions">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="skilllearn" type="SkillLearnAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skilluse" type="SkillUseAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="enchant" type="EnchantItemAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="queststart" type="QuestStartAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dye" type="DyeAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="craftlearn" type="CraftLearnAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="extract" type="ExtractAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="toypetspawn" type="ToyPetSpawnAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="decompose" type="DecomposeAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="expandinventory" type="ExpandInventoryAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="titleadd" type="TitleAddAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="learnemotion" type="EmotionLearnAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="animation" type="AnimationAddAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="read" type="ReadAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fireworkact" type="FireworksUseAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="instancetimeclear" type="InstanceTimeClear" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="cosmetic" type="CosmeticItemAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="charge" type="ChargeAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ride" type="RideAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="houseobject" type="SummonHouseObjectAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="housedeco" type="DecorateAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="assemble" type="AssemblyItemAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="adoptpet" type="AdoptPetAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="apextract" type="ApExtractAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="remodel" type="RemodelAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="expextract" type="ExpExtractAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="polish" type="PolishAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="composition" type="CompositionAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="tuning" type="TuningAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="pack" type="PackAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="stenchant" type="AuthorizeAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="multi_return_item" type="MultiReturnAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="godsocket" type="GodstoneAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="expaction" type="ExpAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="remove_soul_bind" type="RemoveSoulBindAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skill_animation" type="SkillAnimationAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="f2p" type="F2pAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="reductlevel" type="EquipedLevelAdjAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="luna" type="LunaChestAction" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RideAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="npc_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CosmeticItemAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="name" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ChargeAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="capacity" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EmotionLearnAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="emotionid" type="xs:int"/>
+				<xs:attribute name="minutes" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TitleAddAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="titleid" type="xs:int"/>
+				<xs:attribute name="minutes" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AnimationAddAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="idle" type="xs:int"/>
+				<xs:attribute name="run" type="xs:int"/>
+				<xs:attribute name="jump" type="xs:int"/>
+				<xs:attribute name="rest" type="xs:int"/>
+				<xs:attribute name="shop" type="xs:int"/>
+				<xs:attribute name="minutes" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillLearnAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="level" type="xs:int"/>
+				<xs:attribute name="class" type="playerClass"/>
+				<xs:attribute name="skillid" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillUseAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="skillid" type="xs:int"/>
+				<xs:attribute name="level" type="xs:int"/>
+				<xs:attribute name="mapid" type="xs:int" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EnchantItemAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="count" type="xs:int" default="0"/>
+				<xs:attribute name="min_level" type="xs:int" default="0"/>
+				<xs:attribute name="max_level" type="xs:int" default="0"/>
+				<xs:attribute name="chance" type="xs:float" default="0"/>
+				<xs:attribute name="manastone_only" type="xs:boolean" default="false"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ExtractAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AssemblyItemAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="item" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DyeAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="color" type="xs:string"/>
+				<xs:attribute name="minutes" type="xs:int" default="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="QuestStartAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="questid" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CraftLearnAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="recipeid" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ToyPetSpawnAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="npcid" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DecomposeAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="select" type="xs:boolean" default="false"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ExpandInventoryAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="level" type="xs:int"/>
+				<xs:attribute name="storage" type="storageType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReadAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="InstanceTimeClear">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="sync_ids" type="IntListType"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FireworksUseAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SummonHouseObjectAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DecorateAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AdoptPetAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="minutes" type="xs:int" use="optional"/>
+				<xs:attribute name="sidekick" type="xs:boolean" default="false"/>
+				<xs:attribute name="petId" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ApExtractAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="target" type="UseTarget"/>
+				<xs:attribute name="rate" type="xs:float"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TuningAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="target" type="UseTarget"/>
+				<xs:attribute name="type" type="xs:int"/>
+				<xs:attribute name="del" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PackAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="target" type="UseTarget"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AuthorizeAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="count" type="xs:int" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MultiReturnAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GodstoneAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RemodelAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="minutes" type="xs:int" use="optional"/>
+				<xs:attribute name="type" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ExpExtractAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="cost" type="xs:int"/>
+				<xs:attribute name="percent" type="xs:boolean" default="false"/>
+				<xs:attribute name="item_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ExpAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="cost" type="xs:int"/>
+				<xs:attribute name="percent" type="xs:boolean" default="false"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PolishAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="set_id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RemoveSoulBindAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CompositionAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillAnimationAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="F2pAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="pack" type="xs:string"/>
+				<xs:attribute name="minutes" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+    <xs:complexType name="EquipedLevelAdjAction">
+        <xs:complexContent>
+            <xs:extension base="AbstractItemAction"/>
+        </xs:complexContent>
+    </xs:complexType>
+	<xs:complexType name="LunaChestAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="count" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>    
+	<xs:simpleType name="equipType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ARMOR"/>
+			<xs:enumeration value="WEAPON"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ItemAttackType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PHYSICAL"/>
+			<xs:enumeration value="MAGICAL_WATER"/>
+			<xs:enumeration value="MAGICAL_WIND"/>
+			<xs:enumeration value="MAGICAL_FIRE"/>
+			<xs:enumeration value="MAGICAL_EARTH"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ItemActivateTarget">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="STANDALONE"/>
+			<xs:enumeration value="TARGET"/>
+			<xs:enumeration value="MYMENTO"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="storageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CUBE"/>
+			<xs:enumeration value="WAREHOUSE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="itemId">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="100000000"/>
+			<xs:maxInclusive value="200000000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="armorType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NO_ARMOR"/>
+			<xs:enumeration value="CHAIN"/>
+			<xs:enumeration value="CLOTHES"/>
+			<xs:enumeration value="LEATHER"/>
+			<xs:enumeration value="PLATE"/>
+			<xs:enumeration value="ROBE"/>
+			<xs:enumeration value="ARROW"/>
+			<xs:enumeration value="SHIELD"/>
+			<xs:enumeration value="WING"/>
+			<xs:enumeration value="PLUME"/>
+	    		<xs:enumeration value="ACCESSORY"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WeaponList">
+		<xs:list itemType="weaponType"/>
+	</xs:simpleType>
+	<xs:simpleType name="weaponType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DAGGER_1H"/>
+			<xs:enumeration value="MACE_1H"/>
+			<xs:enumeration value="SWORD_1H"/>
+			<xs:enumeration value="TOOLHOE_1H"/>
+			<xs:enumeration value="BOOK_2H"/>
+			<xs:enumeration value="ORB_2H"/>
+			<xs:enumeration value="POLEARM_2H"/>
+			<xs:enumeration value="STAFF_2H"/>
+			<xs:enumeration value="SWORD_2H"/>
+			<xs:enumeration value="TOOLPICK_2H"/>
+			<xs:enumeration value="TOOLROD_2H"/>
+			<xs:enumeration value="BOW"/>
+			<xs:enumeration value="CANNON_2H"/>
+			<xs:enumeration value="HARP_2H"/>
+			<xs:enumeration value="GUN_1H"/>
+			<xs:enumeration value="GUN_2H"/>
+			<xs:enumeration value="KEYBLADE_2H"/>
+			<xs:enumeration value="KEYHAMMER_2H"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Category">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MANASTONE"/>
+			<xs:enumeration value="ANCIENT_MANASTONE"/>
+			<xs:enumeration value="GODSTONE"/>
+			<xs:enumeration value="ENCHANTMENT"/>
+			<xs:enumeration value="AMPLIFICATION"/>
+			<xs:enumeration value="FLUX"/>
+			<xs:enumeration value="BALIC_EMOTION"/>
+			<xs:enumeration value="BALIC_MATERIAL"/>
+			<xs:enumeration value="RAWHIDE"/>
+			<xs:enumeration value="SOULSTONE"/>
+			<xs:enumeration value="RECIPE"/>
+			<xs:enumeration value="GATHERABLE"/>
+			<xs:enumeration value="GATHERABLE_BONUS"/>
+			<xs:enumeration value="DROP_MATERIAL"/>
+			<xs:enumeration value="SWORD"/>
+			<xs:enumeration value="DAGGER"/>
+			<xs:enumeration value="MACE"/>
+			<xs:enumeration value="ORB"/>
+			<xs:enumeration value="SPELLBOOK"/>
+			<xs:enumeration value="GREATSWORD"/>
+			<xs:enumeration value="POLEARM"/>
+			<xs:enumeration value="STAFF"/>
+			<xs:enumeration value="BOW"/>
+			<xs:enumeration value="SHIELD"/>
+			<xs:enumeration value="HARP"/>
+			<xs:enumeration value="GUN"/>
+			<xs:enumeration value="CANNON"/>
+			<xs:enumeration value="KEYBLADE"/>
+			<xs:enumeration value="JACKET"/>
+			<xs:enumeration value="PANTS"/>
+			<xs:enumeration value="SHARD"/>
+			<xs:enumeration value="SHOES"/>
+			<xs:enumeration value="GLOVES"/>
+			<xs:enumeration value="SHOULDERS"/>
+			<xs:enumeration value="NECKLACE"/>
+			<xs:enumeration value="EARRINGS"/>
+			<xs:enumeration value="RINGS"/>
+			<xs:enumeration value="HELMET"/>
+			<xs:enumeration value="BELT"/>
+			<xs:enumeration value="SKILLBOOK"/>
+			<xs:enumeration value="STIGMA"/>
+			<xs:enumeration value="COINS"/>
+			<xs:enumeration value="MEDALS"/>
+			<xs:enumeration value="QUEST"/>
+			<xs:enumeration value="KEY"/>
+			<xs:enumeration value="TEMPERING"/>
+			<xs:enumeration value="CRAFT_BOOST"/>
+			<xs:enumeration value="COMBINATION"/>
+			<xs:enumeration value="PLUME"/>
+			<xs:enumeration value="STENCHANTMENT"/>
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="BRACELET"/>
+			<xs:enumeration value="ESTIMA"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="itemType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NORMAL"/>
+			<xs:enumeration value="ABYSS"/>
+			<xs:enumeration value="DRACONIC"/>
+			<xs:enumeration value="DEVANION"/>
+			<xs:enumeration value="LEGEND"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="itemRace">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ELYOS"/>
+			<xs:enumeration value="ASMODIANS"/>
+			<xs:enumeration value="PC_ALL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="acquisitionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AP"/>
+			<xs:enumeration value="ABYSS"/>
+			<xs:enumeration value="REWARD"/>
+			<xs:enumeration value="COUPON"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UseTarget">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ACCESSORY"/>
+			<xs:enumeration value="ARMOR"/>
+			<xs:enumeration value="EQUIPMENT"/>
+			<xs:enumeration value="WEAPON"/>
+			<xs:enumeration value="WING"/>
+			<xs:enumeration value="PLUME"/>
+			<xs:enumeration value="BRACELET"/>
+			<xs:enumeration value="OTHER"/>
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="EVENT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StigmaSkillList">
+		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

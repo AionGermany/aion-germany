@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="global_types.xsd"/>
+    <xs:element name="base_locations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="base_location" type="Base" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Base">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="world" type="xs:int"/>
+        <xs:attribute name="name_id" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="auto_groups">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="auto_group" type="AutoGroup" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="AutoGroup">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="instanceId" type="xs:int" use="required"/>
+        <xs:attribute name="name_id" type="xs:int"/>
+        <xs:attribute name="title_id" type="xs:int"/>
+        <xs:attribute name="min_lvl" type="xs:int"/>
+        <xs:attribute name="max_lvl" type="xs:int"/>
+        <xs:attribute name="register_quick" type="xs:boolean"/>
+        <xs:attribute name="register_group" type="xs:boolean"/>
+        <xs:attribute name="register_new" type="xs:boolean"/>
+        <xs:attribute name="npc_ids" type="IntListType"/>
+    </xs:complexType>
+
+</xs:schema>

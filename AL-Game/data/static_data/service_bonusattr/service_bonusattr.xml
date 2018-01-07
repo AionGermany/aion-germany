@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 15:43 -->
+<service_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="service_bonusattr.xsd">
+    <!-- LegionBonusBuff_1st -->
+    <service_bonusattr buff_id="1">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="5"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="5"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="5"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- SecurityServiceBuff -->
+    <service_bonusattr buff_id="2">
+        <bonus_attr stat="FLY_TIME" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- LegionBonusBuff_1st_special -->
+    <service_bonusattr buff_id="3">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="25"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="25"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="25"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="25"/>
+    </service_bonusattr>
+    <!-- PCBangEXPBoost Buff -->
+    <service_bonusattr buff_id="4">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- LegionBonusBuff_2nd -->
+    <service_bonusattr buff_id="5">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="5"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="5"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="5"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- LegionBonusBuff_2nd_special -->
+    <service_bonusattr buff_id="6">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="25"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="25"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="25"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="25"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_2 -->
+    <service_bonusattr buff_id="7">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="1"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_3 -->
+    <service_bonusattr buff_id="8">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="1"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_4 -->
+    <service_bonusattr buff_id="9">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="15"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="100"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_5 -->
+    <service_bonusattr buff_id="10">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="15"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="100"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_6 -->
+    <service_bonusattr buff_id="11">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="5"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="25"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="100"/>
+        <bonus_attr stat="MAXHP" func="ADD" value="100"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_special_2 -->
+    <service_bonusattr buff_id="12">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="1"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_special_3 -->
+    <service_bonusattr buff_id="13">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="1"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_special_4 -->
+    <service_bonusattr buff_id="14">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="15"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="100"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_special_5 -->
+    <service_bonusattr buff_id="15">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="15"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="100"/>
+    </service_bonusattr>
+    <!-- PartyBonusBuff_special_6 -->
+    <service_bonusattr buff_id="16">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="5"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="25"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="100"/>
+        <bonus_attr stat="MAXHP" func="ADD" value="100"/>
+    </service_bonusattr>
+    <!-- Topping_Base_01 Buff -->
+    <service_bonusattr buff_id="1100">
+        <bonus_attr stat="MAXHP" func="ADD" value="100"/>
+        <bonus_attr stat="DR_BOOST" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- Topping_Base_02 Buff -->
+    <service_bonusattr buff_id="1101">
+        <bonus_attr stat="MAXHP" func="ADD" value="200"/>
+        <bonus_attr stat="DR_BOOST" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Damage_01 Buff -->
+    <service_bonusattr buff_id="1102">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Critical_01 Buff -->
+    <service_bonusattr buff_id="1103">
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="38"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Accuracy_01 Buff -->
+    <service_bonusattr buff_id="1104">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="58"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Damage_01 Buff -->
+    <service_bonusattr buff_id="1105">
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="56"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Crirical_01 Buff -->
+    <service_bonusattr buff_id="1106">
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Accuracy_01 Buff -->
+    <service_bonusattr buff_id="1107">
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="32"/>
+    </service_bonusattr>
+    <!-- Topping_APBoost_01 Buff -->
+    <service_bonusattr buff_id="1108">
+        <bonus_attr stat="AP_BOOST" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- Topping_EXPBoost_01 Buff -->
+    <service_bonusattr buff_id="1109">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- Topping_APPenaltyReduce_01 Buff -->
+    <service_bonusattr buff_id="1110">
+        <bonus_attr stat="AP_REDUCE_RATE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Resist_01 Buff -->
+    <service_bonusattr buff_id="1111">
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="19"/>
+    </service_bonusattr>
+    <!-- Topping_Block_01 Buff -->
+    <service_bonusattr buff_id="1112">
+        <bonus_attr stat="BLOCK" func="ADD" value="39"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Critical_Reduce_Rate_01 Buff -->
+    <service_bonusattr buff_id="1113">
+        <bonus_attr stat="PHYSICAL_CRITICAL_RESIST" func="ADD" value="21"/>
+    </service_bonusattr>
+    <!-- Topping_Dodge_01 Buff -->
+    <service_bonusattr buff_id="1114">
+        <bonus_attr stat="EVASION" func="ADD" value="27"/>
+    </service_bonusattr>
+    <!-- Topping_PvP_Defend_01 Buff -->
+    <service_bonusattr buff_id="1115">
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- Topping_EXPBoost_02 Buff -->
+    <service_bonusattr buff_id="1116">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- Topping_Base_SP_01 Buff -->
+    <service_bonusattr buff_id="2000">
+        <bonus_attr stat="MAXHP" func="ADD" value="85"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Damage_SP_01 Buff -->
+    <service_bonusattr buff_id="2001">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Critical_SP_01 Buff -->
+    <service_bonusattr buff_id="2002">
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Accuracy_SP_01 Buff -->
+    <service_bonusattr buff_id="2003">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Damage_SP_01 Buff -->
+    <service_bonusattr buff_id="2004">
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Crirical_SP_01 Buff -->
+    <service_bonusattr buff_id="2005">
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Accuracy_SP_01 Buff -->
+    <service_bonusattr buff_id="2006">
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="24"/>
+    </service_bonusattr>
+    <!-- Topping_APPenaltyReduce_SP_01 Buff -->
+    <service_bonusattr buff_id="2007">
+        <bonus_attr stat="AP_REDUCE_RATE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- Topping_EXPBoost_SP_01 Buff -->
+    <service_bonusattr buff_id="2008">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- Topping_APBoost__SP_01 Buff -->
+    <service_bonusattr buff_id="2009">
+        <bonus_attr stat="AP_BOOST" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- Topping_Magical_Resist_SP_01 Buff -->
+    <service_bonusattr buff_id="2010">
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="14"/>
+    </service_bonusattr>
+    <!-- Topping_Block_SP_01 Buff -->
+    <service_bonusattr buff_id="2011">
+        <bonus_attr stat="BLOCK" func="ADD" value="27"/>
+    </service_bonusattr>
+    <!-- Topping_Physical_Critical_Reduce_Rate_SP_01 Buff -->
+    <service_bonusattr buff_id="2012">
+        <bonus_attr stat="PHYSICAL_CRITICAL_RESIST" func="ADD" value="15"/>
+    </service_bonusattr>
+    <!-- Topping_Dodge_SP_01 Buff -->
+    <service_bonusattr buff_id="2013">
+        <bonus_attr stat="EVASION" func="ADD" value="17"/>
+    </service_bonusattr>
+    <!-- Topping_PvP_Defend_SP_01 Buff -->
+    <service_bonusattr buff_id="2014">
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="7"/>
+    </service_bonusattr>
+    <!-- Topping_EXPBoost_SP_02 Buff -->
+    <service_bonusattr buff_id="2015">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- World_Topping_Physical_Damage_01 Buff -->
+    <service_bonusattr buff_id="3000">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
+    </service_bonusattr>
+    <!-- World_Topping_Physical_Critical_01 Buff -->
+    <service_bonusattr buff_id="3001">
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="38"/>
+    </service_bonusattr>
+    <!-- World_Topping_Physical_Accuracy_01 Buff -->
+    <service_bonusattr buff_id="3002">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="58"/>
+    </service_bonusattr>
+    <!-- World_Topping_Magical_Damage_01 Buff -->
+    <service_bonusattr buff_id="3003">
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="56"/>
+    </service_bonusattr>
+    <!-- World_Topping_Magical_Crirical_01 Buff -->
+    <service_bonusattr buff_id="3004">
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- World_Topping_Magical_Accuracy_01 Buff -->
+    <service_bonusattr buff_id="3005">
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="32"/>
+    </service_bonusattr>
+    <!-- World_Topping_APBoost_01 Buff -->
+    <service_bonusattr buff_id="3006">
+        <bonus_attr stat="AP_BOOST" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- World_Topping_EXPBoost_01 Buff -->
+    <service_bonusattr buff_id="3007">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- World_Topping_Physical_Damage_02 Buff -->
+    <service_bonusattr buff_id="3008">
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
+    </service_bonusattr>
+    <!-- World_Topping_Physical_Critical_02 Buff -->
+    <service_bonusattr buff_id="3009">
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- World_Topping_Physical_Accuracy_02 Buff -->
+    <service_bonusattr buff_id="3010">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- World_Topping_Magical_Damage_02 Buff -->
+    <service_bonusattr buff_id="3011">
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- World_Topping_Magical_Crirical_02 Buff -->
+    <service_bonusattr buff_id="3012">
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- World_Topping_Magical_Accuracy_02 Buff -->
+    <service_bonusattr buff_id="3013">
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="24"/>
+    </service_bonusattr>
+    <!-- World_Topping_APBoost_02 Buff -->
+    <service_bonusattr buff_id="3014">
+        <bonus_attr stat="AP_BOOST" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- World_Topping_EXPBoost_02 Buff -->
+    <service_bonusattr buff_id="3015">
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- World_Topping_APPenaltyReduce_01 Buff -->
+    <service_bonusattr buff_id="3016">
+        <bonus_attr stat="AP_REDUCE_RATE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- World_Topping_APPenaltyReduce_02 Buff -->
+    <service_bonusattr buff_id="3017">
+        <bonus_attr stat="AP_REDUCE_RATE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- World_Topping_Speed_01 Buff -->
+    <service_bonusattr buff_id="3018">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="2"/>
+    </service_bonusattr>
+    <!-- World_Topping_Speed_02 Buff -->
+    <service_bonusattr buff_id="3019">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="2"/>
+    </service_bonusattr>
+    <!-- World_Topping_AttackDelay_01 Buff -->
+    <service_bonusattr buff_id="3020">
+        <bonus_attr stat="ATTACK_SPEED" func="PERCENT" value="1"/>
+    </service_bonusattr>
+    <!-- World_Topping_AttackDelay_SP_01 Buff -->
+    <service_bonusattr buff_id="3021">
+        <bonus_attr stat="ATTACK_SPEED" func="PERCENT" value="1"/>
+    </service_bonusattr>
+    <!-- World_Topping_CastingDelay_01 Buff -->
+    <service_bonusattr buff_id="3022">
+        <bonus_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="-1"/>
+    </service_bonusattr>
+    <!-- World_Topping_CastingDelay_SP_01 Buff -->
+    <service_bonusattr buff_id="3023">
+        <bonus_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="-1"/>
+    </service_bonusattr>
+    <!-- World_Topping_Enchantboost_01 Buff -->
+    <service_bonusattr buff_id="3024">
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="5"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="5"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- World_Topping_Enchantboost_SP_01 Buff -->
+    <service_bonusattr buff_id="3025">
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="5"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="5"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- World_Topping_PvPRatio_01 Buff -->
+    <service_bonusattr buff_id="3026">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="20"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- World_Topping_PvPRatio_SP_01 Buff -->
+    <service_bonusattr buff_id="3027">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="20"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- VIP_Base_CN_01 Buff -->
+    <service_bonusattr buff_id="1000001">
+        <bonus_attr stat="MAXHP" func="ADD" value="666"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="666"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="7"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- VIP_Base_CN_02 Buff -->
+    <service_bonusattr buff_id="1000002">
+        <bonus_attr stat="MAXHP" func="ADD" value="666"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="666"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="14"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="8"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="8"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="1"/>
+    </service_bonusattr>
+    <!-- VIP_Base_CN_03 Buff -->
+    <service_bonusattr buff_id="1000003">
+        <bonus_attr stat="MAXHP" func="ADD" value="666"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="666"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="21"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="11"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="12"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="3"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="14"/>
+    </service_bonusattr>
+    <!-- VIP_Base_CN_04 Buff -->
+    <service_bonusattr buff_id="1000004">
+        <bonus_attr stat="MAXHP" func="ADD" value="666"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="666"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="29"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="16"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="19"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="5"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="5"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="28"/>
+    </service_bonusattr>
+    <!-- VIP_Base_CN_05 Buff -->
+    <service_bonusattr buff_id="1000005">
+        <bonus_attr stat="MAXHP" func="ADD" value="888"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="800"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="33"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="22"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="24"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="7"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="7"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="34"/>
+    </service_bonusattr>
+    <!-- VIP_Base_CN_06 Buff -->
+    <service_bonusattr buff_id="1000006">
+        <bonus_attr stat="MAXHP" func="ADD" value="888"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="800"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="40"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="28"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="31"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="9"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="9"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="43"/>
+    </service_bonusattr>
+    <!-- VIP_OP_A_CN_01 Buff -->
+    <service_bonusattr buff_id="1000007">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="2"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- VIP_OP_A_CN_02 Buff -->
+    <service_bonusattr buff_id="1000008">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="2"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="1"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="20"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- VIP_OP_A_CN_03 Buff -->
+    <service_bonusattr buff_id="1000009">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="2"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="40"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="40"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="40"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="40"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- VIP_OP_A_CN_04 Buff -->
+    <service_bonusattr buff_id="1000010">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="60"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="60"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="60"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="60"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- VIP_OP_A_CN_05 Buff -->
+    <service_bonusattr buff_id="1000011">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- VIP_OP_A_CN_06 Buff -->
+    <service_bonusattr buff_id="1000012">
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="4"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="80"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="60"/>
+    </service_bonusattr>
+    <!-- VIP_OP_B_CN_01 Buff -->
+    <service_bonusattr buff_id="1000013">
+        <bonus_attr stat="INDUN_DROP_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- VIP_OP_B_CN_02 Buff -->
+    <service_bonusattr buff_id="1000014">
+        <bonus_attr stat="INDUN_DROP_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- VIP_OP_B_CN_03 Buff -->
+    <service_bonusattr buff_id="1000015">
+        <bonus_attr stat="INDUN_DROP_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- VIP_OP_B_CN_04 Buff -->
+    <service_bonusattr buff_id="1000016">
+        <bonus_attr stat="INDUN_DROP_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- VIP_OP_B_CN_05 Buff -->
+    <service_bonusattr buff_id="1000017">
+        <bonus_attr stat="INDUN_DROP_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- VIP_OP_B_CN_06 Buff -->
+    <service_bonusattr buff_id="1000018">
+        <bonus_attr stat="INDUN_DROP_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_BASE_TW_01 Buff -->
+    <service_bonusattr buff_id="2000001">
+        <bonus_attr stat="MAXHP" func="ADD" value="300"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="300"/>
+        <bonus_attr stat="REGEN_HP" func="ADD" value="6"/>
+        <bonus_attr stat="REGEN_MP" func="ADD" value="6"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="2"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="2"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="2"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="10"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_BASE_TW_02 Buff -->
+    <service_bonusattr buff_id="2000002">
+        <bonus_attr stat="MAXHP" func="ADD" value="500"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="500"/>
+        <bonus_attr stat="REGEN_HP" func="ADD" value="8"/>
+        <bonus_attr stat="REGEN_MP" func="ADD" value="8"/>
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="1"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="1"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_BASE_TW_03 Buff -->
+    <service_bonusattr buff_id="2000003">
+        <bonus_attr stat="MAXHP" func="ADD" value="700"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="700"/>
+        <bonus_attr stat="REGEN_HP" func="ADD" value="10"/>
+        <bonus_attr stat="REGEN_MP" func="ADD" value="10"/>
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="2"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="2"/>
+        <bonus_attr stat="ATTACK_SPEED" func="PERCENT" value="1"/>
+        <bonus_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="-1"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="3"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="20"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_BASE_TW_04 Buff -->
+    <service_bonusattr buff_id="2000004">
+        <bonus_attr stat="MAXHP" func="ADD" value="1000"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="1000"/>
+        <bonus_attr stat="REGEN_HP" func="ADD" value="12"/>
+        <bonus_attr stat="REGEN_MP" func="ADD" value="12"/>
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="ATTACK_SPEED" func="PERCENT" value="3"/>
+        <bonus_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="-3"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="5"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="5"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="5"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="35"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_BASE_TW_05 Buff -->
+    <service_bonusattr buff_id="2000005">
+        <bonus_attr stat="MAXHP" func="ADD" value="1500"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="1500"/>
+        <bonus_attr stat="REGEN_HP" func="ADD" value="14"/>
+        <bonus_attr stat="REGEN_MP" func="ADD" value="14"/>
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="ATTACK_SPEED" func="PERCENT" value="4"/>
+        <bonus_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="-4"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="10"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_BASE_TW_06 Buff -->
+    <service_bonusattr buff_id="2000006">
+        <bonus_attr stat="MAXHP" func="ADD" value="1500"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="1500"/>
+        <bonus_attr stat="REGEN_HP" func="ADD" value="16"/>
+        <bonus_attr stat="REGEN_MP" func="ADD" value="16"/>
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="ATTACK_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="-5"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="15"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="15"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="15"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_BASE_TW_07 Buff -->
+    <service_bonusattr buff_id="2000007">
+        <bonus_attr stat="MAXHP" func="ADD" value="1500"/>
+        <bonus_attr stat="MAXMP" func="ADD" value="1500"/>
+        <bonus_attr stat="REGEN_HP" func="ADD" value="18"/>
+        <bonus_attr stat="REGEN_MP" func="ADD" value="18"/>
+        <bonus_attr stat="FLY_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="ATTACK_SPEED" func="PERCENT" value="5"/>
+        <bonus_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="-5"/>
+        <bonus_attr stat="ENCHANT_BOOST" func="ADD" value="20"/>
+        <bonus_attr stat="AUTHORIZE_BOOST" func="ADD" value="20"/>
+        <bonus_attr stat="ENCHANT_OPTION_BOOST" func="ADD" value="20"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="50"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_A_TW_01 Buff -->
+    <service_bonusattr buff_id="2000008">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="18"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="11"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="1"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="12"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="2"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="18"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_A_TW_02 Buff -->
+    <service_bonusattr buff_id="2000009">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="58"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="32"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="32"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="10"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="56"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_A_TW_03 Buff -->
+    <service_bonusattr buff_id="2000010">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="61"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="34"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="11"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="34"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="11"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="59"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_A_TW_04 Buff -->
+    <service_bonusattr buff_id="2000011">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="64"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="35"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="12"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="35"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="12"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="62"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_A_TW_05 Buff -->
+    <service_bonusattr buff_id="2000012">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="70"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="38"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="13"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="38"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="13"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="67"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_A_TW_06 Buff -->
+    <service_bonusattr buff_id="2000013">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="81"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="45"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="14"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="45"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="14"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="78"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_A_TW_07 Buff -->
+    <service_bonusattr buff_id="2000014">
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="81"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="45"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="14"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="45"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="14"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="78"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_B_TW_01 Buff -->
+    <service_bonusattr buff_id="2000015">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="1"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="1"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_B_TW_02 Buff -->
+    <service_bonusattr buff_id="2000016">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="2"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="2"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_B_TW_03 Buff -->
+    <service_bonusattr buff_id="2000017">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="3"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_B_TW_04 Buff -->
+    <service_bonusattr buff_id="2000018">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="5"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="5"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_B_TW_05 Buff -->
+    <service_bonusattr buff_id="2000019">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="3"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="3"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_B_TW_06 Buff -->
+    <service_bonusattr buff_id="2000020">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="4"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="4"/>
+    </service_bonusattr>
+    <!-- MEMBERSHIP_PK_B_TW_07 Buff -->
+    <service_bonusattr buff_id="2000021">
+        <bonus_attr stat="PVP_ATTACK_RATIO" func="ADD" value="4"/>
+        <bonus_attr stat="PVP_DEFEND_RATIO" func="ADD" value="4"/>
+    </service_bonusattr>
+</service_bonusattrs>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="pet_feed">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="flavour" type="PetFlavour"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PetFlavour">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="food" type="PetRewards"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute default="0" name="full_count" type="xs:int"/>
+        <xs:attribute default="0" name="loved_limit" type="xs:int"/>
+        <xs:attribute name="cd" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="PetRewards">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element maxOccurs="unbounded" name="result" type="PetFeedResult"/>
+        </xs:sequence>
+        <xs:attribute name="group" type="FoodType" use="required"/>
+        <xs:attribute name="loved" type="xs:boolean" default="false"/>
+    </xs:complexType>
+
+    <xs:complexType name="PetFeedResult">
+        <xs:attribute name="item" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:simpleType name="FoodType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AETHER_CRYSTAL_BISCUIT"/>
+            <xs:enumeration value="AETHER_GEM_BISCUIT"/>
+            <xs:enumeration value="AETHER_POWDER_BISCUIT"/>
+            <xs:enumeration value="ARMOR"/>
+            <xs:enumeration value="BALAUR_SCALES"/>
+            <xs:enumeration value="BONES"/>
+            <xs:enumeration value="FLUIDS"/>
+            <xs:enumeration value="HEALTHY_FOOD_ALL"/>
+            <xs:enumeration value="HEALTHY_FOOD_SPICY"/>
+            <xs:enumeration value="MISCELLANEOUS"/>
+            <xs:enumeration value="POPPY_SNACK"/>
+            <xs:enumeration value="POPPY_SNACK_TASTY"/>
+            <xs:enumeration value="POPPY_SNACK_NUTRITIOUS"/>
+            <xs:enumeration value="SOULS"/>
+            <xs:enumeration value="SHUGO_EVENT_COIN"/>
+            <xs:enumeration value="THORNS"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

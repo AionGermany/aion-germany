@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+           jxb:version="2.1">
+    <xs:include schemaLocation="global_types.xsd"/>
+    <xs:element name="dimensional_vortex">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vortex_location" type="Vortex" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Vortex">
+        <xs:sequence>
+            <xs:element name="home_point" type="HomePoint" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="resurrection_point" type="ResurrectionPoint" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="start_point" type="StartPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="defends_race" type="Race"/>
+        <xs:attribute name="offence_race" type="Race"/>
+    </xs:complexType>
+    <xs:complexType name="HomePoint">
+        <xs:attribute name="map" type="xs:int" use="required"/>
+        <xs:attribute name="x" type="xs:float" use="required"/>
+        <xs:attribute name="y" type="xs:float" use="required"/>
+        <xs:attribute name="z" type="xs:float" use="required"/>
+        <xs:attribute name="h" type="xs:byte" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="ResurrectionPoint">
+        <xs:attribute name="map" type="xs:int" use="required"/>
+        <xs:attribute name="x" type="xs:float" use="required"/>
+        <xs:attribute name="y" type="xs:float" use="required"/>
+        <xs:attribute name="z" type="xs:float" use="required"/>
+        <xs:attribute name="h" type="xs:byte" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="StartPoint">
+        <xs:attribute name="map" type="xs:int" use="required"/>
+        <xs:attribute name="x" type="xs:float" use="required"/>
+        <xs:attribute name="y" type="xs:float" use="required"/>
+        <xs:attribute name="z" type="xs:float" use="required"/>
+        <xs:attribute name="h" type="xs:byte" use="required"/>
+    </xs:complexType>
+</xs:schema>

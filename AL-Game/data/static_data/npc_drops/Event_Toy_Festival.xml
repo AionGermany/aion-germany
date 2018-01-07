@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+	<!-- Shining Capsule -->
+	<npc_drop npc_id="833660">
+        <drop_group name="OTHER_MYTHIC" use_category="true" race="PC_ALL">
+            <drop item_id="182007396" chance="50.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Robot Energy" />
+        </drop_group>
+        <drop_group name="OTHER_RARE" use_category="true" race="PC_ALL">
+            <drop item_id="188100292" chance="50.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tonirunerk's Toy Legs" />
+        </drop_group>
+	</npc_drop>
+</npc_drops>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<players_service_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="players_bonus.xsd">
+	<players_service_bonusattr buff_id="1"/>
+	<!-- Ascension Boost -->
+	<players_service_bonusattr buff_id="2">
+		<apply_bonus stat="DR_BOOST" func="ADD" value="10"/>
+	</players_service_bonusattr>
+	<!-- Veteran Boost -->
+	<players_service_bonusattr buff_id="3">
+		<apply_bonus stat="DR_BOOST" func="ADD" value="10"/>
+	</players_service_bonusattr>
+	<!-- Account Game Experience Item "DIAMOND_01 Green" -->
+	<players_service_bonusattr buff_id="4"/>
+	<!-- Account Game Experience Item "DIAMOND_01 Blue" -->
+	<players_service_bonusattr buff_id="5"/>
+	<!-- Account Game Experience Item "DIAMOND_01 Pink" -->
+	<players_service_bonusattr buff_id="6"/>
+	<!-- Account Game Experience Item "DIAMOND_01 Yellow" -->
+	<players_service_bonusattr buff_id="7"/>
+	<!-- Account Game Experience Item "DIAMOND_01 Orange" -->
+	<players_service_bonusattr buff_id="8"/>
+	<!-- Account Game Experience Item "DIAMOND_01 Red" -->
+	<players_service_bonusattr buff_id="9"/>
+	<!-- Eminence Of The Bearer -->
+	<players_service_bonusattr buff_id="10">
+		<apply_bonus stat="DR_BOOST" func="ADD" value="10"/>
+		<apply_bonus stat="SPEED" func="PERCENT" value="5"/>
+	</players_service_bonusattr>
+</players_service_bonusattrs>

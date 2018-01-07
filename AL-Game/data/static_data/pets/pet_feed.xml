@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pet_feed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pet_feed.xsd">
+    <!-- Flavours with id 1-6 are NCSoft tests, not included -->
+    <flavour id="7" full_count="100" cd="10">
+        <food group="FLUIDS">
+            <result item="188050758"/>
+            <result item="188050759"/>
+            <result item="188050760"/>
+            <result item="188050761"/>
+            <result item="188050762"/>
+        </food>
+    </flavour>
+    <flavour id="8" full_count="100" cd="10">
+        <food group="ARMOR">
+            <result item="188050753"/>
+            <result item="188050754"/>
+            <result item="188050755"/>
+            <result item="188050756"/>
+            <result item="188050757"/>
+        </food>
+    </flavour>
+    <flavour id="9" full_count="40" cd="10">
+        <food group="THORNS">
+            <result item="188050988"/>
+            <result item="188050989"/>
+            <result item="188050990"/>
+            <result item="188050991"/>
+            <result item="188050992"/>
+        </food>
+    </flavour>
+    <flavour id="10" full_count="100" cd="10">
+        <food group="MISCELLANEOUS">
+            <result item="188050993"/>
+            <result item="188050994"/>
+            <result item="188050995"/>
+            <result item="188050996"/>
+            <result item="188050997"/>
+        </food>
+    </flavour>
+    <flavour id="11" full_count="200" loved_limit="40" cd="10">
+        <food group="MISCELLANEOUS">
+            <result item="188050763"/>
+            <result item="188050764"/>
+            <result item="188050765"/>
+            <result item="188050766"/>
+            <result item="188050767"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188050961"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188050961"/>
+            <result item="188050962"/>
+            <result item="188050963"/>
+        </food>
+    </flavour>
+    <flavour id="12" full_count="200" loved_limit="40" cd="10">
+        <food group="BONES">
+            <result item="188051003"/>
+            <result item="188051004"/>
+            <result item="188051005"/>
+            <result item="188051006"/>
+            <result item="188051007"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051028"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051028"/>
+            <result item="188051029"/>
+            <result item="188051030"/>
+        </food>
+    </flavour>
+    <flavour id="13" full_count="200" loved_limit="40" cd="10">
+        <food group="BONES">
+            <result item="188051008"/>
+            <result item="188051009"/>
+            <result item="188051010"/>
+            <result item="188051011"/>
+            <result item="188051012"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051031"/>
+            <result item="188051032"/>
+            <result item="188051033"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051031"/>
+            <result item="188051032"/>
+            <result item="188051033"/>
+        </food>
+    </flavour>
+    <flavour id="14" full_count="100" cd="10">
+        <food group="BALAUR_SCALES">
+            <result item="188050953"/>
+            <result item="188050954"/>
+            <result item="188050955"/>
+            <result item="188050956"/>
+            <result item="188050957"/>
+        </food>
+    </flavour>
+    <flavour id="15" full_count="200" loved_limit="10" cd="10">
+        <food group="SOULS">
+            <result item="188050967"/>
+            <result item="188050968"/>
+            <result item="188050969"/>
+            <result item="188050970"/>
+            <result item="188050971"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188050958"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188050958"/>
+            <result item="188050959"/>
+            <result item="188050960"/>
+        </food>
+        <food group="AETHER_GEM_BISCUIT" loved="true">
+            <result item="188050960"/>
+        </food>
+    </flavour>
+    <flavour id="16" full_count="50" loved_limit="10" cd="10">
+        <food group="SOULS">
+            <result item="188050972"/>
+            <result item="188050973"/>
+            <result item="188050974"/>
+            <result item="188050975"/>
+            <result item="188050976"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051043"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051043"/>
+            <result item="188051044"/>
+            <result item="188051045"/>
+        </food>
+    </flavour>
+    <flavour id="17" full_count="100" loved_limit="10" cd="10">
+        <food group="BALAUR_SCALES">
+            <result item="188051013"/>
+            <result item="188051014"/>
+            <result item="188051015"/>
+            <result item="188051016"/>
+            <result item="188051017"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051037"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051037"/>
+            <result item="188051038"/>
+            <result item="188051039"/>
+        </food>
+    </flavour>
+    <flavour id="18" full_count="100" loved_limit="10" cd="10">
+        <food group="SOULS">
+            <result item="188050977"/>
+            <result item="188050978"/>
+            <result item="188050979"/>
+            <result item="188050980"/>
+            <result item="188050981"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051034"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051034"/>
+            <result item="188051035"/>
+            <result item="188051036"/>
+        </food>
+    </flavour>
+    <flavour id="19" full_count="50" loved_limit="10" cd="10">
+        <food group="SOULS">
+            <result item="188051023"/>
+            <result item="188051024"/>
+            <result item="188051025"/>
+            <result item="188051026"/>
+            <result item="188051027"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051046"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051046"/>
+            <result item="188051047"/>
+            <result item="188051048"/>
+        </food>
+    </flavour>
+    <flavour id="20" full_count="100" loved_limit="10" cd="10">
+        <food group="BALAUR_SCALES">
+            <result item="188051018"/>
+            <result item="188051019"/>
+            <result item="188051020"/>
+            <result item="188051021"/>
+            <result item="188051022"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051040"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051040"/>
+            <result item="188051041"/>
+            <result item="188051042"/>
+        </food>
+    </flavour>
+    <flavour id="21" full_count="200" loved_limit="10" cd="10">
+        <food group="BONES">
+            <result item="188051063"/>
+            <result item="188051064"/>
+            <result item="188051065"/>
+            <result item="188051066"/>
+            <result item="188051067"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051054"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051054"/>
+            <result item="188051055"/>
+            <result item="188051056"/>
+        </food>
+    </flavour>
+    <flavour id="22" full_count="100" loved_limit="10" cd="10">
+        <food group="BALAUR_SCALES">
+            <result item="188051068"/>
+            <result item="188051069"/>
+            <result item="188051070"/>
+            <result item="188051071"/>
+            <result item="188051072"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="190020060"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051057"/>
+            <result item="188051058"/>
+            <result item="188051059"/>
+        </food>
+    </flavour>
+    <flavour id="23" full_count="50" loved_limit="10" cd="10">
+        <food group="SOULS">
+            <result item="188051073"/>
+            <result item="188051074"/>
+            <result item="188051075"/>
+            <result item="188051076"/>
+            <result item="188051077"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051060"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051060"/>
+            <result item="188051061"/>
+            <result item="188051062"/>
+        </food>
+    </flavour>
+    <flavour id="24" full_count="200" loved_limit="40" cd="10">
+        <food group="MISCELLANEOUS">
+            <result item="188051080"/>
+            <result item="188051081"/>
+            <result item="188051082"/>
+            <result item="188051083"/>
+            <result item="188051084"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051078"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051078"/>
+            <result item="188051079"/>
+        </food>
+    </flavour>
+    <flavour id="25" full_count="100" cd="10">
+        <food group="MISCELLANEOUS">
+            <result item="188051085"/>
+            <result item="188051086"/>
+            <result item="188051087"/>
+            <result item="188051088"/>
+            <result item="188051089"/>
+        </food>
+    </flavour>
+    <flavour id="26" full_count="100" cd="10">
+        <food group="HEALTHY_FOOD_ALL">
+            <result item="188051228"/>
+            <result item="188051229"/>
+            <result item="188051230"/>
+            <result item="188051231"/>
+            <result item="188051232"/>
+            <result item="188051233"/>
+        </food>
+    </flavour>
+    <flavour id="27" full_count="100" cd="10">
+        <food group="HEALTHY_FOOD_ALL">
+            <result item="188051240"/>
+            <result item="188051241"/>
+            <result item="188051242"/>
+            <result item="188051243"/>
+            <result item="188051244"/>
+            <result item="188051245"/>
+        </food>
+    </flavour>
+    <flavour id="28" full_count="100" cd="10">
+        <food group="HEALTHY_FOOD_ALL">
+            <result item="188051234"/>
+            <result item="188051235"/>
+            <result item="188051236"/>
+            <result item="188051237"/>
+            <result item="188051238"/>
+            <result item="188051239"/>
+            <result item="188051264"/>
+        </food>
+    </flavour>
+    <flavour id="29" full_count="100" cd="10">
+        <food group="HEALTHY_FOOD_ALL">
+            <result item="188051246"/>
+            <result item="188051247"/>
+            <result item="188051248"/>
+            <result item="188051249"/>
+            <result item="188051250"/>
+            <result item="188051251"/>
+            <result item="188051265"/>
+        </food>
+    </flavour>
+    <flavour id="30" full_count="50" loved_limit="10" cd="10">
+        <food group="SOULS">
+            <result item="188051355"/>
+            <result item="188051356"/>
+            <result item="188051357"/>
+            <result item="188051358"/>
+            <result item="188051359"/>
+        </food>
+        <food group="AETHER_POWDER_BISCUIT" loved="true">
+            <result item="188051353"/>
+        </food>
+        <food group="AETHER_CRYSTAL_BISCUIT" loved="true">
+            <result item="188051354"/>
+        </food>
+    </flavour>
+    <flavour id="31" full_count="50" cd="600">
+        <food group="HEALTHY_FOOD_SPICY">
+            <result item="188051360"/>
+        </food>
+    </flavour>
+    <flavour id="32" full_count="1" loved_limit="40" cd="0">
+        <food group="POPPY_SNACK" loved="true">
+            <result item="188051384"/>
+        </food>
+        <food group="POPPY_SNACK_TASTY" loved="true">
+            <result item="188051385"/>
+        </food>
+        <food group="POPPY_SNACK_NUTRITIOUS" loved="true">
+            <result item="188051386"/>
+        </food>
+    </flavour>
+    <flavour id="33" full_count="25" cd="1200">
+        <food group="HEALTHY_FOOD_SPICY">
+            <result item="188051646"/>
+            <result item="188051647"/>
+            <result item="188051648"/>
+        </food>
+    </flavour>
+    <flavour id="34" full_count="100" cd="1080">
+        <food group="SOULS">
+            <!-- Aether bundles -->
+            <result item="188051880"/>
+            <result item="188051881"/>
+            <result item="188051882"/>
+            <result item="188051883"/>
+            <result item="188051884"/>
+        </food>
+    </flavour>
+    <flavour id="35" full_count="10" cd="60">
+        <food group="HEALTHY_FOOD_SPICY">
+            <!-- decomposable for: 169620056, 169620057, 169620058 -->
+            <result item="188052010"/>
+        </food>
+    </flavour>
+    <flavour id="36" full_count="10" cd="60">
+        <food group="HEALTHY_FOOD_SPICY">
+            <!-- decomposable for: 169620059, 169620060, 169620061 -->
+            <result item="188052011"/>
+        </food>
+    </flavour>
+    <flavour id="37" full_count="10" cd="1200">
+        <food group="SHUGO_EVENT_COIN">
+            <result item="188052303"/>
+        </food>
+    </flavour>
+    <flavour id="38" full_count="10" cd="1200">
+        <food group="SHUGO_EVENT_COIN">
+            <result item="188052688"/>
+        </food>
+    </flavour>
+    <flavour id="39" full_count="10" cd="1200">
+        <food group="HEALTHY_FOOD_SPICY">
+            <result item="188051360"/>
+        </food>
+    </flavour>
+</pet_feed>

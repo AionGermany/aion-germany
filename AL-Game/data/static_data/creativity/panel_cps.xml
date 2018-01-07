@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-11-06 21:03 -->
+<panel_cps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="panel_cps.xsd">
+    <!-- Enhance Character -->
+    <panel_cp id="1" name="Power" panelType="STAT_UP" statsId="1" statValue="1" countMax="255" cost="0" costAdj="1"/>
+    <panel_cp id="2" name="Health" panelType="STAT_UP" statsId="2" statValue="1" countMax="255" cost="0" costAdj="1"/>
+    <panel_cp id="3" name="Agility" panelType="STAT_UP" statsId="3" statValue="1" countMax="255" cost="0" costAdj="1"/>
+    <panel_cp id="4" name="Accuracy" panelType="STAT_UP" statsId="4" statValue="1" countMax="255" cost="0" costAdj="1"/>
+    <panel_cp id="5" name="Knowledge" panelType="STAT_UP" statsId="5" statValue="1" countMax="255" cost="0" costAdj="1"/>
+    <panel_cp id="6" name="Will" panelType="STAT_UP" statsId="6" statValue="1" countMax="255" cost="0" costAdj="1"/>
+    <panel_cp id="7" name="Compassion of Wind" panelType="LEARN_SKILL" learnSkill="4696" additionalSkill="4697" cost="5" costAdj="0"/>
+    <panel_cp id="8" name="ALL_HIGHDEVA_1" panelType="ENCHANT_SKILL" learnSkill="4696" countMax="5" cost="1" costAdj="2"/>
+    <panel_cp id="9" name="Compassion of Fire" panelType="LEARN_SKILL" learnSkill="4700" additionalSkill="4701" cost="5" costAdj="0"/>
+    <panel_cp id="10" name="ALL_HIGHDEVA_3" panelType="ENCHANT_SKILL" learnSkill="4700" countMax="5" cost="1" costAdj="2"/>
+    <panel_cp id="11" name="Compassion of Water" panelType="LEARN_SKILL" learnSkill="4702" additionalSkill="4703" cost="5" costAdj="0"/>
+    <panel_cp id="12" name="ALL_HIGHDEVA_4" panelType="ENCHANT_SKILL" learnSkill="4702" countMax="5" cost="1" costAdj="2"/>
+    <panel_cp id="13" name="Compassion of the Earth" panelType="LEARN_SKILL" learnSkill="4698" additionalSkill="4699" cost="5" costAdj="0"/>
+    <panel_cp id="14" name="ALL_HIGHDEVA_2" panelType="ENCHANT_SKILL" learnSkill="4698" countMax="5" cost="1" costAdj="2"/>
+    <panel_cp id="15" name="Blade of Incitement I" panelType="ENCHANT_SKILL" skillId="517" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="16" name="Crushing Blow" panelType="ENCHANT_SKILL" skillId="538" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="17" name="Aerial Lockdown" panelType="ENCHANT_SKILL" skillId="553" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="18" name="Energy Explosion" panelType="ENCHANT_SKILL" skillId="573" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="19" name="Ferocious Strike" panelType="ENCHANT_SKILL" skillId="2876" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="20" name="Body Smash" panelType="ENCHANT_SKILL" skillId="2902" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="21" name="Repeated Body Smash" panelType="ENCHANT_SKILL" skillId="603" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="22" name="Body Blow I" panelType="ENCHANT_SKILL" skillId="604" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="23" name="Reckless Strike" panelType="ENCHANT_SKILL" skillId="611" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="24" name="Wrathful Strike" panelType="ENCHANT_SKILL" skillId="634" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="25" name="Piercing Rupture" panelType="ENCHANT_SKILL" skillId="647" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="26" name="Weakening Blow VII" panelType="ENCHANT_SKILL" skillId="669" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="27" name="Cleave" panelType="ENCHANT_SKILL" skillId="719" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="28" name="Great Cleave" panelType="ENCHANT_SKILL" skillId="724" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="29" name="Righteous Cleave II" panelType="ENCHANT_SKILL" skillId="726" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="30" name="Rupture" panelType="ENCHANT_SKILL" skillId="748" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="31" name="Robust Blow" panelType="ENCHANT_SKILL" skillId="2889" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="32" name="Counter Leech" panelType="ENCHANT_SKILL" skillId="760" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="33" name="Crashing Blow" panelType="ENCHANT_SKILL" skillId="516" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="34" name="Explosion of Rage" panelType="ENCHANT_SKILL" skillId="530" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="35" name="Raging Blow I" panelType="ENCHANT_SKILL" skillId="554" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="36" name="Seismic Billow" panelType="ENCHANT_SKILL" skillId="562" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="41" name="Explosion of Wrath" panelType="ENCHANT_SKILL" skillId="623" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="42" name="Wrathful Wave" panelType="ENCHANT_SKILL" skillId="640" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="44" name="Pressure Wave" panelType="ENCHANT_SKILL" skillId="675" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="45" name="Dragon Cut Variation I" panelType="ENCHANT_SKILL" skillId="682" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="47" name="Absorption Wave I" panelType="ENCHANT_SKILL" skillId="758" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="48" name="Fury Absorption" panelType="ENCHANT_SKILL" skillId="780" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="49" name="Springing Slice" panelType="ENCHANT_SKILL" skillId="597" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="50" name="Final Strike" panelType="ENCHANT_SKILL" skillId="709" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="51" name="Sword Wind" panelType="ENCHANT_SKILL" skillId="3126" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="52" name="Air Change I" panelType="ENCHANT_SKILL" skillId="3065" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="53" name="Dazing Severe Blow" panelType="ENCHANT_SKILL" skillId="4606" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="54" name="Shield Bash" panelType="ENCHANT_SKILL" skillId="3083" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="55" name="Shield Shock I" panelType="ENCHANT_SKILL" skillId="3084" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="56" name="Swinging Shield Counter" panelType="ENCHANT_SKILL" skillId="3115" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="57" name="Judgment" panelType="ENCHANT_SKILL" skillId="3146" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="58" name="Divine Blow" panelType="ENCHANT_SKILL" skillId="4608" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="59" name="Holy Punishment" panelType="ENCHANT_SKILL" skillId="3034" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="62" name="Wrath Strike" panelType="ENCHANT_SKILL" skillId="3047" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="63" name="Bloodsword Slash" panelType="ENCHANT_SKILL" skillId="3130" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="64" name="Slash Artery" panelType="ENCHANT_SKILL" skillId="3173" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="65" name="Illusion Chains I" panelType="ENCHANT_SKILL" skillId="2967" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="66" name="Divine Grasp" panelType="ENCHANT_SKILL" skillId="3167" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="68" name="Face Smash" panelType="ENCHANT_SKILL" skillId="3112" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="69" name="Shield Counter" panelType="ENCHANT_SKILL" skillId="3105" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="70" name="Ensnaring Blow I" panelType="ENCHANT_SKILL" skillId="3071" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="71" name="Panoply of Protection I" panelType="ENCHANT_SKILL" skillId="3069" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="75" name="Pitiless Blow" panelType="ENCHANT_SKILL" skillId="3068" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="76" name="Break Power" panelType="ENCHANT_SKILL" skillId="3122" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="77" name="Avenging Blow" panelType="ENCHANT_SKILL" skillId="3093" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="78" name="Surprise Attack" panelType="ENCHANT_SKILL" skillId="3208" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="79" name="Beast Kick" panelType="ENCHANT_SKILL" skillId="3434" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="80" name="Beast Fang" panelType="ENCHANT_SKILL" skillId="3369" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="81" name="Fang Strike" panelType="ENCHANT_SKILL" skillId="3426" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="82" name="Beast Swipe" panelType="ENCHANT_SKILL" skillId="3440" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="83" name="Massacre" panelType="ENCHANT_SKILL" skillId="3416" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="84" name="Rune Carve" panelType="ENCHANT_SKILL" skillId="3395" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="85" name="Rune Burst" panelType="ENCHANT_SKILL" skillId="3299" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="86" name="Pain Rune Burst" panelType="ENCHANT_SKILL" skillId="3384" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="87" name="Back Breaker" panelType="ENCHANT_SKILL" skillId="3518" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="88" name="Sneak Ambush I" panelType="ENCHANT_SKILL" skillId="3467" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="89" name="Swift Edge" panelType="ENCHANT_SKILL" skillId="3194" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="90" name="Assassination" panelType="ENCHANT_SKILL" skillId="3477" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="91" name="Killing Spree" panelType="ENCHANT_SKILL" skillId="3479" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="92" name="Soul Slash" panelType="ENCHANT_SKILL" skillId="3234" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="93" name="Dash Attack" panelType="ENCHANT_SKILL" skillId="3466" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="94" name="Ambush Attack" panelType="ENCHANT_SKILL" skillId="3344" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="95" name="Ambush Assault I" panelType="ENCHANT_SKILL" skillId="3271" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="96" name="Blood Rune" panelType="ENCHANT_SKILL" skillId="3354" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="97" name="Rune Slash" panelType="ENCHANT_SKILL" skillId="3291" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="98" name="Binding Rune" panelType="ENCHANT_SKILL" skillId="3414" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="99" name="Cross Slash" panelType="ENCHANT_SKILL" skillId="3307" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="100" name="Spiral Slash" panelType="ENCHANT_SKILL" skillId="3505" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="101" name="Fall" panelType="ENCHANT_SKILL" skillId="3305" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="102" name="Leap of the Beast" panelType="ENCHANT_SKILL" skillId="3405" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="103" name="Vaizel's Dirk" panelType="ENCHANT_SKILL" skillId="3499" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="104" name="Triniel's Dirk" panelType="ENCHANT_SKILL" skillId="3495" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="107" name="Divine Strike" panelType="ENCHANT_SKILL" skillId="3530" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="110" name="Signet Silence" panelType="ENCHANT_SKILL" skillId="3311" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="112" name="Cyclone Slash" panelType="ENCHANT_SKILL" skillId="3347" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="113" name="Counter-Attack" panelType="ENCHANT_SKILL" skillId="3221" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="114" name="Ambush" panelType="ENCHANT_SKILL" skillId="3364" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="115" name="Whirlwind Slash" panelType="ENCHANT_SKILL" skillId="3490" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="116" name="Stunning Shot" panelType="ENCHANT_SKILL" skillId="795" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="117" name="Griffonix Arrow" panelType="ENCHANT_SKILL" skillId="829" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="118" name="Spiral Arrow" panelType="ENCHANT_SKILL" skillId="837" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="119" name="Spread Shot" panelType="ENCHANT_SKILL" skillId="839" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="120" name="Weakening Arrow I" panelType="ENCHANT_SKILL" skillId="848" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="121" name="Manaleech Shot" panelType="ENCHANT_SKILL" skillId="866" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="123" name="Fleshcutter Arrow" panelType="ENCHANT_SKILL" skillId="895" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="125" name="Arrow Strike" panelType="ENCHANT_SKILL" skillId="949" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="126" name="Entangling Shot" panelType="ENCHANT_SKILL" skillId="961" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="127" name="Sniper Shot" panelType="ENCHANT_SKILL" skillId="1005" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="128" name="Deadshot" panelType="ENCHANT_SKILL" skillId="1021" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="129" name="Shackle Arrow" panelType="ENCHANT_SKILL" skillId="1026" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="130" name="Silencing Shot" panelType="ENCHANT_SKILL" skillId="1074" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="131" name="Rupture Arrow" panelType="ENCHANT_SKILL" skillId="1110" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="132" name="Unerring Arrow" panelType="ENCHANT_SKILL" skillId="1119" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="133" name="Arrow Storm" panelType="ENCHANT_SKILL" skillId="1140" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="136" name="Poisoning Trap" panelType="ENCHANT_SKILL" skillId="21992" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="138" name="Final Storm Attack" panelType="ENCHANT_SKILL" skillId="1056" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="139" name="Shock Trap" panelType="ENCHANT_SKILL" skillId="1058" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="140" name="Fighting Withdrawal" panelType="ENCHANT_SKILL" skillId="1089" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="141" name="Retreating Slash" panelType="ENCHANT_SKILL" skillId="1098" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="143" name="Aether Arrow" panelType="ENCHANT_SKILL" skillId="1125" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="144" name="Seizure Arrow" panelType="ENCHANT_SKILL" skillId="1085" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="145" name="Penance" panelType="ENCHANT_SKILL" skillId="3877" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="146" name="Power Blast" panelType="ENCHANT_SKILL" skillId="4151" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="147" name="Flashbolt" panelType="ENCHANT_SKILL" skillId="4036" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="148" name="Storm of Vengeance" panelType="ENCHANT_SKILL" skillId="4104" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="149" name="Thunderbolt" panelType="ENCHANT_SKILL" skillId="4060" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="150" name="Hallowed Strike" panelType="ENCHANT_SKILL" skillId="1626" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="151" name="Earth's Wrath" panelType="ENCHANT_SKILL" skillId="4094" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="152" name="Crush" panelType="ENCHANT_SKILL" skillId="4024" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="153" name="Punishing Earth" panelType="ENCHANT_SKILL" skillId="4053" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="154" name="Stunning Hammer I" panelType="ENCHANT_SKILL" skillId="4011" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="155" name="Divine Spark" panelType="ENCHANT_SKILL" skillId="4045" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="156" name="Divine Touch" panelType="ENCHANT_SKILL" skillId="4082" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="157" name="Summon Holy Servant" panelType="ENCHANT_SKILL" skillId="21947" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="158" name="Aero Snare" panelType="ENCHANT_SKILL" skillId="4097" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="159" name="Chastise" panelType="ENCHANT_SKILL" skillId="4133" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="161" name="Slashing Wind" panelType="ENCHANT_SKILL" skillId="4072" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="162" name="Infernal Blaze" panelType="ENCHANT_SKILL" skillId="1825" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="163" name="Impervious Veil" panelType="ENCHANT_SKILL" skillId="4101" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="165" name="Immortal Shroud" panelType="ENCHANT_SKILL" skillId="3921" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="166" name="Life Shield" panelType="ENCHANT_SKILL" skillId="4194" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="168" name="Light of Rejuvenation" panelType="ENCHANT_SKILL" skillId="3950" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="170" name="Healing Splendour I" panelType="ENCHANT_SKILL" skillId="3977" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="171" name="Healing Wind" panelType="ENCHANT_SKILL" skillId="4202" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="172" name="Blessed Shield" panelType="ENCHANT_SKILL" skillId="3917" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="173" name="Healing Light" panelType="ENCHANT_SKILL" skillId="1850" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="174" name="Healing Lightning Bolt" panelType="ENCHANT_SKILL" skillId="3974" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="175" name="Radiant Cure" panelType="ENCHANT_SKILL" skillId="4212" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="176" name="Splendour of Recovery" panelType="ENCHANT_SKILL" skillId="4181" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="177" name="Light of Recovery" panelType="ENCHANT_SKILL" skillId="4219" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="178" name="Flash of Recovery" panelType="ENCHANT_SKILL" skillId="3959" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="179" name="Word of Destruction" panelType="ENCHANT_SKILL" skillId="4175" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="180" name="Stone Shock" panelType="ENCHANT_SKILL" skillId="3624" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="181" name="Chain of Earth" panelType="ENCHANT_SKILL" skillId="3613" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="182" name="Spirit Detonation Claw I" panelType="ENCHANT_SKILL" skillId="3835" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="183" name="Spirit Erosion I" panelType="ENCHANT_SKILL" skillId="3643" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="184" name="Spirit Wrath Position I" panelType="ENCHANT_SKILL" skillId="3852" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="185" name="Command: Storm of Elements I" panelType="ENCHANT_SKILL" skillId="3838" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="188" name="Soul Torrent I" panelType="ENCHANT_SKILL" skillId="3776" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="189" name="Elemental Strike I" panelType="ENCHANT_SKILL" skillId="3834" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="191" name="Weaken Spirit" panelType="ENCHANT_SKILL" skillId="3588" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="193" name="Vacuum Choke" panelType="ENCHANT_SKILL" skillId="3601" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="194" name="Erosion" panelType="ENCHANT_SKILL" skillId="1459" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="195" name="Vengeful Backdraft" panelType="ENCHANT_SKILL" skillId="3628" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="196" name="Backdraft" panelType="ENCHANT_SKILL" skillId="4665" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="197" name="Stone Skin" panelType="ENCHANT_SKILL" skillId="1166" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="198" name="Sandblaster" panelType="ENCHANT_SKILL" skillId="3750" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="200" name="Spirit Preserve I" panelType="ENCHANT_SKILL" skillId="3839" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="201" name="Cursecloud" panelType="ENCHANT_SKILL" skillId="3795" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="202" name="EL_DARKBURST" panelType="ENCHANT_SKILL" skillId="3540" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="203" name="Magic Explosion" panelType="ENCHANT_SKILL" skillId="3741" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="204" name="Replenish Element" panelType="ENCHANT_SKILL" skillId="3639" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="205" name="Gain Mana" panelType="ENCHANT_SKILL" skillId="1203" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="206" name="Freezing Wind" panelType="ENCHANT_SKILL" skillId="1225" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="207" name="Frozen Shock" panelType="ENCHANT_SKILL" skillId="1237" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="208" name="Refracting Shard" panelType="ENCHANT_SKILL" skillId="1257" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="209" name="Fire of Magic Power I" panelType="ENCHANT_SKILL" skillId="1258" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="210" name="Spear of Wind" panelType="ENCHANT_SKILL" skillId="1269" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="211" name="Flame Harpoon" panelType="ENCHANT_SKILL" skillId="1281" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="212" name="Flame Bolt" panelType="ENCHANT_SKILL" skillId="1295" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="214" name="Ice Chain" panelType="ENCHANT_SKILL" skillId="1375" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="215" name="Ember" panelType="ENCHANT_SKILL" skillId="1386" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="216" name="Soul Freeze" panelType="ENCHANT_SKILL" skillId="4660" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="217" name="Soul Absorption III" panelType="ENCHANT_SKILL" skillId="1393" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="218" name="Stamina Absorption" panelType="ENCHANT_SKILL" skillId="1401" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="219" name="Blaze" panelType="ENCHANT_SKILL" skillId="1415" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="220" name="Flame Cage" panelType="ENCHANT_SKILL" skillId="1519" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="221" name="Flame Fusion" panelType="ENCHANT_SKILL" skillId="1539" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="222" name="Winter Binding" panelType="ENCHANT_SKILL" skillId="1177" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="223" name="Aether's Hold" panelType="ENCHANT_SKILL" skillId="1191" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="224" name="Magic Fist" panelType="ENCHANT_SKILL" skillId="1209" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="226" name="Lumiel's Wrath" panelType="ENCHANT_SKILL" skillId="1248" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="227" name="Lumiel's Lament" panelType="ENCHANT_SKILL" skillId="1362" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="228" name="Aetheric Spell" panelType="ENCHANT_SKILL" skillId="1505" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="229" name="Repeated Protective Shield I" panelType="ENCHANT_SKILL" skillId="1384" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="230" name="Summon Meteorite" panelType="ENCHANT_SKILL" skillId="1395" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="231" name="Delayed Burst" panelType="ENCHANT_SKILL" skillId="1430" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="232" name="Delayed Heatwave" panelType="ENCHANT_SKILL" skillId="22028" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="237" name="Big Magma Eruption" panelType="ENCHANT_SKILL" skillId="1509" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="238" name="Flaming Meteor" panelType="ENCHANT_SKILL" skillId="1548" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="239" name="Frost" panelType="ENCHANT_SKILL" skillId="1183" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="240" name="Aether Flame" panelType="ENCHANT_SKILL" skillId="1532" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="242" name="Booming Strike" panelType="ENCHANT_SKILL" skillId="1573" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="243" name="Resonance Haze" panelType="ENCHANT_SKILL" skillId="1586" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="244" name="Booming Smash" panelType="ENCHANT_SKILL" skillId="1595" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="245" name="Inescapable Judgment" panelType="ENCHANT_SKILL" skillId="1600" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="246" name="Promise of Earth" panelType="ENCHANT_SKILL" skillId="1636" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="247" name="Vehemence Strike I" panelType="ENCHANT_SKILL" skillId="1639" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="248" name="Incandescent Blow" panelType="ENCHANT_SKILL" skillId="1676" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="249" name="Booming Assault" panelType="ENCHANT_SKILL" skillId="1683" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="250" name="Seismic Crash" panelType="ENCHANT_SKILL" skillId="1702" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="251" name="Split Strike" panelType="ENCHANT_SKILL" skillId="1713" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="252" name="Thunderbolt Strike" panelType="ENCHANT_SKILL" skillId="1726" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="253" name="Parrying Strike" panelType="ENCHANT_SKILL" skillId="1777" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="254" name="Meteor Strike" panelType="ENCHANT_SKILL" skillId="1789" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="255" name="Pentacle Shock" panelType="ENCHANT_SKILL" skillId="1882" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="256" name="Soul Crush" panelType="ENCHANT_SKILL" skillId="1898" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="257" name="Retribution" panelType="ENCHANT_SKILL" skillId="1560" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="258" name="Stamina Restoration V" panelType="ENCHANT_SKILL" skillId="1606" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="262" name="Rebirth Spell" panelType="ENCHANT_SKILL" skillId="1745" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="264" name="Backshock" panelType="ENCHANT_SKILL" skillId="1800" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="265" name="Divine Curtain" panelType="ENCHANT_SKILL" skillId="1813" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="266" name="Tremor" panelType="ENCHANT_SKILL" skillId="1831" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="268" name="Recovery Magic" panelType="ENCHANT_SKILL" skillId="1862" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="270" name="Repeated Shatter I" panelType="ENCHANT_SKILL" skillId="1768" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="271" name="Heavy Projectile I" panelType="ENCHANT_SKILL" skillId="1911" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="272" name="Debilitating Volley" panelType="ENCHANT_SKILL" skillId="1922" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="273" name="Disrupter Shot" panelType="ENCHANT_SKILL" skillId="1953" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="274" name="Pistol Shot" panelType="ENCHANT_SKILL" skillId="1969" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="275" name="Aimed Weakpoint Shot" panelType="ENCHANT_SKILL" skillId="1983" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="276" name="Headshot" panelType="ENCHANT_SKILL" skillId="2065" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="277" name="Seal Shot" panelType="ENCHANT_SKILL" skillId="2097" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="278" name="Weakpoint Shot" panelType="ENCHANT_SKILL" skillId="2131" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="279" name="Repeated Rapid Fire" panelType="ENCHANT_SKILL" skillId="2141" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="280" name="Repeated Volley" panelType="ENCHANT_SKILL" skillId="2154" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="281" name="Encircling Bomb" panelType="ENCHANT_SKILL" skillId="2166" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="282" name="Soul Shot" panelType="ENCHANT_SKILL" skillId="2179" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="283" name="Rapid Soul Fire" panelType="ENCHANT_SKILL" skillId="2185" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="284" name="Soul Volley" panelType="ENCHANT_SKILL" skillId="2194" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="285" name="Aimed Cannon Shot" panelType="ENCHANT_SKILL" skillId="2218" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="286" name="Sighting Shot" panelType="ENCHANT_SKILL" skillId="2231" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="287" name="Fire Cannon" panelType="ENCHANT_SKILL" skillId="2346" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="288" name="Restoration Volley I" panelType="ENCHANT_SKILL" skillId="2349" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="289" name="Siege Cannon" panelType="ENCHANT_SKILL" skillId="1939" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="291" name="Torment Cannon Ball" panelType="ENCHANT_SKILL" skillId="1994" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="292" name="Aimed Wing Shot" panelType="ENCHANT_SKILL" skillId="2003" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="293" name="Air Defence Bombardment I" panelType="ENCHANT_SKILL" skillId="2004" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="294" name="Magical Cannon Shot" panelType="ENCHANT_SKILL" skillId="2014" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="295" name="Magical Bombardment" panelType="ENCHANT_SKILL" skillId="2030" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="297" name="Promise of Magic Power" panelType="ENCHANT_SKILL" skillId="2045" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="299" name="Materialised Wall Form" panelType="ENCHANT_SKILL" skillId="2710" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="300" name="Soul Bombardment" panelType="ENCHANT_SKILL" skillId="2207" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="301" name="Projectile of Silence" panelType="ENCHANT_SKILL" skillId="2263" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="302" name="Seizure Projectile" panelType="ENCHANT_SKILL" skillId="2267" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="303" name="Retreat Shot" panelType="ENCHANT_SKILL" skillId="2359" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="304" name="Snow Projectile" panelType="ENCHANT_SKILL" skillId="2108" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="305" name="Strong Attack I" panelType="ENCHANT_SKILL" skillId="2399" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="306" name="Cooling Wave" panelType="ENCHANT_SKILL" skillId="2436" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="307" name="Surge of Glory" panelType="ENCHANT_SKILL" skillId="2494" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="308" name="Mana Absorption" panelType="ENCHANT_SKILL" skillId="2497" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="309" name="Cannon Shot Riposte" panelType="ENCHANT_SKILL" skillId="2503" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="310" name="Two-Handed Strike" panelType="ENCHANT_SKILL" skillId="2552" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="311" name="Light Attack" panelType="ENCHANT_SKILL" skillId="2564" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="312" name="Repeated Cannon Shot II" panelType="ENCHANT_SKILL" skillId="2567" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="313" name="Idium Fist" panelType="ENCHANT_SKILL" skillId="2639" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="314" name="Bludgeon" panelType="ENCHANT_SKILL" skillId="2701" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="315" name="Electric Snare" panelType="ENCHANT_SKILL" skillId="2725" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="316" name="Electric Shock" panelType="ENCHANT_SKILL" skillId="2735" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="317" name="Sprint Strike" panelType="ENCHANT_SKILL" skillId="2749" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="318" name="Collapsing Smash" panelType="ENCHANT_SKILL" skillId="2787" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="319" name="Flame of Destruction I" panelType="ENCHANT_SKILL" skillId="2806" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="320" name="Burning Cannon Shot" panelType="ENCHANT_SKILL" skillId="2818" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="321" name="Flame Jet" panelType="ENCHANT_SKILL" skillId="2824" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="322" name="Vampiric Wave" panelType="ENCHANT_SKILL" skillId="2837" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="323" name="Aerial Shot" panelType="ENCHANT_SKILL" skillId="2408" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="324" name="Rapid Recharge" panelType="ENCHANT_SKILL" skillId="2420" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="326" name="Inciting Wind" panelType="ENCHANT_SKILL" skillId="4658" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="331" name="Divine Dragon Cannon" panelType="ENCHANT_SKILL" skillId="2535" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="332" name="Weakening Sting" panelType="ENCHANT_SKILL" skillId="2542" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="333" name="Uppercut" panelType="ENCHANT_SKILL" skillId="2571" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="335" name="Activate Regeneration" panelType="ENCHANT_SKILL" skillId="2762" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="336" name="Silence Smash" panelType="ENCHANT_SKILL" skillId="2766" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="339" name="Symphony of Wrath" panelType="ENCHANT_SKILL" skillId="4468" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="340" name="Acute Grating Sound III" panelType="ENCHANT_SKILL" skillId="4299" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="341" name="Chilling Harmony" panelType="ENCHANT_SKILL" skillId="4233" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="342" name="Earth Harmony" panelType="ENCHANT_SKILL" skillId="4263" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="343" name="Gust Requiem" panelType="ENCHANT_SKILL" skillId="4523" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="344" name="Harmony of Destruction" panelType="ENCHANT_SKILL" skillId="4284" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="345" name="Loud Bang III" panelType="ENCHANT_SKILL" skillId="4405" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="346" name="Sound of the Breeze" panelType="ENCHANT_SKILL" skillId="4420" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="347" name="Sea Variation" panelType="ENCHANT_SKILL" skillId="4428" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="348" name="Wind Harmony" panelType="ENCHANT_SKILL" skillId="4252" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="349" name="Flame Harmony" panelType="ENCHANT_SKILL" skillId="4245" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="350" name="Soul Harmony" panelType="ENCHANT_SKILL" skillId="4272" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="351" name="Battle Variation" panelType="ENCHANT_SKILL" skillId="4333" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="352" name="Harmony of Death" panelType="ENCHANT_SKILL" skillId="4280" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="353" name="Attack Resonation" panelType="ENCHANT_SKILL" skillId="4296" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="354" name="Ascended Soul Variation" panelType="ENCHANT_SKILL" skillId="4561" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="355" name="Tsunami Requiem" panelType="ENCHANT_SKILL" skillId="4338" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="356" name="Illusion Variation I" panelType="ENCHANT_SKILL" skillId="4471" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="357" name="Harmony of Silence" panelType="ENCHANT_SKILL" skillId="4424" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="358" name="Melody of Appreciation" panelType="ENCHANT_SKILL" skillId="4395" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="359" name="Snowflower Melody I" panelType="ENCHANT_SKILL" skillId="4400" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="360" name="Shield Melody" panelType="ENCHANT_SKILL" skillId="4442" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="361" name="Melody of Reflection" panelType="ENCHANT_SKILL" skillId="4383" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="362" name="Gentle Echo" panelType="ENCHANT_SKILL" skillId="4351" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="363" name="Soft Echo" panelType="ENCHANT_SKILL" skillId="4371" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="364" name="Mild Echo" panelType="ENCHANT_SKILL" skillId="4361" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="366" name="Echo of Clarity" panelType="ENCHANT_SKILL" skillId="4571" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="367" name="Shock Blast" panelType="ENCHANT_SKILL" skillId="4399" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="369" name="Misery Shot" panelType="ENCHANT_SKILL" skillId="887" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="370" name="Holy Chastise" panelType="ENCHANT_SKILL" skillId="9053" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="371" name="Herb Treatment" panelType="ENCHANT_SKILL" skillId="314" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="372" name="Mana Treatment" panelType="ENCHANT_SKILL" skillId="321" countMax="8" cost="1" costAdj="0"/>
+    <panel_cp id="373" name="Bloodthirster Surprise Attack" panelType="ENCHANT_SKILL" skillId="4774" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="374" name="Soul Splitter" panelType="ENCHANT_SKILL" skillId="4775" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="375" name="Swift Ambush" panelType="ENCHANT_SKILL" skillId="4776" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="376" name="Whirlwind Blow" panelType="ENCHANT_SKILL" skillId="4777" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="377" name="Shocking Thunderbolt Strike" panelType="ENCHANT_SKILL" skillId="4778" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="378" name="Power Smash Strike" panelType="ENCHANT_SKILL" skillId="4779" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="379" name="Healing Wave" panelType="ENCHANT_SKILL" skillId="4782" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="380" name="Elemental Smash" panelType="ENCHANT_SKILL" skillId="4784" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="381" name="Order: Elemental Discharge" panelType="ENCHANT_SKILL" skillId="4832" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="382" name="Order: Spirit Barrier" panelType="ENCHANT_SKILL" skillId="4833" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="383" name="Concentrated Cannon Shot" panelType="ENCHANT_SKILL" skillId="4786" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="384" name="Storm Requiem" panelType="ENCHANT_SKILL" skillId="4790" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="385" name="Melody of Snowflower" panelType="ENCHANT_SKILL" skillId="4791" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="386" name="Wrath Wave" panelType="ENCHANT_SKILL" skillId="4795" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="387" name="Idium Strike" panelType="ENCHANT_SKILL" skillId="4799" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="388" name="Surge of Restoration" panelType="ENCHANT_SKILL" skillId="4715" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="389" name="Wild Leap" panelType="ENCHANT_SKILL" skillId="4716" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="390" name="Bloodthirster Strike" panelType="ENCHANT_SKILL" skillId="4719" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="391" name="Judgment Blow" panelType="ENCHANT_SKILL" skillId="4720" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="392" name="Swift Divine Grasp" panelType="ENCHANT_SKILL" skillId="4721" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="393" name="Ascended Soul Arrow" panelType="ENCHANT_SKILL" skillId="4722" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="394" name="Arrow of Annihilation" panelType="ENCHANT_SKILL" skillId="4723" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="395" name="Meditate" panelType="ENCHANT_SKILL" skillId="4725" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="396" name="Storm Spear" panelType="ENCHANT_SKILL" skillId="4726" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="397" name="Hell Flame of Wrath" panelType="ENCHANT_SKILL" skillId="4728" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="398" name="Resonance Attack" panelType="ENCHANT_SKILL" skillId="4729" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="399" name="Chain Strike" panelType="ENCHANT_SKILL" skillId="4730" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="400" name="Oath of Earth" panelType="ENCHANT_SKILL" skillId="4731" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="401" name="Transformation: Incarnation of Wind" panelType="LEARN_SKILL" learnSkill="4768" cost="5" costAdj="0" preCondId="8" preEnchantCount="5" minLevel="75"/>
+    <panel_cp id="402" name="Transformation: Ascension of the Wind" panelType="ENCHANT_SKILL" skillId="4705" countMax="5" cost="1" costAdj="2" minLevel="75"/>
+    <panel_cp id="403" name="Transformation: Incarnation of Fire" panelType="LEARN_SKILL" learnSkill="4752" cost="5" costAdj="0" preCondId="10" preEnchantCount="5" minLevel="75"/>
+    <panel_cp id="404" name="Transformation: Ascension of the Fire" panelType="ENCHANT_SKILL" skillId="4707" countMax="5" cost="1" costAdj="2" minLevel="75"/>
+    <panel_cp id="405" name="Transformation: Incarnation of Water" panelType="LEARN_SKILL" learnSkill="4757" cost="5" costAdj="0" preCondId="12" preEnchantCount="5" minLevel="75"/>
+    <panel_cp id="406" name="Transformation: Ascension of the Water" panelType="ENCHANT_SKILL" skillId="4708" countMax="5" cost="1" costAdj="2" minLevel="75"/>
+    <panel_cp id="407" name="Transformation: Incarnation of Earth" panelType="LEARN_SKILL" learnSkill="4762" cost="5" costAdj="0" preCondId="14" preEnchantCount="5" minLevel="75"/>
+    <panel_cp id="408" name="Transformation: Ascension of the Earth" panelType="ENCHANT_SKILL" skillId="4706" countMax="5" cost="1" costAdj="2" minLevel="75"/>
+    <panel_cp id="409" name="Surge of Restoration" panelType="LEARN_SKILL" learnSkill="4715" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="410" name="Wild Leap" panelType="LEARN_SKILL" learnSkill="4716" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="411" name="Concentrated Defence Shield" panelType="LEARN_SKILL" learnSkill="4718" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="412" name="Daevic Fury" panelType="LEARN_SKILL" learnSkill="4837" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="413" name="Bloodthirster Strike" panelType="LEARN_SKILL" learnSkill="4719" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="414" name="Judgment Blow" panelType="LEARN_SKILL" learnSkill="4720" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="415" name="Hard Charge" panelType="LEARN_SKILL" learnSkill="4717" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="416" name="Swift Divine Grasp" panelType="LEARN_SKILL" learnSkill="4721" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="417" name="Ascended Soul Arrow" panelType="LEARN_SKILL" learnSkill="4722" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="418" name="Arrow of Annihilation" panelType="LEARN_SKILL" learnSkill="4723" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="419" name="Dream Catcher" panelType="LEARN_SKILL" learnSkill="4838" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="420" name="Nature's Blessing" panelType="LEARN_SKILL" learnSkill="4724" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="421" name="Storm Spear" panelType="LEARN_SKILL" learnSkill="4726" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="422" name="Meditate" panelType="LEARN_SKILL" learnSkill="4725" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="423" name="Hell Flame of Wrath" panelType="LEARN_SKILL" learnSkill="4728" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="424" name="Prayer of Iron-Clad" panelType="LEARN_SKILL" learnSkill="4727" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="425" name="Resonance Attack" panelType="LEARN_SKILL" learnSkill="4729" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="426" name="Chain Strike" panelType="LEARN_SKILL" learnSkill="4730" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="427" name="Cross Shield" panelType="LEARN_SKILL" learnSkill="4732" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="428" name="Oath of Earth" panelType="LEARN_SKILL" learnSkill="4731" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="429" name="Bloodthirster Surprise Attack" panelType="LEARN_SKILL" learnSkill="4774" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="430" name="Soul Splitter" panelType="LEARN_SKILL" learnSkill="4775" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="431" name="Swift Ambush" panelType="LEARN_SKILL" learnSkill="4776" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="432" name="Whirlwind Blow" panelType="LEARN_SKILL" learnSkill="4777" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="433" name="Shocking Thunderbolt Strike" panelType="LEARN_SKILL" learnSkill="4778" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="434" name="Power Smash Strike" panelType="LEARN_SKILL" learnSkill="4779" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="435" name="Healing Wave" panelType="LEARN_SKILL" learnSkill="4780" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="436" name="Prayer of Resistance" panelType="LEARN_SKILL" learnSkill="4783" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="437" name="Elemental Smash" panelType="LEARN_SKILL" learnSkill="4784" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="438" name="Order: Elemental Discharge" panelType="LEARN_SKILL" learnSkill="4832" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="439" name="Order: Spirit Barrier" panelType="LEARN_SKILL" learnSkill="4833" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="440" name="Illusion Pact" panelType="LEARN_SKILL" learnSkill="4785" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="441" name="Concentrated Cannon Shot" panelType="LEARN_SKILL" learnSkill="4786" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="442" name="Rapid Fire Readiness" panelType="LEARN_SKILL" learnSkill="4787" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="443" name="Flight Instinct" panelType="LEARN_SKILL" learnSkill="4788" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="444" name="Aimed Hunter's Eye" panelType="LEARN_SKILL" learnSkill="4789" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="445" name="Storm Requiem" panelType="LEARN_SKILL" learnSkill="4790" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="446" name="Cheery Melody" panelType="LEARN_SKILL" learnSkill="4793" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="447" name="Melody of Snowflower" panelType="LEARN_SKILL" learnSkill="4791" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="448" name="Illusion Dance" panelType="LEARN_SKILL" learnSkill="4792" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="449" name="Magical Protective Shield" panelType="LEARN_SKILL" learnSkill="4796" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="450" name="Wrath Wave" panelType="LEARN_SKILL" learnSkill="4795" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="451" name="Idium Strike" panelType="LEARN_SKILL" learnSkill="4797" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="452" name="Combat power maximisation" panelType="LEARN_SKILL" learnSkill="4794" cost="20" costAdj="0" minLevel="66"/>
+    <panel_cp id="453" name="Strengthen Defence" panelType="LEARN_SKILL" learnSkill="4800" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="454" name="Attack Boost" panelType="LEARN_SKILL" learnSkill="4801" cost="5" costAdj="0" minLevel="66"/>
+    <panel_cp id="455" name="Boost Dodge Enemy" panelType="LEARN_SKILL" learnSkill="4802" cost="10" costAdj="0" minLevel="66"/>
+    <panel_cp id="456" name="Masterful Attack Boost" panelType="LEARN_SKILL" learnSkill="4803" cost="15" costAdj="0" minLevel="66"/>
+    <panel_cp id="457" name="Increase Godstone Resistance" panelType="LEARN_SKILL" learnSkill="4866" cost="3" costAdj="0" minLevel="66"/>
+    <panel_cp id="458" name="Increase Godstone Resistance" panelType="ENCHANT_SKILL" skillId="4866" countMax="4" cost="0" costAdj="3" minLevel="66"/>
+    <panel_cp id="459" name="Protection Zone" panelType="LEARN_SKILL" learnSkill="4868" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="460" name="Summon: Punishment Energy" panelType="LEARN_SKILL" learnSkill="4869" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="461" name="Melody of Purification" panelType="LEARN_SKILL" learnSkill="4871" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="462" name="Bloodstorm Blow" panelType="LEARN_SKILL" learnSkill="4872" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="463" name="Nightmare Scream" panelType="LEARN_SKILL" learnSkill="4873" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="464" name="Materialised Magic Form" panelType="LEARN_SKILL" learnSkill="4874" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="465" name="Mau Blessing" panelType="LEARN_SKILL" learnSkill="4875" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="466" name="Overcoming Limits" panelType="LEARN_SKILL" learnSkill="4876" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="467" name="Armour of Vengeance" panelType="LEARN_SKILL" learnSkill="4877" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="468" name="Mist Butcher" panelType="LEARN_SKILL" learnSkill="4878" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="469" name="Fiery Roller" panelType="LEARN_SKILL" learnSkill="4880" cost="25" costAdj="0" minLevel="66"/>
+    <panel_cp id="470" name="Summon: Punishment Energy" panelType="ENCHANT_SKILL" skillId="17421" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="471" name="Melody of Purification" panelType="ENCHANT_SKILL" skillId="4871" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="472" name="Bloodstorm Blow" panelType="ENCHANT_SKILL" skillId="4872" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+    <panel_cp id="473" name="Fiery Roller" panelType="ENCHANT_SKILL" skillId="4880" countMax="8" cost="1" costAdj="0" minLevel="66"/>
+</panel_cps>

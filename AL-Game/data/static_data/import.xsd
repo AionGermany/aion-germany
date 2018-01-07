@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="import">
+        <xs:annotation>
+            <xs:documentation>
+                <![CDATA[
+				Attributes:
+				'file' :
+					Required attribute.
+					Specified path to imported file or directory.
+				'skipRoot' :
+					Optional attribute.
+					Default value: 'false'
+					If enabled, then root tags of imported files are ignored.
+				'recirsiveImport':
+					Optional attribute.
+					Default value: 'true'
+					If enabled and attribute 'file' points to the directory, then all xml files in that
+					directory ( and deeper - recursively ) will be imported, otherwise only files inside that directory (without it subdirectories)
+				]]>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute type="xs:string" name="file" use="required"/>
+            <xs:attribute type="xs:boolean" name="skipRoot" use="optional" default="false"/>
+            <xs:attribute type="xs:boolean" name="recursiveImport" use="optional" default="true"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

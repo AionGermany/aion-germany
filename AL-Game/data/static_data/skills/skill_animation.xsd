@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="skill_animations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="skill_animation" type="SkillAnimation"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SkillAnimation">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="nameId" type="xs:int" use="required"/>
+        <xs:attribute name="name_desc" type="xs:string" use="required"/>
+        <xs:attribute name="motion_name" type="xs:string" use="required"/>
+        <xs:attribute name="skill_group" type="xs:string" use="required"/>
+        <xs:attribute name="show_weapon" type="xs:boolean" use="required" default="false"/>
+    </xs:complexType>
+</xs:schema>
