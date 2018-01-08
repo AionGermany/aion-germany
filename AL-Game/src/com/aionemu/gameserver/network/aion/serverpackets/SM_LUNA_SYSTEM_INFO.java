@@ -84,7 +84,11 @@ public class SM_LUNA_SYSTEM_INFO extends AionServerPacket {
 			case 1:// taki advanture update NOTE also send after free box craft (1,1,1,1)
 				writeH(tableId);// size? subaction
 				writeD(costId);
-				writeD(1);
+				if (costId == 79) {//First run on Dice game is 78 after that its 79 + last D packet get's +1 for every try
+					writeD(con.getActivePlayer().getLunaDiceGameTry());
+				} else {
+					writeD(1);
+				}
 				break;
 			case 2:
 				writeC(tableId);// tabId

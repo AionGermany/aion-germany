@@ -229,6 +229,8 @@ public class Player extends Creature {
 	private String bannedFromWorldReason = "";
 	private ScheduledFuture<?> taskToUnbanFromWorld = null;
 	private Map<Integer, MaxCountOfDay> maxCountEvent;
+	private int LunaDiceGame;
+	private int LunaDiceGameTry = 0;
 	/**
 	 * Static information for players
 	 */
@@ -3110,5 +3112,33 @@ public class Player extends Creature {
 	
 	public void setMinionSkillPoints(int minionSkillPoints) {
 		this.getCommonData().setMinionSkillPoints(minionSkillPoints);
+	}
+	
+	/**
+	 * Luna Dice Game
+	 */
+	
+	public int getLunaDiceGame() {
+		return this.LunaDiceGame;
+	}
+	
+	public void setLunaDiceGame(int dice, boolean reset) {
+		if (!reset) {
+			if (dice > this.LunaDiceGame) {
+				this.LunaDiceGame = dice;
+			} else {
+				return;
+			}
+		} else {
+			this.LunaDiceGame = dice;
+		}
+	}
+	
+	public int getLunaDiceGameTry() {
+		return this.LunaDiceGameTry;
+	}
+	
+	public void setLunaDiceGameTry(int dice) {
+		this.LunaDiceGameTry = dice;
 	}
 }

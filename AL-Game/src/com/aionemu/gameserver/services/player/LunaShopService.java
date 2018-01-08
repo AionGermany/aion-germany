@@ -605,6 +605,79 @@ public class LunaShopService {
 		}
 		return 0;
 	}
+	
+	public void diceGame(Player player) { // TODO Golden Dice + Golden Price fix..
+		int random = Rnd.get(1, 1000);
+		if (random >= 100 && random <= 400) {
+			player.setLunaDiceGame(1, false);
+		} else if (random >= 450 && random <= 749) {
+			player.setLunaDiceGame(2, false);
+		} else if (random >= 750 && random <= 849) {
+			player.setLunaDiceGame(3, false);
+		} else if (random >= 850 && random <= 900) {
+			player.setLunaDiceGame(4, false);
+		} else if (random >= 950 && random <= 1000) {
+			player.setLunaDiceGame(5, false);
+		}
+		int diceTry = player.getLunaDiceGameTry();
+		
+		if (diceTry < 1) {
+			player.setLunaDiceGameTry(player.getLunaDiceGameTry() + 1);
+			player.setLunaConsumePoint(player.getLunaConsumePoint() + lunaDicePrice(diceTry));
+			player.setLunaAccount((player.getLunaAccount() - lunaDicePrice(diceTry)));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(5));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(0));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(1, 1, 78));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM(15));
+		} else {
+			player.setLunaDiceGameTry(player.getLunaDiceGameTry() + 1);
+			player.setLunaConsumePoint(player.getLunaConsumePoint() + lunaDicePrice(diceTry));
+			player.setLunaAccount((player.getLunaAccount() - lunaDicePrice(diceTry)));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(0));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(1, 1, 79));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM(15));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(5));
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(4));
+		}
+		System.out.println("Random: " + random);
+		System.out.println("Try: " + player.getLunaDiceGameTry());
+		System.out.println("Consum: " + player.getLunaConsumePoint());
+	}
+	
+	public void diceGameReward(Player player) { //TODO
+		ItemService.addItem(player, 162001014, 4);
+		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM(16, 162001014, 4));
+		player.setLunaDiceGame(0, true);
+		player.setLunaDiceGameTry(0);
+		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(1, 1, 78));
+	}
+	
+	public int lunaDicePrice(int diceTry) { // Done
+		switch (diceTry) {
+			case 0:
+				return 20;
+			case 1:
+				return 22;
+			case 2:
+				return 24;
+			case 3:
+				return 26;
+			case 4:
+			case 5:
+				return 30;
+			case 6:
+				return 32;
+			case 7:
+				return 36;
+			case 8:
+			case 9:
+				return 38;
+			case 10:
+				return 40;
+			default:
+				return 40;
+		}
+	}
 
 	public static LunaShopService getInstance() {
 		return NewSingletonHolder.INSTANCE;

@@ -81,6 +81,10 @@ public class CM_LUNA_SYSTEM extends AionClientPacket {
 			case 14: // Taki's Adventure.
 				indun_id = readD();
 				break;
+			case 15: //Luna Dice Game
+				break;
+			case 16://Luna Dice Game Reward
+				break;
 		}
 	}
 
@@ -137,6 +141,12 @@ public class CM_LUNA_SYSTEM extends AionClientPacket {
 				break;
 			case 14:
 				LunaShopService.getInstance().takiAdventure(player, indun_id);
+				break;
+			case 15:
+				LunaShopService.getInstance().diceGame(player);
+				break;
+			case 16:
+				LunaShopService.getInstance().diceGameReward(player);
 				break;
 			default:
 				System.out.println("UNKOWN ACTION-ID: " + actionId);

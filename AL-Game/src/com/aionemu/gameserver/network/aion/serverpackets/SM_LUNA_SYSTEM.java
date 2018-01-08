@@ -19,6 +19,7 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.dorinerk_wardrobe.PlayerWardrobeEntry;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -47,6 +48,7 @@ public class SM_LUNA_SYSTEM extends AionServerPacket {
 	private int itemId;
 	private int itemSize;
 	private boolean success;
+	private long itemCount;
 
 	public SM_LUNA_SYSTEM(int actionId) {
 		this.actionId = actionId;
@@ -91,6 +93,12 @@ public class SM_LUNA_SYSTEM extends AionServerPacket {
 		this.actionId = actionId;
 		this.item = item;
 		this.fail = fail;
+	}
+	
+	public SM_LUNA_SYSTEM(int actionId, int itemId, long itemCount) {
+		this.actionId = actionId;
+		this.itemId = itemId;
+		this.itemCount = itemCount;
 	}
 
 	@Override
@@ -172,6 +180,19 @@ public class SM_LUNA_SYSTEM extends AionServerPacket {
 			case 14:
 				writeC(1); // free enter = 1
 				writeD(indun_id);
+				break;
+			case 15: // TODO Golden Dice
+				int dice = player.getLunaDiceGame();
+				writeC(0);
+				writeC(dice);
+				writeC(0);
+				writeC(0);
+				break;
+			case 16: // TODO Display Bug
+				writeC(0);
+				writeH(1);
+				writeD(itemId); // ItemId
+				writeQ(itemCount); // Item Count
 				break;
 		}
 	}
