@@ -39,4 +39,10 @@ public abstract class PlayerMinionsDAO implements DAO {
 	public abstract void updateMinionName(MinionCommonData minionCommonData);
 
 	public abstract List<MinionCommonData> getPlayerMinions(Player player);
+	
+	public abstract void updatePlayerMinionGrowPoint(Player player, MinionCommonData minionCommonData);
+	
+	public abstract boolean PlayerMinions(int playerid, int miniona);
+	
+	public abstract String[] PlayerMinionData(Player player, int minionCommonData);
 }

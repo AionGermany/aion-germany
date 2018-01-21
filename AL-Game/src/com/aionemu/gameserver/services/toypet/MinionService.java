@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.services.toypet;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -24,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.controllers.observer.ItemUseObserver;
 import com.aionemu.gameserver.dao.PlayerMinionsDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -32,10 +34,12 @@ import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.model.minion.MinionBuff;
 import com.aionemu.gameserver.model.templates.item.ItemUseLimits;
 import com.aionemu.gameserver.model.templates.item.actions.AbstractItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.ItemActions;
+import com.aionemu.gameserver.model.templates.minion.MinionEvolved;
 import com.aionemu.gameserver.model.templates.minion.MinionSkill;
 import com.aionemu.gameserver.model.templates.minion.MinionTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
@@ -66,9 +70,10 @@ public class MinionService {
 		PacketSendUtility.sendPacket(player, new SM_MINIONS(11, player.getMinionSkillPoints(), false));
 		PacketSendUtility.sendPacket(player, new SM_MINIONS(12));
 	}
-
+	//Alpha
 	public void addMinion(final Player player, final int itemObjId) {
-		if (player.getMinionList().getMinions().size() == 200) { // TODO MESSAGE ?
+		if (player.getMinionList().getMinions().size() == 200) {
+			PacketSendUtility.sendMessage(player, "Max 200 Minion!");
 			return;
 		}
 		
@@ -99,11 +104,19 @@ public class MinionService {
 				int minionId = 0;
 				String grade = "";
 				int level = 0;
+				String name = "";
 				if (!item.getItemTemplate().getMinionTicket()) {
 					return;
 				}
+				//beta new
 				if (item.getItemTemplate().isMinionCashContract()) {
 					switch (item.getItemTemplate().getTemplateId()) {
+						case 190080017: //Shita
+							minionId = 980073;
+							break;
+						case 190080018: //Grendal
+							minionId = 980063;
+							break;
 						case 190080028: //Abija's
 							minionId = 980043;
 							break;
@@ -122,6 +135,121 @@ public class MinionService {
 						case 190080033: //Kerubian's
 							minionId = 980011;
 							break;
+						case 190080035: //Shita
+							minionId = 980073;
+							break;
+						case 190080036: //Grendal
+							minionId = 980063;
+							break;
+						case 190080008://Cute Minion Contract
+						case 190080013://Cute Minion Contract
+							int rnd = Rnd.get(0,6);
+							switch(rnd) {
+								case 0: {
+									minionId = Rnd.get(11,13) + 980000;//kerub c b a
+									break;
+								}
+								case 1: {
+									minionId = Rnd.get(20,23) + 980000;//Seiren
+									break;
+								}
+								case 2: {
+									minionId = Rnd.get(30,33) + 980000;//Steel Rose
+									break;
+								}
+								case 3: {
+									minionId = Rnd.get(40,43) + 980000;//Abija
+									break;
+								}
+								case 4: {
+									minionId = Rnd.get(50,53) + 980000;//Hamerun
+									break;
+								}
+								case 5: {
+									minionId = Rnd.get(60,63) + 980000;//Grendal
+									break;
+								}
+								case 6: {
+									minionId = Rnd.get(70,73) + 980000;//Sita
+									break;
+								}
+							}
+							break;
+						default: 
+							minionId = minions.get(new Random().nextInt(minions.size()));
+							break;
+					}
+					MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
+					grade = minionTemplate.getGrade();
+					level = minionTemplate.getLevel();
+					name = minionTemplate.getName();
+				} else {
+					int rnd;
+					switch (item.getItemTemplate().getTemplateId()) {
+						case 190089999:
+						case 190080005:
+						case 190080009: //Lesser Minion Contract
+						case 190080010:
+						case 190080011:
+							rnd = Rnd.get(0,2);
+							switch(rnd) {
+								case 0: {
+									minionId = Rnd.get(10,11) + 980000;//kerub d c
+									break;
+								}
+								case 1: {
+									minionId = Rnd.get(20,23) + 980000;//Seiren
+									break;
+								}
+								case 2: {
+									minionId = Rnd.get(30,33) + 980000;//Steel Rose
+									break;
+								}
+							}
+							break;
+						case 190080012://special minion contract
+						case 190080006://Normal Minion Contract
+							rnd = Rnd.get(1,3);
+							switch(rnd) {
+								case 1: {
+									minionId = Rnd.get(20,23) + 980000;//Seiren
+									break;
+								}
+								case 2: {
+									minionId = Rnd.get(30,33) + 980000;//Steel Rose
+									break;
+								}
+								case 3: {
+									minionId = Rnd.get(40,43) + 980000;//Abija
+									break;
+								}
+							}
+							break;
+						case 190080007://Larger Minion Contract
+							rnd = Rnd.get(0,4);
+							switch(rnd) {
+								case 0: {
+									minionId = Rnd.get(11,12) + 980000;//kerub b c
+									break;
+								}
+								case 1: {
+									minionId = Rnd.get(20,23) + 980000;//Seiren
+									break;
+								}
+								case 2: {
+									minionId = Rnd.get(30,33) + 980000;//Steel Rose
+									break;
+								}
+								case 3: {
+									minionId = Rnd.get(40,43) + 980000;//Abija
+									break;
+								}
+								case 4: {
+									minionId = Rnd.get(50,53) + 980000;//Hamerun
+									break;
+								}
+							}
+							break;
 						default:
 							minionId = minions.get(new Random().nextInt(minions.size()));
 							break;
@@ -129,18 +257,12 @@ public class MinionService {
 					MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
 					grade = minionTemplate.getGrade();
 					level = minionTemplate.getLevel();
-					log.info("Cash-Contract"); // TODO
-				} else {
-					minionId = minions.get(new Random().nextInt(minions.size()));
-					MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
-					grade = minionTemplate.getGrade();
-					level = minionTemplate.getLevel();
-					log.info("Normal-Contract"); // TODO
+					name = minionTemplate.getName();
 				}
 				if (!player.getInventory().decreaseByObjectId(itemObjId, 1)) {
 					return;
 				}
-				MinionCommonData addNewMinion = player.getMinionList().addNewMinion(player, minionId, "Minion", grade, level);
+				MinionCommonData addNewMinion = player.getMinionList().addNewMinion(player, minionId, name, grade, level);
 				if (addNewMinion != null) {
 					PacketSendUtility.sendPacket(player, new SM_MINIONS(1, addNewMinion));
 					player.getMinionList().updateMinionsList();
@@ -208,9 +330,73 @@ public class MinionService {
 		mb.end(player);
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(6, minionObjId));
 	}
-
-	public void growthUpMinion(Player player, int n) { // TODO
-		log.info("Called growthUpMinion");
+	//alpha new
+	public void growthUpMinion(Player player, ArrayList<Integer> minionObjId, int miniona) { // TODO
+		MinionCommonData minion = player.getMinionList().getMinion(miniona);
+		int maxGrow = DataManager.MINION_DATA.getMinionTemplate(minion.getMinionId()).getMaxGrowthValue();
+		int price, growpoint = 0, count = 0;
+		try {
+			for(int minionaa : minionObjId) {
+				//System.out.println("ActionId 6 Grow method and plus id: " + minionaa);
+				if(minionaa == 0) break;
+				growpoint += DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionaa).getMinionId()).getGrowthPt();
+				count++;
+			}
+			for(int minionid : minionObjId) {
+				//System.out.println("ActionId 6 Grow method delete and plus id list delete: " + minionid);
+				deleteMinion(player, minionid);
+			}
+		}
+		catch (Exception e) {
+			log.error("Error growthUpMinion method 225-235 # ", e);
+		}
+		minionObjId.clear();
+		switch(minion.getMinionGrade()) {
+			case "A": 
+				price = 1800000;
+				break;
+			case "B":
+				price = 1000000;
+				break;
+			case "C":
+				price = 500000;
+				break;
+			default:
+				price = 0;
+				break;
+		}
+		player.getInventory().decreaseKinah(count * price);
+		if((minion.getMiniongrowpoint() + growpoint) > maxGrow) {
+			minion.setMiniongrowpoint(maxGrow);
+		}
+		else minion.setMiniongrowpoint(growpoint + minion.getMiniongrowpoint());
+		DAOManager.getDAO(PlayerMinionsDAO.class).updatePlayerMinionGrowPoint(player, minion);
+		player.getMinionList().updateMinionsList();
+		PacketSendUtility.sendPacket(player, new SM_MINIONS(7, minion));
+		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(0, player.getMinionList().getMinions()));
+	}
+	//alpha new
+	public void evolutionUpMinion(Player player, int minionObjId) { 
+		MinionEvolved items = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getEvolved();//good
+		Storage storage = player.getInventory();
+		storage.decreaseByItemId(items.getItemId(), (long)items.getEvolvedNum());
+		player.getInventory().decreaseKinah(items.getEvolvedCost());
+		String[] data = DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinionData(player, minionObjId);
+		MinionCommonData addNewMinion = player.getMinionList().addNewMinion(player, Integer.parseInt(data[0]) + 1, data[1], data[2], Integer.parseInt(data[3]) + 1);
+		deleteMinion(player, minionObjId);
+		if (addNewMinion != null) {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, addNewMinion, 1));
+			PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(0, player.getMinionList().getMinions()));
+		}
+	}
+	//Alpha new
+	public void deleteMinion(Player player, int minion) { 
+		player.getMinionList().deleteMinion(minion);
+		PacketSendUtility.sendPacket(player, new SM_MINIONS(0, player.getMinionList().getMinions()));
+	}
+	
+	public void lockMinion(Player player, int minion, int lock) { //TODO
+		log.info("Called lockMinion id: " + minion + " Lock: " + lock);
 	}
 
 	public void renameMinion(Player player, int minionObjId, String name) {
@@ -290,7 +476,101 @@ public class MinionService {
 	public void deaktivateLoot(Player player, int subSwitch, int value, int value1, int value2, int value3) {
 		PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, value1, value2, value3));
 	}
-
+	//alpha new
+	public void CombinationMinion(Player player, ArrayList<Integer> minionObjIds) { //TODO
+		String a = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjIds.get(1)).getMinionId()).getGrade();
+		int rnd = Rnd.get(0, 1000);
+		int rnd_2 = Rnd.get(0, 2);
+		int level;
+		int minionId = 0;
+		String name, grade;
+		if(rnd  > 700) {
+			switch(a) {
+				case "B": {
+					switch(rnd_2){
+						case 0:
+							minionId = Rnd.get(70,73) + 980000;//Sitas
+							break;
+						case 1:
+							minionId = Rnd.get(60,63) + 980000;//Grendal
+							break;
+						case 2:
+							minionId = 980013;//kerub A
+					}
+				}
+				case "C": {
+					switch(rnd_2){
+					case 0:
+						minionId = Rnd.get(40,43) + 980000;//Abija
+						break;
+					case 1:
+						minionId = Rnd.get(50,53) + 980000;//Hamerun
+						break;
+					default:
+						minionId = 980012;//Kerubien B
+						break;
+					}
+				}
+				case "D": {
+					switch(rnd_2){
+					case 0:
+						minionId = Rnd.get(20,23) + 980000;//Seiren
+						break;
+					case 1:
+						minionId = Rnd.get(30,33) + 980000;//Steel Rose
+						break;
+					default:
+						minionId = 980011;//Kerubien C
+						break;
+					}
+				}
+			}
+			MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
+			grade = minionTemplate.getGrade();
+			level = minionTemplate.getLevel();
+			name = minionTemplate.getName();
+		} else {
+				switch(a) {
+				case "B": {
+					switch(rnd_2){
+						case 0:
+							minionId = Rnd.get(40,43) + 980000;//Abija
+							break;
+						case 1:
+							minionId = Rnd.get(50,53) + 980000;//Hamerun
+							break;
+					}
+				}
+				case "C": {
+					switch(rnd_2){
+						case 0:
+							minionId = Rnd.get(20,23) + 980000;//Seiren
+							break;
+						case 1:
+							minionId = Rnd.get(30,33) + 980000;//Steel Rose
+							break;
+					}
+				}
+				case "D": {
+					minionId = 980010;
+				}
+			}
+		    MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
+			grade = minionTemplate.getGrade();
+			level = minionTemplate.getLevel();
+			name = minionTemplate.getName();
+		}
+		for(int minionid : minionObjIds){
+			deleteMinion(player, minionid);
+		}
+		minionObjIds.clear();
+		MinionCommonData addNewMinion = player.getMinionList().addNewMinion(player, minionId, name, grade, level);
+		if (addNewMinion != null) {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(13, addNewMinion));
+			player.getMinionList().updateMinionsList();
+		}
+	}
+	
 	public static MinionService getInstance() {
 		return SingletonHolder.instance;
 	}

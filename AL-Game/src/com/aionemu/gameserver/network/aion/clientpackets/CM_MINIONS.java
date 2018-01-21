@@ -16,6 +16,8 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import java.util.ArrayList;
+
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
@@ -42,6 +44,8 @@ public class CM_MINIONS extends AionClientPacket {
 	private int value1;
 	private int value2;
 	private int value3;
+	private ArrayList<Integer> ids = new ArrayList<Integer>(); //new
+	private int lock = 0;//new
 	
 	public CM_MINIONS(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -50,11 +54,13 @@ public class CM_MINIONS extends AionClientPacket {
 	@Override
 	protected void readImpl() {
 		actionId = readH();
+		System.out.println("ActionId 1: " + actionId);
 		switch (actionId) {
 			case 0: // add
 				itemObjectId = readD(); // Item UniqueId (Minion Contract)
 				break;
 			case 1: // delete
+				objectId = readD();
 				break;
 			case 2: // rename
 				objectId = readD(); // Minion Unique ID
@@ -62,7 +68,7 @@ public class CM_MINIONS extends AionClientPacket {
 				break;
 			case 3: // locked
                 objectId = readD(); // Minion Unique ID
-                readC(); // lock/unlock Todo
+                lock = readC(); // lock/unlock Todo
                 break;
 			case 4: // summon
 				objectId = readD(); // Minion Unique ID
@@ -70,18 +76,22 @@ public class CM_MINIONS extends AionClientPacket {
 			case 5: // unsummon
 				objectId = readD(); // Minion Unique ID
 				break;
-			case 6: // ascension
-				objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-				objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
-                objectId = readD(); // Minion Unique ID
+			case 6: // ascension new
+				objectId = readD();
+				for (int i = 0; i < 10; i++) {
+					int a = readD();
+					ids.add(a);
+				}
+				break;
+			case 7: //evolution new
+				objectId = readD();
+				break;
+			case 8://combination new
+				for (int i = 0; i < 4; i++) {
+					int a = readD();
+					System.out.println("ActionId 8: " + i + " Index   Ertek: " + a);
+					ids.add(a);
+				}
 				break;
 			case 9: // TODO (MinionFunction Scrolls etc)
 				subSwitch = readD(); //0, 1
@@ -113,10 +123,13 @@ public class CM_MINIONS extends AionClientPacket {
 		if (player == null) {
 			return;
 		}
-		System.out.println("ActionId: " + actionId);
+		System.out.println("ActionId 2: " + actionId);
 		switch (actionId) {
 			case 0:
 				MinionService.getInstance().addMinion(player, itemObjectId); // TODO
+				break;
+			case 1:
+				MinionService.getInstance().deleteMinion(player, objectId);
 				break;
 			case 2:
 				if (NameRestrictionService.isForbiddenWord(minionName)) {
@@ -126,7 +139,8 @@ public class CM_MINIONS extends AionClientPacket {
 					MinionService.getInstance().renameMinion(player, objectId, minionName);
 				}
 				break;				
-			case 3:
+			case 3://lock
+				MinionService.getInstance().lockMinion(player, objectId, lock);
 				break;
 			case 4:
 				MinionService.getInstance().spawnMinion(player, objectId);
@@ -135,6 +149,16 @@ public class CM_MINIONS extends AionClientPacket {
 				MinionService.getInstance().despawnMinion(player, objectId);
 				break;
 			case 6:
+				//new
+				MinionService.getInstance().growthUpMinion(player, ids, objectId);
+				break;
+			case 7:
+				//new
+				MinionService.getInstance().evolutionUpMinion(player, objectId);
+				break;
+			case 8:
+				//new
+				MinionService.getInstance().CombinationMinion(player, ids);
 				break;
 			case 9: // TODO
 				if (subSwitch == 0 && value == 0) {

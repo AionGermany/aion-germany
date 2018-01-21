@@ -42,6 +42,7 @@ public class SM_MINIONS extends AionServerPacket {
 	private int value1;
 	private int value2;
 	private int value3;
+	private int levelup = 0; //new
 
 	public SM_MINIONS(int action) {
 		this.action = action;
@@ -62,6 +63,12 @@ public class SM_MINIONS extends AionServerPacket {
 	public SM_MINIONS(int action, int minionObjId) {
 		this.action = action;
 		this.minionObjId = minionObjId;
+	}
+	
+	public SM_MINIONS(int action, MinionCommonData commonData, int levelup) {
+		this.action = action;
+		this.commonData = commonData;
+		this.levelup = levelup;
 	}
 
 	public SM_MINIONS(int action, MinionCommonData commonData) {
@@ -104,19 +111,19 @@ public class SM_MINIONS extends AionServerPacket {
 				writeH(minions.size());
 				for (MinionCommonData minionCommonData : minions) {
 					writeD(minionCommonData.getObjectId());
-					writeQ(2550); // Todo
+					writeQ(2550); // Todo what is this?
 					writeD(minionCommonData.getMasterObjectId());
 					writeD(minionCommonData.getMinionId());
 					writeS(minionCommonData.getName()); // Name
 					writeD(minionCommonData.getBirthday());
 					writeD(0);
-					writeD(100); //Minion Growth Points
+					writeD(minionCommonData.getMiniongrowpoint()); // Minion Growth Points
 					writeB(new byte[26]);
 				}
 				break;
 			}
 			case 1: {
-				writeD(0);
+				writeD(levelup);//1 levelup, 0 new minion (effect)
 				writeD(0);
 				writeH(0);
 				writeD(commonData.getObjectId());
@@ -134,16 +141,20 @@ public class SM_MINIONS extends AionServerPacket {
 				writeS(commonData.getName());
 				break;
 			}
-			case 5: {
+			case 5: {// Spawn
 				writeS(name); // Name
 				writeD(minionObjId);
 				writeD(minionId);
 				writeD(masterObjId);
 				break;
 			}
-			case 6: {
+			case 6: {// Despawn
 				writeD(minionObjId);
 				writeC(21);
+				break;
+			}
+			case 7: {//growthUp alpha new
+				writeD(commonData.getMiniongrowpoint());
 				break;
 			}
 			case 8: {
@@ -178,6 +189,11 @@ public class SM_MINIONS extends AionServerPacket {
 			}
 			case 12: { //Miol funktion Warn AutoCharge (1 = ON  0 = OFF)
 				writeC(0);
+				break;
+			}
+			//bad
+			case 13: { //Combination
+				writeD(commonData.getObjectId());
 				break;
 			}
 		}

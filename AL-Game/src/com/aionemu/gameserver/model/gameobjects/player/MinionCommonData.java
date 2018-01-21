@@ -18,6 +18,8 @@ package com.aionemu.gameserver.model.gameobjects.player;
 
 import java.sql.Timestamp;
 
+import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.dao.PlayerMinionsDAO;
 import com.aionemu.gameserver.model.IExpirable;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
@@ -30,16 +32,30 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	private String minionGrade;
 	private String name;
 	private int minionLevel;
+	private int miniongrowpoint; //new
 
-	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel) {
-		if (this.minionObjId == 0) {
-			this.minionObjId = IDFactory.getInstance().nextId();
+	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int growpoints) {
+		switch(this.minionObjId) {
+			case 0: {
+				this.minionObjId = IDFactory.getInstance().nextId();
+				break;
+			}
+			default:
+				do 
+				{
+					if(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId)) {
+						this.minionObjId = IDFactory.getInstance().nextId();
+					}
+				} 
+				while(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId));
+				break;
 		}
 		this.minionId = minionId;
 		this.masterObjectId = masterObjectId;
 		this.name = name;
 		this.minionGrade = minionGrade;
 		this.minionLevel = minionLevel;
+		this.miniongrowpoint = growpoints;
 	}
 
 	public void setObjectId(int minionObjId) {
@@ -116,5 +132,13 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	@Override
 	public int getNameId() {
 		return 0;
+	}
+
+	public int getMiniongrowpoint() {
+		return miniongrowpoint;
+	}
+
+	public void setMiniongrowpoint(int miniongrowpoint) {
+		this.miniongrowpoint = miniongrowpoint;
 	}
 }

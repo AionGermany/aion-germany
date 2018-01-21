@@ -66,7 +66,7 @@ public class MinionList {
 	}
 
 	public MinionCommonData addNewMinion(Player player, int minionId, String name, String grade, int level, long time) {
-		MinionCommonData minionCommonData = new MinionCommonData(minionId, player.getObjectId(), name, grade, level);
+		MinionCommonData minionCommonData = new MinionCommonData(minionId, player.getObjectId(), name, grade, level, 0);
 		minionCommonData.setBirthday(new Timestamp(time));
 		DAOManager.getDAO(PlayerMinionsDAO.class).insertPlayerMinion(minionCommonData);
 		minions.put(minionId, minionCommonData);
