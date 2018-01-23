@@ -64,16 +64,17 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO {
 	}
 
 	@Override
-	public void updatePassport(final int accountId, final int passportId, final int stamps, final boolean rewarded) {
+	public void updatePassport(final int accountId, final int passportId, final int stamps, final boolean rewarded, final Timestamp last_stamp) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("UPDATE player_passports SET stamps = ?, rewarded = ? WHERE account_id = ? AND passport_id = ?");
+			PreparedStatement stmt = con.prepareStatement("UPDATE player_passports SET stamps = ?, rewarded = ?, last_stamp = ? WHERE account_id = ? AND passport_id = ?");
 
 			stmt.setInt(1, stamps);
 			stmt.setInt(2, rewarded ? 1 : 0);
-			stmt.setInt(3, accountId);
-			stmt.setInt(4, passportId);
+			stmt.setTimestamp(3, last_stamp);
+			stmt.setInt(4, accountId);
+			stmt.setInt(5, passportId);
 			stmt.execute();
 			stmt.close();
 		}

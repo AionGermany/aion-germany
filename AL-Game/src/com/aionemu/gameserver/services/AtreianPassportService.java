@@ -19,7 +19,6 @@ package com.aionemu.gameserver.services;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -29,9 +28,13 @@ import org.slf4j.LoggerFactory;
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerPassportsDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
-import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.event.AtreianPassport;
+import com.aionemu.gameserver.model.templates.event.AtreianPassportRewards;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ATREIAN_PASSPORT;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.item.ItemService;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author Alcapwnd
@@ -44,41 +47,6 @@ public class AtreianPassportService {
 	private Map<Integer, AtreianPassport> anny = new HashMap<Integer, AtreianPassport>(1);
 	public Map<Integer, AtreianPassport> data = new HashMap<Integer, AtreianPassport>(1);
 
-	public Map<Integer, AtreianPassport> getCurrentCumuPassports() {
-		Map<Integer, AtreianPassport> passports = new HashMap<Integer, AtreianPassport>();
-		return passports;
-	}
-
-	public int getMonthsSinceAscension(Player player) {
-		Timestamp firstDate = null;
-		Iterator<PlayerAccountData> it = player.getPlayerAccount().iterator();
-		while (it.hasNext()) {
-			PlayerAccountData data = it.next();
-			if (firstDate == null) {
-				firstDate = data.getCreationDate();
-			}
-			else {
-				if (data.getCreationDate().before(firstDate)) {
-					firstDate = data.getCreationDate();
-				}
-			}
-		}
-		if (firstDate != null) {
-			Calendar first = Calendar.getInstance();
-			Calendar now = Calendar.getInstance();
-			first.setTimeInMillis(firstDate.getTime());
-			now.setTimeInMillis(System.currentTimeMillis());
-
-			int diffYear = now.get(Calendar.YEAR) - first.get(Calendar.YEAR);
-
-			return diffYear * 12 + now.get(Calendar.MONTH) - first.get(Calendar.MONTH);
-		}
-		else {
-			log.error("FIRST DATE == NULL");
-			return 0;
-		}
-	}
-
 	public Map<Integer, AtreianPassport> getPlayerPassports(int accountId) {
 		Map<Integer, AtreianPassport> passports = new HashMap<Integer, AtreianPassport>();
 		List<Integer> ids = DAOManager.getDAO(PlayerPassportsDAO.class).getPassports(accountId);
@@ -89,24 +57,38 @@ public class AtreianPassportService {
 	}
 
 	public void onLogin(Player player) {
-		if (player == null)
+		if (player == null) {
 			return;
-		boolean newPassport = false;
+		}
+		int atreianId = 5;
 		int accountId = player.getPlayerAccount().getId();
 		PlayerPassportsDAO dao = DAOManager.getDAO(PlayerPassportsDAO.class);
-		Map<Integer, AtreianPassport> currentCumuPassports = getCurrentCumuPassports();
 		Map<Integer, AtreianPassport> playerPassports = getPlayerPassports(accountId);
 
-		// ANNIVERSARY
-		int annyMonths = getMonthsSinceAscension(player);
-		for (int i = 14; i < annyMonths + 14; i++) {
-			if (!playerPassports.containsKey(i)) {
-				//dao.insertPassport(accountId, anny.get(i).getId(), anny.get(i).getAttendNum(), new Timestamp(System.currentTimeMillis()));
-				newPassport = true;
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(player.getPlayerAccount().getPlayerAccountData(player.getCommonData().getPlayerObjId()).getCreationDate().getTime());
+		int month = cal.get(Calendar.MONTH);
+		int year = cal.get(Calendar.YEAR);
+
+		if (!playerPassports.containsKey(atreianId)) {
+			System.out.println("Used 1: " + atreianId);
+			final Timestamp now = new Timestamp(System.currentTimeMillis() - 86400000L);
+			dao.insertPassport(accountId, atreianId, 0, new Timestamp(System.currentTimeMillis() - 86400000L));
+			PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, 0, (int) now.getTime(), false, month, year));
+		}
+		else {
+			int stamps = dao.getStamps(accountId, atreianId);
+			Timestamp now2 = new Timestamp(System.currentTimeMillis());
+			Timestamp lastStamp = dao.getLastStamp(accountId, atreianId);
+			if (lastStamp.getTime() - now2.getTime() <= 0L) {
+				PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps - 1, (int) now2.getTime(), false, month, year));
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NEW_PASSPORT_AVAIBLE);
+			}
+			else {
+				PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps - 1, (int) now2.getTime(), true, month, year));
 			}
 		}
 	}
-
 
 	public void onStart() {
 		Map<Integer, AtreianPassport> raw = DataManager.ATREIAN_PASSPORT_DATA.getAll();
@@ -123,14 +105,24 @@ public class AtreianPassportService {
 	 * @param count
 	 * @param timestamp
 	 */
-	public void onGetReward(Player player, int timestamp, List<Integer> passportId) {
+	public void getReward(Player player, int atreianId) {
+		AtreianPassport loginRewardTemplate = DataManager.ATREIAN_PASSPORT_DATA.getAtreianPassportId(atreianId);
 		int accountId = player.getPlayerAccount().getId();
-		Map<Integer, AtreianPassport> playerPassports = getPlayerPassports(accountId);
-		for (Integer i : passportId) {
-			//if (playerPassports.containsKey(i) && DAOManager.getDAO(PlayerPassportsDAO.class).getStamps(accountId, playerPassports.get(i).getId()) == playerPassports.get(i).getAttendNum() && !DAOManager.getDAO(PlayerPassportsDAO.class).isRewarded(accountId, playerPassports.get(i).getId())) {
-			//	ItemService.addItem(player, playerPassports.get(i).getRewardItem(), playerPassports.get(i).getRewardItemNum(), new ItemUpdatePredicate(ItemAddType.ITEM_COLLECT, ItemUpdateType.INC_PASSPORT_ADD));
-			//	DAOManager.getDAO(PlayerPassportsDAO.class).updatePassport(accountId, playerPassports.get(i).getId(), playerPassports.get(i).getStamps(), true);
-			//}
+		PlayerPassportsDAO dao = DAOManager.getDAO(PlayerPassportsDAO.class);
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(player.getPlayerAccount().getPlayerAccountData(player.getCommonData().getPlayerObjId()).getCreationDate().getTime());
+		int month = cal.get(2);
+		int year = cal.get(1);
+		int stamps = dao.getStamps(accountId, atreianId);
+		for (AtreianPassportRewards component : loginRewardTemplate.getAtreianPassportRewards()) {
+			Timestamp now = new Timestamp(System.currentTimeMillis());
+			Timestamp lastStamp = dao.getLastStamp(accountId, atreianId);
+			Timestamp nextStamp = new Timestamp(System.currentTimeMillis() + 86400000L);
+			if (lastStamp.getTime() - now.getTime() <= 0L) {
+				ItemService.addItem(player, component.getRewardItem(), component.getRewardItemCount());
+				PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps + 1, (int) now.getTime(), true, month, year));
+				DAOManager.getDAO(PlayerPassportsDAO.class).updatePassport(accountId, atreianId, stamps + 1, false, nextStamp);
+			}
 		}
 		onLogin(player);
 	}
@@ -145,10 +137,18 @@ public class AtreianPassportService {
 				case ANNIVERSARY:
 					getAnniversaryPassports(atp.getId(), atp);
 					break;
+				default:
+					break;
 			}
 		}
 		log.info("[AtreianPassportService] Loaded " + basic.size() + " basic passports");
 		log.info("[AtreianPassportService] Loaded " + anny.size() + " anniversary passports");
+	}
+
+	public void getPassports(int id, AtreianPassport atp) {
+		if (data.containsValue(id))
+			return;
+		data.put(id, atp);
 	}
 
 	public void getBasicPassports(int id, AtreianPassport atp) {

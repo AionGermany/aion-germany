@@ -16,10 +16,12 @@
  */
 package com.aionemu.gameserver.model.templates.event;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.aionemu.gameserver.model.AttendType;
@@ -28,7 +30,7 @@ import com.aionemu.gameserver.model.AttendType;
  * @author Falke_34
  */
 @XmlRootElement(name = "atreian_passport")
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class AtreianPassport {
 
 	@XmlAttribute(name = "active", required = true)
@@ -39,8 +41,7 @@ public class AtreianPassport {
 	private int id;
 	@XmlAttribute(name = "name")
 	private String name = "";
-	@XmlElement(name = "atreian_passport_reward")
-	private AtreianPassportRewards atreianPassportRewards;
+    protected List<AtreianPassportRewards> atreian_passport_reward;
 
 	public int getActive() {
 		return active;
@@ -58,7 +59,10 @@ public class AtreianPassport {
 		return name;
 	}
 
-	public AtreianPassportRewards getAtreianPassportRewards() {
-		return atreianPassportRewards;
-	}
+    public List<AtreianPassportRewards> getAtreianPassportRewards() {
+        if (atreian_passport_reward == null) {
+            atreian_passport_reward = new ArrayList<AtreianPassportRewards>();
+        }
+        return atreian_passport_reward;
+    }
 }

@@ -24,21 +24,25 @@ import javax.xml.bind.annotation.XmlEnum;
 @XmlEnum
 public enum AttendType {
 
-	BASIC(0),
-	ANNIVERSARY(1);
+    NONE(0), 
+    BASIC(1),
+    ANNIVERSARY(2);
 
 	private int id;
 
-	/**
-	 * Constructors
-	 */
 	private AttendType(int id) {
 		this.id = id;
 	}
 
-	/**
-	 * Accessors
-	 */
+    public static AttendType getLoginTypeById(int id) {
+        for (AttendType attendType : values()) {
+            if (attendType.getId() == id) {
+                return attendType;
+            }
+        }
+        return AttendType.NONE;
+    }
+
 	public int getId() {
 		return id;
 	}

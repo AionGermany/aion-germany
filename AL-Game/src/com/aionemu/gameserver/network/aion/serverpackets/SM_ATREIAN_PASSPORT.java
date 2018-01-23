@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import java.util.Map;
-
-import com.aionemu.gameserver.model.templates.event.AtreianPassport;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -28,31 +25,31 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 public class SM_ATREIAN_PASSPORT extends AionServerPacket {
 
 	private int month;
-	private Map<Integer, AtreianPassport> passports;
 	private int year;
+	private int passportId;
+	private int countCollected;
+	private int lastStampRecived;
+	private boolean hasCollected;
 
-	public SM_ATREIAN_PASSPORT(Map<Integer, AtreianPassport> passports, int month, int year) {
-		this.passports = passports;
+	public SM_ATREIAN_PASSPORT(int passportId, int countCollected, int lastStampRecived, boolean hasCollected, int month, int year) {
 		this.month = month;
 		this.year = year;
+		this.passportId = passportId;
+		this.countCollected = countCollected;
+		this.lastStampRecived = lastStampRecived;
+		this.hasCollected = hasCollected;
 	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
 		writeH(year);
 		writeH(month);
-		writeH(11);// unk //can be variable
-		writeH(this.passports.size());
-		for (AtreianPassport atp : passports.values()) {
-			writeD(atp.getId());
-			//writeD(atp.getStamps());
-			//if (atp.getStamps() == atp.getRewardItemNum() && !DAOManager.getDAO(PlayerPassportsDAO.class).isRewarded(con.getAccount().getId(), atp.getId()))
-			//	writeH(1);
-			//else
-				writeH(0);
-			writeH(0); // unk
-			//Long time = atp.getLastStamp().getTime() / 1000;
-			//writeD(time.intValue());
-		}
+		writeH(8 );// can be variable
+		writeC(0);
+		writeH(1);
+		writeD(passportId);
+		writeD(countCollected);
+		writeD(lastStampRecived);
+		writeC(hasCollected ? 0 : 1);
 	}
 }

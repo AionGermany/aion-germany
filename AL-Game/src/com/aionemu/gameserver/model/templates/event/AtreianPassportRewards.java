@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Falke_34
  */
 @XmlRootElement(name = "atreian_passport_reward")
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class AtreianPassportRewards {
 
 	@XmlAttribute(name = "name")

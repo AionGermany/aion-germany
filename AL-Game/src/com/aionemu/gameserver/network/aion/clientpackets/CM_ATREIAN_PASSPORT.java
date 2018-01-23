@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
@@ -29,9 +26,11 @@ import com.aionemu.gameserver.services.AtreianPassportService;
  */
 public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 
-	private List<Integer> passportId;
 	private int timestamp;
 	private int count;
+	private int count2;
+	private int passportId;
+	private int unk;
 
 	/**
 	 * @param opcode
@@ -48,13 +47,10 @@ public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 	 */
 	@Override
 	protected void readImpl() {
-		passportId = new ArrayList<Integer>();
 		count = readH();
-		for (int i = 0; i < count; i++) {
-			passportId.add(readD());
-			timestamp = readD();
-		}
-
+		count2 = readH();
+		passportId = readD();
+		unk = readD();
 	}
 
 	/*
@@ -64,10 +60,13 @@ public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 	@Override
 	protected void runImpl() {
 		Player player = getConnection().getActivePlayer();
-		if (player == null)
+		if (player == null) {
 			return;
-		AtreianPassportService.getInstance().onGetReward(player, timestamp, passportId);
-
+		}
+		if (count <= 0) {
+			return;
+		}
+		AtreianPassportService.getInstance().getReward(player, 5);
 	}
 
 }

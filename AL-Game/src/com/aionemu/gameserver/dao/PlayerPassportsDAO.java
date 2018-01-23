@@ -29,7 +29,7 @@ public abstract class PlayerPassportsDAO implements DAO {
 
 	public abstract void insertPassport(int accountId, int passportId, int stamps, Timestamp last_stamp);
 
-	public abstract void updatePassport(int accountId, int passportId, int stamps, boolean rewarded);
+	public abstract void updatePassport(int accountId, int passportId, int stamps, boolean rewarded, Timestamp last_stamp);
 
 	public abstract int getStamps(int accountId, int passportId);
 
