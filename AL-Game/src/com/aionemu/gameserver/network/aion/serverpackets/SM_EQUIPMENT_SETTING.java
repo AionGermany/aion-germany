@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import java.util.Collection;
+
+import com.aionemu.gameserver.model.gameobjects.player.equipmentsetting.EquipmentSetting;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -24,11 +27,46 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_EQUIPMENT_SETTING extends AionServerPacket {
 
-	// TODO
+	Collection<EquipmentSetting> equipmentSetting;
+
+	public SM_EQUIPMENT_SETTING(final Collection<EquipmentSetting> equipmentSetting) {
+		this.equipmentSetting = equipmentSetting;
+	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeC(0);
-		writeC(0);
+		writeH(equipmentSetting.size());
+		if (equipmentSetting != null) {
+			for (EquipmentSetting eqSetting : equipmentSetting) {
+				writeD(eqSetting.getSlot());
+				writeC(1);
+				writeC(1);
+				writeC(1);
+				writeC(1);
+				writeD(eqSetting.getmHand());
+				writeD(eqSetting.getsHand());
+				writeD(eqSetting.getHelmet());
+				writeD(eqSetting.getTorso());
+				writeD(eqSetting.getGlove());
+				writeD(eqSetting.getBoots());
+				writeD(eqSetting.getEarringsLeft());
+				writeD(eqSetting.getEarringsRight());
+				writeD(eqSetting.getRingLeft());
+				writeD(eqSetting.getRingRight());
+				writeD(eqSetting.getNecklace());
+				writeD(eqSetting.getShoulder());
+				writeD(eqSetting.getPants());
+				writeD(eqSetting.getPowershardLeft());
+				writeD(eqSetting.getPowershardRight());
+				writeD(eqSetting.getWings());
+				writeD(eqSetting.getWaist());
+				writeD(eqSetting.getmOffHand());
+				writeD(eqSetting.getsOffHand());
+				writeD(eqSetting.getPlume());
+				writeD(0);
+				writeD(eqSetting.getBracelet());
+				writeD(0);
+			}
+		}
 	}
 }

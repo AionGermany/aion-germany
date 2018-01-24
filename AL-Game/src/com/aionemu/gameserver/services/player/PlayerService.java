@@ -50,6 +50,7 @@ import com.aionemu.gameserver.dao.PlayerCreativityPointsDAO;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerEffectsDAO;
 import com.aionemu.gameserver.dao.PlayerEmotionListDAO;
+import com.aionemu.gameserver.dao.PlayerEquipmentSettingDAO;
 import com.aionemu.gameserver.dao.PlayerGameStatsDAO;
 import com.aionemu.gameserver.dao.PlayerLifeStatsDAO;
 import com.aionemu.gameserver.dao.PlayerMacrossesDAO;
@@ -302,6 +303,8 @@ public class PlayerService {
 		if (CacheConfig.CACHE_PLAYERS) {
 			playerCache.put(playerObjId, player);
 		}
+		
+		DAOManager.getDAO(PlayerEquipmentSettingDAO.class).loadEquipmentSetting(player);
 
 		return player;
 	}

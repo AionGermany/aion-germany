@@ -497,8 +497,10 @@ public final class PlayerEnterWorldService {
 			// and SM_CUBE_UPDATE advancedStigmas ?! (not on offi)
 			sendItemInfos(client, player);
 
-			// SM_EQUIPMENT_SETTING TODO
-			client.sendPacket(new SM_EQUIPMENT_SETTING());
+			// SM_EQUIPMENT_SETTING
+			if (!player.getEquipmentSettingList().getEquipmentSetting().isEmpty()) {
+				client.sendPacket(new SM_EQUIPMENT_SETTING(player.getEquipmentSettingList().getEquipmentSetting()));
+			}
 
 			// SM_CHANNEL_INFO
 			client.sendPacket(new SM_CHANNEL_INFO(player.getPosition()));

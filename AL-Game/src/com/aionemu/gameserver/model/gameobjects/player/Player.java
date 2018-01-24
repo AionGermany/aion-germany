@@ -65,6 +65,7 @@ import com.aionemu.gameserver.model.gameobjects.Trap;
 import com.aionemu.gameserver.model.gameobjects.player.AbyssRank.AbyssRankUpdateType;
 import com.aionemu.gameserver.model.gameobjects.player.FriendList.Status;
 import com.aionemu.gameserver.model.gameobjects.player.emotion.EmotionList;
+import com.aionemu.gameserver.model.gameobjects.player.equipmentsetting.EquipmentSettingList;
 import com.aionemu.gameserver.model.gameobjects.player.f2p.F2p;
 import com.aionemu.gameserver.model.gameobjects.player.motion.MotionList;
 import com.aionemu.gameserver.model.gameobjects.player.npcFaction.NpcFactions;
@@ -317,6 +318,7 @@ public class Player extends Creature {
 	private PlayerLunaShop lunaShop;
 	private PlayerMonsterbookList monsterbook;
 	private boolean setMinionSpawned;
+	private EquipmentSettingList equipmentSettingList;
 
 	/**
 	 * Used for JUnit tests
@@ -3117,7 +3119,6 @@ public class Player extends Creature {
 	/**
 	 * Luna Dice Game
 	 */
-	
 	public int getLunaDiceGame() {
 		return this.LunaDiceGame;
 	}
@@ -3141,4 +3142,15 @@ public class Player extends Creature {
 	public void setLunaDiceGameTry(int dice) {
 		this.LunaDiceGameTry = dice;
 	}
+
+	/**
+	 * Equipment Setting
+	 */
+    public EquipmentSettingList getEquipmentSettingList() {
+        return equipmentSettingList;
+    }
+    
+    public void setEquipmentSettingList(EquipmentSettingList equipmentSettingList) {
+        this.equipmentSettingList = equipmentSettingList;
+    }
 }

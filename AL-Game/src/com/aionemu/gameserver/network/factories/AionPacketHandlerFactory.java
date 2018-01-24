@@ -281,8 +281,8 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MAGIC_MORPH(0x1D7, State.IN_GAME)); // 5.6 TODO
 
 		// // /////////////// EQUIPMENT SETTING //////////////////
-		addPacket(new CM_SAVE_EQUIPMENT_SETTINGS(0x1D2, State.IN_GAME)); // 5.6 TODO
-		addPacket(new CM_CHANGE_EQUIPMENT(0x1D3, State.IN_GAME)); // 5.6 TODO
+		addPacket(new CM_EQUIPMENT_SETTING_SAVE(0x1D2, State.IN_GAME)); // 5.6 TODO
+		addPacket(new CM_EQUIPMENT_SETTING_USE(0x1D3, State.IN_GAME)); // 5.6 TODO
 
 		// // /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0xE1, State.IN_GAME)); // 5.4 EU
