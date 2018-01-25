@@ -64,7 +64,6 @@ public class PlayerTeamDistributionService {
 
 		// Reward mode
 		long expReward;
-		int kinahCount = 0;
 		if (filteredStats.players.size() + filteredStats.mentorCount == 1) {
 			expReward = (StatFunctions.calculateSoloExperienceReward(filteredStats.players.get(0), owner));
 		}

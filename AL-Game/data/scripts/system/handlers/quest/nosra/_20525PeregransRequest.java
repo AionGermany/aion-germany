@@ -68,7 +68,6 @@ public class _20525PeregransRequest extends QuestHandler {
 
 		if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			int var1 = qs.getQuestVarById(1);
 			switch (targetId) {
 				case 806079: { // Peregran
 					switch (dialog) {
@@ -168,7 +167,6 @@ public class _20525PeregransRequest extends QuestHandler {
 
 	@Override
 	public boolean onMovieEndEvent(QuestEnv env, int movieId) {
-		Player player = env.getPlayer();
 		if (movieId == 876) {
 			removeQuestItem(env, 182216084, 1);
 			changeQuestStep(env, 6, 7, true);
@@ -214,7 +212,6 @@ public class _20525PeregransRequest extends QuestHandler {
 				@Override
 				public void run() {
 
-					int var = qs.getQuestVarById(0);
 					PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 0, 1), true);
 					playQuestMovie(env, 876);
 					updateQuestStatus(env);

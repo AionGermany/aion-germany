@@ -157,7 +157,6 @@ public class _15306WieldingPower extends QuestHandler {
 	public boolean onMovieEndEvent(QuestEnv env, int movieId) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		int var = qs.getQuestVarById(0);
 		if (movieId == 865) {
 			qs.setQuestVar(10);
 			qs.setStatus(QuestStatus.REWARD);

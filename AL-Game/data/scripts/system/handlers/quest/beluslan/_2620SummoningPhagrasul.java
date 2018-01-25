@@ -151,7 +151,6 @@ public class _2620SummoningPhagrasul extends QuestHandler {
 
 								@Override
 								public void run() {
-									final QuestState qs = player.getQuestStateList().getQuestState(questId);
 									removeQuestItem(env, 182204498, 1);
 									if (player.getTarget() == null || player.getTarget().getObjectId() != targetObjectId) {
 										return;

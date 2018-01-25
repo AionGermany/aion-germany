@@ -19,7 +19,6 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.dorinerk_wardrobe.PlayerWardrobeEntry;
 import com.aionemu.gameserver.model.gameobjects.player.Player;

@@ -189,7 +189,6 @@ public class _20528TheProtectionArtefact extends QuestHandler {
 
 	@Override
 	public boolean onMovieEndEvent(QuestEnv env, int movieId) {
-		Player player = env.getPlayer();
 		if (movieId == 877) {
 			changeQuestStep(env, 10, 11, false);
 			return true;

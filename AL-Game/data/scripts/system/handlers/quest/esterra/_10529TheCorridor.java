@@ -181,7 +181,6 @@ public class _10529TheCorridor extends QuestHandler {
 
 	@Override
 	public boolean onMovieEndEvent(QuestEnv env, int movieId) {
-		Player player = env.getPlayer();
 		if (movieId == 1006) {
 			changeQuestStep(env, 7, 8, false);
 			Npc npc = env.getPlayer().getPosition().getWorldMapInstance().getNpc(703317);

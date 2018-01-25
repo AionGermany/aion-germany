@@ -16,7 +16,6 @@
  */
 package quest.morheim;
 
-import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
@@ -89,7 +88,6 @@ public class _24024ANepraProtector extends QuestHandler {
 		}
 		int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
-		DialogAction dialog = env.getDialog();
 
 		if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {

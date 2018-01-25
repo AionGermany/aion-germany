@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Equipment;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
@@ -38,41 +37,36 @@ public class CM_EQUIPMENT_SETTING_USE extends AionClientPacket {
 	}
 
 	protected void readImpl() {
-
-        final Player activePlayer = getConnection().getActivePlayer();
-        activePlayer.getController().cancelUseItem();
-
-        Equipment equipment = activePlayer.getEquipment();
-        Item resultItem = null;
-
         size = readH();
-
-        if (activePlayer.getInventory().isFull() || activePlayer.getInventory().getFreeSlots() < size) {
-            return;
-        }
         for (int i = 0; i < size; ++i) {
             action = readD();
             slotRead = readD();
             readD();
             itemObjtId = readD();
-            if (action == 0) {
-                resultItem = equipment.equipItem(itemObjtId, slotRead);
-            }
-            else {
-                resultItem = equipment.unEquipItem(itemObjtId, slotRead);
-            }
         }
-        PacketSendUtility.sendPacket(activePlayer, new SM_SYSTEM_MESSAGE(1404124, new Object[0]));
-        PacketSendUtility.broadcastPacket(activePlayer, new SM_UPDATE_PLAYER_APPEARANCE(activePlayer.getObjectId(), equipment.getEquippedForApparence()), true);
     }
 
 	protected void runImpl() {
-        final Player player = getConnection().getActivePlayer();
-        if (player == null || !player.isSpawned()) {
+		final Player activePlayer = getConnection().getActivePlayer();
+		Equipment equipment = activePlayer.getEquipment();
+        activePlayer.getController().cancelUseItem();
+        
+        if (!activePlayer.isSpawned() || activePlayer.getController().isInShutdownProgress()) {
             return;
         }
-        if (player.getController().isInShutdownProgress()) {
+        
+        if (activePlayer.getInventory().isFull() || activePlayer.getInventory().getFreeSlots() < size) {
             return;
         }
+        
+        if (action == 0) {
+            equipment.equipItem(itemObjtId, slotRead);
+        }
+        else {
+            equipment.unEquipItem(itemObjtId, slotRead);
+        }
+        
+        PacketSendUtility.sendPacket(activePlayer, new SM_SYSTEM_MESSAGE(1404124, new Object[0]));
+        PacketSendUtility.broadcastPacket(activePlayer, new SM_UPDATE_PLAYER_APPEARANCE(activePlayer.getObjectId(), equipment.getEquippedForApparence()), true);
     }
 }

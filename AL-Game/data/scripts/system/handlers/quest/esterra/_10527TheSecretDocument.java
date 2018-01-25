@@ -225,8 +225,6 @@ public class _10527TheSecretDocument extends QuestHandler {
 
 				@Override
 				public void run() {
-
-					int var = qs.getQuestVarById(0);
 					PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 0, 1), true);
 					qs.setQuestVar(15);
 					qs.setStatus(QuestStatus.REWARD);

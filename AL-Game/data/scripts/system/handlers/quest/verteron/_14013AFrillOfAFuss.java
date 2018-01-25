@@ -66,9 +66,6 @@ public class _14013AFrillOfAFuss extends QuestHandler {
 		}
 		if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			int var1 = qs.getQuestVarById(1);
-			int var2 = qs.getQuestVarById(2);
-			int var3 = qs.getQuestVarById(3);
 			switch (targetId) {
 				case (203129): {
 					switch (dialog) {

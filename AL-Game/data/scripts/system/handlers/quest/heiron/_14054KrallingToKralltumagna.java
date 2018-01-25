@@ -16,7 +16,6 @@
  */
 package quest.heiron;
 
-import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -67,7 +66,6 @@ public class _14054KrallingToKralltumagna extends QuestHandler {
 		Player player = env.getPlayer();
 		int targetId = env.getTargetId();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
 		if (qs == null) {
 			return false;
 		}
@@ -79,8 +77,6 @@ public class _14054KrallingToKralltumagna extends QuestHandler {
 		}
 		else if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			int var1 = qs.getQuestVarById(1);
-			int var2 = qs.getQuestVarById(2);
 			if (targetId == 204602) {
 				switch (env.getDialog()) {
 					case QUEST_SELECT:

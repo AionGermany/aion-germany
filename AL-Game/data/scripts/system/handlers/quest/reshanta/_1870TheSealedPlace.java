@@ -62,7 +62,6 @@ public class _1870TheSealedPlace extends QuestHandler {
 		}
 		else if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			int var1 = qs.getQuestVarById(1);
 			switch (targetId) {
 				case 278501: { // Michalis
 					switch (dialog) {

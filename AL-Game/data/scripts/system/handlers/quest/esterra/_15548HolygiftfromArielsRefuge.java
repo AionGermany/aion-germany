@@ -16,7 +16,6 @@
  */
 package quest.esterra;
 
-import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
@@ -48,7 +47,6 @@ public class _15548HolygiftfromArielsRefuge extends QuestHandler {
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
 
 		if (qs.getStatus() == QuestStatus.REWARD) {

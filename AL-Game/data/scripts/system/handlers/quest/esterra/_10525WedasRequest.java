@@ -81,7 +81,6 @@ public class _10525WedasRequest extends QuestHandler {
 
 		if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			int var1 = qs.getQuestVarById(1);
 			switch (targetId) {
 				case 806075: { // Weda
 					switch (dialog) {
@@ -181,7 +180,6 @@ public class _10525WedasRequest extends QuestHandler {
 
 	@Override
 	public boolean onMovieEndEvent(QuestEnv env, int movieId) {
-		Player player = env.getPlayer();
 		if (movieId == 1004) {
 			removeQuestItem(env, 182216072, 1);
 			changeQuestStep(env, 6, 7, true);
@@ -226,8 +224,6 @@ public class _10525WedasRequest extends QuestHandler {
 
 				@Override
 				public void run() {
-
-					int var = qs.getQuestVarById(0);
 					PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 0, 1), true);
 					playQuestMovie(env, 1004);
 					updateQuestStatus(env);

@@ -79,10 +79,6 @@ public class _2252ChasingtheLegend extends QuestHandler {
 	public boolean onDialogEvent(QuestEnv env) {
 		final Player player = env.getPlayer();
 		int targetId = 0;
-		Npc npc = null;
-		if (env.getVisibleObject() instanceof Npc) {
-			npc = (Npc) env.getVisibleObject();
-		}
 		targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();

@@ -149,7 +149,6 @@ public class _25608SugarSweet extends QuestHandler {
 		if (qs != null && qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
 			int time = GameTimeManager.getGameTime().getHour();
-			int min = GameTimeManager.getGameTime().getMinute();
 
 			if (var == 2 && zoneName == ZoneName.get("SAPHORA_FOREST_220110000") && time > 21) {
 				changeQuestStep(env, 2, 3, false);

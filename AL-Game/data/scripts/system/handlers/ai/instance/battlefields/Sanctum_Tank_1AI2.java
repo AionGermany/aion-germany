@@ -40,7 +40,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 @AIName("Sanctum_Tank_1") // 220820
 public class Sanctum_Tank_1AI2 extends GeneralNpcAI2 {
 	private boolean canThink = true;
-	private String walkerId = "302200001";
 	private AtomicBoolean isAggred = new AtomicBoolean(false);
 	private AtomicBoolean startedEvent = new AtomicBoolean(false);
 

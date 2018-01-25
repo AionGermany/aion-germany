@@ -170,7 +170,6 @@ public class _14016AGateAgape extends QuestHandler {
 				if (player.getTarget().getObjectId() != targetObjectId) {
 					return;
 				}
-				QuestState qs = player.getQuestStateList().getQuestState(questId);
 				switch (var) {
 					case -2:
 						changeQuestStep(env, 2, 3, true);

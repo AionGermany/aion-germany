@@ -233,9 +233,7 @@ public class RiftOfOblivionInstance extends GeneralInstanceHandler {
 		if (master instanceof Player)
 			return;
 
-		int npcId = npc.getNpcId();
 		int points = 0;
-		Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId()) {
 			/*** Player Lvl 66 ***/
 			case 244454: // Minion of Oblivion

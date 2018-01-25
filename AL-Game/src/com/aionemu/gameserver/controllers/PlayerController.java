@@ -955,8 +955,9 @@ public class PlayerController extends CreatureController<Player> {
 		player.getLifeStats().synchronizeWithMaxStats();
 		player.getLifeStats().updateCurrentStats();
 
+		//TODO TEST
 		int effectId = player.getRace() == Race.ELYOS ? 0 : 4;
-		PacketSendUtility.broadcastPacket(player, new SM_LEVEL_UPDATE(player.getObjectId(), 0, level), true);
+		PacketSendUtility.broadcastPacket(player, new SM_LEVEL_UPDATE(player.getObjectId(), effectId, level), true);
 
 		// Guides Html on level up
 		if (HTMLConfig.ENABLE_GUIDES) {
