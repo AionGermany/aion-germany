@@ -78,7 +78,6 @@ public class LandingUpdateService {
 
 	public void resetQuestPoints() {
 		log.debug("##### Abyss Landing Reset Quest Points #####");
-		long startTime = System.currentTimeMillis();
 		// Redemption's Landing
 		redemptionLanding.setPoints(redemptionPts);
 		redemptionLanding.setQuestPoints(0);
@@ -93,7 +92,6 @@ public class LandingUpdateService {
 
 	public void resetMonumentPoints() {
 		log.debug("##### Abyss Landing Reset Monuments Points #####");
-		long startTime = System.currentTimeMillis();
 		// Redemption's Landing
 		redemptionLanding.setPoints(redemptionPts1);
 		redemptionLanding.setMonumentsPoints(0);
@@ -108,7 +106,6 @@ public class LandingUpdateService {
 
 	public void resetFacilityPoints() {
 		log.debug("##### Abyss Landing Reset Facility Points #####");
-		long startTime = System.currentTimeMillis();
 		// Redemption's Landing
 		redemptionLanding.setPoints(redemptionPts2);
 		redemptionLanding.setFacilityPoints(0);
@@ -123,7 +120,6 @@ public class LandingUpdateService {
 
 	public void resetCommanderPoints() {
 		log.debug("##### Abyss Landing Reset Commander Points #####");
-		long startTime = System.currentTimeMillis();
 		// Redemption's Landing
 		redemptionLanding.setPoints(redemptionPts3);
 		redemptionLanding.setCommanderPoints(0);

@@ -149,7 +149,7 @@ public class ItemEquipmentListener {
 		}
 
 		List<StatFunction> allModifiers = null;
-		List<StatFunction> decreaseAllModifiers = null;
+//		List<StatFunction> decreaseAllModifiers = null;
 
 		if ((slot & ItemSlot.MAIN_OR_SUB.getSlotIdMask()) != 0) {
 			allModifiers = wrapModifiers(item, modifiers);

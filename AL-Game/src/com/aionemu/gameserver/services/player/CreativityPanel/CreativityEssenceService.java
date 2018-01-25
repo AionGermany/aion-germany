@@ -89,7 +89,7 @@ public class CreativityEssenceService {
 					player.setCreativityPoint(point);
 					int totalPoint = player.getCreativityPoint();
 					int size = DAOManager.getDAO(PlayerCreativityPointsDAO.class).getSlotSize(player.getObjectId());
-					PacketSendUtility.sendPacket(player, new SM_CREATIVITY_POINTS(totalPoint, 2));
+					PacketSendUtility.sendPacket(player, new SM_CREATIVITY_POINTS(totalPoint, 2, size, false));
 					PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
 					// You have gained Essence.
 					// Click the Essence icon displayed on the Character XP meter, SHIFT+U, or select Start Menu.
@@ -369,7 +369,6 @@ public class CreativityEssenceService {
 	}
 
 	public void archDaevaSkills(Player player, int id, int point) {
-		PanelCp pcp = DataManager.PANEL_CP_DATA.getPanelCpId(id);
 		if (point >= 5) {
 			switch (id) {
 				case 8:

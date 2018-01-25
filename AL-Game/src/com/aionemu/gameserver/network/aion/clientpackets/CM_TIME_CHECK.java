@@ -56,8 +56,8 @@ public class CM_TIME_CHECK extends AionClientPacket {
 	@Override
 	protected void runImpl() {
 		AionConnection client = getConnection();
-		int timeNow = (int) (System.nanoTime() / 1000000);
-		int diff = timeNow - nanoTime;
+//		int timeNow = (int) (System.nanoTime() / 1000000);
+//		int diff = timeNow - nanoTime;
 		client.sendPacket(new SM_TIME_CHECK(nanoTime));
 
 		// log.info("CM_TIME_CHECK: " + nanoTime + " =?= " + timeNow + " dif: " + diff);

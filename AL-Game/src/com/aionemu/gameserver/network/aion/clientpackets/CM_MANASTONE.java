@@ -17,7 +17,6 @@
 package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.model.gameobjects.Item;
-import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.GodstoneAction;
@@ -33,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_MANASTONE extends AionClientPacket {
 
-	private int npcObjId;
 	private int slotNum;
 	private int actionType;
 	private int targetFusedSlot;
@@ -64,7 +62,7 @@ public class CM_MANASTONE extends AionClientPacket {
 				slotNum = readC();
 				readC();
 				readH();
-				npcObjId = readD();
+				readD(); //Old = npcObjId
 				break;
 		}
 	}
@@ -72,7 +70,6 @@ public class CM_MANASTONE extends AionClientPacket {
 	@Override
 	protected void runImpl() {
 		Player player = getConnection().getActivePlayer();
-		VisibleObject obj = player.getKnownList().getObject(npcObjId);
 
 		switch (actionType) {
 			case 1: // enchant stone

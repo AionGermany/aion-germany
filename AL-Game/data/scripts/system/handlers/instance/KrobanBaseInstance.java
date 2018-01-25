@@ -49,6 +49,7 @@ public class KrobanBaseInstance extends GeneralInstanceHandler {
 
 	private Race spawnRace;
 	protected boolean isInstanceDestroyed = false;
+	@SuppressWarnings("unused")
 	private FastMap<Integer, VisibleObject> objects = new FastMap<Integer, VisibleObject>();
 
 	@Override
@@ -382,6 +383,7 @@ public class KrobanBaseInstance extends GeneralInstanceHandler {
 		spawn(243952, 237.5806f, 787.14343f, 103.5251f, (byte) 93);
 	}
 
+	@SuppressWarnings("unused")
 	private void seaOfFlames3() {
 		// Hurry and destroy the iron fence to get to the Timolia Abandoned Mine before Lieutenant Anuhart returns.
 		sendMsgByRace(1403442, Race.PC_ALL, 30000);

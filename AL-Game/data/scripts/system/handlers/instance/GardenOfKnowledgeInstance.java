@@ -135,7 +135,6 @@ public class GardenOfKnowledgeInstance extends GeneralInstanceHandler {
 
 	@Override
 	public void onDie(Npc npc) {
-		Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId()) {
 			case 220470: // Covetous Fallen Guardian
 			case 220471: // Covetous Fallen Guardian

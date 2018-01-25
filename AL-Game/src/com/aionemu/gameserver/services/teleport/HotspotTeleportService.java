@@ -38,10 +38,6 @@ public class HotspotTeleportService {
 		return SingletonHolder.instance;
 	}
 
-	private HotspotTeleportService() {
-		int hotspotList = DataManager.HOTSPOT_TELEPORTER_DATA.size();
-	}
-
 	public void doTeleport(final Player player, final int teleportId, final int price) {
 		final int worldId = DataManager.HOTSPOT_TELEPORTER_DATA.getHotspotTemplate(teleportId).getMapId();
 		final float getX = DataManager.HOTSPOT_TELEPORTER_DATA.getHotspotTemplate(teleportId).getX();
@@ -98,9 +94,8 @@ public class HotspotTeleportService {
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_HOTSPOT_TELEPORT(1, player.getObjectId(), teleportId));
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
-
+		
 		protected static final HotspotTeleportService instance = new HotspotTeleportService();
 	}
 }

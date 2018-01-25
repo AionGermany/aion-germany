@@ -120,8 +120,8 @@ public class SteelWallBastionBattlefieldReward extends InstanceReward<SteelWallB
 		 */
 		float Rx = Rnd.get(-5, 5);
 		float Ry = Rnd.get(-5, 5);
-		Point3D ElyosStartPoint = new Point3D(570.468f + Rx, 166.897f + Rx, 432.28986f);// Elyos Center
-		Point3D AsmoStartPoint = new Point3D(400.741f + Rx, 166.713f + Rx, 432.290f);// Asmo Center
+		Point3D ElyosStartPoint = new Point3D(570.468f + Rx, 166.897f + Ry, 432.28986f);// Elyos Center
+		Point3D AsmoStartPoint = new Point3D(400.741f + Rx, 166.713f + Ry, 432.290f);// Asmo Center
 
 		if (player.getRace() == Race.ASMODIANS) {
 			TeleportService2.teleportTo(player, mapId, instanceId, AsmoStartPoint.getX(), AsmoStartPoint.getY(), AsmoStartPoint.getZ(), (byte) 45);

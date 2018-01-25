@@ -69,6 +69,7 @@ public class KumukiHideoutInstance extends GeneralInstanceHandler {
 	public void onDropRegistered(Npc npc) {
 		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		int npcId = npc.getNpcId();
+		@SuppressWarnings("unused")
 		int index = dropItems.size() + 1;
 		switch (npcId) {
 			case 246294: // Key Chest
@@ -316,6 +317,7 @@ public class KumukiHideoutInstance extends GeneralInstanceHandler {
 		sendMsg("You managed to save all <Poppy>");
 	}
 
+	@SuppressWarnings("unused")
 	private void deleteNpc(int npcId) {
 		if (getNpc(npcId) != null) {
 			getNpc(npcId).getController().onDelete();
@@ -456,6 +458,7 @@ public class KumukiHideoutInstance extends GeneralInstanceHandler {
 		TeleportService2.moveToInstanceExit(player, mapId, player.getRace());
 	}
 
+	@SuppressWarnings("unused")
 	private int getTime() {
 		long result = System.currentTimeMillis() - instanceTime;
 		if (result < 10000) {

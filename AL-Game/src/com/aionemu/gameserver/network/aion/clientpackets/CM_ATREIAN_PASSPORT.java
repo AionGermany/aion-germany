@@ -26,10 +26,12 @@ import com.aionemu.gameserver.services.AtreianPassportService;
  */
 public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 
-	private int timestamp;
 	private int count;
+	@SuppressWarnings("unused")
 	private int count2;
+	@SuppressWarnings("unused")
 	private int passportId;
+	@SuppressWarnings("unused")
 	private int unk;
 
 	/**
@@ -66,7 +68,7 @@ public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 		if (count <= 0) {
 			return;
 		}
-		AtreianPassportService.getInstance().getReward(player, 5);
+		AtreianPassportService.getInstance().getReward(player, 5); // 5 = active PassportID (Todo Config ?)
 	}
 
 }

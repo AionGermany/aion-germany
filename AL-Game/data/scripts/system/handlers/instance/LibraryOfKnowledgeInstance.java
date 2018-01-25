@@ -145,7 +145,6 @@ public class LibraryOfKnowledgeInstance extends GeneralInstanceHandler {
 
 	@Override
 	public void onDie(Npc npc) {
-		Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId()) {
 			case 701432: // IDEternity_01_Secret_Door_01
 				despawnNpc(npc);

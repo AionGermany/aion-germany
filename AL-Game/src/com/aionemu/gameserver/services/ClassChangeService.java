@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import java.sql.Timestamp;
-import java.util.Calendar;
-
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
@@ -200,8 +197,8 @@ public class ClassChangeService {
 
 	private static void completeQuest(Player player, int questId) {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		Calendar calendar = Calendar.getInstance();
-		Timestamp timeStamp = new Timestamp(calendar.getTime().getTime());
+//		Calendar calendar = Calendar.getInstance();
+//		Timestamp timeStamp = new Timestamp(calendar.getTime().getTime());
 		if (qs == null) {
 			player.getQuestStateList().addQuest(questId, new QuestState(questId, QuestStatus.COMPLETE, 0, 0, null, 0, null));
 			PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(questId, QuestStatus.COMPLETE.value(), 0));

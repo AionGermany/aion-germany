@@ -18,7 +18,6 @@ package ai.siege;
 
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.skillengine.SkillEngine;
@@ -45,7 +44,6 @@ public class EmptyAethericCannonAI2 extends ActionItemNpcAI2 {
 
 	@Override
 	protected void handleUseItemFinish(Player player) {
-		Npc owner = getOwner();
 		player.getController().stopProtectionActiveTask();
 		SkillEngine.getInstance().getSkill(player, 21385, 1, player).useNoAnimationSkill();
 		AI2Actions.deleteOwner(this);

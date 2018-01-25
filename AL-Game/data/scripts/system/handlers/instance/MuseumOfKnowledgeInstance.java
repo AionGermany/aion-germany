@@ -74,8 +74,10 @@ public class MuseumOfKnowledgeInstance extends GeneralInstanceHandler {
 
 	private Race spawnRace;
 	private Race videoRace;
+	@SuppressWarnings("unused")
 	private long startTime;
 	private long instanceTime;
+	@SuppressWarnings("unused")
 	private Future<?> fakeBook2Task;
 	private Future<?> instanceTimer;
 	private boolean isInstanceDestroyed;
@@ -533,6 +535,7 @@ public class MuseumOfKnowledgeInstance extends GeneralInstanceHandler {
 		PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, endVideo));
 	}
 
+	@SuppressWarnings("unused")
 	private int getTime() {
 		long result = System.currentTimeMillis() - instanceTime;
 		if (result < 60000) {

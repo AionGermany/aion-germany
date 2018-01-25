@@ -120,10 +120,10 @@ public class RunatoriumInstance extends GeneralInstanceHandler {
 		/*
 		 * Elyos & Asmodian PvP and Points
 		 */
-		int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
-		int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
-		int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
-		int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
+//		int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
+//		int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
+//		int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
+//		int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
 
 		for (Player player : Runatorium.getPlayersInside()) {
 			if (CreatureActions.isAlreadyDead(player)) {
