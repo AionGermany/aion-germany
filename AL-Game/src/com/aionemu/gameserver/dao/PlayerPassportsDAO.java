@@ -35,11 +35,7 @@ public abstract class PlayerPassportsDAO implements DAO {
 
 	public abstract Timestamp getLastStamp(int accountId, int passportId);
 
-	public abstract void deletePassport(int accountId, int passportId);
-
 	public abstract List<Integer> getPassports(int accountId);
-
-	public abstract boolean isRewarded(int accountId, int passportId);
 
 	@Override
 	public final String getClassName() {

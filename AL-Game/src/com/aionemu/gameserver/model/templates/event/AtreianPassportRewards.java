@@ -35,7 +35,7 @@ public class AtreianPassportRewards {
 	@XmlAttribute(name = "reward_item_count", required = true)
 	private int rewardItemCount;
 	@XmlAttribute(name = "reward_item_num", required = true)
-	private int rewardItemNum = 1;
+	private int rewardItemNum;
 	@XmlAttribute(name = "reward_permit_level")
 	private int rewardPermitLevel;
 
