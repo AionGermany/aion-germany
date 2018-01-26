@@ -21872,11 +21872,11 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	 * MonsterBook
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MONSTER_ACHIEVEMENT_GET(int nameId) {
-		return new SM_SYSTEM_MESSAGE(1404072, nameId);
+		return new SM_SYSTEM_MESSAGE(1404072, new Object[] { new DescriptionId(nameId)});
 	}
 	
 	public static SM_SYSTEM_MESSAGE STR_MSG_MONSTER_ACHIEVEMENT_COMPLETION(int level, int nameId) {
-		return new SM_SYSTEM_MESSAGE(1404073, level, nameId);
+		return new SM_SYSTEM_MESSAGE(1404073, level, new Object[] { new DescriptionId(nameId)});
 	}
 
 	/**

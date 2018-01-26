@@ -22,6 +22,7 @@ import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.dao.PlayerMonsterbookDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.RewardType;
 import com.aionemu.gameserver.model.templates.monsterbook.MonsterbookTemplate;
@@ -58,10 +59,9 @@ public class MonsterbookService {
         	return;
         }
         
-        Iterator<Integer> iterator = monsterbookTemplateByNpcId.getNpcIds().iterator();
-        while (iterator.hasNext()) {
-            if (npcId == iterator.next()) {
-                ++killCountById;
+        Iterator<Integer> npcIds = monsterbookTemplateByNpcId.getNpcIds().iterator();
+        while (npcIds.hasNext()) {
+            if (npcId == npcIds.next()) {
                 for (MonsterbookTemplate.MonsterbookAchievementTemplate monsterbookAchievementTemplate : monsterbookTemplateByNpcId.getMonsterbookAchievementTemplate()) {
                     if (monsterbookAchievementTemplate == null) {
                         return;
@@ -72,12 +72,12 @@ public class MonsterbookService {
                     	level+= 1;
                     }
                 }
-                //Should be for ++killCountById
-//                if (killCountById == 0) { //TODO Need Template nameId
-//                	PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404072, new DescriptionId(monsterbookTemplateByNpcId.getNameId() * 2 + 1)));
-//                }
-                PacketSendUtility.sendPacket(player, new SM_MONSTERBOOK(monsterbookTemplateByNpcId.getId(), killCountById, level, 0));
-                player.getMonsterbook().add(player, monsterbookTemplateByNpcId.getId(), killCountById, level, 0);
+                if (killCountById == 0) {
+                	PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404072, new DescriptionId(monsterbookTemplateByNpcId.getNameId())));
+                }
+                ++killCountById;
+                PacketSendUtility.sendPacket(player, new SM_MONSTERBOOK(monsterbookTemplateByNpcId.getId(), killCountById, level, level));
+                player.getMonsterbook().add(player, monsterbookTemplateByNpcId.getId(), killCountById, level, level);
             }
         }
     }
@@ -97,6 +97,7 @@ public class MonsterbookService {
         }
         player.getCommonData().addExp(EXP, RewardType.MONSTER_BOOK);
         PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GET_EXP2(EXP));
+        PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404073, level, new DescriptionId(monsterbookTemplate.getNameId())));
         PacketSendUtility.sendPacket(player, new SM_MONSTERBOOK(npcId, killCountById, level, level));
         player.getMonsterbook().add(player, npcId, killCountById, level, level);
 	}
