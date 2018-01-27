@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-09-27 19:07 -->
 <monster_books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="monster_books.xsd">
+	<!-- ELYOS BOSS MOBS -->
     <monster_book id="1" level="66" name="STR_LF6_01_Boss" name_id="4613343" npc_ids="241150" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
@@ -246,6 +247,7 @@
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
+	<!-- ELYOS NORMALE MOBS -->
     <monster_book id="36" level="66" name="STR_LF6_01_Normal" name_id="4613411" npc_ids="241176" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
@@ -589,742 +591,746 @@
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="85" level="66" name="STR_LF6_50_Normal" name_id="4651645" npc_ids="241704 241705 241706" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="86" level="66" name="STR_LF6_51_Normal" name_id="4651647" npc_ids="241165" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="87" level="66" name="STR_LF6_52_Normal" name_id="4651649" npc_ids="241664 241665" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="88" level="66" name="STR_LF6_53_Normal" name_id="4651651" npc_ids="241166" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="89" level="66" name="STR_LF6_54_Normal" name_id="4651653" npc_ids="241666 241667" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="90" level="66" name="STR_LF6_55_Normal" name_id="4651655" npc_ids="241658 241659 243284 243285" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="91" level="66" name="STR_LF6_56_Normal" name_id="4651657" npc_ids="241662 241663" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="92" level="66" name="STR_LF6_57_Normal" name_id="4651659" npc_ids="241670 241671" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="93" level="66" name="STR_LF6_58_Normal" name_id="4651661" npc_ids="241678 241679" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="94" level="66" name="STR_LF6_59_Normal" name_id="4651663" npc_ids="241676 241677" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="95" level="66" name="STR_LF6_60_Normal" name_id="4651665" npc_ids="241728 241729 241730" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="96" level="66" name="STR_LF6_61_Normal" name_id="4651667" npc_ids="241672 241673" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="97" level="66" name="STR_LF6_62_Normal" name_id="4651669" npc_ids="241698 241699 241700" type="NORMAL">
-        <achievement condition="50" exp="4750000"/>
-        <achievement condition="135" exp="8075000"/>
-        <achievement condition="285" exp="14250000"/>
-        <achievement condition="545" exp="24700000"/>
-        <achievement condition="1000" exp="43225000"/>
-    </monster_book>
-    <monster_book id="98" level="66" name="STR_DF6_01_Boss" name_id="4613509" npc_ids="241198" type="HERO">
+	<!-- ASMO BOSS MOBS -->
+	    <monster_book id="85" level="66" name="STR_DF6_01_Boss" name_id="4613509" npc_ids="241198" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="99" level="66" name="STR_DF6_02_Boss" name_id="4613511" npc_ids="241217" type="HERO">
+    <monster_book id="86" level="66" name="STR_DF6_02_Boss" name_id="4613511" npc_ids="241217" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="100" level="66" name="STR_DF6_03_Boss" name_id="4613513" npc_ids="241222" type="HERO">
+    <monster_book id="87" level="66" name="STR_DF6_03_Boss" name_id="4613513" npc_ids="241222" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="101" level="66" name="STR_DF6_04_Boss" name_id="4613515" npc_ids="241202" type="HERO">
+    <monster_book id="88" level="66" name="STR_DF6_04_Boss" name_id="4613515" npc_ids="241202" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="102" level="66" name="STR_DF6_05_Boss" name_id="4613517" npc_ids="243308" type="HERO">
+    <monster_book id="89" level="66" name="STR_DF6_05_Boss" name_id="4613517" npc_ids="243308" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="103" level="66" name="STR_DF6_06_Boss" name_id="4613519" npc_ids="243293" type="HERO">
+    <monster_book id="90" level="66" name="STR_DF6_06_Boss" name_id="4613519" npc_ids="243293" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="104" level="66" name="STR_DF6_07_Boss" name_id="4613521" npc_ids="243301" type="HERO">
+    <monster_book id="91" level="66" name="STR_DF6_07_Boss" name_id="4613521" npc_ids="243301" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="105" level="66" name="STR_DF6_08_Boss" name_id="4613523" npc_ids="243300" type="HERO">
+    <monster_book id="92" level="66" name="STR_DF6_08_Boss" name_id="4613523" npc_ids="243300" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="106" level="66" name="STR_DF6_09_Boss" name_id="4613525" npc_ids="243318" type="HERO">
+    <monster_book id="93" level="66" name="STR_DF6_09_Boss" name_id="4613525" npc_ids="243318" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="107" level="66" name="STR_DF6_10_Boss" name_id="4613527" npc_ids="243302" type="HERO">
+    <monster_book id="94" level="66" name="STR_DF6_10_Boss" name_id="4613527" npc_ids="243302" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="108" level="66" name="STR_DF6_11_Boss" name_id="4613529" npc_ids="243297 243310 243331" type="HERO">
+    <monster_book id="95" level="66" name="STR_DF6_11_Boss" name_id="4613529" npc_ids="243297 243310 243331" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="109" level="66" name="STR_DF6_12_Boss" name_id="4613531" npc_ids="241213" type="HERO">
+    <monster_book id="96" level="66" name="STR_DF6_12_Boss" name_id="4613531" npc_ids="241213" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="110" level="66" name="STR_DF6_13_Boss" name_id="4613533" npc_ids="241194" type="HERO">
+    <monster_book id="97" level="66" name="STR_DF6_13_Boss" name_id="4613533" npc_ids="241194" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="111" level="66" name="STR_DF6_14_Boss" name_id="4613535" npc_ids="243307 243315 243327" type="HERO">
+    <monster_book id="98" level="66" name="STR_DF6_14_Boss" name_id="4613535" npc_ids="243307 243315 243327" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="112" level="66" name="STR_DF6_15_Boss" name_id="4613537" npc_ids="243312" type="HERO">
+    <monster_book id="99" level="66" name="STR_DF6_15_Boss" name_id="4613537" npc_ids="243312" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="113" level="66" name="STR_DF6_16_Boss" name_id="4613539" npc_ids="243287 243325" type="HERO">
+    <monster_book id="100" level="66" name="STR_DF6_16_Boss" name_id="4613539" npc_ids="243287 243325" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="114" level="66" name="STR_DF6_17_Boss" name_id="4613541" npc_ids="243333" type="HERO">
+    <monster_book id="101" level="66" name="STR_DF6_17_Boss" name_id="4613541" npc_ids="243333" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="115" level="66" name="STR_DF6_18_Boss" name_id="4613543" npc_ids="241195 241220" type="HERO">
+    <monster_book id="102" level="66" name="STR_DF6_18_Boss" name_id="4613543" npc_ids="241195 241220" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="116" level="66" name="STR_DF6_19_Boss" name_id="4613545" npc_ids="243290" type="HERO">
+    <monster_book id="103" level="66" name="STR_DF6_19_Boss" name_id="4613545" npc_ids="243290" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="117" level="66" name="STR_DF6_20_Boss" name_id="4613547" npc_ids="241419" type="HERO">
+    <monster_book id="104" level="66" name="STR_DF6_20_Boss" name_id="4613547" npc_ids="241419" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="118" level="66" name="STR_DF6_21_Boss" name_id="4613549" npc_ids="241200 243291 243296 243306 243313 243316" type="HERO">
+    <monster_book id="105" level="66" name="STR_DF6_21_Boss" name_id="4613549" npc_ids="241200 243291 243296 243306 243313 243316" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="119" level="66" name="STR_DF6_22_Boss" name_id="4613551" npc_ids="243320" type="HERO">
+    <monster_book id="106" level="66" name="STR_DF6_22_Boss" name_id="4613551" npc_ids="243320" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="120" level="66" name="STR_DF6_23_Boss" name_id="4613553" npc_ids="241234" type="HERO">
+    <monster_book id="107" level="66" name="STR_DF6_23_Boss" name_id="4613553" npc_ids="241234" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="121" level="66" name="STR_DF6_24_Boss" name_id="4613555" npc_ids="243295" type="HERO">
+    <monster_book id="108" level="66" name="STR_DF6_24_Boss" name_id="4613555" npc_ids="243295" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="122" level="66" name="STR_DF6_25_Boss" name_id="4613557" npc_ids="243326" type="HERO">
+    <monster_book id="109" level="66" name="STR_DF6_25_Boss" name_id="4613557" npc_ids="243326" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="123" level="66" name="STR_DF6_26_Boss" name_id="4613559" npc_ids="241227 241228 241229 241230 241231 241233 241416 243854 243855 243856 243857" type="HERO">
+    <monster_book id="110" level="66" name="STR_DF6_26_Boss" name_id="4613559" npc_ids="241227 241228 241229 241230 241231 241233 241416 243854 243855 243856 243857" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="124" level="66" name="STR_DF6_28_Boss" name_id="4613563" npc_ids="241196 243289" type="HERO">
+    <monster_book id="112" level="66" name="STR_DF6_28_Boss" name_id="4613563" npc_ids="241196 243289" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="125" level="66" name="STR_DF6_29_Boss" name_id="4613565" npc_ids="243314" type="HERO">
+    <monster_book id="113" level="66" name="STR_DF6_29_Boss" name_id="4613565" npc_ids="243314" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="126" level="66" name="STR_DF6_30_Boss" name_id="4613567" npc_ids="241203 241208 241209 241210 241232 241417 243858 243859 243860 243861" type="HERO">
+    <monster_book id="114" level="66" name="STR_DF6_30_Boss" name_id="4613567" npc_ids="241203 241208 241209 241210 241232 241417 243858 243859 243860 243861" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="127" level="66" name="STR_DF6_31_Boss" name_id="4613569" npc_ids="243330" type="HERO">
+    <monster_book id="115" level="66" name="STR_DF6_31_Boss" name_id="4613569" npc_ids="243330" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="128" level="66" name="STR_DF6_32_Boss" name_id="4613571" npc_ids="241211 241418" type="HERO">
+    <monster_book id="116" level="66" name="STR_DF6_32_Boss" name_id="4613571" npc_ids="241211 241418" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="129" level="66" name="STR_DF6_33_Boss" name_id="4613573" npc_ids="243294" type="HERO">
+    <monster_book id="117" level="66" name="STR_DF6_33_Boss" name_id="4613573" npc_ids="243294" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="130" level="66" name="STR_DF6_34_Boss" name_id="4613575" npc_ids="243319" type="HERO">
+    <monster_book id="118" level="66" name="STR_DF6_34_Boss" name_id="4613575" npc_ids="243319" type="HERO">
         <achievement condition="35" exp="6175000"/>
         <achievement condition="95" exp="10497500"/>
         <achievement condition="200" exp="18525000"/>
         <achievement condition="380" exp="32110000"/>
         <achievement condition="700" exp="56192500"/>
     </monster_book>
-    <monster_book id="131" level="66" name="STR_DF6_01_Normal" name_id="4613577" npc_ids="241492 241493 241553 241554 241555" type="NORMAL">
+	<!-- ASMO NORMALE MOBS -->
+	<monster_book id="119" level="66" name="STR_DF6_01_Normal" name_id="4613577" npc_ids="241492 241493 241553 241554 241555" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="132" level="66" name="STR_DF6_02_Normal" name_id="4613579" npc_ids="237510 237511 237512 237513 237514 237515 238222 238223 238224 238225 238226 238227 238228 238229 238230 238231 238232 238233 238234 238235 238236 238237 238238 238239 238240 238241 238242 238243 238244 238245 238246 238247 238248 238249 238250 238251 238252 238253 238254 238255 238256 238257 241201 241496 241497 241508 241509 241532 241533 241534 241547 241548 241549 241574 241575 241576 241595 241596 241597 241604 241605 241606 242164 242165 242166 242167 242168 242169 242170 242171 242172 242173 242174 242175 242176 242177 242178 242179 242180 242181 242182 242183" type="NORMAL">
+    <monster_book id="120" level="66" name="STR_DF6_02_Normal" name_id="4613579" npc_ids="237510 237511 237512 237513 237514 237515 238222 238223 238224 238225 238226 238227 238228 238229 238230 238231 238232 238233 238234 238235 238236 238237 238238 238239 238240 238241 238242 238243 238244 238245 238246 238247 238248 238249 238250 238251 238252 238253 238254 238255 238256 238257 241201 241496 241497 241508 241509 241532 241533 241534 241547 241548 241549 241574 241575 241576 241595 241596 241597 241604 241605 241606 242164 242165 242166 242167 242168 242169 242170 242171 242172 242173 242174 242175 242176 242177 242178 242179 242180 242181 242182 242183" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="133" level="66" name="STR_DF6_03_Normal" name_id="4613581" npc_ids="241494 241495 241550 241551 241552 241586 241587 241588 241643 241644 241645" type="NORMAL">
+    <monster_book id="121" level="66" name="STR_DF6_03_Normal" name_id="4613581" npc_ids="241494 241495 241550 241551 241552 241586 241587 241588 241643 241644 241645" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="134" level="66" name="STR_DF6_04_Normal" name_id="4613583" npc_ids="241221 241500 241501" type="NORMAL">
+    <monster_book id="122" level="66" name="STR_DF6_04_Normal" name_id="4613583" npc_ids="241221 241500 241501" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="135" level="66" name="STR_DF6_05_Normal" name_id="4613585" npc_ids="237411 237412 237413 237414 237415 237416 237628 237629 237630 237631 237632 237633 237634 237635 237636 237637 237638 237639 237640 237641 237642 237643 237644 237645 237646 237647 237648 237649 237650 237651 237652 237653 237654 237655 237656 237657 237658 237659 237660 237661 237662 237663 241565 241566 241567 241640 241641 241642 241824 241825 241826 241827 241828 241829 241830 241831 241832 241833 241834 241835 241836 241837 241838 241839 241840 241841 241842 241843" type="NORMAL">
+    <monster_book id="123" level="66" name="STR_DF6_05_Normal" name_id="4613585" npc_ids="237411 237412 237413 237414 237415 237416 237628 237629 237630 237631 237632 237633 237634 237635 237636 237637 237638 237639 237640 237641 237642 237643 237644 237645 237646 237647 237648 237649 237650 237651 237652 237653 237654 237655 237656 237657 237658 237659 237660 237661 237662 237663 241565 241566 241567 241640 241641 241642 241824 241825 241826 241827 241828 241829 241830 241831 241832 241833 241834 241835 241836 241837 241838 241839 241840 241841 241842 241843" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="136" level="66" name="STR_DF6_06_Normal" name_id="4613587" npc_ids="241199 241212" type="NORMAL">
+    <monster_book id="124" level="66" name="STR_DF6_06_Normal" name_id="4613587" npc_ids="241199 241212" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="137" level="66" name="STR_DF6_07_Normal" name_id="4613589" npc_ids="241541 241542 241543" type="NORMAL">
+    <monster_book id="125" level="66" name="STR_DF6_07_Normal" name_id="4613589" npc_ids="241541 241542 241543" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="138" level="66" name="STR_DF6_08_Normal" name_id="4613591" npc_ids="241610 241611 241612 243264 243265" type="NORMAL">
+    <monster_book id="126" level="66" name="STR_DF6_08_Normal" name_id="4613591" npc_ids="241610 241611 241612 243264 243265" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="139" level="66" name="STR_DF6_09_Normal" name_id="4613593" npc_ids="241580 241581 241582" type="NORMAL">
+    <monster_book id="127" level="66" name="STR_DF6_09_Normal" name_id="4613593" npc_ids="241580 241581 241582" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="140" level="66" name="STR_DF6_10_Normal" name_id="4613595" npc_ids="241538 241539 241540" type="NORMAL">
+    <monster_book id="128" level="66" name="STR_DF6_10_Normal" name_id="4613595" npc_ids="241538 241539 241540" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="141" level="66" name="STR_DF6_11_Normal" name_id="4613597" npc_ids="241559 241560 241561" type="NORMAL">
+    <monster_book id="129" level="66" name="STR_DF6_11_Normal" name_id="4613597" npc_ids="241559 241560 241561" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="142" level="66" name="STR_DF6_12_Normal" name_id="4613599" npc_ids="241556 241557 241558" type="NORMAL">
+    <monster_book id="130" level="66" name="STR_DF6_12_Normal" name_id="4613599" npc_ids="241556 241557 241558" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="143" level="66" name="STR_DF6_13_Normal" name_id="4613601" npc_ids="241607 241608 241609" type="NORMAL">
+    <monster_book id="131" level="66" name="STR_DF6_13_Normal" name_id="4613601" npc_ids="241607 241608 241609" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="144" level="66" name="STR_DF6_14_Normal" name_id="4613603" npc_ids="237555 237556 237557 237558 237559 238492 238493 238494 238495 238496 238497 238498 238499 238500 238501 238502 238503 238504 238505 238506 238507 238508 238509 238510 238511 238512 238513 238514 238515 238516 238517 238518 238519 238520 238521 242304 242305 242306 242307 242308 242309 242310 242311 242312 242313 242314 242315 242316 242317 242318 242319 242320 242321 242322 242323" type="NORMAL">
+    <monster_book id="132" level="66" name="STR_DF6_14_Normal" name_id="4613603" npc_ids="237555 237556 237557 237558 237559 238492 238493 238494 238495 238496 238497 238498 238499 238500 238501 238502 238503 238504 238505 238506 238507 238508 238509 238510 238511 238512 238513 238514 238515 238516 238517 238518 238519 238520 238521 242304 242305 242306 242307 242308 242309 242310 242311 242312 242313 242314 242315 242316 242317 242318 242319 242320 242321 242322 242323" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="145" level="66" name="STR_DF6_15_Normal" name_id="4613605" npc_ids="241215 243272 243273 243274 243275 243276 243277" type="NORMAL">
+    <monster_book id="133" level="66" name="STR_DF6_15_Normal" name_id="4613605" npc_ids="241215 243272 243273 243274 243275 243276 243277" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="146" level="66" name="STR_DF6_16_Normal" name_id="4613607" npc_ids="237450 237451 237452 237453 237454 237862 237863 237864 237865 237866 237867 237868 237869 237870 237871 237872 237873 237874 237875 237876 237877 237878 237879 237880 237881 237882 237883 237884 237885 237886 237887 237888 237889 237890 237891 241577 241578 241579 241601 241602 241603 241631 241632 241633 241944 241945 241946 241947 241948 241949 241950 241951 241952 241953 241954 241955 241956 241957 241958 241959 241960 241961 241962 241963" type="NORMAL">
+    <monster_book id="134" level="66" name="STR_DF6_16_Normal" name_id="4613607" npc_ids="237450 237451 237452 237453 237454 237862 237863 237864 237865 237866 237867 237868 237869 237870 237871 237872 237873 237874 237875 237876 237877 237878 237879 237880 237881 237882 237883 237884 237885 237886 237887 237888 237889 237890 237891 241577 241578 241579 241601 241602 241603 241631 241632 241633 241944 241945 241946 241947 241948 241949 241950 241951 241952 241953 241954 241955 241956 241957 241958 241959 241960 241961 241962 241963" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="147" level="66" name="STR_DF6_17_Normal" name_id="4613609" npc_ids="241592 241593 241594" type="NORMAL">
+    <monster_book id="135" level="66" name="STR_DF6_17_Normal" name_id="4613609" npc_ids="241592 241593 241594" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="148" level="66" name="STR_DF6_18_Normal" name_id="4613611" npc_ids="241523 241524 241525 241625 241626 241627 241634 241635 241636" type="NORMAL">
+    <monster_book id="136" level="66" name="STR_DF6_18_Normal" name_id="4613611" npc_ids="241523 241524 241525 241625 241626 241627 241634 241635 241636" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="149" level="66" name="STR_DF6_19_Normal" name_id="4613613" npc_ids="241649 241650 241651" type="NORMAL">
+    <monster_book id="137" level="66" name="STR_DF6_19_Normal" name_id="4613613" npc_ids="241649 241650 241651" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="150" level="66" name="STR_DF6_20_Normal" name_id="4613615" npc_ids="241510 241511 243266 243267 243268" type="NORMAL">
+    <monster_book id="138" level="66" name="STR_DF6_20_Normal" name_id="4613615" npc_ids="241510 241511 243266 243267 243268" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="151" level="66" name="STR_DF6_21_Normal" name_id="4613617" npc_ids="241218 241219" type="NORMAL">
+    <monster_book id="139" level="66" name="STR_DF6_21_Normal" name_id="4613617" npc_ids="241218 241219" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="152" level="66" name="STR_DF6_22_Normal" name_id="4613619" npc_ids="241613 241614 241615" type="NORMAL">
+    <monster_book id="140" level="66" name="STR_DF6_22_Normal" name_id="4613619" npc_ids="241613 241614 241615" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="153" level="66" name="STR_DF6_23_Normal" name_id="4613621" npc_ids="241235" type="NORMAL">
+    <monster_book id="141" level="66" name="STR_DF6_23_Normal" name_id="4613621" npc_ids="241235" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="154" level="66" name="STR_DF6_24_Normal" name_id="4613623" npc_ids="241544 241545 241546 243281 243282 243283" type="NORMAL">
+    <monster_book id="142" level="66" name="STR_DF6_24_Normal" name_id="4613623" npc_ids="241544 241545 241546 243281 243282 243283" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="155" level="66" name="STR_DF6_25_Normal" name_id="4613625" npc_ids="241535 241536 241537 241571 241572 241573 241583 241584 241585 241589 241590 241591 241628 241629 241630 241637 241638 241639 241646 241647 241648 243269 243270 243271" type="NORMAL">
+    <monster_book id="143" level="66" name="STR_DF6_25_Normal" name_id="4613625" npc_ids="241535 241536 241537 241571 241572 241573 241583 241584 241585 241589 241590 241591 241628 241629 241630 241637 241638 241639 241646 241647 241648 243269 243270 243271" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="156" level="66" name="STR_DF6_26_Normal" name_id="4613627" npc_ids="237565 237566 237567 237568 237569 237570 237571 237572 237573 237574 237575 237576 237577 237578 237579 237580 237581 237582 237583 237584 237585 237586 237587 237588 237589 237590 237591 237592 237593 237594 238552 238553 238554 238555 238556 238557 238558 238559 238560 238561 238562 238563 238564 238565 238566 238567 238568 238569 238570 238571 238572 238573 238574 238575 238576 238577 238578 238579 238580 238581 238582 238583 238584 238585 238586 238587 238588 238589 238590 238591 238592 238593 238594 238595 238596 238597 238598 238599 238600 238601 238602 238603 238604 238605 238606 238607 238608 238609 238610 238611 238612 238613 238614 238615 238616 238617 238618 238619 238620 238621 238622 238623 238624 238625 238626 238627 238628 238629 238630 238631 238632 238633 238634 238635 238636 238637 238638 238639 238640 238641 238642 238643 238644 238645 238646 238647 238648 238649 238650 238651 238652 238653 238654 238655 238656 238657 238658 238659 238660 238661 238662 238663 238664 238665 238666 238667 238668 238669 238670 238671 238672 238673 238674 238675 238676 238677 238678 238679 238680 238681 238682 238683 238684 238685 238686 238687 238688 238689 238690 238691 238692 238693 238694 238695 238696 238697 238698 238699 238700 238701 238702 238703 238704 238705 238706 238707 238708 238709 238710 238711 238712 238713 238714 238715 238716 238717 238718 238719 238720 238721 238722 238723 238724 238725 238726 238727 238728 238729 238730 238731 241204 241205 241206 241207 242344 242345 242346 242347 242348 242349 242350 242351 242352 242353 242354 242355 242356 242357 242358 242359 242360 242361 242362 242363 242364 242365 242366 242367 242368 242369 242370 242371 242372 242373 242374 242375 242376 242377 242378 242379 242380 242381 242382 242383 242384 242385 242386 242387 242388 242389 242390 242391 242392 242393 242394 242395 242396 242397 242398 242399 242400 242401 242402 242403 242404 242405 242406 242407 242408 242409 242410 242411 242412 242413 242414 242415 242416 242417 242418 242419 242420 242421 242422 242423 243758 243759 243760 243761 243762 243763 244019 244020 244021 244022" type="NORMAL">
+    <monster_book id="144" level="66" name="STR_DF6_26_Normal" name_id="4613627" npc_ids="237565 237566 237567 237568 237569 237570 237571 237572 237573 237574 237575 237576 237577 237578 237579 237580 237581 237582 237583 237584 237585 237586 237587 237588 237589 237590 237591 237592 237593 237594 238552 238553 238554 238555 238556 238557 238558 238559 238560 238561 238562 238563 238564 238565 238566 238567 238568 238569 238570 238571 238572 238573 238574 238575 238576 238577 238578 238579 238580 238581 238582 238583 238584 238585 238586 238587 238588 238589 238590 238591 238592 238593 238594 238595 238596 238597 238598 238599 238600 238601 238602 238603 238604 238605 238606 238607 238608 238609 238610 238611 238612 238613 238614 238615 238616 238617 238618 238619 238620 238621 238622 238623 238624 238625 238626 238627 238628 238629 238630 238631 238632 238633 238634 238635 238636 238637 238638 238639 238640 238641 238642 238643 238644 238645 238646 238647 238648 238649 238650 238651 238652 238653 238654 238655 238656 238657 238658 238659 238660 238661 238662 238663 238664 238665 238666 238667 238668 238669 238670 238671 238672 238673 238674 238675 238676 238677 238678 238679 238680 238681 238682 238683 238684 238685 238686 238687 238688 238689 238690 238691 238692 238693 238694 238695 238696 238697 238698 238699 238700 238701 238702 238703 238704 238705 238706 238707 238708 238709 238710 238711 238712 238713 238714 238715 238716 238717 238718 238719 238720 238721 238722 238723 238724 238725 238726 238727 238728 238729 238730 238731 241204 241205 241206 241207 242344 242345 242346 242347 242348 242349 242350 242351 242352 242353 242354 242355 242356 242357 242358 242359 242360 242361 242362 242363 242364 242365 242366 242367 242368 242369 242370 242371 242372 242373 242374 242375 242376 242377 242378 242379 242380 242381 242382 242383 242384 242385 242386 242387 242388 242389 242390 242391 242392 242393 242394 242395 242396 242397 242398 242399 242400 242401 242402 242403 242404 242405 242406 242407 242408 242409 242410 242411 242412 242413 242414 242415 242416 242417 242418 242419 242420 242421 242422 242423 243758 243759 243760 243761 243762 243763 244019 244020 244021 244022" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="157" level="66" name="STR_DF6_27_Normal" name_id="4613629" npc_ids="237595 237596 237597 237598 237599 237600 237601 237602 237603 237604 237605 237606 237607 237608 237609 237610 237611 237612 238732 238733 238734 238735 238736 238737 238738 238739 238740 238741 238742 238743 238744 238745 238746 238747 238748 238749 238750 238751 238752 238753 238754 238755 238756 238757 238758 238759 238760 238761 238762 238763 238764 238765 238766 238767 238768 238769 238770 238771 238772 238773 238774 238775 238776 238777 238778 238779 238780 238781 238782 238783 238784 238785 238786 238787 238788 238789 238790 238791 238792 238793 238794 238795 238796 238797 238798 238799 238800 238801 238802 238803 238804 238805 238806 238807 238808 238809 238810 238811 238812 238813 238814 238815 238816 238817 238818 238819 238820 238821 238822 238823 238824 238825 238826 238827 238828 238829 238830 238831 238832 238833 238834 238835 238836 238837 238838 238839 241622 241623 241624 242424 242425 242426 242427 242428 242429 242430 242431 242432 242433 242434 242435 242436 242437 242438 242439 242440 242441 242442 242443 242444 242445 242446 242447 242448 242449 242450 242451 242452 242453 242454 242455 242456 242457 242458 242459 242460 242461 242462 242463 242464 242465 242466 242467 242468 242469 242470 242471 242472 242473 242474 242475 242476 242477 242478 242479 242480 242481 242482 242483" type="NORMAL">
+    <monster_book id="145" level="66" name="STR_DF6_27_Normal" name_id="4613629" npc_ids="237595 237596 237597 237598 237599 237600 237601 237602 237603 237604 237605 237606 237607 237608 237609 237610 237611 237612 238732 238733 238734 238735 238736 238737 238738 238739 238740 238741 238742 238743 238744 238745 238746 238747 238748 238749 238750 238751 238752 238753 238754 238755 238756 238757 238758 238759 238760 238761 238762 238763 238764 238765 238766 238767 238768 238769 238770 238771 238772 238773 238774 238775 238776 238777 238778 238779 238780 238781 238782 238783 238784 238785 238786 238787 238788 238789 238790 238791 238792 238793 238794 238795 238796 238797 238798 238799 238800 238801 238802 238803 238804 238805 238806 238807 238808 238809 238810 238811 238812 238813 238814 238815 238816 238817 238818 238819 238820 238821 238822 238823 238824 238825 238826 238827 238828 238829 238830 238831 238832 238833 238834 238835 238836 238837 238838 238839 241622 241623 241624 242424 242425 242426 242427 242428 242429 242430 242431 242432 242433 242434 242435 242436 242437 242438 242439 242440 242441 242442 242443 242444 242445 242446 242447 242448 242449 242450 242451 242452 242453 242454 242455 242456 242457 242458 242459 242460 242461 242462 242463 242464 242465 242466 242467 242468 242469 242470 242471 242472 242473 242474 242475 242476 242477 242478 242479 242480 242481 242482 242483" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="158" level="66" name="STR_DF6_28_Normal" name_id="4613631" npc_ids="237455 237456 237457 237458 237459 237892 237893 237894 237895 237896 237897 237898 237899 237900 237901 237902 237903 237904 237905 237906 237907 237908 237909 237910 237911 237912 237913 237914 237915 237916 237917 237918 237919 237920 237921 241197 241529 241530 241531 241964 241965 241966 241967 241968 241969 241970 241971 241972 241973 241974 241975 241976 241977 241978 241979 241980 241981 241982 241983" type="NORMAL">
+    <monster_book id="146" level="66" name="STR_DF6_28_Normal" name_id="4613631" npc_ids="237455 237456 237457 237458 237459 237892 237893 237894 237895 237896 237897 237898 237899 237900 237901 237902 237903 237904 237905 237906 237907 237908 237909 237910 237911 237912 237913 237914 237915 237916 237917 237918 237919 237920 237921 241197 241529 241530 241531 241964 241965 241966 241967 241968 241969 241970 241971 241972 241973 241974 241975 241976 241977 241978 241979 241980 241981 241982 241983" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="159" level="66" name="STR_DF6_29_Normal" name_id="4613633" npc_ids="241598 241599 241600" type="NORMAL">
+    <monster_book id="147" level="66" name="STR_DF6_29_Normal" name_id="4613633" npc_ids="241598 241599 241600" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="160" level="66" name="STR_DF6_30_Normal" name_id="4613635" npc_ids="237465 237466 237467 237468 237469 237470 237471 237472 237473 237474 237475 237476 237477 237478 237479 237480 237481 237482 237483 237484 237485 237486 237487 237488 237952 237953 237954 237955 237956 237957 237958 237959 237960 237961 237962 237963 237964 237965 237966 237967 237968 237969 237970 237971 237972 237973 237974 237975 237976 237977 237978 237979 237980 237981 237982 237983 237984 237985 237986 237987 237988 237989 237990 237991 237992 237993 237994 237995 237996 237997 237998 237999 238000 238001 238002 238003 238004 238005 238006 238007 238008 238009 238010 238011 238012 238013 238014 238015 238016 238017 238018 238019 238020 238021 238022 238023 238024 238025 238026 238027 238028 238029 238030 238031 238032 238033 238034 238035 238036 238037 238038 238039 238040 238041 238042 238043 238044 238045 238046 238047 238048 238049 238050 238051 238052 238053 238054 238055 238056 238057 238058 238059 238060 238061 238062 238063 238064 238065 238066 238067 238068 238069 238070 238071 238072 238073 238074 238075 238076 238077 238078 238079 238080 238081 238082 238083 238084 238085 238086 238087 238088 238089 238090 238091 238092 238093 238094 238095 241223 241224 241225 241226 242004 242005 242006 242007 242008 242009 242010 242011 242012 242013 242014 242015 242016 242017 242018 242019 242020 242021 242022 242023 242024 242025 242026 242027 242028 242029 242030 242031 242032 242033 242034 242035 242036 242037 242038 242039 242040 242041 242042 242043 242044 242045 242046 242047 242048 242049 242050 242051 242052 242053 242054 242055 242056 242057 242058 242059 242060 242061 242062 242063 242064 242065 242066 242067 242068 242069 242070 242071 242072 242073 242074 242075 242076 242077 242078 242079 242080 242081 242082 242083 243559 243560 243561 243562 243563 243564 243565 243566 243567 243568 243569 243570 243571 243572 243573 243574 243575 243576 243577 243578 243579 243580 243581 243582 243583 243584 243585 243586 243587 243588 243589 243590 243591 243592 243593 243594 243595 243596 243597 243598 243599 243600 243601 243602 243603 243604 243605 243606 243607 243608 243609 243610 243611 243612 243613 243614 243615 243616 243617 243618 243619 243620 243621 243622 243623 243624 243625 243626 243627 243628 243629 243630 243631 243632 243633 243634 243635 243636 243637 243638" type="NORMAL">
+    <monster_book id="148" level="66" name="STR_DF6_30_Normal" name_id="4613635" npc_ids="237465 237466 237467 237468 237469 237470 237471 237472 237473 237474 237475 237476 237477 237478 237479 237480 237481 237482 237483 237484 237485 237486 237487 237488 237952 237953 237954 237955 237956 237957 237958 237959 237960 237961 237962 237963 237964 237965 237966 237967 237968 237969 237970 237971 237972 237973 237974 237975 237976 237977 237978 237979 237980 237981 237982 237983 237984 237985 237986 237987 237988 237989 237990 237991 237992 237993 237994 237995 237996 237997 237998 237999 238000 238001 238002 238003 238004 238005 238006 238007 238008 238009 238010 238011 238012 238013 238014 238015 238016 238017 238018 238019 238020 238021 238022 238023 238024 238025 238026 238027 238028 238029 238030 238031 238032 238033 238034 238035 238036 238037 238038 238039 238040 238041 238042 238043 238044 238045 238046 238047 238048 238049 238050 238051 238052 238053 238054 238055 238056 238057 238058 238059 238060 238061 238062 238063 238064 238065 238066 238067 238068 238069 238070 238071 238072 238073 238074 238075 238076 238077 238078 238079 238080 238081 238082 238083 238084 238085 238086 238087 238088 238089 238090 238091 238092 238093 238094 238095 241223 241224 241225 241226 242004 242005 242006 242007 242008 242009 242010 242011 242012 242013 242014 242015 242016 242017 242018 242019 242020 242021 242022 242023 242024 242025 242026 242027 242028 242029 242030 242031 242032 242033 242034 242035 242036 242037 242038 242039 242040 242041 242042 242043 242044 242045 242046 242047 242048 242049 242050 242051 242052 242053 242054 242055 242056 242057 242058 242059 242060 242061 242062 242063 242064 242065 242066 242067 242068 242069 242070 242071 242072 242073 242074 242075 242076 242077 242078 242079 242080 242081 242082 242083 243559 243560 243561 243562 243563 243564 243565 243566 243567 243568 243569 243570 243571 243572 243573 243574 243575 243576 243577 243578 243579 243580 243581 243582 243583 243584 243585 243586 243587 243588 243589 243590 243591 243592 243593 243594 243595 243596 243597 243598 243599 243600 243601 243602 243603 243604 243605 243606 243607 243608 243609 243610 243611 243612 243613 243614 243615 243616 243617 243618 243619 243620 243621 243622 243623 243624 243625 243626 243627 243628 243629 243630 243631 243632 243633 243634 243635 243636 243637 243638" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="161" level="66" name="STR_DF6_31_Normal" name_id="4613637" npc_ids="237460 237461 237462 237463 237464 237489 237490 237491 237492 237493 237922 237923 237924 237925 237926 237927 237928 237929 237930 237931 237932 237933 237934 237935 237936 237937 237938 237939 237940 237941 237942 237943 237944 237945 237946 237947 237948 237949 237950 237951 238096 238097 238098 238099 238100 238101 238102 238103 238104 238105 238106 238107 238108 238109 238110 238111 238112 238113 238114 238115 238116 238117 238118 238119 238120 238121 238122 238123 238124 238125 241984 241985 241986 241987 241988 241989 241990 241991 241992 241993 241994 241995 241996 241997 241998 241999 242000 242001 242002 242003 242084 242085 242086 242087 242088 242089 242090 242091 242092 242093 242094 242095 242096 242097 242098 242099 242100 242101 242102 242103" type="NORMAL">
+    <monster_book id="149" level="66" name="STR_DF6_31_Normal" name_id="4613637" npc_ids="237460 237461 237462 237463 237464 237489 237490 237491 237492 237493 237922 237923 237924 237925 237926 237927 237928 237929 237930 237931 237932 237933 237934 237935 237936 237937 237938 237939 237940 237941 237942 237943 237944 237945 237946 237947 237948 237949 237950 237951 238096 238097 238098 238099 238100 238101 238102 238103 238104 238105 238106 238107 238108 238109 238110 238111 238112 238113 238114 238115 238116 238117 238118 238119 238120 238121 238122 238123 238124 238125 241984 241985 241986 241987 241988 241989 241990 241991 241992 241993 241994 241995 241996 241997 241998 241999 242000 242001 242002 242003 242084 242085 242086 242087 242088 242089 242090 242091 242092 242093 242094 242095 242096 242097 242098 242099 242100 242101 242102 242103" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="162" level="66" name="STR_DF6_32_Normal" name_id="4613639" npc_ids="237499 237500 237501 237502 237503 237623 237624 237625 237626 237627 238156 238157 238158 238159 238160 238161 238162 238163 238164 238165 238166 238167 238168 238169 238170 238171 238172 238173 238174 238175 238176 238177 238178 238179 238180 238181 238182 238183 238184 238185 238900 238901 238902 238903 238904 238905 238906 238907 238908 238909 238910 238911 238912 238913 238914 238915 238916 238917 238918 238919 238920 238921 238922 238923 238924 238925 238926 238927 238928 238929 242124 242125 242126 242127 242128 242129 242130 242131 242132 242133 242134 242135 242136 242137 242138 242139 242140 242141 242142 242143 242524 242525 242526 242527 242528 242529 242530 242531 242532 242533 242534 242535 242536 242537 242538 242539 242540 242541 242542 242543" type="NORMAL">
+    <monster_book id="150" level="66" name="STR_DF6_32_Normal" name_id="4613639" npc_ids="237499 237500 237501 237502 237503 237623 237624 237625 237626 237627 238156 238157 238158 238159 238160 238161 238162 238163 238164 238165 238166 238167 238168 238169 238170 238171 238172 238173 238174 238175 238176 238177 238178 238179 238180 238181 238182 238183 238184 238185 238900 238901 238902 238903 238904 238905 238906 238907 238908 238909 238910 238911 238912 238913 238914 238915 238916 238917 238918 238919 238920 238921 238922 238923 238924 238925 238926 238927 238928 238929 242124 242125 242126 242127 242128 242129 242130 242131 242132 242133 242134 242135 242136 242137 242138 242139 242140 242141 242142 242143 242524 242525 242526 242527 242528 242529 242530 242531 242532 242533 242534 242535 242536 242537 242538 242539 242540 242541 242542 242543" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="163" level="66" name="STR_DF6_33_Normal" name_id="4613641" npc_ids="237560 237561 237562 237563 237564 238522 238523 238524 238525 238526 238527 238528 238529 238530 238531 238532 238533 238534 238535 238536 238537 238538 238539 238540 238541 238542 238543 238544 238545 238546 238547 238548 238549 238550 238551 242324 242325 242326 242327 242328 242329 242330 242331 242332 242333 242334 242335 242336 242337 242338 242339 242340 242341 242342 242343" type="NORMAL">
+    <monster_book id="151" level="66" name="STR_DF6_33_Normal" name_id="4613641" npc_ids="237560 237561 237562 237563 237564 238522 238523 238524 238525 238526 238527 238528 238529 238530 238531 238532 238533 238534 238535 238536 238537 238538 238539 238540 238541 238542 238543 238544 238545 238546 238547 238548 238549 238550 238551 242324 242325 242326 242327 242328 242329 242330 242331 242332 242333 242334 242335 242336 242337 242338 242339 242340 242341 242342 242343" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="164" level="66" name="STR_DF6_34_Normal" name_id="4613643" npc_ids="241562 241563 241564" type="NORMAL">
+    <monster_book id="152" level="66" name="STR_DF6_34_Normal" name_id="4613643" npc_ids="241562 241563 241564" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="165" level="66" name="STR_DF6_35_Normal" name_id="4613645" npc_ids="237543 237544 237545 237546 237547 237548 237549 238420 238421 238422 238423 238424 238425 238426 238427 238428 238429 238430 238431 238432 238433 238434 238435 238436 238437 238438 238439 238440 238441 238442 238443 238444 238445 238446 238447 238448 238449 238450 238451 238452 238453 238454 238455 238456 238457 238458 238459 238460 238461 242264 242265 242266 242267 242268 242269 242270 242271 242272 242273 242274 242275 242276 242277 242278 242279 242280 242281 242282 242283" type="NORMAL">
+	<monster_book id="153" level="66" name="STR_DF6_35_Normal" name_id="4613645" npc_ids="237543 237544 237545 237546 237547 237548 237549 238420 238421 238422 238423 238424 238425 238426 238427 238428 238429 238430 238431 238432 238433 238434 238435 238436 238437 238438 238439 238440 238441 238442 238443 238444 238445 238446 238447 238448 238449 238450 238451 238452 238453 238454 238455 238456 238457 238458 238459 238460 238461 242264 242265 242266 242267 242268 242269 242270 242271 242272 242273 242274 242275 242276 242277 242278 242279 242280 242281 242282 242283" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="166" level="66" name="STR_DF6_36_Normal" name_id="4613647" npc_ids="237417 237418 237419 237420 237421 237422 237664 237665 237666 237667 237668 237669 237670 237671 237672 237673 237674 237675 237676 237677 237678 237679 237680 237681 237682 237683 237684 237685 237686 237687 237688 237689 237690 237691 237692 237693 237694 237695 237696 237697 237698 237699 241844 241845 241846 241847 241848 241849 241850 241851 241852 241853 241854 241855 241856 241857 241858 241859 241860 241861 241862 241863" type="NORMAL">
+    <monster_book id="154" level="66" name="STR_DF6_36_Normal" name_id="4613647" npc_ids="237417 237418 237419 237420 237421 237422 237664 237665 237666 237667 237668 237669 237670 237671 237672 237673 237674 237675 237676 237677 237678 237679 237680 237681 237682 237683 237684 237685 237686 237687 237688 237689 237690 237691 237692 237693 237694 237695 237696 237697 237698 237699 241844 241845 241846 241847 241848 241849 241850 241851 241852 241853 241854 241855 241856 241857 241858 241859 241860 241861 241862 241863" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="167" level="66" name="STR_DF6_37_Normal" name_id="4613649" npc_ids="237529 237530 237531 237532 237533 237534 237535 238336 238337 238338 238339 238340 238341 238342 238343 238344 238345 238346 238347 238348 238349 238350 238351 238352 238353 238354 238355 238356 238357 238358 238359 238360 238361 238362 238363 238364 238365 238366 238367 238368 238369 238370 238371 238372 238373 238374 238375 238376 238377 242224 242225 242226 242227 242228 242229 242230 242231 242232 242233 242234 242235 242236 242237 242238 242239 242240 242241 242242 242243" type="NORMAL">
+    <monster_book id="155" level="66" name="STR_DF6_37_Normal" name_id="4613649" npc_ids="237529 237530 237531 237532 237533 237534 237535 238336 238337 238338 238339 238340 238341 238342 238343 238344 238345 238346 238347 238348 238349 238350 238351 238352 238353 238354 238355 238356 238357 238358 238359 238360 238361 238362 238363 238364 238365 238366 238367 238368 238369 238370 238371 238372 238373 238374 238375 238376 238377 242224 242225 242226 242227 242228 242229 242230 242231 242232 242233 242234 242235 242236 242237 242238 242239 242240 242241 242242 242243" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="168" level="66" name="STR_DF6_38_Normal" name_id="4613651" npc_ids="237443 237444 237445 237446 237447 237448 237449 237494 237495 237496 237497 237498 237820 237821 237822 237823 237824 237825 237826 237827 237828 237829 237830 237831 237832 237833 237834 237835 237836 237837 237838 237839 237840 237841 237842 237843 237844 237845 237846 237847 237848 237849 237850 237851 237852 237853 237854 237855 237856 237857 237858 237859 237860 237861 238126 238127 238128 238129 238130 238131 238132 238133 238134 238135 238136 238137 238138 238139 238140 238141 238142 238143 238144 238145 238146 238147 238148 238149 238150 238151 238152 238153 238154 238155 241924 241925 241926 241927 241928 241929 241930 241931 241932 241933 241934 241935 241936 241937 241938 241939 241940 241941 241942 241943 242104 242105 242106 242107 242108 242109 242110 242111 242112 242113 242114 242115 242116 242117 242118 242119 242120 242121 242122 242123 243278 243279 243280" type="NORMAL">
+    <monster_book id="156" level="66" name="STR_DF6_38_Normal" name_id="4613651" npc_ids="237443 237444 237445 237446 237447 237448 237449 237494 237495 237496 237497 237498 237820 237821 237822 237823 237824 237825 237826 237827 237828 237829 237830 237831 237832 237833 237834 237835 237836 237837 237838 237839 237840 237841 237842 237843 237844 237845 237846 237847 237848 237849 237850 237851 237852 237853 237854 237855 237856 237857 237858 237859 237860 237861 238126 238127 238128 238129 238130 238131 238132 238133 238134 238135 238136 238137 238138 238139 238140 238141 238142 238143 238144 238145 238146 238147 238148 238149 238150 238151 238152 238153 238154 238155 241924 241925 241926 241927 241928 241929 241930 241931 241932 241933 241934 241935 241936 241937 241938 241939 241940 241941 241942 241943 242104 242105 242106 242107 242108 242109 242110 242111 242112 242113 242114 242115 242116 242117 242118 242119 242120 242121 242122 242123 243278 243279 243280" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="169" level="66" name="STR_DF6_39_Normal" name_id="4613653" npc_ids="237536 237537 237538 237539 237540 237541 237542 238378 238379 238380 238381 238382 238383 238384 238385 238386 238387 238388 238389 238390 238391 238392 238393 238394 238395 238396 238397 238398 238399 238400 238401 238402 238403 238404 238405 238406 238407 238408 238409 238410 238411 238412 238413 238414 238415 238416 238417 238418 238419 242244 242245 242246 242247 242248 242249 242250 242251 242252 242253 242254 242255 242256 242257 242258 242259 242260 242261 242262 242263" type="NORMAL">
+    <monster_book id="157" level="66" name="STR_DF6_39_Normal" name_id="4613653" npc_ids="237536 237537 237538 237539 237540 237541 237542 238378 238379 238380 238381 238382 238383 238384 238385 238386 238387 238388 238389 238390 238391 238392 238393 238394 238395 238396 238397 238398 238399 238400 238401 238402 238403 238404 238405 238406 238407 238408 238409 238410 238411 238412 238413 238414 238415 238416 238417 238418 238419 242244 242245 242246 242247 242248 242249 242250 242251 242252 242253 242254 242255 242256 242257 242258 242259 242260 242261 242262 242263" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="170" level="66" name="STR_DF6_40_Normal" name_id="4613655" npc_ids="237436 237437 237438 237439 237440 237441 237442 237778 237779 237780 237781 237782 237783 237784 237785 237786 237787 237788 237789 237790 237791 237792 237793 237794 237795 237796 237797 237798 237799 237800 237801 237802 237803 237804 237805 237806 237807 237808 237809 237810 237811 237812 237813 237814 237815 237816 237817 237818 237819 241904 241905 241906 241907 241908 241909 241910 241911 241912 241913 241914 241915 241916 241917 241918 241919 241920 241921 241922 241923" type="NORMAL">
+    <monster_book id="158" level="66" name="STR_DF6_40_Normal" name_id="4613655" npc_ids="237436 237437 237438 237439 237440 237441 237442 237778 237779 237780 237781 237782 237783 237784 237785 237786 237787 237788 237789 237790 237791 237792 237793 237794 237795 237796 237797 237798 237799 237800 237801 237802 237803 237804 237805 237806 237807 237808 237809 237810 237811 237812 237813 237814 237815 237816 237817 237818 237819 241904 241905 241906 241907 241908 241909 241910 241911 241912 241913 241914 241915 241916 241917 241918 241919 241920 241921 241922 241923" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="171" level="66" name="STR_DF6_41_Normal" name_id="4613657" npc_ids="237618 237619 237620 237621 237622 238870 238871 238872 238873 238874 238875 238876 238877 238878 238879 238880 238881 238882 238883 238884 238885 238886 238887 238888 238889 238890 238891 238892 238893 238894 238895 238896 238897 238898 238899 242504 242505 242506 242507 242508 242509 242510 242511 242512 242513 242514 242515 242516 242517 242518 242519 242520 242521 242522 242523" type="NORMAL">
+    <monster_book id="159" level="66" name="STR_DF6_41_Normal" name_id="4613657" npc_ids="237618 237619 237620 237621 237622 238870 238871 238872 238873 238874 238875 238876 238877 238878 238879 238880 238881 238882 238883 238884 238885 238886 238887 238888 238889 238890 238891 238892 238893 238894 238895 238896 238897 238898 238899 242504 242505 242506 242507 242508 242509 242510 242511 242512 242513 242514 242515 242516 242517 242518 242519 242520 242521 242522 242523" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="172" level="66" name="STR_DF6_42_Normal" name_id="4613659" npc_ids="237550 237551 237552 237553 237554 238462 238463 238464 238465 238466 238467 238468 238469 238470 238471 238472 238473 238474 238475 238476 238477 238478 238479 238480 238481 238482 238483 238484 238485 238486 238487 238488 238489 238490 238491 242284 242285 242286 242287 242288 242289 242290 242291 242292 242293 242294 242295 242296 242297 242298 242299 242300 242301 242302 242303" type="NORMAL">
+    <monster_book id="160" level="66" name="STR_DF6_42_Normal" name_id="4613659" npc_ids="237550 237551 237552 237553 237554 238462 238463 238464 238465 238466 238467 238468 238469 238470 238471 238472 238473 238474 238475 238476 238477 238478 238479 238480 238481 238482 238483 238484 238485 238486 238487 238488 238489 238490 238491 242284 242285 242286 242287 242288 242289 242290 242291 242292 242293 242294 242295 242296 242297 242298 242299 242300 242301 242302 242303" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="173" level="66" name="STR_DF6_43_Normal" name_id="4613661" npc_ids="237516 237517 237518 237519 237520 237521 238258 238259 238260 238261 238262 238263 238264 238265 238266 238267 238268 238269 238270 238271 238272 238273 238274 238275 238276 238277 238278 238279 238280 238281 238282 238283 238284 238285 238286 238287 238288 238289 238290 238291 238292 238293 242184 242185 242186 242187 242188 242189 242190 242191 242192 242193 242194 242195 242196 242197 242198 242199 242200 242201 242202 242203" type="NORMAL">
+    <monster_book id="161" level="66" name="STR_DF6_43_Normal" name_id="4613661" npc_ids="237516 237517 237518 237519 237520 237521 238258 238259 238260 238261 238262 238263 238264 238265 238266 238267 238268 238269 238270 238271 238272 238273 238274 238275 238276 238277 238278 238279 238280 238281 238282 238283 238284 238285 238286 238287 238288 238289 238290 238291 238292 238293 242184 242185 242186 242187 242188 242189 242190 242191 242192 242193 242194 242195 242196 242197 242198 242199 242200 242201 242202 242203" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="174" level="66" name="STR_DF6_44_Normal" name_id="4613663" npc_ids="237504 237505 237506 237507 237508 237509 238186 238187 238188 238189 238190 238191 238192 238193 238194 238195 238196 238197 238198 238199 238200 238201 238202 238203 238204 238205 238206 238207 238208 238209 238210 238211 238212 238213 238214 238215 238216 238217 238218 238219 238220 238221 242144 242145 242146 242147 242148 242149 242150 242151 242152 242153 242154 242155 242156 242157 242158 242159 242160 242161 242162 242163" type="NORMAL">
+    <monster_book id="162" level="66" name="STR_DF6_44_Normal" name_id="4613663" npc_ids="237504 237505 237506 237507 237508 237509 238186 238187 238188 238189 238190 238191 238192 238193 238194 238195 238196 238197 238198 238199 238200 238201 238202 238203 238204 238205 238206 238207 238208 238209 238210 238211 238212 238213 238214 238215 238216 238217 238218 238219 238220 238221 242144 242145 242146 242147 242148 242149 242150 242151 242152 242153 242154 242155 242156 242157 242158 242159 242160 242161 242162 242163" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="175" level="66" name="STR_DF6_45_Normal" name_id="4613665" npc_ids="237522 237523 237524 237525 237526 237527 237528 238294 238295 238296 238297 238298 238299 238300 238301 238302 238303 238304 238305 238306 238307 238308 238309 238310 238311 238312 238313 238314 238315 238316 238317 238318 238319 238320 238321 238322 238323 238324 238325 238326 238327 238328 238329 238330 238331 238332 238333 238334 238335 242204 242205 242206 242207 242208 242209 242210 242211 242212 242213 242214 242215 242216 242217 242218 242219 242220 242221 242222 242223" type="NORMAL">
+    <monster_book id="163" level="66" name="STR_DF6_45_Normal" name_id="4613665" npc_ids="237522 237523 237524 237525 237526 237527 237528 238294 238295 238296 238297 238298 238299 238300 238301 238302 238303 238304 238305 238306 238307 238308 238309 238310 238311 238312 238313 238314 238315 238316 238317 238318 238319 238320 238321 238322 238323 238324 238325 238326 238327 238328 238329 238330 238331 238332 238333 238334 238335 242204 242205 242206 242207 242208 242209 242210 242211 242212 242213 242214 242215 242216 242217 242218 242219 242220 242221 242222 242223" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="176" level="66" name="STR_DF6_46_Normal" name_id="4613667" npc_ids="237423 237424 237425 237426 237427 237428 237613 237614 237615 237616 237617 237700 237701 237702 237703 237704 237705 237706 237707 237708 237709 237710 237711 237712 237713 237714 237715 237716 237717 237718 237719 237720 237721 237722 237723 237724 237725 237726 237727 237728 237729 237730 237731 237732 237733 237734 237735 238840 238841 238842 238843 238844 238845 238846 238847 238848 238849 238850 238851 238852 238853 238854 238855 238856 238857 238858 238859 238860 238861 238862 238863 238864 238865 238866 238867 238868 238869 241864 241865 241866 241867 241868 241869 241870 241871 241872 241873 241874 241875 241876 241877 241878 241879 241880 241881 241882 241883 242484 242485 242486 242487 242488 242489 242490 242491 242492 242493 242494 242495 242496 242497 242498 242499 242500 242501 242502 242503" type="NORMAL">
+    <monster_book id="164" level="66" name="STR_DF6_46_Normal" name_id="4613667" npc_ids="237423 237424 237425 237426 237427 237428 237613 237614 237615 237616 237617 237700 237701 237702 237703 237704 237705 237706 237707 237708 237709 237710 237711 237712 237713 237714 237715 237716 237717 237718 237719 237720 237721 237722 237723 237724 237725 237726 237727 237728 237729 237730 237731 237732 237733 237734 237735 238840 238841 238842 238843 238844 238845 238846 238847 238848 238849 238850 238851 238852 238853 238854 238855 238856 238857 238858 238859 238860 238861 238862 238863 238864 238865 238866 238867 238868 238869 241864 241865 241866 241867 241868 241869 241870 241871 241872 241873 241874 241875 241876 241877 241878 241879 241880 241881 241882 241883 242484 242485 242486 242487 242488 242489 242490 242491 242492 242493 242494 242495 242496 242497 242498 242499 242500 242501 242502 242503" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="177" level="66" name="STR_DF6_47_Normal" name_id="4613669" npc_ids="237429 237430 237431 237432 237433 237434 237435 237736 237737 237738 237739 237740 237741 237742 237743 237744 237745 237746 237747 237748 237749 237750 237751 237752 237753 237754 237755 237756 237757 237758 237759 237760 237761 237762 237763 237764 237765 237766 237767 237768 237769 237770 237771 237772 237773 237774 237775 237776 237777 241884 241885 241886 241887 241888 241889 241890 241891 241892 241893 241894 241895 241896 241897 241898 241899 241900 241901 241902 241903" type="NORMAL">
+    <monster_book id="165" level="66" name="STR_DF6_47_Normal" name_id="4613669" npc_ids="237429 237430 237431 237432 237433 237434 237435 237736 237737 237738 237739 237740 237741 237742 237743 237744 237745 237746 237747 237748 237749 237750 237751 237752 237753 237754 237755 237756 237757 237758 237759 237760 237761 237762 237763 237764 237765 237766 237767 237768 237769 237770 237771 237772 237773 237774 237775 237776 237777 241884 241885 241886 241887 241888 241889 241890 241891 241892 241893 241894 241895 241896 241897 241898 241899 241900 241901 241902 241903" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="178" level="66" name="STR_DF6_48_Normal" name_id="4651671" npc_ids="241514 241515" type="NORMAL">
+	<!-- ELYOS NORMALE MOBS 2 -->
+	<monster_book id="166" level="66" name="STR_LF6_50_Normal" name_id="4651645" npc_ids="241704 241705 241706" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="179" level="66" name="STR_DF6_49_Normal" name_id="4651673" npc_ids="241518 241519" type="NORMAL">
+    <monster_book id="167" level="66" name="STR_LF6_51_Normal" name_id="4651647" npc_ids="241165" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="180" level="66" name="STR_DF6_50_Normal" name_id="4651675" npc_ids="241616 241617 241618" type="NORMAL">
+    <monster_book id="168" level="66" name="STR_LF6_52_Normal" name_id="4651649" npc_ids="241664 241665" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="181" level="66" name="STR_DF6_51_Normal" name_id="4651677" npc_ids="241520 241521 241522" type="NORMAL">
+    <monster_book id="169" level="66" name="STR_LF6_53_Normal" name_id="4651651" npc_ids="241166" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="182" level="66" name="STR_DF6_52_Normal" name_id="4651679" npc_ids="241619 241620 241621" type="NORMAL">
+    <monster_book id="170" level="66" name="STR_LF6_54_Normal" name_id="4651653" npc_ids="241666 241667" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="183" level="66" name="STR_DF6_53_Normal" name_id="4651681" npc_ids="241516 241517" type="NORMAL">
+    <monster_book id="171" level="66" name="STR_LF6_55_Normal" name_id="4651655" npc_ids="241658 241659 243284 243285" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="184" level="66" name="STR_DF6_54_Normal" name_id="4651683" npc_ids="241506 241507" type="NORMAL">
+    <monster_book id="172" level="66" name="STR_LF6_56_Normal" name_id="4651657" npc_ids="241662 241663" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="185" level="66" name="STR_DF6_55_Normal" name_id="4651685" npc_ids="241502 241503" type="NORMAL">
+    <monster_book id="173" level="66" name="STR_LF6_57_Normal" name_id="4651659" npc_ids="241670 241671" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="186" level="66" name="STR_DF6_56_Normal" name_id="4651687" npc_ids="241504 241505" type="NORMAL">
+    <monster_book id="174" level="66" name="STR_LF6_58_Normal" name_id="4651661" npc_ids="241678 241679" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="187" level="66" name="STR_DF6_57_Normal" name_id="4651689" npc_ids="241568 241569 241570" type="NORMAL">
+    <monster_book id="175" level="66" name="STR_LF6_59_Normal" name_id="4651663" npc_ids="241676 241677" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="188" level="66" name="STR_DF6_58_Normal" name_id="4651691" npc_ids="241498 241499" type="NORMAL">
+    <monster_book id="176" level="66" name="STR_LF6_60_Normal" name_id="4651665" npc_ids="241728 241729 241730" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="189" level="66" name="STR_DF6_59_Normal" name_id="4651693" npc_ids="241526 241527 241528" type="NORMAL">
+    <monster_book id="177" level="66" name="STR_LF6_61_Normal" name_id="4651667" npc_ids="241672 241673" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>
         <achievement condition="545" exp="24700000"/>
         <achievement condition="1000" exp="43225000"/>
     </monster_book>
-    <monster_book id="190" level="66" name="STR_DF6_60_Normal" name_id="4651695" npc_ids="241512" type="NORMAL">
+    <monster_book id="178" level="66" name="STR_LF6_62_Normal" name_id="4651669" npc_ids="241698 241699 241700" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+	<!-- ASMO NORMALE MOBS 2 -->
+    <monster_book id="179" level="66" name="STR_DF6_48_Normal" name_id="4651671" npc_ids="241514 241515" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="180" level="66" name="STR_DF6_49_Normal" name_id="4651673" npc_ids="241518 241519" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="181" level="66" name="STR_DF6_50_Normal" name_id="4651675" npc_ids="241616 241617 241618" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="182" level="66" name="STR_DF6_51_Normal" name_id="4651677" npc_ids="241520 241521 241522" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="183" level="66" name="STR_DF6_52_Normal" name_id="4651679" npc_ids="241619 241620 241621" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="184" level="66" name="STR_DF6_53_Normal" name_id="4651681" npc_ids="241516 241517" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="185" level="66" name="STR_DF6_54_Normal" name_id="4651683" npc_ids="241506 241507" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="186" level="66" name="STR_DF6_55_Normal" name_id="4651685" npc_ids="241502 241503" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="187" level="66" name="STR_DF6_56_Normal" name_id="4651687" npc_ids="241504 241505" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="188" level="66" name="STR_DF6_57_Normal" name_id="4651689" npc_ids="241568 241569 241570" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="189" level="66" name="STR_DF6_58_Normal" name_id="4651691" npc_ids="241498 241499" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="190" level="66" name="STR_DF6_59_Normal" name_id="4651693" npc_ids="241526 241527 241528" type="NORMAL">
+        <achievement condition="50" exp="4750000"/>
+        <achievement condition="135" exp="8075000"/>
+        <achievement condition="285" exp="14250000"/>
+        <achievement condition="545" exp="24700000"/>
+        <achievement condition="1000" exp="43225000"/>
+    </monster_book>
+    <monster_book id="191" level="66" name="STR_DF6_60_Normal" name_id="4651695" npc_ids="241512" type="NORMAL">
         <achievement condition="50" exp="4750000"/>
         <achievement condition="135" exp="8075000"/>
         <achievement condition="285" exp="14250000"/>

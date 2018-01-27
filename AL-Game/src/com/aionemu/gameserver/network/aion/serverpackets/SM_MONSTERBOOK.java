@@ -20,20 +20,20 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
- * @author Falke_34
+ * @author Falke_34, FrozenKiller
  */
 public class SM_MONSTERBOOK extends AionServerPacket {
 
     private int id;
     private int kill;
-    private int isRewardable;
     private byte level;
+    private int rewardLevel;
 
-    public SM_MONSTERBOOK(int id, int kill, byte level, int isRewardable) {
+    public SM_MONSTERBOOK(int id, int kill, byte level, int rewardLevel) {
         this.id = id;
         this.kill = kill;
         this.level = level;
-        this.isRewardable = isRewardable;
+        this.rewardLevel = rewardLevel;
     }
 
 	@Override
@@ -41,6 +41,6 @@ public class SM_MONSTERBOOK extends AionServerPacket {
 		writeD(id); // MonsterBook ID
 		writeD(kill); // Kill Count
 		writeC(level); // Level
-		writeC(isRewardable); // Received 0 and 1
+		writeC(rewardLevel); // Reward Level
 	}
 }

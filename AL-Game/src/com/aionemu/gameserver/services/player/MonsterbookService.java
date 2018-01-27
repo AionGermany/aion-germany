@@ -16,8 +16,6 @@
  */
 package com.aionemu.gameserver.services.player;
 
-import java.util.Iterator;
-
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.dao.PlayerMonsterbookDAO;
@@ -33,6 +31,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author Falke_34
+ * @rework FrozenKiller
  */
 public class MonsterbookService {
 
@@ -54,32 +53,25 @@ public class MonsterbookService {
         int killCountById = DAOManager.getDAO(PlayerMonsterbookDAO.class).getKillCountById(player.getObjectId(), monsterbookTemplateByNpcId.getId());
         byte level = (byte) DAOManager.getDAO(PlayerMonsterbookDAO.class).getLevelById(player.getObjectId(), monsterbookTemplateByNpcId.getId());  
         int rewardId = DAOManager.getDAO(PlayerMonsterbookDAO.class).getClaimRewardById(player.getObjectId(), monsterbookTemplateByNpcId.getId());
-        
         if (level != rewardId) { //get reward first
         	return;
         }
-        
-        Iterator<Integer> npcIds = monsterbookTemplateByNpcId.getNpcIds().iterator();
-        while (npcIds.hasNext()) {
-            if (npcId == npcIds.next()) {
-                for (MonsterbookTemplate.MonsterbookAchievementTemplate monsterbookAchievementTemplate : monsterbookTemplateByNpcId.getMonsterbookAchievementTemplate()) {
-                    if (monsterbookAchievementTemplate == null) {
-                        return;
-                    }
-                    if (killCountById != monsterbookAchievementTemplate.getKillCondition()) {
-                        continue;
-                    } else {
-                    	level+= 1;
-                    }
-                }
-                if (killCountById == 0) {
-                	PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404072, new DescriptionId(monsterbookTemplateByNpcId.getNameId())));
-                }
-                ++killCountById;
-                PacketSendUtility.sendPacket(player, new SM_MONSTERBOOK(monsterbookTemplateByNpcId.getId(), killCountById, level, level));
-                player.getMonsterbook().add(player, monsterbookTemplateByNpcId.getId(), killCountById, level, level);
-            }
+        if (killCountById == 0) {
+        	PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404072, new DescriptionId(monsterbookTemplateByNpcId.getNameId())));
         }
+        ++killCountById;
+		for (MonsterbookTemplate.MonsterbookAchievementTemplate monsterbookAchievementTemplate : monsterbookTemplateByNpcId.getMonsterbookAchievementTemplate()) {
+			if (monsterbookAchievementTemplate == null) {
+				return;
+			}
+			if (killCountById != monsterbookAchievementTemplate.getKillCondition()) {
+				continue;
+			} else {
+				level += 1;
+			}
+		}
+        PacketSendUtility.sendPacket(player, new SM_MONSTERBOOK(monsterbookTemplateByNpcId.getId(), killCountById, level, rewardId));
+        player.getMonsterbook().add(player, monsterbookTemplateByNpcId.getId(), killCountById, level, rewardId);
     }
 
 	public void onLvlUp(Player player, int npcId) {
@@ -97,7 +89,7 @@ public class MonsterbookService {
         }
         player.getCommonData().addExp(EXP, RewardType.MONSTER_BOOK);
         PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GET_EXP2(EXP));
-        PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404073, level, new DescriptionId(monsterbookTemplate.getNameId())));
+        PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404073, new DescriptionId(monsterbookTemplate.getNameId()), level));
         PacketSendUtility.sendPacket(player, new SM_MONSTERBOOK(npcId, killCountById, level, level));
         player.getMonsterbook().add(player, npcId, killCountById, level, level);
 	}
@@ -105,7 +97,14 @@ public class MonsterbookService {
 	public static MonsterbookService getInstance() {
 		return NewSingletonHolder.INSTANCE;
 	}
-
+	
+	// TODO COMPLETE MONSTERBOOK
+	// <id>1404074</id>
+	// <name>STR_MSG_MONSTER_ACHIEVEMENT_COMPLETION2</name>
+	// <body>&lt;p&gt;Ihr habt das Monsterbuch vollendet.&lt;/p&gt;&lt;p&gt;&lt;a href="monster_achievement_dialog"&gt;Monsterbuch öffnen&lt;p&gt;</body>
+	// <message_type>103</message_type>
+	// <display_type>2048</display_type>
+	
 	private static class NewSingletonHolder {
 
 		private static final MonsterbookService INSTANCE = new MonsterbookService();

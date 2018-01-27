@@ -38,7 +38,7 @@ public class SM_MONSTERBOOK_LIST extends AionServerPacket {
             writeD(playerMonsterbookEntry.getId()); // MonsterBookId
             writeD(playerMonsterbookEntry.getKillCount()); // Count
             writeC(playerMonsterbookEntry.getLevel()); // Level
-            writeC(playerMonsterbookEntry.claimRewardLevel()); // RewardButton 0 / 1
+            writeC(playerMonsterbookEntry.claimRewardLevel()); // RewardLevel
         }
 	}
 }
