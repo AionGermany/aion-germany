@@ -23,6 +23,7 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.NameRestrictionService;
 import com.aionemu.gameserver.services.toypet.MinionService;
+import com.aionemu.gameserver.services.toypet.PetSpawnService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
@@ -143,6 +144,9 @@ public class CM_MINIONS extends AionClientPacket {
 				MinionService.getInstance().lockMinion(player, objectId, lock);
 				break;
 			case 4:
+                if (player.getPet() != null) {
+                    PetSpawnService.dismissPet(player, true);
+                }				
 				MinionService.getInstance().spawnMinion(player, objectId);
 				break;
 			case 5:
