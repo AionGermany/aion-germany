@@ -101,7 +101,7 @@ public class MonsterbookService {
 	// TODO COMPLETE MONSTERBOOK
 	// <id>1404074</id>
 	// <name>STR_MSG_MONSTER_ACHIEVEMENT_COMPLETION2</name>
-	// <body>&lt;p&gt;Ihr habt das Monsterbuch vollendet.&lt;/p&gt;&lt;p&gt;&lt;a href="monster_achievement_dialog"&gt;Monsterbuch öffnen&lt;p&gt;</body>
+	// <body>&lt;p&gt;Ihr habt das Monsterbuch vollendet.&lt;/p&gt;&lt;p&gt;&lt;a href="monster_achievement_dialog"&gt;Monsterbuch oeffnen&lt;p&gt;</body>
 	// <message_type>103</message_type>
 	// <display_type>2048</display_type>
 	
