@@ -151,7 +151,7 @@ public class _2008Ascension extends QuestHandler {
 					case SETPRO1:
 						qs.setQuestVar(1);
 						updateQuestStatus(env);
-						TeleportService2.teleportTo(player, 220010000, 585.5074f, 2416.0312f, 278.625f, (byte) 102, TeleportAnimation.BEAM_ANIMATION);
+						TeleportService2.teleportTo(player, 220010000, 583.8902f, 2434.7676f, 280.16092f, (byte) 80, TeleportAnimation.BEAM_ANIMATION);
 						return true;
 					case SETPRO5:
 						if (var == 4) {
@@ -273,7 +273,7 @@ public class _2008Ascension extends QuestHandler {
 							}
 							qs.setQuestVar(3);
 							updateQuestStatus(env);
-							TeleportService2.teleportTo(player, 220010000, 1111.5637f, 1719.2745f, 270.114256f, (byte) 114, TeleportAnimation.BEAM_ANIMATION);
+							TeleportService2.teleportTo(player, 220010000, 1103.6028f, 1728.0868f, 267.63983f, (byte) 114, TeleportAnimation.BEAM_ANIMATION);
 							return true;
 						}
 					default:
