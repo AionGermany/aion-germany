@@ -273,8 +273,10 @@ public class ItemEquipmentListener {
 		// 1.- Check equipment for items already equip with this itemSetTemplate id
 		int itemSetPartsEquipped = player.getEquipment().itemSetPartsEquipped(itemSetTemplate.getId());
 
-		if (itemSetPartsEquipped > itemSetTemplate.getFullbonus().getCount()) { // DO NOT REMOVE
-			return;
+		if (itemSetTemplate.getFullbonus() != null) {
+			if (itemSetPartsEquipped > itemSetTemplate.getFullbonus().getCount()) { // DO NOT REMOVE
+				return;
+			}
 		}
 
 		player.getGameStats().endEffect(itemSetTemplate);
