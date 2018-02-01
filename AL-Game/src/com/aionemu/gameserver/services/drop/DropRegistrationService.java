@@ -41,6 +41,7 @@ import com.aionemu.gameserver.model.templates.event.EventTemplate;
 import com.aionemu.gameserver.model.templates.housing.HouseType;
 import com.aionemu.gameserver.model.templates.pet.PetFunctionType;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LOOT_STATUS;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MINIONS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PET;
 import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
@@ -246,6 +247,25 @@ public class DropRegistrationService {
 				}
 			}
 			PacketSendUtility.sendPacket(player, new SM_PET(false, npcObjId));
+			// if everything was looted, npc is deleted
+			if (drops == null || drops.size() == 0) {
+				return;
+			}
+		}
+		//Minion auto loot
+		if (player.getMinion() != null && player.getMinion().getCommonData().isLooting()) {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, npcObjId, true));
+			Set<DropItem> drops = getCurrentDropMap().get(npcObjId);
+			if (drops == null || drops.size() == 0) {
+				npc.getController().onDelete();
+			}
+			else {
+				DropItem[] dropItems = drops.toArray(new DropItem[drops.size()]);
+				for (int i = 0; i < dropItems.length; i++) {
+					DropService.getInstance().requestDropItem(player, npcObjId, dropItems[i].getIndex(), true);
+				}
+			}
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, npcObjId, false));
 			// if everything was looted, npc is deleted
 			if (drops == null || drops.size() == 0) {
 				return;

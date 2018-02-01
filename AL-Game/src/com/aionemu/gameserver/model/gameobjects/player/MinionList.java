@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.model.gameobjects.player;
 
-import java.sql.Timestamp;
 import java.util.Collection;
 
 import com.aionemu.commons.database.dao.DAOManager;
@@ -30,7 +29,7 @@ public class MinionList {
 	private int lastUsedObjId;
 	private FastMap<Integer, MinionCommonData> minions = new FastMap<Integer, MinionCommonData>();
 
-	MinionList(Player player) {
+	public MinionList(Player player) {
 		this.player = player;
 		loadMinions();
 	}
@@ -62,29 +61,25 @@ public class MinionList {
 	}
 
 	public MinionCommonData addNewMinion(Player player, int minionId, String name, String grade, int level) {
-		return addNewMinion(player, minionId, name, grade, level, System.currentTimeMillis());
-	}
-
-	public MinionCommonData addNewMinion(Player player, int minionId, String name, String grade, int level, long time) {
 		MinionCommonData minionCommonData = new MinionCommonData(minionId, player.getObjectId(), name, grade, level, 0);
-		minionCommonData.setBirthday(new Timestamp(time));
 		DAOManager.getDAO(PlayerMinionsDAO.class).insertPlayerMinion(minionCommonData);
+		DAOManager.getDAO(PlayerMinionsDAO.class).saveBirthday(minionCommonData);
 		minions.put(minionId, minionCommonData);
 		return minionCommonData;
 	}
 
 	public boolean hasMinion(int n) {
-		return minions.containsKey( n);
+		return minions.containsKey(n);
 	}
 
 	public void deleteMinion(int minionObjId) {
 		if (hasMinion(minionObjId)) {
+            DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, minionObjId);
 			minions.remove(minionObjId);
-			DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, minionObjId);
 		}
 	}
 
-	public void setLastUsed(final int lastUsedObjId) {
+	public void setLastUsed(int lastUsedObjId) {
 		this.lastUsedObjId = lastUsedObjId;
 	}
 

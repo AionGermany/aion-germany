@@ -21,6 +21,7 @@ import java.util.List;
 import com.aionemu.commons.database.dao.DAO;
 import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.templates.minion.MinionDopingBag;
 
 /**
  * @author Falke_34
@@ -44,5 +45,12 @@ public abstract class PlayerMinionsDAO implements DAO {
 	
 	public abstract boolean PlayerMinions(int playerid, int miniona);
 	
-	public abstract String[] PlayerMinionData(Player player, int minionCommonData);
+	public abstract void evolutionMinion(Player player, MinionCommonData minionCommonData);
+	
+	public abstract void lockMinions(Player player, int minionObjId, int isLocked);
+	
+	public abstract void saveDopingBag(Player player, MinionCommonData minionCommonData, MinionDopingBag bag);
+	
+	public abstract void saveBirthday(MinionCommonData minionCommonData);
+	
 }

@@ -161,15 +161,10 @@ public class SM_PET extends AionServerPacket {
 					}
 					if (petTemplate.ContainsFunction(PetFunctionType.BUFF)) {
 						writeH(PetFunctionType.BUFF.getId());
-						short buff = (short) petTemplate.getPetFunction(PetFunctionType.BUFF).getId();
-						writeH(buff);
 						specialtyCount++;
 					}
 					if (petTemplate.ContainsFunction(PetFunctionType.MERCHANT)) {
 						writeH(PetFunctionType.MERCHANT.getId());
-						short merchant = (short) petTemplate.getPetFunction(PetFunctionType.MERCHANT).getId();
-						writeH(merchant);
-						writeC(0x00);
 						specialtyCount++;
 					}
 					if (petTemplate.ContainsFunction(PetFunctionType.DOPING)) {

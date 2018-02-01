@@ -22,6 +22,7 @@ import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerMinionsDAO;
 import com.aionemu.gameserver.model.IExpirable;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
+import com.aionemu.gameserver.model.templates.minion.MinionDopingBag;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
 public class MinionCommonData extends VisibleObjectTemplate implements IExpirable {
@@ -32,30 +33,37 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	private String minionGrade;
 	private String name;
 	private int minionLevel;
-	private int miniongrowpoint; //new
+	private int miniongrowpoint = 0;
+	private boolean lock = false;
+	private boolean IsBuffing = false;
+	private boolean isLooting = false;
+	MinionDopingBag dopingBag = null;
 
-	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int growpoints) {
+	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int miniongrowpoint) {
 		switch(this.minionObjId) {
-			case 0: {
-				this.minionObjId = IDFactory.getInstance().nextId();
-				break;
-			}
-			default:
-				do 
-				{
-					if(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId)) {
-						this.minionObjId = IDFactory.getInstance().nextId();
-					}
-				} 
-				while(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId));
-				break;
+		case 0: {
+			this.minionObjId = IDFactory.getInstance().nextId();
+			break;
 		}
+		default:
+			do 
+			{
+				if(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId)) {
+					this.minionObjId = IDFactory.getInstance().nextId();
+				}
+			} 
+			while(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId));
+			break;
+	}
 		this.minionId = minionId;
 		this.masterObjectId = masterObjectId;
 		this.name = name;
 		this.minionGrade = minionGrade;
 		this.minionLevel = minionLevel;
-		this.miniongrowpoint = growpoints;
+		this.miniongrowpoint = miniongrowpoint;
+		if (minionId > 980013) {
+			this.dopingBag = new MinionDopingBag();
+		}
 	}
 
 	public void setObjectId(int minionObjId) {
@@ -73,6 +81,10 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	public int getMinionId() {
 		return minionId;
 	}
+	
+	public int setMinionId(int minionId) {
+		return this.minionId = minionId;
+	}
 
 	public String getMinionGrade() {
 		return minionGrade;
@@ -80,6 +92,10 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 
 	public int getMinionLevel() {
 		return minionLevel;
+	}
+	
+	public int setMinionLevel(int minionLevel) {
+		return this.minionLevel = minionLevel;
 	}
 
 	public int getBirthday() {
@@ -140,5 +156,33 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 
 	public void setMiniongrowpoint(int miniongrowpoint) {
 		this.miniongrowpoint = miniongrowpoint;
+	}
+
+	public boolean isLock() {
+		return lock;
+	}
+
+	public void setLock(boolean lock) {
+		this.lock = lock;
+	}
+	
+	public MinionDopingBag getDopingBag() {
+        return this.dopingBag;
+    }
+
+	public boolean getIsBuffing() {
+		return IsBuffing;
+	}
+
+	public void setIsBuffing(boolean isBuffing) {
+		IsBuffing = isBuffing;
+	}
+	
+	public void setIsLooting(boolean isLooting) {
+		this.isLooting = isLooting;
+	}
+
+	public boolean isLooting() {
+		return this.isLooting;
 	}
 }

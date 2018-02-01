@@ -35,18 +35,20 @@ public class CM_MINIONS extends AionClientPacket {
 	private String minionName;
 	private int objectId;
 	private int itemObjectId;
+	@SuppressWarnings("unused")
 	private boolean isSpawned; //Should be in DB (TODO)
 	private int charge;
 	private int autoCharge;
-	private int itemId;
-	private int itemSlot;
+	private int functId;
 	private int subSwitch;
-	private int value;
-	private int value1;
-	private int value2;
-	private int value3;
-	private ArrayList<Integer> ids = new ArrayList<Integer>(); //new
-	private int lock = 0;//new
+	private int minionObjectId;
+	private int dopingItemId;
+	private int targetSlot;
+	private int destinationSlot;
+	private int unk;
+	private ArrayList<Integer> MaterialObjIds = new ArrayList<Integer>();
+	private int MaterialObjId;
+	private int lock = 0;
 	
 	public CM_MINIONS(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -55,7 +57,6 @@ public class CM_MINIONS extends AionClientPacket {
 	@Override
 	protected void readImpl() {
 		actionId = readH();
-		System.out.println("ActionId 1: " + actionId);
 		switch (actionId) {
 			case 0: // add
 				itemObjectId = readD(); // Item UniqueId (Minion Contract)
@@ -72,34 +73,70 @@ public class CM_MINIONS extends AionClientPacket {
                 lock = readC(); // lock/unlock Todo
                 break;
 			case 4: // summon
-				objectId = readD(); // Minion Unique ID
-				break;
 			case 5: // unsummon
 				objectId = readD(); // Minion Unique ID
 				break;
-			case 6: // ascension new
-				objectId = readD();
+			case 6: // ascension
+				MaterialObjIds.clear();
+				objectId = readD(); // Minion Unique ID
 				for (int i = 0; i < 10; i++) {
-					int a = readD();
-					ids.add(a);
+					MaterialObjId = readD();
+					MaterialObjIds.add(MaterialObjId);
 				}
 				break;
-			case 7: //evolution new
+			case 7: //evolution
 				objectId = readD();
 				break;
-			case 8://combination new
+			case 8://combination
+				MaterialObjIds.clear();
 				for (int i = 0; i < 4; i++) {
-					int a = readD();
-					System.out.println("ActionId 8: " + i + " Index   Ertek: " + a);
-					ids.add(a);
+					MaterialObjId = readD();
+					MaterialObjIds.add(MaterialObjId);
 				}
 				break;
 			case 9: // TODO (MinionFunction Scrolls etc)
 				subSwitch = readD(); //0, 1
-				value = readD(); // 0, 3 or Minion Unique ID / subSwitch (1) = Minion Unique ID
-				value1 = readD(); //subSwitch + value (0) =  Minion Unique ID 
-				value2 = readD(); //subSwitch + value (0) = ItemId
-				value3 = readD(); //subSwitch + value (0) = ItemSlot
+				System.out.println("SubSwitch: "+subSwitch);
+				switch (subSwitch) {
+	                case 0: {
+	                    functId = readD();
+	                    switch(functId) {
+		                    case 0:{//add item
+		                    	minionObjectId = readD();
+		                        dopingItemId = readD();
+		                        targetSlot = readD();
+		                        break;
+		                    }
+		                    case 1:{
+		                    	minionObjectId = readD();
+		                        targetSlot = readD();
+		                        unk = readD();
+		                        break;
+		                    }
+		                    case 2:{
+		                        minionObjectId = readD();
+		                        targetSlot = readD();
+		                        destinationSlot = readD();
+		                        break;
+		                    }
+		                    case 3:{//BUFF ON
+		                        minionObjectId = readD();
+		                        dopingItemId = readD();
+		                        targetSlot = readD();
+		                        break;
+		                    }
+		                    case 4:{
+		                        minionObjectId = readD();
+		                        break;
+		                    }
+	                    }
+	                    break;
+	                }
+	                case 1: {//Auto Loot
+	                    minionObjectId = readD();
+	                    break;
+	                }
+				}
 				break;
 			case 10: //Nothing to read (Falke Log 5.6_Minion_Function)
 				break;
@@ -115,6 +152,10 @@ public class CM_MINIONS extends AionClientPacket {
             	readC();
             	readH();
             	break;
+            case 14://Nothing to read BUFF ON
+            	break;
+		default:
+			break;
 		}
 	}
 
@@ -124,13 +165,12 @@ public class CM_MINIONS extends AionClientPacket {
 		if (player == null) {
 			return;
 		}
-		System.out.println("ActionId 2: " + actionId);
 		switch (actionId) {
 			case 0:
-				MinionService.getInstance().addMinion(player, itemObjectId); // TODO
+				MinionService.getInstance().addMinion(player, itemObjectId);
 				break;
 			case 1:
-				MinionService.getInstance().deleteMinion(player, objectId);
+				MinionService.getInstance().deleteMinion(player, objectId, false);
 				break;
 			case 2:
 				if (NameRestrictionService.isForbiddenWord(minionName)) {
@@ -140,39 +180,50 @@ public class CM_MINIONS extends AionClientPacket {
 					MinionService.getInstance().renameMinion(player, objectId, minionName);
 				}
 				break;				
-			case 3://lock
+			case 3:
 				MinionService.getInstance().lockMinion(player, objectId, lock);
 				break;
 			case 4:
-                if (player.getPet() != null) {
-                    PetSpawnService.dismissPet(player, true);
-                }				
+				if (player.getPet() != null) {
+					PetSpawnService.dismissPet(player, true);
+				}
 				MinionService.getInstance().spawnMinion(player, objectId);
 				break;
 			case 5:
 				MinionService.getInstance().despawnMinion(player, objectId);
 				break;
 			case 6:
-				//new
-				MinionService.getInstance().growthUpMinion(player, ids, objectId);
+				MinionService.getInstance().growthUpMinion(player, MaterialObjIds, objectId);
 				break;
 			case 7:
-				//new
 				MinionService.getInstance().evolutionUpMinion(player, objectId);
 				break;
 			case 8:
-				//new
-				MinionService.getInstance().CombinationMinion(player, ids);
+				MinionService.getInstance().CombinationMinion(player, MaterialObjIds);
 				break;
 			case 9: // TODO
-				if (subSwitch == 0 && value == 0) {
-					MinionService.getInstance().addMinionFunctionItems(player, 0, value, value1, value2, value3); // Scrolls etc
-				} else if (subSwitch == 1 && value > 3) {
-					//Send SystemMessage 1400876 (Loot Deaktivated)
-					MinionService.getInstance().deaktivateLoot(player, 1, value, value1, value2, value3); //Loot Deaktivated
-					return;
-				} else {
-					MinionService.getInstance().buffPlayer(player, 768, value, value1, value2, value3); //Buff
+				switch(subSwitch) {
+					case 0: {
+						switch(functId) {
+							case 0: { //Add Item
+								MinionService.getInstance().addMinionFunctionItems(player, functId, minionObjectId, dopingItemId, targetSlot, destinationSlot);  // Scrolls etc
+								break;
+							}
+							case 2: {
+								MinionService.getInstance().relocateDoping(player, minionObjectId, targetSlot, destinationSlot);
+								break;
+							}
+							case 3: {
+								MinionService.getInstance().buffPlayer(player, minionObjectId, dopingItemId, targetSlot); //Buff
+								break;
+							}
+						}
+						break;
+					}
+					case 1: {
+						MinionService.getInstance().ActivDeactivLoot(player, true);
+						break;
+					}
 				}
 				break;
 			case 10: // MinionFunction (Activate)
@@ -183,8 +234,14 @@ public class CM_MINIONS extends AionClientPacket {
 				// TODO
 				//MinionService.getInstance().chargeMinion(player, todo2 == 1 ? true : false);
 				break;
+			case 12:
+				break;
 			case 13:
 				break;
+			case 14:
+				break;
+		default:
+			break;
 		}
 	}
 }
