@@ -188,7 +188,7 @@ public class MySQL5PlayerMinionsDAO extends PlayerMinionsDAO {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("UPDATE player_minions SET minion_id = ?, growepoint = 0, level = ? WHERE player_id = ? AND object_id = ?");
+			PreparedStatement stmt = con.prepareStatement("UPDATE player_minions SET minion_id = ?, growpoint = 0, level = ? WHERE player_id = ? AND object_id = ?");
 			stmt.setInt(1, minionCommonData.getMinionId());
 			stmt.setInt(2, minionCommonData.getMinionLevel());
 			stmt.setInt(3, minionCommonData.getMasterObjectId());
