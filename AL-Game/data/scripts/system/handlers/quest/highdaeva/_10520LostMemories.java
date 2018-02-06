@@ -77,7 +77,7 @@ public class _10520LostMemories extends QuestHandler {
 							return closeDialogWindow(env);
 						}
 						default:
-							break;
+							return sendQuestStartDialog(env);
 					}
 				}
 				case 806073: { // Messenger Pellen

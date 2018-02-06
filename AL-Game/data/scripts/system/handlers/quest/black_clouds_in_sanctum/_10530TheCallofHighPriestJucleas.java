@@ -82,7 +82,7 @@ public class _10530TheCallofHighPriestJucleas extends QuestHandler {
 							return checkQuestItems(env, 7, 8, true, 10000, 10001);
 						}
 						default:
-							break;
+							return sendQuestStartDialog(env);
 					}
 				}
 				case 203725: { // Leah
