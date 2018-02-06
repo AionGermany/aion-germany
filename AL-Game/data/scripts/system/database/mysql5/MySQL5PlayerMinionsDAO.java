@@ -91,7 +91,7 @@ public class MySQL5PlayerMinionsDAO extends PlayerMinionsDAO {
 			stmt.setInt(1, player.getObjectId());
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				MinionCommonData minionCommonData = new MinionCommonData(rs.getInt("minion_id"), player.getObjectId(), rs.getString("name"), rs.getString("grade"), rs.getInt("level"), rs.getInt("growepoint"));
+				MinionCommonData minionCommonData = new MinionCommonData(rs.getInt("minion_id"), player.getObjectId(), rs.getString("name"), rs.getString("grade"), rs.getInt("level"), rs.getInt("growpoints"));
 				minionCommonData.setObjectId(rs.getInt("object_id"));
 				minionCommonData.setBirthday(rs.getTimestamp("birthday"));
 				minionCommonData.setLock(rs.getInt("is_locked") == 1 ? true : false);

@@ -32,6 +32,7 @@ import com.aionemu.gameserver.model.stats.calc.Stat2;
 import com.aionemu.gameserver.model.team.legion.LegionEmblemType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
+import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
 import javolution.util.FastList;
 
@@ -380,7 +381,28 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
 		writeC(pcdd.getConquerorBuffLevel());
 		writeC(pcdd.getProtectorBuffLevel());
-		writeC(0x00); // 4.8
+		switch (player.getAbyssRank().getRank()) {
+			case STAR1_OFFICER:
+			case STAR2_OFFICER:
+			case STAR3_OFFICER:
+			case STAR4_OFFICER:
+			case STAR5_OFFICER:
+		        writeC(1); // 4.9
+		        break;
+			case GENERAL:
+			case GREAT_GENERAL:
+		        writeC(2); // 4.9
+		        break;
+			case COMMANDER:
+		        writeC(3); // 4.9
+		        break;
+			case SUPREME_COMMANDER:
+		        writeC(4); // 4.9
+		        break;
+			default:
+		        writeC(0); // 4.9
+		        break;
+		    }
 		writeD(0x00); // 5.4 found value 1000,2000 and 0
 	}
 }
