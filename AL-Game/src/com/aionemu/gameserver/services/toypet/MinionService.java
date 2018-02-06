@@ -471,8 +471,12 @@ public class MinionService {
 	}
 	//TODO
 	public void addMinionFunctionItems(Player player, int action, int minionObjectId, int itemId, int targetSlot, int destinationSlot) {
+		if (player.getMinion() == null) {
+			return;
+		}
 		Minion minions = player.getMinion();
 		minions.getCommonData().getDopingBag().setItem(itemId, targetSlot);
+
 		if(minions.getCommonData().getDopingBag().getFoodItem() != 0) {
 			System.out.println("Minion Bag food:"+minions.getCommonData().getDopingBag().getFoodItem());
 		}
