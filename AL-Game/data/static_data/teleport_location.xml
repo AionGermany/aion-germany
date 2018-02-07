@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 15:33 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-02-07 20:24 -->
 <teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">
     <!-- teleport -->
     <teleloc_template loc_id="2" mapid="110010000" name="Sanctum" name_id="400489" posX="1313.25" posY="1512.011" posZ="568.107" heading="0"/>
@@ -8,7 +8,7 @@
     <teleloc_template loc_id="5" mapid="210020000" name="Eltnen" name_id="400492" posX="344.48312" posY="2723.4956" posZ="263.88733" heading="45"/>
     <teleloc_template loc_id="6" mapid="210040000" name="Heiron" name_id="400493" posX="2542.2327" posY="339.2828" posZ="411.66394" heading="36"/>
     <teleloc_template loc_id="7" mapid="120010000" name="Pandaemonium" name_id="400494" posX="1685.7" posY="1400.5" posZ="195.48618" heading="60"/>
-    <teleloc_template loc_id="8" mapid="220010000" name="Ishalgen" name_id="400495" posX="570.40451" posY="2462.6885" posZ="280.94876" heading="106"/> <!-- 5.6 fix -->
+    <teleloc_template loc_id="8" mapid="220010000" name="Ishalgen" name_id="400495" posX="570.40451" posY="2462.6885" posZ="280.94876" heading="106"/>
     <teleloc_template loc_id="9" mapid="220030000" name="Altgard" name_id="400496" posX="1752.5322" posY="1806.6096" posZ="254.66133" heading="60"/>
     <teleloc_template loc_id="10" mapid="220020000" name="Morheim" name_id="400497" posX="309.53" posY="2271.51" posZ="449.41266" heading="0"/>
     <teleloc_template loc_id="11" mapid="220040000" name="Beluslan" name_id="400498" posX="398.3" posY="400.8" posZ="222.79721" heading="23"/>
@@ -41,7 +41,7 @@
     <teleloc_template loc_id="36" mapid="400010000" name="Siel's Western Fortress" name_id="400659" posX="2985.3564" posY="2595.3398" posZ="1489.0905" heading="33"/>
     <teleloc_template loc_id="37" mapid="400010000" name="Siel's Eastern Fortress" name_id="400660" posX="2656.2722" posY="3063.4211" posZ="1483.1167" heading="33"/>
     <teleloc_template loc_id="38" mapid="400010000" name="Primum Landing" name_id="400661" posX="1078.71" posY="2838.54" posZ="1636.58" heading="0"/>
-    <teleloc_template loc_id="39" mapid="400010000" name="Sulphur Archipelago" name_id="400662" posX="1345.1719" posY="1190.9126" posZ="1514.6681" heading="41"/>
+    <teleloc_template loc_id="39" mapid="400010000" name="Sulphur Fortress" name_id="400662" posX="1345.1719" posY="1190.9126" posZ="1514.6681" heading="41"/>
     <teleloc_template loc_id="40" mapid="400010000" name="Eastern Shard of Latesran" name_id="400666" posX="1346" posY="2866" posZ="1668" heading="90"/>
     <!-- flying -->
     <teleloc_template loc_id="41" mapid="400010000" name="Eastern Shard of Latesran" name_id="400667"/>
@@ -66,7 +66,7 @@
     <!-- teleport -->
     <teleloc_template loc_id="54" mapid="400010000" name="Siel's Western Fortress" name_id="400725" posX="2985.3564" posY="2595.3398" posZ="1489.0905" heading="33"/>
     <teleloc_template loc_id="55" mapid="400010000" name="Siel's Eastern Fortress" name_id="400726" posX="2656.2722" posY="3063.4211" posZ="1483.1167" heading="33"/>
-    <teleloc_template loc_id="56" mapid="400010000" name="Sulphur Archipelago" name_id="400727" posX="1345.1719" posY="1190.9126" posZ="1514.6681" heading="41"/>
+    <teleloc_template loc_id="56" mapid="400010000" name="Sulphur Fortress" name_id="400727" posX="1345.1719" posY="1190.9126" posZ="1514.6681" heading="41"/>
     <teleloc_template loc_id="57" mapid="400010000" name="Krotan Refuge" name_id="400729" posX="2033.38" posY="1294.35" posZ="2963.57" heading="60"/>
     <teleloc_template loc_id="58" mapid="400010000" name="Kysis Fortress" name_id="400730" posX="1919.1362" posY="1726.4082" posZ="3015.5928" heading="93"/>
     <teleloc_template loc_id="59" mapid="400010000" name="Miren Fortress" name_id="400731" posX="1175.0942" posY="1945.7646" posZ="2949.6787" heading="8"/>
@@ -360,4 +360,40 @@
     <teleloc_template loc_id="484" mapid="210100000" name="Forest of Silence" name_id="404830" posX="767.51978" posY="965.3139" posZ="368.49634" heading="0"/>
     <teleloc_template loc_id="485" mapid="210100000" name="Storm Plateau" name_id="404831" posX="767.51978" posY="965.3139" posZ="368.49634" heading="0"/>
     <teleloc_template loc_id="486" mapid="210100000" name="Mushroom Gorge" name_id="404832" posX="767.51978" posY="965.3139" posZ="368.49634" heading="0"/>
+    <!-- CHECK
+    <teleloc_template loc_id="487" mapid="" name="Remnant Altar" name_id="405158" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="488" mapid="" name="Refuge of Beginning" name_id="405153" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="489" mapid="" name="Anvil of Immortality" name_id="405156" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="490" mapid="" name="Anvil of Eternity" name_id="405160" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="491" mapid="" name="Remnant Altar" name_id="405158" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="492" mapid="" name="Refuge of Beginning" name_id="405153" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="493" mapid="" name="Anvil of Immortality" name_id="405156" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="494" mapid="" name="Anvil of Eternity" name_id="405160" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="495" mapid="" name="Remnant Altar" name_id="405158" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="496" mapid="" name="Refuge of Beginning" name_id="405153" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="497" mapid="" name="Anvil of Immortality" name_id="405156" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="498" mapid="" name="Anvil of Eternity" name_id="405160" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="499" mapid="" name="Remnant Altar" name_id="405158" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="500" mapid="" name="Refuge of Beginning" name_id="405153" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="501" mapid="" name="Anvil of Immortality" name_id="405156" posX="0" posY="0" posZ="0" heading="0"/>
+    <teleloc_template loc_id="502" mapid="" name="Anvil of Eternity" name_id="405160" posX="0" posY="0" posZ="0" heading="0"/>
+    -->
+    <teleloc_template loc_id="523" mapid="400010000" name="Divine Fortress" name_id="400690" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="524" mapid="400010000" name="Divine Fortress" name_id="400733" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="526" mapid="220110000" name="208th Garrison - Battlefield Encouragement" name_id="405268" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="527" mapid="220110000" name="209th Garrison - The Hand of Bitter Battle" name_id="405269" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="528" mapid="220110000" name="210th Garrison - Battlefield Encouragement" name_id="405270" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="529" mapid="220110000" name="211th Garrison - The Hand of Bitter Battle" name_id="405271" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="530" mapid="220110000" name="208th Garrison - Battlefield Encouragement" name_id="405268" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="531" mapid="220110000" name="209th Garrison - The Hand of Bitter Battle" name_id="405269" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="532" mapid="220110000" name="210th Garrison - Battlefield Encouragement" name_id="405270" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="533" mapid="220110000" name="211th Garrison - The Hand of Bitter Battle" name_id="405271" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="535" mapid="210100000" name="108th Garrison - Battlefield Encouragement" name_id="405273" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="536" mapid="210100000" name="109th Garrison - The Hand of Bitter Battle" name_id="405274" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="537" mapid="210100000" name="110th Garrison - Battlefield Encouragement" name_id="405275" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="538" mapid="210100000" name="111th Garrison - The Hand of Bitter Battle" name_id="405276" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="539" mapid="210100000" name="108th Garrison - Battlefield Encouragement" name_id="405273" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="540" mapid="210100000" name="109th Garrison - The Hand of Bitter Battle" name_id="405274" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="541" mapid="210100000" name="110th Garrison - Battlefield Encouragement" name_id="405275" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
+    <teleloc_template loc_id="542" mapid="210100000" name="111th Garrison - The Hand of Bitter Battle" name_id="405276" posX="0" posY="0" posZ="0" heading="0"/>  <!-- CHECK POSITION -->
 </teleport_location>

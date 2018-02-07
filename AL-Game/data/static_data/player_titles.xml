@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-08-11 18:41 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-02-07 20:09 -->
 <player_titles>
     <title id="1" nameId="2201801" desc="Poeta's Protector" race="ELYOS">
         <modifiers>
@@ -2497,6 +2497,70 @@
             <rate name="SPEED" value="4" bonus="true"/>
             <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
             <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="362" nameId="3607583" desc="Experienced Exceptional Talent" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <add name="POWER" value="5" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="363" nameId="3607585" desc="Wise Multitalent" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <add name="KNOWLEDGE" value="5" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="364" nameId="3607599" desc="Asmodian Deathbringer" race="ELYOS">
+        <modifiers>
+            <add name="PVP_DEFEND_RATIO" value="10" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="365" nameId="3607601" desc="Corpserunner" race="ELYOS">
+        <modifiers>
+            <add name="PVP_ATTACK_RATIO" value="10" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="1" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="366" nameId="3607603" desc="Whitewing Angel of Death" race="ELYOS">
+        <modifiers>
+            <add name="PVP_ATTACK_RATIO" value="10" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="367" nameId="3607605" desc="Elyos Deathbringer" race="ASMODIANS">
+        <modifiers>
+            <add name="PVP_DEFEND_RATIO" value="10" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="368" nameId="3607607" desc="Corpsetreader" race="ASMODIANS">
+        <modifiers>
+            <add name="PVP_ATTACK_RATIO" value="10" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="1" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="369" nameId="3607609" desc="Blackwing Angel of Death" race="ASMODIANS">
+        <modifiers>
+            <add name="PVP_ATTACK_RATIO" value="10" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="2" bonus="true"/>
         </modifiers>
     </title>
 </player_titles>

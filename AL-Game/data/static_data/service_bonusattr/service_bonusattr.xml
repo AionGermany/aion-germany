@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 15:43 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-02-07 20:20 -->
 <service_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="service_bonusattr.xsd">
     <!-- LegionBonusBuff_1st -->
     <service_bonusattr buff_id="1">
@@ -21,10 +21,12 @@
     </service_bonusattr>
     <!-- PCBangEXPBoost Buff -->
     <service_bonusattr buff_id="4">
-        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="30"/>
-        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="30"/>
-        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="30"/>
-        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="30"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="50"/>
+        <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="50"/>
+        <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="50"/>
+        <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="50"/>
+        <bonus_attr stat="BOOST_CRAFTING_XP_RATE" func="ADD" value="50"/>
+        <bonus_attr stat="DEATH_PENALTY_REDUCE" func="ADD" value="100"/>
     </service_bonusattr>
     <!-- LegionBonusBuff_2nd -->
     <service_bonusattr buff_id="5">
@@ -110,27 +112,33 @@
     </service_bonusattr>
     <!-- Topping_Physical_Damage_01 Buff -->
     <service_bonusattr buff_id="1102">
-        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="16"/>
+        <bonus_attr stat="PHYSICAL_DEFENSE" func="ADD" value="50"/>
     </service_bonusattr>
     <!-- Topping_Physical_Critical_01 Buff -->
     <service_bonusattr buff_id="1103">
-        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="38"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="48"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL_RESIST" func="ADD" value="12"/>
     </service_bonusattr>
     <!-- Topping_Physical_Accuracy_01 Buff -->
     <service_bonusattr buff_id="1104">
-        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="58"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="70"/>
+        <bonus_attr stat="EVASION" func="ADD" value="13"/>
     </service_bonusattr>
     <!-- Topping_Magical_Damage_01 Buff -->
     <service_bonusattr buff_id="1105">
-        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="56"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="70"/>
+        <bonus_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="25"/>
     </service_bonusattr>
     <!-- Topping_Magical_Crirical_01 Buff -->
     <service_bonusattr buff_id="1106">
-        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="10"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="18"/>
+        <bonus_attr stat="MAGICAL_CRITICAL_RESIST" func="ADD" value="5"/>
     </service_bonusattr>
     <!-- Topping_Magical_Accuracy_01 Buff -->
     <service_bonusattr buff_id="1107">
-        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="32"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="44"/>
+        <bonus_attr stat="MAGICAL_RESIST" func="ADD" value="11"/>
     </service_bonusattr>
     <!-- Topping_APBoost_01 Buff -->
     <service_bonusattr buff_id="1108">
@@ -174,33 +182,41 @@
         <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="30"/>
         <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="30"/>
     </service_bonusattr>
+    <!-- Topping_MaxHP_01 Buff -->
+    <service_bonusattr buff_id="1117">
+        <bonus_attr stat="MAXHP" func="ADD" value="1100"/>
+    </service_bonusattr>
+    <!-- Topping_MaxMP_01 Buff -->
+    <service_bonusattr buff_id="1118">
+        <bonus_attr stat="MAXMP" func="ADD" value="1100"/>
+    </service_bonusattr>
     <!-- Topping_Base_SP_01 Buff -->
     <service_bonusattr buff_id="2000">
         <bonus_attr stat="MAXHP" func="ADD" value="85"/>
     </service_bonusattr>
     <!-- Topping_Physical_Damage_SP_01 Buff -->
     <service_bonusattr buff_id="2001">
-        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
+        <bonus_attr stat="PHYSICAL_ATTACK" func="PERCENT" value="12"/>
     </service_bonusattr>
     <!-- Topping_Physical_Critical_SP_01 Buff -->
     <service_bonusattr buff_id="2002">
-        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="30"/>
+        <bonus_attr stat="PHYSICAL_CRITICAL" func="ADD" value="38"/>
     </service_bonusattr>
     <!-- Topping_Physical_Accuracy_SP_01 Buff -->
     <service_bonusattr buff_id="2003">
-        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="50"/>
+        <bonus_attr stat="PHYSICAL_ACCURACY" func="ADD" value="58"/>
     </service_bonusattr>
     <!-- Topping_Magical_Damage_SP_01 Buff -->
     <service_bonusattr buff_id="2004">
-        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="50"/>
+        <bonus_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="56"/>
     </service_bonusattr>
     <!-- Topping_Magical_Crirical_SP_01 Buff -->
     <service_bonusattr buff_id="2005">
-        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="10"/>
+        <bonus_attr stat="MAGICAL_CRITICAL" func="ADD" value="14"/>
     </service_bonusattr>
     <!-- Topping_Magical_Accuracy_SP_01 Buff -->
     <service_bonusattr buff_id="2006">
-        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="24"/>
+        <bonus_attr stat="MAGICAL_ACCURACY" func="ADD" value="32"/>
     </service_bonusattr>
     <!-- Topping_APPenaltyReduce_SP_01 Buff -->
     <service_bonusattr buff_id="2007">
@@ -243,6 +259,14 @@
         <bonus_attr stat="BOOST_GATHERING_XP_RATE" func="ADD" value="30"/>
         <bonus_attr stat="BOOST_GROUP_HUNTING_XP_RATE" func="ADD" value="30"/>
         <bonus_attr stat="BOOST_HUNTING_XP_RATE" func="ADD" value="30"/>
+    </service_bonusattr>
+    <!-- Topping_MaxHP_SP_01 Buff -->
+    <service_bonusattr buff_id="2016">
+        <bonus_attr stat="MAXHP" func="ADD" value="900"/>
+    </service_bonusattr>
+    <!-- Topping_MaxMP_SP_01 Buff -->
+    <service_bonusattr buff_id="2017">
+        <bonus_attr stat="MAXMP" func="ADD" value="900"/>
     </service_bonusattr>
     <!-- World_Topping_Physical_Damage_01 Buff -->
     <service_bonusattr buff_id="3000">
