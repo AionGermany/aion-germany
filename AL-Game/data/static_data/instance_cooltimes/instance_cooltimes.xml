@@ -310,7 +310,7 @@
         <enter_min_level_light>51</enter_min_level_light>
         <enter_min_level_dark>51</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
-        <maxcount>5</maxcount>
+        <maxcount>1</maxcount>
     </instance_cooltime>
     <!-- Lower Udas Temple -->
     <instance_cooltime race="PC_ALL" worldId="300160000" id="27">
@@ -322,7 +322,7 @@
         <enter_min_level_light>51</enter_min_level_light>
         <enter_min_level_dark>51</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
-        <maxcount>5</maxcount>
+        <maxcount>1</maxcount>
     </instance_cooltime>
     <!-- Beshmundir Temple -->
     <instance_cooltime race="PC_ALL" worldId="300170000" id="28">
@@ -705,8 +705,8 @@
         <typevalue>Wed</typevalue>
         <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
-        <max_member_light>48</max_member_light>
-        <max_member_dark>48</max_member_dark>
+        <max_member_light>12</max_member_light>
+        <max_member_dark>12</max_member_dark>
         <enter_min_level_light>55</enter_min_level_light>
         <enter_min_level_dark>55</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
@@ -1438,7 +1438,7 @@
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>4</maxcount>
     </instance_cooltime>
-    <!-- Heart of Memory -->
+    <!-- Museum of Knowledge -->
     <instance_cooltime race="PC_ALL" worldId="301560000" id="147">
         <type>WEEKLY</type>
         <typevalue>Wed</typevalue>
@@ -1508,8 +1508,8 @@
         <typevalue>Wed</typevalue>
         <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
-        <max_member_light>6</max_member_light>
-        <max_member_dark>6</max_member_dark>
+        <max_member_light>3</max_member_light>
+        <max_member_dark>3</max_member_dark>
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
@@ -1521,8 +1521,8 @@
         <typevalue>Wed</typevalue>
         <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
-        <max_member_light>6</max_member_light>
-        <max_member_dark>6</max_member_dark>
+        <max_member_light>3</max_member_light>
+        <max_member_dark>3</max_member_dark>
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
@@ -1534,10 +1534,10 @@
         <typevalue>Wed</typevalue>
         <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
-        <max_member_light>6</max_member_light>
-        <max_member_dark>6</max_member_dark>
-        <enter_min_level_light>66</enter_min_level_light>
-        <enter_min_level_dark>66</enter_min_level_dark>
+        <max_member_light>3</max_member_light>
+        <max_member_dark>3</max_member_dark>
+        <enter_min_level_light>69</enter_min_level_light>
+        <enter_min_level_dark>69</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>3</maxcount>
     </instance_cooltime>
@@ -1588,10 +1588,10 @@
         <typevalue>Wed</typevalue>
         <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
-        <max_member_light>6</max_member_light>
-        <max_member_dark>6</max_member_dark>
-        <enter_min_level_light>66</enter_min_level_light>
-        <enter_min_level_dark>66</enter_min_level_dark>
+        <max_member_light>3</max_member_light>
+        <max_member_dark>3</max_member_dark>
+        <enter_min_level_light>72</enter_min_level_light>
+        <enter_min_level_dark>72</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>3</maxcount>
     </instance_cooltime>
@@ -1661,39 +1661,18 @@
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>1</maxcount>
     </instance_cooltime>
-    <!-- Sanctum Battlefield -->
-    <instance_cooltime race="ELYOS" worldId="302200000" id="164">
-        <type>DAILY</type>
-        <ent_cool_time>900</ent_cool_time>
-        <indun_type>NORMAL</indun_type>
-        <max_member_light>384</max_member_light>
-        <max_member_dark>0</max_member_dark>
-        <enter_min_level_light>66</enter_min_level_light>
-        <enter_min_level_dark>66</enter_min_level_dark>
-        <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>0</maxcount>
-    </instance_cooltime>
-    <!-- Pandaemonium Battlefield -->
-    <instance_cooltime race="ASMODIANS" worldId="302300000" id="165">
-        <type>DAILY</type>
-        <ent_cool_time>900</ent_cool_time>
-        <indun_type>NORMAL</indun_type>
-        <max_member_light>0</max_member_light>
-        <max_member_dark>384</max_member_dark>
-        <enter_min_level_light>66</enter_min_level_light>
-        <enter_min_level_dark>66</enter_min_level_dark>
-        <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>0</maxcount>
-    </instance_cooltime>
     <!-- Gold Arena -->
     <instance_cooltime race="PC_ALL" worldId="302310000" id="166">
+        <type>WEEKLY</type>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
         <max_member_light>32</max_member_light>
         <max_member_dark>32</max_member_dark>
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>0</maxcount>
+        <maxcount>4</maxcount>
     </instance_cooltime>
     <!-- Golden Crucible -->
     <instance_cooltime race="PC_ALL" worldId="302320000" id="167">
@@ -1738,7 +1717,7 @@
     <!-- Neviwind Canyon -->
     <instance_cooltime race="PC_ALL" worldId="302350000" id="170">
         <type>RELATIVE</type>
-        <ent_cool_time>15</ent_cool_time>
+        <ent_cool_time>60</ent_cool_time>
         <indun_type>BATTLEFIELD</indun_type>
         <max_member_light>96</max_member_light>
         <max_member_dark>96</max_member_dark>
@@ -1758,7 +1737,7 @@
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-		<maxcount>0</maxcount>
+	<maxcount>0</maxcount>
     </instance_cooltime>
     <!-- Golden Crucible (Group Battle) -->
     <instance_cooltime race="PC_ALL" worldId="302370000" id="172">
@@ -1775,12 +1754,12 @@
     <!-- Gold Arena (Group Battles) -->
     <instance_cooltime race="PC_ALL" worldId="302380000" id="173">
         <indun_type>NORMAL</indun_type>
-        <max_member_light>96</max_member_light>
-        <max_member_dark>96</max_member_dark>
+        <max_member_light>48</max_member_light>
+        <max_member_dark>48</max_member_dark>
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-		<maxcount>0</maxcount>
+	<maxcount>0</maxcount>
     </instance_cooltime>
     <!-- Golden Crucible (Group Battles) -->
     <instance_cooltime race="PC_ALL" worldId="302390000" id="174">
@@ -1788,30 +1767,30 @@
         <typevalue>Wed</typevalue>
         <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
-        <max_member_light>96</max_member_light>
-        <max_member_dark>96</max_member_dark>
+        <max_member_light>48</max_member_light>
+        <max_member_dark>48</max_member_dark>
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>4</maxcount>
+        <maxcount>2</maxcount>
     </instance_cooltime>
     <!-- Gold Arena (Group Battles) -->
     <instance_cooltime race="PC_ALL" worldId="302410000" id="175">
         <indun_type>NORMAL</indun_type>
-        <max_member_light>96</max_member_light>
-        <max_member_dark>96</max_member_dark>
+        <max_member_light>48</max_member_light>
+        <max_member_dark>48</max_member_dark>
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-		<maxcount>0</maxcount>
+	<maxcount>0</maxcount>
     </instance_cooltime>
     <!-- Golden Crucible (Group Battles) -->
     <instance_cooltime race="PC_ALL" worldId="302420000" id="176">
         <type>RELATIVE</type>
         <ent_cool_time>0</ent_cool_time>
         <indun_type>NORMAL</indun_type>
-        <max_member_light>96</max_member_light>
-        <max_member_dark>96</max_member_dark>
+        <max_member_light>48</max_member_light>
+        <max_member_dark>48</max_member_dark>
         <enter_min_level_light>66</enter_min_level_light>
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
@@ -1829,5 +1808,83 @@
         <enter_min_level_dark>66</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>3</maxcount>
+    </instance_cooltime>
+    <!-- Treasure Island of Courage -->
+    <instance_cooltime race="PC_ALL" worldId="301700000" id="178">
+        <type>DAILY</type>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>BATTLEFIELD</indun_type>
+        <max_member_light>3</max_member_light>
+        <max_member_dark>3</max_member_dark>
+        <enter_min_level_light>10</enter_min_level_light>
+        <enter_min_level_dark>10</enter_min_level_dark>
+        <alarm_unit_score>50000</alarm_unit_score>
+        <can_enter_mentor>false</can_enter_mentor>
+        <maxcount>0</maxcount>
+    </instance_cooltime>
+    <!-- Rift of Oblivion (Bonus) -->
+    <instance_cooltime race="PC_ALL" worldId="302110000" id="179">
+        <type>DAILY</type>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>1</max_member_light>
+        <max_member_dark>1</max_member_dark>
+        <enter_min_level_light>66</enter_min_level_light>
+        <enter_min_level_dark>66</enter_min_level_dark>
+        <alarm_unit_score>1000</alarm_unit_score>
+        <can_enter_mentor>false</can_enter_mentor>
+        <maxcount>2</maxcount>
+    </instance_cooltime>
+    <!-- Holy Tower -->
+    <instance_cooltime race="ELYOS" worldId="310160000" id="180">
+        <type>WEEKLY</type>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>6</max_member_light>
+        <max_member_dark>6</max_member_dark>
+        <enter_min_level_light>66</enter_min_level_light>
+        <enter_min_level_dark>66</enter_min_level_dark>
+        <can_enter_mentor>true</can_enter_mentor>
+        <maxcount>4</maxcount>
+    </instance_cooltime>
+    <!-- Mirash Refuge -->
+    <instance_cooltime race="PC_ALL" worldId="301720000" id="181">
+        <type>WEEKLY</type>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>1</max_member_light>
+        <max_member_dark>1</max_member_dark>
+        <enter_min_level_light>66</enter_min_level_light>
+        <enter_min_level_dark>66</enter_min_level_dark>
+        <can_enter_mentor>true</can_enter_mentor>
+        <maxcount>4</maxcount>
+    </instance_cooltime>
+    <!-- Holy Tower -->
+    <instance_cooltime race="ASMODIANS" worldId="320160000" id="182">
+        <type>WEEKLY</type>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>6</max_member_light>
+        <max_member_dark>6</max_member_dark>
+        <enter_min_level_light>65</enter_min_level_light>
+        <enter_min_level_dark>66</enter_min_level_dark>
+        <can_enter_mentor>true</can_enter_mentor>
+        <maxcount>4</maxcount>
+    </instance_cooltime>
+    <!-- Hell Pass -->
+    <instance_cooltime race="PC_ALL" worldId="301631000" id="183">
+        <type>DAILY</type>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>1</max_member_light>
+        <max_member_dark>1</max_member_dark>
+        <enter_min_level_light>46</enter_min_level_light>
+        <enter_min_level_dark>46</enter_min_level_dark>
+        <alarm_unit_score>50000</alarm_unit_score>
+        <can_enter_mentor>false</can_enter_mentor>
+        <maxcount>1</maxcount>
     </instance_cooltime>
 </instance_cooltimes>
