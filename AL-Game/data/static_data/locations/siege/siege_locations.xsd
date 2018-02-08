@@ -29,10 +29,10 @@
         <xs:attribute name="fortress_dependency" type="DependencyList"/>
         <xs:attribute name="siege_duration" type="xs:int" use="optional" default="-1"/>
         <xs:attribute name="influence" type="xs:int" use="optional" default="0"/>
-	<xs:attribute name="buff_id" type="xs:int" use="optional" default="0"/>
-	<xs:attribute name="buff_idA" type="xs:int" use="optional" default="0"/>
-	<xs:attribute name="buff_idE" type="xs:int" use="optional" default="0"/>
-	<xs:attribute name="occupy_count" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="buff_id" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="buff_idA" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="buff_idE" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="occupy_count" type="xs:int" use="optional" default="0"/>
     </xs:complexType>
 
     <xs:simpleType name="DependencyList">

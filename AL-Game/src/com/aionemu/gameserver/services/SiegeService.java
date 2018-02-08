@@ -712,6 +712,9 @@ public class SiegeService {
 
 	public int getFortressId(int locId) {
 		switch (locId) {
+            case 49:
+            case 61:
+                return 1011; // Divine Fortress
 			case 36:
 			case 54:
 				return 1131; // Siel's Western Fortress
@@ -721,7 +724,6 @@ public class SiegeService {
 			case 39:
 			case 56:
 				return 1141; // Sulfur Archipelago
-
 			case 45:
 			case 57:
 			case 72:

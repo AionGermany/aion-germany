@@ -190,39 +190,31 @@ public class FortressAssault extends Assault<FortressSiege> {
 	private int getSpawnIdByFortressId() {
 		switch (locationId) {
 			// RESHANTA
-			case 1131: // Siel's Western Fortress.
+			case 1011: // Divine Fortress
 				return 10;
-			case 1132: // Siel's Eastern Fortress.
+			case 1131: // Siel's Western Fortress
 				return 10;
-			case 1141: // Sulfur Fortress.
+			case 1132: // Siel's Eastern Fortress
 				return 10;
-			case 1221: // Krotan Refuge.
+			case 1141: // Sulfur Fortress
 				return 10;
-			case 1231: // Kysis Fortress.
+			case 1221: // Krotan Refuge
 				return 10;
-			case 1241: // Miren Fortress.
+			case 1231: // Kysis Fortress
 				return 10;
-			// INGGISON
-			case 2011: // Temple Of Scales.
-				return 10;
-			case 2021: // Altar Of Avarice.
-				return 10;
-			// GELKMAROS
-			case 3011: // Vorgaltem Citadel.
-				return 10;
-			case 3021: // Crimsom Temple.
+			case 1241: // Miren Fortress
 				return 10;
 			// KALDOR
-			case 7011: // Wealhtheow's Keep.
+			case 7011: // Wealhtheow's Keep
 				return 10;
 			// PANESTERRA
-			case 10111: // Arcadian Fortress.
+			case 10111: // Arcadian Fortress
 				return 10;
-			case 10211: // Umbral Fortress.
+			case 10211: // Umbral Fortress
 				return 10;
-			case 10311: // Eternum Fortress.
+			case 10311: // Eternum Fortress
 				return 10;
-			case 10411: // Skyclash Fortress.
+			case 10411: // Skyclash Fortress
 				return 10;
 			default:
 				return 1;
@@ -232,6 +224,8 @@ public class FortressAssault extends Assault<FortressSiege> {
 	private List<Integer> getSpawnIds() {
 		List<Integer> Spawns = new ArrayList<Integer>();
 		switch (locationId) {
+			case 1011: // Divine Fortress
+				return Spawns;
 			case 1131: // Siel's Western Fortress
 				Spawns.add(263027);
 				Spawns.add(263042);
@@ -281,16 +275,6 @@ public class FortressAssault extends Assault<FortressSiege> {
 				Spawns.add(279828);
 				Spawns.add(279829);
 				Spawns.add(279833);
-				return Spawns;
-			case 2011: // Temple Of Scales
-			case 2021: // Altar Of Avarice
-			case 3011: // Vorgaltem Citadel
-			case 3021: // Crimsom Temple
-				Spawns.add(257025);
-				Spawns.add(257032);
-				Spawns.add(257035);
-				Spawns.add(257038);
-				Spawns.add(257041);
 				return Spawns;
 			case 7011: // Wealhtheow's Keep
 				Spawns.add(252000);

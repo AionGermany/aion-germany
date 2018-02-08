@@ -207,10 +207,7 @@ public abstract class Siege<SL extends SiegeLocation> {
 
 		Collection<SiegeNpc> npcs = World.getInstance().getLocalSiegeNpcs(getSiegeLocationId());
 		for (SiegeNpc npc : npcs) {
-			if (npc.getObjectTemplate().getAbyssNpcType().equals(AbyssNpcType.BOSS) || npc.getObjectTemplate().getAi().equals("artifact_protector") || npc.getObjectTemplate().getAi().equals("siege_protector")) { // TODO:
-																																																					// AbyssNpcType
-																																																					// for
-																																																					// artifacts
+			if (npc.getObjectTemplate().getAbyssNpcType().equals(AbyssNpcType.BOSS) || npc.getObjectTemplate().getAi().equals("artifact_protector") || npc.getObjectTemplate().getAi().equals("siege_protector")) { // TODO: AbyssNpcType for artifacts
 
 				if (boss != null) {
 					throw new SiegeException("[SiegeService] Found 2 siege bosses for outpost " + getSiegeLocationId() + " NPC " + npc.getNpcId());
