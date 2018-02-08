@@ -44,12 +44,19 @@ public class SM_ATREIAN_PASSPORT extends AionServerPacket {
 	protected void writeImpl(AionConnection con) {
 		writeH(year);
 		writeH(month);
-		writeH(8 );// can be variable
-		writeC(0);
-		writeH(1);
+		writeH(8);// can be variable
+		//TODO
+		writeH(2); // TODO PassportCount
+		//TODO
 		writeD(passportId);
-		writeD(countCollected);
 		writeD(lastStampRecived);
+		writeD(countCollected);
 		writeC(hasCollected ? 0 : 1);
+		//TODO Aniversity ?
+		writeD(9);
+		writeD(0);
+		writeD(0);
+		writeC(0);
+		//TODO
 	}
 }

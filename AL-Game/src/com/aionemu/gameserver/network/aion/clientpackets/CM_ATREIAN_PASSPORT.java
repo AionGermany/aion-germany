@@ -26,13 +26,8 @@ import com.aionemu.gameserver.services.AtreianPassportService;
  */
 public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 
-	private int count;
-	@SuppressWarnings("unused")
-	private int count2;
 	@SuppressWarnings("unused")
 	private int passportId;
-	@SuppressWarnings("unused")
-	private int unk;
 
 	/**
 	 * @param opcode
@@ -49,10 +44,7 @@ public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 	 */
 	@Override
 	protected void readImpl() {
-		count = readH();
-		count2 = readH();
 		passportId = readD();
-		unk = readD();
 	}
 
 	/*
@@ -65,10 +57,7 @@ public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 		if (player == null) {
 			return;
 		}
-		if (count <= 0) {
-			return;
-		}
-		AtreianPassportService.getInstance().getReward(player, 5); // 5 = active PassportID (Todo Config ?)
+		AtreianPassportService.getInstance().getReward(player, 8); // 8 = active PassportID (Todo Config ?)
 	}
 
 }

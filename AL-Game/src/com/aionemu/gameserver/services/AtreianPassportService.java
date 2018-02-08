@@ -60,7 +60,7 @@ public class AtreianPassportService {
 		if (player == null) {
 			return;
 		}
-		int atreianId = 5;
+		int atreianId = 8;
 		int accountId = player.getPlayerAccount().getId();
 		PlayerPassportsDAO dao = DAOManager.getDAO(PlayerPassportsDAO.class);
 		Map<Integer, AtreianPassport> playerPassports = getPlayerPassports(accountId);
@@ -72,19 +72,20 @@ public class AtreianPassportService {
 
 		if (!playerPassports.containsKey(atreianId)) {
 			final Timestamp now = new Timestamp(System.currentTimeMillis() - 86400000L);
-			dao.insertPassport(accountId, atreianId, 0, new Timestamp(System.currentTimeMillis() - 86400000L));
-			PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, 0, (int) now.getTime(), false, month + 1, year));
+			dao.insertPassport(accountId, atreianId, 0, now);
+			PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, 0, 1, false, month + 1, year)); //NEW
 		}
 		else {
 			int stamps = dao.getStamps(accountId, atreianId);
 			Timestamp now2 = new Timestamp(System.currentTimeMillis());
 			Timestamp lastStamp = dao.getLastStamp(accountId, atreianId);
 			if (now2.getTime() - lastStamp.getTime() >= 86400000L) {
-				PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps, (int) now2.getTime(), false, month + 1, year));
+				DAOManager.getDAO(PlayerPassportsDAO.class).updatePassport(accountId, atreianId, stamps, false, lastStamp);
+				PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps, 1, false, month + 1, year));
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NEW_PASSPORT_AVAIBLE);
 			}
 			else {
-				PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps, (int) now2.getTime(), true, month + 1, year));
+				PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps, 1, true, month + 1, year));
 			}
 		}
 	}
@@ -119,8 +120,9 @@ public class AtreianPassportService {
 			if (now.getTime() - lastStamp.getTime() >= 86400000L) {
 				if (component.getRewardItemNum() == stamps + 1) {
 					ItemService.addItem(player, component.getRewardItem(), component.getRewardItemCount());
-					PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps + 1, (int) now.getTime(), true, month + 1, year));
-					DAOManager.getDAO(PlayerPassportsDAO.class).updatePassport(accountId, atreianId, stamps + 1, false, now);
+//					PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps + 1, (int) now.getTime(), true, month + 1, year)); //OLD
+					PacketSendUtility.sendPacket(player, new SM_ATREIAN_PASSPORT(atreianId, stamps + 1, 1, true, month + 1, year)); //NEW
+					DAOManager.getDAO(PlayerPassportsDAO.class).updatePassport(accountId, atreianId, stamps + 1, true, now);
 				}
 			}
 		}

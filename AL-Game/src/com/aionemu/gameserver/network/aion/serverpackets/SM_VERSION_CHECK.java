@@ -113,55 +113,33 @@ public class SM_VERSION_CHECK extends AionServerPacket {
 		}
 		writeC(0x00);
 		writeC(NetworkConfig.GAMESERVER_ID);
-		// need to check this, cause if you check date in Aion World, we havent the good one :/
-		writeD(170320);// start year month day
-		writeD(161214);// start year month day
+		writeD(180205);// start year month day
+		writeD(171201);// start year month day
 		writeD(0x00);// spacing
-		writeD(170317);// year month day
+		writeD(180205);// year month day
 		writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000)); // Start Server Time in Seconds Unit (Need to Implements in Config Files)
 		writeC(0x00);// unk
 		writeC(GSConfig.SERVER_COUNTRY_CODE);// country code;
-		writeC(0x00);// unk
 		int serverMode = (characterLimitCount * 0x10) | characterFactionsMode;
 		writeC(serverMode | characterCreateMode);
 		writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000));
-		writeH(350);
-		writeH(1281);
-		writeH(2575);
-		writeH(257);
-		writeH(266);
-		writeH(2);
+		writeD(-3600);// 5.8 (-3600 = +1 Std, 0 = -1Std)
+		writeD(40014200);
 		writeC(GSConfig.CHARACTER_REENTRY_TIME);
 		writeC(EventsConfig.ENABLE_DECOR);
 		writeC(EventService.getInstance().getEventType().getId());
-		writeH(0);// 4.9
-		writeC(0);// 4.9
-		writeD(-3600);// 4.9 (-3600 = +1 Std, 0 = -1Std)
-		writeD(1653700612);// 4.9
-		writeC(2);// 4.9
-		writeC(1);// 4.9
-		writeB(new byte[8]);
-		writeD(68536);// 4.9
-		writeC(0);// 4.9
-		writeC(1);// 4.9
-		writeD(-3600);// 4.9 (-3600 = +1 Std, 0 = -1Std)
-		writeH(257);// 4.9
-		writeB(new byte[17]);
+		writeC(0);
+		writeD(68536);
+		writeB(new byte[20]);
 		for (int i = 0; i < 11; i++) {
 			writeD(1000);
 		}
+		writeH(25600);
+		writeH(0);
 		writeC(0);
-		writeD(100);
-		writeD(1000);// 5.0
-		writeH(0);// 5.0
-		writeH(16256);// 5.0
-		writeH(4865);// 5.1
-		writeD(16777216);// 5.1
-		writeD(1450);// 5.4
-		writeD(2049);// 5.4
-		writeH(16256);// 5.4
-		writeH(1);// 5.4
-		writeC(0);// 5.4
+		writeD(1000);
+		writeH(1);
+		writeC(0);
 		// for... chat servers?
 		{
 
