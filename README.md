@@ -7,7 +7,7 @@
 
 #### Todo:
 * Divine Fortress and Artifact Spawns
-* Nosra and Esterra Artifact Spawns
-* Instance - Mirash Snctum
+* Nosra Artifact Spawns
+* Instance - Mirash Sanctum
 * Minion System
 * some Quest and new Quest
