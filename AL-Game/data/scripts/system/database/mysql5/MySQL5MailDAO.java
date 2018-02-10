@@ -49,6 +49,7 @@ import com.aionemu.gameserver.model.items.storage.StorageType;
 /**
  * @author kosyachok
  * @author Antraxx
+ * @author FrozenKiller
  */
 public class MySQL5MailDAO extends MailDAO {
 
@@ -102,7 +103,8 @@ public class MySQL5MailDAO extends MailDAO {
 	}
 
 	@Override
-	public boolean haveUnread(int playerId) {
+	public int mailCount(int playerId) {
+		int allMailsCount = 0;
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
@@ -110,9 +112,8 @@ public class MySQL5MailDAO extends MailDAO {
 			stmt.setInt(1, playerId);
 			ResultSet rset = stmt.executeQuery();
 			while (rset.next()) {
-				int unread = rset.getInt("unread");
-				if (unread == 1) {
-					return true;
+				if (rset.getInt("unread") == 1 || rset.getInt("unread") == 0) {
+					allMailsCount ++;
 				}
 			}
 			rset.close();
@@ -124,7 +125,33 @@ public class MySQL5MailDAO extends MailDAO {
 		finally {
 			DatabaseFactory.close(con);
 		}
-		return false;
+		return allMailsCount;
+	}
+	
+	@Override
+	public int unreadedMails(int playerId) {
+		int unreadedMails = 0;
+		Connection con = null;
+		try {
+			con = DatabaseFactory.getConnection();
+			PreparedStatement stmt = con.prepareStatement("SELECT * FROM mail WHERE mail_recipient_id = ? ORDER BY recieved_time DESC LIMIT 100");
+			stmt.setInt(1, playerId);
+			ResultSet rset = stmt.executeQuery();
+			while (rset.next()) {
+				if (rset.getInt("unread") == 1) {
+					unreadedMails ++;
+				}
+			}
+			rset.close();
+			stmt.close();
+		}
+		catch (Exception e) {
+			log.error("Could not read mail for player: " + playerId + " from DB: " + e.getMessage(), e);
+		}
+		finally {
+			DatabaseFactory.close(con);
+		}
+		return unreadedMails;
 	}
 
 	private List<Item> loadMailboxItems(final int playerId) {

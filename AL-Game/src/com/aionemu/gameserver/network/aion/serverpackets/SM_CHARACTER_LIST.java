@@ -94,8 +94,8 @@ public class SM_CHARACTER_LIST extends PlayerInfo {
 					writeD(playerData.getDeletionTimeInSeconds()); // v4.9
 					writeH(player.getPlayerSettings().getDisplay());// display helmet 0 show, 5 dont show
 					writeH(0); // unk
-					writeD(0); // Mail Ammount
-					writeD(DAOManager.getDAO(MailDAO.class).haveUnread(pcd.getPlayerObjId()) ? 1 : 0); // mail
+					writeD(DAOManager.getDAO(MailDAO.class).mailCount(pcd.getPlayerObjId())); // All Mail Count
+					writeD(DAOManager.getDAO(MailDAO.class).unreadedMails(pcd.getPlayerObjId())); // Unread Mail Count
 					writeD(0); // unk
 					writeD(0); // unk
 					writeD(0); // unk

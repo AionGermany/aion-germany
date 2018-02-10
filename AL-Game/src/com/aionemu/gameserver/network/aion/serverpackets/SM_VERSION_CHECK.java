@@ -24,7 +24,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.network.IPRange;
-import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
 import com.aionemu.gameserver.configs.network.IPConfig;
@@ -33,7 +32,6 @@ import com.aionemu.gameserver.network.NetworkController;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.ChatService;
-import com.aionemu.gameserver.services.EventService;
 
 /**
  * @author -Nemesiss- CC fix
@@ -125,10 +123,12 @@ public class SM_VERSION_CHECK extends AionServerPacket {
 		writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000));
 		writeD(-3600);// 5.8 (-3600 = +1 Std, 0 = -1Std)
 		writeD(40014200);
-		writeC(GSConfig.CHARACTER_REENTRY_TIME);
-		writeC(EventsConfig.ENABLE_DECOR);
-		writeC(EventService.getInstance().getEventType().getId());
-		writeC(0);
+		// MOVED TO PACKET 168 
+//		writeC(GSConfig.CHARACTER_REENTRY_TIME);
+//		writeC(EventsConfig.ENABLE_DECOR);
+//		writeC(EventService.getInstance().getEventType().getId());
+		// MOVED TO PACKET 168
+		writeD(0);
 		writeD(68536);
 		writeB(new byte[20]);
 		for (int i = 0; i < 11; i++) {

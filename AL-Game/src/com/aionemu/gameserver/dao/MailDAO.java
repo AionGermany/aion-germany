@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 
 /**
  * @author kosyachok
+ * @author FrozenKiller
  */
 public abstract class MailDAO implements IDFactoryAwareDAO {
 
@@ -42,6 +43,8 @@ public abstract class MailDAO implements IDFactoryAwareDAO {
 	public abstract boolean deleteLetter(int letterId);
 
 	public abstract void updateOfflineMailCounter(PlayerCommonData recipientCommonData);
+	
+	public abstract int mailCount(int playerId);
 
-	public abstract boolean haveUnread(int playerId);
+	public abstract int unreadedMails(int playerId);
 }
