@@ -34,6 +34,7 @@ public class SM_TRANSFORM extends AionServerPacket {
 	private boolean applyEffect;
 	private int panelId;
 	private int itemId;
+	private int skillId = 0;
 
 	public SM_TRANSFORM(Creature creature, boolean applyEffect) {
 		this.creature = creature;
@@ -49,6 +50,16 @@ public class SM_TRANSFORM extends AionServerPacket {
 		this.panelId = panelId;
 		this.applyEffect = applyEffect;
 		this.itemId = itemId;
+	}
+	
+	public SM_TRANSFORM(Creature creature, int panelId, boolean applyEffect, int itemId, int skillId) {
+		this.creature = creature;
+		this.state = creature.getState();
+		modelId = creature.getTransformModel().getModelId();
+		this.panelId = panelId;
+		this.applyEffect = applyEffect;
+		this.itemId = itemId;
+		this.skillId = skillId;
 	}
 
 	@Override
@@ -70,6 +81,7 @@ public class SM_TRANSFORM extends AionServerPacket {
 		writeD(panelId); // display panel
 		writeD(itemId); // ItemId
 		writeC(0); // 0 and 1
+		writeH(skillId);
 	}
 
 	/*

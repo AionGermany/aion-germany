@@ -125,7 +125,7 @@ public abstract class TransformEffect extends EffectTemplate {
 		effected.getTransformModel().setPanelId(panelid);
 		effected.getTransformModel().setItemId(itemId);
 		effected.getTransformModel().setTransformType(effect.getTransformType());
-		PacketSendUtility.broadcastPacketAndReceive(effected, new SM_TRANSFORM(effected, panelid, true, itemId));
+		PacketSendUtility.broadcastPacketAndReceive(effected, new SM_TRANSFORM(effected, panelid, true, itemId, effect.getSkillId()));
 
 		if (model == 202635) { // Makes the effected Attackable for all
 			if (effected instanceof Player) {
