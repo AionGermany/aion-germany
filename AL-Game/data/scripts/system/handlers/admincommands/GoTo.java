@@ -992,6 +992,12 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("neviwind") || destination.equalsIgnoreCase("Neviwind Canyon")) {
 			goTo(player, 302350000, 1108.7395f, 746.5648f, 336.33923f, (byte) 60);
 		}
+		/**
+		 * 5.8 Instances
+		 */
+		else if (destination.equalsIgnoreCase("treasure") || destination.equalsIgnoreCase("Treasure Island of Courage")) {
+			goTo(player, 301700000, 1370.3208f, 1381.8193f, 375.19562f, (byte) 60);
+		}
 		else {
 			PacketSendUtility.sendMessage(player, "Could not find the specified destination !");
 		}
