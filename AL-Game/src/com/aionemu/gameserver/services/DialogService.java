@@ -33,6 +33,7 @@ import com.aionemu.gameserver.model.templates.teleport.TeleportLocation;
 import com.aionemu.gameserver.model.templates.teleport.TeleporterTemplate;
 import com.aionemu.gameserver.model.templates.tradelist.TradeListTemplate;
 import com.aionemu.gameserver.model.templates.tradelist.TradeNpcType;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PET;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLASTIC_SURGERY;
@@ -647,6 +648,49 @@ public class DialogService {
 					boolean result = player.getResponseRequester().putRequest(SM_QUESTION_WINDOW.STR_ASK_RECOVER_EXPERIENCE, responseHandler);
 					if (result) {
 						PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_ASK_RECOVER_EXPERIENCE, 0, 0, String.valueOf(price)));
+					}
+				}
+				else {
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_DONOT_HAVE_RECOVER_EXPERIENCE);
+				}
+				break;
+			}
+			case 128: {
+				final long expLost = player.getCommonData().getExpRecoverable();
+				if (expLost == 0) {
+					player.getEffectController().removeAbnormalEffectsByTargetSlot(SkillTargetSlot.SPEC2);
+					player.getCommonData().setDeathCount(0);
+				}
+				//TODO PRICE !!!
+				final int price = (int) ((expLost / 100) * 0.035) ;
+				RequestResponseHandler responseHandler = new RequestResponseHandler(npc) {
+
+					@Override
+					public void acceptRequest(Creature requester, Player responder) {
+						if (player.getInventory().getKinah() >= price) {
+							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GET_EXP2(expLost));
+							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_SUCCESS_RECOVER_EXPERIENCE);
+							player.getCommonData().resetRecoverableExp();
+							player.getInventory().decreaseKinah(price);
+							player.getEffectController().removeAbnormalEffectsByTargetSlot(SkillTargetSlot.SPEC2);
+							player.getCommonData().setDeathCount(0);
+							player.getLifeStats().increaseHp(TYPE.HP, player.getLifeStats().getMaxHp() + 1);
+							player.getLifeStats().increaseMp(TYPE.MP, player.getLifeStats().getMaxMp() + 1);
+							
+						}
+						else {
+							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_KINA(price));
+						}
+					}
+
+					@Override
+					public void denyRequest(Creature requester, Player responder) {
+					}
+				};
+				if (player.getCommonData().getExpRecoverable() > 0) {
+					boolean result = player.getResponseRequester().putRequest(SM_QUESTION_WINDOW.STR_ASK_RECOVER_EXPERIENCE2, responseHandler);
+					if (result) {
+						PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_ASK_RECOVER_EXPERIENCE2, 0, 0, price));
 					}
 				}
 				else {

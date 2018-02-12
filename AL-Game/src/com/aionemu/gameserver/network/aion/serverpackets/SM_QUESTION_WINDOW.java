@@ -49,6 +49,7 @@ public class SM_QUESTION_WINDOW extends AionServerPacket {
 	public static final int STR_QUEST_GIVEUP = 150000;
 	public static final int STR_QUEST_GIVEUP_WHEN_DELETE_QUEST_ITEM = 150001;
 	public static final int STR_ASK_RECOVER_EXPERIENCE = 160011;
+	public static final int STR_ASK_RECOVER_EXPERIENCE2 = 1404454;
 	public static final int STR_ASK_REGISTER_RESURRECT_POINT = 160012;
 	public static final int STR_ASK_GROUP_GATE_DO_YOU_ACCEPT_MOVE = 160014;
 	public static final int STR_ASK_USE_ARTIFACT = 160016;
@@ -271,13 +272,21 @@ public class SM_QUESTION_WINDOW extends AionServerPacket {
 			writeD(senderId);
 			writeD(0x05);
 		}
+		else if (code == STR_ASK_RECOVER_EXPERIENCE2) {
+			System.out.println("RECOVER 2");
+			writeD(0x00);// unk
+			writeD(0x00);// unk
+			writeC(range > 0 ? 0x01 : 0x00);// unk maybe boolean for rangecheck?
+			writeD(senderId);
+			writeD(range);// range within the Question is valid
+		}
 		else {
 			writeD(0x00);// unk
 			writeD(0x00);// unk
 			writeH(0x00);// unk
 			writeC(range > 0 ? 0x01 : 0x00);// unk maybe boolean for rangecheck?
 			writeD(senderId);
-			writeD(range);// range within the Question is valod
+			writeD(range);// range within the Question is valid
 		}
 	}
 }
