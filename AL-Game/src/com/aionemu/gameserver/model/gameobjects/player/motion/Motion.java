@@ -42,7 +42,7 @@ public class Motion implements IExpirable {
 		motionType.put(7, 3);
 		motionType.put(8, 4);
 
-		//Hovering Set – 3-Day Pass (test_add_customize_motion_shop_01)
+		//Hovering Set 3-Day Pass (test_add_customize_motion_shop_01)
 		motionType.put(9, 1);
 		
 		// Signboard
