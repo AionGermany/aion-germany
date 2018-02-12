@@ -32,7 +32,7 @@ public class SM_SHOW_BRAND extends AionServerPacket {
 		this.targetObjectId = targetObjectId;
 	}
 
-	@Override
+	@Override // TODO GRP SIZE + FOR ?
 	protected void writeImpl(AionConnection con) {
 		writeH(0x01);
 		writeD(0x01); // unk

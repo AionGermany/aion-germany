@@ -52,6 +52,7 @@ import com.aionemu.gameserver.model.templates.quest.QuestDrop;
 import com.aionemu.gameserver.model.templates.quest.QuestItems;
 import com.aionemu.gameserver.model.templates.quest.QuestNpc;
 import com.aionemu.gameserver.model.templates.rewards.BonusType;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_QUEST_REPEAT;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.handlers.ConstantSpawnHandler;
 import com.aionemu.gameserver.questEngine.handlers.HandlerResult;
@@ -73,6 +74,7 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.procedure.TIntProcedure;
+import javolution.util.FastList;
 import javolution.util.FastMap;
 
 /**
@@ -116,6 +118,8 @@ public class QuestEngine implements GameEngine {
 	private TIntArrayList questOnEnterWindStream = new TIntArrayList();
 	private TIntArrayList questRideAction = new TIntArrayList();
 	private TIntArrayList questOnCreativityPoint = new TIntArrayList();
+	//TEST
+	private FastList<Integer> questsToRepeat = new FastList<Integer>();
 
 	private QuestEngine() {
 	}
@@ -1190,6 +1194,7 @@ public class QuestEngine implements GameEngine {
 				for (Player player : World.getInstance().getAllPlayers()) {
 					for (QuestState qs : player.getQuestStateList().getAllQuestState()) {
 						if (qs != null && qs.canRepeat()) {
+							questsToRepeat.add(qs.getQuestId());
 							QuestTemplate template = DataManager.QUEST_DATA.getQuestById(qs.getQuestId());
 							if (template.isDaily()) {
 								player.getController().updateNearbyQuests();
@@ -1202,6 +1207,8 @@ public class QuestEngine implements GameEngine {
 						}
 					}
 					player.getNpcFactions().sendDailyQuest();
+					PacketSendUtility.sendPacket(player, new SM_QUEST_REPEAT(questsToRepeat));
+					FastList.recycle(questsToRepeat);
 				}
 			}
 		}, sendingDate.getTimeInMillis() - System.currentTimeMillis(), 1000 * 60 * 60 * 24);
