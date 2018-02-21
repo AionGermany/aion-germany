@@ -363,11 +363,11 @@ public class MinionService {
             }
         }
         if (growthPoint <= 0) {
-            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404345, new Object[0]));
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_GROWTH_MSG_NOTSELECT);
             return;
         }
         if (player.getInventory().getKinah() < growthCost) {
-            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404346, new Object[0]));
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_GROWTH_MSG_NOGOLD);
             return;
         }
         player.getInventory().decreaseKinah(growthCost);
@@ -387,15 +387,15 @@ public class MinionService {
 		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
 		MinionEvolved items = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getEvolved();
 		if (minion.getMinionLevel() >= 4) {
-            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404349, new Object[0]));
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_EVOLVE_MSG_NOEVOLVE);
             return;
         }
 		if (player.getInventory().getKinah() < items.getEvolvedCost()) {
-            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404348, new Object[0]));
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_EVOLVE_MSG_NOGOLD);
             return;
         }
         if (player.getInventory().getItemCountByItemId(190200000) < items.getEvolvedNum()) {
-            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404347, new Object[0]));
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_EVOLVE_MSG_LACK_ITEM);
             return;
         }
         player.getInventory().decreaseKinah(items.getEvolvedCost());
