@@ -91,7 +91,7 @@ public class MySQL5PlayerMinionsDAO extends PlayerMinionsDAO {
 			stmt.setInt(1, player.getObjectId());
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				MinionCommonData minionCommonData = new MinionCommonData(rs.getInt("minion_id"), player.getObjectId(), rs.getString("name"), rs.getString("grade"), rs.getInt("level"), rs.getInt("growpoints"));
+				MinionCommonData minionCommonData = new MinionCommonData(rs.getInt("minion_id"), player.getObjectId(), rs.getString("name"), rs.getString("grade"), rs.getInt("level"), rs.getInt("growthpoints"));
 				minionCommonData.setObjectId(rs.getInt("object_id"));
 				minionCommonData.setBirthday(rs.getTimestamp("birthday"));
 				minionCommonData.setLock(rs.getInt("is_locked") == 1 ? true : false);
@@ -138,12 +138,12 @@ public class MySQL5PlayerMinionsDAO extends PlayerMinionsDAO {
 	}
 	
 	@Override
-	public void updatePlayerMinionGrowPoint(Player player, MinionCommonData minionCommonData) {
+	public void updatePlayerMinionGrowthPoint(Player player, MinionCommonData minionCommonData) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("UPDATE player_minions SET growpoints = ? WHERE player_id = ? AND object_id = ?");
-			stmt.setInt(1, minionCommonData.getMiniongrowpoint());
+			PreparedStatement stmt = con.prepareStatement("UPDATE player_minions SET growthpoints = ? WHERE player_id = ? AND object_id = ?");
+			stmt.setInt(1, minionCommonData.getMinionGrowthPoint());
 			stmt.setInt(2, minionCommonData.getMasterObjectId());
 			stmt.setInt(3, minionCommonData.getObjectId());
 			stmt.execute();
@@ -179,16 +179,11 @@ public class MySQL5PlayerMinionsDAO extends PlayerMinionsDAO {
 	}
 
 	@Override
-	public boolean supports(String databaseName, int majorVersion, int minorVersion) {
-		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
-	}
-
-	@Override
 	public void evolutionMinion(Player player, MinionCommonData minionCommonData) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("UPDATE player_minions SET minion_id = ?, growpoints = 0, level = ? WHERE player_id = ? AND object_id = ?");
+			PreparedStatement stmt = con.prepareStatement("UPDATE player_minions SET minion_id = ?, growthpoints = 0, level = ? WHERE player_id = ? AND object_id = ?");
 			stmt.setInt(1, minionCommonData.getMinionId());
 			stmt.setInt(2, minionCommonData.getMinionLevel());
 			stmt.setInt(3, minionCommonData.getMasterObjectId());
@@ -261,5 +256,11 @@ public class MySQL5PlayerMinionsDAO extends PlayerMinionsDAO {
         } finally {
             DatabaseFactory.close(con);
         }
+	}
+
+
+	@Override
+	public boolean supports(String databaseName, int majorVersion, int minorVersion) {
+		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
 	}
 }

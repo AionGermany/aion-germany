@@ -122,7 +122,8 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	private int consumeCount = 0;
 	private int wardrobeSlot;
 	private int floor;
-	private int minionSkillPoints;
+    private int minionSkillPoints;
+    private Timestamp minionFunctionTime;
 
 	// TODO: Move all function to playerService or Player class.
 	public PlayerCommonData(int objId) {
@@ -1115,11 +1116,22 @@ public class PlayerCommonData extends VisibleObjectTemplate {
         return this.floor;
     }
 
-	public int getMinionSkillPoints() {
-		return minionSkillPoints;
-	}
-
-	public void setMinionSkillPoints(int minionSkillPoints) {
-		this.minionSkillPoints = minionSkillPoints;
-	}
+	/**
+	 * @Minions
+	 */
+    public int getMinionSkillPoints() {
+        return minionSkillPoints;
+    }
+    
+    public void setMinionSkillPoints(int minionSkillPoints) {
+        this.minionSkillPoints = minionSkillPoints;
+    }
+    
+    public Timestamp getMinionFunctionTime() {
+        return minionFunctionTime;
+    }
+    
+    public void setMinionFunctionTime(Timestamp minionFunctionTime) {
+        this.minionFunctionTime = minionFunctionTime;
+    }
 }

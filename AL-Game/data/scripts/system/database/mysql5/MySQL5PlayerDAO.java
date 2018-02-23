@@ -155,7 +155,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, goldenstar_energy=?, growth_energy=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=?, bonus_type=?, bonus_buff_time=?, wardrobe_size=?, is_highdaeva=?, creativity_point=?, creativity_step=?, wardrobe_slot=?, luna_consume_count=?, muni_keys=?, luna_consume=?, toc_floor=?, minion_skill_points=? WHERE id=?");
+			PreparedStatement stmt = con.prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, goldenstar_energy=?, growth_energy=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=?, bonus_type=?, bonus_buff_time=?, wardrobe_size=?, is_highdaeva=?, creativity_point=?, creativity_step=?, wardrobe_slot=?, luna_consume_count=?, muni_keys=?, luna_consume=?, toc_floor=?, minion_skill_points=?, minion_function_time=? WHERE id=?");
 
 			log.debug("[DAO: MySQL5PlayerDAO] storing player " + player.getObjectId() + " " + player.getName());
 			PlayerCommonData pcd = player.getCommonData();
@@ -216,7 +216,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
 			stmt.setInt(47, pcd.getMuniKeys());
 			stmt.setInt(48, pcd.getLunaConsumePoint());
 			stmt.setInt(49, pcd.getFloor());
-			stmt.setInt(50,  pcd.getMinionSkillPoints());
+			stmt.setInt(50, pcd.getMinionSkillPoints());
 			stmt.setInt(51, player.getObjectId());
 			stmt.execute();
 			stmt.close();
@@ -419,6 +419,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
 				cd.setLunaConsumePoint(resultSet.getInt("luna_consume"));
 				cd.setFloor(resultSet.getInt("toc_floor"));
 				cd.setMinionSkillPoints(resultSet.getInt("minion_skill_points"));
+				cd.setMinionFunctionTime(resultSet.getTimestamp("minion_function_time"));
 			}
 			else {
 				log.info("Missing PlayerCommonData from db " + playerObjId);

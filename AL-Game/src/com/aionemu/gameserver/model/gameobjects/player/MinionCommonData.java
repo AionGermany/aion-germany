@@ -26,41 +26,44 @@ import com.aionemu.gameserver.model.templates.minion.MinionDopingBag;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
 public class MinionCommonData extends VisibleObjectTemplate implements IExpirable {
+
 	private int minionId;
 	private Timestamp birthday;
-	private int minionObjId;
+	private int minionObjId = 0;
 	private int masterObjectId;
 	private String minionGrade;
 	private String name;
 	private int minionLevel;
-	private int miniongrowpoint = 0;
+	private int miniongrowthpoint = 0;
 	private boolean lock = false;
 	private boolean IsBuffing = false;
 	private boolean isLooting = false;
 	MinionDopingBag dopingBag = null;
+	private Timestamp despawnTime;
+	private int minionSkillPoints;
+	private Timestamp minionFunctionTime;
 
-	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int miniongrowpoint) {
-		switch(this.minionObjId) {
-		case 0: {
-			this.minionObjId = IDFactory.getInstance().nextId();
-			break;
-		}
-		default:
-			do 
-			{
-				if(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId)) {
-					this.minionObjId = IDFactory.getInstance().nextId();
+	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int miniongrowthpoint) {
+		switch (this.minionObjId) {
+			case 0: {
+				this.minionObjId = IDFactory.getInstance().nextId();
+				break;
+			}
+			default:
+				do {
+					if (DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId)) {
+						this.minionObjId = IDFactory.getInstance().nextId();
+					}
 				}
-			} 
-			while(DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId));
-			break;
-	}
+				while (DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId));
+				break;
+		}
 		this.minionId = minionId;
 		this.masterObjectId = masterObjectId;
 		this.name = name;
 		this.minionGrade = minionGrade;
 		this.minionLevel = minionLevel;
-		this.miniongrowpoint = miniongrowpoint;
+		this.miniongrowthpoint = miniongrowthpoint;
 		if (minionId > 980013) {
 			this.dopingBag = new MinionDopingBag();
 		}
@@ -81,7 +84,7 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	public int getMinionId() {
 		return minionId;
 	}
-	
+
 	public int setMinionId(int minionId) {
 		return this.minionId = minionId;
 	}
@@ -93,7 +96,7 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	public int getMinionLevel() {
 		return minionLevel;
 	}
-	
+
 	public int setMinionLevel(int minionLevel) {
 		return this.minionLevel = minionLevel;
 	}
@@ -150,12 +153,12 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 		return 0;
 	}
 
-	public int getMiniongrowpoint() {
-		return miniongrowpoint;
+	public int getMinionGrowthPoint() {
+		return miniongrowthpoint;
 	}
 
-	public void setMiniongrowpoint(int miniongrowpoint) {
-		this.miniongrowpoint = miniongrowpoint;
+	public void setMinionGrowthPoint(int miniongrowthpoint) {
+		this.miniongrowthpoint = miniongrowthpoint;
 	}
 
 	public boolean isLock() {
@@ -165,24 +168,69 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	public void setLock(boolean lock) {
 		this.lock = lock;
 	}
-	
-	public MinionDopingBag getDopingBag() {
-        return this.dopingBag;
-    }
 
-	public boolean getIsBuffing() {
+	public MinionDopingBag getDopingBag() {
+		return this.dopingBag;
+	}
+
+	public boolean IsBuffing() {
 		return IsBuffing;
 	}
 
 	public void setIsBuffing(boolean isBuffing) {
 		IsBuffing = isBuffing;
 	}
-	
+
 	public void setIsLooting(boolean isLooting) {
 		this.isLooting = isLooting;
 	}
 
 	public boolean isLooting() {
 		return this.isLooting;
+	}
+
+	/**
+	 * @return the despawnTime
+	 */
+	public Timestamp getDespawnTime() {
+		return despawnTime;
+	}
+
+	/**
+	 * @param despawnTime
+	 *            the despawnTime to set
+	 */
+	public void setDespawnTime(Timestamp despawnTime) {
+		this.despawnTime = despawnTime;
+	}
+
+	/**
+	 * @return the minionSkillPoints
+	 */
+	public int getMinionSkillPoints() {
+		return minionSkillPoints;
+	}
+
+	/**
+	 * @param minionSkillPoints
+	 *            the minionSkillPoints to set
+	 */
+	public void setMinionSkillPoints(int minionSkillPoints) {
+		this.minionSkillPoints = minionSkillPoints;
+	}
+
+	/**
+	 * @return the minionFunctionTime
+	 */
+	public Timestamp getMinionFunctionTime() {
+		return minionFunctionTime;
+	}
+
+	/**
+	 * @param minionFunctionTime
+	 *            the minionFunctionTime to set
+	 */
+	public void setMinionFunctionTime(Timestamp minionFunctionTime) {
+		this.minionFunctionTime = minionFunctionTime;
 	}
 }

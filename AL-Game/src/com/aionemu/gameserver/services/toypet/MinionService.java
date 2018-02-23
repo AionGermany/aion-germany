@@ -29,7 +29,6 @@ import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.controllers.MinionController;
 import com.aionemu.gameserver.controllers.observer.ItemUseObserver;
-import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerMinionsDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
@@ -56,9 +55,10 @@ import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
+import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
 
 public class MinionService {
-	private List<Integer> minions;
+	private static List<Integer> minions;
 	private MinionBuff minionbuff;
 	private Logger log = LoggerFactory.getLogger(MinionService.class);
 
@@ -75,7 +75,7 @@ public class MinionService {
 		PacketSendUtility.sendPacket(player, new SM_MINIONS(12));
 	}
 
-	public void addMinion(final Player player, final int itemObjId) {
+	public static void addMinion(final Player player, final int itemObjId) {
 		if (player.getMinionList().getMinions().size() == 200) {
 			PacketSendUtility.sendMessage(player, "Max 200 Minion!");
 			return;
@@ -104,7 +104,13 @@ public class MinionService {
 				player.getObserveController().removeObserver(itemUseObserver);
 				player.getController().cancelTask(TaskId.ITEM_USE);
 				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, itemObjId, item.getItemId(), 0, 1), true);
-			
+				
+				if (!player.getInventory().decreaseByObjectId(itemObjId, 1)) {
+					return;
+				}
+				
+				int rnd = 0;
+				
 				int minionId = 0;
 				String grade = "";
 				int level = 0;
@@ -147,112 +153,37 @@ public class MinionService {
 							break;
 						case 190080008://Cute Minion Contract
 						case 190080013://Cute Minion Contract
-							int rnd = Rnd.get(0,6);
-							switch(rnd) {
-								case 0: {
-									minionId = Rnd.get(11,13) + 980000;//kerub c b a
-									break;
-								}
-								case 1: {
-									minionId = Rnd.get(20,23) + 980000;//Seiren
-									break;
-								}
-								case 2: {
-									minionId = Rnd.get(30,33) + 980000;//Steel Rose
-									break;
-								}
-								case 3: {
-									minionId = Rnd.get(40,43) + 980000;//Abija
-									break;
-								}
-								case 4: {
-									minionId = Rnd.get(50,53) + 980000;//Hamerun
-									break;
-								}
-								case 5: {
-									minionId = Rnd.get(60,63) + 980000;//Grendal
-									break;
-								}
-								case 6: {
-									minionId = Rnd.get(70,73) + 980000;//Sita
-									break;
-								}
-							}
+							rnd = Rnd.get(71,980);
+							minionId = minionId(rnd);
 							break;
 						default: 
 							minionId = minions.get(new Random().nextInt(minions.size()));
 							break;
 					}
-					MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
-					grade = minionTemplate.getGrade();
-					level = minionTemplate.getLevel();
-					name = minionTemplate.getName();
 				} else {
-					int rnd;
 					switch (item.getItemTemplate().getTemplateId()) {
 						case 190089999:
 						case 190080005:
 						case 190080009: //Lesser Minion Contract
 						case 190080010:
 						case 190080011:
-							rnd = Rnd.get(0,2);
-							switch(rnd) {
-								case 0: {
-									minionId = Rnd.get(10,11) + 980000;//kerub d c
-									break;
-								}
-								case 1: {
-									minionId = Rnd.get(20,23) + 980000;//Seiren
-									break;
-								}
-								case 2: {
-									minionId = Rnd.get(30,33) + 980000;//Steel Rose
-									break;
-								}
+							rnd = Rnd.get(0,420);
+							while ((rnd >= 106 && rnd <= 140) || (rnd >= 71 && rnd <= 105)) {
+								rnd = Rnd.get(0,420);
 							}
+							minionId = minionId(rnd);
 							break;
 						case 190080012://special minion contract
 						case 190080006://Normal Minion Contract
-							rnd = Rnd.get(1,3);
-							switch(rnd) {
-								case 1: {
-									minionId = Rnd.get(20,23) + 980000;//Seiren
-									break;
-								}
-								case 2: {
-									minionId = Rnd.get(30,33) + 980000;//Steel Rose
-									break;
-								}
-								case 3: {
-									minionId = Rnd.get(40,43) + 980000;//Abija
-									break;
-								}
-							}
+							rnd = Rnd.get(141,560);
+							minionId = minionId(rnd);
 							break;
 						case 190080007://Larger Minion Contract
-							rnd = Rnd.get(0,4);
-							switch(rnd) {
-								case 0: {
-									minionId = Rnd.get(11,12) + 980000;//kerub b c
-									break;
-								}
-								case 1: {
-									minionId = Rnd.get(20,23) + 980000;//Seiren
-									break;
-								}
-								case 2: {
-									minionId = Rnd.get(30,33) + 980000;//Steel Rose
-									break;
-								}
-								case 3: {
-									minionId = Rnd.get(40,43) + 980000;//Abija
-									break;
-								}
-								case 4: {
-									minionId = Rnd.get(50,53) + 980000;//Hamerun
-									break;
-								}
+							rnd = Rnd.get(0,700);
+							while (rnd >= 106 && rnd <= 140) {
+								rnd = Rnd.get(0,700);
 							}
+							minionId = minionId(rnd);							
 							break;
 						default:
 							minionId = minions.get(new Random().nextInt(minions.size()));
@@ -263,12 +194,10 @@ public class MinionService {
 					level = minionTemplate.getLevel();
 					name = minionTemplate.getName();
 				}
-				if (!player.getInventory().decreaseByObjectId(itemObjId, 1)) {
-					return;
-				}
+				
 				MinionCommonData addNewMinion = player.getMinionList().addNewMinion(player, minionId, name, grade, level);
 				if (addNewMinion != null) {
-					PacketSendUtility.sendPacket(player, new SM_MINIONS(1, addNewMinion, false));
+					PacketSendUtility.sendPacket(player, new SM_MINIONS(1, addNewMinion, 0));
 					player.getMinionList().updateMinionsList();
 					checkQuest(player, item);
 				}
@@ -276,7 +205,7 @@ public class MinionService {
 		}, 1500));
 	}
 	
-	private void checkQuest(Player player, Item item) {
+	private static void checkQuest(Player player, Item item) {
 		switch (player.getRace()) {
 		case ELYOS:
 			if (player.getQuestStateList().hasQuest(15545) && item.getItemId() == 190080010) {
@@ -309,17 +238,17 @@ public class MinionService {
 	public void spawnMinion(Player player, int minionObjId) {
 		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
 		MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId());
-		MinionController minionController = new MinionController();
-		Minion minion = new Minion(minionTemplate, minionController, minionCommonData, player);
+		MinionController controller = new MinionController();
+		Minion minion = new Minion(minionTemplate, controller, minionCommonData, player);
 		Iterator<MinionSkill> iterator = minionTemplate.getAction().getSkillsCollections().iterator();
 		while (iterator.hasNext()) {
 			player.getSkillList().addSkill(player, iterator.next().getSkillId(), 1);
 		}
-		if (player.isMinionSpawned()) {
+		if (player.getMinion() != null) {
 			despawnMinion(player, player.getMinionList().getLastUsed());
 		}
+		minion.setKnownlist(new PlayerAwareKnownList(minion));
 		player.setMinion(minion);
-		player.setMinionSpawned(true);
 		player.getMinionList().setLastUsed(minionObjId);
 		minionbuff.apply(player, minionCommonData.getMinionId());
 		PacketSendUtility.broadcastPacketAndReceive(player,	new SM_MINIONS(5, minionCommonData));
@@ -333,22 +262,21 @@ public class MinionService {
 		}
 		minion.getCommonData().setIsLooting(false);
 		minion.getCommonData().setIsBuffing(false);
-		player.getController().cancelTask(TaskId.MINION_UPDATE);
-		player.setMinionSpawned(false);
+		minion.getController().delete();
 		player.setMinion(null);
 		minionbuff.end(player);
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(6, minionObjId, player));
 	}
 
-	public void growthUpMinion(Player player, List<Integer> minionObjId, int miniona) {
+	public void growthUpMinion(Player player, int minionObjectId, List<Integer> material) {
 		int growthPoint = 0;
         long growthCost = 0;
         String tierGrade = "";
-        MinionCommonData playerMinion = player.getMinionList().getMinion(miniona);
+        MinionCommonData playerMinion = player.getMinionList().getMinion(minionObjectId);
         tierGrade = DataManager.MINION_DATA.getMinionTemplate(playerMinion.getMinionId()).getGrade();
         int maxgrowthMax = DataManager.MINION_DATA.getMinionTemplate(playerMinion.getMinionId()).getMaxGrowthValue();
-        for (final MinionCommonData list : player.getMinionList().getMinions()) {
-            for (final int matObjt : minionObjId) {
+        for (MinionCommonData list : player.getMinionList().getMinions()) {
+            for (int matObjt : material) {
                 if (list.getObjectId() == matObjt) {
                     int minionGrowth = 0;
                     if (DataManager.MINION_DATA.getMinionTemplate(list.getMinionId()).getGrade().equalsIgnoreCase(tierGrade)) {
@@ -371,16 +299,17 @@ public class MinionService {
             return;
         }
         player.getInventory().decreaseKinah(growthCost);
-        if (playerMinion.getMiniongrowpoint() + growthPoint > maxgrowthMax) {
-            playerMinion.setMiniongrowpoint(maxgrowthMax);
+        if (playerMinion.getMinionGrowthPoint() + growthPoint > maxgrowthMax) {
+            playerMinion.setMinionGrowthPoint(maxgrowthMax);
         } else {
-        	playerMinion.setMiniongrowpoint(playerMinion.getMiniongrowpoint() + growthPoint);
+        	playerMinion.setMinionGrowthPoint(playerMinion.getMinionGrowthPoint() + growthPoint);
         }
-        DAOManager.getDAO(PlayerMinionsDAO.class).updatePlayerMinionGrowPoint(player, playerMinion);
+        DAOManager.getDAO(PlayerMinionsDAO.class).updatePlayerMinionGrowthPoint(player, playerMinion);
         PacketSendUtility.broadcastPacket(player, new SM_MINIONS(7, playerMinion), true);
-        for (int materialObjt2 : minionObjId) {
-            deleteMinion(player, materialObjt2, true);
+        for (int matObjt2 : material) {
+            deleteMinion(player, matObjt2, true);
         }
+        player.getMinionList().updateMinionsList();
 	}
 
 	public void evolutionUpMinion(Player player, int minionObjId) { 
@@ -402,9 +331,9 @@ public class MinionService {
         player.getInventory().decreaseByItemId(190200000, items.getEvolvedNum());
 		minion.setMinionId(minion.getMinionId() + 1);
 		minion.setMinionLevel(minion.getMinionLevel() + 1);
-		minion.setMiniongrowpoint(0);
+		minion.setMinionGrowthPoint(0);
         DAOManager.getDAO(PlayerMinionsDAO.class).evolutionMinion(player, minion);
-        PacketSendUtility.sendPacket(player, new SM_MINIONS(1, minion, true));
+        PacketSendUtility.sendPacket(player, new SM_MINIONS(1, minion, 1));
         player.getMinionList().updateMinionsList();
 	}
 
@@ -418,7 +347,7 @@ public class MinionService {
         player.getMinionList().deleteMinion(minionObjId);
         PacketSendUtility.broadcastPacket(player, new SM_MINIONS(2, isMaterial, minionObj), true);
 	}
-	//ALTER TABLE `player_minions` ADD `is_locked` INT(1) NOT NULL DEFAULT '0' AFTER `growepoint`;
+
 	public void lockMinion(Player player, int minionObjId, int lock) {
 		MinionCommonData playerMinion = player.getMinionList().getMinion(minionObjId);
 		if (lock == 1) {
@@ -455,14 +384,12 @@ public class MinionService {
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(11, currentSkillPoints , autoCharge));
 		}
 	}
-	//TODO
-	//ALTER TABLE `players` ADD `MinionFunctionLeftTime` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00 ' AFTER `minion_skill_points`;
+
 	public void activateMinionFunction(Player player) {
 		long leftTime = System.currentTimeMillis() + (30 * 24 * 60 * 60 * 1000); // + 30 Days
 		System.out.println("Int Timestamp : " + new Timestamp(leftTime));
 		if (player.getInventory().tryDecreaseKinah(25000000)) {
-			//player.getCommonData().setMinionFuctionLeftTime(new Timestamp(leftTime)); // TODO
-			//DAOManager.getDAO(PlayerDAO.class).MinionFuctionLeftTime(player); // TODO
+			player.getCommonData().setMinionFunctionTime(new Timestamp(leftTime)); // TODO
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(9, leftTime));
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(12));
 		} else {
@@ -566,7 +493,7 @@ public class MinionService {
         }
     }
 	
-	public void ActivDeactivLoot(Player player, boolean activate) {
+	public void activateLoot(Player player, boolean activate) {
 		Minion minion = player.getMinion();
 		if(minion == null) {
 			return;
@@ -590,98 +517,145 @@ public class MinionService {
 		}
 	}
 	
-	public void CombinationMinion(Player player, ArrayList<Integer> minionObjIds) { //TODO
-		String a = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjIds.get(1)).getMinionId()).getGrade();
-		int rnd = Rnd.get(0, 1000);
-		int rnd_2 = Rnd.get(0, 2);
-		int level;
+	public void CombinationMinion(Player player, List<Integer> minionObjIds) {
+		
+		if (player.getInventory().getKinah() < 50000) {
+            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404348, new Object[0]));
+            return;
+        }
+        player.getInventory().decreaseKinah(50000);
+        MinionCommonData minion;
+        int point=0;
+		int level=0;
+        for(int minions : minionObjIds) {
+        	minion = player.getMinionList().getMinion(minions);
+        	point += minion.getMinionGrowthPoint();
+        	level += minion.getMinionLevel();
+        }
+        
 		int minionId = 0;
-		String name, grade;
-		if(rnd  > 700) {
-			switch(a) {
-				case "B": {
-					switch(rnd_2){
-						case 0:
-							minionId = Rnd.get(70,73) + 980000;//Sitas
-							break;
-						case 1:
-							minionId = Rnd.get(60,63) + 980000;//Grendal
-							break;
-						case 2:
-							minionId = 980013;//kerub A
-					}
-				}
-				case "C": {
-					switch(rnd_2){
-					case 0:
-						minionId = Rnd.get(40,43) + 980000;//Abija
-						break;
-					case 1:
-						minionId = Rnd.get(50,53) + 980000;//Hamerun
-						break;
-					default:
-						minionId = 980012;//Kerubien B
-						break;
-					}
-				}
-				case "D": {
-					switch(rnd_2){
-					case 0:
-						minionId = Rnd.get(20,23) + 980000;//Seiren
-						break;
-					case 1:
-						minionId = Rnd.get(30,33) + 980000;//Steel Rose
-						break;
-					default:
-						minionId = 980011;//Kerubien C
-						break;
-					}
-				}
-			}
-			MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
-			grade = minionTemplate.getGrade();
-			level = minionTemplate.getLevel();
-			name = minionTemplate.getName();
-		} else {
-				switch(a) {
-				case "B": {
-					switch(rnd_2){
-						case 0:
-							minionId = Rnd.get(40,43) + 980000;//Abija
-							break;
-						case 1:
-							minionId = Rnd.get(50,53) + 980000;//Hamerun
-							break;
-					}
-				}
-				case "C": {
-					switch(rnd_2){
-						case 0:
-							minionId = Rnd.get(20,23) + 980000;//Seiren
-							break;
-						case 1:
-							minionId = Rnd.get(30,33) + 980000;//Steel Rose
-							break;
-					}
-				}
-				case "D": {
+		String name="", grade="";
+        
+		grade = player.getMinionList().getMinion(minionObjIds.get(0)).getMinionGrade();
+		
+		int rnd = Rnd.get(0,200) + ((point / level ) / 1000) + (level / 4);
+		
+		boolean result;
+		if(rnd < 125){
+			result = false;
+			rnd = Rnd.get(0,3);
+			switch(grade){
+				case "D":
 					minionId = 980010;
-				}
+					break;
+				case "C":
+					minionId = player.getMinionList().getMinion(minionObjIds.get(rnd)).getMinionId();	
+					break;
+				case "B":
+					minionId = player.getMinionList().getMinion(minionObjIds.get(rnd)).getMinionId();
+					break;
 			}
-		    MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
-			grade = minionTemplate.getGrade();
-			level = minionTemplate.getLevel();
-			name = minionTemplate.getName();
+		} else {
+			result = true;
+			switch(grade){
+				case "D":
+					minionId = minionId(Rnd.get(36,420));
+					break;
+				case "C":
+					if(player.getMinionList().getMinion(minionObjIds.get(0)).getMinionId() == 980011) {
+						minionId = minionId(Rnd.get(141,700));
+					} else {
+						minionId = minionId(Rnd.get(421,700));
+					}
+					break;
+				case "B":
+					if(player.getMinionList().getMinion(minionObjIds.get(0)).getMinionId() == 980012) {
+						minionId = minionId(Rnd.get(421,980));
+					} else {
+						minionId = minionId(Rnd.get(701,980));
+					}
+					break;
+			}
+		}
+		
+		if (player.getAccessLevel() > 5) {
+			PacketSendUtility.sendMessage(player, (result ? "Success" : "Fail") + " Rnd:" + rnd + " Luck:" + 125);
+		}
+		
+		MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionId);
+		grade = minionTemplate.getGrade();
+		level = minionTemplate.getLevel();
+		name = minionTemplate.getName();
+		
+		MinionCommonData addNewMinion = player.getMinionList().addNewMinion(player, minionId, name, grade, level);
+		if (addNewMinion != null) {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, addNewMinion, (result ? 2 : 3)));
 		}
 		for(int minionid : minionObjIds){
 			deleteMinion(player, minionid, true);
 		}
 		minionObjIds.clear();
-		MinionCommonData addNewMinion = player.getMinionList().addNewMinion(player, minionId, name, grade, level);
-		if (addNewMinion != null) {
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(13, addNewMinion));
-			player.getMinionList().updateMinionsList();
-		}
+		player.getMinionList().updateMinionsList();
+	}
+	
+	private static int minionId(int rnd) {
+		if (rnd <= 35) {
+			return 980010; //Kerubar D
+		} else if (rnd >= 36 && rnd <= 70) {
+			return 980011; //Kerubian C
+		} else if (rnd >= 71 && rnd <= 105) {
+			return 980012; //Kerubiel B
+		} else if (rnd >= 106 && rnd <= 140) {
+			return 980013; //Arch Kerubiel A
+		} else if (rnd >= 141 && rnd <= 175) {
+			return 980020; //Seiren D
+		} else if (rnd >= 176 && rnd <= 210) {
+			return 980021; //Seiren C
+		} else if (rnd >= 211 && rnd <= 245) {
+			return 980022; //Seiren B
+		} else if (rnd >= 246 && rnd <= 280) {
+			return 980023; //Seiren A
+		} else if (rnd >= 281 && rnd <= 315) {
+			return 980030; //Steel Rose D
+		} else if (rnd >= 316 && rnd <= 350) {
+			return 980031; //Steel Rose C
+		} else if (rnd >= 351 && rnd <= 385) {
+			return 980032; //Steel Rose B
+		} else if (rnd >= 386 && rnd <= 420) {
+			return 980033; //Steel Rose A
+		} else if (rnd >= 421 && rnd <= 455) {
+			return 980040; //Abija D
+		} else if (rnd >= 456 && rnd <= 490) {
+			return 980041; //Abija C
+		} else if (rnd >= 491 && rnd <= 525) {
+			return 980042; //Abija B
+		} else if (rnd >= 526 && rnd <= 560) {
+			return 980043; //Abija A
+		} else if (rnd >= 561 && rnd <= 595) {
+			return 980050; //Hamerun D
+		} else if (rnd >= 596 && rnd <= 630) {
+			return 980051; //Hamerun C
+		} else if (rnd >= 631 && rnd <= 665) {
+			return 980052; //Hamerun B
+		} else if (rnd >= 666 && rnd <= 700) {
+			return 980053; //Hamerun A
+		} else if (rnd >= 701 && rnd <= 735) {
+			return 980060; //Grendal D
+		} else if (rnd >= 736 && rnd <= 770) {
+			return 980061; //Grendal C
+		} else if (rnd >= 771 && rnd <= 805) {
+			return 980062; //Grendal B
+		} else if (rnd >= 806 && rnd <= 840) {
+			return 980063; //Grendal A
+		} else if (rnd >= 841 && rnd <= 875) {
+			return 980070; //Sita D
+		} else if (rnd >= 876 && rnd <= 910) {
+			return 980071; //Sita C 
+		} else if (rnd >= 911 && rnd <= 945) {
+			return 980072; //Sita B
+		} else if (rnd >= 946 && rnd <= 980) {
+			return 980073; //Sita A
+		} else return 0;
 	}
 	
 	public static MinionService getInstance() {

@@ -18,6 +18,7 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 
 import java.util.Collection;
 
+import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
@@ -42,11 +43,21 @@ public class SM_MINIONS extends AionServerPacket {
 	private int slot;
 	private int slot2;
 	Player player;
-	private boolean evolution;
+	private int addType;
 	private boolean isMaterial;
 	private boolean isloot;
 	private int lootNpcId;
 
+	public SM_MINIONS(int action, int minionObjId, Minion minion) {
+		this.action = action;
+		this.minionObjId = minionObjId;
+		this.commonData = minion.getCommonData();
+	}
+	
+	public SM_MINIONS(int action, Minion minion) {
+		this(action, minion.getCommonData().getObjectId(), minion);
+	}
+	
 	public SM_MINIONS(int action) {
 		this.action = action;
 	}
@@ -63,10 +74,10 @@ public class SM_MINIONS extends AionServerPacket {
 		this.player = player;
 	}
 	
-	public SM_MINIONS(int action, MinionCommonData commonData, boolean evolution) {
+	public SM_MINIONS(int action, MinionCommonData commonData, int addType) {
 		this.action = action;
 		this.commonData = commonData;
-		this.evolution = evolution;
+		this.addType = addType;
 	}
 
 	public SM_MINIONS(int action, MinionCommonData commonData) {
@@ -139,6 +150,10 @@ public class SM_MINIONS extends AionServerPacket {
 		switch (action) {
 			case 0: {
 				writeC(0);
+                if (minions == null) {
+                    writeH(0);
+                    break;
+                }
 				writeH(minions.size());
 				for (MinionCommonData commonData : minions) {
 					writeD(commonData.getObjectId());
@@ -149,7 +164,7 @@ public class SM_MINIONS extends AionServerPacket {
 					writeS(commonData.getName());
 					writeD(commonData.getBirthday());
 					writeD(0);
-					writeD(commonData.getMiniongrowpoint());
+					writeD(commonData.getMinionGrowthPoint());
 					writeC(commonData.isLock() ? 1 : 0);
 					//if (commonData.getDopingBag() == null) {
                         writeB(new byte[24]);
@@ -171,7 +186,10 @@ public class SM_MINIONS extends AionServerPacket {
 				break;
 			}
 			case 1: {
-				writeD(evolution ? 1 : 0);//1 levelup, 0 new minion (effect)
+                if (commonData == null) {
+                    return;
+                }
+				writeD(addType);//3 nem siker combination, 2 siker combination, 1 levelup, 0 new minion (effect)
 				writeD(0);
 				writeH(0);
 				writeD(commonData.getObjectId());
@@ -185,21 +203,33 @@ public class SM_MINIONS extends AionServerPacket {
 				break;
 			}
 			case 2: {//delete
+                if (commonData == null) {
+                    return;
+                }
                 writeH(isMaterial ? 1 : 0);
                 writeD(minionObjId);
                 break;
             }
 			case 3: {//rename
+                if (commonData == null) {
+                    return;
+                }
 				writeD(commonData.getObjectId());
 				writeS(commonData.getName());
 				break;
 			}
 			case 4: {//lock
+                if (commonData == null) {
+                    return;
+                }
 				writeD(commonData.getObjectId());
                 writeC(commonData.isLock() ? 1 : 0);
                 break;
 			}
 			case 5: {// spawn
+                if (commonData == null) {
+                    return;
+                }
 				writeS(commonData.getName());
 				writeD(commonData.getObjectId());
 				writeD(commonData.getMinionId());
@@ -207,8 +237,11 @@ public class SM_MINIONS extends AionServerPacket {
 				break;
 			}
 			case 6: {// despawn
+                if (commonData == null) {
+                    return;
+                }
 				writeD(minionObjId);
-				if (player.getLifeStats().isAlreadyDead()) {
+				if (player != null && player.getLifeStats().isAlreadyDead()) {
                     writeC(0);
                     break;
                 }
@@ -216,8 +249,11 @@ public class SM_MINIONS extends AionServerPacket {
 				break;
 			}
 			case 7: {//growthUp alpha
+                if (commonData == null) {
+                    return;
+                }
 				writeD(commonData.getObjectId());
-				writeD(commonData.getMiniongrowpoint());
+				writeD(commonData.getMinionGrowthPoint());
 				break;
 			}
 			case 8: {
@@ -257,8 +293,7 @@ public class SM_MINIONS extends AionServerPacket {
 	                case 768: {//BUFF
 	                    writeD(minionObjectId);
 	                    writeD(ItemId);
-	                    writeD(slot);
-	                    System.out.println("SM minion minionObjectId: "+minionObjectId+" ItemId: "+ItemId+" slot: "+slot+" slot2: "+slot2);
+	                    //writeD(slot);
 	                    break;
 	                }
 				}

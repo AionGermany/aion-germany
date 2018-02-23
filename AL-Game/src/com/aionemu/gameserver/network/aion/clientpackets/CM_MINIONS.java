@@ -47,7 +47,6 @@ public class CM_MINIONS extends AionClientPacket {
 	private int destinationSlot;
 	private int unk;
 	private ArrayList<Integer> MaterialObjIds = new ArrayList<Integer>();
-	private int MaterialObjId;
 	private int lock = 0;
 	
 	public CM_MINIONS(int opcode, State state, State... restStates) {
@@ -80,8 +79,7 @@ public class CM_MINIONS extends AionClientPacket {
 				MaterialObjIds.clear();
 				objectId = readD(); // Minion Unique ID
 				for (int i = 0; i < 10; i++) {
-					MaterialObjId = readD();
-					MaterialObjIds.add(MaterialObjId);
+					MaterialObjIds.add(readD());
 				}
 				break;
 			case 7: //evolution
@@ -90,8 +88,7 @@ public class CM_MINIONS extends AionClientPacket {
 			case 8://combination
 				MaterialObjIds.clear();
 				for (int i = 0; i < 4; i++) {
-					MaterialObjId = readD();
-					MaterialObjIds.add(MaterialObjId);
+					MaterialObjIds.add(readD());
 				}
 				break;
 			case 9: // TODO (MinionFunction Scrolls etc)
@@ -105,28 +102,33 @@ public class CM_MINIONS extends AionClientPacket {
 		                    	minionObjectId = readD();
 		                        dopingItemId = readD();
 		                        targetSlot = readD();
+		                        System.out.println("subSwitch: "+subSwitch+" functId: "+functId+" minionObjectId :"+minionObjectId+"\ndopingItemId :"+dopingItemId+" dopingItemId :"+dopingItemId+"\ntargetSlot :"+targetSlot+" targetSlot2 :"+destinationSlot+" unk :"+unk);
 		                        break;
 		                    }
 		                    case 1:{
 		                    	minionObjectId = readD();
 		                        targetSlot = readD();
 		                        unk = readD();
+		                        System.out.println("subSwitch: "+subSwitch+" functId: "+functId+" minionObjectId :"+minionObjectId+"\ndopingItemId :"+dopingItemId+" dopingItemId :"+dopingItemId+"\ntargetSlot :"+targetSlot+" targetSlot2 :"+destinationSlot+" unk :"+unk);
 		                        break;
 		                    }
 		                    case 2:{
 		                        minionObjectId = readD();
 		                        targetSlot = readD();
 		                        destinationSlot = readD();
+		                        System.out.println("subSwitch: "+subSwitch+" functId: "+functId+" minionObjectId :"+minionObjectId+"\ndopingItemId :"+dopingItemId+" dopingItemId :"+dopingItemId+"\ntargetSlot :"+targetSlot+" targetSlot2 :"+destinationSlot+" unk :"+unk);
 		                        break;
 		                    }
 		                    case 3:{//BUFF ON
 		                        minionObjectId = readD();
 		                        dopingItemId = readD();
 		                        targetSlot = readD();
+		                        System.out.println("subSwitch: "+subSwitch+" functId: "+functId+" minionObjectId :"+minionObjectId+"\ndopingItemId :"+dopingItemId+" dopingItemId :"+dopingItemId+"\ntargetSlot :"+targetSlot+" targetSlot2 :"+destinationSlot+" unk :"+unk);
 		                        break;
 		                    }
 		                    case 4:{
 		                        minionObjectId = readD();
+		                        System.out.println("subSwitch: "+subSwitch+" functId: "+functId+" minionObjectId :"+minionObjectId+"\ndopingItemId :"+dopingItemId+" dopingItemId :"+dopingItemId+"\ntargetSlot :"+targetSlot+" targetSlot2 :"+destinationSlot+" unk :"+unk);
 		                        break;
 		                    }
 	                    }
@@ -145,14 +147,17 @@ public class CM_MINIONS extends AionClientPacket {
 				autoCharge = readC(); // Auto Recharge on/off Todo
 				break;
 			case 12:
-				readH(); // TODO AutoExtension MiolFunktion
+				readC(); // Auto Function on/off
 				break;
             case 13:
             	readD();
             	readC();
             	readH();
             	break;
-            case 14://Nothing to read BUFF ON
+            case 14: // BUFF ON
+            	readC(); // 20?
+            	readC();
+            	readC();
             	break;
 		default:
 			break;
@@ -193,7 +198,7 @@ public class CM_MINIONS extends AionClientPacket {
 				MinionService.getInstance().despawnMinion(player, objectId);
 				break;
 			case 6:
-				MinionService.getInstance().growthUpMinion(player, MaterialObjIds, objectId);
+				MinionService.getInstance().growthUpMinion(player, objectId, MaterialObjIds);
 				break;
 			case 7:
 				MinionService.getInstance().evolutionUpMinion(player, objectId);
@@ -206,22 +211,26 @@ public class CM_MINIONS extends AionClientPacket {
 					case 0: {
 						switch(functId) {
 							case 0: { //Add Item
-								MinionService.getInstance().addMinionFunctionItems(player, functId, minionObjectId, dopingItemId, targetSlot, destinationSlot);  // Scrolls etc
+								System.out.println("ITEM_ADD");
+			                    MinionService.getInstance().addMinionFunctionItems(player, functId, minionObjectId, dopingItemId, targetSlot, destinationSlot);  // Scrolls etc
 								break;
 							}
 							case 2: {
+								System.out.println("XD");
 								MinionService.getInstance().relocateDoping(player, minionObjectId, targetSlot, destinationSlot);
 								break;
 							}
 							case 3: {
-								MinionService.getInstance().buffPlayer(player, minionObjectId, dopingItemId, targetSlot); //Buff
+								System.out.println("BUFF_ON");
+								 MinionService.getInstance().buffPlayer(player, minionObjectId, dopingItemId, targetSlot); //Buff
 								break;
 							}
 						}
 						break;
 					}
 					case 1: {
-						MinionService.getInstance().ActivDeactivLoot(player, true);
+						System.out.println("AUTOLOOT_ACTIVATION_DEACTIVATION");
+	                	MinionService.getInstance().activateLoot(player, true);
 						break;
 					}
 				}
