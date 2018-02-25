@@ -1,0 +1,125 @@
+/*
+   --------------------------------------------------------
+   Menue-Definitionen  HORIZONTAL
+   --------------------------------------------------------
+*/
+ul#menu 
+    { 
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      position: relative;
+      top: -3px;
+      left: 3px;
+    } 
+* html ul#menu
+    {
+      top: 0px;
+    }
+ul#menu li 
+    { 
+      list-style: none;
+	  display: inline-block;
+      position: relative;
+      margin: 0px;
+      padding: 3px;
+    } 
+* html ul#menu li 
+    { 
+      margin-bottom: -6px;
+    } 
+*:first-child+html ul#menu li 
+    {  /* Korrektur fuer den IE 7 */
+      margin-bottom: -2px;
+      background-color:#333;
+    }
+/* aufgeklapptes Menü */
+ul#menu li ul 
+    { 
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 34px;
+      left: 3px;
+      display: none;
+      background-color:#333;
+      /* UnterMenu ausblenden */
+    } 
+* html ul#menu li ul 
+    { 
+      left: 0px;
+      lef\t: 0px;
+    } 
+*:first-child+html ul#menu ul 
+    { 
+      background-color:black;
+      padding-bottom:6px;
+    } 
+ul#menu li:hover ul 
+    { 
+      display: block;
+      border-radius:8px;
+    } 
+ul#menu li ul li 
+    { 
+      float: none;
+      display: block;
+      margin-bottom: 0;
+      margin-top: 0;
+      position: relative;
+    } 
+* html ul#menu li ul li
+    { 
+      margin-bottom: -2px;
+      margin-top: -2px;
+    } 
+/* Hauptmenue */
+ul#menu a, ul#menu span 
+    { 
+      display: block;
+      width: 145px;
+      padding: 5px 8px;
+      text-decoration: none;
+      color: white;
+      font-size:16px;
+      background-color:#444;
+      border: 1px solid #191919;
+      border-radius:8px;
+      font: 14px georgia;
+      text-transform:uppercase;
+      font-weight: 400;
+    } 
+/* Untermenue */
+ul#menu li ul li a, ul#menu li ul li span 
+    { 
+      display: block;
+      width: 139px;
+      padding: 5px 8px;
+      text-decoration: none;
+      border-color: #292929;
+      border-collapse: collapse;
+      color: white;
+      font-size:14px;
+      /*line-height:22px;*/
+      background-color:#444;
+      text-transform:uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      
+    } 
+* html ul#menu a, * html ul#menu span 
+    { 
+      width: 198px;
+      w\idth: 198px;
+    } 
+
+* html ul#menu li ul li a, ul#menu li ul li span
+    {
+       width:198px;
+       w\idth:198px;
+    }    
+ul#menu a:hover, ul#menu span, li a#aktuell 
+    { 
+      border-color: #003FBE;
+      background-color: #d52300;
+    } 

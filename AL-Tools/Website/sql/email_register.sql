@@ -1,0 +1,1 @@
+ALTER TABLE `account_data` ADD  `email` text NOT NULL;

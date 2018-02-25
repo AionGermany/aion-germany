@@ -1,0 +1,25 @@
+<?php
+//MySQL Database		
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpassword = "aion";
+
+//Game & Login Server
+$gs = "al_server_gs";
+$ls = "al_server_ls";
+$server = "127.0.0.1";
+$portgame = "7777";
+$portlogin = "2106";
+$timeout = "10";
+$address = "IP: 127.0.0.1";
+
+//News Server
+$dbnews = "al_server_ws";
+$news_amt = "5";
+$access_level = "3";
+
+//Rates
+$rate_exp = "1";
+$rate_kinah = "1";
+$rate_drop = "1";
+$rate_quest = "1";

@@ -1,0 +1,1 @@
+ALTER TABLE `account_data` ADD  `donatemoney` int(11) DEFAULT '0';

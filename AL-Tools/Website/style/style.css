@@ -1,0 +1,145 @@
+body {font:10pt Verdana; color:#333; background:#000 url(../img/bg.jpg) top center no-repeat; background-attachment:fixed; margin:8px 0 0 0;}
+
+a {color:#7A8B00; text-decoration:none;}
+a:hover {color:#333; text-decoration:underline;}
+
+img {border:0;}
+
+#tooltip {background:#000; width:auto; color:#fff; opacity:0.80; filter:alpha(opacity="80"); z-index:100; position:absolute; visibility:hidden; border-collapse:separate; margin:0; padding:8px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+
+.rankabyss {background:#3B3B3B url(../img/bg.png) center; border-radius: 10px; color: white; font-size: 14px; font-weight: bold; font: verdena; padding: 17px; text-align: center; text-transform: uppercase;height:47px;}
+.width {width:940px; margin:0 auto;}
+.hr {height:15px; background: url(../img/hr.png) center; margin:10px 0px 10px 0px;}
+.dot {border-bottom: dashed 1px #ccc; padding:5px 0;font-size:12px;color:black;}
+.mb10 {margin-bottom:10px;}
+#mt10 {margin-top:10px;}
+.h15 {line-height:1.5;}
+.h20 {line-height:2.0;}
+.center {margin:0 auto;}
+.tcenter {text-align:center;}
+#left {float:left;}
+.clear {clear:both;}
+#nodecor a {text-decoration:none;}
+.shadow {-moz-box-shadow:0 1px 4px -3px black; -webkit-box-shadow:0 1px 4px -3px black; box-shadow:0 1px 4px -3px black;}
+.dark-shadow {text-shadow:0px 2px 2px black;}
+.dark-bg {background:#3B3B3B url(../img/bg.png) center;}
+.border {-webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;}
+.border-top {-webkit-border-radius:8px 8px 0 0; -moz-border-radius:8px 8px 0 0; border-radius:8px 8px 0 0;}
+.border-bottom {-webkit-border-radius:0 0 8px 8px; -moz-border-radius:0 0 8px 8px; border-radius:0 0 8px 8px;}
+.ico {margin:0px 3px -3px 0px;}
+.flags {height:15px;}
+.aionlogo {display:inline-block;position:relative;top:10px;width:100%;text-align:center;}
+.right { text-align:right; }
+/* Top Status List */
+.head-status {display:block; padding-top:8px; height:35px; width:75%; color:#fff; background: url(../img/grey.png); text-shadow: 0 1px 0 #000;}
+
+
+/* Top Menu Buttons */
+.head-menu {background:#3B3B3B url(../img/bg.png) center; padding:10px; margin-top:1px;height:47px;}
+.head-button {display:inline-block; color:#fff; border:solid 1px #3B3B3B; padding: 5px 10px;}
+a.head-button:hover {color:#fff; background:#D52300; border:solid 1px #FF4F2D; text-decoration:none;}
+
+
+.case {width:941px; background:#EAEAEA; margin:0 auto; padding:20px;}
+.content {display: table-cell; width:600px; vertical-align:top; padding-right:20px;}
+.sidebar {display: table-cell; width:280px;}
+.footer {width: 941px; height:47px; color:#ccc; background:#3B3B3B url(../img/bg.png) center; padding:10px; margin-bottom:20px; text-shadow: 0 1px 1px #000;}
+.footer a:hover {color:#ccc; text-decoration:none;}
+
+
+.top {background:#fff; border:solid 1px #D6D6D6; padding:10px; margin-bottom:20px;}
+.list {background:#fff; border:solid 1px #D6D6D6; padding:10px;}
+.news {background:#fff; border:solid 1px #D6D6D6; padding:10px; margin-bottom:20px;}
+.menu {padding:10px; background:#fff; border:solid 1px #D6D6D6;}
+.pages {background:#fff; border:solid 1px #D6D6D6; padding:10px;}
+
+
+.news-title, .news-title a {font:16pt Georgia; margin-bottom:10px; color:#333;} /*#E32400;} */
+.news-date {margin-bottom:10px;}
+.news-text {background:#fff;}
+.news-text img {margin:0 10px 10px 0; border:none;}
+/*.menu-title {font:16pt Georgia; margin-bottom:10px; padding:10px; color:#fff; background:url(../img/menu-title.png);
+	-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; -moz-box-shadow: 0 2px 4px -2px black;	-webkit-box-shadow:0 2px 4px -2px black; box-shadow: 0 2px 4px -2px black;}*/
+.menu-title {font:16pt Georgia; margin-bottom:10px; color:#E32400;}
+.menu-button {display:block; border:solid 1px #D6D6D6; padding: 8px ; margin-bottom:10px; text-shadow: 0px 1px 1px white;}
+a.menu-button:hover {color:#333; background:#fff; text-decoration:none; padding-left:20px;}
+.menu-button img {margin:0px 3px -3px 0px; border:none;}
+
+
+/* Buttons for download */
+.menu-block {display:inline-block; width:90px; border:solid 1px #D6D6D6; padding:5px; margin:5px; text-shadow: 0px 1px 1px white;}
+.menu-block:hover {color:#333; background:#eee; text-decoration:none;}
+.menu-block img {border:none;}
+
+
+/* Buttons Admin */
+.admin-block {display:inline-block; border:solid 1px #D6D6D6; padding:10px; margin:5px; text-shadow: 0px 1px 1px white;}
+.admin-block:hover {color:#333; background:#eee; text-decoration:none;}
+.admin-block img {border:none;}
+
+
+
+.button-submit {color:#fff; background:#3B3B3B; border:solid 1px #3B3B3B; padding: 5px 10px; margin-top:10px;}
+.button-submit:hover {color:#fff; background:#D52300; border:solid 1px #FF4F2D; text-decoration:none;}
+.field {font:10pt Verdana; color:#333; border:solid 1px #999; width:400px; padding:5px;}
+.login-field {font:10pt Verdana; color:#333; border:solid 1px #999; width:150px; padding:3px;}
+.textarea {border:1px solid #999; padding:0 1px 1px; background-color:white; margin: 0 auto;}
+.button-reg {color:#fff; background:#3B3B3B; border:solid 1px #3B3B3B; padding: 5px 10px; margin-top:10px;}
+.button-reg:hover {color:#fff; background:#D52300; border:solid 1px #FF4F2D; text-decoration:none;}
+.field-reg {font:10pt Verdana; color:#333; border:solid 1px #999; width:200px; padding:5px; margin-bottom:5px;}
+
+
+
+/* Buttons editing news */
+.button-edit {display:inline-block; float:right; border:solid 1px #D6D6D6; padding:5px 10px; margin:10px 0 0 10px; text-shadow: 0px 1px 1px white;}
+.button-edit a {text-decoration:none;}
+.button-edit:hover {color:#333; background:#eee; text-decoration:none;}
+
+
+/* Sidebar */
+/* ---------- GENERAL ---------- */
+* {
+  box-sizing: border-box;
+  
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  } 
+}
+.clearfix {
+  *zoom: 1;  
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }  
+  &:after {
+    clear: both;
+  }  
+}
+.container {font:400 14px georgia; margin-bottom:10px; color:#E32400;}
+.logintext {width:255px;}
+/* ---------- LOGIN-FORM ---------- */
+h3 { margin: 0; }
+a {color: #999; text-decoration: none;}
+a:hover { color: #1dabb8; }
+fieldset {border: none; margin: 0;}
+#login-form {width: 300px;color:black;}
+#login-form h3 {background:#3B3B3B url(../img/bg.png) center; border-radius: 5px 5px 0 0; color: white; font-size: 14px; padding: 17px; text-align: center; text-transform: uppercase;height:47px;}
+#login-form fieldset {background: #fff; border-radius: 0 0 5px 5px; padding: 20px; position: relative;}
+#login-form fieldset:before {background-color: #fff; content: ""; height: 8px; left: 50%; margin: -4px 0 0 -4px; position: absolute; top: 0; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); width: 8px;}
+#login-form input[type="name"],
+#login-form input[type="submit"] {background: #1dabb8; border-radius: 3px; color: #fff; font-weight: bold; margin-top: 0px; padding: 12px;}
+#login-form input[type="submit"]:hover {background: #198d98;}
+#login-form footer {font-size: 12px;margin-top: 16px;}
+.info {background: #e5e5e5; border-radius: 50%; display: inline-block; height: 20px; line-height: 20px; margin: 0 10px 0 0; text-align: center; width: 20px;}
+
+/* Messages in the registration and add news */
+.error {color:red; margin:10px 0 0 0;}
+.accept {color:#008000; margin:10px 0 0 0;}
+
+
+/* Table with online players */
+.tophead {border-bottom: dashed 1px #ccc; font-weight:bold;}
+.toptext {border-bottom: dashed 1px #ccc;}
+.toptextright {border-bottom: dashed 1px #ccc;text-align:right;}
