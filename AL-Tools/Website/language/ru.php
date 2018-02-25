@@ -6,8 +6,9 @@ $lang = array(
         // f�r die Sprachauswahl
         "de" => "German",
 		"gb" => "English",
-        "ru" => "Россия",
-			
+        "ru" => "Russian",
+        "fr" => "French",
+
         // f�r die Seitentexte
         "login" => "Авторизиция",
         "game"  => "Spiel",

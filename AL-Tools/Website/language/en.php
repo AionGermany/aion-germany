@@ -7,7 +7,8 @@ $lang = array(
         "de" => "German",
 		"gb" => "English",
         "ru" => "Russian",
-			
+        "fr" => "French",
+
         // für die Seitentexte
         "login" => "Login",
         "game"  => "Spiel",
