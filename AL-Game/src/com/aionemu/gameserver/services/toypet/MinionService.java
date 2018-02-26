@@ -17,7 +17,6 @@
 package com.aionemu.gameserver.services.toypet;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -63,8 +62,8 @@ public class MinionService {
 	private Logger log = LoggerFactory.getLogger(MinionService.class);
 
 	public void init() {
-		this.minions = DataManager.MINION_DATA.getAll();
-		this.minionbuff = new MinionBuff();
+		minions = DataManager.MINION_DATA.getAll();
+		minionbuff = new MinionBuff();
 		log.info("MinionService initialized");
 	}
 	
@@ -75,7 +74,7 @@ public class MinionService {
 		PacketSendUtility.sendPacket(player, new SM_MINIONS(12));
 	}
 
-	public static void addMinion(final Player player, final int itemObjId) {
+	public void addMinion(final Player player, final int itemObjId) {
 		if (player.getMinionList().getMinions().size() == 200) {
 			PacketSendUtility.sendMessage(player, "Max 200 Minion!");
 			return;

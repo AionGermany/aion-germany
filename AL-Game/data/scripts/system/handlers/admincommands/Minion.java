@@ -29,13 +29,13 @@ public class Minion extends AdminCommand {
 	public Minion() {
 		super("minion");
 	}
-
+	
 	@Override
 	public void execute(final Player player, String... params) {
 		String command = params[0];
 		if ("add".equals(command)) {
 			final int itemObjId = Integer.parseInt(params[1]);
-			MinionService.addMinion(player, itemObjId);
+			MinionService.getInstance().addMinion(player, itemObjId);
 		}
 	}
 
