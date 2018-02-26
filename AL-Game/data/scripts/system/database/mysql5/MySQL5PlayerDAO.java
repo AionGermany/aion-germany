@@ -217,8 +217,8 @@ public class MySQL5PlayerDAO extends PlayerDAO {
 			stmt.setInt(48, pcd.getLunaConsumePoint());
 			stmt.setInt(49, pcd.getFloor());
 			stmt.setInt(50, pcd.getMinionSkillPoints());
-			stmt.setTimestamp(52, pcd.getMinionFunctionTime());
-			stmt.setInt(51, player.getObjectId());
+			stmt.setTimestamp(51, pcd.getMinionFunctionTime());
+			stmt.setInt(52, player.getObjectId());
 			stmt.execute();
 			stmt.close();
 		}
