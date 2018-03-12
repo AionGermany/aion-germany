@@ -15,6 +15,8 @@
                         <xs:attribute name="max_user" type="xs:int"/>
                         <xs:attribute name="prison" type="xs:boolean"/>
                         <xs:attribute name="instance" type="xs:boolean"/>
+                        <xs:attribute name="looting_level" type="xs:int" use="optional"/>
+                        <xs:attribute name="looting_auth" type="xs:string" use="optional"/>
                         <xs:attribute name="water_level" type="xs:int" use="required"/>
                         <xs:attribute name="death_level" type="xs:int" use="required"/>
                         <xs:attribute name="world_type" type="worldType"/>
