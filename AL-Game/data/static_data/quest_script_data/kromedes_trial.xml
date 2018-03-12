@@ -39,10 +39,19 @@
                18634 [XML] [Instance] The Burning Spear
                18635 [XML] [Instance] The Burning Staff
                18636 [XML] [Instance] The Burning Bow
+			   18637 [XML] [Instance] The Burning Aether Revolver
+			   18638 [XML] [Instance] The Burning Aether Cannon
+			   18639 [XML] [Instance] The Burning Stringed Instrument
+			   18640 [XML] [Instance] The Burning Aether Revolver
+			   18641 [XML] [Instance] The Burning Aether Cannon
+			   18642 [XML] [Instance] The Burning Stringed Instrument
                18643 [XML] [Instance] Kaliga's Collection
                18644 [XML] [Instance] Kaliga's Collection
                18645 [XML] [Instance] Kaliga's Collection
+			   18646 [XML] [Instance] The Weeping Aether Key
+			   18647 [XML] [Instance] The Burning Aether Key
                18648 [XML] [Instance] Kaliga's Collection
+			   18649 [XML] Perento's Request
                28600 [SCRIPT] [Instance]  Suspicious Errand
                28601 [SCRIPT] [Instance]  Nightmares and Dreamscapes
                28602 [SCRIPT] [Instance]  Into the Unknown
@@ -86,6 +95,7 @@
         [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
+	<report_to id="18649" start_npc_ids="205232" end_npc_ids="204500"/>
     <!-- COLLECTING QUESTS -->
     <item_collecting id="18618" start_npc_ids="730326"/>
     <item_collecting id="18619" start_npc_ids="730327"/>
@@ -111,11 +121,11 @@
     <item_collecting id="18640" start_npc_ids="205232"/>
     <item_collecting id="18641" start_npc_ids="205232"/>
     <item_collecting id="18642" start_npc_ids="205232"/>
-    <item_collecting id="18646" start_npc_ids="205232"/>
-    <item_collecting id="18647" start_npc_ids="205232"/>
     <item_collecting id="18643" start_npc_ids="730775"/>
     <item_collecting id="18644" start_npc_ids="730776"/>
     <item_collecting id="18645" start_npc_ids="730777"/>
+	<item_collecting id="18646" start_npc_ids="205232"/>
+    <item_collecting id="18647" start_npc_ids="205232"/>
     <item_collecting id="18648" start_npc_ids="730887"/>
     <item_collecting id="18627" start_npc_ids="730335"/>
     <item_collecting id="28608" start_npc_ids="205237"/>
