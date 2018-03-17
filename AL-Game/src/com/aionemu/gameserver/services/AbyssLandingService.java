@@ -108,7 +108,12 @@ public class AbyssLandingService {
 	public static void despawn(LandingLocation loc) {
 		for (VisibleObject npc : loc.getSpawned()) {
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
-			npc.getController().onDelete();
+			if (loc.getSpawned() == null) {
+				log.warn("Trying to Delete none spawned (NPC) LocationTemplateId:" + loc.getTemplate().getId());
+				continue;
+			} else {
+				npc.getController().onDelete();
+			}
 		}
 		loc.getSpawned().clear();
 	}
