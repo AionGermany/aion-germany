@@ -1059,6 +1059,26 @@ public enum AutoGroupType {
 		}
 		return false;
 	}
+	
+	public boolean isBalaurMarching() {
+		switch (this) {
+			case BALAUR_MARCHING_ROUTE:
+				return true;
+			default:
+				break;
+		}
+		return false;
+	}
+	
+	public boolean isGoldenCrucible() {
+		switch (this) {
+			case GOLDEN_CRUCIBLE_GROUP_BATTLE:
+				return true;
+			default:
+				break;
+		}
+		return false;
+	}
  
 	public boolean isPvpArena() {
 		return isTrainingPvPFFAArena() || isPvPFFAArena() || isTrainingPvPSoloArena() || isPvPSoloArena();
