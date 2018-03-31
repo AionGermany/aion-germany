@@ -100,7 +100,7 @@ public class AdminService {
 			return true;
 		}
 
-		if (player.getAccessLevel() > 0) {
+		if(player.getAccessLevel() > 0 && player.getAccessLevel() < 4) { // run check only for 1-3 level gms
 			boolean value = list.contains(itemId);
 			String str = "GM " + player.getName() + "|" + player.getObjectId() + " (" + type + "): " + itemId + "|result=" + value;
 			if (target != null) {
