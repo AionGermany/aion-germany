@@ -129,6 +129,7 @@ public class SM_MESSAGE extends AionServerPacket {
 			case WHITE_CENTER:
 			case YELLOW_CENTER:
 			case BRIGHT_YELLOW_CENTER:
+			case BRIGHT_YELLOW_CENTER_NEW:
 				writeH(0x00); // unknown
 				writeS(message);
 				break;
@@ -158,9 +159,12 @@ public class SM_MESSAGE extends AionServerPacket {
 			case CH10:
 			case COMMAND:
 			case UNION_WAR:
+			case GMRESPONSE:
 				writeS(senderName);
 				writeS(message);
 				break;
+		default:
+			break;
 		}
 	}
 }

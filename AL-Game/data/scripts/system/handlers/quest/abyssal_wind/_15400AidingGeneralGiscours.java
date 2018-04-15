@@ -82,25 +82,20 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 			switch (targetId) {
 				case 805351: { // Jiskur
 					switch (dialog) {
-						case USE_OBJECT: {
-							if (var == 0) {
-								return sendQuestDialog(env, 1011);
-							}
-							else {
-								return sendQuestStartDialog(env);
-							}
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
 						}
 						case SETPRO1: {
 							changeQuestStep(env, 0, 1, false);
 							return closeDialogWindow(env);
 						}
 						default:
-							break;
+							return sendQuestStartDialog(env);
 					}
 				}
 				case 805352: { // Kirwa
 					switch (dialog) {
-						case USE_OBJECT: {
+						case QUEST_SELECT: {
 							if (var == 1) {
 								return sendQuestDialog(env, 1352);
 							}
@@ -123,12 +118,12 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 							return closeDialogWindow(env);
 						}
 						default:
-							break;
+							return sendQuestStartDialog(env);
 					}
 				}
 				case 805353: { // Baud
 					switch (dialog) {
-						case USE_OBJECT: {
+						case QUEST_SELECT: {
 							return sendQuestDialog(env, 1693);
 						}
 						case SETPRO3: {
@@ -136,7 +131,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 							return closeDialogWindow(env);
 						}
 						default:
-							break;
+							return sendQuestStartDialog(env);
 					}
 				}
 				case 702830: { // Troop Supply Chest
@@ -186,7 +181,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 							return closeDialogWindow(env);
 						}
 						default:
-							break;
+							return sendQuestStartDialog(env);
 					}
 				}
 				case 805355: { // Perier
@@ -200,7 +195,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 							return closeDialogWindow(env);
 						}
 						default:
-							break;
+							return sendQuestStartDialog(env);
 					}
 				}
 			}

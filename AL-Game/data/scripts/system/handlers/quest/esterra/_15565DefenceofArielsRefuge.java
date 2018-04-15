@@ -17,22 +17,22 @@
 
 package quest.esterra;
 
+import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
-import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author Phantom_KNA
+ * @rework FrozenKiller
  */
 public class _15565DefenceofArielsRefuge extends QuestHandler {
 
 	private final static int questId = 15565;
+	int[] mobs = {241285, 241286, 241287, 241288, 241289, 241290};
 
 	public _15565DefenceofArielsRefuge() {
 		super(questId);
@@ -40,16 +40,25 @@ public class _15565DefenceofArielsRefuge extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerOnEnterZone(ZoneName.get("ARIELS_REFUGE_210100000"), questId);
 		qe.registerQuestNpc(806114).addOnTalkEvent(questId); // Ilisia
 		qe.registerQuestNpc(806114).addOnTalkEvent(questId);
-		qe.registerQuestNpc(241285).addOnKillEvent(questId);
-		qe.registerQuestNpc(241286).addOnKillEvent(questId);
-		qe.registerQuestNpc(241286).addOnKillEvent(questId);
-		qe.registerQuestNpc(241287).addOnKillEvent(questId);
-		qe.registerQuestNpc(241288).addOnKillEvent(questId);
-		qe.registerQuestNpc(241289).addOnKillEvent(questId);
-		qe.registerQuestNpc(241290).addOnKillEvent(questId);
+		qe.registerOnEnterWorld(questId);
+		for (int mob : mobs) {
+			qe.registerQuestNpc(mob).addOnKillEvent(questId);
+		}
+	}
+	
+	@Override
+	public boolean onEnterWorldEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+			if (player.getLevel() >= 65 && player.getWorldId() == 210100000) {
+				QuestService.startQuest(env);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
@@ -57,10 +66,11 @@ public class _15565DefenceofArielsRefuge extends QuestHandler {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		int targetId = env.getTargetId();
+		DialogAction dialog = env.getDialog();
 
 		if (qs != null && qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 806114) { // Ilisia
-				switch (env.getDialog()) {
+				switch (dialog) {
 					case USE_OBJECT:
 						return sendQuestDialog(env, 10002);
 					case SELECT_QUEST_REWARD:
@@ -72,50 +82,23 @@ public class _15565DefenceofArielsRefuge extends QuestHandler {
 		}
 		return false;
 	}
-
+	
 	@Override
-	public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
-		if (zoneName == ZoneName.get("ARIELS_REFUGE_210100000")) {
-			Player player = env.getPlayer();
-			if (player == null)
-				return false;
-			QuestState qs = player.getQuestStateList().getQuestState(questId);
-			if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
-				QuestService.startQuest(env);
-				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
+	public boolean onKillEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(1);
+			if (var != 9) {
+				return defaultOnKillEvent(env, mobs, var, var + 1, 1);
+			} else {
+				qs.setQuestVarById(0, 10);
+				qs.setStatus(QuestStatus.REWARD);
+				updateQuestStatus(env);
 				return true;
-
 			}
 		}
 		return false;
 	}
 
-	@Override
-	public boolean onKillEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (qs == null || qs.getStatus() != QuestStatus.START)
-			return false;
-
-		int targetId = env.getTargetId();
-
-		switch (targetId) {
-			case 241285:
-			case 241286:
-			case 241287:
-			case 241288:
-			case 241289:
-			case 241290:
-				if (qs.getQuestVarById(1) != 9) {
-					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
-					updateQuestStatus(env);
-				}
-				else {
-					qs.setQuestVarById(0, 10);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-				}
-		}
-		return false;
-	}
 }
