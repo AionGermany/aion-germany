@@ -18,6 +18,11 @@
                     50030 [XML] [Event/Repeatable Event] The Alchemist's Proposal
                     50031 [XML] [Event/Daily] Deal a critical love hit
                     50032 [XML] [Event/Weekly] Extensive Critical Love Hit
+                    50125 [TODO] [Urgent Orders] Mamara's Orders
+                    50126 [XML] [Daily/Union] Governor Sunayaka
+                    50127 [XML] Keymaster of the Protectorate Treasure
+                    50128 [XML] Off to Tiamaranta's Eye
+                    50129 [XML] [Daily] Drakan Protectorate
                     51008 [SCRIPT] [Event/Daily] Non-Helping Hands
                     51010 [XML] [Event] Bitter or Sweet?
                     51019 [XML] [Event/Daily] Cutie-Wootie Choco Wuv
@@ -34,6 +39,11 @@
                     51030 [XML] [Event/Repeatable Event] The Alchemist's Proposal
                     51031 [XML] [Event/Daily] Deal a critical love hit
                     51032 [XML] [Event/Weekly] Extensive Critical Love Hit // TODO
+                    51125 [TODO] [Urgent Orders] Grimron's Orders
+                    51126 [XML] [Daily/Union] Battle against Governor Sunayaka
+                    51127 [XML] Keymaster of the Balaur Treasure
+                    51128 [XML] Into Tiamaranta's Eye
+                    51129 [XML] [Daily] Defeat Drakan Protectorate
                     80000 [SCRIPT] [Event] Joyful Daeva's Day
                     80001 [SCRIPT] [Event] Festive Daeva's Day
                     80008 [SCRIPT] [Event] Piece of Cake!
@@ -242,6 +252,8 @@
 	<report_to_many id="80624" start_npc_ids="832871" end_npc_ids="832871" start_dialog_id="1011">
 		<npc_infos npc_id="832871" var="0" quest_dialog="2375" close_dialog="1009"/>
 	</report_to_many>
+	<report_to id="50128" start_npc_ids="836452" end_npc_ids="836391"/>
+	<report_to id="51128" start_npc_ids="836454" end_npc_ids="836379"/>
     <!-- COLLECTING QUESTS -->
     <item_collecting start_npc_ids="202549" id="50010"/>
     <item_collecting start_npc_ids="202549" id="50019"/>
@@ -418,6 +430,24 @@
     </monster_hunt>
     <monster_hunt start_npc_ids="202549" id="51021">
         <monster var="0" npc_ids="217161" end_var="15"/>
+    </monster_hunt>
+	<monster_hunt start_npc_ids="205958" id="50126">
+        <monster var="0" npc_ids="219311 218553" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt start_npc_ids="205958" id="50127">
+        <monster var="0" npc_ids="219218 219191 219192 219193" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt start_npc_ids="205958" id="50129">
+        <monster var="0" npc_ids="218551 219201 219190 218547 219197 219169 218548 219198 219187 219207 218544 219194 219166 219202 218549 219199 219188 218545 219195 219167 218550 219200 219189 218546 219196 219168" end_var="20"/>
+    </monster_hunt>
+	<monster_hunt start_npc_ids="205960" id="51126">
+        <monster var="0" npc_ids="219311 218553" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt start_npc_ids="205960" id="51127">
+        <monster var="0" npc_ids="219218 219191 219192 219193" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt start_npc_ids="205960" id="51129">
+        <monster var="0" npc_ids="218551 219201 219190 218547 219197 219169 218548 219198 219187 219207 218544 219194 219166 219202 218549 219199 219188 218545 219195 219167 218550 219200 219189 218546 219196 219168" end_var="20"/>
     </monster_hunt>
 	<monster_hunt start_npc_ids="832923" id="80691">
         <monster var="0" npc_ids="235629 235630 235652 235653 235641 235633 235637 235650 235635 235651 235681 235680" end_var="500"/>
