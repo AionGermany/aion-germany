@@ -96,12 +96,16 @@ public class _10520LostMemories extends QuestHandler {
                         break;
                 }
             } else if (targetId == 806073) { //Messenger Pellen
-                switch (env.getDialog()) {
-                    case QUEST_SELECT:
+                switch (dialog) {
+                    case QUEST_SELECT: {
                         return sendQuestDialog(env, 1693);
-                    case SETPRO3:
+                    }
+                    case SETPRO3: {
                         changeQuestStep(env, 2, 3, false); //2
                         return closeDialogWindow(env);
+                    }
+                    default:
+                    	break;
                 }
             } else if (targetId == 203726) { //Polyidus
                 switch (dialog) {
@@ -148,14 +152,11 @@ public class _10520LostMemories extends QuestHandler {
         }
 
         if (qs.getStatus() == QuestStatus.START) {
-            int var = qs.getQuestVarById(0);
             if (item.getItemTemplate().getTemplateId() == 182215973) { //Sealed Letter from Pernos
-                //if (var == 1) {
                 qs.setQuestVar(2); //1
                 updateQuestStatus(env);
                 removeQuestItem(env, 182215973, 1);
                 return HandlerResult.SUCCESS;
-                //}
             }
         }
         return HandlerResult.FAILED;

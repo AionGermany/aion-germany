@@ -101,11 +101,15 @@ public class _20520LostMemories extends QuestHandler {
                 }
             } else if (targetId == 806077) { //Messenger Edorin
                 switch (env.getDialog()) {
-                    case QUEST_SELECT:
+                    case QUEST_SELECT: {
                         return sendQuestDialog(env, 1693);
-                    case SETPRO3:
+                    }
+                    case SETPRO3: {
                         changeQuestStep(env, 2, 3, false); //2
                         return closeDialogWindow(env);
+                    }
+                    default:
+                    	break;
                 }
             } else if (targetId == 204191) { //Doman
                 switch (dialog) {
@@ -152,14 +156,11 @@ public class _20520LostMemories extends QuestHandler {
         }
 
         if (qs.getStatus() == QuestStatus.START) {
-            int var = qs.getQuestVarById(0);
             if (item.getItemTemplate().getTemplateId() == 182215974) { //Sealed Letter from Munin
-                //if (var == 1) {
                 qs.setQuestVar(2); //1
                 updateQuestStatus(env);
                 removeQuestItem(env, 182215974, 1); //Orders to report to Norsvold
                 return HandlerResult.SUCCESS;
-                //}
             }
         }
         return HandlerResult.FAILED;
