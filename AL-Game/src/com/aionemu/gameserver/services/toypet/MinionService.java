@@ -254,17 +254,17 @@ public class MinionService {
 	}
 
 	public void despawnMinion(Player player, int minionObjId) {
-		Minion minion = player.getMinion();
-		Iterator<MinionSkill> iterator = DataManager.MINION_DATA.getMinionTemplate(minion.getMinionId()).getAction().getSkillsCollections().iterator();
+		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
+		Iterator<MinionSkill> iterator = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId()).getAction().getSkillsCollections().iterator();
 		while (iterator.hasNext()) {
 			SkillLearnService.removeSkill(player, iterator.next().getSkillId());
 		}
-		minion.getCommonData().setIsLooting(false);
-		minion.getCommonData().setIsBuffing(false);
-		minion.getController().delete();
+		minionCommonData.setIsLooting(false);
+		minionCommonData.setIsBuffing(false);
+		player.getMinion().getController().delete();
 		player.setMinion(null);
 		minionbuff.end(player);
-		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(6, minionObjId, player));
+		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(6, minionCommonData));
 	}
 
 	public void growthUpMinion(Player player, int minionObjectId, List<Integer> material) {
@@ -337,26 +337,25 @@ public class MinionService {
 	}
 
 	public void deleteMinion(Player player, int minionObjId, boolean isMaterial) { 
-		int minionObj = 0;
-		if (minionObjId != 0) {
-			minionObj = player.getMinionList().getMinion(minionObjId).getObjectId();
+		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
+		if (minion != null) {
+	        player.getMinionList().deleteMinion(minion.getObjectId());
+	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(2, isMaterial, minion), true);
 		} else {
 			return;
 		}
-        player.getMinionList().deleteMinion(minionObjId);
-        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(2, isMaterial, minionObj), true);
 	}
 
 	public void lockMinion(Player player, int minionObjId, int lock) {
-		MinionCommonData playerMinion = player.getMinionList().getMinion(minionObjId);
+		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
 		if (lock == 1) {
-			playerMinion.setLock(true);
+			minion.setLock(true);
 			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 1);
-	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, playerMinion), true);
+	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, minion), true);
 		} else {
-			playerMinion.setLock(false);
+			minion.setLock(false);
 			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 0);
-	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, playerMinion), true);
+	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, minion), true);
 		}
 	}
 
@@ -590,8 +589,8 @@ public class MinionService {
 		if (addNewMinion != null) {
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, addNewMinion, (result ? 2 : 3)));
 		}
-		for(int minionid : minionObjIds){
-			deleteMinion(player, minionid, true);
+		for(int minionObjId : minionObjIds){
+			deleteMinion(player, minionObjId, true);
 		}
 		minionObjIds.clear();
 		player.getMinionList().updateMinionsList();

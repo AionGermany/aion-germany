@@ -20,7 +20,9 @@ import java.util.Collection;
 
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerMinionsDAO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MINIONS;
 import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
@@ -48,10 +50,12 @@ public class MinionList {
 	}
 	
 	public void updateMinionsList() {
+		minions.clear();
 		for (MinionCommonData minionCommonData : DAOManager.getDAO(PlayerMinionsDAO.class).getPlayerMinions(player)) {
-			if (!minions.containsKey(minionCommonData.getObjectId())) {
 				minions.put(minionCommonData.getObjectId(), minionCommonData);
-			}
+		}
+		if(minions !=null) {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(0, player.getMinionList().getMinions()));
 		}
 		return;
 	}

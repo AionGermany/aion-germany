@@ -18,7 +18,6 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 
 import java.util.Collection;
 
-import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
@@ -29,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_MINIONS extends AionServerPacket {
 	private int action;
-	private int minionObjId;
 	@SuppressWarnings("unused")
 	private int expiredTimeMillis;
 	private int minionSkillPoints;
@@ -48,16 +46,6 @@ public class SM_MINIONS extends AionServerPacket {
 	private boolean isloot;
 	private int lootNpcId;
 
-	public SM_MINIONS(int action, int minionObjId, Minion minion) {
-		this.action = action;
-		this.minionObjId = minionObjId;
-		this.commonData = minion.getCommonData();
-	}
-	
-	public SM_MINIONS(int action, Minion minion) {
-		this(action, minion.getCommonData().getObjectId(), minion);
-	}
-	
 	public SM_MINIONS(int action) {
 		this.action = action;
 	}
@@ -68,12 +56,6 @@ public class SM_MINIONS extends AionServerPacket {
 		this.autoCharge = autoCharge;
 	}
 
-	public SM_MINIONS(int action, int minionObjId, Player player) {
-		this.action = action;
-		this.minionObjId = minionObjId;
-		this.player = player;
-	}
-	
 	public SM_MINIONS(int action, MinionCommonData commonData, int addType) {
 		this.action = action;
 		this.commonData = commonData;
@@ -138,10 +120,10 @@ public class SM_MINIONS extends AionServerPacket {
         }
     }
 	
-	public SM_MINIONS(int action, boolean isMaterial , int minionObjId) {
+	public SM_MINIONS(int action, boolean isMaterial , MinionCommonData commonData) {
         this.action = action;
         this.isMaterial = isMaterial;
-        this.minionObjId = minionObjId;
+        this.commonData = commonData;
     }
 
 	@Override
@@ -203,11 +185,11 @@ public class SM_MINIONS extends AionServerPacket {
 				break;
 			}
 			case 2: {//delete
-                if (commonData == null) {
+				if (commonData == null) {
                     return;
                 }
                 writeH(isMaterial ? 1 : 0);
-                writeD(minionObjId);
+                writeD(commonData.getObjectId());
                 break;
             }
 			case 3: {//rename
@@ -240,11 +222,11 @@ public class SM_MINIONS extends AionServerPacket {
                 if (commonData == null) {
                     return;
                 }
-				writeD(minionObjId);
-				if (player != null && player.getLifeStats().isAlreadyDead()) {
-                    writeC(0);
-                    break;
-                }
+				writeD(commonData.getObjectId());
+//				if (player != null && player.getLifeStats().isAlreadyDead()) {
+//                    writeC(0);
+//                    break;
+//                }
 				writeC(21);
 				break;
 			}

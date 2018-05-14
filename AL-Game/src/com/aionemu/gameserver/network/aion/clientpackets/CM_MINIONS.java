@@ -73,7 +73,7 @@ public class CM_MINIONS extends AionClientPacket {
                 break;
 			case 4: // summon
 			case 5: // unsummon
-				objectId = readD(); // Minion Unique ID
+				minionObjectId = readD(); // Minion Unique ID
 				break;
 			case 6: // ascension
 				MaterialObjIds.clear();
@@ -192,10 +192,10 @@ public class CM_MINIONS extends AionClientPacket {
 				if (player.getPet() != null) {
 					PetSpawnService.dismissPet(player, true);
 				}
-				MinionService.getInstance().spawnMinion(player, objectId);
+				MinionService.getInstance().spawnMinion(player, minionObjectId);
 				break;
 			case 5:
-				MinionService.getInstance().despawnMinion(player, objectId);
+				MinionService.getInstance().despawnMinion(player, minionObjectId);
 				break;
 			case 6:
 				MinionService.getInstance().growthUpMinion(player, objectId, MaterialObjIds);
