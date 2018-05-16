@@ -247,11 +247,11 @@ public class LunaShopService {
 			DAOManager.getDAO(PlayerLunaShopDAO.class).add(player.getObjectId(), pls.isFreeUnderpath(), pls.isFreeFactory(), pls.isFreeChest());
 		}
 
-		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(6));
+//		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(6));
 		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(7));
 		sendSpecialCraft(player);
 		sendDailyCraft(player);
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < 9; i++) {
 			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(8, i, 0));
 		}
 		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(0, player.getLunaAccount()));

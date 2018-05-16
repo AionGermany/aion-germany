@@ -135,10 +135,10 @@ public class SM_LUNA_SYSTEM_INFO extends AionServerPacket {
 				writeC(0);
 				writeH(100);
 				break;
-			case 8:
-				writeH(tableId);
-				writeD(-1);
-				writeC(0);
+			case 8:// Updated for 5.8 on 16.05.2018
+				writeH(tableId <= 5 ? tableId : (tableId - 1));
+				writeD(10 + tableId);
+				writeC((tableId + 10) == 16 ? 1 : 0);
 				break;
 			case 9:
 				writeH(-1);
