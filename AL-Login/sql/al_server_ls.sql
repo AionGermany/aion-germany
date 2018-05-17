@@ -22,6 +22,7 @@ CREATE TABLE `account_data` (
   `question` varchar(50) DEFAULT NULL,
   `answer` varchar(50) DEFAULT NULL,
   `balance` float DEFAULT NULL,
+  `luna` bigint(13) NOT NULL DEFAULT '0',
   `return_account` tinyint(1) NOT NULL DEFAULT '0',
   `return_end` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
