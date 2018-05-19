@@ -91,6 +91,14 @@
                15640 [SCRIPT] [Daily] Strange Creatures in Esterra
                15665 [XML] Living Fossils
                15666 [XML] Guardian of the Ancient Garden of Light
+               15694 [XML] [Weekly] Shadows out to get the Garrison at Tarha Village
+               15695 [XML] [Weekly] Archons out to get the Garrison at Tarha Village
+               15696 [XML] [Weekly] Shadows out to get the Garrison at the Aether Temple
+               15697 [XML] [Weekly] Archons out to get the Garrison at the Aether Temple
+               15698 [XML] [Weekly] Shadows out to get the Garrison at the Coast of the Doomed
+               15699 [XML] [Weekly] Archons out to get the Garrison at the Coast of the Doomed
+               15700 [XML] [Weekly] Shadows out to get the Garrison in the Wind Valley
+               15701 [XML] [Weekly] Archons out to get the Garrison in the Wind Valley
                80927 [TODO] The Immortal Light Refuge
                80928 [TODO] The Twilight Garden
                80929 [TODO] Garden Work
@@ -116,4 +124,28 @@
 	<item_collecting id="15665" start_npc_ids="806089" start_dialog_id="4762" start_dialog_id2="1011"/>
 	<item_collecting id="15666" start_npc_ids="806090" start_dialog_id="4762" start_dialog_id2="1011"/>
     <!-- HUNTING QUESTS -->
+    <monster_hunt id="15694" start_npc_ids="806794">
+        <monster npc_ids="885547 885548 885549 885550" var="0" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="15695" start_npc_ids="806794">
+        <monster npc_ids="885531 885532 885533 885534" var="0" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="15696" start_npc_ids="806795">
+        <monster npc_ids="885543 885544 885545 885546" var="0" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="15697" start_npc_ids="806795">
+        <monster npc_ids="885527 885528 885529 885530" var="0" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="15698" start_npc_ids="806796">
+        <monster npc_ids="885535 885536 885537 885538" var="0" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="15699" start_npc_ids="806796">
+        <monster npc_ids="885519 885520 885521 885522" var="0" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="15700" start_npc_ids="806797">
+        <monster npc_ids="885539 885540 885541 885542" var="0" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="15701" start_npc_ids="806797">
+        <monster npc_ids="885523 885524 885525 885526" var="0" end_var="5"/>
+    </monster_hunt>
 </quest_scripts>
