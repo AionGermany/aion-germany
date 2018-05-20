@@ -509,6 +509,13 @@ public class SiegeService {
 				}
 			}
 		}
+		World.getInstance().doOnAllPlayers(new Visitor<Player>() {
+
+			@Override
+			public void visit(Player player) {
+				player.getController().updateNearbyQuests();
+			}
+		});
 	}
 
 	public void deSpawnNpcs(int siegeLocationId) {

@@ -140,7 +140,7 @@ public class RiftInformer {
 		FastMap<Integer, Integer> localRifts = new FastMap<Integer, Integer>();
 
 		// init empty list
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < 14; i++) { //OLD 8 (TODO)
 			localRifts.put(i, 0);
 		}
 

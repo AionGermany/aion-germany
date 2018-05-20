@@ -165,18 +165,20 @@ public class MonsterHunt extends QuestHandler {
 		else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (endNpcs.contains(targetId)) {
 				if (!aggroNpcs.isEmpty()) {
-					switch (dialog) {
-						case QUEST_SELECT:
-						case USE_OBJECT:
-							return sendQuestDialog(env, 10002);
-						case SELECT_QUEST_REWARD:
-							return sendQuestDialog(env, 5);
-						default:
-							return sendQuestEndDialog(env);
+					return sendQuestStartDialog(env);
+				} else {
+					if (endDialog != 0) {
+						switch (dialog) {
+							case USE_OBJECT:
+								return sendQuestDialog(env, 10002);
+							case SELECT_QUEST_REWARD:
+								return sendQuestDialog(env, 5);
+							default:
+								return sendQuestEndDialog(env);
+						}
+					} else {
+						return sendQuestEndDialog(env);
 					}
-				}
-				else {
-					return sendQuestEndDialog(env);
 				}
 			}
 		}

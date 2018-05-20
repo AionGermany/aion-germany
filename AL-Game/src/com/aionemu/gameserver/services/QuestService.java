@@ -106,6 +106,7 @@ public final class QuestService {
 
 	static QuestsData questsData = DataManager.QUEST_DATA;
 	private static final Logger log = LoggerFactory.getLogger(QuestService.class);
+	private static final Logger log2 = LoggerFactory.getLogger("QUEST_LOG"); 
 	private static Multimap<Integer, QuestDrop> questDrop = ArrayListMultimap.create();
 
 	public static boolean finishQuest(QuestEnv env) {
@@ -697,6 +698,10 @@ public final class QuestService {
 		QuestStateList qsl = player.getQuestStateList();
 		QuestState qs = qsl.getQuestState(id);
 		QuestTemplate template = questsData.getQuestById(env.getQuestId());
+		if (template == null) {
+			log2.info("[QuestService] Can't find Quest: " + env.getQuestId() + " in quest_data.xml");
+			return false;
+		}
 		if (template.getNpcFactionId() != 0) {
 			NpcFaction faction = player.getNpcFactions().getNpcFactinById(template.getNpcFactionId());
 			if (!faction.isActive() || faction.getQuestId() != env.getQuestId()) {

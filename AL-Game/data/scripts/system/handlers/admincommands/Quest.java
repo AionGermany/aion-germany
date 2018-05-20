@@ -166,9 +166,19 @@ public class Quest extends AdminCommand {
 				qs.setQuestVar(var);
 			}
 			PacketSendUtility.sendPacket(target, new SM_QUEST_ACTION(questId, qs.getStatus(), qs.getQuestVars().getQuestVars()));
-			if (questStatus == QuestStatus.COMPLETE) {
-				qs.setCompleteCount(qs.getCompleteCount() + 1);
-				target.getController().updateNearbyQuests();
+			
+			switch (questStatus) {
+				case REWARD: {
+					target.getController().updateNearbyQuests();
+					break;
+				}
+				case COMPLETE: {
+					qs.setCompleteCount(qs.getCompleteCount() + 1);
+					target.getController().updateNearbyQuests();
+					break;
+				}
+				default:
+					break;
 			}
 		}
 		if (params[0].equals("delete")) {
