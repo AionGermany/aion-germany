@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import com.aionemu.gameserver.model.templates.item.ItemPreSettingTemplate;
+import com.aionemu.gameserver.services.item.ItemSocketService;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -112,6 +114,18 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 		if (optionSlotBonus != 0) {
 			optionalSocket = -1;
 		}
+
+        //add custom item set
+        ItemPreSettingTemplate itemPreSettingTemplate = DataManager.ITEM_PRESETTING_DATA.getItemPreSettingTemplate(itemTemplate.getTemplateId());
+        if (itemPreSettingTemplate != null) {
+            this.enchantLevel = itemPreSettingTemplate.getEnchant_level();
+            if (itemPreSettingTemplate.getMana_stone() != null && itemPreSettingTemplate.getMana_stone().size() > 0) {
+                for (int i = 0; i < itemPreSettingTemplate.getMana_stone().size(); i++) {
+                    ItemSocketService.addManaStone(this, itemPreSettingTemplate.getMana_stone().get(i), i);
+                }
+            }
+        }
+
 		this.persistentState = PersistentState.NEW;
 		updateChargeInfo(0);
 	}

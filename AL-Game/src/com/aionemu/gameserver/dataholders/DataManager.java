@@ -143,7 +143,7 @@ public final class DataManager {
 	public static MinionData MINION_DATA;
 	public static MonsterbookData MONSTERBOOK_DATA;
 	public static BoostEventData BOOST_EVENT_DATA;
-
+	public static ItemPresettingData ITEM_PRESETTING_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -272,6 +272,7 @@ public final class DataManager {
 		MINION_DATA = data.minionData;
 		MONSTERBOOK_DATA = data.monsterbookData;
 		BOOST_EVENT_DATA = data.boostEvents;
+		ITEM_PRESETTING_DATA = data.itemPresettingData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message
