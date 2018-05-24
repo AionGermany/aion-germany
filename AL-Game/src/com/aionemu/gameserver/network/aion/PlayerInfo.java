@@ -156,16 +156,19 @@ public abstract class PlayerInfo extends AionServerPacket {
 				continue;
 			}
 
-			if (itemTemplate.isArmor() || itemTemplate.isWeapon()) {
-				if (itemTemplate.getItemSlot() <= ItemSlot.PANTS.getSlotIdMask()) {
-					writeC(1); // this flas is needed to show equipment on selection screen
-					writeD(item.getItemSkinTemplate().getTemplateId());
-					GodStone godStone = item.getGodStone();
-					writeD(godStone != null ? godStone.getItemId() : 0);
-					writeD(item.getItemColor());
-
-					itemsDataSize += 13;
+			if (ItemSlot.isDisplaySlot(item.getEquipmentSlot())) {
+				if (item.getEquipmentSlot() == ItemSlot.SUB_HAND.getSlotIdMask()
+						|| item.getEquipmentSlot() == ItemSlot.EARRINGS_LEFT.getSlotIdMask()
+						|| item.getEquipmentSlot() == ItemSlot.RING_LEFT.getSlotIdMask()) {
+					writeC(0x02);
+				} else {
+					writeC(0x01);
 				}
+				writeD(item.getItemSkinTemplate().getTemplateId());
+				GodStone godStone = item.getGodStone();
+				writeD((godStone != null) ? godStone.getItemId() : 0);
+				writeD(item.getItemColor());
+				itemsDataSize += 13;
 			}
 		}
 

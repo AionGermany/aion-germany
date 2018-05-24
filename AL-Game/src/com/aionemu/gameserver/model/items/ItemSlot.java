@@ -87,7 +87,10 @@ public enum ItemSlot {
 	ESTIMA5(1L << 44), // 17592186044416L
 	ESTIMA6(1L << 45), // 35184372088832L
 
-	ESTIMA(ESTIMA1.slotIdMask | ESTIMA2.slotIdMask | ESTIMA3.slotIdMask | ESTIMA4.slotIdMask | ESTIMA5.slotIdMask | ESTIMA6.slotIdMask, true);
+	ESTIMA(ESTIMA1.slotIdMask | ESTIMA2.slotIdMask | ESTIMA3.slotIdMask | ESTIMA4.slotIdMask | ESTIMA5.slotIdMask | ESTIMA6.slotIdMask, true),
+	VIEW_DISPLAY(MAIN_HAND.slotIdMask | SUB_HAND.slotIdMask | HELMET.slotIdMask | TORSO.slotIdMask | GLOVES.slotIdMask | BOOTS.slotIdMask
+			| EARRINGS_LEFT.slotIdMask | EARRINGS_RIGHT.slotIdMask | RING_LEFT.slotIdMask | RING_RIGHT.slotIdMask | NECKLACE.slotIdMask | SHOULDER.slotIdMask
+			| PANTS.slotIdMask | WINGS.slotIdMask | WAIST.slotIdMask | PLUME.slotIdMask, true);//13 * 16 = 208...
 
 	private long slotIdMask;
 	private boolean combo;
@@ -146,4 +149,7 @@ public enum ItemSlot {
 		throw new IllegalArgumentException("Invalid provided slotIdMask " + slot);
 	}
 
+	public static boolean isDisplaySlot(long slot) {
+		return (VIEW_DISPLAY.slotIdMask & slot) == slot;
+	}
 }

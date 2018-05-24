@@ -19,6 +19,8 @@ package com.aionemu.gameserver.services;
 import java.util.List;
 import java.util.Map;
 
+import javolution.util.FastMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +41,7 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.landingspawns.LandingSpawnTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ABYSS_LANDING;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ABYSS_LANDING_LEVEL;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.abysslandingservice.AbyssLanding;
 import com.aionemu.gameserver.services.abysslandingservice.Landing;
@@ -47,14 +50,14 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
-import javolution.util.FastMap;
-
 public class AbyssLandingService {
 
 	private static Logger log = LoggerFactory.getLogger(AbyssLandingService.class);
 	private static Map<Integer, LandingLocation> abyssLanding;
 	private final Map<Integer, Landing<?>> activeLanding = new FastMap<Integer, Landing<?>>().shared();
 	private final int questRate = AbyssLandingConfig.ABYSS_LANDING_QUEST_RATE;
+	private static final Object RedemptionGuard = new Object();
+	private static final Object HarbingerLGuard = new Object();
 
 	public void initLandingLocations() {
 		abyssLanding = DataManager.LANDING_LOCATION_DATA.getLandingLocations();
@@ -92,8 +95,7 @@ public class AbyssLandingService {
 	}
 
 	public static void spawn(LandingLocation loc, LandingStateType estate) {
-		if (estate.equals(estate)) {
-		}
+
 		List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getLandingSpawnsByLocId(loc.getId());
 		for (SpawnGroup2 group : locSpawns) {
 			for (SpawnTemplate st : group.getSpawnTemplates()) {
@@ -111,7 +113,8 @@ public class AbyssLandingService {
 			if (loc.getSpawned() == null) {
 				log.warn("Trying to Delete none spawned (NPC) LocationTemplateId:" + loc.getTemplate().getId());
 				continue;
-			} else {
+			}
+			else {
 				npc.getController().onDelete();
 			}
 		}
@@ -119,104 +122,107 @@ public class AbyssLandingService {
 	}
 
 	public void updateRedemptionLanding(int points, LandingPointsEnum type, boolean win) {
-		LandingLocation loc = redemptionLanding();
-		if (win) {
-			switch (type) {
-				case BASE:
-					loc.setBasePoints(loc.getBasePoints() + points);
-					break;
-				case SIEGE:
-					loc.setSiegePoints(loc.getSiegePoints() + points);
-					break;
-				case COMMANDER:
-					loc.setCommanderPoints(loc.getCommanderPoints() + points);
-					break;
-				case ARTIFACT:
-					loc.setArtifactPoints(loc.getArtifactPoints() + points);
-					break;
-				case QUEST:
-					loc.setQuestPoints(loc.getQuestPoints() + (points * questRate));
-					break;
-				case MONUMENT:
-					loc.setMonumentsPoints(loc.getMonumentsPoints() + points);
-					break;
-				case FACILITY:
-					loc.setFacilityPoints(loc.getFacilityPoints() + points);
-					break;
+		synchronized (RedemptionGuard) {
+			LandingLocation loc = redemptionLanding();
+			if (win) {
+				switch (type) {
+					case BASE:
+						loc.setBasePoints(loc.getBasePoints() + points);
+						break;
+					case SIEGE:
+						loc.setSiegePoints(loc.getSiegePoints() + points);
+						break;
+					case COMMANDER:
+						loc.setCommanderPoints(loc.getCommanderPoints() + points);
+						break;
+					case ARTIFACT:
+						loc.setArtifactPoints(loc.getArtifactPoints() + points);
+						break;
+					case QUEST:
+						loc.setQuestPoints(loc.getQuestPoints() + (points * questRate));
+						break;
+					case MONUMENT:
+						loc.setMonumentsPoints(loc.getMonumentsPoints() + points);
+						break;
+					case FACILITY:
+						loc.setFacilityPoints(loc.getFacilityPoints() + points);
+						break;
+				}
 			}
-		}
-		else {
-			switch (type) {
-				case BASE:
-					if (loc.getBasePoints() < points) {
-						return;
-					}
-					else {
-						loc.setBasePoints(loc.getBasePoints() - points);
-					}
-					break;
-				case SIEGE:
-					if (loc.getSiegePoints() < points) {
-						return;
-					}
-					else {
-						loc.setSiegePoints(loc.getSiegePoints() - points);
-					}
-					break;
-				case COMMANDER:
-					if (loc.getCommanderPoints() < points) {
-						return;
-					}
-					else {
-						loc.setCommanderPoints(loc.getCommanderPoints() - points);
-					}
-					break;
-				case ARTIFACT:
-					if (loc.getArtifactPoints() < points) {
-						return;
-					}
-					else {
-						loc.setArtifactPoints(loc.getArtifactPoints() - points);
-					}
-					break;
-				case QUEST:
-					if (loc.getQuestPoints() < (points * questRate)) {
-						return;
-					}
-					else {
-						loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
-					}
-					break;
-				case MONUMENT:
-					if (loc.getMonumentsPoints() < points) {
-						return;
-					}
-					else {
-						loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
-					}
-					break;
-				case FACILITY:
-					if (loc.getFacilityPoints() < points) {
-						return;
-					}
-					else {
-						loc.setFacilityPoints(loc.getFacilityPoints() - points);
-					}
-					break;
+			else {
+				switch (type) {
+					case BASE:
+						if (loc.getBasePoints() < points) {
+							return;
+						}
+						else {
+							loc.setBasePoints(loc.getBasePoints() - points);
+						}
+						break;
+					case SIEGE:
+						if (loc.getSiegePoints() < points) {
+							return;
+						}
+						else {
+							loc.setSiegePoints(loc.getSiegePoints() - points);
+						}
+						break;
+					case COMMANDER:
+						if (loc.getCommanderPoints() < points) {
+							return;
+						}
+						else {
+							loc.setCommanderPoints(loc.getCommanderPoints() - points);
+						}
+						break;
+					case ARTIFACT:
+						if (loc.getArtifactPoints() < points) {
+							return;
+						}
+						else {
+							loc.setArtifactPoints(loc.getArtifactPoints() - points);
+						}
+						break;
+					case QUEST:
+						if (loc.getQuestPoints() < (points * questRate)) {
+							return;
+						}
+						else {
+							loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
+						}
+						break;
+					case MONUMENT:
+						if (loc.getMonumentsPoints() < points) {
+							return;
+						}
+						else {
+							loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
+						}
+						break;
+					case FACILITY:
+						if (loc.getFacilityPoints() < points) {
+							return;
+						}
+						else {
+							loc.setFacilityPoints(loc.getFacilityPoints() - points);
+						}
+						break;
+				}
 			}
+			int totalScore = loc.getArtifactPoints() + loc.getCommanderPoints() + loc.getFacilityPoints() + loc.getBasePoints() + loc.getMonumentsPoints() + loc.getQuestPoints() + loc.getSiegePoints();
+			loc.setPoints(totalScore);
+			if (win) {
+				checkRedemptionLanding(totalScore, true);
+			}
+			else {
+				checkRedemptionLanding(totalScore, false);
+			}
+			onUpdate();
 		}
-		int totalScore = loc.getArtifactPoints() + loc.getCommanderPoints() + loc.getFacilityPoints() + loc.getBasePoints() + loc.getMonumentsPoints() + loc.getQuestPoints() + loc.getSiegePoints();
-		loc.setPoints(totalScore);
-		if (win) {
-			checkRedemptionLanding(totalScore, true);
-		}
-		else {
-			checkRedemptionLanding(totalScore, false);
-		}
-		onUpdate();
 	}
 
 	public void updateHarbingerLanding(int points, LandingPointsEnum type, boolean win) {
+        synchronized (HarbingerLGuard) {
 		LandingLocation loc = harbingerLanding();
 		if (win) {
 			switch (type) {
@@ -242,8 +248,7 @@ public class AbyssLandingService {
 					loc.setFacilityPoints(loc.getFacilityPoints() + points);
 					break;
 			}
-		}
-		else {
+		} else {
 			switch (type) {
 				case BASE:
 					if (loc.getBasePoints() < points) {
@@ -301,17 +306,19 @@ public class AbyssLandingService {
 						loc.setFacilityPoints(loc.getFacilityPoints() - points);
 					}
 					break;
+				}
 			}
-		}
+			
 		int totalScore = loc.getArtifactPoints() + loc.getCommanderPoints() + loc.getFacilityPoints() + loc.getBasePoints() + loc.getMonumentsPoints() + loc.getQuestPoints() + loc.getSiegePoints();
 		loc.setPoints(totalScore);
+		
 		if (win) {
 			checkHarbingerLanding(totalScore, true);
-		}
-		else {
+		} else {
 			checkHarbingerLanding(totalScore, false);
 		}
-		onUpdate();
+			onUpdate();
+        }
 	}
 
 	public void AnnounceToPoints(final Player pl, final DescriptionId race, final DescriptionId name, final int points, final LandingPointsEnum type) {
@@ -409,62 +416,67 @@ public class AbyssLandingService {
 		}
 	}
 
-	public void levelUpRedemptionLanding(int level) {
+	public void levelUpRedemptionLanding(final int level) {
 		redemptionLanding().setLevel(level);
 		stopLanding(redemptionLanding().getId());
 		startLanding(redemptionLanding().getId());
 		World.getInstance().doOnAllPlayers(new Visitor<Player>() {
-
+			
 			@Override
 			public void visit(Player player) {
 				// Landing Level Up
+				PacketSendUtility.sendPacket(player, new SM_ABYSS_LANDING_LEVEL(redemptionLanding().getTemplate().getRace().getRaceId(), level));
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_UP_LIGHT);
 			}
 		});
 	}
 
-	public void levelUpHarbingerLanding(int level) {
+	public void levelUpHarbingerLanding(final int level) {
 		harbingerLanding().setLevel(level);
 		stopLanding(harbingerLanding().getId());
 		startLanding(harbingerLanding().getId());
 		World.getInstance().doOnAllPlayers(new Visitor<Player>() {
-
+			
 			@Override
 			public void visit(Player player) {
 				// Landing Level Up
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_UP_DARK);
+				 PacketSendUtility.sendPacket(player, new SM_ABYSS_LANDING_LEVEL(harbingerLanding().getTemplate().getRace().getRaceId(), level));
+				 PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_UP_DARK);
 			}
 		});
 	}
 
-	public void onHarbingerLandingLevelDown(int level) {
+	public void onHarbingerLandingLevelDown(final int level) {
 		harbingerLanding().setLevel(level);
 		stopLanding(harbingerLanding().getId());
 		startLanding(harbingerLanding().getId());
 		World.getInstance().doOnAllPlayers(new Visitor<Player>() {
-
+			
 			@Override
 			public void visit(Player player) {
 				// Landing Weakened
+				PacketSendUtility.sendPacket(player, new SM_ABYSS_LANDING_LEVEL(harbingerLanding().getTemplate().getRace().getRaceId(), level));
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_DOWN);
 			}
 		});
 	}
 
-	public void onRedemptionLandinggLevelDown(int level) {
+
+	public void onRedemptionLandinggLevelDown(final int level) {
 		redemptionLanding().setLevel(level);
 		stopLanding(redemptionLanding().getId());
 		startLanding(redemptionLanding().getId());
 		World.getInstance().doOnAllPlayers(new Visitor<Player>() {
-
+			
 			@Override
 			public void visit(Player player) {
 				// Landing Weakened
+				PacketSendUtility.sendPacket(player, new SM_ABYSS_LANDING_LEVEL(redemptionLanding().getTemplate().getRace().getRaceId(), level));
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_DOWN);
 			}
 		});
 	}
-
+	
 	/**
 	 * MONUMENT
 	 */
@@ -535,6 +547,9 @@ public class AbyssLandingService {
 
 	public void onEnterWorld(Player player) {
 		PacketSendUtility.sendPacket(player, new SM_ABYSS_LANDING());
+		for (LandingLocation loc : AbyssLandingService.getLandingLocations().values()) {
+			PacketSendUtility.sendPacket(player, new SM_ABYSS_LANDING_LEVEL(loc.getTemplate().getRace().getRaceId(), loc.getLevel()));
+		}
 	}
 
 	public void onUpdate() {

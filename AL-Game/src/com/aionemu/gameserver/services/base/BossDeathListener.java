@@ -61,12 +61,15 @@ public class BossDeathListener extends OnDieEventCallback {
 		if (winner instanceof Creature) {
 			final Creature kill = (Creature) winner;
 			applyBaseBuff();
-			if (BaseConfig.ENABLE_BASE_REWARDS) {
-				giveBaseRewardsToPlayers((Player) kill);
-			}
-			if (kill.getRace().isPlayerRace()) {
-				base.setRace(kill.getRace());
-				race = kill.getRace();
+            if (kill.getRace().isPlayerRace()) {
+                base.setRace(kill.getRace());
+                race = kill.getRace();
+
+                if (BaseConfig.ENABLE_BASE_REWARDS) {
+                    if (kill instanceof Player) {
+                        giveBaseRewardsToPlayers((Player) kill);
+                    }
+                }
 			}
 			announceCapture(null, kill);
 		}
