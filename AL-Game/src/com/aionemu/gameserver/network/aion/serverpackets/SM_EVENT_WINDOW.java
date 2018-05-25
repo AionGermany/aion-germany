@@ -24,7 +24,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author FrozenKiller
  */
-public class SM_UNK_154 extends AionServerPacket {
+public class SM_EVENT_WINDOW extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
