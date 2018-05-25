@@ -207,7 +207,7 @@ public class PlayerService {
 		player.setCP(DAOManager.getDAO(PlayerCreativityPointsDAO.class).loadCP(player));
 		player.setMonsterbook(DAOManager.getDAO(PlayerMonsterbookDAO.class).load(player));
 		player.setWardrobe(DAOManager.getDAO(PlayerWardrobeDAO.class).load(player));
-		DAOManager.getDAO(Free2PlayDAO.class).loadF2pInfo(player);
+		DAOManager.getDAO(Free2PlayDAO.class).loadF2pInfo(player, account.getId());
 		DAOManager.getDAO(PlayerSettingsDAO.class).loadSettings(player);
 		DAOManager.getDAO(AbyssRankDAO.class).loadAbyssRank(player);
 		DAOManager.getDAO(PlayerNpcFactionsDAO.class).loadNpcFactions(player);

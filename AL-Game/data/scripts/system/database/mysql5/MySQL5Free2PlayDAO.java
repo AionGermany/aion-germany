@@ -30,22 +30,25 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.f2p.F2p;
 import com.aionemu.gameserver.model.gameobjects.player.f2p.F2pAccount;
 
+/**
+ * edited by teenwolf
+ */
 public class MySQL5Free2PlayDAO extends Free2PlayDAO {
 
 	private static final Logger log = LoggerFactory.getLogger(MySQL5Free2PlayDAO.class);
-	public static final String INSERT_QUERY = "INSERT INTO `f2paccount` (`player_id`, `time`) VALUES (?,?)";
-	public static final String SELECT_QUERY = "SELECT `time` FROM `f2paccount` WHERE `player_id`=?";
-	public static final String DELETE_QUERY = "DELETE FROM `f2paccount` WHERE `player_id`=?";
-	public static final String UPDATE_QUERY = "UPDATE `f2paccount` set `time`=? where `player_id`=?";
+	public static final String INSERT_QUERY = "INSERT INTO `f2paccount` (`account_id`, `time`) VALUES (?,?)";
+	public static final String SELECT_QUERY = "SELECT `time` FROM `f2paccount` WHERE `account_id`=?";
+	public static final String DELETE_QUERY = "DELETE FROM `f2paccount` WHERE `account_id`=?";
+	public static final String UPDATE_QUERY = "UPDATE `f2paccount` set `time`=? where `account_id`=?";
 
 	@Override
-	public void loadF2pInfo(Player player) {
+	public void loadF2pInfo(Player player, int accountId) {
 		Connection con = null;
 		F2p f2p = new F2p(player);
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(SELECT_QUERY);
-			stmt.setInt(1, player.getObjectId());
+			stmt.setInt(1, accountId);
 			ResultSet rset = stmt.executeQuery();
 			while (rset.next()) {
 				int time = rset.getInt("time");
@@ -55,7 +58,7 @@ public class MySQL5Free2PlayDAO extends Free2PlayDAO {
 			stmt.close();
 		}
 		catch (Exception e) {
-			log.error("Could not restore f2p time for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
+			log.error("Could not restore f2p time for accountId: " + accountId + " from DB: " + e.getMessage(), e);
 		}
 		finally {
 			DatabaseFactory.close(con);
@@ -64,18 +67,18 @@ public class MySQL5Free2PlayDAO extends Free2PlayDAO {
 	}
 
 	@Override
-	public boolean storeF2p(int objectId, int time) {
+	public boolean storeF2p(int accountId, int time) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(INSERT_QUERY);
-			stmt.setInt(1, objectId);
+			stmt.setInt(1, accountId);
 			stmt.setInt(2, time);
 			stmt.execute();
 			stmt.close();
 		}
 		catch (Exception e) {
-			log.error("Could not store f2p for player " + objectId + " from DB: " + e.getMessage(), e);
+			log.error("Could not store f2p for accountId " + accountId + " from DB: " + e.getMessage(), e);
 			return false;
 		}
 		finally {
@@ -85,18 +88,18 @@ public class MySQL5Free2PlayDAO extends Free2PlayDAO {
 	}
 
 	@Override
-	public boolean updateF2p(int objectId, int time) {
+	public boolean updateF2p(int accountId, int time) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(UPDATE_QUERY);
 			stmt.setInt(1, time);
-			stmt.setInt(2, objectId);
+			stmt.setInt(2, accountId);
 			stmt.execute();
 			stmt.close();
 		}
 		catch (Exception e) {
-			log.error("Could not update f2p for player " + objectId + " from DB: " + e.getMessage(), e);
+			log.error("Could not update f2p for accountId " + accountId + " from DB: " + e.getMessage(), e);
 			return false;
 		}
 		finally {
@@ -106,17 +109,17 @@ public class MySQL5Free2PlayDAO extends Free2PlayDAO {
 	}
 
 	@Override
-	public boolean deleteF2p(int objectId) {
+	public boolean deleteF2p(int accountId) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(DELETE_QUERY);
-			stmt.setInt(1, objectId);
+			stmt.setInt(1, accountId);
 			stmt.execute();
 			stmt.close();
 		}
 		catch (Exception e) {
-			log.error("Could not delete f2p for player " + objectId + " from DB: " + e.getMessage(), e);
+			log.error("Could not delete f2p for accountId " + accountId + " from DB: " + e.getMessage(), e);
 			return false;
 		}
 		finally {

@@ -16,15 +16,18 @@
  */
 package com.aionemu.gameserver.dataholders;
 
-import com.aionemu.gameserver.model.templates.item.ItemPreSettingTemplate;
-import com.aionemu.gameserver.model.templates.minion.MinionTemplate;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.*;
-import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import com.aionemu.gameserver.model.templates.item.ItemPreSettingTemplate;
 
 @XmlRootElement(name = "item_presettings")
 @XmlAccessorType(XmlAccessType.FIELD)

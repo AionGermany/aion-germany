@@ -19,15 +19,18 @@ package com.aionemu.gameserver.dao;
 import com.aionemu.commons.database.dao.DAO;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * edited by teenwolf
+ */
 public abstract class Free2PlayDAO implements DAO {
 
-	public abstract void loadF2pInfo(Player player);
+	public abstract void loadF2pInfo(Player player, int accountId);
 
-	public abstract boolean storeF2p(int playerId, int time);
+	public abstract boolean storeF2p(int accountId, int time);
 
-	public abstract boolean updateF2p(int playerId, int time);
+	public abstract boolean updateF2p(int accountId, int time);
 
-	public abstract boolean deleteF2p(int playerId);
+	public abstract boolean deleteF2p(int accountId);
 
 	@Override
 	public String getClassName() {

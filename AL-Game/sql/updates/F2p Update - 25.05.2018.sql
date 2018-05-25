@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `f2paccount` (
-  `player_id` int(11) NOT NULL,
+  `account_id` int(11) NOT NULL,
   `time` int(11) NOT NULL,
-  PRIMARY KEY (`player_id`)
+  PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
