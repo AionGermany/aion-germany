@@ -119,28 +119,31 @@ public class EnchantService {
 
 	public static int getArmorBuff(Item armor) {
 		int skillId = 0;
+		ItemCategory itemCategory = armor.getItemTemplate().getCategory();
 		// Skill range of armor buffs 13038 - 13147
-		if (armor.getItemTemplate().getCategory() == ItemCategory.JACKET) {
-			skillId = Rnd.get(13128, 13147);
+		// Shield is armor, but have weapon buffs
+		switch(itemCategory) {
+			case JACKET:
+				skillId = Rnd.get(13128, 13147);
+				break;
+			case GLOVES:
+				skillId = Rnd.get(13038, 13060);
+				break;
+			case SHOULDERS:
+				skillId = Rnd.get(13082, 13107);
+				break;
+			case PANTS:
+				skillId = Rnd.get(13061, 13081);
+				break;
+			case SHOES:
+				skillId = Rnd.get(13108, 13127);
+				break;
+			case SHIELD:
+				skillId = Rnd.get(13001, 13037);
+				break;
+			default:
+				break;
 		}
-		else if (armor.getItemTemplate().getCategory() == ItemCategory.GLOVES) {
-			skillId = Rnd.get(13038, 13060);
-		}
-		else if (armor.getItemTemplate().getCategory() == ItemCategory.SHOULDERS) {
-			skillId = Rnd.get(13082, 13107);
-		}
-		else if (armor.getItemTemplate().getCategory() == ItemCategory.PANTS) {
-			skillId = Rnd.get(13061, 13081);
-		}
-		else if (armor.getItemTemplate().getCategory() == ItemCategory.SHOES) {
-			skillId = Rnd.get(13108, 13127);
-
-			// Shield is armor, but have weapon buffs
-		}
-		else if (armor.getItemTemplate().getCategory() == ItemCategory.SHIELD) {
-			skillId = Rnd.get(13001, 13037);
-		}
-
 		return skillId;
 	}
 
@@ -1168,43 +1171,93 @@ public class EnchantService {
 							break;
 						// Plume 5.1
 						case 10103:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
 							break;
 						case 10104:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_CRITICAL, 0));
-							break;
-						case 10105:
-							//modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
 							break;
 						// Pure Plume 5.1
-						case 10106:
-							//modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
+						case 10105:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11105:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 10106:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11106:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
 						case 10107:
-							//modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
 						case 10108:
-							//modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
 						case 10109:
-							//modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
 						case 10110:
-							//modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
-							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 10223:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11223:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 10224:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11224:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 10225:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 10226:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 10227:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 10228:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
 					}
 					if (CustomConfig.ENABLE_ENCHANT_BONUS) {

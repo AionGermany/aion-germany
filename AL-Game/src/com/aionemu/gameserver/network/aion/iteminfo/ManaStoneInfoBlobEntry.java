@@ -34,6 +34,7 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  * @modified Rolandas
  * @modified Alcapwnd
  * @Reworked GiGatR00n
+ * @reworked Himiko and FrozenKiller
  */
 public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 
@@ -119,6 +120,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 	 */
 	private void writePlumeStats(ByteBuffer buf) {
 		Item item = ownerItem;
+		int authorizeName = item.getItemTemplate().getAuthorizeName(); 
 		if (item.getItemTemplate().isPlume()) {
 			writeD(buf, 0);// unk plume stat
 			writeD(buf, 0);// value
@@ -126,54 +128,145 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 			writeD(buf, 0);// value
 			writeD(buf, 42);
 			writeD(buf, item.getAuthorize() * 150); // HP Boost for Tempering Solution
-			if (item.getItemTemplate().getAuthorizeName() == 10051 || item.getItemTemplate().getAuthorizeName() == 10063) {
-				writeD(buf, 30);
-				writeD(buf, item.getAuthorize() * 4);// Physical Attack
-				writeD(buf, 0);// New Plume Stat 4.7.5.6 (NcSoft will implement it at future)
-				writeD(buf, 0);// it's Value
-			}
-			else if (item.getItemTemplate().getAuthorizeName() == 10052 || item.getItemTemplate().getAuthorizeName() == 10064) {
-				writeD(buf, 35);
-				writeD(buf, item.getAuthorize() * 20); // Magic Boost
-				writeD(buf, 0);
-				writeD(buf, 0);
-			}
-			else if (item.getItemTemplate().getAuthorizeName() == 10056 || item.getItemTemplate().getAuthorizeName() == 10065) {
-				writeD(buf, 33);
-				writeD(buf, item.getAuthorize() * 12); // Physical Critical
-				writeD(buf, 0);
-				writeD(buf, 0);
-			}
-			else if (item.getItemTemplate().getAuthorizeName() == 10057 || item.getItemTemplate().getAuthorizeName() == 10066) {
-				writeD(buf, 36);
-				writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
-				writeD(buf, 0);
-				writeD(buf, 0);
-			}
-			else if (item.getItemTemplate().getAuthorizeName() == 10105) {
-				writeD(buf, 30);
-				writeD(buf, item.getAuthorize() * 4); // Physical Attack
-				writeD(buf, 32);
-				writeD(buf, item.getAuthorize() * 16); // Physical Accuracy
-			}
-			else if (item.getItemTemplate().getAuthorizeName() == 10106) {
-				writeD(buf, 35);
-				writeD(buf, item.getAuthorize() * 20); // Magic Boost
-				writeD(buf, 34);
-				writeD(buf, item.getAuthorize() * 8); // Magic Critical
-			}
-			else if (item.getItemTemplate().getAuthorizeName() == 10107 || item.getItemTemplate().getAuthorizeName() == 10109) {
-				writeD(buf, 30);
-				writeD(buf, item.getAuthorize() * 4); // Magical Accuracy
-				writeD(buf, 33);
-				writeD(buf, item.getAuthorize() * 12); // Physical Critical
-			}
-			else if (item.getItemTemplate().getAuthorizeName() == 10108 || item.getItemTemplate().getAuthorizeName() == 10110) {
-				writeD(buf, 35);
-				writeD(buf, item.getAuthorize() * 20); // Magic Boost
-				writeD(buf, 36);
-				writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
-
+			switch (authorizeName) {
+				case 10051:
+				case 10063:
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					writeD(buf, 0);// New Plume Stat 4.7.5.6 (NcSoft will implement it at future)
+					writeD(buf, 0);// it's Value
+					break;
+				case 10052:
+				case 10064:
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					writeD(buf, 0);
+					writeD(buf, 0);
+					break;
+				case 10056:
+				case 10065:
+					writeD(buf, 33);
+					writeD(buf, item.getAuthorize() * 12); // Physical Critical
+					writeD(buf, 0);
+					writeD(buf, 0);
+					break;
+				case 10057:
+				case 10066:
+					writeD(buf, 36);
+					writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
+					writeD(buf, 0);
+					writeD(buf, 0);
+					break;
+				case 10103:
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					writeD(buf, 0);
+					writeD(buf, 0);
+					break;
+				case 10104:
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					writeD(buf, 0);
+					writeD(buf, 0);
+					break;
+				case 10105:
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					writeD(buf, 32);
+					writeD(buf, item.getAuthorize() * 16); // Physical Accuracy
+					break;
+				case 11105:
+					writeD(buf, 33);
+					writeD(buf, item.getAuthorize() * 12); // Physical Critical
+					writeD(buf, 32);
+					writeD(buf, item.getAuthorize() * 16); // Physical Accuracy
+					break;
+				case 10106:
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					writeD(buf, 34);
+					writeD(buf, item.getAuthorize() * 8); // Magic Critical
+					break;
+				case 11106:
+					writeD(buf, 36);
+					writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
+					writeD(buf, 34);
+					writeD(buf, item.getAuthorize() * 8); // Magic Critical
+					break;
+				case 10107:
+					writeD(buf, 33);
+					writeD(buf, item.getAuthorize() * 12); // Physical Critical
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					break;
+				case 10108:
+					writeD(buf, 36);
+					writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					break;
+				case 10109:
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					writeD(buf, 33);
+					writeD(buf, item.getAuthorize() * 12); // Physical Critical
+					break;
+				case 10110:
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					writeD(buf, 36);
+					writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
+					break;
+				case 10223:
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					writeD(buf, 32);
+					writeD(buf, item.getAuthorize() * 16); // Physical Accuracy
+					break;
+				case 11223:
+					writeD(buf, 33);
+					writeD(buf, item.getAuthorize() * 12); // Physical Critical
+					writeD(buf, 32);
+					writeD(buf, item.getAuthorize() * 16); // Physical Accuracy
+					break;
+				case 10224:
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					writeD(buf, 34);
+					writeD(buf, item.getAuthorize() * 8); // Magic Critical
+					break;
+				case 11224:
+					writeD(buf, 36);
+					writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
+					writeD(buf, 34);
+					writeD(buf, item.getAuthorize() * 8); // Magic Critical
+					break;
+				case 10225:
+					writeD(buf, 33);
+					writeD(buf, item.getAuthorize() * 12); // Physical Critical
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					break;
+				case 10226:
+					writeD(buf, 36);
+					writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					break;
+				case 10227:
+					writeD(buf, 30);
+					writeD(buf, item.getAuthorize() * 4); // Physical Attack
+					writeD(buf, 33);
+					writeD(buf, item.getAuthorize() * 12); // Physical Critical
+					break;
+				case 10228:
+					writeD(buf, 35);
+					writeD(buf, item.getAuthorize() * 20); // Magic Boost
+					writeD(buf, 36);
+					writeD(buf, item.getAuthorize() * 8); // Magical Accuracy
+					break;
+				default:
+					break;
 			}
 			// Some Padding for future.
 			writeD(buf, 0);// unk plume stat
@@ -182,9 +275,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 			writeD(buf, 0);// value
 			writeD(buf, 0);// unk plume stat
 			writeD(buf, 0);// value
-
-		}
-		else {
+		} else {
 			writeB(buf, new byte[64]);
 		}
 	}
