@@ -39,8 +39,8 @@ public class AddTitle extends AdminCommand {
 		}
 
 		int titleId = Integer.parseInt(params[0]);
-		if ((titleId > 355) || (titleId < 1)) {
-			PacketSendUtility.sendMessage(admin, "title id " + titleId + " is invalid (must be between 1 and 314)");
+		if ((titleId > 369) || (titleId < 1)) {
+			PacketSendUtility.sendMessage(admin, "title id " + titleId + " is invalid (must be between 1 and 369)");
 			return;
 		}
 
