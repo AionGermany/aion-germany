@@ -1169,7 +1169,7 @@ public class EnchantService {
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
-						// Plume 5.1
+						// Plume
 						case 10103:
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
@@ -1257,6 +1257,26 @@ public class EnchantService {
 						case 10228:
 							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11000:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
+						 // modifiers.add(new StatEnchantFunction(item, StatEnum.PVE_ATTACK_RATIO, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11001:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+						 // modifiers.add(new StatEnchantFunction(item, StatEnum.PVE_DEFEND_RATIO, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11002:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
+							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
+							break;
+						case 11003:
+							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
 					}
