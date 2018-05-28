@@ -104,10 +104,8 @@ public class SM_LUNA_SYSTEM_INFO extends AionServerPacket {
 //						}
 						writeD(startTime);// Start time
 						writeD(0);
-						for (int i = 0; i < 7; i++) {
-							writeC(0xFF);
-						}
-						writeC(0x7F);
+						writeD(-1);
+						writeD(2147483647);// End Time
 						writeH(0);// size
 						break;
 					case 1: // DailyCraft

@@ -58,6 +58,8 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
+import javolution.util.FastList;
+
 public class LunaShopService {
 
 	private Logger log = LoggerFactory.getLogger(LunaShopService.class);
@@ -203,12 +205,18 @@ public class LunaShopService {
 
 	public void generateDailyCraft() {
 		if (DailyCraft.size() > 0) {
+			dailyGenerated = false;
 			DailyCraft.clear();
 		}
+		
+		FastList<LunaTemplate> test = DataManager.LUNA_DATA.getLunaTemplatesAny();
+		Random rand = new Random();
 		for (int i = 0; i < 5; i++) {
-			int templateId = Rnd.get(30000, 37016);
-			DailyCraft.add(templateId);
+	        int randomIndex = rand.nextInt(test.size());
+	        LunaTemplate randomElement = test.get(randomIndex);
+	        DailyCraft.add(randomElement.getId());
 		}
+
 		if (!dailyGenerated) {
 			updateDailyCraft();
 		}
@@ -268,7 +276,7 @@ public class LunaShopService {
 	}
 
 	public void specialDesign(Player player, int recipeId) {
-		LunaTemplate recipe = DataManager.LUNA_DATA.getLunaTemplateById(recipeId + (int) player.getLunaAccount());
+		LunaTemplate recipe = DataManager.LUNA_DATA.getLunaTemplateById(recipeId);
 //		System.out.println("Recipe ID: " + recipe.getId());
 		int product_id = recipe.getProductid();
 //		System.out.println("Produkt ID: " + recipe.getProductid());

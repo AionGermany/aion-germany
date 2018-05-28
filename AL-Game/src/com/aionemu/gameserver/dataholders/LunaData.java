@@ -63,6 +63,10 @@ public class LunaData {
 		}
 		list = null;
 	}
+	
+	public FastList<LunaTemplate> getLunaTemplatesAny() {
+		return any;
+	}
 
 	public LunaTemplate getLunaTemplateById(int id) {
 		return lunaData.get(id);
