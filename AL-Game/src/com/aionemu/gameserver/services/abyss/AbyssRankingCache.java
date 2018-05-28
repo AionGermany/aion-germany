@@ -103,9 +103,9 @@ public class AbyssRankingCache {
 		ArrayList<AbyssRankingResult> list = getDAO().getAbyssRankingPlayers(race, RankingConfig.TOP_RANKING_MAX_OFFLINE_DAYS);
 		int page = 1;
 		List<SM_ABYSS_RANKING_PLAYERS> playerPackets = new ArrayList<SM_ABYSS_RANKING_PLAYERS>();
-		for (int i = 0; i < list.size(); i += 46) {
-			if (list.size() > i + 46) {
-				playerPackets.add(new SM_ABYSS_RANKING_PLAYERS(lastUpdate, list.subList(i, i + 46), race, page, false));
+		for (int i = 0; i < list.size(); i += 44) {
+			if (list.size() > i + 44) {
+				playerPackets.add(new SM_ABYSS_RANKING_PLAYERS(lastUpdate, list.subList(i, i + 44), race, page, false));
 			}
 			else {
 				playerPackets.add(new SM_ABYSS_RANKING_PLAYERS(lastUpdate, list.subList(i, list.size()), race, page, true));
