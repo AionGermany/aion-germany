@@ -277,13 +277,9 @@ public class LunaShopService {
 
 	public void specialDesign(Player player, int recipeId) {
 		LunaTemplate recipe = DataManager.LUNA_DATA.getLunaTemplateById(recipeId);
-//		System.out.println("Recipe ID: " + recipe.getId());
 		int product_id = recipe.getProductid();
-//		System.out.println("Produkt ID: " + recipe.getProductid());
 		int quantity = recipe.getQuantity();
-//		System.out.println("Quantity : " + recipe.getQuantity());
 		ItemTemplate item = DataManager.ITEM_DATA.getItemTemplate(product_id);
-//		System.out.println("Item Id : " + item.getTemplateId());
 		boolean isSuccess = isSuccess(player, recipeId);
 		if (isSuccess) {
 			for (LunaComponent lc : recipe.getLunaComponent()) {
@@ -318,20 +314,18 @@ public class LunaShopService {
 
 	public void craftBox(Player player) {
 		int itemId = 188055460;
-		ItemTemplate item = DataManager.ITEM_DATA.getItemTemplate(itemId);
 		if (player.getPlayerLunaShop().isFreeChest()) {
-			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(5));
-			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM(3, itemId, 1, true));
-			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(0));
-			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(1, 1, 1));
-			ItemService.addItem(player, itemId, 1); // Luna Material Chest
 			player.getPlayerLunaShop().setFreeChest(false);
 		}
 		else {
-			out.println("TODO!");
-			// player.setLunaAccount(player.getLunaAccount() - 5);
-			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM(3, item, 0));
+			player.setLunaAccount(player.getLunaAccount() - 5);
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(0));
+			
 		}
+		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(5));
+		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM(3, itemId, 1, true));
+		PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(1, 1, 1));
+		ItemService.addItem(player, itemId, 1); // Luna Material Chest
 	}
 
 	private boolean isSuccess(Player player, int recipeId) {
