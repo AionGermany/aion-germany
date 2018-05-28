@@ -16,8 +16,6 @@
  */
 package com.aionemu.gameserver.services.player;
 
-import static java.lang.System.out;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
