@@ -223,7 +223,7 @@
 			<xs:element name="remove_soul_bind" type="RemoveSoulBindAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="skill_animation" type="SkillAnimationAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="f2p" type="F2pAction" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="reductlevel" type="EquipedLevelAdjAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="reduce_level" type="ItemReduceLevelAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="luna" type="LunaChestAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -501,11 +501,13 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-    <xs:complexType name="EquipedLevelAdjAction">
-        <xs:complexContent>
-            <xs:extension base="AbstractItemAction"/>
-        </xs:complexContent>
-    </xs:complexType>
+	<xs:complexType name="ItemReduceLevelAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="count" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="LunaChestAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">

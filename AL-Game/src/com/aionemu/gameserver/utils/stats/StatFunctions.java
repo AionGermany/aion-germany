@@ -1091,7 +1091,7 @@ public class StatFunctions {
 			int damage = (int) (distance * dmgPerMeter);
 			player.getLifeStats().reduceHp(damage, player);
 			player.getObserveController().notifyAttackedObservers(player);
-			PacketSendUtility.sendPacket(player, new SM_ATTACK_STATUS(player, SM_ATTACK_STATUS.TYPE.FALL_DAMAGE, 0, -damage));
+			PacketSendUtility.sendPacket(player, new SM_ATTACK_STATUS(player, player, SM_ATTACK_STATUS.TYPE.FALL_DAMAGE, 0, -damage));
 		}
 
 		return false;

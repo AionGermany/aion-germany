@@ -16,65 +16,58 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import java.util.Calendar;
-
+import com.aionemu.gameserver.model.templates.event.EventsWindow;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
+import java.sql.Timestamp;
+import java.util.Collection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * @author FrozenKiller
+ * @author Ghostfur (Aion-Unique)
  */
-public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
+public class SM_EVENT_WINDOW_ITEMS
+		extends AionServerPacket {
+	private static final Logger log = LoggerFactory.getLogger(SM_EVENT_WINDOW_ITEMS.class);
+	private Collection<EventsWindow> active_events_packet;
+	private int remainTime;
+
+	public SM_EVENT_WINDOW_ITEMS(Collection<EventsWindow> collection) {
+		active_events_packet = collection;
+	}
 
 	@Override
-	protected void writeImpl(AionConnection con) {
-		// Get Second's until Midnight
-		long msInDay = 86400000;
-		Calendar c = Calendar.getInstance();
-		c.set(Calendar.HOUR_OF_DAY, 0);
-		c.set(Calendar.MINUTE, 0);
-		c.set(Calendar.SECOND, 0);
-		c.set(Calendar.MILLISECOND, 0);
-		int remainingTime = (int) (msInDay - (System.currentTimeMillis() - c.getTimeInMillis()) + 60000) / 1000; // Second's until Midnight
-
-		writeC(1); // Always 1
-		writeC(1); // ShowIcon 0 = False 1 = True
-		writeC(0);
-		writeD(3565);
-		writeD(0);
-		writeD(remainingTime); // Remaining Time before MaxCountOfDay Reset (Reset Every Day @ 00:00:00)
-		writeD(0);
-		writeD(0);
-		writeD(1490601600);
+	protected void writeImpl(AionConnection aionConnection) {
 		writeC(1);
-		writeD(5);
-		writeD(1);
-		writeD(1401496);
-		writeD(90); // Interval ?
-		writeD(164002368); // ItemId
-		writeQ(1); // ItemCount
-		writeD(30); // Level between 45 and 75?
-		writeD(1490169600); // Event Start
-		writeD(0);
-		writeD(1491375599); // Event End
-		writeD(0);
-		writeD(0);
-		writeD(0);
-		writeD(1087891456);
-		writeD(45); // StartLevel
-		writeD(75); // EndLevel
-		writeD(-1);
-		writeB(new byte[84]);
-		writeD(-1);
-		writeD(0);
-		writeD(0);
-		writeD(1);
-		writeD(9); // CleanTime
-		writeC(2); // MaxCountOfDay
-		writeD(0);
-		writeD(1);
-		writeH(0);
-		writeD(-1);
-		writeD(0);
+		writeH(active_events_packet.size());
+		for (EventsWindow eventsWindow : active_events_packet) {
+			log.info("event id " + eventsWindow.getId() + " remain " + eventsWindow.getRemainingTime() + " start-time " + new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000 + " end-time " + new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000 + " total size " + active_events_packet.size());
+			writeD(eventsWindow.getId());
+			writeB(new byte[33]);
+			writeD(eventsWindow.getRemainingTime());
+			writeD(eventsWindow.getItemId());
+			writeQ(eventsWindow.getCount());
+			writeD(10950);
+			writeQ(new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000);
+			writeQ(new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000);
+			writeD(0);
+			writeD(0);
+			writeD(1088063744);
+			writeD(eventsWindow.getMinLevel());
+			writeD(eventsWindow.getMaxLevel());
+			writeB(new byte[92]);
+			writeD(0);
+			writeD(0);
+			writeD(1);
+			writeD(8);
+			writeD(1);
+			writeC(0);
+			writeD(1);
+			writeH(0);
+			writeD(-1);
+			writeD(0);
+		}
 	}
 }
+

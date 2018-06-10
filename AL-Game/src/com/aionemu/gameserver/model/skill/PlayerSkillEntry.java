@@ -36,8 +36,8 @@ public class PlayerSkillEntry extends SkillEntry {
 
 	private PersistentState persistentState;
 
-	public PlayerSkillEntry(int skillId, boolean isStigma, boolean isLinked, int skillLvl, int skillAnimation, int skillAnimationEnabled, PersistentState persistentState) {
-		super(skillId, skillLvl, skillAnimation, skillAnimationEnabled);
+	public PlayerSkillEntry(int skillId, boolean isStigma, boolean isLinked, int skillLvl, PersistentState persistentState) {
+		super(skillId, skillLvl, 0, 0);
 		this.isStigma = isStigma;
 		this.isLinked = isLinked;
 		this.persistentState = persistentState;
@@ -63,17 +63,17 @@ public class PlayerSkillEntry extends SkillEntry {
 		setPersistentState(PersistentState.UPDATE_REQUIRED);
 	}
 
+	/* TODO CP
 	@Override
-	public void setSkillAnimation(int skillAnimation) {
-		super.setSkillAnimation(skillAnimation);
-		setPersistentState(PersistentState.UPDATE_REQUIRED);
+	public void setSkillLvlCp(int skillLevel) {
+		super.setSkillLvlCp(skillLevel);
 	}
 
 	@Override
-	public void setSkillAnimationEnabled(int skillAnimationEnabled) {
-		super.setSkillAnimationEnabled(skillAnimationEnabled);
-		setPersistentState(PersistentState.UPDATE_REQUIRED);
+	public void setSkillLvlBoost(int skillLevel) {
+		super.setSkillLvlBoost(skillLevel);
 	}
+	*/
 
 	/**
 	 * @return The skill extra lvl
@@ -230,5 +230,5 @@ public class PlayerSkillEntry extends SkillEntry {
 				this.persistentState = persistentState;
 		}
 	}
-
 }
+

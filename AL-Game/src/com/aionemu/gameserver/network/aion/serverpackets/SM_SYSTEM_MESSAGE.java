@@ -35,9 +35,16 @@ import com.aionemu.gameserver.network.aion.SystemMessageId;
  */
 public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 
-	private static DescriptionId calculateNameId(int id) {
+    private static DescriptionId calculateNameId(int id) {
 		return new DescriptionId(id * 2 + 1);
 	}
+
+
+	/**
+	 * Skin Animation
+	 */
+	public static final SM_SYSTEM_MESSAGE STR_MSG_COSTUME_SKILL_ALREADY_HAS_COSTUME = new SM_SYSTEM_MESSAGE(1403683);
+
 
 	/**
 	 * You inflicted %num1 damage on %0.

@@ -144,6 +144,8 @@ public final class DataManager {
 	public static MonsterbookData MONSTERBOOK_DATA;
 	public static BoostEventData BOOST_EVENT_DATA;
 	public static ItemPresettingData ITEM_PRESETTING_DATA;
+	public static SkillAnimationData SKILL_ANIMATION_DATA;
+	public static EventsWindowData EVENTS_WINDOW;
 	private XmlDataLoader loader;
 
 	/**
@@ -273,6 +275,8 @@ public final class DataManager {
 		MONSTERBOOK_DATA = data.monsterbookData;
 		BOOST_EVENT_DATA = data.boostEvents;
 		ITEM_PRESETTING_DATA = data.itemPresettingData;
+		SKILL_ANIMATION_DATA = data.skillAnimationData;
+		EVENTS_WINDOW = data.eventsWindow;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

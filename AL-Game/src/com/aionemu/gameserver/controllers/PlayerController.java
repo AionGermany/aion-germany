@@ -744,23 +744,17 @@ public class PlayerController extends CreatureController<Player> {
 
 	@Override
 	public void onAttack(Creature creature, int skillId, TYPE type, int damage, boolean notifyAttack, LOG log) {
-		if (getOwner().getLifeStats().isAlreadyDead()) {
+		if (getOwner().getLifeStats().isAlreadyDead())
 			return;
-		}
 
-		if (getOwner().isInvul() || getOwner().isProtectionActive()) {
+		if (getOwner().isInvul() || getOwner().isProtectionActive())
 			damage = 0;
-		}
 
 		cancelUseItem();
 		cancelGathering();
 		super.onAttack(creature, skillId, type, damage, notifyAttack, log);
 
-		PacketSendUtility.broadcastPacket(getOwner(), new SM_ATTACK_STATUS(getOwner(), type, skillId, damage, log), true);
-
-		if (creature instanceof Npc) {
-			QuestEngine.getInstance().onAttack(new QuestEnv(creature, getOwner(), 0, 0));
-		}
+		PacketSendUtility.broadcastPacket(getOwner(), new SM_ATTACK_STATUS(getOwner(), creature, type, skillId, damage, log), true);
 
 		lastAttackedMilis = System.currentTimeMillis();
 	}

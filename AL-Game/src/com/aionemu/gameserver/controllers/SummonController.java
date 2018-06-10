@@ -133,7 +133,7 @@ public class SummonController extends CreatureController<Summon> {
 		}
 
 		super.onAttack(creature, skillId, type, damage, notifyAttack, log);
-		PacketSendUtility.broadcastPacket(getOwner(), new SM_ATTACK_STATUS(getOwner(), TYPE.REGULAR, 0, damage, log));
+		PacketSendUtility.broadcastPacket(getOwner(), new SM_ATTACK_STATUS(getOwner(), creature, TYPE.REGULAR, 0, damage, log));
 		PacketSendUtility.sendPacket(getOwner().getMaster(), new SM_SUMMON_UPDATE(getOwner()));
 	}
 

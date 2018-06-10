@@ -18,6 +18,7 @@ package com.aionemu.gameserver.services.player;
 
 import java.sql.Timestamp;
 
+import com.aionemu.gameserver.services.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,19 +48,6 @@ import com.aionemu.gameserver.network.aion.clientpackets.CM_QUIT;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DELETE;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
-import com.aionemu.gameserver.services.AccessLevelEnum;
-import com.aionemu.gameserver.services.AutoGroupService;
-import com.aionemu.gameserver.services.BrokerService;
-import com.aionemu.gameserver.services.ChatService;
-import com.aionemu.gameserver.services.DuelService;
-import com.aionemu.gameserver.services.ExchangeService;
-import com.aionemu.gameserver.services.FindGroupService;
-import com.aionemu.gameserver.services.KiskService;
-import com.aionemu.gameserver.services.LegionService;
-import com.aionemu.gameserver.services.PunishmentService;
-import com.aionemu.gameserver.services.RepurchaseService;
-import com.aionemu.gameserver.services.SkillLearnService;
-import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropService;
 import com.aionemu.gameserver.services.instance.InstanceService;
@@ -159,6 +147,7 @@ public class PlayerLeaveWorldService {
 
 		PlayerGroupService.onPlayerLogout(player);
 		PlayerAllianceService.onPlayerLogout(player);
+		EventWindowService.getInstance().onLogout(player);
 		// fix legion warehouse exploits
 		LegionService.getInstance().LegionWhUpdate(player);
 		player.getEffectController().removeAllEffects(true);
