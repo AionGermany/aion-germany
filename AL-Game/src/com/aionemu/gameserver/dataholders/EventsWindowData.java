@@ -39,7 +39,7 @@ public class EventsWindowData {
     private List<EventsWindow> events_window;
 
     @XmlTransient
-    private TIntObjectHashMap<EventsWindow> eventData = new TIntObjectHashMap();
+    private TIntObjectHashMap<EventsWindow> eventData = new TIntObjectHashMap<EventsWindow>();
 
     @XmlTransient
     private Map<Integer, EventsWindow> eventDataMap = new HashMap<>(1);

@@ -1,4 +1,4 @@
-package com.aionemu.gameserver;
+package mysql5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

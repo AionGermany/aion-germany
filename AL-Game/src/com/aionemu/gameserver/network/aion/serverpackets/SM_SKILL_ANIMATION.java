@@ -28,8 +28,11 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 public class SM_SKILL_ANIMATION extends AionServerPacket {
 	private SkillAnimationList skillAnimationList;
 	private int action;
+	@SuppressWarnings("unused")
 	private int titleId;
+	@SuppressWarnings("unused")
 	private int bonusTitleId;
+	@SuppressWarnings("unused")
 	private int playerObjId;
 
 	public SM_SKILL_ANIMATION(Player player) {

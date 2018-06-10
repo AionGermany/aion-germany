@@ -19,18 +19,21 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import com.aionemu.gameserver.model.templates.event.EventsWindow;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
+
 import java.sql.Timestamp;
 import java.util.Collection;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * @author Ghostfur (Aion-Unique)
  */
-public class SM_EVENT_WINDOW_ITEMS
-		extends AionServerPacket {
+public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
+
 	private static final Logger log = LoggerFactory.getLogger(SM_EVENT_WINDOW_ITEMS.class);
 	private Collection<EventsWindow> active_events_packet;
+	@SuppressWarnings("unused")
 	private int remainTime;
 
 	public SM_EVENT_WINDOW_ITEMS(Collection<EventsWindow> collection) {

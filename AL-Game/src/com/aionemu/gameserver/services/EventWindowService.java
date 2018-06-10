@@ -27,12 +27,15 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_EVENT_WINDOW_ITEMS;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
+
 import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
+
 import javolution.util.FastMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -97,7 +100,8 @@ public class EventWindowService {
         Map<Integer, EventsWindow> map = getActiveEvents();
         Map<Integer, EventsWindow> map2 = getPlayerEventsWindow(RemaininG);
         final FastMap<Integer, EventsWindow> fastMap = new FastMap<>();
-        double timeZ = 0.0; // Todo??
+        @SuppressWarnings("unused")
+		double timeZ = 0.0; // Todo??
         double time = playerEventsWindowDAO.getElapsed(RemaininG);
         int Time = (int)(time % 3600.0 / 60.0);
         player.getEventWindow().setRemaining(Time);

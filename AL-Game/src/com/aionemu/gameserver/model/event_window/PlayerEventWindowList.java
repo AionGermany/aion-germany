@@ -1,19 +1,15 @@
 package com.aionemu.gameserver.model.event_window;
 
-import com.aionemu.commons.database.dao.DAOManager;
-import com.aionemu.gameserver.dao.PlayerEventsWindowDAO;
-import com.aionemu.gameserver.model.account.Account;
-import com.aionemu.gameserver.model.event_window.EventWindowList;
-import com.aionemu.gameserver.model.event_window.PlayerEventWindowEntry;
-import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.gameobjects.PersistentState;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.dao.PlayerEventsWindowDAO;
+import com.aionemu.gameserver.model.gameobjects.PersistentState;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 public class PlayerEventWindowList
 implements EventWindowList<Player> {
@@ -31,7 +27,7 @@ implements EventWindowList<Player> {
     }
 
     public PlayerEventWindowEntry[] getAll() {
-        ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList();
+        ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList<PlayerEventWindowEntry>();
         arrayList.addAll(entry.values());
         return arrayList.toArray(new PlayerEventWindowEntry[arrayList.size()]);
     }
