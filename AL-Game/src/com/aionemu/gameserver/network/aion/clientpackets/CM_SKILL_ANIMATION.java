@@ -21,64 +21,28 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
 /**
- * @author FrozenKiller
+ * @author FrozenKiller & Ghostfur (Aion-Unique)
  */
 public class CM_SKILL_ANIMATION extends AionClientPacket {
 
-	private int skillId;
-	private int skillAnimationId;
-	private int fixedSkillId = 0;
+	private int SkillId;
+	private int SkillSkinId;
 
 	public CM_SKILL_ANIMATION(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 
-	@Override
 	protected void readImpl() {
-		skillId = readH();
-		// System.out.println("SkillId: " + skillId);
-		skillAnimationId = readH();
-		// System.out.println("AnimationsId: " + skillAnimationId);
-		if (skillId == 2607) {
-			fixedSkillId = 2606;
-		}
-		else if (skillId == 2276) {
-			fixedSkillId = 2274;
-		}
+		SkillId = readH();
+		SkillSkinId = readH();
 	}
 
-	@Override
 	protected void runImpl() {
-		final Player player = getConnection().getActivePlayer();
-
-		if (fixedSkillId != 0) {
-			if (player.getSkillList().getSkillEntry(fixedSkillId).getSkillAnimation() == 0) {
-				player.getSkillList().getSkillEntry(fixedSkillId).setSkillAnimationEnabled(1);
-				player.getSkillList().getSkillEntry(fixedSkillId).setSkillAnimation(skillAnimationId);
-			}
-			else if (player.getSkillList().getSkillEntry(fixedSkillId).getSkillAnimation() > 0) {
-				if (skillAnimationId > 0) {
-					player.getSkillList().getSkillEntry(fixedSkillId).setSkillAnimationEnabled(1);
-				}
-				else {
-					player.getSkillList().getSkillEntry(fixedSkillId).setSkillAnimationEnabled(0);
-				}
-			}
+		Player player = getConnection().getActivePlayer();
+		if (SkillSkinId > 0) {
+			player.getSkillAnimationList().setActive(SkillSkinId);
+		} else {
+			player.getSkillAnimationList().setDeactive(SkillId);
 		}
-		else {
-			if (player.getSkillList().getSkillEntry(skillId).getSkillAnimation() == 0) {
-				player.getSkillList().getSkillEntry(skillId).setSkillAnimationEnabled(1);
-				player.getSkillList().getSkillEntry(skillId).setSkillAnimation(skillAnimationId);
-			}
-			else if (player.getSkillList().getSkillEntry(skillId).getSkillAnimation() > 0) {
-				if (skillAnimationId > 0) {
-					player.getSkillList().getSkillEntry(skillId).setSkillAnimationEnabled(1);
-				}
-				else {
-					player.getSkillList().getSkillEntry(skillId).setSkillAnimationEnabled(0);
-				}
-			}
-		}
-		fixedSkillId = 0;
 	}
 }

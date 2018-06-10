@@ -46,7 +46,7 @@ public class SkillAnimationList {
 		skillanimations.put(skinId, new SkillAnimation(ss, skinId, remaining, active));
 	}
 
-	public boolean addSkillSkin(int skinId, int time) {
+	public boolean addSkillAnimation(int skinId, int time) {
 		SkillAnimationTemplate ss = DataManager.SKILL_ANIMATION_DATA.getSkillAnimationTemplate(skinId);
 		if (ss == null) {
 			throw new IllegalArgumentException("Invalid skin id " + skinId);
