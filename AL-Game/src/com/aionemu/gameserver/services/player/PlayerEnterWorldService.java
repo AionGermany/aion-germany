@@ -22,7 +22,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.aionemu.gameserver.model.skillanimation.SkillAnimation;
+import com.aionemu.gameserver.model.skinskill.SkillSkin;
 import com.aionemu.gameserver.services.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -860,12 +860,11 @@ public final class PlayerEnterWorldService {
 					ExpireTimerTask.getInstance().addTask(title, player);
 			}
 
-			for (SkillAnimation skillAnimation : player.getSkillAnimationList().getSkillAnimation()) {
-				if (skillAnimation.getExpireTime() != 0) {
-					ExpireTimerTask.getInstance().addTask(skillAnimation, player);
+			for (SkillSkin skillSkin : player.getSkillSkinList().getSkillSkins()) {
+				if (skillSkin.getExpireTime() != 0) {
+					ExpireTimerTask.getInstance().addTask(skillSkin, player);
 				}
 			}
-
 
 			if (player.getHouseRegistry() != null) {
 				for (HouseObject<?> obj : player.getHouseRegistry().getObjects()) {

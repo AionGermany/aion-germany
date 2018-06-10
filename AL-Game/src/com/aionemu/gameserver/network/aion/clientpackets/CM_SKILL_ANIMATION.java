@@ -21,12 +21,13 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
 /**
- * @author FrozenKiller & Ghostfur (Aion-Unique)
+ * @author FrozenKiller
+ * @reworked Ghostfur (Aion-Unique)
  */
 public class CM_SKILL_ANIMATION extends AionClientPacket {
 
 	private int SkillId;
-	private int SkillAnimationId;
+	private int SkillSkinId;
 
 	public CM_SKILL_ANIMATION(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -34,15 +35,15 @@ public class CM_SKILL_ANIMATION extends AionClientPacket {
 
 	protected void readImpl() {
 		SkillId = readH();
-		SkillAnimationId = readH();
+		SkillSkinId = readH();
 	}
 
 	protected void runImpl() {
 		Player player = getConnection().getActivePlayer();
-		if (SkillAnimationId > 0) {
-			player.getSkillAnimationList().setActive(SkillAnimationId);
+		if (SkillSkinId > 0) {
+			player.getSkillSkinList().setActive(SkillSkinId);
 		} else {
-			player.getSkillAnimationList().setDeactive(SkillId);
+			player.getSkillSkinList().setDeactive(SkillId);
 		}
 	}
 }

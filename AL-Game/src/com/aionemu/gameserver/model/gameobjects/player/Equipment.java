@@ -204,7 +204,7 @@ public class Equipment {
 			soulBindItem(owner, item, itemSlotToEquip);
 			return null;
 		}
-	
+
 		return equip(itemSlotToEquip, item);
 	}
 
@@ -269,11 +269,11 @@ public class Equipment {
 			owner.getLifeStats().updateCurrentStats();
 			setPersistentState(PersistentState.UPDATE_REQUIRED);
 			QuestEngine.getInstance().onEquipItem(new QuestEnv(null, owner, 0, 0), item.getItemId());
-			
+
 			if (item.getItemTemplate().isEstima()) {
 				CreativityEssenceService.getInstance().addEstimaCp(owner, item.getObjectId());
 			}
-			
+
 			return item;
 		}
 	}
@@ -345,9 +345,9 @@ public class Equipment {
 			if (!StigmaService.notifyUnequipAction(owner, itemToUnequip)) {
 				return null;
 			}
-			
+
 			unEquip(itemToUnequip.getEquipmentSlot());
-			
+
 			return itemToUnequip;
 		}
 	}
@@ -377,7 +377,7 @@ public class Equipment {
 		owner.getLifeStats().updateCurrentStats();
 		owner.getGameStats().updateStatsAndSpeedVisually();
 		owner.getInventory().put(item);
-		
+
 		if (item.getItemTemplate().isEstima()) {
 			CreativityEssenceService.getInstance().removeEstimaCp(owner, item.getObjectId());
 		}
@@ -1368,3 +1368,4 @@ public class Equipment {
 		}
 	}
 }
+

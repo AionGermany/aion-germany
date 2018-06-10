@@ -16,8 +16,8 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.model.skillanimation.SkillAnimation;
-import com.aionemu.gameserver.model.skillanimation.SkillAnimationList;
+import com.aionemu.gameserver.model.skinskill.SkillSkin;
+import com.aionemu.gameserver.model.skinskill.SkillSkinList;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
@@ -26,7 +26,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  * @author Ghostfur (Aion-Unique)
  */
 public class SM_SKILL_ANIMATION extends AionServerPacket {
-	private SkillAnimationList skillAnimationList;
+	private SkillSkinList skillSkinList;
 	private int action;
 	@SuppressWarnings("unused")
 	private int titleId;
@@ -37,27 +37,27 @@ public class SM_SKILL_ANIMATION extends AionServerPacket {
 
 	public SM_SKILL_ANIMATION(Player player) {
 		action = 1;
-		skillAnimationList = player.getSkillAnimationList();
+		skillSkinList = player.getSkillSkinList();
 	}
 
 	protected void writeImpl(AionConnection con) {
 		writeC(action);
 		switch (action) {
 			case 0:
-				writeH(skillAnimationList.size());
-				for (SkillAnimation skillanimation : skillAnimationList.getSkillAnimation()) {
-					writeH(skillanimation.getId());
-					writeD(skillanimation.getExpireTime());
-					writeC(skillanimation.getIsActive());
+				writeH(skillSkinList.size());
+				for (SkillSkin skillSkin : skillSkinList.getSkillSkins()) {
+					writeH(skillSkin.getId());
+					writeD(skillSkin.getExpireTime());
+					writeC(skillSkin.getIsActive());
 				}
 				break;
 			case 1:
-				if (skillAnimationList != null) {
-					writeH(skillAnimationList.size());
-					for (SkillAnimation skillAnimation : skillAnimationList.getSkillAnimation()) {
-						writeH(skillAnimation.getId());
-						writeD(skillAnimation.getExpireTime());
-						writeC(skillAnimation.getIsActive());
+				if (skillSkinList != null) {
+					writeH(skillSkinList.size());
+					for (SkillSkin skillSkin : skillSkinList.getSkillSkins()) {
+						writeH(skillSkin.getId());
+						writeD(skillSkin.getExpireTime());
+						writeC(skillSkin.getIsActive());
 					}
 				}
 				break;

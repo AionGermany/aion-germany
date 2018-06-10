@@ -83,7 +83,7 @@ import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.model.items.storage.StorageType;
 import com.aionemu.gameserver.model.monsterbook.PlayerMonsterbookList;
 import com.aionemu.gameserver.model.skill.PlayerSkillList;
-import com.aionemu.gameserver.model.skillanimation.SkillAnimationList;
+import com.aionemu.gameserver.model.skinskill.SkillSkinList;
 import com.aionemu.gameserver.model.stats.container.PlayerGameStats;
 import com.aionemu.gameserver.model.stats.container.PlayerLifeStats;
 import com.aionemu.gameserver.model.team.legion.Legion;
@@ -323,26 +323,14 @@ public class Player extends Creature {
 	private EquipmentSettingList equipmentSettingList;
 
 	/**
+	 * Player Skill Skin List
+	 */
+	private SkillSkinList skillSkinList;
+
+	/**
 	 * Player Event Window List
 	 */
 	private PlayerEventWindowList ew;
-
-	/**
-	 * Player Skill Animation List
-	 */
-	private SkillAnimationList skillAnimationList;
-
-	/**
-	 * Skill Animation List
-	 */
-	public SkillAnimationList getSkillAnimationList() {
-		return skillAnimationList;
-	}
-
-	public void setSkillAnimationList(SkillAnimationList skillAnimationList) {
-		this.skillAnimationList = skillAnimationList;
-		skillAnimationList.setOwner(this);
-	}
 
 	/**
 	 * Player Event Window List
@@ -3188,4 +3176,16 @@ public class Player extends Creature {
     public void setEquipmentSettingList(EquipmentSettingList equipmentSettingList) {
         this.equipmentSettingList = equipmentSettingList;
     }
+
+	/**
+	 * Skill Skin List
+	 */
+	public SkillSkinList getSkillSkinList() {
+		return skillSkinList;
+	}
+
+	public void setSkillSkinList(SkillSkinList skillSkinList) {
+		this.skillSkinList = skillSkinList;
+		skillSkinList.setOwner(this);
+	}
 }

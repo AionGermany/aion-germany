@@ -139,7 +139,7 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 		if (attacker instanceof Player) {
 			Player player = (Player) attacker;
 			if (player != null) {
-				writeH(player.getSkillAnimationList().getSkinId(skillId));
+				writeH(player.getSkillSkinList().getSkinId(skillId));
 			} else {
 				writeH(0);
 			}
