@@ -224,7 +224,7 @@
 			<xs:element name="f2p" type="F2pAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="reduce_level" type="ItemReduceLevelAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="luna" type="LunaChestAction" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="skill_animation" type="SkillAnimationAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skill_skin" type="SkillAnimationAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="RideAction">
