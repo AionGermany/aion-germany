@@ -164,7 +164,7 @@ public abstract class CreatureLifeStats<T extends Creature> {
 		{
 			return;
 		}
-		PacketSendUtility.broadcastPacketAndReceive(owner, new SM_ATTACK_STATUS(owner, type, skillId, value, log));
+		PacketSendUtility.broadcastPacketAndReceive(owner, new SM_ATTACK_STATUS(owner, owner, type, skillId, value, log));
 	}
 
 	/**

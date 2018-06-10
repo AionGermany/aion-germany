@@ -149,6 +149,10 @@ public final class PlayerSkillList implements SkillList<Player> {
 		return addSkill(player, skillId, skillLevel, true, false, PersistentState.NEW);
 	}
 
+	public boolean addTransformationSkill(Player player, int skillId, int skillLevel) {
+		return addSkill(player, skillId, skillLevel, false, false, PersistentState.NOACTION);
+	}
+
 	private boolean addSkill(Player player, int skillId, int skillLevel, boolean isStigma, boolean isLinked, PersistentState state) {
 		return addSkillAct(player, skillId, skillLevel, isStigma, isLinked, state, false);
 	}
@@ -172,7 +176,7 @@ public final class PlayerSkillList implements SkillList<Player> {
 
 	public void addStigmaSkill(Player player, List<StigmaSkill> skills, boolean equipedByNpc) {
 		for (StigmaSkill sSkill : skills) {
-			PlayerSkillEntry skill = new PlayerSkillEntry(sSkill.getSkillId(), true, false, sSkill.getSkillLvl(), 0, 0, PersistentState.NOACTION);
+			PlayerSkillEntry skill = new PlayerSkillEntry(sSkill.getSkillId(), true, false, sSkill.getSkillLvl(), PersistentState.NOACTION);
 			this.stigmaSkills.put(sSkill.getSkillId(), skill);
 			if (equipedByNpc) {
 				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(skill, 1300401, false));
@@ -181,7 +185,7 @@ public final class PlayerSkillList implements SkillList<Player> {
 	}
 
 	public void addStigmaSkill(Player player, int skillId, int skillLevel, boolean withMsg, boolean equipedByNpc) {
-		PlayerSkillEntry skill = new PlayerSkillEntry(skillId, true, false, skillLevel, 0, 0, PersistentState.NOACTION);
+		PlayerSkillEntry skill = new PlayerSkillEntry(skillId, true, false, skillLevel, PersistentState.NOACTION);
 		this.stigmaSkills.put(skillId, skill);
 		if (equipedByNpc) {
 			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(skill, withMsg ? 1300401 : 0, false));
@@ -189,7 +193,7 @@ public final class PlayerSkillList implements SkillList<Player> {
 	}
 
 	public void addHiddenStigmaSkill(Player player, int skillId, int skillLvl) {
-		PlayerSkillEntry skill = new PlayerSkillEntry(skillId, false, true, skillLvl, 0, 0, PersistentState.NOACTION);
+		PlayerSkillEntry skill = new PlayerSkillEntry(skillId, false, true, skillLvl, PersistentState.NOACTION);
 		this.stigmaSkills.put(skillId, skill);
 		PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, skill));
 		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_GET_HIDDEN_SKILL(new DescriptionId(DataManager.SKILL_DATA.getSkillTemplate(skill.getSkillId()).getNameId()), skillLvl));
@@ -207,13 +211,13 @@ public final class PlayerSkillList implements SkillList<Player> {
 		}
 		else {
 			if (isStigma) {
-				stigmaSkills.put(skillId, new PlayerSkillEntry(skillId, true, false, skillLevel, 0, 0, state));
+				stigmaSkills.put(skillId, new PlayerSkillEntry(skillId, true, false, skillLevel, state));
 			}
 			else if (isLinked) {
-				stigmaSkills.put(skillId, new PlayerSkillEntry(skillId, false, true, skillLevel, 0, 0, state));
+				stigmaSkills.put(skillId, new PlayerSkillEntry(skillId, false, true, skillLevel, state));
 			}
 			else {
-				basicSkills.put(skillId, new PlayerSkillEntry(skillId, false, false, skillLevel, 0, 0, state));
+				basicSkills.put(skillId, new PlayerSkillEntry(skillId, false, false, skillLevel, state));
 				isNew = true;
 			}
 		}

@@ -126,6 +126,8 @@ public class SkillTemplate {
 	protected StigmaType stigmaType = StigmaType.NONE;
 	@XmlTransient
 	protected HashMap<Integer, Integer> effectIds = null;
+	@XmlAttribute(name="skill_group")
+	private String skill_group;
 
 	/**
 	 * @return the Properties
@@ -233,6 +235,13 @@ public class SkillTemplate {
 	 */
 	public String getStack() {
 		return stack;
+	}
+
+	/**
+	 * @return SkillGroup
+	 */
+	public String getSkillGroup() {
+		return skill_group;
 	}
 
 	/**

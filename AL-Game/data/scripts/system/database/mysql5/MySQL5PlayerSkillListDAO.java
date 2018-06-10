@@ -47,250 +47,172 @@ import com.google.common.collect.Lists;
  */
 public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO {
 
-	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerSkillListDAO.class);
-	public static final String INSERT_QUERY = "INSERT INTO `player_skills` (`player_id`, `skill_id`, `skill_level`, `skill_animation`, `skill_animation_enabled`) VALUES (?,?,?,?,?)";
-	public static final String UPDATE_QUERY = "UPDATE `player_skills` set skill_level=? where player_id=? AND skill_id=?";
-	public static final String UPDATE_QUERY_ANIMATION = "UPDATE `player_skills` set skill_animation=? where player_id=? AND skill_id=?";
-	public static final String UPDATE_QUERY_ANIMATION_ENABLED = "UPDATE `player_skills` set skill_animation_enabled=? where player_id=? AND skill_id=?";
-	public static final String DELETE_QUERY = "DELETE FROM `player_skills` WHERE `player_id`=? AND skill_id=?";
-	public static final String SELECT_QUERY = "SELECT `skill_id`, `skill_level`, `skill_animation`, `skill_animation_enabled` FROM `player_skills` WHERE `player_id`=?";
-	private static final Predicate<PlayerSkillEntry> skillsToInsertPredicate = new Predicate<PlayerSkillEntry>() {
+	public static final String INSERT_QUERY = "INSERT INTO `player_skills` (`player_id`, `skill_id`, `skill_level`) VALUES (?,?,?)";
+    public static final String UPDATE_QUERY = "UPDATE `player_skills` set skill_level=? where player_id=? AND skill_id=?";
+    public static final String DELETE_QUERY = "DELETE FROM `player_skills` WHERE `player_id`=? AND skill_id=?";
+    public static final String SELECT_QUERY = "SELECT `skill_id`, `skill_level` FROM `player_skills` WHERE `player_id`=?";
+    private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerSkillListDAO.class);
+    private static final Predicate<PlayerSkillEntry> skillsToInsertPredicate = new Predicate<PlayerSkillEntry>() {
+        @Override
+        public boolean apply(@Nullable PlayerSkillEntry input) {
+            return input != null && PersistentState.NEW == input.getPersistentState();
+        }
+    };
+    private static final Predicate<PlayerSkillEntry> skillsToUpdatePredicate = new Predicate<PlayerSkillEntry>() {
+        @Override
+        public boolean apply(@Nullable PlayerSkillEntry input) {
+            return input != null && PersistentState.UPDATE_REQUIRED == input.getPersistentState();
+        }
+    };
+    private static final Predicate<PlayerSkillEntry> skillsToDeletePredicate = new Predicate<PlayerSkillEntry>() {
+        @Override
+        public boolean apply(@Nullable PlayerSkillEntry input) {
+            return input != null && PersistentState.DELETED == input.getPersistentState();
+        }
+    };
 
-		@Override
-		public boolean apply(@Nullable PlayerSkillEntry input) {
-			return input != null && PersistentState.NEW == input.getPersistentState();
-		}
-	};
-	private static final Predicate<PlayerSkillEntry> skillsToUpdatePredicate = new Predicate<PlayerSkillEntry>() {
+    @Override
+    public PlayerSkillList loadSkillList(int playerId) {
+        List<PlayerSkillEntry> skills = new ArrayList<PlayerSkillEntry>();
+        Connection con = null;
+        try {
+            con = DatabaseFactory.getConnection();
+            PreparedStatement stmt = con.prepareStatement(SELECT_QUERY);
+            stmt.setInt(1, playerId);
+            ResultSet rset = stmt.executeQuery();
+            while (rset.next()) {
+                int id = rset.getInt("skill_id");
+                int lv = rset.getInt("skill_level");
 
-		@Override
-		public boolean apply(@Nullable PlayerSkillEntry input) {
-			return input != null && PersistentState.UPDATE_REQUIRED == input.getPersistentState();
-		}
-	};
-	private static final Predicate<PlayerSkillEntry> skillsToDeletePredicate = new Predicate<PlayerSkillEntry>() {
+                skills.add(new PlayerSkillEntry(id, false, false, lv, PersistentState.UPDATED));
+            }
+            rset.close();
+            stmt.close();
+        } catch (Exception e) {
+            log.error("Could not restore SkillList data for player: " + playerId + " from DB: " + e.getMessage(), e);
+        } finally {
+            DatabaseFactory.close(con);
+        }
+        return new PlayerSkillList(skills);
+    }
 
-		@Override
-		public boolean apply(@Nullable PlayerSkillEntry input) {
-			return input != null && PersistentState.DELETED == input.getPersistentState();
-		}
-	};
+    /**
+     * Stores all player skills according to their persistence state
+     */
+    @Override
+    public boolean storeSkills(Player player) {
+        List<PlayerSkillEntry> skillsActive = Lists.newArrayList(player.getSkillList().getAllSkills());
+        List<PlayerSkillEntry> skillsDeleted = Lists.newArrayList(player.getSkillList().getDeletedSkills());
+        store(player, skillsActive);
+        store(player, skillsDeleted);
 
-	@Override
-	public PlayerSkillList loadSkillList(int playerId) {
-		List<PlayerSkillEntry> skills = new ArrayList<PlayerSkillEntry>();
-		Connection con = null;
-		try {
-			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement(SELECT_QUERY);
-			stmt.setInt(1, playerId);
-			ResultSet rset = stmt.executeQuery();
-			while (rset.next()) {
-				int id = rset.getInt("skill_id");
-				int lv = rset.getInt("skill_level");
-				int ani = rset.getInt("skill_animation");
-				int enabled = rset.getInt("skill_animation_enabled");
+        return true;
+    }
 
-				skills.add(new PlayerSkillEntry(id, false, false, lv, ani, enabled, PersistentState.UPDATED));
-			}
-			rset.close();
-			stmt.close();
-		}
-		catch (Exception e) {
-			log.error("Could not restore SkillList data for player: " + playerId + " from DB: " + e.getMessage(), e);
-		}
-		finally {
-			DatabaseFactory.close(con);
-		}
-		return new PlayerSkillList(skills);
-	}
+    private void store(Player player, List<PlayerSkillEntry> skills) {
+        Connection con = null;
+        try {
+            con = DatabaseFactory.getConnection();
+            con.setAutoCommit(false);
 
-	/**
-	 * Stores all player skills according to their persistence state
-	 */
-	@Override
-	public boolean storeSkills(Player player) {
-		List<PlayerSkillEntry> skillsActive = Lists.newArrayList(player.getSkillList().getAllSkills());
-		List<PlayerSkillEntry> skillsDeleted = Lists.newArrayList(player.getSkillList().getDeletedSkills());
-		store(player, skillsActive);
-		store(player, skillsDeleted);
+            deleteSkills(con, player, skills);
+            addSkills(con, player, skills);
+            updateSkills(con, player, skills);
 
-		return true;
-	}
+        } catch (SQLException e) {
+            log.error("Failed to open connection to database while saving SkillList for player " + player.getObjectId());
+        } finally {
+            DatabaseFactory.close(con);
+        }
 
-	private void store(Player player, List<PlayerSkillEntry> skills) {
-		Connection con = null;
-		try {
-			con = DatabaseFactory.getConnection();
-			con.setAutoCommit(false);
+        for (PlayerSkillEntry skill : skills) {
+            skill.setPersistentState(PersistentState.UPDATED);
+        }
+    }
 
-			deleteSkills(con, player, skills);
-			addSkills(con, player, skills);
-			updateSkills(con, player, skills);
-			updateSkillsAnimation(con, player, skills);
-			updateSkillsAnimationEnabled(con, player, skills);
+    private void addSkills(Connection con, Player player, List<PlayerSkillEntry> skills) {
 
-		}
-		catch (SQLException e) {
-			log.error("Failed to open connection to database while saving SkillList for player " + player.getObjectId());
-		}
-		finally {
-			DatabaseFactory.close(con);
-		}
+        Collection<PlayerSkillEntry> skillsToInsert = Collections2.filter(skills, skillsToInsertPredicate);
+        if (GenericValidator.isBlankOrNull(skillsToInsert)) {
+            return;
+        }
 
-		for (PlayerSkillEntry skill : skills) {
-			skill.setPersistentState(PersistentState.UPDATED);
-		}
-	}
+        PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(INSERT_QUERY);
 
-	private void addSkills(Connection con, Player player, List<PlayerSkillEntry> skills) {
+            for (PlayerSkillEntry skill : skillsToInsert) {
+                //log.info("MYSQL INSERT SKILL: " + skill.getSkillId());
+                ps.setInt(1, player.getObjectId());
+                ps.setInt(2, skill.getSkillId());
+                ps.setInt(3, skill.getSkillLevel());
+                ps.addBatch();
+            }
 
-		Collection<PlayerSkillEntry> skillsToInsert = Collections2.filter(skills, skillsToInsertPredicate);
-		if (GenericValidator.isBlankOrNull(skillsToInsert)) {
-			return;
-		}
+            ps.executeBatch();
+            con.commit();
+        } catch (SQLException e) {
+            //log.error("Can't add skills for player: " + player.getObjectId() + " Execption is : " + e.getMessage(), e);
+        } finally {
+            DatabaseFactory.close(ps);
+        }
+    }
 
-		PreparedStatement ps = null;
-		try {
-			ps = con.prepareStatement(INSERT_QUERY);
+    private void updateSkills(Connection con, Player player, List<PlayerSkillEntry> skills) {
 
-			for (PlayerSkillEntry skill : skillsToInsert) {
-				ps.setInt(1, player.getObjectId());
-				ps.setInt(2, skill.getSkillId());
-				ps.setInt(3, skill.getSkillLevel());
-				ps.setInt(4, skill.getSkillAnimation());
-				ps.setInt(5, skill.getSkillAnimationEnabled());
-				ps.addBatch();
-			}
+        Collection<PlayerSkillEntry> skillsToUpdate = Collections2.filter(skills, skillsToUpdatePredicate);
+        if (GenericValidator.isBlankOrNull(skillsToUpdate)) {
+            return;
+        }
 
-			ps.executeBatch();
-			con.commit();
-		}
-		catch (SQLException e) {
-			log.error("Can't add skills for player: " + player.getObjectId());
-		}
-		finally {
-			DatabaseFactory.close(ps);
-		}
-	}
+        PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(UPDATE_QUERY);
 
-	private void updateSkills(Connection con, Player player, List<PlayerSkillEntry> skills) {
+            for (PlayerSkillEntry skill : skillsToUpdate) {
+                ps.setInt(1, skill.getSkillLevel());
+                ps.setInt(2, player.getObjectId());
+                ps.setInt(3, skill.getSkillId());
+                ps.addBatch();
+            }
 
-		Collection<PlayerSkillEntry> skillsToUpdate = Collections2.filter(skills, skillsToUpdatePredicate);
-		if (GenericValidator.isBlankOrNull(skillsToUpdate)) {
-			return;
-		}
+            ps.executeBatch();
+            con.commit();
+        } catch (SQLException e) {
+            log.error("Can't update skills for player: " + player.getObjectId());
+        } finally {
+            DatabaseFactory.close(ps);
+        }
+    }
 
-		PreparedStatement ps = null;
-		try {
-			ps = con.prepareStatement(UPDATE_QUERY);
+    private void deleteSkills(Connection con, Player player, List<PlayerSkillEntry> skills) {
 
-			for (PlayerSkillEntry skill : skillsToUpdate) {
-				ps.setInt(1, skill.getSkillLevel());
-				ps.setInt(2, player.getObjectId());
-				ps.setInt(3, skill.getSkillId());
-				ps.addBatch();
-			}
+        Collection<PlayerSkillEntry> skillsToDelete = Collections2.filter(skills, skillsToDeletePredicate);
+        if (GenericValidator.isBlankOrNull(skillsToDelete)) {
+            return;
+        }
 
-			ps.executeBatch();
-			con.commit();
-		}
-		catch (SQLException e) {
-			log.error("Can't update skills for player: " + player.getObjectId());
-		}
-		finally {
-			DatabaseFactory.close(ps);
-		}
-	}
+        PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(DELETE_QUERY);
 
-	private void updateSkillsAnimation(Connection con, Player player, List<PlayerSkillEntry> skills) {
+            for (PlayerSkillEntry skill : skillsToDelete) {
+                ps.setInt(1, player.getObjectId());
+                ps.setInt(2, skill.getSkillId());
+                ps.addBatch();
+            }
 
-		Collection<PlayerSkillEntry> skillsToUpdate = Collections2.filter(skills, skillsToUpdatePredicate);
-		if (GenericValidator.isBlankOrNull(skillsToUpdate)) {
-			return;
-		}
+            ps.executeBatch();
+            con.commit();
+        } catch (SQLException e) {
+            log.error("Can't delete skills for player: " + player.getObjectId());
+        } finally {
+            DatabaseFactory.close(ps);
+        }
+    }
 
-		PreparedStatement ps = null;
-		try {
-			ps = con.prepareStatement(UPDATE_QUERY_ANIMATION);
-
-			for (PlayerSkillEntry skill : skillsToUpdate) {
-				ps.setInt(1, skill.getSkillAnimation());
-				ps.setInt(2, player.getObjectId());
-				ps.setInt(3, skill.getSkillId());
-				ps.addBatch();
-			}
-
-			ps.executeBatch();
-			con.commit();
-		}
-		catch (SQLException e) {
-			log.error("Can't update skills for player: " + player.getObjectId());
-		}
-		finally {
-			DatabaseFactory.close(ps);
-		}
-	}
-
-	private void updateSkillsAnimationEnabled(Connection con, Player player, List<PlayerSkillEntry> skills) {
-
-		Collection<PlayerSkillEntry> skillsToUpdate = Collections2.filter(skills, skillsToUpdatePredicate);
-		if (GenericValidator.isBlankOrNull(skillsToUpdate)) {
-			return;
-		}
-
-		PreparedStatement ps = null;
-		try {
-			ps = con.prepareStatement(UPDATE_QUERY_ANIMATION_ENABLED);
-
-			for (PlayerSkillEntry skill : skillsToUpdate) {
-				ps.setInt(1, skill.getSkillAnimationEnabled());
-				ps.setInt(2, player.getObjectId());
-				ps.setInt(3, skill.getSkillId());
-				ps.addBatch();
-			}
-
-			ps.executeBatch();
-			con.commit();
-		}
-		catch (SQLException e) {
-			log.error("Can't update skills for player: " + player.getObjectId());
-		}
-		finally {
-			DatabaseFactory.close(ps);
-		}
-	}
-
-	private void deleteSkills(Connection con, Player player, List<PlayerSkillEntry> skills) {
-
-		Collection<PlayerSkillEntry> skillsToDelete = Collections2.filter(skills, skillsToDeletePredicate);
-		if (GenericValidator.isBlankOrNull(skillsToDelete)) {
-			return;
-		}
-
-		PreparedStatement ps = null;
-		try {
-			ps = con.prepareStatement(DELETE_QUERY);
-
-			for (PlayerSkillEntry skill : skillsToDelete) {
-				ps.setInt(1, player.getObjectId());
-				ps.setInt(2, skill.getSkillId());
-				ps.addBatch();
-			}
-
-			ps.executeBatch();
-			con.commit();
-		}
-		catch (SQLException e) {
-			log.error("Can't delete skills for player: " + player.getObjectId());
-		}
-		finally {
-			DatabaseFactory.close(ps);
-		}
-	}
-
-	@Override
-	public boolean supports(String databaseName, int majorVersion, int minorVersion) {
-		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
-	}
+    @Override
+    public boolean supports(String databaseName, int majorVersion, int minorVersion) {
+        return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
+    }
 }

@@ -253,6 +253,10 @@ public class StaticData {
     public MonsterbookData monsterbookData;
 	@XmlElement(name = "boost_events")
 	public BoostEventData boostEvents;
+	@XmlElement(name="skill_animations")
+	public SkillAnimationData skillAnimationData;
+	@XmlElement(name="events_window")
+	public EventsWindowData eventsWindow;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -368,6 +372,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + monsterbookData.size() + " Monsterbook templates");
 		DataManager.log.info("[DataManager] Loaded " + boostEvents.size() + " Boost Event templates");
 		DataManager.log.info("[DataManager] Loaded " + itemPresettingData.size() + " Item Presetting templates");
-
+		DataManager.log.info("[DataManager] Loaded " + skillAnimationData.size() + " Skill Animation Entries");
+		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window Entries");
 	}
 }

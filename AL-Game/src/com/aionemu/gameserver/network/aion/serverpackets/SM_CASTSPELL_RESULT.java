@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
-import com.aionemu.gameserver.services.SkillAnimationService;
 import com.aionemu.gameserver.skillengine.condition.Condition;
 import com.aionemu.gameserver.skillengine.condition.LeftHandCondition;
 import com.aionemu.gameserver.skillengine.model.Effect;
@@ -32,7 +31,7 @@ import com.aionemu.gameserver.skillengine.model.Skill;
  * This packet show cast spell result (including hit time).
  *
  * @author alexa026, Sweetkr
- * @Rework GiGatR00n
+ * @Rework GiGatR00n & Ghostfur (Aion-Unique)
  */
 public class SM_CASTSPELL_RESULT extends AionServerPacket {
 
@@ -46,11 +45,10 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 	private int dashStatus;
 	private int targetType;
 	private boolean chainSuccess;
-	private int firstSkillId = 0;
-	private int animationsId = 0;
+	private int skinId;
 	private boolean dualSkill = false; //see changes in PS paket (Testing)
 
-	public SM_CASTSPELL_RESULT(Skill skill, List<Effect> effects, int hitTime, boolean chainSuccess, int spellStatus, int dashStatus) {
+	public SM_CASTSPELL_RESULT(Skill skill, List<Effect> effects, int hitTime, boolean chainSuccess, int spellStatus, int dashStatus, int skinId) {
 		this.skill = skill;
 		this.effector = skill.getEffector();
 		this.target = skill.getFirstTarget();
@@ -61,16 +59,20 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 		this.targetType = 0;
 		this.hitTime = hitTime;
 		this.dashStatus = dashStatus;
+		this.skinId = skinId;
 	}
 
-	public SM_CASTSPELL_RESULT(Skill skill, List<Effect> effects, int hitTime, boolean chainSuccess, int spellStatus, int dashStatus, int targetType) {
-		this(skill, effects, hitTime, chainSuccess, spellStatus, dashStatus);
+	public SM_CASTSPELL_RESULT(Skill skill, List<Effect> effects, int hitTime, boolean chainSuccess, int spellStatus, int dashStatus, int targetType, int skinId) {
+		this(skill, effects, hitTime, chainSuccess, spellStatus, dashStatus, skinId);
 		this.targetType = targetType;
 	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		final Player player = con.getActivePlayer();
+		Player player = con.getActivePlayer();
+		if (player == null) {
+			return;
+		}
 		writeD(effector.getObjectId());
 		writeC(targetType);
 		switch (targetType) {
@@ -140,17 +142,7 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 				break;
 		}
 
-		try {
-			firstSkillId = SkillAnimationService.getFirstSkillId(player, skill.getSkillId());
-			animationsId = SkillAnimationService.getAnimationId(player, firstSkillId);
-			writeH(animationsId);
-			// System.out.println("Returned Animation's ID: "+ animationsId );
-		}
-		catch (NullPointerException e) { // CATCH NULL POINTER (TEMP FIX)
-			writeH(0);
-			System.out.println("FOUND NULLPOINTER AND CATCHED IT");
-		}
-
+		writeH(skinId);
 		writeH(effects.size());
 		for (Effect effect : effects) {
 			Creature effected = effect.getEffected();
@@ -203,9 +195,9 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 			}
 
 			// Used for:
-	        //<useequipmentconditions>
-            	//<lefthandweapon type="DUAL"/>
-            //</useequipmentconditions>
+			//<useequipmentconditions>
+			//<lefthandweapon type="DUAL"/>
+			//</useequipmentconditions>
 			if (effect.getSkillTemplate().getUseEquipmentconditions() != null) {
 				if (effect.getSkillTemplate().getUseEquipmentconditions().getConditions() != null) {
 					for (Condition condition : effect.getSkillTemplate().getUseEquipmentconditions().getConditions()) {
@@ -236,7 +228,7 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 			}
 
 			writeC(effect.getShieldDefense());
-			
+
 			if (dualSkill) {
 				writeC(1);
 				writeD(0);
@@ -266,6 +258,15 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 					writeD(0);
 					writeD(effect.getMpShield());
 					writeD(effect.getReflectedSkillId());
+					break;
+				case 32:
+					writeD(effect.getProtectorId());
+					writeD(effect.getProtectedDamage());
+					writeD(effect.getProtectedSkillId());
+					writeD(effect.getReflectedDamage());
+					writeD(effect.getReflectedSkillId());
+					writeD(0);
+					writeD(0);
 					break;
 				default:
 					writeD(effect.getProtectorId());

@@ -21,6 +21,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
  * @author Falke_34
+ * @Reworked Ghostfur (Aion-Unique)
  */
 public class SM_EVENT_WINDOW extends AionServerPacket {
 
@@ -30,6 +31,9 @@ public class SM_EVENT_WINDOW extends AionServerPacket {
 	public SM_EVENT_WINDOW(byte unk1, byte unk2) {
 		this.unk1 = unk1;
 		this.unk2 = unk2;
+	}
+
+	public SM_EVENT_WINDOW(int unk1, int unk2) {
 	}
 
 	@Override

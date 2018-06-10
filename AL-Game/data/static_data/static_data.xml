@@ -208,4 +208,10 @@
 	</luna_consume_rewards>
 	<import file="monster_book/monster_books.xml"/>
 	<import file="events_config/boost_events.xml"/>
+	<skill_animations>
+        <import file="skill_animations" skipRoot="true"/>
+    </skill_animations>
+	<events_window>
+		<import file="events_window/events_window.xml" skipRoot="true"/>
+	</events_window>
 </ae_static_data>

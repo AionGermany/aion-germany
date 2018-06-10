@@ -26,28 +26,35 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_ANIMATION;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
- * @author FrozenKiller
+ * @author Ghostfur (Aion-Unique)
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SkillAnimationAction")
 public class SkillAnimationAction extends AbstractItemAction {
 
-	@XmlAttribute(name = "id")
-	protected int id;
+	@XmlAttribute(name="skin_id")
+	protected int skinId;
+	@XmlAttribute(name="minutes")
+	protected int minutes;
 
-	@Override
 	public boolean canAct(Player player, Item parentItem, Item targetItem) {
+		if (skinId == 0 || parentItem == null) {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_COLOR_ERROR);
+			return false;
+		}
 		return true;
 	}
 
 	@Override
 	public void act(Player player, Item parentItem, Item targetItem) {
+		player.getSkillAnimationList().addSkillAnimation(skinId, minutes);
 		ItemTemplate itemTemplate = parentItem.getItemTemplate();
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), itemTemplate.getTemplateId()), true);
-		PacketSendUtility.sendPacket(player, new SM_SKILL_ANIMATION(0, id));
+		PacketSendUtility.sendPacket(player, new SM_SKILL_ANIMATION(player));
 		Item item = player.getInventory().getItemByObjId(parentItem.getObjectId());
 		player.getInventory().delete(item);
 	}

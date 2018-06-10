@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.network.aion.serverpackets;
 
 import com.aionemu.gameserver.model.gameobjects.Creature;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -28,6 +29,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 public class SM_ATTACK_STATUS extends AionServerPacket {
 
 	private Creature creature;
+	private Creature attacker;
 	private TYPE type;
 	private int skillId;
 	private int value;
@@ -92,20 +94,21 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 		}
 	}
 
-	public SM_ATTACK_STATUS(Creature creature, TYPE type, int skillId, int value, LOG log) {
+	public SM_ATTACK_STATUS(Creature creature, Creature attacker, TYPE type, int skillId, int value, LOG log) {
 		this.creature = creature;
+		this.attacker = attacker;
 		this.type = type;
 		this.skillId = skillId;
 		this.value = value;
 		this.logId = log.getValue();
 	}
 
-	public SM_ATTACK_STATUS(Creature creature, TYPE type, int skillId, int value) {
-		this(creature, type, skillId, value, LOG.REGULAR);
+	public SM_ATTACK_STATUS(Creature creature, Creature attacker, TYPE type, int skillId, int value) {
+		this(creature, attacker, type, skillId, value, LOG.REGULAR);
 	}
 
-	public SM_ATTACK_STATUS(Creature creature, int value) {
-		this(creature, TYPE.REGULAR, 0, value, LOG.REGULAR);
+	public SM_ATTACK_STATUS(Creature creature, Creature attacker, int value) {
+		this(creature, attacker, TYPE.REGULAR, 0, value, LOG.REGULAR);
 	}
 
 	/**
@@ -133,11 +136,18 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 		writeC(type.getValue());
 		writeC(creature.getLifeStats().getHpPercentage());
 		writeH(skillId);
-		writeH(0);// unk 5.3
-		if (skillId != 0) {
+		if (attacker instanceof Player) {
+			Player player = (Player) attacker;
+			if (player != null) {
+				writeH(player.getSkillAnimationList().getSkinId(skillId));
+			} else {
+				writeH(0);
+			}
+		} else {
+			writeH(0); // 5.3
+		} if (skillId != 0) {
 			writeH(logId);
-		}
-		else {
+		} else {
 			writeH(LOG.ATTACK.getValue());
 		}
 	}

@@ -51,6 +51,7 @@ import com.aionemu.gameserver.model.actions.PlayerActions;
 import com.aionemu.gameserver.model.actions.PlayerMode;
 import com.aionemu.gameserver.model.cp.PlayerCPList;
 import com.aionemu.gameserver.model.dorinerk_wardrobe.PlayerWardrobeList;
+import com.aionemu.gameserver.model.event_window.PlayerEventWindowList;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.CreatureType;
 import com.aionemu.gameserver.model.gameobjects.Item;
@@ -82,6 +83,7 @@ import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.model.items.storage.StorageType;
 import com.aionemu.gameserver.model.monsterbook.PlayerMonsterbookList;
 import com.aionemu.gameserver.model.skill.PlayerSkillList;
+import com.aionemu.gameserver.model.skillanimation.SkillAnimationList;
 import com.aionemu.gameserver.model.stats.container.PlayerGameStats;
 import com.aionemu.gameserver.model.stats.container.PlayerLifeStats;
 import com.aionemu.gameserver.model.team.legion.Legion;
@@ -319,6 +321,39 @@ public class Player extends Creature {
 	private PlayerMonsterbookList monsterbook;
 	private boolean setMinionSpawned;
 	private EquipmentSettingList equipmentSettingList;
+
+	/**
+	 * Player Event Window List
+	 */
+	private PlayerEventWindowList ew;
+
+	/**
+	 * Player Skill Animation List
+	 */
+	private SkillAnimationList skillAnimationList;
+
+	/**
+	 * Skill Animation List
+	 */
+	public SkillAnimationList getSkillAnimationList() {
+		return skillAnimationList;
+	}
+
+	public void setSkillAnimationList(SkillAnimationList skillAnimationList) {
+		this.skillAnimationList = skillAnimationList;
+		skillAnimationList.setOwner(this);
+	}
+
+	/**
+	 * Player Event Window List
+	 */
+	public PlayerEventWindowList getEventWindow() {
+		return ew;
+	}
+
+	public void setEventWindow(PlayerEventWindowList playerEventWindowList) {
+		ew = playerEventWindowList;
+	}
 
 	/**
 	 * Used for JUnit tests

@@ -22,6 +22,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.aionemu.gameserver.model.skillanimation.SkillAnimation;
+import com.aionemu.gameserver.services.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -116,30 +118,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_BD;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_FD;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.AccessLevelEnum;
-import com.aionemu.gameserver.services.AtreianPassportService;
-import com.aionemu.gameserver.services.AutoGroupService;
-import com.aionemu.gameserver.services.BoostEventService;
-import com.aionemu.gameserver.services.BrokerService;
-import com.aionemu.gameserver.services.ClassChangeService;
-import com.aionemu.gameserver.services.DisputeLandService;
-import com.aionemu.gameserver.services.EventService;
-import com.aionemu.gameserver.services.F2pService;
-import com.aionemu.gameserver.services.FastTrackService;
-import com.aionemu.gameserver.services.HTMLService;
-import com.aionemu.gameserver.services.HousingService;
-import com.aionemu.gameserver.services.KiskService;
-import com.aionemu.gameserver.services.LegionService;
-import com.aionemu.gameserver.services.PetitionService;
-import com.aionemu.gameserver.services.PunishmentService;
 import com.aionemu.gameserver.services.PunishmentService.PunishmentType;
-import com.aionemu.gameserver.services.SiegeService;
-import com.aionemu.gameserver.services.SkillLearnService;
-import com.aionemu.gameserver.services.StigmaService;
-import com.aionemu.gameserver.services.SurveyService;
-import com.aionemu.gameserver.services.TownService;
-import com.aionemu.gameserver.services.VortexService;
-import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
@@ -435,7 +414,8 @@ public final class PlayerEnterWorldService {
 			// SM_QUEST_LIST
 			client.sendPacket(new SM_QUEST_LIST(questList));
 
-			client.sendPacket(new SM_SKILL_ANIMATION(2));
+			// SM_SKILL_ANIMATION
+			client.sendPacket(new SM_SKILL_ANIMATION(player));
 
 			DAOManager.getDAO(PlayerLunaShopDAO.class).load(player);
 
@@ -593,6 +573,9 @@ public final class PlayerEnterWorldService {
 
 			// SM_DISPUTE_LAND
 			DisputeLandService.getInstance().onLogin(player);
+
+			//SM_EVENT_WINDOW
+			EventWindowService.getInstance().onLogin(player);
 
 			// SM_7E_UNK 00 00 00
 			client.sendPacket(new SM_UNK_7E(0)); // TODO
@@ -830,20 +813,6 @@ public final class PlayerEnterWorldService {
 			// Remove Old Stigma's (The Broken Icon Stigmas And Put them in Inventory) 4.8
 			removeBrokenStigmas(player);
 
-			// Homeward Bound Skill fix
-			if (player.getActiveHouse() != null) {
-				if (player.getSkillList().getSkillEntry(295) != null || player.getSkillList().getSkillEntry(296) != null) {
-					return;
-				}
-				else {
-					if (player.getRace() == Race.ASMODIANS)
-						player.getSkillList().addSkill(player, 296, 1);
-					else if (player.getRace() == Race.ELYOS)
-						player.getSkillList().addSkill(player, 295, 1);
-
-				}
-			}
-
 			/**
 			 * Trigger restore services on login.
 			 */
@@ -890,6 +859,13 @@ public final class PlayerEnterWorldService {
 				if (title.getExpireTime() != 0)
 					ExpireTimerTask.getInstance().addTask(title, player);
 			}
+
+			for (SkillAnimation skillAnimation : player.getSkillAnimationList().getSkillAnimation()) {
+				if (skillAnimation.getExpireTime() != 0) {
+					ExpireTimerTask.getInstance().addTask(skillAnimation, player);
+				}
+			}
+
 
 			if (player.getHouseRegistry() != null) {
 				for (HouseObject<?> obj : player.getHouseRegistry().getObjects()) {

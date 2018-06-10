@@ -16,79 +16,48 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import java.util.HashMap;
-import java.util.Map.Entry;
-
+import com.aionemu.gameserver.model.skillanimation.SkillAnimation;
+import com.aionemu.gameserver.model.skillanimation.SkillAnimationList;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.skill.PlayerSkillEntry;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
- * @author FrozenKiller
+ * @author Ghostfur (Aion-Unique)
  */
-
 public class SM_SKILL_ANIMATION extends AionServerPacket {
-
+	private SkillAnimationList skillAnimationList;
 	private int action;
-	private int skillAnimation;
-	private static HashMap<Integer, Integer> skillAnimations = new HashMap<Integer, Integer>();
+	private int titleId;
+	private int bonusTitleId;
+	private int playerObjId;
 
-	public SM_SKILL_ANIMATION(int action) {
-		this.action = action;
+	public SM_SKILL_ANIMATION(Player player) {
+		action = 1;
+		skillAnimationList = player.getSkillAnimationList();
 	}
 
-	public SM_SKILL_ANIMATION(int action, int skillAnimation) {
-		this.action = action;
-		this.skillAnimation = skillAnimation;
-	}
-
-	@Override
-	protected void writeImpl(AionConnection con) { // TODO
-		final Player player = con.getActivePlayer();
+	protected void writeImpl(AionConnection con) {
+		writeC(action);
 		switch (action) {
-			case 0:// Learn
-				writeC(0);
-				writeH(1);
-				writeH(skillAnimation);
-				writeD(0);
-				writeC(0);
+			case 0:
+				writeH(skillAnimationList.size());
+				for (SkillAnimation skillanimation : skillAnimationList.getSkillAnimation()) {
+					writeH(skillanimation.getId());
+					writeD(skillanimation.getExpireTime());
+					writeC(skillanimation.getIsActive());
+				}
 				break;
-			case 1:// Initial packet ?
-				writeC(1);
-				writeH(0);
+			case 1:
+				if (skillAnimationList != null) {
+					writeH(skillAnimationList.size());
+					for (SkillAnimation skillAnimation : skillAnimationList.getSkillAnimation()) {
+						writeH(skillAnimation.getId());
+						writeD(skillAnimation.getExpireTime());
+						writeC(skillAnimation.getIsActive());
+					}
+				}
 				break;
-			case 2: // Load from DB
-				PlayerSkillEntry[] skills = player.getSkillList().getAllSkills();
-				for (PlayerSkillEntry entry : skills) {
-					if (entry.getSkillAnimation() != 0) {
-						skillAnimations.put(entry.getSkillId(), entry.getSkillAnimation());
-					}
-					else {
-						continue;
-					}
-				}
-				writeC(1);
-				if (skillAnimations.size() != 0) {
-					writeH(skillAnimations.size());// Size
-					for (Entry<Integer, Integer> entry : skillAnimations.entrySet()) {
-						int skillId = entry.getKey();
-						int animation = entry.getValue();
-						writeH(animation);
-						writeD(skillId);
-						writeC(player.getSkillList().getSkillEntry(skillId).getSkillAnimationEnabled());// Default Animation (0 = True, 1 = False)
-					}
-					break;
-				}
-				else {
-					// System.out.println("NO ANIMATION SKILLS");
-					writeH(0);
-					writeH(0);
-					writeD(0);
-					writeC(0);
-					break;
-				}
 		}
-		skillAnimations.clear();
 	}
 }

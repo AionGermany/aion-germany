@@ -20,13 +20,13 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
-import com.aionemu.gameserver.services.SkillAnimationService;
 
 /**
  * This packet show casting spell animation.
  *
  * @author alexa026
  * @author rhys2002
+ * @author Ghostfur (Aion-Unique)
  */
 public class SM_CASTSPELL extends AionServerPacket {
 
@@ -40,10 +40,9 @@ public class SM_CASTSPELL extends AionServerPacket {
 	private float x;
 	private float y;
 	private float z;
-	private int firstSkillId = 0;
-	private int animationsId = 0;
+	private int skinId;
 
-	public SM_CASTSPELL(int attackerObjectId, int spellId, int level, int targetType, int targetObjectId, int duration, boolean isCharge) {
+	public SM_CASTSPELL(int attackerObjectId, int spellId, int level, int targetType, int targetObjectId, int duration, boolean isCharge, int skinId) {
 		this.attackerObjectId = attackerObjectId;
 		this.spellId = spellId;
 		this.level = level;
@@ -51,10 +50,11 @@ public class SM_CASTSPELL extends AionServerPacket {
 		this.targetObjectId = targetObjectId;
 		this.duration = duration;
 		this.isCharge = isCharge;
+		this.skinId = skinId;
 	}
 
-	public SM_CASTSPELL(int attackerObjectId, int spellId, int level, int targetType, float x, float y, float z, int duration) {
-		this(attackerObjectId, spellId, level, targetType, 0, duration, false);
+	public SM_CASTSPELL(int attackerObjectId, int spellId, int level, int targetType, float x, float y, float z, int duration, int skinId) {
+		this(attackerObjectId, spellId, level, targetType, 0, duration, false, skinId);
 		this.x = x;
 		this.y = y;
 		this.z = z;
@@ -100,15 +100,6 @@ public class SM_CASTSPELL extends AionServerPacket {
 		writeC(0x00);// unk
 		writeF(player.getGameStats().getReverseStat(StatEnum.BOOST_CASTING_TIME, 1000).getCurrent() / 1000f);// currentCastingSpeed
 		writeC(isCharge ? 0x01 : 0x00);// charge?
-		try {
-			firstSkillId = SkillAnimationService.getFirstSkillId(player, spellId);
-			animationsId = SkillAnimationService.getAnimationId(player, firstSkillId);
-			writeH(animationsId);
-			// System.out.println("Returned Animation's ID 2: "+ animationsId );
-		}
-		catch (NullPointerException e) { // CATCH NULL POINTER (TEMP FIX)
-			writeH(0);
-			// System.out.println("FOUND NULLPOINTER AND CATCHED IT 2");
-		}
+		writeH(skinId);
 	}
 }
