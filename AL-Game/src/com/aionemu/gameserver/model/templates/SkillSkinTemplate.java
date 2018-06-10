@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name="skill_skin")
-public class SkillAnimationTemplate {
+public class SkillSkinTemplate {
 	@XmlAttribute(name="id", required=true)
 	private int id;
 	@XmlAttribute(name="name", required=true)

@@ -5,9 +5,9 @@ import com.aionemu.commons.database.DatabaseFactory;
 import com.aionemu.commons.database.IUStH;
 import com.aionemu.commons.database.ParamReadStH;
 import com.aionemu.gameserver.dao.MySQL5DAOUtils;
-import com.aionemu.gameserver.dao.PlayerSkillAnimationListDAO;
-import com.aionemu.gameserver.model.skillanimation.SkillAnimation;
-import com.aionemu.gameserver.model.skillanimation.SkillAnimationList;
+import com.aionemu.gameserver.dao.PlayerSkillSkinListDAO;
+import com.aionemu.gameserver.model.skinskill.SkillSkin;
+import com.aionemu.gameserver.model.skinskill.SkillSkinList;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class MySQL5PlayerSkillAnimationListDAO extends PlayerSkillAnimationListDAO {
+/**
+ * @author Ghostfur (Aion-Unique)
+ */
+public class MySQL5PlayerSkillSkinListDAO extends PlayerSkillSkinListDAO {
 
     private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerTitleListDAO.class);
     private static final String LOAD_QUERY = "SELECT `skin_id`, `remaining`, `active` FROM `player_skill_skins` WHERE `player_id`=?";
@@ -25,8 +28,8 @@ public class MySQL5PlayerSkillAnimationListDAO extends PlayerSkillAnimationListD
     private static final String DELETE_QUERY = "DELETE FROM `player_skill_skins` WHERE `player_id`=? AND `skin_id` =?;";
 
     @Override
-    public SkillAnimationList loadSkillAnimationList(final int playerId) {
-        final SkillAnimationList tl = new SkillAnimationList();
+    public SkillSkinList loadSkillSkinList(final int playerId) {
+        final SkillSkinList tl = new SkillSkinList();
 
         DB.select(LOAD_QUERY, new ParamReadStH() {
             @Override
@@ -48,7 +51,7 @@ public class MySQL5PlayerSkillAnimationListDAO extends PlayerSkillAnimationListD
     }
 
     @Override
-    public boolean storeSkillAnimations(Player player, SkillAnimation entry) {
+    public boolean storeSkillSkins(Player player, SkillSkin entry) {
         Connection con = null;
         try {
             con = DatabaseFactory.getConnection();
@@ -100,7 +103,7 @@ public class MySQL5PlayerSkillAnimationListDAO extends PlayerSkillAnimationListD
     }
 
     @Override
-    public boolean removeSkillAnimation(int playerId, int skinId) {
+    public boolean removeSkillSkin(int playerId, int skinId) {
         Connection con = null;
         try {
             con = DatabaseFactory.getConnection();

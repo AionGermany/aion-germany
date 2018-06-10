@@ -17,23 +17,23 @@
 package com.aionemu.gameserver.dao;
 
 import com.aionemu.commons.database.dao.DAO;
-import com.aionemu.gameserver.model.skillanimation.SkillAnimation;
-import com.aionemu.gameserver.model.skillanimation.SkillAnimationList;
+import com.aionemu.gameserver.model.skinskill.SkillSkin;
+import com.aionemu.gameserver.model.skinskill.SkillSkinList;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 /**
  * @author Ghostfur (Aion-Unique)
  */
-public abstract class PlayerSkillAnimationListDAO implements DAO {
+public abstract class PlayerSkillSkinListDAO implements DAO {
 	public final String getClassName() {
-		return PlayerSkillAnimationListDAO.class.getName();
+		return PlayerSkillSkinListDAO.class.getName();
 	}
 	
-	public abstract SkillAnimationList loadSkillAnimationList(int paramInt);
+	public abstract SkillSkinList loadSkillSkinList(int paramInt);
 	
-	public abstract boolean storeSkillAnimations(Player paramPlayer, SkillAnimation paramSkillAnimation);
+	public abstract boolean storeSkillSkins(Player paramPlayer, SkillSkin paramSkillSkin);
 	
-	public abstract boolean removeSkillAnimation(int paramInt1, int paramInt2);
+	public abstract boolean removeSkillSkin(int paramInt1, int paramInt2);
 	
 	public abstract boolean setActive(int paramInt1, int paramInt2);
 	
