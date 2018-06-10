@@ -22,8 +22,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Future;
 
-import javolution.util.FastList;
-
 import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.ai2.manager.WalkManager;
 import com.aionemu.gameserver.controllers.effect.PlayerEffectController;
@@ -51,6 +49,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
+
+import javolution.util.FastList;
 
 /**
  * @author

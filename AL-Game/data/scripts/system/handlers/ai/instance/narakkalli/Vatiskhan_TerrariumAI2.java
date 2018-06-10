@@ -16,8 +16,6 @@
  */
 package ai.instance.narakkalli;
 
-import ai.GeneralNpcAI2;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.AIState;
@@ -30,6 +28,8 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
+
+import ai.GeneralNpcAI2;
 
 @AIName("Vatiskhan_Terrarium") // 806703
 public class Vatiskhan_TerrariumAI2 extends GeneralNpcAI2 {

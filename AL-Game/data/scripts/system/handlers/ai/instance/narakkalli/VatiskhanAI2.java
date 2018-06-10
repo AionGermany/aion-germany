@@ -19,8 +19,6 @@ package ai.instance.narakkalli;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import ai.GeneralNpcAI2;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
@@ -37,6 +35,8 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.WorldPosition;
+
+import ai.GeneralNpcAI2;
 
 @AIName("vatiskhan") // 806592
 public class VatiskhanAI2 extends GeneralNpcAI2 {

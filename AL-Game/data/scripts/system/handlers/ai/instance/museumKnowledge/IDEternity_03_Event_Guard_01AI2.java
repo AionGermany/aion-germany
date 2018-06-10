@@ -18,8 +18,6 @@ package ai.instance.museumKnowledge;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import ai.AggressiveNpcAI2;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
@@ -30,6 +28,8 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
+
+import ai.AggressiveNpcAI2;
 
 /**
  * @author Rinzler

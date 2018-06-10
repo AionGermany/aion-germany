@@ -22,9 +22,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Future;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.ai2.AIState;
@@ -65,6 +62,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
+
+import javolution.util.FastList;
+import javolution.util.FastMap;
 
 /**
  * @author Rinzler

@@ -16,7 +16,6 @@
  */
 package ai.beritraInvasion;
 
-import ai.AggressiveNpcAI2;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.Race;
@@ -32,6 +31,8 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
+
+import ai.AggressiveNpcAI2;
 
 /**
  * @author Rinzler

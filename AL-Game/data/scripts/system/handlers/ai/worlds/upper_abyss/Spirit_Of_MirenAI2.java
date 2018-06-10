@@ -16,8 +16,6 @@
  */
 package ai.worlds.upper_abyss;
 
-import ai.AggressiveNpcAI2;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
@@ -30,6 +28,8 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
+
+import ai.AggressiveNpcAI2;
 
 @AIName("spirit_of_miren")
 public class Spirit_Of_MirenAI2 extends AggressiveNpcAI2 {
