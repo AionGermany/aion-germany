@@ -32,6 +32,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author Ghostfur (Aion-Unique)
+ * @rework FrozenKiller
  */
 public class SkillSkinList {
 	private final FastMap<Integer, SkillSkin> skillskins;
@@ -67,7 +68,7 @@ public class SkillSkinList {
 		if (ss == null) {
 			throw new IllegalArgumentException("Invalid skin id " + skinId);
 		} if (owner != null) {
-			SkillSkin entry = new SkillSkin(ss, skinId, time, 0);
+			SkillSkin entry = new SkillSkin(ss, skinId, time, 1);
 			if (!skillskins.containsKey(skinId)) {
 				skillskins.put(skinId, entry);
 				DAOManager.getDAO(PlayerSkillSkinListDAO.class).storeSkillSkins(owner, entry);
@@ -76,7 +77,7 @@ public class SkillSkinList {
 				return false;
 			}
 			PacketSendUtility.sendPacket(owner, SM_SYSTEM_MESSAGE.STR_MSG_GET_ITEM(ss.getName()));
-			PacketSendUtility.sendPacket(owner, new SM_SKILL_ANIMATION(owner));
+			PacketSendUtility.sendPacket(owner, new SM_SKILL_ANIMATION(skinId, time));
 			return true;
 		}
 		return false;

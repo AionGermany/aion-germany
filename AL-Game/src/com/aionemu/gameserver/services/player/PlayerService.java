@@ -185,6 +185,7 @@ public class PlayerService {
 		player.setQuestStateList(DAOManager.getDAO(PlayerQuestListDAO.class).load(player));
 		player.setRecipeList(DAOManager.getDAO(PlayerRecipesDAO.class).load(player.getObjectId()));
 		player.setSkillSkinList(DAOManager.getDAO(PlayerSkillSkinListDAO.class).loadSkillSkinList(playerObjId));
+		player.getSkillSkinList().setOwner(player);
 
 		/**
 		 * Account warehouse should be already loaded in account

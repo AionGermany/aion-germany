@@ -51,10 +51,9 @@ public class SkillAnimationAction extends AbstractItemAction {
 
 	@Override
 	public void act(Player player, Item parentItem, Item targetItem) {
-		player.getSkillSkinList().addSkillSkin(skinId, minutes);
 		ItemTemplate itemTemplate = parentItem.getItemTemplate();
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), itemTemplate.getTemplateId()), true);
-		PacketSendUtility.sendPacket(player, new SM_SKILL_ANIMATION(player));
+		player.getSkillSkinList().addSkillSkin(skinId, minutes);
 		Item item = player.getInventory().getItemByObjId(parentItem.getObjectId());
 		player.getInventory().delete(item);
 	}

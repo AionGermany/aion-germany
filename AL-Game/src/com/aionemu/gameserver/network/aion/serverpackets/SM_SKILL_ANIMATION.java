@@ -24,16 +24,21 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
  * @author Ghostfur (Aion-Unique)
+ * @rework FrozenKiller
  */
 public class SM_SKILL_ANIMATION extends AionServerPacket {
 	private SkillSkinList skillSkinList;
 	private int action;
-	@SuppressWarnings("unused")
-	private int titleId;
-	@SuppressWarnings("unused")
-	private int bonusTitleId;
-	@SuppressWarnings("unused")
-	private int playerObjId;
+	private int skillSkinId;
+	private int expire;
+	private int isActive;
+	
+	public SM_SKILL_ANIMATION(int skillSkinId, int expire) {
+		action = 0;
+		this.skillSkinId = skillSkinId;
+		this.expire = expire;
+		isActive = 1; 
+	}
 
 	public SM_SKILL_ANIMATION(Player player) {
 		action = 1;
@@ -44,12 +49,10 @@ public class SM_SKILL_ANIMATION extends AionServerPacket {
 		writeC(action);
 		switch (action) {
 			case 0:
-				writeH(skillSkinList.size());
-				for (SkillSkin skillSkin : skillSkinList.getSkillSkins()) {
-					writeH(skillSkin.getId());
-					writeD(skillSkin.getExpireTime());
-					writeC(skillSkin.getIsActive());
-				}
+				writeH(1);
+				writeH(skillSkinId);
+				writeD(expire);
+				writeC(isActive);
 				break;
 			case 1:
 				if (skillSkinList != null) {
@@ -60,6 +63,8 @@ public class SM_SKILL_ANIMATION extends AionServerPacket {
 						writeC(skillSkin.getIsActive());
 					}
 				}
+				break;
+			default:
 				break;
 		}
 	}
