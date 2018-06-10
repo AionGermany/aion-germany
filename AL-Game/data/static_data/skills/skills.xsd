@@ -633,6 +633,7 @@
 				<xs:attribute name="model" type="xs:int" use="required"/>
 				<xs:attribute name="type" type="TransformType" default="NONE"/>
 				<xs:attribute name="panelid" type="xs:int"/>
+				<xs:attribute name="itemId" type="xs:int" default="0"/>
 				<xs:attribute name="state" type="AbnormalState" default="BUFF" />
 			</xs:extension>
 		</xs:complexContent>
