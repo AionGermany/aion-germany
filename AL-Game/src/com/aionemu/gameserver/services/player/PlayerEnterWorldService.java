@@ -414,6 +414,7 @@ public final class PlayerEnterWorldService {
 			// SM_QUEST_LIST
 			client.sendPacket(new SM_QUEST_LIST(questList));
 
+			// SM_SKILL_ANIMATION
 			client.sendPacket(new SM_SKILL_ANIMATION(player));
 
 			DAOManager.getDAO(PlayerLunaShopDAO.class).load(player);

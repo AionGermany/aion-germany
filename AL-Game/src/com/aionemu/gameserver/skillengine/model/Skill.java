@@ -1415,6 +1415,15 @@ public class Skill {
 			this.setCooldowns();
 		}
 
+		if (skillMethod == SkillMethod.CAST && getSkillTemplate().getSubType() != SkillSubType.HEAL && hitTime <= 0 || skillMethod == SkillMethod.CHARGE && getSkillTemplate().getSubType() != SkillSubType.HEAL) {
+			double targetDis = MathUtil.getDistance(effector, firstTarget);
+			if (skillanimationHitTIme > 0) {
+				hitTime += (int)(skillanimationHitTIme * effector.getDistanceToTarget() * 1.8F);
+			} else {
+				this.hitTime = ((int)((int)(getSkillTemplate().getAmmoSpeed() * effector.getDistanceToTarget()) * 1.8F));
+			}
+		}
+
 		if (hitTime == 0) {
 			applyEffect(effects);
 		}
