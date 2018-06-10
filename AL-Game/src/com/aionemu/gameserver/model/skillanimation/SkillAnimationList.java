@@ -104,10 +104,10 @@ public class SkillAnimationList {
 		if (SkillId == 0 || getOwner().getSkillAnimationList() == null || getOwner() == null) {
 			return 0;
 		}
-		for (SkillAnimation skillSkin : getOwner().getSkillAnimationList().getSkillAnimation()) {
+		for (SkillAnimation skillAnimation : getOwner().getSkillAnimationList().getSkillAnimation()) {
 			if (DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup() != null) {
-				if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup()) && skillSkin.getIsActive() == 1) {
-					skinid = skillSkin.getId();
+				if (skillAnimation.getTemplate().getSkillGroup().equalsIgnoreCase(DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup()) && skillAnimation.getIsActive() == 1) {
+					skinid = skillAnimation.getId();
 				}
 			}
 		}
