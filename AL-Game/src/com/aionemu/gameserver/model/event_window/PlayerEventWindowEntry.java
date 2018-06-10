@@ -3,9 +3,9 @@
  */
 package com.aionemu.gameserver.model.event_window;
 
-import com.aionemu.gameserver.model.event_window.EventWindowEntry;
-import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import java.sql.Timestamp;
+
+import com.aionemu.gameserver.model.gameobjects.PersistentState;
 
 public class PlayerEventWindowEntry
 extends EventWindowEntry {

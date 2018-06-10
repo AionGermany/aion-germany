@@ -19,8 +19,6 @@ package com.aionemu.gameserver.services;
 import java.util.List;
 import java.util.Map;
 
-import javolution.util.FastMap;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,6 +47,8 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
+
+import javolution.util.FastMap;
 
 public class AbyssLandingService {
 

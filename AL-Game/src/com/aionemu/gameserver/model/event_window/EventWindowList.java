@@ -3,8 +3,9 @@
  */
 package com.aionemu.gameserver.model.event_window;
 
-import com.aionemu.gameserver.model.gameobjects.Creature;
 import java.sql.Timestamp;
+
+import com.aionemu.gameserver.model.gameobjects.Creature;
 
 /**
  * @author Ghostfur (Aion-Unique)

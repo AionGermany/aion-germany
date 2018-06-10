@@ -1,8 +1,8 @@
 package com.aionemu.gameserver.model.skinskill;
 
 import com.aionemu.gameserver.model.IExpirable;
-import com.aionemu.gameserver.model.templates.SkillSkinTemplate;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.templates.SkillSkinTemplate;
 
 /**
  * @author Ghostfur (Aion-Unique)
