@@ -1,4 +1,25 @@
+/**
+ * This file is part of Aion-Lightning <aion-lightning.org>.
+ *
+ *  Aion-Lightning is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Aion-Lightning is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details. *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Aion-Lightning.
+ *  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.aionemu.gameserver.model.event_window;
+
+import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.dao.PlayerEventsWindowDAO;
+import com.aionemu.gameserver.model.gameobjects.PersistentState;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -6,15 +27,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.aionemu.commons.database.dao.DAOManager;
-import com.aionemu.gameserver.dao.PlayerEventsWindowDAO;
-import com.aionemu.gameserver.model.gameobjects.PersistentState;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
-
+/**
+ * @author Ghostfur (Aion-Unique)
+ */
 public class PlayerEventWindowList
 implements EventWindowList<Player> {
     private final Map<Integer, PlayerEventWindowEntry> entry = new HashMap<Integer, PlayerEventWindowEntry>(0);
-    private int RemaininG;
+    private int remaining;
 
     public PlayerEventWindowList() {
     }
@@ -27,7 +46,7 @@ implements EventWindowList<Player> {
     }
 
     public PlayerEventWindowEntry[] getAll() {
-        ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList<PlayerEventWindowEntry>();
+        ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList();
         arrayList.addAll(entry.values());
         return arrayList.toArray(new PlayerEventWindowEntry[arrayList.size()]);
     }
@@ -36,24 +55,24 @@ implements EventWindowList<Player> {
         return entry.values().toArray(new PlayerEventWindowEntry[entry.size()]);
     }
 
-    private synchronized boolean add(Player player, int RemaininG, Timestamp timestamp, int Time, PersistentState persistentState) {
-        entry.put(RemaininG, new PlayerEventWindowEntry(RemaininG, timestamp, Time, persistentState));
-        (DAOManager.getDAO(PlayerEventsWindowDAO.class)).store(player.getPlayerAccount().getId(), RemaininG, timestamp, Time);
+    private synchronized boolean add(Player player, int remaining, Timestamp timestamp, int Time, PersistentState persistentState) {
+        entry.put(remaining, new PlayerEventWindowEntry(remaining, timestamp, Time, persistentState));
+        (DAOManager.getDAO(PlayerEventsWindowDAO.class)).store(player.getPlayerAccount().getId(), remaining, timestamp, Time);
         return true;
     }
 
     @Override
-    public boolean add(Player player, int RemaininG, Timestamp timestamp, int Time) {
-        return add(player, RemaininG, timestamp, Time, PersistentState.NEW);
+    public boolean add(Player player, int remaining, Timestamp timestamp, int Time) {
+        return add(player, remaining, timestamp, Time, PersistentState.NEW);
     }
 
     @Override
-    public synchronized boolean remove(Player player, int RemaininG) {
-        PlayerEventWindowEntry playerEventWindowEntry = entry.get(RemaininG);
+    public synchronized boolean remove(Player player, int remaining) {
+        PlayerEventWindowEntry playerEventWindowEntry = entry.get(remaining);
         if (playerEventWindowEntry != null) {
             playerEventWindowEntry.setPersistentState(PersistentState.DELETED);
-            entry.remove(RemaininG);
-            (DAOManager.getDAO(PlayerEventsWindowDAO.class)).delete(player.getPlayerAccount().getId(), RemaininG);
+            entry.remove(remaining);
+            (DAOManager.getDAO(PlayerEventsWindowDAO.class)).delete(player.getPlayerAccount().getId(), remaining);
         }
         return true;
     }
@@ -63,12 +82,12 @@ implements EventWindowList<Player> {
         return entry.size();
     }
 
-    public void setRemaining(int RemaininG) {
-        this.RemaininG = RemaininG;
+    public void setRemaining(int remaining) {
+        this.remaining = remaining;
     }
 
     public int getRenaming() {
-        return RemaininG;
+        return remaining;
     }
 }
 
