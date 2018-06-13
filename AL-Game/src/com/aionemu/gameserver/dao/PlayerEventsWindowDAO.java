@@ -28,25 +28,23 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public abstract class PlayerEventsWindowDAO
         implements DAO {
-    public abstract PlayerEventWindowList load(Player accountId);
+    public abstract PlayerEventWindowList load(Player id);
 
-    public abstract void insert(int accountId, int eventId, Timestamp last_stamp);
+    public abstract void insert(int id, int eventId, Timestamp last_stamp);
 
-    public abstract boolean store(int accountId, int eventId, Timestamp last_stamp, int elapsed);
+    public abstract boolean store(int id, int eventId, Timestamp last_stamp, int elapsed);
 
-    public abstract void delete(int accountId, int eventId);
+    public abstract void delete(int id, int eventId);
 
-    public abstract Timestamp getLastStamp(int accountId, int eventId);
+    public abstract Timestamp getLastStamp(int id, int eventId);
 
-    public abstract double getElapsed(int accountId);
+    public abstract double getElapsed(int id);
 
-    public abstract void updateElapsed(int accountId, double eventId);
+    public abstract void updateElapsed(int id, double eventId);
 
-    public abstract List<Integer> getEventsWindow(int accountId);
+    public abstract List<Integer> getEventsWindow(int id);
 
     public final String getClassName() {
         return PlayerEventsWindowDAO.class.getName();
     }
 }
-
-
