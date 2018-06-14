@@ -16,15 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import java.sql.Timestamp;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ScheduledFuture;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerEventsWindowDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -37,7 +28,16 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+import java.sql.Timestamp;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ScheduledFuture;
+
 import javolution.util.FastMap;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Ghostfur (Aion-Unique)
@@ -47,9 +47,12 @@ public class EventWindowService {
     private Map<Integer, EventsWindow> data = new HashMap<>(1);
     private Map<Integer, EventsWindow> event = new HashMap<>(1);
     private ScheduledFuture<?> schedule = null;
-    private long tStart = 0;
-    private long tEnd = 0;
+    private long tStart = 0; //Start Time.
+    private long tEnd = 0; //End Time.
 
+    /**
+     * initialize all events
+     */
     public void initialize() {
         Map<Integer, EventsWindow> map = DataManager.EVENTS_WINDOW.getAllEvents();
         if (map.size() != 0) {
@@ -57,21 +60,30 @@ public class EventWindowService {
         }
     }
 
+    /**
+     * get events window start and end time
+     */
     public void getEvents(Map<Integer, EventsWindow> map) {
         data.putAll(map);
         for (EventsWindow eventsWindow : data.values()) {
             getEvent(eventsWindow.getId(), eventsWindow);
-            log.info("[EventWindowService] start " + eventsWindow.getPeriodStart() + " end " + eventsWindow.getPeriodEnd());
+            log.info("[EventWindowService] Start " + eventsWindow.getPeriodStart() + " End " + eventsWindow.getPeriodEnd());
         }
     }
 
-    public void getEvent(int RemaininG, EventsWindow eventsWindow) {
-        if (event.containsValue(RemaininG)) {
+    /**
+     * get events window remaining time
+     */
+    public void getEvent(int remaining, EventsWindow eventsWindow) {
+        if (event.containsValue(remaining)) {
             return;
         }
-        event.put(RemaininG, eventsWindow);
+        event.put(remaining, eventsWindow);
     }
 
+    /**
+     * get events window active events
+     */
     public Map<Integer, EventsWindow> getActiveEvents() {
         HashMap<Integer, EventsWindow> hashMap = new HashMap<>();
         for (EventsWindow eventsWindow : event.values()) {
@@ -81,28 +93,34 @@ public class EventWindowService {
         return hashMap;
     }
 
-    public Map<Integer, EventsWindow> getPlayerEventsWindow(int RemaininG) {
+    /**
+     * get player events window remaining time
+     */
+    public Map<Integer, EventsWindow> getPlayerEventsWindow(int remaining) {
         HashMap<Integer, EventsWindow> hashMap = new HashMap<>();
-        List<Integer> list = (DAOManager.getDAO(PlayerEventsWindowDAO.class)).getEventsWindow(RemaininG);
+        List<Integer> list = (DAOManager.getDAO(PlayerEventsWindowDAO.class)).getEventsWindow(remaining);
         for (Integer Time : list) {
             hashMap.put(Time, data.get(Time));
         }
         return hashMap;
     }
 
+    /**
+     * activate events window on login
+     */
     public void onLogin(final Player player) {
         if (player == null) {
             return;
         }
         tStart = System.currentTimeMillis();
-        final int RemaininG = player.getPlayerAccount().getId();
+        final int remaining = player.getPlayerAccount().getId();
         final PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
         Map<Integer, EventsWindow> map = getActiveEvents();
-        Map<Integer, EventsWindow> map2 = getPlayerEventsWindow(RemaininG);
+        Map<Integer, EventsWindow> map2 = getPlayerEventsWindow(remaining);
         final FastMap<Integer, EventsWindow> fastMap = new FastMap<>();
         @SuppressWarnings("unused")
-		double timeZ = 0.0; // Todo??
-        double time = playerEventsWindowDAO.getElapsed(RemaininG);
+        double timeZ = 0.0;
+        double time = playerEventsWindowDAO.getElapsed(remaining);
         int Time = (int)(time % 3600.0 / 60.0);
         player.getEventWindow().setRemaining(Time);
         for (PlayerEventWindowEntry playerEventWindowEntry : player.getEventWindow().getAll()) {
@@ -117,7 +135,7 @@ public class EventWindowService {
                 @Override
                 public void run() {
                     if (player.isOnline()) {
-                        playerEventsWindowDAO.insert(RemaininG, eventsWindow.getId(), new Timestamp(System.currentTimeMillis()));
+                        playerEventsWindowDAO.insert(remaining, eventsWindow.getId(), new Timestamp(System.currentTimeMillis()));
                         ItemService.addItem(player, eventsWindow.getItemId(), eventsWindow.getCount());
                         fastMap.remove(eventsWindow.getId());
                         log.info("Player " + player.getName() + " get reward of events window item " + eventsWindow.getItemId());
@@ -129,25 +147,31 @@ public class EventWindowService {
         PacketSendUtility.sendPacket(player, new SM_EVENT_WINDOW(3, 1));
     }
 
+    /**
+     * deactivate events window on logout
+     */
     public void onLogout(Player player) {
-        int RemaininG = player.getPlayerAccount().getId();
-        Map<Integer, EventsWindow> map = getPlayerEventsWindow(RemaininG);
+        int remaining = player.getPlayerAccount().getId();
+        Map<Integer, EventsWindow> map = getPlayerEventsWindow(remaining);
         PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
         if (!player.isOnline() && schedule != null) {
             tEnd = System.currentTimeMillis();
             schedule.cancel(true);
             schedule = null;
             if (map != null) {
-                double d2 = playerEventsWindowDAO.getElapsed(RemaininG);
-                long l2 = tEnd - tStart;
-                double d3 = (double)l2 / 1000.0;
-                double d4 = d2 + d3;
-                playerEventsWindowDAO.updateElapsed(RemaininG, d4);
+                double d2 = playerEventsWindowDAO.getElapsed(remaining);
+                long Long = tEnd - tStart;
+                double d3 = (double)Long / 1000.0;
+                double time = d2 + d3;
+                playerEventsWindowDAO.updateElapsed(remaining, time);
             }
             log.info("schedule canceled");
         }
     }
 
+    /**
+     * events window getinstance
+     */
     public static EventWindowService getInstance() {
         return INSTANCE;
     }
