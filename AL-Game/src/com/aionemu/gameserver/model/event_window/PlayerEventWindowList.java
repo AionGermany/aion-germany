@@ -32,7 +32,7 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class PlayerEventWindowList
 implements EventWindowList<Player> {
-    private final Map<Integer, PlayerEventWindowEntry> entry = new HashMap<Integer, PlayerEventWindowEntry>(0);
+    private final Map<Integer, PlayerEventWindowEntry> entry = new HashMap<>(0);
     private int remaining;
 
     public PlayerEventWindowList() {
@@ -46,8 +46,7 @@ implements EventWindowList<Player> {
     }
 
     public PlayerEventWindowEntry[] getAll() {
-        ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList();
-        arrayList.addAll(entry.values());
+        ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList(entry.values());
         return arrayList.toArray(new PlayerEventWindowEntry[arrayList.size()]);
     }
 
@@ -55,6 +54,9 @@ implements EventWindowList<Player> {
         return entry.values().toArray(new PlayerEventWindowEntry[entry.size()]);
     }
 
+    /**
+     * add player event window list
+     */
     private synchronized boolean add(Player player, int remaining, Timestamp timestamp, int Time, PersistentState persistentState) {
         entry.put(remaining, new PlayerEventWindowEntry(remaining, timestamp, Time, persistentState));
         (DAOManager.getDAO(PlayerEventsWindowDAO.class)).store(player.getPlayerAccount().getId(), remaining, timestamp, Time);
@@ -66,6 +68,9 @@ implements EventWindowList<Player> {
         return add(player, remaining, timestamp, Time, PersistentState.NEW);
     }
 
+    /**
+     * remove player event window list
+     */
     @Override
     public synchronized boolean remove(Player player, int remaining) {
         PlayerEventWindowEntry playerEventWindowEntry = entry.get(remaining);
@@ -77,16 +82,25 @@ implements EventWindowList<Player> {
         return true;
     }
 
+    /**
+     * size player event window list
+     */
     @Override
     public int size() {
         return entry.size();
     }
 
+    /**
+     * set a remaining time
+     */
     public void setRemaining(int remaining) {
         this.remaining = remaining;
     }
 
-    public int getRenaming() {
+    /**
+     * gets a remaining time
+     */
+    public int getRemaining() {
         return remaining;
     }
 }
