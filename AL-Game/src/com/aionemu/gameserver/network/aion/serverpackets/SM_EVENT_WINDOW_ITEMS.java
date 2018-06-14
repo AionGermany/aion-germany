@@ -31,46 +31,63 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
 
-	private static final Logger log = LoggerFactory.getLogger(SM_EVENT_WINDOW_ITEMS.class);
-	private Collection<EventsWindow> active_events_packet;
-	@SuppressWarnings("unused")
-	private int remainTime;
+    private static final Logger log = LoggerFactory.getLogger(SM_EVENT_WINDOW_ITEMS.class);
+    private Collection<EventsWindow> active_events_packet;
+    @SuppressWarnings("unused")
+    private int remainTime;
 
-	public SM_EVENT_WINDOW_ITEMS(Collection<EventsWindow> collection) {
-		active_events_packet = collection;
-	}
+    public SM_EVENT_WINDOW_ITEMS(Collection<EventsWindow> collection) {
+        active_events_packet = collection;
+    }
 
-	@Override
-	protected void writeImpl(AionConnection aionConnection) {
-		writeC(1);
-		writeH(active_events_packet.size());
-		for (EventsWindow eventsWindow : active_events_packet) {
-			log.info("event id " + eventsWindow.getId() + " remain " + eventsWindow.getRemainingTime() + " start-time " + new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000 + " end-time " + new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000 + " total size " + active_events_packet.size());
-			writeD(eventsWindow.getId());
-			writeB(new byte[33]);
-			writeD(eventsWindow.getRemainingTime());
-			writeD(eventsWindow.getItemId());
-			writeQ(eventsWindow.getCount());
-			writeD(10950);
-			writeQ(new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000);
-			writeQ(new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000);
-			writeD(0);
-			writeD(0);
-			writeD(1088063744);
-			writeD(eventsWindow.getMinLevel());
-			writeD(eventsWindow.getMaxLevel());
-			writeB(new byte[92]);
-			writeD(0);
-			writeD(0);
-			writeD(1);
-			writeD(8);
-			writeD(1);
-			writeC(0);
-			writeD(1);
-			writeH(0);
-			writeD(-1);
-			writeD(0);
-		}
-	}
+    @Override
+    protected void writeImpl(AionConnection aionConnection) {
+        writeC(1);
+        writeH(active_events_packet.size());
+        for (EventsWindow eventsWindow : active_events_packet) {
+            log.info("event id " + eventsWindow.getId() + " remain " + eventsWindow.getRemainingTime() + " start-time " + new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000 + " end-time " + new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000 + " total size " + active_events_packet.size());
+
+            //writeC(1); // Always 1
+            //writeC(1); // ShowIcon 0 = False 1 = True
+
+            writeD(eventsWindow.getId()); // Id
+
+            writeB(new byte[33]); // Byte 33 GF 5.8?
+
+            writeD(eventsWindow.getRemainingTime()); // Remaining Time
+            writeD(eventsWindow.getItemId());  // ItemId
+            writeQ(eventsWindow.getCount()); // ItemCount
+
+            writeD(10950);
+
+            writeQ(new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000); // Period Start TimeStamp
+            writeQ(new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000); // Period End TimeSTamp
+
+            writeD(0);
+            writeD(0);
+
+            writeD(1088063744);
+
+            writeD(eventsWindow.getMinLevel()); // StartLevel
+            writeD(eventsWindow.getMaxLevel()); // EndLevel
+
+            
+            writeB(new byte[92]); // Byte 92 GF 5.8?
+
+            writeD(0);
+            writeD(0);
+            writeD(1);
+
+            writeD(8);
+            writeD(1);
+
+            writeC(0);
+
+            writeD(1);
+            writeH(0);
+
+            writeD(-1);
+            writeD(0);
+        }
+    }
 }
-
