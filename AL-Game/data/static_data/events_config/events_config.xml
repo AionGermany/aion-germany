@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Tiamaranta Eye</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Tiamaranta Eye;Secret of the Ancients Returns Inventory;Secret of the Ancients Returns</active>
     <events>
         <event name="World Blessers" start="2017-01-01T00:00:00+00:00" end="2018-12-31T00:00:00+00:00">
             <quests>
@@ -2385,6 +2385,60 @@
                     <!-- Verva ||| DC1_Verbenk_E -->
                     <spawn npc_id="836454" respawn_time="295">
                         <spot x="1199.0" y="1392.6" z="208.125" h="30"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Secret of the Ancients Returns Inventory" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
+            <inventory_drop startlevel="65" interval="30" endlevel="75" maxCountOfDay="6" cleanTime="9">188057812</inventory_drop>
+        </event> 
+        <event name="Secret of the Ancients Returns" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
+            <quests>
+                <maintainable>80949;80950;80951;80952;80953</maintainable>
+            </quests>
+            <spawns>
+                <spawn_map map_id="110010000"><!-- Sanctum -->
+                    <!-- Ramses ||| World_event_egypt_kingnpc_01 -->
+                    <spawn npc_id="835551" respawn_time="295">
+                        <spot x="1527.7" y="1512.9" z="565.8943" h="69"/>
+                    </spawn>
+                    <!-- Cleo ||| World_event_egypt_queennpc_01 -->
+                    <spawn npc_id="835552" respawn_time="295">
+                        <spot x="1527.7" y="1507.6" z="565.8971" h="60"/>
+                    </spawn>
+                    <!-- Sphinx ||| World_event_egypt_questnpc_01 -->
+                    <spawn npc_id="835553" respawn_time="295">
+                        <spot x="1532.6" y="1516.0" z="565.89307" h="60"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_Pyramid_01 -->
+                    <spawn npc_id="835554" respawn_time="295">
+                        <spot x="1536.3" y="1509.1" z="565.8934" h="60"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_desert_01 -->
+                    <spawn npc_id="835555" respawn_time="295">
+                        <spot x="1532.4" y="1511.6" z="565.88245" h="60"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="120010000"><!-- Pandaemonium -->
+                    <!-- Ramses ||| World_event_egypt_kingnpc_01 -->
+                    <spawn npc_id="835551" respawn_time="295">
+                        <spot x="1172.5" y="1366.6" z="209.6744" h="15"/>
+                    </spawn>
+                    <!-- Cleo ||| World_event_egypt_queennpc_01 -->
+                    <spawn npc_id="835552" respawn_time="295">
+                        <spot x="1176.4" y="1363.2" z="209.67441" h="15"/>
+                    </spawn>
+                    <!-- Sphinx ||| World_event_egypt_questnpc_01 -->
+                    <spawn npc_id="835553" respawn_time="295">
+                        <spot x="1179.1" y="1357.2" z="209.6744" h="24"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_Pyramid_01 -->
+                    <spawn npc_id="835554" respawn_time="295">
+                        <spot x="1169.6" y="1359.6" z="209.67447" h="16"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_desert_01 -->
+                    <spawn npc_id="835555" respawn_time="295">
+                        <spot x="1169.6" y="1359.6" z="209.67447" h="16"/>
                     </spawn>
                 </spawn_map>
             </spawns>
