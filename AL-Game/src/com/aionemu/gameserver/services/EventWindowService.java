@@ -115,8 +115,8 @@ public class EventWindowService {
 			return;
 		}
 		tStart = System.currentTimeMillis();
-		int accountId = player.getPlayerAccount().getId();
-		PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
+		final int accountId = player.getPlayerAccount().getId();
+		final PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
 		Map<Integer, EventsWindow> map = getActiveEvents();
 		Map<Integer, EventsWindow> map2 = getPlayerEventsWindow(accountId);
 		final FastMap<Integer, EventsWindow> fastMap = new FastMap<>();
@@ -128,7 +128,7 @@ public class EventWindowService {
 		for (PlayerEventWindowEntry playerEventWindowEntry : player.getEventWindow().getAll()) {
 			timeZ = playerEventWindowEntry.getElapsed();
 		}
-		for (EventsWindow eventsWindow : map.values()) {
+		for (final EventsWindow eventsWindow : map.values()) {
 			if (!eventsWindow.getPeriodStart().isBeforeNow() || !eventsWindow.getPeriodEnd().isAfterNow() || map2.containsKey(eventsWindow.getId()))
 				continue;
 			fastMap.put(eventsWindow.getId(), eventsWindow);
