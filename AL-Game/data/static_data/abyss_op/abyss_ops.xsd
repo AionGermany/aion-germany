@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="abyss_ops">
+  <xs:include schemaLocation="../global_types.xsd"/>
+  <xs:element name="abyss_ops">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="abyss_op" minOccurs="0" maxOccurs="unbounded">
