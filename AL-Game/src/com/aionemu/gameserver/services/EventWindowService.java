@@ -72,13 +72,13 @@ public class EventWindowService {
     }
 
     /**
-     * get events window remaining time
+     * get events window
      */
-    public void getEvent(int remaining, EventsWindow eventsWindow) {
-        if (event.containsValue(remaining)) {
+    public void getEvent(int accountId, EventsWindow eventsWindow) {
+        if (event.containsValue(accountId)) {
             return;
         }
-        event.put(remaining, eventsWindow);
+        event.put(accountId, eventsWindow);
     }
 
     /**
@@ -94,11 +94,11 @@ public class EventWindowService {
     }
 
     /**
-     * get player events window remaining time
+     * get player events window
      */
-    public Map<Integer, EventsWindow> getPlayerEventsWindow(int remaining) {
+    public Map<Integer, EventsWindow> getPlayerEventsWindow(int accountId) {
         HashMap<Integer, EventsWindow> hashMap = new HashMap<>();
-        List<Integer> list = (DAOManager.getDAO(PlayerEventsWindowDAO.class)).getEventsWindow(remaining);
+        List<Integer> list = (DAOManager.getDAO(PlayerEventsWindowDAO.class)).getEventsWindow(accountId);
         for (Integer Time : list) {
             hashMap.put(Time, data.get(Time));
         }
@@ -113,14 +113,14 @@ public class EventWindowService {
             return;
         }
         tStart = System.currentTimeMillis();
-        final int remaining = player.getPlayerAccount().getId();
+        final int accountId = player.getPlayerAccount().getId();
         final PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
         Map<Integer, EventsWindow> map = getActiveEvents();
-        Map<Integer, EventsWindow> map2 = getPlayerEventsWindow(remaining);
+        Map<Integer, EventsWindow> map2 = getPlayerEventsWindow(accountId);
         final FastMap<Integer, EventsWindow> fastMap = new FastMap<>();
         @SuppressWarnings("unused")
         double timeZ = 0.0;
-        double time = playerEventsWindowDAO.getElapsed(remaining);
+        double time = playerEventsWindowDAO.getElapsed(accountId);
         int Time = (int)(time % 3600.0 / 60.0);
         player.getEventWindow().setRemaining(Time);
         for (PlayerEventWindowEntry playerEventWindowEntry : player.getEventWindow().getAll()) {
@@ -135,7 +135,7 @@ public class EventWindowService {
                 @Override
                 public void run() {
                     if (player.isOnline()) {
-                        playerEventsWindowDAO.insert(remaining, eventsWindow.getId(), new Timestamp(System.currentTimeMillis()));
+                        playerEventsWindowDAO.insert(accountId, eventsWindow.getId(), new Timestamp(System.currentTimeMillis()));
                         ItemService.addItem(player, eventsWindow.getItemId(), eventsWindow.getCount());
                         fastMap.remove(eventsWindow.getId());
                         log.info("Player " + player.getName() + " get reward of events window item " + eventsWindow.getItemId());
@@ -151,21 +151,21 @@ public class EventWindowService {
      * deactivate events window on logout
      */
     public void onLogout(Player player) {
-        int remaining = player.getPlayerAccount().getId();
-        Map<Integer, EventsWindow> map = getPlayerEventsWindow(remaining);
+        int accountId = player.getPlayerAccount().getId();
+        Map<Integer, EventsWindow> map = getPlayerEventsWindow(accountId);
         PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
         if (!player.isOnline() && schedule != null) {
             tEnd = System.currentTimeMillis();
             schedule.cancel(true);
             schedule = null;
             if (map != null) {
-                double d2 = playerEventsWindowDAO.getElapsed(remaining);
+                double d2 = playerEventsWindowDAO.getElapsed(accountId);
                 long Long = tEnd - tStart;
                 double d3 = (double)Long / 1000.0;
                 double time = d2 + d3;
-                playerEventsWindowDAO.updateElapsed(remaining, time);
+                playerEventsWindowDAO.updateElapsed(accountId, time);
             }
-            log.info("schedule canceled");
+            log.info("Schedule canceled");
         }
     }
 
@@ -178,7 +178,3 @@ public class EventWindowService {
 
     private static final EventWindowService INSTANCE = new EventWindowService();
     }
-
-
-
-
