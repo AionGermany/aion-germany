@@ -30,78 +30,77 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 /**
  * @author Ghostfur (Aion-Unique)
  */
-public class PlayerEventWindowList
-implements EventWindowList<Player> {
-    private final Map<Integer, PlayerEventWindowEntry> entry = new HashMap<>(0);
-    private int remaining;
+public class PlayerEventWindowList implements EventWindowList<Player> {
 
-    public PlayerEventWindowList() {
-    }
+	private final Map<Integer, PlayerEventWindowEntry> entry = new HashMap<>(0);
+	private int remaining;
 
-    public PlayerEventWindowList(List<PlayerEventWindowEntry> list) {
-        this();
-        for (PlayerEventWindowEntry playerEventWindowEntry : list) {
-            entry.put(playerEventWindowEntry.getId(), playerEventWindowEntry);
-        }
-    }
+	public PlayerEventWindowList() {
+	}
 
-    public PlayerEventWindowEntry[] getAll() {
-        ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList(entry.values());
-        return arrayList.toArray(new PlayerEventWindowEntry[arrayList.size()]);
-    }
+	public PlayerEventWindowList(List<PlayerEventWindowEntry> list) {
+		this();
+		for (PlayerEventWindowEntry playerEventWindowEntry : list) {
+			entry.put(playerEventWindowEntry.getId(), playerEventWindowEntry);
+		}
+	}
 
-    public PlayerEventWindowEntry[] getBasic() {
-        return entry.values().toArray(new PlayerEventWindowEntry[entry.size()]);
-    }
+	public PlayerEventWindowEntry[] getAll() {
+		ArrayList<PlayerEventWindowEntry> arrayList = new ArrayList<PlayerEventWindowEntry>(entry.values());
+		return arrayList.toArray(new PlayerEventWindowEntry[arrayList.size()]);
+	}
 
-    /**
-     * add player event window list
-     */
-    private synchronized boolean add(Player player, int remaining, Timestamp timestamp, int Time, PersistentState persistentState) {
-        entry.put(remaining, new PlayerEventWindowEntry(remaining, timestamp, Time, persistentState));
-        (DAOManager.getDAO(PlayerEventsWindowDAO.class)).store(player.getPlayerAccount().getId(), remaining, timestamp, Time);
-        return true;
-    }
+	public PlayerEventWindowEntry[] getBasic() {
+		return entry.values().toArray(new PlayerEventWindowEntry[entry.size()]);
+	}
 
-    @Override
-    public boolean add(Player player, int remaining, Timestamp timestamp, int Time) {
-        return add(player, remaining, timestamp, Time, PersistentState.NEW);
-    }
+	/**
+	 * add player event window list
+	 */
+	private synchronized boolean add(Player player, int remaining, Timestamp timestamp, int Time, PersistentState persistentState) {
+		entry.put(remaining, new PlayerEventWindowEntry(remaining, timestamp, Time, persistentState));
+		DAOManager.getDAO(PlayerEventsWindowDAO.class).store(player.getPlayerAccount().getId(), remaining, timestamp, Time);
+		return true;
+	}
 
-    /**
-     * remove player event window list
-     */
-    @Override
-    public synchronized boolean remove(Player player, int remaining) {
-        PlayerEventWindowEntry playerEventWindowEntry = entry.get(remaining);
-        if (playerEventWindowEntry != null) {
-            playerEventWindowEntry.setPersistentState(PersistentState.DELETED);
-            entry.remove(remaining);
-            (DAOManager.getDAO(PlayerEventsWindowDAO.class)).delete(player.getPlayerAccount().getId(), remaining);
-        }
-        return true;
-    }
+	@Override
+	public boolean add(Player player, int remaining, Timestamp timestamp, int Time) {
+		return add(player, remaining, timestamp, Time, PersistentState.NEW);
+	}
 
-    /**
-     * size player event window list
-     */
-    @Override
-    public int size() {
-        return entry.size();
-    }
+	/**
+	 * remove player event window list
+	 */
+	@Override
+	public synchronized boolean remove(Player player, int remaining) {
+		PlayerEventWindowEntry playerEventWindowEntry = entry.get(remaining);
+		if (playerEventWindowEntry != null) {
+			playerEventWindowEntry.setPersistentState(PersistentState.DELETED);
+			entry.remove(remaining);
+			DAOManager.getDAO(PlayerEventsWindowDAO.class).delete(player.getPlayerAccount().getId(), remaining);
+		}
+		return true;
+	}
 
-    /**
-     * set a remaining time
-     */
-    public void setRemaining(int remaining) {
-        this.remaining = remaining;
-    }
+	/**
+	 * size player event window list
+	 */
+	@Override
+	public int size() {
+		return entry.size();
+	}
 
-    /**
-     * gets a remaining time
-     */
-    public int getRemaining() {
-        return remaining;
-    }
+	/**
+	 * set a remaining time
+	 */
+	public void setRemaining(int remaining) {
+		this.remaining = remaining;
+	}
+
+	/**
+	 * gets a remaining time
+	 */
+	public int getRemaining() {
+		return remaining;
+	}
 }
-

@@ -27,17 +27,18 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  * @rework FrozenKiller
  */
 public class SM_SKILL_ANIMATION extends AionServerPacket {
+
 	private SkillSkinList skillSkinList;
 	private int action;
 	private int skillSkinId;
 	private int expire;
 	private int isActive;
-	
+
 	public SM_SKILL_ANIMATION(int skillSkinId, int expire) {
 		action = 0;
 		this.skillSkinId = skillSkinId;
 		this.expire = expire;
-		isActive = 1; 
+		isActive = 1;
 	}
 
 	public SM_SKILL_ANIMATION(Player player) {

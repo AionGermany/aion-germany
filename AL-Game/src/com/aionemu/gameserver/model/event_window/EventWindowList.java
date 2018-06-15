@@ -25,18 +25,18 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 public interface EventWindowList<T extends Creature> {
 
-    /**
-     * add event window list
-     */
-    public boolean add(T id, int eventId, Timestamp last_stamp, int elapsed);
+	/**
+	 * add event window list
+	 */
+	public boolean add(T id, int eventId, Timestamp last_stamp, int elapsed);
 
-    /**
-     * remove event window list
-     */
-    public boolean remove(T id, int eventId);
+	/**
+	 * remove event window list
+	 */
+	public boolean remove(T id, int eventId);
 
-    /**
-     * size event window list
-     */
-    public int size();
+	/**
+	 * size event window list
+	 */
+	public int size();
 }

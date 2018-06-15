@@ -23,16 +23,11 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 /**
- * 
  * @author Ranastic
- *
  */
 public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
 
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerEventsWindowDAO.class);
-	
-	@Override
-    public boolean supports(String s, int i, int i1) { return MySQL5DAOUtils.supports(s, i, i1); }
 	
 	@Override
 	public PlayerEventWindowList load(Player player) {
@@ -187,4 +182,10 @@ public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
         }
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
+	public boolean supports(String databaseName, int majorVersion, int minorVersion) {
+		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
+	}	
 }

@@ -22,32 +22,32 @@ import java.sql.Timestamp;
  * @author Ghostfur (Aion-Unique)
  */
 public class EventWindowEntry {
-    private int id;
-    private Timestamp lastStamp;
-    private int elapsed;
 
-    /**
-     * entry for id timestamp and elapsed time
-     */
-    public EventWindowEntry(int id, Timestamp timestamp, int elapsed) {
-        this.id = id;
-        this.lastStamp = timestamp;
-        this.elapsed = elapsed;
-    }
+	private int id;
+	private Timestamp lastStamp;
+	private int elapsed;
 
-    /**
-     * get id timestamp + elapsed time
-     */
-    public int getId() {
-        return id;
-    }
+	/**
+	 * entry for id timestamp and elapsed time
+	 */
+	public EventWindowEntry(int id, Timestamp timestamp, int elapsed) {
+		this.id = id;
+		this.lastStamp = timestamp;
+		this.elapsed = elapsed;
+	}
 
-    public Timestamp getLastStamp() {
-        return lastStamp;
-    }
+	/**
+	 * get id timestamp + elapsed time
+	 */
+	public int getId() {
+		return id;
+	}
 
-    public int getElapsed() {
-        return elapsed;
-    }
+	public Timestamp getLastStamp() {
+		return lastStamp;
+	}
+
+	public int getElapsed() {
+		return elapsed;
+	}
 }
-

@@ -12,6 +12,8 @@
  */
 package com.aionemu.gameserver.dataholders;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 import java.util.List;
 
 import javax.xml.bind.Unmarshaller;
@@ -22,15 +24,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.aionemu.gameserver.model.templates.SkillSkinTemplate;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
-@XmlRootElement(name="skill_skins")
+@XmlRootElement(name = "skill_skins")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SkillSkinData {
-	@XmlElement(name="skill_skin")
+
+	@XmlElement(name = "skill_skin")
 	private List<SkillSkinTemplate> sst;
 	private TIntObjectHashMap<SkillSkinTemplate> skillskins;
-  
+
 	void afterUnmarshal(Unmarshaller u, Object parent) {
 		skillskins = new TIntObjectHashMap<SkillSkinTemplate>();
 		for (SkillSkinTemplate st : sst) {
@@ -38,11 +39,11 @@ public class SkillSkinData {
 		}
 		sst = null;
 	}
-  
+
 	public SkillSkinTemplate getSkillSkinTemplate(int skinId) {
 		return skillskins.get(skinId);
 	}
-  
+
 	public int size() {
 		return skillskins.size();
 	}

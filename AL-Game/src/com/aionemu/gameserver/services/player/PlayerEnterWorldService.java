@@ -836,6 +836,20 @@ public final class PlayerEnterWorldService {
 			// Remove Old Stigma's (The Broken Icon Stigmas And Put them in Inventory) 4.8
 			removeBrokenStigmas(player);
 
+			// Homeward Bound Skill fix
+			if (player.getActiveHouse() != null) {
+				if (player.getSkillList().getSkillEntry(295) != null || player.getSkillList().getSkillEntry(296) != null) {
+					return;
+				}
+				else {
+					if (player.getRace() == Race.ASMODIANS)
+						player.getSkillList().addSkill(player, 296, 1);
+					else if (player.getRace() == Race.ELYOS)
+						player.getSkillList().addSkill(player, 295, 1);
+
+				}
+			}
+
 			/**
 			 * Trigger restore services on login.
 			 */

@@ -16,6 +16,8 @@
  */
 package com.aionemu.gameserver.dataholders;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,40 +31,38 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import com.aionemu.gameserver.model.templates.event.EventsWindow;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 /**
  * @author Ghostfur (Aion-Unique)
  */
-@XmlRootElement(name="events_window")
-@XmlAccessorType(value=XmlAccessType.FIELD)
-
+@XmlRootElement(name = "events_window")
+@XmlAccessorType(value = XmlAccessType.FIELD)
 public class EventsWindowData {
-    @XmlElement(name="event_window")
-    private List<EventsWindow> events_window;
 
-    @XmlTransient
-    private TIntObjectHashMap<EventsWindow> eventData = new TIntObjectHashMap<EventsWindow>();
+	@XmlElement(name = "event_window")
+	private List<EventsWindow> events_window;
 
-    @XmlTransient
-    private Map<Integer, EventsWindow> eventDataMap = new HashMap<>(1);
+	@XmlTransient
+	private TIntObjectHashMap<EventsWindow> eventData = new TIntObjectHashMap<EventsWindow>();
 
-    void afterUnmarshal(Unmarshaller unmarshaller, Object object) {
-        for (EventsWindow eventsWindow : events_window) {
-            eventData.put(eventsWindow.getId(), eventsWindow);
-            eventDataMap.put(eventsWindow.getId(), eventsWindow);
-        }
-    }
+	@XmlTransient
+	private Map<Integer, EventsWindow> eventDataMap = new HashMap<>(1);
 
-    public int size() {
-        return eventData.size();
-    }
+	void afterUnmarshal(Unmarshaller unmarshaller, Object object) {
+		for (EventsWindow eventsWindow : events_window) {
+			eventData.put(eventsWindow.getId(), eventsWindow);
+			eventDataMap.put(eventsWindow.getId(), eventsWindow);
+		}
+	}
 
-    public EventsWindow getEventWindowId(int EventData) {
-        return eventData.get(EventData);
-    }
+	public int size() {
+		return eventData.size();
+	}
 
-    public Map<Integer, EventsWindow> getAllEvents() {
-        return eventDataMap;
-    }
+	public EventsWindow getEventWindowId(int EventData) {
+		return eventData.get(EventData);
+	}
+
+	public Map<Integer, EventsWindow> getAllEvents() {
+		return eventDataMap;
+	}
 }

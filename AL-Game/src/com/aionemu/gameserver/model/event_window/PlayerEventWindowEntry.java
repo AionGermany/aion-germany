@@ -23,41 +23,41 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
 /**
  * @author Ghostfur (Aion-Unique)
  */
-public class PlayerEventWindowEntry
-extends EventWindowEntry {
-    private PersistentState persistentState;
+public class PlayerEventWindowEntry extends EventWindowEntry {
 
-    public PlayerEventWindowEntry(int time, Timestamp timestamp, int remaining, PersistentState persistentState) {
-        super(time, timestamp, remaining);
-        this.persistentState = persistentState;
-    }
+	private PersistentState persistentState;
 
-    public PersistentState getPersistentState() {
-        return this.persistentState;
-    }
+	public PlayerEventWindowEntry(int time, Timestamp timestamp, int remaining, PersistentState persistentState) {
+		super(time, timestamp, remaining);
+		this.persistentState = persistentState;
+	}
 
-    public void setPersistentState(PersistentState persistentState) {
-        switch (persistentState) {
-            case DELETED: {
-                if (this.persistentState == PersistentState.NEW) {
-                    this.persistentState = PersistentState.NOACTION;
-                    break;
-                }
-                this.persistentState = PersistentState.DELETED;
-                break;
-            }
-            case UPDATE_REQUIRED: {
-                if (this.persistentState == PersistentState.NEW) break;
-                this.persistentState = PersistentState.UPDATE_REQUIRED;
-                break;
-            }
-            case NOACTION: {
-                break;
-            }
-            default: {
-                this.persistentState = persistentState;
-            }
-        }
-    }
+	public PersistentState getPersistentState() {
+		return this.persistentState;
+	}
+
+	public void setPersistentState(PersistentState persistentState) {
+		switch (persistentState) {
+			case DELETED: {
+				if (this.persistentState == PersistentState.NEW) {
+					this.persistentState = PersistentState.NOACTION;
+					break;
+				}
+				this.persistentState = PersistentState.DELETED;
+				break;
+			}
+			case UPDATE_REQUIRED: {
+				if (this.persistentState == PersistentState.NEW)
+					break;
+				this.persistentState = PersistentState.UPDATE_REQUIRED;
+				break;
+			}
+			case NOACTION: {
+				break;
+			}
+			default: {
+				this.persistentState = persistentState;
+			}
+		}
+	}
 }
-

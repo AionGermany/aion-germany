@@ -18,6 +18,8 @@ package com.aionemu.gameserver.model.skinskill;
 
 import java.util.Collection;
 
+import javolution.util.FastMap;
+
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerSkillSkinListDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -28,13 +30,12 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-import javolution.util.FastMap;
-
 /**
  * @author Ghostfur (Aion-Unique)
  * @rework FrozenKiller
  */
 public class SkillSkinList {
+
 	private final FastMap<Integer, SkillSkin> skillskins;
 	private Player owner;
 
@@ -67,12 +68,14 @@ public class SkillSkinList {
 		SkillSkinTemplate ss = DataManager.SKILL_SKIN_DATA.getSkillSkinTemplate(skinId);
 		if (ss == null) {
 			throw new IllegalArgumentException("Invalid skin id " + skinId);
-		} if (owner != null) {
+		}
+		if (owner != null) {
 			SkillSkin entry = new SkillSkin(ss, skinId, time, 1);
 			if (!skillskins.containsKey(skinId)) {
 				skillskins.put(skinId, entry);
 				DAOManager.getDAO(PlayerSkillSkinListDAO.class).storeSkillSkins(owner, entry);
-			} else {
+			}
+			else {
 				PacketSendUtility.sendPacket(owner, SM_SYSTEM_MESSAGE.STR_MSG_COSTUME_SKILL_ALREADY_HAS_COSTUME);
 				return false;
 			}
@@ -104,7 +107,8 @@ public class SkillSkinList {
 		if (this.owner.getSkillSkinList() != null) {
 			for (SkillSkin skillSkin : owner.getSkillSkinList().getSkillSkins()) {
 				if (skillSkin.getTemplate() != null) {
-					if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(skillGroup.getSkillGroup()) && skillSkin.getIsActive() == 1) {
+					if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(skillGroup.getSkillGroup())
+						&& skillSkin.getIsActive() == 1) {
 						skinIdToremove = skillSkin.getId();
 						break;
 					}
@@ -123,7 +127,9 @@ public class SkillSkinList {
 		}
 		for (SkillSkin skillSkin : getOwner().getSkillSkinList().getSkillSkins()) {
 			if (DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup() != null) {
-				if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup()) && skillSkin.getIsActive() == 1) {
+				if (skillSkin.getTemplate().getSkillGroup()
+					.equalsIgnoreCase(DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup())
+					&& skillSkin.getIsActive() == 1) {
 					skinid = skillSkin.getId();
 				}
 			}

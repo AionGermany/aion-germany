@@ -42,7 +42,8 @@ public class CM_SKILL_ANIMATION extends AionClientPacket {
 		Player player = getConnection().getActivePlayer();
 		if (SkillSkinId > 0) {
 			player.getSkillSkinList().setActive(SkillSkinId);
-		} else {
+		}
+		else {
 			player.getSkillSkinList().setDeactive(SkillId);
 		}
 	}

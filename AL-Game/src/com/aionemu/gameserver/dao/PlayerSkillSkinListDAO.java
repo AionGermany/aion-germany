@@ -25,17 +25,18 @@ import com.aionemu.gameserver.model.skinskill.SkillSkinList;
  * @author Ghostfur (Aion-Unique)
  */
 public abstract class PlayerSkillSkinListDAO implements DAO {
+
 	public final String getClassName() {
 		return PlayerSkillSkinListDAO.class.getName();
 	}
-	
+
 	public abstract SkillSkinList loadSkillSkinList(int paramInt);
-	
+
 	public abstract boolean storeSkillSkins(Player paramPlayer, SkillSkin paramSkillSkin);
-	
+
 	public abstract boolean removeSkillSkin(int paramInt1, int paramInt2);
-	
+
 	public abstract boolean setActive(int paramInt1, int paramInt2);
-	
+
 	public abstract boolean setDeactive(int paramInt1, int paramInt2);
 }
