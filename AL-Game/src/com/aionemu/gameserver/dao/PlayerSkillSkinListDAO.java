@@ -26,17 +26,18 @@ import com.aionemu.gameserver.model.skinskill.SkillSkinList;
  */
 public abstract class PlayerSkillSkinListDAO implements DAO {
 
+    @Override
 	public final String getClassName() {
 		return PlayerSkillSkinListDAO.class.getName();
 	}
 
-	public abstract SkillSkinList loadSkillSkinList(int paramInt);
+	public abstract SkillSkinList loadSkillSkinList(int playerId);
 
-	public abstract boolean storeSkillSkins(Player paramPlayer, SkillSkin paramSkillSkin);
+	public abstract boolean storeSkillSkins(Player player, SkillSkin entry);
 
-	public abstract boolean removeSkillSkin(int paramInt1, int paramInt2);
+	public abstract boolean removeSkillSkin(int playerId, int skinId);
 
-	public abstract boolean setActive(int paramInt1, int paramInt2);
+	public abstract boolean setActive(int playerId, int skinId);
 
-	public abstract boolean setDeactive(int paramInt1, int paramInt2);
+	public abstract boolean setDeactive(int playerId, int skinId);
 }
