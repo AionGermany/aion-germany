@@ -107,25 +107,70 @@ public class CM_EXPAND_CUBE extends AionClientPacket {
 					if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) { // 117 slots to 126 [EU Always 5-Keys Displayed ]
 						CubeExpandService.expand(activePlayer, true); // row goes to 11
 					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
 				}
 				else if (activePlayer.getCubeExpands() == 11) { // 11 rows open
 					if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) { // 126 slots to 135
 						CubeExpandService.expand(activePlayer, true); // row goes to 12
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) {
+						CubeExpandService.expand(activePlayer, true);
 					}
 				}
 				else if (activePlayer.getCubeExpands() == 12) { // 12 rows open
 					if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) { // 135 slots to 144
 						CubeExpandService.expand(activePlayer, true); // row goes to 13
 					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
 				}
 				else if (activePlayer.getCubeExpands() == 13) { // 13 rows open
 					if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) { // 144 slots to 153
 						CubeExpandService.expand(activePlayer, true); // row goes to 14
 					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
 				}
 				else if (activePlayer.getCubeExpands() == 14) { // 14 rows open
 					if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) { // 153 slots to 162
-						CubeExpandService.expand(activePlayer, true); // row goes to 15 (maxi)
+						CubeExpandService.expand(activePlayer, true); // row goes to 15 (max)
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) {
+						CubeExpandService.expand(activePlayer, true);
+					}
+					else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) {
+						CubeExpandService.expand(activePlayer, true);
 					}
 				}
 				else {
