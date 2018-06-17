@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Tiamaranta Eye;Secret of the Ancients Returns Inventory;Secret of the Ancients Returns</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Creativity Event;Highdaeva Growth Event;Tiamaranta Eye;Secret of the Ancients Returns Inventory;Secret of the Ancients Returns</active>
     <events>
         <event name="World Blessers" start="2017-01-01T00:00:00+00:00" end="2018-12-31T00:00:00+00:00">
             <quests>
@@ -2365,6 +2365,47 @@
                 </spawn_map>
             </spawns>
         </event>
+		<event name="Creativity Event" start="2018-06-01T00:00:00+00:00" end="2018-07-31T00:00:00+00:00">
+			<quests>
+				<maintainable>80900;80901;80902;80903;80904;80905;80906;80907;80908;80909;80910;80911;80912;80913;80914;80915;80916;80917;80918;80919</maintainable>
+			</quests>
+			<spawns>
+				<spawn_map map_id="210100000"><!-- Iluma -->
+					<!-- Chairunerk ||| world_event_CP_reward_shugo -->
+				    <spawn npc_id="834418">
+				        <spot x="1423.4839" y="1276.1631" z="336.43802" h="38"/>
+				    </spawn>
+				</spawn_map>
+				<spawn_map map_id="220110000"><!-- Norsvold -->
+					<!-- Chairunerk ||| world_event_CP_reward_shugo -->
+					<spawn npc_id="834418">
+					    <spot x="1772.8887" y="1977.9623" z="197.80386" h="99"/>
+					</spawn>
+				</spawn_map>
+			</spawns>
+		</event>
+		<event name="Highdaeva Growth Event" start="2016-12-28T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+			<event_drops>
+				<event_drop item_id="186000464" count="1" chance="5" minDiff="66" maxDiff="75"/> <!-- [Event] Seed Of Growth -->
+			</event_drops>
+			<quests>
+				<maintainable>80947;80948</maintainable>
+			</quests>
+			<spawns>
+				<spawn_map map_id="210100000"><!-- Iluma -->
+					<!-- Repia ||| world_event_ch_3exp_npc_01 -->
+				    <spawn npc_id="835439">
+				        <spot x="1420.5199" z="336.43802" y="1274.8325" h="38"/>
+				    </spawn>
+				</spawn_map>
+				<spawn_map map_id="220110000"><!-- Norsvold -->
+					<!-- Repia ||| world_event_ch_3exp_npc_01 -->
+					<spawn npc_id="835439">
+					    <spot x="1775.8177" y="1979.4485" z="197.80386" h="101"/>
+					</spawn>
+				</spawn_map>
+			</spawns>
+		</event>
         <event name="Tiamaranta Eye" start="2018-03-16T00:00:00+00:00" end="2018-05-01T00:00:00+00:00">
             <spawns>
                 <spawn_map map_id="110010000"><!-- Sanctum -->
@@ -2393,6 +2434,9 @@
             <inventory_drop startlevel="65" interval="30" endlevel="75" maxCountOfDay="6" cleanTime="9">188057812</inventory_drop>
         </event> 
         <event name="Secret of the Ancients Returns" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
+			<event_drops>
+				<event_drop item_id="186000479" count="1" chance="2" minDiff="66" maxDiff="75"/> <!-- Ancient Shard -->
+			</event_drops>
             <quests>
                 <maintainable>80949;80950;80951;80952;80953</maintainable>
             </quests>
