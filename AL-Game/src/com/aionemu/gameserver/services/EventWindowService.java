@@ -55,9 +55,9 @@ public class EventWindowService {
 	 * initialize all events
 	 */
 	public void initialize() {
-		Map<Integer, EventsWindow> map = DataManager.EVENTS_WINDOW.getAllEvents();
-		if (map.size() != 0) {
-			getEvents(map);
+		Map<Integer, EventsWindow> allEvents = DataManager.EVENTS_WINDOW.getAllEvents();
+		if (allEvents.size() != 0) {
+			getEvents(allEvents);
 		}
 	}
 
@@ -86,11 +86,11 @@ public class EventWindowService {
 	 * get events window active events
 	 */
 	public Map<Integer, EventsWindow> getActiveEvents() {
-		HashMap<Integer, EventsWindow> hashMap = new HashMap<>();
+		HashMap<Integer, EventsWindow> hashMap = new HashMap<Integer, EventsWindow>();
 		for (EventsWindow eventsWindow : event.values()) {
 			if (!eventsWindow.getPeriodStart().isBeforeNow() || !eventsWindow.getPeriodEnd().isAfterNow())
 				continue;
-			hashMap.put(eventsWindow.getId(), eventsWindow);
+				hashMap.put(eventsWindow.getId(), eventsWindow);
 		}
 		return hashMap;
 	}
@@ -99,7 +99,7 @@ public class EventWindowService {
 	 * get player events window
 	 */
 	public Map<Integer, EventsWindow> getPlayerEventsWindow(int accountId) {
-		HashMap<Integer, EventsWindow> hashMap = new HashMap<>();
+		HashMap<Integer, EventsWindow> hashMap = new HashMap<Integer, EventsWindow>();
 		List<Integer> list = DAOManager.getDAO(PlayerEventsWindowDAO.class).getEventsWindow(accountId);
 		for (Integer Time : list) {
 			hashMap.put(Time, data.get(Time));
@@ -117,8 +117,8 @@ public class EventWindowService {
 		tStart = System.currentTimeMillis();
 		final int accountId = player.getPlayerAccount().getId();
 		final PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
-		Map<Integer, EventsWindow> map = getActiveEvents();
-		Map<Integer, EventsWindow> map2 = getPlayerEventsWindow(accountId);
+		Map<Integer, EventsWindow> activeEvents = getActiveEvents();
+		Map<Integer, EventsWindow> playerEventsWindow = getPlayerEventsWindow(accountId);
 		final FastMap<Integer, EventsWindow> fastMap = new FastMap<>();
 		@SuppressWarnings("unused")
 		double timeZ = 0.0;
@@ -128,12 +128,12 @@ public class EventWindowService {
 		for (PlayerEventWindowEntry playerEventWindowEntry : player.getEventWindow().getAll()) {
 			timeZ = playerEventWindowEntry.getElapsed();
 		}
-		for (final EventsWindow eventsWindow : map.values()) {
-			if (!eventsWindow.getPeriodStart().isBeforeNow() || !eventsWindow.getPeriodEnd().isAfterNow() || map2.containsKey(eventsWindow.getId()))
-				continue;
-			fastMap.put(eventsWindow.getId(), eventsWindow);
-			log.info("Start counting id " + eventsWindow.getId() + " time " + eventsWindow.getRemainingTime() + " minute(s)");
-			schedule = ThreadPoolManager.getInstance().schedule(new Runnable() {
+		for (final EventsWindow eventsWindow : activeEvents.values()) {
+			if (!eventsWindow.getPeriodStart().isBeforeNow() || !eventsWindow.getPeriodEnd().isAfterNow() || playerEventsWindow.containsKey(eventsWindow.getId()))
+				continue;		
+				fastMap.put(eventsWindow.getId(), eventsWindow);
+				log.info("Start counting id " + eventsWindow.getId() + " time " + eventsWindow.getRemainingTime() + " minute(s)");
+				schedule = ThreadPoolManager.getInstance().schedule(new Runnable() {
 
 				@Override
 				public void run() {
@@ -147,7 +147,7 @@ public class EventWindowService {
 			}, eventsWindow.getRemainingTime() * 60000);
 		}
 		PacketSendUtility.sendPacket(player, new SM_EVENT_WINDOW_ITEMS(fastMap.values()));
-		PacketSendUtility.sendPacket(player, new SM_EVENT_WINDOW(3, 1));
+		PacketSendUtility.sendPacket(player, new SM_EVENT_WINDOW(1, 3));
 	}
 
 	/**
@@ -155,13 +155,13 @@ public class EventWindowService {
 	 */
 	public void onLogout(Player player) {
 		int accountId = player.getPlayerAccount().getId();
-		Map<Integer, EventsWindow> map = getPlayerEventsWindow(accountId);
+		Map<Integer, EventsWindow> playerEventsWindow = getPlayerEventsWindow(accountId);
 		PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
 		if (!player.isOnline() && schedule != null) {
 			tEnd = System.currentTimeMillis();
 			schedule.cancel(true);
 			schedule = null;
-			if (map != null) {
+			if (playerEventsWindow != null) {
 				double d2 = playerEventsWindowDAO.getElapsed(accountId);
 				long Long = tEnd - tStart;
 				double d3 = (double) Long / 1000.0;

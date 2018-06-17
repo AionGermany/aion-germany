@@ -47,9 +47,10 @@ public class PlayerEventWindowEntry extends EventWindowEntry {
 				break;
 			}
 			case UPDATE_REQUIRED: {
-				if (this.persistentState == PersistentState.NEW)
+				if (this.persistentState == PersistentState.NEW) {
+					this.persistentState = PersistentState.UPDATE_REQUIRED;
 					break;
-				this.persistentState = PersistentState.UPDATE_REQUIRED;
+				}
 				break;
 			}
 			case NOACTION: {
@@ -57,6 +58,7 @@ public class PlayerEventWindowEntry extends EventWindowEntry {
 			}
 			default: {
 				this.persistentState = persistentState;
+				break;
 			}
 		}
 	}

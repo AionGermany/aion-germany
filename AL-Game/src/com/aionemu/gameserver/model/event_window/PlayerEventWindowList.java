@@ -35,11 +35,7 @@ public class PlayerEventWindowList implements EventWindowList<Player> {
 	private final Map<Integer, PlayerEventWindowEntry> entry = new HashMap<>(0);
 	private int remaining;
 
-	public PlayerEventWindowList() {
-	}
-
 	public PlayerEventWindowList(List<PlayerEventWindowEntry> list) {
-		this();
 		for (PlayerEventWindowEntry playerEventWindowEntry : list) {
 			entry.put(playerEventWindowEntry.getId(), playerEventWindowEntry);
 		}
@@ -79,7 +75,7 @@ public class PlayerEventWindowList implements EventWindowList<Player> {
 			entry.remove(remaining);
 			DAOManager.getDAO(PlayerEventsWindowDAO.class).delete(player.getPlayerAccount().getId(), remaining);
 		}
-		return true;
+		return entry != null;
 	}
 
 	/**

@@ -339,8 +339,8 @@ public class Player extends Creature {
 		return ew;
 	}
 
-	public void setEventWindow(PlayerEventWindowList playerEventWindowList) {
-		ew = playerEventWindowList;
+	public void setEventWindow(PlayerEventWindowList ew) {
+		this.ew = ew;
 	}
 
 	/**
