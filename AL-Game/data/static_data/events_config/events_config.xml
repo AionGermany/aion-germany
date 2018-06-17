@@ -2436,6 +2436,7 @@
         <event name="Secret of the Ancients Returns" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
 			<event_drops>
 				<event_drop item_id="186000479" count="1" chance="2" minDiff="66" maxDiff="75"/> <!-- Ancient Shard -->
+				<event_drop item_id="186000479" count="1" chance="100" minDiff="1" maxDiff="10" minLvl="66" npc_id="247233"/> <!-- Anubis -->
 			</event_drops>
             <quests>
                 <maintainable>80949;80950;80951;80952;80953</maintainable>
@@ -2484,6 +2485,58 @@
                     <spawn npc_id="835555" respawn_time="295">
                         <spot x="1169.6" y="1359.6" z="209.67447" h="16"/>
                     </spawn>
+				<spawn_map map_id="210100000"><!-- Esterra -->
+                    <!-- Anubis ||| World_event_egypt_kingmonster_01 -->
+                    <spawn npc_id="247233" respawn_time="3600">
+                        <spot x="1701.2" y="1415.7" z="305.64252" h="67"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_02 -->
+                    <spawn npc_id="247234" respawn_time="295">
+                        <spot x="1693.3" y="1412.9" z="306.04376" h="89"/>
+                        <spot x="1698.6" y="1407.6" z="305.5175" h="94"/>
+                        <spot x="1698.8" y="1411.4" z="305.7375" h="77"/>
+                        <spot x="1696.9" y="1418.1" z="306.0" h="34"/>
+                        <spot x="1702.8" y="1411.8" z="305.21246" h="76"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_03 -->
+                    <spawn npc_id="247235" respawn_time="295">
+                        <spot x="1690.5" y="1411.0" z="306.25" h="51"/>
+                        <spot x="1693.7" y="1408.3" z="305.7875" h="53"/>
+                        <spot x="1696.6" y="1413.1" z="305.92313" h="43"/>
+                        <spot x="1697.8" y="1416.3" z="306.0" h="65"/>
+                        <spot x="1703.7" y="1408.3" z="304.71878" h="0"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_portal_01 -->
+                    <spawn npc_id="835556" respawn_time="295">
+                        <spot x="1703.8" y="1416.7" z="305.3625" h="67"/>
+                    </spawn>
+				</spawn_map>
+				<spawn_map map_id="220110000"><!-- Nosra -->
+                    <!-- Anubis ||| World_event_egypt_kingmonster_01 -->
+                    <spawn npc_id="247233" respawn_time="3600">
+                        <spot x="1533.0" y="2037.4" z="172.66876" h="39"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_02 -->
+                    <spawn npc_id="247234" respawn_time="295">
+                        <spot x="1533.6" y="2042.2" z="172.83499" h="27"/>
+                        <spot x="1535.9" y="2042.6" z="173.26877" h="44"/>
+                        <spot x="1530.5" y="2042.1" z="172.4375" h="89"/>
+                        <spot x="1532.1" y="2045.0" z="172.64374" h="76"/>
+                        <spot x="1529.0" y="2044.8" z="172.25" h="94"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_03 -->
+                    <spawn npc_id="247235" respawn_time="295">
+                        <spot x="1535.7" y="2045.0" z="173.31874" h="0"/>
+                        <spot x="1532.7" y="2050.3" z="172.89343" h="51"/>
+                        <spot x="1534.3" y="2048.1" z="173.06157" h="65"/>
+                        <spot x="1527.9" y="2047.5" z="172.20782" h="43"/>
+                        <spot x="1530.6" y="2048.3" z="172.575" h="53"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_portal_01 -->
+                    <spawn npc_id="835556" respawn_time="295">
+                        <spot x="1535.1" y="2033.6" z="172.94249" h="39"/>
+                    </spawn>
+				</spawn_map>
                 </spawn_map>
             </spawns>
         </event>
