@@ -35,10 +35,10 @@ public class SM_SKILL_ANIMATION extends AionServerPacket {
 	private int isActive;
 
 	public SM_SKILL_ANIMATION(int skillSkinId, int expire) {
-		action = 0;
+		this.action = 0;
 		this.skillSkinId = skillSkinId;
 		this.expire = expire;
-		isActive = 1;
+		this.isActive = 1;
 	}
 
 	public SM_SKILL_ANIMATION(Player player) {
