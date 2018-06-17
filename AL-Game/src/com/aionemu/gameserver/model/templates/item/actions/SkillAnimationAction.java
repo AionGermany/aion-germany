@@ -39,6 +39,7 @@ public class SkillAnimationAction extends AbstractItemAction {
 	protected int skinId;
 	@XmlAttribute(name="minutes")
 	protected int minutes;
+	private int expireTime = 0;
 
 	public boolean canAct(Player player, Item parentItem, Item targetItem) {
 		if (skinId == 0 || parentItem == null) {
@@ -52,7 +53,10 @@ public class SkillAnimationAction extends AbstractItemAction {
 	public void act(Player player, Item parentItem, Item targetItem) {
 		ItemTemplate itemTemplate = parentItem.getItemTemplate();
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), itemTemplate.getTemplateId()), true);
-		player.getSkillSkinList().addSkillSkin(skinId, minutes);
+		if (minutes > 0 ) {
+			expireTime = (int) (System.currentTimeMillis() / 1000 + minutes * 60);
+		}
+		player.getSkillSkinList().addSkillSkin(skinId, minutes * 60, expireTime);
 		Item item = player.getInventory().getItemByObjId(parentItem.getObjectId());
 		player.getInventory().delete(item);
 	}
