@@ -20,7 +20,6 @@ import static com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAG
 
 import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.Item;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.HandlerResult;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
@@ -62,112 +61,100 @@ public class _10032HelpInTheHollow extends QuestHandler {
 	}
 
 	@Override
-	public boolean onZoneMissionEndEvent(QuestEnv env) {
-		return defaultOnZoneMissionEndEvent(env);
-	}
-
-	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 10031, true);
-	}
-
-	@Override
 	public boolean onDialogEvent(final QuestEnv env) {
-		final Player player = env.getPlayer();
-		final QuestState qs = player.getQuestStateList().getQuestState(questId);
+		Player player = env.getPlayer();
+		 QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null) {
 			return false;
 		}
-
+		
+		DialogAction dialog = env.getDialog();
 		int var = qs.getQuestVarById(0);
-		int targetId = 0;
-		if (env.getVisibleObject() instanceof Npc) {
-			targetId = ((Npc) env.getVisibleObject()).getNpcId();
-		}
-
-		if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 798952) {
-				if (env.getDialog() == DialogAction.QUEST_SELECT) {
-					return sendQuestDialog(env, 10002);
-				}
-				else {
-					return sendQuestEndDialog(env);
-				}
-			}
-			return false;
-		}
-		else if (qs.getStatus() != QuestStatus.START) {
-			return false;
-		}
-		if (targetId == 798952) {
-			switch (env.getDialog()) {
-				case QUEST_SELECT: {
-					if (var == 0) {
-						return sendQuestDialog(env, 1011);
-					}
-				}
-				case SETPRO1:
-					return defaultCloseDialog(env, 0, 1);
-				default:
-					break;
-			}
-		}
-		else if (targetId == 798954) {
-			switch (env.getDialog()) {
-				case QUEST_SELECT:
-					if (var == 1) {
-						return sendQuestDialog(env, 1352);
-					}
-				case SETPRO2:
-					return defaultCloseDialog(env, 1, 2);
-				default:
-					break;
-			}
-		}
-		else if (targetId == 799503) {
-			switch (env.getDialog()) {
-				case QUEST_SELECT: {
-					if (var == 6) {
-						return sendQuestDialog(env, 3057);
-					}
-				}
-				case CHECK_USER_HAS_QUEST_ITEM: {
-					removeQuestItem(env, 182215618, 1);
-					removeQuestItem(env, 182215619, 1);
-					return checkQuestItems(env, 6, 7, false, 10000, 10001); // 7
-				}
-				case FINISH_DIALOG: {
-					return sendQuestSelectionDialog(env);
-				}
-				default:
-					break;
-			}
-		}
-		else if (targetId == 799022) {
-			switch (env.getDialog()) {
-				case QUEST_SELECT: {
-					if (var == 2)
-						return sendQuestDialog(env, 1693);
-				}
-				case SETPRO3:
-					if (player.isInGroup2()) {
-						return sendQuestDialog(env, 2034);
-					}
-					else {
-						if (giveQuestItem(env, 182215618, 1) && giveQuestItem(env, 182215619, 1)) {
-							WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(300190000);
-							InstanceService.registerPlayerWithInstance(newInstance, player);
-							TeleportService2.teleportTo(player, 300190000, newInstance.getInstanceId(), 202.26694f, 226.0532f, 1098.236f, (byte) 30);
-							changeQuestStep(env, 2, 3, false);
-							return closeDialogWindow(env);
+		int targetId = env.getTargetId();
+		
+		if (qs.getStatus() == QuestStatus.START) {
+			switch(targetId) {
+				case 798952: { //Crosia
+					switch(dialog) {
+						case QUEST_SELECT: {
+							if (var == 0) {
+								return sendQuestDialog(env, 1011);
+							}
 						}
-						else {
-							PacketSendUtility.sendPacket(player, STR_MSG_FULL_INVENTORY);
+						case SETPRO1:{
+							return defaultCloseDialog(env, 0, 1);
+						}
+						default:
+							break;
+					}
+				}
+				case 798954: { //Tialla
+					switch (dialog) {
+						case QUEST_SELECT: {
+							if (var == 1) {
+								return sendQuestDialog(env, 1352);
+							}
+						}
+						case SETPRO2: {
+							return defaultCloseDialog(env, 1, 2);
+						}
+						default:
+							break;
+					}
+				}
+				case 799022: { // Lothas
+					switch (dialog) {
+						case QUEST_SELECT: {
+							if (var == 2)
+								return sendQuestDialog(env, 1693);
+						}
+						case SETPRO3: {
+							if (player.isInGroup2()) {
+								return sendQuestDialog(env, 1864);
+							} else {
+								if (giveQuestItem(env, 182215618, 1) && giveQuestItem(env, 182215619, 1)) {
+									WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(300190000);
+									InstanceService.registerPlayerWithInstance(newInstance, player);
+									TeleportService2.teleportTo(player, 300190000, newInstance.getInstanceId(), 202.26694f, 226.0532f, 1098.236f, (byte) 30);
+									changeQuestStep(env, 2, 3, false);
+									return closeDialogWindow(env);
+								} else {
+									PacketSendUtility.sendPacket(player, STR_MSG_FULL_INVENTORY);
+									return sendQuestStartDialog(env);
+								}
+							}
+						}
+						default:
+							break;
+					}
+				}
+				case 799503: { //Taloc's Mirage
+					switch (dialog) {
+						case QUEST_SELECT: {
+							if (var == 6) {
+								return sendQuestDialog(env, 3057);
+							}
+						}
+						case CHECK_USER_HAS_QUEST_ITEM: {
+							removeQuestItem(env, 182215618, 1);
+							removeQuestItem(env, 182215619, 1);
+							return checkQuestItems(env, 6, 7, false, 10000, 10001); // 7
+						}
+						case FINISH_DIALOG: {
 							return sendQuestSelectionDialog(env);
 						}
+						default:
+							break;
 					}
-				default:
-					break;
+				}
+			}
+		} else if (qs.getStatus() == QuestStatus.REWARD) {
+			if (targetId == 798952) { //Crosia
+				if (dialog == DialogAction.USE_OBJECT) {
+					return sendQuestDialog(env, 10002);
+				} else {
+					return sendQuestEndDialog(env);
+				}
 			}
 		}
 		return false;
@@ -271,5 +258,16 @@ public class _10032HelpInTheHollow extends QuestHandler {
 			}
 		}
 		return false;
+	}
+	
+
+	@Override
+	public boolean onZoneMissionEndEvent(QuestEnv env) {
+		return defaultOnZoneMissionEndEvent(env);
+	}
+
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env, 10031, true);
 	}
 }
