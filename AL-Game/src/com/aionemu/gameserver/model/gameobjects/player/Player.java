@@ -330,17 +330,17 @@ public class Player extends Creature {
 	/**
 	 * Player Event Window List
 	 */
-	private PlayerEventWindowList ew;
+	private PlayerEventWindowList eventWindowList;
 
 	/**
 	 * Player Event Window List
 	 */
 	public PlayerEventWindowList getEventWindow() {
-		return ew;
+		return eventWindowList;
 	}
 
-	public void setEventWindow(PlayerEventWindowList ew) {
-		this.ew = ew;
+	public void setEventWindow(PlayerEventWindowList eventWindowList) {
+		this.eventWindowList = eventWindowList;
 	}
 
 	/**

@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.network.aion.serverpackets;
 
 import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.Collection;
 
 import org.slf4j.Logger;
@@ -35,7 +36,7 @@ public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
     private Collection<EventsWindow> active_events_packet;
 
     public SM_EVENT_WINDOW_ITEMS(Collection<EventsWindow> active_events_packet) {
-    	this.active_events_packet = active_events_packet;
+        this.active_events_packet = active_events_packet;
     }
 
     @Override
@@ -46,16 +47,12 @@ public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
             log.info("event id " + eventsWindow.getId() + " remain " + eventsWindow.getRemainingTime() + " start-time " + new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000 + " end-time " + new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000 + " total size " + active_events_packet.size());
             writeD(eventsWindow.getId()); // Id
             writeD(0); // Do not Change !!!
-            writeC(-52); // Do not Change !!!
-            writeC(6); // Do not Change !!!
-            writeH(0); // Do not Change !!!
+            writeD(eventsWindow.getRemainingTime() * 60); //Displayed Remaining Time
             writeB(new byte[8]); // Do not Change !!!
-            writeD(1528959600); // Do not Change !!!
+            writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000)); // PlayerLoginTime
             writeC(1); // Do not Change !!!
-            writeC(5); // Do not Change !!!
-            writeB(new byte[3]); // Do not Change !!!
-            writeC(1); // Do not Change !!!
-            writeB(new byte[3]); // Do not Change !!!
+            writeD(5); // Do not Change !!!
+            writeD(1); // Do not Change !!!
             writeC(-104); // Do not Change !!!
             writeC(98); // Do not Change !!!
             writeC(21); // Do not Change !!!
@@ -74,11 +71,10 @@ public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
             writeD(-1);// Do not Change !!!
             writeB(new byte[84]); // Do not Change !!!
             writeD(-1);// Do not Change !!!
-            writeD(0);// Do not Change !!!
-            writeD(0);// Do not Change !!!
+            writeB(new byte[8]);// Do not Change !!!
             writeD(1);// Do not Change !!!
             writeD(9);// Do not Change !!!
-            writeD(6);// Do not Change !!!
+               writeD(1);// Do not Change !!! //Remaining Win Chances min = 1 TODO
             writeB(new byte[7]);// Do not Change !!!
             writeD(-1);// Do not Change !!!
             writeD(0);// Do not Change !!!
