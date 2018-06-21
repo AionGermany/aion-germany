@@ -78,20 +78,20 @@ public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
     @Override
     public void insert(int accountId, int eventId, Timestamp last_stamp) {
         Connection con = null;
-........try {
-............con = DatabaseFactory.getConnection();
-............PreparedStatement stmt = con.prepareStatement("INSERT INTO `player_events_window` (`account_id`, `event_id`, `last_stamp`) VALUES (?,?,?)");
-............stmt.setInt(1, accountId);
-............stmt.setInt(2, eventId);
-............stmt.setTimestamp(3, last_stamp);
-............stmt.execute();
-............stmt.close();
-........} catch (Exception e) {
-............log.error("Can't insert into events window: " + e.getMessage());
-........}
-........finally {
-............DatabaseFactory.close(con);
-........}
+        try {
+            con = DatabaseFactory.getConnection();
+            PreparedStatement stmt = con.prepareStatement("INSERT INTO `player_events_window` (`account_id`, `event_id`, `last_stamp`) VALUES (?,?,?)");
+            stmt.setInt(1, accountId);
+            stmt.setInt(2, eventId);
+            stmt.setTimestamp(3, last_stamp);
+            stmt.execute();
+            stmt.close();
+        } catch (Exception e) {
+            log.error("Can't insert into events window: " + e.getMessage());
+        }
+        finally {
+            DatabaseFactory.close(con);
+        }
     }
 
     @Override
@@ -108,71 +108,71 @@ public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
     @Override
     public List<Integer> getEventsWindow(final int accountId) {
         final List<Integer> ids = new ArrayList<Integer>();
-........DB.select("SELECT event_id FROM player_events_window WHERE account_id = ?", new ParamReadStH() {
-........    @Override
-........    public void setParams(PreparedStatement preparedStatement) throws SQLException {
-........        preparedStatement.setInt(1, accountId);
-........    }
-........    @Override
-........    public void handleRead(ResultSet resultSet) throws SQLException {
-........        while(resultSet.next()) {
-........            ids.add(resultSet.getInt("event_id"));
-........        }
-........    }
-........});
-........return ids;
+        DB.select("SELECT event_id FROM player_events_window WHERE account_id = ?", new ParamReadStH() {
+            @Override
+            public void setParams(PreparedStatement preparedStatement) throws SQLException {
+                preparedStatement.setInt(1, accountId);
+            }
+            @Override
+            public void handleRead(ResultSet resultSet) throws SQLException {
+                while(resultSet.next()) {
+                    ids.add(resultSet.getInt("event_id"));
+                }
+            }
+        });
+        return ids;
     }
 
     @Override
     public Timestamp getLastStamp(int accountId, int eventId) {
         PreparedStatement s = DB.prepareStatement("SELECT last_stamp FROM player_events_window WHERE account_id = ? AND event_id = ?");
-........try {
-............s.setInt(1, accountId);
-............s.setInt(2, eventId);
-............ResultSet rs = s.executeQuery();
-............rs.next();
-............return rs.getTimestamp("last_stamp");
-........} catch (SQLException e) {
-............log.error("Can't get last received Stamp!" + e);
-............return new Timestamp(System.currentTimeMillis());
-........} finally {
-............DB.close(s);
-........}
+        try {
+            s.setInt(1, accountId);
+            s.setInt(2, eventId);
+            ResultSet rs = s.executeQuery();
+            rs.next();
+            return rs.getTimestamp("last_stamp");
+        } catch (SQLException e) {
+            log.error("Can't get last received Stamp!" + e);
+            return new Timestamp(System.currentTimeMillis());
+        } finally {
+            DB.close(s);
+        }
     }
 
     @Override
     public double getElapsed(int accountId) {
         PreparedStatement s = DB.prepareStatement("SELECT elapsed FROM player_events_window WHERE account_id = ?");
-........try {
-............s.setInt(1, accountId);
-............ResultSet rs = s.executeQuery();
-............rs.next();
-............return rs.getDouble("elapsed");
-........} catch (SQLException e) {
-............log.error("Can't get elapsed time!\n" + e);
-............return 0;
-........} finally {
-............DB.close(s);
-........}
+        try {
+            s.setInt(1, accountId);
+            ResultSet rs = s.executeQuery();
+            rs.next();
+            return rs.getDouble("elapsed");
+        } catch (SQLException e) {
+            log.error("Can't get elapsed time!\n" + e);
+            return 0;
+        } finally {
+            DB.close(s);
+        }
     }
 
     @Override
     public void updateElapsed(int accountId, double elapsed) {
         Connection con = null;
-........try {
-............con = DatabaseFactory.getConnection();
-............PreparedStatement stmt = con.prepareStatement("UPDATE player_events_window SET elapsed = ? WHERE account_id = ?");
+        try {
+            con = DatabaseFactory.getConnection();
+            PreparedStatement stmt = con.prepareStatement("UPDATE player_events_window SET elapsed = ? WHERE account_id = ?");
 
-............stmt.setDouble(1, elapsed);
-............stmt.setInt(2, accountId);
-............stmt.execute();
-............stmt.close();
-........} catch (Exception e) {
-............log.error("Error updating elapsed ", e);
-........}
-........finally {
-............DatabaseFactory.close(con);
-........}
+            stmt.setDouble(1, elapsed);
+            stmt.setInt(2, accountId);
+            stmt.execute();
+            stmt.close();
+        } catch (Exception e) {
+            log.error("Error updating elapsed ", e);
+        }
+        finally {
+            DatabaseFactory.close(con);
+        }
     }
 
     /**
