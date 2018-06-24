@@ -257,6 +257,8 @@ public class StaticData {
 	public SkillSkinData skillSkinData;
 	@XmlElement(name="events_window")
 	public EventsWindowData eventsWindow;
+    @XmlElement(name = "item_skill_enhances")
+    public ItemSkillEnhanceData itemSkillEnhance;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -372,7 +374,8 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + monsterbookData.size() + " Monsterbook templates");
 		DataManager.log.info("[DataManager] Loaded " + boostEvents.size() + " Boost Event templates");
 		DataManager.log.info("[DataManager] Loaded " + itemPresettingData.size() + " Item Presetting templates");
-		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation Entries");
-		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window Entries");
+		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation entries");
+		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window entries");
+		DataManager.log.info("[DataManager] Loaded " + itemSkillEnhance.size() + " Skill Boost entries");
 	}
 }

@@ -99,6 +99,9 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	private int amplificationSkill = 0;
 	private int ReductionLevel = 0;
 	private boolean luna_reskin = false;
+    private boolean canEnhance = false;
+    private int enhanceSkillId;
+    private int enhanceEnchantLevel;
 
 	/**
 	 * Create simple item with minimum information
@@ -143,7 +146,7 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	/**
 	 * This constructor should be called only from DAO while loading from DB
 	 */
-	public Item(int objId, int itemId, long itemCount, int itemColor, int colorExpires, String itemCreator, int expireTime, int activationCount, boolean isEquipped, boolean isSoulBound, long equipmentSlot, int itemLocation, int enchant, int itemSkin, int fusionedItem, int optionalSocket, int optionalFusionSocket, int charge, int randomBonus, int rndCount, int packCount, int authorize, boolean isPacked, boolean isAmplified, int amplificationSkill, int reductionLevel, boolean lunaReskin) {
+	public Item(int objId, int itemId, long itemCount, int itemColor, int colorExpires, String itemCreator, int expireTime, int activationCount, boolean isEquipped, boolean isSoulBound, long equipmentSlot, int itemLocation, int enchant, int itemSkin, int fusionedItem, int optionalSocket, int optionalFusionSocket, int charge, int randomBonus, int rndCount, int packCount, int authorize, boolean isPacked, boolean isAmplified, int amplificationSkill, int reductionLevel, boolean lunaReskin, boolean isEnhance, int enhanceSkillId, int enhanceEnchantLevel) {
 		super(objId);
 
 		this.itemTemplate = DataManager.ITEM_DATA.getItemTemplate(itemId);
@@ -180,6 +183,9 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 		}
 		this.ReductionLevel = reductionLevel;
 		this.luna_reskin = lunaReskin;
+        this.canEnhance = isEnhance;
+        this.enhanceSkillId = enhanceSkillId;
+        this.enhanceEnchantLevel = enhanceEnchantLevel;
 		updateChargeInfo(charge);
 	}
 
@@ -1035,4 +1041,28 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	public boolean isLunaReskin() {
 		return luna_reskin;
 	}
+	
+    public boolean isEnhance() {
+        return canEnhance;
+    }
+    
+    public void setIsEnhance(boolean canEnhance) {
+        this.canEnhance = canEnhance;
+    }
+    
+    public int getEnhanceSkillId() {
+        return enhanceSkillId;
+    }
+    
+    public void setEnhanceSkillId(int enhanceSkillId) {
+        this.enhanceSkillId = enhanceSkillId;
+    }
+    
+    public int getEnhanceEnchantLevel() {
+        return enhanceEnchantLevel;
+    }
+    
+    public void setEnhanceEnchantLevel(int enhanceEnchantLevel) {
+        this.enhanceEnchantLevel = enhanceEnchantLevel;
+    }
 }

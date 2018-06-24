@@ -235,6 +235,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	@XmlAttribute(name = "is_cash_contract")
 	private boolean is_cash_contract;
 
+    @XmlAttribute(name = "skill_enchant")
+    private int skill_enchant;
+
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	@XmlTransient
 	private boolean isQuestUpdateItem;
@@ -752,4 +755,12 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	public String getNamedesc() {
 		return namedesc;
 	}
+
+    public int getSkillEnchant() {
+        return skill_enchant;
+    }	
+	
+    public int getSkillEnhance() {
+        return skill_enchant;
+    }
 }

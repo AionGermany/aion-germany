@@ -112,6 +112,7 @@
 	<xs:include schemaLocation="events_config/boost_events.xsd"/>
 	<xs:include schemaLocation="skill_skins/skill_skins.xsd"/>
 	<xs:include schemaLocation="events_window/events_window.xsd"/>
+	<xs:include schemaLocation="items/item_skill_enhances.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -228,6 +229,7 @@
 				<xs:element ref="boost_events" minOccurs="0"/>
 				<xs:element ref="skill_skins" minOccurs="0"/>
 				<xs:element ref="events_window" minOccurs="0"/>
+				<xs:element ref="item_skill_enhances" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

@@ -23,6 +23,8 @@ import java.util.concurrent.Future;
 
 import javax.annotation.Nonnull;
 
+import javolution.util.FastMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -108,7 +110,6 @@ import com.aionemu.gameserver.services.abyss.AbyssService;
 import com.aionemu.gameserver.services.craft.CraftSkillUpdateService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemService;
-import com.aionemu.gameserver.services.player.PlayerBuffService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
@@ -135,8 +136,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
-
-import javolution.util.FastMap;
 
 /**
  * This class is for controlling players.
@@ -1029,9 +1028,6 @@ public class PlayerController extends CreatureController<Player> {
 
 		player.getNpcFactions().onLevelUp();
 		CreativityEssenceService.getInstance().pointPerLevel(player);
-
-		// AbbeyReturnStone
-		PlayerBuffService.getInstance().addReturnStone(player);
 	}
 
 	public static final void reachedPlayerLvl(final Player player) {
