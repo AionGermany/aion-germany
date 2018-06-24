@@ -408,7 +408,8 @@ public final class QuestService {
 		if (rewards.getExpBoost() != null) {
 			player.getCommonData().addGrowthEnergy(1060000 * rewards.getExpBoost());
 		}
-
+		// TODO - Creativity Points 5.x
+        if (rewards.getRewardCP() != null) {}
 		if (rewards.getExtendInventory() != null) {
 			if (rewards.getExtendInventory() == 1) {
 				CubeExpandService.expand(player, false);
