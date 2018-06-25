@@ -33,11 +33,16 @@ public class SkillEnhanceAction extends AbstractItemAction {
 
 	@Override
 	public boolean canAct(Player player, Item item, Item targetItem) {
+		if (targetItem == null) {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_COLOR_ERROR);
+			return false;
+		}
 		return true;
 	}
 
 	@Override
 	public void act(final Player player, final Item item, final Item targetItem) {
+		player.getController().cancelUseItem();
 		RndArray.get(DataManager.ITEM_SKILL_ENHANCE_DATA.getSkillEnhance(targetItem.getItemTemplate().getSkillEnhance()).getSkillId());
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), item.getObjectId(), item.getItemId(), 5000, 0), true);
 		final ItemUseObserver itemUseObserver = new ItemUseObserver() {
@@ -56,16 +61,14 @@ public class SkillEnhanceAction extends AbstractItemAction {
 
 			@Override
 			public void run() {
-				player.getObserveController().removeObserver(itemUseObserver);
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), item.getObjectId(), item.getItemId(), 0, 1),true);
 				if (!player.getInventory().decreaseByObjectId(item.getObjectId(), 1)) {
 					return;
 				}
+				player.getObserveController().removeObserver(itemUseObserver);
+				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), item.getObjectId(), item.getItemId(), 0, 1),true);
 				targetItem.setEnhanceEnchantLevel(targetItem.getEnhanceEnchantLevel() + 1);
 				player.getSkillList().addSkill(player, targetItem.getEnhanceSkillId(), targetItem.getEnhanceEnchantLevel() + 1);
 				PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, targetItem));
-				System.out.println("TargetItem: " + targetItem.getItemId());
-				System.out.println("Item: " + item.getItemId());
 			}
 		}, 5000));
 	}
