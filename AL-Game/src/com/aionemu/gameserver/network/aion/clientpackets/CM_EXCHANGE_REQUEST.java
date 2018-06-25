@@ -80,6 +80,16 @@ public class CM_EXCHANGE_REQUEST extends AionClientPacket {
 				if (targetPlayer.getPlayerSettings().isInDeniedStatus(DeniedStatus.TRADE)) {
 					sendPacket(SM_SYSTEM_MESSAGE.STR_MSG_REJECTED_TRADE(targetPlayer.getName()));
 					return;
+				} 
+				if (targetPlayer.getInventory().isFull()) {
+					//You cannot trade with the target as the target is carrying too many items.
+					PacketSendUtility.sendPacket(activePlayer, SM_SYSTEM_MESSAGE.STR_PARTNER_TOO_HEAVY_TO_EXCHANGE);
+					return;
+				} 
+				if (activePlayer.getInventory().isFull()) {
+					//You cannot trade with the target as you are carrying too many items.
+					PacketSendUtility.sendPacket(activePlayer, SM_SYSTEM_MESSAGE.STR_EXCHANGE_CANT_EXCHANGE_HEAVY_TO_ADD_EXCHANGE_ITEM);
+					return;
 				}
 				sendPacket(SM_SYSTEM_MESSAGE.STR_EXCHANGE_ASKED_EXCHANGE_TO_HIM(targetPlayer.getName()));
 				RequestResponseHandler responseHandler = new RequestResponseHandler(activePlayer) {

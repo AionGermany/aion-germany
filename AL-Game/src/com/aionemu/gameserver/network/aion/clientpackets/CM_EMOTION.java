@@ -85,6 +85,8 @@ public class CM_EMOTION extends AionClientPacket {
 			case LAND_FLYTELEPORT: // fly teleport land
 			case FLY: // fly up
 			case LAND: // land
+			case RIDE:
+			case RIDE_END:
 			case DIE: // die
 			case END_DUEL: // duel end
 			case WALK: // walk on

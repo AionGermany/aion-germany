@@ -595,8 +595,11 @@ public class DropService {
 	private void uniqueDropAnnounce(final Player player, final DropItem requestedItem) {
 		if (DropConfig.ENABLE_UNIQUE_DROP_ANNOUNCE && !player.getInventory().isFull(requestedItem.getDropTemplate().getItemTemplate().getExtraInventoryId())) {
 			final ItemTemplate itemTemplate = ItemInfoService.getItemTemplate(requestedItem.getDropTemplate().getItemId());
-
-			if (itemTemplate.getItemQuality() == ItemQuality.UNIQUE || itemTemplate.getItemQuality() == ItemQuality.EPIC) {
+			if (itemTemplate.getItemQuality() == ItemQuality.RARE ||
+				itemTemplate.getItemQuality() == ItemQuality.LEGEND ||
+				itemTemplate.getItemQuality() == ItemQuality.UNIQUE ||
+				itemTemplate.getItemQuality() == ItemQuality.EPIC ||
+				itemTemplate.getItemQuality() == ItemQuality.MYTHIC) {
 				final String lastGetName = requestedItem.getWinningPlayer() != null ? requestedItem.getWinningPlayer().getName() : player.getName();
 				final int pObjectId = player.getObjectId();
 				final int pRaceId = player.getRace().getRaceId();

@@ -21270,6 +21270,16 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	public static final SM_SYSTEM_MESSAGE STR_CHAT_INVADEPORTL_KEEPER_SYSTEM_MSG03 = new SM_SYSTEM_MESSAGE(1401495);
 
 	/**
+	 * You cannot open a private store while hiding
+	 */
+	public static final SM_SYSTEM_MESSAGE STR_PERSONAL_SHOP_DISABLED_IN_HIDDEN_MODE = new SM_SYSTEM_MESSAGE(1401969);
+
+	/**
+	 * Your private store closed automatically because you are currently hiding
+	 */
+	public static final SM_SYSTEM_MESSAGE STR_PERSONAL_SHOP_CLOSED_FOR_HIDDEN_MODE = new SM_SYSTEM_MESSAGE(1401970);
+
+	/**
 	 * Pets Buff 4.8
 	 */
 	public static final SM_SYSTEM_MESSAGE STR_MSG_BUFF_PET_USE_START_MESSAGE = new SM_SYSTEM_MESSAGE(1402606);
