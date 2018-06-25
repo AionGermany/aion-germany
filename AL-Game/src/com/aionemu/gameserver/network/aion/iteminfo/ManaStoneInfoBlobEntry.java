@@ -86,8 +86,8 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writePlumeStats(buf); // 64-bytes
 		writeB(buf, new byte[36]);
 		writeAmplification(buf); // 5-bytes
-		writeB(buf, new byte[15]);
-		writeSkillBoost(buf); // 5-bytes
+		writeB(buf, new byte[12]);
+		writeSkillBoost(buf); // 8-bytes
 		writeD(buf, 0);
 		writeC(buf, item.getReductionLevel()); // Level Reduction
 	}
@@ -98,8 +98,9 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 	 * @param item
 	 */
 	private void writeSkillBoost(ByteBuffer buf) { // TODO
-		writeD(buf, 0);
-		writeC(buf, 0);
+		Item item = ownerItem;
+		writeD(buf, item.getEnhanceSkillId());
+		writeD(buf, item.getEnhanceEnchantLevel());
 	}
 
 	/**

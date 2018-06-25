@@ -20,7 +20,6 @@ import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ScheduledFuture;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,7 +50,6 @@ public class EventWindowService {
 	private HashMap<Integer, EventsWindow> activeEventsForPlayer = new HashMap<Integer, EventsWindow>();
 	private HashMap<Integer, EventsWindow> times = new HashMap<Integer, EventsWindow>();
 	private final FastMap<Integer, EventsWindow> sendActiveEventsForPlayer = new FastMap<>();
-	private ScheduledFuture<?> schedule = null;
 	private long tStart = 0; // Start Time.
 	private long tEnd = 0; // End Time.
 
@@ -119,18 +117,19 @@ public class EventWindowService {
 		}
 		for (final EventsWindow eventsWindow : activeEventsForPlayer.values()) {
 			if (!eventsWindow.getPeriodStart().isBeforeNow() || !eventsWindow.getPeriodEnd().isAfterNow() || playerEventsWindow.containsKey(eventsWindow.getId()))
-				continue;		
+				continue;
 				sendActiveEventsForPlayer.put(eventsWindow.getId(), eventsWindow);
 				log.info("Start counting id " + eventsWindow.getId() + " time " + eventsWindow.getRemainingTime() + " minute(s)");
-				schedule = ThreadPoolManager.getInstance().schedule(new Runnable() {
+				ThreadPoolManager.getInstance().schedule(new Runnable() {
 
 				@Override
 				public void run() {
 					if (player.isOnline()) {
 						playerEventsWindowDAO.insert(accountId, eventsWindow.getId(), new Timestamp(System.currentTimeMillis()));
 						ItemService.addItem(player, eventsWindow.getItemId(), eventsWindow.getCount());
-						sendActiveEventsForPlayer.remove(eventsWindow.getId());
+//						sendActiveEventsForPlayer.remove(eventsWindow.getId()); // <-- It dosent do any changes in actual EventWindow
 						log.info("Player " + player.getName() + " get reward of events window item " + eventsWindow.getItemId());
+						PacketSendUtility.sendPacket(player, new SM_EVENT_WINDOW_ITEMS(sendActiveEventsForPlayer.values()));
 					}
 				}
 			}, eventsWindow.getRemainingTime() * 60000);
@@ -146,10 +145,8 @@ public class EventWindowService {
 		int accountId = player.getPlayerAccount().getId();
 		Map<Integer, EventsWindow> playerEventsWindow = getPlayerEventsWindow(accountId);
 		PlayerEventsWindowDAO playerEventsWindowDAO = DAOManager.getDAO(PlayerEventsWindowDAO.class);
-		if (!player.isOnline() && schedule != null) {
+		if (!player.isOnline()) {
 			tEnd = System.currentTimeMillis();
-			schedule.cancel(true);
-			schedule = null;
 			if (playerEventsWindow != null) {
 				double d2 = playerEventsWindowDAO.getElapsed(accountId);
 				long Long = tEnd - tStart;
@@ -157,12 +154,10 @@ public class EventWindowService {
 				double time = d2 + d3;
 				playerEventsWindowDAO.updateElapsed(accountId, time);
 			}
-			log.info("Schedule canceled");
 		}
 	}
 
 	private static class SingletonHolder {
-
 		protected static final EventWindowService instance = new EventWindowService();
 	}
 

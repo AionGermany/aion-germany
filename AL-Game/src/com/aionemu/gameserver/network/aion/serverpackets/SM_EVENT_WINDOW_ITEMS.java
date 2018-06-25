@@ -46,9 +46,10 @@ public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
         for (EventsWindow eventsWindow : active_events_packet) {
             log.info("event id " + eventsWindow.getId() + " remain " + eventsWindow.getRemainingTime() + " start-time " + new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000 + " end-time " + new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000 + " total size " + active_events_packet.size());
             writeD(eventsWindow.getId()); // Id
-            writeD(0); // Do not Change !!!
+            writeD(0); // TODO reward recived count
             writeD(eventsWindow.getRemainingTime() * 60); //Displayed Remaining Time
-            writeB(new byte[8]); // Do not Change !!!
+            writeD(0); // Do not Change !!!
+            writeD(0);// TODO reward recived count
             writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000)); // PlayerLoginTime
             writeC(1); // Do not Change !!!
             writeD(5); // Do not Change !!!
@@ -74,7 +75,7 @@ public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
             writeB(new byte[8]);// Do not Change !!!
             writeD(1);// Do not Change !!!
             writeD(9);// Do not Change !!!
-               writeD(1);// Do not Change !!! //Remaining Win Chances min = 1 TODO
+            writeD(1);// Do not Change !!! //How many time you can get this reward
             writeB(new byte[7]);// Do not Change !!!
             writeD(-1);// Do not Change !!!
             writeD(0);// Do not Change !!!
