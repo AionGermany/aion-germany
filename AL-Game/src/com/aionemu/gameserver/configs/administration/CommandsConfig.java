@@ -119,6 +119,8 @@ public class CommandsConfig {
 	public static int ID;
 	@Property(key = "info", defaultValue = "3")
 	public static int INFO;
+	@Property(key = "inventory", defaultValue = "3")
+	public static int Inventory;
 	@Property(key = "invis", defaultValue = "3")
 	public static int INVIS;
 	@Property(key = "invul", defaultValue = "3")
