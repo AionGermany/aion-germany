@@ -21,6 +21,7 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FRIEND_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_NOTE;
 
 /**
  * Received when a player sets his note
@@ -54,17 +55,16 @@ public class CM_SET_NOTE extends AionClientPacket {
 		if (!note.equals(activePlayer.getCommonData().getNote())) {
 
 			activePlayer.getCommonData().setNote(note);
+			sendPacket(new SM_UPDATE_NOTE(activePlayer.getObjectId(), note)); // Update note
 
 			for (Friend friend : activePlayer.getFriendList()) // For all my friends
 			{
 				Player frienPlayer = friend.getPlayer();
 				if (friend.isOnline() && frienPlayer != null) // If the player is online
 				{
-					friend.getPlayer().getClientConnection().sendPacket(new SM_FRIEND_LIST()); // Send him a new friend list
-					// packet
+					friend.getPlayer().getClientConnection().sendPacket(new SM_FRIEND_LIST()); // Send him a new friend list packet
 				}
 			}
-
 		}
 	}
 }
