@@ -347,18 +347,25 @@ public class EnchantService {
 	}
 
 	public static void enchantStigmaAct(Player player, Item parentItem, Item targetItem, int currentEnchant, boolean result) {
+		int oldEnchant = targetItem.getEnchantLevel();
+		int finalPlusMessage = 0;
+		
 		if (result) {
-			currentEnchant++;
+			currentEnchant += Rnd.get(1, 3);
+			if (currentEnchant > 10) {
+				currentEnchant = 10;
+			}
+			finalPlusMessage = currentEnchant - oldEnchant;
 		}
 		else {
 			currentEnchant = 0;
 		}
-
+		
 		if (!player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1)) {
 			AuditLogger.info(player, "Possible enchant hack, can't remove 2nd stigma.");
 			return;
 		}
-
+		
 		targetItem.setEnchantLevel(currentEnchant);
 
 		if (targetItem.isEquipped()) {
@@ -390,26 +397,23 @@ public class EnchantService {
 
 			player.getSkillList().deleteHiddenStigmaSilent(player);
 
-			// TODO block enchant to the max skill lvl
-			Integer realSkillId = DataManager.SKILL_TREE_DATA.getStigmaTree().get(player.getRace()).get(DataManager.SKILL_DATA.getSkillTemplate(stigmaInfo.getSkills().get(0).getSkillId()).getStack()).get(targetItem.getEnchantLevel() + 1);
-			if (realSkillId != null) {
-				if (targetItem.isEquipped()) {
-					player.getSkillList().addStigmaSkill(player, realSkillId, 1);
-				} else { // Test Logging for http://falke34.bplaced.net/forums/showthread.php?tid=2911
-					log.warn("[TEST LOGGING] Stigma in Iventory and not Equiped (Don't add skill for Item): " + targetItem.getItemTemplate().getTemplateId());					
+			List<Integer> realSkillId = targetItem.getItemTemplate().getStigma().getSkillIdOnly();
+			for (int skillId : realSkillId) {
+				if (skillId != 0) {
+					if (targetItem.isEquipped()) {
+						player.getSkillList().addStigmaSkill(player, skillId, 1);
+					}
+				}
+				else {
+					log.error("No have Stigma skill for enchanted stigma item.");
 				}
 			}
-			else {
-				log.error("No have Stigma skill for enchanted stigma item.");
-			}
-
+			
 			StigmaService.recheckHiddenStigma(player);
-
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_SUCCESS(new DescriptionId(targetItem.getNameId())));
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_MATTER_ENCHANT_SUCCESS(new DescriptionId(targetItem.getNameId()), finalPlusMessage));
 		}
 		else {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_FAIL(new DescriptionId(targetItem.getNameId())));
-			player.getInventory().decreaseByObjectId(targetItem.getObjectId(), 1);
 		}
 	}
 

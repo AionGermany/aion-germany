@@ -89,27 +89,18 @@ public class EnchantItemAction extends AbstractItemAction {
 		int tID = targetItem.getItemTemplate().getTemplateId() / 1000000;
 		int wID = targetItem.getItemTemplate().getTemplateId() / 1000000;
 
-		if ((msID != 167 && msID != 166) || tID >= 120 && wID != 187) {
+		if (msID != 166 && msID != 167 || msID != 166 && tID >= 120) {
 			return false;
+		} else if (msID != 166) {
+			if (tID >= 120 && wID != 187) {
+				return false;
+			}
 		}
 
 		if (targetItem.getItemTemplate().getArmorType() == ArmorType.WING) {
 			return true;
 		}
-
-		if ((msID != 167 && msID != 166) || tID >= 120) {
-			if (targetItem.getItemTemplate().isBracelet()) { // Allows Socketing for Bracelet
-				return true;
-			}
-			else if (targetItem.getItemTemplate().isEstima()) { // Allows Enchant for Estima
-				return true;
-			}
-			else {
-				System.out.println("MSID: " + msID);
-				System.out.println("TID: " + tID);
-				return false;
-			}
-		}
+		
 		if ((targetItem.canAmplify()) && parentItem.getItemTemplate().isAmplificationStone() && targetItem.getEnchantLevel() == targetItem.getItemTemplate().getMaxEnchantLevel() && !targetItem.isAmplified()) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EXCEED_ENCHANT_CANNOT_01(new DescriptionId(targetItem.getNameId())));
 			return false;
@@ -131,7 +122,11 @@ public class EnchantItemAction extends AbstractItemAction {
 		// Current enchant level
 		final int currentEnchant = targetItem.getEnchantLevel();
 		final boolean isSuccess = isSuccess(player, parentItem, targetItem, supplementItem, targetWeapon);
-		// player.getController().cancelUseItem();
+		if (targetItem.getEnchantLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
+			// You cannot enchant %0 any further.
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
+			return;
+		}
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), EnchantsConfig.ENCHANT_CAST_DELAY, 0));
 
 		final ItemUseObserver observer = new ItemUseObserver() {
@@ -153,22 +148,25 @@ public class EnchantItemAction extends AbstractItemAction {
 			@Override
 			public void run() {
 				player.getObserveController().removeObserver(observer);
-				// Item template
-				ItemTemplate itemTemplate = parentItem.getItemTemplate();
 				// Enchantment stone
-				if (itemTemplate.getCategory() == ItemCategory.ENCHANTMENT || itemTemplate.getCategory() == ItemCategory.AMPLIFICATION) {
-					EnchantService.enchantItemAct(player, parentItem, targetItem, currentEnchant, isSuccess);
-				} // Stigma
-				else if (itemTemplate.getCategory() == ItemCategory.STIGMA && parentItem.getItemTemplate().getCategory() == targetItem.getItemTemplate().getCategory()) {
-					EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);
-				} // Manastone
+				if (parentItem.getItemTemplate().getCategory() == ItemCategory.ENCHANTMENT || parentItem.getItemTemplate().getCategory() == ItemCategory.AMPLIFICATION) {
+					 // Stigma
+					if (parentItem.getItemTemplate().getCategory() == ItemCategory.ENCHANTMENT && targetItem.getItemTemplate().getCategory() == ItemCategory.STIGMA ||
+						parentItem.getItemTemplate().getCategory() == ItemCategory.STIGMA && parentItem.getItemTemplate().getCategory() == targetItem.getItemTemplate().getCategory()) {
+						EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);
+					} else {
+						// Item
+						EnchantService.enchantItemAct(player, parentItem, targetItem, currentEnchant, isSuccess);
+					}
+				}
+				// Manastone
 				else {
 					EnchantService.socketManastoneAct(player, parentItem, targetItem, targetWeapon, isSuccess);
 				}
 
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 384, isSuccess ? 1 : 2));
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isSuccess ? 1 : 2));
 				if (CustomConfig.ENABLE_ENCHANT_ANNOUNCE) {
-					if (itemTemplate.getCategory() == ItemCategory.ENCHANTMENT || itemTemplate.getCategory() == ItemCategory.AMPLIFICATION) {
+					if (parentItem.getItemTemplate().getCategory() == ItemCategory.ENCHANTMENT || parentItem.getItemTemplate().getCategory() == ItemCategory.AMPLIFICATION) {
 						Iterator<Player> iter = World.getInstance().getPlayersIterator();
 						while (iter.hasNext()) {
 							Player player2 = iter.next();
