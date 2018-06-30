@@ -50,7 +50,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writeC(buf, item.getEnchantLevel()); // enchant (1-15)
 		writeD(buf, item.getItemSkinTemplate().getTemplateId());
 		writeC(buf, item.getOptionalSocket());
-		writeC(buf, 0); // maxEnchant
+		writeC(buf, 0); // enchant Bonus
 		writeItemStones(buf);
 
 		ItemStone god = item.getGodStone();
@@ -88,7 +88,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writeAmplification(buf); // 5-bytes
 		writeB(buf, new byte[12]);
 		writeSkillBoost(buf); // 8-bytes
-		writeD(buf, 0);
+		writeD(buf, item.isLunaReskin() ? 1 : 0); // Luna Reskin
 		writeC(buf, item.getReductionLevel()); // Level Reduction
 	}
 
