@@ -40,7 +40,11 @@ public class EquippedSlotBlobEntry extends ItemBlobEntry {
 		/*
 		 * if (item.isEquipped()) { writeQ(buf, item.getEquipmentSlot()); } else { writeQ(buf, 0); }
 		 */
-		writeQ(buf, item.isEquipped() ? item.getEquipmentSlot() : 0);
+		if (item.isEquipped() && item.getItemTemplate().isTwoHandWeapon()) {
+			writeQ(buf, 3);
+		} else {
+			writeQ(buf, item.isEquipped() ? item.getEquipmentSlot() : 0);
+		}
 	}
 
 	@Override
