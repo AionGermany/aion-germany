@@ -344,7 +344,7 @@ public class ItemService {
 	public static void makeUpgradeItem(Player player, Item sourceItem, Item newItem) {
 		Storage inventory = player.getInventory();
 		newItem.setOptionalSocket(sourceItem.getOptionalSocket());
-		int enchantLevel = sourceItem.getEnchantLevel() - 5;
+		int enchantLevel = sourceItem.getEnchantLevel();
 		
 		if (sourceItem.getFusionedItemId() != 0) {
 			newItem.setFusionedItem(sourceItem.getFusionedItemTemplate());
@@ -363,7 +363,7 @@ public class ItemService {
 			newItem.setEnchantLevel(0);
 		} else {
 			if (enchantLevel >= 20) {
-				newItem.setEnchantLevel(enchantLevel);
+				newItem.setEnchantLevel(enchantLevel - 5);
 				newItem.setAmplificationSkill(sourceItem.getAmplificationSkill());
 				newItem.setAmplified(true);
 			}
