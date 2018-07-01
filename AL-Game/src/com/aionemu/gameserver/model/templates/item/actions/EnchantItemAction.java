@@ -80,10 +80,6 @@ public class EnchantItemAction extends AbstractItemAction {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_MONEY);
 			return false;
 		}
-		if (targetItem.isAmplified() && parentItem.getItemTemplate().isAmplificationStone() && player.getInventory().getKinah() < EnchantKinah) {
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_MONEY);
-			return false;
-		}
 		int msID = parentItem.getItemTemplate().getTemplateId() / 1000000;
 		int tID = targetItem.getItemTemplate().getTemplateId() / 1000000;
 		int wID = targetItem.getItemTemplate().getTemplateId() / 1000000;
@@ -102,7 +98,7 @@ public class EnchantItemAction extends AbstractItemAction {
 			return true;
 		}
 		
-		if ((targetItem.canAmplify()) && parentItem.getItemTemplate().isAmplificationStone() && targetItem.getEnchantLevel() == targetItem.getItemTemplate().getMaxEnchantLevel() && !targetItem.isAmplified()) {
+		if ((targetItem.canAmplify()) && parentItem.getItemTemplate().isEnchantmentStone() && targetItem.getEnchantLevel() == targetItem.getItemTemplate().getMaxEnchantLevel() && !targetItem.isAmplified()) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EXCEED_ENCHANT_CANNOT_01(new DescriptionId(targetItem.getNameId())));
 			return false;
 		}
@@ -123,7 +119,7 @@ public class EnchantItemAction extends AbstractItemAction {
 		// Current enchant level
 		final int currentEnchant = targetItem.getEnchantLevel();
 		final boolean isSuccess = isSuccess(player, parentItem, targetItem, supplementItem, targetWeapon);
-		if (targetItem.getEnchantLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
+		if (!targetItem.getItemTemplate().getExceedEnchant() && targetItem.getEnchantLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
 			// You cannot enchant %0 any further.
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
 			return;

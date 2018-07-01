@@ -223,12 +223,17 @@ public class EnchantService {
 			case 166000195: // Epsilon
 				enchantStoneLevel = Rnd.get(105, 190);
 				break;
-			case 166020000: // Omega Enchantment Stone
-			case 166020001: // [Event] Omega Enchantment Stone (10 Min)
-			case 166020002: // [Event] Omega Enchantment Stone (3 Days)
-			case 166020003: // [Event] Omega Enchantment Stone
-			case 166020004: // [Event] Empyrean Lord's Enchantment Stone (7 Days)
-			case 166020005: // [Event] Enchantment Stone Of The Empyrean Lord
+			case 166020000: // Omega Enchantment Stone's (All variants)
+			case 166020001:
+			case 166020002:
+			case 166020003:
+			case 166020004:
+			case 166020005:
+			case 166020007:
+			case 166020008:
+			case 166020006:
+			case 166022003:
+			case 166022007:
 				enchantStoneLevel = Rnd.get(150, 230);
 				break;
 			case 166022000: // Irridescent Omega Enchantment Stone
@@ -316,7 +321,7 @@ public class EnchantService {
 			// Put supplements to wait for update
 			player.subtractSupplements(supplementUseCount, supplementTemplate.getTemplateId());
 		}
-		if (targetItem.isAmplified() && enchantStone.isAmplificationStone()) {
+		if (targetItem.isAmplified() && enchantStone.isEnchantmentStone()) {
 			success += 180 - targetItem.getEnchantLevel() * 1.0f;
 		}
 		if (success >= 95) {
@@ -568,6 +573,10 @@ public class EnchantService {
 			case 166020001:
 			case 166020002:
 			case 166020003:
+			case 166020004:
+			case 166020005:
+			case 166020007:
+			case 166020008:
 			case 166020006:
 			case 166022003:
 			case 166022007:
@@ -680,6 +689,10 @@ public class EnchantService {
 							case 166020001:
 							case 166020002:
 							case 166020003:
+							case 166020004:
+							case 166020005:
+							case 166020007:
+							case 166020008:
 							case 166020006:
 							case 166022003:
 							case 166022007:
@@ -725,6 +738,10 @@ public class EnchantService {
 							case 166020001:
 							case 166020002:
 							case 166020003:
+							case 166020004:
+							case 166020005:
+							case 166020007:
+							case 166020008:
 							case 166020006:
 							case 166022003:
 							case 166022007:
@@ -842,13 +859,10 @@ public class EnchantService {
 
 	/**
 	 * @param player
-	 * @param parentItem
-	 *            the manastone
-	 * @param targetItem
-	 *            the item to socket
+	 * @param parentItem  the manastone
+	 * @param targetItem  the item to socket
 	 * @param supplementItem
-	 * @param targetWeapon
-	 *            fusioned weapon
+	 * @param targetWeapon fusioned weapon
 	 */
 	public static boolean socketManastone(Player player, Item parentItem, Item targetItem, Item supplementItem, int targetWeapon) {
 
