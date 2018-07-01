@@ -354,7 +354,7 @@ public class ItemService {
 			ItemSocketService.copyManaStones(sourceItem, newItem);
 		}
 
-		if (sourceItem.getGodStone() != null) {
+		if (sourceItem.hasGodStone()) {
 			newItem.addGodStone(sourceItem.getGodStone().getItemId());
 		}
 		
