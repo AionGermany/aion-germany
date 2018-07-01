@@ -344,24 +344,32 @@ public class ItemService {
 	public static void makeUpgradeItem(Player player, Item sourceItem, Item newItem) {
 		Storage inventory = player.getInventory();
 		newItem.setOptionalSocket(sourceItem.getOptionalSocket());
+		int enchantLevel = sourceItem.getEnchantLevel() - 5;
+		
 		if (sourceItem.getFusionedItemId() != 0) {
 			newItem.setFusionedItem(sourceItem.getFusionedItemTemplate());
 		}
 
-		ItemSocketService.copyManaStones(sourceItem, newItem);
+		if (sourceItem.hasManaStones()) {
+			ItemSocketService.copyManaStones(sourceItem, newItem);
+		}
 
 		if (sourceItem.getGodStone() != null) {
 			newItem.addGodStone(sourceItem.getGodStone().getItemId());
 		}
-
-		int enchantLevel = sourceItem.getEnchantLevel() - 5;
-		if (enchantLevel >= 20) {
-			newItem.setEnchantLevel(enchantLevel);
-			newItem.setAmplificationSkill(sourceItem.getAmplificationSkill());
-			newItem.setAmplified(true);
-		}
-		else {
-			newItem.setEnchantLevel(enchantLevel);
+		
+		if (sourceItem.getItemTemplate().isPlume()) {
+			newItem.setAuthorize(1);
+			newItem.setEnchantLevel(0);
+		} else {
+			if (enchantLevel >= 20) {
+				newItem.setEnchantLevel(enchantLevel);
+				newItem.setAmplificationSkill(sourceItem.getAmplificationSkill());
+				newItem.setAmplified(true);
+			}
+			else {
+				newItem.setEnchantLevel(enchantLevel);
+			}
 		}
 
 		if (sourceItem.isSoulBound()) {
