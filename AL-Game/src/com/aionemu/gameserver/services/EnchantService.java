@@ -382,37 +382,32 @@ public class EnchantService {
 		}
 
 		if (result) {
-			Stigma stigmaInfo = targetItem.getItemTemplate().getStigma();
-
-			for (Stigma.StigmaSkill sSkill : stigmaInfo.getSkills()) {
-				String sSkillStack = DataManager.SKILL_DATA.getSkillTemplate(sSkill.getSkillId()).getStack();
-
-				for (PlayerSkillEntry psSkill : player.getSkillList().getStigmaSkills()) {
-					if (psSkill.getSkillTemplate().getStack().equals(sSkillStack)) {
-						SkillLearnService.removeSkill(player, psSkill.getSkillId());
-						player.getEffectController().removeEffect(psSkill.getSkillId());
+			if (targetItem.isEquipped()) {
+				Stigma stigmaInfo = targetItem.getItemTemplate().getStigma();
+				for (Stigma.StigmaSkill sSkill : stigmaInfo.getSkills()) {
+					String sSkillStack = DataManager.SKILL_DATA.getSkillTemplate(sSkill.getSkillId()).getStack();
+					for (PlayerSkillEntry psSkill : player.getSkillList().getStigmaSkills()) {
+						if (psSkill.getSkillTemplate().getStack().equals(sSkillStack)) {
+							SkillLearnService.removeSkill(player, psSkill.getSkillId());
+							player.getEffectController().removeEffect(psSkill.getSkillId());
+						}
 					}
 				}
-			}
-
-			player.getSkillList().deleteHiddenStigmaSilent(player);
-
-			List<Integer> realSkillId = targetItem.getItemTemplate().getStigma().getSkillIdOnly();
-			for (int skillId : realSkillId) {
-				if (skillId != 0) {
-					if (targetItem.isEquipped()) {
-						player.getSkillList().addStigmaSkill(player, skillId, 1);
+				player.getSkillList().deleteHiddenStigmaSilent(player);
+				List<Integer> realSkillId = targetItem.getItemTemplate().getStigma().getSkillIdOnly();
+				for (int skillId : realSkillId) {
+					if (skillId != 0) {
+						if (targetItem.isEquipped()) {
+							player.getSkillList().addStigmaSkill(player, skillId, 1);
+						}
+					} else {
+						log.error("No have Stigma skill for enchanted stigma item.");
 					}
 				}
-				else {
-					log.error("No have Stigma skill for enchanted stigma item.");
-				}
+				StigmaService.recheckHiddenStigma(player);
 			}
-			
-			StigmaService.recheckHiddenStigma(player);
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_MATTER_ENCHANT_SUCCESS(new DescriptionId(targetItem.getNameId()), finalPlusMessage));
-		}
-		else {
+		} else {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_FAIL(new DescriptionId(targetItem.getNameId())));
 		}
 	}
