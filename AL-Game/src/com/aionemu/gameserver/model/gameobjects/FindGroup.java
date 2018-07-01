@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroup;
  * Find Group
  *
  * @author MrPoke
+ * @modified teenwolf
  */
 public class FindGroup {
 
@@ -166,5 +167,9 @@ public class FindGroup {
 	public void setMessage(String message) {
 		lastUpdate = (int) (System.currentTimeMillis() / 1000);
 		this.message = message;
+	}
+
+	public void setGroupType(int groupType) {
+		this.groupType = groupType;
 	}
 }

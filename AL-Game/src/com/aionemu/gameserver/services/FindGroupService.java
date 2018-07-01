@@ -46,6 +46,7 @@ import javolution.util.FastMap;
  * Find Group Service
  *
  * @author cura, MrPoke
+ * @modified teenwolf
  */
 public class FindGroupService {
 
@@ -110,17 +111,37 @@ public class FindGroupService {
 		PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(action, ((int) (System.currentTimeMillis() / 1000)), findGroupList));
 	}
 
-	public void updateFindGroupList(Player player, String message, int objectId) {
+	public void updateFindGroupList(Player player, String message, int action, int groupType, int objectId) {
 		FindGroup findGroup = null;
 
 		switch (player.getRace()) {
 			case ELYOS:
-				findGroup = elyosRecruitFindGroups.get(objectId);
-				findGroup.setMessage(message);
+				switch (action) {
+					case 0x03:
+						findGroup = elyosRecruitFindGroups.get(objectId);
+						findGroup.setMessage(message);
+						findGroup.setGroupType(groupType);
+						break;
+					case 0x07:
+						findGroup = elyosApplyFindGroups.get(objectId);
+						findGroup.setMessage(message);
+						findGroup.setGroupType(groupType);
+						break;
+				}
 				break;
 			case ASMODIANS:
-				findGroup = asmodianRecruitFindGroups.get(objectId);
-				findGroup.setMessage(message);
+				switch (action) {
+					case 0x03:
+						findGroup = asmodianRecruitFindGroups.get(objectId);
+						findGroup.setMessage(message);
+						findGroup.setGroupType(groupType);
+						break;
+					case 0x07:
+						findGroup = asmodianApplyFindGroups.get(objectId);
+						findGroup.setMessage(message);
+						findGroup.setGroupType(groupType);
+						break;
+				}
 				break;
 			default:
 				break;
@@ -195,11 +216,11 @@ public class FindGroupService {
 		if (findGroup != null) {
 			PacketSendUtility.broadcastFilteredPacket(new SM_FIND_GROUP(action + 1, playerObjId, findGroup.getUnk()), new ObjectFilter<Player>() {
 
-				@Override
-				public boolean acceptObject(Player object) {
-					return race == object.getRace();
-				}
-			});
+					@Override
+					public boolean acceptObject(Player object) {
+						return race == object.getRace();
+					}
+				});
 		}
 		return findGroup;
 	}

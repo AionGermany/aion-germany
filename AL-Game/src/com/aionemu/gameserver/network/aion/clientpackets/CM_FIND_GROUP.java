@@ -28,6 +28,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author cura, MrPoke
+ * @modified teenwolf
  */
 public class CM_FIND_GROUP extends AionClientPacket {
 
@@ -46,6 +47,7 @@ public class CM_FIND_GROUP extends AionClientPacket {
 	private int unk;
 	private int instanceId;
 	private int minMembers;
+	@SuppressWarnings("unused")
 	private int groupId;
 
 	public CM_FIND_GROUP(int opcode, State state, State... restStates) {
@@ -137,7 +139,8 @@ public class CM_FIND_GROUP extends AionClientPacket {
 				FindGroupService.getInstance().addFindGroupList(player, action, message, groupType);
 				break;
 			case 0x03:
-				FindGroupService.getInstance().updateFindGroupList(player, message, playerObjId);
+			case 0x07:
+				FindGroupService.getInstance().updateFindGroupList(player, message, action, groupType, playerObjId);
 				break;
 			case 0x08: // Todo
 				FindGroupService.getInstance().registerInstanceGroup(player, 0x0E, instanceId, message, minMembers, groupType);
