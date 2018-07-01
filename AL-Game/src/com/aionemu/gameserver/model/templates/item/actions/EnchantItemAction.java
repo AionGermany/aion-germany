@@ -73,10 +73,9 @@ public class EnchantItemAction extends AbstractItemAction {
 			return false;
 		}
 		if (targetItem.isEquipped() && targetItem.getItemTemplate().getCategory() == ItemCategory.STIGMA) {
-			String message = "Can't Enchant equiped Stigma";
-			PacketSendUtility.sendMessage(player, message);
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_ENCHANT_EQUIPED);
 			return false;
-		}
+		} 
 		if (targetItem.isAmplified() && parentItem.getItemTemplate().isEnchantmentStone() && player.getInventory().getKinah() < EnchantKinah) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_MONEY);
 			return false;
