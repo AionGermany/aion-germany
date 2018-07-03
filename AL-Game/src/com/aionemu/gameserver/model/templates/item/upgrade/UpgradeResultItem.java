@@ -14,48 +14,62 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.model.templates.item.purification;
+package com.aionemu.gameserver.model.templates.item.upgrade;
 
-import java.util.List;
-
-import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.aionemu.gameserver.model.stats.calc.StatOwner;
-
 /**
  * @author Ranastic
  * @rework Navyan
  */
-@XmlRootElement(name = "ItemPurification")
+@XmlRootElement(name = "UpgradeResultItem")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ItemPurificationTemplate implements StatOwner {
+public class UpgradeResultItem {
 
-	protected List<PurificationResultItem> purification_result_item;
-	@XmlAttribute(name = "base_item")
-	private int purification_base_item_id;
+	@XmlAttribute(name = "item_id")
+	private int item_id;
+	@XmlAttribute(name = "check_enchant_count")
+	private int check_enchant_count;
+
+	private RequiredMaterials required_materials;
+	private NeedAbyssPoint abyss_point_needed;
+	private NeedKinah kinah_needed;
 
 	/**
-	 * @param u
-	 * @param parent
+	 * @return the check_enchant_count
 	 */
-	void afterUnmarshal(Unmarshaller u, Object parent) {
+	public int getCheck_enchant_count() {
+		return check_enchant_count;
 	}
 
 	/**
-	 * @return the purification_result_item
+	 * @return the item_id
 	 */
-	public List<PurificationResultItem> getPurification_result_item() {
-		return purification_result_item;
+	public int getItem_id() {
+		return item_id;
 	}
 
 	/**
-	 * @return the purification_base_item_id
+	 * @return the required_materials
 	 */
-	public int getPurification_base_item_id() {
-		return purification_base_item_id;
+	public RequiredMaterials getUpgrade_materials() {
+		return required_materials;
+	}
+
+	/**
+	 * @return the abyss_point_needed
+	 */
+	public NeedAbyssPoint getNeed_abyss_point() {
+		return abyss_point_needed;
+	}
+
+	/**
+	 * @return the kinah_needed
+	 */
+	public NeedKinah getNeed_kinah() {
+		return kinah_needed;
 	}
 }

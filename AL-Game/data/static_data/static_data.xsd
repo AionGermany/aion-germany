@@ -85,7 +85,7 @@
 	<xs:include schemaLocation="locations/svs/svs.xsd"/>
 	<xs:include schemaLocation="locations/rvr/rvr.xsd"/>
     <xs:include schemaLocation="skills/skill_charge.xsd"/>
-    <xs:include schemaLocation="items/item_purifications.xsd"/>
+    <xs:include schemaLocation="items/item_upgrades.xsd"/>
     <xs:include schemaLocation="decomposable_items/decomposable_selectitems.xsd"/>
     <xs:include schemaLocation="items/enchant_templates.xsd"/>
     <xs:include schemaLocation="items/enchant_tables.xsd"/>
@@ -202,7 +202,7 @@
                 <xs:element ref="svs" minOccurs="0"/>
                 <xs:element ref="rvr" minOccurs="0"/>
                 <xs:element ref="skill_charge" minOccurs="0"/>
-                <xs:element ref="item_purifications" minOccurs="0"/>
+                <xs:element ref="item_upgrades" minOccurs="0"/>
                 <xs:element ref="decomposable_selectitems" minOccurs="0"/>
                 <xs:element ref="enchant_templates" minOccurs="0"/>
                 <xs:element ref="enchant_tables" minOccurs="0"/>

@@ -14,28 +14,48 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.model.templates.item.purification;
+package com.aionemu.gameserver.model.templates.item.upgrade;
 
+import java.util.List;
+
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.aionemu.gameserver.model.stats.calc.StatOwner;
+
 /**
  * @author Ranastic
  * @rework Navyan
  */
-@XmlRootElement(name = "NeedAbyssPoint")
+@XmlRootElement(name = "ItemUpgrade")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class NeedAbyssPoint {
+public class ItemUpgradeTemplate implements StatOwner {
 
-	@XmlAttribute(name = "count")
-	private int count;
+	protected List<UpgradeResultItem> upgrade_result_item;
+	@XmlAttribute(name = "base_item")
+	private int upgrade_base_item_id;
 
 	/**
-	 * @return the count
+	 * @param u
+	 * @param parent
 	 */
-	public int getCount() {
-		return count;
+	void afterUnmarshal(Unmarshaller u, Object parent) {
+	}
+
+	/**
+	 * @return the upgrade_result_item
+	 */
+	public List<UpgradeResultItem> getUpgrade_result_item() {
+		return upgrade_result_item;
+	}
+
+	/**
+	 * @return the upgrade_base_item_id
+	 */
+	public int getUpgrade_base_item_id() {
+		return upgrade_base_item_id;
 	}
 }

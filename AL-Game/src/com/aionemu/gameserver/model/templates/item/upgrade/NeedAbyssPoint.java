@@ -14,30 +14,28 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.model.templates.item.purification;
-
-import java.util.List;
+package com.aionemu.gameserver.model.templates.item.upgrade;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author Ranastic
  * @rework Navyan
  */
-@XmlRootElement(name = "RequiredMaterials")
+@XmlRootElement(name = "NeedAbyssPoint")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class RequiredMaterials {
+public class NeedAbyssPoint {
 
-	@XmlElement(required = true)
-	protected List<SubMaterialItem> sub_material_item;
+	@XmlAttribute(name = "count")
+	private int count;
 
 	/**
-	 * @return the subMaterialItem
+	 * @return the count
 	 */
-	public List<SubMaterialItem> getSubMaterialItem() {
-		return sub_material_item;
+	public int getCount() {
+		return count;
 	}
 }

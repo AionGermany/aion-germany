@@ -14,53 +14,30 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.model.templates.item.purification;
+package com.aionemu.gameserver.model.templates.item.upgrade;
+
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author Ranastic
  * @rework Navyan
  */
-@XmlRootElement(name = "SubMaterialItem")
+@XmlRootElement(name = "RequiredMaterials")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SubMaterialItem {
+public class RequiredMaterials {
 
-	@XmlAttribute
-	private int id;
-	@XmlAttribute
-	private int count;
+	@XmlElement(required = true)
+	protected List<SubMaterialItem> sub_material_item;
 
 	/**
-	 * @return the id
+	 * @return the subMaterialItem
 	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * @param id
-	 *            the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	/**
-	 * @return the count
-	 */
-	public int getCount() {
-		return count;
-	}
-
-	/**
-	 * @param count
-	 *            the count to set
-	 */
-	public void setCount(int count) {
-		this.count = count;
+	public List<SubMaterialItem> getSubMaterialItem() {
+		return sub_material_item;
 	}
 }

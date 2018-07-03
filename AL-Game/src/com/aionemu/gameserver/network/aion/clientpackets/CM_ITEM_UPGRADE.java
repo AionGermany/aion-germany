@@ -24,7 +24,7 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.item.ItemPurificationService;
+import com.aionemu.gameserver.services.item.ItemUpgradeService;
 import com.aionemu.gameserver.services.item.ItemService;
 
 /**
@@ -32,10 +32,10 @@ import com.aionemu.gameserver.services.item.ItemService;
  * @rework Navyan
  * @rework Blackfire
  */
-public class CM_ITEM_PURIFICATION extends AionClientPacket {
+public class CM_ITEM_UPGRADE extends AionClientPacket {
 
 	@SuppressWarnings("unused")
-	private static final Logger log = LoggerFactory.getLogger(CM_ITEM_PURIFICATION.class);
+	private static final Logger log = LoggerFactory.getLogger(CM_ITEM_UPGRADE.class);
 	int playerObjectId;
 	int upgradedItemObjectId;
 	int resultItemId;
@@ -49,7 +49,7 @@ public class CM_ITEM_PURIFICATION extends AionClientPacket {
 	/**
 	 * @param opcode
 	 */
-	public CM_ITEM_PURIFICATION(int opcode, State state, State... restStates) {
+	public CM_ITEM_UPGRADE(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 
@@ -78,12 +78,12 @@ public class CM_ITEM_PURIFICATION extends AionClientPacket {
 		Player player = getConnection().getActivePlayer();
 		if (player == null)
 			return;
-		if (!ItemPurificationService.checkItemUpgrade(player, baseItem, resultItemId)) {
+		if (!ItemUpgradeService.checkItemUpgrade(player, baseItem, resultItemId)) {
 			return;
 		}
 		Item resultItem = ItemService.newItem(resultItemId, 1, null, 0, 0, 0);
 
-		if (!ItemPurificationService.decreaseMaterial(player, baseItem, resultItemId)) {
+		if (!ItemUpgradeService.decreaseMaterial(player, baseItem, resultItemId)) {
 			return;
 		}
 		ItemService.makeUpgradeItem(player, baseItem, resultItem);

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:include schemaLocation="../modifiers.xsd"/>
-    <xs:element name="item_purifications">
+    <xs:element name="item_upgrades">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="item_purification" type="ItemPurification" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="item_upgrade" type="ItemUpgrade" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="ItemPurification">
+    <xs:complexType name="ItemUpgrade">
         <xs:sequence>
-            <xs:element name="purification_result_item" type="PurificationResultItem" minOccurs="0" maxOccurs="2"/>
+            <xs:element name="upgrade_result_item" type="UpgradeResultItem" minOccurs="0" maxOccurs="2"/>
         </xs:sequence>
         <xs:attribute name="base_item" type="xs:int" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="PurificationResultItem">
+    <xs:complexType name="UpgradeResultItem">
         <xs:sequence>
             <xs:element name="required_materials" type="RequiredMaterials" minOccurs="0" maxOccurs="1"/>
             <xs:element name="kinah_needed" type="NeedKinah" minOccurs="0" maxOccurs="1"/>

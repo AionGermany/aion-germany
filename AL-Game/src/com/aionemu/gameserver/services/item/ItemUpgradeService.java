@@ -23,9 +23,9 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.templates.item.purification.ItemPurificationTemplate;
-import com.aionemu.gameserver.model.templates.item.purification.PurificationResultItem;
-import com.aionemu.gameserver.model.templates.item.purification.SubMaterialItem;
+import com.aionemu.gameserver.model.templates.item.upgrade.ItemUpgradeTemplate;
+import com.aionemu.gameserver.model.templates.item.upgrade.UpgradeResultItem;
+import com.aionemu.gameserver.model.templates.item.upgrade.SubMaterialItem;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -36,14 +36,14 @@ import javolution.util.FastMap;
 /**
  * @author Ranastic
  */
-public class ItemPurificationService {
+public class ItemUpgradeService {
 
-	private static final Logger log = LoggerFactory.getLogger(ItemPurificationService.class);
+	private static final Logger log = LoggerFactory.getLogger(ItemUpgradeService.class);
 
 	public static boolean decreaseMaterial(Player player, Item baseItem, int resultItemId) {
-		FastMap<Integer, PurificationResultItem> resultItemMap = DataManager.ITEM_PURIFICATION_DATA.getResultItemMap(baseItem.getItemId());
+		FastMap<Integer, UpgradeResultItem> resultItemMap = DataManager.ITEM_UPGRADE_DATA.getResultItemMap(baseItem.getItemId());
 
-		PurificationResultItem resultItem = resultItemMap.get(resultItemId);
+		UpgradeResultItem resultItem = resultItemMap.get(resultItemId);
 		for (SubMaterialItem item : resultItem.getUpgrade_materials().getSubMaterialItem()) {
 			if (!player.getInventory().decreaseByItemId(item.getId(), item.getCount())) {
 				AuditLogger.info(player, "try item upgrade without sub material");
@@ -65,20 +65,20 @@ public class ItemPurificationService {
 	}
 
 	public static boolean checkItemUpgrade(Player player, Item baseItem, int resultItemId) {
-		ItemPurificationTemplate itemPurificationTemplate = DataManager.ITEM_PURIFICATION_DATA.getItemPurificationTemplate(baseItem.getItemId());
-		if (itemPurificationTemplate == null) {
-			log.warn(resultItemId + " item's purification template is null");
+		ItemUpgradeTemplate itemUpgradeTemplate = DataManager.ITEM_UPGRADE_DATA.getItemUpgradeTemplate(baseItem.getItemId());
+		if (itemUpgradeTemplate == null) {
+			log.warn(resultItemId + " item's upgrade template is null");
 			return false;
 		}
 
-		FastMap<Integer, PurificationResultItem> resultItemMap = DataManager.ITEM_PURIFICATION_DATA.getResultItemMap(baseItem.getItemId());
+		FastMap<Integer, UpgradeResultItem> resultItemMap = DataManager.ITEM_UPGRADE_DATA.getResultItemMap(baseItem.getItemId());
 
 		if (!resultItemMap.containsKey(resultItemId)) {
 			AuditLogger.info(player, resultItemId + " item's baseItem and resultItem is not matched (possible client modify)");
 			return false;
 		}
 
-		PurificationResultItem resultItem = resultItemMap.get(resultItemId);
+		UpgradeResultItem resultItem = resultItemMap.get(resultItemId);
 		Item resultItemName = ItemService.newItem(resultItemId, 1, null, 0, 0, 0);
 
 		if (baseItem.getEnchantLevel() < resultItem.getCheck_enchant_count()) {

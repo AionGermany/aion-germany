@@ -187,8 +187,8 @@ public class StaticData {
 	public TownSpawnsData townSpawnsData;
 	@XmlElement(name = "skill_charge")
 	public SkillChargeData skillChargeData;
-	@XmlElement(name = "item_purifications")
-	public ItemPurificationData itemPurificationData;
+	@XmlElement(name = "item_upgrades")
+	public ItemUpgradeData itemUpgradeData;
 	@XmlElement(name = "decomposable_selectitems")
 	public DecomposableSelectItemsData decomposableSelectItemsData;
 	@XmlElement(name = "enchant_templates")
@@ -340,7 +340,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + challengeData.size() + " challenge tasks entries");
 		DataManager.log.info("[DataManager] Loaded " + townSpawnsData.getSpawnsCount() + " town spawns");
 		DataManager.log.info("[DataManager] Loaded " + skillChargeData.size() + " skill charge entries");
-		DataManager.log.info("[DataManager] Loaded " + itemPurificationData.size() + " item purifications entries");
+		DataManager.log.info("[DataManager] Loaded " + itemUpgradeData.size() + " item upgrade entries");
 		DataManager.log.info("[DataManager] Loaded " + decomposableSelectItemsData.size() + " decomposable select data");
 		DataManager.log.info("[DataManager] Loaded " + itemEnchantData.size() + " item enchant data");
 		DataManager.log.info("[DataManager] Loaded " + itemEnchantTableData.size() + " item enchant tables");

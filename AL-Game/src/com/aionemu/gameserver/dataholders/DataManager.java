@@ -111,7 +111,7 @@ public final class DataManager {
 	public static ChallengeData CHALLENGE_DATA;
 	public static TownSpawnsData TOWN_SPAWNS_DATA;
 	public static SkillChargeData SKILL_CHARGE_DATA;
-	public static ItemPurificationData ITEM_PURIFICATION_DATA;
+	public static ItemUpgradeData ITEM_UPGRADE_DATA;
 	public static DecomposableSelectItemsData DECOMPOSABLE_SELECT_ITEM_DATA;
 	public static ItemEnchantData ITEM_ENCHANT_DATA;
 	public static ItemEnchantTableData ITEM_ENCHANT_TABLE_DATA;
@@ -242,7 +242,7 @@ public final class DataManager {
 		CHALLENGE_DATA = data.challengeData;
 		TOWN_SPAWNS_DATA = data.townSpawnsData;
 		SKILL_CHARGE_DATA = data.skillChargeData;
-		ITEM_PURIFICATION_DATA = data.itemPurificationData;
+		ITEM_UPGRADE_DATA = data.itemUpgradeData;
 		DECOMPOSABLE_SELECT_ITEM_DATA = data.decomposableSelectItemsData;
 		ITEM_ENCHANT_DATA = data.itemEnchantData;
 		ITEM_ENCHANT_TABLE_DATA = data.itemEnchantTableData;

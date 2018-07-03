@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.model.templates.item.purification;
+package com.aionemu.gameserver.model.templates.item.upgrade;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,17 +25,42 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Ranastic
  * @rework Navyan
  */
-@XmlRootElement(name = "NeedKinah")
+@XmlRootElement(name = "SubMaterialItem")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class NeedKinah {
+public class SubMaterialItem {
 
-	@XmlAttribute(name = "count")
+	@XmlAttribute
+	private int id;
+	@XmlAttribute
 	private int count;
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	/**
 	 * @return the count
 	 */
 	public int getCount() {
 		return count;
+	}
+
+	/**
+	 * @param count
+	 *            the count to set
+	 */
+	public void setCount(int count) {
+		this.count = count;
 	}
 }
