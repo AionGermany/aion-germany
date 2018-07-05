@@ -31,12 +31,21 @@ public class UpgradeResultItem {
 
 	@XmlAttribute(name = "item_id")
 	private int item_id;
+	@XmlAttribute(name = "name")
+	private String name;
 	@XmlAttribute(name = "check_enchant_count")
 	private int check_enchant_count;
 
 	private RequiredMaterials required_materials;
 	private NeedAbyssPoint abyss_point_needed;
 	private NeedKinah kinah_needed;
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
 
 	/**
 	 * @return the check_enchant_count

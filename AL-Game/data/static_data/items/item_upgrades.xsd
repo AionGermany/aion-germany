@@ -14,6 +14,7 @@
             <xs:element name="upgrade_result_item" type="UpgradeResultItem" minOccurs="0" maxOccurs="2"/>
         </xs:sequence>
         <xs:attribute name="base_item" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
 
     <xs:complexType name="UpgradeResultItem">
@@ -23,6 +24,7 @@
             <xs:element name="abyss_point_needed" type="NeedAbyssPoint" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="name" type="xs:string"/>
         <xs:attribute name="enchant_count" type="xs:int"/>
     </xs:complexType>
 
@@ -34,6 +36,7 @@
 
     <xs:complexType name="SubMaterialItem">
         <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="name" type="xs:string"/>
         <xs:attribute name="count" type="xs:int"/>
     </xs:complexType>
 

@@ -30,6 +30,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name="ItemPreSettingTemplate")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ItemPreSettingTemplate {
+
     @XmlAttribute(name = "item_id")
     private Integer item_id;
     @XmlAttribute(name = "name")

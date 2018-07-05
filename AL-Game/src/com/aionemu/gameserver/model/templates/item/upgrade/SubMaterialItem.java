@@ -31,6 +31,8 @@ public class SubMaterialItem {
 
 	@XmlAttribute
 	private int id;
+	@XmlAttribute(name = "name")
+	private String name;
 	@XmlAttribute
 	private int count;
 
@@ -47,6 +49,13 @@ public class SubMaterialItem {
 	 */
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
 	}
 
 	/**

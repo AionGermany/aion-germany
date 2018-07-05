@@ -37,6 +37,8 @@ public class ItemUpgradeTemplate implements StatOwner {
 	protected List<UpgradeResultItem> upgrade_result_item;
 	@XmlAttribute(name = "base_item")
 	private int upgrade_base_item_id;
+	@XmlAttribute(name = "name")
+	private String name;
 
 	/**
 	 * @param u
@@ -57,5 +59,12 @@ public class ItemUpgradeTemplate implements StatOwner {
 	 */
 	public int getUpgrade_base_item_id() {
 		return upgrade_base_item_id;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
 	}
 }
