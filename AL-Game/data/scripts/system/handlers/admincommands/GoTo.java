@@ -708,7 +708,7 @@ public class GoTo extends AdminCommand {
 			goTo(player, 300540000, 763, 268, 233);
 		}
 		else if (destination.equalsIgnoreCase("ophidan") || destination.equalsIgnoreCase("Ophidan Bridge")) {
-			goTo(player, 300590000, 760, 561, 572);
+			goTo(player, 300590000, 753.97736f, 560.617f, 572.875f, (byte) 90)
 		}
 		else if (destination.equalsIgnoreCase("infinity") || destination.equalsIgnoreCase("Infinity Shard")) {
 			goTo(player, 300800000, 118, 115, 131);
