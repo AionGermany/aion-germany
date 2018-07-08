@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-02-07 19:08 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-07-08 20:59 -->
 <enchant_templates>
     <enchant_template id="10000">
         <item_enchant level="1">
@@ -26543,6 +26543,98 @@
                 <add name="PVP_ATTACK_RATIO_MAGICAL" value="19"/>
                 <add name="PVP_DEFEND_RATIO_PHYSICAL" value="33"/>
                 <add name="PVP_DEFEND_RATIO_MAGICAL" value="33"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10371">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="28"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="28"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="6"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="6"/>
+                <add name="MAXHP" value="50"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="34"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="34"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="6"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="6"/>
+                <add name="MAXHP" value="100"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="41"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="41"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="11"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="11"/>
+                <add name="MAXHP" value="200"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="49"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="49"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="16"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="16"/>
+                <add name="MAXHP" value="300"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="58"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="58"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="21"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="21"/>
+                <add name="MAXHP" value="400"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="68"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="68"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="26"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="26"/>
+                <add name="MAXHP" value="500"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="78"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="78"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="31"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="31"/>
+                <add name="MAXHP" value="600"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="88"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="88"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="36"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="36"/>
+                <add name="MAXHP" value="700"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="98"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="98"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="41"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="41"/>
+                <add name="MAXHP" value="800"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_DEFEND_RATIO_PHYSICAL" value="108"/>
+                <add name="PVP_DEFEND_RATIO_MAGICAL" value="108"/>
+                <add name="PVP_ATTACK_RATIO_PHYSICAL" value="46"/>
+                <add name="PVP_ATTACK_RATIO_MAGICAL" value="46"/>
+                <add name="MAXHP" value="900"/>
             </modifiers>
         </item_enchant>
     </enchant_template>
