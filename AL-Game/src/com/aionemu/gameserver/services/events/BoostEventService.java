@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services;
+package com.aionemu.gameserver.services.events;
 
 import java.util.HashMap;
 import java.util.Map;

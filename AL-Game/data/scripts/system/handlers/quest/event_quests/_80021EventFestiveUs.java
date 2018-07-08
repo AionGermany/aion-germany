@@ -26,7 +26,7 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.EventService;
+import com.aionemu.gameserver.services.events.EventService;
 import com.aionemu.gameserver.services.QuestService;
 
 /**

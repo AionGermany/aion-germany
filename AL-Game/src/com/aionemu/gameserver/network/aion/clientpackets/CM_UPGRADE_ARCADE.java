@@ -20,7 +20,7 @@ import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.ArcadeUpgradeService;
+import com.aionemu.gameserver.services.events.ArcadeUpgradeService;
 
 /**
  * @author Raziel

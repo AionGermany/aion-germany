@@ -52,7 +52,7 @@ import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChatService;
 import com.aionemu.gameserver.services.DuelService;
-import com.aionemu.gameserver.services.EventWindowService;
+import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FindGroupService;
 import com.aionemu.gameserver.services.KiskService;
