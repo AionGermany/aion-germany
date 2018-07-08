@@ -37,9 +37,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 @InstanceID(300590000)
 public class OphidanBridgeInstance extends GeneralInstanceHandler {
 
-	// TODO
-	// Use Corridor Torch and now spawn the Portal - the Torch will despawn
-
 	@Override
 	public void onInstanceCreate(WorldMapInstance instance) {
 		super.onInstanceCreate(instance);
@@ -79,7 +76,7 @@ public class OphidanBridgeInstance extends GeneralInstanceHandler {
 		switch (npc.getNpcId()) {
 			case 235768: // Fighting Spirit Belkur
 			case 235769: // Merciless Belkur
-				spawn(702659, 321.6655f, 488.56683f, 607.6435f, (byte) 0); // Shining Chest of the Returnees
+				//spawn(702659, 321.6655f, 488.56683f, 607.6435f, (byte) 0); // Shining Chest of the Returnees
 				spawn(730868, 315.88037f, 488.6518f, 607.6435f, (byte) 1); // Exit from Ophidan's Bridge
 				spawn(702959, 304.62424f, 474.36063f, 607.95703f, (byte) 1, 36); // Beritra Booty Chest
 				break;

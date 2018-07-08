@@ -16,10 +16,11 @@
  */
 package ai.instance.ophidanBridge;
 
-import ai.ActionItemNpcAI2;
-
+import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+
+import ai.ActionItemNpcAI2;
 
 /**
  * @author Falke_34
@@ -33,6 +34,7 @@ public class Corridor_TorchAI2 extends ActionItemNpcAI2 {
 			case 701644: // Control Corridor
 				spawn(731544, 436.3948f, 496.45862f, 606.90356f, (byte) 1, 7); // Control Corridor
 				spawn(731545, 372.55792f, 492.0503f, 606.90356f, (byte) 1, 34); // Access Corridor
+				AI2Actions.deleteOwner(this);
 				break;
 		}
 	}
