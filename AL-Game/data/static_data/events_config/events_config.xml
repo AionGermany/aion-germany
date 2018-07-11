@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Creativity Event;Highdaeva Growth Event;Tiamaranta Eye;Secret of the Ancients Returns Inventory;Secret of the Ancients Returns</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Creativity Event;Highdaeva Growth Event;Tiamaranta Eye;Secret of the Ancients Returns Inventory;Secret of the Ancients Returns;Sheep on the Rampage Inventory;Sheep on the Rampage</active>
     <events>
         <event name="World Blessers" start="2017-01-01T00:00:00+00:00" end="2018-12-31T00:00:00+00:00">
             <quests>
@@ -2432,7 +2432,7 @@
         </event>
         <event name="Secret of the Ancients Returns Inventory" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
             <inventory_drop startlevel="65" interval="30" endlevel="75" maxCountOfDay="6" cleanTime="9">188057812</inventory_drop>
-        </event> 
+        </event>
         <event name="Secret of the Ancients Returns" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
             <event_drops>
                 <event_drop item_id="186000479" count="1" chance="2" minDiff="66" maxDiff="75"/> <!-- Ancient Shard -->
@@ -2536,6 +2536,28 @@
                     <!-- None ||| World_FOBJ_Egypt_portal_01 -->
                     <spawn npc_id="835556" respawn_time="295">
                         <spot x="1535.1" y="2033.6" z="172.94249" h="39"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Sheep on the Rampage Inventory" start="2018-07-11T00:00:00+00:00" end="2018-07-25T00:00:00+00:00">
+            <inventory_drop startlevel="65" interval="60" endlevel="75" maxCountOfDay="3" cleanTime="9">186000405</inventory_drop>
+        </event>
+        <event name="Sheep on the Rampage" start="2018-07-11T00:00:00+00:00" end="2018-07-25T00:00:00+00:00">
+            <event_drops>
+                <event_drop item_id="186000405" count="1" chance="2" minDiff="65" maxDiff="75"/> <!-- Chilli Chocolate -->
+            </event_drops>
+            <spawns>
+                <spawn_map map_id="110010000"><!-- Sanctum -->
+                    <!-- Mandrunerk ||| LC1_event_bluesheep_mandroong -->
+                    <spawn npc_id="833529" respawn_time="295">
+                        <spot x="1533.3" y="1523.1" z="565.9105" h="67"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="120010000"><!-- Pandaemonium -->
+                    <!-- Mandrunerk ||| DC1_event_bluesheep_mandroong -->
+                    <spawn npc_id="833530" respawn_time="295">
+                        <spot x="1268.1" y="1355.0" z="204.58719" h="55"/>
                     </spawn>
                 </spawn_map>
             </spawns>
