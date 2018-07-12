@@ -143,7 +143,7 @@ public final class DataManager {
 	public static MinionData MINION_DATA;
 	public static MonsterbookData MONSTERBOOK_DATA;
 	public static BoostEventData BOOST_EVENT_DATA;
-	public static ItemPresettingData ITEM_PRESETTING_DATA;
+	public static ItemCustomSetData ITEM_CUSTOM_SET_DATA;
 	public static SkillSkinData SKILL_SKIN_DATA;
 	public static EventsWindowData EVENTS_WINDOW;
 	public static ItemSkillEnhanceData ITEM_SKILL_ENHANCE_DATA;
@@ -275,7 +275,7 @@ public final class DataManager {
 		MINION_DATA = data.minionData;
 		MONSTERBOOK_DATA = data.monsterbookData;
 		BOOST_EVENT_DATA = data.boostEvents;
-		ITEM_PRESETTING_DATA = data.itemPresettingData;
+		ITEM_CUSTOM_SET_DATA = data.itemCustomSetData;
 		SKILL_SKIN_DATA = data.skillSkinData;
 		EVENTS_WINDOW = data.eventsWindow;
 		ITEM_SKILL_ENHANCE_DATA = data.itemSkillEnhance;

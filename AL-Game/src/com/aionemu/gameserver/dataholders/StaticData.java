@@ -59,8 +59,8 @@ public class StaticData {
 	public SummonStatsData summonStatsData;
 	@XmlElement(name = "item_templates")
 	public ItemData itemData;
-	@XmlElement(name = "item_presettings")
-	public ItemPresettingData itemPresettingData;
+	@XmlElement(name = "item_custom_sets")
+	public ItemCustomSetData itemCustomSetData;
 	@XmlElement(name = "random_bonuses")
 	public ItemRandomBonusData itemRandomBonuses;
 	@XmlElement(name = "npc_templates")
@@ -373,7 +373,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + minionData.size() + " Minion templates");
 		DataManager.log.info("[DataManager] Loaded " + monsterbookData.size() + " Monsterbook templates");
 		DataManager.log.info("[DataManager] Loaded " + boostEvents.size() + " Boost Event templates");
-		DataManager.log.info("[DataManager] Loaded " + itemPresettingData.size() + " Item Presetting templates");
+		DataManager.log.info("[DataManager] Loaded " + itemCustomSetData.size() + " Item Custom Set templates");
 		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation entries");
 		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window entries");
 		DataManager.log.info("[DataManager] Loaded " + itemSkillEnhance.size() + " Skill Boost entries");

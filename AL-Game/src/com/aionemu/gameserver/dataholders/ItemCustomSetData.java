@@ -25,32 +25,32 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-import com.aionemu.gameserver.model.templates.item.ItemPreSettingTemplate;
+import com.aionemu.gameserver.model.templates.item.ItemCustomSetTemplate;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-@XmlRootElement(name = "item_presettings")
+@XmlRootElement(name = "item_custom_sets")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ItemPresettingData {
+public class ItemCustomSetData {
 
-    @XmlElement(name = "item_presetting")
-    private List<ItemPreSettingTemplate> itemPreSettingTemplateList;
+    @XmlElement(name = "item_custom_set")
+    private List<ItemCustomSetTemplate> itemCustomSetTemplateList;
     @XmlTransient
-    private TIntObjectHashMap<ItemPreSettingTemplate> itemPreSettingTemplateTIntObjectHashMap = new TIntObjectHashMap<>();
+    private TIntObjectHashMap<ItemCustomSetTemplate> itemCustomSetTemplateTIntObjectHashMap = new TIntObjectHashMap<>();
 
     void afterUnmarshal(final Unmarshaller unmarshaller, final Object o) {
-        for (ItemPreSettingTemplate itemPreSettingTemplate : itemPreSettingTemplateList) {
-            itemPreSettingTemplateTIntObjectHashMap.put(itemPreSettingTemplate.getItem_id(), itemPreSettingTemplate);
+        for (ItemCustomSetTemplate itemCustomSetTemplate : itemCustomSetTemplateList) {
+            itemCustomSetTemplateTIntObjectHashMap.put(itemCustomSetTemplate.getItem_id(), itemCustomSetTemplate);
         }
-        itemPreSettingTemplateList.clear();
-        itemPreSettingTemplateList = null;
+        itemCustomSetTemplateList.clear();
+        itemCustomSetTemplateList = null;
     }
 
     public int size() {
-        return itemPreSettingTemplateTIntObjectHashMap.size();
+        return itemCustomSetTemplateTIntObjectHashMap.size();
     }
 
-    public ItemPreSettingTemplate getItemPreSettingTemplate(int itemId) {
-        return itemPreSettingTemplateTIntObjectHashMap.get(itemId);
+    public ItemCustomSetTemplate getItemCustomSetTemplate(int itemId) {
+        return itemCustomSetTemplateTIntObjectHashMap.get(itemId);
     }
 }

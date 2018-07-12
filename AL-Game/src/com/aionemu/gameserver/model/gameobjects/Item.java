@@ -46,7 +46,7 @@ import com.aionemu.gameserver.model.stats.calc.StatOwner;
 import com.aionemu.gameserver.model.stats.calc.functions.StatFunction;
 import com.aionemu.gameserver.model.templates.item.EquipType;
 import com.aionemu.gameserver.model.templates.item.Improvement;
-import com.aionemu.gameserver.model.templates.item.ItemPreSettingTemplate;
+import com.aionemu.gameserver.model.templates.item.ItemCustomSetTemplate;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.actions.DyeAction;
 import com.aionemu.gameserver.model.templates.item.actions.ItemActions;
@@ -119,12 +119,12 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 		}
 
         //add custom item set
-        ItemPreSettingTemplate itemPreSettingTemplate = DataManager.ITEM_PRESETTING_DATA.getItemPreSettingTemplate(itemTemplate.getTemplateId());
-        if (itemPreSettingTemplate != null) {
-            this.enchantLevel = itemPreSettingTemplate.getEnchant_level();
-            if (itemPreSettingTemplate.getMana_stone() != null && itemPreSettingTemplate.getMana_stone().size() > 0) {
-                for (int i = 0; i < itemPreSettingTemplate.getMana_stone().size(); i++) {
-                    ItemSocketService.addManaStone(this, itemPreSettingTemplate.getMana_stone().get(i), i);
+        ItemCustomSetTemplate itemCustomSetTemplate = DataManager.ITEM_CUSTOM_SET_DATA.getItemCustomSetTemplate(itemTemplate.getTemplateId());
+        if (itemCustomSetTemplate != null) {
+            this.enchantLevel = itemCustomSetTemplate.getEnchant_level();
+            if (itemCustomSetTemplate.getMana_stone() != null && itemCustomSetTemplate.getMana_stone().size() > 0) {
+                for (int i = 0; i < itemCustomSetTemplate.getMana_stone().size(); i++) {
+                    ItemSocketService.addManaStone(this, itemCustomSetTemplate.getMana_stone().get(i), i);
                 }
             }
         }

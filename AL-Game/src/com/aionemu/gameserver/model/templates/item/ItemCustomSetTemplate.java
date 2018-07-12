@@ -27,9 +27,9 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Created by xjplay@yahoo.com on 2015/5/4.
  */
-@XmlType(name="ItemPreSettingTemplate")
+@XmlType(name="ItemCustomSetTemplate")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ItemPreSettingTemplate {
+public class ItemCustomSetTemplate {
 
     @XmlAttribute(name = "item_id")
     private Integer item_id;

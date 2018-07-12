@@ -37,6 +37,8 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 @InstanceID(300590000)
 public class OphidanBridgeInstance extends GeneralInstanceHandler {
 
+    //TODO: Ice Flaeche Buff=8812
+
 	@Override
 	public void onInstanceCreate(WorldMapInstance instance) {
 		super.onInstanceCreate(instance);

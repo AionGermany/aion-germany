@@ -61,7 +61,7 @@ public class SM_EVENT_WINDOW_ITEMS extends AionServerPacket {
             writeD(eventsWindow.getRemainingTime()); // Remaining Time
             writeD(eventsWindow.getItemId());  // ItemId
             writeQ(eventsWindow.getCount()); // ItemCount
-            writeD(126); // Do not Change !!!
+            writeD(126); // Do not Change !!! This ist the Max Count of Day !!
             writeQ(new Timestamp(eventsWindow.getPeriodStart().getMillis()).getTime() / 1000); // Period Start TimeStamp
             writeQ(new Timestamp(eventsWindow.getPeriodEnd().getMillis()).getTime() / 1000); // Period End TimeSTamp
             writeD(0);//Does something
