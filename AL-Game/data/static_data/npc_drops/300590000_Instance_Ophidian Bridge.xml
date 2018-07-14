@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 08.07.2018 18:58 aus PS-Drop-Datei: Jormungand's Bridge_5.0_loot_Game-407569239.xml -->
+<!-- generiert am/um 14.07.2018 09:43 aus PS-Drop-Datei: Jormungand's Bridge_5.0_loot_Game-409964555.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="235726">
         <drop_group name="BALAUR_MATS_LVL61" use_category="true" race="PC_ALL">
@@ -74,8 +74,21 @@
             <drop item_id="152014025" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Holy Balaur Flesh" />
             <drop item_id="186000235" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Holy Balaur Heart" />
         </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="234" no_reduce="false" eachmember="false" name="Power Shard: +40" />
+        </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="100.00" min_amount="1" max_amount="35285" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="100.00" min_amount="1" max_amount="60046" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="235755">
+        <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152013037" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Form of Wrath" />
+            <drop item_id="152013040" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Form of Fear" />
+            <drop item_id="152013043" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Form of Joy" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="100.00" min_amount="1" max_amount="71259" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="235759">

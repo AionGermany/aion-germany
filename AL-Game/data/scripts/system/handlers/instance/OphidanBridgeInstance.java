@@ -53,12 +53,15 @@ public class OphidanBridgeInstance extends GeneralInstanceHandler {
 				spawn(235782, 752.8477f, 529.4818f, 576.11774f, (byte) 0); // Fugitive Asachin
 				break;
 		}
-		switch (Rnd.get(1, 2)) {
+		switch (Rnd.get(1, 3)) {
 			case 1:
 				spawn(235768, 322.42197f, 491.16843f, 607.64343f, (byte) 0); // Fighting Spirit Belkur
 				break;
 			case 2:
 				spawn(235769, 322.42197f, 491.16843f, 607.64343f, (byte) 0); // Merciless Belkur
+				break;
+			case 3:
+				spawn(235770, 322.42197f, 491.16843f, 607.64343f, (byte) 0); // Merciless Belkur
 				break;
 		}
 	}
