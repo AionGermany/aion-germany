@@ -3601,4 +3601,8 @@
   <tribe name="IDINFINITY_TOG" base="MONSTER">
     <aggro>PC PC_DARK IDINFINITY_MEAT</aggro>
   </tribe>
+  <tribe name="IDAB1_HEROES_BOSS" base="MONSTER">
+    <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT IDAB1_ERE_HERO IDAB1_ERE_SMIGOL IDAB1_ERE_ESCORT_DEVA</aggro>
+    <none>IDAB1_ERE_PRISON_DOOR</none>
+  </tribe>
 </tribe_relations>
