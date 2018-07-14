@@ -21918,6 +21918,13 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	public static SM_SYSTEM_MESSAGE STR_MSG_MONSTER_ACHIEVEMENT_COMPLETION(int level, int nameId) {
 		return new SM_SYSTEM_MESSAGE(1404073, level, new Object[] { new DescriptionId(nameId)});
 	}
+	
+	/**
+	 * Through Aion's power you have received the following item: %0
+	 */
+	public static SM_SYSTEM_MESSAGE STR_MSG_GET_HCOIN_07(int nameId) {
+		return new SM_SYSTEM_MESSAGE(1401496, new DescriptionId(nameId));
+	}
 
 	/**
 	 * Museum of Knowledge

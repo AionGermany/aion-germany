@@ -46,6 +46,9 @@ public class EventsWindow {
 	@XmlAttribute(name = "max_level", required = true)
 	private int max_level;
 
+	@XmlAttribute(name = "dailyMaxCount", required = true)
+	private int dailyMaxCount;
+	
 	private Timestamp lastStamp;
 
 	public int getId() {
@@ -58,6 +61,10 @@ public class EventsWindow {
 
 	public long getCount() {
 		return count;
+	}
+	
+	public int getMaxCountOfDay() {
+		return dailyMaxCount;
 	}
 
 	public DateTime getPeriodStart() {

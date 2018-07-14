@@ -14,6 +14,7 @@
                         <xs:attribute name="remaining_time" type="xs:int"/>
                         <xs:attribute name="min_level" type="xs:int"/>
                         <xs:attribute name="max_level" type="xs:int"/>
+                        <xs:attribute name="dailyMaxCount" type="xs:int"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

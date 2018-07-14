@@ -38,9 +38,13 @@ public abstract class PlayerEventsWindowDAO implements DAO {
 
 	public abstract Timestamp getLastStamp(int accountId, int eventId);
 
-	public abstract double getElapsed(int accountId);
+	public abstract double getElapsed(int accountId, int eventId);
 
-	public abstract void updateElapsed(int accountId, double eventId);
+	public abstract void updateElapsed(int accountId, int eventId, double elapsed);
+	
+	public abstract int getRewardRecivedCount(int accountId, int eventId);
+	
+	public abstract void setRewardRecivedCount(int accountId, int eventId, int rewardRecivedCount);
 
 	public abstract List<Integer> getEventsWindow(int accountId);
 

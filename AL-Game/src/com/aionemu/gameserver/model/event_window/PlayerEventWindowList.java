@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 public class PlayerEventWindowList implements EventWindowList<Player> {
 
 	private final Map<Integer, PlayerEventWindowEntry> entry = new HashMap<>(0);
-	private int remaining;
 
 	public PlayerEventWindowList(List<PlayerEventWindowEntry> list) {
 		for (PlayerEventWindowEntry playerEventWindowEntry : list) {
@@ -84,19 +83,5 @@ public class PlayerEventWindowList implements EventWindowList<Player> {
 	@Override
 	public int size() {
 		return entry.size();
-	}
-
-	/**
-	 * set a remaining time
-	 */
-	public void setRemaining(int remaining) {
-		this.remaining = remaining;
-	}
-
-	/**
-	 * gets a remaining time
-	 */
-	public int getRemaining() {
-		return remaining;
 	}
 }
