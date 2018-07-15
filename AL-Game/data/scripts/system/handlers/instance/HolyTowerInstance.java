@@ -47,20 +47,53 @@ public class HolyTowerInstance extends GeneralInstanceHandler {
 			PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 967));
 		}
 		else {
-			PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 967)); // TODO Asmodians Video
+			PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 968)); // TODO Asmodians Video
 		}
 	}
 
 	@Override
 	public void onDie(Npc npc) {
 		switch (npc.getNpcId()) {
-			//case 23576:
-				//spawn(701644, 438.49078f, 496.7822f, 604.88715f, (byte) 1); // Corridor Torch
-				//break;
-			//case 235768:
-				//spawn(702659, 321.6655f, 488.56683f, 607.6435f, (byte) 0); // Shining Chest of the Returnees
-				//spawn(730868, 315.88037f, 488.6518f, 607.6435f, (byte) 0); // Exit from Ophidan's Bridge
-				//break;
+			case 248440: // 31st Anit-Aircraft Machine 1st Door
+				deleteNpc(248437); // Hateful Pelida
+				deleteNpc(248477); // Balaur Barricade
+				hatefulPelida1();
+				break;
+			case 248441: // 31st Anit-Aircraft Machine 2nd Door
+				deleteNpc(248437); // Hateful Pelida
+				deleteNpc(248477); // Balaur Barricade
+				hatefulPelida2();
+				break;
+			case 248442: // 31st Anit-Aircraft Machine 3rd Door
+				deleteNpc(248437); // Hateful Pelida
+				deleteNpc(248477); // Balaur Barricade
+				hatefulPelida3();
+				break;
+			case 248443: // 31st Anit-Aircraft Machine 4th Door
+				//deleteNpc(248437); // Hateful Pelida
+				deleteNpc(248477); // Balaur Barricade
+				break;
+		}
+	}
+
+	private void hatefulPelida1() {
+		spawn(248437, 291.44397f, 268.20294f, 389.05374f, (byte) 90); // Hateful Pelida
+		spawn(248477, 293.0626f, 265.02142f, 388.9091f, (byte) 75, 70); // Balaur Barricade
+	}
+
+	private void hatefulPelida2() {
+		spawn(248437, 249.28769f, 293.27655f, 397.51718f, (byte) 0); // Hateful Pelida
+		spawn(248477, 252.39478f, 294.33484f, 397.56747f, (byte) 75, 69); // Balaur Barricade
+	}
+
+	private void hatefulPelida3() {
+		spawn(248437, 219.81686f, 254.43588f, 402.46582f, (byte) 30); // Hateful Pelida
+		spawn(248477, 219.12627f, 257.25183f, 402.4978f, (byte) 75, 68); // Balaur Barricade
+	}
+
+	private void deleteNpc(int npcId) {
+		if (getNpc(npcId) != null) {
+			getNpc(npcId).getController().onDelete();
 		}
 	}
 
