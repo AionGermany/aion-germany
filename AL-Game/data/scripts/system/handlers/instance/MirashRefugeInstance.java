@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -54,8 +53,7 @@ public class MirashRefugeInstance extends GeneralInstanceHandler {
 	public void handleUseItemFinish(Player player, Npc npc) {
 		switch (npc.getNpcId()) {
 			case 248466: // Bitterly Cold Ladder
-				SkillEngine.getInstance().getSkill(npc, 11333, 1, player).useNoAnimationSkill(); // Iron Hook
-                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300423));
+				SkillEngine.getInstance().getSkill(player, 11333, 1, npc).useNoAnimationSkill(); // Iron Hook
 		}
 	}
 
