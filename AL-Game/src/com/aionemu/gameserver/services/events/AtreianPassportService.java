@@ -64,6 +64,11 @@ public class AtreianPassportService {
 		int accountId = player.getPlayerAccount().getId();
 		PlayerPassportsDAO dao = DAOManager.getDAO(PlayerPassportsDAO.class);
 		Map<Integer, AtreianPassport> playerPassports = getPlayerPassports(accountId);
+		
+		//Added reset if all Stamps are received
+		if (dao.getStamps(accountId, atreianId) == 28) {
+			dao.updatePassport(accountId, atreianId, 0, true,  new Timestamp(System.currentTimeMillis() - 86400000L));
+		}
 
 		Calendar cal = Calendar.getInstance();
 		cal.setTimeInMillis(player.getCreationDate());

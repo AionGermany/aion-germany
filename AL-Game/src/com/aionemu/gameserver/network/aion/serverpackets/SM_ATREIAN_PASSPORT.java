@@ -52,11 +52,10 @@ public class SM_ATREIAN_PASSPORT extends AionServerPacket {
 		writeD(lastStampRecived);
 		writeD(countCollected);
 		writeC(hasCollected ? 0 : 1);
-		//TODO Aniversity ?
+		//TODO Aniversity (9 0 0 1 = Get Aniversity)
 		writeD(9);
 		writeD(0);
 		writeD(0);
 		writeC(0);
-		//TODO
 	}
 }

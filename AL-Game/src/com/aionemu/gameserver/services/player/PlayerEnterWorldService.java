@@ -118,14 +118,10 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_FD;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.AccessLevelEnum;
-import com.aionemu.gameserver.services.events.AtreianPassportService;
 import com.aionemu.gameserver.services.AutoGroupService;
-import com.aionemu.gameserver.services.events.BoostEventService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ClassChangeService;
 import com.aionemu.gameserver.services.DisputeLandService;
-import com.aionemu.gameserver.services.events.EventService;
-import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.F2pService;
 import com.aionemu.gameserver.services.FastTrackService;
 import com.aionemu.gameserver.services.HTMLService;
@@ -145,6 +141,10 @@ import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
+import com.aionemu.gameserver.services.events.AtreianPassportService;
+import com.aionemu.gameserver.services.events.BoostEventService;
+import com.aionemu.gameserver.services.events.EventService;
+import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
@@ -596,7 +596,7 @@ public final class PlayerEnterWorldService {
 
 			// SM_DISPUTE_LAND
 			DisputeLandService.getInstance().onLogin(player);
-
+			
 			//SM_EVENT_WINDOW
 			EventWindowService.getInstance().onLogin(player);
 
@@ -609,7 +609,7 @@ public final class PlayerEnterWorldService {
 			// SM_ABYSS_RANK
 			client.sendPacket(new SM_ABYSS_RANK(player.getAbyssRank()));
 
-			// SM_132 - huge list ....
+			// SM_133 - huge list ....
 			client.sendPacket(new SM_UNK_133()); // TODO
 
 			// SM_STATS_INFO
