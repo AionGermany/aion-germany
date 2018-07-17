@@ -40,7 +40,9 @@ public class SM_CHANNEL_MESSAGE extends AbstractServerPacket {
     protected void writeImpl(ClientChannelHandler cHandler, ChannelBuffer buf) {
         writeC(buf, getOpCode());
         writeC(buf, 0x00);
-        writeD(buf, 0x00);
+        writeC(buf, 0xB7);
+        writeC(buf, 0x32);
+        writeH(buf, 0x6401);
         writeD(buf, 0x00);
         writeD(buf, message.getChannel().getChannelId());
         writeD(buf, message.getSender().getClientId());
