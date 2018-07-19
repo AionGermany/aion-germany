@@ -18,14 +18,12 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Created by Ghostfur
  */
-public class SM_SHUGO_SWEEP extends AionServerPacket
-{
+public class SM_SHUGO_SWEEP extends AionServerPacket {
+
 	private int tableId;
 	private int currentStep;
 	private int diceLeft;
@@ -33,11 +31,10 @@ public class SM_SHUGO_SWEEP extends AionServerPacket
 	private int unkButton;
 	private int moveStep;
 
+	@SuppressWarnings("unused")
 	private int unk;
 
-	private static final Logger log = LoggerFactory.getLogger(SM_SHUGO_SWEEP.class);
-
-	//sweep player infos
+	// sweep player infos
 	public SM_SHUGO_SWEEP(int tableId, int currentStep, int diceLeft, int diceGolden, int unkButton, int moveStep) {
 		this.currentStep = currentStep;
 		this.diceLeft = diceLeft;
@@ -48,19 +45,19 @@ public class SM_SHUGO_SWEEP extends AionServerPacket
 	}
 
 	@Override
-    protected void writeImpl(AionConnection con) {
-		writeD(tableId); //table id
-		writeD(currentStep); //current step
-		writeH(0); //reward ??
-		writeH(0); //reward ??
+	protected void writeImpl(AionConnection con) {
+		writeD(tableId); // table id
+		writeD(currentStep); // current step
+		writeH(0); // reward ??
+		writeH(0); // reward ??
 		writeD(0);
-		writeD(diceLeft); //dice left
-		writeD(diceGolden); //dice golden
-		writeD(unkButton); //button near dice left
+		writeD(diceLeft); // dice left
+		writeD(diceGolden); // dice golden
+		writeD(unkButton); // button near dice left
 		writeD(432000);
 		writeD(0);
 		writeD(432000);
 		writeD(0);
-		writeD(moveStep); //move step
+		writeD(moveStep); // move step
 	}
 }

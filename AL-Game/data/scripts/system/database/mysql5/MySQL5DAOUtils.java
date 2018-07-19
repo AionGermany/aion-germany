@@ -32,11 +32,11 @@ public class MySQL5DAOUtils {
 	 * Returns true only if DB supports MySQL5
 	 * 
 	 * @param db
-	 *          database name
+	 *            database name
 	 * @param majorVersion
-	 *          major version
+	 *            major version
 	 * @param minorVersion
-	 *          minor version, ignored
+	 *            minor version, ignored
 	 * @return supports or not
 	 */
 	public static boolean supports(String db, int majorVersion, int minorVersion) {

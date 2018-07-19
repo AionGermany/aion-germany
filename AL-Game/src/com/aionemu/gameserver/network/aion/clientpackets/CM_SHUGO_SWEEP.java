@@ -20,38 +20,36 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.events.ShugoSweepService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Created by Ghostfur
  */
-public class CM_SHUGO_SWEEP extends AionClientPacket
-{
+public class CM_SHUGO_SWEEP extends AionClientPacket {
+
 	private int action;
-	private static final Logger log = LoggerFactory.getLogger(CM_SHUGO_SWEEP.class);
 	
 	public CM_SHUGO_SWEEP(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
-	
+
 	@Override
 	protected void readImpl() {
 		action = readC();
 	}
-	
+
 	@Override
 	protected void runImpl() {
 		Player player = getConnection().getActivePlayer();
 		if (player == null) {
 			return;
-		} switch (action) {
-			case 0: //Reset
+		}
+		switch (action) {
+			case 0: // Reset
 				ShugoSweepService.getInstance().resetBoard(player);
-			break;
-			case 1: //Launch Dice
+				break;
+			case 1: // Launch Dice
 				ShugoSweepService.getInstance().launchDice(player);
-			break;
+				break;
 		}
 	}
 }
