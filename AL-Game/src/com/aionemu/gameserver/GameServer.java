@@ -30,6 +30,7 @@ import java.util.zip.Deflater;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import com.aionemu.gameserver.services.events.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -74,10 +75,8 @@ import com.aionemu.gameserver.services.AbyssLandingSpecialService;
 import com.aionemu.gameserver.services.AdminService;
 import com.aionemu.gameserver.services.AgentFightService;
 import com.aionemu.gameserver.services.AnnouncementService;
-import com.aionemu.gameserver.services.events.AtreianPassportService;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.BeritraService;
-import com.aionemu.gameserver.services.events.BoostEventService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChallengeTaskService;
 import com.aionemu.gameserver.services.DatabaseCleaningService;
@@ -85,8 +84,6 @@ import com.aionemu.gameserver.services.DebugService;
 import com.aionemu.gameserver.services.DiflodoxService;
 import com.aionemu.gameserver.services.DiflonaxService;
 import com.aionemu.gameserver.services.DisputeLandService;
-import com.aionemu.gameserver.services.events.EventService;
-import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FlyRingService;
 import com.aionemu.gameserver.services.GameTimeService;
@@ -253,6 +250,8 @@ public class GameServer {
 		MinionService.getInstance().init();
 		Util.printSection(" ### Events Window System ### ");
 		EventWindowService.getInstance().initialize();
+		Util.printSsSection(" ### Shugo Sweep initialization ### ");
+		ShugoSweepService.getInstance().initShugoSweep();
 		Util.printSection(" ### GeoData ### ");
 		GeoService.getInstance().initializeGeo();
 		DropRegistrationService.getInstance();
