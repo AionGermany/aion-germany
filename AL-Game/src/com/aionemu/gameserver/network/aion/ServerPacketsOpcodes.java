@@ -281,7 +281,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_BOOST_EVENTS.class, 0x148, idSet); // 5.6 TODO
 		addPacketOpcode(SM_SPLIT_ITEM.class, 0xEB, idSet); // 5.4 TODO
 		addPacketOpcode(SM_TUNE_RESULT.class, 0x122, idSet); // 5.6 TODO
-		addPacketOpcode(SM_LUCKY_DICE.class, 0x14B, idSet); // 5.6 TODO
 		addPacketOpcode(SM_PLAYER_PROTECTION.class, 0x100, idSet); // 5.6
 		addPacketOpcode(SM_FLAG_INFO.class, 0x152, idSet); // 5.6
 		addPacketOpcode(SM_MAC_ADDRESS.class, 0x166, idSet); // 5.6 TODO
@@ -317,6 +316,8 @@ public class ServerPacketsOpcodes {
 		//addPacketOpcode(SM_BATTLEFIELD_UNION_REGISTER.class, 0x154, idSet); // 5.6 TODO
 		addPacketOpcode(SM_BATTLEFIELD_UNION.class, 0x156, idSet); // 5.6 TODO
 		addPacketOpcode(SM_BATTLEFIELD_UNION_POINTS.class, 0x157, idSet); // 5.6 TODO
+		// -------------------SHUGO SWEEP/LUCKY DICE----------------------//
+		addPacketOpcode(SM_SHUGO_SWEEP.class, 0x14B, idSet); //5.8 EU
 		// --------------------UNKNOWN PACKETS-----------------------//
 		addPacketOpcode(SM_UNK_60.class, 0x60, idSet);
 		addPacketOpcode(SM_UNK_106.class, 0x106, idSet);

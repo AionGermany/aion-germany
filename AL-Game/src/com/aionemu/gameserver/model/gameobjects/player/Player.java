@@ -318,6 +318,7 @@ public class Player extends Creature {
 	private int cp_slot1 = 0, cp_slot2 = 0, cp_slot3 = 0, cp_slot4 = 0, cp_slot5 = 0, cp_slot6 = 0;
 	private PlayerWardrobeList wardrobe;
 	private PlayerLunaShop lunaShop;
+	private PlayerSweep shugoSweep;
 	private PlayerMonsterbookList monsterbook;
 	private boolean setMinionSpawned;
 	private EquipmentSettingList equipmentSettingList;
@@ -3072,6 +3073,10 @@ public class Player extends Creature {
 	public int getLunaConsumePoint() {
 		return this.playerCommonData.getLunaConsumePoint();
 	}
+
+	public PlayerSweep getPlayerShugoSweep() { return shugoSweep; }
+
+	public void setPlayerShugoSweep(PlayerSweep ps) { this.shugoSweep = ps; }
 
 	public void setMuniKeys(int keys) {
 		this.playerCommonData.setMuniKeys(keys);

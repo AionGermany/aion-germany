@@ -259,6 +259,8 @@ public class StaticData {
 	public EventsWindowData eventsWindow;
     @XmlElement(name = "item_skill_enhances")
     public ItemSkillEnhanceData itemSkillEnhance;
+	@XmlElement(name = "shugo_sweeps")
+	public ShugoSweepRewardData shugoSweepsRewardData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -377,5 +379,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation entries");
 		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window entries");
 		DataManager.log.info("[DataManager] Loaded " + itemSkillEnhance.size() + " Skill Boost entries");
+		DataManager.log.info("[DataManager] Loaded " + shugoSweepsRewardData.size() + " Shugo Sweep Reward entries");
 	}
 }

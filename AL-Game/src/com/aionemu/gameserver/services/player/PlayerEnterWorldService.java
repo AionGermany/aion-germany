@@ -22,6 +22,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.aionemu.gameserver.services.events.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -89,7 +90,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEGION_JOIN_REQUEST_LIST;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_LUCKY_DICE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MACRO_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
@@ -141,10 +141,6 @@ import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
-import com.aionemu.gameserver.services.events.AtreianPassportService;
-import com.aionemu.gameserver.services.events.BoostEventService;
-import com.aionemu.gameserver.services.events.EventService;
-import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
@@ -638,8 +634,8 @@ public final class PlayerEnterWorldService {
 			// SM_MAIL_SERVICE
 			MailService.getInstance().onPlayerLogin(player);
 
-			// SM_LUCKY_DICE (new with Aion 5.1)
-			client.sendPacket(new SM_LUCKY_DICE(1)); // TODO
+			// SM_SHUGO_SWEEP
+			ShugoSweepService.getInstance().onLogin(player);
 
 			// SM_ATREIAN_PASSPORT
 			AtreianPassportService.getInstance().onLogin(player);
