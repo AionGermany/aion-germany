@@ -72,7 +72,8 @@ public class ItemActions {
 		@XmlElement(name = "f2p", type = F2pAction.class),
 		@XmlElement(name = "reduce_level", type = ItemReduceLevelAction.class), 
 		@XmlElement(name = "luna", type = LunaChestAction.class), 
-		@XmlElement(name = "skill_enhance", type = SkillEnhanceAction.class),})
+		@XmlElement(name = "skill_enhance", type = SkillEnhanceAction.class),
+		@XmlElement(name = "sweep", type = ShugoSweepAction.class),})
 
 	protected List<AbstractItemAction> itemActions;
 

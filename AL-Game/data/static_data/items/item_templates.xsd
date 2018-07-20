@@ -227,7 +227,16 @@
 			<xs:element name="luna" type="LunaChestAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="skill_skin" type="SkillAnimationAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="skill_enhance" type="SkillEnhanceAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sweep" type="ShugoSweepAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShugoSweepAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="type" type="xs:int"/>
+				<xs:attribute name="count" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RideAction">
 		<xs:complexContent>
