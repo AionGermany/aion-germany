@@ -45,7 +45,7 @@ public class ShugoSweepAction extends AbstractItemAction
     public boolean canAct(Player player, Item parentItem, Item targetItem) {
         if (type == 1) {
             if (getCommonData(player).getResetBoard() != 0) {
-                player.sendMessage("You have already one Reset Board");
+            	PacketSendUtility.sendMessage(player, "You have already one Reset Board");
                 return false;
             }
         }
@@ -57,10 +57,10 @@ public class ShugoSweepAction extends AbstractItemAction
         if (player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1)) {
             if (type == 1) {
                 getCommonData(player).setResetBoard(getCommonData(player).getResetBoard() + 1);
-                player.sendMessage("You have received one Reset Board");
+                PacketSendUtility.sendMessage(player, "You have received one Reset Board");
             } if (type == 2) {
                 getCommonData(player).setGoldenDice(getCommonData(player).getGoldenDice() + 1);
-                player.sendMessage("You have received one Golden Dice");
+                PacketSendUtility.sendMessage(player, "You have received one Golden Dice");
             }
             PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), 0));
         }
