@@ -277,7 +277,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_CUSTOM_PACKET.class, 99999, idSet); // fake packet
 		addPacketOpcode(SM_AFTER_TIME_CHECK.class, 0x126, idSet); // 5.6
 		addPacketOpcode(SM_QUEST_REPEAT.class, 0x124, idSet); // 5.6
-		//addPacketOpcode(SM_EVENT_BUFF.class, 0x11A, idSet); // TODO
+		addPacketOpcode(SM_EVENT_BUFF.class, 0x11C, idSet); // 5.8
 		addPacketOpcode(SM_BOOST_EVENTS.class, 0x148, idSet); // 5.6 TODO
 		addPacketOpcode(SM_SPLIT_ITEM.class, 0xEB, idSet); // 5.4 TODO
 		addPacketOpcode(SM_TUNE_RESULT.class, 0x122, idSet); // 5.6 TODO
@@ -336,7 +336,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_UNK_12B.class, 0x12B, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_168.class, 0x168, idSet); // 5.6 TODO
 		addPacketOpcode(SM_SKILL_ANIMATION.class, 0x150, idSet); // 5.6 TODO
-		addPacketOpcode(SM_UNK_11B.class, 0x11C, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_15E.class, 0x15E, idSet); // 5.4 TODO
 		addPacketOpcode(SM_UNK_15D.class, 0x162, idSet); // 5.6 TODO Lodas Silver Star
 		addPacketOpcode(SM_NEVIWIND_CANYON.class, 0x169, idSet); // 5.6 TODO

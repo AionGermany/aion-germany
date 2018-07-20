@@ -16,8 +16,6 @@
  */
 package com.aionemu.gameserver.dataholders;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.List;
 
 import javax.xml.bind.Unmarshaller;
@@ -26,10 +24,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import javolution.util.FastMap;
-
 import com.aionemu.gameserver.model.templates.item.upgrade.ItemUpgradeTemplate;
 import com.aionemu.gameserver.model.templates.item.upgrade.UpgradeResultItem;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
+import javolution.util.FastMap;
 
 /**
  * @author Ranastic

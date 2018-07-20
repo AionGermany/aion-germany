@@ -22,7 +22,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.aionemu.gameserver.services.events.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -141,6 +140,11 @@ import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
+import com.aionemu.gameserver.services.events.AtreianPassportService;
+import com.aionemu.gameserver.services.events.BoostEventService;
+import com.aionemu.gameserver.services.events.EventService;
+import com.aionemu.gameserver.services.events.EventWindowService;
+import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
@@ -627,6 +631,7 @@ public final class PlayerEnterWorldService {
 
 			// SM_BOOST_EVENTS (new with Aion 5.1)
 			BoostEventService.getInstance().sendPacket(player); // TODO
+//			client.sendPacket(new SM_EVENT_BUFF(player, 2)); // TODO
 			
 			// SM_UNK_60
 			client.sendPacket(new SM_UNK_60()); // TODO

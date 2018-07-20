@@ -24,8 +24,8 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.item.ItemUpgradeService;
 import com.aionemu.gameserver.services.item.ItemService;
+import com.aionemu.gameserver.services.item.ItemUpgradeService;
 
 /**
  * @author FinalNovas

@@ -30,7 +30,6 @@ import java.util.zip.Deflater;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import com.aionemu.gameserver.services.events.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -113,6 +112,11 @@ import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.dynamic_world.AdmaPortalSpawnService;
 import com.aionemu.gameserver.services.dynamic_world.LaboratoryPortalSpawnService;
 import com.aionemu.gameserver.services.dynamic_world.TowerEntranceService;
+import com.aionemu.gameserver.services.events.AtreianPassportService;
+import com.aionemu.gameserver.services.events.BoostEventService;
+import com.aionemu.gameserver.services.events.EventService;
+import com.aionemu.gameserver.services.events.EventWindowService;
+import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.gc.GarbageCollector;
 import com.aionemu.gameserver.services.instance.BalaurMarchingRouteService;
 import com.aionemu.gameserver.services.instance.DredgionService;

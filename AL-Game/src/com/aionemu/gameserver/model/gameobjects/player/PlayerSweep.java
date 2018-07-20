@@ -16,11 +16,12 @@
  */
 package com.aionemu.gameserver.model.gameobjects.player;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerShugoSweepDAO;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Created by Ghostfur

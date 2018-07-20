@@ -16,8 +16,6 @@
  */
 package com.aionemu.gameserver.dataholders;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.List;
 
 import javax.xml.bind.Unmarshaller;
@@ -28,6 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import com.aionemu.gameserver.model.templates.item.ItemSkillEnhance;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "item_skill_enhances")

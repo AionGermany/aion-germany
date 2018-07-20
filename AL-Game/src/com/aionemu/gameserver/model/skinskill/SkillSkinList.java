@@ -18,8 +18,6 @@ package com.aionemu.gameserver.model.skinskill;
 
 import java.util.Collection;
 
-import javolution.util.FastMap;
-
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerSkillSkinListDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -30,6 +28,8 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
 import com.aionemu.gameserver.utils.PacketSendUtility;
+
+import javolution.util.FastMap;
 
 /**
  * @author Ghostfur (Aion-Unique)
