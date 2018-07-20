@@ -153,6 +153,10 @@ public class ShugoSweepService {
 	}
 
 	public static final ShugoSweepService getInstance() {
-		return new ShugoSweepService();
+		return SingletonHolder.instance;
+	}
+	   
+	private static class SingletonHolder {
+		protected static final ShugoSweepService instance = new ShugoSweepService();
 	}
 }
