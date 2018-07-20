@@ -2,6 +2,7 @@
 #### Version: 5.8
 
 **Client:** [Gameforge](https://de.aion.gameforge.com/website/download/) **+** [Launcher](https://github.com/AionGermany/aion-germany/blob/master/AL-Tools/AionLauncherEU_5.x.rar)
+
 **Help and Support:** [Aion EU Forum](http://falke34.bplaced.net)
 
 #### Todo (Static Data):
