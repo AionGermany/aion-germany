@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.services.events;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.dao.PlayerDAO;
@@ -29,8 +32,7 @@ import com.aionemu.gameserver.model.templates.shugosweep.ShugoSweepReward;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SHUGO_SWEEP;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
  * Created by Ghostfur
@@ -89,13 +91,13 @@ public class ShugoSweepService {
 			getPlayerSweep(player).setStep(realMove);
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
 			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), realMove));
-			rewardPlayer(player, getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep());
+			rewardPlayer(player, getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), move);
 		}
 		else {
 			getPlayerSweep(player).setStep(newStep);
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
 			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), move));
-			rewardPlayer(player, getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep());
+			rewardPlayer(player, getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), move);
 		}
 	}
 
@@ -112,12 +114,20 @@ public class ShugoSweepService {
 		PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), 0, getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), 0));
 	}
 
-	public void rewardPlayer(Player player, int boardid, int step) {
-		ShugoSweepReward reward = getRewardForBoard(boardid, step);
-		ItemService.addItem(player, reward.getItemId(), reward.getCount());
+	private void rewardPlayer(final Player player, final int boardid, final int step, final int move) {
+		ThreadPoolManager.getInstance().schedule(new Runnable() {
+			@Override
+			public void run() {
+				if (player.isOnline()) {
+					ShugoSweepReward reward = getRewardForBoard(boardid, step);
+					ItemService.addItem(player, reward.getItemId(), reward.getCount());
+				}
+			}
+		}, move * 1000);
+		
 	}
 
-	public void restartBoard(Player player) {
+	private void restartBoard(Player player) {
 		if (getPlayerSweep(player).getStep() != 0) {
 			player.getPlayerShugoSweep().setStep(0);
 		}
@@ -130,25 +140,19 @@ public class ShugoSweepService {
 		PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), 0));
 	}
 
-	public PlayerCommonData getCommonData(Player player) {
+	private PlayerCommonData getCommonData(Player player) {
 		return player.getCommonData();
 	}
 
-	public PlayerSweep getPlayerSweep(Player player) {
+	private PlayerSweep getPlayerSweep(Player player) {
 		return player.getPlayerShugoSweep();
 	}
 
-	public static ShugoSweepReward getRewardForBoard(int boardId, int step) {
+	private static ShugoSweepReward getRewardForBoard(int boardId, int step) {
 		return DataManager.SHUGO_SWEEP_REWARD_DATA.getRewardBoard(boardId, step);
 	}
 
 	public static final ShugoSweepService getInstance() {
-		return SingletonHolder.instance;
-	}
-
-	@SuppressWarnings("synthetic-access")
-	private static class SingletonHolder {
-
-		protected static final ShugoSweepService instance = new ShugoSweepService();
+		return new ShugoSweepService();
 	}
 }

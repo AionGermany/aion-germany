@@ -141,14 +141,14 @@ public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
     }
 
     @Override
-    public double getElapsed(int accountId, int eventId) {
+    public int getElapsed(int accountId, int eventId) {
         PreparedStatement s = DB.prepareStatement("SELECT elapsed FROM player_events_window WHERE account_id = ? AND event_id = ?");
         try {
             s.setInt(1, accountId);
             s.setInt(2, eventId);
             ResultSet rs = s.executeQuery();
             rs.next();
-            return rs.getDouble("elapsed");
+            return rs.getInt("elapsed");
         } catch (SQLException e) {
         	return 0;
         } finally {
@@ -157,7 +157,7 @@ public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
     }
 
     @Override
-    public void updateElapsed(int accountId, int eventId, double elapsed) {
+    public void updateElapsed(int accountId, int eventId, int elapsed) {
         Connection con = null;
         try {
             con = DatabaseFactory.getConnection();
@@ -185,10 +185,10 @@ public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
             rs.next();
             return rs.getInt("reward_recived_count");
         } catch (SQLException e) {
+        	return 0;
         } finally {
             DB.close(s);
         }
-		return 0;
     }
     
     @Override
@@ -196,7 +196,7 @@ public class MySQL5PlayerEventsWindowDAO extends PlayerEventsWindowDAO {
     	Connection con = null;
         try {
         	con = DatabaseFactory.getConnection();
-        	PreparedStatement stmt = con.prepareStatement ("UPDATE player_events_window SET reward_recived_count = ? WHERE account_id = ? AND event_id = ?");
+        	PreparedStatement stmt = con.prepareStatement ("UPDATE player_events_window SET reward_recived_count = ?, elapsed = 0, last_stamp = now() WHERE account_id = ? AND event_id = ?");
         	stmt.setInt(1, rewardRecivedCount);
         	stmt.setInt(2, accountId);
         	stmt.setInt(3, eventId);
