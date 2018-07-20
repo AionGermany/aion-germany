@@ -263,7 +263,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_CHALLENGE_LIST.class, 0x11A, idSet); // 5.6
 		addPacketOpcode(SM_ACCOUNT_ACCESS_PROPERTIES.class, 0xF0, idSet); // 5.6
 		addPacketOpcode(SM_ICON_INFO.class, 0xAF, idSet);
-		addPacketOpcode(SM_MEGAPHONE.class, 0x123, idSet);
+		addPacketOpcode(SM_MEGAPHONE.class, 0x11F, idSet); //5.8
 		addPacketOpcode(SM_RIDE_ROBOT.class, 0x5C, idSet);
 		addPacketOpcode(SM_EMOTION_SWITCH.class, 0xC6, idSet);
 		addPacketOpcode(SM_SECURITY_TOKEN.class, 0x114, idSet); // 5.6
