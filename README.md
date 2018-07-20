@@ -1,8 +1,8 @@
-# Aion EU Emulator
-## Version: 5.8
-## Client: [Gameforge](https://de.aion.gameforge.com/website/download/)
+**Aion EU Emulator**
+**Version: 5.8**
+**Client:** [Gameforge](https://de.aion.gameforge.com/website/download/) **+** [Launcher](https://github.com/AionGermany/aion-germany/blob/master/AL-Tools/AionLauncherEU_5.x.rar)
 
-### Help and Support:
+**Help and Support:**
 * [Aion EU Forum](http://falke34.bplaced.net)
 
 #### Todo (Static Data):
@@ -12,21 +12,20 @@
 #### Todo (Data):
 * add/write new Quest Scipts
 * repair some Quest Scripts
-
 * write new Instance Scripts
 * fix some Instance Scripts
 
 #### Todo (Source):
 * Stigma Enchant 
-- add/find Bonus Stigma Slot and add Sigma Enchant Bonus
-- fix Stigma with Stigma Enchant
-- fix Kinah
+1. add/find Bonus Stigma Slot and add Sigma Enchant Bonus
+2. fix Stigma with Stigma Enchant
+3. fix Kinah
 
 * Plume Enchant
-- fix Plume Lvl10 authorize with 10 Holy Upgrade Serum to a better Plume
+1. fix Plume Lvl10 authorize with 10 Holy Upgrade Serum to a better Plume
 
 * Quest Creativity Points
-- add this
+1. add this
 
 * Skill Enhance
-- this change the Skills not + the Skills
+1. this change the Skills not + the Skills
