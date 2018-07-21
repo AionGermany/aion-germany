@@ -40,8 +40,8 @@ public class SM_EMOTION_LIST extends AionServerPacket {
 	protected void writeImpl(AionConnection con) {
 		writeC(action);
 		if (con.getActivePlayer().havePermission(MembershipConfig.EMOTIONS_ALL)) {
-			writeH(100);
-			for (int i = 0; i < 100; i++)
+			writeH(103); //Motions 5.8
+			for (int i = 0; i < 103; i++) 
 			{
 				writeH(64 + i);
 				writeD(0x00);
