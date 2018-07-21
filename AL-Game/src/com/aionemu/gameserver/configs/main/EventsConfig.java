@@ -84,4 +84,13 @@ public class EventsConfig {
 	
 	@Property(key = "gameserver.event.enable.boost.events", defaultValue = "true")
 	public static boolean ENABLE_BOOST_EVENTS;
+	
+	@Property(key = "gameserver.shugoSweep.board", defaultValue = "1")
+	public static int EVENT_SHUGOSWEEP_BOARD;
+	
+	@Property(key = "gameserver.shugoSweep.freeDice", defaultValue = "5")
+	public static int EVENT_SHUGOSWEEP_FREEDICE;
+	
+	@Property(key = "gameserver.youtube.video", defaultValue = "https://www.youtube.com/embed/3Agip7o-OO0?")
+	public static String EVENT_YOUTUBE_VIDEO;
 }

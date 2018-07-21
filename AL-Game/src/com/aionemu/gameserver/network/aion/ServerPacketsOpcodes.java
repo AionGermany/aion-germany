@@ -318,6 +318,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_BATTLEFIELD_UNION_POINTS.class, 0x157, idSet); // 5.6 TODO
 		// -------------------SHUGO SWEEP/LUCKY DICE----------------------//
 		addPacketOpcode(SM_SHUGO_SWEEP.class, 0x14B, idSet); //5.8 EU
+		addPacketOpcode(SM_YOUTUBE_VIDEO.class, 0x146, idSet);
 		// --------------------UNKNOWN PACKETS-----------------------//
 		addPacketOpcode(SM_UNK_60.class, 0x60, idSet);
 		addPacketOpcode(SM_UNK_106.class, 0x106, idSet);

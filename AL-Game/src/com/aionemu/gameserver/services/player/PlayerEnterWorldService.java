@@ -114,6 +114,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_7E;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_A5;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_BD;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_FD;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_YOUTUBE_VIDEO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.AccessLevelEnum;
@@ -625,6 +626,8 @@ public final class PlayerEnterWorldService {
 
 			// SM_TERRITORY_LIST
 			TerritoryService.getInstance().onEnterWorld(player);
+			
+			client.sendPacket(new SM_YOUTUBE_VIDEO());
 			
 			// SM_UNK_12B
 			// client.sendPacket(new SM_UNK_12B()); // TODO - Null Pointer after Login

@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.Rnd;
+import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerShugoSweepDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -40,6 +41,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 public class ShugoSweepService {
 
 	private static final Logger log = LoggerFactory.getLogger(ShugoSweepService.class);
+	private final int boardId = EventsConfig.EVENT_SHUGOSWEEP_BOARD; 
 
 	public void initShugoSweep() {
 		log.info("[ShugoSweepService] is initialized...");
@@ -50,8 +52,7 @@ public class ShugoSweepService {
 	public void onLogin(Player player) {
 		DAOManager.getDAO(PlayerShugoSweepDAO.class).load(player);
 		if (player.getPlayerShugoSweep() == null) {
-			int boardId = Rnd.get(1, 30);
-			PlayerSweep ps = new PlayerSweep(0, 7, boardId);
+			PlayerSweep ps = new PlayerSweep(0, EventsConfig.EVENT_SHUGOSWEEP_FREEDICE, boardId);
 			ps.setPersistentState(PersistentState.UPDATE_REQUIRED);
 			player.setPlayerShugoSweep(ps);
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
@@ -65,7 +66,7 @@ public class ShugoSweepService {
 		player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
 	}
 
-	public void launchDice(Player player) {
+	public void launchDice(final Player player) {
 		int move = Rnd.get(1, 6);
 		int step = getPlayerSweep(player).getStep();
 		int newStep = step + move;
@@ -79,65 +80,41 @@ public class ShugoSweepService {
 			getCommonData(player).setGoldenDice(goldDice - 1);
 			DAOManager.getDAO(PlayerDAO.class).storePlayer(player);
 		}
-		if (step == 30) {
-			restartBoard(player);
-		}
 		if (newStep > 30) {
-			int diff = 30 - step;
-			getPlayerSweep(player).setStep(step + diff);
+//			System.out.println("Step: " + step + " Move: " + move + " NewStep: " + newStep);
+			int diff = newStep - 30;
+			getPlayerSweep(player).setStep(newStep);
 			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), diff));
-			restartBoard(player);
-			int realMove = move - diff; // 32 = case 2
-			getPlayerSweep(player).setStep(realMove);
+			getPlayerSweep(player).setStep(1);	
+			rewardPlayer(player, getPlayerSweep(player).getStep(), (diff == 0 ? 30 : diff));
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
-			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), realMove));
-			rewardPlayer(player, getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), move);
 		}
 		else {
 			getPlayerSweep(player).setStep(newStep);
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
 			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), move));
-			rewardPlayer(player, getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), move);
+			rewardPlayer(player, getPlayerSweep(player).getStep(), move);
 		}
 	}
 
 	public void resetBoard(Player player) {
 		int reset = getCommonData(player).getResetBoard();
 		getCommonData(player).setResetBoard(reset - 1);
-		int boardId = 0;
-		boardId = Rnd.get(1, 30);
-		if (getPlayerSweep(player).getBoardId() == boardId) {
-			boardId = Rnd.get(1, 30);
-		}
-		getPlayerSweep(player).setBoardId(boardId);
 		getPlayerSweep(player).setStep(0);
 		PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), 0, getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), 0));
 	}
 
-	private void rewardPlayer(final Player player, final int boardid, final int step, final int move) {
+	private void rewardPlayer(final Player player, final int step, final int move) {
 		ThreadPoolManager.getInstance().schedule(new Runnable() {
 			@Override
 			public void run() {
 				if (player.isOnline()) {
-					ShugoSweepReward reward = getRewardForBoard(boardid, step);
+					ShugoSweepReward reward = getRewardForBoard(boardId, step);
 					ItemService.addItem(player, reward.getItemId(), reward.getCount());
 				}
 			}
 		}, move * 1000);
 		
-	}
-
-	private void restartBoard(Player player) {
-		if (getPlayerSweep(player).getStep() != 0) {
-			player.getPlayerShugoSweep().setStep(0);
-		}
-		int boardId = 0;
-		boardId = Rnd.get(1, 30);
-		if (getPlayerSweep(player).getBoardId() == boardId) {
-			boardId = Rnd.get(1, 30);
-		}
-		getPlayerSweep(player).setBoardId(boardId);
-		PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), 0));
 	}
 
 	private PlayerCommonData getCommonData(Player player) {
