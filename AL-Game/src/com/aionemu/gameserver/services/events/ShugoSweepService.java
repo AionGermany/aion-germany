@@ -58,6 +58,14 @@ public class ShugoSweepService {
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
 			DAOManager.getDAO(PlayerShugoSweepDAO.class).add(player.getObjectId(), ps.getFreeDice(), ps.getStep(), ps.getBoardId());
 		}
+		
+		if (player.getPlayerShugoSweep().getBoardId() != boardId) {
+			PlayerSweep ps = new PlayerSweep(0, getPlayerSweep(player).getFreeDice(), boardId);
+			ps.setPersistentState(PersistentState.UPDATE_REQUIRED);
+			player.setPlayerShugoSweep(ps);
+			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
+		}
+		
 		PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), 0));
 	}
 
@@ -72,24 +80,32 @@ public class ShugoSweepService {
 		int newStep = step + move;
 		int dice = getPlayerSweep(player).getFreeDice();
 		int goldDice = getCommonData(player).getGoldenDice();
+		int diff = newStep - 30;
 		if (getPlayerSweep(player).getFreeDice() != 0) {
 			getPlayerSweep(player).setFreeDice(dice - 1);
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
-		}
-		else {
+		} else {
 			getCommonData(player).setGoldenDice(goldDice - 1);
 			DAOManager.getDAO(PlayerDAO.class).storePlayer(player);
 		}
+
+		PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(boardId, getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), 0, 0));
+		
 		if (newStep > 30) {
-//			System.out.println("Step: " + step + " Move: " + move + " NewStep: " + newStep);
-			int diff = newStep - 30;
+			System.out.println("Step > 30: " + step + " Move: " + move + " NewStep: " + newStep);
 			getPlayerSweep(player).setStep(newStep);
-			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), diff));
-			getPlayerSweep(player).setStep(1);	
-			rewardPlayer(player, getPlayerSweep(player).getStep(), (diff == 0 ? 30 : diff));
+			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), move));
+			getPlayerSweep(player).setStep(diff);	
+			rewardPlayer(player, getPlayerSweep(player).getStep(), diff);
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
-		}
-		else {
+		} else if (newStep == 30) {
+			System.out.println("Step = 30: " + step + " Move: " + move + " NewStep: " + newStep);
+			getPlayerSweep(player).setStep(newStep);
+			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), move));
+			rewardPlayer(player, getPlayerSweep(player).getStep(), newStep);
+			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
+		} else {
+			System.out.println("Step normal " + step + " Move: " + move + " NewStep: " + newStep);
 			getPlayerSweep(player).setStep(newStep);
 			player.getPlayerShugoSweep().setShugoSweepByObjId(player.getObjectId());
 			PacketSendUtility.sendPacket(player, new SM_SHUGO_SWEEP(getPlayerSweep(player).getBoardId(), getPlayerSweep(player).getStep(), getPlayerSweep(player).getFreeDice(), getCommonData(player).getGoldenDice(), getCommonData(player).getResetBoard(), move));
@@ -113,7 +129,7 @@ public class ShugoSweepService {
 					ItemService.addItem(player, reward.getItemId(), reward.getCount());
 				}
 			}
-		}, move * 1000);
+		}, move * 1200);
 		
 	}
 

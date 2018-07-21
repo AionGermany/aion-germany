@@ -1120,9 +1120,14 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 		this.goldenDice = dice;
 	}
 
-	public int getResetBoard() { return resetBoard; }
+	public int getResetBoard() { 
+		return resetBoard;
+	}
 
-	public void setResetBoard(int reset) { this.resetBoard = reset; }
+	public void setResetBoard(int reset) {
+		this.resetBoard = reset;
+	}
+	
 	/**
 	 * @Tower of Challenge
 	 */

@@ -50,7 +50,7 @@ public class SM_SHUGO_SWEEP extends AionServerPacket {
 		writeD(currentStep); // current step
 		writeH(0); // reward ??
 		writeH(0); // reward ??
-		writeD(1); // Allow Reset
+		writeD(0); 
 		writeD(diceLeft); // dice left
 		writeD(diceGolden); // dice golden
 		writeD(unkButton); // button near dice left
