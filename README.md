@@ -14,18 +14,24 @@ Launcher Settings (add this to your config File):
 
 **Help and Support:** [Aion EU Forum](http://falke34.bplaced.net)
 
-#### Todo (Static Data):
+#### Todo:
+```sh
+Static Data:
 * Divine Fortress and Artifact Spawns
 * Nosra + Esterra Spawns
+```
 
-#### Todo (Data):
+```sh
+Data:
 * add/write new Quest Scipts
 * repair some Quest Scripts
 
 * write new Instance Scripts
 * fix some Instance Scripts
+```
 
-#### Todo (Source):
+```sh
+Source:
 * Stigma Enchant 
 - add/find Bonus Stigma Slot and add Sigma Enchant Bonus
 - fix Stigma with Stigma Enchant
@@ -39,3 +45,5 @@ Launcher Settings (add this to your config File):
 
 * Skill Enhance
 - this change the Skills not + the Skills
+
+```
