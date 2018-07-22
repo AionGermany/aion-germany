@@ -1,3 +1,5 @@
+![](http://falke34.bplaced.net/Splash01.png)
+
 #### Aion EU Emulator
 #### Version: 5.8
 
