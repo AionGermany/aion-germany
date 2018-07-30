@@ -91,6 +91,6 @@ public class EventsConfig {
 	@Property(key = "gameserver.event.shugoSweep.freeDice", defaultValue = "5")
 	public static int EVENT_SHUGOSWEEP_FREEDICE;
 	
-	@Property(key = "gameserver.event.youtube_video", defaultValue = "https://www.youtube.com/embed/3Agip7o-OO0?")
+	@Property(key = "gameserver.event.youtube_video", defaultValue = "https://www.youtube.com/embed/zZ7OhMY5mYg")
 	public static String EVENT_YOUTUBE_VIDEO;
 }
