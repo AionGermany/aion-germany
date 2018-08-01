@@ -120,16 +120,6 @@ public class _2947FollowingThrough extends QuestHandler {
 					}
 					break;
 				}
-				case 204301: { // Aegir
-					switch (dialog) {
-						case SELECT_QUEST_REWARD: {
-							return false;
-						}
-						default:
-							break;
-					}
-					break;
-				}
 				case 204089: { // Garm
 					switch (dialog) {
 						case QUEST_SELECT: {
