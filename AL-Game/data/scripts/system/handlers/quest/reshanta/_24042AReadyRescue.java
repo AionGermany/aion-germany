@@ -113,7 +113,7 @@ public class _24042AReadyRescue extends QuestHandler {
 							return sendQuestDialog(env, 2035);
 						}
 						case SETPRO4: {
-							return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 1295.0565f, 1499.0419f, 1571.1864f, 3, 4); // 4
+							return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 802.696f, 1080.324f, 1570.6981f, 3, 4); // 4
 						}
 						default:
 							break;
