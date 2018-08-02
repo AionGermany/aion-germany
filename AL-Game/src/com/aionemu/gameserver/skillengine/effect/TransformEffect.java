@@ -87,13 +87,20 @@ public abstract class TransformEffect extends EffectTemplate {
 					}
 				}
 			}
+
 			effected.getTransformModel().setModelId(newModel);
 			effected.getTransformModel().setTransformType(transformType);
 			effected.getTransformModel().setItemId(0);
+			
+			((Player) effected).setTransformed(false);
+			((Player) effected).setTransformedModelId(0);
+			((Player) effected).setTransformedPanelId(0);
+			((Player) effected).setTransformedItemId(0);
+			DAOManager.getDAO(PlayerTransformationDAO.class).deletePlTransfo(effected.getObjectId());
+			
 			if (model == 202635) { // Makes the effected unAttackable for all
 				PacketSendUtility.broadcastPacket(effected, new SM_PLAYER_INFO((Player) effected, false), 100);
 			}
-			DAOManager.getDAO(PlayerTransformationDAO.class).deletePlTransfo(effected.getObjectId());
 		}
 		else if (effected instanceof Summon) {
 			effected.getTransformModel().setModelId(0);
@@ -103,43 +110,35 @@ public abstract class TransformEffect extends EffectTemplate {
 		}
 		effected.getTransformModel().setPanelId(0);
 		PacketSendUtility.broadcastPacketAndReceive(effected, new SM_TRANSFORM(effected, 0, false, 0));
-
-		if (effected instanceof Player) {
-			((Player) effected).setTransformed(false);
-			((Player) effected).setTransformedModelId(0);
-			((Player) effected).setTransformedItemId(0);
-			((Player) effected).setTransformedPanelId(0);
-		}
+		super.endEffect(effect);
 	}
 
 	@Override
 	public void startEffect(Effect effect) { // , AbnormalState effectId
 		final Creature effected = effect.getEffected();
-
-		// if (effectId != null) {
-		// effect.setAbnormal(effectId.getId());
-		// effected.getEffectController().setAbnormal(effectId.getId());
-		// }
+		
+		if (itemId == 0) {
+			if (effected.getUsingItemId() != 0) {
+				itemId = effected.getUsingItemId();
+			}
+		}
 
 		effected.getTransformModel().setModelId(model);
 		effected.getTransformModel().setPanelId(panelid);
+
 		effected.getTransformModel().setItemId(itemId);
 		effected.getTransformModel().setTransformType(effect.getTransformType());
 		PacketSendUtility.broadcastPacketAndReceive(effected, new SM_TRANSFORM(effected, panelid, true, itemId, effect.getSkillId()));
 
-		if (model == 202635) { // Makes the effected Attackable for all
-			if (effected instanceof Player) {
-				PacketSendUtility.broadcastPacket(effected, new SM_PLAYER_INFO((Player) effected, true), 100);
-			}
-		}
-
 		if (effected instanceof Player) {
 			((Player) effected).setTransformed(true);
 			((Player) effected).setTransformedModelId(model);
+			((Player) effected).setTransformedPanelId(panelid);
 			((Player) effected).setTransformedItemId(itemId);
-			((Player) effected).setTransformedItemId(panelid);
 			DAOManager.getDAO(PlayerTransformationDAO.class).storePlTransfo(effected.getObjectId(), panelid, itemId);
+			PacketSendUtility.broadcastPacket(effected, new SM_PLAYER_INFO((Player) effected, true), 100);
 		}
+		super.startEffect(effect);
 	}
 
 	public TransformType getTransformType() {

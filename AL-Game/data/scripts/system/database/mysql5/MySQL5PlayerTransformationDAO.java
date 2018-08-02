@@ -72,7 +72,7 @@ public class MySQL5PlayerTransformationDAO extends PlayerTransformationDAO {
 			stmt.close();
 		}
 		catch (Exception e) {
-			log.error("Could not store f2p for player " + playerId + " from DB: " + e.getMessage(), e);
+			log.error("Could not store Player Tranformation." + playerId + " from DB: " + e.getMessage(), e);
 			return false;
 		}
 		finally {
