@@ -13,7 +13,7 @@
     <xs:include schemaLocation="item_sets/item_sets.xsd"/>
     <xs:include schemaLocation="items/item_restriction_cleanups.xsd"/>
     <xs:include schemaLocation="items/item_templates.xsd"/>
-    <xs:include schemaLocation="items/item_presettings.xsd"/>
+    <xs:include schemaLocation="items/item_custom_sets.xsd"/>
     <xs:include schemaLocation="items/item_random_bonuses.xsd"/>
     <xs:include schemaLocation="items/item_groups.xsd"/>
     <xs:include schemaLocation="items/assembly_items.xsd"/>
@@ -85,7 +85,7 @@
 	<xs:include schemaLocation="locations/svs/svs.xsd"/>
 	<xs:include schemaLocation="locations/rvr/rvr.xsd"/>
     <xs:include schemaLocation="skills/skill_charge.xsd"/>
-    <xs:include schemaLocation="items/item_purifications.xsd"/>
+    <xs:include schemaLocation="items/item_upgrades.xsd"/>
     <xs:include schemaLocation="decomposable_items/decomposable_selectitems.xsd"/>
     <xs:include schemaLocation="items/enchant_templates.xsd"/>
     <xs:include schemaLocation="items/enchant_tables.xsd"/>
@@ -112,6 +112,8 @@
 	<xs:include schemaLocation="events_config/boost_events.xsd"/>
 	<xs:include schemaLocation="skill_skins/skill_skins.xsd"/>
 	<xs:include schemaLocation="events_window/events_window.xsd"/>
+	<xs:include schemaLocation="items/item_skill_enhances.xsd"/>
+	<xs:include schemaLocation="events_config/shugo_sweep.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -129,7 +131,7 @@
                 <xs:element ref="item_sets" minOccurs="0"/>
                 <xs:element ref="item_restriction_cleanups" minOccurs="0"/>
                 <xs:element ref="item_templates" minOccurs="0"/>
-                <xs:element ref="item_presettings" minOccurs="0"/>
+                <xs:element ref="item_custom_sets" minOccurs="0"/>
                 <xs:element ref="random_bonuses" minOccurs="0"/>
                 <xs:element ref="item_groups" minOccurs="0"/>
                 <xs:element ref="assembly_items" minOccurs="0"/>
@@ -201,7 +203,7 @@
                 <xs:element ref="svs" minOccurs="0"/>
                 <xs:element ref="rvr" minOccurs="0"/>
                 <xs:element ref="skill_charge" minOccurs="0"/>
-                <xs:element ref="item_purifications" minOccurs="0"/>
+                <xs:element ref="item_upgrades" minOccurs="0"/>
                 <xs:element ref="decomposable_selectitems" minOccurs="0"/>
                 <xs:element ref="enchant_templates" minOccurs="0"/>
                 <xs:element ref="enchant_tables" minOccurs="0"/>
@@ -228,6 +230,8 @@
 				<xs:element ref="boost_events" minOccurs="0"/>
 				<xs:element ref="skill_skins" minOccurs="0"/>
 				<xs:element ref="events_window" minOccurs="0"/>
+				<xs:element ref="item_skill_enhances" minOccurs="0"/>
+				<xs:element ref="shugo_sweeps" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

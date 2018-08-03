@@ -45,8 +45,8 @@ public class ItemReduceLevelAction extends AbstractItemAction {
 	protected Integer reduceCount;
 
 	@Override
-	public boolean canAct(Player player, Item parentItem, Item targetItem) {
-		if (parentItem == null) {
+	public boolean canAct(Player player, Item item, Item targetItem) {
+		if (targetItem == null) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_COLOR_ERROR);
 			return false;
 		}
@@ -54,15 +54,17 @@ public class ItemReduceLevelAction extends AbstractItemAction {
 	}
 
 	@Override
-	public void act(final Player player, final Item parentItem, final Item targetItem) {
+	public void act(final Player player, final Item item, final Item targetItem) {
 		player.getController().cancelUseItem();
-		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 3000, 0, 0));
+		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), item.getObjectId(), item.getItemId(), 3000, 0), true);
 		final ItemUseObserver observer = new ItemUseObserver() {
 
 			@Override
 			public void abort() {
 				player.getController().cancelTask(TaskId.ITEM_USE);
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(parentItem.getItemTemplate().getNameId())));
+				player.removeItemCoolDown(item.getItemTemplate().getUseLimits().getDelayId());
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(targetItem.getItemTemplate().getNameId())));
+				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), item.getObjectId(), item.getItemId(), 0, 2), true);
 				player.getObserveController().removeObserver(this);
 			}
 		};
@@ -71,23 +73,24 @@ public class ItemReduceLevelAction extends AbstractItemAction {
 
 			@Override
 			public void run() {
-				boolean succ = player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1);
-				if (succ) {
-					player.getObserveController().removeObserver(observer);
-					targetItem.setReductionLevel(targetItem.getReductionLevel() + 1);
-					PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, targetItem));
-					player.getObserveController().removeObserver(observer);
-					if (targetItem.isEquipped()) {
+				if (!player.getInventory().decreaseByObjectId(item.getObjectId(), 1)) {
+					return;
+				}
+				player.getObserveController().removeObserver(observer);
+				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), item.getObjectId(), item.getItemId(), 0, 1),true);
+				targetItem.setReductionLevel(targetItem.getReductionLevel() + 1);
+				PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, targetItem));
+				player.getObserveController().removeObserver(observer);
+				if (targetItem.isEquipped()) {
 						player.getGameStats().updateStatsVisually();
 					}
-					
-					ItemPacketService.updateItemAfterInfoChange(player, targetItem);
-					
-					if (targetItem.isEquipped()) {
-						player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
-					} else {
-						player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
-					}
+				
+				ItemPacketService.updateItemAfterInfoChange(player, targetItem);
+				
+				if (targetItem.isEquipped()) {
+					player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
+				} else {
+					player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
 				}
 			}
 		}, 3000));

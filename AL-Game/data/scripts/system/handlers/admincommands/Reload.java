@@ -54,7 +54,7 @@ import com.aionemu.gameserver.model.drop.NpcDrop;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.questEngine.QuestEngine;
-import com.aionemu.gameserver.services.EventService;
+import com.aionemu.gameserver.services.events.EventService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;

@@ -50,7 +50,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writeC(buf, item.getEnchantLevel()); // enchant (1-15)
 		writeD(buf, item.getItemSkinTemplate().getTemplateId());
 		writeC(buf, item.getOptionalSocket());
-		writeC(buf, 0); // maxEnchant
+		writeC(buf, 0); // enchant Bonus
 		writeItemStones(buf);
 
 		ItemStone god = item.getGodStone();
@@ -86,9 +86,9 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writePlumeStats(buf); // 64-bytes
 		writeB(buf, new byte[36]);
 		writeAmplification(buf); // 5-bytes
-		writeB(buf, new byte[15]);
-		writeSkillBoost(buf); // 5-bytes
-		writeD(buf, 0);
+		writeB(buf, new byte[12]);
+		writeSkillBoost(buf); // 8-bytes
+		writeD(buf, item.isLunaReskin() ? 1 : 0); // Luna Reskin
 		writeC(buf, item.getReductionLevel()); // Level Reduction
 	}
 
@@ -98,8 +98,9 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 	 * @param item
 	 */
 	private void writeSkillBoost(ByteBuffer buf) { // TODO
-		writeD(buf, 0);
-		writeC(buf, 0);
+		Item item = ownerItem;
+		writeD(buf, item.getEnhanceSkillId());
+		writeD(buf, item.getEnhanceEnchantLevel());
 	}
 
 	/**

@@ -16,7 +16,7 @@ CREATE TABLE `abyss_landing` (
   `quest` int(10) NOT NULL DEFAULT '0',
   `facility` int(10) NOT NULL DEFAULT '0',
   `race` enum('ELYOS','ASMODIANS') NOT NULL,
-  `level_up_date` timestamp NOT NULL DEFAULT '2015-01-01 01:00:00',
+  `level_up_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1463,7 +1463,7 @@ CREATE TABLE `towns` (
   `level` int(11) NOT NULL DEFAULT '1',
   `points` int(10) NOT NULL DEFAULT '0',
   `race` enum('ELYOS','ASMODIANS') NOT NULL,
-  `level_up_date` timestamp NOT NULL DEFAULT '1970-01-01 07:00:01',
+  `level_up_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

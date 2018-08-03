@@ -26,6 +26,39 @@ public class SM_UNK_133 extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeD(0);
+		writeB(new byte[12]);
+		writeD(1200);
+		writeB(new byte[8]);
+		writeD(4220);
+		writeB(new byte[8]);
+		writeD(10990);
+		writeB(new byte[8]);
+		writeD(23500);
+		writeB(new byte[8]);
+		writeD(42780);
+		writeB(new byte[8]);
+		writeD(69700);
+		writeB(new byte[8]);
+		writeD(105600);
+		writeB(new byte[8]);
+		writeD(150800);
+		writeB(new byte[16]);
+		writeD(1560);
+		writeB(new byte[8]);
+		writeD(12864);
+		writeB(new byte[8]);
+		writeD(61427);
+		writeB(new byte[8]);
+		writeD(214391);
+		writeB(new byte[8]);
+		writeD(689397);
+		writeB(new byte[8]);
+		writeD(1323699);
+		writeB(new byte[8]);
+		writeD(1815621);
+		writeB(new byte[8]);
+		writeD(2373629);
+		writeB(new byte[8]);
+		writeD(2764975);
 	}
 }

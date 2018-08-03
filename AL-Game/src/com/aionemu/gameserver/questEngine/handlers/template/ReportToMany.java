@@ -168,18 +168,29 @@ public class ReportToMany extends QuestHandler {
 			}
 			else if (var > maxVar) {
 				if (endNpcs.contains(targetId)) {
-					if (dialog == DialogAction.QUEST_SELECT) {
-						return sendQuestDialog(env, endDialog);
-					}
-					else if (env.getDialog() == DialogAction.SELECT_QUEST_REWARD) {
-						if (startItem != 0) {
-							if (!removeQuestItem(env, startItem, 1)) {
-								return false;
+					switch(dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, endDialog);
+						}
+						case CHECK_USER_HAS_QUEST_ITEM: {
+							if (QuestService.collectItemCheck(env, true)) {
+								qs.setStatus(QuestStatus.REWARD);
+								updateQuestStatus(env);
+								return sendQuestDialog(env, 5);
 							}
 						}
-						qs.setStatus(QuestStatus.REWARD);
-						updateQuestStatus(env);
-						return sendQuestEndDialog(env);
+						case SELECT_QUEST_REWARD: {
+							if (startItem != 0) {
+								if (!removeQuestItem(env, startItem, 1)) {
+									return false;
+								}
+							}
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return sendQuestEndDialog(env);
+						}
+					default:
+						break;
 					}
 				}
 			}

@@ -26,26 +26,29 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 /**
  * @author Ghostfur (Aion-Unique)
  */
-public abstract class PlayerEventsWindowDAO
-implements DAO {
-    public abstract PlayerEventWindowList load(Player var1);
+public abstract class PlayerEventsWindowDAO implements DAO {
 
-    public abstract void insert(int var1, int var2, Timestamp var3);
+	public abstract PlayerEventWindowList load(Player accountId);
 
-    public abstract boolean store(int var1, int var2, Timestamp var3, int var4);
+	public abstract void insert(int accountId, int eventId, Timestamp last_stamp);
 
-    public abstract void delete(int var1, int var2);
+	public abstract boolean store(int accountId, int eventId, Timestamp last_stamp, int elapsed);
 
-    public abstract Timestamp getLastStamp(int var1, int var2);
+	public abstract void delete(int accountId, int eventId);
 
-    public abstract double getElapsed(int var1);
+	public abstract Timestamp getLastStamp(int accountId, int eventId);
 
-    public abstract void updateElapsed(int var1, double var2);
+	public abstract int getElapsed(int accountId, int eventId);
 
-    public abstract List<Integer> getEventsWindow(int var1);
+	public abstract void updateElapsed(int accountId, int eventId, int elapsed);
+	
+	public abstract int getRewardRecivedCount(int accountId, int eventId);
+	
+	public abstract void setRewardRecivedCount(int accountId, int eventId, int rewardRecivedCount);
 
-    public final String getClassName() {
-        return PlayerEventsWindowDAO.class.getName();
-    }
+	public abstract List<Integer> getEventsWindow(int accountId);
+
+	public final String getClassName() {
+		return PlayerEventsWindowDAO.class.getName();
+	}
 }
-

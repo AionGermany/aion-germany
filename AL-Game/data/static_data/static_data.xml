@@ -73,7 +73,7 @@
     <import file="item_sets/item_sets.xml"/>
     <import file="items/item_restriction_cleanups.xml"/>
     <import file="items/item_templates.xml"/>
-    <import file="items/item_presettings.xml"/>
+    <import file="items/item_custom_sets.xml"/>
     <import file="items/item_random_bonuses.xml"/>
     <import file="items/item_groups.xml"/>
     <import file="items/assembly_items.xml"/>
@@ -173,7 +173,7 @@
 	<import file="locations/svs/svs.xml"/>
 	<import file="locations/rvr/rvr.xml"/>
     <import file="skills/skill_charge.xml"/>
-    <import file="items/item_purifications.xml"/>
+    <import file="items/item_upgrades.xml"/>
     <import file="decomposable_items/decomposable_selectitems.xml"/>
     <import file="items/enchant_templates.xml"/>
 	<import file="items/enchant_tables.xml"/>
@@ -214,4 +214,6 @@
 	<events_window>
 		<import file="events_window/events_window.xml" skipRoot="true"/>
 	</events_window>
+	<import file="items/item_skill_enhances.xml"/>
+	<import file="events_config/shugo_sweep.xml"/>
 </ae_static_data>

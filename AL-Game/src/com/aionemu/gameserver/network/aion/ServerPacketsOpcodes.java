@@ -263,7 +263,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_CHALLENGE_LIST.class, 0x11A, idSet); // 5.6
 		addPacketOpcode(SM_ACCOUNT_ACCESS_PROPERTIES.class, 0xF0, idSet); // 5.6
 		addPacketOpcode(SM_ICON_INFO.class, 0xAF, idSet);
-		addPacketOpcode(SM_MEGAPHONE.class, 0x123, idSet);
+		addPacketOpcode(SM_MEGAPHONE.class, 0x11F, idSet); //5.8
 		addPacketOpcode(SM_RIDE_ROBOT.class, 0x5C, idSet);
 		addPacketOpcode(SM_EMOTION_SWITCH.class, 0xC6, idSet);
 		addPacketOpcode(SM_SECURITY_TOKEN.class, 0x114, idSet); // 5.6
@@ -277,11 +277,10 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_CUSTOM_PACKET.class, 99999, idSet); // fake packet
 		addPacketOpcode(SM_AFTER_TIME_CHECK.class, 0x126, idSet); // 5.6
 		addPacketOpcode(SM_QUEST_REPEAT.class, 0x124, idSet); // 5.6
-		//addPacketOpcode(SM_EVENT_BUFF.class, 0x11A, idSet); // TODO
+		addPacketOpcode(SM_EVENT_BUFF.class, 0x11C, idSet); // 5.8
 		addPacketOpcode(SM_BOOST_EVENTS.class, 0x148, idSet); // 5.6 TODO
 		addPacketOpcode(SM_SPLIT_ITEM.class, 0xEB, idSet); // 5.4 TODO
 		addPacketOpcode(SM_TUNE_RESULT.class, 0x122, idSet); // 5.6 TODO
-		addPacketOpcode(SM_LUCKY_DICE.class, 0x14B, idSet); // 5.6 TODO
 		addPacketOpcode(SM_PLAYER_PROTECTION.class, 0x100, idSet); // 5.6
 		addPacketOpcode(SM_FLAG_INFO.class, 0x152, idSet); // 5.6
 		addPacketOpcode(SM_MAC_ADDRESS.class, 0x166, idSet); // 5.6 TODO
@@ -317,6 +316,9 @@ public class ServerPacketsOpcodes {
 		//addPacketOpcode(SM_BATTLEFIELD_UNION_REGISTER.class, 0x154, idSet); // 5.6 TODO
 		addPacketOpcode(SM_BATTLEFIELD_UNION.class, 0x156, idSet); // 5.6 TODO
 		addPacketOpcode(SM_BATTLEFIELD_UNION_POINTS.class, 0x157, idSet); // 5.6 TODO
+		// -------------------SHUGO SWEEP/LUCKY DICE----------------------//
+		addPacketOpcode(SM_SHUGO_SWEEP.class, 0x14B, idSet); //5.8 EU
+		addPacketOpcode(SM_YOUTUBE_VIDEO.class, 0x146, idSet);
 		// --------------------UNKNOWN PACKETS-----------------------//
 		addPacketOpcode(SM_UNK_60.class, 0x60, idSet);
 		addPacketOpcode(SM_UNK_106.class, 0x106, idSet);
@@ -335,7 +337,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_UNK_12B.class, 0x12B, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_168.class, 0x168, idSet); // 5.6 TODO
 		addPacketOpcode(SM_SKILL_ANIMATION.class, 0x150, idSet); // 5.6 TODO
-		addPacketOpcode(SM_UNK_11B.class, 0x11C, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_15E.class, 0x15E, idSet); // 5.4 TODO
 		addPacketOpcode(SM_UNK_15D.class, 0x162, idSet); // 5.6 TODO Lodas Silver Star
 		addPacketOpcode(SM_NEVIWIND_CANYON.class, 0x169, idSet); // 5.6 TODO

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../spawns/spawns.xsd"/>
     <xs:include schemaLocation="../global_types.xsd"/>
     <xs:include schemaLocation="../import.xsd"/>
     <xs:element name="town_spawns_data" type="TownSpawnsData"/>

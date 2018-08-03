@@ -166,6 +166,7 @@ public class SkillUseAction extends AbstractItemAction {
 			}
 			else {
 				player.getController().cancelUseItem();
+				player.setUsingItem(parentItem);
 				skill.setItemObjectId(parentItem.getObjectId());
 				skill.useSkill();
 			}

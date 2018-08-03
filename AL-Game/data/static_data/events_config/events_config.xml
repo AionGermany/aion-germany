@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Tiamaranta Eye</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival;Fire Temple of Memory;Joker's Wild 2017;Axe Soup Inventory;Axe Soup;Eggstravaganza Inventory;Eggstravaganza;Kumuki Hideout;Pumpkin Kings Haunt Inventory;Pumpkin Kings Haunt;Creativity Event;Highdaeva Growth Event;Tiamaranta Eye;Secret of the Ancients Returns Inventory;Secret of the Ancients Returns;Sheep on the Rampage Inventory;Sheep on the Rampage</active>
     <events>
         <event name="World Blessers" start="2017-01-01T00:00:00+00:00" end="2018-12-31T00:00:00+00:00">
             <quests>
@@ -170,7 +170,7 @@
                 </spawn_map>
             </spawns>
         </event>        
-		<!--  Novice Event Inventory lvl 1-30 (Novice's Crystal)-->
+        <!--  Novice Event Inventory lvl 1-30 (Novice's Crystal)-->
         <event name="Novice Event Inventory" start="2015-01-01T00:00:00+00:00" end="2016-01-01T00:00:00+00:00">
             <inventory_drop startlevel="1" interval="20" endlevel="30" maxCountOfDay="12" cleanTime="9">186000253</inventory_drop>
         </event> 
@@ -178,30 +178,30 @@
         <event name="Novice Event Inventory1" start="2015-01-01T00:00:00+00:00" end="2016-01-01T00:00:00+00:00">
             <inventory_drop startlevel="30" interval="30" endlevel="45" maxCountOfDay="20" cleanTime="9">186000253</inventory_drop>
         </event> 
-		<event name="Novice Event" start="2015-01-01T00:00:00+00:00" end="2016-01-01T00:00:00+00:00">
-			<spawns>
-		    <spawn_map map_id="110010000">
-				<spawn npc_id="831340" respawn_time="295">
-            		<spot x="1464.0153" y="1589.9034" z="572.8729" h="104"/>
-        		</spawn>
-			</spawn_map>
-			<spawn_map map_id="210010000">
-				<spawn npc_id="831340" respawn_time="295">
-            		<spot x="849.4894" y="1240.7933" z="119.36341" h="95"/>
-        		</spawn>
-			</spawn_map>
-			<spawn_map map_id="120010000">
-				<spawn npc_id="831341" respawn_time="295">
-            		<spot x="1352.7385" y="1362.8286" z="208.125" h="60"/>
-        		</spawn>
-			</spawn_map>
-			<spawn_map map_id="220010000">
-				<spawn npc_id="831341" respawn_time="295">
-            		<spot x="566.87695" y="2452.0857" z="277.9198" h="2"/>
-        		</spawn>
-			</spawn_map>
-		  </spawns>
-		</event>
+        <event name="Novice Event" start="2015-01-01T00:00:00+00:00" end="2016-01-01T00:00:00+00:00">
+            <spawns>
+            <spawn_map map_id="110010000">
+                <spawn npc_id="831340" respawn_time="295">
+                    <spot x="1464.0153" y="1589.9034" z="572.8729" h="104"/>
+                </spawn>
+            </spawn_map>
+            <spawn_map map_id="210010000">
+                <spawn npc_id="831340" respawn_time="295">
+                    <spot x="849.4894" y="1240.7933" z="119.36341" h="95"/>
+                </spawn>
+            </spawn_map>
+            <spawn_map map_id="120010000">
+                <spawn npc_id="831341" respawn_time="295">
+                    <spot x="1352.7385" y="1362.8286" z="208.125" h="60"/>
+                </spawn>
+            </spawn_map>
+            <spawn_map map_id="220010000">
+                <spawn npc_id="831341" respawn_time="295">
+                    <spot x="566.87695" y="2452.0857" z="277.9198" h="2"/>
+                </spawn>
+            </spawn_map>
+          </spawns>
+        </event>
         <event name="Mega Kinah Event" start="2015-07-21T00:00:00+00:00" end="2015-08-19T00:00:00+00:00">
             <quests>
                 <maintainable>80345;80346;80347;80348;80349;80457;80458;80459;80460;80461;80462;80463;80464;80465;80466</maintainable>
@@ -236,45 +236,45 @@
                     </spawn>
                 </spawn_map>
             </spawns>
-        </event>		        
-		<event name="Upgrade Arcade Inventory" start="2015-04-01T00:00:00+00:00" end="2015-04-15T00:00:00+00:00">
-			<inventory_drop startlevel="50" endlevel="65" interval="10" maxCountOfDay="1" cleanTime="9">182215581</inventory_drop>
-		</event>    
-		<event name="Upgrade Arcade" start="2015-04-01T00:00:00+00:00" end="2015-04-15T00:00:00+00:00">
-			<quests>
+        </event>                
+        <event name="Upgrade Arcade Inventory" start="2015-04-01T00:00:00+00:00" end="2015-04-15T00:00:00+00:00">
+            <inventory_drop startlevel="50" endlevel="65" interval="10" maxCountOfDay="1" cleanTime="9">182215581</inventory_drop>
+        </event>    
+        <event name="Upgrade Arcade" start="2015-04-01T00:00:00+00:00" end="2015-04-15T00:00:00+00:00">
+            <quests>
                 <maintainable>80615;80616</maintainable>
             </quests>
-			<spawns>
-			<spawn_map map_id="110010000"><!-- Sanctum -->
-				<spawn npc_id="832866" respawn_time="295"><!-- Dagonerk -->
-					<spot x="1438.0" y="1490.0" z="573.0719" h="109"/>
-				</spawn>
-				<spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
-					<spot x="1434.0" y="1490.0" z="573.0719" h="11"/>
-				</spawn>
-				<spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
-					<spot x="1439.0" y="1486.0" z="573.0719" h="17"/>
-				</spawn>
-				<spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
-					<spot x="1436.2" y="1487.7" z="573.0719" h="18"/>
-				</spawn>
-			</spawn_map>
-			<spawn_map map_id="120010000"><!-- Pandaemonium -->
-				<spawn npc_id="832866" respawn_time="295"><!-- Dagonerk -->
-					<spot x="1610.1" y="1417.9" z="193.12793" h="111"/>
-				</spawn>
-				<spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
-					<spot x="1605.0" y="1419.5" z="193.12814" h="111"/>
-				</spawn>
-				<spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
-					<spot x="1604.6" y="1416.3" z="193.1283" h="111"/>
-				</spawn>
-				<spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
-					<spot x="1606.0" y="1422.5" z="193.12798" h="111"/>
-				</spawn>
-			</spawn_map>
-		  </spawns>
-		</event>
+            <spawns>
+            <spawn_map map_id="110010000"><!-- Sanctum -->
+                <spawn npc_id="832866" respawn_time="295"><!-- Dagonerk -->
+                    <spot x="1438.0" y="1490.0" z="573.0719" h="109"/>
+                </spawn>
+                <spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
+                    <spot x="1434.0" y="1490.0" z="573.0719" h="11"/>
+                </spawn>
+                <spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
+                    <spot x="1439.0" y="1486.0" z="573.0719" h="17"/>
+                </spawn>
+                <spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
+                    <spot x="1436.2" y="1487.7" z="573.0719" h="18"/>
+                </spawn>
+            </spawn_map>
+            <spawn_map map_id="120010000"><!-- Pandaemonium -->
+                <spawn npc_id="832866" respawn_time="295"><!-- Dagonerk -->
+                    <spot x="1610.1" y="1417.9" z="193.12793" h="111"/>
+                </spawn>
+                <spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
+                    <spot x="1605.0" y="1419.5" z="193.12814" h="111"/>
+                </spawn>
+                <spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
+                    <spot x="1604.6" y="1416.3" z="193.1283" h="111"/>
+                </spawn>
+                <spawn npc_id="832894" respawn_time="295"><!-- Dagonerks Freund -->
+                    <spot x="1606.0" y="1422.5" z="193.12798" h="111"/>
+                </spawn>
+            </spawn_map>
+          </spawns>
+        </event>
         <event name="Return To The Shugo Tomb" start="2015-05-06T00:00:00+00:00" end="2015-06-03T00:00:00+00:00">
             <quests>
                 <maintainable>80275;80276;80277;80278;80279;80280;80281;80282</maintainable>
@@ -311,7 +311,7 @@
                     <spawn npc_id="831119" respawn_time="295"><!-- Marayinerk -->
                         <spot x="1813.0" y="2902.0" z="548.52545" h="99"/> <!-- 4.7 -->
                     </spawn>
-                </spawn_map>				
+                </spawn_map>                
             </spawns>
         </event>
         <event name="Code Red: Atreia" start="2015-05-13T00:00:00+00:00" end="2015-05-27T00:00:00+00:00">
@@ -703,15 +703,15 @@
                     </spawn>                                
                     <spawn npc_id="831785" respawn_time="295"> <!-- Premium Treasure Chest -->  
                         <spot x="1512.5641" y="1527.5615" z="565.8794" h="107"/>
-						<spot x="1509.8092" y="1522.9714" z="565.8796" h="111"/>
-						<spot x="1515.6952" y="1531.0807" z="565.8792" h="105"/>
+                        <spot x="1509.8092" y="1522.9714" z="565.8796" h="111"/>
+                        <spot x="1515.6952" y="1531.0807" z="565.8792" h="105"/>
                     </spawn>                
                     <spawn npc_id="831786" respawn_time="295"> <!-- Common Treasure Box -->
                         <spot x="1512.2118" y="1535.4083" z="565.8795" h="103"/>
-						<spot x="1509.6417" y="1533.153" z="565.8797" h="106"/>
-						<spot x="1507.3201" y="1530.3733" z="565.8799" h="109"/>
-						<spot x="1505.543" y="1527.4904" z="565.88007" h="111"/>
-						<spot x="1503.8751" y="1524.1074" z="565.8801" h="112"/>
+                        <spot x="1509.6417" y="1533.153" z="565.8797" h="106"/>
+                        <spot x="1507.3201" y="1530.3733" z="565.8799" h="109"/>
+                        <spot x="1505.543" y="1527.4904" z="565.88007" h="111"/>
+                        <spot x="1503.8751" y="1524.1074" z="565.8801" h="112"/>
                     </spawn>                
                 </spawn_map>
                 <spawn_map map_id="120010000"><!-- Pandaemonium -->            
@@ -723,15 +723,15 @@
                     </spawn>                
                     <spawn npc_id="831785" respawn_time="295"> <!-- Premium Treasure Chest -->
                         <spot x="1287.4314" y="1409.2018" z="208.125" h="30"/>
-						<spot x="1279.4314" y="1409.2018" z="208.125" h="30"/>
-						<spot x="1271.4314" y="1409.2018" z="208.125" h="30"/>
+                        <spot x="1279.4314" y="1409.2018" z="208.125" h="30"/>
+                        <spot x="1271.4314" y="1409.2018" z="208.125" h="30"/>
                     </spawn>                
                     <spawn npc_id="831786" respawn_time="295"> <!-- Common Treasure Box -->
                         <spot x="1290.6384" y="1411.5886" z="208.125" h="30"/>
-						<spot x="1284.6384" y="1411.5886" z="208.125" h="30"/>
-						<spot x="1278.6384" y="1411.5886" z="208.125" h="30"/>
-						<spot x="1272.6384" y="1411.5886" z="208.125" h="30"/>
-						<spot x="1266.6384" y="1411.5886" z="208.125" h="30"/>
+                        <spot x="1284.6384" y="1411.5886" z="208.125" h="30"/>
+                        <spot x="1278.6384" y="1411.5886" z="208.125" h="30"/>
+                        <spot x="1272.6384" y="1411.5886" z="208.125" h="30"/>
+                        <spot x="1266.6384" y="1411.5886" z="208.125" h="30"/>
                     </spawn>
                 </spawn_map>    
                 <spawn_map map_id="210070000"><!-- Cygnea -->            
@@ -778,9 +778,9 @@
                 </spawn_map>                
             </spawns>
         </event>
-		<event name="Sweet Fruits Inventory" start="2015-06-17T00:00:00+00:00" end="2015-07-17T00:00:00+00:00">
-			<inventory_drop startlevel="30" endlevel="65" interval="30" maxCountOfDay="1" cleanTime="9">188053541</inventory_drop>
-		</event>
+        <event name="Sweet Fruits Inventory" start="2015-06-17T00:00:00+00:00" end="2015-07-17T00:00:00+00:00">
+            <inventory_drop startlevel="30" endlevel="65" interval="30" maxCountOfDay="1" cleanTime="9">188053541</inventory_drop>
+        </event>
         <event name="Sweet Fruits Drop" start="2015-06-17T00:00:00+00:00" end="2015-07-17T00:00:00+00:00">
             <event_drops>
                 <event_drop item_id="188100248" count="1" chance="2" minDiff="30" maxDiff="65"/> <!-- [Event] Vinna -->
@@ -788,7 +788,7 @@
                 <event_drop item_id="188100250" count="1" chance="2" minDiff="30" maxDiff="65"/> <!-- [Event] Orange -->
                 <event_drop item_id="188100251" count="1" chance="2" minDiff="30" maxDiff="65"/> <!-- [Event] Fig -->
             </event_drops>                 
-        </event>  		           
+        </event>                     
         <event name="Sweet Fruits" start="2015-06-17T00:00:00+00:00" end="2015-07-17T00:00:00+00:00">
             <quests>
                 <maintainable>80635;80636;80637;80638;80639;80640;80641;80642</maintainable>
@@ -818,93 +818,93 @@
                 </spawn_map>
             </spawns>
         </event>    
-		<event name="The Heroine Weeks" start="2015-06-08T00:00:00+00:00" end="2015-07-08T00:00:00+00:00">
-			<spawns>
-				<spawn_map map_id="110010000"> <!-- Sanctum -->
-					<spawn npc_id="832008" respawn_time="295"> <!-- Flower Rack -->
-						<spot h="59" z="565.92645" y="1511.5986" x="1515.4138"/>
-					</spawn>
-					<spawn npc_id="831999" respawn_time="295"> <!-- Florarinerk -->
-						<spot h="55" z="565.9218" y="1514.4386" x="1516.2908"/>
-					</spawn>
+        <event name="The Heroine Weeks" start="2015-06-08T00:00:00+00:00" end="2015-07-08T00:00:00+00:00">
+            <spawns>
+                <spawn_map map_id="110010000"> <!-- Sanctum -->
+                    <spawn npc_id="832008" respawn_time="295"> <!-- Flower Rack -->
+                        <spot h="59" z="565.92645" y="1511.5986" x="1515.4138"/>
+                    </spawn>
+                    <spawn npc_id="831999" respawn_time="295"> <!-- Florarinerk -->
+                        <spot h="55" z="565.9218" y="1514.4386" x="1516.2908"/>
+                    </spawn>
                 </spawn_map>
-				<spawn_map map_id="120010000"> <!-- Pandaemonium -->
-					<spawn npc_id="832008" respawn_time="295"> <!-- Flower Rack -->
-						<spot h="89" z="209.09084" y="1432.169" x="1297.0289"/>
-					</spawn>
-					<spawn npc_id="831999" respawn_time="295"> <!-- Florarinerk -->
-						<spot h="87" z="209.09084" y="1432.6614" x="1294.4376"/>
-					</spawn>
+                <spawn_map map_id="120010000"> <!-- Pandaemonium -->
+                    <spawn npc_id="832008" respawn_time="295"> <!-- Flower Rack -->
+                        <spot h="89" z="209.09084" y="1432.169" x="1297.0289"/>
+                    </spawn>
+                    <spawn npc_id="831999" respawn_time="295"> <!-- Florarinerk -->
+                        <spot h="87" z="209.09084" y="1432.6614" x="1294.4376"/>
+                    </spawn>
                 </spawn_map>
-			</spawns>
-		</event>
+            </spawns>
+        </event>
         <event name="Violet Revolution Drop" start="2015-06-01T00:00:00+00:00" end="2015-06-30T00:00:00+00:00">
-			<event_drops>
-				<event_drop item_id="186000386" count="1" chance="2" minDiff="30" maxDiff="65"/> <!-- Violet Banner -->
-				<!-- [Event] Violet Bundle - Boss Drop-->
-				<event_drop item_id="188053214" count="1" chance="1.5" minDiff="1" maxDiff="10" npc_id="231305"/> <!-- Enraged Queen Modor -->
-				<event_drop item_id="188053214" count="1" chance="1.5" minDiff="1" maxDiff="10" npc_id="231073"/> <!-- Hyperion -->
-				<event_drop item_id="188053214" count="1" chance="1.5" minDiff="1" maxDiff="10" npc_id="217647"/> <!-- Raksha Boilheart -->
-			</event_drops>                
-        </event>  			
-		<event name="Violet Revolution" start="2015-06-01T00:00:00+00:00" end="2015-06-30T00:00:00+00:00">
-			<spawns>
-				<spawn_map map_id="110010000"> <!-- Sanctum -->
+            <event_drops>
+                <event_drop item_id="186000386" count="1" chance="2" minDiff="30" maxDiff="65"/> <!-- Violet Banner -->
+                <!-- [Event] Violet Bundle - Boss Drop-->
+                <event_drop item_id="188053214" count="1" chance="1.5" minDiff="1" maxDiff="10" npc_id="231305"/> <!-- Enraged Queen Modor -->
+                <event_drop item_id="188053214" count="1" chance="1.5" minDiff="1" maxDiff="10" npc_id="231073"/> <!-- Hyperion -->
+                <event_drop item_id="188053214" count="1" chance="1.5" minDiff="1" maxDiff="10" npc_id="217647"/> <!-- Raksha Boilheart -->
+            </event_drops>                
+        </event>              
+        <event name="Violet Revolution" start="2015-06-01T00:00:00+00:00" end="2015-06-30T00:00:00+00:00">
+            <spawns>
+                <spawn_map map_id="110010000"> <!-- Sanctum -->
                     <spawn npc_id="832747" respawn_time="295"> <!-- Revoruna -->
                        <spot x="1475.0" y="1451.0" z="572.8747" h="62"/>
                     </spawn>
                 </spawn_map>
-				<spawn_map map_id="120010000"> <!-- Pandaemonium -->
+                <spawn_map map_id="120010000"> <!-- Pandaemonium -->
                     <spawn npc_id="832748" respawn_time="295"> <!-- Revorua -->
                         <spot x="1303.0" y="1438.0" z="209.69817" h="98"/>
                     </spawn>
                 </spawn_map>
-			</spawns>
-		</event>
-		<event name="The Lost Words Drop" start="2015-06-03T00:00:00+00:00" end="2015-07-20T00:00:00+00:00">
-			<event_drops>
-				<event_drop item_id="182007132" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card A -->
-				<event_drop item_id="182007135" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card B -->
-				<event_drop item_id="182007137" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card D -->
-				<event_drop item_id="182007138" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card E -->
-				<event_drop item_id="182007133" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card I -->
-				<event_drop item_id="182007139" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card N -->
-				<event_drop item_id="182007134" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card O -->
-				<event_drop item_id="182007136" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card S -->
-				<event_drop item_id="182007141" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card V -->
-				<event_drop item_id="182007140" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card Y -->
-			</event_drops>
-		</event> 
-		<event name="The Lost Words" start="2015-06-03T00:00:00+00:00" end="2015-07-20T00:00:00+00:00">		 
+            </spawns>
+        </event>
+        <event name="The Lost Words Drop" start="2015-06-03T00:00:00+00:00" end="2015-07-20T00:00:00+00:00">
+            <event_drops>
+                <event_drop item_id="182007132" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card A -->
+                <event_drop item_id="182007135" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card B -->
+                <event_drop item_id="182007137" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card D -->
+                <event_drop item_id="182007138" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card E -->
+                <event_drop item_id="182007133" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card I -->
+                <event_drop item_id="182007139" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card N -->
+                <event_drop item_id="182007134" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card O -->
+                <event_drop item_id="182007136" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card S -->
+                <event_drop item_id="182007141" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card V -->
+                <event_drop item_id="182007140" count="1" chance="2" minDiff="5" maxDiff="60"/> <!-- The Stolen Letter Card Y -->
+            </event_drops>
+        </event> 
+        <event name="The Lost Words" start="2015-06-03T00:00:00+00:00" end="2015-07-20T00:00:00+00:00">         
             <quests>
                 <maintainable>80567;80568;80569;80570;80571;80572;80573;80574</maintainable>
-            </quests> 					
-			<spawns>
-				<spawn_map map_id="110010000"> <!-- Sanctum -->
+            </quests>                     
+            <spawns>
+                <spawn_map map_id="110010000"> <!-- Sanctum -->
                     <spawn npc_id="832016" respawn_time="295">
                         <spot x="1456.4198" y="1485.8472" z="573.0719" h="51"/>
-					</spawn>					
-					<spawn npc_id="832017" respawn_time="295">
+                    </spawn>                    
+                    <spawn npc_id="832017" respawn_time="295">
                         <spot x="1459.0651" y="1489.7823" z="573.0719" h="49"/>
-					</spawn>
-				</spawn_map>	
-				<spawn_map map_id="120010000"> <!-- Pandaemonium -->
+                    </spawn>
+                </spawn_map>    
+                <spawn_map map_id="120010000"> <!-- Pandaemonium -->
                     <spawn npc_id="832016" respawn_time="295">
                         <spot x="1312.3" y="1398.0" z="208.125" h="20"/>
-					</spawn>					
-					<spawn npc_id="832017" respawn_time="295">
+                    </spawn>                    
+                    <spawn npc_id="832017" respawn_time="295">
                         <spot x="1307.3" y="1401.2" z="208.125" h="22"/>
-					</spawn>
+                    </spawn>
                 </spawn_map>
-			</spawns>
-		</event>
-		<event name="Divine Bonfire Inventory" start="2015-07-01T00:00:00+00:00" end="2015-08-01T00:00:00+00:00">
-			<inventory_drop startlevel="10" interval="30" endlevel="65" maxCountOfDay="10" cleanTime="9">164000280</inventory_drop>
-		</event>
-		<event name="Divine Bonfire" start="2015-07-01T00:00:00+00:00" end="2015-08-01T00:00:00+00:00">
+            </spawns>
+        </event>
+        <event name="Divine Bonfire Inventory" start="2015-07-01T00:00:00+00:00" end="2015-08-01T00:00:00+00:00">
+            <inventory_drop startlevel="10" interval="30" endlevel="65" maxCountOfDay="10" cleanTime="9">164000280</inventory_drop>
+        </event>
+        <event name="Divine Bonfire" start="2015-07-01T00:00:00+00:00" end="2015-08-01T00:00:00+00:00">
             <quests>
                 <maintainable>80476;80477</maintainable>
-            </quests>		
+            </quests>        
             <spawns>
                 <spawn_map map_id="110010000"><!-- Sanctum -->
                     <spawn npc_id="831871" respawn_time="295"><!-- Katarina -->
@@ -929,7 +929,7 @@
                     </spawn>
                 </spawn_map>
             </spawns>
-		</event>
+        </event>
         <event name="Daeva Day New Inventory" start="2015-08-01T00:00:00+00:00" end="2015-09-01T00:00:00+00:00">
             <inventory_drop startlevel="30" interval="60" endlevel="65" maxCountOfDay="10" cleanTime="9">188052676</inventory_drop>
         </event>
@@ -1018,15 +1018,15 @@
                 </spawn_map>
             </spawns>
         </event>
-		<event name="Legendary Symphony Event" start="2015-07-22T00:00:00+00:00" end="2015-08-05T00:00:00+00:00">
+        <event name="Legendary Symphony Event" start="2015-07-22T00:00:00+00:00" end="2015-08-05T00:00:00+00:00">
             <quests>
                 <maintainable>80677;80682;80697;80698;80699;80700;80701;80702;80703;80704</maintainable>
             </quests>
-			<event_drops>
-				<event_drop item_id="188100252" count="1" chance="100" minDiff="30" maxDiff="65" npc_id="233740"/> <!-- Prototyp Dainatum -->
-				<event_drop item_id="188100252" count="1" chance="100" minDiff="30" maxDiff="65" npc_id="230857"/> <!-- Guard Captain Ahuradim -->
-				<event_drop item_id="188100252" count="1" chance="100" minDiff="30" maxDiff="65" npc_id="231073"/> <!-- Hyperion -->
-			</event_drops>             		
+            <event_drops>
+                <event_drop item_id="188100252" count="1" chance="100" minDiff="30" maxDiff="65" npc_id="233740"/> <!-- Prototyp Dainatum -->
+                <event_drop item_id="188100252" count="1" chance="100" minDiff="30" maxDiff="65" npc_id="230857"/> <!-- Guard Captain Ahuradim -->
+                <event_drop item_id="188100252" count="1" chance="100" minDiff="30" maxDiff="65" npc_id="231073"/> <!-- Hyperion -->
+            </event_drops>                     
             <spawns>              
                 <spawn_map map_id="110010000"><!-- Sanctum --> 
                     <spawn npc_id="832968" respawn_time="295"><!-- Andante -->
@@ -1095,48 +1095,48 @@
                 </spawn_map>
             </spawns>
         </event>
-		<event name="Rainbow Snake Festival Inventory" start="2015-08-26T00:00:00+00:00" end="2015-09-09T00:00:00+00:00">
-			<inventory_drop interval="60" startlevel="30" endlevel="65" maxCountOfDay="1" cleanTime="9">188100257</inventory_drop><!-- [Event] Blue Scale after 60min -->
+        <event name="Rainbow Snake Festival Inventory" start="2015-08-26T00:00:00+00:00" end="2015-09-09T00:00:00+00:00">
+            <inventory_drop interval="60" startlevel="30" endlevel="65" maxCountOfDay="1" cleanTime="9">188100257</inventory_drop><!-- [Event] Blue Scale after 60min -->
         </event>
-		<event name="Rainbow Snake Festival Inventory 1" start="2015-08-26T00:00:00+00:00" end="2015-09-09T00:00:00+00:00">			
-			<inventory_drop interval="120" startlevel="30" endlevel="65" maxCountOfDay="1" cleanTime="9">188100258</inventory_drop><!-- [Event] Yellow Scale after 120min -->
+        <event name="Rainbow Snake Festival Inventory 1" start="2015-08-26T00:00:00+00:00" end="2015-09-09T00:00:00+00:00">            
+            <inventory_drop interval="120" startlevel="30" endlevel="65" maxCountOfDay="1" cleanTime="9">188100258</inventory_drop><!-- [Event] Yellow Scale after 120min -->
         </event>
-		<event name="Rainbow Snake Festival Inventory 2" start="2015-08-26T00:00:00+00:00" end="2015-09-09T00:00:00+00:00">			
-			<inventory_drop interval="180" startlevel="30" endlevel="65" maxCountOfDay="1" cleanTime="9">188100259</inventory_drop><!-- [Event] Red Scale after 180min -->
-		</event>    
+        <event name="Rainbow Snake Festival Inventory 2" start="2015-08-26T00:00:00+00:00" end="2015-09-09T00:00:00+00:00">            
+            <inventory_drop interval="180" startlevel="30" endlevel="65" maxCountOfDay="1" cleanTime="9">188100259</inventory_drop><!-- [Event] Red Scale after 180min -->
+        </event>    
         <event name="Rainbow Snake Festival" start="2015-08-26T00:00:00+00:00" end="2015-09-09T00:00:00+00:00">
             <quests>
                 <maintainable>80683;80685;80686;80688</maintainable>
             </quests>            
             <spawns>
-				<spawn_map map_id="110010000"><!-- Sanctum --> 
-					<spawn npc_id="832965" respawn_time="295"><!-- Salazara -->  
-						<spot x="1454.0" y="1491.0" z="573.0719" h="60"/>
-					</spawn> 
-					<spawn npc_id="832973" respawn_time="295"><!-- Narzissa -->  
-						<spot x="1454.0" y="1489.0" z="573.0719" h="60"/>
-					</spawn> 
-					<spawn npc_id="832963" respawn_time="295"><!-- Dolores Buff NPC -->
-						<spot x="1454.0" y="1493.0" z="573.0719" h="60"/>
-					</spawn>
-					<spawn npc_id="832964" respawn_time="295"><!-- Lucius Buff NPC -->
-						<spot x="1454.0" y="1493.0" z="573.0719" h="60"/>
-					</spawn> 					 
-				</spawn_map>
-				<spawn_map map_id="120010000"><!-- Pandaemonium -->
-					<spawn npc_id="832976" respawn_time="295"><!-- Salazara -->       
-						<spot x="1306.0" y="1404.0" z="208.125" h="18"/> 
-					</spawn> 
-					<spawn npc_id="832978" respawn_time="295"><!-- Narzissa --> 
-						<spot x="1304.0" y="1405.0" z="208.125" h="27"/>
-					</spawn> 
-					<spawn npc_id="832974" respawn_time="295"><!-- Dolores Buff NPC -->
-						<spot x="1308.0" y="1402.0" z="208.125" h="21"/>
-					</spawn> 
-					<spawn npc_id="832975" respawn_time="295"><!-- Lucius Buff NPC -->
-						<spot x="1308.0" y="1402.0" z="208.125" h="21"/>
-					</spawn> 
-				</spawn_map>
+                <spawn_map map_id="110010000"><!-- Sanctum --> 
+                    <spawn npc_id="832965" respawn_time="295"><!-- Salazara -->  
+                        <spot x="1454.0" y="1491.0" z="573.0719" h="60"/>
+                    </spawn> 
+                    <spawn npc_id="832973" respawn_time="295"><!-- Narzissa -->  
+                        <spot x="1454.0" y="1489.0" z="573.0719" h="60"/>
+                    </spawn> 
+                    <spawn npc_id="832963" respawn_time="295"><!-- Dolores Buff NPC -->
+                        <spot x="1454.0" y="1493.0" z="573.0719" h="60"/>
+                    </spawn>
+                    <spawn npc_id="832964" respawn_time="295"><!-- Lucius Buff NPC -->
+                        <spot x="1454.0" y="1493.0" z="573.0719" h="60"/>
+                    </spawn>                      
+                </spawn_map>
+                <spawn_map map_id="120010000"><!-- Pandaemonium -->
+                    <spawn npc_id="832976" respawn_time="295"><!-- Salazara -->       
+                        <spot x="1306.0" y="1404.0" z="208.125" h="18"/> 
+                    </spawn> 
+                    <spawn npc_id="832978" respawn_time="295"><!-- Narzissa --> 
+                        <spot x="1304.0" y="1405.0" z="208.125" h="27"/>
+                    </spawn> 
+                    <spawn npc_id="832974" respawn_time="295"><!-- Dolores Buff NPC -->
+                        <spot x="1308.0" y="1402.0" z="208.125" h="21"/>
+                    </spawn> 
+                    <spawn npc_id="832975" respawn_time="295"><!-- Lucius Buff NPC -->
+                        <spot x="1308.0" y="1402.0" z="208.125" h="21"/>
+                    </spawn> 
+                </spawn_map>
             </spawns>
         </event>
         <event name="Snowy Freezy" start="2015-12-15T00:00:00+00:00" end="2016-01-02T00:00:00+00:00"> <!-- Retail EU 4.8 -->
@@ -1251,32 +1251,32 @@
                 <maintainable>80643;80644;80618;80620;80617;80619</maintainable>
             </quests>            
             <spawns>
-				<spawn_map map_id="110010000"><!-- Sanctum -->
+                <spawn_map map_id="110010000"><!-- Sanctum -->
                     <spawn npc_id="832888" respawn_time="295"><!-- Neltise -->
                         <spot x="1433.0" y="1517.0" z="573.30756"/>
                     </spawn>
                     <spawn npc_id="832895" respawn_time="295"><!-- Landrian -->
                         <spot x="1458.0" y="1526.0" z="573.0719"/>
                     </spawn>                    
-				</spawn_map>
-				<spawn_map map_id="120010000"><!-- Pandaemonium -->
+                </spawn_map>
+                <spawn_map map_id="120010000"><!-- Pandaemonium -->
                     <spawn npc_id="832896" respawn_time="295"><!-- Madareke -->
                         <spot x="1605.0" y="1386.0" z="193.12839"/>
                     </spawn>
                     <spawn npc_id="832889" respawn_time="295"><!-- Hinjel -->
                         <spot x="1635.0" y="1391.0" z="193.12703"/>
                     </spawn>                    
-				</spawn_map>
-				<spawn_map map_id="210010000"><!-- Poeta -->
+                </spawn_map>
+                <spawn_map map_id="210010000"><!-- Poeta -->
                     <spawn npc_id="832886" respawn_time="295"><!-- Lanne -->
                         <spot x="833.0" y="1218.0" z="118.8125"/>
                     </spawn>
-				</spawn_map>
-				<spawn_map map_id="220010000"><!-- Ishalgen -->
+                </spawn_map>
+                <spawn_map map_id="220010000"><!-- Ishalgen -->
                     <spawn npc_id="832887" respawn_time="295"><!-- Jelta -->
                         <spot x="556.0" y="2449.0" z="278.0"/>
                     </spawn>
-				</spawn_map>								
+                </spawn_map>                                
             </spawns>
         </event>
         <event name="Dafarunerk Inventory" start="2016-01-01T00:00:00+00:00" end="2018-12-31T00:00:00+00:00">
@@ -1359,10 +1359,10 @@
             <spawns>
                 <!-- Sanctum -->
                 <spawn_map map_id="110010000">
-					<!-- Picnic Decor -->
-					<spawn npc_id="833500" respawn_time="295">
-					    <spot x="1532.4674" y="1511.5504" z="565.8822" h="0"/>
-					</spawn>
+                    <!-- Picnic Decor -->
+                    <spawn npc_id="833500" respawn_time="295">
+                        <spot x="1532.4674" y="1511.5504" z="565.8822" h="0"/>
+                    </spawn>
                     <!-- Shimmering Fountain -->
                     <spawn npc_id="833501" respawn_time="295">
                         <spot x="1535.0" y="1503.3" z="565.90314" h="67"/>
@@ -1398,10 +1398,10 @@
                 </spawn_map>
                 <!-- Pandaemonium -->
                 <spawn_map map_id="120010000">
-					<!-- Picnic Decor -->
-					<spawn npc_id="833500" respawn_time="295">
-					    <spot x="1200.7" y="1400.0" z="208.125" h="65"/>
-					</spawn>
+                    <!-- Picnic Decor -->
+                    <spawn npc_id="833500" respawn_time="295">
+                        <spot x="1200.7" y="1400.0" z="208.125" h="65"/>
+                    </spawn>
                     <!-- Shimmering Fountain -->
                     <spawn npc_id="833501" respawn_time="295">
                         <spot x="1194.8" y="1405.7" z="208.125" h="118"/>
@@ -1738,7 +1738,7 @@
                 <!-- TODO - Event Spawns in Kaldor, Levinshor, Cygnea and Enshar -->
                 <!-- Kaldor -->
                 <spawn_map map_id="600090000">
-              		<!-- Shining Capsule -->
+                      <!-- Shining Capsule -->
                     <spawn npc_id="833660" respawn_time="600">
                         <spot x="1294.97" y="744.0" z="163.43562" h="90"/>
                         <spot x="830.0" y="820.0" z="164.0" h="90"/>
@@ -1748,7 +1748,7 @@
                 </spawn_map>
                 <!-- Levinshor -->
                 <spawn_map map_id="600100000">
-              		<!-- Shining Capsule -->
+                      <!-- Shining Capsule -->
                     <spawn npc_id="833660" respawn_time="600">
                         <spot x="1030.86" y="1024.3" z="332.72443" h="90"/>
                         <spot x="1130.37" y="1524.7" z="269.00623" h="90"/>
@@ -1756,7 +1756,7 @@
                 </spawn_map>
                 <!-- Cygnea -->
                 <spawn_map map_id="210070000">
-              		<!-- Shining Capsule -->
+                      <!-- Shining Capsule -->
                     <spawn npc_id="833660" respawn_time="600">
                         <spot x="2146.0" y="2397.0" z="289.875" h="90"/>
                         <spot x="310.97" y="2708.56" z="212.74625" h="90"/>
@@ -1768,7 +1768,7 @@
                 </spawn_map>
                 <!-- Enshar -->
                 <spawn_map map_id="220080000">
-              		<!-- Shining Capsule -->
+                      <!-- Shining Capsule -->
                     <spawn npc_id="833660" respawn_time="600">
                         <spot x="2907.46" y="368.24" z="282.3825" h="90"/>
                         <spot x="1095.03" y="2495.14" z="282.2027" h="90"/>
@@ -2365,6 +2365,47 @@
                 </spawn_map>
             </spawns>
         </event>
+        <event name="Creativity Event" start="2018-06-01T00:00:00+00:00" end="2018-07-31T00:00:00+00:00">
+            <quests>
+                <maintainable>80900;80901;80902;80903;80904;80905;80906;80907;80908;80909;80910;80911;80912;80913;80914;80915;80916;80917;80918;80919</maintainable>
+            </quests>
+            <spawns>
+                <spawn_map map_id="210100000"><!-- Iluma -->
+                    <!-- Chairunerk ||| world_event_CP_reward_shugo -->
+                    <spawn npc_id="834418">
+                        <spot x="1423.4839" y="1276.1631" z="336.43802" h="38"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="220110000"><!-- Norsvold -->
+                    <!-- Chairunerk ||| world_event_CP_reward_shugo -->
+                    <spawn npc_id="834418">
+                        <spot x="1772.8887" y="1977.9623" z="197.80386" h="99"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Highdaeva Growth Event" start="2016-12-28T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+            <event_drops>
+                <event_drop item_id="186000464" count="1" chance="5" minDiff="66" maxDiff="75"/> <!-- [Event] Seed Of Growth -->
+            </event_drops>
+            <quests>
+                <maintainable>80947;80948</maintainable>
+            </quests>
+            <spawns>
+                <spawn_map map_id="210100000"><!-- Iluma -->
+                    <!-- Repia ||| world_event_ch_3exp_npc_01 -->
+                    <spawn npc_id="835439">
+                        <spot x="1420.5199" z="336.43802" y="1274.8325" h="38"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="220110000"><!-- Norsvold -->
+                    <!-- Repia ||| world_event_ch_3exp_npc_01 -->
+                    <spawn npc_id="835439">
+                        <spot x="1775.8177" y="1979.4485" z="197.80386" h="101"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
         <event name="Tiamaranta Eye" start="2018-03-16T00:00:00+00:00" end="2018-05-01T00:00:00+00:00">
             <spawns>
                 <spawn_map map_id="110010000"><!-- Sanctum -->
@@ -2385,6 +2426,138 @@
                     <!-- Verva ||| DC1_Verbenk_E -->
                     <spawn npc_id="836454" respawn_time="295">
                         <spot x="1199.0" y="1392.6" z="208.125" h="30"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Secret of the Ancients Returns Inventory" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
+            <inventory_drop startlevel="65" interval="30" endlevel="75" maxCountOfDay="6" cleanTime="9">188057812</inventory_drop>
+        </event>
+        <event name="Secret of the Ancients Returns" start="2018-06-13T00:00:00+00:00" end="2018-07-04T00:00:00+00:00">
+            <event_drops>
+                <event_drop item_id="186000479" count="1" chance="2" minDiff="66" maxDiff="75"/> <!-- Ancient Shard -->
+                <event_drop item_id="186000479" count="1" chance="100" minDiff="1" maxDiff="10" minLvl="66" npc_id="247233"/> <!-- Anubis -->
+            </event_drops>
+            <quests>
+                <maintainable>80949;80950;80951;80952;80953</maintainable>
+            </quests>
+            <spawns>
+                <spawn_map map_id="110010000"><!-- Sanctum -->
+                    <!-- Ramses ||| World_event_egypt_kingnpc_01 -->
+                    <spawn npc_id="835551" respawn_time="295">
+                        <spot x="1527.7" y="1512.9" z="565.8943" h="69"/>
+                    </spawn>
+                    <!-- Cleo ||| World_event_egypt_queennpc_01 -->
+                    <spawn npc_id="835552" respawn_time="295">
+                        <spot x="1527.7" y="1507.6" z="565.8971" h="60"/>
+                    </spawn>
+                    <!-- Sphinx ||| World_event_egypt_questnpc_01 -->
+                    <spawn npc_id="835553" respawn_time="295">
+                        <spot x="1532.6" y="1516.0" z="565.89307" h="60"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_Pyramid_01 -->
+                    <spawn npc_id="835554" respawn_time="295">
+                        <spot x="1536.3" y="1509.1" z="565.8934" h="60"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_desert_01 -->
+                    <spawn npc_id="835555" respawn_time="295">
+                        <spot x="1532.4" y="1511.6" z="565.88245" h="60"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="120010000"><!-- Pandaemonium -->
+                    <!-- Ramses ||| World_event_egypt_kingnpc_01 -->
+                    <spawn npc_id="835551" respawn_time="295">
+                        <spot x="1172.5" y="1366.6" z="209.6744" h="15"/>
+                    </spawn>
+                    <!-- Cleo ||| World_event_egypt_queennpc_01 -->
+                    <spawn npc_id="835552" respawn_time="295">
+                        <spot x="1176.4" y="1363.2" z="209.67441" h="15"/>
+                    </spawn>
+                    <!-- Sphinx ||| World_event_egypt_questnpc_01 -->
+                    <spawn npc_id="835553" respawn_time="295">
+                        <spot x="1179.1" y="1357.2" z="209.6744" h="24"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_Pyramid_01 -->
+                    <spawn npc_id="835554" respawn_time="295">
+                        <spot x="1169.6" y="1359.6" z="209.67447" h="16"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_desert_01 -->
+                    <spawn npc_id="835555" respawn_time="295">
+                        <spot x="1169.6" y="1359.6" z="209.67447" h="16"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="210100000"><!-- Esterra -->
+                    <!-- Anubis ||| World_event_egypt_kingmonster_01 -->
+                    <spawn npc_id="247233" respawn_time="3600">
+                        <spot x="1701.2" y="1415.7" z="305.64252" h="67"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_02 -->
+                    <spawn npc_id="247234" respawn_time="295">
+                        <spot x="1693.3" y="1412.9" z="306.04376" h="89"/>
+                        <spot x="1698.6" y="1407.6" z="305.5175" h="94"/>
+                        <spot x="1698.8" y="1411.4" z="305.7375" h="77"/>
+                        <spot x="1696.9" y="1418.1" z="306.0" h="34"/>
+                        <spot x="1702.8" y="1411.8" z="305.21246" h="76"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_03 -->
+                    <spawn npc_id="247235" respawn_time="295">
+                        <spot x="1690.5" y="1411.0" z="306.25" h="51"/>
+                        <spot x="1693.7" y="1408.3" z="305.7875" h="53"/>
+                        <spot x="1696.6" y="1413.1" z="305.92313" h="43"/>
+                        <spot x="1697.8" y="1416.3" z="306.0" h="65"/>
+                        <spot x="1703.7" y="1408.3" z="304.71878" h="0"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_portal_01 -->
+                    <spawn npc_id="835556" respawn_time="295">
+                        <spot x="1703.8" y="1416.7" z="305.3625" h="67"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="220110000"><!-- Nosra -->
+                    <!-- Anubis ||| World_event_egypt_kingmonster_01 -->
+                    <spawn npc_id="247233" respawn_time="3600">
+                        <spot x="1533.0" y="2037.4" z="172.66876" h="39"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_02 -->
+                    <spawn npc_id="247234" respawn_time="295">
+                        <spot x="1533.6" y="2042.2" z="172.83499" h="27"/>
+                        <spot x="1535.9" y="2042.6" z="173.26877" h="44"/>
+                        <spot x="1530.5" y="2042.1" z="172.4375" h="89"/>
+                        <spot x="1532.1" y="2045.0" z="172.64374" h="76"/>
+                        <spot x="1529.0" y="2044.8" z="172.25" h="94"/>
+                    </spawn>
+                    <!-- Ancient Box ||| World_event_egypt_monster_03 -->
+                    <spawn npc_id="247235" respawn_time="295">
+                        <spot x="1535.7" y="2045.0" z="173.31874" h="0"/>
+                        <spot x="1532.7" y="2050.3" z="172.89343" h="51"/>
+                        <spot x="1534.3" y="2048.1" z="173.06157" h="65"/>
+                        <spot x="1527.9" y="2047.5" z="172.20782" h="43"/>
+                        <spot x="1530.6" y="2048.3" z="172.575" h="53"/>
+                    </spawn>
+                    <!-- None ||| World_FOBJ_Egypt_portal_01 -->
+                    <spawn npc_id="835556" respawn_time="295">
+                        <spot x="1535.1" y="2033.6" z="172.94249" h="39"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Sheep on the Rampage Inventory" start="2018-07-11T00:00:00+00:00" end="2018-07-25T00:00:00+00:00">
+            <inventory_drop startlevel="65" interval="60" endlevel="75" maxCountOfDay="3" cleanTime="9">186000405</inventory_drop>
+        </event>
+        <event name="Sheep on the Rampage" start="2018-07-11T00:00:00+00:00" end="2018-07-25T00:00:00+00:00">
+            <event_drops>
+                <event_drop item_id="186000405" count="1" chance="2" minDiff="65" maxDiff="75"/> <!-- Chilli Chocolate -->
+            </event_drops>
+            <spawns>
+                <spawn_map map_id="110010000"><!-- Sanctum -->
+                    <!-- Mandrunerk ||| LC1_event_bluesheep_mandroong -->
+                    <spawn npc_id="833529" respawn_time="295">
+                        <spot x="1533.3" y="1523.1" z="565.9105" h="67"/>
+                    </spawn>
+                </spawn_map>
+                <spawn_map map_id="120010000"><!-- Pandaemonium -->
+                    <!-- Mandrunerk ||| DC1_event_bluesheep_mandroong -->
+                    <spawn npc_id="833530" respawn_time="295">
+                        <spot x="1268.1" y="1355.0" z="204.58719" h="55"/>
                     </spawn>
                 </spawn_map>
             </spawns>

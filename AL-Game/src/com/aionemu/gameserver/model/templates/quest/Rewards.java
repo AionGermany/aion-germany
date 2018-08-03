@@ -45,6 +45,8 @@ public class Rewards {
 	protected Integer rewardAbyssOpPoint;
 	@XmlAttribute(name = "expBoost")
 	protected Integer expBoost;
+	@XmlAttribute(name = "reward_creativity_point")
+	protected Integer rewardCP;
 	@XmlAttribute
 	protected Integer title;
 	@XmlAttribute(name = "extend_inventory")
@@ -148,6 +150,15 @@ public class Rewards {
 	 */
 	public Integer getExpBoost() {
 		return expBoost;
+	}
+
+	/**
+	 * Gets the value of the rewardCP property.
+	 *
+	 * @return possible object is {@link Integer }
+	 */
+	public Integer getRewardCP() {
+		return rewardCP;
 	}
 
 	/**

@@ -25,20 +25,17 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_EVENT_WINDOW extends AionServerPacket {
 
-	private byte unk1;
-	private byte unk2;
+	private int active;
+	private int activeEventCount;
 
-	public SM_EVENT_WINDOW(byte unk1, byte unk2) {
-		this.unk1 = unk1;
-		this.unk2 = unk2;
-	}
-
-	public SM_EVENT_WINDOW(int unk1, int unk2) {
+	public SM_EVENT_WINDOW(int active, int activeEventCount) { // TODO read from EventWindow
+		this.active = active;
+		this.activeEventCount = activeEventCount;
 	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeC(unk1);
-		writeC(unk2);
+		writeC(active);
+		writeC(activeEventCount);
 	}
 }

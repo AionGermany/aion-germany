@@ -125,6 +125,10 @@ public class PlayerCommonData extends VisibleObjectTemplate {
     private int minionSkillPoints;
     private Timestamp minionFunctionTime;
 
+	//Shugo Sweep 5.1
+	private int goldenDice;
+	private int resetBoard;
+
 	// TODO: Move all function to playerService or Player class.
 	public PlayerCommonData(int objId) {
 		this.playerObjId = objId;
@@ -1105,6 +1109,25 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 		return wardrobeSlot;
 	}
 
+	/**
+	 * @Golden Dice / Lucky Dice
+	 */
+	public int getGoldenDice() {
+		return goldenDice;
+	}
+
+	public void setGoldenDice(int dice) {
+		this.goldenDice = dice;
+	}
+
+	public int getResetBoard() { 
+		return resetBoard;
+	}
+
+	public void setResetBoard(int reset) {
+		this.resetBoard = reset;
+	}
+	
 	/**
 	 * @Tower of Challenge
 	 */

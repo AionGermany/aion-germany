@@ -59,8 +59,8 @@ public class StaticData {
 	public SummonStatsData summonStatsData;
 	@XmlElement(name = "item_templates")
 	public ItemData itemData;
-	@XmlElement(name = "item_presettings")
-	public ItemPresettingData itemPresettingData;
+	@XmlElement(name = "item_custom_sets")
+	public ItemCustomSetData itemCustomSetData;
 	@XmlElement(name = "random_bonuses")
 	public ItemRandomBonusData itemRandomBonuses;
 	@XmlElement(name = "npc_templates")
@@ -187,8 +187,8 @@ public class StaticData {
 	public TownSpawnsData townSpawnsData;
 	@XmlElement(name = "skill_charge")
 	public SkillChargeData skillChargeData;
-	@XmlElement(name = "item_purifications")
-	public ItemPurificationData itemPurificationData;
+	@XmlElement(name = "item_upgrades")
+	public ItemUpgradeData itemUpgradeData;
 	@XmlElement(name = "decomposable_selectitems")
 	public DecomposableSelectItemsData decomposableSelectItemsData;
 	@XmlElement(name = "enchant_templates")
@@ -257,6 +257,10 @@ public class StaticData {
 	public SkillSkinData skillSkinData;
 	@XmlElement(name="events_window")
 	public EventsWindowData eventsWindow;
+    @XmlElement(name = "item_skill_enhances")
+    public ItemSkillEnhanceData itemSkillEnhance;
+	@XmlElement(name = "shugo_sweeps")
+	public ShugoSweepRewardData shugoSweepsRewardData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -338,7 +342,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + challengeData.size() + " challenge tasks entries");
 		DataManager.log.info("[DataManager] Loaded " + townSpawnsData.getSpawnsCount() + " town spawns");
 		DataManager.log.info("[DataManager] Loaded " + skillChargeData.size() + " skill charge entries");
-		DataManager.log.info("[DataManager] Loaded " + itemPurificationData.size() + " item purifications entries");
+		DataManager.log.info("[DataManager] Loaded " + itemUpgradeData.size() + " item upgrade entries");
 		DataManager.log.info("[DataManager] Loaded " + decomposableSelectItemsData.size() + " decomposable select data");
 		DataManager.log.info("[DataManager] Loaded " + itemEnchantData.size() + " item enchant data");
 		DataManager.log.info("[DataManager] Loaded " + itemEnchantTableData.size() + " item enchant tables");
@@ -371,8 +375,10 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + minionData.size() + " Minion templates");
 		DataManager.log.info("[DataManager] Loaded " + monsterbookData.size() + " Monsterbook templates");
 		DataManager.log.info("[DataManager] Loaded " + boostEvents.size() + " Boost Event templates");
-		DataManager.log.info("[DataManager] Loaded " + itemPresettingData.size() + " Item Presetting templates");
-		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation Entries");
-		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window Entries");
+		DataManager.log.info("[DataManager] Loaded " + itemCustomSetData.size() + " Item Custom Set templates");
+		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation entries");
+		DataManager.log.info("[DataManager] Loaded " + eventsWindow.size() + " Events Window entries");
+		DataManager.log.info("[DataManager] Loaded " + itemSkillEnhance.size() + " Skill Boost entries");
+		DataManager.log.info("[DataManager] Loaded " + shugoSweepsRewardData.size() + " Shugo Sweep Reward entries");
 	}
 }

@@ -111,7 +111,7 @@ public final class DataManager {
 	public static ChallengeData CHALLENGE_DATA;
 	public static TownSpawnsData TOWN_SPAWNS_DATA;
 	public static SkillChargeData SKILL_CHARGE_DATA;
-	public static ItemPurificationData ITEM_PURIFICATION_DATA;
+	public static ItemUpgradeData ITEM_UPGRADE_DATA;
 	public static DecomposableSelectItemsData DECOMPOSABLE_SELECT_ITEM_DATA;
 	public static ItemEnchantData ITEM_ENCHANT_DATA;
 	public static ItemEnchantTableData ITEM_ENCHANT_TABLE_DATA;
@@ -143,9 +143,11 @@ public final class DataManager {
 	public static MinionData MINION_DATA;
 	public static MonsterbookData MONSTERBOOK_DATA;
 	public static BoostEventData BOOST_EVENT_DATA;
-	public static ItemPresettingData ITEM_PRESETTING_DATA;
+	public static ItemCustomSetData ITEM_CUSTOM_SET_DATA;
 	public static SkillSkinData SKILL_SKIN_DATA;
 	public static EventsWindowData EVENTS_WINDOW;
+	public static ItemSkillEnhanceData ITEM_SKILL_ENHANCE_DATA;
+	public static ShugoSweepRewardData SHUGO_SWEEP_REWARD_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -241,7 +243,7 @@ public final class DataManager {
 		CHALLENGE_DATA = data.challengeData;
 		TOWN_SPAWNS_DATA = data.townSpawnsData;
 		SKILL_CHARGE_DATA = data.skillChargeData;
-		ITEM_PURIFICATION_DATA = data.itemPurificationData;
+		ITEM_UPGRADE_DATA = data.itemUpgradeData;
 		DECOMPOSABLE_SELECT_ITEM_DATA = data.decomposableSelectItemsData;
 		ITEM_ENCHANT_DATA = data.itemEnchantData;
 		ITEM_ENCHANT_TABLE_DATA = data.itemEnchantTableData;
@@ -274,9 +276,11 @@ public final class DataManager {
 		MINION_DATA = data.minionData;
 		MONSTERBOOK_DATA = data.monsterbookData;
 		BOOST_EVENT_DATA = data.boostEvents;
-		ITEM_PRESETTING_DATA = data.itemPresettingData;
+		ITEM_CUSTOM_SET_DATA = data.itemCustomSetData;
 		SKILL_SKIN_DATA = data.skillSkinData;
 		EVENTS_WINDOW = data.eventsWindow;
+		ITEM_SKILL_ENHANCE_DATA = data.itemSkillEnhance;
+		SHUGO_SWEEP_REWARD_DATA = data.shugoSweepsRewardData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

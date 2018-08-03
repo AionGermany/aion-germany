@@ -69,6 +69,7 @@ public class SM_SERVER_LIST extends AionServerPacket {
 
         writeH(maxId + 1);
         writeC(0x01);
+		writeB(new byte[49]);
 
         for (int i = 1; i <= maxId; i++) {
             if (charactersCountOnServer.containsKey(i)) {

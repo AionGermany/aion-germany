@@ -57,7 +57,10 @@ public class CM_MEGAPHONE extends AionClientPacket {
 
 		if (item == null) {
 			return;
-		}
+        } 
+		if ((item.getItemId() >= 188910000) && (item.getItemId() <= 188910009)) {
+            this.isAll = true;
+        } 
 		if ((item.getItemId() >= 188930000) && (item.getItemId() <= 188930008)) {
 			this.isAll = true;
 		}

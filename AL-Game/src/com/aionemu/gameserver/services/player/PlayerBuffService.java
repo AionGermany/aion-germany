@@ -19,12 +19,10 @@ package com.aionemu.gameserver.services.player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.bonus_service.PlayersBonus;
 import com.aionemu.gameserver.model.bonus_service.ServiceBuff;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerBonusTimeStatus;
-import com.aionemu.gameserver.services.item.ItemService;
 
 /**
  * Created by Ace on 31/07/2016.
@@ -41,7 +39,6 @@ public class PlayerBuffService {
 		securityBuff(player);
 		newPlayerBuff(player);
 		returnPlayerBuff(player);
-		addReturnStone(player);
 	}
 
 	private void securityBuff(Player player) {
@@ -74,21 +71,6 @@ public class PlayerBuffService {
 		else {
 			playersBonus = new PlayersBonus(1);
 			playersBonus.endEffect(player, 1);
-		}
-	}
-
-	public void addReturnStone(Player player) {
-		if (player.getLevel() >= 10 && player.getRace() == Race.ASMODIANS && player.getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN) {
-			if (player.getInventory().getItemCountByItemId(164000336) > 0) {
-				return;
-			}
-			ItemService.addItem(player, 164000336, 1); // Abbey Return Stone (30 days)
-		}
-		if (player.getLevel() >= 10 && player.getRace() == Race.ELYOS && player.getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN) {
-			if (player.getInventory().getItemCountByItemId(164000335) > 0) {
-				return;
-			}
-			ItemService.addItem(player, 164000335, 1); // Abbey Return Stone (30 days)
 		}
 	}
 

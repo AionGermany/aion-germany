@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
-    <xs:include schemaLocation="../zones/zones.xsd"/>
-    <xs:include schemaLocation="../world_maps.xsd"/>
-    <xs:include schemaLocation="../import.xsd"/>
+    <xs:include schemaLocation="../../zones/zones.xsd"/>
+    <xs:include schemaLocation="../../global_types.xsd"/>
+    <xs:include schemaLocation="../../world_maps.xsd"/>
+    <xs:include schemaLocation="../../import.xsd"/>
     <xs:element name="siege_locations">
         <xs:complexType>
             <xs:sequence>

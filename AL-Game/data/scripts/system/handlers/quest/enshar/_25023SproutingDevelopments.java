@@ -121,7 +121,7 @@ public class _25023SproutingDevelopments extends QuestHandler {
 		if (id != 182215711 || qs.getStatus() == QuestStatus.COMPLETE) {
 			return HandlerResult.UNKNOWN;
 		}
-		if (!player.isInsideZone(ZoneName.get("DF5_ITEMUSEAREA_Q25023"))) {
+		if (!player.isInsideZone(ZoneName.get("DF5_ITEMUSEAREA_Q25023_220080000"))) {
 			return HandlerResult.UNKNOWN;
 		}
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 3000, 0, 0), true);

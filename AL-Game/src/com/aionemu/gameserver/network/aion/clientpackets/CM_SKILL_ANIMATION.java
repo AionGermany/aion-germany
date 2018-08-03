@@ -26,24 +26,25 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_SKILL_ANIMATION extends AionClientPacket {
 
-	private int SkillId;
-	private int SkillSkinId;
+	private int skillId;
+	private int skillSkinId;
 
 	public CM_SKILL_ANIMATION(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 
 	protected void readImpl() {
-		SkillId = readH();
-		SkillSkinId = readH();
+		skillId = readH();
+		skillSkinId = readH();
 	}
 
 	protected void runImpl() {
 		Player player = getConnection().getActivePlayer();
-		if (SkillSkinId > 0) {
-			player.getSkillSkinList().setActive(SkillSkinId);
-		} else {
-			player.getSkillSkinList().setDeactive(SkillId);
+		if (skillSkinId > 0) {
+			player.getSkillSkinList().setActive(skillSkinId);
+		}
+		else {
+			player.getSkillSkinList().setDeactive(skillId);
 		}
 	}
 }

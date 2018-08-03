@@ -25,6 +25,7 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEARANCE;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
+import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 //I remove it later now its for testing because .info dont give infos in chat
 
@@ -59,8 +60,11 @@ public class CM_EQUIP_ITEM extends AionClientPacket {
 
 		if (!RestrictionsManager.canChangeEquip(activePlayer)) {
 			return;
-		}
-
+		} 
+		if (activePlayer.getEffectController().isAbnormalState(AbnormalState.CANT_ATTACK_STATE)) {
+			PacketSendUtility.sendPacket(activePlayer, SM_SYSTEM_MESSAGE.STR_SKILL_CAN_NOT_ACT_WHILE_IN_ABNORMAL_STATE);
+			return;
+		} 
 		switch (action) {
 			case 0:
 				Item targetItem = activePlayer.getInventory().getItemByObjId(itemUniqueId);

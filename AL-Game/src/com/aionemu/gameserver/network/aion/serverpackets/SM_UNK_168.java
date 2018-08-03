@@ -20,7 +20,7 @@ import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
-import com.aionemu.gameserver.services.EventService;
+import com.aionemu.gameserver.services.events.EventService;
 
 /**
  * @author FrozenKiller

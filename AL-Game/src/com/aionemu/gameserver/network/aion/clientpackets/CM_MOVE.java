@@ -40,10 +40,22 @@ public class CM_MOVE extends AionClientPacket {
 
 	private byte type;
 	private byte heading;
-	private float x, y, z, x2, y2, z2, vehicleX, vehicleY, vehicleZ, vectorX, vectorY, vectorZ;
+	private float x;
+	private float y;
+	private float z;
+	private float x2;
+	private float y2;
+	private float z2;
+	private float vehicleX;
+	private float vehicleY;
+	private float vehicleZ;
+	private float vectorX;
+	private float vectorY;
+	private float vectorZ;
 	private byte glideFlag;
-	private int unk1, unk2;
-
+	private int unk1;
+	private int unk2;
+	
 	public CM_MOVE(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}

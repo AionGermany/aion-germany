@@ -32,9 +32,49 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ItemActions")
 public class ItemActions {
 
-	@XmlElements({ @XmlElement(name = "skilllearn", type = SkillLearnAction.class), @XmlElement(name = "extract", type = ExtractAction.class), @XmlElement(name = "skilluse", type = SkillUseAction.class), @XmlElement(name = "enchant", type = EnchantItemAction.class), @XmlElement(name = "queststart", type = QuestStartAction.class), @XmlElement(name = "dye", type = DyeAction.class), @XmlElement(name = "craftlearn", type = CraftLearnAction.class), @XmlElement(name = "toypetspawn", type = ToyPetSpawnAction.class), @XmlElement(name = "decompose", type = DecomposeAction.class), @XmlElement(name = "titleadd", type = TitleAddAction.class), @XmlElement(name = "learnemotion", type = EmotionLearnAction.class), @XmlElement(name = "read", type = ReadAction.class), @XmlElement(name = "fireworkact", type = FireworksUseAction.class), @XmlElement(name = "instancetimeclear", type = InstanceTimeClear.class), @XmlElement(name = "expandinventory", type = ExpandInventoryAction.class), @XmlElement(name = "animation", type = AnimationAddAction.class), @XmlElement(name = "cosmetic", type = CosmeticItemAction.class), @XmlElement(name = "charge", type = ChargeAction.class),
-			@XmlElement(name = "ride", type = RideAction.class), @XmlElement(name = "houseobject", type = SummonHouseObjectAction.class), @XmlElement(name = "housedeco", type = DecorateAction.class), @XmlElement(name = "assemble", type = AssemblyItemAction.class), @XmlElement(name = "adoptpet", type = AdoptPetAction.class), @XmlElement(name = "apextract", type = ApExtractAction.class), @XmlElement(name = "remodel", type = RemodelAction.class), @XmlElement(name = "expextract", type = ExpExtractAction.class), @XmlElement(name = "polish", type = PolishAction.class), @XmlElement(name = "composition", type = CompositionAction.class), @XmlElement(name = "tuning", type = TuningAction.class), @XmlElement(name = "pack", type = PackAction.class), @XmlElement(name = "stenchant", type = AuthorizeAction.class), @XmlElement(name = "multi_return_item", type = MultiReturnAction.class), @XmlElement(name = "godsocket", type = GodstoneAction.class), @XmlElement(name = "remove_soul_bind", type = RemoveSoulBindAction.class), @XmlElement(name = "expaction", type = ExpAction.class), @XmlElement(name = "skill_skin", type = SkillAnimationAction.class), @XmlElement(name = "f2p", type = F2pAction.class),
-			@XmlElement(name = "reduce_level", type = ItemReduceLevelAction.class), @XmlElement(name = "luna", type = LunaChestAction.class), })
+	@XmlElements({ 
+		@XmlElement(name = "skilllearn", type = SkillLearnAction.class), 
+		@XmlElement(name = "extract", type = ExtractAction.class), 
+		@XmlElement(name = "skilluse", type = SkillUseAction.class), 
+		@XmlElement(name = "enchant", type = EnchantItemAction.class), 
+		@XmlElement(name = "queststart", type = QuestStartAction.class), 
+		@XmlElement(name = "dye", type = DyeAction.class), 
+		@XmlElement(name = "craftlearn", type = CraftLearnAction.class), 
+		@XmlElement(name = "toypetspawn", type = ToyPetSpawnAction.class), 
+		@XmlElement(name = "decompose", type = DecomposeAction.class), 
+		@XmlElement(name = "titleadd", type = TitleAddAction.class), 
+		@XmlElement(name = "learnemotion", type = EmotionLearnAction.class), 
+		@XmlElement(name = "read", type = ReadAction.class), 
+		@XmlElement(name = "fireworkact", type = FireworksUseAction.class), 
+		@XmlElement(name = "instancetimeclear", type = InstanceTimeClear.class), 
+		@XmlElement(name = "expandinventory", type = ExpandInventoryAction.class), 
+		@XmlElement(name = "animation", type = AnimationAddAction.class), 
+		@XmlElement(name = "cosmetic", type = CosmeticItemAction.class), 
+		@XmlElement(name = "charge", type = ChargeAction.class),
+		@XmlElement(name = "ride", type = RideAction.class), 
+		@XmlElement(name = "houseobject", type = SummonHouseObjectAction.class), 
+		@XmlElement(name = "housedeco", type = DecorateAction.class), 
+		@XmlElement(name = "assemble", type = AssemblyItemAction.class), 
+		@XmlElement(name = "adoptpet", type = AdoptPetAction.class), 
+		@XmlElement(name = "apextract", type = ApExtractAction.class), 
+		@XmlElement(name = "remodel", type = RemodelAction.class), 
+		@XmlElement(name = "expextract", type = ExpExtractAction.class), 
+		@XmlElement(name = "polish", type = PolishAction.class), 
+		@XmlElement(name = "composition", type = CompositionAction.class), 
+		@XmlElement(name = "tuning", type = TuningAction.class), 
+		@XmlElement(name = "pack", type = PackAction.class), 
+		@XmlElement(name = "stenchant", type = AuthorizeAction.class), 
+		@XmlElement(name = "multi_return_item", type = MultiReturnAction.class), 
+		@XmlElement(name = "godsocket", type = GodstoneAction.class), 
+		@XmlElement(name = "remove_soul_bind", type = RemoveSoulBindAction.class), 
+		@XmlElement(name = "expaction", type = ExpAction.class), 
+		@XmlElement(name = "skill_skin", type = SkillAnimationAction.class), 
+		@XmlElement(name = "f2p", type = F2pAction.class),
+		@XmlElement(name = "reduce_level", type = ItemReduceLevelAction.class), 
+		@XmlElement(name = "luna", type = LunaChestAction.class), 
+		@XmlElement(name = "skill_enhance", type = SkillEnhanceAction.class),
+		@XmlElement(name = "sweep", type = ShugoSweepAction.class),})
+
 	protected List<AbstractItemAction> itemActions;
 
 	/**

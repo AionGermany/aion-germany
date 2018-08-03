@@ -108,7 +108,6 @@ import com.aionemu.gameserver.services.abyss.AbyssService;
 import com.aionemu.gameserver.services.craft.CraftSkillUpdateService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemService;
-import com.aionemu.gameserver.services.player.PlayerBuffService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
@@ -1029,9 +1028,6 @@ public class PlayerController extends CreatureController<Player> {
 
 		player.getNpcFactions().onLevelUp();
 		CreativityEssenceService.getInstance().pointPerLevel(player);
-
-		// AbbeyReturnStone
-		PlayerBuffService.getInstance().addReturnStone(player);
 	}
 
 	public static final void reachedPlayerLvl(final Player player) {

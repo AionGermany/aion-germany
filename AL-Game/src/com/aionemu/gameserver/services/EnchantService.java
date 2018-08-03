@@ -223,12 +223,17 @@ public class EnchantService {
 			case 166000195: // Epsilon
 				enchantStoneLevel = Rnd.get(105, 190);
 				break;
-			case 166020000: // Omega Enchantment Stone
-			case 166020001: // [Event] Omega Enchantment Stone (10 Min)
-			case 166020002: // [Event] Omega Enchantment Stone (3 Days)
-			case 166020003: // [Event] Omega Enchantment Stone
-			case 166020004: // [Event] Empyrean Lord's Enchantment Stone (7 Days)
-			case 166020005: // [Event] Enchantment Stone Of The Empyrean Lord
+			case 166020000: // Omega Enchantment Stone's (All variants)
+			case 166020001:
+			case 166020002:
+			case 166020003:
+			case 166020004:
+			case 166020005:
+			case 166020007:
+			case 166020008:
+			case 166020006:
+			case 166022003:
+			case 166022007:
 				enchantStoneLevel = Rnd.get(150, 230);
 				break;
 			case 166022000: // Irridescent Omega Enchantment Stone
@@ -316,7 +321,7 @@ public class EnchantService {
 			// Put supplements to wait for update
 			player.subtractSupplements(supplementUseCount, supplementTemplate.getTemplateId());
 		}
-		if (targetItem.isAmplified() && enchantStone.isAmplificationStone()) {
+		if (targetItem.isAmplified() && enchantStone.isEnchantmentStone()) {
 			success += 180 - targetItem.getEnchantLevel() * 1.0f;
 		}
 		if (success >= 95) {
@@ -347,18 +352,25 @@ public class EnchantService {
 	}
 
 	public static void enchantStigmaAct(Player player, Item parentItem, Item targetItem, int currentEnchant, boolean result) {
+		int oldEnchant = targetItem.getEnchantLevel();
+		int finalPlusMessage = 0;
+		
 		if (result) {
-			currentEnchant++;
+			currentEnchant += Rnd.get(1, 3);
+			if (currentEnchant > 10) {
+				currentEnchant = 10;
+			}
+			finalPlusMessage = currentEnchant - oldEnchant;
 		}
 		else {
 			currentEnchant = 0;
 		}
-
+		
 		if (!player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1)) {
 			AuditLogger.info(player, "Possible enchant hack, can't remove 2nd stigma.");
 			return;
 		}
-
+		
 		targetItem.setEnchantLevel(currentEnchant);
 
 		if (targetItem.isEquipped()) {
@@ -375,41 +387,33 @@ public class EnchantService {
 		}
 
 		if (result) {
-			Stigma stigmaInfo = targetItem.getItemTemplate().getStigma();
-
-			for (Stigma.StigmaSkill sSkill : stigmaInfo.getSkills()) {
-				String sSkillStack = DataManager.SKILL_DATA.getSkillTemplate(sSkill.getSkillId()).getStack();
-
-				for (PlayerSkillEntry psSkill : player.getSkillList().getStigmaSkills()) {
-					if (psSkill.getSkillTemplate().getStack().equals(sSkillStack)) {
-						SkillLearnService.removeSkill(player, psSkill.getSkillId());
-						player.getEffectController().removeEffect(psSkill.getSkillId());
+			if (targetItem.isEquipped()) {
+				Stigma stigmaInfo = targetItem.getItemTemplate().getStigma();
+				for (Stigma.StigmaSkill sSkill : stigmaInfo.getSkills()) {
+					String sSkillStack = DataManager.SKILL_DATA.getSkillTemplate(sSkill.getSkillId()).getStack();
+					for (PlayerSkillEntry psSkill : player.getSkillList().getStigmaSkills()) {
+						if (psSkill.getSkillTemplate().getStack().equals(sSkillStack)) {
+							SkillLearnService.removeSkill(player, psSkill.getSkillId());
+							player.getEffectController().removeEffect(psSkill.getSkillId());
+						}
 					}
 				}
-			}
-
-			player.getSkillList().deleteHiddenStigmaSilent(player);
-
-			// TODO block enchant to the max skill lvl
-			Integer realSkillId = DataManager.SKILL_TREE_DATA.getStigmaTree().get(player.getRace()).get(DataManager.SKILL_DATA.getSkillTemplate(stigmaInfo.getSkills().get(0).getSkillId()).getStack()).get(targetItem.getEnchantLevel() + 1);
-			if (realSkillId != null) {
-				if (targetItem.isEquipped()) {
-					player.getSkillList().addStigmaSkill(player, realSkillId, 1);
-				} else { // Test Logging for http://falke34.bplaced.net/forums/showthread.php?tid=2911
-					log.warn("[TEST LOGGING] Stigma in Iventory and not Equiped (Don't add skill for Item): " + targetItem.getItemTemplate().getTemplateId());					
+				player.getSkillList().deleteHiddenStigmaSilent(player);
+				List<Integer> realSkillId = targetItem.getItemTemplate().getStigma().getSkillIdOnly();
+				for (int skillId : realSkillId) {
+					if (skillId != 0) {
+						if (targetItem.isEquipped()) {
+							player.getSkillList().addStigmaSkill(player, skillId, 1);
+						}
+					} else {
+						log.error("No have Stigma skill for enchanted stigma item.");
+					}
 				}
+				StigmaService.recheckHiddenStigma(player);
 			}
-			else {
-				log.error("No have Stigma skill for enchanted stigma item.");
-			}
-
-			StigmaService.recheckHiddenStigma(player);
-
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_SUCCESS(new DescriptionId(targetItem.getNameId())));
-		}
-		else {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_MATTER_ENCHANT_SUCCESS(new DescriptionId(targetItem.getNameId()), finalPlusMessage));
+		} else {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_FAIL(new DescriptionId(targetItem.getNameId())));
-			player.getInventory().decreaseByObjectId(targetItem.getObjectId(), 1);
 		}
 	}
 
@@ -569,6 +573,10 @@ public class EnchantService {
 			case 166020001:
 			case 166020002:
 			case 166020003:
+			case 166020004:
+			case 166020005:
+			case 166020007:
+			case 166020008:
 			case 166020006:
 			case 166022003:
 			case 166022007:
@@ -681,6 +689,10 @@ public class EnchantService {
 							case 166020001:
 							case 166020002:
 							case 166020003:
+							case 166020004:
+							case 166020005:
+							case 166020007:
+							case 166020008:
 							case 166020006:
 							case 166022003:
 							case 166022007:
@@ -726,6 +738,10 @@ public class EnchantService {
 							case 166020001:
 							case 166020002:
 							case 166020003:
+							case 166020004:
+							case 166020005:
+							case 166020007:
+							case 166020008:
 							case 166020006:
 							case 166022003:
 							case 166022007:
@@ -843,13 +859,10 @@ public class EnchantService {
 
 	/**
 	 * @param player
-	 * @param parentItem
-	 *            the manastone
-	 * @param targetItem
-	 *            the item to socket
+	 * @param parentItem  the manastone
+	 * @param targetItem  the item to socket
 	 * @param supplementItem
-	 * @param targetWeapon
-	 *            fusioned weapon
+	 * @param targetWeapon fusioned weapon
 	 */
 	public static boolean socketManastone(Player player, Item parentItem, Item targetItem, Item supplementItem, int targetWeapon) {
 

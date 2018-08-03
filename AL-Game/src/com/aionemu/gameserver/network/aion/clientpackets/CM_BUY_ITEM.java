@@ -88,6 +88,8 @@ public class CM_BUY_ITEM extends AionClientPacket {
 				break;
 			}
 
+			System.out.println("TradeAction: " + tradeActionId);
+			
 			switch (tradeActionId) {
 				case 0:// private store
 				case 1:// sell to shop
@@ -104,10 +106,12 @@ public class CM_BUY_ITEM extends AionClientPacket {
 				case 17:// sell from Miol
 					tradeList.addSellItem(itemId, count);
 					break;
-				case 18:// sell from Inventory
+				case 19:// sell from Inventory
 					tradeList.addSellItem(itemId, count);
 					break;
 				default:
+					System.out.println("Unknown TradeAction: " + tradeActionId);
+					AuditLogger.info(player, "Unknow TradeAction: " + tradeActionId);
 					break;
 			}
 		}
@@ -126,7 +130,7 @@ public class CM_BUY_ITEM extends AionClientPacket {
 
 		VisibleObject target = player.getKnownList().getKnownObjects().get(sellerObjId);
 
-		if (tradeActionId == 18 && target == null) {
+		if (tradeActionId == 19 && target == null) {
 			TradeService.performSellToShop(player, tradeList); // Sell from Inventory
 		}
 		else if (target == null) {

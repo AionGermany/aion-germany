@@ -235,6 +235,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	@XmlAttribute(name = "is_cash_contract")
 	private boolean is_cash_contract;
 
+    @XmlAttribute(name = "skill_enchant")
+    private int skill_enchant;
+
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	@XmlTransient
 	private boolean isQuestUpdateItem;
@@ -713,10 +716,6 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return category == ItemCategory.ENCHANTMENT;
 	}
 
-	public boolean isAmplificationStone() {
-		return category == ItemCategory.AMPLIFICATION; // itemId == 166020000
-	}
-
 	public boolean isAccessory() {
 		return category == ItemCategory.EARRINGS || category == ItemCategory.RINGS || category == ItemCategory.NECKLACE || category == ItemCategory.PLUME || category == ItemCategory.BRACELET || category == ItemCategory.BELT || category == ItemCategory.HELMET;
 	}
@@ -752,4 +751,12 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	public String getNamedesc() {
 		return namedesc;
 	}
+
+    public int getSkillEnchant() {
+        return skill_enchant;
+    }	
+	
+    public int getSkillEnhance() {
+        return skill_enchant;
+    }
 }

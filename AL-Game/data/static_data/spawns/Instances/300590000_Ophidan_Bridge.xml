@@ -1,147 +1,203 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Ophidan Bridge -->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Parsed via PacketSamurai AionGer-Edtion - [Sat Jul 07 15:27:23 CEST 2018] -->
 <spawns>
-    <spawn_map map_id="300590000">
-        <!-- GATE -->
-        <spawn npc_id="231055">
-            <spot x="745.61145" y="470.5512" z="587.62897" h="18"/>
-            <!-- 2nd -->
-        </spawn>
-        <spawn npc_id="233320">
-            <spot x="751.9979" y="519.0405" z="578.4035" h="27"/>
-        </spawn>
-        <!-- baricade Sentinel -->
-        <spawn npc_id="231191">
-            <spot x="752.23987" y="525.3466" z="576.5341" h="30"/>
-            <spot x="750.978" y="483.9870" z="585.31555" h="28"/>
-            <spot x="744.61615" y="481.8665" z="586.6127" h="25"/>
-            <spot x="753.58417" y="473.40613" z="586.8613" h="26"/>
-            <spot x="653.0235" y="518.4306" z="593.68054" h="118"/>
-            <spot x="662.2411" y="528.88224" z="593.71826" h="103"/>
-            <spot x="666.1349" y="517.53345" z="595.40027" h="107"/>
-            <spot x="569.8391" y="569.1047" z="597.1193" h="118"/>
-            <spot x="571.65283" y="562.1619" z="596.50665" h="2"/>
-            <spot x="573.42346" y="555.9115" z="597.7244" h="13"/>
-            <spot x="650.314" y="43.39612" z="603.39612" h="11"/>
-            <spot x="642.9344" y="441.91782" z="606.0092" h="8"/>
-            <spot x="649.3235" y="428.34195" z="605.22864" h="20"/>
-            <spot x="532.4131" y="540.1758" z="605.17664" h="120"/>
-            <spot x="530.65027" y="547.8833" z="604.99695" h="114"/>
-            <spot x="530.3093" y="533.8489" z="604.9038" h="7"/>
-        </spawn>
-        <!-- Surkana defense Wall -->
-        <spawn npc_id="231056">
-            <spot x="649.31146" y="530.79706" z="591.799" h="106"/>
-            <spot x="565.4651" y="559.47107" z="598.8583" h="13"/>
-            <spot x="639.7998" y="431.1989" z="605.7894" h="8"/>
-            <spot x="524.6873" y="540.2431" z="604.19995" h="0"/>
-        </spawn>
-        <!-- GUARD POST MOBS-->
-        <!-- Guard Post Combatant -->
-        <spawn npc_id="231028">
-            <spot x="689.92926" y="457.15393" z="600.0589" h="21"/>
-            <!-- troupe gauche 1 -->
-            <spot x="695.4869" y="477.82126" z="600.0589" h="88"/>
-            <!-- troupe droite 1 -->
-        </spawn>
-        <!-- Guard Post Scout -->
-        <spawn npc_id="231026">
-            <spot x="685.7471" y="450.7882" z="600.0589" h="41"/>
-            <!-- troupe gauche 1 -->
-            <spot x="693.78937" y="487.02872" z="600.0589" h="75"/>
-            <!-- troupe droite 1 -->
-        </spawn>
-        <!-- Guard Post Magus -->
-        <spawn npc_id="231024">
-            <spot x="682.1617" y="456.59857" z="600.0589" h="40"/>
-            <!-- troupe gauche 1 -->
-            <spot x="686.66974" y="482.53275" z="600.0589" h="75"/>
-            <!-- troupe droite 1 -->
-        </spawn>
-        <!-- Guard Post Gunner Captain -->
-        <spawn npc_id="231022">
-            <spot x="674.84424" y="472.91702" z="600.1104" h="118"/>
-            <!-- troupe 1 -->
-        </spawn>
-        <!-- END OF GUARD POST MOBS-->
-        <!-- GUARD SOUTH MOBS-->
-        <!-- South Post Drummer -->
-        <spawn npc_id="231039">
-            <spot x="617.0687" y="545.04706" z="590.63226" h="36"/>
-        </spawn>
-        <!-- South Post Combatant -->
-        <spawn npc_id="231035">
-            <spot x="612.31683" y="541.1791" z="590.7078" h="44"/>
-            <spot x="596.3235" y="548.17316" z="590.6142" h="83"/>
-        </spawn>
-        <!-- South Post Medic -->
-        <spawn npc_id="231038">
-            <spot x="609.38556" y="569.04" z="590.69" h="91"/>
-        </spawn>
-        <!-- South Post Magus -->
-        <spawn npc_id="231037">
-            <spot x="596.9192" y="564.57104" z="590.5357" h="50"/>
-        </spawn>
-        <!-- South Post Cavalry Captain -->
-        <spawn npc_id="231034">
-            <spot x="591.4865" y="558.6687" z="590.625" h="61"/>
-        </spawn>
-        <!-- END OF GUARD SOUTH MOBS-->
-        <!-- GUARD NORTH MOBS-->
-        <!-- North Post Combatant -->
-        <spawn npc_id="231033">
-            <spot x="524.4381" y="448.8378" z="620.17975" h="99"/>
-        </spawn>
-        <!-- North Post Medic -->
-        <spawn npc_id="231030">
-            <spot x="517.52563" y="445.37265" z="620.125" h="106"/>
-        </spawn>
-        <!-- North Post Magus Captain -->
-        <spawn npc_id="231029">
-            <spot x="539.719" y="443.2448" z="620.25" h="76"/>
-        </spawn>
-        <!-- END OF GUARD NORTH MOBS-->
-        <!-- GUARD DEFENSE MOBS-->
-        <!-- Defense Post Drummer -->
-        <spawn npc_id="231048">
-            <spot x="489.18628" y="550.0803" z="597.9234" h="95"/>
-            <spot x="488.22623" y="503.901" z="597.9163" h="43"/>
-            <spot x="464.79172" y="533.38354" z="597.9234" h="109"/>
-        </spawn>
-        <!-- Defense Post Scout -->
-        <spawn npc_id="231044">
-            <spot x="479.6093" y="552.3827" z="597.9234" h="107"/>
-            <spot x="496.47137" y="511.432" z="597.92163" h="33"/>
-            <spot x="467.13983" y="541.7733" z="597.9234" h="11"/>
-        </spawn>
-        <!-- Defense Post Combatant -->
-        <spawn npc_id="231046">
-            <spot x="498.63965" y="552.3843" z="597.9234" h="107"/>
-            <spot x="483.94763" y="495.9072" z="597.92163" h="64"/>
-            <spot x="459.84396" y="526.71234" z="597.9234" h="96"/>
-        </spawn>
-        <!-- Defense Post Combatant Captain -->
-        <spawn npc_id="231043">
-            <spot x="470.63226" y="514.8644" z="597.5" h="83"/>
-        </spawn>
-        <!-- END OF GUARD DEFENSE MOBS-->
-        <!-- Turrets -->
-        <spawn npc_id="231051">
-            <spot x="368.70828" y="497.1878" z="605.9779" h="93"/>
-            <spot x="370.59372" y="486.21872" z="605.928" h="32"/>
-        </spawn>
-        <!-- Vera defenser -->
-        <spawn npc_id="231052">
-            <spot x="350.95557" y="490.78134" z="606.3214" h="0"/>
-        </spawn>
-        <spawn npc_id="287212">
-            <spot h="108" z="597.5" y="504.77173" x="480.76483"/>
-            <spot h="119" z="597.5" y="504.77173" x="480.76483"/>
-            <spot h="99" z="597.7393" y="502.27002" x="483.39023"/>
-        </spawn>
-        <!-- NAMENAMENAMENAMENAMENAME
-        <spawn npc_id="IDIDIDIDIDIDIDIDI">
-            <spot x="XXXXXXXXXXX" y="YYYYYYYYYYYYY" z="ZZZZZZZZZZZZZ" h="HHHHHHHHHHH"/>
-        </spawn> -->
-    </spawn_map>
+	<spawn_map map_id="300590000">
+		<!-- Shield Troop Legate at the Guard Post ||| IDF5_U01_T01_Fi_65_Ae -->
+		<spawn npc_id="235721">
+			<spot x="677.3447" y="485.60416" z="599.6924" h="0"/>
+			<spot x="691.0189" y="468.6116" z="599.875" h="0"/>
+			<spot x="673.15546" y="456.90863" z="599.75" h="0"/>
+		</spawn>
+		<!-- Shield Troop Magus at the Guard Post ||| IDF5_U01_T01_Wi_65_Ae -->
+		<spawn npc_id="235726">
+			<spot x="687.3099" y="465.6362" z="599.75" h="0"/>
+			<spot x="672.92426" y="482.61807" z="599.57855" h="0"/>
+			<spot x="668.09283" y="454.277" z="599.75" h="0"/>
+		</spawn>
+		<!-- Shield Troop Ambusher at the Guard Post ||| IDF5_U01_T01_As_65_Ae -->
+		<spawn npc_id="235727">
+			<spot x="687.744" y="472.02036" z="599.75" h="0"/>
+			<spot x="673.5243" y="489.50916" z="599.75" h="0"/>
+			<spot x="669.5336" y="460.93893" z="599.705" h="0"/>
+		</spawn>
+		<!-- Shield Troop Legate at the North Post ||| IDF5_U01_T02_Fi_65_Ae -->
+		<spawn npc_id="235728">
+			<spot x="520.55316" y="445.0776" z="620.125" h="13"/>
+			<spot x="516.991" y="434.9003" z="620.125" h="35"/>
+		</spawn>
+		<!-- Shield Troop Shell Officer at the North Post ||| IDF5_U01_T02_Ri_65_Ae -->
+		<spawn npc_id="235730">
+			<spot x="543.96106" y="444.8943" z="620.1941" h="70"/>
+			<spot x="514.3513" y="438.52545" z="620.125" h="110"/>
+		</spawn>
+		<!-- Shield Troop Military Doctor at the North Post ||| IDF5_U01_T02_Pr_65_Ae -->
+		<spawn npc_id="235731">
+			<spot x="525.281" y="448.19513" z="620.2851" h="93"/>
+			<spot x="520.5736" y="424.3942" z="620.125" h="15"/>
+		</spawn>
+		<!-- Shield Troop Legate at the South Post ||| IDF5_U01_T03_Fi_65_Ae -->
+		<spawn npc_id="235735">
+			<spot x="615.76587" y="546.96344" z="590.625" h="0"/>
+			<spot x="602.43304" y="546.21704" z="590.5" h="113"/>
+		</spawn>
+		<!-- Shield Troop Musician Leader at the North Post ||| IDF5_U01_T03_Ba_65_Ae -->
+		<spawn npc_id="235736">
+			<spot x="610.48016" y="546.4087" z="590.6056" h="0"/>
+		</spawn>
+		<!-- Shield Troop Shell Officer at the South Post ||| IDF5_U01_T03_Ri_65_Ae -->
+		<spawn npc_id="235737">
+			<spot x="593.7671" y="552.5551" z="590.5145" h="0"/>
+		</spawn>
+		<!-- Shield Troop Military Doctor at the South Post ||| IDF5_U01_T03_Pr_65_Ae -->
+		<spawn npc_id="235738">
+			<spot x="611.23456" y="565.3293" z="590.67035" h="105"/>
+			<spot x="593.8572" y="562.0347" z="590.5109" h="0"/>
+		</spawn>
+		<!-- Shield Troop Magus at the South Post ||| IDF5_U01_T03_Wi_65_Ae -->
+		<spawn npc_id="235740">
+			<spot x="616.79297" y="561.28235" z="590.72296" h="105"/>
+		</spawn>
+		<!-- Shield Troop Legate at the Defence Post ||| IDF5_U01_T04_Fi_65_Ae -->
+		<spawn npc_id="235742">
+			<spot x="497.5985" y="530.94775" z="597.5" h="0"/>
+			<spot x="464.5864" y="510.20325" z="597.5" h="15"/>
+		</spawn>
+		<!-- Shield Troop Musician Leader at the Defence Post ||| IDF5_U01_T04_Ba_65_Ae -->
+		<spawn npc_id="235743">
+			<spot x="482.76273" y="505.18152" z="597.5" h="15"/>
+			<spot x="468.6585" y="536.86584" z="597.5" h="0"/>
+		</spawn>
+		<!-- Shield Troop Military Doctor at the Defence Post ||| IDF5_U01_T04_Pr_65_Ae -->
+		<spawn npc_id="235745">
+			<spot x="458.14774" y="510.98816" z="597.79944" h="15"/>
+		</spawn>
+		<!-- Shield Troop Sniper at the Defence Post ||| IDF5_U01_T04_Ra_65_Ae -->
+		<spawn npc_id="235746">
+			<spot x="494.02448" y="537.91315" z="597.5" h="0"/>
+			<spot x="489.58072" y="508.67148" z="597.9217" h="15"/>
+			<spot x="477.5928" y="540.9985" z="597.5" h="0"/>
+			<spot x="488.60617" y="502.41428" z="597.9216" h="15"/>
+			<spot x="471.09772" y="543.56396" z="597.5" h="0"/>
+		</spawn>
+		<!-- Shield Troop Magus at the Defence Post ||| IDF5_U01_T04_Wi_65_Ae -->
+		<spawn npc_id="235747">
+			<spot x="492.6807" y="532.18335" z="597.5" h="0"/>
+			<spot x="460.14398" y="517.8771" z="597.5" h="15"/>
+		</spawn>
+		<!-- Shield Troop Ambusher at the Defence Post ||| IDF5_U01_T04_As_65_Ae -->
+		<spawn npc_id="235748">
+			<spot x="484.34552" y="510.25836" z="597.5" h="15"/>
+			<spot x="474.9133" y="535.15204" z="597.5" h="0"/>
+		</spawn>
+		<!-- Barrier Guard ||| IDF5_U01_FC_Fi_65_Ae -->
+		<spawn npc_id="235749">
+			<spot x="753.11646" y="472.18408" z="587.14056" h="15"/>
+			<spot x="743.8981" y="476.1193" z="587.39343" h="15"/>
+			<spot x="747.14124" y="471.63266" z="587.2913" h="15"/>
+			<spot x="658.531" y="527.0176" z="593.5999" h="108"/>
+			<spot x="653.8234" y="529.8614" z="593.05853" h="106"/>
+			<spot x="643.70667" y="433.92062" z="604.9307" h="10"/>
+			<spot x="641.3445" y="428.5395" z="605.7418" h="15"/>
+			<spot x="638.4639" y="434.33823" z="605.97156" h="13"/>
+			<spot x="652.2092" y="523.3837" z="593.4315" h="110"/>
+			<spot x="564.7726" y="554.5548" z="599.74536" h="116"/>
+			<spot x="567.0011" y="564.20734" z="598.0556" h="6"/>
+			<spot x="561.4034" y="561.2011" z="599.9715" h="5"/>
+			<spot x="531.39813" y="539.93384" z="605.04974" h="0"/>
+			<spot x="530.41736" y="545.4597" z="604.9794" h="0"/>
+			<spot x="529.9701" y="533.98395" z="604.87225" h="0"/>
+			<spot x="599.22375" y="424.49258" z="609.3944" h="0"/>
+			<spot x="600.2601" y="418.12378" z="609.7429" h="0"/>
+			<spot x="600.20123" y="412.00748" z="610.00323" h="0"/>
+		</spawn>
+		<!-- Barrier Guard ||| IDF5_U01_FC_As_65_Ae -->
+		<spawn npc_id="235755">
+			<spot x="753.38885" y="477.7291" z="586.1376" h="15"/>
+			<spot x="746.51294" y="481.10336" z="586.26587" h="15"/>
+			<spot x="662.30927" y="522.88086" z="594.34344" h="106"/>
+			<spot x="656.5243" y="519.5956" z="593.83264" h="106"/>
+			<spot x="648.99146" y="432.5674" z="604.4018" h="10"/>
+			<spot x="644.146" y="439.83282" z="605.20306" h="10"/>
+			<spot x="570.2367" y="557.17786" z="598.189" h="116"/>
+			<spot x="573.0812" y="564.38727" z="596.06213" h="116"/>
+			<spot x="536.219" y="543.2711" z="605.52734" h="0"/>
+			<spot x="535.91437" y="536.80725" z="605.4169" h="0"/>
+			<spot x="605.0869" y="421.70914" z="607.99744" h="0"/>
+			<spot x="605.5805" y="415.31302" z="607.93695" h="0"/>
+		</spawn>
+		<!-- Jubara ||| IDF5_U01_PT_N_Fire_As_65_Ae -->
+		<spawn npc_id="235773">
+			<spot x="687.37134" y="460.58243" z="600.0178" h="17"/>
+		</spawn>
+		<!-- Hakara ||| IDF5_U01_N_Dark_As_65_Ae -->
+		<spawn npc_id="235776">
+			<spot x="464.66977" y="514.006" z="597.5" h="15"/>
+		</spawn>
+		<!-- Visia ||| IDF5_U01_N_Poison_As_65_Ae -->
+		<spawn npc_id="235778">
+			<spot x="526.84283" y="434.4652" z="620.1777" h="20"/>
+		</spawn>
+		<!-- Bahara ||| IDF5_U01_N_Ice_As_65_Ae -->
+		<spawn npc_id="235779">
+			<spot x="590.95166" y="557.3694" z="590.625" h="0"/>
+		</spawn>
+		<!-- Iron Barrier ||| IDF5_U01_Vri_Sbar_An -->
+		<spawn npc_id="235786">
+			<spot x="752.8588" y="521.03955" z="578.1052" h="30" static_id="33"/>
+		</spawn>
+		<!-- Corridor Torch ||| IDF5_U1_BridgeOnSwitch -->
+		<spawn npc_id="701644">
+			<spot x="438.49078" y="496.7822" z="604.88715" h="1"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_P1_Mon_Spawn_NPC -->
+		<spawn npc_id="856057">
+			<spot x="685.507" y="467.2186" z="599.75" h="60"/>
+			<spot x="685.507" y="467.2186" z="599.75" h="60"/>
+			<spot x="685.507" y="467.2186" z="599.75" h="60"/>
+			<spot x="685.507" y="467.2186" z="599.75" h="60"/>
+			<spot x="685.507" y="467.2186" z="599.75" h="60"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_P2_1_Mon_Spawn_NPC -->
+		<spawn npc_id="856058">
+			<spot x="541.90094" y="429.58487" z="620.25" h="60"/>
+			<spot x="541.90094" y="429.58487" z="620.25" h="60"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_P2_2_Mon_Spawn_NPC -->
+		<spawn npc_id="856059">
+			<spot x="584.385" y="560.9761" z="591.2922" h="43"/>
+			<spot x="584.385" y="560.9761" z="591.2922" h="43"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_P3_Mon_Spawn_NPC -->
+		<spawn npc_id="856060">
+			<spot x="464.2208" y="508.01038" z="597.5" h="15"/>
+			<spot x="464.2208" y="508.01038" z="597.5" h="15"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_Runaway_Check_NPC -->
+		<spawn npc_id="856062">
+			<spot x="612.3" y="559.2" z="590.6" h="0"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_Runaway_Despawn_NPC -->
+		<spawn npc_id="856063">
+			<spot x="612.3" y="559.2" z="590.6" h="0"/>
+		</spawn>
+		<!-- None ||| BIDLDF5_Under_01_Box_Drop_NPC -->
+		<spawn npc_id="856313">
+			<spot x="321.6655" y="488.56683" z="607.6435" h="1"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_RA_Run_Check_NPC -->
+		<spawn npc_id="856386">
+			<spot x="530.2927" y="435.71" z="620.25" h="0"/>
+		</spawn>
+		<!-- None ||| BIDF5_U01_T_RA_Run_Support_NPC -->
+		<spawn npc_id="856398">
+			<spot x="676.1962" y="496.3059" z="599.75" h="0"/>
+			<spot x="615.3368" y="560.0592" z="590.6287" h="0"/>
+			<spot x="526.8089" y="435.3183" z="620.17554" h="0"/>
+			<spot x="483.38254" y="519.8811" z="597.4187" h="0"/>
+		</spawn>
+		<!-- None ||| BIDLDF5_Under_01_RunAway_SysMSG_Ctrl -->
+		<spawn npc_id="856480">
+			<spot x="604.9928" y="556.7078" z="590.5" h="1"/>
+		</spawn>
+	</spawn_map>
 </spawns>

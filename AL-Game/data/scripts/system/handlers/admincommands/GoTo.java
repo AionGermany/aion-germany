@@ -708,7 +708,7 @@ public class GoTo extends AdminCommand {
 			goTo(player, 300540000, 763, 268, 233);
 		}
 		else if (destination.equalsIgnoreCase("ophidan") || destination.equalsIgnoreCase("Ophidan Bridge")) {
-			goTo(player, 300590000, 760, 561, 572);
+			goTo(player, 300590000, 753.97736f, 560.617f, 572.875f, (byte) 90);
 		}
 		else if (destination.equalsIgnoreCase("infinity") || destination.equalsIgnoreCase("Infinity Shard")) {
 			goTo(player, 300800000, 118, 115, 131);
@@ -995,6 +995,9 @@ public class GoTo extends AdminCommand {
 		/**
 		 * 5.8 Instances
 		 */
+		else if (destination.equalsIgnoreCase("holy") || destination.equalsIgnoreCase("Holy Tower")) {
+			goTo(player, 310160000, 76.61565f, 204.50403f, 419.9462f, (byte) 60);
+		}
 		else if (destination.equalsIgnoreCase("treasure") || destination.equalsIgnoreCase("Treasure Island of Courage")) {
 			goTo(player, 301700000, 1370.3208f, 1381.8193f, 375.19562f, (byte) 60);
 		}

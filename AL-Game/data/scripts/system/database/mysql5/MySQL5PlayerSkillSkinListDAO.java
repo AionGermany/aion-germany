@@ -97,12 +97,6 @@ public class MySQL5PlayerSkillSkinListDAO extends PlayerSkillSkinListDAO {
         });
     }
 
-
-    @Override
-    public boolean supports(String databaseName, int majorVersion, int minorVersion) {
-        return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
-    }
-
     @Override
     public boolean removeSkillSkin(int playerId, int skinId) {
         Connection con = null;
@@ -121,4 +115,11 @@ public class MySQL5PlayerSkillSkinListDAO extends PlayerSkillSkinListDAO {
         }
         return true;
     }
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public boolean supports(String databaseName, int majorVersion, int minorVersion) {
+		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
+	}    
 }

@@ -26,6 +26,7 @@ import com.aionemu.gameserver.model.templates.SkillSkinTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
+import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
@@ -35,6 +36,7 @@ import javolution.util.FastMap;
  * @rework FrozenKiller
  */
 public class SkillSkinList {
+
 	private final FastMap<Integer, SkillSkin> skillskins;
 	private Player owner;
 
@@ -56,28 +58,33 @@ public class SkillSkinList {
 	}
 
 	public void addEntry(int skinId, int remaining, int active) {
-		SkillSkinTemplate ss = DataManager.SKILL_SKIN_DATA.getSkillSkinTemplate(skinId);
-		if (ss == null) {
+		SkillSkinTemplate sst = DataManager.SKILL_SKIN_DATA.getSkillSkinTemplate(skinId);
+		if (sst == null) {
 			throw new IllegalArgumentException("Invalid skill skin id " + skinId);
 		}
-		skillskins.put(skinId, new SkillSkin(ss, skinId, remaining, active));
+		skillskins.put(skinId, new SkillSkin(sst, skinId, remaining, active));
 	}
 
-	public boolean addSkillSkin(int skinId, int time) {
-		SkillSkinTemplate ss = DataManager.SKILL_SKIN_DATA.getSkillSkinTemplate(skinId);
-		if (ss == null) {
+	public boolean addSkillSkin(int skinId, int time, int expireTime) {
+		SkillSkinTemplate sst = DataManager.SKILL_SKIN_DATA.getSkillSkinTemplate(skinId);
+		if (sst == null) {
 			throw new IllegalArgumentException("Invalid skin id " + skinId);
-		} if (owner != null) {
-			SkillSkin entry = new SkillSkin(ss, skinId, time, 1);
+		}
+		if (owner != null) {
+			SkillSkin skillSkin = new SkillSkin(sst, skinId, expireTime, 1); //expireTime = System.currentTimeMillis() / 1000 + minutes * 60 (Calculated in SkillAnimationAction)
 			if (!skillskins.containsKey(skinId)) {
-				skillskins.put(skinId, entry);
-				DAOManager.getDAO(PlayerSkillSkinListDAO.class).storeSkillSkins(owner, entry);
-			} else {
+				skillskins.put(skinId, skillSkin);
+				if (time != 0) {
+					ExpireTimerTask.getInstance().addTask(skillSkin, owner);
+				}
+				DAOManager.getDAO(PlayerSkillSkinListDAO.class).storeSkillSkins(owner, skillSkin);
+			}
+			else {
 				PacketSendUtility.sendPacket(owner, SM_SYSTEM_MESSAGE.STR_MSG_COSTUME_SKILL_ALREADY_HAS_COSTUME);
 				return false;
 			}
-			PacketSendUtility.sendPacket(owner, SM_SYSTEM_MESSAGE.STR_MSG_GET_ITEM(ss.getName()));
-			PacketSendUtility.sendPacket(owner, new SM_SKILL_ANIMATION(skinId, time));
+			PacketSendUtility.sendPacket(owner, SM_SYSTEM_MESSAGE.STR_MSG_GET_ITEM(sst.getName()));
+			PacketSendUtility.sendPacket(owner, new SM_SKILL_ANIMATION(skinId, time)); // time = templateTime * 60 (Calculated in SkillAnimationAction)
 			return true;
 		}
 		return false;
@@ -104,7 +111,8 @@ public class SkillSkinList {
 		if (this.owner.getSkillSkinList() != null) {
 			for (SkillSkin skillSkin : owner.getSkillSkinList().getSkillSkins()) {
 				if (skillSkin.getTemplate() != null) {
-					if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(skillGroup.getSkillGroup()) && skillSkin.getIsActive() == 1) {
+					if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(skillGroup.getSkillGroup())
+						&& skillSkin.getIsActive() == 1) {
 						skinIdToremove = skillSkin.getId();
 						break;
 					}
@@ -116,19 +124,19 @@ public class SkillSkinList {
 		PacketSendUtility.sendPacket(owner, new SM_SKILL_ANIMATION(owner));
 	}
 
-	public int getSkinId(int SkillId) {
-		int skinid = 0;
-		if (SkillId == 0 || getOwner().getSkillSkinList() == null || getOwner() == null) {
+	public int getSkinId(int skillId) {
+		int skinId = 0;
+		if (skillId == 0 || getOwner().getSkillSkinList() == null || getOwner() == null) {
 			return 0;
 		}
 		for (SkillSkin skillSkin : getOwner().getSkillSkinList().getSkillSkins()) {
-			if (DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup() != null) {
-				if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(DataManager.SKILL_DATA.getSkillTemplate(SkillId).getSkillGroup()) && skillSkin.getIsActive() == 1) {
-					skinid = skillSkin.getId();
+			if (DataManager.SKILL_DATA.getSkillTemplate(skillId).getSkillGroup() != null) {
+				if (skillSkin.getTemplate().getSkillGroup().equalsIgnoreCase(DataManager.SKILL_DATA.getSkillTemplate(skillId).getSkillGroup())&& skillSkin.getIsActive() == 1) {
+					skinId = skillSkin.getId();
 				}
 			}
 		}
-		return skinid;
+		return skinId;
 	}
 
 	public int size() {

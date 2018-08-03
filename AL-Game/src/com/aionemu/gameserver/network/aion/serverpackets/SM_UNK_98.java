@@ -26,10 +26,11 @@ public class SM_UNK_98 extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeC(2);
+		writeH(2);
 		writeD(0);
-		writeD(0);
-		writeD(0);
-		writeD(0);
+		writeD(339545603);
+		writeD(6912);
+		writeH(256);
+		writeC(27);
 	}
 }

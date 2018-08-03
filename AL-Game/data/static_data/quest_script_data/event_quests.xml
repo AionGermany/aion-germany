@@ -189,6 +189,33 @@
                     80897 [XML] [Event/Spy] Tracking down the Liars
                     80898 [XML] [Event/Spy] Hunt for the Liars
                     80899 [XML] [Event] Axe Soup
+                    80900 [XML] The 1st Power of Creation Stone
+                    80901 [XML] The 2nd Power of Creation Stone
+                    80902 [XML] The 3rd Power of Creation Stone
+                    80903 [XML] The 4th Power of Creation Stone
+                    80904 [XML] The 5th Power of Creation Stone
+                    80905 [XML] The 6th Power of Creation Stone
+                    80906 [XML] The 7th Power of Creation Stone
+                    80907 [XML] The 8th Power of Creation Stone
+                    80908 [XML] The 9th Power of Creation Stone
+                    80909 [XML] The 10th Power of Creation Stone
+                    80910 [XML] The 11th Power of Creation Stone
+                    80911 [XML] The 12th Power of Creation Stone
+                    80912 [XML] The 13th Power of Creation Stone
+                    80913 [XML] The 14th Power of Creation Stone
+                    80914 [XML] The 15th Power of Creation Stone
+                    80915 [XML] The 16th Power of Creation Stone
+                    80916 [XML] The 17th Power of Creation Stone
+                    80917 [XML] The 18th Power of Creation Stone
+                    80918 [XML] The 19th Power of Creation Stone
+                    80919 [XML] The 20th Power of Creation Stone
+                    80947 [TODO] [Event] Repia's Basic Progression Magic
+                    80948 [TODO] [Event] Repia's Premium Progression Magic
+                    80949 [TODO] [Event] Ancient Relics
+                    80950 [TODO] [Event] Ancient Wish
+                    80951 [TODO] [Event] Ancient Prayer
+                    80952 [XML] [Event/Weekly] Ancient Riddle
+                    80953 [TODO] [Event] Ancient Holy Item
                     80975 [XML] [Event] Mission from the Milky Way League 1
                     80976 [XML] [Event] Mission from the Milky Way League 2
                     80977 [XML] [Event] Mission from the Milky Way League 3
@@ -254,6 +281,7 @@
 	</report_to_many>
 	<report_to id="50128" start_npc_ids="836452" end_npc_ids="836391"/>
 	<report_to id="51128" start_npc_ids="836454" end_npc_ids="836379"/>
+	<report_to id="80952" start_npc_ids="835553" end_npc_ids="835553"/>
     <!-- COLLECTING QUESTS -->
     <item_collecting start_npc_ids="202549" id="50010"/>
     <item_collecting start_npc_ids="202549" id="50019"/>
@@ -420,6 +448,27 @@
     <item_collecting start_npc_ids="835994" id="80976" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="835994" id="80977" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="836143" id="80978" start_dialog_id="4762" start_dialog_id2="5"/>
+	<!-- Creativity Event -->
+	<item_collecting start_npc_ids="834418" id="80900" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80901" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80902" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80903" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80904" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80905" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80906" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80907" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80908" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80909" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80910" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80911" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80912" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80913" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80914" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80915" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80916" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80917" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80918" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="834418" id="80919" start_dialog_id="4762" start_dialog_id2="1011"/>
 
     <!-- HUNTING QUESTS -->
     <monster_hunt start_npc_ids="202549" id="50021">

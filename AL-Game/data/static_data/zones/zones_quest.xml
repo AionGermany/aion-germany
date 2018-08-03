@@ -739,10 +739,14 @@
         <zone mapid="210030000" name="LF1A_SENSORYAREA_Q1023_SPG_206008_2_210030000" area_type="SPHERE" zone_type="SUB">
         <sphere x="2096.1797" y="612.72784" z="95.1548" r="10.0"/>
     </zone>
-    	<zone mapid="220030000" name="DF1A_SENSORYAREA_Q2412_206012_1_220030000" area_type="SPHERE" zone_type="SUB">
+    <zone mapid="220030000" name="DF1A_SENSORYAREA_Q2412_206012_1_220030000" area_type="SPHERE" zone_type="SUB">
         <sphere x="1815" y="1240" z="280" r="20.0"/>
     </zone>
     <zone mapid="210010000" name="QUEST_1123_210010000" area_type="CYLINDER" zone_type="SUB">
         <cylinder bottom="165" top="175" x="222.69" y="1900" r="10"/>
+    </zone>
+	<!-- Added from FrozenKiller on 01.08.2018 -->
+	<zone mapid="220080000" name="QUEST_20507_220080000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2868" y="946" z="227" r="10.0"/>
     </zone>
 </zones>

@@ -154,6 +154,7 @@
 		<xs:attribute name="highreform_groupset" type="xs:int" use="optional"/> <!-- TODO -->
 		<xs:attribute name="minion_ticket" type="xs:boolean" use="optional"/>
 		<xs:attribute name="is_cash_contract" type="xs:boolean" use="optional"/>
+		<xs:attribute name="skill_enchant" type="xs:int" use="optional"/>
 	</xs:complexType>
 	<xs:simpleType name="itemSlot">
 		<xs:restriction base="xs:string">
@@ -225,7 +226,17 @@
 			<xs:element name="reduce_level" type="ItemReduceLevelAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="luna" type="LunaChestAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="skill_skin" type="SkillAnimationAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="skill_enhance" type="SkillEnhanceAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sweep" type="ShugoSweepAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShugoSweepAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="type" type="xs:int"/>
+				<xs:attribute name="count" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RideAction">
 		<xs:complexContent>
@@ -507,6 +518,11 @@
 			<xs:extension base="AbstractItemAction">
 				<xs:attribute name="count" type="xs:int"/>
 			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SkillEnhanceAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="LunaChestAction">

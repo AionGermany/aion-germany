@@ -11,10 +11,13 @@
 		<xs:sequence>
             <xs:element name="atreian_passport_reward" type="AtreianPassportRewards" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
+		<xs:attribute name="id" use="required" type="xs:int"/>
+        <xs:attribute name="name" use="required" type="xs:string"/>
         <xs:attribute name="active" use="required" type="xs:int"/>
         <xs:attribute name="attend_type" use="required" type="xs:string"/>
-        <xs:attribute name="id" use="required" type="xs:int"/>
-        <xs:attribute name="name" use="required" type="xs:string"/>
+		<xs:attribute name="attend_num" type="xs:int"/>
+		<xs:attribute name="period_start" type="xs:dateTime" use="required"/>
+        <xs:attribute name="period_end" type="xs:dateTime" use="required"/>
     </xs:complexType>
     <xs:complexType name="AtreianPassportRewards">
         <xs:attribute name="reward_item_num" use="required" type="xs:int"/>
@@ -30,3 +33,4 @@
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
+

@@ -21103,6 +21103,13 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_ENCHANT_SUCCESS(DescriptionId descriptionId) {
 		return new SM_SYSTEM_MESSAGE(1402930, descriptionId);
 	}
+	
+	/**
+	 * The enchantment of %0 was successful and the boost level increased by %1 level(s).
+	 */
+	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_MATTER_ENCHANT_SUCCESS(DescriptionId descriptionId, int level) {
+		return new SM_SYSTEM_MESSAGE(1404544, descriptionId, level);
+	}
 
 	/**
 	 * You have failed to enchant %0 and the Stigma has been destroyed.
@@ -21268,6 +21275,16 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	public static final SM_SYSTEM_MESSAGE STR_CHAT_INVADEPORTL_KEEPER_SYSTEM_MSG01 = new SM_SYSTEM_MESSAGE(1401493);
 	public static final SM_SYSTEM_MESSAGE STR_CHAT_INVADEPORTL_KEEPER_SYSTEM_MSG02 = new SM_SYSTEM_MESSAGE(1401494);
 	public static final SM_SYSTEM_MESSAGE STR_CHAT_INVADEPORTL_KEEPER_SYSTEM_MSG03 = new SM_SYSTEM_MESSAGE(1401495);
+
+	/**
+	 * You cannot open a private store while hiding
+	 */
+	public static final SM_SYSTEM_MESSAGE STR_PERSONAL_SHOP_DISABLED_IN_HIDDEN_MODE = new SM_SYSTEM_MESSAGE(1401969);
+
+	/**
+	 * Your private store closed automatically because you are currently hiding
+	 */
+	public static final SM_SYSTEM_MESSAGE STR_PERSONAL_SHOP_CLOSED_FOR_HIDDEN_MODE = new SM_SYSTEM_MESSAGE(1401970);
 
 	/**
 	 * Pets Buff 4.8
@@ -21758,6 +21775,22 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	public static final SM_SYSTEM_MESSAGE STR_MSG_NoticeFlyingArea = new SM_SYSTEM_MESSAGE(1401526);
 
 	/**
+	 * Ophidan Bridge
+	 */
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Wi_Start = new SM_SYSTEM_MESSAGE(1402848);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Wi_Point_01 = new SM_SYSTEM_MESSAGE(1402849);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Wi_Point_02 = new SM_SYSTEM_MESSAGE(1402850);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Wi_Point_03 = new SM_SYSTEM_MESSAGE(1402851);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Pr_Start = new SM_SYSTEM_MESSAGE(1402852);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Pr_Point_01 = new SM_SYSTEM_MESSAGE(1402853);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Pr_Point_02 = new SM_SYSTEM_MESSAGE(1402854);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_Pr_Point_03 = new SM_SYSTEM_MESSAGE(1402855);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_As_Start = new SM_SYSTEM_MESSAGE(1402856);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_As_Point_01 = new SM_SYSTEM_MESSAGE(1402857);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_As_Point_02 = new SM_SYSTEM_MESSAGE(1402858);
+	public static final SM_SYSTEM_MESSAGE STR_MSG_IDLDF5_U_01_RA_As_Point_03 = new SM_SYSTEM_MESSAGE(1402859);
+
+	/**
 	 * Archives Of Eternity
 	 */
 	public static final SM_SYSTEM_MESSAGE STR_IDEternity_01_Shield = new SM_SYSTEM_MESSAGE(1403210);
@@ -21885,6 +21918,13 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	public static SM_SYSTEM_MESSAGE STR_MSG_MONSTER_ACHIEVEMENT_COMPLETION(int level, int nameId) {
 		return new SM_SYSTEM_MESSAGE(1404073, level, new Object[] { new DescriptionId(nameId)});
 	}
+	
+	/**
+	 * Through Aion's power you have received the following item: %0
+	 */
+	public static SM_SYSTEM_MESSAGE STR_MSG_GET_HCOIN_07(int nameId) {
+		return new SM_SYSTEM_MESSAGE(1401496, new DescriptionId(nameId));
+	}
 
 	/**
 	 * Museum of Knowledge
@@ -21949,6 +21989,7 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
     public static final SM_SYSTEM_MESSAGE STR_FAMILIAR_EVOLVE_MSG_NOGOLD = new SM_SYSTEM_MESSAGE(1404348);
     public static final SM_SYSTEM_MESSAGE STR_FAMILIAR_EVOLVE_MSG_NOEVOLVE = new SM_SYSTEM_MESSAGE(1404349);
     public static final SM_SYSTEM_MESSAGE STR_FAMILIAR_EVOLVE_MSG_EVOLVE_RESULT = new SM_SYSTEM_MESSAGE(1404350);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_CANT_ENCHANT_EQUIPED = new SM_SYSTEM_MESSAGE(1403358);
 
 	/**
 	 * Constructs new <tt>SM_SYSTEM_MESSAGE </tt> packet

@@ -52,7 +52,6 @@ import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChatService;
 import com.aionemu.gameserver.services.DuelService;
-import com.aionemu.gameserver.services.EventWindowService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FindGroupService;
 import com.aionemu.gameserver.services.KiskService;
@@ -63,6 +62,8 @@ import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropService;
+import com.aionemu.gameserver.services.events.EventWindowService;
+import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.toypet.MinionService;
@@ -161,6 +162,7 @@ public class PlayerLeaveWorldService {
 		PlayerGroupService.onPlayerLogout(player);
 		PlayerAllianceService.onPlayerLogout(player);
 		EventWindowService.getInstance().onLogout(player);
+		ShugoSweepService.getInstance().onLogout(player);
 		// fix legion warehouse exploits
 		LegionService.getInstance().LegionWhUpdate(player);
 		player.getEffectController().removeAllEffects(true);

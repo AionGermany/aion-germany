@@ -143,7 +143,11 @@ public class PortalDialogAI2 extends PortalAI2 {
 			for (int questId : relatedQuests) {
 				QuestState qs = player.getQuestStateList().getQuestState(questId);
 				if (qs != null && (qs.getStatus() == QuestStatus.START || qs.getStatus() == QuestStatus.REWARD)) {
-					playerHasQuest = true;
+					if(qs.getQuestId() == 10032 && qs.getStatus() == QuestStatus.REWARD) {
+						playerHasQuest = false;
+					} else {
+						playerHasQuest = true;
+					}
 					break;
 				}
 				else if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
