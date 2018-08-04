@@ -4,11 +4,11 @@
     <spawn_map map_id="600040000">
         <!-- Ruonas / SP_Ruonas_1 -->
         <spawn npc_id="205957" respawn_time="295">
-            <spot x="753.57098" y="125.95182" z="1198.6195" h="30"/>
+            <spot x="753.571" y="125.95182" z="1196.8096" h="30"/>
         </spawn>
         <!-- Marmara / SP_Marmara_1 -->
         <spawn npc_id="205958" respawn_time="295">
-            <spot x="754.21844" y="187.02206" z="1201.5184" h="119"/>
+            <spot x="754.21844" y="187.02206" z="1201.5184" h="30"/>
         </spawn>
         <!-- Trois / SP_Trois -->
         <spawn npc_id="205959" respawn_time="295">
@@ -16,15 +16,7 @@
         </spawn>
         <!-- Grimron / SP_Grimron -->
         <spawn npc_id="205960" respawn_time="295">
-            <spot x="754.21844" y="1352.4429" z="1205.0747" h="119"/>
-        </spawn>
-        <!-- NONE / SP_TDown_SensoryArea_Q12031A -->
-        <spawn npc_id="206232" respawn_time="295">
-            <spot x="145.63702" y="768.05963" z="1207.7566" h="119"/>
-        </spawn>
-        <!-- NONE / SP_TDown_SensoryArea_Q22031A -->
-        <spawn npc_id="206233" respawn_time="295">
-            <spot x="145.6181" y="768.25568" z="1207.7681" h="119"/>
+            <spot x="754.21844" y="1352.4429" z="1201.5184" h="90"/>
         </spawn>
         <!-- Havochaser Soldier / ldf4b_guard_da_fighter_ae_lv60_m -->
         <spawn npc_id="209383" respawn_time="295">
@@ -330,6 +322,12 @@
             <spot x="1288.38" y="699.65" z="1197.36" h="97"/>
             <spot x="1306.3575" y="843.68939" z="1192.4492" h="30"/>
         </spawn>
+		<!-- Balaur Magic Cannon ||| DrakanWeapon_Invisible -->
+		<spawn npc_id="218921" respawn_time="295">
+			<spot x="231.9643" y="822.12823" z="1200.1638" h="0"/>
+			<spot x="1306.4971" y="822.5428" z="1200.0845" h="0"/>
+			<spot x="1271.6521" y="822.8341" z="1200.0845" h="0"/>
+		</spawn>
         <!-- Protectorate Drakan Fighter / SP_TDown_DrakanFi_Noble_60_An_10 -->
         <spawn npc_id="219187" respawn_time="295">
             <spot x="197.81989" y="680.6748" z="1192.1412" h="90"/>
@@ -625,19 +623,19 @@
         </spawn>
         <!-- Elyos Entrance Teleporter / SP_Tdown_FOBJ_Teleporter_L -->
         <spawn npc_id="730578" respawn_time="295">
-            <spot x="754.18286" y="232.95467" z="1185.2605" h="119" static_id="93"/>
+            <spot x="754.18286" y="232.95467" z="1183.8578" h="30" static_id="93"/>
         </spawn>
         <!-- Asmodian Entrance Teleporter / SP_Tdown_FOBJ_Teleporter_D -->
         <spawn npc_id="730579" respawn_time="295">
-            <spot x="754.18286" y="1300.9847" z="1185.2605" h="119" static_id="96"/>
+            <spot x="754.18286" y="1300.9847" z="1183.8578" h="30" static_id="96"/>
         </spawn>
         <!-- Neglected Maintenance Tunnel / SP_IDTiamat_Reward_Teleport_L -->
         <spawn npc_id="730586" respawn_time="295">
-            <spot x="1356.514" y="612.97125" z="1184.3698" h="56"/>
+            <spot x="1356.514" y="612.97125" z="1184.1638" h="56"/>
         </spawn>
         <!-- Neglected Maintenance Tunnel / SP_IDTiamat_Reward_Teleport_D -->
         <spawn npc_id="730587" respawn_time="295">
-            <spot x="1356.514" y="918.6734" z="1184.3698" h="63"/>
+            <spot x="1356.514" y="918.6734" z="1184.1686" h="63"/>
         </spawn>
         <!-- Spy Vergel / SP_TDown_NPC_Q12035A -->
         <spawn npc_id="800211" respawn_time="295">
@@ -645,7 +643,7 @@
         </spawn>
         <!-- Spy Yumir / SP_TDown_NPC_Q12035B -->
         <spawn npc_id="800212" respawn_time="295">
-            <spot x="1070.52" y="293.3392" z="1185.1171" h="9"/>
+            <spot x="1070.52" y="293.3392" z="1183.8579" h="10"/>
         </spawn>
         <!-- Spy Banir / SP_TDown_NPC_Q12035C -->
         <spawn npc_id="800213" respawn_time="295">
@@ -661,49 +659,49 @@
         </spawn>
         <!-- Spy Caneus / SP_TDown_NPC_Q22035C -->
         <spawn npc_id="800218" respawn_time="295">
-            <spot x="1302.1647" y="865.78381" z="1185.1171" h="30"/>
+            <spot x="1302.1647" y="865.7838" z="1183.8578" h="30"/>
         </spawn>
-        <!-- Reian Sorcerer / SP_LDF4b_Mage_Y_F_Portal_3 -->
-        <spawn npc_id="800303" respawn_time="295">
-            <spot x="731.10529" y="1460.2712" z="1197.9174" h="50"/>
-            <spot x="754.21552" y="227.21532" z="1184.6183" h="30"/>
-            <spot x="775.44012" y="1464.6097" z="1197.9174" h="116"/>
-            <spot x="776.26062" y="1460.8459" z="1197.9174" h="3"/>
-        </spawn>
-        <!-- Reian Sorcerer / SP_LDF4b_Mage_Y_M_Portal_5 -->
-        <spawn npc_id="800304" respawn_time="295">
-            <spot x="732.02625" y="1465.1746" z="1197.8645" h="66"/>
-            <spot x="749.12823" y="236.50293" z="1185.5542" h="103"/>
-            <spot x="755.28" y="73.38" z="1197.86" h="98"/>
-            <spot x="759.26239" y="236.44688" z="1185.5939" h="73"/>
-            <spot x="777.88464" y="79.99881" z="1197.8645" h="106"/>
-            <spot x="778.50281" y="69.403961" z="1197.8645" h="9"/>
-        </spawn>
-        <!-- Fallen Reian Soldier / SP_IDTiamat_Soldier_Dead_6 -->
-        <spawn npc_id="800466" respawn_time="295">
-            <spot x="425.36" y="346.59" z="1190.29" h="24"/>
-            <spot x="520.9286" y="1273.5607" z="1183.8578" h="26"/>
-            <spot x="431.7" y="1219.18" z="1183.8578" h="5"/>
-            <spot x="418.25024" y="1208.1595" z="1183.8578" h="6"/>
-            <spot x="370.93762" y="1162.7532" z="1191.9261" h="53"/>
-            <spot x="342.45477" y="1164.861" z="1191.9261" h="100"/>
-            <spot x="311.96216" y="1105.8015" z="1183.8578" h="19"/>
-            <spot x="259.66876" y="1037.6458" z="1183.8578" h="66"/>
-            <spot x="245.89345" y="970.8164" z="1183.8578" h="43"/>
-            <spot x="216.18214" y="908.71014" z="1183.8578" h="6"/>
-            <spot x="219.07532" y="804.83307" z="1200.164" h="33"/>
-            <spot x="203.77765" y="783.537" z="1200.164" h="106"/>
-            <spot x="191.31998" y="752.78314" z="1200.164" h="9"/>
-            <spot x="229.89497" y="631.53143" z="1183.8578" h="53"/>
-            <spot x="232.37762" y="560.6564" z="1183.8578" h="3"/>
-            <spot x="246.33" y="538.91" z="1183.8578" h="99"/>
-            <spot x="260.27994" y="517.2236" z="1183.8578" h="76"/>
-            <spot x="292.37448" y="436.21286" z="1183.8578" h="50"/>
-            <spot x="367.02948" y="361.4873" z="1191.6683" h="66"/>
-            <spot x="362.84915" y="391.7739" z="1191.6683" h="9"/>
-            <spot x="482.5809" y="273.77753" z="1183.8578" h="9"/>
-            <spot x="558.335" y="257.01263" z="1183.8578" h="63"/>
-        </spawn>
+		<!-- Reian Sorcerer ||| LDF4b_Mage_Y_F_Portal -->
+		<spawn npc_id="800303" respawn_time="295">
+			<spot x="731.12476" y="72.24829" z="1196.8103" h="50"/>
+			<spot x="776.13947" y="76.36075" z="1196.8096" h="116"/>
+			<spot x="776.95996" y="72.596954" z="1196.8103" h="3"/>
+			<spot x="754.2155" y="227.21532" z="1183.8578" h="30"/>
+			<spot x="754.2155" y="1295.2373" z="1183.8578" h="30"/>
+		</spawn>
+		<!-- Reian Sorcerer ||| LDF4b_Mage_Y_M_Portal -->
+		<spawn npc_id="800304" respawn_time="295">
+			<spot x="732.0457" y="77.15161" z="1196.8096" h="66"/>
+			<spot x="777.88464" y="79.99881" z="1196.8096" h="106"/>
+			<spot x="778.5028" y="69.40396" z="1196.8103" h="10"/>
+			<spot x="749.12823" y="236.50293" z="1183.8578" h="103"/>
+			<spot x="759.2624" y="236.44688" z="1183.8578" h="73"/>
+			<spot x="749.12823" y="1304.5249" z="1183.8577" h="103"/>
+			<spot x="759.2624" y="1304.4689" z="1183.8578" h="73"/>
+		</spawn>
+		<!-- Fallen Reian Soldier ||| IDTiamat_Soldier_Dead -->
+		<spawn npc_id="800466" respawn_time="295">
+			<spot x="558.335" y="257.01263" z="1183.8578" h="63"/>
+			<spot x="482.5809" y="273.77753" z="1183.8579" h="10"/>
+			<spot x="429.70258" y="319.34006" z="1183.8578" h="16"/>
+			<spot x="367.02948" y="361.4873" z="1191.6683" h="66"/>
+			<spot x="362.84915" y="391.7739" z="1191.6683" h="10"/>
+			<spot x="292.37448" y="436.21286" z="1183.8577" h="50"/>
+			<spot x="260.27994" y="517.2236" z="1183.8578" h="76"/>
+			<spot x="232.37762" y="560.6564" z="1183.8578" h="3"/>
+			<spot x="229.89497" y="631.53143" z="1183.8578" h="53"/>
+			<spot x="220.39313" y="732.525" z="1200.1624" h="73"/>
+			<spot x="191.31998" y="752.78314" z="1200.1624" h="10"/>
+			<spot x="203.77765" y="783.537" z="1200.164" h="106"/>
+			<spot x="219.07532" y="804.83307" z="1200.164" h="33"/>
+			<spot x="370.93762" y="1162.7532" z="1191.7349" h="53"/>
+			<spot x="216.18214" y="908.71014" z="1183.8578" h="6"/>
+			<spot x="520.9286" y="1273.5607" z="1183.8578" h="26"/>
+			<spot x="461.57162" y="1246.4127" z="1183.8578" h="80"/>
+			<spot x="418.25024" y="1208.1595" z="1183.8577" h="6"/>
+			<spot x="342.45477" y="1164.861" z="1191.735" h="100"/>
+			<spot x="311.96216" y="1105.8015" z="1183.8575" h="20"/>
+		</spawn>
         <!-- Achin / SPTiamat_Down_MOB_5.2 -->
         <spawn npc_id="804833" respawn_time="295">
             <spot x="179.30225" y="742.93396" z="1201.7395" h="60"/>
@@ -1053,23 +1051,19 @@
         </spawn>
         <!-- Western Tiamaranta's Eye Exit / tdown_fobj_telepoter_ldf4b_t2 -->
         <spawn npc_id="836445" respawn_time="295">
-            <spot x="754.80" y="14.00" z="1198.66" h="90" static_id="57"/>
+            <spot x="754.779" y="13.973127" z="1196.8103" h="30" static_id="57"/>
         </spawn>
         <!-- Eastern Tiamaranta's Eye Exit / tdown_fobj_telepoter_ldf4b_t3 -->
         <spawn npc_id="836446" respawn_time="295">
             <spot x="754.26" y="1522.38" z="1198.21" h="90" static_id="56"/>
         </spawn>
-        <!-- NONE / SP_Tiamat_Down_Quest_Npc_01 -->
-        <spawn npc_id="836456" respawn_time="295">
-            <spot x="757.32001" y="748.59998" z="1300" h="60"/>
-        </spawn>
-        <!-- Arseus / SP_Marmara_6 -->
-        <spawn npc_id="836525" respawn_time="295">
-            <spot x="749.972" y="187.09618" z="1201.5184" h="30"/>
-        </spawn>
-        <!-- Lechi / SP_Grimron3 -->
-        <spawn npc_id="836526" respawn_time="295">
-            <spot x="758.33472" y="1352.5173" z="1205.0747" h="90"/>
-        </spawn>
+		<!-- Arseus ||| TIAMAT_DOWN_L_abyss_seller_Europe -->
+		<spawn npc_id="837157" respawn_time="295">
+			<spot x="748.45" y="185.6" z="1201.5184" h="60"/>
+		</spawn>
+		<!-- Lechi ||| TIAMAT_DOWN_D_abyss_seller_Europe -->
+		<spawn npc_id="837158" respawn_time="295">
+			<spot x="756.81" y="1351.02" z="1201.5183" h="30"/>
+		</spawn>
     </spawn_map>
 </spawns>
