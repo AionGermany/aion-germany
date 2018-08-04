@@ -284,9 +284,10 @@
             <spot x="1383.1334" y="530.37396" z="1184.4513" h="90"/>
         </spawn>
         <!-- Governor Sunayaka / SP_TDown_Dragon_General_Named_60_Af_Mon -->
-        <spawn npc_id="218553" respawn_time="295">
-            <spot x="753.9057" y="766.8252" z="1234.3203" h="119"/>
-        </spawn>
+        <spawn npc_id="218553" respawn_time="3600">
+            <temporary_spawn spawn_time="9.*.*" despawn_time="21.*.*"/>
+			<spot x="753.9057" y="766.8252" z="1217.0035"/>
+		</spawn>
         <!-- Malevolent Muraba / SP_TDown_DrakanFi_Tiamat_ItemNamed_60_Ae_1 -->
         <spawn npc_id="218721" respawn_time="295">
             <spot x="352.48254" y="1296.2426" z="1183.7893" h="93"/>
@@ -562,9 +563,10 @@
             <spot x="409.82925" y="421.32507" z="1197.4736" h="76"/>
         </spawn>
         <!-- Berserker Sunayaka / tiamatdown_tiamatagent -->
-        <spawn npc_id="219311" respawn_time="295">
-            <spot x="756.95477" y="766.82861" z="1224.0729" h="119"/>
-        </spawn>
+        <spawn npc_id="219311" respawn_time="3600">
+            <temporary_spawn spawn_time="21.*.*" despawn_time="6.*.*"/>
+			<spot x="753.9057" y="766.8252" z="1217.0035"/>
+		</spawn>
         <!-- Greedy Gurriki / SPTiamat_Down_Gururu9 -->
         <spawn npc_id="249168" respawn_time="295">
             <spot x="227.29893" y="594.5014" z="1184.9471" h="105"/>
