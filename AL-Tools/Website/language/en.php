@@ -8,6 +8,7 @@ $lang = array(
 		"gb" => "English",
         "ru" => "Russian",
         "fr" => "French",
+        "it" => "Italian",
 
         // für die Seitentexte
         "login" => "Login",
