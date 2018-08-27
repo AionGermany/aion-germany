@@ -116,6 +116,7 @@ public abstract class TransformEffect extends EffectTemplate {
 	@Override
 	public void startEffect(Effect effect) { // , AbnormalState effectId
 		final Creature effected = effect.getEffected();
+		DAOManager.getDAO(PlayerTransformationDAO.class).deletePlTransfo(effected.getObjectId());
 		
 		if (itemId == 0) {
 			if (effected.getUsingItemId() != 0) {
