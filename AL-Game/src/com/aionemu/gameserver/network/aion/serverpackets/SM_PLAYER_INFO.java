@@ -16,9 +16,11 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.configs.administration.AdminConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
 import com.aionemu.gameserver.configs.main.WeddingsConfig;
+import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.model.Gender;
 import com.aionemu.gameserver.model.actions.PlayerMode;
 import com.aionemu.gameserver.model.gameobjects.Item;
@@ -131,9 +133,10 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 						break;
 				}
 			}
-			// * = Wedding
 			if (player.isMarried()) {
-				nameFormat = sb.insert(0, WeddingsConfig.TAG_WEDDING.substring(0, 2)).toString();
+				String partnerName = DAOManager.getDAO(PlayerDAO.class).getPlayerNameByObjId(player.getPartnerId());
+				String tag = WeddingsConfig.TAG_WEDDING; 
+	            nameFormat += " " + tag + " " + partnerName;
 			}
 			// * = Server Staff Access Level
 			if (AdminConfig.CUSTOMTAG_ENABLE && player.isGmMode()) {

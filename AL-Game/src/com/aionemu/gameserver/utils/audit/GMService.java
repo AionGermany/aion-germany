@@ -101,7 +101,7 @@ public class GMService {
 				}
 				// * = Wedding
 				if (player.isMarried()) {
-					adminTag = sb.insert(0, WeddingsConfig.TAG_WEDDING.substring(0, 2)).toString();
+					adminTag = sb.insert(0, WeddingsConfig.TAG_WEDDING).toString();
 				}
 				if (AdminConfig.CUSTOMTAG_ENABLE) {
 					if (player.getAccessLevel() == 1) {
@@ -164,7 +164,7 @@ public class GMService {
 			}
 			// * = Wedding
 			if (player.isMarried()) {
-				adminTag = sb.insert(0, WeddingsConfig.TAG_WEDDING.substring(0, 2)).toString();
+				adminTag = sb.insert(0, WeddingsConfig.TAG_WEDDING).toString();
 			}
 
 			if (AdminConfig.CUSTOMTAG_ENABLE) {

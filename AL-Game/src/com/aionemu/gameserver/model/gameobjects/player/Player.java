@@ -3193,4 +3193,11 @@ public class Player extends Creature {
 		this.skillSkinList = skillSkinList;
 		skillSkinList.setOwner(this);
 	}
+	
+	/**
+	 * Add Tag Wedding
+	 */
+	public int getPartnerId() { 
+		return this.partnerId;
+	}
 }
