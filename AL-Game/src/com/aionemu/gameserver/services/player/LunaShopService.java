@@ -271,6 +271,9 @@ public class LunaShopService {
 		if (!player.getPlayerLunaShop().isFreeFactory()) {
 			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(1, 1, 47));
 		}
+		if (!player.getPlayerLunaShop().isFreeChest()) {
+			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(1, 1, 1));
+		}
 	}
 
 	public void specialDesign(Player player, int recipeId) {
@@ -316,7 +319,7 @@ public class LunaShopService {
 			player.getPlayerLunaShop().setFreeChest(false);
 		}
 		else {
-			player.setLunaAccount(player.getLunaAccount() - 5);
+			player.setLunaAccount(player.getLunaAccount() - 2);
 			PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM_INFO(0));
 			
 		}
