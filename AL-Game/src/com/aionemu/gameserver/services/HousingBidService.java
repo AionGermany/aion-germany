@@ -308,7 +308,7 @@ public class HousingBidService extends AbstractCronTask {
 
 		// send mails + messages if players are online
 		if (LoggingConfig.LOG_HOUSE_AUCTION) {
-			log.info("[HousingBidService] ##### Houses sold by admins #####");
+			log.info("[HousingBidService] ##### " + winners.size( ) + " Houses sold by Auction System #####");
 		}
 
 		// check houses sold by administrators
@@ -329,7 +329,7 @@ public class HousingBidService extends AbstractCronTask {
 		long time = System.currentTimeMillis();
 
 		if (LoggingConfig.LOG_HOUSE_AUCTION) {
-			log.info("[HousingBidService] ##### Houses auctioned by players #####");
+			log.info("[HousingBidService] ##### " + successSell.size() + " Houses auctioned by players #####");
 		}
 		for (Entry<HouseBidEntry, Integer> sellData : successSell.entrySet()) {
 			House soldHouse = HousingService.getInstance().getHouseByAddress(sellData.getKey().getAddress());
@@ -421,10 +421,10 @@ public class HousingBidService extends AbstractCronTask {
 		houseBids.clear();
 		playerBids.clear();
 		bidsByIndex.clear();
-
+		
 		// add back auto auctioned houses (with grace period ended) + admin houses not sold
 		if (LoggingConfig.LOG_HOUSE_AUCTION) {
-			log.info("[HousingBidService] ##### Houses added back to auction #####");
+			log.info("[HousingBidService] ##### " + (copy.size() - winners.size()) + " Houses added back to auction #####");
 		}
 
 		for (HouseBidEntry houseBid : copy) {
@@ -433,7 +433,6 @@ public class HousingBidService extends AbstractCronTask {
 			if (house.getOwnerId() == 0) {
 				house.setStatus(HouseStatus.NOSALE);
 				addHouseToAuction(house);
-				house.save();
 				if (LoggingConfig.LOG_HOUSE_AUCTION) {
 					log.info("[HousingBidService] Address " + houseBid.getAddress() + " not sold for price " + houseBid.getBidPrice());
 				}

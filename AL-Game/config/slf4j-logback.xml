@@ -213,7 +213,7 @@
     <logger name="SYSMAIL_LOG">
         <appender-ref ref="app_sysmail"/>
     </logger>
-    <logger name="HOUSE_AUCTION_LOG">
+    <logger name="HOUSE_AUCTION_LOG" additivity="false">
         <appender-ref ref="app_auction"/>
     </logger>
     <logger name="ai">

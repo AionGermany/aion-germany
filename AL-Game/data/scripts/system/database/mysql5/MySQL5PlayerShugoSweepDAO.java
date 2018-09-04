@@ -126,7 +126,7 @@ public class MySQL5PlayerShugoSweepDAO extends PlayerShugoSweepDAO {
 		return insert;
 	}
 
-	public boolean updatePlayerSweep(Connection con, Player player) {
+	private boolean updatePlayerSweep(Connection con, Player player) {
 		PreparedStatement stmt = null;
 		try {
 			stmt = con.prepareStatement(UPDATE_QUERY);

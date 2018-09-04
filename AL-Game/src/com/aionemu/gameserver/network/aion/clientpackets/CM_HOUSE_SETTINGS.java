@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.house.House;
 import com.aionemu.gameserver.model.house.HousePermissions;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_HOUSE_ACQUIRE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.HousingService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -66,12 +65,10 @@ public class CM_HOUSE_SETTINGS extends AionClientPacket {
 		house.setDoorState(doorPermission);
 		house.setNoticeState(HousePermissions.getNoticeState(displayOwner));
 		house.setSignNotice(signNotice.getBytes(Charset.forName("UTF-16LE")));
-
-		PacketSendUtility.sendPacket(player, new SM_HOUSE_ACQUIRE(player.getObjectId(), house.getAddress().getId(), true));
 		HouseController controller = house.getController();
 		controller.updateAppearance();
+		controller.broadcastAppearance();
 
-		// TODO: save signNotice
 		if (doorPermission == HousePermissions.DOOR_OPENED_ALL) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HOUSING_ORDER_OPEN_DOOR);
 		}
