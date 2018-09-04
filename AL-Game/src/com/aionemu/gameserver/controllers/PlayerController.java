@@ -711,7 +711,7 @@ public class PlayerController extends CreatureController<Player> {
 		}
 
 		// Normal attack is already limited client side (ex. Press C and attacker approaches target) but need a check server side too also for Z axis issue
-		if (!MathUtil.isInAttackRange(getOwner(), target, getOwner().getGameStats().getAttackRange().getCurrent() / 1000f + 1)) {
+		if (!MathUtil.isInAttackRange(getOwner(), target, (gameStats.getAttackRange().getCurrent() / 1000) + 1)) {
 			return;
 		}
 

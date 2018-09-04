@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerConquererProtectorData;
 import com.aionemu.gameserver.model.items.GodStone;
 import com.aionemu.gameserver.model.items.ItemSlot;
-import com.aionemu.gameserver.model.stats.calc.Stat2;
 import com.aionemu.gameserver.model.team.legion.LegionEmblemType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
@@ -329,10 +328,8 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeF(0.25f); // scale
 		writeF(2.0f); // gravity or slide surface o_O
 		writeF(player.getGameStats().getMovementSpeedFloat()); // move speed
-
-		Stat2 attackSpeed = player.getGameStats().getAttackSpeed();
-		writeH(attackSpeed.getBase());
-		writeH(attackSpeed.getCurrent());
+		writeH(player.getGameStats().getAttackSpeed().getBase());
+		writeH(player.getGameStats().getAttackSpeed().getCurrent());
 		writeC(player.getPortAnimation());
 
 		writeS(player.hasStore() ? player.getStore().getStoreMessage() : "");// private store message
@@ -343,12 +340,10 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeF(0);
 		writeF(0);
 		writeF(0);
-
 		writeF(player.getX());// x
 		writeF(player.getY());// y
 		writeF(player.getZ());// z
-		writeC(0x00); // move type
-		// ?
+		writeC(0x00); // move type ?
 		if (player.isUsingFlyTeleport()) {
 			writeD(player.getFlightTeleportId());
 			writeD(player.getFlightDistance());
@@ -360,7 +355,6 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		// ?
 		writeC(player.getVisualState()); // visualState
 		writeS(player.getCommonData().getNote()); // note show in right down windows if your target on player
-
 		writeH(player.getLevel()); // [level]
 		writeH(player.getPlayerSettings().getDisplay()); // unk - 0x04
 		writeH(player.getPlayerSettings().getDeny()); // unk - 0x00
@@ -374,7 +368,7 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeC(player.isMentor() ? 1 : 0);
 		writeD(player.getHouseOwnerId()); // 3.0
 		writeD(player.getBonusTime().getStatus().getId()); // Abbey Return Buff ID 1 -Normal, 2 - New, 3 Return
-		writeD(0x01);// unk 0x00 4.7 //TODO need to figure out
+		writeD(0x00);// unk 0x00 4.7 //TODO need to figure out
 		writeC(raceId == 0 ? 3 : 5); // language asmo:3 ely:5
 		/**
 		 * === Conqueror === 0x01 = Conquerers Will Lvl 1 (Buff you get for killing enemies from their home map) 0x02 = Furious Conquerers Will Lvl 2 (Buff you get for killing enemies from their home

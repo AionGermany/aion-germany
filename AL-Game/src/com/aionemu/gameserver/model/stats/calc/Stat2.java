@@ -60,8 +60,7 @@ public abstract class Stat2 {
 	}
 
 	public final int getCurrent() {
-		return this.base + this.bonus; // <-- This breaks our Stats !!!
-
+		return this.base + this.bonus;
 	}
 
 	public final void setBonus(int bonus) {

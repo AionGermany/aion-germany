@@ -34,10 +34,10 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class MySQL5PlayerGameStatsDAO extends PlayerGameStatsDAO {
 
-	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerGameStatsDAO.class);
-	public static final String INSERT_QUERY = "INSERT INTO `player_game_stats` (`player_id`, `defense_physic`, `block`, `parry`, `magical_critical`, `evasion`, `precision`, `attack`, `magical_precision`, `attack_speed`, `magical_resist`, `magical_attack`, `physical_critical`, `attack_range`, `magical_defense`, `agility`, `knowledge`, `will`, `magical_boost`, `magical_boost_resist`, `physical_critical_resist`, `magical_critical_resist`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerGameStatsDAO.class); //add main_hand_magical_attack off_hand_magical_attack
+	public static final String INSERT_QUERY = "INSERT INTO `player_game_stats` (`player_id`, `defense_physic`, `block`, `parry`, `magical_critical`, `evasion`, `precision`, `attack`, `magical_precision`, `attack_speed`, `magical_resist`, `magical_attack`, `main_hand_magical_attack`,  `off_hand_magical_attack`, `physical_critical`, `attack_range`, `magical_defense`, `agility`, `knowledge`, `will`, `magical_boost`, `magical_boost_resist`, `physical_critical_resist`, `magical_critical_resist`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	public static final String DELETE_QUERY = "DELETE FROM `player_game_stats` WHERE `player_id`=?";
-	public static final String UPDATE_QUERY = "UPDATE player_game_stats set `defense_physic` = ?, `block` = ?, `parry` = ?, `magical_critical` = ?, `evasion` = ?, `precision` = ?, `attack` = ?, `magical_precision` = ?, `attack_speed` = ?, `magical_resist` = ?, `magical_attack` = ?, `physical_critical` = ?, `attack_range` = ?, `magical_defense` = ?, `agility` = ?, `knowledge` = ?, `will` = ?, `magical_boost` = ?, `magical_boost_resist` = ?, `physical_critical_resist` = ?, `magical_critical_resist` = ? WHERE `player_id` = ?";
+	public static final String UPDATE_QUERY = "UPDATE player_game_stats set `defense_physic` = ?, `block` = ?, `parry` = ?, `magical_critical` = ?, `evasion` = ?, `precision` = ?, `attack` = ?, `magical_precision` = ?, `attack_speed` = ?, `magical_resist` = ?, `magical_attack` = ?, `main_hand_magical_attack` = ?, `off_hand_magical_attack` = ?, `physical_critical` = ?, `attack_range` = ?, `magical_defense` = ?, `agility` = ?, `knowledge` = ?, `will` = ?, `magical_boost` = ?, `magical_boost_resist` = ?, `physical_critical_resist` = ?, `magical_critical_resist` = ? WHERE `player_id` = ?";
 
 	@Override
 	public void insertPlayerGameStat(final Player player) {
@@ -56,17 +56,19 @@ public class MySQL5PlayerGameStatsDAO extends PlayerGameStatsDAO {
 			stmt.setInt(9, player.getGameStats().getMAccuracy().getCurrent());
 			stmt.setInt(10, player.getGameStats().getAttackSpeed().getCurrent());
 			stmt.setInt(11, player.getGameStats().getMResist().getCurrent());
-			stmt.setInt(12, player.getGameStats().getMainHandMAttack().getCurrent());
-			stmt.setInt(13, player.getGameStats().getMainHandPCritical().getCurrent());
-			stmt.setInt(14, player.getGameStats().getAttackRange().getCurrent());
-			stmt.setInt(15, player.getGameStats().getMDef().getCurrent());
-			stmt.setInt(16, player.getGameStats().getAgility().getCurrent());
-			stmt.setInt(17, player.getGameStats().getKnowledge().getCurrent());
-			stmt.setInt(18, player.getGameStats().getWill().getCurrent());
-			stmt.setInt(19, player.getGameStats().getMBoost().getCurrent());
-			stmt.setInt(20, player.getGameStats().getMBResist().getCurrent());
-			stmt.setInt(21, player.getGameStats().getStrikeResist().getCurrent());
-			stmt.setInt(22, player.getGameStats().getSpellResist().getCurrent());
+			stmt.setInt(12, player.getGameStats().getMAttack().getCurrent());
+			stmt.setInt(13, player.getGameStats().getMainHandMAttack().getCurrent());
+			stmt.setInt(14, player.getGameStats().getOffHandMAttack().getCurrent());
+			stmt.setInt(15, player.getGameStats().getMainHandPCritical().getCurrent());
+			stmt.setInt(16, player.getGameStats().getAttackRange().getCurrent());
+			stmt.setInt(17, player.getGameStats().getMDef().getCurrent());
+			stmt.setInt(18, player.getGameStats().getAgility().getCurrent());
+			stmt.setInt(19, player.getGameStats().getKnowledge().getCurrent());
+			stmt.setInt(20, player.getGameStats().getWill().getCurrent());
+			stmt.setInt(21, player.getGameStats().getMBoost().getCurrent());
+			stmt.setInt(22, player.getGameStats().getMBResist().getCurrent());
+			stmt.setInt(23, player.getGameStats().getStrikeResist().getCurrent());
+			stmt.setInt(24, player.getGameStats().getSpellResist().getCurrent());
 			stmt.execute();
 			stmt.close();
 		}
@@ -112,18 +114,20 @@ public class MySQL5PlayerGameStatsDAO extends PlayerGameStatsDAO {
 			stmt.setInt(8, player.getGameStats().getMAccuracy().getCurrent());
 			stmt.setInt(9, player.getGameStats().getAttackSpeed().getCurrent());
 			stmt.setInt(10, player.getGameStats().getMResist().getCurrent());
-			stmt.setInt(11, player.getGameStats().getMainHandMAttack().getCurrent());
-			stmt.setInt(12, player.getGameStats().getMainHandPCritical().getCurrent());
-			stmt.setInt(13, player.getGameStats().getAttackRange().getCurrent());
-			stmt.setInt(14, player.getGameStats().getMDef().getCurrent());
-			stmt.setInt(15, player.getGameStats().getAgility().getCurrent());
-			stmt.setInt(16, player.getGameStats().getKnowledge().getCurrent());
-			stmt.setInt(17, player.getGameStats().getWill().getCurrent());
-			stmt.setInt(18, player.getGameStats().getMBoost().getCurrent());
-			stmt.setInt(19, player.getGameStats().getMBResist().getCurrent());
-			stmt.setInt(20, player.getGameStats().getStrikeResist().getCurrent());
-			stmt.setInt(21, player.getGameStats().getSpellResist().getCurrent());
-			stmt.setInt(22, player.getObjectId());
+			stmt.setInt(11, player.getGameStats().getMAttack().getCurrent());
+			stmt.setInt(12, player.getGameStats().getMainHandMAttack().getCurrent());
+			stmt.setInt(13, player.getGameStats().getOffHandMAttack().getCurrent());
+			stmt.setInt(14, player.getGameStats().getMainHandPCritical().getCurrent());
+			stmt.setInt(15, player.getGameStats().getAttackRange().getCurrent());
+			stmt.setInt(16, player.getGameStats().getMDef().getCurrent());
+			stmt.setInt(17, player.getGameStats().getAgility().getCurrent());
+			stmt.setInt(18, player.getGameStats().getKnowledge().getCurrent());
+			stmt.setInt(19, player.getGameStats().getWill().getCurrent());
+			stmt.setInt(20, player.getGameStats().getMBoost().getCurrent());
+			stmt.setInt(21, player.getGameStats().getMBResist().getCurrent());
+			stmt.setInt(22, player.getGameStats().getStrikeResist().getCurrent());
+			stmt.setInt(23, player.getGameStats().getSpellResist().getCurrent());
+			stmt.setInt(24, player.getObjectId());
 			stmt.execute();
 			stmt.close();
 		}

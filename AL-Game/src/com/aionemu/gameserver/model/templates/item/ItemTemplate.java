@@ -290,6 +290,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 				return 8;
 			}
 		}
+		if (isTwoHandWeapon()) { // Temp fix for 2Hand Weapon's Display TODO find a better way ^^
+			return 3;
+		}
 		return itemSlot;
 	}
 

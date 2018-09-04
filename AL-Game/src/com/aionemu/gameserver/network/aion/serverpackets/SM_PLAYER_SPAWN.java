@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.gameserver.configs.main.FastTrackConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.instance.InstanceBuff;
 import com.aionemu.gameserver.network.aion.AionConnection;
@@ -64,6 +65,10 @@ public class SM_PLAYER_SPAWN extends AionServerPacket {
 		if ((player.getWorldId() == 210020000 || player.getWorldId() == 210040000 || player.getWorldId() == 210050000 || player.getWorldId() == 210060000 || player.getWorldId() == 210070000 || player.getWorldId() == 210100000 || player.getWorldId() == 220020000 || player.getWorldId() == 220040000 || player.getWorldId() == 220050000 || player.getWorldId() == 220070000 || player.getWorldId() == 220080000 || player.getWorldId() == 220110000 || player.getWorldId() == 400010000 || player.getWorldId() == 400020000 || player.getWorldId() == 400040000 || player.getWorldId() == 400050000 || player.getWorldId() == 400060000 || player.getWorldId() == 600010000 || player.getWorldId() == 600090000 || player.getWorldId() == 600100000)) {
 			// This game area is a free PK area. Abide by the rules and you will have a great gaming experience.
 			// PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_MSGBOX_AKS_ENTER_PK_SERVER, 0, 0));
+			writeD(1);
+			instanceBuff = new InstanceBuff(1);
+			instanceBuff.applyPledge(player, 1);
+			// TODO CHECK this
 		}
 		if ((player.getWorldId() == 300200000 || player.getWorldId() == 320100000 || player.getWorldId() == 320050000 || player.getWorldId() == 300030000)) {
 			writeD(2);
@@ -111,12 +116,8 @@ public class SM_PLAYER_SPAWN extends AionServerPacket {
 				instanceBuff.endPledge(player);
 			}
 		}
-		if (World.getInstance().getWorldMap(player.getWorldId()).getTemplate().getBeginnerTwinCount() > 0) {
-			writeC(1); // Fast Track Server Enabled
-		}
-		else {
-			writeC(0); // Fast Track Server Disabled
-		}
+		// Fast Track Server
+		writeC(World.getInstance().getWorldMap(player.getWorldId()).getTemplate().getBeginnerTwinCount() > 0 && FastTrackConfig.FASTTRACK_ENABLE ? 1 : 0);
 		writeD(0); // 4.0 protocol changed
 		writeC(0); // 4.7 new part
 	}

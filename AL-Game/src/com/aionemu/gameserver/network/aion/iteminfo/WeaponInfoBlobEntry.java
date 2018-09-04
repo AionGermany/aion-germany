@@ -39,17 +39,20 @@ public class WeaponInfoBlobEntry extends ItemBlobEntry {
 		Item item = ownerItem;
 
 		ItemSlot[] slots = ItemSlot.getSlotsFor(item.getItemTemplate().getItemSlot());
-
-		// must occupy two slots
-		if (item.getItemTemplate().isTwoHandWeapon()) {
-			writeQ(buf, 3);
+		if (slots.length == 1) {
+			writeQ(buf, slots[0].getSlotIdMask());
 			writeQ(buf, 0);
-		}
-		else {
+		} else if (item.getItemTemplate().isTwoHandWeapon()) {
+			// must occupy two slots
+			writeQ(buf, slots[0].getSlotIdMask() | slots[1].getSlotIdMask());
+			writeQ(buf, 0);
+		} else {
 			// primary and secondary slots
 			writeQ(buf, slots[0].getSlotIdMask());
 			writeQ(buf, slots[1].getSlotIdMask());
 		}
+		// TODO: 2te Q check this, seems wrong
+		// writeQ(buf, item.hasFusionedItem() ? 0x00 : 0x02);
 	}
 
 	@Override

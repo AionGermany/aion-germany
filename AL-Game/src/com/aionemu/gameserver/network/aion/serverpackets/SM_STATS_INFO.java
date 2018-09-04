@@ -62,7 +62,6 @@ public class SM_STATS_INFO extends AionServerPacket {
 	protected void writeImpl(AionConnection con) {
 		writeD(player.getObjectId());// Player ObjectId
 		writeD(GameTimeManager.getGameTime().getTime());// Minutes since 1/1/00 00:00:00
-
 		writeH(pgs.getPower().getCurrent());// [current power]
 		writeH(pgs.getHealth().getCurrent());// [current health]
 		writeH(pgs.getAccuracy().getCurrent());// [current accuracy]
@@ -78,51 +77,45 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeH(pgs.getStat(StatEnum.ELEMENTAL_RESISTANCE_DARK, 0).getCurrent());// [current dark resistance]
 
 		writeH(player.getLevel());// [level]
-
 		writeH(0);// [unk]
 		writeH(0);// [unk]
 		writeH(0);// [unk]
-
 		writeQ(pcd.getExpNeed());// [xp till next lv]
 		writeQ(pcd.getExpRecoverable());// [recoverable exp]
 		writeQ(pcd.getExpShown());// [current xp]
-
 		writeD(0);// [unk]
 
 		writeD(pgs.getMaxHp().getCurrent());// [max hp]
 		writeD(pls.getCurrentHp());// [current hp]
-
 		writeD(pgs.getMaxMp().getCurrent());// [max mana]
 		writeD(pls.getCurrentMp());// [current mana]
-
 		writeH(pgs.getMaxDp().getCurrent());// [max dp]
 		writeH(pcd.getDp());// [current dp]
-
 		writeD(pgs.getFlyTime().getCurrent());// [max fly time]
 		writeD(pls.getCurrentFp());// [current fly time]
-
 		writeH(player.getFlyState());// [fly state]
 
 		writeH(pgs.getMainHandPAttack().getCurrent());// [current main hand attack]
 		writeH(pgs.getOffHandPAttack().getCurrent());// [off hand attack]
-
 		writeH(0);// 5.0 NA MAGE LVL 1 (73 or 0)
-
 		writeD(pgs.getPDef().getCurrent());// [current pdef]
-		if (player.getEquipment().getMainHandWeapon() != null && (player.getEquipment().getMainHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getMainHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.KEYBLADE_2H))
+		if (player.getEquipment().getMainHandWeapon() != null && (player.getEquipment().getMainHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getMainHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.KEYBLADE_2H)) {
 			writeH(pgs.getMainHandMAttack().getCurrent());
-		else
+		}
+		else {
 			writeH(pgs.getMainHandPAttack().getCurrent());
-
-		if (player.getEquipment().getOffHandWeaponType() != null && (player.getEquipment().getOffHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getOffHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.KEYBLADE_2H))
+		}
+		if (player.getEquipment().getOffHandWeaponType() != null && (player.getEquipment().getOffHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getOffHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.KEYBLADE_2H)) {
 			writeH(pgs.getOffHandMAttack().getCurrent());
-		else
+		}
+		else {
 			writeH(pgs.getOffHandPAttack().getCurrent());
-
+		}
+		
 		writeD(pgs.getMDef().getCurrent()); // [Current magic def]
 		writeH(pgs.getMResist().getCurrent());// [current mres]
 		writeH(pgs.getMainHandMAttack().getCurrent());
-		writeF(pgs.getAttackRange().getCurrent() / 1500f);// attack range
+		writeF(pgs.getAttackRange().getCurrent() / 1000);// attack range
 		writeH(pgs.getAttackSpeed().getCurrent());// attack speed
 		writeH(pgs.getEvasion().getCurrent());// [current evasion]
 		writeH(pgs.getParry().getCurrent());// [current parry]
@@ -135,9 +128,7 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeH(3);// [unk]
 		writeH(pgs.getMAccuracy().getCurrent());// [current magic accuracy]
 		writeH(pgs.getMCritical().getCurrent());// [current crit spell]
-
 		writeH(0);
-
 		writeF(pgs.getReverseStat(StatEnum.BOOST_CASTING_TIME, 1000).getCurrent() / 1000f);// [current casting speed]
 		writeH(0); // [unk 3.5]
 		writeH(pgs.getStat(StatEnum.CONCENTRATION, 0).getCurrent());// [current concetration]
@@ -145,25 +136,24 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeH(pgs.getMBResist().getCurrent());// [current magic suppression]
 		writeH(pgs.getStat(StatEnum.HEAL_BOOST, 0).getCurrent());// [current heal_boost]
 		writeH(0);
+		
 		writeH(pgs.getStrikeResist().getCurrent()); // [current strike resist]
 		writeH(pgs.getSpellResist().getCurrent());// [current spell resist]
 		writeH(pgs.getStrikeFort().getCurrent());// [current strike fortitude]
 		writeH(pgs.getSpellFort().getCurrent());// [current spell fortitude]
-
 		writeD(player.getInventory().getLimit());
 		writeD(player.getInventory().size());
 		writeB(new byte[8]);
 		writeD(pcd.getPlayerClass().getClassId());// [Player Class id]
+		
 		writeH(player.getPlayerSettings().getDisplay());
 		writeH(player.getPlayerSettings().getDeny());
 		writeD(0);
-
 		writeQ(pcd.getCurrentReposteEnergy());
 		writeQ(pcd.getMaxReposteEnergy());
 		writeD(0x00);
 		writeF(1.0f);// Default Base Casting Speed
 		writeB(new byte[8]);
-
 		writeQ(pcd.getGoldenStarEnergy()); // Golden Star Energy (625000000 = 100%)
 		writeQ(pcd.getGrowthEnergy()); // Energy of Growth (160000000 = 100%)
 		writeQ(50000); //SilverStarEnergy TODO (50000 = 5%, 100000 = 10% etc )
@@ -196,27 +186,26 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeH(pgs.getMainHandPAttack().getBase());// [base main hand attack]
 		writeH(pgs.getOffHandPAttack().getBase());// [base off hand attack]
 
-		if (player.getEquipment().getMainHandWeapon() != null && (player.getEquipment().getMainHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getMainHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.KEYBLADE_2H))
+		if (player.getEquipment().getMainHandWeapon() != null && (player.getEquipment().getMainHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getMainHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.KEYBLADE_2H)) {
 			writeD(pgs.getMainHandMAttack().getBase());
-		else
+		}
+		else {
 			writeD(pgs.getMainHandPAttack().getBase());
-
+		}
 		writeD(pgs.getPDef().getBase()); // [base pdef]
 		writeD(pgs.getMDef().getBase());// [base magic def]
 		writeH(pgs.getMResist().getBase());// [base magic resist]
 		writeH(-1); // [unk 5.4]
-		writeF(pgs.getAttackRange().getBase() / 1500f);// [base attack range]
+		writeF(pgs.getAttackRange().getBase() / 1000);// [base attack range]
 		writeH(pgs.getEvasion().getBase());// [base evasion]
 		writeH(pgs.getParry().getBase());// [base parry]
 		writeH(pgs.getBlock().getBase());// [base block]
 		writeH(pgs.getMainHandPCritical().getBase());// [base main hand crit rate]
 		writeH(pgs.getOffHandPCritical().getBase());// [base off hand crit rate]
 		writeH(pgs.getMCritical().getBase());// [base magical crit rate]
-
 		writeH(pgs.getStat(StatEnum.BLOCK_PENETRATION, 0).getBase());
 		writeH(pgs.getMainHandPAccuracy().getBase());// [base main hand accuracy]
 		writeH(pgs.getOffHandPAccuracy().getBase());// [base off hand accuracy]
-
 		writeH(3);
 		writeH(pgs.getMAccuracy().getBase());// [base main hand magic accuracy]
 		writeH(pgs.getStat(StatEnum.CONCENTRATION, 0).getBase());// [base concentration]

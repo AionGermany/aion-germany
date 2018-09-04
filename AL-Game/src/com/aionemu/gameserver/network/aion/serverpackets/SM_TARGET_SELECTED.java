@@ -49,8 +49,8 @@ public class SM_TARGET_SELECTED extends AionServerPacket {
 				this.level = creature.getLevel();
 				this.maxHp = creature.getLifeStats().getMaxHp();
 				this.currentHp = creature.getLifeStats().getCurrentHp();
-				this.maxMp = creature.getLifeStats().getMaxMp();
-				this.currentMp = creature.getLifeStats().getCurrentMp();
+				this.maxMp = 0;
+				this.currentMp = 0;
 			}
 			else {
 				this.level = 0;
@@ -75,7 +75,7 @@ public class SM_TARGET_SELECTED extends AionServerPacket {
 		writeH(level);
 		writeD(maxHp);
 		writeD(currentHp);
-		writeD(maxMp);// new 4.0
-		writeD(currentMp);// new 4.0
+		writeD(maxMp);// Todo Check on Offi
+		writeD(currentMp);// Todo Check on Offi
 	}
 }
