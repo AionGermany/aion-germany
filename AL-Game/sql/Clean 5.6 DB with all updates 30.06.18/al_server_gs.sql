@@ -315,8 +315,8 @@ CREATE TABLE `houses` (
   `status` enum('ACTIVE','SELL_WAIT','INACTIVE','NOSALE') NOT NULL DEFAULT 'ACTIVE',
   `fee_paid` tinyint(1) NOT NULL DEFAULT '1',
   `next_pay` timestamp NULL DEFAULT NULL,
-  `sell_started` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `sign_notice` text CHARACTER SET utf16le,
+  `sell_started` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `sign_notice` text CHARACTER SET utf16le NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `address` (`address`) USING BTREE,
   KEY `address_2` (`address`) USING BTREE
