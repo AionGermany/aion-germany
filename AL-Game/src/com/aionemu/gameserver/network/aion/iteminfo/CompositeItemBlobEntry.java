@@ -43,6 +43,7 @@ public class CompositeItemBlobEntry extends ItemBlobEntry {
 		writeD(buf, item.getFusionedItemId());
 		writeFusionStones(buf);
 		writeH(buf, 0);
+		writeB(buf, new byte[40]); // TODO
 	}
 
 	private void writeFusionStones(ByteBuffer buf) {
@@ -73,7 +74,7 @@ public class CompositeItemBlobEntry extends ItemBlobEntry {
 
 	@Override
 	public int getSize() {
-		return 30;
+		return 70;
 		// return 12 * 2 + 6;
 	}
 }

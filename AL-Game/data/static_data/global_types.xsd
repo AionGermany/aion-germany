@@ -997,7 +997,29 @@
             <xs:enumeration value="IDRUN_POLYMORPH_L"/>
             <xs:enumeration value="IDRUN_POLYMORPH_D"/>
             <xs:enumeration value="IDRUN_NPC"/>
-            <xs:enumeration value=""/>
+            <!-- New 6.x -->
+            <xs:enumeration value="DOOR_GUARD"/>
+            <xs:enumeration value="DOOR_GUARD_DARK"/>
+            <xs:enumeration value="ERESUKIGAL_SOLO"/>
+            <xs:enumeration value="GENERAL_DARK_NLIZARDMAN"/>
+            <xs:enumeration value="IDF7_WEAPON"/>
+            <xs:enumeration value="IDF7_WEAPON_BOX"/>
+            <xs:enumeration value="IDF7_WEAPON_BOX_N"/>
+            <xs:enumeration value="IDF7_WEAPON_FOBJ"/>
+            <xs:enumeration value="IDF7_WEAPON_NEPILIM"/>
+            <xs:enumeration value="IDF7_WEAPON_OIL"/>
+            <xs:enumeration value="IDF7_WEAPON_POLYMORPH"/>
+            <xs:enumeration value="IDF7_WEAPON_PRIGIDA"/>
+            <xs:enumeration value="IDINFINITY_HEAL"/>
+            <xs:enumeration value="IDTIAMAT_ANCIENT_V60"/>
+            <xs:enumeration value="IDTIAMAT_XDRAKAN_V60"/>
+            <xs:enumeration value="LDF7_EVENT"/>
+            <xs:enumeration value="LDF7_RAID"/>
+            <xs:enumeration value="LDF7_RAID_TARGET"/>
+            <xs:enumeration value="LF4_NUTE_Q61916A"/>
+            <xs:enumeration value="LYCAN_DARK"/>
+            <xs:enumeration value="NLIZARDMAN_GENERAL_DARK"/>
+            <xs:enumeration value="ONLY_GUARD_AGRRESI"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Base types -->
@@ -1095,6 +1117,8 @@
 			<xs:enumeration value="RARE"/>
 			<xs:enumeration value="LEGEND"/>
 			<xs:enumeration value="UNIQUE"/>
+			<xs:enumeration value="RELIC"/>
+			<xs:enumeration value="FINALITY"/>
 			<xs:enumeration value="EPIC"/>
 			<xs:enumeration value="MYTHIC"/>
 			<xs:enumeration value="ANCIENT"/>

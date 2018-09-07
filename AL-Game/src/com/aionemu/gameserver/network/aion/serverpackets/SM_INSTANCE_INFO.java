@@ -95,6 +95,7 @@ public class SM_INSTANCE_INFO extends AionServerPacket {
 				writeD(0); // 4.9
 				writeD(0); // 4.9
 				writeD(1); // Unk 5.1
+				writeD(0); // Unk 6.x
 				writeC(1); // activated
 			}
 			writeS(player.getName());

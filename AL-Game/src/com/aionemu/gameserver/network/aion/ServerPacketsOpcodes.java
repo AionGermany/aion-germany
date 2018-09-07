@@ -229,7 +229,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_BIND_POINT_INFO.class, 0xEC, idSet);
 		addPacketOpcode(SM_RIFT_ANNOUNCE.class, 0xED, idSet);
 		addPacketOpcode(SM_ABYSS_RANK.class, 0xEF, idSet); // 5.6
-		addPacketOpcode(SM_PETITION.class, 0x170, idSet); // 5.6 TODO
+		//addPacketOpcode(SM_PETITION.class, 0x170, idSet); // 5.6 TODO
 		addPacketOpcode(SM_FRIEND_UPDATE.class, 0xF2, idSet); // 5.6
 		addPacketOpcode(SM_LEARN_RECIPE.class, 0xF3, idSet); // 5.6
 		addPacketOpcode(SM_RECIPE_DELETE.class, 0xF4, idSet); // 5.6
@@ -273,7 +273,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_HOTSPOT_TELEPORT.class, 0x12A, idSet); // 5.6
 		addPacketOpcode(SM_UPGRADE_ARCADE.class, 0x12C, idSet); // 5.6
 		addPacketOpcode(SM_ATREIAN_PASSPORT.class, 0x12D, idSet); // 5.6
-		addPacketOpcode(SM_GAMEGUARD.class, 0x128, idSet); // 5.6
+		addPacketOpcode(SM_GAMEGUARD.class, 0x129, idSet); // 6.x
 		addPacketOpcode(SM_CUSTOM_PACKET.class, 99999, idSet); // fake packet
 		addPacketOpcode(SM_AFTER_TIME_CHECK.class, 0x126, idSet); // 5.6
 		addPacketOpcode(SM_QUEST_REPEAT.class, 0x124, idSet); // 5.6
@@ -342,6 +342,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_NEVIWIND_CANYON.class, 0x169, idSet); // 5.6 TODO
 		addPacketOpcode(SM_TOWER_OF_CHALLENGE.class, 0xEE, idSet); // 5.6
 		addPacketOpcode(SM_GODSTONE_DESTROY.class, 0x12E, idSet); // 5.6
+		// addPacketOpcode(SM_TRANSFORMATION.class, 0x170, idSet); // 6.x TODO
 		// --------------------UNKNOWN PACKETS-----------------------//
 	}
 

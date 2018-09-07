@@ -1,77 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <player_initial_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="player_initial_data.xsd">
-    <asmodian_spawn_location map_id="220010000" heading="32" x="571.0388" y="2787.3420" z="299.8750"/>
-    <elyos_spawn_location map_id="210010000" heading="32" x="1212.9423" y="1044.8516" z="140.75568"/>
+    <asmodian_spawn_location map_id="220010000" heading="80" x="595.3203" y="2465.4019" z="279.65676"/> <!-- 6.x -->
+    <elyos_spawn_location map_id="210010000" heading="45" x="872.58154" y="1158.3865" z="110.601425"/> <!-- 6.x -->
     <player_data class="WARRIOR">
         <items>
-            <item id="182400001" count="1000"/><!-- Kinah -->
-            <item id="100000094" count="1"/><!-- Training Sword -->
-            <item id="110500003" count="1"/><!-- Training Hauberk -->
-            <item id="113500001" count="1"/><!-- Training Chausses -->
-            <item id="160000001" count="12"/><!-- Mercenary's Fruit Juice -->
-            <item id="169300002" count="20"/><!-- Bandage -->
-            <item id="162000170" count="100"/><!-- Novice Minor Life Potion -->
-            <item id="162000171" count="100"/><!-- Novice Minor Mana Potion -->            
+            <item id="182400001" count="0"/><!-- Kinah 6.x -->
+            <item id="100050065" count="1"/><!-- Old Longsword 6.x -->
+            <item id="115050124" count="1"/><!-- Old Battle Shield 6.x -->
+            <item id="110650062" count="1"/><!-- Old Breastplate 6.x -->
+            <item id="113650062" count="1"/><!-- Old Plate Greaves 6.x -->
+            <item id="111650062" count="1"/><!-- Old Plate Gauntlets 6.x -->
+            <item id="114650062" count="1"/><!-- Old Sabatons 6.x -->
+            <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
+            <item id="169300002" count="20"/><!-- Bandage 6.x -->
+            <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
+            <item id="162005040" count="50"/><!-- Apprentices Recovery Serum 6.x -->            
         </items>
     </player_data>
     <player_data class="MAGE">
         <items>
-            <item id="182400001" count="1000"/><!-- Kinah -->
-            <item id="100600034" count="1"/><!-- Training Spellbook -->
+            <item id="182400001" count="0"/><!-- Kinah 6.x -->
+            <item id="100650065" count="1"/><!-- Old Spellbook 6.x -->
             <item id="110100009" count="1"/><!-- Training Tunic -->
             <item id="113100005" count="1"/><!-- Training Leggings -->
-            <item id="160000001" count="12"/><!-- Mercenary's Fruit Juice -->
-            <item id="169300002" count="20"/><!-- Bandage -->
-            <item id="162000170" count="100"/><!-- Novice Minor Life Potion -->
-            <item id="162000171" count="100"/><!-- Novice Minor Mana Potion -->           
+            <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
+            <item id="169300002" count="20"/><!-- Bandage 6.x -->
+            <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
+            <item id="162005040" count="50"/><!-- Apprentices Recovery Serum 6.x -->          
         </items>
     </player_data>
     <player_data class="PRIEST">
         <items>
-            <item id="182400001" count="1000"/><!-- Kinah -->
-            <item id="100100011" count="1"/><!-- Training Mace -->
-            <item id="110300292" count="1"/><!-- Training Leather Armor -->
-            <item id="113300278" count="1"/><!-- Training Leather Leg Armor -->
-            <item id="160000001" count="12"/><!-- Mercenary's Fruit Juice -->
-            <item id="169300002" count="20"/><!-- Bandage -->
-            <item id="162000170" count="100"/><!-- Novice Minor Life Potion -->
-            <item id="162000171" count="100"/><!-- Novice Minor Mana Potion -->            
+            <item id="182400001" count="0"/><!-- Kinah 6.x -->
+            <item id="100150065" count="1"/><!-- Old Mace 6.x -->
+            <item id="110550124" count="1"/><!-- Old Chain Cuirass 6.x -->
+            <item id="113550124" count="1"/><!-- Old Chausses 6.x -->
+            <item id="111550124" count="1"/><!-- Old Chain Gauntlets 6.x -->
+            <item id="114550124" count="1"/><!-- Old Brogans 6.x -->
+            <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
+            <item id="169300002" count="20"/><!-- Bandage 6.x -->
+            <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
+            <item id="162005040" count="50"/><!-- Apprentices Recovery Serum 6.x -->             
         </items>
     </player_data>
     <player_data class="SCOUT">
         <items>
-            <item id="182400001" count="1000"/><!-- Kinah -->
-            <item id="100200112" count="1"/><!-- Training Dagger -->
-            <item id="110300015" count="1"/><!-- Training Jerkin -->
-            <item id="113300005" count="1"/><!-- Training Breeches -->
-            <item id="160000001" count="12"/><!-- Mercenary's Fruit Juice -->
-            <item id="169300002" count="20"/><!-- Bandage -->
-            <item id="162000170" count="100"/><!-- Novice Minor Life Potion -->
-            <item id="162000171" count="100"/><!-- Novice Minor Mana Potion -->            
+            <item id="182400001" count="0"/><!-- Kinah 6.x -->
+            <item id="100250065" count="1"/><!-- Old Dagger 6.x -->
+            <item id="110350124" count="1"/><!-- Old Leather Doublet 6.x  -->
+            <item id="113350124" count="1"/><!-- Old Leather Legwear 6.x -->
+            <item id="111350124" count="1"/><!-- Old Vambraces 6.x -->
+            <item id="114350124" count="1"/><!-- Old Leather Shoes 6.x -->
+            <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
+            <item id="169300002" count="20"/><!-- Bandage 6.x -->
+            <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
+            <item id="162005040" count="50"/><!-- Apprentices Recovery Serum 6.x -->            
         </items>
     </player_data>
     <player_data class="ENGINEER">
         <items>
-            <item id="182400001" count="1000"/><!-- Kinah -->
-            <item id="101800181" count="1"/><!-- Pistol for Training -->            
-            <item id="110301667" count="1"/><!-- Jerkin for Training -->
-            <item id="113300005" count="1"/><!-- Training Breeches -->
-            <item id="160000001" count="12"/><!-- Mercenary's Fruit Juice -->
-            <item id="169300002" count="20"/><!-- Bandage -->
-            <item id="162000170" count="100"/><!-- Novice Minor Life Potion -->
-            <item id="162000171" count="100"/><!-- Novice Minor Mana Potion -->		
+            <item id="182400001" count="0"/><!-- Kinah 6.x -->
+            <item id="101850065" count="1"/><!-- Old Aether Revolver 6.x -->            
+            <item id="110350125" count="1"/><!-- Old Jerkin 6.x -->
+            <item id="113350125" count="1"/><!-- Old Breeches 6.x -->
+            <item id="111350125" count="1"/><!-- Old Leather Gauntlets 6.x -->
+            <item id="114350125" count="1"/><!-- Old Leather Footwear 6.x -->
+            <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
+            <item id="169300002" count="20"/><!-- Bandage 6.x -->
+            <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
+            <item id="162005040" count="50"/><!-- Apprentices Recovery Serum 6.x --> 
         </items>
     </player_data>
     <player_data class="ARTIST">
         <items>
-            <item id="182400001" count="1000"/><!-- Kinah -->
-            <item id="102000194" count="1"/><!-- Harp for Training -->            
+            <item id="182400001" count="0"/><!-- Kinah 6.x -->
+            <item id="102050065" count="1"/><!-- Old Stringed Instrument 6.x -->            
             <item id="110100009" count="1"/><!-- Training Tunic -->
             <item id="113100005" count="1"/><!-- Training Leggings -->
-            <item id="160000001" count="12"/><!-- Mercenary's Fruit Juice -->
-            <item id="169300002" count="20"/><!-- Bandage -->
-            <item id="162000170" count="100"/><!-- Novice Minor Life Potion -->
-            <item id="162000171" count="100"/><!-- Novice Minor Mana Potion -->		
+            <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
+            <item id="169300002" count="20"/><!-- Bandage 6.x -->
+            <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
+            <item id="162005040" count="50"/><!-- Apprentices Recovery Serum 6.x --> 	
         </items>
     </player_data>
 </player_initial_data>

@@ -7,7 +7,7 @@ CLS
 
 echo.
 
-echo Starting Aion German Version 5.x Game Server.
+echo Starting Aion German Version 6.x Game Server.
 
 echo.
 

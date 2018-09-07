@@ -90,6 +90,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writeSkillBoost(buf); // 8-bytes
 		writeD(buf, item.isLunaReskin() ? 1 : 0); // Luna Reskin
 		writeC(buf, item.getReductionLevel()); // Level Reduction
+		writeB(buf, new byte[40]); // TODO
 	}
 
 	/**
@@ -272,6 +273,6 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 
 	@Override
 	public int getSize() {
-		return 187; // 5.0 EU
+		return 227; // 6.x
 	}
 }
