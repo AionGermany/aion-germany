@@ -241,10 +241,6 @@ public class StaticData {
 	public F2PBonusData f2pBonus;
 	@XmlElement(name = "abyss_ops")
 	public AbyssOpData abyssOpData;
-	@XmlElement(name = "landing")
-	public LandingData landingLocationData;
-	@XmlElement(name = "landing_special")
-	public LandingSpecialData landingSpecialLocationData;
 	@XmlElement(name = "luna_consume_rewards")
 	public LunaConsumeRewardsData lunaConsumeRewardsData;
 	@XmlElement(name = "minions")
@@ -369,8 +365,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + panelCpData.size() + " Creativity Template entries");
 		DataManager.log.info("[DataManager] Loaded " + f2pBonus.size() + " F2P Bonus entries");
 		DataManager.log.info("[DataManager] Loaded " + abyssOpData.size() + " Abyss Landing entries");
-		DataManager.log.info("[DataManager] Loaded " + landingLocationData.size() + " Abyss Landing entries");
-		DataManager.log.info("[DataManager] Loaded " + landingSpecialLocationData.size() + " Abyss Monument entries");
 		DataManager.log.info("[DataManager] Loaded " + lunaConsumeRewardsData.size() + " Luna Consume entries");
 		DataManager.log.info("[DataManager] Loaded " + minionData.size() + " Minion templates");
 		DataManager.log.info("[DataManager] Loaded " + monsterbookData.size() + " Monsterbook templates");

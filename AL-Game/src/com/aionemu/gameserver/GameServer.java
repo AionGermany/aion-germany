@@ -69,8 +69,6 @@ import com.aionemu.gameserver.network.aion.GameConnectionFactoryImpl;
 import com.aionemu.gameserver.network.chatserver.ChatServer;
 import com.aionemu.gameserver.network.loginserver.LoginServer;
 import com.aionemu.gameserver.questEngine.QuestEngine;
-import com.aionemu.gameserver.services.AbyssLandingService;
-import com.aionemu.gameserver.services.AbyssLandingSpecialService;
 import com.aionemu.gameserver.services.AdminService;
 import com.aionemu.gameserver.services.AgentFightService;
 import com.aionemu.gameserver.services.AnnouncementService;
@@ -106,7 +104,6 @@ import com.aionemu.gameserver.services.WeatherService;
 import com.aionemu.gameserver.services.WeddingService;
 import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.abyss.AbyssRankUpdateService;
-import com.aionemu.gameserver.services.abysslandingservice.LandingUpdateService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.dynamic_world.AdmaPortalSpawnService;
@@ -317,10 +314,6 @@ public class GameServer {
 		MoltenusService.getInstance().initMoltenus();
 		DiflodoxService.getInstance().initDiflodox(); // 4.9
 		DiflonaxService.getInstance().initDiflonax(); // 4.9
-		AbyssLandingService.getInstance().initLandingLocations();
-		LandingUpdateService.getInstance().initResetQuestPoints();
-		LandingUpdateService.getInstance().initResetAbyssLandingPoints();
-		AbyssLandingSpecialService.getInstance().initLandingSpecialLocations();
 		DisputeLandService.getInstance().initDisputeLand();
 		TowerEntranceService.getInstance().startTowerEntrance();
 		Util.printSsSection("Bases");

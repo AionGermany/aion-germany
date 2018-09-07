@@ -33,8 +33,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawnTemplate;
-import com.aionemu.gameserver.model.templates.spawns.landingspawns.LandingSpawnTemplate;
-import com.aionemu.gameserver.model.templates.spawns.landingspecialspawns.LandingSpecialSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.rvrspawns.RvrSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
@@ -101,12 +99,6 @@ public class SpawnEngine {
 		}
 		else if (spawn instanceof SvsSpawnTemplate) {
 			return VisibleObjectSpawner.spawnSvsNpc((SvsSpawnTemplate) spawn, instanceIndex);
-		}
-		else if (spawn instanceof LandingSpawnTemplate) {
-			return VisibleObjectSpawner.spawnLandingNpc((LandingSpawnTemplate) spawn, instanceIndex);
-		}
-		else if (spawn instanceof LandingSpecialSpawnTemplate) {
-			return VisibleObjectSpawner.spawnLandingSpecialNpc((LandingSpecialSpawnTemplate) spawn, instanceIndex);
 		}
 		else {
 			return VisibleObjectSpawner.spawnNpc(spawn, instanceIndex);

@@ -59,8 +59,6 @@ import com.aionemu.gameserver.model.gameobjects.siege.SiegeNpc;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureVisualState;
 import com.aionemu.gameserver.model.house.House;
-import com.aionemu.gameserver.model.landing.LandingLocation;
-import com.aionemu.gameserver.model.landing_special.LandingSpecialLocation;
 import com.aionemu.gameserver.model.rift.RiftLocation;
 import com.aionemu.gameserver.model.rvr.RvrLocation;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
@@ -73,8 +71,6 @@ import com.aionemu.gameserver.model.templates.pet.PetTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawnTemplate;
-import com.aionemu.gameserver.model.templates.spawns.landingspawns.LandingSpawnTemplate;
-import com.aionemu.gameserver.model.templates.spawns.landingspecialspawns.LandingSpecialSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.rvrspawns.RvrSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
@@ -82,8 +78,6 @@ import com.aionemu.gameserver.model.templates.spawns.svsspawns.SvsSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawnTemplate;
 import com.aionemu.gameserver.model.vortex.VortexLocation;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
-import com.aionemu.gameserver.services.AbyssLandingService;
-import com.aionemu.gameserver.services.AbyssLandingSpecialService;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.BeritraService;
 import com.aionemu.gameserver.services.RiftService;
@@ -361,60 +355,6 @@ public class VisibleObjectSpawner {
 			npc.setKnownlist(new NpcKnownList(npc));
 		}
 		else if (!loc.isActive() && spawnId == loc.getId() && spawn.isSvsPeace()) {
-			npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, npcTemplate);
-			npc.setKnownlist(new NpcKnownList(npc));
-		}
-		else {
-			return null;
-		}
-		npc.setEffectController(new EffectController(npc));
-		SpawnEngine.bringIntoWorld(npc, spawn, instanceIndex);
-		return npc;
-	}
-
-	protected static VisibleObject spawnLandingNpc(LandingSpawnTemplate spawn, int instanceIndex) {
-		int objectId = spawn.getNpcId();
-		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
-		if (npcTemplate == null) {
-			log.error("No template for NPC " + String.valueOf(objectId));
-			return null;
-		}
-		IDFactory iDFactory = IDFactory.getInstance();
-		Npc npc;
-		int spawnId = spawn.getId();
-		LandingLocation loc = AbyssLandingService.getInstance().getLandingLocation(spawnId);
-		if (loc.isActive() && spawnId == loc.getId() && spawn.isLandingOpen()) {
-			npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, npcTemplate);
-			npc.setKnownlist(new NpcKnownList(npc));
-		}
-		else if (!loc.isActive() && spawnId == loc.getId() && spawn.isLandingClosed()) {
-			npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, npcTemplate);
-			npc.setKnownlist(new NpcKnownList(npc));
-		}
-		else {
-			return null;
-		}
-		npc.setEffectController(new EffectController(npc));
-		SpawnEngine.bringIntoWorld(npc, spawn, instanceIndex);
-		return npc;
-	}
-
-	protected static VisibleObject spawnLandingSpecialNpc(LandingSpecialSpawnTemplate spawn, int instanceIndex) {
-		int objectId = spawn.getNpcId();
-		NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(objectId);
-		if (npcTemplate == null) {
-			log.error("No template for NPC " + String.valueOf(objectId));
-			return null;
-		}
-		IDFactory iDFactory = IDFactory.getInstance();
-		Npc npc;
-		int spawnId = spawn.getId();
-		LandingSpecialLocation loc = AbyssLandingSpecialService.getInstance().getLandingSpecialLocation(spawnId);
-		if (loc.isActive() && spawnId == loc.getId() && spawn.isSpecialLandingSpawn()) {
-			npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, npcTemplate);
-			npc.setKnownlist(new NpcKnownList(npc));
-		}
-		else if (!loc.isActive() && spawnId == loc.getId() && spawn.isSpecialLandingDespawn()) {
 			npc = new Npc(iDFactory.nextId(), new NpcController(), spawn, npcTemplate);
 			npc.setKnownlist(new NpcKnownList(npc));
 		}

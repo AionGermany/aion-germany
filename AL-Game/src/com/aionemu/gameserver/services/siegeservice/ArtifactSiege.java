@@ -23,14 +23,12 @@ import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.SiegeDAO;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.landing.LandingPointsEnum;
 import com.aionemu.gameserver.model.siege.ArtifactLocation;
 import com.aionemu.gameserver.model.siege.SiegeModType;
 import com.aionemu.gameserver.model.siege.SiegeRace;
 import com.aionemu.gameserver.model.team.legion.Legion;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.AbyssLandingService;
 import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.player.PlayerService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -122,22 +120,6 @@ public class ArtifactSiege extends Siege<ArtifactLocation> {
 					PacketSendUtility.sendPacket(player, player.getRace().equals(wRace) ? wRacePacket : lRacePacket);
 				}
 			});
-		}
-		if (getSiegeLocation().getLocationId() == 140 || // Wildersage Artifact Outpost
-			getSiegeLocation().getLocationId() == 141 || // Dauntless Artifact Outpost
-			getSiegeLocation().getLocationId() == 142 || // Anchorbrak Artifact Outpost
-			getSiegeLocation().getLocationId() == 143) { // Brokenblade Artifact Outpost
-			if (getSiegeLocation().getRace() == SiegeRace.BALAUR) {
-				return;
-			}
-			if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS) {
-				AbyssLandingService.getInstance().updateRedemptionLanding(8000, LandingPointsEnum.ARTIFACT, false);
-				AbyssLandingService.getInstance().updateHarbingerLanding(8000, LandingPointsEnum.ARTIFACT, true);
-			}
-			if (getSiegeLocation().getRace() == SiegeRace.ELYOS) {
-				AbyssLandingService.getInstance().updateRedemptionLanding(8000, LandingPointsEnum.ARTIFACT, true);
-				AbyssLandingService.getInstance().updateHarbingerLanding(8000, LandingPointsEnum.ARTIFACT, false);
-			}
 		}
 	}
 

@@ -21,13 +21,11 @@ import com.aionemu.gameserver.configs.main.SiegeConfig;
 import com.aionemu.gameserver.dao.SiegeDAO;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.landing.LandingPointsEnum;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.model.siege.SiegeModType;
 import com.aionemu.gameserver.model.siege.SiegeRace;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SIEGE_LOCATION_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.AbyssLandingService;
 import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -71,8 +69,6 @@ public class SiegeAutoRace {
 					}
 					// %0 succeeded in conquering %1.
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, loc.getRace().getDescriptionId(), NameId));
-					// %0 has occupied %0 and the Landing is now enhanced.
-					AbyssLandingService.getInstance().AnnounceToPoints(player, loc.getRace().getDescriptionId(), NameId, 0, LandingPointsEnum.SIEGE);
 					PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_INFO(loc));
 				}
 			});

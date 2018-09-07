@@ -137,8 +137,6 @@ public final class DataManager {
 	public static PanelCpData PANEL_CP_DATA;
 	public static F2PBonusData F2P_BONUS_DATA;
 	public static AbyssOpData ABYSS_OP_DATA;
-	public static LandingData LANDING_LOCATION_DATA;
-	public static LandingSpecialData LANDING_SPECIAL_LOCATION_DATA;
 	public static LunaConsumeRewardsData LUNA_CONSUME_REWARDS_DATA;
 	public static MinionData MINION_DATA;
 	public static MonsterbookData MONSTERBOOK_DATA;
@@ -270,8 +268,6 @@ public final class DataManager {
 		PANEL_CP_DATA = data.panelCpData;
 		F2P_BONUS_DATA = data.f2pBonus;
 		ABYSS_OP_DATA = data.abyssOpData;
-		LANDING_LOCATION_DATA = data.landingLocationData;
-		LANDING_SPECIAL_LOCATION_DATA = data.landingSpecialLocationData;
 		LUNA_CONSUME_REWARDS_DATA = data.lunaConsumeRewardsData;
 		MINION_DATA = data.minionData;
 		MONSTERBOOK_DATA = data.monsterbookData;

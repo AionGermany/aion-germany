@@ -59,8 +59,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnSpotTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawn;
 import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawn;
-import com.aionemu.gameserver.model.templates.spawns.landingspawns.LandingSpawn;
-import com.aionemu.gameserver.model.templates.spawns.landingspecialspawns.LandingSpecialSpawn;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawn;
 import com.aionemu.gameserver.model.templates.spawns.rvrspawns.RvrSpawn;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawn;
@@ -291,55 +289,6 @@ public class SpawnsData2 {
 						}
 					}
 				}
-				for (LandingSpawn LandingSpawn : spawnMap.getLandingSpawns()) {
-					int id = LandingSpawn.getId();
-					if (!landingSpawnMaps.containsKey(id)) {
-						landingSpawnMaps.put(id, new ArrayList<SpawnGroup2>());
-					}
-					for (LandingSpawn.LandingStateTemplate type : LandingSpawn.getSiegeModTemplates()) {
-						if (type == null || type.getSpawns() == null) {
-							continue;
-						}
-						for (Spawn spawn : type.getSpawns()) {
-							if (spawn.isCustom()) {
-								if (allSpawnMaps.get(mapId).containsKey(spawn.getNpcId())) {
-									allSpawnMaps.get(mapId).remove(spawn.getNpcId());
-								}
-								customs.put(spawn.getNpcId(), spawn);
-							}
-							else if (customs.containsKey(spawn.getNpcId())) {
-								continue;
-							}
-							SpawnGroup2 spawnGroup = new SpawnGroup2(mapId, spawn, id, type.getLandingType());
-							landingSpawnMaps.get(id).add(spawnGroup);
-						}
-					}
-				}
-				for (LandingSpecialSpawn LandingSpecialSpawn : spawnMap.getLandingSpecialSpawns()) {
-					int id = LandingSpecialSpawn.getId();
-					if (!landingSpecialSpawnMaps.containsKey(id)) {
-						landingSpecialSpawnMaps.put(id, new ArrayList<SpawnGroup2>());
-					}
-					for (LandingSpecialSpawn.LandingSpStateTemplate type : LandingSpecialSpawn.getSiegeModTemplates()) {
-						if (type == null || type.getSpawns() == null) {
-							continue;
-						}
-						for (Spawn spawn : type.getSpawns()) {
-							if (spawn.isCustom()) {
-								if (allSpawnMaps.get(mapId).containsKey(spawn.getNpcId())) {
-									allSpawnMaps.get(mapId).remove(spawn.getNpcId());
-								}
-								customs.put(spawn.getNpcId(), spawn);
-							}
-							else if (customs.containsKey(spawn.getNpcId())) {
-								continue;
-							}
-							SpawnGroup2 spawnGroup = new SpawnGroup2(mapId, spawn, id, type.getLandingSpecialType());
-							landingSpecialSpawnMaps.get(id).add(spawnGroup);
-						}
-					}
-				}
-				customs.clear();
 			}
 		}
 	}

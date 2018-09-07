@@ -27,8 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawn;
 import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawn;
-import com.aionemu.gameserver.model.templates.spawns.landingspawns.LandingSpawn;
-import com.aionemu.gameserver.model.templates.spawns.landingspecialspawns.LandingSpecialSpawn;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawn;
 import com.aionemu.gameserver.model.templates.spawns.rvrspawns.RvrSpawn;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawn;
@@ -58,10 +56,6 @@ public class SpawnMap {
 	private List<RvrSpawn> rvrSpawns;
 	@XmlElement(name = "svs_spawn")
 	private List<SvsSpawn> svsSpawns;
-	@XmlElement(name = "landing_spawn")
-	private List<LandingSpawn> landingSpawns;
-	@XmlElement(name = "landing_special_spawn")
-	private List<LandingSpecialSpawn> landingSpecialSpawns;
 
 	@XmlAttribute(name = "map_id")
 	private int mapId;
@@ -161,29 +155,7 @@ public class SpawnMap {
 		return vortexSpawns;
 	}
 
-	public List<LandingSpawn> getLandingSpawns() {
-		if (landingSpawns == null) {
-			landingSpawns = new ArrayList<LandingSpawn>();
-		}
-		return landingSpawns;
-	}
-
-	public List<LandingSpecialSpawn> getLandingSpecialSpawns() {
-		if (landingSpecialSpawns == null) {
-			landingSpecialSpawns = new ArrayList<LandingSpecialSpawn>();
-		}
-		return landingSpecialSpawns;
-	}
-
 	public void addVortexSpawns(VortexSpawn spawns) {
 		getVortexSpawns().add(spawns);
-	}
-
-	public void addLandingSpawns(LandingSpawn spawns) {
-		getLandingSpawns().add(spawns);
-	}
-
-	public void addLandingSpecialSpawns(LandingSpecialSpawn spawns) {
-		getLandingSpecialSpawns().add(spawns);
 	}
 }

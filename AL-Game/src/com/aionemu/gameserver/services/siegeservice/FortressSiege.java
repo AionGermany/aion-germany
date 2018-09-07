@@ -31,7 +31,6 @@ import com.aionemu.gameserver.dao.SiegeDAO;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
-import com.aionemu.gameserver.model.landing.LandingPointsEnum;
 import com.aionemu.gameserver.model.siege.ArtifactLocation;
 import com.aionemu.gameserver.model.siege.FortressLocation;
 import com.aionemu.gameserver.model.siege.SiegeModType;
@@ -42,8 +41,6 @@ import com.aionemu.gameserver.model.templates.zone.ZoneType;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
-import com.aionemu.gameserver.services.AbyssLandingService;
-import com.aionemu.gameserver.services.AbyssLandingSpecialService;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.SiegeService;
@@ -214,85 +211,6 @@ public class FortressSiege extends Siege<FortressLocation> {
 			Integer topLegionId = winner.getWinnerLegionId();
 			getSiegeLocation().setLegionId(topLegionId != null ? topLegionId : 0);
 			getArtifact().setLegionId(topLegionId != null ? topLegionId : 0);
-		}
-		// Abyss Landing 4.9.1
-		if (getSiegeLocation().getLocationId() == 1221 || getSiegeLocation().getLocationId() == 1231 || getSiegeLocation().getLocationId() == 1241) {
-			Player player = null;
-			if (SiegeRace.BALAUR != getSiegeLocation().getRace()) {
-				switch (getSiegeLocation().getLocationId()) {
-					// Krotan Refuge.
-					case 1221:
-						if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS) {
-							AbyssLandingSpecialService.getInstance().startLanding(16);
-							AbyssLandingService.getInstance().updateHarbingerLanding(35000, LandingPointsEnum.SIEGE, true);
-						}
-						if (getSiegeLocation().getRace() == SiegeRace.ELYOS) {
-							AbyssLandingSpecialService.getInstance().startLanding(4);
-							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, true);
-						}
-						break;
-					// Kysis Fortress.
-					case 1231:
-						if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS) {
-							AbyssLandingSpecialService.getInstance().startLanding(18);
-							AbyssLandingService.getInstance().updateHarbingerLanding(40000, LandingPointsEnum.SIEGE, true);
-						}
-						if (getSiegeLocation().getRace() == SiegeRace.ELYOS) {
-							AbyssLandingSpecialService.getInstance().startLanding(6);
-							AbyssLandingService.getInstance().updateRedemptionLanding(40000, LandingPointsEnum.SIEGE, true);
-						}
-						break;
-					// Miren Fortress.
-					case 1241:
-						if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS) {
-							AbyssLandingSpecialService.getInstance().startLanding(17);
-							AbyssLandingService.getInstance().updateHarbingerLanding(35000, LandingPointsEnum.SIEGE, true);
-						}
-						if (getSiegeLocation().getRace() == SiegeRace.ELYOS) {
-							AbyssLandingSpecialService.getInstance().startLanding(5);
-							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, true);
-						}
-						break;
-				}
-				AbyssLandingService.getInstance().AnnounceToPoints(player, getSiegeLocation().getRace().getDescriptionId(), getSiegeLocation().getNameAsDescriptionId(), 0, LandingPointsEnum.SIEGE);
-			}
-			if (SiegeRace.BALAUR == getSiegeLocation().getRace() || winner.getSiegeRace() != looser) {
-				switch (getSiegeLocation().getLocationId()) {
-					// Krotan Refuge.
-					case 1221:
-						if (looser == SiegeRace.ASMODIANS) {
-							AbyssLandingSpecialService.getInstance().stopLanding(16);
-							AbyssLandingService.getInstance().updateHarbingerLanding(35000, LandingPointsEnum.SIEGE, false);
-						}
-						if (looser == SiegeRace.ELYOS) {
-							AbyssLandingSpecialService.getInstance().stopLanding(4);
-							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, false);
-						}
-						break;
-					// Kysis Fortress.
-					case 1231:
-						if (looser == SiegeRace.ASMODIANS) {
-							AbyssLandingSpecialService.getInstance().stopLanding(18);
-							AbyssLandingService.getInstance().updateHarbingerLanding(40000, LandingPointsEnum.SIEGE, false);
-						}
-						if (looser == SiegeRace.ELYOS) {
-							AbyssLandingSpecialService.getInstance().stopLanding(6);
-							AbyssLandingService.getInstance().updateRedemptionLanding(40000, LandingPointsEnum.SIEGE, false);
-						}
-						break;
-					// Miren Fortress.
-					case 1241:
-						if (looser == SiegeRace.ASMODIANS) {
-							AbyssLandingSpecialService.getInstance().stopLanding(17);
-							AbyssLandingService.getInstance().updateHarbingerLanding(35000, LandingPointsEnum.SIEGE, false);
-						}
-						if (looser == SiegeRace.ELYOS) {
-							AbyssLandingSpecialService.getInstance().stopLanding(5);
-							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, false);
-						}
-						break;
-				}
-			}
 		}
 	}
 

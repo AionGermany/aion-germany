@@ -27,10 +27,8 @@ import com.aionemu.gameserver.model.gameobjects.AionObject;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.landing.LandingPointsEnum;
 import com.aionemu.gameserver.model.team2.TemporaryPlayerTeam;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.AbyssLandingService;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
@@ -84,15 +82,6 @@ public class BossDeathListener extends OnDieEventCallback {
 		}
 		else {
 			base.setRace(Race.NPC);
-		}
-		if (base.getBaseLocation().getWorldId() == 400010000) {
-			if (race == Race.ASMODIANS && boss.getRace() == Race.ELYOS) {
-				AbyssLandingService.getInstance().updateRedemptionLanding(6000, LandingPointsEnum.BASE, false);
-			}
-			if (race == Race.ELYOS && boss.getRace() == Race.ASMODIANS) {
-				AbyssLandingService.getInstance().updateHarbingerLanding(6000, LandingPointsEnum.BASE, false);
-			}
-			landingWinBase(race);
 		}
 		BaseService.getInstance().capture(base.getId(), base.getRace());
 		log.info("Legat kill ! BOSS: " + boss + " in BaseId: " + base.getBaseLocation().getId() + " killed by RACE: " + race);
@@ -166,15 +155,6 @@ public class BossDeathListener extends OnDieEventCallback {
 			case 400060000: // Disillon
 				HTMLService.sendGuideHtml(player, "adventurers_base3");
 				break;
-		}
-	}
-
-	public void landingWinBase(Race race) {
-		if (race == Race.ASMODIANS) {
-			AbyssLandingService.getInstance().updateHarbingerLanding(6000, LandingPointsEnum.BASE, true);
-		}
-		if (race == Race.ELYOS) {
-			AbyssLandingService.getInstance().updateRedemptionLanding(6000, LandingPointsEnum.BASE, true);
 		}
 	}
 

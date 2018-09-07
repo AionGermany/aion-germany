@@ -288,9 +288,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_MINIONS.class, 0x16A, idSet); // 5.6 TODO
 		addPacketOpcode(SM_EVENT_WINDOW.class, 0x13E, idSet); // 5.8 TODO
 		addPacketOpcode(SM_EVENT_WINDOW_ITEMS.class, 0x154, idSet); // 5.8 TODO
-		// --------------------ABYSS LANDING-------------------------//
-		addPacketOpcode(SM_ABYSS_LANDING_LEVEL.class, 0x13C, idSet); // 5.6 TODO
-		addPacketOpcode(SM_ABYSS_LANDING.class, 0x13D, idSet); // 5.6 TODO
 		// ------------------FAST TRACK PACKETS----------------------//
 		addPacketOpcode(SM_SERVER_IDS.class, 0x116, idSet); // 5.6
 		addPacketOpcode(SM_FAST_TRACK.class, 0x96, idSet);

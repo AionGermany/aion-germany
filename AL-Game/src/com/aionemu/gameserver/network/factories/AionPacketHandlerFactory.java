@@ -265,7 +265,6 @@ public class AionPacketHandlerFactory {
 		// // /////////////////// NEW 4.9 //////////////////////
 		addPacket(new CM_EXPAND_CUBE(0x1C7, State.IN_GAME)); // 5.4 EU
 		//addPacket(new CM_INTRUDER_SCAN(0x18C, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_ABYSS_LANDING(0x107, State.IN_GAME)); // 5.4
 
 		// // /////////////////// SHUGO SWEEP/LUCKY DICE //////////////////////
 		addPacket(new CM_SHUGO_SWEEP(0x1D6, State.IN_GAME)); //5.8 EU

@@ -36,7 +36,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_WINDSTREAM_ANNOUNCE;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
-import com.aionemu.gameserver.services.AbyssLandingService;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.FastTrackService;
 import com.aionemu.gameserver.services.SiegeService;
@@ -151,8 +150,6 @@ public class CM_LEVEL_READY extends AionClientPacket {
 		TerritoryService.getInstance().onEnterWorld(activePlayer);
 		// Base 4.3
 		BaseService.getInstance().onEnterBaseWorld(activePlayer);
-		// Abyss Landing 4.9.1
-		AbyssLandingService.getInstance().onEnterWorld(activePlayer);
 		activePlayer.getEffectController().updatePlayerEffectIcons();
 		sendPacket(SM_CUBE_UPDATE.cubeSize(StorageType.CUBE, activePlayer));
 		TeleportService2.highdaevaTransformation(activePlayer);

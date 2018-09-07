@@ -51,7 +51,6 @@ import com.aionemu.gameserver.model.gameobjects.player.QuestStateList;
 import com.aionemu.gameserver.model.gameobjects.player.RewardType;
 import com.aionemu.gameserver.model.gameobjects.player.npcFaction.NpcFaction;
 import com.aionemu.gameserver.model.items.ItemId;
-import com.aionemu.gameserver.model.landing.LandingPointsEnum;
 import com.aionemu.gameserver.model.skill.PlayerSkillEntry;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 import com.aionemu.gameserver.model.team2.common.legacy.LootRuleType;
@@ -392,16 +391,6 @@ public final class QuestService {
 		}
 		if (rewards.getRewardGloryPoint() != null) {
 			AbyssPointsService.addGp(player, (int) (player.getRates().getQuestApRate() * rewards.getRewardGloryPoint()));
-		}
-		// Abyss Landing 4.9.1
-		if (rewards.getRewardAbyssOpPoint() != null) {
-			AbyssLandingService.getInstance().AnnounceToPoints(player, null, null, rewards.getRewardAbyssOpPoint(), LandingPointsEnum.QUEST);
-			if (player.getRace() == Race.ASMODIANS) {
-				AbyssLandingService.getInstance().updateHarbingerLanding(rewards.getRewardAbyssOpPoint(), LandingPointsEnum.QUEST, true);
-			}
-			if (player.getRace() == Race.ELYOS) {
-				AbyssLandingService.getInstance().updateRedemptionLanding(rewards.getRewardAbyssOpPoint(), LandingPointsEnum.QUEST, true);
-			}
 		}
 		// Growth Energy 5.x
 		if (rewards.getExpBoost() != null) {
