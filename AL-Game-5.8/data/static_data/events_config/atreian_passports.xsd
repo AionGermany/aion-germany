@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="atreian_passports">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="atreian_passport" type="AtreianPassport" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="AtreianPassport">
+		<xs:sequence>
+            <xs:element name="atreian_passport_reward" type="AtreianPassportRewards" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+		<xs:attribute name="id" use="required" type="xs:int"/>
+        <xs:attribute name="name" use="required" type="xs:string"/>
+        <xs:attribute name="active" use="required" type="xs:int"/>
+        <xs:attribute name="attend_type" use="required" type="xs:string"/>
+		<xs:attribute name="attend_num" type="xs:int"/>
+		<xs:attribute name="period_start" type="xs:dateTime" use="required"/>
+        <xs:attribute name="period_end" type="xs:dateTime" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="AtreianPassportRewards">
+        <xs:attribute name="reward_item_num" use="required" type="xs:int"/>
+        <xs:attribute name="reward_item_count" use="required" type="xs:int"/>
+        <xs:attribute name="reward_item" use="required" type="xs:int"/>
+        <xs:attribute name="name" use="required"/>
+        <xs:attribute name="reward_permit_level" type="xs:int"/>
+    </xs:complexType>
+    <xs:simpleType name="AttendType">
+        <xs:restriction base="xs:string">
+			<xs:enumeration value="BASIC"/>
+            <xs:enumeration value="ANNIVERSARY"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="motion_times" type="motionData"/>
+    <xs:complexType name="motionData">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="motion_time" type="MotionTime" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="MotionTime">
+        <xs:sequence>
+            <xs:element name="am" type="Times" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="af" type="Times" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="em" type="Times" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="ef" type="Times" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="Times">
+        <xs:attribute name="times" type="xs:string" use="required"/>
+    </xs:complexType>
+</xs:schema>

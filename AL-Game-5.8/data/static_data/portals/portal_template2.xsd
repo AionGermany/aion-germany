@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="portal_templates2">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="portal_use" type="PortalUse" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="portal_dialog" type="PortalDialog" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="portal_scroll" type="PortalScroll" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PortalUse">
+        <xs:sequence>
+            <xs:element name="portal_path" type="PortalPath" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="npc_id" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="PortalDialog">
+        <xs:sequence>
+            <xs:element name="portal_path" type="PortalPath" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="npc_id" type="xs:int"/>
+        <xs:attribute name="teleport_dialog_id" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="PortalScroll">
+        <xs:sequence>
+            <xs:element name="portal_path" type="PortalPath" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="PortalPath">
+        <xs:sequence>
+            <xs:element name="portal_req" type="PortalReq" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="dialog" type="xs:int"/>
+        <xs:attribute name="loc_id" type="xs:int"/>
+        <xs:attribute name="player_count" type="xs:int"/>
+        <xs:attribute name="instance" type="xs:boolean" default="false"/>
+        <xs:attribute name="siege_id" type="xs:int"/>
+        <xs:attribute name="race" type="Race" default="PC_ALL"/>
+        <xs:attribute name="err_group" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="PortalReq">
+        <xs:sequence>
+            <xs:element name="quest_req" type="QuestReq" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="item_req" type="ItemReq" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="min_level" type="xs:int"/>
+        <xs:attribute name="max_level" type="xs:int" default="65"/>
+        <xs:attribute name="kinah_req" type="xs:int"/>
+        <xs:attribute name="title_id" type="xs:int"/>
+        <xs:attribute name="err_level" type="xs:int"/>
+        <xs:attribute name="legion_req" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:complexType name="QuestReq">
+        <xs:attribute name="quest_id" type="xs:int"/>
+        <xs:attribute name="quest_step" type="xs:int"/>
+        <xs:attribute name="err_quest" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="ItemReq">
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="item_count" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

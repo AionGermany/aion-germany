@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="player_experience_table">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="exp" type="ExpItem" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ExpItem">
+		<xs:attribute name="level" type="xs:int" use="required"/>
+		<xs:attribute name="exp" type="xs:long" use="required"/>
+		<xs:attribute name="cp" type="xs:int" use="optional" default="0"/>
+		<xs:attribute name="cp_lvlup" type="xs:int" use="optional" default="0"/>
+		<xs:attribute name="feverpoint_boost" type="xs:long" use="optional" default="0"/>
+		<xs:attribute name="feverpoint_max" type="xs:long" use="optional" default="0"/>
+	</xs:complexType>
+</xs:schema>

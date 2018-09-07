@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+	<npc_drop npc_id="233740">
+		<drop_group name="KINAH" use_category="true">
+			<drop item_id="182400001" chance="11.55" min_amount="100000" max_amount="150000" no_reduce="false" eachmember="false" />
+		</drop_group>
+		<drop_group name="MEDAL" use_category="true" race="PC_ALL">
+			<drop item_id="186000238" chance="20" min_amount="1" max_amount="1" no_reduce="false" eachmember="true" />
+		</drop_group>
+		<drop_group name="NAMED_CHEST" use_category="true" race="PC_ALL">
+			<drop item_id="188053083" chance="1.92" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tempering Solution Chest"/>
+			<drop item_id="188053023" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="true" />
+        </drop_group>
+		<drop_group name="NAMED_ARMORS" use_category="true">
+			<drop item_id="188052827" chance="100.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="true"/>
+		</drop_group>
+		<drop_group name="NAMED_SUPPLY" use_category="true">
+			<drop item_id="188052823" chance="2.53" min_amount="1" max_amount="1" no_reduce="false" eachmember="true" name="Illuminary Obelisk Supply Chest"/>
+		</drop_group>
+		<drop_group name="NAMED_WINGS" use_category="true" race="PC_ALL">
+			<drop item_id="187000130" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"/>
+			<drop item_id="187000129" chance="0.05" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"/>
+        </drop_group>
+	</npc_drop>
+	<npc_drop npc_id="730884">
+		<drop_group name="NAMED_OBJET" use_category="true">
+			<drop item_id="164000289" chance="100.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"/>
+		</drop_group>
+	</npc_drop>
+	<npc_drop npc_id="730885">
+		<drop_group name="NAMED_OBJET" use_category="true">
+			<drop item_id="164000290" chance="100.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false"/>
+		</drop_group>
+	</npc_drop>
+</npc_drops>

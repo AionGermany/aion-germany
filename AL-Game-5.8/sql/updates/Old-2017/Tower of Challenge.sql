@@ -1,0 +1,1 @@
+ALTER TABLE `players` ADD COLUMN toc_floor int(11) NOT NULL DEFAULT '0' AFTER `luna_consume`;

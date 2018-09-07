@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+	<!--
+		[BEGIN] SUMMARY
+			16941 [XML] Chaos, Not Cookies
+			16942 [SCRIPT] Foundry Finds
+			26941 [XML] The Belsagos Saga
+			26942 [SCRIPT] A Jump Ahead
+		[END] SUMMARY
+	-->
+	<!-- COLLECTING QUESTS --> 
+	<!-- MONSTER HUNT QUESTS -->
+	<monster_hunt id="16941" start_npc_ids="206361" end_npc_ids="802350">	
+		<monster var="0" npc_ids="234990 233898 234991" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="26941" start_npc_ids="206362" end_npc_ids="802353">	
+		<monster var="0" npc_ids="234990 233898 234991" end_var="1"/>
+	</monster_hunt>
+</quest_scripts>

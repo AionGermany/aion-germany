@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+    <xs:element name="dopings">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="doping" type="dope" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="dope">
+        <xs:attribute name="id" type="xs:short"/>
+        <xs:attribute name="usedrink" type="xs:boolean"/>
+        <xs:attribute name="usefood" type="xs:boolean"/>
+        <xs:attribute name="usescroll" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

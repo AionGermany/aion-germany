@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 21:29 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               18930 [SCRIPT] [Instanced Zone/Group] Battle against the Ashunatal Dredgion
+               18931 [XML] [Instanced Zone/Daily/Group] Conquest of the Weapons of the Ashunatal Dredgion
+               18932 [SCRIPT] [Instanced Zone/Daily/Group] Battle against the Captain of the Dredgion
+               28930 [SCRIPT] [Instanced Zone/Group] Battle against the Ashunatal Dredgion
+               28931 [XML] [Instanced Zone/Daily/Group] Weapon of the Ashunatal Dredgion
+               28932 [SCRIPT] [Instanced Zone/Daily/Group] Battle against the Captain
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="18931" start_npc_ids="806259" end_npc_ids="806258" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <item_collecting id="28931" start_npc_ids="806261" end_npc_ids="806260" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

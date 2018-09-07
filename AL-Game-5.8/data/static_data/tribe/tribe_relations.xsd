@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="tribe_relations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="tribe" type="Tribe" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Tribe">
+        <xs:all>
+            <xs:element name="aggro" type="TribeListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="hostile" type="TribeListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="friend" type="TribeListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="neutral" type="TribeListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="support" type="TribeListType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="none" type="TribeListType" minOccurs="0" maxOccurs="1"/>
+        </xs:all>
+        <xs:attribute name="base" type="TribeClass"/>
+        <xs:attribute name="name" type="TribeClass" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="TribeListType">
+        <xs:list itemType="TribeClass"/>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../stats/stats.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="gatherable_templates" type="gatherableTemplates"/>
+    <xs:complexType name="gatherableTemplates">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="gatherable_template" type="gatherableTemplate" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="gatherableTemplate">
+        <xs:sequence>
+            <xs:element name="materials" type="Materials" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="exmaterials" type="Exmaterials" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="aerialAdj" type="xs:int"/>
+        <xs:attribute name="failureAdj" type="xs:int"/>
+        <xs:attribute name="successAdj" type="xs:int"/>
+        <xs:attribute name="harvestSkill" type="xs:int"/>
+        <xs:attribute name="skillLevel" type="xs:int"/>
+        <xs:attribute name="harvestCount" type="xs:int"/>
+        <xs:attribute name="sourceType" type="xs:string"/>
+        <xs:attribute name="nameId" type="xs:int"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="desc" type="xs:string"/>
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="captcha" type="xs:int"/>
+        <xs:attribute name="lvlLimit" type="xs:int"/>
+        <xs:attribute name="reqItem" type="xs:int"/>
+        <xs:attribute name="reqItemNameId" type="xs:int"/>
+        <xs:attribute name="checkType" type="xs:int"/>
+        <xs:attribute name="eraseValue" type="xs:int"/>
+    </xs:complexType>
+    <xs:simpleType name="gatherableId">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="400000"/>
+            <xs:maxInclusive value="499999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Materials">
+        <xs:sequence>
+            <xs:element name="material" type="Material" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Exmaterials">
+        <xs:sequence>
+            <xs:element name="material" type="Material" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Material">
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="itemid" type="xs:int"/>
+        <xs:attribute name="nameid" type="xs:int"/>
+        <xs:attribute name="rate" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+    <npc_drop npc_id="248556">
+        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="182216245" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="true" name="Magic Pumpkin" />
+        </drop_group>
+        <drop_group name="OTHER_UNIQUE" use_category="true" race="PC_ALL">
+            <drop item_id="188058252" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="true" name="Pumpkin King’s Bundle" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="248557">
+        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="182216245" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Magic Pumpkin" />
+        </drop_group>
+        <drop_group name="OTHER_UNIQUE" use_category="true" race="PC_ALL">
+            <drop item_id="188058252" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pumpkin King’s Bundle" />
+        </drop_group>
+    </npc_drop>
+</npc_drops>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="staticdoor_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="world" type="World" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="World">
+        <xs:sequence>
+            <xs:element name="staticdoor" type="StaticDoor" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="world" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="StaticDoor">
+        <xs:sequence>
+            <xs:element name="box" type="StaticDoorBounds" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="DoorType" default="DOOR"/>
+        <xs:attribute name="x" type="xs:float"/>
+        <xs:attribute name="y" type="xs:float"/>
+        <xs:attribute name="z" type="xs:float"/>
+        <xs:attribute name="doorid" type="xs:int"/>
+        <xs:attribute name="keyid" type="xs:int"/>
+        <xs:attribute name="mesh" type="xs:string"/>
+        <xs:attribute name="state" type="xs:string"/>
+    </xs:complexType>
+    <xs:simpleType name="DoorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DOOR"/>
+            <xs:enumeration value="ABYSS"/>
+            <xs:enumeration value="HOUSE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="StaticDoorBounds">
+        <xs:attribute name="x1" type="xs:float" use="required"/>
+        <xs:attribute name="y1" type="xs:float" use="required"/>
+        <xs:attribute name="z1" type="xs:float" use="required"/>
+        <xs:attribute name="x2" type="xs:float" use="required"/>
+        <xs:attribute name="y2" type="xs:float" use="required"/>
+        <xs:attribute name="z2" type="xs:float" use="required"/>
+    </xs:complexType>
+</xs:schema>

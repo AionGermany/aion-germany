@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    17100 [XML] [Daily] Village's Old Grudge
+                    17101 [XML] [Daily] Blessed Fountain Components Construction
+                    17102 [XML] [Daily] Crafting Metal for the Bell Tower
+                    17103 [XML] [Daily] What is Needed for the Flowerbed
+                    17104 [XML] [Daily] Light that Grows Plants
+                    17105 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17106 [XML] [Daily] Appearance of the Shulack Bandits
+                    17107 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17108 [XML] [Daily] Appearance of the Shulack Bandits
+                    17109 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17110 [XML] [Daily] Appearance of the Shulack Bandits
+                    17111 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17112 [XML] [Daily] Appearance of the Shulack Bandits
+                    17113 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17114 [XML] [Daily] Appearance of the Shulack Bandits
+                    17115 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17116 [XML] [Daily] Appearance of the Shulack Bandits
+                    17117 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17118 [XML] [Daily] Appearance of the Shulack Bandits
+                    17119 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17120 [XML] [Daily] Appearance of the Shulack Bandits
+                    17121 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17122 [XML] [Daily] Appearance of the Shulack Bandits
+                    17123 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17124 [XML] [Daily] Appearance of the Shulack Bandits
+                    17125 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17126 [XML] [Daily] Appearance of the Shulack Bandits
+                    17127 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17128 [XML] [Daily] Appearance of the Shulack Bandits
+                    17129 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17130 [XML] [Daily] Appearance of the Shulack Bandits
+                    17131 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17132 [XML] [Daily] Appearance of the Shulack Bandits
+                    17133 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17134 [XML] [Daily] Appearance of the Shulack Bandits
+                    17135 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17137 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17138 [XML] [Daily] Appearance of the Shulack Bandits
+                    17139 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17140 [XML] [Daily] Appearance of the Shulack Bandits
+                    17141 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17142 [XML] [Daily] Appearance of the Shulack Bandits
+                    17143 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17144 [XML] [Daily] Appearance of the Shulack Bandits
+                    17145 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17146 [XML] [Daily] Appearance of the Shulack Bandits
+                    17147 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17148 [XML] [Daily] Appearance of the Shulack Bandits
+                    17149 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17150 [XML] [Daily] Appearance of the Shulack Bandits
+                    17151 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17152 [XML] [Daily] Appearance of the Shulack Bandits
+                    17153 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    17154 [XML] [Daily] Appearance of the Shulack Bandits
+                    27100 [XML] [Daily] Village's Old Grudge
+                    27101 [XML] [Daily] Blessed Fountain Components Construction
+                    27102 [XML] [Daily] Crafting Metal for the Bell Tower
+                    27103 [XML] [Daily] What is Needed for the Flowerbed
+                    27104 [XML] [Daily] Light that Grows Plants
+                    27105 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27106 [XML] [Daily] Appearance of the Shulack Bandits
+                    27107 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27108 [XML] [Daily] Appearance of the Shulack Bandits
+                    27109 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27110 [XML] [Daily] Appearance of the Shulack Bandits
+                    27111 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27112 [XML] [Daily] Appearance of the Shulack Bandits
+                    27113 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27114 [XML] [Daily] Appearance of the Shulack Bandits
+                    27115 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27116 [XML] [Daily] Appearance of the Shulack Bandits
+                    27117 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27118 [XML] [Daily] Appearance of the Shulack Bandits
+                    27119 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27120 [XML] [Daily] Appearance of the Shulack Bandits
+                    27121 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27122 [XML] [Daily] Appearance of the Shulack Bandits
+                    27123 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27124 [XML] [Daily] Appearance of the Shulack Bandits
+                    27125 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27126 [XML] [Daily] Appearance of the Shulack Bandits
+                    27127 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27128 [XML] [Daily] Appearance of the Shulack Bandits
+                    27129 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27130 [XML] [Daily] Appearance of the Shulack Bandits
+                    27131 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27132 [XML] [Daily] Appearance of the Shulack Bandits
+                    27133 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27134 [XML] [Daily] Appearance of the Shulack Bandits
+                    27135 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27137 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27138 [XML] [Daily] Appearance of the Shulack Bandits
+                    27139 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27140 [XML] [Daily] Appearance of the Shulack Bandits
+                    27141 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27142 [XML] [Daily] Appearance of the Shulack Bandits
+                    27143 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27144 [XML] [Daily] Appearance of the Shulack Bandits
+                    27145 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27146 [XML] [Daily] Appearance of the Shulack Bandits
+                    27147 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27148 [XML] [Daily] Appearance of the Shulack Bandits
+                    27149 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27150 [XML] [Daily] Appearance of the Shulack Bandits
+                    27151 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27152 [XML] [Daily] Appearance of the Shulack Bandits
+                    27153 [XML] [Daily] The Flower's Essence that Bloomed in the Flowerbed
+                    27154 [XML] [Daily] Appearance of the Shulack Bandits
+            [END] SUMMARY
+    -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="17100" start_npc_ids="0" end_npc_ids="831222"/>
+    <item_collecting id="17101" start_npc_ids="0" end_npc_ids="831222"/>
+    <item_collecting id="17102" start_npc_ids="0" end_npc_ids="831222"/>
+    <item_collecting id="17103" start_npc_ids="0" end_npc_ids="831222"/>
+    <item_collecting id="17104" start_npc_ids="0" end_npc_ids="831222"/>
+    <item_collecting id="17105" start_npc_ids="0" end_npc_ids="831254"/>
+    <item_collecting id="17107" start_npc_ids="0" end_npc_ids="831255"/>
+    <item_collecting id="17109" start_npc_ids="0" end_npc_ids="831256"/>
+    <item_collecting id="17111" start_npc_ids="0" end_npc_ids="831257"/>
+    <item_collecting id="17113" start_npc_ids="0" end_npc_ids="831258"/>
+    <item_collecting id="17115" start_npc_ids="0" end_npc_ids="831259"/>
+    <item_collecting id="17117" start_npc_ids="0" end_npc_ids="831260"/>
+    <item_collecting id="17119" start_npc_ids="0" end_npc_ids="831261"/>
+    <item_collecting id="17121" start_npc_ids="0" end_npc_ids="831262"/>
+    <item_collecting id="17123" start_npc_ids="0" end_npc_ids="831263"/>
+    <item_collecting id="17125" start_npc_ids="0" end_npc_ids="831264"/>
+    <item_collecting id="17127" start_npc_ids="0" end_npc_ids="831265"/>
+    <item_collecting id="17129" start_npc_ids="0" end_npc_ids="831266"/>
+    <item_collecting id="17131" start_npc_ids="0" end_npc_ids="831267"/>
+    <item_collecting id="17133" start_npc_ids="0" end_npc_ids="831268"/>
+    <item_collecting id="17135" start_npc_ids="0" end_npc_ids="831269"/>
+    <item_collecting id="17137" start_npc_ids="0" end_npc_ids="831270"/>
+    <item_collecting id="17139" start_npc_ids="0" end_npc_ids="831271"/>
+    <item_collecting id="17141" start_npc_ids="0" end_npc_ids="831272"/>
+    <item_collecting id="17143" start_npc_ids="0" end_npc_ids="831273"/>
+    <item_collecting id="17145" start_npc_ids="0" end_npc_ids="831274"/>
+    <item_collecting id="17147" start_npc_ids="0" end_npc_ids="831275"/>
+    <item_collecting id="17149" start_npc_ids="0" end_npc_ids="831276"/>
+    <item_collecting id="17151" start_npc_ids="0" end_npc_ids="831277"/>
+    <item_collecting id="17153" start_npc_ids="0" end_npc_ids="831278"/>
+    <item_collecting id="27100" start_npc_ids="0" end_npc_ids="831247"/>
+    <item_collecting id="27101" start_npc_ids="0" end_npc_ids="831247"/>
+    <item_collecting id="27102" start_npc_ids="0" end_npc_ids="831247"/>
+    <item_collecting id="27103" start_npc_ids="0" end_npc_ids="831247"/>
+    <item_collecting id="27104" start_npc_ids="0" end_npc_ids="831247"/>
+    <item_collecting id="27105" start_npc_ids="0" end_npc_ids="831279"/>
+    <item_collecting id="27107" start_npc_ids="0" end_npc_ids="831280"/>
+    <item_collecting id="27109" start_npc_ids="0" end_npc_ids="831281"/>
+    <item_collecting id="27111" start_npc_ids="0" end_npc_ids="831282"/>
+    <item_collecting id="27113" start_npc_ids="0" end_npc_ids="831283"/>
+    <item_collecting id="27115" start_npc_ids="0" end_npc_ids="831284"/>
+    <item_collecting id="27117" start_npc_ids="0" end_npc_ids="831285"/>
+    <item_collecting id="27119" start_npc_ids="0" end_npc_ids="831286"/>
+    <item_collecting id="27121" start_npc_ids="0" end_npc_ids="831287"/>
+    <item_collecting id="27123" start_npc_ids="0" end_npc_ids="831288"/>
+    <item_collecting id="27125" start_npc_ids="0" end_npc_ids="831289"/>
+    <item_collecting id="27127" start_npc_ids="0" end_npc_ids="831290"/>
+    <item_collecting id="27129" start_npc_ids="0" end_npc_ids="831291"/>
+    <item_collecting id="27131" start_npc_ids="0" end_npc_ids="831292"/>
+    <item_collecting id="27133" start_npc_ids="0" end_npc_ids="831293"/>
+    <item_collecting id="27135" start_npc_ids="0" end_npc_ids="831294"/>
+    <item_collecting id="27137" start_npc_ids="0" end_npc_ids="831295"/>
+    <item_collecting id="27139" start_npc_ids="0" end_npc_ids="831296"/>
+    <item_collecting id="27141" start_npc_ids="0" end_npc_ids="831297"/>
+    <item_collecting id="27143" start_npc_ids="0" end_npc_ids="831298"/>
+    <item_collecting id="27145" start_npc_ids="0" end_npc_ids="831299"/>
+    <item_collecting id="27147" start_npc_ids="0" end_npc_ids="831300"/>
+    <item_collecting id="27149" start_npc_ids="0" end_npc_ids="831301"/>
+    <item_collecting id="27151" start_npc_ids="0" end_npc_ids="831302"/>
+    <item_collecting id="27153" start_npc_ids="0" end_npc_ids="831303"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="27106" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27108" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27110" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27112" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27114" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27116" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27118" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27120" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27122" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27124" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27126" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27128" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27130" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27132" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27134" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27136" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27138" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27140" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27142" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27144" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27146" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27148" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27150" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27152" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="27154" start_npc_ids="831234">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17106" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17108" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17110" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17112" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17114" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17116" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17118" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17120" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17122" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17124" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17126" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17128" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17130" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17132" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17134" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17136" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17138" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17140" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17142" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17144" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17146" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17148" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17150" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17152" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="17154" start_npc_ids="831209">
+        <monster var="0" npc_ids="219501 219600" end_var="3"/>
+    </monster_hunt>
+</quest_scripts>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="events_window">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="event_window" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence/>
+                        <xs:attribute name="id" type="xs:int" use="required"/>
+                        <xs:attribute name="item" type="xs:int" use="required"/>
+                        <xs:attribute name="count" type="xs:int" use="required"/>
+						<xs:attribute name="period_start" type="xs:dateTime" use="required"/>
+                        <xs:attribute name="period_end" type="xs:dateTime" use="required"/>
+                        <xs:attribute name="remaining_time" type="xs:int"/>
+                        <xs:attribute name="min_level" type="xs:int"/>
+                        <xs:attribute name="max_level" type="xs:int"/>
+                        <xs:attribute name="dailyMaxCount" type="xs:int"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

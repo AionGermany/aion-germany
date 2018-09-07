@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="world_buffs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="world_buff_map" type="WorldBuffMap" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="WorldBuffMap">
+        <xs:choice>
+            <xs:element name="world_buff" type="WorldBuff" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:choice>
+        <xs:attribute name="id" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="WorldBuff">
+        <xs:attribute name="skill_ids" type="IntListType"/>
+        <xs:attribute name="duration" type="xs:int"/>
+        <xs:attribute name="no_remove" type="xs:boolean"/>
+        <xs:attribute name="type" type="WorldBuffType"/>
+        <xs:attribute name="npc_tribe" type="StringListType"/>
+        <xs:attribute name="npc_ids" type="IntListType"/>
+    </xs:complexType>
+
+    <xs:simpleType name="WorldBuffType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PC"/>
+            <xs:enumeration value="NPC"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

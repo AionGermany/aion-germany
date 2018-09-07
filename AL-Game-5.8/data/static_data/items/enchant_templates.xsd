@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../modifiers.xsd"/>
+    <xs:element name="enchant_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="enchant_template" type="ItemEnchantTemplate" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ItemEnchantTemplate">
+        <xs:sequence>
+            <xs:element name="item_enchant" type="ItemEnchantBonus" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="ItemEnchantBonus">
+        <xs:sequence>
+            <xs:element name="modifiers" type="Modifiers" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="level" type="xs:int" use="required"/>
+    </xs:complexType>
+</xs:schema>

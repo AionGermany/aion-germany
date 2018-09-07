@@ -1,0 +1,1 @@
+ALTER TABLE `players` ADD COLUMN minion_function_time timestamp NULL DEFAULT NULL AFTER `minion_skill_points`;

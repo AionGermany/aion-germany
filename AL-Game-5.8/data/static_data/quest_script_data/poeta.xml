@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-01-10 08:59 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    1000 [SCRIPT] Prologue
+                    1001 [SCRIPT] The Kerubim Threat
+                    1002 [SCRIPT] Request of the Elim
+                    1003 [SCRIPT] Illegal Logging
+                    1004 [SCRIPT] Neutralizing Odium
+                    1005 [SCRIPT] Barring the Gate
+                    1100 [SCRIPT] Kalio's Call
+                    1101 [XML] Sleeping on the Job
+                    1102 [XML] Kerubar Hunt
+                    1103 [XML] Grain Thieves
+                    1104 [XML] Report to Polinia
+                    1105 [XML] The Snuffler Headache
+                    1106 [XML] Helping Kales
+                    1107 [SCRIPT] The Lost Axe
+                    1108 [XML] Uno's Ingredients
+                    1109 [XML] Abandoned Goods
+                    1110 [XML] A Book for Namus
+                    1111 [SCRIPT] Insomnia Medicine
+                    1112 [XML] To Fish in Peace
+                    1113 [XML] Mushroom Thieves
+                    1114 [SCRIPT] The Nymph's Gown
+                    1115 [XML] The Elim's Message
+                    1116 [XML] Pernos's Robe
+                    1117 [XML] An item that can light up the night
+                    1118 [XML] Polinia's Ointment
+                    1119 [XML] A Taste of Namus's Medicine
+                    1120 [XML] Thinning out Worgs
+                    1121 [XML] Oz's Prayer Beads
+                    1122 [SCRIPT] Delivering Pernos's Robe
+                    1123 [SCRIPT] Where's Tutty?
+                    1124 [XML] Avenging Tutty
+                    1125 [XML] Suspicious Ore
+                    1126 [XML] Mushroom Research
+                    1127 [SCRIPT] Ancient Cube
+                    1129 [XML] Scouting Timolia Mine
+                    1205 [SCRIPT] A New Skill
+                    1206 [XML] Collecting Aria
+                    1207 [XML] Tula's Music Box
+                    1230 [SCRIPT] Message to Madeline
+                    1231 [SCRIPT] A House Guest
+                    9612 [UNUSED] [Test] Talk
+                    9613 [UNUSED] [Test] Hunt
+                    9614 [UNUSED] [Test] CollectItem
+                    80621 [TODO] [Event] Just One New Thing
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to start_npc_ids="203049" end_npc_ids="203057" id="1101"/>
+    <report_to start_npc_ids="203057" end_npc_ids="203059" id="1104"/>
+    <report_to start_npc_ids="203050" end_npc_ids="203061" item_id="182200203" id="1106"/>
+    <report_to start_npc_ids="203065" end_npc_ids="203075" item_id="182200206" id="1110"/>
+    <report_to start_npc_ids="203059" end_npc_ids="203070" item_id="0" id="1118"/>
+    <report_to start_npc_ids="203075" end_npc_ids="203080" item_id="182200225" id="1119"/>
+	<report_to_many id="1115" start_npc_ids="203075" end_npc_ids="203058">
+	    <npc_infos var="0" npc_id="203075" quest_dialog="1011"/>
+        <npc_infos var="0" npc_id="203072" quest_dialog="1352" close_dialog="10000"/>
+        <npc_infos var="1" npc_id="203058" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting start_npc_ids="203057" action_item_ids="700105" id="1103"/>
+    <item_collecting start_npc_ids="203050" id="1105"/>
+    <item_collecting start_npc_ids="203061" end_npc_ids="203072" id="1108"/>
+    <item_collecting start_npc_ids="798007" action_item_ids="700106" id="1109"/>
+    <item_collecting start_npc_ids="203060" id="1116"/>
+    <item_collecting start_npc_ids="203074" id="1117"/>
+    <item_collecting start_npc_ids="203081" id="1121"/>
+    <item_collecting start_npc_ids="790001" id="1124"/>
+    <item_collecting start_npc_ids="203085" action_item_ids="700107" end_npc_ids="203067" id="1125"/>
+    <item_collecting start_npc_ids="203079" id="1126"/>
+    <item_collecting start_npc_ids="203085" end_npc_ids="203067" id="1129"/>
+    <item_collecting start_npc_ids="203059" id="1206"/>
+    <item_collecting start_npc_ids="203082" end_npc_ids="203085" id="1207"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt start_npc_ids="203057" id="1102">
+        <monster npc_ids="210133 210134" var="0" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt start_npc_ids="203072" id="1112">
+        <monster npc_ids="210259 210260" var="0" end_var="5"/>
+        <monster npc_ids="210065 210066" var="1" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt start_npc_ids="203076" id="1113">
+        <monster npc_ids="210262 210675" var="0" end_var="8"/>
+    </monster_hunt>
+    <monster_hunt start_npc_ids="203082" id="1120">
+        <monster npc_ids="210142 210143" var="0" end_var="9"/>
+    </monster_hunt>
+</quest_scripts>

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-08-04 18:49 -->
+<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">
+	<walker_template route_id="lf6_npcpathlf6_design10" pool="1">
+        <routestep step="1" z="268.39624" y="2612.364" x="2063.6602"/>
+	    <routestep step="2" z="268.375" y="2620.0" x="2068.0"/>
+        <routestep step="3" z="268.625" y="2627.0" x="2067.0"/>
+        <routestep step="4" z="268.625" y="2632.0" x="2063.0"/>
+        <routestep step="5" z="268.625" y="2634.0" x="2059.0"/>
+        <routestep step="6" z="268.75" y="2630.0" x="2052.0"/>
+		<routestep step="7" z="268.625" y="2634.0" x="2059.0"/>
+		<routestep step="8" z="268.625" y="2632.0" x="2063.0"/>
+		<routestep step="9" z="268.625" y="2627.0" x="2067.0"/>
+		<routestep step="10" z="268.375" y="2620.0" x="2068.0"/>
+		<routestep step="11" z="268.39624" y="2612.364" x="2063.6602"/>
+	</walker_template>
+	<walker_template route_id="lf6_npcpathspot_npc_5.1" pool="1">
+        <routestep step="1" z="303.14252" y="325.39383" x="2130.769"/>
+        <routestep step="2" z="302.8125" y="333.0" x="2129.0"/>
+        <routestep step="3" z="302.75" y="341.0" x="2139.0"/>
+        <routestep step="4" z="302.75" y="339.0" x="2146.0"/>
+        <routestep step="5" z="302.7507" y="334.0" x="2147.0"/>
+		<routestep step="6" z="302.75" y="339.0" x="2146.0"/>
+		<routestep step="7" z="302.75" y="341.0" x="2139.0"/>
+		<routestep step="8" z="302.8125" y="333.0" x="2129.0"/>
+		<routestep step="9" z="303.14252" y="325.39383" x="2130.769"/>
+	</walker_template>
+	<walker_template route_id="lf6_npcpathspot_npc_5.2" pool="1">
+        <routestep step="1" z="349.625" y="392.47327" x="1367.485"/>
+        <routestep step="2" z="349.6875" y="390.0" x="1361.0"/>
+        <routestep step="3" z="349.69675" y="386.232" x="1349.1542"/>
+        <routestep step="4" z="349.625" y="380.0" x="1342.0"/>
+		<routestep step="5" z="349.69675" y="386.232" x="1349.1542"/>
+		<routestep step="6" z="349.6875" y="390.0" x="1361.0"/>
+		<routestep step="7" z="349.625" y="392.47327" x="1367.485"/>
+	</walker_template>
+	<walker_template route_id="lf6_npcpathlf6_npc_guard_5.11" pool="1">
+        <routestep step="1" z="337.36615" y="1378.0" x="1481.0"/>
+        <routestep step="2" z="337.36615" y="1386.0" x="1483.0"/>
+        <routestep step="3" z="337.36615" y="1390.0" x="1490.0"/>
+        <routestep step="4" z="337.36615" y="1396.0" x="1503.0"/>
+        <routestep step="5" z="337.36615" y="1401.0" x="1513.0"/>
+		<routestep step="6" z="337.36615" y="1396.0" x="1503.0"/>
+		<routestep step="7" z="337.36615" y="1390.0" x="1490.0"/>
+		<routestep step="8" z="337.36615" y="1386.0" x="1483.0"/>
+		<routestep step="9" z="337.36615" y="1378.0" x="1481.0"/>
+	</walker_template>
+	<walker_template route_id="lf6_npcpathlf6_npc_guard_5.12" pool="1">
+        <routestep step="1" z="336.66" y="1298.1075" x="1379.2212"/>
+        <routestep step="2" z="336.6528" y="1308.0" x="1383.0"/>
+        <routestep step="3" z="336.6504" y="1316.0" x="1389.0"/>
+        <routestep step="4" z="336.6761" y="1326.0" x="1403.0"/>
+		<routestep step="5" z="336.6504" y="1316.0" x="1389.0"/>
+		<routestep step="6" z="336.6528" y="1308.0" x="1383.0"/>
+		<routestep step="7" z="336.66" y="1298.1075" x="1379.2212"/>
+	</walker_template>
+	<walker_template route_id="lf6_npcpathlf6_npc_guard_5.13" pool="3" formation="SQUARE" rows="1,2">
+        <routestep step="1" z="336.67856" y="1311.7488" x="1407.0591"/>
+        <routestep step="2" z="336.67746" y="1332.6235" x="1428.5055"/>
+        <routestep step="3" z="336.6601" y="1341.1584" x="1460.6267"/>
+        <routestep step="4" z="336.6601" y="1327.9867" x="1485.6232"/>
+		<routestep step="5" z="336.6601" y="1341.1584" x="1460.6267"/>
+		<routestep step="6" z="336.67746" y="1332.6235" x="1428.5055"/>
+		<routestep step="7" z="336.67856" y="1311.7488" x="1407.0591"/>
+    </walker_template>
+	<walker_template route_id="lf6_npcpathlf6_npc_guard_5.14" pool="3" formation="SQUARE" rows="1,2">
+        <routestep step="1" z="336.6767" y="1258.1416" x="1429.785"/>
+        <routestep step="2" z="336.65952" y="1270.7382" x="1482.2665"/>
+        <routestep step="3" z="336.6601" y="1301.9373" x="1497.538"/>
+		<routestep step="4" z="336.65952" y="1270.7382" x="1482.2665"/>
+		<routestep step="5" z="336.6767" y="1258.1416" x="1429.785"/>
+    </walker_template>
+	<walker_template route_id="lf6_npcpathlf6_npc_guard_5.15" pool="3" formation="SQUARE" rows="1,2">
+        <routestep step="1" z="336.8048" y="1314.5734" x="1502.2151"/>
+        <routestep step="2" z="329.87506" y="1323.8918" x="1525.1849"/>
+        <routestep step="3" z="322.99585" y="1334.7657" x="1549.5249"/>
+        <routestep step="4" z="316.27225" y="1343.6442" x="1569.8214"/>
+		<routestep step="5" z="322.99585" y="1334.7657" x="1549.5249"/>
+		<routestep step="6" z="329.87506" y="1323.8918" x="1525.1849"/>
+		<routestep step="7" z="336.8048" y="1314.5734" x="1502.2151"/>
+    </walker_template>
+	<walker_template route_id="lf6_npcpathlf6_npc_guard_5.16" pool="3" formation="SQUARE" rows="1,2">
+        <routestep step="1" z="336.8048" y="1323.9708" x="1498.0767"/>
+        <routestep step="2" z="329.87506" y="1334.6161" x="1520.7142"/>
+        <routestep step="3" z="322.99585" y="1345.3812" x="1544.2264"/>
+        <routestep step="4" z="316.32135" y="1354.8152" x="1564.8586"/>
+		<routestep step="5" z="322.99585" y="1345.3812" x="1544.2264"/>
+		<routestep step="6" z="329.87506" y="1334.6161" x="1520.7142"/>
+		<routestep step="7" z="336.8048" y="1323.9708" x="1498.0767"/>
+    </walker_template>
+	<walker_template route_id="lf6_npcpathlf6_npc_guard_5.17" pool="1">
+        <routestep step="1" z="339.82892" y="1285.5996" x="1357.2849"/>
+        <routestep step="2" z="339.87473" y="1270.3969" x="1364.1604"/>
+        <routestep step="3" z="339.8418" y="1261.1993" x="1368.3363"/>
+		<routestep step="4" z="339.87473" y="1270.3969" x="1364.1604"/>
+		<routestep step="5" z="339.82892" y="1285.5996" x="1357.2849"/>
+    </walker_template>
+	<walker_template route_id="lf6_npcpathlf6_fobj_c1" pool="1">
+        <routestep step="1" z="227.75" y="1283.1295" x="2451.9526"/>
+        <routestep step="2" z="227.75" y="1284.8295" x="2446.9192"/>
+        <routestep step="3" z="227.75" y="1286.0" x="2443.0"/>
+        <routestep step="4" z="227.75" y="1288.0" x="2438.0"/>
+        <routestep step="5" z="227.75" y="1287.0" x="2433.0"/>
+        <routestep step="6" z="227.75" y="1284.0" x="2430.0"/>
+        <routestep step="7" z="227.75" y="1278.0" x="2427.0"/>
+		<routestep step="8" z="227.75" y="1284.0" x="2430.0"/>
+		<routestep step="9" z="227.75" y="1287.0" x="2433.0"/>
+		<routestep step="10" z="227.75" y="1288.0" x="2438.0"/>
+		<routestep step="11" z="227.75" y="1286.0" x="2443.0"/>
+		<routestep step="12" z="227.75" y="1284.8295" x="2446.9192"/>
+		<routestep step="13" z="227.75" y="1283.1295" x="2451.9526"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path52" pool="1">
+        <routestep step="1" x="170.53" y="1727.38" z="334.49"/>
+		<routestep step="2" x="174.94" y="1748.55" z="334.39"/>
+		<routestep step="3" x="187.01" y="1764.75" z="334.49"/>
+		<routestep step="4" x="202.22" y="1774.28" z="334.39"/>
+		<routestep step="5" x="222.08" y="1779.81" z="334.49"/>
+		<routestep step="6" x="239.58" y="1774.04" z="334.39"/>
+		<routestep step="7" x="253.96" y="1766.70" z="334.49"/>
+		<routestep step="8" x="266.48" y="1749.28" z="334.39"/>
+		<routestep step="9" x="271.45" y="1728.15" z="334.49"/>
+		<routestep step="10" x="266.85" y="1706.93" z="334.39"/>
+		<routestep step="11" x="256.75" y="1692.54" z="334.49"/>
+		<routestep step="12" x="240.83" y="1681.52" z="334.39"/>
+		<routestep step="13" x="220.62" y="1677.49" z="334.49"/>
+		<routestep step="14" x="200.82" y="1681.74" z="334.39"/>
+		<routestep step="15" x="186.25" y="1691.83" z="334.49"/>
+		<routestep step="16" x="175.37" y="1706.99" z="334.39"/>
+		<routestep step="17" x="170.48" y="1724.11" z="334.49"/>
+		<routestep step="18" x="170.48" y="1725.87" z="334.49"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path56" pool="1">
+        <routestep step="1" x="419.20" y="1706.74" z="310.61"/>
+        <routestep step="2" x="423.61" y="1727.91" z="310.51"/>
+        <routestep step="3" x="435.67" y="1744.12" z="310.61"/>
+        <routestep step="4" x="450.89" y="1753.65" z="310.51"/>
+        <routestep step="5" x="470.75" y="1759.17" z="310.61"/>
+        <routestep step="6" x="488.25" y="1753.41" z="310.51"/>
+        <routestep step="7" x="502.63" y="1746.07" z="310.61"/>
+        <routestep step="8" x="515.15" y="1728.65" z="310.51"/>
+        <routestep step="9" x="520.12" y="1707.51" z="310.61"/>
+        <routestep step="10" x="515.52" y="1686.30" z="310.51"/>
+        <routestep step="11" x="505.42" y="1671.91" z="310.61"/>
+        <routestep step="12" x="489.50" y="1660.89" z="310.51"/>
+        <routestep step="13" x="469.29" y="1656.85" z="310.61"/>
+        <routestep step="14" x="449.49" y="1661.10" z="310.51"/>
+        <routestep step="15" x="434.92" y="1671.20" z="310.61"/>
+        <routestep step="16" x="424.04" y="1686.35" z="310.51"/>
+        <routestep step="17" x="419.15" y="1703.47" z="310.61"/>
+        <routestep step="18" x="419.15" y="1705.23" z="310.61"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path75" pool="1">
+        <routestep step="1" x="446.17" y="1792.25" z="240.05"/>
+        <routestep step="2" x="426.32" y="1792.29" z="240.05"/>
+        <routestep step="3" x="418.29" y="1782.36" z="240.05"/>
+        <routestep step="4" x="421.28" y="1757.13" z="240.05"/>
+        <routestep step="5" x="438.45" y="1747.39" z="240.05"/>
+        <routestep step="6" x="459.73" y="1744.61" z="240.05"/>
+        <routestep step="7" x="475.61" y="1753.60" z="240.05"/>
+        <routestep step="8" x="475.61" y="1775.78" z="240.05"/>
+        <routestep step="9" x="462.01" y="1787.37" z="240.05"/>
+        <routestep step="10" x="448.02" y="1791.68" z="240.05"/>
+    </walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path72" pool="1">
+        <routestep step="1" x="430.30" y="1754.64" z="240.05"/>
+        <routestep step="2" x="410.45" y="1754.69" z="240.05"/>
+        <routestep step="3" x="402.42" y="1744.76" z="240.05"/>
+        <routestep step="4" x="405.41" y="1719.52" z="240.05"/>
+        <routestep step="5" x="422.58" y="1709.78" z="240.05"/>
+        <routestep step="6" x="443.86" y="1707.01" z="240.05"/>
+        <routestep step="7" x="459.74" y="1715.99" z="240.05"/>
+        <routestep step="8" x="459.74" y="1738.18" z="240.05"/>
+        <routestep step="9" x="446.14" y="1749.77" z="240.05"/>
+        <routestep step="10" x="432.15" y="1754.08" z="240.05"/>
+    </walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path59" pool="1">
+        <routestep step="1" x="564.77" y="1842.81" z="328.55"/>
+        <routestep step="2" x="569.18" y="1863.98" z="328.45"/>
+        <routestep step="3" x="581.24" y="1880.18" z="328.55"/>
+        <routestep step="4" x="596.46" y="1889.71" z="328.45"/>
+        <routestep step="5" x="616.31" y="1895.24" z="328.55"/>
+        <routestep step="6" x="633.82" y="1889.47" z="328.45"/>
+        <routestep step="7" x="648.20" y="1882.13" z="328.55"/>
+        <routestep step="8" x="660.72" y="1864.71" z="328.45"/>
+        <routestep step="9" x="665.69" y="1843.57" z="328.55"/>
+        <routestep step="10" x="661.09" y="1822.36" z="328.45"/>
+        <routestep step="11" x="650.99" y="1807.97" z="328.55"/>
+        <routestep step="12" x="635.07" y="1796.95" z="328.45"/>
+        <routestep step="13" x="614.86" y="1792.92" z="328.55"/>
+        <routestep step="14" x="595.06" y="1797.17" z="328.45"/>
+        <routestep step="15" x="580.49" y="1807.26" z="328.55"/>
+        <routestep step="16" x="569.61" y="1822.42" z="328.45"/>
+        <routestep step="17" x="564.72" y="1839.54" z="328.55"/>
+        <routestep step="18" x="564.72" y="1841.30" z="328.55"/>
+    </walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path45" pool="1">
+        <routestep step="1" x="629.20" y="1838.00" z="310.58"/>
+        <routestep step="2" x="633.61" y="1859.17" z="310.48"/>
+        <routestep step="3" x="645.67" y="1875.37" z="310.58"/>
+        <routestep step="4" x="660.89" y="1884.90" z="310.48"/>
+        <routestep step="5" x="680.75" y="1890.43" z="310.58"/>
+        <routestep step="6" x="698.25" y="1884.66" z="310.48"/>
+        <routestep step="7" x="712.63" y="1877.32" z="310.58"/>
+        <routestep step="8" x="725.15" y="1859.91" z="310.48"/>
+        <routestep step="9" x="730.12" y="1838.77" z="310.58"/>
+        <routestep step="10" x="725.52" y="1817.55" z="310.48"/>
+        <routestep step="11" x="715.42" y="1803.16" z="310.58"/>
+        <routestep step="12" x="699.50" y="1792.15" z="310.48"/>
+        <routestep step="13" x="679.29" y="1788.11" z="310.58"/>
+        <routestep step="14" x="659.49" y="1792.36" z="310.48"/>
+        <routestep step="15" x="644.92" y="1802.46" z="310.58"/>
+        <routestep step="16" x="634.04" y="1817.61" z="310.48"/>
+        <routestep step="17" x="629.15" y="1834.73" z="310.58"/>
+        <routestep step="18" x="629.15" y="1836.49" z="310.58"/>
+    </walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path58" pool="1">
+        <routestep step="1" x="604.88" y="1711.00" z="310.58"/>
+        <routestep step="2" x="609.29" y="1732.17" z="310.48"/>
+        <routestep step="3" x="621.35" y="1748.38" z="310.58"/>
+        <routestep step="4" x="636.56" y="1757.91" z="310.48"/>
+        <routestep step="5" x="656.42" y="1763.43" z="310.58"/>
+        <routestep step="6" x="673.92" y="1757.67" z="310.48"/>
+        <routestep step="7" x="688.30" y="1750.32" z="310.58"/>
+        <routestep step="8" x="700.82" y="1732.91" z="310.48"/>
+        <routestep step="9" x="705.80" y="1711.77" z="310.58"/>
+        <routestep step="10" x="701.20" y="1690.55" z="310.48"/>
+        <routestep step="11" x="691.09" y="1676.17" z="310.58"/>
+        <routestep step="12" x="675.18" y="1665.15" z="310.48"/>
+        <routestep step="13" x="654.96" y="1661.11" z="310.58"/>
+        <routestep step="14" x="635.17" y="1665.36" z="310.48"/>
+        <routestep step="15" x="620.60" y="1675.46" z="310.58"/>
+        <routestep step="16" x="609.71" y="1690.61" z="310.48"/>
+        <routestep step="17" x="604.83" y="1707.73" z="310.58"/>
+        <routestep step="18" x="604.83" y="1709.49" z="310.58"/>
+    </walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path71" pool="1">
+        <routestep step="1" x="502.33" y="1834.97" z="259.26"/>
+        <routestep step="2" x="506.74" y="1856.15" z="259.16"/>
+        <routestep step="3" x="518.80" y="1872.35" z="259.26"/>
+        <routestep step="4" x="534.02" y="1881.88" z="259.16"/>
+        <routestep step="5" x="553.87" y="1887.40" z="259.26"/>
+        <routestep step="6" x="571.38" y="1881.64" z="259.16"/>
+        <routestep step="7" x="585.76" y="1874.30" z="259.26"/>
+        <routestep step="8" x="598.28" y="1856.88" z="259.16"/>
+        <routestep step="9" x="603.25" y="1835.74" z="259.26"/>
+        <routestep step="10" x="598.65" y="1814.53" z="259.16"/>
+        <routestep step="11" x="588.55" y="1800.14" z="259.26"/>
+        <routestep step="12" x="572.63" y="1789.12" z="259.16"/>
+        <routestep step="13" x="552.41" y="1785.08" z="259.26"/>
+        <routestep step="14" x="532.62" y="1789.33" z="259.16"/>
+        <routestep step="15" x="518.05" y="1799.43" z="259.26"/>
+        <routestep step="16" x="507.17" y="1814.58" z="259.16"/>
+        <routestep step="17" x="502.28" y="1831.71" z="259.26"/>
+        <routestep step="18" x="502.28" y="1833.47" z="259.26"/>
+    </walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path55" pool="1">
+        <routestep step="1" x="422.11" y="1583.14" z="310.58"/>
+        <routestep step="2" x="426.52" y="1604.31" z="310.48"/>
+        <routestep step="3" x="438.58" y="1620.51" z="310.58"/>
+        <routestep step="4" x="453.79" y="1630.04" z="310.48"/>
+        <routestep step="5" x="473.65" y="1635.57" z="310.58"/>
+        <routestep step="6" x="491.15" y="1629.80" z="310.48"/>
+        <routestep step="7" x="505.53" y="1622.46" z="310.58"/>
+        <routestep step="8" x="518.06" y="1605.04" z="310.48"/>
+        <routestep step="9" x="523.03" y="1583.90" z="310.58"/>
+        <routestep step="10" x="518.43" y="1562.69" z="310.48"/>
+        <routestep step="11" x="508.33" y="1548.30" z="310.58"/>
+        <routestep step="12" x="492.41" y="1537.28" z="310.48"/>
+        <routestep step="13" x="472.19" y="1533.25" z="310.58"/>
+        <routestep step="14" x="452.40" y="1537.50" z="310.48"/>
+        <routestep step="15" x="437.83" y="1547.59" z="310.58"/>
+        <routestep step="16" x="426.95" y="1562.75" z="310.48"/>
+        <routestep step="17" x="422.06" y="1579.87" z="310.58"/>
+        <routestep step="18" x="422.06" y="1581.63" z="310.58"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path49" pool="1">
+        <routestep step="1" x="796.92" y="1767.07" z="387.08"/>
+        <routestep step="2" x="801.33" y="1788.25" z="386.98"/>
+        <routestep step="3" x="813.39" y="1804.45" z="387.08"/>
+        <routestep step="4" x="828.61" y="1813.98" z="386.98"/>
+        <routestep step="5" x="848.46" y="1819.50" z="387.08"/>
+        <routestep step="6" x="865.97" y="1813.74" z="386.98"/>
+        <routestep step="7" x="880.35" y="1806.40" z="387.08"/>
+        <routestep step="8" x="892.87" y="1788.98" z="386.98"/>
+        <routestep step="9" x="897.84" y="1767.84" z="387.08"/>
+        <routestep step="10" x="893.24" y="1746.63" z="386.98"/>
+        <routestep step="11" x="883.14" y="1732.24" z="387.08"/>
+        <routestep step="12" x="867.22" y="1721.22" z="386.98"/>
+        <routestep step="13" x="847.01" y="1717.18" z="387.08"/>
+        <routestep step="14" x="827.21" y="1721.43" z="386.98"/>
+        <routestep step="15" x="812.64" y="1731.53" z="387.08"/>
+        <routestep step="16" x="801.76" y="1746.68" z="386.98"/>
+        <routestep step="17" x="796.87" y="1763.81" z="387.08"/>
+        <routestep step="18" x="796.87" y="1765.57" z="387.08"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path53" pool="1">
+        <routestep step="1" x="209.56" y="1795.32" z="288.09"/>
+        <routestep step="2" x="213.97" y="1816.49" z="287.99"/>
+        <routestep step="3" x="226.03" y="1832.69" z="288.09"/>
+        <routestep step="4" x="241.24" y="1842.22" z="287.99"/>
+        <routestep step="5" x="261.10" y="1847.75" z="288.09"/>
+        <routestep step="6" x="278.60" y="1841.98" z="287.99"/>
+        <routestep step="7" x="292.98" y="1834.64" z="288.09"/>
+        <routestep step="8" x="305.51" y="1817.22" z="287.99"/>
+        <routestep step="9" x="310.48" y="1796.08" z="288.09"/>
+        <routestep step="10" x="305.88" y="1774.87" z="287.99"/>
+        <routestep step="11" x="295.78" y="1760.48" z="288.09"/>
+        <routestep step="12" x="279.86" y="1749.46" z="287.99"/>
+        <routestep step="13" x="259.64" y="1745.43" z="288.09"/>
+        <routestep step="14" x="239.85" y="1749.68" z="287.99"/>
+        <routestep step="15" x="225.28" y="1759.77" z="288.09"/>
+        <routestep step="16" x="214.39" y="1774.93" z="287.99"/>
+        <routestep step="17" x="209.51" y="1792.05" z="288.09"/>
+        <routestep step="18" x="209.51" y="1793.81" z="288.09"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path69" pool="1">
+        <routestep step="1" x="446.75" y="1715.76" z="259.26"/>
+        <routestep step="2" x="451.17" y="1736.93" z="259.16"/>
+        <routestep step="3" x="463.23" y="1753.13" z="259.26"/>
+        <routestep step="4" x="478.44" y="1762.66" z="259.16"/>
+        <routestep step="5" x="498.30" y="1768.19" z="259.26"/>
+        <routestep step="6" x="515.80" y="1762.42" z="259.16"/>
+        <routestep step="7" x="530.18" y="1755.08" z="259.26"/>
+        <routestep step="8" x="542.70" y="1737.66" z="259.16"/>
+        <routestep step="9" x="547.67" y="1716.52" z="259.26"/>
+        <routestep step="10" x="543.07" y="1695.31" z="259.16"/>
+        <routestep step="11" x="532.97" y="1680.92" z="259.26"/>
+        <routestep step="12" x="517.05" y="1669.90" z="259.16"/>
+        <routestep step="13" x="496.84" y="1665.87" z="259.26"/>
+        <routestep step="14" x="477.04" y="1670.12" z="259.16"/>
+        <routestep step="15" x="462.47" y="1680.21" z="259.26"/>
+        <routestep step="16" x="451.59" y="1695.37" z="259.16"/>
+        <routestep step="17" x="446.70" y="1712.49" z="259.26"/>
+        <routestep step="18" x="446.70" y="1714.25" z="259.26"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path42" pool="1">
+        <routestep step="1" x="487.53" y="1700.05" z="310.58"/>
+        <routestep step="2" x="491.94" y="1721.23" z="310.48"/>
+        <routestep step="3" x="504.00" y="1737.43" z="310.58"/>
+        <routestep step="4" x="519.21" y="1746.96" z="310.48"/>
+        <routestep step="5" x="539.07" y="1752.48" z="310.58"/>
+        <routestep step="6" x="556.57" y="1746.72" z="310.48"/>
+        <routestep step="7" x="570.96" y="1739.38" z="310.58"/>
+        <routestep step="8" x="583.48" y="1721.96" z="310.48"/>
+        <routestep step="9" x="588.45" y="1700.82" z="310.58"/>
+        <routestep step="10" x="583.85" y="1679.61" z="310.48"/>
+        <routestep step="11" x="573.75" y="1665.22" z="310.58"/>
+        <routestep step="12" x="557.83" y="1654.20" z="310.48"/>
+        <routestep step="13" x="537.61" y="1650.16" z="310.58"/>
+        <routestep step="14" x="517.82" y="1654.41" z="310.48"/>
+        <routestep step="15" x="503.25" y="1664.51" z="310.58"/>
+        <routestep step="16" x="492.37" y="1679.66" z="310.48"/>
+        <routestep step="17" x="487.48" y="1696.79" z="310.58"/>
+        <routestep step="18" x="487.48" y="1698.55" z="310.58"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path51" pool="1">
+        <routestep step="1" x="584.62" y="1643.79" z="308.81"/>
+        <routestep step="2" x="589.03" y="1664.96" z="308.71"/>
+        <routestep step="3" x="601.09" y="1681.16" z="308.81"/>
+        <routestep step="4" x="616.31" y="1690.69" z="308.71"/>
+        <routestep step="5" x="636.17" y="1696.22" z="308.81"/>
+        <routestep step="6" x="653.67" y="1690.45" z="308.71"/>
+        <routestep step="7" x="668.05" y="1683.11" z="308.81"/>
+        <routestep step="8" x="680.57" y="1665.69" z="308.71"/>
+        <routestep step="9" x="685.54" y="1644.55" z="308.81"/>
+        <routestep step="10" x="680.94" y="1623.34" z="308.71"/>
+        <routestep step="11" x="670.84" y="1608.95" z="308.81"/>
+        <routestep step="12" x="654.92" y="1597.93" z="308.71"/>
+        <routestep step="13" x="634.71" y="1593.89" z="308.81"/>
+        <routestep step="14" x="614.91" y="1598.15" z="308.71"/>
+        <routestep step="15" x="600.34" y="1608.24" z="308.81"/>
+        <routestep step="16" x="589.46" y="1623.40" z="308.71"/>
+        <routestep step="17" x="584.57" y="1640.52" z="308.81"/>
+        <routestep step="18" x="584.57" y="1642.28" z="308.81"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path68" pool="1">
+        <routestep step="1" x="475.17" y="1766.20" z="259.26"/>
+        <routestep step="2" x="479.58" y="1787.37" z="259.16"/>
+        <routestep step="3" x="491.64" y="1803.57" z="259.26"/>
+        <routestep step="4" x="506.86" y="1813.10" z="259.16"/>
+        <routestep step="5" x="526.71" y="1818.63" z="259.26"/>
+        <routestep step="6" x="544.21" y="1812.86" z="259.16"/>
+        <routestep step="7" x="558.60" y="1805.52" z="259.26"/>
+        <routestep step="8" x="571.12" y="1788.10" z="259.16"/>
+        <routestep step="9" x="576.09" y="1766.97" z="259.26"/>
+        <routestep step="10" x="571.49" y="1745.75" z="259.16"/>
+        <routestep step="11" x="561.39" y="1731.36" z="259.26"/>
+        <routestep step="12" x="545.47" y="1720.35" z="259.16"/>
+        <routestep step="13" x="525.25" y="1716.31" z="259.26"/>
+        <routestep step="14" x="505.46" y="1720.56" z="259.16"/>
+        <routestep step="15" x="490.89" y="1730.65" z="259.26"/>
+        <routestep step="16" x="480.01" y="1745.81" z="259.16"/>
+        <routestep step="17" x="475.12" y="1762.93" z="259.26"/>
+        <routestep step="18" x="475.12" y="1764.69" z="259.26"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path48" pool="1">
+        <routestep step="1" x="630.99" y="1753.83" z="368.35"/>
+        <routestep step="2" x="635.40" y="1775.00" z="368.25"/>
+        <routestep step="3" x="647.46" y="1791.21" z="368.35"/>
+        <routestep step="4" x="662.67" y="1800.73" z="368.25"/>
+        <routestep step="5" x="682.53" y="1806.26" z="368.35"/>
+        <routestep step="6" x="700.03" y="1800.49" z="368.25"/>
+        <routestep step="7" x="714.42" y="1793.15" z="368.35"/>
+        <routestep step="8" x="726.94" y="1775.74" z="368.25"/>
+        <routestep step="9" x="731.91" y="1754.60" z="368.35"/>
+        <routestep step="10" x="727.31" y="1733.38" z="368.25"/>
+        <routestep step="11" x="717.21" y="1718.99" z="368.35"/>
+        <routestep step="12" x="701.29" y="1707.98" z="368.25"/>
+        <routestep step="13" x="681.07" y="1703.94" z="368.35"/>
+        <routestep step="14" x="661.28" y="1708.19" z="368.25"/>
+        <routestep step="15" x="646.71" y="1718.29" z="368.35"/>
+        <routestep step="16" x="635.83" y="1733.44" z="368.25"/>
+        <routestep step="17" x="630.94" y="1750.56" z="368.35"/>
+        <routestep step="18" x="630.94" y="1752.32" z="368.35"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path50" pool="1">
+        <routestep step="1" x="790.13" y="1641.65" z="379.67"/>
+        <routestep step="2" x="794.54" y="1662.83" z="379.57"/>
+        <routestep step="3" x="806.60" y="1679.03" z="379.67"/>
+        <routestep step="4" x="821.81" y="1688.56" z="379.57"/>
+        <routestep step="5" x="841.67" y="1694.09" z="379.67"/>
+        <routestep step="6" x="859.17" y="1688.32" z="379.57"/>
+        <routestep step="7" x="873.55" y="1680.98" z="379.67"/>
+        <routestep step="8" x="886.08" y="1663.56" z="379.57"/>
+        <routestep step="9" x="891.05" y="1642.42" z="379.67"/>
+        <routestep step="10" x="886.45" y="1621.21" z="379.57"/>
+        <routestep step="11" x="876.35" y="1606.82" z="379.67"/>
+        <routestep step="12" x="860.43" y="1595.80" z="379.57"/>
+        <routestep step="13" x="840.21" y="1591.76" z="379.67"/>
+        <routestep step="14" x="820.42" y="1596.01" z="379.57"/>
+        <routestep step="15" x="805.85" y="1606.11" z="379.67"/>
+        <routestep step="16" x="794.96" y="1621.26" z="379.57"/>
+        <routestep step="17" x="790.08" y="1638.39" z="379.67"/>
+        <routestep step="18" x="790.08" y="1640.15" z="379.67"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path74" pool="1">
+        <routestep step="1" x="508.79" y="1808.20" z="240.05"/>
+        <routestep step="2" x="488.94" y="1808.25" z="240.05"/>
+        <routestep step="3" x="480.92" y="1798.32" z="240.05"/>
+        <routestep step="4" x="483.90" y="1773.08" z="240.05"/>
+        <routestep step="5" x="501.07" y="1763.35" z="240.05"/>
+        <routestep step="6" x="522.36" y="1760.57" z="240.05"/>
+        <routestep step="7" x="538.24" y="1769.56" z="240.05"/>
+        <routestep step="8" x="538.23" y="1791.74" z="240.05"/>
+        <routestep step="9" x="524.63" y="1803.33" z="240.05"/>
+        <routestep step="10" x="510.64" y="1807.64" z="240.05"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path67" pool="1">
+        <routestep step="1" x="449.82" y="1695.07" z="298.95"/>
+        <routestep step="2" x="454.24" y="1716.24" z="298.85"/>
+        <routestep step="3" x="466.30" y="1732.44" z="298.95"/>
+        <routestep step="4" x="481.51" y="1741.97" z="298.85"/>
+        <routestep step="5" x="501.37" y="1747.50" z="298.95"/>
+        <routestep step="6" x="518.87" y="1741.73" z="298.85"/>
+        <routestep step="7" x="533.25" y="1734.39" z="298.95"/>
+        <routestep step="8" x="545.77" y="1716.97" z="298.85"/>
+        <routestep step="9" x="550.74" y="1695.83" z="298.95"/>
+        <routestep step="10" x="546.14" y="1674.62" z="298.85"/>
+        <routestep step="11" x="536.04" y="1660.23" z="298.95"/>
+        <routestep step="12" x="520.12" y="1649.21" z="298.85"/>
+        <routestep step="13" x="499.91" y="1645.17" z="298.95"/>
+        <routestep step="14" x="480.11" y="1649.43" z="298.85"/>
+        <routestep step="15" x="465.54" y="1659.52" z="298.95"/>
+        <routestep step="16" x="454.66" y="1674.68" z="298.85"/>
+        <routestep step="17" x="449.77" y="1691.80" z="298.95"/>
+        <routestep step="18" x="449.77" y="1693.56" z="298.95"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path57" pool="1">
+        <routestep step="1" x="404.38" y="1634.33" z="310.58"/>
+        <routestep step="2" x="408.79" y="1655.50" z="310.48"/>
+        <routestep step="3" x="420.85" y="1671.70" z="310.58"/>
+        <routestep step="4" x="436.07" y="1681.23" z="310.48"/>
+        <routestep step="5" x="455.92" y="1686.76" z="310.58"/>
+        <routestep step="6" x="473.42" y="1680.99" z="310.48"/>
+        <routestep step="7" x="487.81" y="1673.65" z="310.58"/>
+        <routestep step="8" x="500.33" y="1656.23" z="310.48"/>
+        <routestep step="9" x="505.30" y="1635.09" z="310.58"/>
+        <routestep step="10" x="500.70" y="1613.88" z="310.48"/>
+        <routestep step="11" x="490.60" y="1599.49" z="310.58"/>
+        <routestep step="12" x="474.68" y="1588.47" z="310.48"/>
+        <routestep step="13" x="454.46" y="1584.43" z="310.58"/>
+        <routestep step="14" x="434.67" y="1588.68" z="310.48"/>
+        <routestep step="15" x="420.10" y="1598.78" z="310.58"/>
+        <routestep step="16" x="409.22" y="1613.94" z="310.48"/>
+        <routestep step="17" x="404.33" y="1631.06" z="310.58"/>
+        <routestep step="18" x="404.33" y="1632.82" z="310.58"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path73" pool="1">
+        <routestep step="1" x="486.21" y="1722.99" z="240.05"/>
+        <routestep step="2" x="466.36" y="1723.04" z="240.05"/>
+        <routestep step="3" x="458.34" y="1713.11" z="240.05"/>
+        <routestep step="4" x="461.32" y="1687.87" z="240.05"/>
+        <routestep step="5" x="478.49" y="1678.14" z="240.05"/>
+        <routestep step="6" x="499.78" y="1675.36" z="240.05"/>
+        <routestep step="7" x="515.65" y="1684.35" z="240.05"/>
+        <routestep step="8" x="515.65" y="1706.53" z="240.05"/>
+        <routestep step="9" x="502.05" y="1718.12" z="240.05"/>
+        <routestep step="10" x="488.06" y="1722.43" z="240.05"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path46" pool="1">
+        <routestep step="1" x="690.46" y="1627.40" z="378.75"/>
+        <routestep step="2" x="694.87" y="1648.57" z="378.65"/>
+        <routestep step="3" x="706.93" y="1664.77" z="378.75"/>
+        <routestep step="4" x="722.15" y="1674.30" z="378.65"/>
+        <routestep step="5" x="742.00" y="1679.83" z="378.75"/>
+        <routestep step="6" x="759.51" y="1674.06" z="378.65"/>
+        <routestep step="7" x="773.89" y="1666.72" z="378.75"/>
+        <routestep step="8" x="786.41" y="1649.30" z="378.65"/>
+        <routestep step="9" x="791.38" y="1628.17" z="378.75"/>
+        <routestep step="10" x="786.78" y="1606.95" z="378.65"/>
+        <routestep step="11" x="776.68" y="1592.56" z="378.75"/>
+        <routestep step="12" x="760.76" y="1581.54" z="378.65"/>
+        <routestep step="13" x="740.55" y="1577.51" z="378.75"/>
+        <routestep step="14" x="720.75" y="1581.76" z="378.65"/>
+        <routestep step="15" x="706.18" y="1591.85" z="378.75"/>
+        <routestep step="16" x="695.30" y="1607.01" z="378.65"/>
+        <routestep step="17" x="690.41" y="1624.13" z="378.75"/>
+        <routestep step="18" x="690.41" y="1625.89" z="378.75"/>
+	</walker_template>
+	<walker_template route_id="lf6_NPCPathDynamic_NPC_Path44" pool="1">
+        <routestep step="1" x="447.35" y="1812.29" z="310.58"/>
+        <routestep step="2" x="451.76" y="1833.46" z="310.48"/>
+        <routestep step="3" x="463.82" y="1849.67" z="310.58"/>
+        <routestep step="4" x="479.04" y="1859.20" z="310.48"/>
+        <routestep step="5" x="498.89" y="1864.72" z="310.58"/>
+        <routestep step="6" x="516.39" y="1858.95" z="310.48"/>
+        <routestep step="7" x="530.78" y="1851.61" z="310.58"/>
+        <routestep step="8" x="543.30" y="1834.20" z="310.48"/>
+        <routestep step="9" x="548.27" y="1813.06" z="310.58"/>
+        <routestep step="10" x="543.67" y="1791.84" z="310.48"/>
+        <routestep step="11" x="533.57" y="1777.45" z="310.58"/>
+        <routestep step="12" x="517.65" y="1766.44" z="310.48"/>
+        <routestep step="13" x="497.43" y="1762.40" z="310.58"/>
+        <routestep step="14" x="477.64" y="1766.65" z="310.48"/>
+        <routestep step="15" x="463.07" y="1776.75" z="310.58"/>
+        <routestep step="16" x="452.19" y="1791.90" z="310.48"/>
+        <routestep step="17" x="447.30" y="1809.02" z="310.58"/>
+        <routestep step="18" x="447.30" y="1810.78" z="310.58"/>
+	</walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path43" pool="1">
+        <routestep step="1" x="469.24" y="1620.25" z="303.83"/>
+        <routestep step="2" x="473.65" y="1641.42" z="303.73"/>
+        <routestep step="3" x="485.71" y="1657.62" z="303.83"/>
+        <routestep step="4" x="500.93" y="1667.15" z="303.73"/>
+        <routestep step="5" x="520.78" y="1672.68" z="303.83"/>
+        <routestep step="6" x="538.28" y="1666.91" z="303.73"/>
+        <routestep step="7" x="552.67" y="1659.57" z="303.83"/>
+        <routestep step="8" x="565.19" y="1642.15" z="303.73"/>
+        <routestep step="9" x="570.16" y="1621.01" z="303.83"/>
+        <routestep step="10" x="565.56" y="1599.80" z="303.73"/>
+        <routestep step="11" x="555.46" y="1585.41" z="303.83"/>
+        <routestep step="12" x="539.54" y="1574.39" z="303.73"/>
+        <routestep step="13" x="519.32" y="1570.36" z="303.83"/>
+        <routestep step="14" x="499.53" y="1574.61" z="303.73"/>
+        <routestep step="15" x="484.96" y="1584.70" z="303.83"/>
+        <routestep step="16" x="474.08" y="1599.86" z="303.73"/>
+        <routestep step="17" x="469.19" y="1616.98" z="303.83"/>
+        <routestep step="18" x="469.19" y="1618.74" z="303.83"/>
+	</walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path70" pool="1">
+        <routestep step="1" x="388.12" y="1638.76" z="259.26"/>
+        <routestep step="2" x="392.53" y="1659.93" z="259.16"/>
+        <routestep step="3" x="404.59" y="1676.14" z="259.26"/>
+        <routestep step="4" x="419.80" y="1685.67" z="259.16"/>
+        <routestep step="5" x="439.66" y="1691.19" z="259.26"/>
+        <routestep step="6" x="457.16" y="1685.42" z="259.16"/>
+        <routestep step="7" x="471.55" y="1678.08" z="259.26"/>
+        <routestep step="8" x="484.07" y="1660.67" z="259.16"/>
+        <routestep step="9" x="489.04" y="1639.53" z="259.26"/>
+        <routestep step="10" x="484.44" y="1618.31" z="259.16"/>
+        <routestep step="11" x="474.34" y="1603.93" z="259.26"/>
+        <routestep step="12" x="458.42" y="1592.91" z="259.16"/>
+        <routestep step="13" x="438.20" y="1588.87" z="259.26"/>
+        <routestep step="14" x="418.41" y="1593.12" z="259.16"/>
+        <routestep step="15" x="403.84" y="1603.22" z="259.26"/>
+        <routestep step="16" x="392.96" y="1618.37" z="259.16"/>
+        <routestep step="17" x="388.07" y="1635.49" z="259.26"/>
+        <routestep step="18" x="388.07" y="1637.25" z="259.26"/>
+	</walker_template>
+    <walker_template route_id="lf6_NPCPathDynamic_NPC_Path11" pool="1">
+        <routestep step="1" x="317.24" y="1506.94" z="310.58"/>
+        <routestep step="2" x="321.65" y="1528.11" z="310.48"/>
+        <routestep step="3" x="333.71" y="1544.31" z="310.58"/>
+        <routestep step="4" x="348.93" y="1553.84" z="310.48"/>
+        <routestep step="5" x="368.78" y="1559.37" z="310.58"/>
+        <routestep step="6" x="386.28" y="1553.60" z="310.48"/>
+        <routestep step="7" x="400.67" y="1546.26" z="310.58"/>
+        <routestep step="8" x="413.19" y="1528.84" z="310.48"/>
+        <routestep step="9" x="418.16" y="1507.71" z="310.58"/>
+        <routestep step="10" x="413.56" y="1486.49" z="310.48"/>
+        <routestep step="11" x="403.46" y="1472.10" z="310.58"/>
+        <routestep step="12" x="387.54" y="1461.09" z="310.48"/>
+        <routestep step="13" x="367.32" y="1457.05" z="310.58"/>
+        <routestep step="14" x="347.53" y="1461.30" z="310.48"/>
+        <routestep step="15" x="332.96" y="1471.39" z="310.58"/>
+        <routestep step="16" x="322.08" y="1486.55" z="310.48"/>
+        <routestep step="17" x="317.19" y="1503.67" z="310.58"/>
+        <routestep step="18" x="317.19" y="1505.43" z="310.58"/>
+	</walker_template>
+</npc_walker>

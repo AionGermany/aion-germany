@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               13700 [XML] A new battlefield
+               13701 [XML] A New Battlefield
+               13702 [XML] Order Transmission
+               13703 [XML] [Group] Capture the Tiamat Basin
+               13704 [XML] Securing the Abyss Invasion
+               13705 [XML] Eliminating Obstacles
+               13706 [XML] Lost Infiltration Report
+               13708 [SCRIPT] Proximity Protect
+               13744 [SCRIPT] [Urgent Order] Agent in Need
+               13745 [SCRIPT] [Urgent Order] Eljer's Request
+               13758 [SCRIPT] [Weekly] Cut Throat Tactics
+               13759 [SCRIPT] [Weekly] Oust the Aquamancers
+               13760 [SCRIPT] [Weekly] Northern Healer Hindrance
+               13761 [SCRIPT] [Weekly] Tomuls in the West
+               13762 [SCRIPT] [Weekly] No Chance for Aquamancers
+               13763 [SCRIPT] [Weekly] Shoo the Shamans
+               13764 [SCRIPT] [Weekly] Beasts in the East
+               13765 [SCRIPT] [Weekly] Push from the East
+               13766 [SCRIPT] [Weekly] Shamans Skedaddle
+               13767 [SCRIPT] [Weekly] Southern Brawlers
+               13768 [SCRIPT] [Weekly] Slow the South
+               13769 [SCRIPT] [Weekly] Halt the Healers
+               13770 [SCRIPT] [Weekly] Central Control
+               16931 [XML] Warrior of the Defence Squad
+               18977 [XML] Unidentified Aetheric Field Shards
+               23700 [XML] Dispatch to Akaron
+               23701 [XML] Depart for Akaron
+               23702 [XML] Order Transmission
+               23703 [XML] [Group] Occupation of the Tiamat Basin
+               23704 [XML] Securing the Abyss Infiltration
+               23705 [XML] Removing Obstacles
+               23706 [XML] Lost Infiltration Order
+               23706 [XML] Don't Eat the Messenger
+               23708 [SCRIPT] Sound the Alarm
+               23744 [SCRIPT] [Urgent Order] Effect Elyos Elimination
+               23745 [SCRIPT] [Urgent Order] No More in Levinshor
+               23758 [SCRIPT] [Weekly] Oust the South
+               23759 [SCRIPT] [Weekly] Business in the South
+               23760 [SCRIPT] [Weekly] Southern Hospitality
+               23761 [SCRIPT] [Weekly] Decrease the East
+               23762 [SCRIPT] [Weekly] A Spirited Attack
+               23763 [SCRIPT] [Weekly] Cries of Spies
+               23764 [SCRIPT] [Weekly] Give Your Best to the West
+               23765 [SCRIPT] [Weekly] Feralmage Rage
+               23766 [SCRIPT] [Weekly] Destroy the Restorers
+               23767 [SCRIPT] [Weekly] Excitement in the North
+               23768 [SCRIPT] [Weekly] Northern Fights
+               23769 [SCRIPT] [Weekly] Nip the North
+               23770 [SCRIPT] [Weekly] Central to the Plot
+               26931 [XML] Warrior of the Defence Squad
+               28977 [XML] Unidentified Aetheric Field Shards
+               80669 [XML] [Event/Rep.] Glorious Ceranium Medal
+               80670 [XML] [Event/Rep.] Glorious Ceranium Medal
+               80671 [XML] [Event/Rep.] Glorious Ceranium Medal
+               80672 [XML] [Event/Rep.] Glorious Ceranium Medal
+        [END] SUMMARY
+    -->
+	<!-- COLLECTING QUESTS -->
+    <item_collecting id="13706" start_npc_ids="802329" action_item_ids="702615"/>
+    <item_collecting id="18977" start_npc_ids="802350" end_npc_ids="805215"/>
+    <item_collecting id="23706" start_npc_ids="802349" action_item_ids="702616"/>
+    <item_collecting id="28977" start_npc_ids="802353" end_npc_ids="805218"/>
+	<item_collecting id="80669" start_npc_ids="832898"/>
+	<item_collecting id="80670" start_npc_ids="832903"/>
+	<item_collecting id="80671" start_npc_ids="832900"/>
+	<item_collecting id="80672" start_npc_ids="832904"/>
+	<!-- REPORTING QUESTS --> 
+	<report_to id="13700" start_npc_ids="800527" end_npc_ids="802350"/>
+	<report_to id="13701" start_npc_ids="798926" end_npc_ids="802350"/>
+	<report_to id="13704" start_npc_ids="802343" end_npc_ids="802343" item_id="182215527"/>
+	<report_to id="23700" start_npc_ids="800529" end_npc_ids="802353"/>
+	<report_to id="23701" start_npc_ids="800529" end_npc_ids="802353"/>
+	<report_to id="23704" start_npc_ids="802343" end_npc_ids="802343" item_id="182215533"/>
+	<!-- MONSTER HUNT QUESTS -->
+	<monster_hunt id="13702" start_npc_ids="802350" end_npc_ids="802352" end_dialog_id="2375">
+		<monster var="0" npc_ids="235346 235347 235348 235349" end_var="4"/>
+	</monster_hunt>
+	<monster_hunt id="13703" start_npc_ids="802350" end_npc_ids="802350" end_dialog_id="2375">	
+		<monster var="0" npc_ids="235145 235171" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="13705" start_npc_ids="802343" end_npc_ids="802345" end_dialog_id="2375">	
+		<monster var="0" npc_ids="233919" end_var="3"/>
+		<monster var="1" npc_ids="233920" end_var="3"/>
+	</monster_hunt>
+	<monster_hunt id="16931" start_npc_ids="804626">	
+		<monster var="0" npc_ids="234967" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="23702" start_npc_ids="802353" end_npc_ids="802354" end_dialog_id="2375">
+		<monster var="0" npc_ids="235366 235367 235368 235369" end_var="4"/>
+	</monster_hunt>
+	<monster_hunt id="23703" start_npc_ids="802353" end_npc_ids="802353" end_dialog_id="2375">	
+		<monster var="0" npc_ids="235145 235158" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="23705" start_npc_ids="802343" end_npc_ids="802345" end_dialog_id="2375">	
+		<monster var="0" npc_ids="233937" end_var="3"/>
+		<monster var="1" npc_ids="233938" end_var="3"/>
+	</monster_hunt>
+	<monster_hunt id="26931" start_npc_ids="804627">	
+		<monster var="0" npc_ids="234967" end_var="1"/>
+	</monster_hunt>
+	<!-- KILL IN WORLD QUESTS -->
+</quest_scripts>

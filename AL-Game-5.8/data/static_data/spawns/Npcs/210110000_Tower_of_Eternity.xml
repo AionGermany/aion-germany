@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spawns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- Tower of Eternity created by Falke_34 -->
+    <spawn_map map_id="210110000">
+		<!-- None ||| LF_Tower_SensoryArea_Q16800 -->
+		<spawn npc_id="206536" respawn_time="295">
+			<spot x="489.8007" y="499.52887" z="302.38846"/>
+		</spawn>
+		<!-- Corridor to the Hall of the Wise ||| LF_Tower_FOBJ_Sage_Room_Q_Entrance -->
+		<spawn npc_id="731717" respawn_time="295">
+			<spot x="558.46136" y="498.36276" z="299.85013" h="60"/>
+		</spawn>
+		<!-- Exit from the Hall of the Wise ||| LF_Tower_FOBJ_Sage_Room_Q_Exit -->
+		<spawn npc_id="731718" respawn_time="295">
+			<spot x="504.23102" y="500.9271" z="348.8464"/>
+		</spawn>
+		<!-- Entrance to the Library of Knowledge ||| IDEternity_01_L_Entrance -->
+		<spawn npc_id="806028" respawn_time="295">
+			<spot x="370.11566" y="513.5316" z="322.6904" static_id="9"/>
+		</spawn>
+		<!-- Entrance to the Garden of Knowledge ||| IDEternity_02_L_Entrance -->
+		<spawn npc_id="806030" respawn_time="295">
+			<spot x="372.2993" y="508.2784" z="355.625" static_id="1"/>
+		</spawn>
+		<!-- Entrance to the Museum of Knowledge ||| IDEternity_03_L_Entrance -->
+		<spawn npc_id="806032" respawn_time="295">
+			<spot x="370.87317" y="502.36594" z="385.7007" static_id="3"/>
+		</spawn>
+		<!-- Magical Protective Circle ||| LF_Tower_Out_Portal -->
+		<spawn npc_id="806083" respawn_time="295">
+			<spot x="498.5734" y="500.0629" z="302.18674" static_id="11"/>
+		</spawn>
+		<!-- Ezar ||| LF_Tower_Etezar_E -->
+		<spawn npc_id="806232" respawn_time="295">
+			<spot x="474.8007" y="499.52887" z="302.38852"/>
+		</spawn>
+		<!-- Guardian of the Tower of Eternity ||| LF_Tower_Guard01_L_E -->
+		<spawn npc_id="806234" respawn_time="295">
+			<spot x="462.2735" y="488.1953" z="299.85013" h="60"/>
+			<spot x="462.2735" y="511.7743" z="299.85013" h="60"/>
+			<spot x="485.2735" y="492.7743" z="302.3885" h="10"/>
+			<spot x="485.2735" y="507.00543" z="302.3885" h="110"/>
+		</spawn>
+		<!-- Dezabo ||| LF_Tower_Dejabobo_E -->
+		<spawn npc_id="806291" respawn_time="295">
+			<spot x="498.92227" y="499.5655" z="348.79135" h="60"/>
+		</spawn>
+		<!-- Pores ||| LF6_Fores_E -->
+		<spawn npc_id="806393" respawn_time="295">
+			<spot x="556.87274" y="502.72385" z="299.85013" h="60"/>
+		</spawn>
+    </spawn_map>
+</spawns>

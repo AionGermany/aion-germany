@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:include schemaLocation="../items/item_templates.xsd"/>
+    <xs:include schemaLocation="../spawns/spawns.xsd"/>
+
+    <xs:element name="events_config">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="active" type="xs:string"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="events">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element minOccurs="0" maxOccurs="unbounded" name="event" type="EventTemplate"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="EventTemplate">
+        <xs:all>
+            <xs:element minOccurs="0" maxOccurs="1" name="event_drops" type="EventDrops"/>
+            <xs:element minOccurs="0" name="quests" type="EventQuestList"/>
+            <xs:element minOccurs="0" maxOccurs="1" name="spawns" type="SpawnsData2"/>
+            <xs:element minOccurs="0" maxOccurs="1" name="inventory_drop" type="InventoryDrop"/>
+            <xs:element minOccurs="0" maxOccurs="1" name="surveys" type="SurveyList"/>
+        </xs:all>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="start" type="xs:dateTime" use="required"/>
+        <xs:attribute name="end" type="xs:dateTime" use="required"/>
+        <xs:attribute name="theme" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="EventDrops">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="event_drop" type="EventDrop"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EventDrop">
+        <xs:attribute name="item_id" type="xs:int" use="required"/>
+        <xs:attribute name="count" type="xs:long" use="required"/>
+        <xs:attribute name="chance" type="xs:float" use="required"/>
+        <xs:attribute name="minDiff" type="xs:int"/>
+        <xs:attribute name="maxDiff" type="xs:int"/>
+        <xs:attribute name="loc_id" type="xs:int"/>
+		<xs:attribute name="npc_id" type="xs:int"/>
+		<xs:attribute name="minLvl" type="xs:int"/>
+		<xs:attribute name="maxLvl" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="InventoryDrop">
+        <xs:simpleContent>
+            <xs:extension base="itemId">
+                <xs:attribute name="startlevel" type="xs:int"/>
+                <xs:attribute name="interval" type="xs:int" use="required"/>
+                <xs:attribute name="endlevel" type="xs:int"/>
+				<xs:attribute name="maxCountOfDay" type="xs:int"/>
+				<xs:attribute name="cleanTime" type="xs:int"/>
+				<xs:attribute name="race" type="Race" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="EventQuestList">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="startable" type="xs:string"/>
+            <xs:element minOccurs="0" maxOccurs="1" name="maintainable" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="SurveyList">
+        <xs:list itemType="xs:string"/>
+    </xs:simpleType>
+
+</xs:schema>

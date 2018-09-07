@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               13305 [SCRIPT] Meet Stifas the Stiff
+               18030 [XML] [Alliance] Accounting for Orders
+               18031 [XML] [Alliance] Eternal Campers
+               18032 [XML] [Alliance] Artillery Action
+               18033 [XML] [Alliance] Retreat Into Death
+               18034 [XML] [Alliance] The Follow-Through
+               18035 [XML] [Alliance] Sheba's Surveillance
+               18036 [XML] Bastions Are Eternal; Positions Are Not
+               18037 [XML] [Alliance] Keep Up the Defense
+               23305 [SCRIPT] A Fierce Struggle
+               28030 [XML] [Alliance] Protecting The Eternal Bastion
+               28031 [XML] [Alliance] Eliminating the Bind Point Commander
+               28032 [XML] [Alliance] The Enemy's Key Strength
+               28033 [XML] [Alliance] Confusing the Chain of Command
+               28034 [XML] [Alliance] Conquering Ambitions
+               28035 [XML] [Alliance] Trust In None, But Verify
+               28036 [XML] Interrogate Kvash
+               28037 [XML] [Alliance] Defend to the End
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="18035" start_npc_ids="801037" end_npc_ids="800527"/>
+    <report_to id="18036" start_npc_ids="802008" end_npc_ids="801037"/>
+    <report_to id="28035" start_npc_ids="801047" end_npc_ids="800529"/>
+    <report_to id="28036" start_npc_ids="802008" end_npc_ids="801047"/>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="18034" start_npc_ids="801226"/>
+    <item_collecting id="28034" start_npc_ids="801047"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="18030" start_npc_ids="801037">
+        <monster var="0" npc_ids="231168 231169 231170" end_var="3"/>
+        <monster var="0" npc_ids="231171 231172 231173" end_var="3"/>
+        <monster var="0" npc_ids="231174 231175 231176" end_var="3"/>
+        <monster var="1" npc_ids="230783 231152 231153 231154 231155" end_var="5"/>
+        <monster var="2" npc_ids="231130" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="18031" start_npc_ids="801037">
+        <monster var="0" npc_ids="231178" end_var="1"/>
+        <monster var="1" npc_ids="231179" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="18032" start_npc_ids="801037">
+        <monster var="0" npc_ids="231117 231118 231119 231120 231122" end_var="40"/>
+        <monster var="0" npc_ids="231123 231125 231126 231127 231128" end_var="40"/>
+    </monster_hunt>
+    <monster_hunt id="18033" start_npc_ids="801037">
+        <monster var="0" npc_ids="230744 230745 230749" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="18037" start_npc_ids="801037">
+        <monster var="0" npc_ids="231130" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28030" start_npc_ids="801047">
+        <monster var="0" npc_ids="231168 231169 231170" end_var="3"/>
+        <monster var="0" npc_ids="231171 231172 231173" end_var="3"/>
+        <monster var="0" npc_ids="231174 231175 231176" end_var="3"/>
+        <monster var="1" npc_ids="230783 231152 231153 231154 231155" end_var="5"/>
+        <monster var="2" npc_ids="231130" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28031" start_npc_ids="801047">
+        <monster var="0" npc_ids="231178" end_var="1"/>
+        <monster var="1" npc_ids="231179" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28032" start_npc_ids="801047">
+        <monster var="0" npc_ids="231117 231118 231119 231120 231122" end_var="40"/>
+        <monster var="0" npc_ids="231123 231125 231126 231127 231128" end_var="40"/>
+    </monster_hunt>
+    <monster_hunt id="28033" start_npc_ids="801047">
+        <monster var="0" npc_ids="230744 230745 230749" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28037" start_npc_ids="801047">
+        <monster var="0" npc_ids="231130" end_var="1"/>
+    </monster_hunt>
+    <!-- ITEM ORDERS QUESTS -->
+</quest_scripts>

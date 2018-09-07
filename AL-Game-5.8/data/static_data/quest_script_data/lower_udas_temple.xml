@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    30007 [XML] Drakan Document
+                    30008 [XML] Legendary Jotun
+                    30009 [XML] Pieces of You
+                    30011 [XML] Arachnophobia
+                    30013 [XML] Axe Another Favor
+                    30014 [XML] A Reian in the Sun
+                    30033 [XML] A New Spin on Death
+                    30107 [XML] Deciphering Drakan
+                    30108 [XML] Heart of the Matter
+                    30109 [XML] Pieces of the Past
+                    30111 [SCRIPT] Center of the Web
+                    30113 [XML] Fan Flames of Vengeance
+                    30114 [XML] Revenge's Last Link
+                    30133 [XML] Chakra Choking
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="30109" start_npc_ids="799333"/>
+    <!-- ITEM ORDERS QUESTS -->
+    <item_order start_item_id="182209153" talk_npc_id1="799030" end_npc_id="799029" id="30007"/>
+    <item_order start_item_id="182209183" talk_npc_id1="799030" end_npc_id="799029" id="30107"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="30011" start_npc_ids="799031">
+        <monster var="0" npc_ids="215792" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30113" start_npc_ids="799337">
+        <monster var="0" end_var="1" npc_ids="215786"/>
+        <monster var="1" end_var="1" npc_ids="215784"/>
+        <monster var="2" end_var="10" npc_ids="215820"/>
+    </monster_hunt>
+    <monster_hunt id="30114" start_npc_ids="799337">
+        <monster var="0" end_var="1" npc_ids="216156"/>
+    </monster_hunt>
+    <monster_hunt id="30133" start_npc_ids="799335">
+        <monster var="0" end_var="10" npc_ids="215848 215849"/>
+    </monster_hunt>
+</quest_scripts>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-09-25 09:15 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               13900 [SCRIPT] [Hero] Lord's Call
+               13901 [XML] [Hero/Group] Qualification as a Hero
+               13902 [SCRIPT] [Hero] Start of the Conquest of Balaurea
+               13903 [XML] [Hero] Conquest Achievements
+               13904 [XML] [Hero/Daily] The Conquest of Balaurea
+               13905 [XML] [Hero/Daily] Conquest of the Northern Bases
+               13906 [XML] [Hero/Daily] Conquest of the Eastern bases
+               13907 [XML] [Hero/Daily] Conquest of the Southern Bases
+               13908 [XML] [Hero/Daily] Conquest of the Western Bases
+               13909 [XML] [Hero/Group] Chapir Hunt
+               13910 [XML] [Hero/Alliance] The Conquest of Kaldor
+               13914 [XML] [Hero/Alliance] Orb of the Invasion
+               13915 [XML] [Hero/Weekly/Alliance] Orb of the Invasion
+               13916 [XML] [Hero/Alliance] Battle Against Mastarius
+               13917 [XML] [Hero/Group] Battle for the Akaron Central Base
+               13918 [XML] [Hero/Group] Defensive Battle for the Akaron Central Base
+               23900 [SCRIPT] [Hero] Call of Destiny
+               23901 [XML] [Hero/Group] Hero Test
+               23902 [SCRIPT] [Hero] The Conquest of Balaurea Begins
+               23903 [XML] [Hero] Pearl of Occupation
+               23904 [XML] [Hero/Daily] Sign of Conquest
+               23905 [XML] [Hero/Daily] Conquest of the Northern Bases
+               23906 [XML] [Hero/Daily] Conquest of the Eastern Bases
+               23907 [XML] [Hero/Daily] Conquest of the Southern Bases
+               23908 [XML] [Hero/Daily] Conquest of the Western Bases
+               23909 [XML] [Hero/Group] Popoku Hunt
+               23910 [XML] [Hero/Alliance] Battle for Kaldor
+               23914 [XML] [Hero/Alliance] Pearl of Invasion
+               23915 [XML] [Hero/Weekly/Alliance] Pearl of Invasion
+               23916 [XML] [Hero/Alliance] Battle Against Veille
+               23917 [XML] [Hero/Group] Conquering Battle for the Akaron Central Base
+               23918 [XML] [Hero/Group] Defensive Battle for the Akaron Central Base
+               80539 [TODO] [Hero] Mission for Extraordinary Daevas
+               80540 [TODO] [Hero] Mission for Extraordinary Daevas
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+	<!-- Elyos -->
+	<item_collecting id="13901" start_npc_ids="798514"/>
+	<item_collecting id="13903" start_npc_ids="798926"/>
+	<item_collecting id="13904" start_npc_ids="798926"/>
+	<item_collecting id="13914" start_npc_ids="798515"/>
+	<item_collecting id="13915" start_npc_ids="798515"/>
+	<item_collecting id="13916" start_npc_ids="802350"/>
+	<!-- Asmodians -->
+	<item_collecting id="23901" start_npc_ids="798718"/>
+	<item_collecting id="23903" start_npc_ids="799225"/>
+	<item_collecting id="23904" start_npc_ids="799225"/>
+	<item_collecting id="23914" start_npc_ids="798719"/>
+	<item_collecting id="23915" start_npc_ids="798719"/>
+	<item_collecting id="23916" start_npc_ids="802353"/>
+    <!-- HUNTING QUESTS -->
+	<!-- Garrison Nort Elyos -->
+	<monster_hunt id="13905" start_npc_ids="802350">
+	    <monster var="0" npc_ids="235066 235159" end_var="1"/>
+        <monster var="1" npc_ids="235067 235160" end_var="1"/>
+        <monster var="2" npc_ids="235068 235161" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison Este Elyos  -->
+	<monster_hunt id="13906" start_npc_ids="802350">
+	    <monster var="0" npc_ids="235069 235162" end_var="1"/>
+        <monster var="1" npc_ids="235070 235163" end_var="1"/>
+        <monster var="2" npc_ids="235071 235164" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison Sur Elyos -->
+	<monster_hunt id="13907" start_npc_ids="802350">
+	    <monster var="0" npc_ids="235072 235165" end_var="1"/>
+        <monster var="1" npc_ids="235073 235166" end_var="1"/>
+        <monster var="2" npc_ids="235141 235167" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison West Elyos -->
+	<monster_hunt id="13908" start_npc_ids="802350">
+	    <monster var="0" npc_ids="235142 235168" end_var="1"/>
+        <monster var="1" npc_ids="235143 235169" end_var="1"/>
+        <monster var="2" npc_ids="235144 235170" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison Center Elyos -->
+	<monster_hunt id="13917" start_npc_ids="802350" end_npc_ids="802328">
+	    <monster var="0" npc_ids="235145 235171" end_var="1"/>
+    </monster_hunt>
+	<!-- Quest Levinshor Elyos -->
+	<monster_hunt id="13909" start_npc_ids="802350">
+	    <monster var="0" npc_ids="235217" end_var="1"/>
+        <monster var="1" npc_ids="235218" end_var="1"/>
+        <monster var="2" npc_ids="235219" end_var="1"/>
+		<monster var="3" npc_ids="235220" end_var="1"/>
+    </monster_hunt>
+	<!-- Quest Kaldor Elyos -->
+	<monster_hunt id="13910" start_npc_ids="798514">
+	    <monster var="0" npc_ids="251830 251831 251832 251833 251834 251835 251836 251837 251838 251839" end_var="1"/>
+		<monster var="1" npc_ids="252183 252184 252185 252186 252187 252188 252189 252190 252191 252192" end_var="1"/>
+		<monster var="2" npc_ids="252198 252199 252200 252201 252202 252203 252204 252205 252206 252207" end_var="1"/>
+		<monster var="3" npc_ids="252213 252214 252215 252216 252217 252218 252219 252220 252221 252222" end_var="1"/>
+		<monster var="4" npc_ids="855263" end_var="1"/>
+    </monster_hunt>
+	<!-- Atormentadores Asmodians-->
+	<monster_hunt id="13918" start_npc_ids="802328" end_npc_ids="802350">
+	    <monster var="0" npc_ids="235321" end_var="1"/>
+		<monster var="1" npc_ids="235322" end_var="1"/>
+		<monster var="2" npc_ids="235323" end_var="1"/>
+		<monster var="3" npc_ids="235324" end_var="1"/>
+		<monster var="4" npc_ids="235325" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison Nort Asmodians-->
+	<monster_hunt id="23905" start_npc_ids="802353">
+	    <monster var="0" npc_ids="235066 235146" end_var="1"/>
+        <monster var="1" npc_ids="235067 235147" end_var="1"/>
+        <monster var="2" npc_ids="235068 235148" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison Este Asmodians -->
+	<monster_hunt id="23906" start_npc_ids="802353">
+	    <monster var="0" npc_ids="235069 235149" end_var="1"/>
+        <monster var="1" npc_ids="235070 235150" end_var="1"/>
+        <monster var="2" npc_ids="235071 235151" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison Sur Asmodians -->
+	<monster_hunt id="23907" start_npc_ids="802353">
+	    <monster var="0" npc_ids="235072 235152" end_var="1"/>
+        <monster var="1" npc_ids="235073 235153" end_var="1"/>
+        <monster var="2" npc_ids="235141 235154" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison West Asmodians -->
+	<monster_hunt id="23908" start_npc_ids="802353">
+	    <monster var="0" npc_ids="235142 235155" end_var="1"/>
+        <monster var="1" npc_ids="235143 235156" end_var="1"/>
+        <monster var="2" npc_ids="235144 235157" end_var="1"/>
+    </monster_hunt>
+	<!-- Garrison Center Asmodians -->
+	<monster_hunt id="23917" start_npc_ids="802353" end_npc_ids="802328">
+	    <monster var="0" npc_ids="235145 235158" end_var="1"/>
+    </monster_hunt>
+	<!-- Quest Levinshor -->
+	<monster_hunt id="23909" start_npc_ids="802353">
+	    <monster var="0" npc_ids="235217" end_var="1"/>
+        <monster var="1" npc_ids="235218" end_var="1"/>
+        <monster var="2" npc_ids="235219" end_var="1"/>
+		<monster var="3" npc_ids="235220" end_var="1"/>
+    </monster_hunt>
+	<!-- Quest Kaldor -->
+	<monster_hunt id="23910" start_npc_ids="798718">
+	    <monster var="0" npc_ids="251830 251831 251832 251833 251834 251835 251836 251837 251838 251839" end_var="1"/>
+		<monster var="1" npc_ids="252183 252184 252185 252186 252187 252188 252189 252190 252191 252192" end_var="1"/>
+		<monster var="2" npc_ids="252198 252199 252200 252201 252202 252203 252204 252205 252206 252207" end_var="1"/>
+		<monster var="3" npc_ids="252213 252214 252215 252216 252217 252218 252219 252220 252221 252222" end_var="1"/>
+		<monster var="4" npc_ids="855263" end_var="1"/>
+    </monster_hunt>
+	<!-- Atormentadores Asmodians-->
+	<monster_hunt id="23918" start_npc_ids="802347" end_npc_ids="802353">
+	    <monster var="0" npc_ids="235559" end_var="1"/>
+		<monster var="1" npc_ids="235560" end_var="1"/>
+		<monster var="2" npc_ids="235561" end_var="1"/>
+		<monster var="3" npc_ids="235326" end_var="1"/>
+		<monster var="4" npc_ids="235327" end_var="1"/>
+    </monster_hunt>
+    <!-- ITEM ORDERS QUESTS -->
+</quest_scripts>

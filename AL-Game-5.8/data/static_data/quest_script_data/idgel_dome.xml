@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+	<!--
+		[BEGIN] SUMMARY
+			18940 [XML] [Group] Into the Dome
+			18941 [XML] [Group] Destroying the Destroyer
+			28940 [XML] [Group] All for One
+			28941 [XML] [Group] Destroy the Destroyer
+		[END] SUMMARY
+	-->
+	<!-- REPORTING QUESTS --> 
+	<report_to id="18940" start_npc_ids="802431" end_npc_ids="802383"/>
+	<report_to id="28940" start_npc_ids="802433" end_npc_ids="802384"/>
+	<!-- MONSTER HUNT QUESTS -->
+	<monster_hunt id="18941" start_npc_ids="802383" end_npc_ids="802431">	
+		<monster var="0" npc_ids="234190" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="28941" start_npc_ids="802384" end_npc_ids="802433">	
+		<monster var="0" npc_ids="234190" end_var="1"/>
+	</monster_hunt>
+</quest_scripts>

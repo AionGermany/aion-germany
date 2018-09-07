@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+<!--
+            [BEGIN] SUMMARY
+                80689 [XML] [Event] Secret of the Vault
+				80690 [XML] [Event/Daily] Kill Kinah Grabbers
+				80691 [TODO] [Event] Recapturing the Vault
+                80692 [XML] [Event] Mirez, The Mired
+                80693 [XML] [Event] Zodica, The Crazed
+                80694 [XML] [Event] Budyn, The Bloodied
+                80695 [XML] [Event] Rupasha, The Rapacious
+                80696 [XML] [Event] Gradi, The Grusome
+            [END] SUMMARY
+    -->
+	<!-- REPORTING QUESTS -->
+	<report_to id="80689" start_npc_ids="832921" end_npc_ids="832922"/>
+	<!-- COLLECTING QUESTS -->
+	<!-- HUNTING QUESTS -->
+	<monster_hunt id="80690" start_npc_ids="832923" end_npc_ids="832922">
+		<monster var="0" npc_ids="235678" end_var="1"/>
+		<monster var="1" npc_ids="235634" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="80692" start_npc_ids="832921">
+		<monster var="0" npc_ids="235640" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="80693" start_npc_ids="832921">
+		<monster var="0" npc_ids="235685" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="80694" start_npc_ids="832921">
+		<monster var="0" npc_ids="235684" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="80695" start_npc_ids="832921">
+		<monster var="0" npc_ids="235683" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="80696" start_npc_ids="832921">
+		<monster var="0" npc_ids="235647" end_var="1"/>
+	</monster_hunt>
+</quest_scripts>

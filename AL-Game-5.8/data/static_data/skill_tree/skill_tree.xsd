@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="skill_tree">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="skill" type="SkillTreeEntry" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SkillTreeEntry">
+        <xs:attribute name="classId" type="playerClass" use="required"/>
+        <xs:attribute name="skillId" type="xs:int" use="required"/>
+        <xs:attribute name="skillLevel" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="autolearn" type="xs:boolean"/>
+        <xs:attribute name="stigma" type="xs:boolean" default="false"/>
+        <xs:attribute name="race" type="Race" use="required"/>
+        <xs:attribute name="minLevel" type="xs:int" use="required"/>
+    </xs:complexType>
+</xs:schema>

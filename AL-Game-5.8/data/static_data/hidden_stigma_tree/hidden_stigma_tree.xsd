@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="../import.xsd"/>
+	<xs:element name="hidden_stigma_tree">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="playerclass" type="PlayerClass" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PlayerClass">
+		<xs:sequence>
+			<xs:element name="hiddenstigma" type="HiddenStigmaList" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="classname" type="xs:string"/>
+	</xs:complexType>	
+	<xs:complexType name="HiddenStigmaList">
+		<xs:attribute name="id" type="xs:string"/>
+		<xs:attribute name="requiredid" type="xs:string" default="" />
+		<xs:attribute name="customids" type="xs:string" default="" />		
+	</xs:complexType>
+</xs:schema>

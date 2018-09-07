@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               28800 [XML] [Housing] Give My Regards to Pernon
+               28801 [XML] [Housing] Moving Up in the World
+               28802 [SCRIPT] [Housing] Be It Ever So Humble
+               28805 [SCRIPT] Something Old, Something New
+               28806 [SCRIPT] Wilting Flowers, Falling Tears
+               28807 [SCRIPT] Blessings of a Green Thumb
+               28808 [SCRIPT] Open, Says Me!
+               28809 [SCRIPT] First Class or Coach?
+               28810 [XML] Going Twice...
+               28812 [XML] Precious in Pink
+               28813 [XML] Homage to An Unsung Hero
+               28814 [XML] Fit for a Sprigg
+               28815 [XML] Immortal Guru... Sort Of
+               28816 [XML] Turn, Turn, Turn
+               28817 [XML] Crystal Visions
+               28818 [XML] [Daily] Gentlemen Prefer Pearls
+               28819 [XML] [Daily] Much More Than Ore
+               28820 [XML] [Daily] How Does Your Garden Grow?
+               28821 [SCRIPT] [Daily] Your Butler's Gift
+               28822 [XML] Spring Light Box
+               28823 [XML] Summer Light Box
+               28824 [XML] Autumn Light Box
+               28825 [XML] Winter Light Box
+               28826 [SCRIPT] [Daily] Free to a Good Home...
+               28827 [XML] [Housing] Homeward Bound
+               28828 [SCRIPT] [Housing] The Many Facets of Friendship
+               28829 [XML] [Housing] The Big Empty
+               28830 [SCRIPT] [Housing] Interior Decorator
+               28831 [SCRIPT] [Housing] Just a Step to the Left...
+               28832 [SCRIPT] [Housing] Taking the Tour
+               28833 [XML] [Daily] Sprout, Sprout, Let It All Out
+               28834 [XML] [Daily] 'Til the Soil...
+               28835 [XML] [Daily] Sprout It Out
+               28836 [XML] [Daily] Soiled Quest
+               28837 [XML] [Daily] Sprout of Joy
+               28838 [XML] [Daily] The Soil Under Your Claws
+               28840 [XML] Turn, Turn, Turn
+               28841 [XML] Turn, Turn, Turn
+               28842 [XML] Turn, Turn, Turn
+               28843 [XML] No One Under 21 Allowed
+               28844 [XML] [Daily] A Little Alchemy Practice
+               28846 [XML] A Child's Direction
+               28847 [SCRIPT] A Home That's Your Own
+               28849 [XML] [Relic Bundle Reward] Ancient Goblet
+               28850 [XML] [Relic Bundle Reward] Ancient Crown
+               51007 [XML] [Event/Daily] Save Solorius!
+               51008 [SCRIPT] [Event/Daily] Non-Helping Hands
+               51009 [SCRIPT] [Event/Daily] The Gift of Charity
+               51010 [TODO] [Event] Bitter or Sweet?
+               51019 [TODO] [Event/Daily] Cutie-Wootie Choco Wuv
+               51020 [TODO] [Event/Daily] Chocolate, Extra-Bitter
+               51021 [TODO] [Event/Daily] Candypocalypse
+               51022 [TODO] [Event/Daily] Just Shove-l It
+               51023 [TODO] [Event] Asmodian Perseverance
+               51024 [TODO] [Event] Right to the Heart
+               51025 [TODO] [Event] Left with Half a Heart
+               51026 [TODO] [Event] Fragmented Blessings
+               51027 [TODO] [Event/Weekly] Seeking Soul Vigor
+               51028 [TODO] [Event/Weekly] Seeking Life Essence
+               51029 [TODO] [Event/Daily] Alchemist's Experiment
+               51030 [TODO] [Event/Repeat] Alchemist's Trade
+               80271 [SCRIPT] [Event/Daily] Tasting Treats
+               80304 [TODO] [Event] Bitter or Sweet?
+               80305 [TODO] [Event] Bitter or Sweet?
+               80306 [TODO] [Event/Daily] Cutie-Wootie Choco Wuv
+               80307 [TODO] [Event/Daily] Chocolate, Extra Bitter
+               80308 [TODO] [Event/Daily] Candypocalypse
+               80309 [TODO] [Event/Daily] Just Shove-l It
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="28800" start_npc_ids="798459" end_npc_ids="830532"/>
+    <report_to id="28801" start_npc_ids="830085" end_npc_ids="830102"/>
+    <report_to id="28810" start_npc_ids="830118" end_npc_ids="830154"/>
+    <report_to id="28827" start_npc_ids="830153" end_npc_ids="810022 810023 810024 810025 810026"/>
+    <report_to id="28829" start_npc_ids="810022 810023 810024 810025 810026" end_npc_ids="830585"/>
+    <report_to id="28843" start_npc_ids="830532" end_npc_ids="830211"/>
+    <report_to id="28846" start_npc_ids="830466" end_npc_ids="798457"/>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="28812" start_npc_ids="830525"/>
+    <item_collecting id="28813" start_npc_ids="830525"/>
+    <item_collecting id="28814" start_npc_ids="830525"/>
+    <item_collecting id="28815" start_npc_ids="830525"/>
+    <item_collecting id="28816" start_npc_ids="830436"/>
+    <item_collecting id="28817" start_npc_ids="830436"/>
+    <item_collecting id="28818" start_npc_ids="830391"/>
+    <item_collecting id="28819" start_npc_ids="830430"/>
+    <item_collecting id="28820" start_npc_ids="830436"/>
+    <item_collecting id="28822" start_npc_ids="830526"/>
+    <item_collecting id="28823" start_npc_ids="830526"/>
+    <item_collecting id="28824" start_npc_ids="830526"/>
+    <item_collecting id="28825" start_npc_ids="830526"/>
+    <item_collecting id="28834" start_npc_ids="830656"/>
+    <item_collecting id="28836" start_npc_ids="830656"/>
+    <item_collecting id="28838" start_npc_ids="830656"/>
+    <item_collecting id="28840" start_npc_ids="830436"/>
+    <item_collecting id="28841" start_npc_ids="830436"/>
+    <item_collecting id="28842" start_npc_ids="830436"/>
+    <item_collecting id="28844" start_npc_ids="830394"/>
+    <item_collecting id="51007" start_npc_ids="831033 831039"/>
+    <relic_rewards id="28849" start_npc_ids="831253" relic_var1="186000058" relic_var2="186000057"
+                   relic_var3="186000056" relic_var4="186000055" relic_count="10"/>
+    <relic_rewards id="28850" start_npc_ids="831235" relic_var1="186000054" relic_var2="186000053"
+                   relic_var3="186000052" relic_var4="186000051" relic_count="10"/>
+    <!-- ITEM ORDERS QUESTS -->
+    <item_order id="28833" start_item_id="182213209" end_npc_id="830656"/>
+    <item_order id="28835" start_item_id="182213210" end_npc_id="830656"/>
+    <item_order id="28837" start_item_id="182213211" end_npc_id="830656"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

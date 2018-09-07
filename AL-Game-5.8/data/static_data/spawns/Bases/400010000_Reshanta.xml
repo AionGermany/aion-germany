@@ -1,0 +1,3295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+	<spawn_map map_id="400010000">
+		<base_spawn id="134"> <!-- Rattlefrost Outpost (Base 50) -->
+			<simple_race race="ASMODIANS">
+				<!-- 50th Garrison / ab1_v01_flag_d -->
+				<spawn npc_id="805439">
+					<spot x="1454.88" y="1078.34" z="3001.52" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 50th Defence Squad ||| Ab1_v01_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883082" handler="BOSS">
+					<spot x="1454.925" y="1081.1628" z="2971.0544" h="28"/>
+				</spawn>
+                <!-- Taboa ||| Ab1_Village_Guard50_D -->
+                <spawn npc_id="805408" respawn_time="295">
+                    <spot x="1455.6504" y="1073.7363" z="2970.5303" h="93"/>
+                </spawn>
+                <!-- Bernad ||| Ab1_v01_D_Seller_Goods -->
+                <spawn npc_id="805495" respawn_time="295">
+                    <spot x="1453.103" y="1073.9794" z="2970.53" h="83"/>
+                </spawn>
+                <!-- Petronille ||| Ab1_v01_D_Warehouse -->
+                <spawn npc_id="805496" respawn_time="295">
+                    <spot x="1451.1753" y="1075.3495" z="2970.5303" h="73"/>
+                </spawn>
+                <!-- Lorik ||| Ab1_v01_D_Seller_ap -->
+                <spawn npc_id="805497" respawn_time="295">
+                    <spot x="1457.7383" y="1074.7117" z="2970.5303" h="103"/>
+                </spawn>
+                <!-- Destroyer of the 50th Defence Squad ||| Ab1_v01_Da_Fi_65_Ae -->
+                <spawn npc_id="883083" respawn_time="295">
+                    <spot x="1474.9656" y="1101.4719" z="2964.3367" h="26"/>
+                    <spot x="1426.4092" y="1079.1389" z="2965.0642" h="66"/>
+                    <spot x="1469.3372" y="1055.6182" z="2966.0217" h="116"/>
+                </spawn>
+                <!-- Miracle Healer of the 50th Defence Squad ||| Ab1_v01_Da_Pr_65_Ae -->
+                <spawn npc_id="883084" respawn_time="295">
+                    <spot x="1450.22" y="1093.8984" z="2970.1426" h="33"/>
+                    <spot x="1458.4736" y="1079.1273" z="2970.8313" h="3"/>
+                </spawn>
+                <!-- Sentinel Leader of the 50th Defence Squad ||| Ab1_v01_Da_Ra_65_Ae -->
+                <spawn npc_id="883085" respawn_time="295">
+                    <spot x="1451.3601" y="1079.7319" z="2970.8386" h="53"/>
+                </spawn>
+                <!-- Scout Officer of the 50th Defence Squad ||| Ab1_v01_Da_As_65_Ae -->
+                <spawn npc_id="883086" respawn_time="295">
+                    <spot x="1469.0537" y="1087.8142" z="2970.2234" h="13"/>
+                    <spot x="1434.1111" y="1081.4958" z="2967.9026" h="56"/>
+                    <spot x="1462.323" y="1061.8569" z="2969.5615" h="100"/>
+                </spawn>
+                <!-- Chief of Staff of the 50th Defence Squad ||| Ab1_v01_Da_Wi_65_Ae -->
+                <spawn npc_id="883087" respawn_time="295">
+                    <spot x="1470.3081" y="1074.1722" z="2969.8323" h="116"/>
+                    <spot x="1448.6838" y="1061.9657" z="2969.9119" h="90"/>
+                </spawn>
+
+                <!-- Slayer of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883327" respawn_time="295">
+                    <spot x="1388.7598" y="1072.6083" z="2941.5928" h="63"/>
+                    <spot x="1349.0715" y="1067.1277" z="2937.8374" h="100"/>
+                    <spot x="1353.8701" y="1034.2396" z="2939.3352" h="63"/>
+                    <spot x="1325.4775" y="1024.6499" z="2937.0244" h="98"/>
+                </spawn>
+                <!-- Miracle Healer of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Pr_65_Ae -->
+                <spawn npc_id="883328" respawn_time="295">
+                    <spot x="1328.425" y="993.1789" z="2938.9514" h="98"/>
+                </spawn>
+                <!-- Sentinel Leader of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883329" respawn_time="295">
+                    <spot x="1306.5219" y="1071.7454" z="2936.6875" h="10"/>
+                </spawn>
+                <!-- Scout Officer of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883330" respawn_time="295">
+                    <spot x="1371.9564" y="1067.6633" z="2940.309" h="40"/>
+                </spawn>
+                <!-- Chief of Staff of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883331" respawn_time="295">
+                    <spot x="1312.2145" y="1056.9415" z="2937.2375" h="47"/>
+                </spawn>
+                <!-- Slayer of the 50th Scout Troop ||| Ab1_v01Ctrl_Li_Fi_65_Ae -->
+                <spawn npc_id="883333" respawn_time="295">
+                    <spot x="1361.0159" y="1142.0542" z="2945.7942" h="25"/>
+                    <spot x="1371.2871" y="1173.0048" z="2947.9875" h="71"/>
+                    <spot x="1321.6553" y="1136.0013" z="2945.2107" h="8"/>
+                    <spot x="1345.7924" y="1188.0889" z="2947.787" h="5"/>
+                </spawn>
+                <!-- Miracle Healer of the 50th Scout Troop ||| Ab1_v01Ctrl_Li_Pr_65_Ae -->
+                <spawn npc_id="883334" respawn_time="295">
+                    <spot x="1326.1324" y="1171.2798" z="2946.6235" h="96"/>
+                </spawn>
+                <!-- Sentinel Leader of the 50th Scout Troop ||| Ab1_v01Ctrl_Li_Ra_65_Ae -->
+                <spawn npc_id="883335" respawn_time="295">
+                    <spot x="1375.3364" y="1119.059" z="2944.3335" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 50th Scout Troop ||| Ab1_v01Ctrl_Li_As_65_Ae -->
+                <spawn npc_id="883336" respawn_time="295">
+                    <spot x="1379.3275" y="1149.6163" z="2946.068" h="80"/>
+                </spawn>
+                <!-- Chief of Staff of the 50th Scout Troop ||| Ab1_v01Ctrl_Li_Wi_65_Ae -->
+                <spawn npc_id="883337" respawn_time="295">
+                    <spot x="1317.9119" y="1148.0807" z="2946.361" h="26"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 50th Garrison / Ab1_v01_Flag_L -->
+				<spawn npc_id="805438">
+					<spot x="1454.8809" y="1078.3506" z="3001.5208" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 50th Occupation Troop ||| Ab1_v01_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883076" handler="BOSS">
+					<spot x="1454.925" y="1081.1628" z="2971.0544" h="28"/>
+				</spawn>
+                <!-- Kandea ||| Ab1_Village_Guard50_L -->
+                <spawn npc_id="805385" respawn_time="295">
+                    <spot x="1455.6504" y="1073.7363" z="2970.5303" h="93"/>
+                </spawn>
+                <!-- Spiridon ||| Ab1_v01_L_Seller_Goods -->
+                <spawn npc_id="805492" respawn_time="295">
+                    <spot x="1453.103" y="1073.9794" z="2970.53" h="83"/>
+                </spawn>
+                <!-- Zephyra ||| Ab1_v01_L_Warehouse -->
+                <spawn npc_id="805493" respawn_time="295">
+                    <spot x="1451.1753" y="1075.3495" z="2970.5303" h="73"/>
+                </spawn>
+                <!-- Bernado ||| Ab1_v01_L_Seller_ap -->
+                <spawn npc_id="805494" respawn_time="295">
+                    <spot x="1457.7383" y="1074.7117" z="2970.5303" h="103"/>
+                </spawn>
+                <!-- Destroyer of the 50th Occupation Troop ||| Ab1_v01_Li_Fi_65_Ae -->
+                <spawn npc_id="883077" respawn_time="295">
+                    <spot x="1426.4092" y="1079.1389" z="2965.0642" h="66"/>
+                    <spot x="1474.9656" y="1101.4719" z="2964.3367" h="26"/>
+                    <spot x="1469.3372" y="1055.6182" z="2966.0217" h="116"/>
+                </spawn>
+                <!-- Miracle Healer of the 50th Occupation Troop ||| Ab1_v01_Li_Pr_65_Ae -->
+                <spawn npc_id="883078" respawn_time="295">
+                    <spot x="1450.22" y="1093.8984" z="2970.1426" h="33"/>
+                    <spot x="1458.4736" y="1079.1273" z="2970.8313" h="3"/>
+                </spawn>
+                <!-- Sentinel Leader of the 50th Occupation Troop ||| Ab1_v01_Li_Ra_65_Ae -->
+                <spawn npc_id="883079" respawn_time="295">
+                    <spot x="1451.3601" y="1079.7319" z="2970.8386" h="53"/>
+                </spawn>
+                <!-- Scout Officer of the 50th Occupation Troop ||| Ab1_v01_Li_As_65_Ae -->
+                <spawn npc_id="883080" respawn_time="295">
+                    <spot x="1434.1111" y="1081.4958" z="2967.9026" h="56"/>
+                    <spot x="1469.0537" y="1087.8142" z="2970.2234" h="13"/>
+                    <spot x="1462.323" y="1061.8569" z="2969.5615" h="100"/>
+                </spawn>
+                <!-- Chief of Staff of the 50th Occupation Troop ||| Ab1_v01_Li_Wi_65_Ae -->
+                <spawn npc_id="883081" respawn_time="295">
+                    <spot x="1448.6838" y="1061.9657" z="2969.9119" h="90"/>
+                    <spot x="1470.3081" y="1074.1722" z="2969.8323" h="116"/>
+                </spawn>
+
+                <!-- Slayer of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883327" respawn_time="295">
+                    <spot x="1350.9312" y="1063.4203" z="2938.606" h="117"/>
+                    <spot x="1390.2551" y="1068.5103" z="2942.0386" h="4"/>
+                    <spot x="1361.0741" y="1033.671" z="2939.5933" h="1"/>
+                    <spot x="1332.852" y="1025.5247" z="2937.2878" h="115"/>
+                </spawn>
+                <!-- Miracle Healer of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Pr_65_Ae -->
+                <spawn npc_id="883328" respawn_time="295">
+                    <spot x="1325.4923" y="996.91797" z="2938.0144" h="0"/>
+                </spawn>
+                <!-- Sentinel Leader of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883329" respawn_time="295">
+                    <spot x="1302.5248" y="1068.1187" z="2936.8518" h="30"/>
+                </spawn>
+                <!-- Scout Officer of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883330" respawn_time="295">
+                    <spot x="1373.0975" y="1066.8914" z="2940.5195" h="1"/>
+                </spawn>
+                <!-- Chief of Staff of the 50th Vanguard ||| Ab1_v01Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883331" respawn_time="295">
+                    <spot x="1326.2936" y="1052.5732" z="2937.2612" h="81"/>
+                </spawn>
+                <!-- Slayer of the 50th Search Party ||| Ab1_v01Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883339" respawn_time="295">
+                    <spot x="1342.0823" y="1187.8904" z="2947.1716" h="1"/>
+                    <spot x="1379.9735" y="1172.1412" z="2947.8643" h="2"/>
+                    <spot x="1358.6157" y="1142.8059" z="2945.874" h="37"/>
+                    <spot x="1310.7673" y="1133.739" z="2945.0322" h="48"/>
+                </spawn>
+                <!-- Miracle Healer of the 50th Search Party ||| Ab1_v01Ctrl_Da_Pr_65_Ae -->
+                <spawn npc_id="883340" respawn_time="295">
+                    <spot x="1335.3983" y="1172.9381" z="2947.1445" h="8"/>
+                </spawn>
+                <!-- Sentinel Leader of the 50th Search Party ||| Ab1_v01Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883341" respawn_time="295">
+                    <spot x="1375.3364" y="1119.059" z="2944.3335" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 50th Search Party ||| Ab1_v01Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883342" respawn_time="295">
+                    <spot x="1379.19" y="1153.72" z="2946.132" h="49"/>
+                </spawn>
+                <!-- Chief of Staff of the 50th Search Party ||| Ab1_v01Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883343" respawn_time="295">
+                    <spot x="1319.29" y="1153.6266" z="2946.4885" h="11"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 50th Garrison / ab1_v01_flag_dr -->
+				<spawn npc_id="805440">
+					<spot x="1454.88" y="1078.34" z="3001.52" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 50th Conquest Squad ||| Ab1_v01_Eresh_Fi_Boss_65_Ae -->
+				<spawn npc_id="882980" handler="BOSS">
+					<spot x="1454.925" y="1081.1628" z="2971.0544" h="28"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v01Ctrl_Eresh_Fi_BossKiller_65_Ae1 -->
+				<spawn npc_id="883326" handler="ATTACKER">
+					<spot x="1455.6238" y="1087.8514" z="2970.53" h="88"/>
+				</spawn>
+				<!-- Destroyer of the 50th Conquest Squad ||| Ab1_v01_Eresh_Fi_65_Ae -->
+				<spawn npc_id="882981" respawn_time="295">
+					<spot x="1474.9656" y="1101.4719" z="2964.3367" h="26"/>
+					<spot x="1469.3372" y="1055.6182" z="2966.0217" h="116"/>
+					<spot x="1426.4092" y="1079.1389" z="2965.0642" h="66"/>
+				</spawn>
+				<!-- Miracle Healer of the 50th Conquest Squad ||| Ab1_v01_Eresh_Pr_65_Ae -->
+				<spawn npc_id="882982" respawn_time="295">
+					<spot x="1450.22" y="1093.8984" z="2970.1426" h="33"/>
+					<spot x="1458.4736" y="1079.1273" z="2970.8313" h="3"/>
+				</spawn>
+				<!-- Sentinel Leader of the 50th Conquest Squad ||| Ab1_v01_Eresh_Ra_65_Ae -->
+				<spawn npc_id="882983" respawn_time="295">
+					<spot x="1451.3601" y="1079.7319" z="2970.8386" h="53"/>
+				</spawn>
+				<!-- Scout Officer of the 50th Conquest Squad ||| Ab1_v01_Eresh_As_65_Ae -->
+				<spawn npc_id="882984" respawn_time="295">
+					<spot x="1469.0537" y="1087.8142" z="2970.2234" h="13"/>
+					<spot x="1462.323" y="1061.8569" z="2969.5615" h="88"/>
+					<spot x="1434.1111" y="1081.4958" z="2967.9026" h="56"/>
+				</spawn>
+				<!-- Chief of Staff of the 50th Conquest Squad ||| Ab1_v01_Eresh_Wi_65_Ae -->
+				<spawn npc_id="882985" respawn_time="295">
+					<spot x="1470.3081" y="1074.1722" z="2969.8323" h="116"/>
+					<spot x="1448.6838" y="1061.9657" z="2969.9119" h="90"/>
+				</spawn>
+
+				<!-- Destroyer of the 50th Search Party ||| Ab1_v01_Search_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883669" respawn_time="295">
+					<spot x="1473.7096" y="1550.2134" z="3097.43" h="81"/>
+					<spot x="1479.3347" y="1529.1621" z="3096.9604" h="43"/>
+					<spot x="1550.2622" y="1499.9249" z="3092.1665" h="109"/>
+					<spot x="1573.7672" y="1498.9487" z="3094.5789" h="64"/>
+					<spot x="1334.362" y="1030.8357" z="2937.2805" h="31"/>
+					<spot x="1363.3525" y="1036.1864" z="2939.868" h="50"/>
+					<spot x="1347.6724" y="1059.0719" z="2938.356" h="114"/>
+					<spot x="1317.8688" y="1138.5226" z="2945.4934" h="57"/>
+					<spot x="1346.4419" y="1188.8271" z="2947.9495" h="100"/>
+					<spot x="1363.8231" y="1140.3967" z="2945.618" h="116"/>
+					<spot x="1381.9083" y="1172.1383" z="2947.9062" h="8"/>
+					<spot x="1392.885" y="1072.0413" z="2942.0464" h="36"/>
+				</spawn>
+				<!-- Miracle Healer of the 50th Search Party ||| Ab1_v01_Search_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883670" respawn_time="295">
+					<spot x="1323.7012" y="995.8777" z="2937.7961" h="6"/>
+					<spot x="1336.6718" y="1172.8059" z="2947.218" h="6"/>
+				</spawn>
+				<!-- Sentinel Leader of the 50th Search Party ||| Ab1_v01_Search_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883671" respawn_time="295">
+					<spot x="1298.8912" y="1073.2078" z="2936.5894" h="6"/>
+					<spot x="1376.734" y="1113.5696" z="2944.0645" h="83"/>
+				</spawn>
+				<!-- Scout Officer of the 50th Search Party ||| Ab1_v01_Search_Eresh_As_65_Ae -->
+				<spawn npc_id="883672" respawn_time="295">
+					<spot x="1373.6079" y="1068.4888" z="2940.3325" h="42"/>
+					<spot x="1370.5963" y="1151.335" z="2946.4634" h="96"/>
+				</spawn>
+				<!-- Chief of Staff of the 50th Search Party ||| Ab1_v01_Search_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883673" respawn_time="295">
+					<spot x="1317.8579" y="1058.1714" z="2937.5608" h="15"/>
+					<spot x="1318.8293" y="1152.2772" z="2946.4473" h="69"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="135"> <!-- Sliversleet Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 51st Garrison / ab1_v02_flag_d -->
+				<spawn npc_id="805442">
+					<spot x="1560.99" y="803.03" z="3046.90" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 51st Defence Squad ||| Ab1_v02_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883094" handler="BOSS">
+					<spot x="1559.6467" y="805.5591" z="3017.5269" h="40"/>
+				</spawn>
+                <!-- Pierre ||| Ab1_Village_Guard51_D -->
+                <spawn npc_id="805409" respawn_time="295">
+                    <spot x="1565.5798" y="801.65015" z="3017.0122" h="116"/>
+                </spawn>
+                <!-- Markos ||| Ab1_v02_D_Seller_Goods -->
+                <spawn npc_id="805501" respawn_time="295">
+                    <spot x="1564.2991" y="799.50916" z="3017.0125" h="106"/>
+                </spawn>
+                <!-- Adal ||| Ab1_v02_D_Warehouse -->
+                <spawn npc_id="805502" respawn_time="295">
+                    <spot x="1562.0115" y="798.2582" z="3017.0125" h="96"/>
+                </spawn>
+                <!-- Lamar ||| Ab1_v02_D_Seller_ap -->
+                <spawn npc_id="805503" respawn_time="295">
+                    <spot x="1559.6094" y="798.386" z="3017.0122" h="83"/>
+                </spawn>
+                <!-- Destroyer of the 51st Defence Squad ||| Ab1_v02_Da_Fi_65_Ae -->
+                <spawn npc_id="883095" respawn_time="295">
+                    <spot x="1536.6577" y="786.90686" z="3011.0515" h="73"/>
+                    <spot x="1566.8501" y="830.57825" z="3012.1057" h="33"/>
+                    <spot x="1586.7649" y="792.2219" z="3012.1785" h="3"/>
+                </spawn>
+                <!-- Miracle Healer of the 51st Defence Squad ||| Ab1_v02_Da_Pr_65_Ae -->
+                <spawn npc_id="883096" respawn_time="295">
+                    <spot x="1548.9426" y="813.1554" z="3016.574" h="46"/>
+                    <spot x="1563.7134" y="805.6633" z="3017.3123" h="13"/>
+                </spawn>
+                <!-- Sentinel Leader of the 51st Defence Squad ||| Ab1_v02_Da_Ra_65_Ae -->
+                <spawn npc_id="883097" respawn_time="295">
+                    <spot x="1557.4495" y="801.96497" z="3017.315" h="66"/>
+                </spawn>
+                <!-- Scout Officer of the 51st Defence Squad ||| Ab1_v02_Da_As_65_Ae -->
+                <spawn npc_id="883098" respawn_time="295">
+                    <spot x="1539.4956" y="792.49927" z="3013.0867" h="73"/>
+                    <spot x="1566.4392" y="819.65454" z="3016.4087" h="20"/>
+                    <spot x="1576.3264" y="793.8584" z="3016.0793" h="113"/>
+                </spawn>
+                <!-- Chief of Staff of the 51st Defence Squad ||| Ab1_v02_Da_Wi_65_Ae -->
+                <spawn npc_id="883099" respawn_time="295">
+                    <spot x="1575.6248" y="810.07166" z="3016.2896" h="10"/>
+                    <spot x="1565.5657" y="785.77466" z="3016.3" h="96"/>
+                </spawn>
+
+                <!-- Slayer of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883346" respawn_time="295">
+                    <spot x="1394.9457" y="837.6786" z="2951.5696" h="112"/>
+                    <spot x="1377.0024" y="842.8281" z="2954.5068" h="9"/>
+                    <spot x="1397.5282" y="798.8337" z="2963.8403" h="117"/>
+                    <spot x="1346.091" y="866.6583" z="2958.6868" h="18"/>
+                </spawn>
+                <!-- Miracle Healer of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Pr_65_Ae -->
+                <spawn npc_id="883347" respawn_time="295">
+                    <spot x="1350.1877" y="852.30457" z="2956.1768" h="67"/>
+                </spawn>
+                <!-- Sentinel Leader of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883348" respawn_time="295">
+                    <spot x="1360.4513" y="870.8521" z="2960.9485" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883349" respawn_time="295">
+                    <spot x="1410.4904" y="793.5504" z="2963.841" h="56"/>
+                </spawn>
+                <!-- Chief of Staff of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883350" respawn_time="295">
+                    <spot x="1436.2454" y="788.12726" z="2964.726" h="108"/>
+                </spawn>
+                <!-- Slayer of the 51st Scout Troop ||| Ab1_v02Ctrl_Li_Fi_65_Ae -->
+                <spawn npc_id="883352" respawn_time="295">
+                    <spot x="1621.8999" y="979.82214" z="2965.5474" h="0"/>
+                    <spot x="1663.5948" y="978.8357" z="2984.0325" h="116"/>
+                    <spot x="1655.3235" y="988.0795" z="2980.06" h="1"/>
+                    <spot x="1615.5276" y="1026.1454" z="2962.889" h="119"/>
+                </spawn>
+                <!-- Sentinel Leader of the 51st Scout Troop ||| Ab1_v02Ctrl_Li_Ra_65_Ae -->
+                <spawn npc_id="883354" respawn_time="295">
+                    <spot x="1629.1187" y="1014.4038" z="2967.0117" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 51st Scout Troop ||| Ab1_v02Ctrl_Li_As_65_Ae -->
+                <spawn npc_id="883355" respawn_time="295">
+                    <spot x="1602.4698" y="1048.2386" z="2959.5432" h="44"/>
+                    <spot x="1640.363" y="985.19965" z="2973.6257" h="0"/>
+                </spawn>
+                <!-- Chief of Staff of the 51st Scout Troop ||| Ab1_v02Ctrl_Li_Wi_65_Ae -->
+                <spawn npc_id="883356" respawn_time="295">
+                    <spot x="1621.8114" y="997.01025" z="2965.128" h="114"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 51st Garrison / Ab1_v02_Flag_L -->
+				<spawn npc_id="805441">
+					<spot x="1560.9944" y="803.03564" z="3046.8975" h="119"/>
+				</spawn>           
+				<!-- Battle Commander of the 51st Occupation Troop ||| Ab1_v02_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883088" respawn_time="295">
+					<spot x="1559.6467" y="805.5591" z="3017.5269" h="40"/>
+				</spawn>
+				<!-- Segla ||| Ab1_Village_Guard51_L -->
+				<spawn npc_id="805386" respawn_time="295">
+					<spot x="1565.5798" y="801.65015" z="3017.0122" h="116"/>
+				</spawn>
+				<!-- Oreste ||| Ab1_v02_L_Seller_Goods -->
+				<spawn npc_id="805498" respawn_time="295">
+					<spot x="1564.2991" y="799.50916" z="3017.0125" h="106"/>
+				</spawn>
+				<!-- Marbara ||| Ab1_v02_L_Warehouse -->
+				<spawn npc_id="805499" respawn_time="295">
+					<spot x="1562.0115" y="798.2582" z="3017.0125" h="96"/>
+				</spawn>
+				<!-- Timoteos ||| Ab1_v02_L_Seller_ap -->
+				<spawn npc_id="805500" respawn_time="295">
+					<spot x="1559.6094" y="798.386" z="3017.0122" h="83"/>
+				</spawn>
+				<!-- Destroyer of the 51st Occupation Troop ||| Ab1_v02_Li_Fi_65_Ae -->
+				<spawn npc_id="883089" respawn_time="295">
+					<spot x="1586.7649" y="792.2219" z="3012.1785" h="3"/>
+					<spot x="1566.8501" y="830.57825" z="3012.1057" h="33"/>
+					<spot x="1536.6577" y="786.90686" z="3011.0515" h="73"/>
+				</spawn>
+				<!-- Miracle Healer of the 51st Occupation Troop ||| Ab1_v02_Li_Pr_65_Ae -->
+				<spawn npc_id="883090" respawn_time="295">
+					<spot x="1563.7134" y="805.6633" z="3017.3123" h="13"/>
+					<spot x="1548.9426" y="813.1554" z="3016.574" h="46"/>
+				</spawn>
+				<!-- Sentinel Leader of the 51st Occupation Troop ||| Ab1_v02_Li_Ra_65_Ae -->
+				<spawn npc_id="883091" respawn_time="295">
+					<spot x="1557.4495" y="801.96497" z="3017.315" h="66"/>
+				</spawn>
+				<!-- Scout Officer of the 51st Occupation Troop ||| Ab1_v02_Li_As_65_Ae -->
+				<spawn npc_id="883092" respawn_time="295">
+					<spot x="1576.3264" y="793.8584" z="3016.0793" h="113"/>
+					<spot x="1566.4392" y="819.65454" z="3016.4087" h="20"/>
+					<spot x="1539.4956" y="792.49927" z="3013.0867" h="73"/>
+				</spawn>
+				<!-- Chief of Staff of the 51st Occupation Troop ||| Ab1_v02_Li_Wi_65_Ae -->
+				<spawn npc_id="883093" respawn_time="295">
+					<spot x="1565.5657" y="785.77466" z="3016.3" h="96"/>
+					<spot x="1575.6248" y="810.07166" z="3016.2896" h="10"/>
+				</spawn>
+
+				<!-- Slayer of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883346" respawn_time="295">
+					<spot x="1398.8475" y="799.3895" z="2963.871" h="1"/>
+					<spot x="1390.3906" y="835.9851" z="2951.4636" h="119"/>
+					<spot x="1372.295" y="841.0253" z="2954.1587" h="2"/>
+					<spot x="1338.455" y="862.65564" z="2956.494" h="28"/>
+				</spawn>
+				<!-- Miracle Healer of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883347" respawn_time="295">
+					<spot x="1360.9371" y="851.9702" z="2956.8855" h="21"/>
+				</spawn>
+				<!-- Sentinel Leader of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883348" respawn_time="295">
+					<spot x="1360.7002" y="872.782" z="2960.8342" h="16"/>
+				</spawn>
+				<!-- Scout Officer of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_As_65_Ae -->
+				<spawn npc_id="883349" respawn_time="295">
+					<spot x="1416.4661" y="802.13855" z="2963.0237" h="60"/>
+				</spawn>
+				<!-- Chief of Staff of the 51st Vanguard ||| Ab1_v02Ctrl_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883350" respawn_time="295">
+					<spot x="1438.5591" y="790.2525" z="2965.8196" h="0"/>
+				</spawn>
+				<!-- Slayer of the 51st Search Party ||| Ab1_v02Ctrl_Da_Fi_65_Ae -->
+				<spawn npc_id="883358" respawn_time="295">
+					<spot x="1623.7789" y="980.1704" z="2966.408" h="0"/>
+					<spot x="1656.2583" y="987.6756" z="2980.5322" h="118"/>
+					<spot x="1664.3971" y="979.7105" z="2984.3914" h="12"/>
+				</spawn>
+				<!-- Sentinel Leader of the 51st Search Party ||| Ab1_v02Ctrl_Da_Ra_65_Ae -->
+				<spawn npc_id="883360" respawn_time="295">
+					<spot x="1629.1187" y="1014.4038" z="2967.0117" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 51st Search Party ||| Ab1_v02Ctrl_Da_As_65_Ae -->
+				<spawn npc_id="883361" respawn_time="295">
+					<spot x="1635.3625" y="985.42444" z="2971.4773" h="114"/>
+					<spot x="1596.9908" y="1045.635" z="2959.614" h="74"/>
+				</spawn>
+				<!-- Chief of Staff of the 51st Search Party ||| Ab1_v02Ctrl_Da_Wi_65_Ae -->
+				<spawn npc_id="883362" respawn_time="295">
+					<spot x="1622.7222" y="997.16614" z="2965.408" h="3"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 51st Garrison / ab1_v02_flag_dr -->
+				<spawn npc_id="805443">
+					<spot x="1560.99" y="803.03" z="3046.90" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 51st Conquest Squad ||| Ab1_v02_Eresh_Fi_Boss_65_Ae -->
+				<spawn npc_id="882986" handler="BOSS">
+					<spot x="1559.6467" y="805.5591" z="3017.5269" h="40"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v02Ctrl_Eresh_Fi_BossKiller_65_Ae -->
+				<spawn npc_id="883345" handler="ATTACKER">
+					<spot x="1556.4519" y="811.01807" z="3019.7317" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 51st Conquest Squad ||| Ab1_v02_Eresh_Fi_65_Ae -->
+				<spawn npc_id="882987" respawn_time="295">
+					<spot x="1536.6577" y="786.90686" z="3011.0515" h="73"/>
+					<spot x="1586.7649" y="792.2219" z="3012.1785" h="3"/>
+					<spot x="1566.8501" y="830.57825" z="3012.1057" h="33"/>
+				</spawn>
+				<!-- Miracle Healer of the 51st Conquest Squad ||| Ab1_v02_Eresh_Pr_65_Ae -->
+				<spawn npc_id="882988" respawn_time="295">
+					<spot x="1563.7134" y="805.6633" z="3017.3123" h="13"/>
+					<spot x="1548.9426" y="813.1554" z="3016.574" h="46"/>
+				</spawn>
+				<!-- Sentinel Leader of the 51st Conquest Squad ||| Ab1_v02_Eresh_Ra_65_Ae -->
+				<spawn npc_id="882989" respawn_time="295">
+					<spot x="1557.4495" y="801.96497" z="3017.315" h="66"/>
+				</spawn>
+				<!-- Scout Officer of the 51st Conquest Squad ||| Ab1_v02_Eresh_As_65_Ae -->
+				<spawn npc_id="882990" respawn_time="295">
+					<spot x="1539.4956" y="792.49927" z="3013.0867" h="73"/>
+					<spot x="1576.3264" y="793.8584" z="3016.0793" h="113"/>
+					<spot x="1566.4392" y="819.65454" z="3016.4087" h="20"/>
+				</spawn>
+				<!-- Chief of Staff of the 51st Conquest Squad ||| Ab1_v02_Eresh_Wi_65_Ae -->
+				<spawn npc_id="882991" respawn_time="295">
+					<spot x="1565.5657" y="785.77466" z="3016.3" h="96"/>
+					<spot x="1575.6248" y="810.07166" z="3016.2896" h="10"/>
+				</spawn>
+
+				<!-- Destroyer of the 51st Search Party ||| Ab1_v02_Search_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883684" respawn_time="295">
+					<spot x="1398.6544" y="800.0546" z="2963.7659" h="10"/>
+					<spot x="1392.9353" y="833.0632" z="2950.425" h="23"/>
+					<spot x="1372.5945" y="841.81726" z="2954.4158" h="111"/>
+					<spot x="1350.2051" y="864.38293" z="2959.0266" h="5"/>
+					<spot x="1615.4169" y="1028.8213" z="2962.5718" h="67"/>
+					<spot x="1617.115" y="978.253" z="2964.4421" h="48"/>
+					<spot x="1647.8738" y="987.7932" z="2976.6218" h="61"/>
+					<spot x="1662.8107" y="976.9827" z="2983.6885" h="12"/>
+				</spawn>
+				<!-- Miracle Healer of the 51st Search Party ||| Ab1_v02_Search_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883685" respawn_time="295">
+					<spot x="1349.552" y="854.14746" z="2956.5044" h="38"/>
+				</spawn>
+				<!-- Sentinel Leader of the 51st Search Party ||| Ab1_v02_Search_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883686" respawn_time="295">
+					<spot x="1362.1005" y="872.74225" z="2960.7402" h="56"/>
+					<spot x="1626.9109" y="1017.3736" z="2965.9438" h="55"/>
+				</spawn>
+				<!-- Scout Officer of the 51st Search Party ||| Ab1_v02_Search_Eresh_As_65_Ae -->
+				<spawn npc_id="883687" respawn_time="295">
+					<spot x="1417.4183" y="787.07355" z="2962.7722" h="83"/>
+					<spot x="1598.9946" y="1041.4048" z="2960.2048" h="50"/>
+					<spot x="1638.6964" y="989.3053" z="2972.694" h="50"/>
+				</spawn>
+				<!-- Chief of Staff of the 51st Search Party ||| Ab1_v02_Search_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883688" respawn_time="295">
+					<spot x="1434.8577" y="793.6604" z="2964.9382" h="35"/>
+					<spot x="1617.5427" y="997.352" z="2964.4014" h="99"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="136"> <!-- Coldforge Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 52nd Garrison / ab1_v03_flag_d -->
+				<spawn npc_id="805445">
+					<spot x="1096.80" y="1774.82" z="2978.97" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 52nd Defence Squad ||| Ab1_v03_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883106" handler="BOSS">
+					<spot x="1096.7216" y="1777.7795" z="2949.506" h="30"/>
+				</spawn>
+				<!-- Rojet ||| Ab1_Village_Guard52_D -->
+				<spawn npc_id="805410" respawn_time="295">
+					<spot x="1100.2134" y="1771.8652" z="2948.9905" h="106"/>
+				</spawn>                
+				<!-- Orbat ||| Ab1_v03_D_Seller_Goods -->
+				<spawn npc_id="805507" respawn_time="295">
+					<spot x="1098.271" y="1770.4944" z="2948.9907" h="96"/>
+				</spawn>                
+				<!-- Madallen ||| Ab1_v03_D_Warehouse -->
+				<spawn npc_id="805508" respawn_time="295">
+					<spot x="1095.7705" y="1770.2891" z="2948.9905" h="83"/>
+				</spawn>              
+				<!-- Koen ||| Ab1_v03_D_Seller_ap -->
+				<spawn npc_id="805509" respawn_time="295">
+					<spot x="1093.6254" y="1771.3811" z="2948.9905" h="73"/>
+				</spawn>          
+				<!-- Destroyer of the 52nd Defence Squad ||| Ab1_v03_Da_Fi_65_Ae -->
+				<spawn npc_id="883107" respawn_time="295">
+					<spot x="1106.2474" y="1802.7869" z="2943.747" h="30"/>
+					<spot x="1074.9841" y="1798.5017" z="2942.4407" h="50"/>
+					<spot x="1125.1323" y="1773.8508" z="2947.2761" h="116"/>
+				</spawn>
+				<!-- Miracle Healer of the 52nd Defence Squad ||| Ab1_v03_Da_Pr_65_Ae -->
+				<spawn npc_id="883108" respawn_time="295">
+					<spot x="1105.1019" y="1789.7234" z="2948.3582" h="20"/>
+					<spot x="1093.0706" y="1775.6196" z="2949.2898" h="53"/>
+				</spawn>
+				<!-- Sentinel Leader of the 52nd Defence Squad ||| Ab1_v03_Da_Ra_65_Ae -->
+				<spawn npc_id="883109" respawn_time="295">
+					<spot x="1100.3131" y="1775.9834" z="2949.295" h="6"/>
+				</spawn>
+				<!-- Scout Officer of the 52nd Defence Squad ||| Ab1_v03_Da_As_65_Ae -->
+				<spawn npc_id="883110" respawn_time="295">
+					<spot x="1083.3108" y="1793.5166" z="2945.9697" h="43"/>
+					<spot x="1112.5264" y="1797.9333" z="2944.869" h="110"/>
+					<spot x="1118.7092" y="1782.1763" z="2946.067" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 52nd Defence Squad ||| Ab1_v03_Da_Wi_65_Ae -->
+				<spawn npc_id="883111" respawn_time="295">
+					<spot x="1080.447" y="1775.1248" z="2948.2593" h="60"/>
+					<spot x="1096.0764" y="1758.4587" z="2949.175" h="30"/>
+				</spawn>
+
+				<!-- Slayer of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883365" respawn_time="295">
+					<spot x="921.9697" y="1852.5887" z="2925.536" h="58"/>
+					<spot x="905.2374" y="1893.6263" z="2920.5557" h="103"/>
+					<spot x="987.3447" y="1822.5022" z="2920.9707" h="0"/>
+				</spawn>
+				<!-- Miracle Healer of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883366" respawn_time="295">
+					<spot x="958.3199" y="1844.4895" z="2921.9883" h="35"/>
+				</spawn>
+				<!-- Sentinel Leader of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883367" respawn_time="295">
+					<spot x="946.2255" y="1851.351" z="2922.4895" h="105"/>
+				</spawn>
+				<!-- Scout Officer of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_As_65_Ae -->
+				<spawn npc_id="883368" respawn_time="295">
+					<spot x="923.8865" y="1876.1824" z="2920.9553" h="23"/>
+				</spawn>
+				<!-- Chief of Staff of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883369" respawn_time="295">
+					<spot x="975.24554" y="1824.5676" z="2923.4302" h="7"/>
+				</spawn>
+				<!-- Slayer of the 52nd Scout Troop ||| Ab1_v03Ctrl_Li_Fi_65_Ae -->
+				<spawn npc_id="883371" respawn_time="295">
+					<spot x="1221.0079" y="1723.1187" z="2946.762" h="7"/>
+					<spot x="1240.5509" y="1698.6786" z="2951.2983" h="8"/>
+					<spot x="1265.7997" y="1752.4333" z="2950.2668" h="118"/>
+					<spot x="1276.3525" y="1711.4183" z="2958.012" h="107"/>
+				</spawn>
+				<!-- Sentinel Leader of the 52nd Scout Troop ||| Ab1_v03Ctrl_Li_Ra_65_Ae -->
+				<spawn npc_id="883373" respawn_time="295">
+					<spot x="1246.805" y="1739.1042" z="2948.5503" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 52nd Scout Troop ||| Ab1_v03Ctrl_Li_As_65_Ae -->
+				<spawn npc_id="883374" respawn_time="295">
+					<spot x="1234.6675" y="1710.4602" z="2949.9934" h="14"/>
+				</spawn>
+				<!-- Chief of Staff of the 52nd Scout Troop ||| Ab1_v03Ctrl_Li_Wi_65_Ae -->
+				<spawn npc_id="883375" respawn_time="295">
+					<spot x="1237.5237" y="1725.583" z="2949.1567" h="116"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 52nd Garrison / Ab1_v03_Flag_L -->
+				<spawn npc_id="805444">
+					<spot x="1096.8032" y="1774.8259" z="2978.9714" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 52nd Occupation Troop ||| Ab1_v03_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883100" handler="BOSS">
+					<spot x="1096.7216" y="1777.7795" z="2949.506" h="30"/>
+				</spawn>
+				<!-- Segrinne ||| Ab1_Village_Guard52_L -->
+				<spawn npc_id="805387" respawn_time="295">
+					<spot x="1100.2134" y="1771.8652" z="2948.9905" h="106"/>
+				</spawn>
+				<!-- Nestario ||| Ab1_v03_L_Seller_Goods -->
+				<spawn npc_id="805504" respawn_time="295">
+					<spot x="1098.271" y="1770.4944" z="2948.9907" h="96"/>
+				</spawn>
+				<!-- Kallandra ||| Ab1_v03_L_Warehouse -->
+				<spawn npc_id="805505" respawn_time="295">
+					<spot x="1095.7705" y="1770.2891" z="2948.9905" h="83"/>
+				</spawn>
+				<!-- Silvanos ||| Ab1_v03_L_Seller_ap -->
+				<spawn npc_id="805506" respawn_time="295">
+					<spot x="1093.6254" y="1771.3811" z="2948.9905" h="73"/>
+				</spawn>
+				<!-- Destroyer of the 52nd Occupation Troop ||| Ab1_v03_Li_Fi_65_Ae -->
+				<spawn npc_id="883101" respawn_time="295">
+					<spot x="1074.9841" y="1798.5017" z="2942.4407" h="50"/>
+					<spot x="1106.2474" y="1802.7869" z="2943.747" h="30"/>
+					<spot x="1125.1323" y="1773.8508" z="2947.2761" h="116"/>
+				</spawn>
+				<!-- Miracle Healer of the 52nd Occupation Troop ||| Ab1_v03_Li_Pr_65_Ae -->
+				<spawn npc_id="883102" respawn_time="295">
+					<spot x="1093.0706" y="1775.6196" z="2949.2898" h="53"/>
+					<spot x="1105.1019" y="1789.7234" z="2948.3582" h="20"/>
+				</spawn>
+				<!-- Sentinel Leader of the 52nd Occupation Troop ||| Ab1_v03_Li_Ra_65_Ae -->
+				<spawn npc_id="883103" respawn_time="295">
+					<spot x="1100.3131" y="1775.9834" z="2949.295" h="6"/>
+				</spawn>
+				<!-- Scout Officer of the 52nd Occupation Troop ||| Ab1_v03_Li_As_65_Ae -->
+				<spawn npc_id="883104" respawn_time="295">
+					<spot x="1083.3108" y="1793.5166" z="2945.9697" h="43"/>
+					<spot x="1112.5264" y="1797.9333" z="2944.869" h="110"/>
+					<spot x="1118.7092" y="1782.1763" z="2946.067" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 52nd Occupation Troop ||| Ab1_v03_Li_Wi_65_Ae -->
+				<spawn npc_id="883105" respawn_time="295">
+					<spot x="1096.0764" y="1758.4587" z="2949.175" h="30"/>
+					<spot x="1080.447" y="1775.1248" z="2948.2593" h="60"/>
+				</spawn>
+
+                <!-- Slayer of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883365" respawn_time="295">
+                    <spot x="984.35364" y="1821.0051" z="2921.5837" h="4"/>
+                    <spot x="947.3657" y="1822.6375" z="2927.6917" h="61"/>
+                    <spot x="915.38574" y="1852.8262" z="2927.584" h="64"/>
+                    <spot x="900.9855" y="1899.3428" z="2920.21" h="43"/>
+                </spawn>
+                <!-- Miracle Healer of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Pr_65_Ae -->
+                <spawn npc_id="883366" respawn_time="295">
+                    <spot x="957.1318" y="1850.0469" z="2921.185" h="44"/>
+                </spawn>
+                <!-- Sentinel Leader of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883367" respawn_time="295">
+                    <spot x="932.30225" y="1851.3097" z="2924.5652" h="86"/>
+                </spawn>
+                <!-- Scout Officer of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883368" respawn_time="295">
+                    <spot x="922.4649" y="1885.0928" z="2920.2695" h="42"/>
+                </spawn>
+                <!-- Chief of Staff of the 52nd Vanguard ||| Ab1_v03Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883369" respawn_time="295">
+                    <spot x="965.1292" y="1824.969" z="2924.5671" h="80"/>
+                </spawn>
+                <!-- Slayer of the 52nd Search Party ||| Ab1_v03Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883377" respawn_time="295">
+                    <spot x="1262.5007" y="1753.1395" z="2949.2578" h="71"/>
+                    <spot x="1279.0406" y="1710.8285" z="2958.7463" h="100"/>
+                    <spot x="1213.2954" y="1722.8799" z="2945.4983" h="54"/>
+                    <spot x="1241.4766" y="1698.7693" z="2951.4246" h="10"/>
+                </spawn>
+                <!-- Sentinel Leader of the 52nd Search Party ||| Ab1_v03Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883379" respawn_time="295">
+                    <spot x="1246.805" y="1739.1042" z="2948.5503" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 52nd Search Party ||| Ab1_v03Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883380" respawn_time="295">
+                    <spot x="1275.0955" y="1726.9673" z="2956.2283" h="64"/>
+                    <spot x="1235.501" y="1711.3956" z="2950.0042" h="22"/>
+                </spawn>
+                <!-- Chief of Staff of the 52nd Search Party ||| Ab1_v03Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883381" respawn_time="295">
+                    <spot x="1238.5912" y="1727.4034" z="2949.048" h="19"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 52nd Garrison / ab1_v03_flag_dr -->
+				<spawn npc_id="805446">
+					<spot x="1096.80" y="1774.82" z="2978.97" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 52nd Conquest Squad ||| Ab1_v03_Eresh_Fi_Boss_65_Ae -->       
+				<spawn npc_id="882992" handler="BOSS">
+					<spot x="1127.8275" y="1770.2252" z="2947.803" h="116"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v03Ctrl_Eresh_Fi_BossKiller_65_Ae3 -->
+				<spawn npc_id="883364" handler="ATTACKER">
+					<spot x="1096.368" y="1784.2717" z="2949.0815" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 52nd Conquest Squad ||| Ab1_v03_Eresh_Fi_65_Ae -->
+				<spawn npc_id="882993" respawn_time="295">
+					<spot x="1074.9841" y="1798.5017" z="2942.4407" h="50"/>
+					<spot x="1106.2474" y="1802.7869" z="2943.747" h="30"/>
+					<spot x="1125.1323" y="1773.8508" z="2947.2761" h="116"/>
+				</spawn>
+				<!-- Miracle Healer of the 52nd Conquest Squad ||| Ab1_v03_Eresh_Pr_65_Ae -->
+				<spawn npc_id="882994" respawn_time="295">
+					<spot x="1105.1019" y="1789.7234" z="2948.3582" h="20"/>
+					<spot x="1093.0706" y="1775.6196" z="2949.2898" h="53"/>
+				</spawn>
+				<!-- Sentinel Leader of the 52nd Conquest Squad ||| Ab1_v03_Eresh_Ra_65_Ae -->
+				<spawn npc_id="882995" respawn_time="295">
+					<spot x="1100.3131" y="1775.9834" z="2949.295" h="6"/>
+				</spawn>
+				<!-- Scout Officer of the 52nd Conquest Squad ||| Ab1_v03_Eresh_As_65_Ae -->
+				<spawn npc_id="882996" respawn_time="295">
+					<spot x="1083.3108" y="1793.5166" z="2945.9697" h="43"/>
+					<spot x="1112.5264" y="1797.9333" z="2944.869" h="110"/>
+					<spot x="1118.7092" y="1782.1763" z="2946.067" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 52nd Conquest Squad ||| Ab1_v03_Eresh_Wi_65_Ae -->
+				<spawn npc_id="882997" respawn_time="295">
+					<spot x="1080.447" y="1775.1248" z="2948.2593" h="60"/>
+					<spot x="1096.0764" y="1758.4587" z="2949.175" h="30"/>
+				</spawn>
+
+				<!-- Destroyer of the 52nd Search Party ||| Ab1_v03_Search_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883699" respawn_time="295">
+					<spot x="1275.9786" y="1712.033" z="2957.8364" h="115"/>
+					<spot x="906.3027" y="1895.6138" z="2920.2869" h="113"/>
+					<spot x="917.8098" y="1854.919" z="2925.777" h="5"/>
+					<spot x="947.0264" y="1827.0652" z="2926.915" h="117"/>
+					<spot x="988.6787" y="1822.5022" z="2921.2808" h="0"/>
+					<spot x="1221.917" y="1720.0184" z="2947.7476" h="102"/>
+					<spot x="1241.8256" y="1700.584" z="2951.42" h="86"/>
+					<spot x="1267.639" y="1751.9365" z="2950.8552" h="110"/>
+				</spawn>
+				<!-- Miracle Healer of the 52nd Search Party ||| Ab1_v03_Search_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883700" respawn_time="295">
+					<spot x="958.00214" y="1842.0485" z="2922.3718" h="113"/>
+				</spawn>
+				<!-- Sentinel Leader of the 52nd Search Party ||| Ab1_v03_Search_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883701" respawn_time="295">
+					<spot x="940.9505" y="1850.8428" z="2923.6316" h="117"/>
+					<spot x="1250.1191" y="1737.7291" z="2949.443" h="111"/>
+				</spawn>
+				<!-- Scout Officer of the 52nd Search Party ||| Ab1_v03_Search_Eresh_As_65_Ae -->
+				<spawn npc_id="883702" respawn_time="295">
+					<spot x="1272.5309" y="1729.8951" z="2955.4202" h="117"/>
+					<spot x="921.56604" y="1877.6415" z="2921.076" h="119"/>
+					<spot x="1225.2301" y="1708.053" z="2949.3252" h="69"/>
+				</spawn>
+				<!-- Chief of Staff of the 52nd Search Party ||| Ab1_v03_Search_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883703" respawn_time="295">
+					<spot x="972.3238" y="1827.8594" z="2923.9302" h="14"/>
+					<spot x="1241.1609" y="1724.5013" z="2950.0925" h="112"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="137"> <!-- Shimmerfrost Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 53rd Garrison / ab1_v04_flag_d -->
+				<spawn npc_id="805448">
+					<spot x="1121.99" y="2071.75" z="2972.10" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 53rd Defence Squad ||| Ab1_v04_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883118" handler="BOSS">
+					<spot x="1122.0691" y="2068.9685" z="2942.2627" h="93"/>
+				</spawn>
+				<!-- Dukro ||| Ab1_Village_Guard53_D -->
+				<spawn npc_id="805411" respawn_time="295">
+					<spot x="1124.6661" y="2075.6301" z="2941.7454" h="16"/>
+				</spawn>
+				<!-- Penn ||| Ab1_v04_D_Seller_Goods -->
+				<spawn npc_id="805513" respawn_time="295">
+					<spot x="1122.4938" y="2076.5796" z="2941.7454" h="26"/>
+				</spawn>
+				<!-- Landra ||| Ab1_v04_D_Warehouse -->
+				<spawn npc_id="805514" respawn_time="295">
+					<spot x="1120.0514" y="2076.276" z="2941.7456" h="40"/>
+				</spawn>
+				<!-- Kephes ||| Ab1_v04_D_Seller_ap -->
+				<spawn npc_id="805515" respawn_time="295">
+					<spot x="1118.1042" y="2074.8506" z="2941.7456" h="43"/>
+				</spawn>
+				<!-- Destroyer of the 53rd Defence Squad ||| Ab1_v04_Da_Fi_65_Ae -->
+				<spawn npc_id="883119" respawn_time="295">
+					<spot x="1140.6028" y="2092.1384" z="2940.9102" h="83"/>
+					<spot x="1128.397" y="2077.1467" z="2941.763" h="62"/>
+					<spot x="1139.4701" y="2048.1602" z="2940.528" h="103"/>
+				</spawn>
+				<!-- Miracle Healer of the 53rd Defence Squad ||| Ab1_v04_Da_Pr_65_Ae -->
+				<spawn npc_id="883120" respawn_time="295">
+					<spot x="1129.3893" y="2076.1277" z="2941.768" h="59"/>
+					<spot x="1119.7384" y="2086.2466" z="2941.5806" h="90"/>
+				</spawn>
+				<!-- Sentinel Leader of the 53rd Defence Squad ||| Ab1_v04_Da_Ra_65_Ae -->
+				<spawn npc_id="883121" respawn_time="295">
+					<spot x="1125.3872" y="2071.2964" z="2942.0505" h="103"/>
+				</spawn>
+				<!-- Scout Officer of the 53rd Defence Squad ||| Ab1_v04_Da_As_65_Ae -->
+				<spawn npc_id="883122" respawn_time="295">
+					<spot x="1130.2405" y="2079.1555" z="2941.6929" h="23"/>
+					<spot x="1133.135" y="2077.8826" z="2941.6929" h="64"/>
+					<spot x="1132.5236" y="2053.4502" z="2939.8503" h="103"/>
+				</spawn>
+				<!-- Chief of Staff of the 53rd Defence Squad ||| Ab1_v04_Da_Wi_65_Ae -->
+				<spawn npc_id="883123" respawn_time="295">
+					<spot x="1135.4657" y="2074.75" z="2941.6184" h="105"/>
+					<spot x="1119.0411" y="2054.12" z="2941.042" h="90"/>
+				</spawn>
+
+				<!-- Slayer of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883384" respawn_time="295">
+					<spot x="994.1171" y="2002.0527" z="2918.2778" h="97"/>
+					<spot x="954.0565" y="1983.391" z="2912.7278" h="30"/>
+					<spot x="1024.346" y="2034.6996" z="2931.6968" h="79"/>
+					<spot x="941.5447" y="2000.5044" z="2913.9802" h="119"/>
+				</spawn>
+				<!-- Miracle Healer of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883385" respawn_time="295">
+					<spot x="986.4505" y="1989.2584" z="2915.131" h="1"/>
+				</spawn>
+				<!-- Sentinel Leader of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883386" respawn_time="295">
+					<spot x="1014.4859" y="2012.3528" z="2923.9946" h="12"/>
+				</spawn>
+				<!-- Scout Officer of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_As_65_Ae -->
+				<spawn npc_id="883387" respawn_time="295">
+					<spot x="995.3478" y="1975.9976" z="2916.18" h="78"/>
+				</spawn>
+				<!-- Chief of Staff of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883388" respawn_time="295">
+					<spot x="917.258" y="1986.8263" z="2917.9937" h="3"/>
+				</spawn>
+				<!-- Slayer of the 53rd Scout Troop ||| Ab1_v04Ctrl_Li_Fi_65_Ae -->
+				<spawn npc_id="883390" respawn_time="295">
+					<spot x="1256.2451" y="2161.622" z="2956.5625" h="111"/>
+					<spot x="1280.2495" y="2113.5825" z="2955.8208" h="34"/>
+					<spot x="1209.5433" y="2112.1333" z="2952.192" h="0"/>
+					<spot x="1245.9673" y="2122.0283" z="2958.1165" h="22"/>
+				</spawn>
+				<!-- Miracle Healer of the 53rd Scout Troop ||| Ab1_v04Ctrl_Li_Pr_65_Ae -->
+				<spawn npc_id="883391" respawn_time="295">
+					<spot x="1215.8175" y="2130.8076" z="2955.0796" h="0"/>
+				</spawn>
+				<!-- Sentinel Leader of the 53rd Scout Troop ||| Ab1_v04Ctrl_Li_Ra_65_Ae -->
+				<spawn npc_id="883392" respawn_time="295">
+					<spot x="1233.3342" y="2134.7378" z="2957.988" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 53rd Scout Troop ||| Ab1_v04Ctrl_Li_As_65_Ae -->
+				<spawn npc_id="883393" respawn_time="295">
+					<spot x="1271.6681" y="2144.3735" z="2956.2827" h="35"/>
+				</spawn>
+				<!-- Chief of Staff of the 53rd Scout Troop ||| Ab1_v04Ctrl_Li_Wi_65_Ae -->
+				<spawn npc_id="883394" respawn_time="295">
+					<spot x="1276.3434" y="2125.4172" z="2955.6477" h="3"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 53rd Garrison / Ab1_v04_Flag_L -->
+				<spawn npc_id="805447">
+					<spot x="1121.9915" y="2071.7583" z="2972.105" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 53rd Occupation Troop ||| Ab1_v04_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883112" handler="BOSS">
+					<spot x="1122.0691" y="2068.9685" z="2942.2627" h="93"/>
+				</spawn>
+				<!-- Rojan ||| Ab1_Village_Guard53_L -->
+				<spawn npc_id="805388" respawn_time="295">
+					<spot x="1124.6661" y="2075.6301" z="2941.7454" h="16"/>
+				</spawn>
+				<!-- Phillipos ||| Ab1_v04_L_Seller_Goods -->
+				<spawn npc_id="805510" respawn_time="295">
+					<spot x="1122.4938" y="2076.5796" z="2941.7454" h="26"/>
+				</spawn>
+				<!-- Shima ||| Ab1_v04_L_Warehouse -->
+				<spawn npc_id="805511" respawn_time="295">
+					<spot x="1120.0514" y="2076.276" z="2941.7456" h="40"/>
+				</spawn>
+				<!-- Yani ||| Ab1_v04_L_Seller_ap -->
+				<spawn npc_id="805512" respawn_time="295">
+					<spot x="1118.1042" y="2074.8506" z="2941.7456" h="43"/>
+				</spawn>
+				<!-- Destroyer of the 53rd Occupation Troop ||| Ab1_v04_Li_Fi_65_Ae -->
+				<spawn npc_id="883113" respawn_time="295">
+					<spot x="1140.6028" y="2092.1384" z="2940.9102" h="16"/>
+					<spot x="1095.429" y="2067.6394" z="2936.8438" h="66"/>
+					<spot x="1139.4701" y="2048.1602" z="2940.528" h="103"/>
+				</spawn>
+				<!-- Miracle Healer of the 53rd Occupation Troop ||| Ab1_v04_Li_Pr_65_Ae -->
+				<spawn npc_id="883114" respawn_time="295">
+					<spot x="1119.7384" y="2086.2466" z="2941.5806" h="90"/>
+					<spot x="1118.2721" y="2070.535" z="2942.0498" h="70"/>
+				</spawn>
+				<!-- Sentinel Leader of the 53rd Occupation Troop ||| Ab1_v04_Li_Ra_65_Ae -->
+				<spawn npc_id="883115" respawn_time="295">
+					<spot x="1125.3872" y="2071.2964" z="2942.0505" h="116"/>
+				</spawn>
+				<!-- Scout Officer of the 53rd Occupation Troop ||| Ab1_v04_Li_As_65_Ae -->
+				<spawn npc_id="883116" respawn_time="295">
+					<spot x="1133.653" y="2088.6042" z="2940.1616" h="10"/>
+					<spot x="1105.4208" y="2069.458" z="2941.0608" h="63"/>
+					<spot x="1132.5236" y="2053.4502" z="2939.8503" h="103"/>
+				</spawn>
+				<!-- Chief of Staff of the 53rd Occupation Troop ||| Ab1_v04_Li_Wi_65_Ae -->
+				<spawn npc_id="883117" respawn_time="295">
+					<spot x="1137.881" y="2071.934" z="2941.0125" h="0"/>
+					<spot x="1119.0411" y="2054.12" z="2941.042" h="90"/>
+				</spawn>
+
+                <!-- Slayer of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883384" respawn_time="295">
+                    <spot x="1030.6559" y="2034.8414" z="2927.9553" h="14"/>
+                    <spot x="995.6301" y="2003.5969" z="2920.354" h="49"/>
+                    <spot x="954.51056" y="1985.7146" z="2912.6472" h="69"/>
+                    <spot x="930.59094" y="1997.9396" z="2916.975" h="78"/>
+                </spawn>
+                <!-- Miracle Healer of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Pr_65_Ae -->
+                <spawn npc_id="883385" respawn_time="295">
+                    <spot x="989.62933" y="1989.2943" z="2915.388" h="6"/>
+                </spawn>
+                <!-- Sentinel Leader of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883386" respawn_time="295">
+                    <spot x="1002.9591" y="2015.4708" z="2927.6377" h="35"/>
+                </spawn>
+                <!-- Scout Officer of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883387" respawn_time="295">
+                    <spot x="994.0418" y="1981.4598" z="2915.8577" h="33"/>
+                </spawn>
+                <!-- Chief of Staff of the 53rd Vanguard ||| Ab1_v04Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883388" respawn_time="295">
+                    <spot x="926.1392" y="1988.0345" z="2916.8442" h="25"/>
+                </spawn>
+                <!-- Slayer of the 53rd Search Party ||| Ab1_v04Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883396" respawn_time="295">
+                    <spot x="1204.0345" y="2111.263" z="2950.904" h="78"/>
+                    <spot x="1248.9883" y="2121.875" z="2958.422" h="1"/>
+                    <spot x="1253.8654" y="2167.787" z="2956.7065" h="75"/>
+                    <spot x="1281.283" y="2102.1084" z="2955.9045" h="79"/>
+                </spawn>
+                <!-- Miracle Healer of the 53rd Search Party ||| Ab1_v04Ctrl_Da_Pr_65_Ae -->
+                <spawn npc_id="883397" respawn_time="295">
+                    <spot x="1213.8516" y="2128.8093" z="2954.516" h="76"/>
+                </spawn>
+                <!-- Sentinel Leader of the 53rd Search Party ||| Ab1_v04Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883398" respawn_time="295">
+                    <spot x="1233.3342" y="2134.7378" z="2957.988" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 53rd Search Party ||| Ab1_v04Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883399" respawn_time="295">
+                    <spot x="1265.4554" y="2141.553" z="2957.2961" h="105"/>
+                    <spot x="1268.7435" y="2144.6118" z="2956.7502" h="72"/>
+                </spawn>
+                <!-- Chief of Staff of the 53rd Search Party ||| Ab1_v04Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883400" respawn_time="295">
+                    <spot x="1270.7646" y="2128.959" z="2956.5208" h="32"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 53rd Garrison / ab1_v04_flag_dr -->
+				<spawn npc_id="805449">
+					<spot x="1121.99" y="2071.75" z="2972.10" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 53rd Conquest Squad ||| Ab1_v04_Eresh_Fi_Boss_65_Ae -->
+				<spawn npc_id="882998" handler="BOSS">
+					<spot x="1122.0691" y="2068.9685" z="2942.2627" h="93"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v04Ctrl_Eresh_Fi_BossKiller_65_Ae5 -->
+				<spawn npc_id="883383" handler="ATTACKER">
+					<spot x="1122.7302" y="2062.6226" z="2944.978" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 53rd Conquest Squad ||| Ab1_v04_Eresh_Fi_65_Ae -->
+				<spawn npc_id="882999" respawn_time="295">
+					<spot x="1140.6028" y="2092.1384" z="2940.9102" h="16"/>
+					<spot x="1139.4701" y="2048.1602" z="2940.528" h="103"/>
+					<spot x="1095.429" y="2067.6394" z="2936.8438" h="66"/>
+				</spawn>
+				<!-- Miracle Healer of the 53rd Conquest Squad ||| Ab1_v04_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883000" respawn_time="295">
+					<spot x="1118.2721" y="2070.535" z="2942.0498" h="70"/>
+					<spot x="1119.7384" y="2086.2466" z="2941.5806" h="90"/>
+				</spawn>
+				<!-- Sentinel Leader of the 53rd Conquest Squad ||| Ab1_v04_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883001" respawn_time="295">
+					<spot x="1125.3872" y="2071.2964" z="2942.0505" h="116"/>
+				</spawn>
+				<!-- Scout Officer of the 53rd Conquest Squad ||| Ab1_v04_Eresh_As_65_Ae -->
+				<spawn npc_id="883002" respawn_time="295">
+					<spot x="1133.653" y="2088.6042" z="2940.1616" h="10"/>
+					<spot x="1132.5236" y="2053.4502" z="2939.8503" h="103"/>
+					<spot x="1105.4208" y="2069.458" z="2941.0608" h="63"/>
+				</spawn>
+				<!-- Chief of Staff of the 53rd Conquest Squad ||| Ab1_v04_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883003" respawn_time="295">
+					<spot x="1137.881" y="2071.934" z="2941.0125" h="0"/>
+					<spot x="1119.0411" y="2054.12" z="2941.042" h="90"/>
+				</spawn>
+
+				<!-- Destroyer of the 53rd Search Party ||| Ab1_v04_Search_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883714" respawn_time="295">
+					<spot x="1285.8796" y="2109.219" z="2956.1565" h="20"/>
+					<spot x="1248.825" y="2120.4307" z="2958.2375" h="1"/>
+					<spot x="1214.5532" y="2113.6936" z="2953.35" h="6"/>
+					<spot x="1263.575" y="2165.0828" z="2956.1921" h="6"/>
+					<spot x="1025.3383" y="2031.3263" z="2930.2524" h="83"/>
+					<spot x="997.18335" y="1997.9849" z="2917.5237" h="65"/>
+					<spot x="961.1632" y="1988.9675" z="2912.828" h="21"/>
+					<spot x="940.17444" y="2004.8611" z="2914.5876" h="22"/>
+				</spawn>
+				<!-- Miracle Healer of the 53rd Search Party ||| Ab1_v04_Search_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883715" respawn_time="295">
+					<spot x="1218.2385" y="2132.3762" z="2955.6965" h="18"/>
+					<spot x="980.6332" y="1986.64" z="2914.288" h="37"/>
+				</spawn>
+				<!-- Sentinel Leader of the 53rd Search Party ||| Ab1_v04_Search_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883716" respawn_time="295">
+					<spot x="1236.7461" y="2135.8523" z="2958.4973" h="10"/>
+					<spot x="1006.84436" y="2012.2507" z="2925.36" h="67"/>
+				</spawn>
+				<!-- Scout Officer of the 53rd Search Party ||| Ab1_v04_Search_Eresh_As_65_Ae -->
+				<spawn npc_id="883717" respawn_time="295">
+					<spot x="1263.2877" y="2142.8296" z="2957.3218" h="117"/>
+					<spot x="996.83466" y="1972.1715" z="2916.4868" h="94"/>
+				</spawn>
+				<!-- Chief of Staff of the 53rd Search Party ||| Ab1_v04_Search_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883718" respawn_time="295">
+					<spot x="1278.4773" y="2126.3071" z="2955.692" h="25"/>
+					<spot x="923.09784" y="1992.949" z="2918.2585" h="44"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="138"> <!-- Icehowl Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 54th Garrison / ab1_v05_flag_d -->
+				<spawn npc_id="805451">
+					<spot x="1800.54" y="1851.81" z="3118.87" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 54th Defence Squad ||| Ab1_v05_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883130" handler="BOSS">
+					<spot x="1799.0671" y="1849.2461" z="3086.6746" h="80"/>
+				</spawn>
+                <!-- Rashinne ||| Ab1_Village_Guard54_D -->
+                <spawn npc_id="805412" respawn_time="295">
+                    <spot x="1798.8762" y="1856.26" z="3086.1558" h="36"/>
+                </spawn>
+                <!-- Menrid ||| Ab1_v05_D_Seller_Goods -->
+                <spawn npc_id="805519" respawn_time="295">
+                    <spot x="1801.2493" y="1856.3884" z="3086.156" h="26"/>
+                </spawn>
+                <!-- Lize ||| Ab1_v05_D_Warehouse -->
+                <spawn npc_id="805520" respawn_time="295">
+                    <spot x="1803.4609" y="1855.2708" z="3086.156" h="13"/>
+                </spawn>
+                <!-- Alger ||| Ab1_v05_D_Seller_ap -->
+                <spawn npc_id="805521" respawn_time="295">
+                    <spot x="1804.8882" y="1853.3005" z="3086.156" h="3"/>
+                </spawn>
+                <!-- Destroyer of the 54th Defence Squad ||| Ab1_v05_Da_Fi_65_Ae -->
+                <spawn npc_id="883131" respawn_time="295">
+                    <spot x="1773.2622" y="1862.7688" z="3080.116" h="60"/>
+                    <spot x="1807.092" y="1821.9717" z="3080.2925" h="103"/>
+                    <spot x="1827.1106" y="1862.804" z="3080.9907" h="10"/>
+                </spawn>
+                <!-- Miracle Healer of the 54th Defence Squad ||| Ab1_v05_Da_Pr_65_Ae -->
+                <spawn npc_id="883132" respawn_time="295">
+                    <spot x="1803.2026" y="1849.3108" z="3086.457" h="103"/>
+                    <spot x="1803.3286" y="1867.3853" z="3085.7207" h="26"/>
+                </spawn>
+                <!-- Sentinel Leader of the 54th Defence Squad ||| Ab1_v05_Da_Ra_65_Ae -->
+                <spawn npc_id="883133" respawn_time="295">
+                    <spot x="1796.8538" y="1852.6328" z="3086.465" h="53"/>
+                </spawn>
+                <!-- Scout Officer of the 54th Defence Squad ||| Ab1_v05_Da_As_65_Ae -->
+                <spawn npc_id="883134" respawn_time="295">
+                    <spot x="1779.7793" y="1861.6841" z="3082.4265" h="53"/>
+                    <spot x="1801.6438" y="1833.8252" z="3085.1436" h="93"/>
+                    <spot x="1816.4331" y="1855.7683" z="3085.8032" h="3"/>
+                </spawn>
+                <!-- Chief of Staff of the 54th Defence Squad ||| Ab1_v05_Da_Wi_65_Ae -->
+                <spawn npc_id="883135" respawn_time="295">
+                    <spot x="1785.9331" y="1842.9348" z="3085.523" h="66"/>
+                    <spot x="1814.3567" y="1843.6145" z="3085.432" h="110"/>
+                </spawn>
+
+                <!-- Slayer of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883403" respawn_time="295">
+                    <spot x="1679.0408" y="1768.4874" z="3022.1765" h="76"/>
+                    <spot x="1730.9908" y="1760.1301" z="3020.2273" h="45"/>
+                    <spot x="1735.3851" y="1791.8922" z="3016.5408" h="28"/>
+                    <spot x="1748.6641" y="1785.5326" z="3015.2498" h="56"/>
+                </spawn>
+                <!-- Sentinel Leader of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883405" respawn_time="295">
+                    <spot x="1716.6515" y="1784.2418" z="3018.55" h="21"/>
+                </spawn>
+                <!-- Scout Officer of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883406" respawn_time="295">
+                    <spot x="1699.9069" y="1731.894" z="3028.0317" h="62"/>
+                    <spot x="1703.6146" y="1765.6427" z="3021.8516" h="64"/>
+                </spawn>
+                <!-- Chief of Staff of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883407" respawn_time="295">
+                    <spot x="1774.631" y="1791.6934" z="3009.9424" h="75"/>
+                </spawn>
+                <!-- Slayer of the 54th Scout Troop ||| Ab1_v05Ctrl_Li_Fi_65_Ae -->
+                <spawn npc_id="883409" respawn_time="295">
+                    <spot x="1963.0201" y="1940.5702" z="2983.9238" h="4"/>
+                    <spot x="1956.518" y="1892.2708" z="2992.9167" h="1"/>
+                    <spot x="1888.0658" y="1907.9397" z="3000.4001" h="112"/>
+                </spawn>
+                <!-- Miracle Healer of the 54th Scout Troop ||| Ab1_v05Ctrl_Li_Pr_65_Ae -->
+                <spawn npc_id="883410" respawn_time="295">
+                    <spot x="1920.6569" y="1881.8403" z="2999.025" h="106"/>
+                </spawn>
+                <!-- Sentinel Leader of the 54th Scout Troop ||| Ab1_v05Ctrl_Li_Ra_65_Ae -->
+                <spawn npc_id="883411" respawn_time="295">
+                    <spot x="1947.9226" y="1920.0303" z="2988.3704" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 54th Scout Troop ||| Ab1_v05Ctrl_Li_As_65_Ae -->
+                <spawn npc_id="883412" respawn_time="295">
+                    <spot x="1898.5516" y="1907.3579" z="2998.8643" h="80"/>
+                </spawn>
+                <!-- Chief of Staff of the 54th Scout Troop ||| Ab1_v05Ctrl_Li_Wi_65_Ae -->
+                <spawn npc_id="883413" respawn_time="295">
+                    <spot x="1935.0927" y="1894.8074" z="2994.03" h="114"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 54th Garrison / Ab1_v05_Flag_L -->
+				<spawn npc_id="805450">
+					<spot x="1800.542" y="1851.8184" z="3118.8738" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 54th Occupation Troop ||| Ab1_v05_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883124" handler="BOSS">
+					<spot x="1799.0671" y="1849.2461" z="3086.6746" h="80"/>
+				</spawn>
+				<!-- Poeron ||| Ab1_Village_Guard54_L -->
+				<spawn npc_id="805389" respawn_time="295">
+					<spot x="1798.8762" y="1856.26" z="3086.1558" h="36"/>
+				</spawn>
+				<!-- Titos ||| Ab1_v05_L_Seller_Goods -->
+				<spawn npc_id="805516" respawn_time="295">
+					<spot x="1801.2493" y="1856.3884" z="3086.156" h="26"/>
+				</spawn>
+				<!-- Senia ||| Ab1_v05_L_Warehouse -->
+				<spawn npc_id="805517" respawn_time="295">
+					<spot x="1803.4609" y="1855.2708" z="3086.156" h="13"/>
+				</spawn>
+				<!-- Nicolos ||| Ab1_v05_L_Seller_ap -->
+				<spawn npc_id="805518" respawn_time="295">
+					<spot x="1804.8882" y="1853.3005" z="3086.156" h="3"/>
+				</spawn>
+				<!-- Destroyer of the 54th Occupation Troop ||| Ab1_v05_Li_Fi_65_Ae -->
+				<spawn npc_id="883125" respawn_time="295">
+					<spot x="1773.2622" y="1862.7688" z="3080.116" h="60"/>
+					<spot x="1827.1106" y="1862.804" z="3080.9907" h="10"/>
+					<spot x="1807.092" y="1821.9717" z="3080.2925" h="103"/>
+				</spawn>
+				<!-- Miracle Healer of the 54th Occupation Troop ||| Ab1_v05_Li_Pr_65_Ae -->
+				<spawn npc_id="883126" respawn_time="295">
+					<spot x="1803.3286" y="1867.3853" z="3085.7207" h="26"/>
+					<spot x="1803.2026" y="1849.3108" z="3086.457" h="103"/>
+				</spawn>
+				<!-- Sentinel Leader of the 54th Occupation Troop ||| Ab1_v05_Li_Ra_65_Ae -->
+				<spawn npc_id="883127" respawn_time="295">
+					<spot x="1796.8538" y="1852.6328" z="3086.465" h="53"/>
+				</spawn>
+				<!-- Scout Officer of the 54th Occupation Troop ||| Ab1_v05_Li_As_65_Ae -->
+				<spawn npc_id="883128" respawn_time="295">
+					<spot x="1816.4331" y="1855.7683" z="3085.8032" h="3"/>
+					<spot x="1779.7793" y="1861.6841" z="3082.4265" h="53"/>
+					<spot x="1801.6438" y="1833.8252" z="3085.1436" h="93"/>
+				</spawn>
+				<!-- Chief of Staff of the 54th Occupation Troop ||| Ab1_v05_Li_Wi_65_Ae -->
+				<spawn npc_id="883129" respawn_time="295">
+					<spot x="1785.9331" y="1842.9348" z="3085.523" h="66"/>
+					<spot x="1814.3567" y="1843.6145" z="3085.432" h="110"/>
+				</spawn>
+
+				<!-- Slayer of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883403" respawn_time="295">
+					<spot x="1748.7958" y="1780.9218" z="3015.5747" h="114"/>
+					<spot x="1737.0568" y="1763.3002" z="3018.8967" h="6"/>
+					<spot x="1735.1187" y="1797.5425" z="3016.45" h="0"/>
+				</spawn>
+				<!-- Sentinel Leader of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883405" respawn_time="295">
+					<spot x="1715.4478" y="1780.5173" z="3019.1445" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_As_65_Ae -->
+				<spawn npc_id="883406" respawn_time="295">
+					<spot x="1712.8083" y="1764.536" z="3021.576" h="117"/>
+					<spot x="1702.1289" y="1736.8953" z="3027.0134" h="65"/>
+				</spawn>
+				<!-- Chief of Staff of the 54th Vanguard ||| Ab1_v05Ctrl_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883407" respawn_time="295">
+					<spot x="1771.3015" y="1793.7676" z="3010.6733" h="0"/>
+				</spawn>
+				<!-- Slayer of the 54th Search Party ||| Ab1_v05Ctrl_Da_Fi_65_Ae -->
+				<spawn npc_id="883415" respawn_time="295">
+					<spot x="1963.7612" y="1941.9675" z="2983.5962" h="80"/>
+					<spot x="1890.7245" y="1909.0505" z="2999.9695" h="13"/>
+					<spot x="1960.2577" y="1892.0771" z="2992.7449" h="112"/>
+				</spawn>
+				<!-- Miracle Healer of the 54th Search Party ||| Ab1_v05Ctrl_Da_Pr_65_Ae -->
+				<spawn npc_id="883416" respawn_time="295">
+					<spot x="1917.945" y="1889.9579" z="2997.1514" h="33"/>
+				</spawn>
+				<!-- Sentinel Leader of the 54th Search Party ||| Ab1_v05Ctrl_Da_Ra_65_Ae -->
+				<spawn npc_id="883417" respawn_time="295">
+					<spot x="1947.9226" y="1920.0303" z="2988.3704" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 54th Search Party ||| Ab1_v05Ctrl_Da_As_65_Ae -->
+				<spawn npc_id="883418" respawn_time="295">
+					<spot x="1906.0724" y="1902.5515" z="2997.5178" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 54th Search Party ||| Ab1_v05Ctrl_Da_Wi_65_Ae -->
+				<spawn npc_id="883419" respawn_time="295">
+					<spot x="1937.485" y="1892.4891" z="2994.066" h="26"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 54th Garrison / ab1_v05_flag_dr -->
+				<spawn npc_id="805452">
+					<spot x="1800.54" y="1851.81" z="3118.87" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 54th Conquest Squad ||| Ab1_v05_Eresh_Fi_Boss_65_Ae -->
+				<spawn npc_id="883004" handler="BOSS">
+					<spot x="1799.0671" y="1849.2461" z="3086.6746" h="80"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v05Ctrl_Eresh_Fi_BossKiller_65_Ae7 -->
+				<spawn npc_id="883402" handler="ATTACKER">
+					<spot x="1796.3206" y="1843.5647" z="3086.1558" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 54th Conquest Squad ||| Ab1_v05_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883005" respawn_time="295">
+					<spot x="1807.092" y="1821.9717" z="3080.2925" h="103"/>
+					<spot x="1773.2622" y="1862.7688" z="3080.116" h="60"/>
+					<spot x="1827.1106" y="1862.804" z="3080.9907" h="10"/>
+				</spawn>
+				<!-- Miracle Healer of the 54th Conquest Squad ||| Ab1_v05_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883006" respawn_time="295">
+					<spot x="1803.2026" y="1849.3108" z="3086.457" h="103"/>
+					<spot x="1803.3286" y="1867.3853" z="3085.7207" h="26"/>
+				</spawn>
+				<!-- Sentinel Leader of the 54th Conquest Squad ||| Ab1_v05_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883007" respawn_time="295">
+					<spot x="1796.8538" y="1852.6328" z="3086.465" h="53"/>
+				</spawn>
+				<!-- Scout Officer of the 54th Conquest Squad ||| Ab1_v05_Eresh_As_65_Ae -->
+				<spawn npc_id="883008" respawn_time="295">
+					<spot x="1801.6438" y="1833.8252" z="3085.1436" h="93"/>
+					<spot x="1816.4331" y="1855.7683" z="3085.8032" h="3"/>
+					<spot x="1779.7793" y="1861.6841" z="3082.4265" h="53"/>
+				</spawn>
+				<!-- Chief of Staff of the 54th Conquest Squad ||| Ab1_v05_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883009" respawn_time="295">
+					<spot x="1785.9331" y="1842.9348" z="3085.523" h="66"/>
+					<spot x="1814.3567" y="1843.6145" z="3085.432" h="110"/>
+				</spawn>
+
+				<!-- Destroyer of the 54th Search Party ||| Ab1_v05_Search_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883729" respawn_time="295">
+					<spot x="1675.754" y="1765.2881" z="3022.6438" h="38"/>
+					<spot x="1737.0894" y="1762.4705" z="3018.9736" h="117"/>
+					<spot x="1750.1205" y="1781.4019" z="3015.3694" h="116"/>
+					<spot x="1737.7195" y="1797.0604" z="3016.0898" h="119"/>
+					<spot x="1889.2861" y="1912.5574" z="3000.068" h="31"/>
+					<spot x="1959.0325" y="1893.9595" z="2992.6296" h="52"/>
+					<spot x="1967.508" y="1940.7002" z="2983.614" h="20"/>
+				</spawn>
+				<!-- Miracle Healer of the 54th Search Party ||| Ab1_v05_Search_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883730" respawn_time="295">
+					<spot x="1917.6912" y="1891.1752" z="2996.8481" h="39"/>
+				</spawn>
+				<!-- Sentinel Leader of the 54th Search Party ||| Ab1_v05_Search_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883731" respawn_time="295">
+					<spot x="1711.7122" y="1778.166" z="3019.6604" h="60"/>
+					<spot x="1948.905" y="1916.8738" z="2989.1062" h="75"/>
+				</spawn>
+				<!-- Scout Officer of the 54th Search Party ||| Ab1_v05_Search_Eresh_As_65_Ae -->
+				<spawn npc_id="883732" respawn_time="295">
+					<spot x="1704.8517" y="1735.6809" z="3026.9727" h="6"/>
+					<spot x="1709.1072" y="1759.7181" z="3022.447" h="112"/>
+					<spot x="1904.3103" y="1911.6576" z="2997.3845" h="11"/>
+				</spawn>
+				<!-- Chief of Staff of the 54th Search Party ||| Ab1_v05_Search_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883733" respawn_time="295">
+					<spot x="1773.058" y="1794.7565" z="3010.4863" h="8"/>
+					<spot x="1934.1134" y="1898.6644" z="2993.7856" h="55"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="139"> <!-- Chillhaunt Outpost (Base 55) -->
+			<simple_race race="ASMODIANS">
+				<!-- 55th Garrison / ab1_v06_flag_d -->
+				<spawn npc_id="805454">
+					<spot x="1996.87" y="1646.92" z="3117.19" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 55th Defence Squad ||| Ab1_v06_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883142" handler="BOSS">
+					<spot x="1995.302" y="1649.3586" z="3086.82" h="40"/>
+				</spawn>
+                <!-- Duar ||| Ab1_Village_Guard55_D -->
+                <spawn npc_id="805413" respawn_time="295">
+                    <spot x="2000.9724" y="1645.0494" z="3086.3032" h="116"/>
+                </spawn>
+                <!-- Loui ||| Ab1_v06_D_Seller_Goods -->
+                <spawn npc_id="805525" respawn_time="295">
+                    <spot x="1999.5781" y="1643.0397" z="3086.3032" h="103"/>
+                </spawn>
+                <!-- Kultis ||| Ab1_v06_D_Warehouse -->
+                <spawn npc_id="805526" respawn_time="295">
+                    <spot x="1997.1934" y="1642.0142" z="3086.3032" h="93"/>
+                </spawn>
+                <!-- Ben ||| Ab1_v06_D_Seller_ap -->
+                <spawn npc_id="805527" respawn_time="295">
+                    <spot x="1994.7229" y="1642.217" z="3086.3035" h="80"/>
+                </spawn>
+                <!-- Destroyer of the 55th Defence Squad ||| Ab1_v06_Da_Fi_65_Ae -->
+                <spawn npc_id="883143" respawn_time="295">
+                    <spot x="2023.2793" y="1633.1979" z="3080.6963" h="0"/>
+                    <spot x="2004.2644" y="1674.8918" z="3080.8674" h="30"/>
+                    <spot x="1971.1636" y="1633.1735" z="3080.5364" h="73"/>
+                </spawn>
+                <!-- Miracle Healer of the 55th Defence Squad ||| Ab1_v06_Da_Pr_65_Ae -->
+                <spawn npc_id="883144" respawn_time="295">
+                    <spot x="1992.8826" y="1646.1238" z="3086.6099" h="63"/>
+                    <spot x="1986.7246" y="1659.5468" z="3085.8728" h="46"/>
+                </spawn>
+                <!-- Sentinel Leader of the 55th Defence Squad ||| Ab1_v06_Da_Ra_65_Ae -->
+                <spawn npc_id="883145" respawn_time="295">
+                    <spot x="1999.3389" y="1649.0386" z="3086.6106" h="13"/>
+                </spawn>
+                <!-- Scout Officer of the 55th Defence Squad ||| Ab1_v06_Da_As_65_Ae -->
+                <spawn npc_id="883146" respawn_time="295">
+                    <spot x="2017.0581" y="1633.6488" z="3082.7031" h="106"/>
+                    <spot x="2004.1375" y="1667.2948" z="3083.6401" h="23"/>
+                    <spot x="1980.6699" y="1639.2445" z="3085.179" h="70"/>
+                </spawn>
+                <!-- Chief of Staff of the 55th Defence Squad ||| Ab1_v06_Da_Wi_65_Ae -->
+                <spawn npc_id="883147" respawn_time="295">
+                    <spot x="2011.7395" y="1652.1958" z="3085.5757" h="10"/>
+                    <spot x="1993.8069" y="1630.0286" z="3085.6855" h="83"/>
+                </spawn>
+
+                <!-- Slayer of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883422" respawn_time="295">
+                    <spot x="1943.644" y="1556.0795" z="3012.7366" h="111"/>
+                    <spot x="1896.8685" y="1577.951" z="3011.3806" h="98"/>
+                    <spot x="1850.0461" y="1603.3694" z="3010.0593" h="58"/>
+                    <spot x="1928.107" y="1536.8525" z="3014.8413" h="35"/>
+                </spawn>
+                <!-- Miracle Healer of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Pr_65_Ae -->
+                <spawn npc_id="883423" respawn_time="295">
+                    <spot x="1917.3391" y="1586.5573" z="3012.6968" h="117"/>
+                </spawn>
+                <!-- Sentinel Leader of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883424" respawn_time="295">
+                    <spot x="1930.8567" y="1553.2307" z="3013.667" h="20"/>
+                </spawn>
+                <!-- Scout Officer of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883425" respawn_time="295">
+                    <spot x="1869.5487" y="1595.7646" z="3009.752" h="111"/>
+                </spawn>
+                <!-- Chief of Staff of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883426" respawn_time="295">
+                    <spot x="1913.7483" y="1564.9618" z="3013.3525" h="20"/>
+                </spawn>
+                <!-- Slayer of the 55th Scout Troop ||| Ab1_v06Ctrl_Li_Fi_65_Ae -->
+                <spawn npc_id="883428" respawn_time="295">
+                    <spot x="2100.8096" y="1613.1486" z="3023.9695" h="2"/>
+                    <spot x="2116.9287" y="1596.5669" z="3029.4006" h="118"/>
+                </spawn>
+                <!-- Miracle Healer of the 55th Scout Troop ||| Ab1_v06Ctrl_Li_Pr_65_Ae -->
+                <spawn npc_id="883429" respawn_time="295">
+                    <spot x="2129.23" y="1578.0457" z="3031.8909" h="23"/>
+                </spawn>
+                <!-- Sentinel Leader of the 55th Scout Troop ||| Ab1_v06Ctrl_Li_Ra_65_Ae -->
+                <spawn npc_id="883430" respawn_time="295">
+                    <spot x="2134.6328" y="1600.1779" z="3027.8237" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 55th Scout Troop ||| Ab1_v06Ctrl_Li_As_65_Ae -->
+                <spawn npc_id="883431" respawn_time="295">
+                    <spot x="2117.6912" y="1626.7274" z="3022.9949" h="93"/>
+                </spawn>
+                <!-- Chief of Staff of the 55th Scout Troop ||| Ab1_v06Ctrl_Li_Wi_65_Ae -->
+                <spawn npc_id="883432" respawn_time="295">
+                    <spot x="2164.5474" y="1562.9579" z="3034.28" h="7"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 55th Garrison / Ab1_v06_Flag_L -->
+				<spawn npc_id="805453">
+					<spot x="1996.8706" y="1646.9248" z="3117.1941" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 55th Occupation Troop ||| Ab1_v06_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883136" handler="BOSS">
+					<spot x="1995.302" y="1649.3586" z="3086.82" h="40"/>
+				</spawn>
+				<!-- Lazka ||| Ab1_Village_Guard55_L -->
+				<spawn npc_id="805390" respawn_time="295">
+					<spot x="2000.9724" y="1645.0494" z="3086.3032" h="29"/>
+				</spawn>
+				<!-- Orian ||| Ab1_v06_L_Seller_Goods -->
+				<spawn npc_id="805522" respawn_time="295">
+					<spot x="1999.5781" y="1643.0397" z="3086.3032" h="103"/>
+				</spawn>
+				<!-- Salome ||| Ab1_v06_L_Warehouse -->
+				<spawn npc_id="805523" respawn_time="295">
+					<spot x="1997.1934" y="1642.0142" z="3086.3032" h="93"/>
+				</spawn>
+				<!-- Desio ||| Ab1_v06_L_Seller_ap -->
+				<spawn npc_id="805524" respawn_time="295">
+					<spot x="1994.7229" y="1642.217" z="3086.3035" h="80"/>
+				</spawn>
+				<!-- Destroyer of the 55th Occupation Troop ||| Ab1_v06_Li_Fi_65_Ae -->
+				<spawn npc_id="883137" respawn_time="295">
+					<spot x="2023.2793" y="1633.1979" z="3080.6963" h="0"/>
+					<spot x="2004.2644" y="1674.8918" z="3080.8674" h="30"/>
+					<spot x="1971.1636" y="1633.1735" z="3080.5364" h="73"/>
+				</spawn>
+				<!-- Miracle Healer of the 55th Occupation Troop ||| Ab1_v06_Li_Pr_65_Ae -->
+				<spawn npc_id="883138" respawn_time="295">
+					<spot x="1986.7246" y="1659.5468" z="3085.8728" h="46"/>
+					<spot x="1992.8826" y="1646.1238" z="3086.6099" h="63"/>
+				</spawn>
+				<!-- Sentinel Leader of the 55th Occupation Troop ||| Ab1_v06_Li_Ra_65_Ae -->
+				<spawn npc_id="883139" respawn_time="295">
+					<spot x="1999.3389" y="1649.0386" z="3086.6106" h="13"/>
+				</spawn>
+				<!-- Scout Officer of the 55th Occupation Troop ||| Ab1_v06_Li_As_65_Ae -->
+				<spawn npc_id="883140" respawn_time="295">
+					<spot x="2004.1375" y="1667.2948" z="3083.6401" h="23"/>
+					<spot x="2017.0581" y="1633.6488" z="3082.7031" h="106"/>
+					<spot x="1980.6699" y="1639.2445" z="3085.179" h="70"/>
+				</spawn>
+
+                <!-- Slayer of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Fi_65_Ae -->
+                <spawn npc_id="883422" respawn_time="295">
+                    <spot x="1924.3348" y="1535.1213" z="3015.0176" h="67"/>
+                    <spot x="1945.8785" y="1559.2455" z="3012.4878" h="112"/>
+                    <spot x="1898.4335" y="1577.9702" z="3011.4294" h="112"/>
+                    <spot x="1854.3138" y="1599.5006" z="3009.5662" h="20"/>
+                </spawn>
+                <!-- Miracle Healer of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Pr_65_Ae -->
+                <spawn npc_id="883423" respawn_time="295">
+                    <spot x="1920.3031" y="1587.0461" z="3012.5454" h="7"/>
+                </spawn>
+                <!-- Sentinel Leader of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Ra_65_Ae -->
+                <spawn npc_id="883424" respawn_time="295">
+                    <spot x="1926.636" y="1550.4457" z="3014.122" h="46"/>
+                </spawn>
+                <!-- Scout Officer of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_As_65_Ae -->
+                <spawn npc_id="883425" respawn_time="295">
+                    <spot x="1875.0886" y="1598.5978" z="3008.3074" h="14"/>
+                </spawn>
+                <!-- Chief of Staff of the 55th Vanguard ||| Ab1_v06Ctrl_Eresh_Wi_65_Ae -->
+                <spawn npc_id="883426" respawn_time="295">
+                    <spot x="1908.5881" y="1561.2981" z="3014.1685" h="117"/>
+                </spawn>
+                <!-- Slayer of the 55th Search Party ||| Ab1_v06Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883434" respawn_time="295">
+                    <spot x="2100.9849" y="1613.0641" z="3024.0276" h="119"/>
+                    <spot x="2120.0125" y="1602.018" z="3028.4365" h="16"/>
+                    <spot x="2135.5059" y="1559.7336" z="3035.5557" h="118"/>
+                </spawn>
+                <!-- Miracle Healer of the 55th Search Party ||| Ab1_v06Ctrl_Da_Pr_65_Ae -->
+                <spawn npc_id="883435" respawn_time="295">
+                    <spot x="2128.9915" y="1572.6506" z="3033.142" h="99"/>
+                </spawn>
+                <!-- Sentinel Leader of the 55th Search Party ||| Ab1_v06Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883436" respawn_time="295">
+                    <spot x="2134.6328" y="1600.1779" z="3027.8237" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 55th Search Party ||| Ab1_v06Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883437" respawn_time="295">
+                    <spot x="2119.0315" y="1630.1167" z="3022.4724" h="34"/>
+                </spawn>
+                <!-- Chief of Staff of the 55th Search Party ||| Ab1_v06Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883438" respawn_time="295">
+                    <spot x="2161.2673" y="1566.41" z="3033.325" h="56"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 55th Garrison / ab1_v06_flag_dr -->
+				<spawn npc_id="805455">
+					<spot x="1996.87" y="1646.92" z="3117.19" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 55th Conquest Squad ||| Ab1_v06_Eresh_Fi_Boss_65_Ae -->
+				<spawn npc_id="883010" handler="BOSS">
+					<spot x="1995.302" y="1649.3586" z="3086.82" h="40"/>
+				</spawn>
+				<!-- Balaur Assassin Officer ||| Ab1_v06Ctrl_Eresh_Fi_BossKiller_65_Ae -->
+				<spawn npc_id="883421" handler="ATTACKER">
+					<spot x="1992.56" y="1655.1201" z="3086.4277" h="0"/>
+				</spawn>
+				<!-- Destroyer of the 55th Conquest Squad ||| Ab1_v06_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883011" respawn_time="295">
+					<spot x="2023.2793" y="1633.1979" z="3080.6963" h="0"/>
+					<spot x="2004.2644" y="1674.8918" z="3080.8674" h="30"/>
+					<spot x="1971.1636" y="1633.1735" z="3080.5364" h="73"/>
+				</spawn>
+				<!-- Miracle Healer of the 55th Conquest Squad ||| Ab1_v06_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883012" respawn_time="295">
+					<spot x="1992.8826" y="1646.1238" z="3086.6099" h="63"/>
+					<spot x="1986.7246" y="1659.5468" z="3085.8728" h="46"/>
+				</spawn>
+				<!-- Sentinel Leader of the 55th Conquest Squad ||| Ab1_v06_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883013" respawn_time="295">
+					<spot x="1999.3389" y="1649.0386" z="3086.6106" h="13"/>
+				</spawn>
+				<!-- Scout Officer of the 55th Conquest Squad ||| Ab1_v06_Eresh_As_65_Ae -->
+				<spawn npc_id="883014" respawn_time="295">
+					<spot x="2017.0581" y="1633.6488" z="3082.7031" h="106"/>
+					<spot x="2004.1375" y="1667.2948" z="3083.6401" h="23"/>
+					<spot x="1980.6699" y="1639.2445" z="3085.179" h="70"/>
+				</spawn>
+				<!-- Chief of Staff of the 55th Conquest Squad ||| Ab1_v06_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883015" respawn_time="295">
+					<spot x="2011.7395" y="1652.1958" z="3085.5757" h="10"/>
+					<spot x="1993.8069" y="1630.0286" z="3085.6855" h="83"/>
+				</spawn>
+
+				<!-- Destroyer of the 55th Search Party ||| Ab1_v06_Search_Eresh_Fi_65_Ae -->
+				<spawn npc_id="883744" respawn_time="295">
+					<spot x="2094.701" y="1616.0502" z="3022.1133" h="66"/>
+					<spot x="2113.0657" y="1597.4242" z="3029.3564" h="63"/>
+					<spot x="2140.523" y="1561.3572" z="3035.028" h="112"/>
+					<spot x="1954.7465" y="1561.3948" z="3012.2356" h="108"/>
+					<spot x="1928.599" y="1536.4725" z="3014.8328" h="107"/>
+					<spot x="1892.6207" y="1581.1984" z="3010.9011" h="69"/>
+					<spot x="1848.5947" y="1605.3689" z="3010.3464" h="49"/>
+				</spawn>
+				<!-- Miracle Healer of the 55th Search Party ||| Ab1_v06_Search_Eresh_Pr_65_Ae -->
+				<spawn npc_id="883745" respawn_time="295">
+					<spot x="2132.1812" y="1577.4677" z="3031.7646" h="9"/>
+					<spot x="1912.302" y="1581.2362" z="3012.4072" h="71"/>
+				</spawn>
+				<!-- Sentinel Leader of the 55th Search Party ||| Ab1_v06_Search_Eresh_Ra_65_Ae -->
+				<spawn npc_id="883746" respawn_time="295">
+					<spot x="2135.2039" y="1598.3855" z="3028.046" h="27"/>
+					<spot x="1930.8397" y="1556.4292" z="3013.427" h="1"/>
+				</spawn>
+				<!-- Scout Officer of the 55th Search Party ||| Ab1_v06_Search_Eresh_As_65_Ae -->
+				<spawn npc_id="883747" respawn_time="295">
+					<spot x="2115.3342" y="1624.0211" z="3023.2961" h="107"/>
+					<spot x="1871.802" y="1603.273" z="3008.4197" h="81"/>
+				</spawn>
+				<!-- Chief of Staff of the 55th Search Party ||| Ab1_v06_Search_Eresh_Wi_65_Ae -->
+				<spawn npc_id="883748" respawn_time="295">
+					<spot x="2159.5325" y="1567.2947" z="3033.0908" h="57"/>
+					<spot x="1912.6709" y="1568.8156" z="3012.9238" h="53"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<!-- <base_spawn id="140"> Wildersage Artifact Outpost - Artifact 1224?
+</base_spawn> -->
+
+		<!-- <base_spawn id="141"> Dauntless Artifact Outpost - Artifact 1401?
+</base_spawn> -->
+
+		<!-- <base_spawn id="142"> Anchorbrak Artifact Outpost  - Artifact 1402?
+</base_spawn> -->
+
+		<!-- <base_spawn id="143"> Brokenblade Artifact Outpost - Artifact 1403?
+</base_spawn> -->
+
+		<base_spawn id="144"> <!-- Sootguzzle Outpost (Base 60) -->
+			<simple_race race="ASMODIANS">
+				<!-- 60th Garrison / ab1_v07_flag_d -->
+				<spawn npc_id="805457">
+					<spot x="2083.13" y="500.31" z="2931.61" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 60th Defence Squad ||| Ab1_v07_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883154" handler="BOSS">
+					<spot x="2085.116" y="502.2503" z="2897.991" h="16"/>
+				</spawn>
+				<!-- Pujeo ||| Ab1_Village_Guard60_D -->
+				<spawn npc_id="805418" respawn_time="295">
+					<spot x="2083.8203" y="495.24744" z="2897.4714" h="93"/>
+				</spawn>
+				<!-- Kervan ||| Ab1_v07_D_Seller_Goods -->
+				<spawn npc_id="805531" respawn_time="295">
+					<spot x="2081.3164" y="495.66705" z="2897.4714" h="83"/>
+				</spawn>
+				<!-- Medai ||| Ab1_v07_D_Warehouse -->
+				<spawn npc_id="805532" respawn_time="295">
+					<spot x="2079.4165" y="497.3598" z="2897.4717" h="73"/>
+				</spawn>
+				<!-- Perod ||| Ab1_v07_D_Seller_ap -->
+				<spawn npc_id="805533" respawn_time="295">
+					<spot x="2078.7332" y="499.6225" z="2897.4717" h="60"/>
+				</spawn>
+				<!-- Sonirunerk ||| Ab1_v07_D_Seller_Cera -->
+				<spawn npc_id="805602" respawn_time="295">
+					<spot x="2085.7854" y="496.08887" z="2897.4714" h="103"/>
+				</spawn>
+				<!-- Destroyer of the 60th Defence Squad ||| Ab1_v07_Da_Fi_65_Ae -->
+				<spawn npc_id="883155" respawn_time="295">
+					<spot x="2052.8777" y="509.14893" z="2895.7322" h="56"/>
+					<spot x="2090.955" y="523.557" z="2893.7922" h="20"/>
+					<spot x="2084.796" y="469.14777" z="2896.8179" h="90"/>
+				</spawn>
+				<!-- Miracle Healer of the 60th Defence Squad ||| Ab1_v07_Da_Pr_65_Ae -->
+				<spawn npc_id="883156" respawn_time="295">
+					<spot x="2082.0327" y="503.69208" z="2897.7747" h="36"/>
+					<spot x="2094.1423" y="512.5468" z="2897.0496" h="15"/>
+				</spawn>
+				<!-- Sentinel Leader of the 60th Defence Squad ||| Ab1_v07_Da_Ra_65_Ae -->
+				<spawn npc_id="883157" respawn_time="295">
+					<spot x="2087.1143" y="499.3938" z="2897.7744" h="116"/>
+				</spawn>
+				<!-- Scout Officer of the 60th Defence Squad ||| Ab1_v07_Da_As_65_Ae -->
+				<spawn npc_id="883158" respawn_time="295">
+					<spot x="2069.3313" y="510.59595" z="2896.4119" h="43"/>
+					<spot x="2104.9893" y="498.73724" z="2895.1128" h="0"/>
+					<spot x="2080.1978" y="481.35297" z="2896.23" h="96"/>
+				</spawn>
+				<!-- Chief of Staff of the 60th Defence Squad ||| Ab1_v07_Da_Wi_65_Ae -->
+				<spawn npc_id="883159" respawn_time="295">
+					<spot x="2066.8933" y="494.5171" z="2896.8083" h="63"/>
+					<spot x="2094.7021" y="488.44562" z="2896.7356" h="106"/>
+				</spawn>
+
+                <!-- Slayer of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883441" respawn_time="295">
+                    <spot x="2015.9534" y="484.5032" z="2869.5312" h="57"/>
+                    <spot x="2006.7344" y="436.90344" z="2869.5303" h="3"/>
+                    <spot x="2035.8743" y="434.82935" z="2869.5312" h="3"/>
+                    <spot x="1990.5691" y="453.14417" z="2869.5308" h="0"/>
+                </spawn>
+                <!-- Miracle Healer of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883442" respawn_time="295">
+                    <spot x="2005.4045" y="460.2248" z="2869.5308" h="85"/>
+                </spawn>
+                <!-- Sentinel Leader of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883443" respawn_time="295">
+                    <spot x="2027.7898" y="410.27844" z="2869.5303" h="58"/>
+                </spawn>
+                <!-- Scout Officer of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_As_65_Ae -->
+                <spawn npc_id="883444" respawn_time="295">
+                    <spot x="2022.9183" y="466.5961" z="2869.5312" h="92"/>
+                </spawn>
+                <!-- Chief of Staff of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883445" respawn_time="295">
+                    <spot x="2017.4812" y="450.67584" z="2869.5308" h="0"/>
+                </spawn>
+				<!-- Slayer of the 60th Scout Troop ||| Ab1_v07Ctrl_Li_Fi_65_Ae -->
+				<spawn npc_id="883447" respawn_time="295">
+					<spot x="1975.0148" y="334.5667" z="2869.5308" h="110"/>
+					<spot x="1970.6412" y="322.38385" z="2869.5305" h="76"/>
+					<spot x="1999.5726" y="304.75534" z="2869.53" h="109"/>
+					<spot x="1994.1041" y="278.22467" z="2869.5308" h="119"/>
+				</spawn>
+				<!-- Miracle Healer of the 60th Scout Troop ||| Ab1_v07Ctrl_Li_Pr_65_Ae -->
+				<spawn npc_id="883448" respawn_time="295">
+					<spot x="1984.1742" y="312.83417" z="2869.5305" h="81"/>
+				</spawn>
+				<!-- Sentinel Leader of the 60th Scout Troop ||| Ab1_v07Ctrl_Li_Ra_65_Ae -->
+				<spawn npc_id="883449" respawn_time="295">
+					<spot x="1971.6226" y="310.8625" z="2869.5305" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 60th Scout Troop ||| Ab1_v07Ctrl_Li_As_65_Ae -->
+				<spawn npc_id="883450" respawn_time="295">
+					<spot x="2003.101" y="326.98386" z="2869.53" h="16"/>
+				</spawn>
+				<!-- Chief of Staff of the 60th Scout Troop ||| Ab1_v07Ctrl_Li_Wi_65_Ae -->
+				<spawn npc_id="883451" respawn_time="295">
+					<spot x="1987.7354" y="300.24078" z="2869.53" h="18"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 60th Garrison / Ab1_v07_Flag_L -->
+				<spawn npc_id="805456">
+					<spot x="2083.1335" y="500.31555" z="2931.613" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 60th Occupation Troop ||| Ab1_v07_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883148" handler="BOSS">
+					<spot x="2085.116" y="502.2503" z="2897.991" h="16"/>
+				</spawn>
+				<!-- Bartos ||| Ab1_Village_Guard60_L -->
+				<spawn npc_id="805395" respawn_time="295">
+					<spot x="2083.8203" y="495.24744" z="2897.4714" h="93"/>
+				</spawn>
+				<!-- Nanos ||| Ab1_v07_L_Seller_Goods -->
+				<spawn npc_id="805528" respawn_time="295">
+					<spot x="2081.3164" y="495.66705" z="2897.4714" h="83"/>
+				</spawn>
+				<!-- Sopronia ||| Ab1_v07_L_Warehouse -->
+				<spawn npc_id="805529" respawn_time="295">
+					<spot x="2079.4165" y="497.3598" z="2897.4717" h="73"/>
+				</spawn>
+				<!-- Jeno ||| Ab1_v07_L_Seller_ap -->
+				<spawn npc_id="805530" respawn_time="295">
+					<spot x="2078.7332" y="499.6225" z="2897.4717" h="60"/>
+				</spawn>
+				<!-- Unirunerk ||| Ab1_v07_L_Seller_Cera -->
+				<spawn npc_id="805594" respawn_time="295">
+					<spot x="2085.7854" y="496.08887" z="2897.4714" h="103"/>
+				</spawn>
+				<!-- Destroyer of the 60th Occupation Troop ||| Ab1_v07_Li_Fi_65_Ae -->
+				<spawn npc_id="883149" respawn_time="295">
+					<spot x="2090.955" y="523.557" z="2893.7922" h="20"/>
+					<spot x="2052.8777" y="509.14893" z="2895.7322" h="56"/>
+					<spot x="2084.796" y="469.14777" z="2896.8179" h="90"/>
+				</spawn>
+				<!-- Miracle Healer of the 60th Occupation Troop ||| Ab1_v07_Li_Pr_65_Ae -->
+				<spawn npc_id="883150" respawn_time="295">
+					<spot x="2094.1423" y="512.5468" z="2897.0496" h="15"/>
+					<spot x="2082.0327" y="503.69208" z="2897.7747" h="36"/>
+				</spawn>
+				<!-- Sentinel Leader of the 60th Occupation Troop ||| Ab1_v07_Li_Ra_65_Ae -->
+				<spawn npc_id="883151" respawn_time="295">
+					<spot x="2087.1143" y="499.3938" z="2897.7744" h="116"/>
+				</spawn>
+				<!-- Scout Officer of the 60th Occupation Troop ||| Ab1_v07_Li_As_65_Ae -->
+				<spawn npc_id="883152" respawn_time="295">
+					<spot x="2104.9893" y="498.73724" z="2895.1128" h="0"/>
+					<spot x="2069.3313" y="510.59595" z="2896.4119" h="43"/>
+					<spot x="2080.1978" y="481.35297" z="2896.23" h="96"/>
+				</spawn>
+				<!-- Chief of Staff of the 60th Occupation Troop ||| Ab1_v07_Li_Wi_65_Ae -->
+				<spawn npc_id="883153" respawn_time="295">
+					<spot x="2094.7021" y="488.44562" z="2896.7356" h="106"/>
+					<spot x="2066.8933" y="494.5171" z="2896.8083" h="63"/>
+				</spawn>
+
+                <!-- Slayer of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883441" respawn_time="295">
+                    <spot x="2021.2584" y="476.94028" z="2869.5312" h="56"/>
+                    <spot x="2030.0737" y="437.77667" z="2869.5312" h="47"/>
+                    <spot x="2007.6967" y="437.93265" z="2869.5308" h="14"/>
+                    <spot x="1990.5673" y="453.07434" z="2869.5308" h="119"/>
+                </spawn>
+                <!-- Miracle Healer of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883442" respawn_time="295">
+                    <spot x="2009.4047" y="470.71204" z="2869.5308" h="113"/>
+                </spawn>
+                <!-- Sentinel Leader of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883443" respawn_time="295">
+                    <spot x="2038.0079" y="411.08536" z="2869.5303" h="106"/>
+                </spawn>
+                <!-- Scout Officer of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_As_65_Ae -->
+                <spawn npc_id="883444" respawn_time="295">
+                    <spot x="2021.9668" y="465.53305" z="2869.5312" h="64"/>
+                </spawn>
+                <!-- Chief of Staff of the 60th Vanguard ||| Ab1_v07Ctrl_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883445" respawn_time="295">
+                    <spot x="2017.4812" y="450.67584" z="2869.5308" h="0"/>
+                </spawn>
+				<!-- Slayer of the 60th Search Party ||| Ab1_v07Ctrl_Da_Fi_65_Ae -->
+				<spawn npc_id="883453" respawn_time="295">
+					<spot x="1981.0046" y="336.45895" z="2869.5308" h="106"/>
+					<spot x="1968.6125" y="323.10733" z="2869.5305" h="0"/>
+					<spot x="2000.6324" y="307.38443" z="2869.53" h="110"/>
+					<spot x="1993.4471" y="279.89142" z="2869.5308" h="114"/>
+				</spawn>
+				<!-- Miracle Healer of the 60th Search Party ||| Ab1_v07Ctrl_Da_Pr_65_Ae -->
+				<spawn npc_id="883454" respawn_time="295">
+					<spot x="1987.7451" y="319.77438" z="2869.5305" h="16"/>
+				</spawn>
+				<!-- Sentinel Leader of the 60th Search Party ||| Ab1_v07Ctrl_Da_Ra_65_Ae -->
+				<spawn npc_id="883455" respawn_time="295">
+					<spot x="1971.6226" y="310.8625" z="2869.5305" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 60th Search Party ||| Ab1_v07Ctrl_Da_As_65_Ae -->
+				<spawn npc_id="883456" respawn_time="295">
+					<spot x="2002.0742" y="330.21796" z="2869.53" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 60th Search Party ||| Ab1_v07Ctrl_Da_Wi_65_Ae -->
+				<spawn npc_id="883457" respawn_time="295">
+					<spot x="1986.2684" y="297.92276" z="2869.53" h="12"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 60th Garrison / ab1_v07_flag_dr -->
+				<spawn npc_id="805458">
+					<spot x="2083.13" y="500.31" z="2931.61" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 60th Conquest Squad ||| Ab1_v07_Vritra_Fi_Boss_65_Ae -->
+				<spawn npc_id="883016" handler="BOSS">
+					<spot x="2085.116" y="502.2503" z="2897.991" h="16"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v07Ctrl_Vritra_Fi_BossKiller_65_Ae -->
+				<spawn npc_id="883440" handler="ATTACKER">
+					<spot x="2089.2241" y="507.03918" z="2898.3293" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 60th Conquest Squad ||| Ab1_v07_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883017" respawn_time="295">
+					<spot x="2084.796" y="469.14777" z="2896.8179" h="90"/>
+					<spot x="2052.8777" y="509.14893" z="2895.7322" h="56"/>
+					<spot x="2090.955" y="523.557" z="2893.7922" h="20"/>
+				</spawn>
+				<!-- Miracle Healer of the 60th Conquest Squad ||| Ab1_v07_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883018" respawn_time="295">
+					<spot x="2082.0327" y="503.69208" z="2897.7747" h="36"/>
+					<spot x="2094.1423" y="512.5468" z="2897.0496" h="15"/>
+				</spawn>
+				<!-- Sentinel Leader of the 60th Conquest Squad ||| Ab1_v07_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883019" respawn_time="295">
+					<spot x="2087.1143" y="499.3938" z="2897.7744" h="116"/>
+				</spawn>
+				<!-- Scout Officer of the 60th Conquest Squad ||| Ab1_v07_Vritra_As_65_Ae -->
+				<spawn npc_id="883020" respawn_time="295">
+					<spot x="2080.1978" y="481.35297" z="2896.23" h="96"/>
+					<spot x="2069.3313" y="510.59595" z="2896.4119" h="43"/>
+					<spot x="2104.9893" y="498.73724" z="2895.1128" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 60th Conquest Squad ||| Ab1_v07_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883021" respawn_time="295">
+					<spot x="2066.8933" y="494.5171" z="2896.8083" h="63"/>
+					<spot x="2094.7021" y="488.44562" z="2896.7356" h="106"/>
+				</spawn>
+
+				<!-- Destroyer of the 60th Search Party ||| Ab1_v07_Search_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883759" respawn_time="295">
+					<spot x="1965.8436" y="326.4078" z="2869.5305" h="58"/>
+					<spot x="1982.3114" y="339.95343" z="2869.5308" h="46"/>
+					<spot x="1995.6348" y="280.0819" z="2869.5308" h="92"/>
+					<spot x="2003.0223" y="307.48224" z="2869.53" h="4"/>
+					<spot x="2010.0399" y="438.26236" z="2869.5308" h="58"/>
+					<spot x="2040.0704" y="437.81845" z="2869.5312" h="6"/>
+					<spot x="1991.5284" y="458.6696" z="2869.5308" h="33"/>
+					<spot x="2017.3589" y="479.6638" z="2869.5312" h="100"/>
+				</spawn>
+				<!-- Miracle Healer of the 60th Search Party ||| Ab1_v07_Search_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883760" respawn_time="295">
+					<spot x="1988.6876" y="321.228" z="2869.5305" h="44"/>
+					<spot x="2008.8398" y="466.15558" z="2869.5308" h="92"/>
+				</spawn>
+				<!-- Sentinel Leader of the 60th Search Party ||| Ab1_v07_Search_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883761" respawn_time="295">
+					<spot x="1968.1753" y="312.4527" z="2869.5305" h="5"/>
+					<spot x="2027.9088" y="411.6244" z="2869.5303" h="70"/>
+				</spawn>
+				<!-- Scout Officer of the 60th Search Party ||| Ab1_v07_Search_Vritra_As_65_Ae -->
+				<spawn npc_id="883762" respawn_time="295">
+					<spot x="2004.9712" y="329.43265" z="2869.53" h="112"/>
+					<spot x="2025.3977" y="464.45633" z="2869.5312" h="98"/>
+				</spawn>
+				<!-- Chief of Staff of the 60th Search Party ||| Ab1_v07_Search_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883763" respawn_time="295">
+					<spot x="1986.2639" y="294.66" z="2869.53" h="72"/>
+					<spot x="2023.8804" y="448.78506" z="2869.5312" h="87"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="145"> <!-- Flameruin Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 61st Garrison / ab1_v08_flag_d -->
+				<spawn npc_id="805460">
+					<spot x="2424.67" y="216.09" z="2926.04" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 61st Defence Squad ||| Ab1_v08_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883166" handler="BOSS">
+					<spot x="2422.4414" y="214.39557" z="2893.3357" h="73"/>
+				</spawn>
+				<!-- Beshel ||| Ab1_Village_Guard61_D -->
+				<spawn npc_id="805419" respawn_time="295">
+					<spot x="2424.9492" y="220.88477" z="2892.8206" h="30"/>
+				</spawn>
+				<!-- Yorgen ||| Ab1_v08_D_Seller_Goods -->
+				<spawn npc_id="805537" respawn_time="295">
+					<spot x="2429.4312" y="216.055" z="2892.8206" h="0"/>
+				</spawn>
+				<!-- Edelize ||| Ab1_v08_D_Warehouse -->
+				<spawn npc_id="805538" respawn_time="295">
+					<spot x="2428.7593" y="218.43628" z="2892.8206" h="10"/>
+				</spawn>
+				<!-- Irma ||| Ab1_v08_D_Seller_ap -->
+				<spawn npc_id="805539" respawn_time="295">
+					<spot x="2427.2554" y="220.43878" z="2892.8206" h="20"/>
+				</spawn>
+				<!-- Berit ||| Ab1_v08_D_Material_2st -->
+				<spawn npc_id="805597" respawn_time="295">
+					<spot x="2428.4429" y="213.81055" z="2892.8208" h="110"/>
+				</spawn>
+
+				<!-- Destroyer of the 61st Defence Squad ||| Ab1_v08_Da_Fi_65_Ae -->
+				<spawn npc_id="883167" respawn_time="295">
+					<spot x="2402.7979" y="236.62524" z="2886.5361" h="53"/>
+					<spot x="2418.6025" y="187.36377" z="2888.539" h="90"/>
+					<spot x="2455.4678" y="219.40802" z="2886.389" h="10"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Defence Squad ||| Ab1_v08_Da_Pr_65_Ae -->
+				<spawn npc_id="883168" respawn_time="295">
+					<spot x="2407.7275" y="213.3197" z="2892.1736" h="30"/>
+					<spot x="2421.002" y="217.58234" z="2893.1194" h="53"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Defence Squad ||| Ab1_v08_Da_Ra_65_Ae -->
+				<spawn npc_id="883169" respawn_time="295">
+					<spot x="2425.5298" y="212.50525" z="2893.1226" h="93"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Defence Squad ||| Ab1_v08_Da_As_65_Ae -->
+				<spawn npc_id="883170" respawn_time="295">
+					<spot x="2412.37" y="229.99048" z="2891.218" h="46"/>
+					<spot x="2420.016" y="198.62561" z="2891.7449" h="83"/>
+					<spot x="2442.959" y="214.3764" z="2891.9583" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Defence Squad ||| Ab1_v08_Da_Wi_65_Ae -->
+				<spawn npc_id="883171" respawn_time="295">
+					<spot x="2433.437" y="202.58417" z="2892.0706" h="106"/>
+					<spot x="2432.5688" y="229.94421" z="2892.384" h="20"/>
+				</spawn>
+				<!-- Slayer of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883460" respawn_time="295">
+					<spot x="2474.7742" y="165.35861" z="2885.8005" h="3"/>
+					<spot x="2495.4011" y="178.42186" z="2884.6375" h="7"/>
+					<spot x="2476.2998" y="254.68777" z="2877.8032" h="7"/>
+					<spot x="2495.4175" y="239.15857" z="2878.0823" h="2"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883461" respawn_time="295">
+					<spot x="2496.2495" y="211.17235" z="2881.635" h="9"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883462" respawn_time="295">
+					<spot x="2501.5076" y="218.37776" z="2881.441" h="6"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_As_65_Ae -->
+				<spawn npc_id="883463" respawn_time="295">
+					<spot x="2504.8848" y="190.035" z="2882.7532" h="77"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883464" respawn_time="295">
+					<spot x="2512.5684" y="210.83585" z="2880.7327" h="1"/>
+				</spawn>
+				<!-- Slayer of the 61st Scout Troop ||| Ab1_v08Ctrl_Li_Fi_65_Ae -->
+				<spawn npc_id="883466" respawn_time="295">
+					<spot x="2349.4214" y="186.03214" z="2887.5254" h="116"/>
+					<spot x="2357.855" y="210.8849" z="2884.8972" h="40"/>
+					<spot x="2384.1938" y="180.23634" z="2887.1985" h="15"/>
+					<spot x="2386.7825" y="155.91992" z="2888.2737" h="5"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Scout Troop ||| Ab1_v08Ctrl_Li_Pr_65_Ae -->
+				<spawn npc_id="883467" respawn_time="295">
+					<spot x="2354.0493" y="173.26614" z="2888.6453" h="83"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Scout Troop ||| Ab1_v08Ctrl_Li_Ra_65_Ae -->
+				<spawn npc_id="883468" respawn_time="295">
+					<spot x="2351.5996" y="198.84735" z="2886.1968" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Scout Troop ||| Ab1_v08Ctrl_Li_As_65_Ae -->
+				<spawn npc_id="883469" respawn_time="295">
+					<spot x="2362.1514" y="166.31897" z="2890.4812" h="45"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Scout Troop ||| Ab1_v08Ctrl_Li_Wi_65_Ae -->
+				<spawn npc_id="883470" respawn_time="295">
+					<spot x="2362.4624" y="186.97742" z="2886.928" h="90"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 61st Garrison / Ab1_v08_Flag_L -->
+				<spawn npc_id="805459">
+					<spot x="2424.6655" y="216.09485" z="2926.0415" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 61st Occupation Troop ||| Ab1_v08_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883160" handler="BOSS">
+					<spot x="2422.4414" y="214.39557" z="2893.3357" h="73"/>
+				</spawn>
+				<!-- Brinne ||| Ab1_Village_Guard61_L -->
+				<spawn npc_id="805396" respawn_time="295">
+					<spot x="2424.9492" y="220.88477" z="2892.8206" h="30"/>
+				</spawn>               
+				<!-- Petros ||| Ab1_v08_L_Seller_Goods -->
+				<spawn npc_id="805534" respawn_time="295">
+					<spot x="2429.4312" y="216.055" z="2892.8206" h="0"/>
+				</spawn>
+				<!-- Sophia ||| Ab1_v08_L_Warehouse -->
+				<spawn npc_id="805535" respawn_time="295">
+					<spot x="2428.7593" y="218.43628" z="2892.8206" h="10"/>
+				</spawn>
+				<!-- Simeon ||| Ab1_v08_L_Seller_ap -->
+				<spawn npc_id="805536" respawn_time="295">
+					<spot x="2427.2554" y="220.43878" z="2892.8206" h="20"/>
+				</spawn>
+				<!-- Kalida ||| Ab1_v08_L_Material_2st -->
+				<spawn npc_id="805589" respawn_time="295">
+					<spot x="2428.4429" y="213.81055" z="2892.8208" h="110"/>
+				</spawn>
+
+				<!-- Destroyer of the 61st Occupation Troop ||| Ab1_v08_Li_Fi_65_Ae -->
+				<spawn npc_id="883161" respawn_time="295">
+					<spot x="2402.7979" y="236.62524" z="2886.5361" h="53"/>
+					<spot x="2455.4678" y="219.40802" z="2886.389" h="10"/>
+					<spot x="2418.6025" y="187.36377" z="2888.539" h="90"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Occupation Troop ||| Ab1_v08_Li_Pr_65_Ae -->
+				<spawn npc_id="883162" respawn_time="295">
+					<spot x="2421.002" y="217.58234" z="2893.1194" h="53"/>
+					<spot x="2407.7275" y="213.3197" z="2892.1736" h="30"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Occupation Troop ||| Ab1_v08_Li_Ra_65_Ae -->
+				<spawn npc_id="883163" respawn_time="295">
+					<spot x="2425.5298" y="212.50525" z="2893.1226" h="48"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Occupation Troop ||| Ab1_v08_Li_As_65_Ae -->
+				<spawn npc_id="883164" respawn_time="295">
+					<spot x="2412.37" y="229.99048" z="2891.218" h="46"/>
+					<spot x="2442.959" y="214.3764" z="2891.9583" h="0"/>
+					<spot x="2420.016" y="198.62561" z="2891.7449" h="83"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Occupation Troop ||| Ab1_v08_Li_Wi_65_Ae -->
+				<spawn npc_id="883165" respawn_time="295">
+					<spot x="2432.5688" y="229.94421" z="2892.384" h="20"/>
+					<spot x="2433.437" y="202.58417" z="2892.0706" h="106"/>
+				</spawn>
+
+				<!-- Slayer of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883460" respawn_time="295">
+					<spot x="2467.7349" y="256.69305" z="2877.7175" h="72"/>
+					<spot x="2495.384" y="244.14035" z="2877.2686" h="44"/>
+					<spot x="2486.8904" y="176.67651" z="2885.2112" h="13"/>
+					<spot x="2464.2078" y="163.22969" z="2885.0864" h="104"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883461" respawn_time="295">
+					<spot x="2494.3943" y="210.40274" z="2881.4377" h="12"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883462" respawn_time="295">
+					<spot x="2496.9302" y="224.22879" z="2880.8186" h="84"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_As_65_Ae -->
+				<spawn npc_id="883463" respawn_time="295">
+					<spot x="2500.3599" y="190.47125" z="2882.8254" h="96"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Vanguard ||| Ab1_v08Ctrl_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883464" respawn_time="295">
+					<spot x="2514.2998" y="216.09439" z="2880.3618" h="45"/>
+				</spawn>
+				<!-- Slayer of the 61st Search Party ||| Ab1_v08Ctrl_Da_Fi_65_Ae -->
+				<spawn npc_id="883472" respawn_time="295">
+					<spot x="2381.8447" y="152.45197" z="2889.0417" h="4"/>
+					<spot x="2377.0989" y="181.61134" z="2887.0083" h="58"/>
+					<spot x="2356.3032" y="212.59398" z="2884.719" h="38"/>
+					<spot x="2342.5107" y="184.80986" z="2888.294" h="38"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Search Party ||| Ab1_v08Ctrl_Da_Pr_65_Ae -->
+				<spawn npc_id="883473" respawn_time="295">
+					<spot x="2361.3042" y="172.6411" z="2889.4102" h="119"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Search Party ||| Ab1_v08Ctrl_Da_Ra_65_Ae -->
+				<spawn npc_id="883474" respawn_time="295">
+					<spot x="2351.5996" y="198.84735" z="2886.1968" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Search Party ||| Ab1_v08Ctrl_Da_As_65_Ae -->
+				<spawn npc_id="883475" respawn_time="295">
+					<spot x="2368.5244" y="171.0265" z="2888.7656" h="90"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Search Party ||| Ab1_v08Ctrl_Da_Wi_65_Ae -->
+				<spawn npc_id="883476" respawn_time="295">
+					<spot x="2359.6948" y="190.58015" z="2886.7925" h="35"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 61st Garrison / ab1_v08_flag_dr -->
+				<spawn npc_id="805461">
+					<spot x="2424.67" y="216.09" z="2926.04" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 61st Conquest Squad ||| Ab1_v08_Vritra_Fi_Boss_65_Ae -->         
+				<spawn npc_id="883022" handler="BOSS">
+					<spot x="2422.4414" y="214.39557" z="2893.3357" h="73"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v08Ctrl_Vritra_Fi_BossKiller_65_Ae1 -->
+				<spawn npc_id="883459" handler="ATTACKER">
+					<spot x="2417.8145" y="210.1604" z="2893.5574" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 61st Conquest Squad ||| Ab1_v08_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883023" respawn_time="295">
+					<spot x="2402.7979" y="236.62524" z="2886.5361" h="53"/>
+					<spot x="2418.6025" y="187.36377" z="2888.539" h="90"/>
+					<spot x="2455.4678" y="219.40802" z="2886.389" h="10"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Conquest Squad ||| Ab1_v08_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883024" respawn_time="295">
+					<spot x="2407.7275" y="213.3197" z="2892.1736" h="30"/>
+					<spot x="2421.002" y="217.58234" z="2893.1194" h="53"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Conquest Squad ||| Ab1_v08_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883025" respawn_time="295">
+					<spot x="2425.5298" y="212.50525" z="2893.1226" h="93"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Conquest Squad ||| Ab1_v08_Vritra_As_65_Ae -->
+				<spawn npc_id="883026" respawn_time="295">
+					<spot x="2412.37" y="229.99048" z="2891.218" h="46"/>
+					<spot x="2420.016" y="198.62561" z="2891.7449" h="83"/>
+					<spot x="2442.959" y="214.3764" z="2891.9583" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Conquest Squad ||| Ab1_v08_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883027" respawn_time="295">
+					<spot x="2433.437" y="202.58417" z="2892.0706" h="106"/>
+					<spot x="2432.5688" y="229.94421" z="2892.384" h="20"/>
+				</spawn>
+
+				<!-- Destroyer of the 61st Search Party ||| Ab1_v08_Search_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883774" respawn_time="295">
+					<spot x="2356.3853" y="218.65868" z="2884.6282" h="81"/>
+					<spot x="2354.1018" y="185.89403" z="2887.8762" h="12"/>
+					<spot x="2376.2007" y="179.88297" z="2886.898" h="94"/>
+					<spot x="2387.4229" y="158.19283" z="2888.0881" h="33"/>
+					<spot x="2470.9612" y="166.78677" z="2885.257" h="6"/>
+					<spot x="2491.8523" y="176.91212" z="2884.9827" h="119"/>
+					<spot x="2494.178" y="239.24481" z="2878.237" h="4"/>
+					<spot x="2476.3918" y="254.75853" z="2877.7915" h="117"/>
+				</spawn>
+				<!-- Miracle Healer of the 61st Search Party ||| Ab1_v08_Search_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883775" respawn_time="295">
+					<spot x="2358.5046" y="172.27986" z="2889.8447" h="10"/>
+					<spot x="2494.3625" y="210.4443" z="2881.4346" h="13"/>
+				</spawn>
+				<!-- Sentinel Leader of the 61st Search Party ||| Ab1_v08_Search_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883776" respawn_time="295">
+					<spot x="2349.9846" y="199.08841" z="2886.2249" h="57"/>
+					<spot x="2502.352" y="225.19588" z="2879.8567" h="5"/>
+				</spawn>
+				<!-- Scout Officer of the 61st Search Party ||| Ab1_v08_Search_Vritra_As_65_Ae -->
+				<spawn npc_id="883777" respawn_time="295">
+					<spot x="2374.0945" y="167.74484" z="2888.929" h="108"/>
+					<spot x="2503.4019" y="195.64636" z="2882.0532" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 61st Search Party ||| Ab1_v08_Search_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883778" respawn_time="295">
+					<spot x="2364.3508" y="192.26164" z="2886.349" h="36"/>
+					<spot x="2514.1826" y="211.99031" z="2880.6497" h="11"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="146"> <!-- Stokebellow Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 62nd Garrison / ab1_v09_flag_d -->
+				<spawn npc_id="805463">
+					<spot x="2494.25" y="555.61" z="2883.95" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 62nd Defence Squad ||| Ab1_v09_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883178" handler="BOSS">
+					<spot x="2491.7998" y="556.98413" z="2849.3008" h="50"/>
+				</spawn>
+				<!-- Kane ||| Ab1_Village_Guard62_D -->
+				<spawn npc_id="805420" respawn_time="295">
+					<spot x="2498.7905" y="556.86676" z="2848.7822" h="6"/>
+				</spawn>
+				<!-- Margit ||| Ab1_v09_D_Seller_Goods -->
+				<spawn npc_id="805543" respawn_time="295">
+					<spot x="2498.766" y="554.1737" z="2848.7827" h="116"/>
+				</spawn>
+				<!-- Inbers ||| Ab1_v09_D_Warehouse -->
+				<spawn npc_id="805544" respawn_time="295">
+					<spot x="2497.5708" y="552.21533" z="2848.7825" h="106"/>
+				</spawn>
+
+				<!-- Destroyer of the 62nd Defence Squad ||| Ab1_v09_Da_Fi_65_Ae -->
+				<spawn npc_id="883179" respawn_time="295">
+					<spot x="2503.1895" y="529.603" z="2844.1216" h="106"/>
+					<spot x="2466.704" y="552.29834" z="2844.082" h="73"/>
+					<spot x="2506.5737" y="581.7715" z="2842.8552" h="30"/>
+				</spawn>
+				<!-- Miracle Healer of the 62nd Defence Squad ||| Ab1_v09_Da_Pr_65_Ae -->
+				<spawn npc_id="883180" respawn_time="295">
+					<spot x="2495.2598" y="559.14923" z="2849.0847" h="44"/>
+					<spot x="2486.0654" y="570.6373" z="2848.128" h="46"/>
+				</spawn>
+				<!-- Sentinel Leader of the 62nd Defence Squad ||| Ab1_v09_Da_Ra_65_Ae -->
+				<spawn npc_id="883181" respawn_time="295">
+					<spot x="2491.645" y="552.847" z="2849.0818" h="73"/>
+				</spawn>
+				<!-- Scout Officer of the 62nd Defence Squad ||| Ab1_v09_Da_As_65_Ae -->
+				<spawn npc_id="883182" respawn_time="295">
+					<spot x="2498.0508" y="538.3144" z="2848.1685" h="93"/>
+					<spot x="2474.4663" y="555.3989" z="2847.41" h="63"/>
+					<spot x="2502.0874" y="570.815" z="2847.8826" h="20"/>
+				</spawn>
+				<!-- Chief of Staff of the 62nd Defence Squad ||| Ab1_v09_Da_Wi_65_Ae -->
+				<spawn npc_id="883183" respawn_time="295">
+					<spot x="2484.2388" y="542.59186" z="2848.0342" h="80"/>
+					<spot x="2509.6704" y="551.9332" z="2848.346" h="113"/>
+				</spawn>
+
+				<!-- Slayer of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883479" respawn_time="295">
+					<spot x="2596.906" y="513.0548" z="2845.9736" h="73"/>
+					<spot x="2615.9434" y="557.3748" z="2822.1733" h="4"/>
+					<spot x="2624.573" y="514.777" z="2821.5044" h="31"/>
+					<spot x="2584.792" y="462.05972" z="2773.9148" h="65"/>
+					<spot x="2653.2363" y="535.22205" z="2821.8308" h="101"/>
+				</spawn>
+				<!-- Miracle Healer of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883480" respawn_time="295">
+					<spot x="2586.9739" y="460.36005" z="2773.9148" h="57"/>
+				</spawn>
+				<!-- Sentinel Leader of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883481" respawn_time="295">
+					<spot x="2628.5771" y="526.507" z="2821.4727" h="38"/>
+				</spawn>
+				<!-- Scout Officer of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_As_65_Ae -->
+				<spawn npc_id="883482" respawn_time="295">
+					<spot x="2631.526" y="556.7034" z="2821.641" h="32"/>
+				</spawn>
+				<!-- Chief of Staff of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883483" respawn_time="295">
+					<spot x="2611.2415" y="492.13992" z="2774.0398" h="34"/>
+				</spawn>
+				<!-- Slayer of the 62nd Scout Troop ||| Ab1_v09Ctrl_Li_Fi_65_Ae -->
+				<spawn npc_id="883485" respawn_time="295">
+					<spot x="2379.1" y="590.0206" z="2794.0872" h="115"/>
+					<spot x="2376.887" y="628.498" z="2794.155" h="67"/>
+					<spot x="2355.6804" y="581.9682" z="2795.5874" h="54"/>
+					<spot x="2351.4175" y="631.041" z="2794.1338" h="2"/>
+				</spawn>
+				<!-- Miracle Healer of the 62nd Scout Troop ||| Ab1_v09Ctrl_Li_Pr_65_Ae -->
+				<spawn npc_id="883486" respawn_time="295">
+					<spot x="2368.4167" y="623.9339" z="2794.1382" h="61"/>
+				</spawn>
+				<!-- Sentinel Leader of the 62nd Scout Troop ||| Ab1_v09Ctrl_Li_Ra_65_Ae -->
+				<spawn npc_id="883487" respawn_time="295">
+					<spot x="2367.9268" y="587.39294" z="2794.2473" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 62nd Scout Troop ||| Ab1_v09Ctrl_Li_As_65_Ae -->
+				<spawn npc_id="883488" respawn_time="295">
+					<spot x="2381.899" y="598.3258" z="2794.4062" h="70"/>
+				</spawn>
+				<!-- Chief of Staff of the 62nd Scout Troop ||| Ab1_v09Ctrl_Li_Wi_65_Ae -->
+				<spawn npc_id="883489" respawn_time="295">
+					<spot x="2361.9138" y="629.1796" z="2794.1428" h="46"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 62nd Garrison / Ab1_v09_Flag_L -->
+				<spawn npc_id="805462">
+					<spot x="2494.2549" y="555.61505" z="2883.9451" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 62nd Occupation Troop ||| Ab1_v09_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883172" handler="BOSS">
+					<spot x="2491.7998" y="556.98413" z="2849.3008" h="50"/>
+				</spawn>
+                <!-- Dupor ||| Ab1_Village_Guard62_L -->
+                <spawn npc_id="805397" respawn_time="295">
+                    <spot x="2498.7905" y="556.86676" z="2848.7822" h="6"/>
+                </spawn>
+                <!-- Mylon ||| Ab1_v09_L_Seller_Goods -->
+                <spawn npc_id="805540" respawn_time="295">
+                    <spot x="2498.766" y="554.1737" z="2848.7827" h="116"/>
+                </spawn>
+                <!-- Rodet ||| Ab1_v09_L_Warehouse -->
+                <spawn npc_id="805541" respawn_time="295">
+                    <spot x="2497.5708" y="552.21533" z="2848.7825" h="106"/>
+                </spawn>
+                <!-- Maximos ||| Ab1_v09_L_Seller_ap -->
+                <spawn npc_id="805542" respawn_time="295">
+                    <spot x="2495.4868" y="550.94336" z="2848.7825" h="96"/>
+                </spawn>
+                <!-- Destroyer of the 62nd Occupation Troop ||| Ab1_v09_Li_Fi_65_Ae -->
+                <spawn npc_id="883173" respawn_time="295">
+                    <spot x="2466.704" y="552.29834" z="2844.082" h="73"/>
+                    <spot x="2503.1895" y="529.603" z="2844.1216" h="106"/>
+                    <spot x="2506.5737" y="581.7715" z="2842.8552" h="30"/>
+                </spawn>
+                <!-- Miracle Healer of the 62nd Occupation Troop ||| Ab1_v09_Li_Pr_65_Ae -->
+                <spawn npc_id="883174" respawn_time="295">
+                    <spot x="2486.0654" y="570.6373" z="2848.128" h="46"/>
+                    <spot x="2495.2598" y="559.14923" z="2849.0847" h="23"/>
+                </spawn>
+                <!-- Sentinel Leader of the 62nd Occupation Troop ||| Ab1_v09_Li_Ra_65_Ae -->
+                <spawn npc_id="883175" respawn_time="295">
+                    <spot x="2491.645" y="552.847" z="2849.0818" h="73"/>
+                </spawn>
+                <!-- Scout Officer of the 62nd Occupation Troop ||| Ab1_v09_Li_As_65_Ae -->
+                <spawn npc_id="883176" respawn_time="295">
+                    <spot x="2502.0874" y="570.815" z="2847.8826" h="20"/>
+                    <spot x="2498.0508" y="538.3144" z="2848.1685" h="93"/>
+                    <spot x="2474.4663" y="555.3989" z="2847.41" h="63"/>
+                </spawn>
+                <!-- Chief of Staff of the 62nd Occupation Troop ||| Ab1_v09_Li_Wi_65_Ae -->
+                <spawn npc_id="883177" respawn_time="295">
+                    <spot x="2509.6704" y="551.9332" z="2848.346" h="113"/>
+                    <spot x="2484.2388" y="542.59186" z="2848.0342" h="80"/>
+                </spawn>
+
+                <!-- Slayer of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883479" respawn_time="295">
+                    <spot x="2605.6423" y="512.3801" z="2845.9736" h="116"/>
+                    <spot x="2619.245" y="558.36597" z="2822.0708" h="5"/>
+                    <spot x="2647.135" y="535.05493" z="2821.9336" h="7"/>
+                    <spot x="2629.6453" y="514.1943" z="2821.3276" h="27"/>
+                    <spot x="2587.4753" y="469.83368" z="2773.9148" h="5"/>
+                </spawn>
+                <!-- Miracle Healer of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883480" respawn_time="295">
+                    <spot x="2593.6687" y="457.99423" z="2773.9153" h="2"/>
+                </spawn>
+                <!-- Sentinel Leader of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883481" respawn_time="295">
+                    <spot x="2624.2583" y="527.2114" z="2821.6248" h="2"/>
+                </spawn>
+                <!-- Scout Officer of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_As_65_Ae -->
+                <spawn npc_id="883482" respawn_time="295">
+                    <spot x="2639.7065" y="553.93475" z="2821.3408" h="0"/>
+                </spawn>
+                <!-- Chief of Staff of the 62nd Vanguard ||| Ab1_v09Ctrl_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883483" respawn_time="295">
+                    <spot x="2620.4539" y="493.91556" z="2774.04" h="11"/>
+                </spawn>
+                <!-- Slayer of the 62nd Search Party ||| Ab1_v09Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883491" respawn_time="295">
+                    <spot x="2383.2896" y="588.87823" z="2795.0847" h="18"/>
+                    <spot x="2382.0066" y="625.4321" z="2794.1562" h="118"/>
+                    <spot x="2360.055" y="580.3034" z="2795.632" h="111"/>
+                    <spot x="2348.7678" y="631.2407" z="2794.1323" h="113"/>
+                </spawn>
+                <!-- Miracle Healer of the 62nd Search Party ||| Ab1_v09Ctrl_Da_Pr_65_Ae -->
+                <spawn npc_id="883492" respawn_time="295">
+                    <spot x="2369.802" y="621.48706" z="2794.1335" h="119"/>
+                </spawn>
+                <!-- Sentinel Leader of the 62nd Search Party ||| Ab1_v09Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883493" respawn_time="295">
+                    <spot x="2367.9268" y="587.39294" z="2794.2473" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 62nd Search Party ||| Ab1_v09Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883494" respawn_time="295">
+                    <spot x="2383.9375" y="602.20636" z="2795.0396" h="0"/>
+                </spawn>
+                <!-- Chief of Staff of the 62nd Search Party ||| Ab1_v09Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883495" respawn_time="295">
+                    <spot x="2359.2073" y="626.4914" z="2794.1301" h="6"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 62nd Garrison / ab1_v09_flag_dr -->
+				<spawn npc_id="805464">
+					<spot x="2494.25" y="555.61" z="2883.95" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 62nd Conquest Squad ||| Ab1_v09_Vritra_Fi_Boss_65_Ae -->
+				<spawn npc_id="883028" handler="BOSS">
+					<spot x="2491.7998" y="556.98413" z="2849.3008" h="50"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v09Ctrl_Vritra_Fi_BossKiller_65_Ae3 -->
+				<spawn npc_id="883478" handler="ATTACKER">
+					<spot x="2486.5078" y="560.17499" z="2849.5842" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 62nd Conquest Squad ||| Ab1_v09_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883029" respawn_time="295">
+					<spot x="2503.1895" y="529.603" z="2844.1216" h="106"/>
+					<spot x="2466.704" y="552.29834" z="2844.082" h="73"/>
+					<spot x="2506.5737" y="581.7715" z="2842.8552" h="30"/>
+				</spawn>
+				<!-- Miracle Healer of the 62nd Conquest Squad ||| Ab1_v09_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883030" respawn_time="295">
+					<spot x="2495.2598" y="559.14923" z="2849.0847" h="23"/>
+					<spot x="2486.0654" y="570.6373" z="2848.128" h="46"/>
+				</spawn>
+				<!-- Sentinel Leader of the 62nd Conquest Squad ||| Ab1_v09_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883031" respawn_time="295">
+					<spot x="2491.645" y="552.847" z="2849.0818" h="73"/>
+				</spawn>
+				<!-- Scout Officer of the 62nd Conquest Squad ||| Ab1_v09_Vritra_As_65_Ae -->
+				<spawn npc_id="883032" respawn_time="295">
+					<spot x="2498.0508" y="538.3144" z="2848.1685" h="93"/>
+					<spot x="2474.4663" y="555.3989" z="2847.41" h="63"/>
+					<spot x="2502.0874" y="570.815" z="2847.8826" h="20"/>
+				</spawn>
+				<!-- Chief of Staff of the 62nd Conquest Squad ||| Ab1_v09_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883033" respawn_time="295">
+					<spot x="2484.2388" y="542.59186" z="2848.0342" h="80"/>
+					<spot x="2509.6704" y="551.9332" z="2848.346" h="113"/>
+				</spawn>
+
+				<!-- Destroyer of the 62nd Search Party ||| Ab1_v09_Search_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883789" respawn_time="295">
+					<spot x="2620.393" y="558.95593" z="2822.037" h="11"/>
+					<spot x="2648.5396" y="534.438" z="2821.9822" h="1"/>
+					<spot x="2608.1243" y="511.8526" z="2845.9736" h="110"/>
+					<spot x="2630.067" y="510.2932" z="2821.2786" h="108"/>
+					<spot x="2588.7537" y="473.62482" z="2773.9148" h="60"/>
+					<spot x="2379.997" y="584.2174" z="2794.9375" h="55"/>
+					<spot x="2384.9243" y="626.47174" z="2794.1633" h="31"/>
+					<spot x="2343.6619" y="632.8677" z="2794.1387" h="83"/>
+					<spot x="2359.1284" y="586.9156" z="2795.0337" h="13"/>
+				</spawn>
+				<!-- Miracle Healer of the 62nd Search Party ||| Ab1_v09_Search_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883790" respawn_time="295">
+					<spot x="2593.2551" y="452.95822" z="2773.9153" h="111"/>
+					<spot x="2369.0117" y="627.4445" z="2794.1465" h="29"/>
+				</spawn>
+				<!-- Sentinel Leader of the 62nd Search Party ||| Ab1_v09_Search_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883791" respawn_time="295">
+					<spot x="2625.5623" y="528.6957" z="2821.5942" h="24"/>
+					<spot x="2365.159" y="590.0667" z="2794.0376" h="35"/>
+				</spawn>
+				<!-- Scout Officer of the 62nd Search Party ||| Ab1_v09_Search_Vritra_As_65_Ae -->
+				<spawn npc_id="883792" respawn_time="295">
+					<spot x="2641.002" y="554.5864" z="2821.3025" h="11"/>
+					<spot x="2386.859" y="602.797" z="2795.0557" h="57"/>
+				</spawn>
+				<!-- Chief of Staff of the 62nd Search Party ||| Ab1_v09_Search_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883793" respawn_time="295">
+					<spot x="2620.808" y="492.4599" z="2774.04" h="0"/>
+					<spot x="2360.3933" y="628.01086" z="2794.1367" h="86"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="147"> <!-- Blazerack Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 63rd Garrison / ab1_v10_flag_d -->
+				<spawn npc_id="805466">
+					<spot x="372.55" y="2400.46" z="2722.32" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 63rd Defence Squad ||| Ab1_v10_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883190" handler="BOSS">
+					<spot x="375.30887" y="2401.3398" z="2693.594" h="6"/>
+				</spawn>
+				<!-- Makriar ||| Ab1_Village_Guard63_D -->
+				<spawn npc_id="805421" respawn_time="295">
+					<spot x="372.6235" y="2395.7515" z="2693.0793" h="90"/>
+				</spawn>
+				<!-- Anfried ||| Ab1_v10_D_Seller_Goods -->
+				<spawn npc_id="805549" respawn_time="295">
+					<spot x="370.29684" y="2396.2249" z="2693.0796" h="80"/>
+				</spawn>
+				<!-- Alice ||| Ab1_v10_D_Warehouse -->
+				<spawn npc_id="805550" respawn_time="295">
+					<spot x="368.506" y="2397.8186" z="2693.0793" h="70"/>
+				</spawn>
+				<!-- Lodwig ||| Ab1_v10_D_Seller_ap -->
+				<spawn npc_id="805551" respawn_time="295">
+					<spot x="367.72717" y="2400.1487" z="2693.0793" h="60"/>
+				</spawn>
+				<!-- Henirunerk ||| Ab1_v10_D_Seller_Cera -->
+				<spawn npc_id="805603" respawn_time="295">
+					<spot x="368.26505" y="2402.825" z="2693.0793" h="50"/>
+				</spawn>
+				<!-- Destroyer of the 63rd Defence Squad ||| Ab1_v10_Da_Fi_65_Ae -->
+				<spawn npc_id="883191" respawn_time="295">
+					<spot x="353.94168" y="2431.4314" z="2684.1155" h="53"/>
+					<spot x="356.28055" y="2369.067" z="2684.9258" h="90"/>
+					<spot x="400.4335" y="2390.0679" z="2687.1902" h="0"/>
+				</spawn>
+				<!-- Miracle Healer of the 63rd Defence Squad ||| Ab1_v10_Da_Pr_65_Ae -->
+				<spawn npc_id="883192" respawn_time="295">
+					<spot x="373.23752" y="2404.1748" z="2693.3845" h="26"/>
+					<spot x="387.42422" y="2406.7827" z="2692.6575" h="15"/>
+				</spawn>
+				<!-- Sentinel Leader of the 63rd Defence Squad ||| Ab1_v10_Da_Ra_65_Ae -->
+				<spawn npc_id="883193" respawn_time="295">
+					<spot x="375.29874" y="2397.762" z="2693.3804" h="106"/>
+				</spawn>
+				<!-- Scout Officer of the 63rd Defence Squad ||| Ab1_v10_Da_As_65_Ae -->
+				<spawn npc_id="883194" respawn_time="295">
+					<spot x="366.85294" y="2418.984" z="2691.0015" h="40"/>
+					<spot x="357.7107" y="2383.4473" z="2690.2893" h="73"/>
+					<spot x="393.5743" y="2389.9124" z="2689.6394" h="106"/>
+				</spawn>
+				<!-- Chief of Staff of the 63rd Defence Squad ||| Ab1_v10_Da_Wi_65_Ae -->
+				<spawn npc_id="883195" respawn_time="295">
+					<spot x="355.96506" y="2405.0437" z="2692.4448" h="53"/>
+					<spot x="374.35678" y="2384.0557" z="2692.319" h="96"/>
+				</spawn>
+
+				<!-- Slayer of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883498" respawn_time="295">
+					<spot x="221.0091" y="2352.6604" z="2838.0999" h="5"/>
+					<spot x="228.13043" y="2300.7297" z="2836.1414" h="5"/>
+					<spot x="215.79994" y="2317.4248" z="2836.8591" h="117"/>
+					<spot x="204.55075" y="2343.7095" z="2838.1372" h="2"/>
+				</spawn>
+				<!-- Miracle Healer of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883499" respawn_time="295">
+					<spot x="237.45303" y="2318.0571" z="2837.154" h="33"/>
+				</spawn>
+				<!-- Sentinel Leader of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883500" respawn_time="295">
+					<spot x="247.82585" y="2294.8152" z="2836.755" h="20"/>
+				</spawn>
+				<!-- Scout Officer of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_As_65_Ae -->
+				<spawn npc_id="883501" respawn_time="295">
+					<spot x="232.58946" y="2329.044" z="2837.476" h="11"/>
+				</spawn>
+				<!-- Chief of Staff of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883502" respawn_time="295">
+					<spot x="199.843" y="2302.472" z="2835.6416" h="115"/>
+				</spawn>
+				<!-- Slayer of the 63rd Scout Troop ||| Ab1_v10Ctrl_Li_Fi_65_Ae -->
+				<spawn npc_id="883504" respawn_time="295">
+					<spot x="183.26704" y="2465.4766" z="2836.748" h="112"/>
+					<spot x="194.67836" y="2477.3594" z="2837.1633" h="5"/>
+					<spot x="157.5738" y="2479.5024" z="2833.6135" h="25"/>
+					<spot x="175.50941" y="2506.2236" z="2837.1975" h="115"/>
+				</spawn>
+				<!-- Miracle Healer of the 63rd Scout Troop ||| Ab1_v10Ctrl_Li_Pr_65_Ae -->
+				<spawn npc_id="883505" respawn_time="295">
+					<spot x="159.42091" y="2493.8403" z="2834.5986" h="1"/>
+				</spawn>
+				<!-- Sentinel Leader of the 63rd Scout Troop ||| Ab1_v10Ctrl_Li_Ra_65_Ae -->
+				<spawn npc_id="883506" respawn_time="295">
+					<spot x="167.41193" y="2479.25" z="2835.0354" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 63rd Scout Troop ||| Ab1_v10Ctrl_Li_As_65_Ae -->
+				<spawn npc_id="883507" respawn_time="295">
+					<spot x="170.75357" y="2493.4949" z="2835.4983" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 63rd Scout Troop ||| Ab1_v10Ctrl_Li_Wi_65_Ae -->
+				<spawn npc_id="883508" respawn_time="295">
+					<spot x="181.75417" y="2483.449" z="2836.1467" h="116"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 63rd Garrison / Ab1_v10_Flag_L -->
+				<spawn npc_id="805465">
+					<spot x="372.55142" y="2400.4741" z="2722.3179" h="119"/>
+				</spawn>
+                <!-- Battle Commander of the 63rd Occupation Troop ||| Ab1_v10_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883184" handler="BOSS">
+					<spot x="375.30887" y="2401.3398" z="2693.594" h="6"/>
+				</spawn>
+                <!-- Laros ||| Ab1_Village_Guard63_L -->
+                <spawn npc_id="805398" respawn_time="295">
+                    <spot x="372.6235" y="2395.7515" z="2693.0793" h="90"/>
+                </spawn>
+                <!-- Nilos ||| Ab1_v10_L_Seller_Goods -->
+                <spawn npc_id="805546" respawn_time="295">
+                    <spot x="370.29684" y="2396.2249" z="2693.0796" h="80"/>
+                </spawn>
+                <!-- Maris ||| Ab1_v10_L_Warehouse -->
+                <spawn npc_id="805547" respawn_time="295">
+                    <spot x="368.506" y="2397.8186" z="2693.0793" h="70"/>
+                </spawn>
+                <!-- Lukiano ||| Ab1_v10_L_Seller_ap -->
+                <spawn npc_id="805548" respawn_time="295">
+                    <spot x="367.72717" y="2400.1487" z="2693.0793" h="60"/>
+                </spawn>
+                <!-- Uirunerk ||| Ab1_v10_L_Seller_Cera -->
+                <spawn npc_id="805595" respawn_time="295">
+                    <spot x="368.26505" y="2402.825" z="2693.0793" h="50"/>
+                </spawn>
+                <!-- Destroyer of the 63rd Occupation Troop ||| Ab1_v10_Li_Fi_65_Ae -->
+                <spawn npc_id="883185" respawn_time="295">
+                    <spot x="400.4335" y="2390.0679" z="2687.1902" h="0"/>
+                    <spot x="356.28055" y="2369.067" z="2684.9258" h="90"/>
+                    <spot x="353.94168" y="2431.4314" z="2684.1155" h="53"/>
+                </spawn>
+                <!-- Miracle Healer of the 63rd Occupation Troop ||| Ab1_v10_Li_Pr_65_Ae -->
+                <spawn npc_id="883186" respawn_time="295">
+                    <spot x="387.42422" y="2406.7827" z="2692.6575" h="15"/>
+                    <spot x="373.23752" y="2404.1748" z="2693.3845" h="26"/>
+                </spawn>
+                <!-- Sentinel Leader of the 63rd Occupation Troop ||| Ab1_v10_Li_Ra_65_Ae -->
+                <spawn npc_id="883187" respawn_time="295">
+                    <spot x="375.29874" y="2397.762" z="2693.3804" h="106"/>
+                </spawn>
+                <!-- Scout Officer of the 63rd Occupation Troop ||| Ab1_v10_Li_As_65_Ae -->
+                <spawn npc_id="883188" respawn_time="295">
+                    <spot x="393.5743" y="2389.9124" z="2689.6394" h="106"/>
+                    <spot x="357.7107" y="2383.4473" z="2690.2893" h="73"/>
+                    <spot x="366.85294" y="2418.984" z="2691.0015" h="40"/>
+                </spawn>
+                <!-- Chief of Staff of the 63rd Occupation Troop ||| Ab1_v10_Li_Wi_65_Ae -->
+                <spawn npc_id="883189" respawn_time="295">
+                    <spot x="374.35678" y="2384.0557" z="2692.319" h="96"/>
+                    <spot x="355.96506" y="2405.0437" z="2692.4448" h="53"/>
+                </spawn>
+
+                <!-- Slayer of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883498" respawn_time="295">
+                    <spot x="212.255" y="2352.6497" z="2837.941" h="44"/>
+                    <spot x="210.54918" y="2342.4766" z="2838.0432" h="117"/>
+                    <spot x="223.05038" y="2295.1714" z="2835.4614" h="55"/>
+                    <spot x="210.44366" y="2317.3215" z="2836.919" h="75"/>
+                </spawn>
+                <!-- Miracle Healer of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883499" respawn_time="295">
+                    <spot x="243.53737" y="2315.6794" z="2837.049" h="111"/>
+                </spawn>
+                <!-- Sentinel Leader of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883500" respawn_time="295">
+                    <spot x="252.88695" y="2304.3916" z="2836.7866" h="30"/>
+                </spawn>
+                <!-- Scout Officer of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_As_65_Ae -->
+                <spawn npc_id="883501" respawn_time="295">
+                    <spot x="227.0804" y="2327.6404" z="2837.3022" h="70"/>
+                </spawn>
+                <!-- Chief of Staff of the 63rd Vanguard ||| Ab1_v10Ctrl_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883502" respawn_time="295">
+                    <spot x="198.27856" y="2296.2095" z="2835.0764" h="73"/>
+                </spawn>
+                <!-- Slayer of the 63rd Search Party ||| Ab1_v10Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883510" respawn_time="295">
+                    <spot x="178.00702" y="2464.0967" z="2836.095" h="112"/>
+                    <spot x="190.6246" y="2474.3547" z="2837.0654" h="28"/>
+                    <spot x="151.77945" y="2473.0144" z="2833.9746" h="30"/>
+                    <spot x="169.62859" y="2505.3137" z="2836.5676" h="102"/>
+                </spawn>
+                <!-- Miracle Healer of the 63rd Search Party ||| Ab1_v10Ctrl_Da_Pr_65_Ae -->
+                <spawn npc_id="883511" respawn_time="295">
+                    <spot x="156.80498" y="2487.1545" z="2833.774" h="97"/>
+                </spawn>
+                <!-- Sentinel Leader of the 63rd Search Party ||| Ab1_v10Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883512" respawn_time="295">
+                    <spot x="167.41193" y="2479.25" z="2835.0354" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 63rd Search Party ||| Ab1_v10Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883513" respawn_time="295">
+                    <spot x="169.44817" y="2493.9224" z="2835.436" h="56"/>
+                </spawn>
+                <!-- Chief of Staff of the 63rd Search Party ||| Ab1_v10Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883514" respawn_time="295">
+                    <spot x="182.40057" y="2485.782" z="2836.1301" h="104"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 63rd Garrison / ab1_v10_flag_dr -->
+				<spawn npc_id="805467">
+					<spot x="372.55" y="2400.46" z="2722.32" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 63rd Conquest Squad ||| Ab1_v10_Vritra_Fi_Boss_65_Ae -->
+				<spawn npc_id="883034" handler="BOSS">
+					<spot x="375.30887" y="2401.3398" z="2693.594" h="6"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v10Ctrl_Vritra_Fi_BossKiller_65_Ae5 -->
+				<spawn npc_id="883497" handler="ATTACKER">
+					<spot x="381.63779" y="2403.4368" z="2693.8987" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 63rd Conquest Squad ||| Ab1_v10_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883035" respawn_time="295">
+					<spot x="400.4335" y="2390.0679" z="2687.1902" h="0"/>
+					<spot x="356.28055" y="2369.067" z="2684.9258" h="90"/>
+					<spot x="353.94168" y="2431.4314" z="2684.1155" h="53"/>
+				</spawn>
+				<!-- Miracle Healer of the 63rd Conquest Squad ||| Ab1_v10_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883036" respawn_time="295">
+					<spot x="387.42422" y="2406.7827" z="2692.6575" h="15"/>
+					<spot x="373.23752" y="2404.1748" z="2693.3845" h="26"/>
+				</spawn>
+				<!-- Sentinel Leader of the 63rd Conquest Squad ||| Ab1_v10_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883037" respawn_time="295">
+					<spot x="375.29874" y="2397.762" z="2693.3804" h="106"/>
+				</spawn>
+				<!-- Scout Officer of the 63rd Conquest Squad ||| Ab1_v10_Vritra_As_65_Ae -->
+				<spawn npc_id="883038" respawn_time="295">
+					<spot x="393.5743" y="2389.9124" z="2689.6394" h="106"/>
+					<spot x="357.7107" y="2383.4473" z="2690.2893" h="73"/>
+					<spot x="366.85294" y="2418.984" z="2691.0015" h="40"/>
+				</spawn>
+				<!-- Chief of Staff of the 63rd Conquest Squad ||| Ab1_v10_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883039" respawn_time="295">
+					<spot x="374.35678" y="2384.0557" z="2692.319" h="96"/>
+					<spot x="355.96506" y="2405.0437" z="2692.4448" h="53"/>
+				</spawn>
+
+				<!-- Destroyer of the 63rd Search Party ||| Ab1_v10_Search_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883804" respawn_time="295">
+					<spot x="229.36266" y="2301.06" z="2836.1743" h="9"/>
+					<spot x="215.7709" y="2317.2883" z="2836.8533" h="115"/>
+					<spot x="220.96594" y="2351.8372" z="2838.073" h="113"/>
+					<spot x="204.55806" y="2343.57" z="2838.1382" h="0"/>
+					<spot x="183.70593" y="2466.0112" z="2836.7715" h="2"/>
+					<spot x="195.0282" y="2477.4531" z="2837.173" h="5"/>
+					<spot x="155.75136" y="2476.3445" z="2833.5166" h="0"/>
+					<spot x="175.83942" y="2506.8872" z="2837.3054" h="6"/>
+				</spawn>
+				<!-- Miracle Healer of the 63rd Search Party ||| Ab1_v10_Search_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883805" respawn_time="295">
+					<spot x="240.35884" y="2315.7087" z="2837.125" h="119"/>
+					<spot x="156.11494" y="2492.0178" z="2834.1687" h="5"/>
+				</spawn>
+				<!-- Sentinel Leader of the 63rd Search Party ||| Ab1_v10_Search_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883806" respawn_time="295">
+					<spot x="247.903" y="2300.6753" z="2836.7146" h="113"/>
+					<spot x="168.33113" y="2479.202" z="2835.115" h="119"/>
+				</spawn>
+				<!-- Scout Officer of the 63rd Search Party ||| Ab1_v10_Search_Vritra_As_65_Ae -->
+				<spawn npc_id="883807" respawn_time="295">
+					<spot x="227.78372" y="2330.8242" z="2837.4705" h="0"/>
+					<spot x="169.90422" y="2493.4949" z="2835.4358" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 63rd Search Party ||| Ab1_v10_Search_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883808" respawn_time="295">
+					<spot x="199.81424" y="2303.5703" z="2835.722" h="6"/>
+					<spot x="182.64322" y="2484.2488" z="2836.1924" h="6"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="148"> <!-- Smoldergeist Outpost -->
+			<simple_race race="ASMODIANS">
+				<!-- 64th Garrison / ab1_v11_flag_d -->
+				<spawn npc_id="805469">
+					<spot x="443.79" y="2712.63" z="2945.36" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 64th Defence Squad ||| Ab1_v11_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883202" handler="BOSS">
+					<spot x="445.75363" y="2709.4182" z="2915.4592" h="103"/>
+				</spawn>
+				<!-- Kemillon ||| Ab1_Village_Guard64_D -->
+				<spawn npc_id="805422" respawn_time="295">
+					<spot x="439.45682" y="2713.9465" z="2915.149" h="56"/>
+				</spawn>
+				<!-- Hovars ||| Ab1_v11_D_Seller_Goods -->
+				<spawn npc_id="805555" respawn_time="295">
+					<spot x="447.1661" y="2716.0476" z="2915.149" h="13"/>
+				</spawn>
+				<!-- Malene ||| Ab1_v11_D_Warehouse -->
+				<spawn npc_id="805556" respawn_time="295">
+					<spot x="445.07053" y="2717.0781" z="2915.1492" h="26"/>
+				</spawn>
+				<!-- Aizas ||| Ab1_v11_D_Seller_ap -->
+				<spawn npc_id="805557" respawn_time="295">
+					<spot x="442.65836" y="2717.2083" z="2915.149" h="36"/>
+				</spawn>
+				<!-- Dashunerk ||| Ab1_v11_D_Seller_Rcoin -->
+				<spawn npc_id="805598" respawn_time="295">
+					<spot x="440.59" y="2715.9233" z="2915.1492" h="46"/>
+				</spawn>
+				<!-- Destroyer of the 64th Defence Squad ||| Ab1_v11_Da_Fi_65_Ae -->
+				<spawn npc_id="883203" respawn_time="295">
+					<spot x="420.03775" y="2696.7893" z="2909.453" h="73"/>
+					<spot x="448.92905" y="2740.1704" z="2910.2937" h="33"/>
+					<spot x="470.78006" y="2701.6763" z="2910.005" h="0"/>
+				</spawn>
+				<!-- Miracle Healer of the 64th Defence Squad ||| Ab1_v11_Da_Pr_65_Ae -->
+				<spawn npc_id="883204" respawn_time="295">
+					<spot x="441.9412" y="2709.387" z="2915.4548" h="80"/>
+					<spot x="448.22043" y="2696.3896" z="2914.4863" h="103"/>
+				</spawn>
+				<!-- Sentinel Leader of the 64th Defence Squad ||| Ab1_v11_Da_Ra_65_Ae -->
+				<spawn npc_id="883205" respawn_time="295">
+					<spot x="447.65482" y="2712.686" z="2915.455" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 64th Defence Squad ||| Ab1_v11_Da_As_65_Ae -->
+				<spawn npc_id="883206" respawn_time="295">
+					<spot x="428.18918" y="2702.898" z="2913.574" h="70"/>
+					<spot x="448.75284" y="2728.6123" z="2914.7983" h="23"/>
+					<spot x="464.79562" y="2702.4302" z="2912.0059" h="113"/>
+				</spawn>
+				<!-- Chief of Staff of the 64th Defence Squad ||| Ab1_v11_Da_Wi_65_Ae -->
+				<spawn npc_id="883207" respawn_time="295">
+					<spot x="433.7941" y="2725.3608" z="2914.7239" h="50"/>
+					<spot x="458.6956" y="2719.195" z="2914.4124" h="10"/>
+				</spawn>
+
+				<!-- Slayer of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883517" respawn_time="295">
+					<spot x="291.59888" y="2742.6348" z="2824.5674" h="12"/>
+					<spot x="294.95242" y="2788.6418" z="2821.721" h="117"/>
+					<spot x="328.09485" y="2754.4038" z="2823.2334" h="29"/>
+					<spot x="309.38632" y="2715.9614" z="2825.7222" h="40"/>
+				</spawn>
+				<!-- Miracle Healer of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883518" respawn_time="295">
+					<spot x="302.2811" y="2762.909" z="2822.598" h="5"/>
+				</spawn>
+				<!-- Sentinel Leader of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883519" respawn_time="295">
+					<spot x="311.1947" y="2746.4773" z="2823.6958" h="14"/>
+				</spawn>
+				<!-- Scout Officer of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_As_65_Ae -->
+				<spawn npc_id="883520" respawn_time="295">
+					<spot x="297.47363" y="2729.2092" z="2824.9673" h="76"/>
+				</spawn>
+				<!-- Chief of Staff of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883521" respawn_time="295">
+					<spot x="323.93555" y="2730.5967" z="2825.434" h="46"/>
+				</spawn>
+				<!-- Slayer of the 64th Scout Troop ||| Ab1_v11Ctrl_Li_Fi_65_Ae -->
+				<spawn npc_id="883523" respawn_time="295">
+					<spot x="447.40115" y="2909.696" z="2913.12" h="111"/>
+					<spot x="497.32965" y="2907.4766" z="2903.3555" h="115"/>
+					<spot x="521.99664" y="2884.6787" z="2897.4521" h="115"/>
+					<spot x="529.36084" y="2918.1965" z="2903.5225" h="118"/>
+				</spawn>
+				<!-- Miracle Healer of the 64th Scout Troop ||| Ab1_v11Ctrl_Li_Pr_65_Ae -->
+				<spawn npc_id="883524" respawn_time="295">
+					<spot x="516.0513" y="2903.188" z="2902.41" h="12"/>
+				</spawn>
+				<!-- Sentinel Leader of the 64th Scout Troop ||| Ab1_v11Ctrl_Li_Ra_65_Ae -->
+				<spawn npc_id="883525" respawn_time="295">
+					<spot x="466.74948" y="2903.3997" z="2905.4363" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 64th Scout Troop ||| Ab1_v11Ctrl_Li_As_65_Ae -->
+				<spawn npc_id="883526" respawn_time="295">
+					<spot x="520.3977" y="2910.152" z="2903.5186" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 64th Scout Troop ||| Ab1_v11Ctrl_Li_Wi_65_Ae -->
+				<spawn npc_id="883527" respawn_time="295">
+					<spot x="485.34946" y="2900.3474" z="2902.5205" h="38"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 64th Garrison / Ab1_v11_Flag_L -->
+				<spawn npc_id="805468">
+					<spot x="443.79233" y="2712.6387" z="2945.3599" h="119"/>
+				</spawn>
+				<!-- Battle Commander of the 64th Occupation Troop ||| Ab1_v11_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883196" handler="BOSS">
+					<spot x="445.75363" y="2709.4182" z="2915.4592" h="103"/>
+				</spawn>
+                <!-- Pionel ||| Ab1_Village_Guard64_L -->
+                <spawn npc_id="805399" respawn_time="295">
+                    <spot x="439.45682" y="2713.9465" z="2915.149" h="56"/>
+                </spawn>
+                <!-- Marino ||| Ab1_v11_L_Seller_Goods -->
+                <spawn npc_id="805552" respawn_time="295">
+                    <spot x="447.1661" y="2716.0476" z="2915.149" h="13"/>
+                </spawn>
+                <!-- Lisa ||| Ab1_v11_L_Warehouse -->
+                <spawn npc_id="805553" respawn_time="295">
+                    <spot x="445.07053" y="2717.0781" z="2915.1492" h="26"/>
+                </spawn>
+                <!-- Teopilus ||| Ab1_v11_L_Seller_ap -->
+                <spawn npc_id="805554" respawn_time="295">
+                    <spot x="442.65836" y="2717.2083" z="2915.149" h="36"/>
+                </spawn>
+                <!-- Kaoshunerk ||| Ab1_v11_L_Seller_Rcoin -->
+                <spawn npc_id="805590" respawn_time="295">
+                    <spot x="440.59" y="2715.9233" z="2915.1492" h="46"/>
+                </spawn>
+                <!-- Destroyer of the 64th Occupation Troop ||| Ab1_v11_Li_Fi_65_Ae -->
+                <spawn npc_id="883197" respawn_time="295">
+                    <spot x="420.03775" y="2696.7893" z="2909.453" h="73"/>
+                    <spot x="448.92905" y="2740.1704" z="2910.2937" h="33"/>
+                    <spot x="470.78006" y="2701.6763" z="2910.005" h="0"/>
+                </spawn>
+                <!-- Miracle Healer of the 64th Occupation Troop ||| Ab1_v11_Li_Pr_65_Ae -->
+                <spawn npc_id="883198" respawn_time="295">
+                    <spot x="441.9412" y="2709.387" z="2915.4548" h="80"/>
+                    <spot x="448.22043" y="2696.3896" z="2914.4863" h="103"/>
+                </spawn>
+                <!-- Sentinel Leader of the 64th Occupation Troop ||| Ab1_v11_Li_Ra_65_Ae -->
+                <spawn npc_id="883199" respawn_time="295">
+                    <spot x="447.65482" y="2712.686" z="2915.455" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 64th Occupation Troop ||| Ab1_v11_Li_As_65_Ae -->
+                <spawn npc_id="883200" respawn_time="295">
+                    <spot x="428.18918" y="2702.898" z="2913.574" h="70"/>
+                    <spot x="448.75284" y="2728.6123" z="2914.7983" h="23"/>
+                    <spot x="464.79562" y="2702.4302" z="2912.0059" h="113"/>
+                </spawn>
+                <!-- Chief of Staff of the 64th Occupation Troop ||| Ab1_v11_Li_Wi_65_Ae -->
+                <spawn npc_id="883201" respawn_time="295">
+                    <spot x="433.7941" y="2725.3608" z="2914.7239" h="50"/>
+                    <spot x="458.6956" y="2719.195" z="2914.4124" h="10"/>
+                </spawn>
+
+                <!-- Slayer of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883517" respawn_time="295">
+                    <spot x="313.5097" y="2716.5557" z="2826.1267" h="116"/>
+                    <spot x="285.62402" y="2745.2776" z="2824.7122" h="38"/>
+                    <spot x="331.76715" y="2745.0657" z="2824.3726" h="103"/>
+                    <spot x="282.80835" y="2792.8" z="2822.9392" h="44"/>
+                </spawn>
+                <!-- Miracle Healer of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883518" respawn_time="295">
+                    <spot x="295.7995" y="2756.1445" z="2823.7087" h="61"/>
+                </spawn>
+                <!-- Sentinel Leader of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883519" respawn_time="295">
+                    <spot x="304.76456" y="2743.5503" z="2823.915" h="42"/>
+                </spawn>
+                <!-- Scout Officer of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_As_65_Ae -->
+                <spawn npc_id="883520" respawn_time="295">
+                    <spot x="299.67175" y="2729.7688" z="2824.8381" h="95"/>
+                </spawn>
+                <!-- Chief of Staff of the 64th Vanguard ||| Ab1_v11Ctrl_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883521" respawn_time="295">
+                    <spot x="313.91486" y="2730.9124" z="2825.227" h="17"/>
+                </spawn>
+                <!-- Slayer of the 64th Search Party ||| Ab1_v11Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883529" respawn_time="295">
+                    <spot x="524.10974" y="2888.3638" z="2898.7393" h="55"/>
+                    <spot x="497.31522" y="2907.4277" z="2903.34" h="114"/>
+                    <spot x="454.3682" y="2911.918" z="2911.1084" h="106"/>
+                    <spot x="529.3449" y="2918.096" z="2903.534" h="116"/>
+                </spawn>
+                <!-- Miracle Healer of the 64th Search Party ||| Ab1_v11Ctrl_Da_Pr_65_Ae -->
+                <spawn npc_id="883530" respawn_time="295">
+                    <spot x="513.75476" y="2901.5544" z="2901.9248" h="50"/>
+                </spawn>
+                <!-- Sentinel Leader of the 64th Search Party ||| Ab1_v11Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883531" respawn_time="295">
+                    <spot x="466.74948" y="2903.3997" z="2905.4363" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 64th Search Party ||| Ab1_v11Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883532" respawn_time="295">
+                    <spot x="520.20337" y="2910.152" z="2903.533" h="0"/>
+                </spawn>
+                <!-- Chief of Staff of the 64th Search Party ||| Ab1_v11Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883533" respawn_time="295">
+                    <spot x="484.16483" y="2900.8909" z="2902.992" h="2"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 64th Garrison / ab1_v11_flag_dr -->
+				<spawn npc_id="805470">
+					<spot x="443.79" y="2712.63" z="2945.36" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 64th Conquest Squad ||| Ab1_v11_Vritra_Fi_Boss_65_Ae -->
+				<spawn npc_id="883040" handler="BOSS">
+					<spot x="445.75363" y="2709.4182" z="2915.4592" h="103"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v11Ctrl_Vritra_Fi_BossKiller_65_Ae7 -->
+				<spawn npc_id="883516" handler="ATTACKER">
+					<spot x="448.65305" y="2704.5435" z="2916.3457" h="119"/>
+				</spawn>
+				<!-- Destroyer of the 64th Conquest Squad ||| Ab1_v11_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883041" respawn_time="295">
+					<spot x="420.03775" y="2696.7893" z="2909.453" h="73"/>
+					<spot x="470.78006" y="2701.6763" z="2910.005" h="0"/>
+				</spawn>
+				<!-- Miracle Healer of the 64th Conquest Squad ||| Ab1_v11_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883042" respawn_time="295">
+					<spot x="448.22043" y="2696.3896" z="2914.4863" h="103"/>
+					<spot x="441.9412" y="2709.387" z="2915.4548" h="80"/>
+				</spawn>
+				<!-- Sentinel Leader of the 64th Conquest Squad ||| Ab1_v11_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883043" respawn_time="295">
+					<spot x="447.65482" y="2712.686" z="2915.455" h="0"/>
+				</spawn>
+				<!-- Scout Officer of the 64th Conquest Squad ||| Ab1_v11_Vritra_As_65_Ae -->
+				<spawn npc_id="883044" respawn_time="295">
+					<spot x="428.18918" y="2702.898" z="2913.574" h="70"/>
+					<spot x="464.79562" y="2702.4302" z="2912.0059" h="113"/>
+					<spot x="448.75284" y="2728.6123" z="2914.7983" h="23"/>
+				</spawn>
+				<!-- Chief of Staff of the 64th Conquest Squad ||| Ab1_v11_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883045" respawn_time="295">
+					<spot x="433.7941" y="2725.3608" z="2914.7239" h="50"/>
+					<spot x="458.6956" y="2719.195" z="2914.4124" h="10"/>
+				</spawn>
+
+				<!-- Destroyer of the 64th Search Party ||| Ab1_v11_Search_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883819" respawn_time="295">
+					<spot x="293.03613" y="2791.23" z="2821.8997" h="7"/>
+					<spot x="291.82852" y="2738.6528" z="2824.7559" h="99"/>
+					<spot x="333.3637" y="2744.0388" z="2824.6755" h="19"/>
+					<spot x="452.11432" y="2912.1775" z="2911.8516" h="118"/>
+					<spot x="497.70853" y="2907.9368" z="2903.4941" h="3"/>
+					<spot x="522.34753" y="2885.4521" z="2897.823" h="55"/>
+					<spot x="529.6992" y="2918.5754" z="2903.4856" h="4"/>
+					<spot x="303.25134" y="2710.8354" z="2825.6191" h="48"/>
+				</spawn>
+				<!-- Miracle Healer of the 64th Search Party ||| Ab1_v11_Search_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883820" respawn_time="295">
+					<spot x="296.30048" y="2757.2976" z="2823.6292" h="30"/>
+					<spot x="518.00085" y="2900.2444" z="2901.6543" h="43"/>
+				</spawn>
+				<!-- Sentinel Leader of the 64th Search Party ||| Ab1_v11_Search_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883821" respawn_time="295">
+					<spot x="313.3209" y="2740.9822" z="2824.2217" h="64"/>
+					<spot x="467.64984" y="2903.2083" z="2905.3691" h="116"/>
+				</spawn>
+				<!-- Scout Officer of the 64th Search Party ||| Ab1_v11_Search_Vritra_As_65_Ae -->
+				<spawn npc_id="883822" respawn_time="295">
+					<spot x="303.10037" y="2731.9114" z="2824.5725" h="94"/>
+					<spot x="520.1521" y="2910.152" z="2903.5374" h="0"/>
+				</spawn>
+				<!-- Chief of Staff of the 64th Search Party ||| Ab1_v11_Search_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883823" respawn_time="295">
+					<spot x="485.11557" y="2901.194" z="2902.8813" h="4"/>
+					<spot x="317.3305" y="2728.754" z="2825.5002" h="102"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+
+		<base_spawn id="149"> <!-- Moltenspike Outpost (Base 65) -->
+			<simple_race race="ASMODIANS">
+				<!-- 65th Garrison / ab1_v12_flag_d -->
+				<spawn npc_id="805472">
+					<spot x="572.54" y="2559.78" z="3080.75" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 65th Defence Squad ||| Ab1_v12_Da_Fi_Boss_65_Ae -->
+				<spawn npc_id="883214" handler="BOSS">
+					<spot x="569.54156" y="2559.5486" z="3052.6025" h="60"/>
+				</spawn>
+                <!-- Tarter ||| Ab1_Village_Guard65_D -->
+                <spawn npc_id="805423" respawn_time="295">
+                    <spot x="576.9483" y="2554.9807" z="3052.0862" h="0"/>
+                </spawn>
+                <!-- Bernadin ||| Ab1_v12_D_Seller_Goods -->
+                <spawn npc_id="805561" respawn_time="295">
+                    <spot x="578.87036" y="2557.9517" z="3052.0867" h="0"/>
+                </spawn>
+                <!-- Loranna ||| Ab1_v12_D_Warehouse -->
+                <spawn npc_id="805562" respawn_time="295">
+                    <spot x="578.618" y="2562.235" z="3052.0862" h="0"/>
+                </spawn>
+                <!-- Yekar ||| Ab1_v12_D_Seller_ap -->
+                <spawn npc_id="805563" respawn_time="295">
+                    <spot x="576.3384" y="2564.9941" z="3052.0862" h="0"/>
+                </spawn>
+                <!-- Destroyer of the 65th Defence Squad ||| Ab1_v12_Da_Fi_65_Ae -->
+                <spawn npc_id="883215" respawn_time="295">
+                    <spot x="548.6507" y="2534.6597" z="3044.2847" h="90"/>
+                    <spot x="593.9072" y="2542.5415" z="3047.3845" h="0"/>
+                    <spot x="567.0071" y="2590.76" z="3044.799" h="43"/>
+                </spawn>
+                <!-- Miracle Healer of the 65th Defence Squad ||| Ab1_v12_Da_Pr_65_Ae -->
+                <spawn npc_id="883216" respawn_time="295">
+                    <spot x="571.092" y="2543.2307" z="3051.3398" h="90"/>
+                    <spot x="571.70703" y="2556.051" z="3052.3928" h="83"/>
+                </spawn>
+                <!-- Sentinel Leader of the 65th Defence Squad ||| Ab1_v12_Da_Ra_65_Ae -->
+                <spawn npc_id="883217" respawn_time="295">
+                    <spot x="571.4173" y="2563.2417" z="3052.3882" h="36"/>
+                </spawn>
+                <!-- Scout Officer of the 65th Defence Squad ||| Ab1_v12_Da_As_65_Ae -->
+                <spawn npc_id="883218" respawn_time="295">
+                    <spot x="554.3865" y="2546.5503" z="3049.3762" h="73"/>
+                    <spot x="584.2409" y="2545.6255" z="3051.3394" h="110"/>
+                    <spot x="571.2351" y="2577.0457" z="3051.023" h="30"/>
+                </spawn>
+                <!-- Chief of Staff of the 65th Defence Squad ||| Ab1_v12_Da_Wi_65_Ae -->
+                <spawn npc_id="883219" respawn_time="295">
+                    <spot x="558.3358" y="2568.9512" z="3051.4714" h="50"/>
+                    <spot x="588.94824" y="2560.8806" z="3051.6697" h="6"/>
+                </spawn>
+
+                <!-- Slayer of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883536" respawn_time="295">
+                    <spot x="730.95807" y="2705.9067" z="2919.7122" h="15"/>
+                    <spot x="698.9263" y="2721.737" z="2911.8254" h="63"/>
+                    <spot x="730.0626" y="2746.697" z="2925.3816" h="15"/>
+                    <spot x="686.6227" y="2710.5623" z="2908.5432" h="21"/>
+                </spawn>
+                <!-- Miracle Healer of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883537" respawn_time="295">
+                    <spot x="712.62384" y="2733.2393" z="2917.3494" h="0"/>
+                </spawn>
+                <!-- Sentinel Leader of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883538" respawn_time="295">
+                    <spot x="714.2562" y="2714.6147" z="2915.7634" h="116"/>
+                </spawn>
+                <!-- Scout Officer of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_As_65_Ae -->
+                <spawn npc_id="883539" respawn_time="295">
+                    <spot x="703.21716" y="2701.9583" z="2911.7239" h="0"/>
+                </spawn>
+                <!-- Chief of Staff of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883540" respawn_time="295">
+                    <spot x="728.0525" y="2726.3333" z="2920.6235" h="117"/>
+                </spawn>
+                <!-- Slayer of the 65th Scout Troop ||| Ab1_v12Ctrl_Li_Fi_65_Ae -->
+                <spawn npc_id="883542" respawn_time="295">
+                    <spot x="757.3564" y="2420.8213" z="2914.739" h="42"/>
+                    <spot x="748.7417" y="2440.5984" z="2914.5396" h="0"/>
+                    <spot x="771.5907" y="2466.8408" z="2924.6897" h="0"/>
+                    <spot x="754.949" y="2478.013" z="2923.168" h="0"/>
+                </spawn>
+                <!-- Miracle Healer of the 65th Scout Troop ||| Ab1_v12Ctrl_Li_Pr_65_Ae -->
+                <spawn npc_id="883543" respawn_time="295">
+                    <spot x="776.3669" y="2436.957" z="2921.2905" h="27"/>
+                </spawn>
+                <!-- Sentinel Leader of the 65th Scout Troop ||| Ab1_v12Ctrl_Li_Ra_65_Ae -->
+                <spawn npc_id="883544" respawn_time="295">
+                    <spot x="750.94727" y="2457.4004" z="2918.8972" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 65th Scout Troop ||| Ab1_v12Ctrl_Li_As_65_Ae -->
+                <spawn npc_id="883545" respawn_time="295">
+                    <spot x="780.13983" y="2450.0405" z="2925.1182" h="71"/>
+                </spawn>
+                <!-- Chief of Staff of the 65th Scout Troop ||| Ab1_v12Ctrl_Li_Wi_65_Ae -->
+                <spawn npc_id="883546" respawn_time="295">
+                    <spot x="734.8219" y="2452.0215" z="2914.2144" h="0"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+				<!-- 65th Garrison / Ab1_v12_Flag_L -->
+				<spawn npc_id="805471">
+					<spot x="572.54333" y="2559.7852" z="3080.7478" h="119"/>
+				</spawn>
+                <!-- Battle Commander of the 65th Occupation Troop ||| Ab1_v12_Li_Fi_Boss_65_Ae -->
+				<spawn npc_id="883208" handler="BOSS">
+					<spot x="569.54156" y="2559.5486" z="3052.6025" h="60"/>
+				</spawn>
+				<!-- Lason ||| Ab1_Village_Guard65_L -->
+				<spawn npc_id="805400" respawn_time="295">
+					<spot x="576.9483" y="2554.9807" z="3052.0862" h="0"/>
+				</spawn>
+				<!-- Silias ||| Ab1_v12_L_Seller_Goods -->
+				<spawn npc_id="805558" respawn_time="295">
+					<spot x="578.87036" y="2557.9517" z="3052.0867" h="0"/>
+				</spawn>
+				<!-- Pedra ||| Ab1_v12_L_Warehouse -->
+				<spawn npc_id="805559" respawn_time="295">
+					<spot x="578.618" y="2562.235" z="3052.0862" h="0"/>
+				</spawn>
+				<!-- Nikos ||| Ab1_v12_L_Seller_ap -->
+				<spawn npc_id="805560" respawn_time="295">
+					<spot x="576.3384" y="2564.9941" z="3052.0862" h="0"/>
+				</spawn>
+				<!-- Destroyer of the 65th Occupation Troop ||| Ab1_v12_Li_Fi_65_Ae -->
+				<spawn npc_id="883209" respawn_time="295">
+					<spot x="593.9072" y="2542.5415" z="3047.3845" h="0"/>
+					<spot x="548.6507" y="2534.6597" z="3044.2847" h="90"/>
+					<spot x="567.0071" y="2590.76" z="3044.799" h="43"/>
+				</spawn>
+				<!-- Miracle Healer of the 65th Occupation Troop ||| Ab1_v12_Li_Pr_65_Ae -->
+				<spawn npc_id="883210" respawn_time="295">
+					<spot x="571.092" y="2543.2307" z="3051.3398" h="90"/>
+					<spot x="571.70703" y="2556.051" z="3052.3928" h="83"/>
+				</spawn>
+				<!-- Sentinel Leader of the 65th Occupation Troop ||| Ab1_v12_Li_Ra_65_Ae -->
+				<spawn npc_id="883211" respawn_time="295">
+					<spot x="571.4173" y="2563.2417" z="3052.3882" h="36"/>
+				</spawn>
+				<!-- Scout Officer of the 65th Occupation Troop ||| Ab1_v12_Li_As_65_Ae -->
+				<spawn npc_id="883212" respawn_time="295">
+					<spot x="554.3865" y="2546.5503" z="3049.3762" h="73"/>
+					<spot x="571.2351" y="2577.0457" z="3051.023" h="30"/>
+					<spot x="584.2409" y="2545.6255" z="3051.3394" h="110"/>
+				</spawn>
+				<!-- Chief of Staff of the 65th Occupation Troop ||| Ab1_v12_Li_Wi_65_Ae -->
+				<spawn npc_id="883213" respawn_time="295">
+					<spot x="558.3358" y="2568.9512" z="3051.4714" h="50"/>
+					<spot x="588.94824" y="2560.8806" z="3051.6697" h="6"/>
+				</spawn>
+
+                <!-- Slayer of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883536" respawn_time="295">
+                    <spot x="687.1475" y="2704.6936" z="2908.5928" h="20"/>
+                    <spot x="697.55054" y="2721.2522" z="2911.397" h="115"/>
+                    <spot x="723.32965" y="2705.0457" z="2917.7954" h="91"/>
+                    <spot x="720.05054" y="2746.6428" z="2922.3726" h="72"/>
+                </spawn>
+                <!-- Miracle Healer of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883537" respawn_time="295">
+                    <spot x="710.6907" y="2733.6501" z="2916.7996" h="0"/>
+                </spawn>
+                <!-- Sentinel Leader of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883538" respawn_time="295">
+                    <spot x="711.75146" y="2722.987" z="2915.5984" h="30"/>
+                </spawn>
+                <!-- Scout Officer of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_As_65_Ae -->
+                <spawn npc_id="883539" respawn_time="295">
+                    <spot x="702.1127" y="2701.9583" z="2911.4065" h="0"/>
+                </spawn>
+                <!-- Chief of Staff of the 65th Vanguard ||| Ab1_v12Ctrl_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883540" respawn_time="295">
+                    <spot x="726.1659" y="2726.3333" z="2920.067" h="0"/>
+                </spawn>
+                <!-- Slayer of the 65th Search Party ||| Ab1_v12Ctrl_Da_Fi_65_Ae -->
+                <spawn npc_id="883548" respawn_time="295">
+                    <spot x="756.81195" y="2478.0618" z="2923.419" h="6"/>
+                    <spot x="773.3156" y="2466.018" z="2924.9194" h="108"/>
+                    <spot x="750.5498" y="2441.1858" z="2915.1147" h="10"/>
+                    <spot x="765.4938" y="2420.0579" z="2918.5117" h="61"/>
+                </spawn>
+                <!-- Miracle Healer of the 65th Search Party ||| Ab1_v12Ctrl_Da_Pr_65_Ae -->
+                <spawn npc_id="883549" respawn_time="295">
+                    <spot x="766.53314" y="2434.932" z="2918.3438" h="48"/>
+                </spawn>
+                <!-- Sentinel Leader of the 65th Search Party ||| Ab1_v12Ctrl_Da_Ra_65_Ae -->
+                <spawn npc_id="883550" respawn_time="295">
+                    <spot x="750.94727" y="2457.4004" z="2918.8972" h="0"/>
+                </spawn>
+                <!-- Scout Officer of the 65th Search Party ||| Ab1_v12Ctrl_Da_As_65_Ae -->
+                <spawn npc_id="883551" respawn_time="295">
+                    <spot x="781.40356" y="2453.8643" z="2926.3762" h="40"/>
+                </spawn>
+                <!-- Chief of Staff of the 65th Search Party ||| Ab1_v12Ctrl_Da_Wi_65_Ae -->
+                <spawn npc_id="883552" respawn_time="295">
+                    <spot x="736.66724" y="2452.2644" z="2914.5518" h="119"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- 65th Garrison / ab1_v12_flag_dr -->
+				<spawn npc_id="805473">
+					<spot x="572.54" y="2559.78" z="3080.75" h="90"/>
+				</spawn>
+				<!-- Battle Commander of the 65th Conquest Squad ||| Ab1_v12_Vritra_Fi_Boss_65_Ae -->
+				<spawn npc_id="883046" handler="BOSS">
+					<spot x="569.54156" y="2559.5486" z="3052.6025" h="60"/>
+				</spawn>
+				<!-- Balaur Assassin Officer / Ab1_v12Ctrl_Vritra_Fi_BossKiller_65_Ae9 -->
+				<spawn npc_id="883535" handler="ATTACKER">
+					<spot x="563.78412" y="2559.4963" z="3052.9053" h="119"/>
+				</spawn>
+                <!-- Destroyer of the 65th Conquest Squad ||| Ab1_v12_Vritra_Fi_65_Ae -->
+                <spawn npc_id="883047" respawn_time="295">
+                    <spot x="567.0071" y="2590.76" z="3044.799" h="43"/>
+                    <spot x="593.9072" y="2542.5415" z="3047.3845" h="0"/>
+                    <spot x="548.6507" y="2534.6597" z="3044.2847" h="90"/>
+                </spawn>
+                <!-- Miracle Healer of the 65th Conquest Squad ||| Ab1_v12_Vritra_Pr_65_Ae -->
+                <spawn npc_id="883048" respawn_time="295">
+                    <spot x="571.092" y="2543.2307" z="3051.3398" h="90"/>
+                    <spot x="571.70703" y="2556.051" z="3052.3928" h="83"/>
+                </spawn>
+                <!-- Sentinel Leader of the 65th Conquest Squad ||| Ab1_v12_Vritra_Ra_65_Ae -->
+                <spawn npc_id="883049" respawn_time="295">
+                    <spot x="571.4173" y="2563.2417" z="3052.3882" h="36"/>
+                </spawn>
+                <!-- Scout Officer of the 65th Conquest Squad ||| Ab1_v12_Vritra_As_65_Ae -->
+                <spawn npc_id="883050" respawn_time="295">
+                    <spot x="571.2351" y="2577.0457" z="3051.023" h="30"/>
+                    <spot x="584.2409" y="2545.6255" z="3051.3394" h="110"/>
+                    <spot x="554.3865" y="2546.5503" z="3049.3762" h="73"/>
+                </spawn>
+                <!-- Chief of Staff of the 65th Conquest Squad ||| Ab1_v12_Vritra_Wi_65_Ae -->
+                <spawn npc_id="883051" respawn_time="295">
+                    <spot x="588.94824" y="2560.8806" z="3051.6697" h="6"/>
+                    <spot x="558.3358" y="2568.9512" z="3051.4714" h="50"/>
+                </spawn>
+
+				<!-- Destroyer of the 65th Search Party ||| Ab1_v12_Search_Vritra_Fi_65_Ae -->
+				<spawn npc_id="883834" respawn_time="295">
+					<spot x="686.89667" y="2706.2986" z="2908.5527" h="40"/>
+					<spot x="694.8009" y="2722.5977" z="2910.6968" h="45"/>
+					<spot x="720.7713" y="2746.6882" z="2922.587" h="85"/>
+					<spot x="725.13556" y="2708.3264" z="2918.549" h="32"/>
+					<spot x="759.7443" y="2477.9604" z="2923.7876" h="83"/>
+					<spot x="772.2189" y="2471.8284" z="2925.1956" h="29"/>
+					<spot x="743.62103" y="2440.669" z="2913.643" h="72"/>
+					<spot x="763.63806" y="2415.8083" z="2917.7766" h="70"/>
+				</spawn>
+				<!-- Miracle Healer of the 65th Search Party ||| Ab1_v12_Search_Vritra_Pr_65_Ae -->
+				<spawn npc_id="883835" respawn_time="295">
+					<spot x="706.76215" y="2730.1921" z="2914.952" h="95"/>
+					<spot x="767.17566" y="2436.054" z="2918.7976" h="35"/>
+				</spawn>
+				<!-- Sentinel Leader of the 65th Search Party ||| Ab1_v12_Search_Vritra_Ra_65_Ae -->
+				<spawn npc_id="883836" respawn_time="295">
+					<spot x="710.27734" y="2720.4697" z="2915.0044" h="38"/>
+					<spot x="748.51495" y="2458.9333" z="2918.6511" h="33"/>
+				</spawn>
+				<!-- Scout Officer of the 65th Search Party ||| Ab1_v12_Search_Vritra_As_65_Ae -->
+				<spawn npc_id="883837" respawn_time="295">
+					<spot x="696.3461" y="2705.2722" z="2910.2502" h="84"/>
+					<spot x="778.9789" y="2448.4446" z="2924.1257" h="73"/>
+				</spawn>
+				<!-- Chief of Staff of the 65th Search Party ||| Ab1_v12_Search_Vritra_Wi_65_Ae -->
+				<spawn npc_id="883838" respawn_time="295">
+					<spot x="730.0043" y="2728.7976" z="2921.3657" h="41"/>
+					<spot x="736.0644" y="2450.1316" z="2914.0835" h="109"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+	</spawn_map>
+</spawns>

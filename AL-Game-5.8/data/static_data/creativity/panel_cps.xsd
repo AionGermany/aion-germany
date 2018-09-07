@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="panel_cps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="panel_cp" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence/>
+						<xs:attribute name="id" type="xs:int" use="required"/>
+						<xs:attribute name="name" type="xs:string"/>
+						<xs:attribute name="panelType" type="PanelType" use="required"/>
+						<xs:attribute name="learnSkill" type="xs:int"/>
+						<xs:attribute name="additionalSkill" type="xs:int"/>
+						<xs:attribute name="statsId" type="xs:int"/>
+						<xs:attribute name="skillId" type="xs:int"/>
+						<xs:attribute name="statValue" type="xs:int"/>
+						<xs:attribute name="cost" type="xs:int"/>
+						<xs:attribute name="countMax" type="xs:int"/>
+						<xs:attribute name="costAdj" type="xs:int"/>
+						<xs:attribute name="preCondId" type="xs:int"/>
+						<xs:attribute name="preEnchantCount" type="xs:int"/>
+						<xs:attribute name="minLevel" type="xs:int"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="PanelType">
+        <xs:restriction base="xs:string">
+			<xs:enumeration value="STAT_UP"/>
+			<xs:enumeration value="LEARN_SKILL"/>
+			<xs:enumeration value="ENCHANT_SKILL"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

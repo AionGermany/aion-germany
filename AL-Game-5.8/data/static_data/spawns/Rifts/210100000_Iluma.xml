@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="210100000">
+        <!-- Rift -->
+        <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Iluma -->
+            <spot x="1347.4923" y="1757.6678" z="326.96277" anchor="ILUMA_AM"/> <!-- checked -->
+            <spot x="1587.9425" y="831.59424" z="315.17297" anchor="ILUMA_BM"/> <!-- checked -->
+        </spawn>
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Iluma -->
+            <spot x="1832.978" y="760.0112" z="320.31332" anchor="ILUMA_AS"/> <!-- checked -->
+            <spot x="1995.8005" y="1504.9324" z="315.84818" anchor="ILUMA_BS"/> <!-- checked -->
+        </spawn>
+
+        <!-- ILUMA_AS -->
+        <rift_spawn id="2289">
+        </rift_spawn>
+        <!-- ILUMA_BS -->
+        <rift_spawn id="2290">
+        </rift_spawn>
+    </spawn_map>
+</spawns>

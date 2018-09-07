@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop>
+    <set name="godstones" description="Godstone" cost="100000000"> <!-- Kinah Cost here (sample value) -->
+        <item count="1">168000181</item> <!-- [Stamp] Illusion Godstone: Beritra's Plot -->
+    </set>
+    <set name="idian" description="Enchantment" cost="300000"> <!-- Kinah Cost here (Sell Price of Wish to Buy Items) -->
+        <!-- Wish To Buy -->
+        <item count="1">166050087</item> <!-- Lord's Idian: Physical Defence -->
+        <item count="5">166050124</item> <!-- Blazing Fighter's Idian: Physical Attack -->
+        <!-- Required  -->
+        <trade count="3">152014024</trade> <!-- Gleaming Balaur Blood (get some fiery Balaur Blood for blazing fightpower ) -->
+        <trade count="5">166050135</trade> <!-- Fine Remodeled Idian: Physical Attack (bought from NPC) -->
+        <trade count="6">152000918</trade> <!-- Pure Ancient Aether (gathered from L60+ map) -->
+       </set>
+    <set name="ancient_manastones" description="Enchantment" cost="5000000">
+        <!-- Wish To Buy -->
+        <item count="5">167020079</item> <!-- Ancient Manastone: Attack +8 -->
+        <item count="5">167020074</item> <!-- Ancient Manastone: Crit Strike +24 -->
+        <!-- Required  -->
+        <trade count="5">167020036</trade> <!-- Ancient Manastone: Attack +6 -->
+        <trade count="5">167020030</trade> <!-- Ancient Manastone: Crit Strike +20 -->
+        <trade count="6">152000918</trade> <!-- Pure Ancient Aether (gathered from L60+ map) -->
+        <trade count="6">152003015</trade> <!-- Flawless Ide (gathered from L60+ map) -->
+    </set>
+</shop>

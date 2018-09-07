@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="600090000">
+        <siege_spawn siege_id="7012">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Squad Artifact Savant Warmage -->
+                    <spawn npc_id="252230">
+                        <spot x="846.9631" y="810.477" z="165.465" h="30"/>
+                        <spot x="838.3016" y="812.5221" z="165.25" h="21"/>
+                        <spot x="840.6795" y="788.3926" z="165.76793" h="90"/>
+                        <spot x="835.6723" y="788.87524" z="165.48137" h="84"/>
+                    </spawn>
+                    <!-- Хранитель артефакта асмодиан -->
+                    <spawn npc_id="252183">
+                        <spot x="839.24677" y="793.0356" z="167.13857" h="85"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Defender -->
+                    <spawn npc_id="252227">
+                        <spot x="827.22363" y="792.8556" z="165.14946" h="69"/>
+                        <spot x="849.43475" y="788.9172" z="165.81767" h="103"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Master Healer -->
+                    <spawn npc_id="252229">
+                        <spot x="830.94055" y="812.0275" z="165.11984" h="43"/>
+                        <spot x="853.8352" y="807.45734" z="164.93982" h="10"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Master Tracker -->
+                    <spawn npc_id="252228">
+                        <spot x="855.41656" y="797.12054" z="164.78647" h="116"/>
+                        <spot x="825.6889" y="803.22546" z="165.01904" h="56"/>
+                    </spawn>
+                    <!-- Fortress Teleporter (Object Normal lvl:3) -->
+                    <spawn npc_id="802444" respawn_time="295">
+                        <spot x="865.44281" y="805.20691" z="164.76651" static_id="252"/>
+                    </spawn>
+                    <!-- (A): Hellfire Array -->
+                    <spawn npc_id="252293">
+                        <spot x="840.5061" y="800.22791" z="167.09218" static_id="551"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE"><!-- Retail 4.8 -->
+                    <!-- Pashid Artifact Savant Defender -->
+                    <spawn npc_id="252231">
+                        <spot h="45" x="841.6434" y="815.8891" z="164.77771"/>
+                        <spot h="60" x="864.85565" y="800.7359" z="164.67847"/>
+                    </spawn>
+                    <!-- Pashid Artifact Savant Master Tracker -->
+                    <spawn npc_id="252232">
+                        <spot h="90" x="829.9286" y="783.938" z="165.20201"/>
+                        <spot h="20" x="853.0012" y="813.36127" z="164.53992"/>
+                    </spawn>
+                    <!-- Pashid Artifact Savant Master Healer -->
+                    <spawn npc_id="252233">
+                        <spot h="86" x="836.4707" y="794.3878" z="167.13478"/>
+                    </spawn>
+                    <!-- Pashid Artifact Savant Warmage -->
+                    <spawn npc_id="252234">
+                        <spot h="86" x="851.751" y="783.4045" z="166.47594"/>
+                        <spot h="60" x="824.342" y="807.25146" z="164.53334"/>
+                    </spawn>
+                    <!-- Pashid Savant Artifact Protector -->
+                    <spawn npc_id="252188">
+                        <spot h="86" x="839.2666" y="793.2137" z="167.13564"/>
+                    </spawn>                    
+                    <!-- (B): Hellfire Array -->
+                    <spawn npc_id="252294">
+                        <spot x="840.4733" y="801.10016" z="165.0" static_id="549"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Garrison Artifact Savant Warmage -->
+                    <spawn npc_id="252226">
+                        <spot x="846.9631" y="810.477" z="165.465" h="30"/>
+                        <spot x="838.3016" y="812.5221" z="165.25" h="21"/>
+                        <spot x="840.6795" y="788.3926" z="165.76793" h="90"/>
+                        <spot x="835.6723" y="788.87524" z="165.48137" h="84"/>
+                    </spawn>
+                    <!-- Garrison Artifact Savant Master Tracker -->
+                    <spawn npc_id="252224">
+                        <spot x="855.41656" y="797.12054" z="164.78647" h="116"/>
+                        <spot x="825.6889" y="803.22546" z="165.01904" h="56"/>
+                    </spawn>
+                    <!-- Хранитель артефакта элиусов -->
+                    <spawn npc_id="252178">
+                        <spot x="839.24677" y="793.0356" z="167.13857" h="85"/>
+                    </spawn>
+                    <!-- Garrison Artifact Savant Defender -->
+                    <spawn npc_id="252223">
+                        <spot x="827.22363" y="792.8556" z="165.14946" h="69"/>
+                        <spot x="849.43475" y="788.9172" z="165.81767" h="103"/>
+                    </spawn>
+                    <!-- Garrison Artifact Savant Master Healer -->
+                    <spawn npc_id="252225">
+                        <spot x="830.94055" y="812.0275" z="165.11984" h="43"/>
+                        <spot x="853.8352" y="807.45734" z="164.93982" h="10"/>
+                    </spawn>
+                    <!-- Fortress Teleporter (Object Normal lvl:3) -->
+                    <spawn npc_id="802443" respawn_time="295">
+                        <spot x="865.44281" y="805.20691" z="164.76651" static_id="252"/>
+                    </spawn>
+                    <!-- (E): Hellfire Array -->
+                    <spawn npc_id="252292">
+                        <spot x="840.5061" y="800.22791" z="167.09218" static_id="551"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="7013">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Squad Savant Artifact Protector -->
+                    <spawn npc_id="252198">
+                        <spot x="467.1329" y="436.02182" z="152.74594" h="71"/>
+                    </spawn>
+                    <!-- (A): Soul Crush" -->
+                    <spawn npc_id="252296">
+                        <spot x="472.99448" y="440.11829" z="152.70201" static_id="24"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Defender -->
+                    <spawn npc_id="252239">
+                        <spot x="458.34314" y="444.2751" z="150.93509" h="54"/>
+                        <spot x="471.65262" y="425.10733" z="150.70763" h="88"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Master Tracker -->
+                    <spawn npc_id="252240">
+                        <spot x="481.45908" y="427.6559" z="150.84119" h="103"/>
+                        <spot x="464.4441" y="452.56128" z="151.09724" h="41"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Master Healer -->
+                    <spawn npc_id="252241">
+                        <spot x="474.39078" y="455.1882" z="150.875" h="28"/>
+                        <spot x="487.24313" y="436.1759" z="151.1554" h="115"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Warmage -->
+                    <spawn npc_id="252242">
+                        <spot x="479.60626" y="450.46805" z="150.875" h="6"/>
+                        <spot x="484.74957" y="442.7881" z="151.0" h="18"/>
+                        <spot x="466.61264" y="429.89172" z="151.21172" h="69"/>
+                        <spot x="461.07605" y="437.44998" z="150.94226" h="78"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Rekrutierter Artefaktwächter der Drakan -->
+                    <spawn npc_id="252243">
+                        <spot h="80" x="460.44843" y="422.94504" z="151.56894"/>
+                        <spot h="50" x="449.94864" y="441.48257" z="150.28876"/>
+                        <spot h="15" x="484.393" y="458.6411" z="150.45993"/>
+                    </spawn>
+                    <!-- Rekrutierter Artefaktsuchoffizier der Drakan -->
+                    <spawn npc_id="252244">
+                        <spot h="90" x="473.52493" y="417.5762" z="151.07317"/>
+                    </spawn>
+                    <!-- Niederrangiger Artefakt-Wundheilergeist der Drakan -->
+                    <spawn npc_id="252245">
+                        <spot h="15" x="480.55267" y="442.66135" z="152.75969"/>
+                    </spawn>
+                    <!-- Rekrutierter Artefaktstabsoffizier der Drakan -->
+                    <spawn npc_id="252246">
+                        <spot h="60" x="453.13644" y="449.92587" z="151.21043"/>
+                        <spot h="30" x="493.09726" y="448.58118" z="151.72581"/>
+                    </spawn>
+                    <!-- Rekrutierter Drakan-Beschützer -->
+                    <spawn npc_id="252203">
+                        <spot h="15" x="478.81744" y="444.46005" z="152.74867"/>
+                    </spawn>
+                    <!-- Balaur-Artefakt: Vernichtung der Seele -->
+                    <spawn npc_id="252297">
+                        <spot x="472.1639" y="440.51553" z="151.0" static_id="31"/>
+                    </spawn>                    
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Garrison Savant Artifact Protector -->
+                    <spawn npc_id="252193">
+                        <spot x="467.1329" y="436.02182" z="152.74594" h="71"/>
+                    </spawn>
+                    <!-- (E): Soul Crush -->
+                    <spawn npc_id="252295">
+                        <spot x="472.99448" y="440.11829" z="152.70201" static_id="24"/>
+                    </spawn>
+                    <!-- Guard_Kn_Li -->
+                    <spawn npc_id="252235">
+                        <spot x="458.34314" y="444.2751" z="150.93509" h="54"/>
+                        <spot x="471.65262" y="425.10733" z="150.70763" h="88"/>
+                    </spawn>
+                    <!-- Guard_Ra_Li -->
+                    <spawn npc_id="252236">
+                        <spot x="481.45908" y="427.6559" z="150.84119" h="103"/>
+                        <spot x="464.4441" y="452.56128" z="151.09724" h="41"/>
+                    </spawn>
+                    <!-- Guard_Pr_Li -->
+                    <spawn npc_id="252237">
+                        <spot x="474.39078" y="455.1882" z="150.875" h="28"/>
+                        <spot x="487.24313" y="436.1759" z="151.1554" h="115"/>
+                    </spawn>
+                    <!-- Guard_Wi_Li -->
+                    <spawn npc_id="252238">
+                        <spot x="479.60626" y="450.46805" z="150.875" h="6"/>
+                        <spot x="484.74957" y="442.7881" z="151.0" h="18"/>
+                        <spot x="466.61264" y="429.89172" z="151.21172" h="69"/>
+                        <spot x="461.07605" y="437.44998" z="150.94226" h="78"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="7014">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Squad Savant Artifact Protector -->
+                    <spawn npc_id="252213">
+                        <spot x="1204.2892" y="205.4322" z="138.3627" h="39"/>
+                    </spawn>
+                    <!-- (A): Soul Crush -->
+                    <spawn npc_id="252299">
+                        <spot x="1207.295" y="198.98555" z="138.31851" static_id="553"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Master Tracker -->
+                    <spawn npc_id="252252">
+                        <spot x="1220.9359" y="205.50926" z="136.34718" h="9"/>
+                        <spot x="1193.7395" y="192.33743" z="136.375" h="67"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Defender -->
+                    <spawn npc_id="252251">
+                        <spot x="1192.5844" y="202.72955" z="136.2382" h="56"/>
+                        <spot x="1213.5344" y="212.805" z="136.31136" h="21"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Warmage -->
+                    <spawn npc_id="252254">
+                        <spot x="1216.798" y="190.32162" z="136.375" h="95"/>
+                        <spot x="1208.1357" y="186.24908" z="136.375" h="105"/>
+                        <spot x="1197.8568" y="207.3182" z="136.375" h="35"/>
+                        <spot x="1206.2748" y="211.55222" z="136.375" h="43"/>
+                    </spawn>
+                    <!-- Squad Artifact Savant Master Healer -->
+                    <spawn npc_id="252253">
+                        <spot x="1200.9607" y="185.1026" z="136.31891" h="83"/>
+                        <spot x="1221.9312" y="195.2125" z="136.375" h="115"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE"><!-- Retail 4.8 -->
+                    <!-- Pashid Artifact Savant Defender -->
+                    <spawn npc_id="252255">
+                        <spot h="45" x="1194.4471" y="234.91045" z="136.43492"/>
+                        <spot h="30" x="1228.1453" y="225.81429" z="136.0"/>
+                    </spawn>
+                    <!-- Pashid Artifact Savant Master Tracker -->
+                    <spawn npc_id="252256">
+                        <spot h="30" x="1192.9865" y="223.85869" z="135.87778"/>
+                        <spot h="30" x="1219.7482" y="219.31056" z="136.0"/>
+                    </spawn>
+                    <!-- Pashid Artifact Savant Master Healer -->
+                    <spawn npc_id="252257">
+                        <spot h="30" x="1206.2028" y="206.49586" z="138.3703"/>
+                    </spawn>
+                    <!-- Pashid Artifact Savant Warmage -->
+                    <spawn npc_id="252258">
+                        <spot h="30" x="1185.8403" y="228.60164" z="135.07742"/>
+                        <spot h="30" x="1217.0295" y="228.73668" z="136.67644"/>
+                    </spawn>
+                    <!-- Pashid Savant Artifact Protector -->
+                    <spawn npc_id="252218">
+                        <spot h="45" x="1204.0262" y="205.39928" z="138.36414"/>
+                    </spawn>
+                    <!-- (B): Soul Crush -->
+                    <spawn npc_id="252300">
+                        <spot x="1206.8086" y="199.82913" z="136.375" static_id="554"/>
+                    </spawn>                    
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Garrison Savant Artifact Protector -->
+                    <spawn npc_id="252208">
+                        <spot x="1204.2892" y="205.4322" z="138.3627" h="39"/>
+                    </spawn>
+                    <!-- (E): Soul Crush -->
+                    <spawn npc_id="252298">
+                        <spot x="1207.295" y="198.98555" z="138.31851" static_id="553"/>
+                    </spawn>
+                    <!-- Garrison Artifact Savant Master Tracker -->
+                    <spawn npc_id="252248">
+                        <spot x="1220.9359" y="205.50926" z="136.34718" h="9"/>
+                        <spot x="1193.7395" y="192.33743" z="136.375" h="67"/>
+                    </spawn>
+                    <!-- Garrison Artifact Savant Defender -->
+                    <spawn npc_id="252247">
+                        <spot x="1192.5844" y="202.72955" z="136.2382" h="56"/>
+                        <spot x="1213.5344" y="212.805" z="136.31136" h="21"/>
+                    </spawn>
+                    <!-- Garrison Artifact Savant Warmage -->
+                    <spawn npc_id="252250">
+                        <spot x="1216.798" y="190.32162" z="136.375" h="95"/>
+                        <spot x="1208.1357" y="186.24908" z="136.375" h="105"/>
+                        <spot x="1197.8568" y="207.3182" z="136.375" h="35"/>
+                        <spot x="1206.2748" y="211.55222" z="136.375" h="43"/>
+                    </spawn>
+                    <!-- Garrison Artifact Savant Master Healer -->
+                    <spawn npc_id="252249">
+                        <spot x="1200.9607" y="185.1026" z="136.31891" h="83"/>
+                        <spot x="1221.9312" y="195.2125" z="136.375" h="115"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>        
+    </spawn_map>
+</spawns>

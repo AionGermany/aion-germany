@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               16974 [TODO] Monster Abridged
+               16975 [TODO] Fugative Fragment
+               16976 [XML] Velkur's Valuable Piece
+               16977 [XML] [Instanced Dungeon] Seized Goods
+               16979 [XML] Engulfed Bridge
+               26974 [TODO] To The Bridge
+               26975 [TODO] A Mysterious Shard
+               26976 [XML] Report to the Bridge
+               26977 [XML] [Instanced Dungeon] Seize and Seize Again
+               26979 [TODO] Defend the Advance Route to the Last Soldier
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to_many id="16976" start_npc_ids="801762" start_dialog_id="4762" end_npc_ids="801762" end_dialog_id="1352">
+        <npc_infos var="0" npc_id="801763" quest_dialog="1011"/>
+    </report_to_many>
+    <report_to id="16979" start_npc_ids="802025" end_npc_ids="801762"/>
+    <report_to_many id="26976" start_npc_ids="801764" start_dialog_id="4762" end_npc_ids="801762" end_dialog_id="1352">
+        <npc_infos var="0" npc_id="801765" quest_dialog="1011"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="16977" start_npc_ids="801763" start_dialog_id="4762" end_npc_ids="801762" start_dialog_id2="1011" action_item_ids="702959"/>
+    <item_collecting id="26977" start_npc_ids="801765" start_dialog_id="4762" end_npc_ids="801764" start_dialog_id2="1011" action_item_ids="702959"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

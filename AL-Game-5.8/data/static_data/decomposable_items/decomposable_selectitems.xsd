@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../items/item_templates.xsd"/>
+    <xs:element name="decomposable_selectitems">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="decomposable_selectitem" type="DecomposableSelectItem" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="DecomposableSelectItem">
+        <xs:sequence>
+            <xs:element name="items" type="SelectItems" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="name" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="SelectItems">
+        <xs:sequence>
+            <xs:element name="item" type="SelectItem" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="player_class" type="playerClass" default="ALL"/>
+        <xs:attribute name="minlevel" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="maxlevel" type="xs:int" use="optional" default="0"/>
+    </xs:complexType>
+    <xs:complexType name="SelectItem">
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="name" type="xs:string" use="optional"/>
+        <xs:attribute name="count" type="xs:int" use="optional" default="1"/>
+        <xs:attribute name="race" type="Race" use="optional" default="PC_ALL"/>
+    </xs:complexType>
+    <xs:simpleType name="itemRaces">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ELYOS"/>
+            <xs:enumeration value="ASMODIANS"/>
+            <xs:enumeration value="PC_ALL"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

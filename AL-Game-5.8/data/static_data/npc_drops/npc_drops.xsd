@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:include schemaLocation="../import.xsd"/>
+        <xs:include schemaLocation="../global_types.xsd"/>
+        <xs:element name="npc_drops" type="npcDrops"/>
+        <xs:complexType name="npcDrops">
+                <xs:sequence>
+                        <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="npc_drop" type="npcDrop" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+        </xs:complexType>
+        <xs:complexType name="npcDrop">
+                <xs:sequence>
+                        <xs:element name="drop_group" type="dropGroup" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="npc_id" type="xs:int" use="required"/>
+        </xs:complexType>
+        <xs:complexType name="dropGroup">
+                <xs:sequence>
+                        <xs:element name="drop" type="drop" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="race" type="Race"/>
+                <xs:attribute name="use_category" type="xs:boolean"/>
+                <xs:attribute name="name" type="xs:string"/>
+        </xs:complexType>
+        <xs:complexType name="drop">
+                <xs:attribute name="item_id" type="xs:int" use="required"/>
+                <xs:attribute name="min_amount" type="xs:int" use="required"/>
+                <xs:attribute name="max_amount" type="xs:int" use="required"/>
+                <xs:attribute name="chance" type="xs:float" use="required"/>
+                <xs:attribute name="no_reduce" type="xs:boolean"/>
+                <xs:attribute name="eachmember" type="xs:boolean"/>
+                <xs:attribute name="name" type="xs:string"/>
+        </xs:complexType>
+</xs:schema>

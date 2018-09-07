@@ -1,8 +1,9 @@
 ![](http://falke34.bplaced.net/Splash01.png)
 
 # Aion EU Emulator
-### Version: 5.8
+### Version: 6.0
 
+**PTS-Client 6.0:** [Gameforge](http://dl.aion.gameforge.com/aion/client/20180806/2018-08-06_AION_Setup_PTS.exe)
 **Client:** [Gameforge](https://de.aion.gameforge.com/website/download/) **+** [Launcher](https://github.com/AionGermany/aion-germany/blob/master/AL-Tools/AionLauncherEU_5.x.rar)
 
 ```sh
@@ -17,33 +18,16 @@ Launcher Settings (add this to your config File):
 ### Todo:
 ```sh
 Static Data:
-* Divine Fortress and Artifact Spawns
-* Nosra + Esterra Spawns
+* all
 ```
 
 ```sh
 Data:
-* add/write new Quest Scipts
-* repair some Quest Scripts
-
-* write new Instance Scripts
-* fix some Instance Scripts
+* all
 ```
 
 ```sh
 Source:
-* Stigma Enchant 
-- add/find Bonus Stigma Slot and add Sigma Enchant Bonus
-- fix Stigma with Stigma Enchant
-- fix Kinah
-
-* Plume Enchant
-- fix Plume Lvl10 authorize with 10 Holy Upgrade Serum to a better Plume
-
-* Quest Creativity Points
-- add this
-
-* Skill Enhance
-- this change the Skills not + the Skills
-
+* remove some old Code
+* add new Packets
 ```
