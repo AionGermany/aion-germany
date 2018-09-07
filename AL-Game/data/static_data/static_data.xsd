@@ -81,9 +81,6 @@
     <xs:include schemaLocation="quest_data/challenge_tasks.xsd"/>
     <xs:include schemaLocation="town_spawns/town_spawns.xsd"/>
     <xs:include schemaLocation="locations/base/base_locations.xsd"/>
-    <xs:include schemaLocation="locations/beritra/beritra_invasion.xsd"/>
-	<xs:include schemaLocation="locations/svs/svs.xsd"/>
-	<xs:include schemaLocation="locations/rvr/rvr.xsd"/>
     <xs:include schemaLocation="skills/skill_charge.xsd"/>
     <xs:include schemaLocation="items/item_upgrades.xsd"/>
     <xs:include schemaLocation="decomposable_items/decomposable_selectitems.xsd"/>
@@ -197,9 +194,6 @@
                 <xs:element ref="challenge_tasks" minOccurs="0"/>
                 <xs:element ref="town_spawns_data" minOccurs="0"/>
                 <xs:element ref="base_locations" minOccurs="0"/>
-                <xs:element ref="beritra_invasion" minOccurs="0"/>
-                <xs:element ref="svs" minOccurs="0"/>
-                <xs:element ref="rvr" minOccurs="0"/>
                 <xs:element ref="skill_charge" minOccurs="0"/>
                 <xs:element ref="item_upgrades" minOccurs="0"/>
                 <xs:element ref="decomposable_selectitems" minOccurs="0"/>

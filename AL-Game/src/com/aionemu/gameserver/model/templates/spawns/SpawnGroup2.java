@@ -26,17 +26,11 @@ import org.slf4j.LoggerFactory;
 import com.aionemu.commons.taskmanager.AbstractLockManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.model.Race;
-import com.aionemu.gameserver.model.beritra.BeritraStateType;
-import com.aionemu.gameserver.model.rvr.RvrStateType;
 import com.aionemu.gameserver.model.siege.SiegeModType;
 import com.aionemu.gameserver.model.siege.SiegeRace;
-import com.aionemu.gameserver.model.svs.SvsStateType;
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawnTemplate;
-import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawnTemplate;
-import com.aionemu.gameserver.model.templates.spawns.rvrspawns.RvrSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
-import com.aionemu.gameserver.model.templates.spawns.svsspawns.SvsSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawnTemplate;
 import com.aionemu.gameserver.model.vortex.VortexStateType;
 import com.aionemu.gameserver.spawnengine.SpawnHandlerType;
@@ -110,39 +104,6 @@ public class SpawnGroup2 extends AbstractLockManager {
 			spawnTemplate.setSiegeId(siegeId);
 			spawnTemplate.setSiegeRace(race);
 			spawnTemplate.setSiegeModType(mod);
-			spots.add(spawnTemplate);
-		}
-	}
-
-	public SpawnGroup2(int worldId, Spawn spawn, int beritraId, BeritraStateType state) {
-		this.worldId = worldId;
-		initializing(spawn);
-		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates()) {
-			BeritraSpawnTemplate spawnTemplate = new BeritraSpawnTemplate(this, template);
-			spawnTemplate.setId(beritraId);
-			spawnTemplate.setBStateType(state);
-			spots.add(spawnTemplate);
-		}
-	}
-
-	public SpawnGroup2(int worldId, Spawn spawn, int id, RvrStateType type) {
-		this.worldId = worldId;
-		initializing(spawn);
-		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates()) {
-			RvrSpawnTemplate spawnTemplate = new RvrSpawnTemplate(this, template);
-			spawnTemplate.setId(id);
-			spawnTemplate.setRStateType(type);
-			spots.add(spawnTemplate);
-		}
-	}
-
-	public SpawnGroup2(int worldId, Spawn spawn, int id, SvsStateType type) {
-		this.worldId = worldId;
-		initializing(spawn);
-		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates()) {
-			SvsSpawnTemplate spawnTemplate = new SvsSpawnTemplate(this, template);
-			spawnTemplate.setId(id);
-			spawnTemplate.setPStateType(type);
 			spots.add(spawnTemplate);
 		}
 	}

@@ -203,12 +203,6 @@ public class StaticData {
 	public AtreianPassportData atreianPassportData;
 	@XmlElement(name = "base_locations")
 	public BaseData baseData;
-	@XmlElement(name = "beritra_invasion")
-	public BeritraData beritraData;
-	@XmlElement(name = "svs")
-	public SvsData svsData;
-	@XmlElement(name = "rvr")
-	public RvrData rvrData;
 	@XmlElement(name = "abyss_bonusattrs")
 	public AbyssBuffData abyssBuffData;
 	@XmlElement(name = "abyss_groupattrs")
@@ -347,9 +341,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + arcadeUpgradeData.size() + " arcade upgrade entries");
 		DataManager.log.info("[DataManager] Loaded " + atreianPassportData.size() + " atreian passports");
 		DataManager.log.info("[DataManager] Loaded " + baseData.size() + " base entries");
-		DataManager.log.info("[DataManager] Loaded " + beritraData.size() + " beritra invasion entries");
-		DataManager.log.info("[DataManager] Loaded " + svsData.size() + " s.v.s entries");
-		DataManager.log.info("[DataManager] Loaded " + rvrData.size() + " r.v.r entries");
 		DataManager.log.info("[DataManager] Loaded " + abyssBuffData.size() + " abyss bonus entries");
 		DataManager.log.info("[DataManager] Loaded " + abyssGroupData.size() + " abyss bonus group entries");
 		DataManager.log.info("[DataManager] Loaded " + absoluteStatsData.size() + " absolute stat templates");

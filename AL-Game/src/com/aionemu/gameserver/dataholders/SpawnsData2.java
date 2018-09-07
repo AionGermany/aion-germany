@@ -58,11 +58,8 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnSearchResult;
 import com.aionemu.gameserver.model.templates.spawns.SpawnSpotTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawn;
-import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawn;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawn;
-import com.aionemu.gameserver.model.templates.spawns.rvrspawns.RvrSpawn;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawn;
-import com.aionemu.gameserver.model.templates.spawns.svsspawns.SvsSpawn;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawn;
 import com.aionemu.gameserver.model.templates.world.WorldMapTemplate;
 import com.aionemu.gameserver.spawnengine.SpawnHandlerType;
@@ -215,77 +212,6 @@ public class SpawnsData2 {
 							}
 							SpawnGroup2 spawnGroup = new SpawnGroup2(mapId, spawn, id, type.getStateType());
 							vortexSpawnMaps.get(id).add(spawnGroup);
-						}
-					}
-				}
-				for (BeritraSpawn BeritraSpawn : spawnMap.getBeritraSpawns()) {
-					int id = BeritraSpawn.getId();
-					if (!beritraSpawnMaps.containsKey(id)) {
-						beritraSpawnMaps.put(id, new ArrayList<SpawnGroup2>());
-					}
-					for (BeritraSpawn.BeritraStateTemplate type : BeritraSpawn.getSiegeModTemplates()) {
-						if (type == null || type.getSpawns() == null) {
-							continue;
-						}
-						for (Spawn spawn : type.getSpawns()) {
-							if (spawn.isCustom()) {
-								if (allSpawnMaps.get(mapId).containsKey(spawn.getNpcId())) {
-									allSpawnMaps.get(mapId).remove(spawn.getNpcId());
-								}
-								customs.put(spawn.getNpcId(), spawn);
-							}
-							else if (customs.containsKey(spawn.getNpcId()))
-								continue;
-							SpawnGroup2 spawnGroup = new SpawnGroup2(mapId, spawn, id, type.getBeritraType());
-							beritraSpawnMaps.get(id).add(spawnGroup);
-						}
-					}
-				}
-				for (RvrSpawn RvrSpawn : spawnMap.getRvrSpawns()) {
-					int id = RvrSpawn.getId();
-					if (!rvrSpawnMaps.containsKey(id)) {
-						rvrSpawnMaps.put(id, new ArrayList<SpawnGroup2>());
-					}
-					for (RvrSpawn.RvrStateTemplate type : RvrSpawn.getSiegeModTemplates()) {
-						if (type == null || type.getSpawns() == null) {
-							continue;
-						}
-						for (Spawn spawn : type.getSpawns()) {
-							if (spawn.isCustom()) {
-								if (allSpawnMaps.get(mapId).containsKey(spawn.getNpcId())) {
-									allSpawnMaps.get(mapId).remove(spawn.getNpcId());
-								}
-								customs.put(spawn.getNpcId(), spawn);
-							}
-							else if (customs.containsKey(spawn.getNpcId())) {
-								continue;
-							}
-							SpawnGroup2 spawnGroup = new SpawnGroup2(mapId, spawn, id, type.getRvrType());
-							rvrSpawnMaps.get(id).add(spawnGroup);
-						}
-					}
-				}
-				for (SvsSpawn SvsSpawn : spawnMap.getSvsSpawns()) {
-					int id = SvsSpawn.getId();
-					if (!svsSpawnMaps.containsKey(id)) {
-						svsSpawnMaps.put(id, new ArrayList<SpawnGroup2>());
-					}
-					for (SvsSpawn.SvsStateTemplate type : SvsSpawn.getSiegeModTemplates()) {
-						if (type == null || type.getSpawns() == null) {
-							continue;
-						}
-						for (Spawn spawn : type.getSpawns()) {
-							if (spawn.isCustom()) {
-								if (allSpawnMaps.get(mapId).containsKey(spawn.getNpcId())) {
-									allSpawnMaps.get(mapId).remove(spawn.getNpcId());
-								}
-								customs.put(spawn.getNpcId(), spawn);
-							}
-							else if (customs.containsKey(spawn.getNpcId())) {
-								continue;
-							}
-							SpawnGroup2 spawnGroup = new SpawnGroup2(mapId, spawn, id, type.getSvsType());
-							svsSpawnMaps.get(id).add(spawnGroup);
 						}
 					}
 				}

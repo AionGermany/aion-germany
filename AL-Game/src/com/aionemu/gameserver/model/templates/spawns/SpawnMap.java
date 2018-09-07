@@ -26,11 +26,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawn;
-import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawn;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawn;
-import com.aionemu.gameserver.model.templates.spawns.rvrspawns.RvrSpawn;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawn;
-import com.aionemu.gameserver.model.templates.spawns.svsspawns.SvsSpawn;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawn;
 
 /**
@@ -50,12 +47,6 @@ public class SpawnMap {
 	private List<SiegeSpawn> siegeSpawns;
 	@XmlElement(name = "vortex_spawn")
 	private List<VortexSpawn> vortexSpawns;
-	@XmlElement(name = "beritra_spawn")
-	private List<BeritraSpawn> beritraSpawns;
-	@XmlElement(name = "rvr_spawn")
-	private List<RvrSpawn> rvrSpawns;
-	@XmlElement(name = "svs_spawn")
-	private List<SvsSpawn> svsSpawns;
 
 	@XmlAttribute(name = "map_id")
 	private int mapId;
@@ -117,35 +108,6 @@ public class SpawnMap {
 
 	public void addSiegeSpawns(SiegeSpawn spawns) {
 		getSiegeSpawns().add(spawns);
-	}
-
-	public List<BeritraSpawn> getBeritraSpawns() {
-		if (beritraSpawns == null) {
-			beritraSpawns = new ArrayList<BeritraSpawn>();
-		}
-		return beritraSpawns;
-	}
-
-	public void addBeritraSpawns(BeritraSpawn beritraSpawn) {
-		getBeritraSpawns().add(beritraSpawn);
-	}
-
-	public List<RvrSpawn> getRvrSpawns() {
-		if (rvrSpawns == null) {
-			rvrSpawns = new ArrayList<RvrSpawn>();
-		}
-		return rvrSpawns;
-	}
-
-	public List<SvsSpawn> getSvsSpawns() {
-		if (svsSpawns == null) {
-			svsSpawns = new ArrayList<SvsSpawn>();
-		}
-		return svsSpawns;
-	}
-
-	public void addSvsSpawns(SvsSpawn spawns) {
-		getSvsSpawns().add(spawns);
 	}
 
 	public List<VortexSpawn> getVortexSpawns() {

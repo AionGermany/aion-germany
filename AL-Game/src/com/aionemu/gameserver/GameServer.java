@@ -51,7 +51,6 @@ import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
-import com.aionemu.gameserver.configs.main.PanesterraConfig;
 import com.aionemu.gameserver.configs.main.SiegeConfig;
 import com.aionemu.gameserver.configs.main.ThreadConfig;
 import com.aionemu.gameserver.configs.main.WeddingsConfig;
@@ -70,10 +69,8 @@ import com.aionemu.gameserver.network.chatserver.ChatServer;
 import com.aionemu.gameserver.network.loginserver.LoginServer;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.services.AdminService;
-import com.aionemu.gameserver.services.AgentFightService;
 import com.aionemu.gameserver.services.AnnouncementService;
 import com.aionemu.gameserver.services.BaseService;
-import com.aionemu.gameserver.services.BeritraService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChallengeTaskService;
 import com.aionemu.gameserver.services.DatabaseCleaningService;
@@ -92,12 +89,10 @@ import com.aionemu.gameserver.services.PeriodicSaveService;
 import com.aionemu.gameserver.services.RestartService;
 import com.aionemu.gameserver.services.RiftService;
 import com.aionemu.gameserver.services.RoadService;
-import com.aionemu.gameserver.services.RvrService;
 import com.aionemu.gameserver.services.ShieldService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.StigmaService;
 import com.aionemu.gameserver.services.SupportService;
-import com.aionemu.gameserver.services.SvsService;
 import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.WeatherService;
@@ -281,9 +276,6 @@ public class GameServer {
 		// No Siege schedule or spawns
 		Util.printSection(" ### Siege Location Data ### ");
 		BaseService.getInstance().initBaseLocations();
-		BeritraService.getInstance().initBeritraLocations();
-		RvrService.getInstance().initRvrLocations();
-		SvsService.getInstance().initSvsLocations();
 		SiegeService.getInstance().initSiegeLocations();
 		VortexService.getInstance().initVortexLocations();
 		RiftService.getInstance().initRiftLocations();
@@ -310,7 +302,6 @@ public class GameServer {
 			ShieldService.getInstance().spawnAll();
 		}
 		SiegeService.getInstance().initSieges();
-		AgentFightService.getInstance().initAgentFight();
 		MoltenusService.getInstance().initMoltenus();
 		DiflodoxService.getInstance().initDiflodox(); // 4.9
 		DiflonaxService.getInstance().initDiflonax(); // 4.9
@@ -322,20 +313,6 @@ public class GameServer {
 		}
 		else {
 			BaseService.getInstance().basesDisabled();
-		}
-		Util.printSsSection("RvR");
-		if (PanesterraConfig.SVS_ENABLED) {
-			RvrService.getInstance().initRvr();
-		}
-		else {
-			RvrService.getInstance().RvrDisabled();
-		}
-		Util.printSsSection("Panesterra");
-		if (PanesterraConfig.SVS_ENABLED) {
-			SvsService.getInstance().initSvs();
-		}
-		else {
-			SvsService.getInstance().SvsDisabled();
 		}
 		Util.printSection(" ### Cleaning ### ");
 		DatabaseCleaningService.getInstance();

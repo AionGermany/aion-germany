@@ -119,9 +119,6 @@ public final class DataManager {
 	public static HotspotTeleporterData HOTSPOT_TELEPORTER_DATA;
 	public static AtreianPassportData ATREIAN_PASSPORT_DATA;
 	public static BaseData BASE_DATA;
-	public static BeritraData BERITRA_DATA;
-	public static SvsData SVS_DATA;
-	public static RvrData RVR_DATA;
 	public static AbyssBuffData ABYSS_BUFF_DATA;
 	public static AbyssGroupData ABYSS_GROUP_DATA;
 	public static AbsoluteStatsData ABSOLUTE_STATS_DATA;
@@ -249,9 +246,6 @@ public final class DataManager {
 		HOTSPOT_TELEPORTER_DATA = data.hotspotTeleporterData;
 		ATREIAN_PASSPORT_DATA = data.atreianPassportData;
 		BASE_DATA = data.baseData;
-		BERITRA_DATA = data.beritraData;
-		SVS_DATA = data.svsData;
-		RVR_DATA = data.rvrData;
 		ABYSS_BUFF_DATA = data.abyssBuffData;
 		ABYSS_GROUP_DATA = data.abyssGroupData;
 		ABSOLUTE_STATS_DATA = data.absoluteStatsData;

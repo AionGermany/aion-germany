@@ -29,10 +29,8 @@ import com.aionemu.gameserver.configs.administration.AdminConfig;
 import com.aionemu.gameserver.configs.administration.DeveloperConfig;
 import com.aionemu.gameserver.configs.main.AIConfig;
 import com.aionemu.gameserver.configs.main.AbyssBossesConfig;
-import com.aionemu.gameserver.configs.main.AgentFightConfig;
 import com.aionemu.gameserver.configs.main.AutoGroupConfig;
 import com.aionemu.gameserver.configs.main.BaseConfig;
-import com.aionemu.gameserver.configs.main.BeritraConfig;
 import com.aionemu.gameserver.configs.main.CacheConfig;
 import com.aionemu.gameserver.configs.main.CleaningConfig;
 import com.aionemu.gameserver.configs.main.CompositionConfig;
@@ -56,14 +54,12 @@ import com.aionemu.gameserver.configs.main.LoggingConfig;
 import com.aionemu.gameserver.configs.main.LunaSystemConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
 import com.aionemu.gameserver.configs.main.NameConfig;
-import com.aionemu.gameserver.configs.main.PanesterraConfig;
 import com.aionemu.gameserver.configs.main.PeriodicSaveConfig;
 import com.aionemu.gameserver.configs.main.PlayerTransferConfig;
 import com.aionemu.gameserver.configs.main.PricesConfig;
 import com.aionemu.gameserver.configs.main.PunishmentConfig;
 import com.aionemu.gameserver.configs.main.RankingConfig;
 import com.aionemu.gameserver.configs.main.RateConfig;
-import com.aionemu.gameserver.configs.main.RvRConfig;
 import com.aionemu.gameserver.configs.main.SecurityConfig;
 import com.aionemu.gameserver.configs.main.ShutdownConfig;
 import com.aionemu.gameserver.configs.main.SiegeConfig;
@@ -115,9 +111,6 @@ public class Config {
 			Properties[] mainProps = PropertiesUtils.loadAllFromDirectory(main);
 			PropertiesUtils.overrideProperties(mainProps, myProps);
 
-			ConfigurableProcessor.process(AgentFightConfig.class, mainProps);
-			log.info("[Config] Loading: " + main + "/agentfight.properties");
-
 			ConfigurableProcessor.process(AIConfig.class, mainProps);
 			log.info("[Config] Loading: " + main + "/ai.properties");
 
@@ -126,15 +119,6 @@ public class Config {
 
 			ConfigurableProcessor.process(BaseConfig.class, mainProps);
 			log.info("[Config] Loading: " + main + "/base.properties");
-
-			ConfigurableProcessor.process(BeritraConfig.class, mainProps);
-			log.info("[Config] Loading: " + main + "/beritra.properties");
-
-			ConfigurableProcessor.process(PanesterraConfig.class, mainProps);
-			log.info("[Config] Loading: " + main + "/panesterra.properties");
-
-			ConfigurableProcessor.process(RvRConfig.class, mainProps);
-			log.info("[Config] Loading: " + main + "/rvr.properties");
 
 			ConfigurableProcessor.process(CompositionConfig.class, mainProps);
 			log.info("[Config] Loading: " + main + "/composition.properties");
@@ -304,9 +288,6 @@ public class Config {
 			Properties[] mainProps = PropertiesUtils.loadAllFromDirectory(main);
 			PropertiesUtils.overrideProperties(mainProps, myProps);
 
-			ConfigurableProcessor.process(AgentFightConfig.class, mainProps);
-			log.info("[Config] Reload: " + main + "/agentfight.properties");
-
 			ConfigurableProcessor.process(AIConfig.class, mainProps);
 			log.info("[Config] Reload: " + main + "/ai.properties");
 
@@ -315,15 +296,6 @@ public class Config {
 
 			ConfigurableProcessor.process(BaseConfig.class, mainProps);
 			log.info("[Config] Reload: " + main + "/base.properties");
-
-			ConfigurableProcessor.process(BeritraConfig.class, mainProps);
-			log.info("[Config] Reload: " + main + "/beritra.properties");
-
-			ConfigurableProcessor.process(PanesterraConfig.class, mainProps);
-			log.info("[Config] Reload: " + main + "/panesterra.properties");
-
-			ConfigurableProcessor.process(RvRConfig.class, mainProps);
-			log.info("[Config] Reload: " + main + "/rvr.properties");
 
 			ConfigurableProcessor.process(CompositionConfig.class, mainProps);
 			log.info("[Config] Reload: " + main + "/composition.properties");

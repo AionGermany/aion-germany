@@ -1,43 +1,19 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : Aion
-Source Server Version : 50546
+Source Server         : AionServer
+Source Server Version : 50621
 Source Host           : localhost:3306
-Source Database       : al_server_gs
+Source Database       : 6.x_al_server_gs
 
 Target Server Type    : MYSQL
-Target Server Version : 50546
+Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2018-06-30 22:29:34
+Date: 2018-09-07 21:38:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for `abyss_landing`
--- ----------------------------
-DROP TABLE IF EXISTS `abyss_landing`;
-CREATE TABLE `abyss_landing` (
-  `id` int(11) NOT NULL,
-  `level` int(11) NOT NULL DEFAULT '1',
-  `points` int(10) NOT NULL DEFAULT '0',
-  `siege` int(10) NOT NULL DEFAULT '0',
-  `commander` int(10) NOT NULL DEFAULT '0',
-  `artefact` int(10) NOT NULL DEFAULT '0',
-  `base` int(10) NOT NULL DEFAULT '0',
-  `monuments` int(10) NOT NULL DEFAULT '0',
-  `quest` int(10) NOT NULL DEFAULT '0',
-  `facility` int(10) NOT NULL DEFAULT '0',
-  `race` enum('ELYOS','ASMODIANS') NOT NULL,
-  `level_up_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of abyss_landing
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for `abyss_rank`
@@ -178,7 +154,7 @@ CREATE TABLE `broker` (
   PRIMARY KEY (`id`),
   KEY `seller_id` (`seller_id`),
   CONSTRAINT `broker_ibfk_1` FOREIGN KEY (`seller_id`) REFERENCES `players` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of broker
@@ -316,7 +292,7 @@ CREATE TABLE `houses` (
   `fee_paid` tinyint(1) NOT NULL DEFAULT '1',
   `next_pay` timestamp NULL DEFAULT NULL,
   `sell_started` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `sign_notice` text CHARACTER SET utf16le NOT NULL,
+  `sign_notice` text CHARACTER SET utf16le,
   PRIMARY KEY (`id`),
   UNIQUE KEY `address` (`address`) USING BTREE,
   KEY `address_2` (`address`) USING BTREE
@@ -537,7 +513,7 @@ CREATE TABLE `legion_history` (
   PRIMARY KEY (`id`),
   KEY `legion_id` (`legion_id`),
   CONSTRAINT `legion_history_ibfk_1` FOREIGN KEY (`legion_id`) REFERENCES `legions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of legion_history
@@ -938,10 +914,11 @@ CREATE TABLE `player_equipment_setting` (
 DROP TABLE IF EXISTS `player_events_window`;
 CREATE TABLE `player_events_window` (
   `account_id` int(11) NOT NULL DEFAULT '0',
-  `event_id` int(11) DEFAULT NULL,
+  `event_id` int(11) NOT NULL DEFAULT '0',
   `last_stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `elapsed` double(11,0) DEFAULT '0',
-  PRIMARY KEY (`account_id`)
+  `elapsed` int(11) NOT NULL DEFAULT '0',
+  `reward_recived_count` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`account_id`,`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -1047,6 +1024,8 @@ CREATE TABLE `player_minions` (
   `level` varchar(11) NOT NULL,
   `birthday` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `growthpoints` int(6) NOT NULL DEFAULT '0',
+  `is_locked` int(1) NOT NULL DEFAULT '0',
+  `buff_bag` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`player_id`,`object_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1262,6 +1241,22 @@ CREATE TABLE `player_settings` (
 
 -- ----------------------------
 -- Records of player_settings
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `player_shugo_sweep`
+-- ----------------------------
+DROP TABLE IF EXISTS `player_shugo_sweep`;
+CREATE TABLE `player_shugo_sweep` (
+  `player_id` int(11) NOT NULL,
+  `free_dice` int(10) NOT NULL DEFAULT '0',
+  `sweep_step` int(10) NOT NULL DEFAULT '0',
+  `board_id` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`player_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of player_shugo_sweep
 -- ----------------------------
 
 -- ----------------------------
@@ -1549,7 +1544,7 @@ CREATE TABLE `towns` (
   `level` int(11) NOT NULL DEFAULT '1',
   `points` int(10) NOT NULL DEFAULT '0',
   `race` enum('ELYOS','ASMODIANS') NOT NULL,
-  `level_up_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `level_up_date` timestamp NOT NULL DEFAULT '1970-01-01 07:00:01',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1591,7 +1586,7 @@ CREATE TABLE `weddings` (
   KEY `player2` (`player2`),
   CONSTRAINT `weddings_ibfk_1` FOREIGN KEY (`player1`) REFERENCES `players` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `weddings_ibfk_2` FOREIGN KEY (`player2`) REFERENCES `players` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of weddings
