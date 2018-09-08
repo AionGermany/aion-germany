@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="320030000" name="BREGIRUN_320030000" area_type="POLYGON" zone_type="SUB" priority="16" flags="2">
-        <points bottom="67.75453" top="367.75455">
-            <point x="157.68" y="327.24"/>
-            <point x="319.2793" y="349.8126"/>
-            <point x="348.52106" y="122.54756"/>
-            <point x="182.30466" y="107.670166"/>
+    <zone mapid="320030000" name="BGM_MUTE_75" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="-52.776676" y="-168.33136"/>
+            <point x="737.170349" y="-138.568817"/>
+            <point x="737.170288" y="839.874268"/>
+            <point x="-137.103882" y="765.467896"/>
+            <point x="-99.900681" y="36.285995"/>
+        </points>
+    </zone>
+    <zone mapid="320030000" name="BREGIRUN_320030000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
+        <points bottom="67.754532" top="367.754532">
+            <point x="157.679993" y="327.23999"/>
+            <point x="319.279297" y="349.812592"/>
+            <point x="348.521057" y="122.547562"/>
+            <point x="182.304657" y="107.670166"/>
+        </points>
+    </zone>
+    <zone mapid="320030000" name="MUSICZONESHAPEIDABGATED1-BGM1" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.1">
+            <point x="49.092438" y="-8.333607"/>
+            <point x="26.332787" y="456.001282"/>
+            <point x="454.193359" y="474.522095"/>
+            <point x="489.377563" y="17.802996"/>
         </points>
     </zone>
 </zones>

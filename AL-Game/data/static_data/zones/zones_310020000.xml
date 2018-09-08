@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="310020000" name="AFIRA_OBELISK_1_310020000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="310020000" name="AFIRA_OBELISK_1_310020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="46.0" y="152.0"/>
             <point x="116.0" y="180.0"/>
@@ -9,8 +8,7 @@
             <point x="35.0" y="188.0"/>
         </points>
     </zone>
-    <zone mapid="310020000" name="FLOATING_ISLAND_C_1_310020000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="310020000" name="FLOATING_ISLAND_C_1_310020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="409.0" y="444.0"/>
             <point x="410.0" y="374.0"/>
@@ -18,21 +16,30 @@
             <point x="478.0" y="449.0"/>
         </points>
     </zone>
-    <zone mapid="310020000" name="FLYINGZONESHAPEIDABPRO_SUBZONE1_3" area_type="POLYGON" zone_type="FLY" flags="14">
-        <points bottom="65.1" top="75.1">
+    <zone mapid="310020000" name="FLYINGZONESHAPEIDABPRO_SUBZONE1_1" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="65.099998" top="75.099998">
             <point x="128.0" y="895.0"/>
             <point x="128.0" y="861.0"/>
             <point x="160.0" y="859.0"/>
             <point x="159.0" y="900.0"/>
         </points>
     </zone>
-    <zone mapid="310020000" name="KARAMATIS_1_310020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="6">
+    <zone mapid="310020000" name="KARAMATIS_1_310020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="170.0" y="324.0"/>
             <point x="168.0" y="147.0"/>
             <point x="356.0" y="146.0"/>
             <point x="354.0" y="348.0"/>
             <point x="172.0" y="347.0"/>
+        </points>
+    </zone>
+    <zone mapid="310020000" name="MUSICZONESHAPEIDABPROL1_BGM2_1" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.1">
+            <point x="-161.619995" y="-99.5"/>
+            <point x="-158.619995" y="577.75"/>
+            <point x="551.880005" y="577.375"/>
+            <point x="551.755005" y="-94.125"/>
+            <point x="720.630005" y="-97.5"/>
         </points>
     </zone>
 </zones>

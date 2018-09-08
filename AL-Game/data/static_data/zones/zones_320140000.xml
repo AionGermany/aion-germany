@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="320140000" name="ATAXIAR_320140000" area_type="POLYGON" zone_type="SUB" priority="16" flags="6">
+    <zone mapid="320140000" name="ATAXIAR_2_320140000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="170.0" y="324.0"/>
             <point x="168.0" y="147.0"/>
@@ -9,8 +9,7 @@
             <point x="172.0" y="347.0"/>
         </points>
     </zone>
-    <zone mapid="320140000" name="FLOATING_ISLAND_A_320140000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="320140000" name="FLOATING_ISLAND_A_2_320140000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="46.0" y="152.0"/>
             <point x="116.0" y="180.0"/>
@@ -18,8 +17,23 @@
             <point x="35.0" y="188.0"/>
         </points>
     </zone>
-    <zone mapid="320140000" name="VANPERN_OBELISK_320140000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="320140000" name="MUSICZONESHAPEIDABPROD3_BGM2" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.1">
+            <point x="-161.619995" y="-99.5"/>
+            <point x="-158.619995" y="577.75"/>
+            <point x="551.880005" y="577.375"/>
+            <point x="551.755005" y="-94.125"/>
+        </points>
+    </zone>
+    <zone mapid="320140000" name="MUTE_28" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.1">
+            <point x="-226.220001" y="-205.300003"/>
+            <point x="-229.756363" y="705.887024"/>
+            <point x="609.525879" y="702.350769"/>
+            <point x="614.240967" y="-248.914383"/>
+        </points>
+    </zone>
+    <zone mapid="320140000" name="VANPERN_OBELISK_2_320140000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="409.0" y="444.0"/>
             <point x="410.0" y="374.0"/>

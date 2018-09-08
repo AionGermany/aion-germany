@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="310040000" name="GERANAIA_310040000" area_type="POLYGON" zone_type="SUB" priority="16" flags="2">
+    <zone mapid="310040000" name="BGM_MUTE_71" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="20.209946" y="-33.28194"/>
+            <point x="19.459675" y="647.940552"/>
+            <point x="603.150269" y="630.684937"/>
+            <point x="622.656677" y="-131.564041"/>
+            <point x="224.276596" y="-76.045914"/>
+        </points>
+    </zone>
+    <zone mapid="310040000" name="DABGATEL2_BGM" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="103.0" y="51.0"/>
+            <point x="101.0" y="494.0"/>
+            <point x="526.0" y="503.0"/>
+            <point x="524.0" y="40.0"/>
+        </points>
+    </zone>
+    <zone mapid="310040000" name="GERANAIA_310040000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="65.0" top="365.0">
-            <point x="140.23" y="329.67"/>
-            <point x="208.97089" y="87.48357"/>
-            <point x="361.93286" y="131.23796"/>
-            <point x="289.44894" y="371.80634"/>
+            <point x="140.229996" y="329.670013"/>
+            <point x="208.970886" y="87.483566"/>
+            <point x="361.932861" y="131.237961"/>
+            <point x="289.448944" y="371.806335"/>
         </points>
     </zone>
 </zones>

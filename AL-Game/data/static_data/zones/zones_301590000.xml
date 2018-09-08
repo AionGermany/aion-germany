@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
+    <zone mapid="301590000" name="BGM_MUTE_55" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="-0.1" top="999.900024">
+            <point x="-290.649994" y="-67.669998"/>
+            <point x="1029.729492" y="-67.669945"/>
+            <point x="1029.729492" y="1532.846802"/>
+            <point x="-285.047333" y="1538.449585"/>
+        </points>
+    </zone>
     <zone mapid="301590000" name="BURGLARY_SITE_1_301590000" area_type="POLYGON" zone_type="SUB" priority="14" flags="52">
         <points bottom="392.513397" top="452.513397">
             <point x="518.265381" y="321.980438"/>
@@ -54,6 +62,26 @@
             <point x="585.520325" y="434.362701"/>
             <point x="548.493469" y="664.43396"/>
             <point x="486.830597" y="606.070374"/>
+        </points>
+    </zone>
+    <zone mapid="301590000" name="IDSWEEP-BGM_1" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="-0.1" top="999.900024">
+            <point x="308.980011" y="56.529999"/>
+            <point x="700.482056" y="55.788536"/>
+            <point x="690.842773" y="878.091064"/>
+            <point x="368.073029" y="890.55127"/>
+            <point x="256.996063" y="827.078735"/>
+            <point x="239.434128" y="693.944702"/>
+            <point x="293.247528" y="598.668701"/>
+        </points>
+    </zone>
+    <zone mapid="301590000" name="IDSWEEP_INDEMNITY-BGM_1" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="-0.1" top="999.900024">
+            <point x="-14.99" y="-15.95"/>
+            <point x="295.478455" y="-15.255426"/>
+            <point x="265.519104" y="616.994263"/>
+            <point x="-18.847855" y="611.166809"/>
+            <point x="0.0" y="0.0"/>
         </points>
     </zone>
     <zone mapid="301590000" name="IDSWEEP_ITEMAREA_1" area_type="POLYGON" zone_type="ITEM_USE" flags="52">

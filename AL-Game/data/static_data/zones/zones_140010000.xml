@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="140010000" name="FATEBOUND_ABBEY_140010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="50">
-        <points bottom="95.739693" top="145.739693">
+    <zone mapid="140010000" name="LIMITAREALIMIT_AREA1_1_140010000" area_type="POLYGON" zone_type="LIMIT" flags="4">
+        <points bottom="96.0755" top="146.0755">
+            <point x="298.50058" y="258.365051"/>
+            <point x="298.336761" y="274.825104"/>
+            <point x="277.660797" y="274.598816"/>
+            <point x="265.867584" y="291.938782"/>
+            <point x="243.647522" y="297.536591"/>
+            <point x="200.908737" y="295.273926"/>
+            <point x="200.729599" y="239.196106"/>
+            <point x="243.516159" y="235.196106"/>
+            <point x="268.837585" y="240.274094"/>
+            <point x="276.390198" y="258.519775"/>
+        </points>
+    </zone>
+    <zone mapid="140010000" name="REFUGE_OF_RETURNEES_1_140010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="55">
+        <points bottom="95.739693" top="145.739685">
             <point x="200.483902" y="239.131744"/>
             <point x="243.530899" y="235.215439"/>
             <point x="268.509918" y="240.398941"/>
             <point x="276.692413" y="258.458252"/>
             <point x="298.326233" y="258.067322"/>
-            <point x="298.327118" y="274.842010"/>
+            <point x="298.327118" y="274.84201"/>
             <point x="277.668274" y="274.560516"/>
-            <point x="265.957550" y="292.028961"/>
+            <point x="265.95755" y="292.028961"/>
             <point x="243.296539" y="297.578308"/>
             <point x="200.842972" y="295.260223"/>
         </points>

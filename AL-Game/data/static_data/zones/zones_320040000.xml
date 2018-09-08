@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="320040000" name="NIDALBER_320040000" area_type="POLYGON" zone_type="SUB" priority="16" flags="2">
+    <zone mapid="320040000" name="BGM_MUTE_76" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="-17.373066" y="-267.923462"/>
+            <point x="675.547485" y="-226.192902"/>
+            <point x="538.710205" y="716.140198"/>
+            <point x="-71.719795" y="650.147705"/>
+            <point x="-74.63121" y="-68.975677"/>
+        </points>
+    </zone>
+    <zone mapid="320040000" name="MUSICZONESHAPEIDABGATED2-BGM1" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="110.029297" y="-99.850288"/>
+            <point x="67.927719" y="459.311035"/>
+            <point x="406.713684" y="556.670898"/>
+            <point x="540.912415" y="-67.616264"/>
+        </points>
+    </zone>
+    <zone mapid="320040000" name="NIDALBER_320040000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="70.0" top="370.0">
-            <point x="135.98" y="321.32"/>
-            <point x="208.58311" y="88.76044"/>
-            <point x="365.79285" y="138.13394"/>
-            <point x="291.7307" y="369.13492"/>
+            <point x="135.979996" y="321.320007"/>
+            <point x="208.583115" y="88.760437"/>
+            <point x="365.792847" y="138.133942"/>
+            <point x="291.730713" y="369.134918"/>
         </points>
     </zone>
 </zones>

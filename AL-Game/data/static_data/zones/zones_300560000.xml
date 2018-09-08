@@ -1,120 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="300560000" name="CROWN_PRINCE_MILLINERUNERKS_TOMB_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="533.4664" top="633.4664">
-            <point x="97.53259" y="169.987"/>
-            <point x="110.22033" y="338.97705"/>
-            <point x="283.63065" y="326.1103"/>
-            <point x="260.60474" y="153.94814"/>
+    <zone mapid="300560000" name="BGM_MUTE_49" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-28.949266" y="-90.613556"/>
+            <point x="582.332764" y="-88.813004"/>
+            <point x="584.133301" y="653.008057"/>
+            <point x="-19.046362" y="637.703369"/>
+            <point x="-32.550354" y="-91.513817"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="CROWN_PRINCE_MILLINERUNERKS_TREASURE_ROOM_1_300560000" area_type="POLYGON"
-          zone_type="SUB" priority="16" flags="0">
-        <points bottom="428.73486" top="528.73486">
-            <point x="120.9946" y="-8.274399"/>
-            <point x="133.68234" y="160.71565"/>
-            <point x="302.35074" y="146.26823"/>
-            <point x="284.06674" y="-24.313263"/>
+    <zone mapid="300560000" name="IDDF2FLYING_EVENT01-BGM" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="0.200098" top="1000.200073">
+            <point x="-4.430562" y="-56.36768"/>
+            <point x="554.680176" y="-48.36607"/>
+            <point x="548.678955" y="592.760925"/>
+            <point x="-4.43059" y="576.75769"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="CROWN_PRINCE_MILLINERUNERKS_TREASURE_ROOM_2_300560000" area_type="POLYGON"
-          zone_type="SUB" priority="16" flags="0">
-        <points bottom="605.9853" top="705.9853">
-            <point x="120.47842" y="350.5032"/>
-            <point x="130.74785" y="510.16547"/>
-            <point x="299.41626" y="495.71805"/>
-            <point x="283.55057" y="334.46432"/>
+    <zone mapid="300560000" name="IDDF2FLYING_EVENT01_ITEM_AREA_TO_USE" area_type="POLYGON" zone_type="ITEM_USE" flags="52">
+        <points bottom="208.059998" top="698.059998">
+            <point x="497.75" y="1.78"/>
+            <point x="484.070251" y="503.310333"/>
+            <point x="11.041138" y="501.180206"/>
+            <point x="2.968445" y="10.041429"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="CROWN_PRINCE_MILLINERUNERKS_TREASURE_ROOM_300560000" area_type="POLYGON"
-          zone_type="SUB" priority="16" flags="0">
-        <points bottom="507.10297" top="607.10297">
-            <point x="354.3571" y="202.75148"/>
-            <point x="376.0955" y="363.97217"/>
-            <point x="535.71326" y="357.29413"/>
-            <point x="517.4292" y="186.71262"/>
+    <zone mapid="300560000" name="TOMB_OF_THE_CROWN_PRINCE_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="533.46637" top="633.46637">
+            <point x="97.532593" y="169.987"/>
+            <point x="110.220329" y="338.977051"/>
+            <point x="283.630646" y="326.110291"/>
+            <point x="260.604736" y="153.948135"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="EMPEROR_TRILLIRUNERKS_TOMB_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="196.91127" top="256.91125">
-            <point x="355.72214" y="43.4713"/>
-            <point x="375.0716" y="162.2766"/>
-            <point x="496.96475" y="148.96573"/>
-            <point x="475.2712" y="16.329605"/>
+    <zone mapid="300560000" name="TOMB_OF_THE_EMPEROR_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="196.91127" top="256.911255">
+            <point x="355.722137" y="43.471298"/>
+            <point x="375.071594" y="162.276596"/>
+            <point x="496.964752" y="148.965729"/>
+            <point x="475.27121" y="16.329605"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="EMPEROR_TRILLIRUNERKS_TREASURE_ROOM_1_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
+    <zone mapid="300560000" name="TOMB_OF_THE_EMPRESS_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="285.020721" top="325.020721">
+            <point x="295.293549" y="394.077698"/>
+            <point x="297.557129" y="465.826782"/>
+            <point x="371.715088" y="463.192047"/>
+            <point x="367.002106" y="385.860077"/>
+        </points>
+    </zone>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_CROWN_PRINCE_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="507.102966" top="607.102966">
+            <point x="354.357086" y="202.75148"/>
+            <point x="376.09549" y="363.972168"/>
+            <point x="535.713257" y="357.294128"/>
+            <point x="517.429199" y="186.712616"/>
+        </points>
+    </zone>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_CROWN_PRINCE_1_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="428.734863" top="528.734863">
+            <point x="120.994598" y="-8.274399"/>
+            <point x="133.682343" y="160.715652"/>
+            <point x="302.350739" y="146.268234"/>
+            <point x="284.066742" y="-24.313263"/>
+        </points>
+    </zone>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_CROWN_PRINCE_2_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="605.985291" top="705.985291">
+            <point x="120.478416" y="350.503204"/>
+            <point x="130.747849" y="510.165466"/>
+            <point x="299.41626" y="495.718048"/>
+            <point x="283.550568" y="334.464325"/>
+        </points>
+    </zone>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_EMPEROR_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="446.636658" top="506.636658">
+            <point x="228.576157" y="266.713104"/>
+            <point x="247.925613" y="385.518402"/>
+            <point x="369.818787" y="372.20752"/>
+            <point x="348.125244" y="239.571411"/>
+        </points>
+    </zone>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_EMPEROR_1_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
         <points bottom="300.79718" top="360.79718">
-            <point x="266.5428" y="132.46257"/>
-            <point x="285.89224" y="251.26787"/>
-            <point x="407.7854" y="237.957"/>
-            <point x="386.09186" y="105.32088"/>
+            <point x="266.542786" y="132.46257"/>
+            <point x="285.892242" y="251.267868"/>
+            <point x="407.7854" y="237.957001"/>
+            <point x="386.091858" y="105.320877"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="EMPEROR_TRILLIRUNERKS_TREASURE_ROOM_2_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="284.59827" top="344.59827">
-            <point x="-3.875648" y="294.67874"/>
-            <point x="15.473808" y="413.48404"/>
-            <point x="137.36697" y="400.17316"/>
-            <point x="115.67342" y="267.53705"/>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_EMPEROR_2_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="284.598267" top="344.598267">
+            <point x="-3.875648" y="294.678741"/>
+            <point x="15.473808" y="413.484039"/>
+            <point x="137.366974" y="400.173157"/>
+            <point x="115.673424" y="267.537048"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="EMPEROR_TRILLIRUNERKS_TREASURE_ROOM_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="446.63666" top="506.63666">
-            <point x="228.57616" y="266.7131"/>
-            <point x="247.92561" y="385.5184"/>
-            <point x="369.8188" y="372.20752"/>
-            <point x="348.12524" y="239.57141"/>
-        </points>
-    </zone>
-    <zone mapid="300560000" name="EMPRESS_VILLIRESHUNERKS_TOMB_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="285.02072" top="325.02072">
-            <point x="295.29355" y="394.0777"/>
-            <point x="297.55713" y="465.82678"/>
-            <point x="371.7151" y="463.19205"/>
-            <point x="367.0021" y="385.86008"/>
-        </points>
-    </zone>
-    <zone mapid="300560000" name="EMPRESS_VILLIRESHUNERKS_TREASURE_ROOM_1_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="414.93405" top="454.93405">
-            <point x="31.05165" y="211.14839"/>
-            <point x="33.31523" y="282.89746"/>
-            <point x="107.47319" y="280.26276"/>
-            <point x="102.76021" y="202.93077"/>
-        </points>
-    </zone>
-    <zone mapid="300560000" name="EMPRESS_VILLIRESHUNERKS_TREASURE_ROOM_2_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="352.67535" top="392.67535">
-            <point x="309.17447" y="6.190826"/>
-            <point x="311.43805" y="77.93991"/>
-            <point x="385.596" y="75.305176"/>
-            <point x="380.88303" y="-2.026794"/>
-        </points>
-    </zone>
-    <zone mapid="300560000" name="EMPRESS_VILLIRESHUNERKS_TREASURE_ROOM_300560000" area_type="POLYGON" zone_type="SUB"
-          priority="16" flags="0">
-        <points bottom="450.4445" top="490.4445">
-            <point x="26.632595" y="406.07965"/>
-            <point x="28.896175" y="477.82874"/>
-            <point x="103.05414" y="475.194"/>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_EMPRESS_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="450.444489" top="490.444489">
+            <point x="26.632595" y="406.079651"/>
+            <point x="28.896175" y="477.828735"/>
+            <point x="103.054138" y="475.194"/>
             <point x="98.341156" y="397.86203"/>
         </points>
     </zone>
-    <zone mapid="300560000" name="IDDF2FLYING_EVENT01_ITEM_AREA_TO_USE" area_type="POLYGON" zone_type="ITEM_USE"
-          flags="0">
-        <points bottom="0.1" top="800.1">
-            <point x="789.1952" y="-380.7835"/>
-            <point x="783.35864" y="1030.1655"/>
-            <point x="-233.63348" y="1005.36066"/>
-            <point x="-232.17432" y="-373.48798"/>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_EMPRESS_1_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="414.934052" top="454.934052">
+            <point x="31.051649" y="211.148392"/>
+            <point x="33.315231" y="282.897461"/>
+            <point x="107.47319" y="280.262756"/>
+            <point x="102.760208" y="202.930771"/>
+        </points>
+    </zone>
+    <zone mapid="300560000" name="TREASURE_CHAMBER_OF_THE_EMPRESS_2_300560000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="352.675354" top="392.675354">
+            <point x="309.174469" y="6.190826"/>
+            <point x="311.438049" y="77.939911"/>
+            <point x="385.596008" y="75.305176"/>
+            <point x="380.883026" y="-2.026794"/>
         </points>
     </zone>
 </zones>

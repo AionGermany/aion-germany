@@ -1,72 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="301240000" name="KYSIS_ARTIFACT_CONTROL_ROOM_301240000" area_type="POLYGON" zone_type="SUB"
-          priority="8" flags="2">
-        <points bottom="180.0" top="230.0">
-            <point x="502.61" y="750.55"/>
-            <point x="502.61" y="798.303"/>
-            <point x="553.379" y="798.303"/>
-            <point x="553.37897" y="750.55"/>
+    <zone mapid="301240000" name="BOSS_12" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.099976">
+            <point x="494.011292" y="803.976257"/>
+            <point x="598.059448" y="804.339417"/>
+            <point x="598.059448" y="918.193237"/>
+            <point x="463.686584" y="918.556396"/>
+            <point x="464.049774" y="803.976257"/>
+            <point x="464.049774" y="803.794678"/>
         </points>
     </zone>
-    <zone mapid="301240000" name="KYSIS_ASCENSION_CHAMBER_301240000" area_type="POLYGON" zone_type="SUB" priority="11"
-          flags="2">
-        <points bottom="180.0" top="260.0">
-            <point x="458.48" y="796.77"/>
-            <point x="458.48" y="915.2498"/>
-            <point x="598.16144" y="915.14685"/>
-            <point x="598.16144" y="796.873"/>
-        </points>
-    </zone>
-    <zone mapid="301240000" name="KYSIS_CHAMBER_301240000" area_type="POLYGON" zone_type="SUB" priority="20" flags="2">
+    <zone mapid="301240000" name="HIDDEN_KYSIS_WAR_FORTRESS_301240000" area_type="POLYGON" zone_type="SUB" priority="20" flags="50">
         <points bottom="130.0" top="280.0">
-            <point x="332.93" y="63.75"/>
-            <point x="332.92996" y="947.3623"/>
-            <point x="711.7468" y="947.3622"/>
-            <point x="711.7469" y="63.75002"/>
+            <point x="332.929993" y="63.75"/>
+            <point x="332.929962" y="947.362305"/>
+            <point x="711.746826" y="947.362183"/>
+            <point x="711.746887" y="63.750019"/>
         </points>
     </zone>
-    <zone mapid="301240000" name="OPERATIONS_ROOM_301240000" area_type="POLYGON" zone_type="SUB" priority="10"
-          flags="2">
+    <zone mapid="301240000" name="KYSIS_ARTEFACT_CONTROL_ROOM_301240000" area_type="POLYGON" zone_type="SUB" priority="8" flags="50">
+        <points bottom="180.0" top="230.0">
+            <point x="502.609985" y="750.549988"/>
+            <point x="502.609985" y="798.302979"/>
+            <point x="553.379028" y="798.302979"/>
+            <point x="553.378967" y="750.549988"/>
+        </points>
+    </zone>
+    <zone mapid="301240000" name="KYSIS_ASCENSION_CHAMBER_301240000" area_type="POLYGON" zone_type="SUB" priority="11" flags="50">
+        <points bottom="180.0" top="260.0">
+            <point x="458.480011" y="796.77002"/>
+            <point x="458.480011" y="915.249817"/>
+            <point x="598.161438" y="915.146851"/>
+            <point x="598.161438" y="796.872986"/>
+        </points>
+    </zone>
+    <zone mapid="301240000" name="KYSIS_WAR_FORTRESS_SUPPLY_DEPOT_301240000" area_type="POLYGON" zone_type="SUB" priority="10" flags="50">
         <points bottom="170.0" top="220.0">
-            <point x="481.61136" y="242.45901"/>
-            <point x="481.61136" y="632.6836"/>
+            <point x="556.624146" y="171.690765"/>
+            <point x="549.317078" y="184.149628"/>
+            <point x="559.020264" y="203.172348"/>
+            <point x="600.348389" y="228.788574"/>
+            <point x="600.407593" y="611.715454"/>
+            <point x="550.764587" y="694.537109"/>
+            <point x="558.776245" y="718.889648"/>
+            <point x="570.289185" y="731.23938"/>
+            <point x="625.397339" y="731.395142"/>
+            <point x="677.74353" y="681.200317"/>
+            <point x="678.220825" y="229.558197"/>
+            <point x="617.067993" y="171.693542"/>
+        </points>
+    </zone>
+    <zone mapid="301240000" name="MUSICZONESHAPEIDABRE_UP3_DKISAS-BGM2_1" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.099976">
+            <point x="207.506607" y="-14.011497"/>
+            <point x="202.746033" y="1027.352905"/>
+            <point x="832.325195" y="1064.24707"/>
+            <point x="804.952209" y="-16.391743"/>
+        </points>
+    </zone>
+    <zone mapid="301240000" name="MUTE_19" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.099976">
+            <point x="125.389999" y="-98.510002"/>
+            <point x="115.868904" y="1159.458252"/>
+            <point x="963.242004" y="1220.155029"/>
+            <point x="951.340759" y="-117.552055"/>
+        </points>
+    </zone>
+    <zone mapid="301240000" name="OPERATION_CENTRE_OF_THE_KYSIS_WAR_FORTRESS_301240000" area_type="POLYGON" zone_type="SUB" priority="10" flags="50">
+        <points bottom="170.0" top="220.0">
+            <point x="481.611359" y="242.459015"/>
+            <point x="481.611359" y="632.683594"/>
             <point x="509.98526" y="682.70166"/>
-            <point x="541.89996" y="682.70984"/>
-            <point x="570.47894" y="632.47205"/>
-            <point x="570.4061" y="242.51167"/>
+            <point x="541.899963" y="682.709839"/>
+            <point x="570.478943" y="632.472046"/>
+            <point x="570.406128" y="242.511673"/>
         </points>
     </zone>
-    <zone mapid="301240000" name="SUPPLY_DEPOT_301240000" area_type="POLYGON" zone_type="SUB" priority="10" flags="2">
+    <zone mapid="301240000" name="WEAPONS_DEPOT_OF_THE_KYSIS_WAR_FORTRESS_301240000" area_type="POLYGON" zone_type="SUB" priority="10" flags="50">
         <points bottom="170.0" top="220.0">
-            <point x="556.62415" y="171.69077"/>
-            <point x="549.3171" y="184.14963"/>
-            <point x="559.02026" y="203.17235"/>
-            <point x="600.3484" y="228.78857"/>
-            <point x="600.4076" y="611.71545"/>
-            <point x="550.7646" y="694.5371"/>
-            <point x="558.77625" y="718.88965"/>
-            <point x="570.2892" y="731.2394"/>
-            <point x="625.39734" y="731.39514"/>
-            <point x="677.7435" y="681.2003"/>
-            <point x="678.2208" y="229.5582"/>
-            <point x="617.068" y="171.69354"/>
-        </points>
-    </zone>
-    <zone mapid="301240000" name="WEAPONS_DEPOT_301240000" area_type="POLYGON" zone_type="SUB" priority="10" flags="2">
-        <points bottom="170.0" top="220.0">
-            <point x="416.77267" y="174.2965"/>
-            <point x="369.9299" y="230.89427"/>
-            <point x="369.7704" y="684.73975"/>
-            <point x="423.75516" y="731.9784"/>
-            <point x="479.38586" y="732.07306"/>
-            <point x="492.45053" y="718.621"/>
-            <point x="500.9501" y="695.157"/>
-            <point x="451.3347" y="609.6293"/>
-            <point x="451.07483" y="232.15274"/>
-            <point x="494.6603" y="204.44577"/>
-            <point x="505.25818" y="185.85216"/>
-            <point x="493.55774" y="174.69077"/>
+            <point x="416.772675" y="174.296494"/>
+            <point x="369.929901" y="230.894272"/>
+            <point x="369.770386" y="684.739746"/>
+            <point x="423.755157" y="731.978394"/>
+            <point x="479.385864" y="732.073059"/>
+            <point x="492.450531" y="718.620972"/>
+            <point x="500.950104" y="695.156982"/>
+            <point x="451.334686" y="609.629272"/>
+            <point x="451.074829" y="232.15274"/>
+            <point x="494.660309" y="204.44577"/>
+            <point x="505.258179" y="185.852158"/>
+            <point x="493.557739" y="174.690765"/>
         </points>
     </zone>
 </zones>

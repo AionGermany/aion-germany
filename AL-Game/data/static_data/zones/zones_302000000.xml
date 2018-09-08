@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
+    <zone mapid="302000000" name="BGM_MUTE_60" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.099609">
+            <point x="-47.830002" y="-163.869995"/>
+            <point x="-43.163784" y="690.055542"/>
+            <point x="635.776917" y="657.391724"/>
+            <point x="626.444458" y="-168.536255"/>
+        </points>
+    </zone>
     <zone mapid="302000000" name="FIRE_TEMPLE_OF_MEMORY_302000000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="80.0" top="180.0">
             <point x="406.88501" y="32.755005"/>
@@ -70,6 +78,31 @@
             <point x="445.206665" y="126.140137"/>
             <point x="459.510498" y="94.598206"/>
             <point x="432.736572" y="53.520264"/>
+        </points>
+    </zone>
+    <zone mapid="302000000" name="MUSICZONESHAPEIDDF2_DFLAME-BGM3" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.099609">
+            <point x="100.338188" y="99.953094"/>
+            <point x="74.079987" y="176.67627"/>
+            <point x="63.822868" y="244.373199"/>
+            <point x="52.334911" y="282.939941"/>
+            <point x="51.514343" y="337.507751"/>
+            <point x="66.284569" y="385.921326"/>
+            <point x="81.465088" y="448.284546"/>
+            <point x="101.569023" y="494.646667"/>
+            <point x="123.314095" y="506.134644"/>
+            <point x="147.867203" y="510.785919"/>
+            <point x="202.675537" y="531.157654"/>
+            <point x="311.097839" y="560.362305"/>
+            <point x="376.808319" y="552.696106"/>
+            <point x="446.69519" y="403.94101"/>
+            <point x="479.185394" y="304.280121"/>
+            <point x="505.338501" y="64.937042"/>
+            <point x="461.531525" y="2.147034"/>
+            <point x="392.900574" y="-31.803406"/>
+            <point x="297.620392" y="-32.168457"/>
+            <point x="106.490471" y="11.770447"/>
+            <point x="97.040924" y="83.166962"/>
         </points>
     </zone>
 </zones>

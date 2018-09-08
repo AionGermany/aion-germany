@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="210080000" name="SZONE_NAME_LF5_Ship" area_type="POLYGON" zone_type="SUB" priority="16" flags="55">
-        <points bottom="477.100494" top="577.100494">
+    <zone mapid="210080000" name="BGM_MUTE_37" area_type="POLYGON" zone_type="FLY" flags="63">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-2.112038" y="1.398546"/>
+            <point x="510.66745" y="1.398569"/>
+            <point x="509.216827" y="514.90332"/>
+            <point x="-2.11204" y="512.002136"/>
+        </points>
+    </zone>
+    <zone mapid="210080000" name="GRIFFOEN_210080000" area_type="POLYGON" zone_type="SUB" priority="16" flags="55">
+        <points bottom="477.100494" top="577.100464">
             <point x="203.651901" y="84.275322"/>
-            <point x="206.372726" y="330.239410"/>
+            <point x="206.372726" y="330.23941"/>
             <point x="260.660034" y="484.812805"/>
             <point x="317.281921" y="335.118347"/>
             <point x="324.715057" y="82.702278"/>
             <point x="266.737305" y="79.942741"/>
         </points>
     </zone>
-</zones>	
+    <zone mapid="210080000" name="LF5_SHIP" area_type="POLYGON" zone_type="FLY" flags="63">
+        <points bottom="0.1" top="1000.099976">
+            <point x="6.591439" y="7.926154"/>
+            <point x="502.68924" y="9.376753"/>
+            <point x="502.689209" y="503.298676"/>
+            <point x="6.591417" y="504.023956"/>
+        </points>
+    </zone>
+</zones>

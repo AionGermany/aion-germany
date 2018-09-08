@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="310030000" name="AERDINA_310030000" area_type="POLYGON" zone_type="SUB" priority="16" flags="2">
+    <zone mapid="310030000" name="AERDINA_310030000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="65.0" top="365.0">
-            <point x="130.44194" y="325.00488"/>
-            <point x="213.21217" y="74.77846"/>
-            <point x="373.08258" y="121.1846"/>
-            <point x="284.0347" y="371.8571"/>
+            <point x="130.44194" y="325.004883"/>
+            <point x="213.212173" y="74.778458"/>
+            <point x="373.082581" y="121.184601"/>
+            <point x="284.034698" y="371.857086"/>
+        </points>
+    </zone>
+    <zone mapid="310030000" name="MUSICZONESHAPEIDABGATEL1_BGM1" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="15.0" y="740.0"/>
+            <point x="603.0" y="373.0"/>
+            <point x="300.0" y="1.0"/>
+            <point x="3.0" y="150.0"/>
+            <point x="4.0" y="388.0"/>
+        </points>
+    </zone>
+    <zone mapid="310030000" name="MUSICZONESHAPEIDABGATEL1_BGM2" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="-61.049999" y="-90.860001"/>
+            <point x="-158.932159" y="749.649658"/>
+            <point x="171.952011" y="845.403992"/>
+            <point x="539.010071" y="806.03833"/>
+            <point x="739.03009" y="447.491821"/>
+            <point x="657.107056" y="-6.808998"/>
+            <point x="379.419678" y="-156.82402"/>
+            <point x="25.128849" y="-170.655228"/>
         </points>
     </zone>
 </zones>

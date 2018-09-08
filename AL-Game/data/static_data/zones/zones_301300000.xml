@@ -1,73 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="301300000" name="KROTAN_ARTIFACT_CONTROL_ROOM_301300000" area_type="POLYGON" zone_type="SUB"
-          priority="8" flags="2">
+    <zone mapid="301300000" name="BOSS_17" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.099976">
+            <point x="471.001221" y="804.050598"/>
+            <point x="596.606873" y="803.901306"/>
+            <point x="597.13208" y="916.83136"/>
+            <point x="459.646393" y="916.858093"/>
+            <point x="459.646393" y="806.029053"/>
+        </points>
+    </zone>
+    <zone mapid="301300000" name="KROTAN_ARTEFACT_CONTROL_ROOM_1_301300000" area_type="POLYGON" zone_type="SUB" priority="8" flags="50">
         <points bottom="180.0" top="230.0">
-            <point x="502.61" y="750.55"/>
-            <point x="502.61" y="798.303"/>
-            <point x="553.379" y="798.303"/>
-            <point x="553.37897" y="750.55"/>
+            <point x="502.609985" y="750.549988"/>
+            <point x="502.609985" y="798.302979"/>
+            <point x="553.379028" y="798.302979"/>
+            <point x="553.378967" y="750.549988"/>
         </points>
     </zone>
-    <zone mapid="301300000" name="KROTAN_ASCENSION_CHAMBER_301300000" area_type="POLYGON" zone_type="SUB" priority="11"
-          flags="2">
+    <zone mapid="301300000" name="KROTAN_ASCENSION_CHAMBER_1_301300000" area_type="POLYGON" zone_type="SUB" priority="11" flags="50">
         <points bottom="180.0" top="260.0">
-            <point x="458.48" y="796.77"/>
-            <point x="458.48" y="915.2498"/>
-            <point x="598.16144" y="915.14685"/>
-            <point x="598.16144" y="796.873"/>
+            <point x="458.480011" y="796.77002"/>
+            <point x="458.480011" y="915.249817"/>
+            <point x="598.161438" y="915.146851"/>
+            <point x="598.161438" y="796.872986"/>
         </points>
     </zone>
-    <zone mapid="301300000" name="KROTAN_CHAMBER_301300000" area_type="POLYGON" zone_type="SUB" priority="20" flags="2">
+    <zone mapid="301300000" name="KROTAN_WAR_FORTRESS_301300000" area_type="POLYGON" zone_type="SUB" priority="20" flags="50">
         <points bottom="130.0" top="280.0">
-            <point x="332.93" y="63.75"/>
-            <point x="332.92996" y="947.3623"/>
-            <point x="711.7468" y="947.3622"/>
-            <point x="711.7469" y="63.75002"/>
+            <point x="332.929993" y="63.75"/>
+            <point x="332.929962" y="947.362305"/>
+            <point x="711.746826" y="947.362183"/>
+            <point x="711.746887" y="63.750019"/>
         </points>
     </zone>
-    <zone mapid="301300000" name="OPERATIONS_ROOM_1_301300000" area_type="POLYGON" zone_type="SUB" priority="10"
-          flags="2">
+    <zone mapid="301300000" name="KROTAN_WAR_FORTRESS_SUPPLY_DEPOT_1_301300000" area_type="POLYGON" zone_type="SUB" priority="10" flags="50">
         <points bottom="170.0" top="220.0">
-            <point x="481.61136" y="242.01488"/>
-            <point x="481.61136" y="632.6836"/>
+            <point x="556.624146" y="171.690765"/>
+            <point x="548.702698" y="184.627472"/>
+            <point x="559.097839" y="203.094757"/>
+            <point x="600.348389" y="228.788574"/>
+            <point x="600.407593" y="611.715454"/>
+            <point x="550.764587" y="694.537109"/>
+            <point x="558.776245" y="718.889648"/>
+            <point x="570.289185" y="731.23938"/>
+            <point x="625.397339" y="731.395142"/>
+            <point x="677.74353" y="681.200317"/>
+            <point x="678.220825" y="229.558197"/>
+            <point x="617.067993" y="171.693542"/>
+        </points>
+    </zone>
+    <zone mapid="301300000" name="KROTAN_WAR_FORTRESS_WEAPONS_DEPOT_1_301300000" area_type="POLYGON" zone_type="SUB" priority="10" flags="50">
+        <points bottom="170.0" top="220.0">
+            <point x="416.772675" y="174.296494"/>
+            <point x="369.929901" y="230.894272"/>
+            <point x="369.770386" y="684.739746"/>
+            <point x="423.755157" y="731.978394"/>
+            <point x="479.385864" y="732.073059"/>
+            <point x="492.450531" y="718.620972"/>
+            <point x="500.950104" y="695.156982"/>
+            <point x="451.334686" y="609.629272"/>
+            <point x="451.074829" y="232.15274"/>
+            <point x="493.727875" y="206.088974"/>
+            <point x="505.484009" y="183.996048"/>
+            <point x="493.557739" y="174.690765"/>
+        </points>
+    </zone>
+    <zone mapid="301300000" name="MUSICZONESHAPEIDABRE_UP3_CROTAN-BGM2_2" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.099976">
+            <point x="273.884949" y="33.182087"/>
+            <point x="298.947388" y="953.658203"/>
+            <point x="770.577454" y="963.911072"/>
+            <point x="740.958252" y="25.207647"/>
+        </points>
+    </zone>
+    <zone mapid="301300000" name="MUTE_24" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.099976">
+            <point x="180.470306" y="-101.898849"/>
+            <point x="167.939041" y="1053.253174"/>
+            <point x="944.87561" y="1078.315674"/>
+            <point x="914.117188" y="-35.825043"/>
+            <point x="796.779175" y="-82.532372"/>
+        </points>
+    </zone>
+    <zone mapid="301300000" name="OPERATION_CENTRE_OF_THE_KROTAN_WAR_FORTRESS_1_301300000" area_type="POLYGON" zone_type="SUB" priority="10" flags="50">
+        <points bottom="170.0" top="220.0">
+            <point x="481.611359" y="242.014877"/>
+            <point x="481.611359" y="632.683594"/>
             <point x="509.98526" y="682.70166"/>
-            <point x="541.89996" y="682.70984"/>
-            <point x="570.47894" y="632.47205"/>
-            <point x="570.47894" y="241.95099"/>
-        </points>
-    </zone>
-    <zone mapid="301300000" name="SUPPLY_DEPOT_1_301300000" area_type="POLYGON" zone_type="SUB" priority="10" flags="2">
-        <points bottom="170.0" top="220.0">
-            <point x="556.62415" y="171.69077"/>
-            <point x="548.7027" y="184.62747"/>
-            <point x="559.09784" y="203.09476"/>
-            <point x="600.3484" y="228.78857"/>
-            <point x="600.4076" y="611.71545"/>
-            <point x="550.7646" y="694.5371"/>
-            <point x="558.77625" y="718.88965"/>
-            <point x="570.2892" y="731.2394"/>
-            <point x="625.39734" y="731.39514"/>
-            <point x="677.7435" y="681.2003"/>
-            <point x="678.2208" y="229.5582"/>
-            <point x="617.068" y="171.69354"/>
-        </points>
-    </zone>
-    <zone mapid="301300000" name="WEAPONS_DEPOT_1_301300000" area_type="POLYGON" zone_type="SUB" priority="10"
-          flags="2">
-        <points bottom="170.0" top="220.0">
-            <point x="416.77267" y="174.2965"/>
-            <point x="369.9299" y="230.89427"/>
-            <point x="369.7704" y="684.73975"/>
-            <point x="423.75516" y="731.9784"/>
-            <point x="479.38586" y="732.07306"/>
-            <point x="492.45053" y="718.621"/>
-            <point x="500.9501" y="695.157"/>
-            <point x="451.3347" y="609.6293"/>
-            <point x="451.07483" y="232.15274"/>
-            <point x="493.72787" y="206.08897"/>
-            <point x="505.484" y="183.99605"/>
-            <point x="493.55774" y="174.69077"/>
+            <point x="541.899963" y="682.709839"/>
+            <point x="570.478943" y="632.472046"/>
+            <point x="570.478943" y="241.950989"/>
         </points>
     </zone>
 </zones>

@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="110020000" name="CLOISTER_OF_KAISINEL_110020000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="54">
+    <zone mapid="110020000" name="CLOISTER_OF_KAISINEL_110020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="1000.0" top="1500.0">
-            <point x="2095.43" y="1631.29"/>
-            <point x="2166.7546" y="1499.3396"/>
-            <point x="2257.6936" y="1545.7006"/>
-            <point x="2181.9111" y="1679.4342"/>
+            <point x="2095.429932" y="1631.290039"/>
+            <point x="2166.754639" y="1499.3396"/>
+            <point x="2257.693604" y="1545.700562"/>
+            <point x="2181.911133" y="1679.434204"/>
+        </points>
+    </zone>
+    <zone mapid="110020000" name="EMPYREAN_LORDS_SANCTUARY_110020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
+        <points bottom="458.94278" top="558.942749">
+            <point x="371.851135" y="374.877106"/>
+            <point x="622.191528" y="377.257568"/>
+            <point x="617.871948" y="620.184509"/>
+            <point x="381.809082" y="615.20166"/>
+        </points>
+    </zone>
+    <zone mapid="110020000" name="LC2" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.200098" top="10000.200195">
+            <point x="2036.814209" y="1442.383667"/>
+            <point x="2031.114014" y="1827.860107"/>
+            <point x="2380.251709" y="1828.572632"/>
+            <point x="2401.627441" y="1447.371338"/>
+        </points>
+    </zone>
+    <zone mapid="110020000" name="LC2_Q" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="120.0" top="970.0">
+            <point x="241.784851" y="234.471252"/>
+            <point x="778.576477" y="233.104889"/>
+            <point x="773.775574" y="777.624695"/>
+            <point x="242.535004" y="773.333984"/>
+        </points>
+    </zone>
+    <zone mapid="110020000" name="MUTE" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.099609">
+            <point x="191.18045" y="144.425125"/>
+            <point x="218.307175" y="1863.538696"/>
+            <point x="2436.54126" y="1879.870117"/>
+            <point x="2430.322754" y="204.388184"/>
         </points>
     </zone>
 </zones>

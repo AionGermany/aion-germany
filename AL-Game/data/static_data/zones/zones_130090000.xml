@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="130090000" name="WISPLIGHT_ABBEY_130090000" area_type="POLYGON" zone_type="SUB" priority="16" flags="50">
+    <zone mapid="130090000" name="LIMITAREALIMIT_AREA1_130090000" area_type="POLYGON" zone_type="LIMIT" flags="4">
+        <points bottom="128.851593" top="178.851593">
+            <point x="241.19194" y="216.774246"/>
+            <point x="252.764542" y="216.78862"/>
+            <point x="252.844269" y="234.172592"/>
+            <point x="267.494843" y="242.032211"/>
+            <point x="272.407745" y="270.326294"/>
+            <point x="272.141449" y="307.450226"/>
+            <point x="222.347565" y="306.684448"/>
+            <point x="221.174316" y="271.305298"/>
+            <point x="226.579544" y="243.695084"/>
+            <point x="241.424011" y="234.00293"/>
+        </points>
+    </zone>
+    <zone mapid="130090000" name="REFUGE_OF_RETURNEES_130090000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
         <points bottom="128.698624" top="178.698624">
             <point x="241.240891" y="216.766785"/>
-            <point x="252.860840" y="216.560242"/>
+            <point x="252.86084" y="216.560242"/>
             <point x="252.981537" y="234.208008"/>
             <point x="267.484253" y="242.419617"/>
             <point x="272.587341" y="270.316803"/>

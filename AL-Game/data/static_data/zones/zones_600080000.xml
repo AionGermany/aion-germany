@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="600080000" name="LIMITAREAIDIU_DESIGN2" area_type="POLYGON" zone_type="LIMIT" flags="4">
+    <zone mapid="600080000" name="CONCERT_GROUNDS_2_600080000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
+        <points bottom="542.520996" top="642.520996">
+            <point x="1658.248779" y="1677.074951"/>
+            <point x="1334.130493" y="1679.952148"/>
+            <point x="1334.082031" y="1349.943848"/>
+            <point x="1657.786377" y="1348.890747"/>
+        </points>
+    </zone>
+    <zone mapid="600080000" name="LIMITAREAIDIU_DESIGN2_2_600080000" area_type="POLYGON" zone_type="LIMIT" flags="0">
         <points bottom="532.0" top="632.0">
-            <point x="1344.8359" y="1356.7966"/>
-            <point x="1653.9684" y="1357.8481"/>
-            <point x="1653.4426" y="1685.3812"/>
-            <point x="1344.8359" y="1684.8555"/>
-        </points>
-    </zone>
-    <zone mapid="600080000" name="LIVE_PARTY_CONCERT_HALL_600080000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="54">
-        <points bottom="542.521" top="642.521">
-            <point x="1658.2488" y="1677.075"/>
-            <point x="1334.1305" y="1679.9521"/>
-            <point x="1334.082" y="1349.9438"/>
-            <point x="1657.7864" y="1348.8907"/>
-        </points>
-    </zone>
-    <zone mapid="600080000" name="PVP_53_600080000" area_type="POLYGON" zone_type="PVP" flags="0">
-        <points bottom="532.6942" top="632.6942">
-            <point x="1653.0109" y="1685.5421"/>
-            <point x="1344.6094" y="1684.9253"/>
-            <point x="1344.6094" y="1358.0197"/>
-            <point x="1653.0109" y="1358.6365"/>
+            <point x="1344.835938" y="1356.796631"/>
+            <point x="1653.968384" y="1357.848145"/>
+            <point x="1653.442627" y="1685.381226"/>
+            <point x="1344.835938" y="1684.855469"/>
         </points>
     </zone>
 </zones>

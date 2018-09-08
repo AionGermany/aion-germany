@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="300050000" name="ASTERIA_CHAMBER_300050000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="2">
-        <points bottom="168.97421" top="268.9742">
-            <point x="454.98685" y="566.6676"/>
-            <point x="500.51764" y="716.2975"/>
-            <point x="536.32764" y="719.87366"/>
-            <point x="708.56775" y="573.30237"/>
-            <point x="522.75836" y="402.36478"/>
-            <point x="468.44006" y="446.4018"/>
+    <zone mapid="300050000" name="GALE_ISLAND_TREASURE_CHAMBER_300050000" area_type="POLYGON" zone_type="SUB" priority="16" flags="50">
+        <points bottom="168.974213" top="268.974213">
+            <point x="454.986847" y="566.667603"/>
+            <point x="500.517639" y="716.297485"/>
+            <point x="536.327637" y="719.873657"/>
+            <point x="708.567749" y="573.302368"/>
+            <point x="522.758362" y="402.364777"/>
+            <point x="468.440063" y="446.401794"/>
+        </points>
+    </zone>
+    <zone mapid="300050000" name="MUSICZONESHAPEIDABRE_UP_ASTERIA-BGM2" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="492.839996" y="405.070007"/>
+            <point x="491.232513" y="489.609375"/>
+            <point x="549.165222" y="489.486877"/>
+            <point x="560.353638" y="405.758911"/>
+        </points>
+    </zone>
+    <zone mapid="300050000" name="MUSICZONESHAPEIDABRE_UP_ASTERIA-BGM3" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="603.62262" y="531.94928"/>
+            <point x="603.337219" y="595.071411"/>
+            <point x="693.538696" y="603.311218"/>
+            <point x="694.752502" y="519.72998"/>
+        </points>
+    </zone>
+    <zone mapid="300050000" name="MUSICZONESHAPEIDABRE_UP_ASTERIA-BGM4" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="478.298096" y="638.272644"/>
+            <point x="480.641571" y="736.259827"/>
+            <point x="560.851563" y="735.428406"/>
+            <point x="554.980652" y="638.129517"/>
+        </points>
+    </zone>
+    <zone mapid="300050000" name="MUSICZONESHAPEIDABRE_UP_ASTERIA-BGM8" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="19.889999" y="-49.459999"/>
+            <point x="24.908487" y="1156.658081"/>
+            <point x="998.501709" y="1252.01001"/>
+            <point x="1003.520325" y="-17.675966"/>
+        </points>
+    </zone>
+    <zone mapid="300050000" name="MUTE_5" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="-140.706055" y="-303.729919"/>
+            <point x="-130.669083" y="1399.22168"/>
+            <point x="1117.27002" y="1481.190918"/>
+            <point x="1093.850342" y="-270.27301"/>
         </points>
     </zone>
 </zones>

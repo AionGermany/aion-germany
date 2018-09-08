@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="300520000" name="DRAGON_LORDS_REFUGE_1_300520000" area_type="POLYGON" zone_type="SUB" priority="15"
-          flags="0">
-        <points bottom="200.0" top="400.0">
-            <point x="397.79962" y="417.245"/>
-            <point x="597.7996" y="417.245"/>
-            <point x="597.7996" y="617.245"/>
-            <point x="397.79962" y="617.245"/>
+    <zone mapid="300520000" name="BGM_MUTE_48" area_type="POLYGON" zone_type="FLY" flags="56">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-140.31488" y="-144.864212"/>
+            <point x="1106.145508" y="-142.873032"/>
+            <point x="1106.145508" y="1163.321777"/>
+            <point x="-132.350357" y="1161.330566"/>
         </points>
     </zone>
-    <zone mapid="300520000" name="DRAGON_LORDS_REFUGE_300520000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="0">
+    <zone mapid="300520000" name="BLOODY_THRONE_300520000" area_type="POLYGON" zone_type="SUB" priority="13" flags="48">
+        <points bottom="370.0" top="570.0">
+            <point x="388.829987" y="406.799988"/>
+            <point x="608.829956" y="406.799988"/>
+            <point x="608.829956" y="626.799988"/>
+            <point x="388.829987" y="626.799988"/>
+        </points>
+    </zone>
+    <zone mapid="300520000" name="ENTRANCE_TO_THE_INTERIOR_300520000" area_type="POLYGON" zone_type="SUB" priority="2" flags="48">
+        <points bottom="411.067474" top="561.067505">
+            <point x="450.46582" y="447.257416"/>
+            <point x="470.0" y="446.0"/>
+            <point x="469.677551" y="468.629669"/>
+            <point x="452.0" y="468.0"/>
+        </points>
+    </zone>
+    <zone mapid="300520000" name="IDTIAMAT_2_BGM1" area_type="POLYGON" zone_type="FLY" flags="56">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-77.684845" y="-89.147423"/>
+            <point x="1057.271118" y="-81.18277"/>
+            <point x="1051.297607" y="1111.516479"/>
+            <point x="-79.676025" y="1099.569458"/>
+        </points>
+    </zone>
+    <zone mapid="300520000" name="THE_CORE_OF_FISSURE_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="48">
+        <points bottom="150.0" top="350.0">
+            <point x="100.052788" y="80.094238"/>
+            <point x="300.052795" y="80.094238"/>
+            <point x="300.052795" y="280.094238"/>
+            <point x="100.052788" y="280.094238"/>
+        </points>
+    </zone>
+    <zone mapid="300520000" name="THE_CORE_OF_GRAVITY_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="48">
+        <points bottom="150.0" top="350.0">
+            <point x="699.324646" y="80.094238"/>
+            <point x="899.324646" y="80.094238"/>
+            <point x="899.324646" y="280.094238"/>
+            <point x="699.324646" y="280.094238"/>
+        </points>
+    </zone>
+    <zone mapid="300520000" name="THE_CORE_OF_PETRIFICATION_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="48">
+        <points bottom="150.0" top="350.0">
+            <point x="699.320007" y="748.02002"/>
+            <point x="899.320007" y="748.02002"/>
+            <point x="899.320007" y="948.02002"/>
+            <point x="699.320007" y="948.02002"/>
+        </points>
+    </zone>
+    <zone mapid="300520000" name="THE_CORE_OF_WRATH_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="48">
+        <points bottom="150.0" top="350.0">
+            <point x="100.052788" y="748.019104"/>
+            <point x="300.052795" y="748.019104"/>
+            <point x="300.052795" y="948.019104"/>
+            <point x="100.052788" y="948.019104"/>
+        </points>
+    </zone>
+    <zone mapid="300520000" name="TIAMATS_SHELTER_300520000" area_type="POLYGON" zone_type="SUB" priority="16" flags="48">
         <points bottom="1.0" top="801.0">
             <point x="28.0" y="28.0"/>
             <point x="988.0" y="28.0"/>
@@ -18,46 +72,12 @@
             <point x="28.0" y="988.0"/>
         </points>
     </zone>
-    <zone mapid="300520000" name="FISSURES_REALM_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="150.0" top="350.0">
-            <point x="100.05279" y="80.09424"/>
-            <point x="300.0528" y="80.09424"/>
-            <point x="300.0528" y="280.09424"/>
-            <point x="100.05279" y="280.09424"/>
-        </points>
-    </zone>
-    <zone mapid="300520000" name="GRAVITYS_REALM_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="150.0" top="350.0">
-            <point x="699.32465" y="80.09424"/>
-            <point x="899.32465" y="80.09424"/>
-            <point x="899.32465" y="280.09424"/>
-            <point x="699.32465" y="280.09424"/>
-        </points>
-    </zone>
-    <zone mapid="300520000" name="PETRIFICATIONS_REALM_300520000" area_type="POLYGON" zone_type="SUB" priority="15"
-          flags="0">
-        <points bottom="150.0" top="350.0">
-            <point x="699.32" y="748.02"/>
-            <point x="899.32" y="748.02"/>
-            <point x="899.32" y="948.02"/>
-            <point x="699.32" y="948.02"/>
-        </points>
-    </zone>
-    <zone mapid="300520000" name="THRONE_OF_BLOOD_300520000" area_type="POLYGON" zone_type="SUB" priority="13"
-          flags="0">
-        <points bottom="370.0" top="570.0">
-            <point x="388.83" y="406.8"/>
-            <point x="608.83" y="406.8"/>
-            <point x="608.83" y="626.8"/>
-            <point x="388.83" y="626.8"/>
-        </points>
-    </zone>
-    <zone mapid="300520000" name="WRATHS_REALM_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="150.0" top="350.0">
-            <point x="100.05279" y="748.0191"/>
-            <point x="300.0528" y="748.0191"/>
-            <point x="300.0528" y="948.0191"/>
-            <point x="100.05279" y="948.0191"/>
+    <zone mapid="300520000" name="TIAMATS_SHELTER_1_300520000" area_type="POLYGON" zone_type="SUB" priority="15" flags="48">
+        <points bottom="200.0" top="400.0">
+            <point x="397.799622" y="417.244995"/>
+            <point x="597.799622" y="417.244995"/>
+            <point x="597.799622" y="617.244995"/>
+            <point x="397.799622" y="617.244995"/>
         </points>
     </zone>
 </zones>

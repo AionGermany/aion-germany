@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
+    <zone mapid="301630000" name="BGM_MUTE_56" area_type="POLYGON" zone_type="FLY" flags="56">
+        <points bottom="-0.1" top="999.900024">
+            <point x="178.884109" y="78.372742"/>
+            <point x="179.187027" y="342.230774"/>
+            <point x="317.023254" y="342.230774"/>
+            <point x="317.023285" y="78.069809"/>
+        </points>
+    </zone>
     <zone mapid="301630000" name="HELL_PASS_301630000" area_type="POLYGON" zone_type="SUB" priority="16" flags="48">
         <points bottom="115.197968" top="215.197968">
             <point x="107.726822" y="54.466042"/>
@@ -7,6 +15,16 @@
             <point x="395.36084" y="408.10733"/>
             <point x="111.344902" y="408.332092"/>
             <point x="107.739944" y="54.479252"/>
+        </points>
+    </zone>
+    <zone mapid="301630000" name="IDLUNA_DEF" area_type="POLYGON" zone_type="FLY" flags="56">
+        <points bottom="-0.0646" top="999.935425">
+            <point x="199.729996" y="99.7071"/>
+            <point x="199.427048" y="320.245117"/>
+            <point x="296.807434" y="320.759583"/>
+            <point x="296.276642" y="262.637482"/>
+            <point x="259.917145" y="262.637482"/>
+            <point x="260.447937" y="99.41787"/>
         </points>
     </zone>
 </zones>

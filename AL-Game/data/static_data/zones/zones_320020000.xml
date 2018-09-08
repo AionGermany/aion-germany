@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="320020000" name="ATAXIAR_2_320020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="6">
+    <zone mapid="320020000" name="ATAXIAR_1_320020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="170.0" y="324.0"/>
             <point x="168.0" y="147.0"/>
@@ -9,8 +9,15 @@
             <point x="172.0" y="347.0"/>
         </points>
     </zone>
-    <zone mapid="320020000" name="FLOATING_ISLAND_A_2_320020000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="320020000" name="BGM_MUTE_74" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="1000.1">
+            <point x="-93.379921" y="-152.163925"/>
+            <point x="-90.539673" y="757.672791"/>
+            <point x="659.294495" y="819.212219"/>
+            <point x="639.412537" y="-174.886108"/>
+        </points>
+    </zone>
+    <zone mapid="320020000" name="FLOATING_ISLAND_A_1_320020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="46.0" y="152.0"/>
             <point x="116.0" y="180.0"/>
@@ -18,16 +25,23 @@
             <point x="35.0" y="188.0"/>
         </points>
     </zone>
-    <zone mapid="320020000" name="FLYINGZONESHAPEIDABPRO_SUBZONE1_1" area_type="POLYGON" zone_type="FLY" flags="14">
-        <points bottom="65.1" top="75.1">
+    <zone mapid="320020000" name="FLYINGZONESHAPEIDABPRO_SUBZONE1_3" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="65.099998" top="75.099998">
             <point x="128.0" y="895.0"/>
             <point x="128.0" y="861.0"/>
             <point x="160.0" y="859.0"/>
             <point x="159.0" y="900.0"/>
         </points>
     </zone>
-    <zone mapid="320020000" name="VANPERN_OBELISK_2_320020000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="320020000" name="MUSICZONESHAPEIDABPROD2-BGM1" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.1">
+            <point x="21.75" y="25.25"/>
+            <point x="22.25" y="564.5"/>
+            <point x="519.0" y="600.75"/>
+            <point x="526.75" y="43.25"/>
+        </points>
+    </zone>
+    <zone mapid="320020000" name="VANPERN_OBELISK_1_320020000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="409.0" y="444.0"/>
             <point x="410.0" y="374.0"/>

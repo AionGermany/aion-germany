@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="300060000" name="SULFUR_TREE_NEST_300060000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="2">
+    <zone mapid="300060000" name="IDABRE_LOW_DIVINE" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="294.859985" y="275.130005"/>
+            <point x="296.191498" y="681.249634"/>
+            <point x="635.068359" y="673.926147"/>
+            <point x="629.742188" y="266.475006"/>
+        </points>
+    </zone>
+    <zone mapid="300060000" name="MUTE_6" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="208.976685" y="163.948578"/>
+            <point x="203.650513" y="774.459595"/>
+            <point x="691.65979" y="783.114624"/>
+            <point x="692.325623" y="172.603622"/>
+        </points>
+    </zone>
+    <zone mapid="300060000" name="SULPHUR_TREE_NEST_300060000" area_type="POLYGON" zone_type="SUB" priority="16" flags="50">
         <points bottom="150.0" top="250.0">
-            <point x="319.75" y="305.98"/>
-            <point x="319.72723" y="633.1666"/>
-            <point x="599.7216" y="633.6847"/>
-            <point x="600.0973" y="306.0957"/>
+            <point x="319.75" y="305.980011"/>
+            <point x="319.727234" y="633.166626"/>
+            <point x="599.721619" y="633.684692"/>
+            <point x="600.09729" y="306.095703"/>
         </points>
     </zone>
 </zones>

@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="220090000" name="Subzone_Main" area_type="POLYGON" zone_type="SUB" priority="16" flags="55">
-        <points bottom="344.099976" top="544.099976">
-            <point x="176.000000" y="56.000000"/>
-            <point x="176.000000" y="404.000000"/>
-            <point x="336.000000" y="404.000000"/>
-            <point x="336.000000" y="56.000000"/>
+    <zone mapid="220090000" name="BGM_MUTE_43" area_type="POLYGON" zone_type="FLY" flags="63">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-1.75" y="2.75"/>
+            <point x="513.25" y="3.25"/>
+            <point x="514.5" y="513.25"/>
+            <point x="-1.5" y="512.0"/>
         </points>
     </zone>
-</zones>	
+    <zone mapid="220090000" name="DF5_SHIP" area_type="POLYGON" zone_type="FLY" flags="63">
+        <points bottom="0.1" top="1000.099976">
+            <point x="7.75" y="11.0"/>
+            <point x="503.5" y="10.25"/>
+            <point x="504.5" y="505.0"/>
+            <point x="9.5" y="505.0"/>
+        </points>
+    </zone>
+    <zone mapid="220090000" name="HABROK_220090000" area_type="POLYGON" zone_type="SUB" priority="16" flags="55">
+        <points bottom="344.099976" top="544.099976">
+            <point x="176.0" y="56.0"/>
+            <point x="176.0" y="404.0"/>
+            <point x="336.0" y="404.0"/>
+            <point x="336.0" y="56.0"/>
+        </points>
+    </zone>
+</zones>

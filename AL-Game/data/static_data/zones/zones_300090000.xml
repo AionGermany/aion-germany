@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="300090000" name="RIGHT_WING_CHAMBER_300090000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="2">
+    <zone mapid="300090000" name="MUSICZONESHAPEIDABRE_LOW_ECIEL-BGM1" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="53.258541" y="-12.564165"/>
+            <point x="54.866817" y="491.636963"/>
+            <point x="522.881287" y="509.328217"/>
+            <point x="495.540222" y="-20.605637"/>
+        </points>
+    </zone>
+    <zone mapid="300090000" name="MUTE_9" area_type="POLYGON" zone_type="FLY" flags="58">
+        <points bottom="0.1" top="1000.1">
+            <point x="-54.234356" y="-111.040466"/>
+            <point x="-50.150978" y="687.266418"/>
+            <point x="693.029846" y="749.538513"/>
+            <point x="663.425171" y="-162.083069"/>
+        </points>
+    </zone>
+    <zone mapid="300090000" name="RIGHT_WING_CHAMBER_300090000" area_type="POLYGON" zone_type="SUB" priority="16" flags="50">
         <points bottom="80.0" top="280.0">
-            <point x="121.86" y="84.17"/>
-            <point x="122.98328" y="405.977"/>
-            <point x="399.95367" y="404.5912"/>
-            <point x="398.8319" y="83.20323"/>
+            <point x="121.860001" y="84.169998"/>
+            <point x="122.983276" y="405.97699"/>
+            <point x="399.953674" y="404.591187"/>
+            <point x="398.831909" y="83.203232"/>
         </points>
     </zone>
 </zones>

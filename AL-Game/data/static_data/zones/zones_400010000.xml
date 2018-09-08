@@ -20,10 +20,30 @@
     </zone>
     <zone mapid="400010000" name="AB1_1011_LIMITAREA_400010000" area_type="POLYGON" zone_type="LIMIT" flags="0">
         <points bottom="2073.02002" top="2490.02002">
-            <point x="1166.408447" y="1189.918213"/>
-            <point x="1884.320923" y="1189.248901"/>
-            <point x="1883.360107" y="1898.52356"/>
-            <point x="1165.920288" y="1896.729858"/>
+            <point x="1067.049683" y="1085.630859"/>
+            <point x="1504.0" y="960.0"/>
+            <point x="1948.320923" y="1093.248901"/>
+            <point x="2144.0" y="1536.0"/>
+            <point x="1947.360107" y="1994.52356"/>
+            <point x="1504.0" y="2176.0"/>
+            <point x="1069.920288" y="1992.729858"/>
+            <point x="928.0" y="1536.0"/>
+        </points>
+    </zone>
+    <zone mapid="400010000" name="AB1_1011_LIMITAREA_NOBIND_400010000" area_type="POLYGON" zone_type="LIMIT" flags="0">
+        <points bottom="2074.182129" top="2491.182129">
+            <point x="1430.434814" y="1472.894897"/>
+            <point x="1491.67981" y="1431.413818"/>
+            <point x="1553.226563" y="1429.716919"/>
+            <point x="1592.026855" y="1450.03833"/>
+            <point x="1638.838745" y="1526.002197"/>
+            <point x="1638.838867" y="1598.61853"/>
+            <point x="1583.521729" y="1676.966187"/>
+            <point x="1552.0" y="1687.309326"/>
+            <point x="1493.951904" y="1686.603271"/>
+            <point x="1442.266846" y="1650.425659"/>
+            <point x="1404.320313" y="1587.679688"/>
+            <point x="1406.773438" y="1524.960693"/>
         </points>
     </zone>
     <zone mapid="400010000" name="AB1_1111_LIMITAREA_NOBIND_400010000" area_type="POLYGON" zone_type="LIMIT" flags="6">
@@ -551,7 +571,7 @@
             <point x="308.11203" y="2453.737305"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="BGM_MUTE_153" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="BGM_MUTE_81" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="0.1" top="10000.099609">
             <point x="-505.350769" y="-543.100464"/>
             <point x="-503.769409" y="4256.603516"/>
@@ -608,7 +628,7 @@
             <point x="1582.505005" y="1474.353516"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="CHUN_ARMS_3" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="CHUN_ARMS_1" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1546.0" top="1553.099976">
             <point x="2395.359863" y="553.95459"/>
             <point x="2390.925293" y="559.496582"/>
@@ -617,7 +637,7 @@
             <point x="2413.133057" y="570.406799"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="CHUN_AUCTION_3" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="CHUN_AUCTION_1" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1545.189453" top="1555.189453">
             <point x="2395.74707" y="539.753906"/>
             <point x="2401.154541" y="551.035889"/>
@@ -626,7 +646,7 @@
             <point x="2396.548096" y="533.154297"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="CHUN_MEDICINES_2" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="CHUN_MEDICINES" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1543.956177" top="1553.956177">
             <point x="2337.51416" y="529.272705"/>
             <point x="2351.413574" y="514.945374"/>
@@ -634,7 +654,7 @@
             <point x="2320.216797" y="513.674255"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="CHUN_MERCHANDISE_3" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="CHUN_MERCHANDISE_1" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1538.669312" top="1545.769287">
             <point x="2405.594727" y="577.273804"/>
             <point x="2389.11377" y="562.068787"/>
@@ -650,7 +670,7 @@
             <point x="2332.560547" y="536.76947"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="CHUN_SANCTUARY_6" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="CHUN_SANCTUARY_3" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1546.0" top="1558.0">
             <point x="2391.72998" y="526.284607"/>
             <point x="2411.031006" y="505.581116"/>
@@ -658,7 +678,7 @@
             <point x="2379.013428" y="514.982361"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="CHUN_WAREHOUSE_1" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="CHUN_WAREHOUSE" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1546.0" top="1556.0">
             <point x="2353.169922" y="509.134583"/>
             <point x="2372.983398" y="511.629272"/>
@@ -1272,6 +1292,54 @@
             <point x="446.942505" y="2719.915527"/>
         </points>
     </zone>
+    <zone mapid="400010000" name="LIMITAREAAB1_LIMIT_AREA_6_4_400010000" area_type="POLYGON" zone_type="LIMIT" flags="0">
+        <points bottom="2224.100098" top="2424.100098">
+            <point x="1200.0" y="1520.0"/>
+            <point x="1232.0" y="1392.0"/>
+            <point x="1312.0" y="1280.0"/>
+            <point x="1440.0" y="1232.0"/>
+            <point x="1477.634277" y="1228.739502"/>
+            <point x="1479.07605" y="1100.432251"/>
+            <point x="1552.600342" y="1103.315552"/>
+            <point x="1598.733276" y="1202.789673"/>
+            <point x="1616.0" y="1216.0"/>
+            <point x="1776.0" y="1296.0"/>
+            <point x="1840.0" y="1424.0"/>
+            <point x="1856.0" y="1584.0"/>
+            <point x="1824.0" y="1728.0"/>
+            <point x="1728.0" y="1824.0"/>
+            <point x="1616.0" y="1888.0"/>
+            <point x="1586.358276" y="1982.05542"/>
+            <point x="1518.600708" y="1974.847168"/>
+            <point x="1488.0" y="1888.0"/>
+            <point x="1344.0" y="1824.0"/>
+            <point x="1264.0" y="1728.0"/>
+            <point x="1200.0" y="1600.0"/>
+            <point x="1200.0" y="1504.0"/>
+            <point x="496.0" y="1504.0"/>
+            <point x="512.0" y="2448.0"/>
+            <point x="2480.0" y="2448.0"/>
+            <point x="2448.0" y="464.0"/>
+            <point x="512.0" y="496.0"/>
+            <point x="496.0" y="1536.0"/>
+        </points>
+    </zone>
+    <zone mapid="400010000" name="LIMITAREAAB1_LIMIT_AREA_6_5_400010000" area_type="POLYGON" zone_type="LIMIT" flags="0">
+        <points bottom="1248.100098" top="2248.100098">
+            <point x="512.0" y="496.0"/>
+            <point x="2432.0" y="464.0"/>
+            <point x="2480.0" y="2448.0"/>
+            <point x="512.0" y="2448.0"/>
+        </points>
+    </zone>
+    <zone mapid="400010000" name="LIMITAREAAB1_LIMIT_AREA_6_6_400010000" area_type="POLYGON" zone_type="LIMIT" flags="0">
+        <points bottom="2400.100098" top="3400.100098">
+            <point x="512.0" y="496.0"/>
+            <point x="2432.0" y="464.0"/>
+            <point x="2480.0" y="2448.0"/>
+            <point x="512.0" y="2448.0"/>
+        </points>
+    </zone>
     <zone mapid="400010000" name="LIMITAREAAB1_NORECALLAREA_4_3_400010000" area_type="POLYGON" zone_type="LIMIT" flags="4">
         <points bottom="2687.08667" top="3687.08667">
             <point x="888.734253" y="1031.838135"/>
@@ -1365,7 +1433,7 @@
             <point x="405.938477" y="2643.755615"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="MA_AUCTION_3" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="MA_AUCTION_1" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1643.138672" top="1653.138672">
             <point x="419.468811" y="2723.001465"/>
             <point x="432.44751" y="2736.221924"/>
@@ -1374,7 +1442,7 @@
             <point x="433.707581" y="2707.582275"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="MA_MEDICINES_3" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="MA_MEDICINES_1" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1652.340942" top="1664.340942">
             <point x="480.52301" y="2716.081543"/>
             <point x="463.654724" y="2699.808838"/>
@@ -1382,7 +1450,7 @@
             <point x="466.747803" y="2730.974609"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="MA_MERCHANDISE_3" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="MA_MERCHANDISE_1" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1653.001465" top="1663.001465">
             <point x="397.714844" y="2664.837402"/>
             <point x="414.862366" y="2680.97168"/>
@@ -1390,7 +1458,7 @@
             <point x="411.655029" y="2650.378662"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="MA_SANCTUARY_5" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="MA_SANCTUARY_1" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1654.205566" top="1666.205566">
             <point x="432.797546" y="2710.890625"/>
             <point x="419.196899" y="2698.938232"/>
@@ -1406,7 +1474,7 @@
             <point x="409.367493" y="2684.230713"/>
         </points>
     </zone>
-    <zone mapid="400010000" name="MA_WEAPON_4" area_type="POLYGON" zone_type="FLY" flags="63">
+    <zone mapid="400010000" name="MA_WEAPON_2" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="1641.046021" top="1651.046021">
             <point x="456.885315" y="2719.157471"/>
             <point x="474.222229" y="2734.97998"/>

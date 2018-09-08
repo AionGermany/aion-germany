@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="310120000" name="AFIRA_OBELISK_2_310120000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="310120000" name="AFIRA_OBELISK_2_310120000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="46.0" y="152.0"/>
             <point x="116.0" y="180.0"/>
@@ -9,8 +8,7 @@
             <point x="35.0" y="188.0"/>
         </points>
     </zone>
-    <zone mapid="310120000" name="FLOATING_ISLAND_C_2_310120000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="6">
+    <zone mapid="310120000" name="FLOATING_ISLAND_C_2_310120000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="409.0" y="444.0"/>
             <point x="410.0" y="374.0"/>
@@ -18,13 +16,29 @@
             <point x="478.0" y="449.0"/>
         </points>
     </zone>
-    <zone mapid="310120000" name="KARAMATIS_2_310120000" area_type="POLYGON" zone_type="SUB" priority="16" flags="6">
+    <zone mapid="310120000" name="KARAMATIS_2_310120000" area_type="POLYGON" zone_type="SUB" priority="16" flags="54">
         <points bottom="0.1" top="500.1">
             <point x="170.0" y="324.0"/>
             <point x="168.0" y="147.0"/>
             <point x="356.0" y="146.0"/>
             <point x="354.0" y="348.0"/>
             <point x="172.0" y="347.0"/>
+        </points>
+    </zone>
+    <zone mapid="310120000" name="MUSICZONESHAPEIDABPROL3_BGM" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.1">
+            <point x="-161.619995" y="-99.5"/>
+            <point x="-158.619995" y="577.75"/>
+            <point x="551.880005" y="577.375"/>
+            <point x="551.755005" y="-94.125"/>
+        </points>
+    </zone>
+    <zone mapid="310120000" name="MUSICZONESHAPEIDABPROL3_BGM1" area_type="POLYGON" zone_type="FLY" flags="62">
+        <points bottom="0.1" top="10000.1">
+            <point x="-251.009995" y="-285.700012"/>
+            <point x="-256.238525" y="765.225281"/>
+            <point x="687.502747" y="782.217712"/>
+            <point x="675.738708" y="-281.778625"/>
         </points>
     </zone>
 </zones>

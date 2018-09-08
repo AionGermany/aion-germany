@@ -197,18 +197,18 @@
     </zone>
     <zone mapid="210010000" name="DAMINU_FOREST" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="0.1" top="1000.099976">
-            <point x="656.919983" y="1324.339966"/>
-            <point x="519.226929" y="1282.737549"/>
-            <point x="474.715179" y="1294.264893"/>
-            <point x="416.975586" y="1354.18335"/>
-            <point x="406.081299" y="1434.074707"/>
-            <point x="400.585815" y="1513.860596"/>
-            <point x="413.038422" y="1611.138062"/>
-            <point x="708.906738" y="1722.905518"/>
-            <point x="844.865173" y="1722.100342"/>
-            <point x="838.265198" y="1519.220581"/>
-            <point x="739.675903" y="1351.290649"/>
-            <point x="680.830627" y="1328.635132"/>
+            <point x="656.914978" y="1324.339966"/>
+            <point x="519.221924" y="1282.737549"/>
+            <point x="474.710175" y="1294.264893"/>
+            <point x="416.970581" y="1354.18335"/>
+            <point x="406.076294" y="1434.074707"/>
+            <point x="400.580811" y="1513.860596"/>
+            <point x="413.033417" y="1611.138062"/>
+            <point x="708.901733" y="1722.905518"/>
+            <point x="844.860168" y="1722.100342"/>
+            <point x="838.260193" y="1519.220581"/>
+            <point x="739.670898" y="1351.290649"/>
+            <point x="680.825623" y="1328.635132"/>
         </points>
     </zone>
     <zone mapid="210010000" name="DAMINU_FOREST_1_210010000" area_type="POLYGON" zone_type="SUB" priority="20" flags="55">
@@ -245,20 +245,25 @@
         </points>
     </zone>
     <zone mapid="210010000" name="KABARA" area_type="POLYGON" zone_type="FLY" flags="63">
-        <points bottom="0.041086" top="1000.041077">
+        <points bottom="0.01" top="1000.01001">
             <point x="455.910004" y="1891.209961"/>
             <point x="472.262268" y="1945.298218"/>
             <point x="490.661072" y="2013.463257"/>
             <point x="490.906799" y="2033.394287"/>
             <point x="452.637238" y="2137.228027"/>
             <point x="384.532867" y="2182.041504"/>
-            <point x="234.439468" y="2205.995117"/>
-            <point x="211.443207" y="2194.202148"/>
+            <point x="347.677612" y="2185.457275"/>
+            <point x="278.805878" y="2129.716553"/>
+            <point x="245.166824" y="2126.787842"/>
+            <point x="161.61795" y="2189.716064"/>
             <point x="154.542175" y="2068.017578"/>
             <point x="147.956879" y="1935.261963"/>
-            <point x="145.056396" y="1770.687988"/>
-            <point x="310.68222" y="1802.593628"/>
-            <point x="384.314301" y="1817.890137"/>
+            <point x="121.490753" y="1772.793945"/>
+            <point x="139.607117" y="1752.520874"/>
+            <point x="227.169464" y="1723.621094"/>
+            <point x="328.103394" y="1755.97168"/>
+            <point x="390.216614" y="1815.496826"/>
+            <point x="392.804657" y="1819.810181"/>
             <point x="394.254181" y="1849.173584"/>
             <point x="415.010895" y="1879.160156"/>
             <point x="426.628296" y="1897.685303"/>
@@ -395,6 +400,20 @@
             <point x="411.03653" y="1738.501221"/>
         </points>
     </zone>
+    <zone mapid="210010000" name="MUSICZONESHAPELF1-BGM13" area_type="POLYGON" zone_type="FLY" flags="63">
+        <points bottom="0.1" top="10.1">
+            <point x="0.0" y="0.0"/>
+            <point x="0.0" y="0.0"/>
+            <point x="0.0" y="0.0"/>
+        </points>
+    </zone>
+    <zone mapid="210010000" name="MUSICZONESHAPELF1-BGM8" area_type="POLYGON" zone_type="FLY" flags="63">
+        <points bottom="0.1" top="10.1">
+            <point x="0.0" y="0.0"/>
+            <point x="0.0" y="0.0"/>
+            <point x="0.0" y="0.0"/>
+        </points>
+    </zone>
     <zone mapid="210010000" name="MUTE_4" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="0.1" top="1000.099976">
             <point x="491.98999" y="1533.319946"/>
@@ -424,6 +443,8 @@
     </zone>
     <zone mapid="210010000" name="POETA_MUTE" area_type="POLYGON" zone_type="FLY" flags="63">
         <points bottom="0.1" top="10000.099609">
+            <point x="0.0" y="0.0"/>
+            <point x="0.0" y="0.0"/>
             <point x="2237.671875" y="-65.222992"/>
             <point x="3282.182617" y="-2.96733"/>
             <point x="3240.678955" y="1297.483398"/>
@@ -479,6 +500,17 @@
             <point x="815.767395" y="1253.35083"/>
             <point x="817.28894" y="1253.356079"/>
             <point x="819.506592" y="1253.378662"/>
+        </points>
+    </zone>
+    <zone mapid="210010000" name="SECRET_KRALL_CAVE_210010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="55">
+        <points bottom="138.404327" top="338.404327">
+            <point x="243.246033" y="2127.278076"/>
+            <point x="277.970062" y="2129.371582"/>
+            <point x="395.950256" y="2225.664551"/>
+            <point x="376.739044" y="2398.067871"/>
+            <point x="156.503525" y="2359.567627"/>
+            <point x="161.49826" y="2191.361084"/>
+            <point x="202.086594" y="2165.758301"/>
         </points>
     </zone>
     <zone mapid="210010000" name="TIMOLIA_MINE_210010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="55">

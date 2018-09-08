@@ -33,7 +33,7 @@
             <point x="1144.182861" y="1039.611938"/>
         </points>
     </zone>
-    <zone mapid="302340000" name="CHAMBER_OF_GUIDANCE_1_302340000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
+    <zone mapid="302340000" name="CHAMBER_OF_GUIDANCE_302340000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
         <points bottom="381.063446" top="396.063446">
             <point x="1007.506714" y="702.778992"/>
             <point x="1075.345215" y="702.518677"/>
@@ -123,6 +123,14 @@
             <point x="1422.578491" y="1036.211426"/>
             <point x="1444.728149" y="1362.097168"/>
             <point x="1336.940063" y="1491.081177"/>
+        </points>
+    </zone>
+    <zone mapid="302340000" name="LIMITED_AREA_NOCUNARESURRECT_302340000" area_type="POLYGON" zone_type="LIMIT" flags="4">
+        <points bottom="432.100006" top="482.100006">
+            <point x="92.0" y="616.0"/>
+            <point x="92.0" y="680.0"/>
+            <point x="160.0" y="680.0"/>
+            <point x="160.0" y="616.0"/>
         </points>
     </zone>
     <zone mapid="302340000" name="MUSICZONESHAPEIDAB1_ERE_BGM1" area_type="POLYGON" zone_type="FLY" flags="60">

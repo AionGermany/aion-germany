@@ -1,357 +1,436 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zones>
-    <zone mapid="600010000" name="ANGRIEF_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="313.58667" y="88.265"/>
-            <point x="355.6436" y="60.320522"/>
-            <point x="460.3754" y="88.09519"/>
-            <point x="453.49612" y="178.03891"/>
-            <point x="413.6378" y="194.59024"/>
-            <point x="324.44553" y="152.93195"/>
+    <zone mapid="600010000" name="ANGRIEF_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="313.58667" y="88.264999"/>
+            <point x="355.643585" y="60.320522"/>
+            <point x="460.375397" y="88.095192"/>
+            <point x="453.496124" y="178.03891"/>
+            <point x="413.637787" y="194.59024"/>
+            <point x="324.445526" y="152.931946"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="BESHMUNDIRS_WALK_1_600010000" area_type="POLYGON" zone_type="SUB" priority="10"
-          flags="0">
-        <points bottom="312.4877" top="327.4877">
-            <point x="1371.869" y="744.05505"/>
-            <point x="1371.7996" y="789.8821"/>
-            <point x="1418.7308" y="790.309"/>
-            <point x="1419.2455" y="743.90546"/>
+    <zone mapid="600010000" name="BESHMUNDIR_TEMPLE_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="52">
+        <points bottom="207.370392" top="607.370361">
+            <point x="1457.580322" y="714.960205"/>
+            <point x="1306.185791" y="711.599854"/>
+            <point x="1254.708252" y="743.105835"/>
+            <point x="1257.915894" y="805.658569"/>
+            <point x="1319.09314" y="828.839661"/>
+            <point x="1459.642456" y="825.872437"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="BESHMUNDIR_TEMPLE_600010000" area_type="POLYGON" zone_type="SUB" priority="15"
-          flags="0">
-        <points bottom="207.37039" top="607.3704">
-            <point x="1457.5803" y="714.9602"/>
-            <point x="1306.1858" y="711.59985"/>
-            <point x="1254.7083" y="743.10583"/>
-            <point x="1257.9159" y="805.65857"/>
-            <point x="1319.0931" y="828.83966"/>
-            <point x="1459.6425" y="825.87244"/>
+    <zone mapid="600010000" name="BRIGHT2_1" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-72.68" y="831.01001"/>
+            <point x="-48.245754" y="1577.273926"/>
+            <point x="593.154297" y="1569.12915"/>
+            <point x="413.614899" y="1449.469727"/>
+            <point x="423.948242" y="1364.588257"/>
+            <point x="647.592041" y="1377.874146"/>
+            <point x="691.525574" y="1345.497681"/>
+            <point x="678.673462" y="1233.945557"/>
+            <point x="618.453857" y="1180.163696"/>
+            <point x="545.362732" y="1181.66272"/>
+            <point x="484.563232" y="1208.815918"/>
+            <point x="409.194092" y="1174.666748"/>
+            <point x="317.21347" y="1171.348267"/>
+            <point x="327.431427" y="1002.050049"/>
+            <point x="327.431427" y="835.082397"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="CHANTERS_WALK_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="515.98" y="459.91"/>
-            <point x="546.00806" y="428.0052"/>
-            <point x="603.2491" y="424.25168"/>
-            <point x="652.0447" y="367.94904"/>
-            <point x="709.2857" y="383.90146"/>
-            <point x="709.2857" y="470.23215"/>
-            <point x="701.591" y="505.542"/>
-            <point x="612.6328" y="505.6493"/>
-            <point x="532.8639" y="491.30298"/>
+    <zone mapid="600010000" name="BRIGHT_3" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-20.473261" y="-43.165379"/>
+            <point x="-17.978037" y="512.024475"/>
+            <point x="295.325623" y="598.382751"/>
+            <point x="336.056732" y="363.339508"/>
+            <point x="401.10672" y="359.972168"/>
+            <point x="404.853455" y="298.525665"/>
+            <point x="447.566254" y="315.760651"/>
+            <point x="459.632538" y="304.145538"/>
+            <point x="495.632629" y="318.969116"/>
+            <point x="499.86792" y="336.969177"/>
+            <point x="517.863159" y="350.061249"/>
+            <point x="559.958801" y="362.638458"/>
+            <point x="596.686462" y="432.658905"/>
+            <point x="627.409729" y="426.664124"/>
+            <point x="630.407104" y="397.439575"/>
+            <point x="622.164246" y="359.972168"/>
+            <point x="671.621216" y="292.530884"/>
+            <point x="714.334045" y="289.533508"/>
+            <point x="745.806641" y="321.755463"/>
+            <point x="722.605774" y="394.316315"/>
+            <point x="722.043762" y="438.628876"/>
+            <point x="795.371826" y="433.112793"/>
+            <point x="824.082764" y="422.036377"/>
+            <point x="879.395569" y="360.385773"/>
+            <point x="875.439697" y="213.119568"/>
+            <point x="848.637695" y="158.828354"/>
+            <point x="897.773254" y="-76.851013"/>
+            <point x="538.480103" y="187.171143"/>
+            <point x="425.496765" y="181.846924"/>
+            <point x="414.014099" y="162.62854"/>
+            <point x="400.13504" y="127.873932"/>
+            <point x="372.622406" y="87.376556"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="EARTHFANG_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="207.37051" top="607.37054">
-            <point x="940.1936" y="908.7027"/>
-            <point x="943.4201" y="1031.3104"/>
-            <point x="1036.9893" y="1030.2349"/>
-            <point x="1040.2156" y="906.55164"/>
+    <zone mapid="600010000" name="CHANTERS_WALK_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="515.97998" y="459.910004"/>
+            <point x="546.008057" y="428.005188"/>
+            <point x="603.249084" y="424.251678"/>
+            <point x="652.044678" y="367.949036"/>
+            <point x="709.285706" y="383.901459"/>
+            <point x="709.285706" y="470.232147"/>
+            <point x="701.591003" y="505.541992"/>
+            <point x="612.632813" y="505.649292"/>
+            <point x="532.863892" y="491.302979"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="EASTERN_CORRIDOR_600010000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="0">
-        <points bottom="206.76993" top="606.76996">
-            <point x="582.8366" y="869.0662"/>
-            <point x="575.07654" y="924.13257"/>
-            <point x="444.3928" y="933.83344"/>
-            <point x="339.6277" y="936.65405"/>
-            <point x="300.53278" y="977.725"/>
-            <point x="307.66028" y="1191.4191"/>
-            <point x="425.53082" y="1197.607"/>
-            <point x="429.17154" y="1069.7006"/>
-            <point x="605.712" y="1058.9314"/>
-            <point x="680.3811" y="996.52936"/>
-            <point x="680.9626" y="867.9728"/>
+    <zone mapid="600010000" name="DRAGON_10" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="0.1" top="1000.099976">
+            <point x="1059.619995" y="588.76001"/>
+            <point x="1067.626343" y="937.038025"/>
+            <point x="1497.56958" y="945.044434"/>
+            <point x="1490.363892" y="591.161926"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="FELONS_FLIGHT_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="255.50941" y="129.34903"/>
-            <point x="239.12575" y="236.65643"/>
-            <point x="301.30646" y="367.72583"/>
-            <point x="408.38885" y="370.1322"/>
-            <point x="406.80075" y="283.12448"/>
-            <point x="390.49384" y="219.1208"/>
-            <point x="463.03342" y="191.13274"/>
+    <zone mapid="600010000" name="EARTHFANG_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="52">
+        <points bottom="207.370514" top="607.370483">
+            <point x="940.193604" y="908.702698"/>
+            <point x="943.420105" y="1031.310425"/>
+            <point x="1036.989258" y="1030.234863"/>
+            <point x="1040.215576" y="906.551636"/>
+        </points>
+    </zone>
+    <zone mapid="600010000" name="EASTERN_CORRIDOR_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="206.769928" top="606.769897">
+            <point x="582.836609" y="869.066223"/>
+            <point x="575.076538" y="924.132568"/>
+            <point x="444.392792" y="933.833435"/>
+            <point x="339.627686" y="936.654053"/>
+            <point x="300.532776" y="977.724976"/>
+            <point x="307.660278" y="1191.419067"/>
+            <point x="425.530823" y="1197.607056"/>
+            <point x="429.171539" y="1069.700562"/>
+            <point x="605.711975" y="1058.931396"/>
+            <point x="680.381104" y="996.529358"/>
+            <point x="680.962585" y="867.972778"/>
+        </points>
+    </zone>
+    <zone mapid="600010000" name="FELONS_FLIGHT_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="255.509415" y="129.34903"/>
+            <point x="239.125748" y="236.656433"/>
+            <point x="301.306458" y="367.72583"/>
+            <point x="408.388855" y="370.132202"/>
+            <point x="406.800751" y="283.124481"/>
+            <point x="390.493835" y="219.120804"/>
+            <point x="463.033417" y="191.132736"/>
             <point x="470.8573" y="73.77079"/>
             <point x="326.6315" y="41.939926"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="HANARKAND_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="783.7608" y="132.41434"/>
-            <point x="767.6234" y="238.00726"/>
-            <point x="818.8131" y="274.82635"/>
-            <point x="920.2163" y="204.73082"/>
-            <point x="873.5306" y="130.88599"/>
+    <zone mapid="600010000" name="HANARKAND_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="783.760803" y="132.414337"/>
+            <point x="767.623413" y="238.007263"/>
+            <point x="818.81311" y="274.826355"/>
+            <point x="920.216309" y="204.73082"/>
+            <point x="873.530579" y="130.885986"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="HOPES_DEMISE_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="0">
-        <points bottom="207.27042" top="607.2704">
-            <point x="1310.2953" y="596.53204"/>
-            <point x="1085.5525" y="605.0829"/>
-            <point x="1082.4786" y="944.0086"/>
-            <point x="1308.9209" y="942.4094"/>
-            <point x="1339.9375" y="914.3004"/>
-            <point x="1343.551" y="859.9462"/>
-            <point x="1355.9764" y="837.3143"/>
-            <point x="1478.4347" y="832.59894"/>
-            <point x="1477.74" y="708.9382"/>
-            <point x="1365.6998" y="705.14905"/>
-            <point x="1355.9763" y="685.4808"/>
-            <point x="1354.9071" y="660.88794"/>
+    <zone mapid="600010000" name="HOPES_DEMISE_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="207.270416" top="607.270386">
+            <point x="1310.295288" y="596.532043"/>
+            <point x="1085.55249" y="605.082886"/>
+            <point x="1082.478638" y="944.008606"/>
+            <point x="1308.920898" y="942.409424"/>
+            <point x="1339.9375" y="914.300415"/>
+            <point x="1343.551025" y="859.946228"/>
+            <point x="1355.97644" y="837.31427"/>
+            <point x="1478.434692" y="832.598938"/>
+            <point x="1477.73999" y="708.938171"/>
+            <point x="1365.699829" y="705.149048"/>
+            <point x="1355.976318" y="685.480774"/>
+            <point x="1354.907104" y="660.887939"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="JOTUN_SQUARE_600010000" area_type="POLYGON" zone_type="SUB" priority="10" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="509.65" y="656.6601"/>
-            <point x="509.65002" y="879.4354"/>
-            <point x="839.073" y="880.6204"/>
-            <point x="836.7031" y="656.66016"/>
+    <zone mapid="600010000" name="JOTUN_SQUARE_1_600010000" area_type="POLYGON" zone_type="SUB" priority="10" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="509.649994" y="656.660095"/>
+            <point x="509.650024" y="879.435425"/>
+            <point x="839.072998" y="880.620422"/>
+            <point x="836.703125" y="656.660156"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="MARAKA_CAVE_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="682.5793" y="1227.3041"/>
-            <point x="698.88275" y="1364.9585"/>
-            <point x="790.2832" y="1427.5216"/>
-            <point x="902.9841" y="1450.4008"/>
-            <point x="959.70435" y="1321.7947"/>
-            <point x="858.9716" y="1269.1605"/>
-            <point x="872.53955" y="1196.0553"/>
-            <point x="828.13367" y="1085.5712"/>
-            <point x="714.5737" y="1091.8193"/>
-            <point x="714.05707" y="1156.1271"/>
+    <zone mapid="600010000" name="LF4_SENSORYAREA_Q10025_600010000" area_type="POLYGON" zone_type="SUB" priority="10" flags="52">
+        <points bottom="312.487701" top="327.487701">
+            <point x="1371.869019" y="744.055054"/>
+            <point x="1371.799561" y="789.88208"/>
+            <point x="1418.730835" y="790.309021"/>
+            <point x="1419.245483" y="743.905457"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="MITRAKAND_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="0">
-        <points bottom="206.97012" top="606.9701">
-            <point x="371.00247" y="1347.2108"/>
-            <point x="362.00912" y="1452.3024"/>
-            <point x="430.25806" y="1471.698"/>
-            <point x="469.9411" y="1420.5361"/>
-            <point x="454.31503" y="1345.2124"/>
+    <zone mapid="600010000" name="MARAKA_CAVE_1_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="682.579285" y="1227.304077"/>
+            <point x="698.882751" y="1364.958496"/>
+            <point x="790.283203" y="1427.521606"/>
+            <point x="902.98407" y="1450.400757"/>
+            <point x="959.704346" y="1321.794678"/>
+            <point x="858.971619" y="1269.160522"/>
+            <point x="872.539551" y="1196.055298"/>
+            <point x="828.133667" y="1085.571167"/>
+            <point x="714.57373" y="1091.819336"/>
+            <point x="714.057068" y="1156.127075"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="MOURNERS_WALK_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="0">
-        <points bottom="207.37051" top="607.37054">
-            <point x="832.3067" y="771.2039"/>
-            <point x="997.5938" y="772.92566"/>
-            <point x="1001.89813" y="835.76917"/>
-            <point x="1069.046" y="845.2388"/>
-            <point x="1069.9069" y="945.9606"/>
-            <point x="927.8633" y="914.1084"/>
-            <point x="912.3676" y="884.8388"/>
-            <point x="860.7154" y="864.1779"/>
-            <point x="829.72406" y="861.5953"/>
+    <zone mapid="600010000" name="MITRAKAND_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="206.970123" top="606.970093">
+            <point x="371.002472" y="1347.210815"/>
+            <point x="362.009125" y="1452.302368"/>
+            <point x="430.258057" y="1471.697998"/>
+            <point x="469.941101" y="1420.536133"/>
+            <point x="454.315033" y="1345.212402"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="PACIFISTS_WALK_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="206.87003" top="606.87006">
-            <point x="528.09814" y="1031.39"/>
-            <point x="685.8759" y="1014.9466"/>
-            <point x="727.5882" y="1073.6398"/>
-            <point x="727.7038" y="1155.0492"/>
-            <point x="642.40094" y="1157.4763"/>
-            <point x="638.3643" y="1138.1285"/>
-            <point x="634.7236" y="1112.6433"/>
-            <point x="525.67096" y="1095.7097"/>
+    <zone mapid="600010000" name="MOURNERS_WALK_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
+        <points bottom="207.370514" top="607.370483">
+            <point x="832.306702" y="771.203918"/>
+            <point x="997.593811" y="772.925659"/>
+            <point x="1001.898132" y="835.769165"/>
+            <point x="1069.046021" y="845.23877"/>
+            <point x="1069.90686" y="945.960571"/>
+            <point x="927.863281" y="914.108398"/>
+            <point x="912.367615" y="884.838806"/>
+            <point x="860.715393" y="864.177917"/>
+            <point x="829.72406" y="861.595276"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="PAUPERS_PATHS_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="0">
-        <points bottom="207.27042" top="607.2704">
-            <point x="829.7241" y="666.17773"/>
-            <point x="834.02844" y="767.76044"/>
-            <point x="996.733" y="768.62134"/>
-            <point x="1001.0373" y="705.7778"/>
-            <point x="1069.907" y="692.00385"/>
-            <point x="1066.4635" y="593.0038"/>
-            <point x="920.2844" y="596.7905"/>
-            <point x="908.9242" y="658.4299"/>
+    <zone mapid="600010000" name="MUTE_29" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="0.1" top="1000.099976">
+            <point x="-298.203186" y="-490.655762"/>
+            <point x="-306.654388" y="1884.096436"/>
+            <point x="1761.042236" y="1889.730469"/>
+            <point x="1763.859131" y="-535.728027"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="PRAYERFUL_PASSAGES_600010000" area_type="POLYGON" zone_type="SUB" priority="17"
-          flags="0">
-        <points bottom="207.27042" top="607.2704">
-            <point x="691.79205" y="446.75272"/>
-            <point x="833.26013" y="458.19446"/>
-            <point x="853.2528" y="376.68427"/>
-            <point x="1180.1017" y="379.1042"/>
-            <point x="1177.5767" y="627.48413"/>
-            <point x="1080.612" y="618.31433"/>
-            <point x="1082.9783" y="510.3622"/>
-            <point x="1007.38226" y="506.73096"/>
-            <point x="919.4803" y="583.79565"/>
-            <point x="903.82654" y="652.4314"/>
-            <point x="827.96594" y="663.2686"/>
-            <point x="749.9675" y="674.4399"/>
-            <point x="736.6184" y="604.26447"/>
-            <point x="788.71356" y="574.5601"/>
-            <point x="800.82544" y="543.2098"/>
-            <point x="705.37146" y="557.0449"/>
+    <zone mapid="600010000" name="PACIFISTS_WALK_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="52">
+        <points bottom="206.870026" top="606.869995">
+            <point x="528.098145" y="1031.390015"/>
+            <point x="685.875916" y="1014.946594"/>
+            <point x="727.588196" y="1073.639771"/>
+            <point x="727.703796" y="1155.049194"/>
+            <point x="642.40094" y="1157.476318"/>
+            <point x="638.364319" y="1138.12854"/>
+            <point x="634.723572" y="1112.643311"/>
+            <point x="525.670959" y="1095.709717"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="PRIMEVAL_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="207.37051" top="607.37054">
-            <point x="933.74054" y="484.95337"/>
-            <point x="936.96704" y="607.56104"/>
-            <point x="1030.5361" y="606.48553"/>
-            <point x="1033.7626" y="482.80234"/>
+    <zone mapid="600010000" name="PAUPERS_PATHS_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
+        <points bottom="207.270416" top="607.270386">
+            <point x="829.724121" y="666.177734"/>
+            <point x="834.028442" y="767.760437"/>
+            <point x="996.732971" y="768.621338"/>
+            <point x="1001.037292" y="705.777771"/>
+            <point x="1069.906982" y="692.003845"/>
+            <point x="1066.463501" y="593.003784"/>
+            <point x="920.284424" y="596.790527"/>
+            <point x="908.924194" y="658.429871"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="SHADOWS_EGRESSS_600010000" area_type="POLYGON" zone_type="SUB" priority="17"
-          flags="0">
-        <points bottom="206.87003" top="606.87006">
-            <point x="290.51898" y="1176.7573"/>
-            <point x="241.37544" y="1308.5634"/>
-            <point x="311.69775" y="1473.9017"/>
-            <point x="439.13867" y="1484.8387"/>
-            <point x="483.974" y="1419.5488"/>
-            <point x="458.0271" y="1330.8947"/>
-            <point x="393.5274" y="1333.5588"/>
-            <point x="401.59186" y="1252.0188"/>
-            <point x="416.73135" y="1191.3202"/>
+    <zone mapid="600010000" name="PRAYERFUL_PASSAGES_1_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
+        <points bottom="207.270416" top="607.270386">
+            <point x="691.792053" y="446.752716"/>
+            <point x="833.260132" y="458.194458"/>
+            <point x="853.252808" y="376.684265"/>
+            <point x="1180.101685" y="379.104187"/>
+            <point x="1177.57666" y="627.484131"/>
+            <point x="1080.612061" y="618.314331"/>
+            <point x="1082.978271" y="510.362213"/>
+            <point x="1007.382263" y="506.730957"/>
+            <point x="919.480286" y="583.795654"/>
+            <point x="903.826538" y="652.431396"/>
+            <point x="827.965942" y="663.268616"/>
+            <point x="749.967529" y="674.43988"/>
+            <point x="736.618408" y="604.264465"/>
+            <point x="788.713562" y="574.56012"/>
+            <point x="800.825439" y="543.209778"/>
+            <point x="705.37146" y="557.044922"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="SILENTERA_CANYON_1_600010000" area_type="POLYGON" zone_type="SUB" priority="18"
-          flags="0">
-        <points bottom="206.6654" top="606.6654">
-            <point x="202.00732" y="218.22621"/>
-            <point x="298.2137" y="387.46918"/>
-            <point x="299.7278" y="602.20703"/>
-            <point x="383.21216" y="650.10956"/>
-            <point x="532.446" y="628.5325"/>
-            <point x="543.6215" y="682.6574"/>
-            <point x="1097.5177" y="675.30743"/>
-            <point x="1096.0593" y="340.4903"/>
-            <point x="887.13275" y="87.92233"/>
-            <point x="782.80896" y="97.097404"/>
-            <point x="745.13794" y="181.2223"/>
-            <point x="654.8865" y="188.62416"/>
-            <point x="599.84467" y="240.56172"/>
-            <point x="560.77435" y="252.27055"/>
-            <point x="485.67145" y="195.14206"/>
-            <point x="478.45966" y="56.665146"/>
-            <point x="302.45483" y="33.339157"/>
+    <zone mapid="600010000" name="PRIMEVAL_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="52">
+        <points bottom="207.370514" top="607.370483">
+            <point x="933.74054" y="484.953369"/>
+            <point x="936.967041" y="607.561035"/>
+            <point x="1030.536133" y="606.485535"/>
+            <point x="1033.762573" y="482.802338"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="SILENTERA_CANYON_600010000" area_type="POLYGON" zone_type="SUB" priority="18"
-          flags="0">
-        <points bottom="206.6654" top="606.6654">
-            <point x="323.02408" y="926.9702"/>
-            <point x="287.36972" y="972.0837"/>
-            <point x="279.7909" y="1165.3633"/>
-            <point x="228.33093" y="1313.0231"/>
-            <point x="301.78418" y="1495.5874"/>
-            <point x="453.82944" y="1499.6222"/>
-            <point x="454.74796" y="1500.9774"/>
-            <point x="495.67615" y="1425.6343"/>
-            <point x="488.18744" y="1357.6407"/>
-            <point x="537.6021" y="1328.596"/>
-            <point x="610.2044" y="1324.9161"/>
-            <point x="631.5369" y="1365.7634"/>
-            <point x="805.2711" y="1455.306"/>
-            <point x="904.50586" y="1479.5643"/>
-            <point x="1081.4161" y="1212.5177"/>
-            <point x="1090.9515" y="891.8592"/>
-            <point x="431.22314" y="872.4205"/>
+    <zone mapid="600010000" name="SHADOWS_EGRESS_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
+        <points bottom="206.870026" top="606.869995">
+            <point x="290.518982" y="1176.757324"/>
+            <point x="241.375443" y="1308.563354"/>
+            <point x="311.697754" y="1473.901733"/>
+            <point x="439.138672" y="1484.838745"/>
+            <point x="483.973999" y="1419.548828"/>
+            <point x="458.0271" y="1330.894653"/>
+            <point x="393.527405" y="1333.558838"/>
+            <point x="401.591858" y="1252.018799"/>
+            <point x="416.731354" y="1191.32019"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="SILENTERA_EASTGATE_600010000" area_type="POLYGON" zone_type="SUB" priority="14"
-          flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="435.6" y="1087.37"/>
-            <point x="436.81357" y="1208.728"/>
-            <point x="525.40497" y="1223.291"/>
-            <point x="632.2001" y="1160.1848"/>
-            <point x="611.5692" y="1105.5737"/>
-            <point x="521.7642" y="1060.6713"/>
+    <zone mapid="600010000" name="SILENTERA_EASTGATE_1_600010000" area_type="POLYGON" zone_type="SUB" priority="14" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="435.600006" y="1087.369995"/>
+            <point x="436.813568" y="1208.728027"/>
+            <point x="525.404968" y="1223.291016"/>
+            <point x="632.200073" y="1160.184814"/>
+            <point x="611.569214" y="1105.57373"/>
+            <point x="521.764221" y="1060.671265"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="SILENTERA_WESTGATE_600010000" area_type="POLYGON" zone_type="SUB" priority="14"
-          flags="0">
-        <points bottom="206.87003" top="606.87006">
-            <point x="417.16974" y="331.98032"/>
-            <point x="424.51517" y="402.12207"/>
-            <point x="445.58002" y="445.59338"/>
-            <point x="492.98666" y="470.88675"/>
-            <point x="535.87335" y="441.40094"/>
-            <point x="582.7555" y="414.74225"/>
-            <point x="530.00714" y="314.7663"/>
+    <zone mapid="600010000" name="SILENTERA_WESTGATE_1_600010000" area_type="POLYGON" zone_type="SUB" priority="14" flags="52">
+        <points bottom="206.870026" top="606.869995">
+            <point x="417.169739" y="331.980316"/>
+            <point x="424.515167" y="402.12207"/>
+            <point x="445.580017" y="445.593384"/>
+            <point x="492.986664" y="470.886749"/>
+            <point x="535.873352" y="441.40094"/>
+            <point x="582.755493" y="414.742249"/>
+            <point x="530.007141" y="314.766296"/>
             <point x="477.54657" y="307.26828"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="SULLEN_PASSAGE_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="0">
-        <points bottom="207.17032" top="607.17035">
-            <point x="733.70605" y="875.1725"/>
-            <point x="861.3184" y="867.891"/>
-            <point x="914.3633" y="891.25995"/>
-            <point x="926.1882" y="933.3825"/>
-            <point x="948.69617" y="1046.2874"/>
-            <point x="1080.9314" y="1034.3645"/>
-            <point x="1082.7114" y="1036.3231"/>
-            <point x="1080.81" y="935.64435"/>
-            <point x="1180.7863" y="934.50964"/>
-            <point x="1175.3448" y="1170.9753"/>
-            <point x="875.88135" y="1180.9948"/>
-            <point x="840.6875" y="1134.8788"/>
-            <point x="823.4571" y="1102.5055"/>
-            <point x="723.5743" y="1092.8147"/>
-            <point x="719.96326" y="1009.42395"/>
-            <point x="779.9874" y="999.73303"/>
-            <point x="786.5689" y="966.8254"/>
-            <point x="748.9602" y="952.72205"/>
+    <zone mapid="600010000" name="SULLEN_PASSAGE_1_600010000" area_type="POLYGON" zone_type="SUB" priority="17" flags="52">
+        <points bottom="207.170319" top="607.170288">
+            <point x="733.706055" y="875.172485"/>
+            <point x="861.31842" y="867.890991"/>
+            <point x="914.363281" y="891.259949"/>
+            <point x="926.188171" y="933.382507"/>
+            <point x="948.696167" y="1046.287354"/>
+            <point x="1080.931396" y="1034.364502"/>
+            <point x="1082.711426" y="1036.32312"/>
+            <point x="1080.810059" y="935.644348"/>
+            <point x="1180.786255" y="934.509644"/>
+            <point x="1175.344849" y="1170.975342"/>
+            <point x="875.881348" y="1180.994751"/>
+            <point x="840.6875" y="1134.878784"/>
+            <point x="823.457092" y="1102.505493"/>
+            <point x="723.57428" y="1092.814697"/>
+            <point x="719.963257" y="1009.42395"/>
+            <point x="779.987427" y="999.733032"/>
+            <point x="786.568909" y="966.825378"/>
+            <point x="748.960205" y="952.722046"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="UNKNOWN_LANDS_600010000" area_type="POLYGON" zone_type="SUB" priority="9" flags="0">
+    <zone mapid="600010000" name="TITAN_5" area_type="POLYGON" zone_type="FLY" flags="60">
+        <points bottom="0.1" top="1000.099976">
+            <point x="337.938477" y="364.216827"/>
+            <point x="306.30835" y="618.027893"/>
+            <point x="335.783691" y="839.638916"/>
+            <point x="321.325165" y="1168.679077"/>
+            <point x="413.728851" y="1172.21814"/>
+            <point x="424.354004" y="1050.028809"/>
+            <point x="517.028992" y="1050.619141"/>
+            <point x="545.953003" y="1104.335205"/>
+            <point x="601.670105" y="1101.589111"/>
+            <point x="681.846252" y="1227.185303"/>
+            <point x="710.229919" y="1277.402588"/>
+            <point x="713.504944" y="1364.737183"/>
+            <point x="812.847839" y="1441.154541"/>
+            <point x="856.087769" y="1388.749512"/>
+            <point x="867.604797" y="1312.429443"/>
+            <point x="950.397095" y="1318.724731"/>
+            <point x="1030.904175" y="1341.862427"/>
+            <point x="1237.275269" y="1414.011963"/>
+            <point x="1258.017212" y="990.440186"/>
+            <point x="1236.183594" y="947.864624"/>
+            <point x="1059.331421" y="947.864624"/>
+            <point x="1051.689697" y="928.214355"/>
+            <point x="1050.598022" y="583.24353"/>
+            <point x="1074.840942" y="578.580872"/>
+            <point x="1186.452759" y="581.075012"/>
+            <point x="1209.983276" y="578.876831"/>
+            <point x="1371.009033" y="526.809448"/>
+            <point x="1352.450562" y="223.322403"/>
+            <point x="1080.622192" y="169.830063"/>
+            <point x="949.620667" y="237.514236"/>
+            <point x="895.036621" y="367.424133"/>
+            <point x="863.37793" y="394.716156"/>
+            <point x="839.360962" y="418.733093"/>
+            <point x="807.702271" y="448.208466"/>
+            <point x="716.623657" y="448.986328"/>
+            <point x="713.817749" y="392.532745"/>
+            <point x="714.909424" y="365.240784"/>
+            <point x="728.009583" y="325.940308"/>
+            <point x="705.084351" y="309.565094"/>
+            <point x="666.875549" y="331.398682"/>
+            <point x="648.316956" y="347.773895"/>
+            <point x="646.133606" y="382.707642"/>
+            <point x="633.810303" y="424.035095"/>
+            <point x="632.505798" y="429.233948"/>
+            <point x="614.474915" y="434.016602"/>
+            <point x="594.670349" y="436.098694"/>
+            <point x="583.435669" y="423.572968"/>
+            <point x="556.13501" y="364.110443"/>
+            <point x="516.852661" y="351.95163"/>
+            <point x="497.523285" y="337.922211"/>
+            <point x="495.100403" y="322.349304"/>
+            <point x="461.046814" y="307.369263"/>
+            <point x="448.264435" y="316.722198"/>
+            <point x="406.487976" y="303.316315"/>
+            <point x="408.869751" y="341.052185"/>
+            <point x="404.185242" y="362.421631"/>
+        </points>
+    </zone>
+    <zone mapid="600010000" name="UNKNOWN_LANDS_1_600010000" area_type="POLYGON" zone_type="SUB" priority="9" flags="52">
         <points bottom="279.0" top="329.0">
-            <point x="520.89" y="748.21"/>
-            <point x="520.80237" y="785.9123"/>
-            <point x="550.25433" y="785.8456"/>
-            <point x="550.28455" y="747.9834"/>
+            <point x="520.890015" y="748.210022"/>
+            <point x="520.802368" y="785.912292"/>
+            <point x="550.254333" y="785.845581"/>
+            <point x="550.284546" y="747.983398"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="VISALA_GROTTO_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="726.8685" y="247.18347"/>
-            <point x="739.5391" y="341.04218"/>
-            <point x="703.57764" y="384.5717"/>
-            <point x="703.57764" y="464.4966"/>
-            <point x="799.7897" y="467.0719"/>
-            <point x="868.1105" y="361.5921"/>
-            <point x="864.37994" y="267.4401"/>
-            <point x="931.50024" y="201.23634"/>
-            <point x="877.82245" y="107.703156"/>
-            <point x="776.20447" y="124.30372"/>
+    <zone mapid="600010000" name="VISALA_GROTTO_1_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="726.86853" y="247.183472"/>
+            <point x="739.539124" y="341.042175"/>
+            <point x="703.577637" y="384.571686"/>
+            <point x="703.577637" y="464.496613"/>
+            <point x="799.789673" y="467.071899"/>
+            <point x="868.110474" y="361.592102"/>
+            <point x="864.379944" y="267.440094"/>
+            <point x="931.500244" y="201.236343"/>
+            <point x="877.822449" y="107.703156"/>
+            <point x="776.204468" y="124.303719"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="VORGALTEM_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="0">
-        <points bottom="206.67" top="606.67">
-            <point x="840.02" y="1274.34"/>
-            <point x="773.27313" y="1324.0967"/>
-            <point x="794.4803" y="1405.9221"/>
-            <point x="894.20825" y="1420.8154"/>
-            <point x="938.9301" y="1322.1011"/>
-            <point x="870.2501" y="1287.9763"/>
+    <zone mapid="600010000" name="VORGALTEM_PASS_600010000" area_type="POLYGON" zone_type="SUB" priority="15" flags="52">
+        <points bottom="206.669998" top="606.669983">
+            <point x="840.02002" y="1274.339966"/>
+            <point x="773.273132" y="1324.09668"/>
+            <point x="794.480286" y="1405.922119"/>
+            <point x="894.208252" y="1420.81543"/>
+            <point x="938.930115" y="1322.101074"/>
+            <point x="870.250122" y="1287.976318"/>
         </points>
     </zone>
-    <zone mapid="600010000" name="WESTERN_CORRIDOR_600010000" area_type="POLYGON" zone_type="SUB" priority="16"
-          flags="0">
-        <points bottom="206.87003" top="606.87006">
-            <point x="313.33557" y="360.76614"/>
-            <point x="424.02747" y="360.76614"/>
+    <zone mapid="600010000" name="WESTERN_CORRIDOR_600010000" area_type="POLYGON" zone_type="SUB" priority="16" flags="52">
+        <points bottom="206.870026" top="606.869995">
+            <point x="313.335571" y="360.766144"/>
+            <point x="424.027466" y="360.766144"/>
             <point x="430.66507" y="479.41394"/>
-            <point x="603.68744" y="488.22208"/>
-            <point x="625.723" y="526.2456"/>
-            <point x="677.3747" y="530.8225"/>
-            <point x="677.897" y="667.57526"/>
-            <point x="562.39233" y="667.57526"/>
-            <point x="531.84674" y="588.5803"/>
-            <point x="382.5727" y="629.08527"/>
-            <point x="329.66324" y="587.2392"/>
+            <point x="603.687439" y="488.222076"/>
+            <point x="625.723022" y="526.245605"/>
+            <point x="677.374695" y="530.82251"/>
+            <point x="677.896973" y="667.575256"/>
+            <point x="562.392334" y="667.575256"/>
+            <point x="531.846741" y="588.580322"/>
+            <point x="382.572693" y="629.085266"/>
+            <point x="329.663239" y="587.239197"/>
         </points>
     </zone>
 </zones>
