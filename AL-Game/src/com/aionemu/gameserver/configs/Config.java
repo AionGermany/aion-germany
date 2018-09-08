@@ -28,7 +28,6 @@ import com.aionemu.commons.utils.PropertiesUtils;
 import com.aionemu.gameserver.configs.administration.AdminConfig;
 import com.aionemu.gameserver.configs.administration.DeveloperConfig;
 import com.aionemu.gameserver.configs.main.AIConfig;
-import com.aionemu.gameserver.configs.main.AbyssBossesConfig;
 import com.aionemu.gameserver.configs.main.AutoGroupConfig;
 import com.aionemu.gameserver.configs.main.BaseConfig;
 import com.aionemu.gameserver.configs.main.CacheConfig;
@@ -191,9 +190,6 @@ public class Config {
 
 			ConfigurableProcessor.process(MembershipConfig.class, mainProps);
 			log.info("[Config] Loading: " + main + "/membership.properties");
-
-			ConfigurableProcessor.process(AbyssBossesConfig.class, mainProps);
-			log.info("[Config] Loading: " + main + "/abyssbosses.properties");
 
 			ConfigurableProcessor.process(NameConfig.class, mainProps);
 			log.info("[Config] Loading: " + main + "/name.properties");
@@ -365,9 +361,6 @@ public class Config {
 
 			ConfigurableProcessor.process(MembershipConfig.class, mainProps);
 			log.info("[Config] Reload: " + main + "/membership.properties");
-
-			ConfigurableProcessor.process(AbyssBossesConfig.class, mainProps);
-			log.info("[Config] Reload: " + main + "/abyssbosses.properties");
 
 			ConfigurableProcessor.process(NameConfig.class, mainProps);
 			log.info("[Config] Reload: " + main + "/name.properties");

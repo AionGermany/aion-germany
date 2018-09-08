@@ -75,15 +75,12 @@ import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChallengeTaskService;
 import com.aionemu.gameserver.services.DatabaseCleaningService;
 import com.aionemu.gameserver.services.DebugService;
-import com.aionemu.gameserver.services.DiflodoxService;
-import com.aionemu.gameserver.services.DiflonaxService;
 import com.aionemu.gameserver.services.DisputeLandService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FlyRingService;
 import com.aionemu.gameserver.services.GameTimeService;
 import com.aionemu.gameserver.services.HousingBidService;
 import com.aionemu.gameserver.services.LimitedItemTradeService;
-import com.aionemu.gameserver.services.MoltenusService;
 import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.services.PeriodicSaveService;
 import com.aionemu.gameserver.services.RestartService;
@@ -101,9 +98,6 @@ import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.abyss.AbyssRankUpdateService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
-import com.aionemu.gameserver.services.dynamic_world.AdmaPortalSpawnService;
-import com.aionemu.gameserver.services.dynamic_world.LaboratoryPortalSpawnService;
-import com.aionemu.gameserver.services.dynamic_world.TowerEntranceService;
 import com.aionemu.gameserver.services.events.AtreianPassportService;
 import com.aionemu.gameserver.services.events.BoostEventService;
 import com.aionemu.gameserver.services.events.EventService;
@@ -302,11 +296,7 @@ public class GameServer {
 			ShieldService.getInstance().spawnAll();
 		}
 		SiegeService.getInstance().initSieges();
-		MoltenusService.getInstance().initMoltenus();
-		DiflodoxService.getInstance().initDiflodox(); // 4.9
-		DiflonaxService.getInstance().initDiflonax(); // 4.9
 		DisputeLandService.getInstance().initDisputeLand();
-		TowerEntranceService.getInstance().startTowerEntrance();
 		Util.printSsSection("Bases");
 		if (BaseConfig.BASE_ENABLED) {
 			BaseService.getInstance().initBases();
@@ -321,8 +311,6 @@ public class GameServer {
 		PacketBroadcaster.getInstance();
 		PeriodicSaveService.getInstance();
 		TaskFromDBManager.getInstance();
-		LaboratoryPortalSpawnService.getInstance().startLaboratory();
-		AdmaPortalSpawnService.getInstance().startAdma();
 		Util.printSection(" ### Services ### ");
 		if (EventsConfig.ENABLE_BOOST_EVENTS) {
 			BoostEventService.getInstance().onStart();
