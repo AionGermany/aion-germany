@@ -62,15 +62,16 @@ public class SM_ABNORMAL_EFFECT extends AionServerPacket {
 					writeC(effect.getSkillLevel());
 					writeC(effect.getTargetSlot());
 					writeD(effect.getRemainingTime());
-					writeH(0);// unk 5.3
+					writeH(0);
 					break;
 				case 2:
 					writeD(effect.getEffectorId());
+					writeD(0); // TODO 6.x
 					writeH(effect.getSkillId());
 					writeC(effect.getSkillLevel());
 					writeC(effect.getTargetSlot());
 					writeD(effect.getRemainingTime());
-					writeH(0);// unk 5.3
+					writeH(0);
 					break;
 				default:
 					writeH(effect.getSkillId());

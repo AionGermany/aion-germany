@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+	<spawn_map map_id="600200000">
+		<base_spawn id="121"> <!--  -->
+			<simple_race race="ASMODIANS">
+                <!-- Taboa ||| Ab1_Village_Guard50_D -->
+                <spawn npc_id="805408" respawn_time="295">
+                    <spot x="1455.6504" y="1073.7363" z="2970.5303" h="93"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="ELYOS">
+                <!-- Kandea ||| Ab1_Village_Guard50_L -->
+                <spawn npc_id="805385" respawn_time="295">
+                    <spot x="1455.6504" y="1073.7363" z="2970.5303" h="93"/>
+                </spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- Balaur Assassin Officer / Ab1_v01Ctrl_Eresh_Fi_BossKiller_65_Ae1 -->
+				<spawn npc_id="883326" handler="ATTACKER">
+					<spot x="1455.6238" y="1087.8514" z="2970.53" h="88"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+	</spawn_map>
+</spawns>
