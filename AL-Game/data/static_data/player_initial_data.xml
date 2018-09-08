@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <player_initial_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="player_initial_data.xsd">
     <asmodian_spawn_location map_id="220010000" heading="80" x="595.3203" y="2465.4019" z="279.65676"/> <!-- 6.x -->
-    <elyos_spawn_location map_id="210010000" heading="45" x="872.58154" y="1158.3865" z="110.601425"/> <!-- 6.x -->
+    <elyos_spawn_location map_id="210010000" heading="45" x="873.781" y="1185.4426" z="110.3707"/> <!-- 6.x -->
     <player_data class="WARRIOR">
         <items>
             <item id="182400001" count="0"/><!-- Kinah 6.x -->
-            <item id="100050065" count="1"/><!-- Old Longsword 6.x -->
-            <item id="115050124" count="1"/><!-- Old Battle Shield 6.x -->
-            <item id="110650062" count="1"/><!-- Old Breastplate 6.x -->
-            <item id="113650062" count="1"/><!-- Old Plate Greaves 6.x -->
-            <item id="111650062" count="1"/><!-- Old Plate Gauntlets 6.x -->
-            <item id="114650062" count="1"/><!-- Old Sabatons 6.x -->
+            <item id="100050065" count="1" race="ASMODIANS"/><!-- Old Longsword 6.x -->
+            <item id="115050124" count="1" race="ASMODIANS"/><!-- Old Battle Shield 6.x -->
+            <item id="110650062" count="1" race="ASMODIANS"/><!-- Old Breastplate 6.x -->
+            <item id="113650062" count="1" race="ASMODIANS"/><!-- Old Plate Greaves 6.x -->
+            <item id="111650062" count="1" race="ASMODIANS"/><!-- Old Plate Gauntlets 6.x -->
+            <item id="114650062" count="1" race="ASMODIANS"/><!-- Old Sabatons 6.x -->
             <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
             <item id="169300002" count="20"/><!-- Bandage 6.x -->
             <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
@@ -20,11 +20,11 @@
     <player_data class="MAGE">
         <items>
             <item id="182400001" count="0"/><!-- Kinah 6.x -->
-            <item id="100650065" count="1"/><!-- Old Spellbook 6.x -->
-            <item id="110150062" count="1"/><!-- Old Tunic 6.x -->
-            <item id="113150062" count="1"/><!-- Old Cloth Breeches 6.x -->
-            <item id="111150062" count="1"/><!-- Old Cloth Gloves 6.x -->
-            <item id="114150062" count="1"/><!-- Old Cloth Shoes 6.x -->
+            <item id="100650065" count="1" race="ASMODIANS"/><!-- Old Spellbook 6.x -->
+            <item id="110150062" count="1" race="ASMODIANS"/><!-- Old Tunic 6.x -->
+            <item id="113150062" count="1" race="ASMODIANS"/><!-- Old Cloth Breeches 6.x -->
+            <item id="111150062" count="1" race="ASMODIANS"/><!-- Old Cloth Gloves 6.x -->
+            <item id="114150062" count="1" race="ASMODIANS"/><!-- Old Cloth Shoes 6.x -->
             <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
             <item id="169300002" count="20"/><!-- Bandage 6.x -->
             <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
@@ -34,11 +34,16 @@
     <player_data class="PRIEST">
         <items>
             <item id="182400001" count="0"/><!-- Kinah 6.x -->
-            <item id="100150065" count="1"/><!-- Old Mace 6.x -->
-            <item id="110550124" count="1"/><!-- Old Chain Cuirass 6.x -->
-            <item id="113550124" count="1"/><!-- Old Chausses 6.x -->
-            <item id="111550124" count="1"/><!-- Old Chain Gauntlets 6.x -->
-            <item id="114550124" count="1"/><!-- Old Brogans 6.x -->
+            <item id="100150065" count="1" race="ASMODIANS"/><!-- Old Mace 6.x -->
+            <item id="110550124" count="1" race="ASMODIANS"/><!-- Old Chain Cuirass 6.x -->
+            <item id="113550124" count="1" race="ASMODIANS"/><!-- Old Chausses 6.x -->
+            <item id="111550124" count="1" race="ASMODIANS"/><!-- Old Chain Gauntlets 6.x -->
+            <item id="114550124" count="1" race="ASMODIANS"/><!-- Old Brogans 6.x -->
+            <item id="100150064" count="1" race="ELYOS"/><!-- Old Mace 6.x -->
+            <item id="110550122" count="1" race="ELYOS"/><!-- Old Chain Cuirass 6.x -->
+            <item id="113550122" count="1" race="ELYOS"/><!-- Old Chausses 6.x -->
+            <item id="111550122" count="1" race="ELYOS"/><!-- Old Chain Gauntlets 6.x -->
+            <item id="114550122" count="1" race="ELYOS"/><!-- Old Brogans 6.x -->
             <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
             <item id="169300002" count="20"/><!-- Bandage 6.x -->
             <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
@@ -48,11 +53,11 @@
     <player_data class="SCOUT">
         <items>
             <item id="182400001" count="0"/><!-- Kinah 6.x -->
-            <item id="100250065" count="1"/><!-- Old Dagger 6.x -->
-            <item id="110350124" count="1"/><!-- Old Leather Doublet 6.x  -->
-            <item id="113350124" count="1"/><!-- Old Leather Legwear 6.x -->
-            <item id="111350124" count="1"/><!-- Old Vambraces 6.x -->
-            <item id="114350124" count="1"/><!-- Old Leather Shoes 6.x -->
+            <item id="100250065" count="1" race="ASMODIANS"/><!-- Old Dagger 6.x -->
+            <item id="110350124" count="1" race="ASMODIANS"/><!-- Old Leather Doublet 6.x  -->
+            <item id="113350124" count="1" race="ASMODIANS"/><!-- Old Leather Legwear 6.x -->
+            <item id="111350124" count="1" race="ASMODIANS"/><!-- Old Vambraces 6.x -->
+            <item id="114350124" count="1" race="ASMODIANS"/><!-- Old Leather Shoes 6.x -->
             <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
             <item id="169300002" count="20"/><!-- Bandage 6.x -->
             <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
@@ -62,11 +67,11 @@
     <player_data class="ENGINEER">
         <items>
             <item id="182400001" count="0"/><!-- Kinah 6.x -->
-            <item id="101850065" count="1"/><!-- Old Aether Revolver 6.x -->            
-            <item id="110350125" count="1"/><!-- Old Jerkin 6.x -->
-            <item id="113350125" count="1"/><!-- Old Breeches 6.x -->
-            <item id="111350125" count="1"/><!-- Old Leather Gauntlets 6.x -->
-            <item id="114350125" count="1"/><!-- Old Leather Footwear 6.x -->
+            <item id="101850065" count="1" race="ASMODIANS"/><!-- Old Aether Revolver 6.x -->            
+            <item id="110350125" count="1" race="ASMODIANS"/><!-- Old Jerkin 6.x -->
+            <item id="113350125" count="1" race="ASMODIANS"/><!-- Old Breeches 6.x -->
+            <item id="111350125" count="1" race="ASMODIANS"/><!-- Old Leather Gauntlets 6.x -->
+            <item id="114350125" count="1" race="ASMODIANS"/><!-- Old Leather Footwear 6.x -->
             <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
             <item id="169300002" count="20"/><!-- Bandage 6.x -->
             <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
@@ -76,11 +81,11 @@
     <player_data class="ARTIST">
         <items>
             <item id="182400001" count="0"/><!-- Kinah 6.x -->
-            <item id="102050065" count="1"/><!-- Old Stringed Instrument 6.x -->            
-            <item id="110150062" count="1"/><!-- Old Tunic 6.x -->
-            <item id="113150062" count="1"/><!-- Old Cloth Breeches 6.x -->
-            <item id="111150062" count="1"/><!-- Old Cloth Gloves 6.x -->
-            <item id="114150062" count="1"/><!-- Old Cloth Shoes 6.x -->
+            <item id="102050065" count="1" race="ASMODIANS"/><!-- Old Stringed Instrument 6.x -->            
+            <item id="110150062" count="1" race="ASMODIANS"/><!-- Old Tunic 6.x -->
+            <item id="113150062" count="1" race="ASMODIANS"/><!-- Old Cloth Breeches 6.x -->
+            <item id="111150062" count="1" race="ASMODIANS"/><!-- Old Cloth Gloves 6.x -->
+            <item id="114150062" count="1" race="ASMODIANS"/><!-- Old Cloth Shoes 6.x -->
             <item id="160020008" count="10"/><!-- Malodor Juice 6.x -->
             <item id="169300002" count="20"/><!-- Bandage 6.x -->
             <item id="162005039" count="50"/><!-- Apprentices Recovery Potion 6.x -->
