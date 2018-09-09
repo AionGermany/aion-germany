@@ -349,15 +349,14 @@ public class PlayerService {
 			List<ItemType> items = playerCreationData.getItems();
 			for (ItemType itemType : items) {
 				// check item is not PC_ALL and must equal to playerRace
-				if ((itemType.getRace() != Race.PC_ALL) && (itemType.getRace() != playerCommonData.getRace()))
+				if (itemType.getRace() != Race.PC_ALL && itemType.getRace() != newPlayer.getRace()){
 					continue;
-
+				}
 				int itemId = itemType.getTemplate().getTemplateId();
 				Item item = ItemFactory.newItem(itemId, itemType.getCount());
 				if (item == null) {
 					continue;
 				}
-
 				// When creating new player - all equipment that has slot values will be equipped
 				// Make sure you will not put into xml file more items than possible to equip.
 				ItemTemplate itemTemplate = item.getItemTemplate();

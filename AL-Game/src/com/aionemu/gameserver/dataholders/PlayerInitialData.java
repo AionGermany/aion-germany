@@ -45,14 +45,12 @@ import gnu.trove.map.hash.THashMap;
 public class PlayerInitialData {
 
 	@XmlElement(name = "player_data")
-	private List<PlayerCreationData> dataList = new ArrayList<>();
-
+	private List<PlayerCreationData> dataList = new ArrayList<PlayerCreationData>();
 	@XmlElement(name = "elyos_spawn_location", required = true)
 	private LocationData elyosSpawnLocation;
 	@XmlElement(name = "asmodian_spawn_location", required = true)
 	private LocationData asmodianSpawnLocation;
-
-	private THashMap<PlayerClass, PlayerCreationData> data = new THashMap<>();
+	private THashMap<PlayerClass, PlayerCreationData> data = new THashMap<PlayerClass, PlayerCreationData>();
 
 	void afterUnmarshal(Unmarshaller u, Object parent) {
 		for (PlayerCreationData pt : dataList) {
@@ -92,6 +90,8 @@ public class PlayerInitialData {
 		@XmlElement(name = "items")
 		private ItemsType itemsType;
 
+		// @XmlElement(name="shortcuts")
+		// private ShortcutType shortcutData;
 		PlayerClass getRequiredPlayerClass() {
 			return requiredPlayerClass;
 		}
@@ -103,7 +103,7 @@ public class PlayerInitialData {
 		static class ItemsType {
 
 			@XmlElement(name = "item")
-			public List<ItemType> items = new ArrayList<>();
+			public List<ItemType> items = new ArrayList<ItemType>();
 		}
 
 		public static class ItemType {
@@ -111,12 +111,10 @@ public class PlayerInitialData {
 			@XmlAttribute(name = "id")
 			@XmlIDREF
 			public ItemTemplate template;
-
 			@XmlAttribute(name = "count")
 			public int count;
-
-            @XmlAttribute(name = "race")
-            public Race race = Race.PC_ALL;
+			@XmlAttribute(name = "race")
+			public Race race;
 
 			public ItemTemplate getTemplate() {
 				return template;
@@ -125,10 +123,10 @@ public class PlayerInitialData {
 			public int getCount() {
 				return count;
 			}
-
-            public Race getRace() {
-                return race;
-            }
+			
+			public Race getRace() {
+				return race;
+			}
 
 			@Override
 			public String toString() {
@@ -136,10 +134,15 @@ public class PlayerInitialData {
 				sb.append("ItemType");
 				sb.append("{template=").append(template);
 				sb.append(", count=").append(count);
+				sb.append(", race=").append(race);
 				sb.append('}');
 				return sb.toString();
 			}
 		}
+		// public static class ShortcutType
+		// {
+		// public List<Shortcut> shortcuts;
+		// }
 	}
 
 	/**
