@@ -304,8 +304,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_MAGIC_MORPH_WINDOW.class, 0x15D, idSet); // 5.6 TODO
 		addPacketOpcode(SM_MAGIC_MORPH_RESULT.class, 0x14E, idSet); // 5.6 TODO
 		// ----------------------MONSTERBOOK-------------------------//
-		addPacketOpcode(SM_MONSTERBOOK_LIST.class, 0x15B, idSet); // 5.6 TODO
-		addPacketOpcode(SM_MONSTERBOOK.class, 0x15C, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_135.class, 0x136, idSet); // TODO After SM_Monsterbook
 		// -------------------EQUIPMENT SETTING----------------------//
 		addPacketOpcode(SM_EQUIPMENT_SETTING.class, 0x165, idSet); // 5.6 TODO

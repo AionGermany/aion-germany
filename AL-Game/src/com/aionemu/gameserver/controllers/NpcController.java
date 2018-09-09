@@ -64,7 +64,6 @@ import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.drop.DropService;
-import com.aionemu.gameserver.services.player.MonsterbookService;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -336,9 +335,6 @@ public class NpcController extends CreatureController<Npc> {
 							player.getCommonData().addGrowthEnergy(1060000 * 8);
 							PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
 						}
-					}
-					if (player.getLevel() >= 66) {
-						MonsterbookService.getInstance().onKill(player, getOwner().getNpcId());
 					}
 				}
 			}

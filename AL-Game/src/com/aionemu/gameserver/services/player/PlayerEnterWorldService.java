@@ -457,9 +457,6 @@ public final class PlayerEnterWorldService {
 			// SM_MOTION
 			client.sendPacket(new SM_MOTION(player.getMotions().getMotions().values()));
 
-			// MONSTERBOOK
-			MonsterbookService.getInstance().onLogin(player);
-
 			// SM_ENTER_WORLD_CHECK
 			client.sendPacket(new SM_ENTER_WORLD_CHECK());
 
@@ -937,7 +934,6 @@ public final class PlayerEnterWorldService {
 
 			// EnchantService.getGloryShield(player);
 			LunaShopService.getInstance().onLogin(player);
-			MonsterbookService.getInstance().onLogin(player);
 		}
 		else
 			log.info("[DEBUG] enter world" + objectId + ", Player: " + player);

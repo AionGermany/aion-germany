@@ -103,7 +103,6 @@
 	<xs:include schemaLocation="abyss_bonusattr/abyss_bonusattr.xsd"/>
 	<xs:include schemaLocation="abyss_bonusattr/abyss_groupattr.xsd"/>
 	<xs:include schemaLocation="luna/luna_consume_rewards.xsd"/>
-	<xs:include schemaLocation="monster_book/monster_books.xsd"/>
 	<xs:include schemaLocation="events_config/boost_events.xsd"/>
 	<xs:include schemaLocation="skill_skins/skill_skins.xsd"/>
 	<xs:include schemaLocation="events_window/events_window.xsd"/>
@@ -216,7 +215,6 @@
 				<xs:element ref="abyss_bonusattrs" minOccurs="0"/>
 				<xs:element ref="abyss_groupattrs" minOccurs="0"/>
 				<xs:element ref="luna_consume_rewards" minOccurs="0"/>
-				<xs:element ref="monster_books" minOccurs="0"/>
 				<xs:element ref="boost_events" minOccurs="0"/>
 				<xs:element ref="skill_skins" minOccurs="0"/>
 				<xs:element ref="events_window" minOccurs="0"/>

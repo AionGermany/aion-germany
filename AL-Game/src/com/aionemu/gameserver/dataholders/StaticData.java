@@ -239,8 +239,6 @@ public class StaticData {
 	public LunaConsumeRewardsData lunaConsumeRewardsData;
 	@XmlElement(name = "minions")
 	public MinionData minionData;
-    @XmlElement(name = "monster_books")
-    public MonsterbookData monsterbookData;
 	@XmlElement(name = "boost_events")
 	public BoostEventData boostEvents;
 	@XmlElement(name="skill_skins")
@@ -358,7 +356,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + abyssOpData.size() + " Abyss Landing entries");
 		DataManager.log.info("[DataManager] Loaded " + lunaConsumeRewardsData.size() + " Luna Consume entries");
 		DataManager.log.info("[DataManager] Loaded " + minionData.size() + " Minion templates");
-		DataManager.log.info("[DataManager] Loaded " + monsterbookData.size() + " Monsterbook templates");
 		DataManager.log.info("[DataManager] Loaded " + boostEvents.size() + " Boost Event templates");
 		DataManager.log.info("[DataManager] Loaded " + itemCustomSetData.size() + " Item Custom Set templates");
 		DataManager.log.info("[DataManager] Loaded " + skillSkinData.size() + " Skill Animation entries");

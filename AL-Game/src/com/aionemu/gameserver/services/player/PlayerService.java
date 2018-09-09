@@ -55,7 +55,6 @@ import com.aionemu.gameserver.dao.PlayerEventsWindowDAO;
 import com.aionemu.gameserver.dao.PlayerGameStatsDAO;
 import com.aionemu.gameserver.dao.PlayerLifeStatsDAO;
 import com.aionemu.gameserver.dao.PlayerMacrossesDAO;
-import com.aionemu.gameserver.dao.PlayerMonsterbookDAO;
 import com.aionemu.gameserver.dao.PlayerNpcFactionsDAO;
 import com.aionemu.gameserver.dao.PlayerPunishmentsDAO;
 import com.aionemu.gameserver.dao.PlayerQuestListDAO;
@@ -208,7 +207,6 @@ public class PlayerService {
 		player.setTitleList(DAOManager.getDAO(PlayerTitleListDAO.class).loadTitleList(playerObjId));
 		player.setCP(DAOManager.getDAO(PlayerCreativityPointsDAO.class).loadCP(player));
 		player.setEventWindow(DAOManager.getDAO(PlayerEventsWindowDAO.class).load(player));
-		player.setMonsterbook(DAOManager.getDAO(PlayerMonsterbookDAO.class).load(player));
 		player.setWardrobe(DAOManager.getDAO(PlayerWardrobeDAO.class).load(player));
 		DAOManager.getDAO(Free2PlayDAO.class).loadF2pInfo(player, account.getId());
 		DAOManager.getDAO(PlayerSettingsDAO.class).loadSettings(player);

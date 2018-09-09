@@ -136,7 +136,6 @@ public final class DataManager {
 	public static AbyssOpData ABYSS_OP_DATA;
 	public static LunaConsumeRewardsData LUNA_CONSUME_REWARDS_DATA;
 	public static MinionData MINION_DATA;
-	public static MonsterbookData MONSTERBOOK_DATA;
 	public static BoostEventData BOOST_EVENT_DATA;
 	public static ItemCustomSetData ITEM_CUSTOM_SET_DATA;
 	public static SkillSkinData SKILL_SKIN_DATA;
@@ -264,7 +263,6 @@ public final class DataManager {
 		ABYSS_OP_DATA = data.abyssOpData;
 		LUNA_CONSUME_REWARDS_DATA = data.lunaConsumeRewardsData;
 		MINION_DATA = data.minionData;
-		MONSTERBOOK_DATA = data.monsterbookData;
 		BOOST_EVENT_DATA = data.boostEvents;
 		ITEM_CUSTOM_SET_DATA = data.itemCustomSetData;
 		SKILL_SKIN_DATA = data.skillSkinData;

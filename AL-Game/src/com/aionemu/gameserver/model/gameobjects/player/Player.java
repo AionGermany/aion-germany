@@ -81,7 +81,6 @@ import com.aionemu.gameserver.model.items.storage.IStorage;
 import com.aionemu.gameserver.model.items.storage.LegionStorageProxy;
 import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.model.items.storage.StorageType;
-import com.aionemu.gameserver.model.monsterbook.PlayerMonsterbookList;
 import com.aionemu.gameserver.model.skill.PlayerSkillList;
 import com.aionemu.gameserver.model.skinskill.SkillSkinList;
 import com.aionemu.gameserver.model.stats.container.PlayerGameStats;
@@ -319,7 +318,6 @@ public class Player extends Creature {
 	private PlayerWardrobeList wardrobe;
 	private PlayerLunaShop lunaShop;
 	private PlayerSweep shugoSweep;
-	private PlayerMonsterbookList monsterbook;
 	private boolean setMinionSpawned;
 	private EquipmentSettingList equipmentSettingList;
 
@@ -3113,17 +3111,6 @@ public class Player extends Creature {
 	public int getWardrobeSlot() {
 		return this.playerCommonData.getWardrobeSlot();
 	}
-
-	/**
-	 * Monsterbook
-	 */
-    public PlayerMonsterbookList getMonsterbook() {
-        return this.monsterbook;
-    }
-    
-    public void setMonsterbook(final PlayerMonsterbookList monsterbook) {
-        this.monsterbook = monsterbook;
-    }
 
 	/**
 	 * Tower of Challenge

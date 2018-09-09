@@ -112,7 +112,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_FRIEND_DEL(0x13C, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_FRIEND_STATUS(0x176, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_FRIEND_EDIT(0x1CB, State.IN_GAME)); // 5.4 EU (NEW) (Notiz Friendlist)
-		//addPacket(new CM_SET_NOTE(0x2F1, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_SET_NOTE(0x105, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_MARK_FRIENDLIST(0x14A, State.IN_GAME)); // 5.4
 		addPacket(new CM_SHOW_BLOCKLIST(0x17A, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_BLOCK_ADD(0x162, State.IN_GAME)); // 5.4 EU TODO
@@ -145,13 +145,13 @@ public class AionPacketHandlerFactory {
 
 		// ******************(BROKER)******************
 		addPacket(new CM_BROKER_LIST(0x147, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_BROKER_SEARCH(0x144, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_BROKER_SEARCH(0x158, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_REGISTER_BROKER_ITEM(0x15B, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BROKER_ADD_ITEM(0x13D, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BROKER_SETTLE_LIST(0x159, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BROKER_REGISTERED(0x145, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BUY_BROKER_ITEM(0x15A, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_BROKER_CANCEL_REGISTERED(0x158, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_BROKER_CANCEL_REGISTERED(0x14C, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_BROKER_SETTLE_ACCOUNT(0x14E, State.IN_GAME)); // 5.4 EU
 
 		// ******************(PING)******************
@@ -271,7 +271,6 @@ public class AionPacketHandlerFactory {
 
 		// // /////////////////// NEW 5.0 //////////////////////
 		addPacket(new CM_LUNA_SYSTEM(0x1C3, State.IN_GAME)); // 5.6
-		addPacket(new CM_MONSTER_BOOK_REWARD(0x1DC, State.IN_GAME)); // 5.6
 
 		// // ////////////// MAGIC MORPH + CRAFT /////////////////
 		addPacket(new CM_MAGIC_MORPH_WINDOW(0x1DE, State.IN_GAME)); // 5.6 TODO
@@ -295,7 +294,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MY_DOCUMENTATION(0x1E9, State.IN_GAME)); // 5.6 TODO CM_MY_DOCUMENTATION
 
 		// // /////////////////////////////////////////////////
-		addPacket(new CM_SECURITY_TOKEN(0x1AD, State.IN_GAME)); // 5.4 EU
+		// addPacket(new CM_SECURITY_TOKEN(0x1AD, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_ENCHANTMENT_EXTRACTION(0x1CC, State.IN_GAME)); // 5.4
 		addPacket(new CM_CREATIVITY_POINTS(0x122, State.IN_GAME)); // 5.4
 		addPacket(new CM_USE_PACK_ITEM(0x1C8, State.IN_GAME)); // 5.4 EU
