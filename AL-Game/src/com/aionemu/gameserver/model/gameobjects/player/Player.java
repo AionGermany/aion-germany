@@ -1154,8 +1154,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param start
-	 *            : The time in ms of start prison
+	 * @param start The time in ms of start prison
 	 */
 	public void setStartPrison(long start) {
 		this.startPrison = start;
@@ -2123,7 +2122,7 @@ public class Player extends Creature {
 	}
 
 	/**
-	 * @param stoneItemId
+	 * @param stoneId
 	 * @return stoneItem or null
 	 */
 	private Item getReviveStone(int stoneId) {

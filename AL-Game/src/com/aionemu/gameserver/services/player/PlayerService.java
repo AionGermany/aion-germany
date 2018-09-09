@@ -72,6 +72,7 @@ import com.aionemu.gameserver.dataholders.PlayerInitialData;
 import com.aionemu.gameserver.dataholders.PlayerInitialData.LocationData;
 import com.aionemu.gameserver.dataholders.PlayerInitialData.PlayerCreationData;
 import com.aionemu.gameserver.dataholders.PlayerInitialData.PlayerCreationData.ItemType;
+import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.Item;
@@ -343,9 +344,14 @@ public class PlayerService {
 		newPlayer.setStorage(accountWarehouse, StorageType.ACCOUNT_WAREHOUSE);
 
 		Equipment equipment = new Equipment(newPlayer);
+
 		if (playerCreationData != null) { // player transfer
 			List<ItemType> items = playerCreationData.getItems();
 			for (ItemType itemType : items) {
+				// check item is not PC_ALL and must equal to playerRace
+				if ((itemType.getRace() != Race.PC_ALL) && (itemType.getRace() != playerCommonData.getRace()))
+					continue;
+
 				int itemId = itemType.getTemplate().getTemplateId();
 				Item item = ItemFactory.newItem(itemId, itemType.getCount());
 				if (item == null) {
@@ -361,8 +367,7 @@ public class PlayerService {
 					ItemSlot itemSlot = ItemSlot.getSlotFor(itemTemplate.getItemSlot());
 					item.setEquipmentSlot(itemSlot.getSlotIdMask());
 					equipment.onLoadHandler(item);
-				}
-				else {
+				} else {
 					playerInventory.onLoadHandler(item);
 				}
 			}
@@ -394,8 +399,7 @@ public class PlayerService {
 	/**
 	 * Cancel Player deletion process if its possible.
 	 *
-	 * @param accData
-	 *            PlayerAccountData
+	 * @param accData PlayerAccountData
 	 * @return True if deletion was successful canceled.
 	 */
 	public static boolean cancelPlayerDeletion(PlayerAccountData accData) {
