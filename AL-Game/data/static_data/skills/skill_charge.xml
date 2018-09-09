@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 15:06 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-09-08 16:11 -->
 <skill_charge>
     <charge id="1" min_time="400">
         <skill id="3751" time="1600"/>
@@ -40,18 +40,6 @@
         <skill id="3772" time="1600"/>
         <skill id="3773" time="1600"/>
         <skill id="3774" time="5000"/>
-    </charge>
-    <charge id="9" min_time="400">
-        <skill id="727" time="1900"/>
-        <skill id="728" time="7000"/>
-    </charge>
-    <charge id="10" min_time="400">
-        <skill id="729" time="1900"/>
-        <skill id="730" time="7000"/>
-    </charge>
-    <charge id="11" min_time="400">
-        <skill id="731" time="1900"/>
-        <skill id="732" time="7000"/>
     </charge>
     <charge id="12" min_time="400">
         <skill id="4300" time="1500"/>
@@ -193,22 +181,7 @@
         <skill id="4562" time="1500"/>
         <skill id="4563" time="7000"/>
     </charge>
-    <charge id="40" min_time="400">
-        <skill id="3968" time="1900"/>
-        <skill id="3969" time="1000"/>
-        <skill id="3970" time="7000"/>
-    </charge>
-    <charge id="41" min_time="900">
-        <skill id="3971" time="1900"/>
-        <skill id="3972" time="1000"/>
-        <skill id="3973" time="7000"/>
-    </charge>
-    <charge id="42" min_time="900">
-        <skill id="3974" time="1900"/>
-        <skill id="3975" time="1000"/>
-        <skill id="3976" time="7000"/>
-    </charge>
-    <charge id="43" min_time="900">
+    <charge id="43" min_time="400">
         <skill id="3977" time="1900"/>
         <skill id="3978" time="1000"/>
         <skill id="3979" time="7000"/>
@@ -773,48 +746,11 @@
         <skill id="21452" time="1500"/>
         <skill id="21453" time="3000"/>
     </charge>
-    <charge id="156" min_time="400">
-        <skill id="4615" time="1200"/>
-        <skill id="4616" time="7000"/>
-    </charge>
-    <charge id="157" min_time="400">
-        <skill id="4617" time="1200"/>
-        <skill id="4618" time="7000"/>
-    </charge>
-    <charge id="158" min_time="400">
-        <skill id="4619" time="1200"/>
-        <skill id="4620" time="7000"/>
-    </charge>
-    <charge id="159" min_time="400">
-        <skill id="4621" time="1200"/>
-        <skill id="4622" time="7000"/>
-    </charge>
-    <charge id="160" min_time="400">
-        <skill id="4623" time="1200"/>
-        <skill id="4624" time="7000"/>
-    </charge>
-    <charge id="161" min_time="400">
-        <skill id="4625" time="1200"/>
-        <skill id="4626" time="7000"/>
-    </charge>
-    <charge id="162" min_time="400">
-        <skill id="4627" time="1200"/>
-        <skill id="4628" time="7000"/>
-    </charge>
-    <charge id="163" min_time="400">
-        <skill id="4629" time="1200"/>
-        <skill id="4630" time="7000"/>
-    </charge>
     <charge id="164" min_time="400">
         <skill id="4666" time="1400"/>
         <skill id="4667" time="5000"/>
     </charge>
-    <charge id="165" min_time="400">
-        <skill id="4689" time="1900"/>
-        <skill id="4690" time="1000"/>
-        <skill id="4691" time="7000"/>
-    </charge>
-    <charge id="166" min_time="900">
+    <charge id="166" min_time="400">
         <skill id="4764" time="1000"/>
         <skill id="4765" time="5000"/>
     </charge>
@@ -831,5 +767,29 @@
     <charge id="169" min_time="400">
         <skill id="4820" time="1000"/>
         <skill id="4821" time="5000"/>
+    </charge>
+    <charge id="170" min_time="400">
+        <skill id="5135" time="1100"/>
+        <skill id="5136" time="1700"/>
+        <skill id="5137" time="5000"/>
+    </charge>
+    <charge id="171" min_time="400">
+        <skill id="5138" time="1100"/>
+        <skill id="5139" time="1700"/>
+        <skill id="5140" time="5000"/>
+    </charge>
+    <charge id="172" min_time="400">
+        <skill id="5145" time="1500"/>
+        <skill id="5146" time="5000"/>
+    </charge>
+    <charge id="173" min_time="400">
+        <skill id="5148" time="1500"/>
+        <skill id="5149" time="1500"/>
+        <skill id="5150" time="7000"/>
+    </charge>
+	<charge id="174" min_time="400"> <!-- fix for parser problem (<skillcharge value=""/>) -->
+        <skill id="5148" time="1900"/>
+        <skill id="5149" time="1000"/>
+        <skill id="5150" time="5000"/>
     </charge>
 </skill_charge>

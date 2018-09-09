@@ -72,7 +72,9 @@
     <import file="instance_cooltimes/instance_cooltimes.xml"/>
     <import file="item_sets/item_sets.xml"/>
     <import file="items/item_restriction_cleanups.xml"/>
-    <import file="items/item_templates.xml"/>
+    <item_templates>
+        <import file="items/item" skipRoot="true"/>
+    </item_templates>
     <import file="items/item_custom_sets.xml"/>
     <import file="items/item_random_bonuses.xml"/>
     <import file="items/item_groups.xml"/>

@@ -20,7 +20,7 @@
                             <xs:complexType>
                                 <xs:attribute name="id" type="itemId" use="required"/>
                                 <xs:attribute name="count" type="xs:int" use="required"/>
-                                <xs:attribute name="race" type="Race" use="optional" default="PC_ALL"/>
+                                <xs:attribute name="race" type="Race" default="PC_ALL"/>
                             </xs:complexType>
                         </xs:element>
                     </xs:sequence>
