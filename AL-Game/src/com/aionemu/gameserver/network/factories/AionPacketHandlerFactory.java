@@ -72,7 +72,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MAC_ADDRESS(0x185, State.CONNECTED, State.AUTHED, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_CHARACTER_PASSKEY(0x19E, State.AUTHED)); // 6.x
 		addPacket(new CM_MOVE(0x10B, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_CASTSPELL(0xF8, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_CASTSPELL(0xEC, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_EMOTION(0x2F6, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_TITLE_SET(0x157, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_DELETE_ITEM(0x130, State.IN_GAME)); // 6.x EU
@@ -134,7 +134,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_STONESPEAR_SIEGE(0xE4, State.IN_GAME)); // 5.4 EU
 
 		// ******************(GROUP)******************* (BUGGY)
-		addPacket(new CM_FIND_GROUP(0x114, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_FIND_GROUP(0x128, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_AUTO_GROUP(0x180, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_INVITE_TO_GROUP(0x139, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_GROUP_DISTRIBUTION(0x134, State.IN_GAME)); // 5.4 EU
@@ -201,7 +201,7 @@ public class AionPacketHandlerFactory {
 		// ******************(OTHERS)******************
 		addPacket(new CM_OBJECT_SEARCH(0xD6, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_MOVE_IN_AIR(0x2FC, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_VIEW_PLAYER_DETAILS(0x12C, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_VIEW_PLAYER_DETAILS(0x120, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_TELEPORT_DONE(0xEA, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_CHARACTER_EDIT(0xC2, State.AUTHED)); // 5.3
 		addPacket(new CM_PLAYER_STATUS_INFO(0x138, State.IN_GAME)); // 5.4 EU (Mentor etc)
@@ -274,12 +274,12 @@ public class AionPacketHandlerFactory {
 
 		// // ////////////// MAGIC MORPH + CRAFT /////////////////
 		addPacket(new CM_MAGIC_MORPH_WINDOW(0x1DE, State.IN_GAME)); // 5.6 TODO
-		addPacket(new CM_MAGIC_CRAFT(0x1D4, State.IN_GAME)); // 5.6 TODO
+		addPacket(new CM_MAGIC_CRAFT(0x1E8, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_MAGIC_MORPH(0x1D7, State.IN_GAME)); // 5.6 TODO
 
 		// // /////////////// EQUIPMENT SETTING //////////////////
-		addPacket(new CM_EQUIPMENT_SETTING_SAVE(0x1D2, State.IN_GAME)); // 5.6 TODO
-		addPacket(new CM_EQUIPMENT_SETTING_USE(0x1D3, State.IN_GAME)); // 5.6 TODO
+		addPacket(new CM_EQUIPMENT_SETTING_SAVE(0x1D3, State.IN_GAME)); // 6.x TODO
+		addPacket(new CM_EQUIPMENT_SETTING_USE(0x1E4, State.IN_GAME)); // 6.x TODO
 
 		// // /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0x2F5, State.IN_GAME)); // 6.x EU
@@ -290,7 +290,7 @@ public class AionPacketHandlerFactory {
 		// addPacket(new CM_UNK_1DB(0x1DB, State.IN_GAME)); // 5.0 TODO
 		addPacket(new CM_UNK_E3(0xE3, State.IN_GAME)); // 5.3
 		addPacket(new CM_UNK_1EA(0x1EA, State.IN_GAME)); // 5.3 EU
-		addPacket(new CM_UNK_1EB(0x1E8, State.IN_GAME)); // 5.3 TODO CM_RANK_LIST
+		// addPacket(new CM_UNK_1EB(0x1E8, State.IN_GAME)); // 5.3 TODO CM_RANK_LIST
 		addPacket(new CM_MY_DOCUMENTATION(0x1E9, State.IN_GAME)); // 5.6 TODO CM_MY_DOCUMENTATION
 
 		// // /////////////////////////////////////////////////
