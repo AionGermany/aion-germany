@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-02-07 20:09 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-09-10 15:48 -->
 <player_titles>
     <title id="1" nameId="2201801" desc="Poeta's Protector" race="ELYOS">
         <modifiers>
@@ -2561,6 +2561,263 @@
             <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
             <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
             <rate name="SPEED" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="370" nameId="3607843" desc="Special Forgotten Ruler" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="4" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="1" bonus="true"/>
+            <add name="MAGICAL_RESIST" value="12" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="371" nameId="3607845" desc="Special Forgotten Conqueror" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="4" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="1" bonus="true"/>
+            <add name="MAGICAL_RESIST" value="10" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="372" nameId="3607847" desc="Special Forgotten Hero" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="3" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="1" bonus="true"/>
+            <add name="MAGICAL_RESIST" value="8" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="373" nameId="3607865" desc="Lonely Tyrant" race="PC_ALL">
+        <modifiers>
+            <rate name="ATTACK_SPEED" value="-3" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="3" bonus="true"/>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <add name="MAXHP" value="200" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="374" nameId="3607869" desc="Lonely Tyrant" race="PC_ALL">
+        <modifiers>
+            <rate name="ATTACK_SPEED" value="-3" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="3" bonus="true"/>
+            <rate name="SPEED" value="3" bonus="true"/>
+            <add name="MAXHP" value="200" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="375" nameId="3607921" desc="Best Actor" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="376" nameId="3607923" desc="Best Actress" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="377" nameId="3607925" desc="Best Actor" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="3" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="378" nameId="3607927" desc="Best Actress" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="3" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="379" nameId="3610615" desc="Hamerun Subjugator" race="ELYOS">
+        <modifiers>
+            <add name="MAXHP" value="32" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="380" nameId="3610617" desc="Odium Sleuth" race="ELYOS">
+        <modifiers>
+            <add name="PHYSICAL_DEFENSE" value="13" bonus="true"/>
+            <add name="MAGICAL_RESIST" value="13" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="381" nameId="3610619" desc="Conqueror of Torment" race="ELYOS">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="19" bonus="true"/>
+            <add name="MAGICAL_ATTACK" value="19" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="382" nameId="3610621" desc="Lord's Army Commander" race="ELYOS">
+        <modifiers>
+            <add name="PVE_ATTACK_RATIO" value="15" bonus="true"/>
+            <add name="PVE_DEFEND_RATIO" value="16" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="383" nameId="3610623" desc="Hamerun Slayer" race="ASMODIANS">
+        <modifiers>
+            <add name="MAXHP" value="32" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="384" nameId="3610625" desc="Odella Sleuth" race="ASMODIANS">
+        <modifiers>
+            <add name="PHYSICAL_DEFENSE" value="13" bonus="true"/>
+            <add name="MAGICAL_RESIST" value="13" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="385" nameId="3610627" desc="Overcomer of Suffering" race="ASMODIANS">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="19" bonus="true"/>
+            <add name="MAGICAL_ATTACK" value="19" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="386" nameId="3610629" desc="Lord's Confidant" race="ASMODIANS">
+        <modifiers>
+            <add name="PVE_ATTACK_RATIO" value="15" bonus="true"/>
+            <add name="PVE_DEFEND_RATIO" value="16" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="387" nameId="3610647" desc="Conqueror of Lakrum Fortress" race="PC_ALL">
+        <modifiers>
+            <add name="PVE_ATTACK_RATIO" value="15" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="388" nameId="3610651" desc="1st place in the Arena of Discipline" race="PC_ALL">
+        <modifiers>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+            <add name="PVP_ATTACK_RATIO" value="15" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="389" nameId="3610655" desc="1st place in the Arena of Cooperation" race="PC_ALL">
+        <modifiers>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+            <add name="PVP_ATTACK_RATIO" value="15" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="390" nameId="3610659" desc="Life Protector" race="ELYOS">
+        <modifiers>
+            <add name="MAXHP" value="330" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="1" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="391" nameId="3610661" desc="Protector of Wisdom" race="ASMODIANS">
+        <modifiers>
+            <add name="MAXHP" value="330" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-1" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="1" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="392" nameId="3610753" desc="Quickest" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="393" nameId="3610755" desc="Exotic" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="4" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-3" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="3" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="394" nameId="3610757" desc="Dispute King" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-3" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="3" bonus="true"/>
+            <add name="MAXHP" value="500" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="395" nameId="3610765" desc="Border Trespasser" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-3" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="3" bonus="true"/>
+            <add name="PVP_DEFEND_RATIO" value="20" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="396" nameId="3610769" desc="Shura's Friend" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="3" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <add name="MAXHP" value="100" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="397" nameId="3610773" desc="A Hero's Power" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="4" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <add name="MAXHP" value="100" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="398" nameId="3610907" desc="Next Aion" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="5" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <add name="MAXHP" value="500" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="399" nameId="3610943" desc="Krall Whisperer" race="ELYOS">
+        <modifiers>
+            <add name="MAXHP" value="150" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="400" nameId="3610947" desc="Mau Whisperer" race="ASMODIANS">
+        <modifiers>
+            <add name="MAXHP" value="150" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="401" nameId="3610951" desc="Run Like The Wind" race="PC_ALL">
+        <modifiers>
+            <rate name="SPEED" value="3" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="402" nameId="3611053" desc="Minion Blessing" race="PC_ALL">
+        <modifiers>
+            <add name="PVE_ATTACK_RATIO" value="15" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="406" nameId="3606641" desc="Special Daeva" race="PC_ALL">
+        <modifiers>
+            <add name="MAXHP" value="3000" bonus="true"/>
+            <rate name="ATTACK_SPEED" value="-5" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="5" bonus="true"/>
+            <rate name="SPEED" value="5" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="407" nameId="3611093" desc="Luna's Light" race="PC_ALL">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="15" bonus="true"/>
+            <add name="MAGICAL_ATTACK" value="15" bonus="true"/>
+            <add name="PVE_ATTACK_RATIO" value="18" bonus="true"/>
+            <add name="PVP_ATTACK_RATIO" value="18" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="408" nameId="3611097" desc="Luna's Blessing" race="PC_ALL">
+        <modifiers>
+            <add name="PHYSICAL_DEFENSE" value="15" bonus="true"/>
+            <add name="MAGICAL_RESIST" value="15" bonus="true"/>
+            <add name="PVE_DEFEND_RATIO" value="18" bonus="true"/>
+            <add name="PVP_DEFEND_RATIO" value="18" bonus="true"/>
         </modifiers>
     </title>
 </player_titles>
