@@ -306,7 +306,7 @@ public class ServerPacketsOpcodes {
 		// ----------------------MONSTERBOOK-------------------------//
 		addPacketOpcode(SM_UNK_135.class, 0x136, idSet); // TODO After SM_Monsterbook
 		// -------------------EQUIPMENT SETTING----------------------//
-		addPacketOpcode(SM_EQUIPMENT_SETTING.class, 0x165, idSet); // 5.6 TODO
+		addPacketOpcode(SM_EQUIPMENT_SETTING.class, 0x167, idSet); // 6.x EU TODO
 		// -------------------BATTLEFIELD UNION----------------------//
 		//addPacketOpcode(SM_BATTLEFIELD_UNION_REGISTER.class, 0x154, idSet); // 5.6 TODO
 		addPacketOpcode(SM_BATTLEFIELD_UNION.class, 0x156, idSet); // 5.6 TODO

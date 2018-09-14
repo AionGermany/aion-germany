@@ -35,13 +35,17 @@ public class AetherogeneticsLabInstance extends GeneralInstanceHandler {
 	@Override
 	public boolean onDie(final Player player, Creature lastAttacker) {
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
-
-		PacketSendUtility.sendPacket(player, new SM_DIE(false, false, 0, 8));
+		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));
 		return true;
 	}
 
 	@Override
 	public void onPlayerLogOut(Player player) {
+		TeleportService2.moveToInstanceExit(player, mapId, player.getRace());
+	}
+
+	@Override
+	public void onExitInstance(Player player) {
 		TeleportService2.moveToInstanceExit(player, mapId, player.getRace());
 	}
 }

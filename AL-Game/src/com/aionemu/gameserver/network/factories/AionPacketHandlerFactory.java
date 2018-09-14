@@ -136,12 +136,12 @@ public class AionPacketHandlerFactory {
 		// ******************(GROUP)******************* (BUGGY)
 		addPacket(new CM_FIND_GROUP(0x128, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_AUTO_GROUP(0x180, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_INVITE_TO_GROUP(0x139, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_INVITE_TO_GROUP(0x12D, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_GROUP_DISTRIBUTION(0x134, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_GROUP_LOOT(0x170, State.IN_GAME)); // 5.6 EU
 		addPacket(new CM_GROUP_DATA_EXCHANGE(0x12A, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_DISTRIBUTION_SETTINGS(0x171, State.IN_GAME)); // 5.4 EU
-		//addPacket(new CM_SHOW_BRAND(0x17D, State.IN_GAME)); // 5.4 EU (Group Mark Target etc)
+		addPacket(new CM_DISTRIBUTION_SETTINGS(0x185, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_SHOW_BRAND(0x171, State.IN_GAME)); // 6.x EU (Group Mark Target etc)
 
 		// ******************(BROKER)******************
 		addPacket(new CM_BROKER_LIST(0x147, State.IN_GAME)); // 5.4 EU
@@ -178,7 +178,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EXCHANGE_ADD_ITEM(0x11B, State.IN_GAME)); // 5.4 EU
 		//addPacket(new CM_EXCHANGE_ADD_KINAH(0x119, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_EXCHANGE_LOCK(0x10E, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_EXCHANGE_CANCEL(0x10C, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_EXCHANGE_CANCEL(0x100, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_EXCHANGE_OK(0x10F, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_EXCHANGE_REQUEST(0x11A, State.IN_GAME)); // 5.4 EU
 
@@ -290,7 +290,7 @@ public class AionPacketHandlerFactory {
 		// addPacket(new CM_UNK_1DB(0x1DB, State.IN_GAME)); // 5.0 TODO
 		addPacket(new CM_UNK_E3(0xE3, State.IN_GAME)); // 5.3
 		addPacket(new CM_UNK_1EA(0x1EA, State.IN_GAME)); // 5.3 EU
-		// addPacket(new CM_UNK_1EB(0x1E8, State.IN_GAME)); // 5.3 TODO CM_RANK_LIST
+		// addPacket(new CM_CM_RANK_LIST(0x1DC, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_MY_DOCUMENTATION(0x1E9, State.IN_GAME)); // 5.6 TODO CM_MY_DOCUMENTATION
 
 		// // /////////////////////////////////////////////////
