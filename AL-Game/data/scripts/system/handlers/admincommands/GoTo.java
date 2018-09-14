@@ -430,9 +430,6 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("weapon_factory") || destination.equalsIgnoreCase("Mechanerks Weapons Factory")) {
 			goTo(player, 301640000, 400.3279f, 290.5061f, 198.64015f, (byte) 60);
 		}
-		else if (destination.equalsIgnoreCase("garden") || destination.equalsIgnoreCase("Garden of Knowledge")) {
-			goTo(player, 301550000, 1470.9073f, 766.46826f, 1035.2672f, (byte) 60);
-		}
 		else if (destination.equalsIgnoreCase("ashunatal") || destination.equalsIgnoreCase("Ashunatal Dredgion")) {
 			goTo(player, 301650000, 414, 193, 431);
 		}
