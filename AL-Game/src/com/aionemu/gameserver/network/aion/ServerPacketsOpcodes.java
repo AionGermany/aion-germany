@@ -203,7 +203,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_PLAYER_LEGION_JOIN_REQUEST_INFO.class, 0x137, idSet); // 5.6
 		addPacketOpcode(SM_LEGION_JOIN_REQUEST_LIST.class, 0x138, idSet); // 5.6
 		//addPacketOpcode(SM_LEGION_JOIN_REQUEST_FROM_PLAYER.class, 0x138, idSet);
-		addPacketOpcode(SM_LEGION_ANSWER_JOIN_REQUEST.class, 0x141, idSet);
+		addPacketOpcode(SM_LEGION_ANSWER_JOIN_REQUEST.class, 0x13A, idSet); // 6.x TODO
 		addPacketOpcode(SM_STONESPEAR_SIEGE.class, 0x130, idSet); // 5.6 TODO
 		//addPacketOpcode(SM_LEGION_JOIN_SETTING.class, 0x13E, idSet); // TODO
 		addPacketOpcode(SM_LEGION_SEARCH.class, 0x135, idSet); // 5.6

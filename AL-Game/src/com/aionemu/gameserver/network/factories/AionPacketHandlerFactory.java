@@ -104,7 +104,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_ATTACK(0xFB, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_PET(0xD1, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_PET_EMOTE(0xDC, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_CHALLENGE_LIST(0x1A0, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_CHALLENGE_LIST(0x1B4, State.IN_GAME)); // 6.x EU
 
 		// ********************(FRIEND LIST)*********************
 		addPacket(new CM_SHOW_FRIENDLIST(0x1A2, State.IN_GAME)); // 6.x EU
@@ -120,12 +120,12 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_PLAYER_SEARCH(0x17B, State.IN_GAME)); // 5.4 EU
 
 		// ********************(LEGION)*********************
-		addPacket(new CM_LEGION(0x2F4, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_LEGION(0x108, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_WH_KINAH(0x117, State.IN_GAME)); // 5.4 EU
 		// addPacket(new CM_LEGION_UPLOAD_INFO(0x178, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x179, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_LEGION_SEARCH(0x1C4, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_LEGION_JOIN_REQUEST(0x1C5, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_LEGION_JOIN_REQUEST(0x1D9, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_JOIN_REQUEST_CANCEL(0x1DA, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0xEB, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_SEND_EMBLEM(0x10A, State.IN_GAME)); // 5.4 EU
@@ -290,7 +290,7 @@ public class AionPacketHandlerFactory {
 		// addPacket(new CM_UNK_1DB(0x1DB, State.IN_GAME)); // 5.0 TODO
 		addPacket(new CM_UNK_E3(0xE3, State.IN_GAME)); // 5.3
 		addPacket(new CM_UNK_1EA(0x1EA, State.IN_GAME)); // 5.3 EU
-		// addPacket(new CM_CM_RANK_LIST(0x1DC, State.IN_GAME)); // 6.x TODO
+		// addPacket(new CM_RANK_LIST(0x1DC, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_MY_DOCUMENTATION(0x1E9, State.IN_GAME)); // 5.6 TODO CM_MY_DOCUMENTATION
 
 		// // /////////////////////////////////////////////////
