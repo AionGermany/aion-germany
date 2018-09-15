@@ -49,7 +49,6 @@ import com.aionemu.gameserver.model.WorldBuff;
 import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.actions.PlayerActions;
 import com.aionemu.gameserver.model.actions.PlayerMode;
-import com.aionemu.gameserver.model.cp.PlayerCPList;
 import com.aionemu.gameserver.model.dorinerk_wardrobe.PlayerWardrobeList;
 import com.aionemu.gameserver.model.event_window.PlayerEventWindowList;
 import com.aionemu.gameserver.model.gameobjects.Creature;
@@ -313,8 +312,6 @@ public class Player extends Creature {
 	private int transformModelId;
 	private int transformItemId;
 	private int transformPanelId;
-	private PlayerCPList cp;
-	private int cp_slot1 = 0, cp_slot2 = 0, cp_slot3 = 0, cp_slot4 = 0, cp_slot5 = 0, cp_slot6 = 0;
 	private PlayerWardrobeList wardrobe;
 	private PlayerLunaShop lunaShop;
 	private PlayerSweep shugoSweep;
@@ -2960,88 +2957,6 @@ public class Player extends Creature {
 
 	public void setTransformedPanelId(int id) {
 		transformPanelId = id;
-	}
-
-	/**
-	 * @High Daeva
-	 */
-	public boolean isHighDaeva() {
-		return getCommonData().isHighDaeva();
-	}
-
-	/**
-	 * Creativity Points
-	 */
-	public PlayerCPList getCP() {
-		return cp;
-	}
-
-	public void setCP(PlayerCPList cp) {
-		this.cp = cp;
-	}
-
-	public int getCreativityPoint() {
-		return getCommonData().getCreativityPoint();
-	}
-
-	public void setCreativityPoint(int point) {
-		getCommonData().setCreativityPoint(point);
-	}
-
-	public int getCPStep() {
-		return getCommonData().getCPStep();
-	}
-
-	public void setCPStep(int step) {
-		getCommonData().setCPStep(step);
-	}
-
-	public int getCPSlot1() {
-		return cp_slot1;
-	}
-
-	public void setCPSlot1(int point) {
-		this.cp_slot1 = point;
-	}
-
-	public int getCPSlot2() {
-		return cp_slot2;
-	}
-
-	public void setCPSlot2(int point) {
-		this.cp_slot2 = point;
-	}
-
-	public int getCPSlot3() {
-		return cp_slot3;
-	}
-
-	public void setCPSlot3(int point) {
-		this.cp_slot3 = point;
-	}
-
-	public int getCPSlot4() {
-		return cp_slot4;
-	}
-
-	public void setCPSlot4(int point) {
-		this.cp_slot4 = point;
-	}
-
-	public int getCPSlot5() {
-		return cp_slot5;
-	}
-
-	public void setCPSlot5(int point) {
-		this.cp_slot5 = point;
-	}
-
-	public int getCPSlot6() {
-		return cp_slot6;
-	}
-
-	public void setCPSlot6(int point) {
-		this.cp_slot6 = point;
 	}
 
 	/**

@@ -158,12 +158,12 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeQ(pcd.getGrowthEnergy()); // Energy of Growth (160000000 = 100%)
 		writeQ(50000); //SilverStarEnergy TODO (50000 = 5%, 100000 = 10% etc )
 
-		writeH(player.getCPSlot1());
-		writeH(player.getCPSlot2());
-		writeH(player.getCPSlot3());
-		writeH(player.getCPSlot4());
-		writeH(player.getCPSlot5());
-		writeH(player.getCPSlot6());
+		// writeH(player.getCPSlot1());
+		// writeH(player.getCPSlot2());
+		// writeH(player.getCPSlot3());
+		// writeH(player.getCPSlot4());
+		// writeH(player.getCPSlot5());
+		// writeH(player.getCPSlot6());
 
 		writeD(0);// PS = 2000
 		writeH(pgs.getPower().getBase());// [base power]

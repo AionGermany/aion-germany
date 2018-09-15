@@ -148,7 +148,6 @@ import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
-import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.territory.TerritoryService;
 import com.aionemu.gameserver.services.toypet.MinionService;
@@ -508,9 +507,6 @@ public final class PlayerEnterWorldService {
 			// SM_ITEM_COOLDOWN
 			if (player.getItemCoolDowns() != null)
 				client.sendPacket(new SM_ITEM_COOLDOWN(player.getItemCoolDowns()));
-
-			// Creativity Points
-			CreativityEssenceService.getInstance().onLogin(player);
 
 			// SM_INVENTORY_INFO, SM_CHANNEL_INFO, SM_STATS_INFO
 			// and SM_CUBE_UPDATE advancedStigmas ?! (not on offi)

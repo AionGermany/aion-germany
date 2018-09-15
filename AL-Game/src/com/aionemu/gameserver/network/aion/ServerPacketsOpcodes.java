@@ -292,9 +292,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_SERVER_IDS.class, 0x116, idSet); // 5.6
 		addPacketOpcode(SM_FAST_TRACK.class, 0x96, idSet);
 		addPacketOpcode(SM_FAST_TRACK_MOVE.class, 0x107, idSet); // 5.6
-		// -------------CREATIVITY_POINTS PACKETS 5.0----------------//
-		addPacketOpcode(SM_CREATIVITY_POINTS.class, 0x5D, idSet);
-		addPacketOpcode(SM_CREATIVITY_POINTS_APPLY.class, 0x5E, idSet);
 		// -----------------LUNA SHOP PACKETS 5.1--------------------//
 		addPacketOpcode(SM_LUNA_SYSTEM_INFO.class, 0x149, idSet); // 5.6
 		addPacketOpcode(SM_LUNA_SYSTEM.class, 0x14A, idSet); // 5.6

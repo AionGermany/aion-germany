@@ -62,7 +62,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.StigmaService;
 import com.aionemu.gameserver.services.item.ItemPacketService;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
-import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
@@ -270,10 +269,6 @@ public class Equipment {
 			setPersistentState(PersistentState.UPDATE_REQUIRED);
 			QuestEngine.getInstance().onEquipItem(new QuestEnv(null, owner, 0, 0), item.getItemId());
 
-			if (item.getItemTemplate().isEstima()) {
-				CreativityEssenceService.getInstance().addEstimaCp(owner, item.getObjectId());
-			}
-
 			return item;
 		}
 	}
@@ -377,10 +372,6 @@ public class Equipment {
 		owner.getLifeStats().updateCurrentStats();
 		owner.getGameStats().updateStatsAndSpeedVisually();
 		owner.getInventory().put(item);
-
-		if (item.getItemTemplate().isEstima()) {
-			CreativityEssenceService.getInstance().removeEstimaCp(owner, item.getObjectId());
-		}
 	}
 
 	/**

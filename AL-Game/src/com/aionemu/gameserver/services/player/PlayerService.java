@@ -46,7 +46,6 @@ import com.aionemu.gameserver.dao.OldNamesDAO;
 import com.aionemu.gameserver.dao.PlayerAppearanceDAO;
 import com.aionemu.gameserver.dao.PlayerBindPointDAO;
 import com.aionemu.gameserver.dao.PlayerCooldownsDAO;
-import com.aionemu.gameserver.dao.PlayerCreativityPointsDAO;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerEffectsDAO;
 import com.aionemu.gameserver.dao.PlayerEmotionListDAO;
@@ -206,7 +205,6 @@ public class PlayerService {
 		player.setFriendList(DAOManager.getDAO(FriendListDAO.class).load(player));
 		player.setBlockList(DAOManager.getDAO(BlockListDAO.class).load(player));
 		player.setTitleList(DAOManager.getDAO(PlayerTitleListDAO.class).loadTitleList(playerObjId));
-		player.setCP(DAOManager.getDAO(PlayerCreativityPointsDAO.class).loadCP(player));
 		player.setEventWindow(DAOManager.getDAO(PlayerEventsWindowDAO.class).load(player));
 		player.setWardrobe(DAOManager.getDAO(PlayerWardrobeDAO.class).load(player));
 		DAOManager.getDAO(Free2PlayDAO.class).loadF2pInfo(player, account.getId());

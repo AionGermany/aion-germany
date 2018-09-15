@@ -108,7 +108,6 @@ import com.aionemu.gameserver.services.abyss.AbyssService;
 import com.aionemu.gameserver.services.craft.CraftSkillUpdateService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemService;
-import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.toypet.PetSpawnService;
@@ -969,36 +968,6 @@ public class PlayerController extends CreatureController<Player> {
 		if (level == 10) {
 			CraftSkillUpdateService.getInstance().setMorphRecipe(player);
 		}
-		// Stigma 5.1
-		// Characters will receive "Chargeable Stigma" bundles based on their class and level.
-		if (level == 20) {
-			ItemService.addItem(player, 188053787, 1); // Stigma Support Bundle.
-			// An additional normal Stigma slot is now available.
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_OPEN_NORMAL_SLOT);
-		}
-		if (level == 30) {
-			ItemService.addItem(player, 188053787, 1); // Stigma Support Bundle
-		}
-		if (level == 40) {
-			ItemService.addItem(player, 188053787, 1); // Stigma Support Bundle
-		}
-		if (level == 45) {
-			ItemService.addItem(player, 188053787, 1); // Stigma Support Bundle
-			ItemService.addItem(player, 188053785, 1); // Greater Stigma Bundle
-			// An additional Greater Stigma slot is now available.
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_OPEN_ENHANCED1_SLOT);
-		}
-		if (level == 50) {
-			ItemService.addItem(player, 188053787, 1); // Stigma Support Bundle
-			ItemService.addItem(player, 188053785, 1); // Greater Stigma Bundle
-		}
-		if (level == 55) {
-			ItemService.addItem(player, 188053787, 1); // Stigma Support Bundle
-			ItemService.addItem(player, 188053785, 1); // Greater Stigma Bundle
-			ItemService.addItem(player, 188053786, 1); // Major Stigma Bundle
-			// An additional Major Stigma slot is now available.
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_OPEN_ENHANCED2_SLOT);
-		}
 		SkillLearnService.addNewSkills(player);
 		PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
 		if (player.isInTeam()) {
@@ -1017,17 +986,11 @@ public class PlayerController extends CreatureController<Player> {
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_BE_MENTEE_BY_LEVEL_LIMIT);
 			}
 		}
-		if (level == 66) {
-			if (!player.isHighDaeva()) {
-				player.getCommonData().setHighDaeva(true);
-			}
-		}
 		if (level >= 66 && level <= 83) {
 			reachedPlayerLvl(player);
 		}
 
 		player.getNpcFactions().onLevelUp();
-		CreativityEssenceService.getInstance().pointPerLevel(player);
 	}
 
 	public static final void reachedPlayerLvl(final Player player) {

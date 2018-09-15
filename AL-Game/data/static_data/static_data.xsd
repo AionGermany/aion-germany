@@ -98,7 +98,6 @@
     <xs:include schemaLocation="service_bonusattr/f2p_bonusattr.xsd"/>
     <xs:include schemaLocation="pets/pet_buff.xsd"/>
     <xs:include schemaLocation="pets/pet_merchant.xsd"/>
-	<xs:include schemaLocation="creativity/panel_cps.xsd"/>
     <xs:include schemaLocation="abyss_op/abyss_ops.xsd"/>
 	<xs:include schemaLocation="abyss_bonusattr/abyss_bonusattr.xsd"/>
 	<xs:include schemaLocation="abyss_bonusattr/abyss_groupattr.xsd"/>
@@ -210,7 +209,6 @@
                 <xs:element ref="f2p_bonus" minOccurs="0"/>
                 <xs:element ref="pet_bonusattrs" minOccurs="0"/>
                 <xs:element ref="merchants" minOccurs="0"/>
-				<xs:element ref="panel_cps" minOccurs="0"/>
 				<xs:element ref="abyss_ops" minOccurs="0"/>
 				<xs:element ref="abyss_bonusattrs" minOccurs="0"/>
 				<xs:element ref="abyss_groupattrs" minOccurs="0"/>

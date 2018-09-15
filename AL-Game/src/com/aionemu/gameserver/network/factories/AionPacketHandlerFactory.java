@@ -296,7 +296,6 @@ public class AionPacketHandlerFactory {
 		// // /////////////////////////////////////////////////
 		// addPacket(new CM_SECURITY_TOKEN(0x1AD, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_ENCHANTMENT_EXTRACTION(0x1CC, State.IN_GAME)); // 5.4
-		addPacket(new CM_CREATIVITY_POINTS(0x122, State.IN_GAME)); // 5.4
 		addPacket(new CM_USE_PACK_ITEM(0x1C8, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_SELL_BROKEN_ITEMS(0x1C0, State.IN_GAME)); // 5.6 TODO
 		addPacket(new CM_AUTOMATIC_GOLDENSTAR(0x1EA, State.IN_GAME)); // 5.6
