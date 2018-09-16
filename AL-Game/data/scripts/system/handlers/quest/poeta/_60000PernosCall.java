@@ -54,7 +54,7 @@ public class _60000PernosCall extends QuestHandler {
 				switch (dialog) {
 				case QUEST_SELECT:
 					return sendQuestDialog(env, 1011);
-				case SETPRO1:
+				case SET_SUCCEED:
 					return defaultCloseDialog(env, 0, 1);
 				default:
 					break;
