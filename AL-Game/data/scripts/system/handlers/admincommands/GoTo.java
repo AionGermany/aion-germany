@@ -204,6 +204,14 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("enshar2") || destination.equalsIgnoreCase("Whirlpool Temple")) {
 			goTo(player, 220080000, 1578.95f, 151.19f, 186.81342f, (byte) 55);
 		}
+		else if (destination.equalsIgnoreCase("lakrum") || destination.equalsIgnoreCase("Lakrum")) {
+			if (player.getRace() == Race.ELYOS) {
+				goTo(player, 600200000, 2688.5857f, 487.36588f, 323.3768f, (byte) 110);
+			}
+			else if (player.getRace() == Race.ASMODIANS) {
+				goTo(player, 600200000, 2925.3015f, 2505.124f, 313.80035f, (byte) 90);
+			}
+		}
 		/**
 		 * Quest Instance Maps
 		 */

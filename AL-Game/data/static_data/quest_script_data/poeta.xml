@@ -8,7 +8,7 @@
                60000 [SCRIPT] Pernos' Call
                60001 [TODO]   A New Age
                60003 [TODO]   The Strength to Become a Guardian
-               60004 [TODO]   The Attitude to Become a Guardian
+               60004 [XML] The Attitude to Become a Guardian
                60005 [TODO]   Special Mission
                60006 [TODO]   Elim in Danger
                60007 [TODO]   Forest Rescue
@@ -17,6 +17,7 @@
         [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
+    <report_to id="60004" start_npc_ids="820006" end_npc_ids="820006"/>
     <!-- COLLECTING QUESTS -->
     <!-- HUNTING QUESTS -->
 </quest_scripts>
