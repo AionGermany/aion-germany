@@ -334,7 +334,8 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_NEVIWIND_CANYON.class, 0x169, idSet); // 5.6 TODO
 		addPacketOpcode(SM_TOWER_OF_CHALLENGE.class, 0xEE, idSet); // 5.6
 		addPacketOpcode(SM_GODSTONE_DESTROY.class, 0x12E, idSet); // 5.6
-		// addPacketOpcode(SM_TRANSFORMATION.class, 0x170, idSet); // 6.x TODO
+		addPacketOpcode(SM_TRANSFORMATION.class, 0x170, idSet); // 6.x TODO
+		addPacketOpcode(SM_CUBIC.class, 0x176, idSet); // 6.x TODO
 		// --------------------UNKNOWN PACKETS-----------------------//
 	}
 
