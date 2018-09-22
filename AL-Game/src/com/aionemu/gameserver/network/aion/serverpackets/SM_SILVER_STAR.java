@@ -22,7 +22,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Falke_34
  */
-public class SM_UNK_15D extends AionServerPacket {
+public class SM_SILVER_STAR extends AionServerPacket {
 
 	// This Packet is coming by using the Lodas Silver Star (this is for AP) (same Lodas Gold Star)
 

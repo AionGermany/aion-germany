@@ -294,14 +294,14 @@ public class AionPacketHandlerFactory {
 		// addPacket(new CM_MY_DOCUMENTATION(0x1E9, State.IN_GAME)); // 5.6 TODO CM_MY_DOCUMENTATION
 
 		// // /////////////////////////////////////////////////
-		// addPacket(new CM_SECURITY_TOKEN(0x1AD, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_SECURITY_TOKEN(0x1A1, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_ENCHANTMENT_EXTRACTION(0x1CC, State.IN_GAME)); // 5.4
 		addPacket(new CM_USE_PACK_ITEM(0x1C8, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_SELL_BROKEN_ITEMS(0x1C0, State.IN_GAME)); // 5.6 TODO
+		addPacket(new CM_SELL_BROKEN_ITEMS(0x1D4, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_AUTOMATIC_GOLDENSTAR(0x1EA, State.IN_GAME)); // 5.6
 		addPacket(new CM_TELEPORT_BACK(0x13B, State.IN_GAME)); // 5.4 TODO
 		addPacket(new CM_SKILL_ANIMATION(0x1E9, State.IN_GAME)); // 6.x TODO
-		addPacket(new CM_MINIONS(0x1D1, State.IN_GAME)); // 5.6 TODO
+		addPacket(new CM_MINIONS(0x1E6, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_NEVIWIND_CANYON(0x1D0, State.IN_GAME)); // 5.6 TODO
 		addPacket(new CM_TRANSFOMATION(0x1F8, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_CUBIC(0x1D1, State.IN_GAME)); // 6.x TODO

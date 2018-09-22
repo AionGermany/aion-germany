@@ -113,12 +113,12 @@ public class CM_GM_COMMAND_SEND extends AionClientPacket {
 			case LEVELUP:
 				QuestState elyos = admin.getQuestStateList().getQuestState(10521);
 				QuestState asmo = admin.getQuestStateList().getQuestState(20521);
-				if (admin.getLevel() >= 65 && admin.getRace() == Race.ELYOS && elyos.getStatus() != QuestStatus.COMPLETE) {
-					PacketSendUtility.sendPacket(admin, new SM_SYSTEM_MESSAGE(1403187, 66));
+				if (admin.getLevel() >= 80 && admin.getRace() == Race.ELYOS && elyos.getStatus() != QuestStatus.COMPLETE) {
+					PacketSendUtility.sendPacket(admin, new SM_SYSTEM_MESSAGE(1403187, 81));
 					break;
 				}
-				else if (admin.getLevel() >= 65 && admin.getRace() == Race.ASMODIANS && asmo.getStatus() != QuestStatus.COMPLETE) {
-					PacketSendUtility.sendPacket(admin, new SM_SYSTEM_MESSAGE(1403187, 66));
+				else if (admin.getLevel() >= 80 && admin.getRace() == Race.ASMODIANS && asmo.getStatus() != QuestStatus.COMPLETE) {
+					PacketSendUtility.sendPacket(admin, new SM_SYSTEM_MESSAGE(1403187, 81));
 					break;
 				}
 				else {
