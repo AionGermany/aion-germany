@@ -55,7 +55,14 @@
             </siege_race>
             <siege_race race="BALAUR">
                 <siege_mod mod="PEACE">
-
+					<!-- Legate of the 122nd Conquest Squad ||| LDF7_1512_Boss_Dr_1 -->
+					<spawn npc_id="885671" respawn_time="295">
+						<spot x="1052.5057" y="554.54" z="304.5" h="83"/>
+					</spawn>
+					<!-- 122nd Garrison - Battle Encouragement ||| LDF7_Artifact_15121_Dr -->
+					<spawn npc_id="885786" respawn_time="295">
+						<spot x="1046.7" y="539.7716" z="304.5" h="0" static_id="827"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
@@ -103,6 +110,10 @@
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
+					<!-- Legate of the 123rd Occupation Troop ||| LDF7_1513_Boss_Li_5 -->
+					<spawn npc_id="885680" respawn_time="295">
+						<spot x="735.2287" y="816.33466" z="332.625" h="105"/>
+					</spawn>
 					<!-- 123rd Garrison - Fantastic Flame ||| LDF7_Artifact_15131_Li -->
 					<spawn npc_id="885787" respawn_time="295">
 						<spot x="744.6924" y="802.78467" z="332.625" h="0" static_id="1734"/>
