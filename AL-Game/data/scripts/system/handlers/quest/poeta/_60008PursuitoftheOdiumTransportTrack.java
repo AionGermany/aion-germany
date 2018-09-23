@@ -66,6 +66,7 @@ public class _60008PursuitoftheOdiumTransportTrack extends QuestHandler {
 					updateQuestStatus(env);
 					return false;
 				}
+				break;
 			case 820011:
 				if (dialog == DialogAction.USE_OBJECT) {
 					qs.setQuestVar(2);
@@ -73,6 +74,7 @@ public class _60008PursuitoftheOdiumTransportTrack extends QuestHandler {
 					updateQuestStatus(env);
 					return false;
 				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 203086) {

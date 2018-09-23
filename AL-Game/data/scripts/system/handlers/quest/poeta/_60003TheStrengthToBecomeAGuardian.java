@@ -83,11 +83,11 @@ public class _60003TheStrengthToBecomeAGuardian extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820006) {
 				if (dialog == DialogAction.USE_OBJECT) {
-					System.out.println(" set request");
 					return sendQuestDialog(env, 10002);
 				}
 				return sendQuestEndDialog(env);

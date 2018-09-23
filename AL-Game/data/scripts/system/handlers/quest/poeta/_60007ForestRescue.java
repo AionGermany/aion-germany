@@ -73,6 +73,7 @@ public class _60007ForestRescue extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			case 820002:
 				switch (dialog) {
 				case QUEST_SELECT:
@@ -84,6 +85,7 @@ public class _60007ForestRescue extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			case 820003:
 				switch (dialog) {
 				case QUEST_SELECT:
@@ -99,6 +101,7 @@ public class _60007ForestRescue extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			case 700030:
 				if (dialog == DialogAction.USE_OBJECT) {
 					qs.setQuestVar(4);
@@ -106,6 +109,7 @@ public class _60007ForestRescue extends QuestHandler {
 					updateQuestStatus(env);
 					return false;
 				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820003) {

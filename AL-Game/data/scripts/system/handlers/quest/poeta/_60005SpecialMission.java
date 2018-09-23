@@ -76,6 +76,7 @@ public class _60005SpecialMission extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			case 203065:
 				switch (dialog) {
 				case QUEST_SELECT:
@@ -87,6 +88,7 @@ public class _60005SpecialMission extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			case 820001:
 				switch (dialog) {
 				case QUEST_SELECT:
@@ -99,6 +101,7 @@ public class _60005SpecialMission extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 730007) {

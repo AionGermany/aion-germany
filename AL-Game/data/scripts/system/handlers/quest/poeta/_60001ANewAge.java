@@ -70,6 +70,7 @@ public class _60001ANewAge extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			case 820134:
 				switch (dialog) {
 				case QUEST_SELECT:
@@ -81,6 +82,7 @@ public class _60001ANewAge extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			case 820135:
 				switch (dialog) {
 				case QUEST_SELECT:
@@ -93,6 +95,7 @@ public class _60001ANewAge extends QuestHandler {
 				default:
 					break;
 				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 790001) {
