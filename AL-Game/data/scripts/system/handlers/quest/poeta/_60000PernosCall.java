@@ -22,10 +22,10 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author Falke_34
+ * @Rework FrozenKiller
  */
 public class _60000PernosCall extends QuestHandler {
 
@@ -37,9 +37,14 @@ public class _60000PernosCall extends QuestHandler {
 
 	@Override
 	public void register() {
+		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(820000).addOnTalkEvent(questId); // Old Friend Royer
 		qe.registerQuestNpc(790001).addOnTalkEvent(questId); // Pernos
-		qe.registerOnEnterWorld(questId);
+	}
+
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env, 1000, true);
 	}
 
 	@Override
@@ -50,41 +55,29 @@ public class _60000PernosCall extends QuestHandler {
 		int targetId = env.getTargetId();
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 820000) {
+			switch (targetId) {
+			case 820000: {
 				switch (dialog) {
-				case QUEST_SELECT:
+				case QUEST_SELECT: {
 					return sendQuestDialog(env, 1011);
-				case SET_SUCCEED:
-					return defaultCloseDialog(env, 0, 1);
+				}
+				case SET_SUCCEED: {
+					qs.setQuestVar(1);
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				}
 				default:
 					break;
 				}
-			} else if (targetId == 790001) {
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1352);
-				default:
-					break;
-				}
+			}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 790001) {
+				if (dialog == DialogAction.USE_OBJECT) {
+					return sendQuestDialog(env, 10002);
+				}
 				return sendQuestEndDialog(env);
-			}
-		}
-		return false;
-	}
-
-	@Override
-	public boolean onEnterWorldEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-			if (player.getWorldId() == 210010000) {
-				QuestService.startQuest(env);
-				return true;
-			} else {
-				return false;
 			}
 		}
 		return false;
