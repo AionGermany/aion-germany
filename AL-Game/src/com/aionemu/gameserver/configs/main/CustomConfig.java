@@ -345,4 +345,8 @@ public class CustomConfig {
 	// Illusion Godstones
 	@Property(key = "gameserver.break.illusion.godstones", defaultValue = "1.0")
 	public static float ILLUSION_GODSTONE_BREAK_RATE;
+
+	// Minions
+	@Property(key = "gameserver.max.minion.list", defaultValue = "200")
+	public static int MAX_MINION_LIST;	
 }

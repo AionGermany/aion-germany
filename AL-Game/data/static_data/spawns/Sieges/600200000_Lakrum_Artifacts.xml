@@ -4,6 +4,10 @@
         <siege_spawn siege_id="1511">
             <siege_race race="ASMODIANS">
                 <siege_mod mod="PEACE">
+					<!-- Legate of the 121st Defence Troop ||| LDF7_1511_Boss_Da_5 -->
+					<spawn npc_id="885655" respawn_time="295">
+						<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+					</spawn>
 					<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Da -->
 					<spawn npc_id="885782" respawn_time="295">
 						<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="421"/>
@@ -28,6 +32,10 @@
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
+					<!-- Legate of the 121st Occupation Troop ||| LDF7_1511_Boss_Li_1 -->
+					<spawn npc_id="885646" respawn_time="295">
+						<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+					</spawn>
 					<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Li -->
 					<spawn npc_id="885781" respawn_time="295">
 						<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="432"/>
@@ -69,6 +77,10 @@
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
+					<!-- Legate of the 122nd Occupation Troop ||| LDF7_1512_Boss_Li_5 -->
+					<spawn npc_id="885665" respawn_time="295">
+						<spot x="1052.5057" y="554.54" z="304.5" h="83"/>
+					</spawn>
 					<!-- 122nd Garrison - Battle Encouragement ||| LDF7_Artifact_15121_Li -->
 					<spawn npc_id="885784" respawn_time="295">
 						<spot x="1046.7" y="539.7716" z="304.5" h="0" static_id="1498"/>
@@ -127,6 +139,10 @@
         <siege_spawn siege_id="1514">
             <siege_race race="ASMODIANS">
                 <siege_mod mod="PEACE">
+					<!-- Legate of the 124th Defence Troop ||| LDF7_1514_Boss_Da_1 -->
+					<spawn npc_id="885696" respawn_time="295">
+						<spot x="1912.4154" y="2142.0166" z="285.25" h="75"/>
+					</spawn>
 					<!-- 124th Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15141_Da -->
 					<spawn npc_id="885791" respawn_time="295">
 						<spot x="1901.9431" y="2131.7478" z="285.25" h="0" static_id="1484"/>
@@ -151,7 +167,14 @@
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
-
+					<!-- Legate of the 124th Occupation Troop ||| LDF7_1514_Boss_Li_1 -->
+					<spawn npc_id="885691" respawn_time="295">
+						<spot x="1912.4154" y="2142.0166" z="285.25" h="75"/>
+					</spawn>
+					<!-- 124th Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15141_Li -->
+					<spawn npc_id="885790" respawn_time="295">
+						<spot x="1901.9431" y="2131.7478" z="285.25" h="0" static_id="1270"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
@@ -175,7 +198,14 @@
             </siege_race>
             <siege_race race="BALAUR">
                 <siege_mod mod="PEACE">
-
+					<!-- Legate of the 125th Conquest Squad ||| LDF7_1515_Boss_Dr_1 -->
+					<spawn npc_id="885716" respawn_time="295">
+						<spot x="1088.1792" y="2767.1409" z="231.125" h="81"/>
+					</spawn>
+					<!-- 125th Garrison - Battle Encouragement ||| LDF7_Artifact_15151_Dr -->
+					<spawn npc_id="885795" respawn_time="295">
+						<spot x="1075.5143" y="2757.4468" z="231.125" h="0" static_id="1743"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
@@ -227,7 +257,14 @@
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
-
+					<!-- Legate of the 126th Occupation Troop ||| LDF7_1516_Boss_Li_1 -->
+					<spawn npc_id="885721" respawn_time="295">
+						<spot x="543.4009" y="2183.3936" z="284.875" h="15"/>
+					</spawn>
+					<!-- 126th Garrison - Fantastic Flame ||| LDF7_Artifact_15161_Li -->
+					<spawn npc_id="885796" respawn_time="295">
+						<spot x="555.5819" y="2192.6445" z="284.875" h="0" static_id="1469"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
@@ -265,7 +302,14 @@
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
-
+					<!-- 127th Garrison - Battle's Blessing ||| LDF7_Artifact_15171_Li -->
+					<spawn npc_id="885799" respawn_time="295">
+						<spot x="2760.708" y="1461.2642" z="197.84529" h="0" static_id="1186"/>
+					</spawn>
+					<!-- Legate of the 127th Occupation Troop ||| LDF7_1517_Boss_Li_5 -->
+					<spawn npc_id="885740" respawn_time="295">
+						<spot x="2789.1172" y="1445.5415" z="199.60179" h="41"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
@@ -279,12 +323,20 @@
 					<spawn npc_id="885803" respawn_time="295">
 						<spot x="1915.1212" y="1488.3267" z="215.125" h="0" static_id="1475"/>
 					</spawn>
+					<!-- 128th Garrison - Battlefield Encouragement ||| LDF7_Artifact_15181_Da -->
+					<spawn npc_id="885803" respawn_time="295">
+						<spot x="1915.1212" y="1488.3267" z="215.125" h="0" static_id="1475"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
             </siege_race>
             <siege_race race="BALAUR">
                 <siege_mod mod="PEACE">
+					<!-- Legate of the 128th Conquest Squad ||| LDF7_1518_Boss_Dr_1 -->
+					<spawn npc_id="885761" respawn_time="295">
+						<spot x="1915.1212" y="1488.3267" z="215.125"/>
+					</spawn>
 					<!-- 128th Garrison - Battlefield Encouragement ||| LDF7_Artifact_15181_Dr -->
 					<spawn npc_id="885804" respawn_time="295">
 						<spot x="1915.1212" y="1488.3267" z="215.125" h="0" static_id="1474"/>
@@ -295,7 +347,14 @@
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
-
+					<!-- Legate of the 128th Occupation Troop ||| LDF7_1518_Boss_Li_5 -->
+					<spawn npc_id="885755" respawn_time="295">
+						<spot x="1944.2816" y="1489.9724" z="215.6049" h="60"/>
+					</spawn>
+					<!-- 128th Garrison - Battlefield Encouragement ||| LDF7_Artifact_15181_Li -->
+					<spawn npc_id="885802" respawn_time="295">
+						<spot x="1915.1212" y="1488.3267" z="215.125" h="0" static_id="1474"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
@@ -319,13 +378,24 @@
             </siege_race>
             <siege_race race="BALAUR">
                 <siege_mod mod="PEACE">
-
+					<!-- Legate of the 129th Conquest Squad ||| LDF7_1519_Boss_Dr_5 -->
+					<spawn npc_id="885780" respawn_time="295">
+						<spot x="1315.6932" y="1505.5182" z="256.34888" h="60"/>
+					</spawn>
+					<!-- 129th Garrison - Battle's Blessing ||| LDF7_Artifact_15191_Dr -->
+					<spawn npc_id="885807" respawn_time="295">
+						<spot x="1283.4933" y="1504.9915" z="253.625" h="0" static_id="969"/>
+					</spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
+					<!-- Legate of the 129th Occupation Troop ||| LDF7_1519_Boss_Li_5 -->
+					<spawn npc_id="885770" respawn_time="295">
+						<spot x="1315.6932" y="1505.5182" z="256.34888" h="60"/>
+					</spawn>
 					<!-- 129th Garrison - Battle's Blessing ||| LDF7_Artifact_15191_Li -->
 					<spawn npc_id="885805" respawn_time="295">
 						<spot x="1283.4933" y="1504.9915" z="253.625" h="0" static_id="1024"/>

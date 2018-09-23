@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-09-16 15:52 -->
 <siege_locations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="siege_locations.xsd">
+    <!-- Reshanta -->
+    <siege_location id="1011" type="FORTRESS" world="400010000" name_id="801821" occupy_count="1" influence="8">
+        <door_repair itemid="188030000" repair_fee="5" repair_cooltime="30"/>
+        <artifact_activation itemid="188020000" count="1" skill="12078" cd="7200"/>
+    </siege_location>
+    <siege_location id="1014" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12191" repeat_count="5" repeat_interval="4" cd="600"/>
+    </siege_location>
+    <siege_location id="1016" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12191" repeat_count="5" repeat_interval="4" cd="600"/>
+    </siege_location>
+    <siege_location id="1017" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12189" repeat_count="5" repeat_interval="4" cd="600"/>
+    </siege_location>
+    <siege_location id="1018" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12190" repeat_count="5" repeat_interval="4" cd="600"/>
+    </siege_location>
+    <siege_location id="1019" type="ARTIFACT" world="400010000" influence="0">
+        <artifact_activation itemid="188020002" count="2" skill="12189" repeat_count="5" repeat_interval="4" cd="600"/>
+    </siege_location>
+	<!-- Lakrum -->
     <siege_location id="1511" type="ARTIFACT" world="600200000" influence="0">
         <artifact_activation itemid="188020002" count="2" skill="12194" repeat_count="5" repeat_interval="3" cd="180"/>
     </siege_location>
