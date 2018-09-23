@@ -34,7 +34,7 @@ public class _60007ForestRescue extends QuestHandler {
 	public _60007ForestRescue() {
 		super(questId);
 	}
-	
+
 	@Override
 	public void register() {
 		qe.registerOnLevelUp(questId);
@@ -43,13 +43,13 @@ public class _60007ForestRescue extends QuestHandler {
 		qe.registerQuestNpc(820003).addOnTalkEvent(questId); // Implementer Royer
 		qe.registerQuestNpc(700030).addOnTalkEvent(questId); // Odium Cauldron
 	}
-	
+
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60000, false);
-		
+
 	}
-	
+
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
@@ -65,7 +65,7 @@ public class _60007ForestRescue extends QuestHandler {
 			case 730008:
 				switch (dialog) {
 				case QUEST_SELECT:
-						return sendQuestDialog(env, 1011);
+					return sendQuestDialog(env, 1011);
 				case SETPRO1:
 					qs.setQuestVar(1);
 					updateQuestStatus(env);
@@ -93,8 +93,7 @@ public class _60007ForestRescue extends QuestHandler {
 						qs.setQuestVar(3);
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 10000);
-					}
-					else {
+					} else {
 						return sendQuestDialog(env, 10001);
 					}
 				default:

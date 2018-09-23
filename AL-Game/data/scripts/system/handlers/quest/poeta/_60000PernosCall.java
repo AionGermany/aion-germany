@@ -53,10 +53,12 @@ public class _60000PernosCall extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+		if (qs == null) {
+			return false;
+		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-			case 820000: {
+			if (targetId == 820000) {
 				switch (dialog) {
 				case QUEST_SELECT: {
 					return sendQuestDialog(env, 1011);
@@ -70,7 +72,6 @@ public class _60000PernosCall extends QuestHandler {
 				default:
 					break;
 				}
-			}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 790001) {

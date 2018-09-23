@@ -40,12 +40,12 @@ public class _60003TheStrengthToBecomeAGuardian extends QuestHandler {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(820006).addOnTalkEvent(questId); // Kasis
 	}
-	
+
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60000, false);
 	}
-	
+
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
@@ -71,20 +71,17 @@ public class _60003TheStrengthToBecomeAGuardian extends QuestHandler {
 					qs.setQuestVar(1);
 					updateQuestStatus(env);
 					return closeDialogWindow(env);
-				case FINISH_DIALOG:
-					return closeDialogWindow(env);
 				case CHECK_USER_HAS_QUEST_ITEM:
 					if (QuestService.collectItemCheck(env, true)) {
 						qs.setQuestVar(2);
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 5);
-					}
-					else {
+					} else {
 						return sendQuestDialog(env, 10001);
 					}
 				default:
-					return sendQuestSelectionDialog(env);
+					break;
 				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {

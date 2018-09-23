@@ -41,7 +41,7 @@ public class _60006ElimInDanger extends QuestHandler {
 	public _60006ElimInDanger() {
 		super(questId);
 	}
-	
+
 	@Override
 	public void register() {
 		qe.registerOnLevelUp(questId);
@@ -52,13 +52,13 @@ public class _60006ElimInDanger extends QuestHandler {
 		qe.registerQuestNpc(730008).addOnTalkEvent(questId); // Daminu
 		qe.registerQuestItem(182216250, questId);
 	}
-	
+
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60000, false);
-		
+
 	}
-	
+
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
@@ -74,7 +74,7 @@ public class _60006ElimInDanger extends QuestHandler {
 			case 730007:
 				switch (dialog) {
 				case QUEST_SELECT:
-						return sendQuestDialog(env, 1011);
+					return sendQuestDialog(env, 1011);
 				case SETPRO1:
 					qs.setQuestVar(1);
 					updateQuestStatus(env);
@@ -115,8 +115,7 @@ public class _60006ElimInDanger extends QuestHandler {
 						qs.setQuestVar(4);
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 10000);
-					}
-					else {
+					} else {
 						return sendQuestDialog(env, 10001);
 					}
 				case SETPRO5:
@@ -138,7 +137,7 @@ public class _60006ElimInDanger extends QuestHandler {
 		}
 		return false;
 	}
-	
+
 	@Override
 	public HandlerResult onItemUseEvent(final QuestEnv env, Item item) {
 		final Player player = env.getPlayer();
@@ -155,7 +154,7 @@ public class _60006ElimInDanger extends QuestHandler {
 			@Override
 			public void run() {
 				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, itemObjId, id, 0, 1), true);
-				TeleportService2.teleportTo(player, 210010000, 502.2042f, 1529.8256f, 104.6827f, (byte) 45, TeleportAnimation.BEAM_ANIMATION);
+				TeleportService2.teleportTo(player, 210010000, 502.2042f, 1529.8256f, 104.6827f, (byte) 45,	TeleportAnimation.BEAM_ANIMATION);
 				qs.setQuestVar(6);
 				qs.setStatus(QuestStatus.REWARD);
 				updateQuestStatus(env);

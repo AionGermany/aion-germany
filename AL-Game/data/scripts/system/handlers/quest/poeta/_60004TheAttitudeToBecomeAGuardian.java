@@ -39,12 +39,12 @@ public class _60004TheAttitudeToBecomeAGuardian extends QuestHandler {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(820006).addOnTalkEvent(questId); // Kasis
 	}
-	
+
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60000, false);
 	}
-	
+
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
@@ -56,11 +56,10 @@ public class _60004TheAttitudeToBecomeAGuardian extends QuestHandler {
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-			case 820006:
+			if (targetId == 820006) {
 				switch (dialog) {
 				case QUEST_SELECT:
-						return sendQuestDialog(env, 1011);
+					return sendQuestDialog(env, 1011);
 				case SELECT_QUEST_REWARD:
 					qs.setQuestVar(1);
 					qs.setStatus(QuestStatus.REWARD);

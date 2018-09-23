@@ -33,7 +33,7 @@ public class _60008PursuitoftheOdiumTransportTrack extends QuestHandler {
 	public _60008PursuitoftheOdiumTransportTrack() {
 		super(questId);
 	}
-	
+
 	@Override
 	public void register() {
 		qe.registerOnLevelUp(questId);
@@ -41,13 +41,13 @@ public class _60008PursuitoftheOdiumTransportTrack extends QuestHandler {
 		qe.registerQuestNpc(820011).addOnTalkEvent(questId); // Second Odium Transport Track
 		qe.registerQuestNpc(203086).addOnTalkEvent(questId); // Ino
 	}
-	
+
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60000, false);
-		
+
 	}
-	
+
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
