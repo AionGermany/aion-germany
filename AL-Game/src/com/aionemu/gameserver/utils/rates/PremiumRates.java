@@ -88,11 +88,6 @@ public class PremiumRates extends Rates {
 	}
 
 	@Override
-	public float getQuestAbyssOpRate() {
-		return RateConfig.PREMIUM_QUEST_ABYSS_OP_RATE + holidayRate;
-	}
-
-	@Override
 	public float getQuestExpBoostRate() {
 		return RateConfig.PREMIUM_QUEST_EXP_BOOST_RATE + holidayRate;
 	}

@@ -555,6 +555,7 @@ public class MotionLoggingService {
 			return this.motionsForWeapons;
 		}
 
+		@SuppressWarnings("unlikely-arg-type")
 		public boolean addSkillTime(WeaponTypeWrapper weapon, SkillTime skillTime) {
 			if (motionsForWeapons.containsKey(weapon)) {
 				if (!motionsForWeapons.containsValue(skillTime)) {

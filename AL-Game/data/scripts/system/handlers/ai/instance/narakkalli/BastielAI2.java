@@ -65,7 +65,6 @@ public class BastielAI2 extends GeneralNpcAI2 {
 
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex) {
-		int instanceId = getPosition().getInstanceId();
 		QuestEnv env = new QuestEnv(getOwner(), player, questId, dialogId);
 		env.setExtendedRewardIndex(extendedRewardIndex);
 		if (QuestEngine.getInstance().onDialog(env) && dialogId != 1011) {

@@ -459,6 +459,7 @@ public class PvpService {
 		rewarded.clear();
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	private int Zerg(Player winner, Player victim) {
 		if (!CustomConfig.ANTI_ZERG_ENABLED) {
 			return 0;

@@ -90,8 +90,6 @@ public class SpawnsData2 {
 	private TIntObjectHashMap<List<SpawnGroup2>> beritraSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
 	private TIntObjectHashMap<List<SpawnGroup2>> rvrSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
 	private TIntObjectHashMap<List<SpawnGroup2>> svsSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
-	private TIntObjectHashMap<List<SpawnGroup2>> landingSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
-	private TIntObjectHashMap<List<SpawnGroup2>> landingSpecialSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
 	private TIntObjectHashMap<Spawn> customs = new TIntObjectHashMap<Spawn>();
 
 	/**
@@ -266,14 +264,6 @@ public class SpawnsData2 {
 
 	public List<SpawnGroup2> getSvsSpawnsByLocId(int id) {
 		return svsSpawnMaps.get(id);
-	}
-
-	public List<SpawnGroup2> getLandingSpawnsByLocId(int id) {
-		return landingSpawnMaps.get(id);
-	}
-
-	public List<SpawnGroup2> getLandingSpecialSpawnsByLocId(int id) {
-		return landingSpecialSpawnMaps.get(id);
 	}
 
 	public synchronized boolean saveSpawn(Player admin, VisibleObject visibleObject, boolean delete) throws IOException {
@@ -476,6 +466,7 @@ public class SpawnsData2 {
 		templates.add(spawnMap);
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	public void removeEventSpawnObjects(List<VisibleObject> objects) {
 		for (VisibleObject visObj : objects) {
 			if (!allSpawnMaps.contains(visObj.getWorldId())) {

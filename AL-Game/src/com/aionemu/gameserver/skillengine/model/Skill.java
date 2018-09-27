@@ -1418,7 +1418,7 @@ public class Skill {
 		}
 
 		if (skillMethod == SkillMethod.CAST && getSkillTemplate().getSubType() != SkillSubType.HEAL && hitTime <= 0 || skillMethod == SkillMethod.CHARGE && getSkillTemplate().getSubType() != SkillSubType.HEAL) {
-			double targetDis = MathUtil.getDistance(effector, firstTarget);
+//			double targetDis = MathUtil.getDistance(effector, firstTarget);
 			if (skillskinHitTIme > 0) {
 				hitTime += (int)(skillskinHitTIme * effector.getDistanceToTarget() * 1.8F);
 			} else {

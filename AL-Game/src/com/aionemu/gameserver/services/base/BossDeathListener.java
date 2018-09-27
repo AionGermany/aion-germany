@@ -101,19 +101,6 @@ public class BossDeathListener extends OnDieEventCallback {
 					// %0 succeeded in conquering %1
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, kill.getRace().getRaceDescriptionId(), baseName));
 				}
-				// Abyss Landing 4.9.1
-				switch (player.getWorldId()) {
-					case 400010000: // Reshanta.
-						if (team != null && kill == null) {
-							// %0 has occupied %1 Base and the Landing is now enhanced
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403186, team.getRace().getRaceDescriptionId(), baseName));
-						}
-						else {
-							// %0 has occupied %1 Base and the Landing is now enhanced
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403186, kill.getRace().getRaceDescriptionId(), baseName));
-						}
-						break;
-				}
 			}
 		});
 	}

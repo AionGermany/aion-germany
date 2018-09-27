@@ -200,7 +200,7 @@ public class FortressSiege extends Siege<FortressLocation> {
 
 	public void onCapture() {
 		SiegeRaceCounter winner = getSiegeCounter().getWinnerRaceCounter();
-		SiegeRace looser = getSiegeLocation().getRace();
+//		SiegeRace looser = getSiegeLocation().getRace();
 		getSiegeLocation().setRace(winner.getSiegeRace());
 		getArtifact().setRace(winner.getSiegeRace());
 		if (SiegeRace.BALAUR == winner.getSiegeRace()) {

@@ -111,15 +111,6 @@ public class RateConfig {
 	@Property(key = "gameserver.rate.vip.quest.gp", defaultValue = "2.0")
 	public static float VIP_QUEST_GP_RATE;
 	/**
-	 * Quest Abyss OP - Regular (1), Premium (1.5), VIP (2)
-	 */
-	@Property(key = "gameserver.rate.regular.quest.abyss_op", defaultValue = "1")
-	public static float QUEST_ABYSS_OP_RATE;
-	@Property(key = "gameserver.rate.premium.quest.abyss_op", defaultValue = "2")
-	public static float PREMIUM_QUEST_ABYSS_OP_RATE;
-	@Property(key = "gameserver.rate.vip.quest.abyss_op", defaultValue = "3")
-	public static float VIP_QUEST_ABYSS_OP_RATE;
-	/**
 	 * Drop Rates - Regular (1), Premium (2), VIP (3)
 	 */
 	@Property(key = "gameserver.rate.regular.drop", defaultValue = "1.0")

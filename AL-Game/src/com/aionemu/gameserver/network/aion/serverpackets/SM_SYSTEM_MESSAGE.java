@@ -21474,18 +21474,6 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	public static final SM_SYSTEM_MESSAGE STR_MSG_WORLDRAID_Ere_MESSAGE_04 = new SM_SYSTEM_MESSAGE(1403072);
 	public static final SM_SYSTEM_MESSAGE STR_MSG_WORLDRAID_Ere_MESSAGE_DIE_01 = new SM_SYSTEM_MESSAGE(1403073);
 
-	/**
-	 * Abyss Landing
-	 */
-	public static final SM_SYSTEM_MESSAGE STR_MSG_Ab1_Fortress_Entrance_In01 = new SM_SYSTEM_MESSAGE(1403044);
-	public static final SM_SYSTEM_MESSAGE STR_MSG_Ab1_Fortress_Entrance_In02 = new SM_SYSTEM_MESSAGE(1403045);
-	public static final SM_SYSTEM_MESSAGE STR_MSG_Ab1_Named_Spawn_Fail01 = new SM_SYSTEM_MESSAGE(1403046);
-	public static final SM_SYSTEM_MESSAGE STR_MSG_Ab1_Named_Spawn_Fail02 = new SM_SYSTEM_MESSAGE(1403047);
-	public static final SM_SYSTEM_MESSAGE STR_MSG_Ab1_Named_Spawn_Fail03 = new SM_SYSTEM_MESSAGE(1403048);
-	public static final SM_SYSTEM_MESSAGE STR_MSG_ABYSS_OP_LEVEL_UP_LIGHT = new SM_SYSTEM_MESSAGE(1403077);
-	public static final SM_SYSTEM_MESSAGE STR_MSG_ABYSS_OP_LEVEL_DOWN = new SM_SYSTEM_MESSAGE(1403078);
-	public static final SM_SYSTEM_MESSAGE STR_MSG_ABYSS_OP_LEVEL_UP_DARK = new SM_SYSTEM_MESSAGE(1403107);
-
 	public static SM_SYSTEM_MESSAGE STR_MSG_BUILDUP_POINT_QUEST_GAIN(int value0) {
 		return new SM_SYSTEM_MESSAGE(1403172, value0);
 	}

@@ -41,8 +41,6 @@ public class Rewards {
 	protected Integer rewardAbyssPoint;
 	@XmlAttribute(name = "reward_glory_point")
 	protected Integer rewardGloryPoint;
-	@XmlAttribute(name = "reward_abyss_op_point")
-	protected Integer rewardAbyssOpPoint;
 	@XmlAttribute(name = "expBoost")
 	protected Integer expBoost;
 	@XmlAttribute(name = "reward_creativity_point")
@@ -132,15 +130,6 @@ public class Rewards {
 	 */
 	public Integer getRewardGloryPoint() {
 		return rewardGloryPoint;
-	}
-
-	/**
-	 * Gets the value of the rewardAbyssOperationsPoint property.
-	 *
-	 * @return possible object is {@link Integer }
-	 */
-	public Integer getRewardAbyssOpPoint() {
-		return rewardAbyssOpPoint;
 	}
 
 	/**

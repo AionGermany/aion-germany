@@ -231,8 +231,6 @@ public class StaticData {
 	public PetMerchandData petMerchandData;
 	@XmlElement(name = "f2p_bonus")
 	public F2PBonusData f2pBonus;
-	@XmlElement(name = "abyss_ops")
-	public AbyssOpData abyssOpData;
 	@XmlElement(name = "luna_consume_rewards")
 	public LunaConsumeRewardsData lunaConsumeRewardsData;
 	@XmlElement(name = "minions")
@@ -352,7 +350,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + petBuffData.size() + " Pets Buff entries");
 		DataManager.log.info("[DataManager] Loaded " + petMerchandData.size() + " Pets Merchant entries");
 		DataManager.log.info("[DataManager] Loaded " + f2pBonus.size() + " F2P Bonus entries");
-		DataManager.log.info("[DataManager] Loaded " + abyssOpData.size() + " Abyss Landing entries");
 		DataManager.log.info("[DataManager] Loaded " + lunaConsumeRewardsData.size() + " Luna Consume entries");
 		DataManager.log.info("[DataManager] Loaded " + minionData.size() + " Minion templates");
 		DataManager.log.info("[DataManager] Loaded " + boostEvents.size() + " Boost Event templates");

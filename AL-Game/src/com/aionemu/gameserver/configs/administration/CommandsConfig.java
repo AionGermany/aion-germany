@@ -133,8 +133,6 @@ public class CommandsConfig {
 	public static int KILL;
 	@Property(key = "kinah", defaultValue = "3")
 	public static int KINAH;
-	@Property(key = "landing", defaultValue = "3")
-	public static int LANDING;
 	@Property(key = "legion", defaultValue = "3")
 	public static int LEGION;
 	@Property(key = "map", defaultValue = "3")

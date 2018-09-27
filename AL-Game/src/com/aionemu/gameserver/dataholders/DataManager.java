@@ -132,7 +132,6 @@ public final class DataManager {
 	public static PetBuffData PET_BUFF_DATA;
 	public static PetMerchandData PET_MERCHAND_DATA;
 	public static F2PBonusData F2P_BONUS_DATA;
-	public static AbyssOpData ABYSS_OP_DATA;
 	public static LunaConsumeRewardsData LUNA_CONSUME_REWARDS_DATA;
 	public static MinionData MINION_DATA;
 	public static BoostEventData BOOST_EVENT_DATA;
@@ -259,7 +258,6 @@ public final class DataManager {
 		PET_BUFF_DATA = data.petBuffData;
 		PET_MERCHAND_DATA = data.petMerchandData;
 		F2P_BONUS_DATA = data.f2pBonus;
-		ABYSS_OP_DATA = data.abyssOpData;
 		LUNA_CONSUME_REWARDS_DATA = data.lunaConsumeRewardsData;
 		MINION_DATA = data.minionData;
 		BOOST_EVENT_DATA = data.boostEvents;
