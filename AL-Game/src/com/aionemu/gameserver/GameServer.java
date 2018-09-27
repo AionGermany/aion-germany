@@ -117,6 +117,7 @@ import com.aionemu.gameserver.services.instance.SanctumBattlefieldService;
 import com.aionemu.gameserver.services.instance.SteelWallBastionBattlefieldService;
 import com.aionemu.gameserver.services.player.FatigueService;
 import com.aionemu.gameserver.services.player.LunaShopService;
+import com.aionemu.gameserver.services.player.PlayerCubicService;
 import com.aionemu.gameserver.services.player.PlayerEventService;
 import com.aionemu.gameserver.services.player.PlayerLimitService;
 import com.aionemu.gameserver.services.reward.OnlineBonus;
@@ -242,6 +243,8 @@ public class GameServer {
 		EventWindowService.getInstance().initialize();
 		Util.printSsSection(" ### Shugo Sweep initialization ### ");
 		ShugoSweepService.getInstance().initShugoSweep();
+		Util.printSsSection(" ### Cubic Monster initialization ### ");
+        PlayerCubicService.getInstance();
 		Util.printSection(" ### GeoData ### ");
 		GeoService.getInstance().initializeGeo();
 		DropRegistrationService.getInstance();

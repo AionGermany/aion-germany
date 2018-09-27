@@ -49,6 +49,7 @@ import com.aionemu.gameserver.model.WorldBuff;
 import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.actions.PlayerActions;
 import com.aionemu.gameserver.model.actions.PlayerMode;
+import com.aionemu.gameserver.model.cubics.PlayerMCList;
 import com.aionemu.gameserver.model.dorinerk_wardrobe.PlayerWardrobeList;
 import com.aionemu.gameserver.model.event_window.PlayerEventWindowList;
 import com.aionemu.gameserver.model.gameobjects.Creature;
@@ -317,6 +318,7 @@ public class Player extends Creature {
 	private PlayerSweep shugoSweep;
 	private boolean setMinionSpawned;
 	private EquipmentSettingList equipmentSettingList;
+	private PlayerMCList mc;
 
 	/**
 	 * Player Skill Skin List
@@ -3101,4 +3103,12 @@ public class Player extends Creature {
 	public int getPartnerId() { 
 		return this.partnerId;
 	}
+	
+	public PlayerMCList getMonsterCubic() {
+               return this.mc;
+        }
+
+        public void setMonsterCubic(PlayerMCList playerABList) {
+               this.mc = playerABList;
+        }
 }

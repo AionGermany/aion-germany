@@ -23,12 +23,25 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  * @author Falke_34
  */
 public class SM_CUBIC extends AionServerPacket {
+	
+	private int cubicId;
+    private int rank;
+    private int level;
+    private int register;
+
+    public SM_CUBIC(int cubicId, int rank, int level, int register) {
+        this.cubicId = cubicId;
+        this.rank = rank;
+        this.level = level;
+        this.level = level;
+        this.register = register;
+    }
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeD(0); // Cube
-		writeD(0); // Rank
-		writeD(0); // Level
-		writeD(0); // unk
+		writeD(cubicId); // Cube
+        writeD(rank); // Rank
+        writeD(level); // Level
+        writeD(register); // Count of Cubic to Register
 	}
 }

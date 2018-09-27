@@ -141,6 +141,7 @@ public final class DataManager {
 	public static EventsWindowData EVENTS_WINDOW;
 	public static ItemSkillEnhanceData ITEM_SKILL_ENHANCE_DATA;
 	public static ShugoSweepRewardData SHUGO_SWEEP_REWARD_DATA;
+	public static CubicsData CUBICS_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -267,6 +268,7 @@ public final class DataManager {
 		EVENTS_WINDOW = data.eventsWindow;
 		ITEM_SKILL_ENHANCE_DATA = data.itemSkillEnhance;
 		SHUGO_SWEEP_REWARD_DATA = data.shugoSweepsRewardData;
+		CUBICS_DATA = data.cubicsData; //6.0
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

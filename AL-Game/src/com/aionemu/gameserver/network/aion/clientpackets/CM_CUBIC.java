@@ -16,24 +16,36 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import com.aionemu.gameserver.GameServer;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
+import com.aionemu.gameserver.services.player.PlayerCubicService;
 
 /**
  * @author Falke_34
+ * @rework Phantom_KNA
  */
 public class CM_CUBIC extends AionClientPacket {
 
+    private int cubicId;
+    
 	public CM_CUBIC(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 
 	@Override
-	protected void readImpl() {
-		readD(); // Cube
-	}
+    protected void readImpl() {
+        cubicId = readD(); // Id Cube
+        GameServer.log.info("ActionID: " + cubicId + ""); //For Debug 
+    }
 
 	@Override
-	protected void runImpl() {
-	}
+    protected void runImpl() {
+        Player player = getConnection().getActivePlayer();
+        if (player == null) {
+            return;
+        }
+        PlayerCubicService.getInstance().registerCubic(player, cubicId);
+    }
 }
