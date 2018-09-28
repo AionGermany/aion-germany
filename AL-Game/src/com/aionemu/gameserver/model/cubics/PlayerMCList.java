@@ -29,7 +29,7 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public final class PlayerMCList implements MCList<Player> {
 
-	private final Map<Integer, PlayerMCEntry> entry = new HashMap(0);
+	private final Map<Integer, PlayerMCEntry> entry = new HashMap<Integer, PlayerMCEntry>(0);
 
 	public PlayerMCList() {
 	}
@@ -42,7 +42,7 @@ public final class PlayerMCList implements MCList<Player> {
 	}
 
 	public PlayerMCEntry[] getAllMC() {
-		ArrayList list = new ArrayList();
+		ArrayList<PlayerMCEntry> list = new ArrayList<PlayerMCEntry>();
 		list.addAll(this.entry.values());
 		return (PlayerMCEntry[]) list.toArray(new PlayerMCEntry[list.size()]);
 	}
