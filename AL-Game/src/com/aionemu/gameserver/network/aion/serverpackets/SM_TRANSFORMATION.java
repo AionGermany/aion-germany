@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import java.util.Collection;
+
+import com.aionemu.gameserver.model.gameobjects.player.TransformationCommonData;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -25,6 +28,8 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 public class SM_TRANSFORMATION extends AionServerPacket {
 
 	private int actionId;
+	private Collection<TransformationCommonData> transformations;
+	private TransformationCommonData transformationsCommonData;
 
 	public SM_TRANSFORMATION(int actionId) {
 		this.actionId = actionId;
@@ -34,16 +39,25 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 	protected void writeImpl(AionConnection con) {
 		writeH(actionId);
 		switch (actionId) {
-		case 0:
+		case 0: //List
 			writeC(0);
-			writeH(0); // Count
-		case 1:
-			writeH(0);
-			writeD(0); // Transformation ID
-		case 2:
-			writeH(0);
-			writeD(0); // Transformation ID
-			writeD(0);
+			if (transformations == null) {
+				writeH(0);
+				break;
+			}
+			writeH(transformations.size());
+			for (TransformationCommonData commonData : transformations) {
+				writeD(commonData.getTransformationId());
+				writeD(0); // 0/1
+			}
+			break;
+		case 1: //Add
+			writeH(1);
+			writeD(transformationsCommonData.getTransformationId());
+		case 2: //Delete
+			writeH(1);
+			writeD(transformationsCommonData.getTransformationId());
+			writeD(1);
 		}
 	}
 }

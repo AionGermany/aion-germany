@@ -254,7 +254,7 @@ public class DropRegistrationService {
 		}
 		//Minion auto loot
 		if (player.getMinion() != null && player.getMinion().getCommonData().isLooting()) {
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, npcObjId, true));
+			//PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, npcObjId, true));
 			Set<DropItem> drops = getCurrentDropMap().get(npcObjId);
 			if (drops == null || drops.size() == 0) {
 				npc.getController().onDelete();
@@ -265,7 +265,7 @@ public class DropRegistrationService {
 					DropService.getInstance().requestDropItem(player, npcObjId, dropItems[i].getIndex(), true);
 				}
 			}
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, npcObjId, false));
+			//PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, npcObjId, false));
 			// if everything was looted, npc is deleted
 			if (drops == null || drops.size() == 0) {
 				return;

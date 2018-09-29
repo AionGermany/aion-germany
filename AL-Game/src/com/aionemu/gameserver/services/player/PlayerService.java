@@ -16,6 +16,13 @@
  */
 package com.aionemu.gameserver.services.player;
 
+import java.sql.Timestamp;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.GenericValidator;
 import com.aionemu.gameserver.configs.main.CacheConfig;
@@ -39,7 +46,6 @@ import com.aionemu.gameserver.dao.OldNamesDAO;
 import com.aionemu.gameserver.dao.PlayerAppearanceDAO;
 import com.aionemu.gameserver.dao.PlayerBindPointDAO;
 import com.aionemu.gameserver.dao.PlayerCooldownsDAO;
-import com.aionemu.gameserver.dao.PlayerCubicsDAO;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerEffectsDAO;
 import com.aionemu.gameserver.dao.PlayerEmotionListDAO;
@@ -101,12 +107,6 @@ import com.aionemu.gameserver.world.knownlist.KnownList;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import java.sql.Timestamp;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * This class is designed to do all the work related with loading/storing players.<br>
@@ -213,7 +213,6 @@ public class PlayerService {
 		DAOManager.getDAO(PlayerNpcFactionsDAO.class).loadNpcFactions(player);
 		DAOManager.getDAO(MotionDAO.class).loadMotionList(player);
 		player.setVars(DAOManager.getDAO(PlayerVarsDAO.class).load(player.getObjectId()));
-		player.setMonsterCubic(DAOManager.getDAO(PlayerCubicsDAO.class).load(player)); //6.0
 		player.setEffectController(new PlayerEffectController(player));
 		player.setFlyController(new FlyController(player));
 		PlayerStatFunctions.addPredefinedStatFunctions(player);

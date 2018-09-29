@@ -492,8 +492,6 @@ public final class PlayerEnterWorldService {
 			// SM_UNK_154
 //			client.sendPacket(new SM_UNK_154()); // TODO 5.6
 
-            PlayerCubicService.getInstance().onLogin(player);
-
 			// SM_UI_SETTINGS
 			byte[] uiSettings = player.getPlayerSettings().getUiSettings();
 			byte[] shortcuts = player.getPlayerSettings().getShortcuts();

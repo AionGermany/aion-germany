@@ -247,6 +247,8 @@ public class StaticData {
 	public ShugoSweepRewardData shugoSweepsRewardData;
 	@XmlElement(name = "cubics_templates")
     public CubicsData cubicsData;
+	@XmlElement(name = "transformations")	
+	public TransformationData transformationData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -359,5 +361,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + itemSkillEnhance.size() + " Skill Boost entries");
 		DataManager.log.info("[DataManager] Loaded " + shugoSweepsRewardData.size() + " Shugo Sweep Reward entries");
 		DataManager.log.info("[DataManager] Loaded " + cubicsData.size() + " Cubics entries");
+		DataManager.log.info("[DataManager] Loaded " + transformationData.size() + " Transformation entries");
 	}
 }

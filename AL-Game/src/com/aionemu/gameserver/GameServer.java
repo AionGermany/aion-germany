@@ -237,13 +237,13 @@ public class GameServer {
 		World.getInstance();
 		Util.printSection(" ### Luna System ### ");
 		LunaShopService.getInstance().init();
-		Util.printSection(" ### Minion System ### ");
-		MinionService.getInstance().init();
+		//Util.printSection(" ### Minion System ### ");
+		//MinionService.getInstance().init();
 		Util.printSection(" ### Events Window System ### ");
 		EventWindowService.getInstance().initialize();
 		Util.printSsSection(" ### Shugo Sweep initialization ### ");
 		ShugoSweepService.getInstance().initShugoSweep();
-		Util.printSsSection(" ### Cubic Monster initialization ### ");
+		Util.printSsSection(" ### Cubic initialization ### ");
         PlayerCubicService.getInstance();
 		Util.printSection(" ### GeoData ### ");
 		GeoService.getInstance().initializeGeo();

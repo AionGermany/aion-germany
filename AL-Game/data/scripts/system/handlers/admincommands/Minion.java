@@ -35,7 +35,7 @@ public class Minion extends AdminCommand {
 		String command = params[0];
 		if ("add".equals(command)) {
 			final int itemObjId = Integer.parseInt(params[1]);
-			MinionService.getInstance().addMinion(player, itemObjId);
+			//MinionService.getInstance().addMinion(player, itemObjId);
 		}
 	}
 

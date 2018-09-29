@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="transformations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="transformation" type="transformation" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="transformation">
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="grade" type="xs:int"/>
+        <xs:attribute name="skill" type="xs:int"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="name_id" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

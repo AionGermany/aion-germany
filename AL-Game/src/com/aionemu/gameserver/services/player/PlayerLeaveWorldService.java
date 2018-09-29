@@ -184,9 +184,9 @@ public class PlayerLeaveWorldService {
 			SummonsService.doMode(SummonMode.RELEASE, summon, UnsummonType.LOGOUT);
 		}
 		PetSpawnService.dismissPet(player, true);
-		if(player.getMinion() != null) {
-			MinionService.getInstance().despawnMinion(player, player.getMinion().getObjectId());	
-		}
+		//if(player.getMinion() != null) {
+		//	MinionService.getInstance().despawnMinion(player, player.getMinion().getObjectId());	
+		//}
 
 		if (player.getPostman() != null) {
 			player.getPostman().getController().onDelete();

@@ -3103,7 +3103,7 @@ public class Player extends Creature {
 	public int getPartnerId() { 
 		return this.partnerId;
 	}
-	
+
 	public PlayerMCList getMonsterCubic() {
                return this.mc;
         }

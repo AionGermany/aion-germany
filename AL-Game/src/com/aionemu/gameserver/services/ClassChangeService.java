@@ -139,8 +139,8 @@ public class ClassChangeService {
 						break;
 
 				}
-				completeQuest(player, 1006);
-				completeQuest(player, 1007);
+				completeQuest(player, 60100);
+				completeQuest(player, 60101);
 
 				// Stigma Quests Elyos
 				if (player.havePermission(MembershipConfig.STIGMA_SLOT_QUEST)) {
@@ -184,8 +184,8 @@ public class ClassChangeService {
 						break;
 				}
 				// Optimate @Enomine
-				completeQuest(player, 2008);
-				completeQuest(player, 2009);
+				completeQuest(player, 70100);
+				completeQuest(player, 70101);
 
 				// Stigma Quests Asmodians
 				if (player.havePermission(MembershipConfig.STIGMA_SLOT_QUEST)) {

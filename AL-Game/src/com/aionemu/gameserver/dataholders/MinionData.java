@@ -33,6 +33,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "minions")
 public class MinionData {
+
 	@XmlElement(name = "minion")
 	private List<MinionTemplate> minionTemplates;
 	@XmlTransient
@@ -60,4 +61,8 @@ public class MinionData {
 	public List<Integer> getAll() {
 		return minionDataList;
 	}
+
+    public TIntObjectHashMap<MinionTemplate> getMinionData() {
+        return minionData;
+    }
 }

@@ -178,9 +178,9 @@ public class CM_PET extends AionClientPacket {
 				PetAdoptionService.surrenderPet(player, petId);
 				break;
 			case SPAWN:
-                if (player.getMinion() != null) {
-                    MinionService.getInstance().despawnMinion(player, 0);
-                }
+                //if (player.getMinion() != null) {
+                //    MinionService.getInstance().despawnMinion(player, 0);
+                //}
 				PetSpawnService.summonPet(player, petId, true);
 				break;
 			case DISMISS:
