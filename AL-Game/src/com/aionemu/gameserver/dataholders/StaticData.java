@@ -199,8 +199,6 @@ public class StaticData {
 	public MultiReturnItemData multiReturnItemData;
 	@XmlElement(name = "hotspot_teleport")
 	public HotspotTeleporterData hotspotTeleporterData;
-	@XmlElement(name = "atreian_passports")
-	public AtreianPassportData atreianPassportData;
 	@XmlElement(name = "base_locations")
 	public BaseData baseData;
 	@XmlElement(name = "abyss_bonusattrs")
@@ -337,7 +335,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + multiReturnItemData.size() + " multi returns items");
 		DataManager.log.info("[DataManager] Loaded " + hotspotTeleporterData.size() + " hotspot templates");
 		DataManager.log.info("[DataManager] Loaded " + arcadeUpgradeData.size() + " arcade upgrade entries");
-		DataManager.log.info("[DataManager] Loaded " + atreianPassportData.size() + " atreian passports");
 		DataManager.log.info("[DataManager] Loaded " + baseData.size() + " base entries");
 		DataManager.log.info("[DataManager] Loaded " + abyssBuffData.size() + " abyss bonus entries");
 		DataManager.log.info("[DataManager] Loaded " + abyssGroupData.size() + " abyss bonus group entries");

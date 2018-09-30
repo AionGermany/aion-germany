@@ -98,7 +98,6 @@ import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.abyss.AbyssRankUpdateService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
-import com.aionemu.gameserver.services.events.AtreianPassportService;
 import com.aionemu.gameserver.services.events.BoostEventService;
 import com.aionemu.gameserver.services.events.EventService;
 import com.aionemu.gameserver.services.events.EventWindowService;
@@ -124,7 +123,6 @@ import com.aionemu.gameserver.services.reward.OnlineBonus;
 import com.aionemu.gameserver.services.reward.RewardService;
 import com.aionemu.gameserver.services.teleport.HotspotTeleportService;
 import com.aionemu.gameserver.services.territory.TerritoryService;
-import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.services.transfers.PlayerTransferService;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.spawnengine.TemporarySpawnEngine;
@@ -285,9 +283,6 @@ public class GameServer {
 		if (EventsConfig.ENABLE_EVENT_SERVICE) {
 			EventService.getInstance().start();
 		}
-		if (EventsConfig.ENABLE_ATREIAN_PASSPORT) {
-			AtreianPassportService.getInstance().onStart();
-		}
 		
 		RiftService.getInstance().initRifts();
 		TemporarySpawnEngine.spawnAll();
@@ -318,8 +313,6 @@ public class GameServer {
 		if (EventsConfig.ENABLE_BOOST_EVENTS) {
 			BoostEventService.getInstance().onStart();
 		}
-		Util.printSsSection("Atreian Passport");
-		AtreianPassportService.getInstance().onStart();
 		Util.printSsSection("HTML");
 		HTMLCache.getInstance();
 		if (CustomConfig.ENABLE_REWARD_SERVICE) {

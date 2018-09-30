@@ -272,7 +272,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_FATIGUE.class, 0xB3, idSet);
 		addPacketOpcode(SM_HOTSPOT_TELEPORT.class, 0x12A, idSet); // 5.6
 		addPacketOpcode(SM_UPGRADE_ARCADE.class, 0x12C, idSet); // 5.6
-		addPacketOpcode(SM_ATREIAN_PASSPORT.class, 0x12D, idSet); // 5.6
 		addPacketOpcode(SM_GAMEGUARD.class, 0x129, idSet); // 6.x
 		addPacketOpcode(SM_CUSTOM_PACKET.class, 99999, idSet); // fake packet
 		addPacketOpcode(SM_AFTER_TIME_CHECK.class, 0x126, idSet); // 5.6

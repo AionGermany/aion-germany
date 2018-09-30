@@ -88,7 +88,6 @@
     <xs:include schemaLocation="items/enchant_tables.xsd"/>
     <xs:include schemaLocation="items/item_multi_returns.xsd"/> 
     <xs:include schemaLocation="hotspot_teleporter.xsd"/>
-    <xs:include schemaLocation="events_config/atreian_passports.xsd"/>
     <xs:include schemaLocation="stats/absolute_stats.xsd"/>
     <xs:include schemaLocation="arcadelist.xsd"/> 
 	<xs:include schemaLocation="hidden_stigma_tree/hidden_stigma_tree.xsd"/>
@@ -200,7 +199,6 @@
                 <xs:element ref="enchant_tables" minOccurs="0"/>
                 <xs:element ref="item_multi_returns" minOccurs="0"/>
                 <xs:element ref="hotspot_teleport" minOccurs="0"/>
-                <xs:element ref="atreian_passports" minOccurs="0"/>
                 <xs:element ref="absolute_stats" minOccurs="0"/>
                 <xs:element ref="arcadelist" minOccurs="0"/>       
 				<xs:element ref="hidden_stigma_tree" minOccurs="0"/>

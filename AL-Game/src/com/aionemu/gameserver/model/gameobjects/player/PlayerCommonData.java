@@ -18,8 +18,6 @@ package com.aionemu.gameserver.model.gameobjects.player;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +33,6 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.team.legion.LegionJoinRequestState;
 import com.aionemu.gameserver.model.templates.BoundRadius;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
-import com.aionemu.gameserver.model.templates.event.AtreianPassport;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DP_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATUPDATE_DP;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATUPDATE_EXP;
@@ -98,17 +95,12 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	private int fatigue = 0;
 	private int fatigueRecover = 0;
 	private int fatigueReset = 0;
-	private int stamps = 0;
-	private int passportReward = 0;
 	private int joinRequestLegionId = 0;
 	private LegionJoinRequestState joinRequestState = LegionJoinRequestState.NONE;
 	private PlayerUpgradeArcade upgradeArcade;
 
 	private PlayerBonusTime bonusTime = new PlayerBonusTime();
 	private Timestamp creationDate;
-
-	public Map<Integer, AtreianPassport> playerPassports = new HashMap<Integer, AtreianPassport>(1);
-	private PlayerPassports completedPassports;
 
 	private int lunaCoins = 0;
 	private int wardrobeSize = 256;
@@ -945,30 +937,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 
 	public int getFatigueReset() {
 		return fatigueReset;
-	}
-
-	public int getPassportStamps() {
-		return stamps;
-	}
-
-	public void setPassportStamps(int value) {
-		this.stamps = value;
-	}
-
-	public PlayerPassports getCompletedPassports() {
-		return completedPassports;
-	}
-
-	public void setCompletedPassports(PlayerPassports pp) {
-		completedPassports = pp;
-	}
-
-	public int getPassportReward() {
-		return passportReward;
-	}
-
-	public void setPassportReward(int value) {
-		this.passportReward = value;
 	}
 
 	public int getJoinRequestLegionId() {

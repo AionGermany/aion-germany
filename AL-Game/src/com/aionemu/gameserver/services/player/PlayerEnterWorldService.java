@@ -141,7 +141,6 @@ import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
-import com.aionemu.gameserver.services.events.AtreianPassportService;
 import com.aionemu.gameserver.services.events.BoostEventService;
 import com.aionemu.gameserver.services.events.EventService;
 import com.aionemu.gameserver.services.events.EventWindowService;
@@ -655,9 +654,6 @@ public final class PlayerEnterWorldService {
 
 			// SM_SHUGO_SWEEP
 			ShugoSweepService.getInstance().onLogin(player);
-
-			// SM_ATREIAN_PASSPORT
-			AtreianPassportService.getInstance().onLogin(player);
 
 			// SM_BROKER_SERVICE
 			BrokerService.getInstance().onPlayerLogin(player);

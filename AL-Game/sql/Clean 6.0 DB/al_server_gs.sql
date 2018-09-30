@@ -681,9 +681,6 @@ CREATE TABLE `players` (
   `fatigue` int(11) NOT NULL DEFAULT '0',
   `fatigueRecover` int(11) NOT NULL DEFAULT '0',
   `fatigueReset` int(11) NOT NULL DEFAULT '0',
-  `stamps` int(11) NOT NULL DEFAULT '0',
-  `last_stamp` timestamp NULL DEFAULT NULL,
-  `rewarded_pass` int(1) NOT NULL DEFAULT '0',
   `joinRequestLegionId` int(11) NOT NULL DEFAULT '0',
   `joinRequestState` enum('NONE','DENIED','ACCEPTED') NOT NULL DEFAULT 'NONE',
   `frenzy_points` int(4) NOT NULL DEFAULT '0' COMMENT 'Upgrade Arcade FrenzyPoints',
@@ -1099,23 +1096,6 @@ CREATE TABLE `player_passkey` (
 
 -- ----------------------------
 -- Records of player_passkey
--- ----------------------------
-
--- ----------------------------
--- Table structure for `player_passports`
--- ----------------------------
-DROP TABLE IF EXISTS `player_passports`;
-CREATE TABLE `player_passports` (
-  `account_id` int(11) NOT NULL,
-  `passport_id` int(11) NOT NULL,
-  `stamps` int(11) NOT NULL DEFAULT '0',
-  `last_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `rewarded` tinyint(1) NOT NULL DEFAULT '0',
-  UNIQUE KEY `account_passport` (`account_id`,`passport_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of player_passports
 -- ----------------------------
 
 -- ----------------------------

@@ -117,7 +117,6 @@ public final class DataManager {
 	public static ItemEnchantTableData ITEM_ENCHANT_TABLE_DATA;
 	public static MultiReturnItemData MULTI_RETURN_ITEM_DATA;
 	public static HotspotTeleporterData HOTSPOT_TELEPORTER_DATA;
-	public static AtreianPassportData ATREIAN_PASSPORT_DATA;
 	public static BaseData BASE_DATA;
 	public static AbyssBuffData ABYSS_BUFF_DATA;
 	public static AbyssGroupData ABYSS_GROUP_DATA;
@@ -243,7 +242,6 @@ public final class DataManager {
 		ITEM_ENCHANT_TABLE_DATA = data.itemEnchantTableData;
 		MULTI_RETURN_ITEM_DATA = data.multiReturnItemData;
 		HOTSPOT_TELEPORTER_DATA = data.hotspotTeleporterData;
-		ATREIAN_PASSPORT_DATA = data.atreianPassportData;
 		BASE_DATA = data.baseData;
 		ABYSS_BUFF_DATA = data.abyssBuffData;
 		ABYSS_GROUP_DATA = data.abyssGroupData;
