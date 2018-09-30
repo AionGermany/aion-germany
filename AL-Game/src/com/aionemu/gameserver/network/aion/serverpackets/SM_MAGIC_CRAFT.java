@@ -23,7 +23,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Falke_34, FrozenKiller
  */
-
 public class SM_MAGIC_CRAFT extends AionServerPacket {
 
 	private int action;
@@ -53,6 +52,10 @@ public class SM_MAGIC_CRAFT extends AionServerPacket {
 				writeD(0);
 				break;
 			case 2:
+				writeD(recipe);
+				writeD(0);
+				break;
+			case 3: // Proc
 				writeD(recipe);
 				writeD(0);
 				break;

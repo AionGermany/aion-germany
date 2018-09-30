@@ -298,8 +298,6 @@ public class ServerPacketsOpcodes {
 		// ------------------MAGIC MORPH + CRAFT---------------------//
 		addPacketOpcode(SM_MAGIC_CRAFT_ANIMATION.class, 0x14D, idSet); // 5.6 TODO
 		addPacketOpcode(SM_MAGIC_CRAFT.class, 0x14C, idSet); // 5.6 TODO
-		addPacketOpcode(SM_MAGIC_MORPH_WINDOW.class, 0x15D, idSet); // 5.6 TODO
-		addPacketOpcode(SM_MAGIC_MORPH_RESULT.class, 0x14E, idSet); // 5.6 TODO
 		// ----------------------MONSTERBOOK-------------------------//
 		addPacketOpcode(SM_UNK_135.class, 0x136, idSet); // TODO After SM_Monsterbook
 		// -------------------EQUIPMENT SETTING----------------------//

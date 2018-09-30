@@ -55,7 +55,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_UI_SETTINGS(0xD5, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_MOTION(0x102, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_WINDSTREAM(0x10D, State.IN_GAME)); // 5.3 EU
-		addPacket(new CM_STOP_TRAINING(0x2F5, State.IN_GAME)); // 5.3
+		addPacket(new CM_STOP_TRAINING(0x109, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_REVIVE(0xC0, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_DUEL_REQUEST(0x13E, State.IN_GAME)); // 5.4 EU
 		// addPacket(new CM_CRAFT(0x155, State.IN_GAME)); // 5.4
@@ -76,7 +76,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EMOTION(0x2F6, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_TITLE_SET(0x157, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_DELETE_ITEM(0x130, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_QUEST_SHARE(0x16C, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_QUEST_SHARE(0x160, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_DELETE_QUEST(0x12B, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_ABYSS_RANKING_PLAYERS(0x184, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_ABYSS_RANKING_LEGIONS(0x132, State.IN_GAME)); // 5.4 EU
@@ -149,7 +149,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_REGISTER_BROKER_ITEM(0x15B, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BROKER_ADD_ITEM(0x13D, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BROKER_SETTLE_LIST(0x159, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_BROKER_REGISTERED(0x145, State.IN_GAME)); // 5.4 EU
+		// addPacket(new CM_BROKER_REGISTERED(0x145, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BUY_BROKER_ITEM(0x15A, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BROKER_CANCEL_REGISTERED(0x14C, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_BROKER_SETTLE_ACCOUNT(0x14E, State.IN_GAME)); // 5.4 EU
@@ -161,9 +161,9 @@ public class AionPacketHandlerFactory {
 		// ******************(SUMMON)******************
 		addPacket(new CM_SUMMON_EMOTION(0x196, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_SUMMON_ATTACK(0x197, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_SUMMON_CASTSPELL(0x195, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_SUMMON_COMMAND(0x131, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_SUMMON_MOVE(0x181, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_SUMMON_CASTSPELL(0x1A9, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_SUMMON_COMMAND(0x145, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_SUMMON_MOVE(0x195, State.IN_GAME)); // 6.x EU
 
 		// ******************(MAIL)******************
 		addPacket(new CM_CHECK_MAIL_SIZE(0x141, State.IN_GAME)); // 6.x EU
@@ -272,10 +272,8 @@ public class AionPacketHandlerFactory {
 		// // /////////////////// NEW 5.0 //////////////////////
 		addPacket(new CM_LUNA_SYSTEM(0x1C3, State.IN_GAME)); // 5.6
 
-		// // ////////////// MAGIC MORPH + CRAFT /////////////////
-		addPacket(new CM_MAGIC_MORPH_WINDOW(0x1DE, State.IN_GAME)); // 5.6 TODO
+		// // ////////////////// MAGIC CRAFT //////////////////
 		addPacket(new CM_MAGIC_CRAFT(0x1E8, State.IN_GAME)); // 6.x TODO
-		addPacket(new CM_MAGIC_MORPH(0x1D7, State.IN_GAME)); // 5.6 TODO
 
 		// // /////////////// EQUIPMENT SETTING //////////////////
 		addPacket(new CM_EQUIPMENT_SETTING_SAVE(0x1D3, State.IN_GAME)); // 6.x TODO
