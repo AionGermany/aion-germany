@@ -786,10 +786,6 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 		return (getItemMask() & ItemMask.CAN_AMPLIFICATION) == ItemMask.CAN_AMPLIFICATION;
 	}
 
-	public boolean isHighDaevaItem() {
-		return (getItemMask() & ItemMask.ITEM_HIGHDAEVA) == ItemMask.ITEM_HIGHDAEVA;
-	}
-
 	/**
 	 * @return Returns the expireTime.
 	 */

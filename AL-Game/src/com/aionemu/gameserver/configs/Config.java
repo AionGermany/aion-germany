@@ -46,7 +46,6 @@ import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.configs.main.GeoDataConfig;
 import com.aionemu.gameserver.configs.main.GroupConfig;
 import com.aionemu.gameserver.configs.main.HTMLConfig;
-import com.aionemu.gameserver.configs.main.HighDaevaConfig;
 import com.aionemu.gameserver.configs.main.HousingConfig;
 import com.aionemu.gameserver.configs.main.LegionConfig;
 import com.aionemu.gameserver.configs.main.LoggingConfig;
@@ -124,9 +123,6 @@ public class Config {
 
 			ConfigurableProcessor.process(ConquerorProtectorConfig.class, mainProps);
 			log.info("[Config] Loading: " + main + "/conqueror.properties");
-
-			ConfigurableProcessor.process(HighDaevaConfig.class, mainProps);
-			log.info("[Config] Loading: " + main + "/highdaeva.properties");
 
 			ConfigurableProcessor.process(DualBoxConfig.class, mainProps);
 			log.info("[Config] Loading: " + main + "/DualBoxConfig.properties");
@@ -298,9 +294,6 @@ public class Config {
 
 			ConfigurableProcessor.process(ConquerorProtectorConfig.class, mainProps);
 			log.info("[Config] Reload: " + main + "/conqueror.properties");
-
-			ConfigurableProcessor.process(HighDaevaConfig.class, mainProps);
-			log.info("[Config] Reload: " + main + "/highdaeva.properties");
 
 			ConfigurableProcessor.process(DualBoxConfig.class, mainProps);
 			log.info("[Config] Reload: " + main + "/DualBoxConfig.properties");

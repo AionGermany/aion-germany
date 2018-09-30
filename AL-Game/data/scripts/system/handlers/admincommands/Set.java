@@ -199,10 +199,6 @@ public class Set extends AdminCommand {
 			if (level <= GSConfig.PLAYER_MAX_LEVEL) {
 				player.getCommonData().setLevel(level);
 			}
-			if (level > 65) {
-				player.getCommonData().setHighDaeva();
-			}
-
 			PacketSendUtility.sendMessage(admin, "Set " + player.getCommonData().getName() + " level to " + level);
 		}
 		else if (params[0].equals("title")) {

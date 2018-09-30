@@ -38,5 +38,4 @@ public class ItemMask {
 	public static final int CAN_AP_EXTRACT = (1 << 16);
 	public static final int CAN_POLISH = (1 << 17);
 	public static final int CAN_AMPLIFICATION = (1 << 18);
-	public static final int ITEM_HIGHDAEVA = (1 << 19);
 }

@@ -43,11 +43,6 @@ public class EquipedLevelAdjAction extends AbstractItemAction {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EQUIPLEVEL_ADJ_NO_TARGET_ITEM);
 			return false;
 		}
-		if (!targetItem.isHighDaevaItem()) {
-			// You cannot reduce the recommended level of %0
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EQUIPLEVEL_ADJ_CANNOT(parentItem.getNameId()));
-			return false;
-		}
 		if (targetItem.isPacked()) {
 			// You cannot reduce the recommended level of packed items
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EQUIPLEVEL_ADJ_WRONG_PACK);

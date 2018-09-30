@@ -327,9 +327,6 @@ public class EnchantService {
 		if (success >= 95) {
 			success = 95;
 		}
-		if (targetItem.isHighDaevaItem()) {
-			success = 75;
-		}
 		if (targetItem.getItemTemplate().isEstima()) { // TODO
 			success = 50;
 		}
@@ -480,10 +477,6 @@ public class EnchantService {
 			case 7:
 				number = Rnd.get(1000, 2000);
 				break;
-		}
-		// Extracting HighDaeva equipment will give Enchantment Stone Dust and HighDaeva crafting materials.
-		if (targetItem.isHighDaevaItem()) {
-			ItemService.addItem(player, RndArray.get(HighDaevaStoneItems), 1);
 		}
 		int enchantItemId = stone;
 		if (inventory.delete(targetItem) != null) {

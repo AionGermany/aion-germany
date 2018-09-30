@@ -63,11 +63,6 @@ public class EventsConfig {
 	@Property(key = "gameserver.event.service.enable", defaultValue = "false")
 	public static boolean ENABLE_EVENT_SERVICE;
 	/**
-	 * Atreian Passport
-	 */
-	@Property(key = "gameserver.atreian.passport.enable", defaultValue = "false")
-	public static boolean ENABLE_ATREIAN_PASSPORT;
-	/**
 	 * Arcade Event
 	 */
 	@Property(key = "gameserver.event.arcade.enable", defaultValue = "false")

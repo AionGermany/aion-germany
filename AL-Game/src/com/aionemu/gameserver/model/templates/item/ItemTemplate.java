@@ -583,10 +583,6 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return (getMask() & ItemMask.CAN_POLISH) == ItemMask.CAN_POLISH;
 	}
 
-	public boolean isHighdaeva() {
-		return (getMask() & ItemMask.ITEM_HIGHDAEVA) == ItemMask.ITEM_HIGHDAEVA;
-	}
-
 	public boolean isTwoHandWeapon() {
 		if (!isWeapon()) {
 			return false;

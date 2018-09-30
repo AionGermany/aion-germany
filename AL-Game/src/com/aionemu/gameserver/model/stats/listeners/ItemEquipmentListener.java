@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import com.aionemu.gameserver.configs.main.HighDaevaConfig;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.IdianStone;
@@ -173,56 +172,6 @@ public class ItemEquipmentListener {
 					else {
 						allModifiers.add(new StatAddFunction(StatEnum.MAIN_HAND_POWER, attack, false));
 					}
-				}
-			}
-			if (HighDaevaConfig.ITEM_NOT_FOR_HIGHDAEVA_ENABLE) {
-				if (player.getLevel() >= 65 && !itemTemplate.isHighdaeva()) {
-					for (StatFunction a : modifiers) {
-						int value = a.getValue();
-						int formula = (int) (value * (20.0f / 100.0f));
-						allModifiers.add(new StatAddFunction(a.getName(), -formula, false));
-					}
-				}
-			}
-			// HighDaeva item level limitations
-			if (player.getLevel() >= 65 && itemTemplate.isHighdaeva()) {
-				int pLevel = player.getLevel();
-				int iLevel = itemTemplate.getLevel();
-				float percentageDecrease = 0;
-				if (iLevel - pLevel == 1) {
-					percentageDecrease = 2.0f;
-				}
-				else if (iLevel - pLevel == 2) {
-					percentageDecrease = 4.0f;
-				}
-				else if (iLevel - pLevel == 3) {
-					percentageDecrease = 6.0f;
-				}
-				else if (iLevel - pLevel == 4) {
-					percentageDecrease = 8.0f;
-				}
-				else if (iLevel - pLevel == 5) {
-					percentageDecrease = 10.0f;
-				}
-				else if (iLevel - pLevel == 6) {
-					percentageDecrease = 12.0f;
-				}
-				else if (iLevel - pLevel == 7) {
-					percentageDecrease = 14.0f;
-				}
-				else if (iLevel - pLevel == 8) {
-					percentageDecrease = 16.0f;
-				}
-				else if (iLevel - pLevel == 9) {
-					percentageDecrease = 18.0f;
-				}
-				else if (iLevel - pLevel == 10) {
-					percentageDecrease = 20.0f;
-				}
-				for (StatFunction a : modifiers) {
-					int value = a.getValue();
-					int formula = (int) (value * (percentageDecrease / 100.0f));
-					allModifiers.add(new StatAddFunction(a.getName(), -formula, false));
 				}
 			}
 		}

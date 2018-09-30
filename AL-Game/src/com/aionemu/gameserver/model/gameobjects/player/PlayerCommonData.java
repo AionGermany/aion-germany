@@ -105,9 +105,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	private int lunaCoins = 0;
 	private int wardrobeSize = 256;
 	private boolean GoldenStarBoost = false;
-	private boolean isHighDaeva = false;
-	private int creativityPoint;
-	private int cp_step = 0;
 	private int lunaConsumePoint;
 	private int muni_keys;
 	private int consumeCount = 0;
@@ -293,12 +290,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 				} else {
 					reward += 0;
 				}
-			}
-		}
-		if (this.getPlayer().getLevel() < 66) {
-			if (questId == 10521 || questId == 20521) {
-				setHighDaeva();
-				return;
 			}
 		}
 		
@@ -555,22 +546,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 				PacketSendUtility.sendPacket(this.getPlayer(), SM_SYSTEM_MESSAGE.STR_LEVEL_LIMIT_QUEST_NOT_FINISHED1);
 			}
 		}
-		else if (this.getLevel() == 65 && !this.isHighDaeva()) {
-			boolean isCompleteQuest = false;
-			if (this.getPlayer().getRace() == Race.ELYOS) {
-				isCompleteQuest = this.getPlayer().isCompleteQuest(10520); // Covert Communiques.
-			}
-			else {
-				isCompleteQuest = this.getPlayer().isCompleteQuest(20520); // Lost Destiny.
-			}
-			if (!isCompleteQuest) {
-				maxExp = 2066885000;
-				if (this.getExp() >= 2066885000) {
-					// You can advance to level 66 only after you have completed the Transcendence quest.
-					PacketSendUtility.sendPacket(this.getPlayer(), new SM_SYSTEM_MESSAGE(1403187, "66"));
-				}
-			}
-		}
 		if (exp > maxExp) {
 			exp = maxExp;
 		}
@@ -706,18 +681,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	public void setLevel(int level) {
 		if (level <= DataManager.PLAYER_EXPERIENCE_TABLE.getMaxLevel()) {
 			this.setExp(DataManager.PLAYER_EXPERIENCE_TABLE.getStartExpForLevel(level));
-		}
-	}
-
-	// HighDaeva Update
-	public void setHighDaeva() {
-		this.setHighDaeva(true);
-		if (this.getLevel() < 66) {
-			this.setExp(DataManager.PLAYER_EXPERIENCE_TABLE.getStartExpForLevel(66));
-			addGrowthEnergy(1060000 * 10);
-		}
-		else if (this.getLevel() >= 66) {
-			return;
 		}
 	}
 
@@ -1006,36 +969,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 
 	public void setWardrobeSize(int wardrobeSize) {
 		this.wardrobeSize = wardrobeSize;
-	}
-
-	/**
-	 * @High Daeva
-	 */
-	public void setHighDaeva(boolean isHighDaeva) {
-		this.isHighDaeva = isHighDaeva;
-	}
-
-	public boolean isHighDaeva() {
-		return isHighDaeva;
-	}
-
-	/**
-	 * @Creativity Points
-	 */
-	public int getCreativityPoint() {
-		return creativityPoint;
-	}
-
-	public void setCreativityPoint(int point) {
-		this.creativityPoint = point;
-	}
-
-	public int getCPStep() {
-		return cp_step;
-	}
-
-	public void setCPStep(int step) {
-		this.cp_step = step;
 	}
 
 	/**

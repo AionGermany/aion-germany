@@ -150,9 +150,7 @@ public class CM_LEVEL_READY extends AionClientPacket {
 		BaseService.getInstance().onEnterBaseWorld(activePlayer);
 		activePlayer.getEffectController().updatePlayerEffectIcons();
 		sendPacket(SM_CUBE_UPDATE.cubeSize(StorageType.CUBE, activePlayer));
-		TeleportService2.highdaevaTransformation(activePlayer);
 		TeleportService2.playerTransformation(activePlayer);
-		TeleportService2.instanceTransformation(activePlayer);
 		// Pet
 		Pet pet = activePlayer.getPet();
 		if (pet != null && !pet.isSpawned()) {

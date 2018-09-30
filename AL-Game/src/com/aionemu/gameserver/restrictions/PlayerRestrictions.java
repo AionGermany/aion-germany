@@ -439,11 +439,6 @@ public class PlayerRestrictions extends AbstractRestrictions {
 			return false;
 		}
 
-		if (item.getItemTemplate().isHighdaeva() && !player.getCommonData().isHighDaeva()) {
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_USE_ITEM_INVALID_HIGHDEVA(item.getName()));
-			return false;
-		}
-
 		if (item.getItemTemplate().hasAreaRestriction()) {
 			ZoneName restriction = item.getItemTemplate().getUseArea();
 			if (restriction == ZoneName.get("_ABYSS_CASTLE_AREA_")) {

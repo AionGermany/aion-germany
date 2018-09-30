@@ -164,8 +164,6 @@ public class PlayerController extends CreatureController<Player> {
 			}
 			if (player.isTransformed()) {
 				TeleportService2.playerTransformation(getOwner());
-				TeleportService2.instanceTransformation(getOwner());
-				TeleportService2.highdaevaTransformation(getOwner());
 				PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, player.getTransformedModelId(), true, player.getTransformedItemId()));
 				PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, true));
 			}
@@ -489,8 +487,6 @@ public class PlayerController extends CreatureController<Player> {
 
 		InstanceService.onEnterInstance(getOwner());
 		TeleportService2.playerTransformation(getOwner());
-		TeleportService2.instanceTransformation(getOwner());
-		TeleportService2.highdaevaTransformation(getOwner());
 		WorldBuffService.getInstance().onEnterWorld(getOwner());
 		if (getOwner().getPosition().getWorldMapInstance().getParent().isExceptBuff()) {
 			getOwner().getEffectController().removeAllEffects();
@@ -1012,8 +1008,6 @@ public class PlayerController extends CreatureController<Player> {
 	public void startProtectionActiveTask() {
 		if (!getOwner().isProtectionActive()) {
 			TeleportService2.playerTransformation(getOwner());
-			TeleportService2.instanceTransformation(getOwner());
-			TeleportService2.highdaevaTransformation(getOwner());
 			PacketSendUtility.broadcastPacket(getOwner(), new SM_PLAYER_PROTECTION(60));
 			PacketSendUtility.broadcastPacket(getOwner(), new SM_PLAYER_PROTECTION(60000));
 			getOwner().setVisualState(CreatureVisualState.BLINKING);
