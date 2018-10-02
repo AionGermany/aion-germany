@@ -214,7 +214,7 @@ public class _1114TheNymphsGown extends QuestHandler {
 			return HandlerResult.UNKNOWN;
 		}
 
-		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 20, 1, 0), true);
+		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, itemObjId, id, 20, 1), true);
 		if (qs == null || qs.getStatus() == QuestStatus.NONE) {
 			QuestService.startQuest(env);
 		}
