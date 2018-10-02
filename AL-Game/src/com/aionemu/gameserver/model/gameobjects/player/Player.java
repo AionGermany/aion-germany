@@ -70,6 +70,8 @@ import com.aionemu.gameserver.model.gameobjects.player.equipmentsetting.Equipmen
 import com.aionemu.gameserver.model.gameobjects.player.f2p.F2p;
 import com.aionemu.gameserver.model.gameobjects.player.motion.MotionList;
 import com.aionemu.gameserver.model.gameobjects.player.npcFaction.NpcFactions;
+import com.aionemu.gameserver.model.gameobjects.player.ranking.ArenaOfCooperationRank;
+import com.aionemu.gameserver.model.gameobjects.player.ranking.ArenaOfDisciplineRank;
 import com.aionemu.gameserver.model.gameobjects.player.title.TitleList;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureVisualState;
@@ -3104,11 +3106,36 @@ public class Player extends Creature {
 		return this.partnerId;
 	}
 
+	/**
+	 * Cubics System
+	 */
 	public PlayerMCList getMonsterCubic() {
-               return this.mc;
-        }
+		return this.mc;
+	}
 
-        public void setMonsterCubic(PlayerMCList playerABList) {
-               this.mc = playerABList;
-        }
+	public void setMonsterCubic(PlayerMCList playerABList) {
+		this.mc = playerABList;
+	}
+
+	/**
+	 * Player Ranking System
+	 */
+	private ArenaOfDisciplineRank disciplineRank;
+	private ArenaOfCooperationRank cooperationRank;
+
+	public ArenaOfDisciplineRank getDisciplineRank() {
+		return disciplineRank;
+	}
+
+	public void setDisciplineRank(ArenaOfDisciplineRank dr) {
+		this.disciplineRank = dr;
+	}
+
+	public ArenaOfCooperationRank getCooperationRank() {
+		return cooperationRank;
+	}
+
+	public void setCooperationRank(ArenaOfCooperationRank cr) {
+		this.cooperationRank = cr;
+	}	
 }

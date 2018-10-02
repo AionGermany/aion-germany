@@ -16,8 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -26,7 +24,6 @@ import org.slf4j.LoggerFactory;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.base.BaseLocation;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FLAG_INFO;
 import com.aionemu.gameserver.services.base.Base;
@@ -44,7 +41,6 @@ public class BaseService {
 	private static final Logger log = LoggerFactory.getLogger(BaseService.class);
 	private final Map<Integer, Base<?>> active = new FastMap<Integer, Base<?>>().shared();
 	private Map<Integer, BaseLocation> bases;
-	private List<Npc> flags = new ArrayList<Npc>();
 
 	public void initBaseLocations() {
 		bases = DataManager.BASE_DATA.getBaseLocations();
@@ -127,14 +123,10 @@ public class BaseService {
 		for (BaseLocation baseLocation : getBaseLocations().values()) {
 			if (baseLocation.getWorldId() == player.getWorldId() && isActive(baseLocation.getId())) {
 				Base<?> base = getActiveBase(baseLocation.getId());
-				if (base.getFlag() != null) {
-					flags.add(base.getFlag());
-				}
+				PacketSendUtility.sendPacket(player, new SM_FLAG_INFO(1, base.getFlag()));
+				player.getController().updateZone();
+				player.getController().updateNearbyQuests();
 			}
-		}
-		if (flags != null) {
-			PacketSendUtility.sendPacket(player, new SM_FLAG_INFO(flags));
-			player.getController().updateNearbyQuests();
 		}
 	}
 
@@ -145,13 +137,9 @@ public class BaseService {
 			public void visit(Player player) {
 				if (isActive(baseLocation.getId())) {
 					Base<?> base = getActiveBase(baseLocation.getId());
-					if (base.getFlag() != null) {
-						flags.add(base.getFlag());
-					}
-				}
-				if (flags != null) {
-					PacketSendUtility.sendPacket(player, new SM_FLAG_INFO(flags));
-					player.getController().updateNearbyQuests();
+					PacketSendUtility.sendPacket(player, new SM_FLAG_INFO(1, base.getFlag()));
+					player.getController().updateZone();
+			        player.getController().updateNearbyQuests();
 				}
 			}
 		});

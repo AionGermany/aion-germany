@@ -16,6 +16,8 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.gameserver.model.gameobjects.player.ranking.ArenaOfCooperationRank;
+import com.aionemu.gameserver.model.gameobjects.player.ranking.ArenaOfDisciplineRank;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -24,18 +26,54 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_MY_DOCUMENTATION extends AionServerPacket {
 
-	// TODO - Rank List - My Documentation
+	private int tableId;
+	private ArenaOfDisciplineRank arenaOfDiscipline;
+	private ArenaOfCooperationRank arenaOfCooperation;
+
+	public SM_MY_DOCUMENTATION(int tableId, ArenaOfDisciplineRank ranking) {
+		this.tableId = tableId;
+		this.arenaOfDiscipline = ranking;
+	}
+
+	public SM_MY_DOCUMENTATION(int tableId, ArenaOfCooperationRank ranking) {
+		this.tableId = tableId;
+		this.arenaOfCooperation = ranking;
+	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeD(1);
-		writeD(0);
-		writeD(0);
-		writeD(37); // Current Points
-		writeD(0);
-		writeD(0);
-		writeD(37); // Last Points
-		writeD(0);
-		writeD(37); // Highest Points
+		writeD(tableId);
+		switch (tableId) {
+		case 541: // Arena Of Discipline
+			writeD(arenaOfDiscipline.getRank()); // actual Rank
+			writeD(arenaOfDiscipline.getPoints()); // current Points
+			writeD(1);
+			writeD(arenaOfDiscipline.getPossitionMatch()); // position match
+			writeD(arenaOfDiscipline.getBestRank());// lasted rank
+			writeD(arenaOfDiscipline.getLastPoints()); // last Points
+			writeD(arenaOfDiscipline.getLowPoints()); // low points
+			writeD(arenaOfDiscipline.getHighPoints()); // high points
+			return;
+		case 741: // Arena Of Cooperation
+			writeD(arenaOfCooperation.getRank()); // actual Rank
+			writeD(arenaOfCooperation.getPoints()); // current Points
+			writeD(1);
+			writeD(arenaOfCooperation.getPossitionMatch()); // position match
+			writeD(arenaOfCooperation.getBestRank());// lasted rank
+			writeD(arenaOfCooperation.getLastPoints()); // last Points
+			writeD(arenaOfCooperation.getLowPoints()); // low points
+			writeD(arenaOfCooperation.getHighPoints()); // high points
+			return;
+		default:
+			writeD(0); // actual Rank
+			writeD(0); // current Points
+			writeD(0);
+			writeD(0);
+			writeD(0);// lasted rank
+			writeD(0); // last Points
+			writeD(0); // low points
+			writeD(0); // high points
+			return;
+		}
 	}
 }

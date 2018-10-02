@@ -119,6 +119,7 @@ import com.aionemu.gameserver.services.player.LunaShopService;
 import com.aionemu.gameserver.services.player.PlayerCubicService;
 import com.aionemu.gameserver.services.player.PlayerEventService;
 import com.aionemu.gameserver.services.player.PlayerLimitService;
+import com.aionemu.gameserver.services.ranking.PlayerRankingUpdateService;
 import com.aionemu.gameserver.services.reward.OnlineBonus;
 import com.aionemu.gameserver.services.reward.RewardService;
 import com.aionemu.gameserver.services.teleport.HotspotTeleportService;
@@ -321,7 +322,7 @@ public class GameServer {
 		if (WeddingsConfig.WEDDINGS_ENABLE) {
 			WeddingService.getInstance();
 		}
-		Util.printSsSection("Sheduled Services");
+		Util.printSsSection("Scheduled Services");
 		LimitedItemTradeService.getInstance().start();
 		if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.DREDGION2_ENABLE)
 			DredgionService.getInstance().start();
@@ -346,6 +347,7 @@ public class GameServer {
 		if (ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP)
 			ConquerorsService.getInstance().initConquerorPvPSystem();
 		AbyssRankUpdateService.getInstance().scheduleUpdate();
+		PlayerRankingUpdateService.getInstance().onStart();
 		/**
 		 * Schedules Garbage Collector to be launched at the specified time to be optimized unused memory. (Avoids OutOfMemoryException)
 		 */

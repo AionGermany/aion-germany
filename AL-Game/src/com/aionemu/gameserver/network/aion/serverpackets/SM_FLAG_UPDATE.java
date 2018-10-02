@@ -14,32 +14,26 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.network.aion.clientpackets;
+package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.network.aion.AionClientPacket;
-import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.ranking.PlayerRankingService;
+import com.aionemu.gameserver.model.gameobjects.Npc;
+import com.aionemu.gameserver.network.aion.AionConnection;
+import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
  * @author Falke_34
  */
-public class CM_MY_DOCUMENTATION extends AionClientPacket {
+public class SM_FLAG_UPDATE extends AionServerPacket {
 
-	private int tableId;
+	Npc npc;
 
-	public CM_MY_DOCUMENTATION(int opcode, State state, State... restStates) {
-		super(opcode, state, restStates);
+	public SM_FLAG_UPDATE(Npc npc) {
+		this.npc = npc;
 	}
 
 	@Override
-	protected void readImpl() {
-		tableId = readD();
-	}
-
-	@Override
-	protected void runImpl() {
-		final Player player = this.getConnection().getActivePlayer();
-		PlayerRankingService.getInstance().loadPacketPlayer(player, tableId);
+	protected void writeImpl(AionConnection con) {
+		writeD(npc.getNpcId());
+		writeD(npc.getObjectId());
 	}
 }

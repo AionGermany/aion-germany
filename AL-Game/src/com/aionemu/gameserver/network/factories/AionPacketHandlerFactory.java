@@ -287,8 +287,8 @@ public class AionPacketHandlerFactory {
 		// addPacket(new CM_UNK_1DB(0x1DB, State.IN_GAME)); // 5.0 TODO
 		addPacket(new CM_UNK_E3(0xE3, State.IN_GAME)); // 5.3
 		addPacket(new CM_UNK_1EA(0x1EA, State.IN_GAME)); // 5.3 EU
-		// addPacket(new CM_RANK_LIST(0x1DC, State.IN_GAME)); // 6.x TODO
-		// addPacket(new CM_MY_DOCUMENTATION(0x1E9, State.IN_GAME)); // 5.6 TODO CM_MY_DOCUMENTATION
+		addPacket(new CM_RANK_LIST(0x1DC, State.IN_GAME)); // 6.x TODO
+		addPacket(new CM_MY_DOCUMENTATION(0x1DD, State.IN_GAME)); // 6.x TODO
 
 		// // /////////////////////////////////////////////////
 		addPacket(new CM_SECURITY_TOKEN(0x1A1, State.IN_GAME)); // 6.x EU

@@ -16,30 +16,36 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import com.aionemu.gameserver.model.gameobjects.player.Player;
+import java.util.List;
+
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.ranking.PlayerRankingService;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_RANK_LIST;
+import com.aionemu.gameserver.services.ranking.PlayerRankingUpdateService;
 
 /**
  * @author Falke_34
  */
-public class CM_MY_DOCUMENTATION extends AionClientPacket {
+public class CM_RANK_LIST extends AionClientPacket {
 
 	private int tableId;
+    private int serverSwitch;
 
-	public CM_MY_DOCUMENTATION(int opcode, State state, State... restStates) {
+	public CM_RANK_LIST(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 
 	@Override
 	protected void readImpl() {
-		tableId = readD();
+        tableId = readD();
+        serverSwitch = readC();
 	}
 
-	@Override
-	protected void runImpl() {
-		final Player player = this.getConnection().getActivePlayer();
-		PlayerRankingService.getInstance().loadPacketPlayer(player, tableId);
-	}
+    @Override
+    protected void runImpl() {
+        List<SM_RANK_LIST> results = PlayerRankingUpdateService.getInstance().getPlayers(tableId);
+        for (SM_RANK_LIST packet: results) {
+            sendPacket(packet);
+		}
+    }
 }

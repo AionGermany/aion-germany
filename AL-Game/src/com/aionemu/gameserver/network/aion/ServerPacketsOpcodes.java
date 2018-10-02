@@ -282,6 +282,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_TUNE_RESULT.class, 0x122, idSet); // 5.6 TODO
 		addPacketOpcode(SM_PLAYER_PROTECTION.class, 0x100, idSet); // 5.6
 		addPacketOpcode(SM_FLAG_INFO.class, 0x152, idSet); // 5.6
+		addPacketOpcode(SM_FLAG_UPDATE.class, 0x153, idSet); // 5.6
 		addPacketOpcode(SM_MAC_ADDRESS.class, 0x166, idSet); // 5.6 TODO
 		addPacketOpcode(SM_CHECK_MAIL_SIZE.class, 0x95, idSet); // 5.4 TODO
 		addPacketOpcode(SM_MINIONS.class, 0x16A, idSet); // 5.6 TODO
@@ -321,8 +322,8 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_UNK_14F.class, 0x14F, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_117.class, 0x118, idSet); // 5.6 TODO Kisk: Stigmameister
 		addPacketOpcode(SM_UNK_13B.class, 0x13B, idSet); // 5.1 TODO
-		addPacketOpcode(SM_UNK_158.class, 0x159, idSet); // 5.3 TODO SM_RANK_LIST
-		addPacketOpcode(SM_MY_DOCUMENTATION.class, 0x15A, idSet); // 5.6 TODO
+		addPacketOpcode(SM_RANK_LIST.class, 0x159, idSet); // 6.x TODO
+		addPacketOpcode(SM_MY_DOCUMENTATION.class, 0x15A, idSet); // 6.x TODO
 		addPacketOpcode(SM_UNK_12B.class, 0x12B, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_168.class, 0x168, idSet); // 5.6 TODO
 		addPacketOpcode(SM_SKILL_ANIMATION.class, 0x150, idSet); // 5.6 TODO

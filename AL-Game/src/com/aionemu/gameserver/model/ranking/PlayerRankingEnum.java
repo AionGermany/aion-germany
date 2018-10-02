@@ -14,32 +14,20 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.network.aion.clientpackets;
+package com.aionemu.gameserver.model.ranking;
 
-import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.network.aion.AionClientPacket;
-import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.ranking.PlayerRankingService;
+public enum PlayerRankingEnum {
 
-/**
- * @author Falke_34
- */
-public class CM_MY_DOCUMENTATION extends AionClientPacket {
+	ARENA_OF_DISCIPLINE(541), 
+	ARENA_OF_COOPERATION(741);
 
 	private int tableId;
 
-	public CM_MY_DOCUMENTATION(int opcode, State state, State... restStates) {
-		super(opcode, state, restStates);
+	private PlayerRankingEnum(int tableId) {
+		this.tableId = tableId;
 	}
 
-	@Override
-	protected void readImpl() {
-		tableId = readD();
-	}
-
-	@Override
-	protected void runImpl() {
-		final Player player = this.getConnection().getActivePlayer();
-		PlayerRankingService.getInstance().loadPacketPlayer(player, tableId);
+	public int getId() {
+		return tableId;
 	}
 }
