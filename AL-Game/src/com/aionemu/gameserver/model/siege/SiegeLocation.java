@@ -64,6 +64,7 @@ public class SiegeLocation implements ZoneHandler {
 	protected int buffId;
 	protected int buffIdA;
 	protected int buffIdE;
+	protected int baseId;
 
 	public SiegeLocation() {
 	}
@@ -298,5 +299,9 @@ public class SiegeLocation implements ZoneHandler {
 
 	public int getBuffIdE() {
 		return buffIdE = template.getBuffIdE();
+	}
+
+	public int getBaseId() {
+		return baseId = template.getBaseId();
 	}
 }

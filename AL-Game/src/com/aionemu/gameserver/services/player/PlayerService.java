@@ -53,6 +53,7 @@ import com.aionemu.gameserver.dao.PlayerEquipmentSettingDAO;
 import com.aionemu.gameserver.dao.PlayerEventsWindowDAO;
 import com.aionemu.gameserver.dao.PlayerGameStatsDAO;
 import com.aionemu.gameserver.dao.PlayerLifeStatsDAO;
+import com.aionemu.gameserver.dao.PlayerLunaShopDAO;
 import com.aionemu.gameserver.dao.PlayerMacrossesDAO;
 import com.aionemu.gameserver.dao.PlayerNpcFactionsDAO;
 import com.aionemu.gameserver.dao.PlayerPunishmentsDAO;
@@ -169,6 +170,8 @@ public class PlayerService {
 		DAOManager.getDAO(PortalCooldownsDAO.class).storePortalCooldowns(player);
 		DAOManager.getDAO(CraftCooldownsDAO.class).storeCraftCooldowns(player);
 		DAOManager.getDAO(PlayerNpcFactionsDAO.class).storeNpcFactions(player);
+		DAOManager.getDAO(PlayerLunaShopDAO.class).store(player);
+		DAOManager.getDAO(EventItemsDAO.class).loadItems(player);
 	}
 
 	/**
@@ -292,7 +295,9 @@ public class PlayerService {
 		DAOManager.getDAO(PlayerBindPointDAO.class).loadBindPoint(player);
 		// load craft cooldowns
 		DAOManager.getDAO(CraftCooldownsDAO.class).loadCraftCooldowns(player);
-
+		// load luna items
+		DAOManager.getDAO(PlayerLunaShopDAO.class).load(player);
+		// load event items
 		DAOManager.getDAO(EventItemsDAO.class).loadItems(player);
 
 		if (player.getCommonData().getBonusTitleId() > 0) {

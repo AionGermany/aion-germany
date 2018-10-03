@@ -1,23 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spawns>
 	<spawn_map map_id="600200000">
-		<base_spawn id="121"> <!--  -->
+		<base_spawn id="121">
 			<simple_race race="ASMODIANS">
-                <!-- Taboa ||| Ab1_Village_Guard50_D -->
-                <spawn npc_id="805408" respawn_time="295">
-                    <spot x="1455.6504" y="1073.7363" z="2970.5303" h="93"/>
-                </spawn>
+				<!-- Legate of the 121st Defence Troop ||| LDF7_1511_Boss_Da_5 -->
+				<spawn npc_id="885655" handler="BOSS">
+					<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+				</spawn>
+				<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Da -->
+				<spawn npc_id="885782">
+					<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="421"/>
+				</spawn>
 			</simple_race>
 			<simple_race race="ELYOS">
-                <!-- Kandea ||| Ab1_Village_Guard50_L -->
-                <spawn npc_id="805385" respawn_time="295">
-                    <spot x="1455.6504" y="1073.7363" z="2970.5303" h="93"/>
-                </spawn>
+				<!-- Teleporter ||| LDF7_v01_Teleport_L -->
+				<spawn npc_id="731894" respawn_time="295">
+					<spot x="1803.2623" y="1119.7411" z="264.31198" h="100" static_id="1253"/>
+				</spawn>
+				<!-- Jeronos ||| LDF7_Jeronos_E -->
+				<spawn npc_id="836594" respawn_time="295">
+					<spot x="1803.3745" y="1116.4492" z="261.875" h="60"/>
+				</spawn>
+				<!-- None ||| LDF7_Event_Flag_L -->
+				<spawn npc_id="836869" respawn_time="295">
+					<spot x="1797.857" y="963.03253" z="232.6956" h="0" static_id="918"/>
+				</spawn>
+				<!-- None ||| LDF7_v01_Flyctrl_L -->
+				<spawn npc_id="836873" respawn_time="295">
+					<spot x="1787.7438" y="1117.4237" z="261.875" h="0"/>
+				</spawn>
+				<!-- SYSTEM_INGAME_L_Kinah Merchant ||| SYSTEM_ingame_L_qina_Seller -->
+				<spawn npc_id="837033" respawn_time="295">
+					<spot x="397.85483" y="247.39859" z="9.875" h="30"/>
+				</spawn>
+				<!-- SYSTEM_INGAME_L_Outfit Merchant ||| SYSTEM_ingame_L_costume_Seller -->
+				<spawn npc_id="837034" respawn_time="295">
+					<spot x="397.85483" y="254.06909" z="9.875" h="30"/>
+				</spawn>
+				<!-- SYSTEM_INGAME_L_Gold Ingot Merchant ||| SYSTEM_ingame_L_goldbar_Seller -->
+				<spawn npc_id="837035" respawn_time="295">
+					<spot x="397.85483" y="260.609" z="9.8397" h="30"/>
+				</spawn>
+				<!-- SYSTEM_INGAME_D_Kinah Merchant ||| SYSTEM_ingame_D_qina_Seller -->
+				<spawn npc_id="837036" respawn_time="295">
+					<spot x="401.99902" y="247.39859" z="9.75" h="30"/>
+				</spawn>
+				<!-- SYSTEM_INGAME_D_Outfit Merchant ||| SYSTEM_ingame_D_costume_Seller -->
+				<spawn npc_id="837037" respawn_time="295">
+					<spot x="401.99902" y="254.06909" z="9.75" h="30"/>
+				</spawn>
+				<!-- SYSTEM_INGAME_D_Gold Ingot Merchant ||| SYSTEM_ingame_D_goldbar_Seller -->
+				<spawn npc_id="837038" respawn_time="295">
+					<spot x="401.99902" y="260.609" z="9.75" h="30"/>
+				</spawn>
+				<!-- Narakkalli Abyss Rift ||| IDAb1_Ere_Entrance_02 -->
+				<spawn npc_id="837433" respawn_time="295">
+					<spot x="1919.9996" y="947.09766" z="247.9558" h="0"/>
+				</spawn>
+				<!-- Legate of the 121st Occupation Troop ||| LDF7_1511_Boss_Li_1 -->
+				<spawn npc_id="885646" handler="BOSS">
+					<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+				</spawn>
+				<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Li -->
+				<spawn npc_id="885781">
+					<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="432"/>
+				</spawn>
+				<!-- Warrior of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_Fi -->
+				<spawn npc_id="885835" respawn_time="295">
+					<spot x="1797.8284" y="1111.813" z="261.875" h="105"/>
+					<spot x="1776.347" y="1127.2982" z="261.875" h="90"/>
+				</spawn>
+				<!-- Scout of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_As -->
+				<spawn npc_id="885836" respawn_time="295">
+					<spot x="1787.3534" y="1104.352" z="261.875" h="90"/>
+				</spawn>
+				<!-- Recruit of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_Wi -->
+				<spawn npc_id="885837" respawn_time="295">
+					<spot x="1776.6486" y="1113.5549" z="261.875" h="75"/>
+				</spawn>
+				<!-- Healer of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_Pr -->
+				<spawn npc_id="885838" respawn_time="295">
+					<spot x="1783.1279" y="1138.0376" z="261.875" h="105"/>
+				</spawn>
+				<!-- Fighter of the 121st Search Party ||| LDF7_1511_Da_Recon_Fi -->
+				<spawn npc_id="885951" respawn_time="295">
+					<spot x="1753.4507" y="1013.55646" z="242.48145" h="41"/>
+					<spot x="1780.3235" y="979.90204" z="230.25" h="60"/>
+					<spot x="1800.8654" y="970.13245" z="230.125" h="100"/>
+					<spot x="1801.3365" y="960.57477" z="230.125" h="90"/>
+				</spawn>
+				<!-- Scout of the 121st Search Party ||| LDF7_1511_Da_Recon_As -->
+				<spawn npc_id="885952" respawn_time="295">
+					<spot x="1793.5541" y="962.13794" z="230.25" h="90"/>
+				</spawn>
+				<!-- Recruit of the 121st Search Party ||| LDF7_1511_Da_Recon_Wi -->
+				<spawn npc_id="885953" respawn_time="295">
+					<spot x="1794.5522" y="976.62274" z="230.25" h="60"/>
+				</spawn>
+				<!-- Healer of the 121st Search Party ||| LDF7_1511_Da_Recon_Pr -->
+				<spawn npc_id="885954" respawn_time="295">
+					<spot x="1786.2008" y="971.9496" z="230.25" h="111"/>
+				</spawn>
+				<!-- Fighter of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Fi -->
+				<spawn npc_id="885955" respawn_time="295">
+					<spot x="1971.8225" y="1085.0042" z="270.8067" h="60"/>
+					<spot x="1973.8912" y="1057.0541" z="270.875" h="75"/>
+					<spot x="1974.482" y="1074.527" z="270.875" h="45"/>
+					<spot x="1974.2224" y="1043.4427" z="271.2117" h="60"/>
+				</spawn>
+				<!-- Raider of the 121st Vanguard ||| LDF7_1511_Dr_Recon_As -->
+				<spawn npc_id="885956" respawn_time="295">
+					<spot x="1965.9564" y="1067.2903" z="270.75" h="56"/>
+				</spawn>
+				<!-- Dark Mage of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Wi -->
+				<spawn npc_id="885957" respawn_time="295">
+					<spot x="1986.8395" y="1065.8446" z="270.875" h="60"/>
+				</spawn>
+				<!-- Healer of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Pr -->
+				<spawn npc_id="885958" respawn_time="295">
+					<spot x="1985.0017" y="1076.3589" z="270.875" h="45"/>
+				</spawn>
+				<!-- None ||| LDF7_Flag_Ctrl_Li_01 -->
+				<spawn npc_id="886339" respawn_time="295">
+					<spot x="1787.9502" y="1116.0804" z="261.875" h="0"/>
+				</spawn>
 			</simple_race>
 			<simple_race race="NPC">
-				<!-- Balaur Assassin Officer / Ab1_v01Ctrl_Eresh_Fi_BossKiller_65_Ae1 -->
-				<spawn npc_id="883326" handler="ATTACKER">
-					<spot x="1455.6238" y="1087.8514" z="2970.53" h="88"/>
+				<!-- Legate of the 121st Conquest Squad ||| LDF7_1511_Boss_Dr_5 -->
+				<spawn npc_id="885660" handler="BOSS">
+					<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+				</spawn>
+				<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Dr -->
+				<spawn npc_id="885783">
+					<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="413"/>
 				</spawn>
 			</simple_race>
 		</base_spawn>

@@ -29,7 +29,8 @@ public enum XPLossEnum {
 	LEVEL_60(60, 0.25),
 	LEVEL_65(65, 0.25),
 	LEVEL_70(70, 0.25),
-	LEVEL_75(75, 0.25);
+	LEVEL_75(75, 0.25),
+	LEVEL_80(80, 0.25);
 
 	private int level;
 	private double param;

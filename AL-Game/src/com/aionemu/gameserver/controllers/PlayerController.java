@@ -634,8 +634,7 @@ public class PlayerController extends CreatureController<Player> {
 		QuestEngine.getInstance().onDie(new QuestEnv(null, player, 0, 0));
 
 		if (player.isInGroup2()) {
-			player.getPlayerGroup2().sendPacket(SM_SYSTEM_MESSAGE.STR_MSG_COMBAT_FRIENDLY_DEATH(player.getName()),
-				new ExcludePlayerFilter(player));
+			player.getPlayerGroup2().sendPacket(SM_SYSTEM_MESSAGE.STR_MSG_COMBAT_FRIENDLY_DEATH(player.getName()), new ExcludePlayerFilter(player));
 		}
 	}
 
@@ -651,13 +650,16 @@ public class PlayerController extends CreatureController<Player> {
 	private void sendDieFromCreature(@Nonnull Creature lastAttacker, boolean showPacket) {
 		Player player = this.getOwner();
 
-		PacketSendUtility.broadcastPacket(player,
-			new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
+		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 
 		if (showPacket) {
-			int kiskTimeRemaining = (player.getKisk() != null ? player.getKisk().getRemainingLifetime() : 0);
-			PacketSendUtility.sendPacket(player, new SM_DIE(player.canUseRebirthRevive(), player.haveSelfRezItem(), kiskTimeRemaining, 0,
-				isInvader(player)));
+			if (player.isInInstance()) {
+				PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8, false));
+			} 
+			else {
+				int kiskTimeRemaining = (player.getKisk() != null ? player.getKisk().getRemainingLifetime() : 0);
+				PacketSendUtility.sendPacket(player, new SM_DIE(player.canUseRebirthRevive(), player.haveSelfRezItem(), kiskTimeRemaining, 0, isInvader(player)));
+			}
 		}
 
 		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_COMBAT_MY_DEATH);
@@ -956,6 +958,7 @@ public class PlayerController extends CreatureController<Player> {
 		ClassChangeService.showClassChangeDialog(player);
 
 		QuestEngine.getInstance().onLvlUp(new QuestEnv(null, player, 0, 0));
+		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		player.getController().updatePassiveStats();
 		PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
@@ -1061,8 +1064,7 @@ public class PlayerController extends CreatureController<Player> {
 				FlyPathEntry path = player.getCurrentFlyPath();
 
 				if (player.getWorldId() != path.getEndWorldId()) {
-					AuditLogger.info(player,
-						"Player tried to use flyPath #" + path.getId() + " from not native start world " + player.getWorldId() + ". expected " + path.getEndWorldId());
+					AuditLogger.info(player, "Player tried to use flyPath #" + path.getId() + " from not native start world " + player.getWorldId() + ". expected " + path.getEndWorldId());
 				}
 
 				if (diff < path.getTimeInMs()) {

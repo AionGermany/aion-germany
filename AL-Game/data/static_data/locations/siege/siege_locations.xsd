@@ -34,6 +34,7 @@
         <xs:attribute name="buff_idA" type="xs:int" use="optional" default="0"/>
         <xs:attribute name="buff_idE" type="xs:int" use="optional" default="0"/>
         <xs:attribute name="occupy_count" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="base_id" type="xs:int" use="optional" default="0"/>
     </xs:complexType>
 
     <xs:simpleType name="DependencyList">

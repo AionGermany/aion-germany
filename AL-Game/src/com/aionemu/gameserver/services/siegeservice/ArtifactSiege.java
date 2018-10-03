@@ -29,6 +29,7 @@ import com.aionemu.gameserver.model.siege.SiegeRace;
 import com.aionemu.gameserver.model.team.legion.Legion;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.player.PlayerService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -120,6 +121,17 @@ public class ArtifactSiege extends Siege<ArtifactLocation> {
 					PacketSendUtility.sendPacket(player, player.getRace().equals(wRace) ? wRacePacket : lRacePacket);
 				}
 			});
+		}
+		if (getSiegeLocation().getLocationId() >= 1511 && getSiegeLocation().getLocationId() <= 1519) {
+			if (getSiegeLocation().getRace() == SiegeRace.BALAUR) {
+				BaseService.getInstance().capture(getSiegeLocation().getBaseId(), Race.NPC);
+			} 
+			if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS) {
+				BaseService.getInstance().capture(getSiegeLocation().getBaseId(), Race.ASMODIANS);
+			} 
+			if (getSiegeLocation().getRace() == SiegeRace.ELYOS) {
+				BaseService.getInstance().capture(getSiegeLocation().getBaseId(), Race.ELYOS);
+			}
 		}
 	}
 
