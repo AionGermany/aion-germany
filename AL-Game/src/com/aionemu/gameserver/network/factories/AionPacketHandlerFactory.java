@@ -54,7 +54,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_ENTER_WORLD(0xC3, State.AUTHED)); // 6.x EU
 		addPacket(new CM_UI_SETTINGS(0xD5, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_MOTION(0x102, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_WINDSTREAM(0x10D, State.IN_GAME)); // 5.3 EU
+		addPacket(new CM_WINDSTREAM(0x101, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_STOP_TRAINING(0x109, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_REVIVE(0xC0, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_DUEL_REQUEST(0x13E, State.IN_GAME)); // 5.4 EU
@@ -205,7 +205,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_TELEPORT_DONE(0xEA, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_CHARACTER_EDIT(0xC2, State.AUTHED)); // 5.3
 		addPacket(new CM_PLAYER_STATUS_INFO(0x12C, State.IN_GAME)); // 6.x EU (Mentor etc)
-		addPacket(new CM_MANASTONE(0x101, State.IN_GAME)); // 5.4 EU
+		// addPacket(new CM_MANASTONE(0x101, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_FUSION_WEAPONS(0x1AA, State.IN_GAME)); // 5.4
 		addPacket(new CM_ITEM_REMODEL(0x111, State.IN_GAME)); // 5.3
 		// addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xF9, State.IN_GAME)); // 5.4
