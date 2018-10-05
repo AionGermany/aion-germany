@@ -208,7 +208,7 @@ public class AionPacketHandlerFactory {
 		// addPacket(new CM_MANASTONE(0x101, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_FUSION_WEAPONS(0x1AA, State.IN_GAME)); // 5.4
 		addPacket(new CM_ITEM_REMODEL(0x111, State.IN_GAME)); // 5.3
-		// addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xF9, State.IN_GAME)); // 5.4
+		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xED, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_RECIPE_DELETE(0x110, State.IN_GAME)); // 5.3 EU
 		addPacket(new CM_REMOVE_ALTERED_STATE(0xEE, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_MAY_QUIT(0xCF, State.AUTHED, State.IN_GAME)); // 6.x EU
@@ -241,7 +241,7 @@ public class AionPacketHandlerFactory {
 		// // ******************(CHAT)******************
 		addPacket(new CM_CHAT_AUTH(0x18A, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_CHAT_MESSAGE_PUBLIC(0xE6, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_CHAT_GROUP_INFO(0x104, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_CHAT_GROUP_INFO(0x118, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_CHAT_MESSAGE_WHISPER(0xE7, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_CHAT_PLAYER_INFO(0xE2, State.IN_GAME)); // 5.3 EU
 
