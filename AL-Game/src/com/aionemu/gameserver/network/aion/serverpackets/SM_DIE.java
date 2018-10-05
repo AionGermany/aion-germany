@@ -50,5 +50,6 @@ public class SM_DIE extends AionServerPacket {
 		writeD(remainingKiskTime);
 		writeC(type);
 		writeC(invasion ? 0x80 : 0x00);
+		writeC(4);
 	}
 }

@@ -138,7 +138,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_AUTO_GROUP(0x180, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_INVITE_TO_GROUP(0x12D, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_GROUP_DISTRIBUTION(0x134, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_GROUP_LOOT(0x170, State.IN_GAME)); // 5.6 EU
+		addPacket(new CM_GROUP_LOOT(0x184, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_GROUP_DATA_EXCHANGE(0x12A, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_DISTRIBUTION_SETTINGS(0x185, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_SHOW_BRAND(0x171, State.IN_GAME)); // 6.x EU (Group Mark Target etc)
