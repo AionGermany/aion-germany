@@ -22,7 +22,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Falke_34
  */
-public class SM_UNK_133 extends AionServerPacket {
+public class SM_ABYSS_RANK_POINTS extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {

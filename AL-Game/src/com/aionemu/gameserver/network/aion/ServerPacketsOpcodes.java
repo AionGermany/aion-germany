@@ -317,7 +317,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_UNK_A5.class, 0xA5, idSet);
 		addPacketOpcode(SM_UNK_127.class, 0x127, idSet);
 		addPacketOpcode(SM_UNK_98.class, 0x98, idSet); // TODO
-		addPacketOpcode(SM_UNK_133.class, 0x133, idSet); // TODO
+		addPacketOpcode(SM_ABYSS_RANK_POINTS.class, 0x133, idSet); // TODO
 		addPacketOpcode(SM_UNK_7E.class, 0x7E, idSet); // TODO
 		addPacketOpcode(SM_UNK_14F.class, 0x14F, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_117.class, 0x118, idSet); // 5.6 TODO Kisk: Stigmameister
@@ -326,6 +326,8 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_MY_DOCUMENTATION.class, 0x15A, idSet); // 6.x TODO
 		addPacketOpcode(SM_UNK_12B.class, 0x12B, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_168.class, 0x168, idSet); // 5.6 TODO
+		addPacketOpcode(SM_UNK_165.class, 0x165, idSet); // 6.x TODO after/before Title_Info
+		addPacketOpcode(SM_UNK_11C.class, 0x11C, idSet); // 6.x TODO after/before Emotion
 		addPacketOpcode(SM_SKILL_ANIMATION.class, 0x150, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_15E.class, 0x15E, idSet); // 5.4 TODO
 		addPacketOpcode(SM_SILVER_STAR.class, 0x164, idSet); // 6.x TODO Lodas Silver Star

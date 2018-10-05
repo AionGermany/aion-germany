@@ -64,7 +64,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.panels.SkillPanel;
 import com.aionemu.gameserver.model.templates.quest.QuestItems;
 import com.aionemu.gameserver.model.templates.robot.RobotInfo;
-import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.stats.PlayerStatsTemplate;
 import com.aionemu.gameserver.model.templates.zone.ZoneClassName;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
@@ -119,7 +118,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 import com.aionemu.gameserver.skillengine.model.Skill.SkillMethod;
 import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
-import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.taskmanager.tasks.PlayerMoveTaskManager;
 import com.aionemu.gameserver.taskmanager.tasks.TeamEffectUpdater;
 import com.aionemu.gameserver.utils.MathUtil;
@@ -133,8 +131,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
-
-import javolution.util.FastMap;
 
 /**
  * This class is for controlling players.
@@ -150,7 +146,6 @@ public class PlayerController extends CreatureController<Player> {
 	private int stance = 0;
 	@SuppressWarnings("unused")
 	private Listener mListener;
-	private FastMap<Integer, VisibleObject> autoPortals = new FastMap<Integer, VisibleObject>();
 
 	@Override
 	public void see(VisibleObject object) {
@@ -271,143 +266,15 @@ public class PlayerController extends CreatureController<Player> {
 			QuestEngine.getInstance().onEnterZone(new QuestEnv(null, player, 0, 0), zone.getAreaTemplate().getZoneName());
 		}
 		/**
-		 * These instances portal are "spawn & reversed" to the opposite race. If a player enter in fews area, a portal
-		 * will appear automatically. These portals are only 2 minute ingame before despawn. 
-		 * PS: Please, check "portal/AI2" for these portal.
-		 */
-		SpawnTemplate template;
-		if (zone.getAreaTemplate().getZoneName() == ZoneName.get("REIAN_REFUGEE_CAMP_210070000")) {
-			switch (player.getRace()) {
-				// Rentus Base
-				case ELYOS:
-					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 730399, 1147.6155f, 800.88049f, 563.40173f, (byte) 0);
-					template.setStaticId(885);
-					autoPortals.put(730399, SpawnEngine.spawnObject(template, 1));
-					break;
-				// Occupied Rentus Base
-				case ASMODIANS:
-					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 832992, 1147.6155f, 800.88049f, 563.40173f, (byte) 0);
-					template.setStaticId(885);
-					autoPortals.put(832992, SpawnEngine.spawnObject(template, 1));
-					break;
-				default:
-					break;
-			}
-		}
-		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("RENTUS_RECOVERY_BASE_220080000")) {
-			switch (player.getRace()) {
-				// Occupied Rentus Base
-				case ELYOS:
-					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 832991, 1973.3156f, 2017.3612f, 329.13571f, (byte) 0);
-					template.setStaticId(900);
-					autoPortals.put(832991, SpawnEngine.spawnObject(template, 1));
-					break;
-				// Rentus Base
-				case ASMODIANS:
-					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 730399, 1973.3156f, 2017.3612f, 329.13571f, (byte) 0);
-					template.setStaticId(900);
-					autoPortals.put(730399, SpawnEngine.spawnObject(template, 1));
-					break;
-				default:
-					break;
-			}
-		}
-		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("RUINHOLD_SCATTERINGS_210070000")) {
-			switch (player.getRace()) {
-				case ELYOS:
-					// Tiamat Stronghold
-					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 832995, 93.335602f, 1474.6055f, 491.90103f, (byte) 0);
-					template.setStaticId(306);
-					autoPortals.put(832995, SpawnEngine.spawnObject(template, 1));
-					// Dragon Lord Refuge
-					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 832998, 103.8532f, 1461.7725f, 494.52884f, (byte) 0);
-					template.setStaticId(865);
-					autoPortals.put(832998, SpawnEngine.spawnObject(template, 1));
-					break;
-				case ASMODIANS:
-					// [Anguished] Dragon Lord Refuge
-					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 832997, 103.8532f, 1461.7725f, 494.52884f, (byte) 0);
-					template.setStaticId(865);
-					autoPortals.put(832997, SpawnEngine.spawnObject(template, 1));
-					break;
-				default:
-					break;
-			}
-		}
-		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("DRAGONFALLS_GLARE_220080000")) {
-			switch (player.getRace()) {
-				case ELYOS:
-					// [Anguished] Dragon Lord Refuge
-					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 832997, 2862.9939f, 1679.4772f, 308.87949f, (byte) 0);
-					template.setStaticId(422);
-					autoPortals.put(832997, SpawnEngine.spawnObject(template, 1));
-					break;
-				case ASMODIANS:
-					// Tiamat Stronghold
-					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 832996, 2845.8596f, 1659.2727f, 302.67017f, (byte) 0);
-					template.setStaticId(364);
-					autoPortals.put(832996, SpawnEngine.spawnObject(template, 1));
-					// Dragon Lord Refuge
-					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 832998, 2862.9939f, 1679.4772f, 308.87949f, (byte) 0);
-					template.setStaticId(422);
-					autoPortals.put(832998, SpawnEngine.spawnObject(template, 1));
-					break;
-				default:
-					break;
-			}
-		}
-		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("DANUAR_SANCTUARY_INSPECTOR_210070000")) {
-			switch (player.getRace()) {
-				// Danuar Sanctuary
-				case ELYOS:
-					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 731570, 2097.4739f, 2276.1729f, 294.90442f, (byte) 0);
-					template.setStaticId(888);
-					autoPortals.put(731570, SpawnEngine.spawnObject(template, 1));
-					break;
-				// [Seized] Danuar Sanctuary
-				case ASMODIANS:
-					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 731549, 2097.4739f, 2276.1729f, 294.90442f, (byte) 0);
-					template.setStaticId(888);
-					autoPortals.put(731549, SpawnEngine.spawnObject(template, 1));
-					break;
-				default:
-					break;
-			}
-		}
-		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("DANUAR_SANCTUARY_INVESTIGATION_AREA_220080000")) {
-			switch (player.getRace()) {
-				// [Seized] Danuar Sanctuary
-				case ELYOS:
-					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 731549, 1667.7465f, 562.70654f, 258.88382f, (byte) 0);
-					template.setStaticId(407);
-					autoPortals.put(731549, SpawnEngine.spawnObject(template, 1));
-					break;
-				// Danuar Sanctuary
-				case ASMODIANS:
-					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 731570, 1667.7465f, 562.70654f, 258.88382f, (byte) 0);
-					template.setStaticId(407);
-					autoPortals.put(731570, SpawnEngine.spawnObject(template, 1));
-					break;
-				default:
-					break;
-			}
-		}
-		/**
 		 * For Protect City. If a opposite race player enter on these zone ==> return to "Bind Location"
 		 */
 		if (player.getAccessLevel() == 0) {
 			if (
-				// Morheim
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("MORHEIM_SNOW_FIELD_220020000")
-				||
 				// Beluslan
 				zone.getAreaTemplate().getZoneName() == ZoneName.get("KURNGALFBERG_220040000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("RED_MANE_CAVERN_220040000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("BELUSLAN_FORTRESS_220040000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("HOARFROST_SHELTER_220040000")
-				||
-				// Brusthonin
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("POLLUTED_WASTE_220050000")
 				||
 				// Gelkmaros
 				zone.getAreaTemplate().getZoneName() == ZoneName.get("ANTAGOR_BATTLEFIELD_220070000")
@@ -416,9 +283,7 @@ public class PlayerController extends CreatureController<Player> {
 				zone.getAreaTemplate().getZoneName() == ZoneName.get("DAWNBREAK_TEMPLE_220080000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("WHIRLPOOL_TEMPLE_220080000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("DRAGONREST_TEMPLE_220080000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("FATEBOUND_LEGION_OUTPOST_220080000") ||
-				// Norsvold
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("AZPHEL_SANCTUARY_220110000")) {
+				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("FATEBOUND_LEGION_OUTPOST_220080000")) {
 				switch (player.getRace()) {
 					case ELYOS:
 						TeleportService2.moveToBindLocation(player, true);
@@ -428,11 +293,6 @@ public class PlayerController extends CreatureController<Player> {
 				}
 			}
 			else if (
-				// Eltnen
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("MANDURI_FOREST_210020000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("GOLDEN_BOUGH_GARRISON_210020000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("MYSTIC_SPRING_OF_AGAIRON_210020000")
-				||
 				// Heiron
 				zone.getAreaTemplate().getZoneName() == ZoneName.get("HEIRONOPOLIS_210040000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("PATEMA_RUINS_210040000")
@@ -442,20 +302,11 @@ public class PlayerController extends CreatureController<Player> {
 				zone.getAreaTemplate().getZoneName() == ZoneName.get("CALMHEART_GROVE_210050000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("WILDHEART_GROVE_210050000")
 				||
-				// Theobomos
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("PORT_ANANGKE_210060000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("JOSNACKS_VIGIL_210060000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("CRIMSON_BARRENS_210060000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("OBSERVATORY_VILLAGE_210060000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("SOUTHERN_LATHERON_COAST_210060000")
-				||
 				// Cygnea
 				zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_OUTPOST_210070000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_HEADQUARTERS_210070000")
 				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_ADVANCE_POST_210070000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_DETACHMENT_POST_210070000") ||
-				// Iluma
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("ARIEL_SANCTUARY_210100000")) {
+				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_DETACHMENT_POST_210070000")) {
 				switch (player.getRace()) {
 					case ASMODIANS:
 						TeleportService2.moveToBindLocation(player, true);

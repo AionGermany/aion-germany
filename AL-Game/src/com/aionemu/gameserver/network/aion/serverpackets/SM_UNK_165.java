@@ -14,26 +14,24 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.instance.beshmundirTemple;
+package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Creature;
-
-import ai.AggressiveNpcAI2;
+import com.aionemu.gameserver.network.aion.AionConnection;
+import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
- * @author xTz
+ * @author Falke_34
  */
-@AIName("monolithicambusher")
-public class MonolithicAmbusherAI2 extends AggressiveNpcAI2 {
+public class SM_UNK_165 extends AionServerPacket {
+
+	// TODO - after/before SM_TITLE_INFO
+
+	private int playerObjId;
+	private int titleId;
 
 	@Override
-	protected void handleBackHome() {
-		super.handleBackHome();
-	}
-
-	@Override
-	protected void handleCreatureAggro(Creature creature) {
-		super.handleCreatureAggro(creature);
+	protected void writeImpl(AionConnection con) {
+		writeD(playerObjId);
+		writeH(titleId);
 	}
 }

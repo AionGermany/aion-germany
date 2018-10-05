@@ -78,8 +78,8 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_DELETE_ITEM(0x130, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_QUEST_SHARE(0x160, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_DELETE_QUEST(0x12B, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_ABYSS_RANKING_PLAYERS(0x184, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_ABYSS_RANKING_LEGIONS(0x132, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_ABYSS_RANKING_PLAYERS(0x198, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_ABYSS_RANKING_LEGIONS(0x132, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_PRIVATE_STORE(0x133, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_USE_ITEM(0xE0, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_TARGET_SELECT(0xFA, State.IN_GAME)); // 6.x EU

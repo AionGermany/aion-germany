@@ -14,22 +14,23 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.instance.rentusBase;
+package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.ai2.NpcAI2;
-import com.aionemu.gameserver.skillengine.SkillEngine;
+import com.aionemu.gameserver.network.aion.AionConnection;
+import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
- * @author xTz
+ * @author Falke_34
  */
-@AIName("collapsed_reian_building")
-// 282626
-public class CollapsedReianBuildingAI2 extends NpcAI2 {
+public class SM_UNK_11C extends AionServerPacket {
+
+	// TODO - after/before SM_EMOTION
+
+	private int senderObjectId;
 
 	@Override
-	protected void handleSpawned() {
-		super.handleSpawned();
-		SkillEngine.getInstance().getSkill(getOwner(), 20088, 60, getOwner()).useNoAnimationSkill();
+	protected void writeImpl(AionConnection con) {
+		writeD(senderObjectId);
+		writeD(3);
 	}
 }
