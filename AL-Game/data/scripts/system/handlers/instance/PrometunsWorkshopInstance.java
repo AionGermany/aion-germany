@@ -69,7 +69,7 @@ public class PrometunsWorkshopInstance extends GeneralInstanceHandler {
 			case 655277: // Rim Ore Grinder
 			case 655279: // Rim Ore Grinder
 			    startRimOreGrinder++;
-				if (startstartRimOreGrinder == 2) {
+				if (startRimOreGrinder == 2) {
 					doors.get(235).setOpen(true);
 					sendMsgByRace(1404592, Race.PC_ALL, 0);
 				}
