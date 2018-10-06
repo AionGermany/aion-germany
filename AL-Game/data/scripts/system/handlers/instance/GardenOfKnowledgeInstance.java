@@ -80,6 +80,16 @@ public class GardenOfKnowledgeInstance extends GeneralInstanceHandler {
 			case 653784: // Fallen Jotun Warrior
 				spawn(834000, 1198.6876f, 774.06604f, 1038.4924f, (byte) 90, 297);
 				spawn(834000, 1152.3656f, 726.8832f, 1036.4382f, (byte) 60, 301);
+				sendMsgByRace(1403507, Race.PC_ALL, 0);
+				break;
+			case 653817: // All-Seeing Eye
+				sendMsgByRace(1403211, Race.PC_ALL, 0);
+				spawn(834003, 1069.1040f, 783.19177f, 511.93161f, (byte) 0, 323);
+				deleteNpc(653877); // Imprisoned Earth Jotun
+				spawn(653878, 1109.5481f, 783.1569f, 508.24936f, (byte) 0); // Liberated Earth Jotun 
+				break;
+			case 653825: // Fallen Water Jotun
+				spawn(834004, 209.37688f, 1234.7327f, 826.13635f, (byte) 0, 414);
 				break;
 			case 653884: // Piton
 				final int Peregran2_Weda2 = spawnRace == Race.ASMODIANS ? 806290 : 806285;

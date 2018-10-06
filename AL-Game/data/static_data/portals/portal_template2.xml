@@ -2,7 +2,26 @@
 <portal_templates2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portal_template2.xsd">
 	<!-- For exit Race is needed (moveToInstanceExit) function -->
     <!-- ***************** PORTAL USE ***************** -->
-
+    <!-- Garden of Knowledge Entrance Door Boss 1 -->
+    <portal_use npc_id="834000">
+        <portal_path loc_id="3015501"/>
+    </portal_use>
+    <!-- Garden of Knowledge Exit Door Boss 1 -->
+    <portal_use npc_id="834003">
+        <portal_path loc_id="3015502"/>
+    </portal_use>
+    <!-- Garden of Knowledge Entrance Door Boss 2 -->
+    <portal_use npc_id="834001">
+        <portal_path loc_id="3015503"/>
+    </portal_use>
+    <!-- Garden of Knowledge Exit Door Boss 2 -->
+    <portal_use npc_id="834004">
+        <portal_path loc_id="3015504"/>
+    </portal_use>
+    <!-- Garden of Knowledge Door Final Boss -->
+    <portal_use npc_id="834002">
+        <portal_path loc_id="3015505"/>
+    </portal_use>
     <!-- **************** PORTAL DIALOG **************** -->
 	<!-- Prometuns Workshop - Grappling Hook -->
     <portal_dialog npc_id="836434">
