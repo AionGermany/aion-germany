@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AL-Commons" default="dist" basedir=".">
+    <description>
+    </description>
+	<property name="jre" location="${java.home}/lib"/>
+    <property name="src" location="src"/>
+    <property name="lib" location="libs"/>
+    <property name="config" location="config"/>
+    <property name="build" location="build"/>
+    <property name="build.classes" location="${build}/classes"/>
+    <property name="build.dist" location="${build}/dist"/>
+	<property name="build.dist.commons" location="${build.dist}/commons"/>
+	
+    <path id="classpath">
+        <fileset dir="${lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>   
+    
+    <target name="clean"
+		description="Removes build directory.">
+    	<delete dir="${build}"/>
+	</target>
+	
+    <target name="init"
+        description="Create the output directories." depends="clean">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${build.classes}"/>
+    </target>
+    
+    
+    <target name="compile"
+            depends="init"
+            description="Compile the source.">
+
+        <javac destdir="${build.classes}" optimize="on" debug="on" nowarn="off" source="1.7" target="1.7" includeantruntime="false">       	
+        	<src path="${src}"/>
+            <classpath refid="classpath"/> 
+        </javac>
+    </target>
+    
+    
+    <target name="jar" depends="compile" description="Create the jar file">   	
+        <jar destfile="${build}/al-commons.jar">
+            <fileset dir="${build.classes}"/>
+
+            <manifest>
+            	<attribute name="Revision" value="${revision}"/>
+            	<attribute name="Date" value="${date}"/>
+            	<attribute name="Premain-Class" value="com.aionemu.commons.callbacks.JavaAgentEnhancer"/>
+            	<attribute name="Can-Retransform-Classes" value="true"/>
+            </manifest>
+        </jar>
+
+	</target>
+ 
+    <target name="dist" depends="jar">
+    	<mkdir dir="${build.dist}" />
+    	<mkdir dir="${build.dist.commons}" />
+    	<mkdir dir="${build.dist.commons}/libs" />
+        <mkdir dir="${build.dist.commons}/config" />
+    	
+    	<copy todir="${build.dist.commons}/libs">
+            <fileset dir="${build}">
+                <include name="al-commons.jar"/>
+			</fileset>
+        </copy>
+    	
+    	<copy todir="${build.dist.commons}/libs">
+			<fileset dir="${lib}">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+
+        <copy todir="${build.dist.commons}/config">
+            <fileset dir="${config}">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+        <zip destfile="${build}/AL-Commons.zip"
+             basedir="${build.dist.commons}" />
+    </target>   
+    
+   
+	
+</project>
