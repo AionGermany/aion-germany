@@ -161,7 +161,7 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 							if (var == 8) {
 								qs.setStatus(QuestStatus.REWARD);
 								updateQuestStatus(env);
-								TeleportService2.teleportTo(env.getPlayer(), 220010000, 590.01886f, 2453.0552f, 278.375f, (byte) 86, TeleportAnimation.BEAM_ANIMATION);
+								TeleportService2.teleportTo(env.getPlayer(), 220010000, 590.01886f, 2453.0552f, 280.375f, (byte) 86, TeleportAnimation.BEAM_ANIMATION);
 								return true;
 							}
 						}
