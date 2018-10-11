@@ -3,6 +3,9 @@
     <active>The Moon Festival</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
+            <event_drops>
+                <event_drop item_id="164002387" count="1" chance="2" minDiff="75" maxDiff="85"/> <!-- [Jakunerk] Moon Palace Rabbit Insignia -->
+            </event_drops>
             <spawns>
                 <!-- Sanctum -->
                 <spawn_map map_id="110010000">
