@@ -60,7 +60,7 @@ public class MovespeedUpAI2 extends NpcAI2 {
 		}
 		if (MathUtil.isIn3dRange(owner, creature, 2.0F)) {
 			if (GeoService.getInstance().canSee(owner, creature)) {
-				SkillEngine.getInstance().getSkill(getOwner(), 22883, 540, getOwner()).useNoAnimationSkill();
+				SkillEngine.getInstance().getSkill(getOwner(), 22883, 1, getOwner()).useNoAnimationSkill();
 			}
 		}
 	}

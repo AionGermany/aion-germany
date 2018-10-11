@@ -1,84 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers</active>
+    <active>The Moon Festival</active>
     <events>
-        <event name="World Blessers" start="2017-01-01T00:00:00+00:00" end="2018-12-31T00:00:00+00:00">
+        <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <spawns>
                 <!-- Sanctum -->
                 <spawn_map map_id="110010000">
-                    <!-- Riel -->
-                    <spawn npc_id="831025" respawn_time="295">
-                        <spot x="1458.0" y="1533.0" z="573.07196" h="65"/> <!-- 4.8 -->
-                    </spawn>
-                    <!-- Nebrith -->
-                    <spawn npc_id="831031" respawn_time="295">
-                        <spot x="1458.5" y="1531.6" z="573.07196" h="66"/> <!-- 4.8 -->
-                    </spawn>
+					<!-- Juin ||| world_event_midautumn_npc01_l -->
+					<spawn npc_id="834957" respawn_time="295">
+						<spot x="1531.0" y="1516.2" z="565.894" h="30"/>
+					</spawn>
+					<!-- Ring ||| world_event_midautumn_npc02_l -->
+					<spawn npc_id="834959" respawn_time="295">
+						<spot x="1533.01" y="1514.9" z="565.89056" h="23"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_mortar -->
+					<spawn npc_id="834963" respawn_time="295">
+						<spot x="1528.74" y="1506.65" z="565.8971" h="23"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_background -->
+					<spawn npc_id="834964" respawn_time="295">
+						<spot x="1532.6" y="1511.5" z="565.88257" h="60"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_table -->
+					<spawn npc_id="834965" respawn_time="295">
+						<spot x="1531.81" y="1515.91" z="565.8928" h="30"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_moon -->
+					<spawn npc_id="834966" respawn_time="295">
+						<spot x="1534.81" y="1514.91" z="565.89197" h="30"/>
+					</spawn>
                 </spawn_map>
-                <!-- Pandaemonium -->
+				<!-- Pandaemonium -->
                 <spawn_map map_id="120010000">
-                    <!-- Rikanellie -->
-                    <spawn npc_id="831026" respawn_time="295">
-                        <spot x="1300.0" y="1406.0" z="208.125" h="9"/> <!-- 4.8 -->
-                    </spawn>
-                    <!-- Edandos -->
-                    <spawn npc_id="831029" respawn_time="295">
-                        <spot x="1297.7" y="1407.1" z="208.11656" h="18"/> <!-- 4.8 -->
-                    </spawn>
-                </spawn_map> 
-                <!-- Poeta -->
-                <spawn_map map_id="210010000">
-                    <!-- Nebrith -->
-                    <spawn npc_id="831031" respawn_time="295">
-                        <spot x="832.0" y="1248.0" z="118.875" h="89"/> <!-- 5.6 -->
-                        <spot x="440.0" y="1746.0" z="119.75" h="46"/> <!-- 5.6 -->
-                    </spawn>
+					<!-- Juin ||| world_event_midautumn_npc01_d -->
+					<spawn npc_id="834958" respawn_time="295">
+						<spot x="1185.5" y="1402.79" z="208.125" h="30"/>
+					</spawn>
+					<!-- Ring ||| world_event_midautumn_npc02_d -->
+					<spawn npc_id="834960" respawn_time="295">
+						<spot x="1187.8" y="1401.4" z="208.125" h="23"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_mortar -->
+					<spawn npc_id="834963" respawn_time="295">
+						<spot x="1182.92" y="1394.38" z="208.125" h="30"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_background -->
+					<spawn npc_id="834964" respawn_time="295">
+						<spot x="1187.59" y="1396.98" z="208.125" h="60"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_table -->
+					<spawn npc_id="834965" respawn_time="295">
+						<spot x="1186.51" y="1402.35" z="208.125" h="30"/>
+					</spawn>
+					<!-- None ||| world_event_midautumn_moon -->
+					<spawn npc_id="834966" respawn_time="295">
+						<spot x="1189.51" y="1401.35" z="208.125" h="30"/>
+					</spawn>
                 </spawn_map>
-                <!-- Ishalgen -->
-                <spawn_map map_id="220010000">
-                    <!-- Edandos -->
-                    <spawn npc_id="831029" respawn_time="295">
-                        <spot x="577.0" y="2435.0" z="280.34375" h="17"/> <!-- 5.6 -->
-                        <spot x="937.0" y="1699.0" z="259.625" h="34"/> <!-- 5.6 -->
-                    </spawn>
-                </spawn_map> 
-                <!-- Heiron -->
-                <spawn_map map_id="210040000">
-                    <!-- Yoenia -->
-                    <spawn npc_id="831024" respawn_time="295">
-                        <spot h="60" x="172.0" y="1654.0" z="120.5"/> <!-- 4.8 -->
-                        <spot h="0" x="899.0" y="2259.0" z="157.65625"/> <!-- 4.8 -->
-                        <spot h="0" x="1629.0" y="2705.0" z="115.375"/> <!-- 4.8 -->
-                        <spot h="78" x="2018.0" y="1403.0" z="118.4375"/> <!-- 4.8 -->
-                        <spot h="118" x="2466.0" y="361.5" z="410.75"/> <!-- 4.8 -->
-                        <spot h="25" x="1434.0" y="1327.0" z="174.625"/> <!-- 4.8 -->
-                        <spot h="44" x="982.0" y="686.0" z="135.125"/> <!-- 4.8 -->
-                    </spawn>
+				<!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Chen ||| world_event_midautumn_npc03_l -->
+					<spawn npc_id="834961" respawn_time="295">
+						<spot x="2668.16" y="495.95" z="323.40546" h="80"/>
+					</spawn>
+					<!-- Chen ||| world_event_midautumn_npc03_d -->
+					<spawn npc_id="834962" respawn_time="295">
+						<spot x="2899.1" y="2475.37" z="313.82904" h="19"/>
+					</spawn>
                 </spawn_map>
-                <!-- Beluslan -->
-                <spawn_map map_id="220040000">
-                    <!-- Karzanke -->
-                    <spawn npc_id="831027" respawn_time="295">
-                        <spot h="77" x="394.0" y="418.0" z="222.11166"/> <!-- 4.8 -->
-                        <spot h="23" x="532.0" y="1881.0" z="261.375"/> <!-- 4.8 -->
-                        <spot h="79" x="2433.0" y="2073.0" z="579.125"/> <!-- 4.8 -->
-                        <spot h="10" x="1924.7" y="492.4" z="412.125"/> <!-- 4.8 -->
-                    </spawn>
-                </spawn_map>
-                <!-- Inggison -->
-                <spawn_map map_id="210050000">
-                    <!-- Nebrith -->
-                    <spawn npc_id="831031" respawn_time="295">
-                        <spot h="4" x="1330.3" y="279.5" z="589.3655"/> <!-- 4.8 -->
-                    </spawn> 
-                </spawn_map>
-                <!-- Gelkmaros -->
-                <spawn_map map_id="220070000">
-                    <!-- Edandos -->
-                    <spawn npc_id="831029" respawn_time="295">
-                        <spot h="47" x="1886.7" y="2888.2" z="554.9788"/> <!-- 4.8 -->
-                    </spawn> 
-                </spawn_map>                 
             </spawns>
         </event>  
     </events>
