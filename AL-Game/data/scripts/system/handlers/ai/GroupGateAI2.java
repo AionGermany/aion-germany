@@ -61,10 +61,10 @@ public class GroupGateAI2 extends NpcAI2 {
 						switch (getNpcId()) {
 							// Group Gates
 							case 833208:
-								TeleportService2.teleportTo(responder, 110010000, 1444.9f, 1577.2f, 572.9f, (byte) 0, TeleportAnimation.MAGE_ANIMATION);
+								TeleportService2.teleportTo(responder, 110010000, 1364.5358f, 1513.5854f, 569.1747f, (byte) 60, TeleportAnimation.MAGE_ANIMATION); // 6.x
 								break;
 							case 833207:
-								TeleportService2.teleportTo(responder, 120010000, 1657.5f, 1398.7f, 194.7f, (byte) 0, TeleportAnimation.MAGE_ANIMATION);
+								TeleportService2.teleportTo(responder, 120010000, 1603.5927f, 1389.0717f, 193.12859f, (byte) 0, TeleportAnimation.MAGE_ANIMATION); // 6.x
 								break;
 							// Binding Group Gates
 							case 749131:
