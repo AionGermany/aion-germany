@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -73,6 +73,144 @@
 					</spawn>
                 </spawn_map>
             </spawns>
-        </event>  
+        </event>
+        <event name="The Spookily Super Halloween Event" start="2018-10-24T00:00:00+00:00" end="2018-11-14T00:00:00+00:00">
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- A Nobleman’s Coffin ||| World_event_halloween_buff_coffin -->
+					<spawn npc_id="835989" respawn_time="295">
+						<spot x="1523.69" y="1511.55" z="565.905" h="30"/>
+					</spawn>
+					<!-- Kabe ||| World_event_halloween_cat_01 -->
+					<spawn npc_id="835990" respawn_time="295">
+						<spot x="1529.53" y="1506.59" z="565.8959" h="60"/>
+					</spawn>
+					<!-- None ||| World_event_halloween_pot_01 -->
+					<spawn npc_id="835992" respawn_time="295">
+						<spot x="1532.98" y="1504.34" z="565.9" h="60"/>
+					</spawn>
+					<!-- None ||| World_event_halloween_magicdesign_01 -->
+					<spawn npc_id="835993" respawn_time="295">
+						<spot x="1523.69" y="1511.55" z="565.905" h="60"/>
+					</spawn>
+					<!-- Esta ||| world_event_halloween_milkyway_01 -->
+					<spawn npc_id="835994" respawn_time="295">
+						<spot x="1528.9" y="1505.29" z="565.89923" h="60"/>
+					</spawn>
+					<!-- Ista ||| world_event_halloween_milkyway_02 -->
+					<spawn npc_id="835995" respawn_time="295">
+						<spot x="1530.8" y="1507.0" z="565.89386" h="60"/>
+					</spawn>
+					<!-- Esta ||| world_event_halloween_milkyway_03 -->
+					<spawn npc_id="835996" respawn_time="295">
+						<spot x="1529.68" y="1504.09" z="565.90137" h="60"/>
+					</spawn>
+					<!-- Ista ||| world_event_halloween_milkyway_04 -->
+					<spawn npc_id="835997" respawn_time="295">
+						<spot x="1530.36" y="1505.53" z="565.8976" h="60"/>
+					</spawn>
+                </spawn_map>
+				<!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- A Nobleman’s Coffin ||| World_event_halloween_buff_coffin -->
+					<spawn npc_id="835989" respawn_time="295">
+						<spot x="1275.71" y="1339.51" z="204.42003" h="60"/>
+					</spawn>
+					<!-- Kabe ||| World_event_halloween_cat_01 -->
+					<spawn npc_id="835990" respawn_time="295">
+						<spot x="1274.82" y="1343.74" z="204.58722" h="90"/>
+					</spawn>
+					<!-- None ||| World_event_halloween_pot_01 -->
+					<spawn npc_id="835992" respawn_time="295">
+						<spot x="1275.74" y="1347.42" z="204.58722" h="30"/>
+					</spawn>
+					<!-- None ||| World_event_halloween_magicdesign_01 -->
+					<spawn npc_id="835993" respawn_time="295">
+						<spot x="1275.71" y="1339.51" z="204.42003" h="30"/>
+					</spawn>
+					<!-- Esta ||| world_event_halloween_milkyway_01 -->
+					<spawn npc_id="835994" respawn_time="295">
+						<spot x="1276.67" y="1343.73" z="204.58722" h="90"/>
+					</spawn>
+					<!-- Ista ||| world_event_halloween_milkyway_02 -->
+					<spawn npc_id="835995" respawn_time="295">
+						<spot x="1277.79" y="1345.29" z="204.58722" h="90"/>
+					</spawn>
+					<!-- Esta ||| world_event_halloween_milkyway_03 -->
+					<spawn npc_id="835996" respawn_time="295">
+						<spot x="1273.66" y="1345.27" z="204.58722" h="90"/>
+					</spawn>
+					<!-- Ista ||| world_event_halloween_milkyway_04 -->
+					<spawn npc_id="835997" respawn_time="295">
+						<spot x="1275.76" y="1345.25" z="204.58722" h="90"/>
+					</spawn>
+                </spawn_map>
+				<!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- A Nobleman’s Coffin ||| World_event_halloween_buff_coffin -->
+					<spawn npc_id="835989" respawn_time="295">
+						<spot x="2640.75" y="532.28" z="319.47076" h="30"/>
+						<spot x="2836.91" y="2488.69" z="309.8937" h="30"/>
+					</spawn>
+					<!-- Kabe ||| World_event_halloween_cat_01 -->
+					<spawn npc_id="835990" respawn_time="295">
+						<spot x="2634.82" y="538.16" z="319.47076" h="21"/>
+						<spot x="2842.0" y="2483.5" z="309.89362" h="79"/>
+					</spawn>
+					<!-- None ||| World_event_halloween_pot_01 -->
+					<spawn npc_id="835992" respawn_time="295">
+						<spot x="2628.96" y="541.67" z="319.47076" h="0"/>
+						<spot x="2848.25" y="2480.52" z="309.89346" h="0"/>
+					</spawn>
+					<!-- None ||| World_event_halloween_magicdesign_01 -->
+					<spawn npc_id="835993" respawn_time="295">
+						<spot x="2640.75" y="532.28" z="319.47076" h="0"/>
+						<spot x="2836.91" y="2488.69" z="309.8937" h="0"/>
+					</spawn>
+					<!-- Esta ||| world_event_halloween_milkyway_01 -->
+					<spawn npc_id="835994" respawn_time="295">
+						<spot x="2633.05" y="539.52" z="319.47076" h="21"/>
+						<spot x="2843.65" y="2482.44" z="309.8935" h="80"/>
+					</spawn>
+					<!-- Ista ||| world_event_halloween_milkyway_02 -->
+					<spawn npc_id="835995" respawn_time="295">
+						<spot x="2630.9" y="538.54" z="319.47076" h="27"/>
+						<spot x="2842.03" y="2485.86" z="309.89365" h="79"/>
+					</spawn>
+					<!-- Esta ||| world_event_halloween_milkyway_03 -->
+					<spawn npc_id="835996" respawn_time="295">
+						<spot x="2632.84" y="537.42" z="319.47076" h="20"/>
+						<spot x="2844.07" y="2484.73" z="309.89362" h="79"/>
+					</spawn>
+					<!-- Ista ||| world_event_halloween_milkyway_04 -->
+					<spawn npc_id="835997" respawn_time="295">
+						<spot x="2635.05" y="536.17" z="319.47076" h="26"/>
+						<spot x="2845.77" y="2483.1" z="309.89355" h="78"/>
+					</spawn>
+                </spawn_map>
+				<!-- Garden of Knowledge -->
+                <spawn_map map_id="301550000">
+					<!-- Awakened Pumpkin King ||| World_event_halloween_JOL_party -->
+					<spawn npc_id="248556" respawn_time="295">
+						<spot x="631.32" y="700.47" z="555.8916" h="40"/>
+					</spawn>
+                </spawn_map>
+				<!-- Mirash Refuge -->
+                <spawn_map map_id="301720000">
+					<!-- Pumpkin King ||| World_event_halloween_JOL_solo -->
+					<spawn npc_id="248557" respawn_time="295">
+						<spot x="281.84" y="486.37" z="547.99567" h="90"/>
+					</spawn>
+                </spawn_map>
+				<!-- Narakkalli -->
+                <spawn_map map_id="302340000">
+					<!-- Awakened Pumpkin King ||| World_event_halloween_JOL_party -->
+					<spawn npc_id="248556" respawn_time="295">
+						<spot x="1079.48" y="727.37" z="394.20743" h="0"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event> 
     </events>
 </events_config>

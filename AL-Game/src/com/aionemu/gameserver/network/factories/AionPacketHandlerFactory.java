@@ -225,7 +225,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_APPEARANCE(0x18D, State.IN_GAME)); // 5.4
 		// addPacket(new CM_CAPTCHA(0xC8, State.IN_GAME)); // 4.9
 		// addPacket(new CM_COMPOSITE_STONES(0x1AE, State.IN_GAME)); // 4.9
-		addPacket(new CM_MEGAPHONE(0x1B5, State.IN_GAME)); // 5.4 EU
+		// addPacket(new CM_MEGAPHONE(0x1B5, State.IN_GAME)); // 5.4 EU
 		// addPacket(new CM_SUBZONE_CHANGE(0x17D, State.IN_GAME)); // 5.0 NOT SURE
 		addPacket(new CM_MOVE_ITEM(0x178, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_SELECTITEM_OK(0x1C8, State.IN_GAME)); // 6.x EU
