@@ -205,7 +205,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_TELEPORT_DONE(0xEA, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_CHARACTER_EDIT(0xC2, State.AUTHED)); // 5.3
 		addPacket(new CM_PLAYER_STATUS_INFO(0x12C, State.IN_GAME)); // 6.x EU (Mentor etc)
-		// addPacket(new CM_MANASTONE(0x101, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_MANASTONE(0x115, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_FUSION_WEAPONS(0x1AA, State.IN_GAME)); // 5.4
 		addPacket(new CM_ITEM_REMODEL(0x111, State.IN_GAME)); // 5.3
 		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xED, State.IN_GAME)); // 6.x EU
@@ -257,7 +257,7 @@ public class AionPacketHandlerFactory {
 
 		// // /////////////////// NEW 4.7 //////////////////////
 		addPacket(new CM_HOTSPOT_TELEPORT(0x1B0, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_ITEM_UPGRADE(0x115, State.IN_GAME)); // 6.x EU
+		// addPacket(new CM_ITEM_UPGRADE(0x115, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_UPGRADE_ARCADE(0x1B2, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_FILE_VERIFY(0x119, State.IN_GAME)); // 6.x EU
 
