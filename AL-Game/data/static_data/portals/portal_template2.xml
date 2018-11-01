@@ -17,6 +17,12 @@
         <portal_path loc_id="3002002" race="ASMODIANS"/>
     </portal_use>
 
+    <!-- Mirash Refuge Exit -->
+    <portal_use npc_id="835690">
+        <portal_path loc_id="3017201" race="ELYOS"/>
+        <portal_path loc_id="3017202" race="ASMODIANS"/>
+    </portal_use>
+
     <!-- Garden of Knowledge Entrance Door Boss 1 -->
     <portal_use npc_id="834000">
         <portal_path loc_id="3015501"/>
@@ -48,6 +54,18 @@
     <portal_dialog npc_id="837100">
         <portal_path dialog="10000" loc_id="3001602">
             <portal_req min_level="52"/>
+        </portal_path>
+    </portal_dialog>
+
+	<!-- Mirash Refuge Entry -->
+    <portal_dialog npc_id="835687">
+        <portal_path dialog="10000" loc_id="3017200">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+    <portal_dialog npc_id="835686">
+        <portal_path dialog="10000" loc_id="3017200">
+            <portal_req min_level="76"/>
         </portal_path>
     </portal_dialog>
 
