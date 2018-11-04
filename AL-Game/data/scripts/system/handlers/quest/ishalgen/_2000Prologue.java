@@ -16,70 +16,58 @@
  */
 package quest.ishalgen;
 
-import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
- * @author Falke_34
- * @author FrozenKiller
+ * @author MrPoke
+ * @rework FrozenKiller
  */
-public class _70000MuninsReputation extends QuestHandler {
+public class _2000Prologue extends QuestHandler {
 
-	private final static int questId = 70000;
+	private final static int questId = 2000;
 
-	public _70000MuninsReputation() {
+	public _2000Prologue() {
 		super(questId);
 	}
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(806810).addOnTalkEvent(questId); // Old Friend Cheska
-		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
+		qe.registerOnEnterWorld(questId);
+		qe.registerOnMovieEndQuest(2, questId);
 	}
 
 	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 2000, true);
-	}
-
-	@Override
-	public boolean onDialogEvent(QuestEnv env) {
+	public boolean onEnterWorldEvent(QuestEnv env) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
+		if (qs == null && player.getRace() == Race.ASMODIANS) {
+			if (QuestService.startQuest(env)) {
+				PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(1, 2));
+				return true;
+			}
+		}
+		return false;
+	}
 
-		if (qs == null) {
+	@Override
+	public boolean onMovieEndEvent(QuestEnv env, int movieId) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null || qs.getStatus() != QuestStatus.START) {
 			return false;
 		}
-
-		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 806810) {
-				switch (dialog) {
-				case QUEST_SELECT: {
-					return sendQuestDialog(env, 1011);
-				}
-				case SET_SUCCEED: {
-					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				}
-				default:
-					break;
-				}
-			}
-		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 203550) {
-				if (dialog == DialogAction.USE_OBJECT) {
-					return sendQuestDialog(env, 10002);
-				}
-				return sendQuestEndDialog(env);
-			}
+		if (movieId == 2 && player.getRace() == Race.ASMODIANS) {
+			qs.setStatus(QuestStatus.REWARD);
+			QuestService.finishQuest(env);
+			return true;
 		}
 		return false;
 	}

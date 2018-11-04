@@ -27,23 +27,23 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  * @author Falke_34
  * @author FrozenKiller
  */
-public class _70000MuninsReputation extends QuestHandler {
+public class _70004ReadinessToBecomeAnArchonSoldier extends QuestHandler {
 
-	private final static int questId = 70000;
+	private final static int questId = 70004;
 
-	public _70000MuninsReputation() {
+	public _70004ReadinessToBecomeAnArchonSoldier() {
 		super(questId);
 	}
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(806810).addOnTalkEvent(questId); // Old Friend Cheska
-		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
+		qe.registerOnLevelUp(questId);
+		qe.registerQuestNpc(806814).addOnTalkEvent(questId); // Marko
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 2000, true);
+		return defaultOnLvlUpEvent(env, 70000, false);
 	}
 
 	@Override
@@ -52,29 +52,26 @@ public class _70000MuninsReputation extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
-
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 806810) {
+			if (targetId == 806814) {
 				switch (dialog) {
-				case QUEST_SELECT: {
+				case QUEST_SELECT:
 					return sendQuestDialog(env, 1011);
-				}
-				case SET_SUCCEED: {
+				case SELECT_QUEST_REWARD:
 					qs.setQuestVar(1);
 					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				}
+					return sendQuestDialog(env, 5);
 				default:
 					break;
 				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 203550) {
+			if (targetId == 806814) {
 				if (dialog == DialogAction.USE_OBJECT) {
 					return sendQuestDialog(env, 10002);
 				}

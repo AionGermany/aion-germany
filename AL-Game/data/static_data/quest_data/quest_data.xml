@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-09-08 12:25 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-11-01 17:43 -->
 <quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <quest id="1000" name="Prologue" category_name="Poeta" nameId="1102000" minlevel_permitted="1" max_repeat_count="1" race_permitted="ELYOS" category="QUEST">
         <rewards exp="1"/>
@@ -18142,194 +18142,6 @@
         </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
     </quest>
-    <quest id="80721" name="[Event] Welcome Gift from the Dark Star" category_name="Event" nameId="1801332" minlevel_permitted="10" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <selectable_reward_item item_id="114101771" count="1"/>
-            <selectable_reward_item item_id="114301911" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80722" name="[Event] Welcome Gift from the Dark Star" category_name="Event" nameId="1801333" minlevel_permitted="10" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <selectable_reward_item item_id="114101771" count="1"/>
-            <selectable_reward_item item_id="114301911" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80723" name="[Event] Second Rank Dark Star Member" category_name="Event" nameId="1801334" minlevel_permitted="20" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215806" count="8"/>
-        </collect_items>
-        <rewards exp="1">
-            <selectable_reward_item item_id="120015051" count="1"/>
-            <selectable_reward_item item_id="120015052" count="1"/>
-        </rewards>
-        <quest_drop npc_id="256693" item_id="182215806" chance="80" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80724" name="[Event] Second Rank Dark Star Member" category_name="Event" nameId="1801335" minlevel_permitted="20" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215807" count="8"/>
-        </collect_items>
-        <rewards exp="1">
-            <selectable_reward_item item_id="120015051" count="1"/>
-            <selectable_reward_item item_id="120015052" count="1"/>
-        </rewards>
-        <quest_drop npc_id="256693" item_id="182215807" chance="80" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80725" name="[Event] Third Rank Dark Star Member" category_name="Event" nameId="1801336" minlevel_permitted="30" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215808" count="5"/>
-        </collect_items>
-        <rewards exp="1">
-            <selectable_reward_item item_id="111101726" count="1"/>
-            <selectable_reward_item item_id="111301843" count="1"/>
-            <selectable_reward_item item_id="111501800" count="1"/>
-            <selectable_reward_item item_id="111601665" count="1"/>
-        </rewards>
-        <quest_drop npc_id="655496" item_id="182215808" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655502" item_id="182215808" chance="80" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80726" name="[Event] Third Rank Dark Star Member" category_name="Event" nameId="1801337" minlevel_permitted="30" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215809" count="5"/>
-        </collect_items>
-        <rewards exp="1">
-            <selectable_reward_item item_id="111101726" count="1"/>
-            <selectable_reward_item item_id="111301843" count="1"/>
-            <selectable_reward_item item_id="111501800" count="1"/>
-            <selectable_reward_item item_id="111601665" count="1"/>
-        </rewards>
-        <quest_drop npc_id="655496" item_id="182215809" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655502" item_id="182215809" chance="80" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80727" name="[Event] Fourth Rank Dark Star Member" category_name="Event" nameId="1801338" minlevel_permitted="40" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215810" count="6"/>
-        </collect_items>
-        <rewards exp="1">
-            <selectable_reward_item item_id="100001886" count="1"/>
-            <selectable_reward_item item_id="100101413" count="1"/>
-            <selectable_reward_item item_id="100201593" count="1"/>
-            <selectable_reward_item item_id="100501373" count="1"/>
-            <selectable_reward_item item_id="100601491" count="1"/>
-            <selectable_reward_item item_id="100901448" count="1"/>
-            <selectable_reward_item item_id="101301335" count="1"/>
-            <selectable_reward_item item_id="101501431" count="1"/>
-            <selectable_reward_item item_id="101701429" count="1"/>
-            <selectable_reward_item item_id="101801282" count="1"/>
-            <selectable_reward_item item_id="101901188" count="1"/>
-            <selectable_reward_item item_id="102001309" count="1"/>
-            <selectable_reward_item item_id="102101126" count="1"/>
-        </rewards>
-        <quest_drop npc_id="219033" item_id="182215810" drop_each_member="1"/>
-        <quest_drop npc_id="215081" item_id="182215810" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80728" name="[Event] Fourth Rank Dark Star Member" category_name="Event" nameId="1801339" minlevel_permitted="40" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215811" count="6"/>
-        </collect_items>
-        <rewards exp="1">
-            <selectable_reward_item item_id="100001886" count="1"/>
-            <selectable_reward_item item_id="100101413" count="1"/>
-            <selectable_reward_item item_id="100201593" count="1"/>
-            <selectable_reward_item item_id="100501373" count="1"/>
-            <selectable_reward_item item_id="100601491" count="1"/>
-            <selectable_reward_item item_id="100901448" count="1"/>
-            <selectable_reward_item item_id="101301335" count="1"/>
-            <selectable_reward_item item_id="101501431" count="1"/>
-            <selectable_reward_item item_id="101701429" count="1"/>
-        </rewards>
-        <quest_drop npc_id="219033" item_id="182215811" drop_each_member="1"/>
-        <quest_drop npc_id="215081" item_id="182215811" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80729" name="[Event] Fifth Rank Dark Star Member" category_name="Event" nameId="1801340" minlevel_permitted="50" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215812" count="2"/>
-            <collect_item item_id="182215814" count="2"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="186000344" count="4000"/>
-        </rewards>
-        <quest_drop npc_id="214904" item_id="182215812" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655939" item_id="182215814" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655858" item_id="182215814" chance="80" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80730" name="[Event] Fifth Rank Dark Star Member" category_name="Event" nameId="1801341" minlevel_permitted="50" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215813" count="2"/>
-            <collect_item item_id="182215815" count="2"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="186000344" count="4000"/>
-        </rewards>
-        <quest_drop npc_id="214904" item_id="182215813" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655939" item_id="182215815" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655858" item_id="182215815" chance="80" drop_each_member="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80731" name="[Event] Sixth Rank Dark Star Member" category_name="Event" nameId="1801342" minlevel_permitted="60" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <selectable_reward_item item_id="125004356" count="1"/>
-            <selectable_reward_item item_id="125004357" count="1"/>
-            <selectable_reward_item item_id="125004358" count="1"/>
-            <selectable_reward_item item_id="125004359" count="1"/>
-            <selectable_reward_item item_id="125004360" count="1"/>
-            <selectable_reward_item item_id="125004361" count="1"/>
-            <selectable_reward_item item_id="125004362" count="1"/>
-            <selectable_reward_item item_id="125004363" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80732" name="[Event] Sixth Rank Dark Star Member" category_name="Event" nameId="1801343" minlevel_permitted="60" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <selectable_reward_item item_id="125004356" count="1"/>
-            <selectable_reward_item item_id="125004357" count="1"/>
-            <selectable_reward_item item_id="125004358" count="1"/>
-            <selectable_reward_item item_id="125004359" count="1"/>
-            <selectable_reward_item item_id="125004360" count="1"/>
-            <selectable_reward_item item_id="125004361" count="1"/>
-            <selectable_reward_item item_id="125004362" count="1"/>
-            <selectable_reward_item item_id="125004363" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80733" name="[Event] Honorary Dark Star Member" category_name="Event" nameId="1801344" minlevel_permitted="65" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="188054622" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80734" name="[Event] Honorary Dark Star Member" category_name="Event" nameId="1801345" minlevel_permitted="45" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="188054623" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80735" name="[Event] Hungry Robo Shugo" category_name="Event" nameId="1801330" minlevel_permitted="10" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="186000408" count="1"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="164002296" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80736" name="[Event] Hungry Robo Shugo" category_name="Event" nameId="1801331" minlevel_permitted="10" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="186000412" count="1"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="164000348" count="5"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
     <quest id="80737" name="[Event] A Strange Shugo" category_name="Event" nameId="1185851" minlevel_permitted="1" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="1">
             <reward_item item_id="188100262" count="1"/>
@@ -18715,171 +18527,6 @@
         </start_conditions>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
     </quest>
-    <quest id="80795" name="[Event] Devotion of the Second Rank Member" category_name="Event" nameId="1185927" minlevel_permitted="20" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215806" count="8"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="1"/>
-        </rewards>
-        <quest_drop npc_id="256693" item_id="182215806" chance="80" drop_each_member="1"/>
-        <start_conditions>
-            <finished quest_id="80723"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80796" name="[Event] Devotion of the Second Rank Member" category_name="Event" nameId="1185928" minlevel_permitted="20" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215807" count="8"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="1"/>
-        </rewards>
-        <quest_drop npc_id="256693" item_id="182215807" chance="80" drop_each_member="1"/>
-        <start_conditions>
-            <finished quest_id="80724"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80797" name="[Event] Devotion of the Third Rank Member" category_name="Event" nameId="1185929" minlevel_permitted="30" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215808" count="5"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="5"/>
-        </rewards>
-        <quest_drop npc_id="655496" item_id="182215808" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655502" item_id="182215808" chance="80" drop_each_member="1"/>
-        <start_conditions>
-            <finished quest_id="80725"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80798" name="[Event] Devotion of the Third Rank Member" category_name="Event" nameId="1185930" minlevel_permitted="30" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="182215809" count="5"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="1"/>
-        </rewards>
-        <quest_drop npc_id="655496" item_id="182215809" chance="80" drop_each_member="1"/>
-        <quest_drop npc_id="655502" item_id="182215809" chance="80" drop_each_member="1"/>
-        <start_conditions>
-            <finished quest_id="80726"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80799" name="[Event] Devotion of the Fourth Rank Member" category_name="Event" nameId="1185931" minlevel_permitted="40" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="18"/>
-        </rewards>
-        <start_conditions>
-            <finished quest_id="80727"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80800" name="[Event] Devotion of the Fourth Rank Member" category_name="Event" nameId="1185932" minlevel_permitted="40" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="1"/>
-        </rewards>
-        <start_conditions>
-            <finished quest_id="80728"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80801" name="[Event] Devotion of the Fifth Rank Member" category_name="Event" nameId="1185933" minlevel_permitted="50" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="63"/>
-        </rewards>
-        <start_conditions>
-            <finished quest_id="80729"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80802" name="[Event] Devotion of the Sixth Rank Member" category_name="Event" nameId="1185934" minlevel_permitted="50" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="5"/>
-        </rewards>
-        <start_conditions>
-            <finished quest_id="80730"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80803" name="[Event] Devotion of the Sixth Rank Member" category_name="Event" nameId="1185935" minlevel_permitted="60" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000236" count="5"/>
-        </rewards>
-        <start_conditions>
-            <finished quest_id="80731"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80804" name="[Event] Dignity of the Honorary Member" category_name="Event" nameId="1185936" minlevel_permitted="65" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="210"/>
-        </rewards>
-        <start_conditions>
-            <finished quest_id="80733"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80805" name="[Event] Devotion of the Fifth Rank Member" category_name="Event" nameId="1185937" minlevel_permitted="45" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000469" count="5"/>
-        </rewards>
-        <start_conditions>
-            <finished quest_id="80734"/>
-        </start_conditions>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80806" name="[Event/Weekly] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185923" minlevel_permitted="65" max_repeat_count="255" repeat_cycle="WED" race_permitted="ELYOS" category="EVENT">
-        <rewards exp="1" reward_glory_point="5">
-            <reward_item item_id="186000414" count="6"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80807" name="[Event/Weekly] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185924" minlevel_permitted="65" max_repeat_count="255" repeat_cycle="WED" race_permitted="ASMODIANS" category="EVENT">
-        <rewards exp="1" reward_glory_point="5">
-            <reward_item item_id="186000414" count="6"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80808" name="[Event/Weekly] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185925" minlevel_permitted="50" max_repeat_count="255" repeat_cycle="WED" race_permitted="ELYOS" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000055" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80809" name="[Event/Weekly] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185926" minlevel_permitted="50" max_repeat_count="255" repeat_cycle="WED" race_permitted="ASMODIANS" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000055" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80810" name="[Event/Daily] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185896" minlevel_permitted="65" max_repeat_count="255" repeat_cycle="ALL" race_permitted="ELYOS" category="EVENT">
-        <rewards exp="1" reward_glory_point="5">
-            <reward_item item_id="186000236" count="10"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80811" name="[Event/Daily] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185897" minlevel_permitted="65" max_repeat_count="255" repeat_cycle="ALL" race_permitted="ASMODIANS" category="EVENT">
-        <rewards exp="1" reward_glory_point="5">
-            <reward_item item_id="186000236" count="10"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80812" name="[Event/Daily] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185898" minlevel_permitted="50" max_repeat_count="255" repeat_cycle="ALL" race_permitted="ELYOS" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000057" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80813" name="[Event/Daily] Devotion of the Honorary Dark Star Member" category_name="Event" nameId="1185899" minlevel_permitted="50" max_repeat_count="255" repeat_cycle="ALL" race_permitted="ASMODIANS" category="EVENT">
-        <rewards exp="1">
-            <reward_item item_id="186000057" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
     <quest id="80814" name="[Event] A Father's Troubled Heart" category_name="Event" nameId="1185938" minlevel_permitted="30" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="1">
             <reward_item item_id="188100293" count="1"/>
@@ -19020,42 +18667,6 @@
     </quest>
     <quest id="80833" name="Reward for Bonus Cards" category_name="Event" nameId="1802068" minlevel_permitted="60" maxlevel_permitted="65" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="1"/>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80834" name="[Event] Prestige Pass" category_name="Event" nameId="1802342" minlevel_permitted="0" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="186000343" count="1"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="188710263" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80835" name="[Event] Prestige Pass" category_name="Event" nameId="1802343" minlevel_permitted="0" max_repeat_count="1" race_permitted="ASMODIANS" category="EVENT">
-        <collect_items>
-            <collect_item item_id="186000343" count="1"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="188710263" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80836" name="[Event] A new face" category_name="Event" nameId="1802344" minlevel_permitted="30" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
-        <collect_items>
-            <collect_item item_id="186000344" count="100"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="169650007" count="1"/>
-        </rewards>
-        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
-    </quest>
-    <quest id="80837" name="[Event] A new face" category_name="Event" nameId="1802345" minlevel_permitted="30" max_repeat_count="1" race_permitted="ASMODIANS" category="EVENT">
-        <collect_items>
-            <collect_item item_id="186000344" count="100"/>
-        </collect_items>
-        <rewards exp="1">
-            <reward_item item_id="169650007" count="1"/>
-        </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
     </quest>
     <quest id="80838" name="Dangerous Efforts (5)" category_name="Event" nameId="1185971" minlevel_permitted="65" max_repeat_count="255" race_permitted="ELYOS" category="EVENT">
@@ -20078,7 +19689,7 @@
         </start_conditions>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
     </quest>
-    <quest id="80965" name="[Instance/Group] Task 3: Arkhal’s Hidden Space" category_name="Event" nameId="1803660" minlevel_permitted="66" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+    <quest id="80965" name="[Instance/Group] Task 3: Arkhal's Hideout" category_name="Event" nameId="1803660" minlevel_permitted="66" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="100000000"/>
         <start_conditions>
             <finished quest_id="80964"/>
@@ -20120,7 +19731,7 @@
         </start_conditions>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
     </quest>
-    <quest id="80971" name="[Instance/Group] Repeat Task: Arkhal's Hidden Space" category_name="Event" nameId="1803666" minlevel_permitted="66" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
+    <quest id="80971" name="[Instance/Group] Repeat Task: Arkhal's Hideout" category_name="Event" nameId="1803666" minlevel_permitted="66" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="100000000"/>
         <start_conditions>
             <finished quest_id="80965"/>
@@ -20507,11 +20118,299 @@
         <rewards exp="1" reward_glory_point="50700"/>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
     </quest>
-    <quest id="81026" name="[Event]" category_name="Event" nameId="1234567" minlevel_permitted="65" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
+    <quest id="81026" name="[Event] Strive for Glory and Honour (4) (Elyos/Asmodians)" category_name="Event" nameId="1820150" minlevel_permitted="65" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
         <collect_items>
             <collect_item item_id="182007166" count="10"/>
         </collect_items>
         <rewards exp="1" reward_glory_point="10050"/>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81027" name="[Event] Power of the Pipes: Old Pipe" category_name="Event" nameId="1806360" minlevel_permitted="11" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1">
+            <reward_item item_id="164012036" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81028" name="[Event] Power of the Pipes: Red Pipe" category_name="Event" nameId="1806361" minlevel_permitted="11" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1">
+            <reward_item item_id="164012037" count="1"/>
+        </rewards>
+        <start_conditions>
+            <finished quest_id="81027"/>
+        </start_conditions>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81029" name="[Event] Power of the Pipes: Blue Pipe" category_name="Event" nameId="1806362" minlevel_permitted="11" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1">
+            <reward_item item_id="164012038" count="1"/>
+        </rewards>
+        <start_conditions>
+            <finished quest_id="81028"/>
+        </start_conditions>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81030" name="[Event] Power of the Pipes: Violet Pipe" category_name="Event" nameId="1806363" minlevel_permitted="11" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1">
+            <reward_item item_id="164012039" count="1"/>
+        </rewards>
+        <start_conditions>
+            <finished quest_id="81029"/>
+        </start_conditions>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81031" name="[Event] Power of the Pipes: Black Pipe" category_name="Event" nameId="1806364" minlevel_permitted="11" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1">
+            <reward_item item_id="164012040" count="1"/>
+        </rewards>
+        <start_conditions>
+            <finished quest_id="81030"/>
+        </start_conditions>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81032" name="[Event] Power of the Pipes: White Pipe" category_name="Event" nameId="1806365" minlevel_permitted="11" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1">
+            <reward_item item_id="164012041" count="1"/>
+        </rewards>
+        <start_conditions>
+            <finished quest_id="81031"/>
+        </start_conditions>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81033" name="[Event] Exclusive Gift for Dark Star Members" category_name="Event" nameId="1806503" minlevel_permitted="1" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT" quest_cooltime="2592000">
+        <rewards exp="1">
+            <reward_item item_id="188508044" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81034" name="[Event] Hamerun and the Dark Star First Rank" category_name="Event" nameId="1806504" minlevel_permitted="6" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="2000">
+            <selectable_reward_item item_id="120003098" count="1"/>
+            <selectable_reward_item item_id="120003099" count="1"/>
+            <selectable_reward_item item_id="121003098" count="1"/>
+            <selectable_reward_item item_id="121003099" count="1"/>
+            <selectable_reward_item item_id="122003098" count="1"/>
+            <selectable_reward_item item_id="122003099" count="1"/>
+            <selectable_reward_item item_id="123003098" count="1"/>
+            <selectable_reward_item item_id="123003099" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81035" name="[Event] RM-78c and the Dark Star First Rank" category_name="Event" nameId="1806505" minlevel_permitted="18" max_repeat_count="1" race_permitted="ELYOS" category="EVENT">
+        <rewards exp="1" gold="12500">
+            <selectable_reward_item item_id="100050087" count="1"/>
+            <selectable_reward_item item_id="100150083" count="1"/>
+            <selectable_reward_item item_id="100250084" count="1"/>
+            <selectable_reward_item item_id="100550083" count="1"/>
+            <selectable_reward_item item_id="100650083" count="1"/>
+            <selectable_reward_item item_id="100950082" count="1"/>
+            <selectable_reward_item item_id="101350084" count="1"/>
+            <selectable_reward_item item_id="101550082" count="1"/>
+            <selectable_reward_item item_id="101750083" count="1"/>
+            <selectable_reward_item item_id="101850085" count="1"/>
+            <selectable_reward_item item_id="101950080" count="1"/>
+            <selectable_reward_item item_id="102050083" count="1"/>
+            <selectable_reward_item item_id="102150088" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81036" name="[Event] Esras and the Dark Star First Rank" category_name="Event" nameId="1806506" minlevel_permitted="18" max_repeat_count="1" race_permitted="ASMODIANS" category="EVENT">
+        <rewards exp="1" gold="12500">
+            <selectable_reward_item item_id="100050087" count="1"/>
+            <selectable_reward_item item_id="100150083" count="1"/>
+            <selectable_reward_item item_id="100250084" count="1"/>
+            <selectable_reward_item item_id="100550083" count="1"/>
+            <selectable_reward_item item_id="100650083" count="1"/>
+            <selectable_reward_item item_id="100950082" count="1"/>
+            <selectable_reward_item item_id="101350084" count="1"/>
+            <selectable_reward_item item_id="101550082" count="1"/>
+            <selectable_reward_item item_id="101750083" count="1"/>
+            <selectable_reward_item item_id="101850085" count="1"/>
+            <selectable_reward_item item_id="101950080" count="1"/>
+            <selectable_reward_item item_id="102050083" count="1"/>
+            <selectable_reward_item item_id="102150088" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81037" name="[Event] Kaliga and the Dark Star Second Rank" category_name="Event" nameId="1806507" minlevel_permitted="23" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="15000">
+            <selectable_reward_item item_id="120003100" count="1"/>
+            <selectable_reward_item item_id="120003101" count="1"/>
+            <selectable_reward_item item_id="121003100" count="1"/>
+            <selectable_reward_item item_id="121003101" count="1"/>
+            <selectable_reward_item item_id="122003100" count="1"/>
+            <selectable_reward_item item_id="122003101" count="1"/>
+            <selectable_reward_item item_id="123003100" count="1"/>
+            <selectable_reward_item item_id="123003101" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81038" name="[Event] Kromede and the Dark Star Second Rank" category_name="Event" nameId="1806508" minlevel_permitted="28" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="17500">
+            <selectable_reward_item item_id="100050020" count="1"/>
+            <selectable_reward_item item_id="100150020" count="1"/>
+            <selectable_reward_item item_id="100250020" count="1"/>
+            <selectable_reward_item item_id="100550020" count="1"/>
+            <selectable_reward_item item_id="100650020" count="1"/>
+            <selectable_reward_item item_id="100950020" count="1"/>
+            <selectable_reward_item item_id="101350020" count="1"/>
+            <selectable_reward_item item_id="101550020" count="1"/>
+            <selectable_reward_item item_id="101750020" count="1"/>
+            <selectable_reward_item item_id="101850020" count="1"/>
+            <selectable_reward_item item_id="101950020" count="1"/>
+            <selectable_reward_item item_id="102050020" count="1"/>
+            <selectable_reward_item item_id="102150020" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81039" name="[Event] Indratu and the Dark Star Second Rank" category_name="Event" nameId="1806509" minlevel_permitted="36" max_repeat_count="1" race_permitted="ELYOS" category="EVENT">
+        <rewards exp="1" gold="50000">
+            <selectable_reward_item item_id="120003102" count="1"/>
+            <selectable_reward_item item_id="120003103" count="1"/>
+            <selectable_reward_item item_id="121003102" count="1"/>
+            <selectable_reward_item item_id="121003103" count="1"/>
+            <selectable_reward_item item_id="122003102" count="1"/>
+            <selectable_reward_item item_id="122003103" count="1"/>
+            <selectable_reward_item item_id="123003102" count="1"/>
+            <selectable_reward_item item_id="123003103" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81040" name="[Event] Bakarma and the Dark Star Fourth Rank" category_name="Event" nameId="1806510" minlevel_permitted="36" max_repeat_count="1" race_permitted="ASMODIANS" category="EVENT">
+        <rewards exp="1" gold="50000">
+            <selectable_reward_item item_id="120003102" count="1"/>
+            <selectable_reward_item item_id="120003103" count="1"/>
+            <selectable_reward_item item_id="121003102" count="1"/>
+            <selectable_reward_item item_id="121003103" count="1"/>
+            <selectable_reward_item item_id="122003102" count="1"/>
+            <selectable_reward_item item_id="122003103" count="1"/>
+            <selectable_reward_item item_id="123003102" count="1"/>
+            <selectable_reward_item item_id="123003103" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81041" name="[Event] Celestius and the Dark Star Fourth Rank" category_name="Event" nameId="1806511" minlevel_permitted="42" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="75000">
+            <selectable_reward_item item_id="187010098" count="1"/>
+            <selectable_reward_item item_id="187010099" count="1"/>
+            <selectable_reward_item item_id="187105098" count="1"/>
+            <selectable_reward_item item_id="187105099" count="1"/>
+            <selectable_reward_item item_id="187205098" count="1"/>
+            <selectable_reward_item item_id="187205099" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81042" name="[Event] Debilkarim and the Dark Star Fourth Rank" category_name="Event" nameId="1806512" minlevel_permitted="52" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="125000">
+            <selectable_reward_item item_id="120003104" count="1"/>
+            <selectable_reward_item item_id="120003105" count="1"/>
+            <selectable_reward_item item_id="121003104" count="1"/>
+            <selectable_reward_item item_id="121003105" count="1"/>
+            <selectable_reward_item item_id="122003104" count="1"/>
+            <selectable_reward_item item_id="122003105" count="1"/>
+            <selectable_reward_item item_id="123003104" count="1"/>
+            <selectable_reward_item item_id="123003105" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81043" name="[Event] Tiamat and the Dark Star Fourth Rank" category_name="Event" nameId="1806513" minlevel_permitted="57" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="150000">
+            <selectable_reward_item item_id="187010100" count="1"/>
+            <selectable_reward_item item_id="187010101" count="1"/>
+            <selectable_reward_item item_id="187105100" count="1"/>
+            <selectable_reward_item item_id="187105101" count="1"/>
+            <selectable_reward_item item_id="187205100" count="1"/>
+            <selectable_reward_item item_id="187205101" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81044" name="[Event] Beritra and the Dark Star Sixth Rank" category_name="Event" nameId="1806514" minlevel_permitted="66" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="200000">
+            <selectable_reward_item item_id="100050088" count="1"/>
+            <selectable_reward_item item_id="100150084" count="1"/>
+            <selectable_reward_item item_id="100250085" count="1"/>
+            <selectable_reward_item item_id="100550084" count="1"/>
+            <selectable_reward_item item_id="100650084" count="1"/>
+            <selectable_reward_item item_id="100950083" count="1"/>
+            <selectable_reward_item item_id="101350085" count="1"/>
+            <selectable_reward_item item_id="101550083" count="1"/>
+            <selectable_reward_item item_id="101750084" count="1"/>
+            <selectable_reward_item item_id="101850086" count="1"/>
+            <selectable_reward_item item_id="101950081" count="1"/>
+            <selectable_reward_item item_id="102050084" count="1"/>
+            <selectable_reward_item item_id="102150089" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81045" name="[Event] Kirshka and the Dark Star Sixth Rank" category_name="Event" nameId="1806515" minlevel_permitted="76" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="275000">
+            <selectable_reward_item item_id="120003112" count="1"/>
+            <selectable_reward_item item_id="120003113" count="1"/>
+            <selectable_reward_item item_id="121003112" count="1"/>
+            <selectable_reward_item item_id="121003113" count="1"/>
+            <selectable_reward_item item_id="122003112" count="1"/>
+            <selectable_reward_item item_id="122003113" count="1"/>
+            <selectable_reward_item item_id="123003112" count="1"/>
+            <selectable_reward_item item_id="123003113" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81046" name="[Event] Beritra and the Dark Star Honorary Rank" category_name="Event" nameId="1806516" minlevel_permitted="80" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="350000">
+            <selectable_reward_item item_id="100050028" count="1"/>
+            <selectable_reward_item item_id="100150028" count="1"/>
+            <selectable_reward_item item_id="100250028" count="1"/>
+            <selectable_reward_item item_id="100550028" count="1"/>
+            <selectable_reward_item item_id="100650028" count="1"/>
+            <selectable_reward_item item_id="100950028" count="1"/>
+            <selectable_reward_item item_id="101350028" count="1"/>
+            <selectable_reward_item item_id="101550028" count="1"/>
+            <selectable_reward_item item_id="101750028" count="1"/>
+            <selectable_reward_item item_id="101850028" count="1"/>
+            <selectable_reward_item item_id="101950028" count="1"/>
+            <selectable_reward_item item_id="102050028" count="1"/>
+            <selectable_reward_item item_id="102150028" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81047" name="[Event/Weekly] Skill of the Honorary Dark Star Member" category_name="Event" nameId="1806517" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="WED" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="350000">
+            <reward_item item_id="166023102" count="1"/>
+        </rewards>
+        <start_conditions>
+            <finished quest_id="81046"/>
+        </start_conditions>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81048" name="[Event/Weekly] Stamina of the Honorary Dark Star Member" category_name="Event" nameId="1806518" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="WED" race_permitted="ELYOS" category="EVENT">
+        <rewards exp="1" gold="350000">
+            <reward_item item_id="186000344" count="100"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81049" name="[Event/Weekly] Stamina of the Honorary Dark Star Member" category_name="Event" nameId="1806519" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="WED" race_permitted="ASMODIANS" category="EVENT">
+        <rewards exp="1" gold="350000">
+            <reward_item item_id="186000344" count="100"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81050" name="[Event/Weekly] Courage of the Honorary Dark Star Member" category_name="Event" nameId="1806520" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="WED" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1" gold="100000" reward_abyss_point="10000">
+            <reward_item item_id="152080002" count="40"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81051" name="[Event/Weekly/League] Spirit of the Honorary Dark Star Member" category_name="Event" nameId="1806521" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="WED" race_permitted="ELYOS" category="EVENT">
+        <rewards exp="1" gold="100000" reward_abyss_point="10000">
+            <selectable_reward_item item_id="152080000" count="20"/>
+            <selectable_reward_item item_id="152080001" count="20"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
+    </quest>
+    <quest id="81052" name="[Event/Weekly/League] Spirit of the Honorary Dark Star Member" category_name="Event" nameId="1806522" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="WED" race_permitted="ASMODIANS" category="EVENT">
+        <rewards exp="1" gold="100000" reward_abyss_point="10000">
+            <selectable_reward_item item_id="152080000" count="20"/>
+            <selectable_reward_item item_id="152080001" count="20"/>
+        </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER</class_permitted>
     </quest>
     <quest id="90000" name="[Tutorial] Skills" category_name="New Knowledge" nameId="1805388" minlevel_permitted="3" max_repeat_count="1" race_permitted="PC_ALL" category="TUTORIAL">

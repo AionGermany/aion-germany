@@ -22,28 +22,29 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author Falke_34
  * @author FrozenKiller
  */
-public class _70000MuninsReputation extends QuestHandler {
+public class _70003ArchonSoldierExam extends QuestHandler {
 
-	private final static int questId = 70000;
+	private final static int questId = 70003;
 
-	public _70000MuninsReputation() {
+	public _70003ArchonSoldierExam() {
 		super(questId);
 	}
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(806810).addOnTalkEvent(questId); // Old Friend Cheska
-		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
+		qe.registerOnLevelUp(questId);
+		qe.registerQuestNpc(806814).addOnTalkEvent(questId); // Marko
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 2000, true);
+		return defaultOnLvlUpEvent(env, 70000, false);
 	}
 
 	@Override
@@ -52,29 +53,41 @@ public class _70000MuninsReputation extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
-
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 806810) {
+			int var = qs.getQuestVarById(0);
+			switch (targetId) {
+			case 806814:
 				switch (dialog) {
-				case QUEST_SELECT: {
-					return sendQuestDialog(env, 1011);
-				}
-				case SET_SUCCEED: {
+				case QUEST_SELECT:
+					if (var == 0) {
+						return sendQuestDialog(env, 1011);
+					} else {
+						return sendQuestDialog(env, 1352);
+					}
+				case SETPRO1:
 					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);
 					return closeDialogWindow(env);
-				}
+				case CHECK_USER_HAS_QUEST_ITEM:
+					if (QuestService.collectItemCheck(env, true)) {
+						qs.setQuestVar(2);
+						qs.setStatus(QuestStatus.REWARD);
+						updateQuestStatus(env);
+						return sendQuestDialog(env, 5);
+					} else {
+						return sendQuestDialog(env, 10001);
+					}
 				default:
 					break;
 				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 203550) {
+			if (targetId == 806814) {
 				if (dialog == DialogAction.USE_OBJECT) {
 					return sendQuestDialog(env, 10002);
 				}

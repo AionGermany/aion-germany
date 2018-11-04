@@ -27,23 +27,25 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  * @author Falke_34
  * @author FrozenKiller
  */
-public class _70000MuninsReputation extends QuestHandler {
+public class _70001TheStartOfANewAge extends QuestHandler {
 
-	private final static int questId = 70000;
+	private final static int questId = 70001;
 
-	public _70000MuninsReputation() {
+	public _70001TheStartOfANewAge() {
 		super(questId);
 	}
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(806810).addOnTalkEvent(questId); // Old Friend Cheska
+		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
+		qe.registerQuestNpc(806877).addOnTalkEvent(questId); // The History of Bygone Atreia
+		qe.registerQuestNpc(806878).addOnTalkEvent(questId); // Records about the Day of the Storm
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 2000, true);
+		return defaultOnLvlUpEvent(env, 70000, false);
 	}
 
 	@Override
@@ -52,26 +54,49 @@ public class _70000MuninsReputation extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
-
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 806810) {
+			switch (targetId) {
+			case 203550:
 				switch (dialog) {
-				case QUEST_SELECT: {
+				case QUEST_SELECT:
 					return sendQuestDialog(env, 1011);
-				}
-				case SET_SUCCEED: {
+				case SETPRO1:
 					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);
 					return closeDialogWindow(env);
-				}
 				default:
 					break;
 				}
+				break;
+			case 806877:
+				switch (dialog) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1352);
+				case SETPRO2:
+					qs.setQuestVar(2);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
+				break;
+			case 806878:
+				switch (dialog) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1693);
+				case SET_SUCCEED:
+					qs.setQuestVar(3);
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 203550) {

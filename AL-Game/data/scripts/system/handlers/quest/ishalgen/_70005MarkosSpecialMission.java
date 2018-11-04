@@ -27,23 +27,31 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  * @author Falke_34
  * @author FrozenKiller
  */
-public class _70000MuninsReputation extends QuestHandler {
+public class _70005MarkosSpecialMission extends QuestHandler {
 
-	private final static int questId = 70000;
+	private final static int questId = 70005;
+	private final static int[] mobs = { 651765, 651833 };
 
-	public _70000MuninsReputation() {
+	public _70005MarkosSpecialMission() {
 		super(questId);
 	}
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(806810).addOnTalkEvent(questId); // Old Friend Cheska
-		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
+		qe.registerOnLevelUp(questId);
+		qe.registerQuestNpc(203516).addOnTalkEvent(questId); // Ulgorn
+		qe.registerQuestNpc(203519).addOnTalkEvent(questId); // Nobekk
+		qe.registerQuestNpc(806906).addOnTalkEvent(questId); // Active Cheska
+		qe.registerQuestNpc(203533).addOnTalkEvent(questId); // Motgar
+		for (int mob : mobs) {
+			qe.registerQuestNpc(mob).addOnKillEvent(questId);
+		}
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 2000, true);
+		return defaultOnLvlUpEvent(env, 70000, false);
+
 	}
 
 	@Override
@@ -52,33 +60,73 @@ public class _70000MuninsReputation extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
-
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 806810) {
+			switch (targetId) {
+			case 203516:
 				switch (dialog) {
-				case QUEST_SELECT: {
+				case QUEST_SELECT:
 					return sendQuestDialog(env, 1011);
-				}
-				case SET_SUCCEED: {
+				case SETPRO1:
 					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);
 					return closeDialogWindow(env);
-				}
 				default:
 					break;
 				}
+				break;
+			case 203519:
+				switch (dialog) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1352);
+				case SETPRO2:
+					qs.setQuestVar(2);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
+				break;
+			case 806906:
+				switch (dialog) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 2034);
+				case SET_SUCCEED:
+					qs.setQuestVar(4);
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 203550) {
+			if (targetId == 203533) {
 				if (dialog == DialogAction.USE_OBJECT) {
 					return sendQuestDialog(env, 10002);
 				}
 				return sendQuestEndDialog(env);
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public boolean onKillEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
+			int var1 = qs.getQuestVarById(1);
+			if (var == 2 && var1 < 2) {
+				return defaultOnKillEvent(env, mobs, var1, var1 + 1, 1);
+			} else {
+				qs.setQuestVar(3);
+				updateQuestStatus(env);
 			}
 		}
 		return false;
