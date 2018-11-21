@@ -26,6 +26,7 @@ import com.aionemu.gameserver.model.templates.item.actions.ItemActions;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
@@ -36,6 +37,8 @@ public class CM_MINIONS extends AionClientPacket {
 	private int actionId;
 	private MinionAction action;
 	private int ItemObjectId;
+	private int minionObjId;
+	private int lock;
 
 	public CM_MINIONS(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -45,43 +48,45 @@ public class CM_MINIONS extends AionClientPacket {
 	protected void readImpl() {
 		actionId = readH();
 		action = MinionAction.getActionById(actionId);
+		Player player = getConnection().getActivePlayer();
 		switch (action) {
-		case ADOPT: {
+		case ADOPT:
 			ItemObjectId = readD();
 			break;
-		}
-		case RENAME: {
-
-		}
-		case DELETE: {
-
-		}
-		case LOCK: {
-
-		}
+		case RENAME:
+			minionObjId = readD();
+			String name = readS();
+			MinionService.getInstance().renameMinion(player, minionObjId, name);
+			break;
+		case DELETE:
+			break;
+		case LOCK:
+			minionObjId = readD();
+			lock = readC();
+			MinionService.getInstance().lockMinion(player, minionObjId, lock);
+			break;
 		case SPAWN:
-		case DISMISS: {
-
-		}
-		case GROWTH: {
-
-		}
+			minionObjId = readD();
+			MinionService.getInstance().spawnMinion(player, minionObjId);
+			break;
+		case DISMISS:
+			minionObjId = readD();
+			MinionService.getInstance().despawnMinion(player, minionObjId);
+			break;
+		case GROWTH:
+			break;
 		case USE_FUNCTION:
-		case STOP_FUNCTION: {
-
-		}
-		case CHARGE: {
-
-		}
-		case EVOLVE: {
-
-		}
-		case COMBINE: {
-
-		}
-		case SET_FUNCTION: {
-
-		}
+			break;
+		case STOP_FUNCTION:
+			break;
+		case CHARGE:
+			break;
+		case EVOLVE:
+			break;
+		case COMBINE:
+			break;
+		case SET_FUNCTION:
+			break;
 		default:
 			break;
 		}

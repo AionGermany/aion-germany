@@ -18,9 +18,7 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 
 import java.util.Collection;
 
-import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -30,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 public class SM_MINIONS extends AionServerPacket {
 
 	private int actionId;
-	private Minion minion;
 	private Collection<MinionCommonData> minions;
 	private MinionCommonData minionsCommonData;
 	private int subType;
@@ -41,66 +38,54 @@ public class SM_MINIONS extends AionServerPacket {
 	private int dopeSlot2;
 	private int minionObjectId;
 	private int ItemId;
-	private boolean asMaterial;
-
-	public SM_MINIONS(int subType, int actionId, int objectId, int count, Minion minion) {
-		this.subType = subType;
-		this.actionId = actionId;
-		this.ItemId = objectId;
-		this.minion = minion;
-		this.minionsCommonData = minion.getCommonData();
-	}
+//	private boolean asMaterial;
 
 	public SM_MINIONS(int actionId) {
 		this.actionId = actionId;
 	}
 
-	public SM_MINIONS(Player player, int actionId) {
-		this.actionId = actionId;
-	}
+//	public SM_MINIONS(int actionId, int subType, int dopeAction, int minionObjectId, int ItemId2, int slot, int slot2, boolean isLooting) {
+//		this.actionId = actionId;
+//		switch (subType) {
+//		case 0: {
+//			switch (dopeAction) {
+//			case 0:
+//				this.dopeAction = 0;
+//				this.minionObjectId = minionObjectId;
+//				this.ItemId = ItemId2;
+//				this.dopeSlot = slot;
+//			case 2:
+//				this.dopeAction = 512;
+//				this.minionObjectId = minionObjectId;
+//				this.dopeSlot = slot;
+//				this.dopeSlot2 = slot2;
+//			case 1:
+//				this.dopeAction = 256;
+//				this.minionObjectId = minionObjectId;
+//				this.dopeSlot = slot;
+//			case 3:
+//				this.dopeAction = 768;
+//				this.minionObjectId = minionObjectId;
+//				this.ItemId = ItemId2;
+//				this.dopeSlot = slot;
+//			}
+//			}
+//			break;
+//		case 1:
+//			switch (dopeAction) {
+//			case 5: {
+//				this.minionObjectId = minionObjectId;
+//				this.isActing = isLooting;
+//			}
+//			}
+//		}
+//	}
 
-	public SM_MINIONS(int actionId, int subType, int dopeAction, int minionObjectId, int ItemId2, int slot, int slot2, boolean isLooting) {
-		this.actionId = actionId;
-		switch (subType) {
-		case 0: {
-			switch (dopeAction) {
-			case 0:
-				this.dopeAction = 0;
-				this.minionObjectId = minionObjectId;
-				this.ItemId = ItemId2;
-				this.dopeSlot = slot;
-			case 2:
-				this.dopeAction = 512;
-				this.minionObjectId = minionObjectId;
-				this.dopeSlot = slot;
-				this.dopeSlot2 = slot2;
-			case 1:
-				this.dopeAction = 256;
-				this.minionObjectId = minionObjectId;
-				this.dopeSlot = slot;
-			case 3:
-				this.dopeAction = 768;
-				this.minionObjectId = minionObjectId;
-				this.ItemId = ItemId2;
-				this.dopeSlot = slot;
-			}
-			}
-			break;
-		case 1:
-			switch (dopeAction) {
-			case 5: {
-				this.minionObjectId = minionObjectId;
-				this.isActing = isLooting;
-			}
-			}
-		}
-	}
-
-	public SM_MINIONS(boolean isLooting) {
-		this.actionId = 8;
-		this.isActing = isLooting;
-		this.subType = 1;
-	}
+//	public SM_MINIONS(boolean isLooting) {
+//		this.actionId = 8;
+//		this.isActing = isLooting;
+//		this.subType = 1;
+//	}
 
 	public SM_MINIONS(int actionId, Collection<MinionCommonData> minions) {
 		this.actionId = actionId;
@@ -112,30 +97,39 @@ public class SM_MINIONS extends AionServerPacket {
 		this.minionsCommonData = minion;
 	}
 
-	public SM_MINIONS(int actionId, MinionCommonData minion, boolean asMaterial) {
-		this.actionId = actionId;
-		this.minionsCommonData = minion;
-		this.asMaterial = asMaterial;
-	}
-
-	public SM_MINIONS(int actionId, Minion minion) {
-		this(0, actionId, 0, 0, minion);
-	}
+//	public SM_MINIONS(int actionId, MinionCommonData minion, boolean asMaterial) {
+//		this.actionId = actionId;
+//		this.minionsCommonData = minion;
+//		this.asMaterial = asMaterial;
+//	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
 		writeH(actionId);
 		switch (actionId) {
 		case 0:
+			writeH(10);
+			writeD(2500000);
+			writeD(0);
+			writeD(2);
+			writeD(5000);
+			writeD(0);
+			writeD(10000);
+			writeD(0);
+			writeD(5000);
+			writeD(0);
+			writeD(5000);
+			writeD(0);
+			writeD(10000);
+			writeD(0);
+			writeH(4);
+			break;
+		case 1: //Send player MinionList
 			writeC(0);
-			if (minions == null) {
-				writeH(0);
-				break;
-			}
-			writeH(minions.size());
+			writeH(minions != null ? minions.size() : 0);
 			for (MinionCommonData commonData : minions) {
 				writeD(commonData.getObjectId());
-				writeD(commonData.getMinionId());
+				writeD(0);
 				writeD(0);
 				writeD(commonData.getMasterObjectId());
 				writeD(commonData.getMinionId());
@@ -162,15 +156,15 @@ public class SM_MINIONS extends AionServerPacket {
 				writeC(0);
 			}
 			break;
-		case 1:
+		case 2:
 			if (minionsCommonData == null) {
 				return;
 			}
-			writeD(subType);
+			writeD(0);
 			writeD(0);
 			writeH(0);
 			writeD(minionsCommonData.getObjectId());
-			writeD(minionsCommonData.getMinionId());
+			writeD(0);
 			writeD(0);
 			writeD(minionsCommonData.getMasterObjectId());
 			writeD(minionsCommonData.getMinionId());
@@ -178,51 +172,51 @@ public class SM_MINIONS extends AionServerPacket {
 			writeD(minionsCommonData.getBirthday());
 			writeB(new byte[34]);
 			break;
-		case 2:
-			if (minionsCommonData == null) {
-				return;
-			}
-			writeH(asMaterial ? 1 : 0);
-			writeD(minionsCommonData.getObjectId());
-			break;
-		case 3:
+//		case 2:
+//			if (minionsCommonData == null) {
+//				return;
+//			}
+//			writeH(asMaterial ? 1 : 0);
+//			writeD(minionsCommonData.getObjectId());
+//			break;
+		case 3: // Rename
 			if (minionsCommonData == null) {
 				return;
 			}
 			writeD(minionsCommonData.getObjectId());
 			writeS(minionsCommonData.getName());
 			break;
-		case 4:
+		case 4: // Lock / Unlock
 			if (minionsCommonData == null) {
 				return;
 			}
 			writeD(minionsCommonData.getObjectId());
 			writeC(minionsCommonData.isLock() ? 1 : 0);
 			break;
-		case 5:
-			if (minion == null) {
+		case 6: // Spawn
+			if (minionsCommonData == null) {
 				return;
 			}
-			writeS(minion.getName());
-			writeD(minion.getObjectId().intValue());
-			writeD(minion.getMinionId());
-			writeD(minion.getMaster().getObjectId().intValue());
+			writeS(minionsCommonData.getName());
+			writeD(minionsCommonData.getObjectId());
+			writeD(minionsCommonData.getMinionId());
+			writeD(minionsCommonData.getMasterObjectId());
 			break;
-		case 6:
-			if (minion == null) {
-				return;
-			}
-			writeD(minion.getObjectId().intValue());
-			writeC(21);
-			break;
-		case 7:
+		case 7: // Despawn
 			if (minionsCommonData == null) {
 				return;
 			}
 			writeD(minionsCommonData.getObjectId());
-			writeD(minionsCommonData.getMinionLevel());
-			writeD(minionsCommonData.getMinionGrowthPoint());
+			writeC(1);
 			break;
+//		case 7:
+//			if (minionsCommonData == null) {
+//				return;
+//			}
+//			writeD(minionsCommonData.getObjectId());
+//			writeD(minionsCommonData.getMinionLevel());
+//			writeD(minionsCommonData.getMinionGrowthPoint());
+//			break;
 		case 8:
 			switch (subType) {
 			case 0: {
@@ -278,14 +272,16 @@ public class SM_MINIONS extends AionServerPacket {
 			break;
 		case 10:
 		case 11:
+			writeD(1521877022);
 			writeD(0);
-			writeC(0);
 			break;
 		case 12:
 			writeD(0);
-			writeD(0);
+			writeC(0);
 			break;
 		case 13:
+			writeC(0);
+			break;
 		case 14:
 		case 15:
 		case 16:

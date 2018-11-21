@@ -26,7 +26,7 @@ import com.aionemu.gameserver.services.events.EventService;
  * @author FrozenKiller
  */
 
-public class SM_UNK_168 extends AionServerPacket {
+public class SM_UNK_16A extends AionServerPacket {
 	
 	@Override
 	protected void writeImpl(AionConnection con) { //59
@@ -69,6 +69,10 @@ public class SM_UNK_168 extends AionServerPacket {
 		writeH(0);
 		writeC(-128);
 		writeC(63);
-		writeB(new byte[10]);
+		writeB(new byte[11]);
+		writeC(1);
+		writeB(new byte[2]);
+		writeC(1);
+		writeC(0);
 	}
 }

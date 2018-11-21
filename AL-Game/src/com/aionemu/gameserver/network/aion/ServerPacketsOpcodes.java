@@ -285,7 +285,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_FLAG_UPDATE.class, 0x153, idSet); // 5.6
 		addPacketOpcode(SM_MAC_ADDRESS.class, 0x166, idSet); // 5.6 TODO
 		addPacketOpcode(SM_CHECK_MAIL_SIZE.class, 0x95, idSet); // 5.4 TODO
-		addPacketOpcode(SM_MINIONS.class, 0x16A, idSet); // 5.6 TODO
+		addPacketOpcode(SM_MINIONS.class, 0x16C, idSet); // 6.2 EU
 		addPacketOpcode(SM_EVENT_WINDOW.class, 0x13E, idSet); // 5.8 TODO
 		addPacketOpcode(SM_EVENT_WINDOW_ITEMS.class, 0x154, idSet); // 5.8 TODO
 		// ------------------FAST TRACK PACKETS----------------------//
@@ -325,7 +325,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_RANK_LIST.class, 0x159, idSet); // 6.x TODO
 		addPacketOpcode(SM_MY_DOCUMENTATION.class, 0x15A, idSet); // 6.x TODO
 		addPacketOpcode(SM_UNK_12B.class, 0x12B, idSet); // 5.6 TODO
-		addPacketOpcode(SM_UNK_168.class, 0x168, idSet); // 5.6 TODO
+		addPacketOpcode(SM_UNK_16A.class, 0x168, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_165.class, 0x165, idSet); // 6.x TODO after/before Title_Info
 		addPacketOpcode(SM_UNK_11C.class, 0x11C, idSet); // 6.x TODO after/before Emotion
 		addPacketOpcode(SM_SKILL_ANIMATION.class, 0x150, idSet); // 5.6 TODO

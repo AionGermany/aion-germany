@@ -16,16 +16,17 @@
  */
 package com.aionemu.gameserver.services.toypet;
 
-import java.sql.Timestamp;
 import java.util.Collection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.Rnd;
+import com.aionemu.gameserver.controllers.MinionController;
+import com.aionemu.gameserver.dao.PlayerMinionsDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
-import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
@@ -38,17 +39,19 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.utils.PacketSendUtility;
+import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
 
 import javolution.util.FastMap;
 
 public class MinionService {
 
+//	private MinionBuff minionbuff;
 	private static Logger log = LoggerFactory.getLogger(MinionService.class);
 
 	public void addMinion(Player player, int minionId, String name, String grade, int level, int growthPoints) {
 		MinionCommonData minionCommonData = player.getMinionList().addNewMinion(player, minionId, name, grade, level);
 		if (minionCommonData != null) {
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, minionCommonData));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(2, minionCommonData));
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404316, name));
 		}
 		int questId = player.getRace() == Race.ASMODIANS ? 25545 : 15545;
@@ -68,7 +71,7 @@ public class MinionService {
 			return false;
 		}
 		if (DataManager.MINION_DATA.getMinionTemplate(minionId) == null) {
-			log.warn("Trying adopt minion without template. PetId:" + minionId);
+			log.warn("Trying adopt minion without template. MinionId:" + minionId);
 			return false;
 		}
 		return true;
@@ -77,15 +80,16 @@ public class MinionService {
 	public void onPlayerLogin(Player player) {
 		Collection<MinionCommonData> playerMinions = player.getMinionList().getMinions();
 		if (playerMinions != null && playerMinions.size() > 0) {
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(0, playerMinions));
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(9, playerMinions));
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(player, 11));
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(12, playerMinions));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(0));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, playerMinions));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(10));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(12));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(13));
 		}
 	}
 
 	public void adoptMinion(Player player, Item item, String grade) {
-		FastMap<Integer, MinionTemplate> minionTemplate = (FastMap<Integer, MinionTemplate>) new FastMap();
+		FastMap<Integer, MinionTemplate> minionTemplate =  new FastMap<Integer, MinionTemplate>();
 		int minionId = 0;
 		int minionLvl = 0;
 		int minionGrowthPoints = 0;
@@ -126,107 +130,86 @@ public class MinionService {
 		}
 		addMinion(player, minionId, minionName, minionGrade, minionLvl, minionGrowthPoints);
 	}
-
-	public void despawnMinion(Player player, boolean isManualDespawn) {
-		Minion minions = player.getMinion();
-		if (minions != null) {
-			player.getController().cancelTask(TaskId.MINION_UPDATE);
-			if (isManualDespawn) {
-				minions.getCommonData().setDespawnTime(new Timestamp(System.currentTimeMillis()));
-			}
-			player.setMinion(null);
-			minions.getController().delete();
+	
+	public void spawnMinion(Player player, int minionObjId) {
+		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
+		MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId());
+		MinionController controller = new MinionController();
+		Minion minion = new Minion(minionTemplate, controller, minionCommonData, player);
+//		Iterator<MinionSkill> iterator = minionTemplate.getAction().getSkillsCollections().iterator();
+//		while (iterator.hasNext()) {
+//			player.getSkillList().addSkill(player, iterator.next().getSkillId(), 1);
+//		}
+		if (player.getMinion() != null) {
+			despawnMinion(player, player.getMinionList().getLastUsed());
 		}
+		minion.setKnownlist(new PlayerAwareKnownList(minion));
+		player.setMinion(minion);
+		player.getMinionList().setLastUsed(minionObjId);
+//		minionbuff.apply(player, minionCommonData.getMinionId());
+		PacketSendUtility.broadcastPacketAndReceive(player,	new SM_MINIONS(6, minionCommonData));
 	}
 
-	private static int minionId(int rnd) {
-		if (rnd <= 35) {
-			return 980010;
-		}
-		if (rnd >= 36 && rnd <= 70) {
-			return 980011;
-		}
-		if (rnd >= 71 && rnd <= 105) {
-			return 980012;
-		}
-		if (rnd >= 106 && rnd <= 140) {
-			return 980013;
-		}
-		if (rnd >= 141 && rnd <= 175) {
-			return 980020;
-		}
-		if (rnd >= 176 && rnd <= 210) {
-			return 980021;
-		}
-		if (rnd >= 211 && rnd <= 245) {
-			return 980022;
-		}
-		if (rnd >= 246 && rnd <= 280) {
-			return 980023;
-		}
-		if (rnd >= 281 && rnd <= 315) {
-			return 980030;
-		}
-		if (rnd >= 316 && rnd <= 350) {
-			return 980031;
-		}
-		if (rnd >= 351 && rnd <= 385) {
-			return 980032;
-		}
-		if (rnd >= 386 && rnd <= 420) {
-			return 980033;
-		}
-		if (rnd >= 421 && rnd <= 455) {
-			return 980040;
-		}
-		if (rnd >= 456 && rnd <= 490) {
-			return 980041;
-		}
-		if (rnd >= 491 && rnd <= 525) {
-			return 980042;
-		}
-		if (rnd >= 526 && rnd <= 560) {
-			return 980043;
-		}
-		if (rnd >= 561 && rnd <= 595) {
-			return 980050;
-		}
-		if (rnd >= 596 && rnd <= 630) {
-			return 980051;
-		}
-		if (rnd >= 631 && rnd <= 665) {
-			return 980052;
-		}
-		if (rnd >= 666 && rnd <= 700) {
-			return 980053;
-		}
-		if (rnd >= 701 && rnd <= 735) {
-			return 980060;
-		}
-		if (rnd >= 736 && rnd <= 770) {
-			return 980061;
-		}
-		if (rnd >= 771 && rnd <= 805) {
-			return 980062;
-		}
-		if (rnd >= 806 && rnd <= 840) {
-			return 980063;
-		}
-		if (rnd >= 841 && rnd <= 875) {
-			return 980070;
-		}
-		if (rnd >= 876 && rnd <= 910) {
-			return 980071;
-		}
-		if (rnd >= 911 && rnd <= 945) {
-			return 980072;
-		}
-		if (rnd >= 946 && rnd <= 980) {
-			return 980073;
-		}
-		return 0;
+	public void despawnMinion(Player player, int minionObjId) {
+		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
+//		Iterator<MinionSkill> iterator = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId()).getAction().getSkillsCollections().iterator();
+//		while (iterator.hasNext()) {
+//			SkillLearnService.removeSkill(player, iterator.next().getSkillId());
+//		}
+		minionCommonData.setIsLooting(false);
+		minionCommonData.setIsBuffing(false);
+		player.getMinion().getController().delete();
+		player.setMinion(null);
+//		minionbuff.end(player);
+		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(7, minionCommonData));
 	}
-
+	
+	public void lockMinion(Player player, int minionObjId, int lock) {
+		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
+		if (lock == 1) {
+			minion.setLock(true);
+			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 1);
+	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, minion));
+		} else {
+			minion.setLock(false);
+			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 0);
+	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, minion));
+		}
+		player.getMinionList().updateMinionsList();
+	}
+	
+	public void renameMinion(Player player, int minionObjId, String name) {
+		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
+		minion.setName(name);
+		DAOManager.getDAO(PlayerMinionsDAO.class).updateMinionName(minion);
+		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(3, minion));
+		player.getMinionList().updateMinionsList();
+	}
+	
+//	public void activateLoot(Player player, boolean activate) {
+//		Minion minion = player.getMinion();
+//		if(minion == null) {
+//			return;
+//		}
+//		if(!minion.getCommonData().isLooting()) {
+//			if (activate) {
+//				if (player.isInTeam()) {
+//					LootRuleType lootType = player.getLootGroupRules().getLootRule();
+//					if (lootType == LootRuleType.FREEFORALL) {
+//						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOTING_PET_MESSAGE03);
+//						return;
+//					}
+//				}
+//				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOTING_PET_MESSAGE01);
+//			}
+//			minion.getCommonData().setIsLooting(true);
+//			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, 0, true));
+//		} else {
+//			minion.getCommonData().setIsLooting(false);
+//			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, 0, false));
+//		}
+//	}
+	
 	public static MinionService getInstance() {
 		return SingletonHolder.instance;
 	}

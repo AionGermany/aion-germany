@@ -55,9 +55,8 @@ public class MinionList {
 				minions.put(minionCommonData.getObjectId(), minionCommonData);
 		}
 		if(minions !=null) {
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(0, player.getMinionList().getMinions()));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, player.getMinionList().getMinions()));
 		}
-		return;
 	}
 
 	public MinionCommonData getMinion(int minionObjId) {
