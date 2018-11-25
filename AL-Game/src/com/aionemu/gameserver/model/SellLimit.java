@@ -31,7 +31,7 @@ public enum SellLimit {
 	LIMIT_41_55(41, 55, CustomConfig.SELL_LIMIT_KINAH_LV41_LV55),
 	LIMIT_56_60(56, 60, CustomConfig.SELL_LIMIT_KINAH_LV56_LV60),
 	LIMIT_61_65(61, 65, CustomConfig.SELL_LIMIT_KINAH_LV61_LV65),
-	LIMIT_66_75(66, 75, CustomConfig.SELL_LIMIT_KINAH_LV66_LV75);
+	LIMIT_66_75(66, 80, CustomConfig.SELL_LIMIT_KINAH_LV66_LV75);
 
 	private int playerMinLevel;
 	private int playerMaxLevel;

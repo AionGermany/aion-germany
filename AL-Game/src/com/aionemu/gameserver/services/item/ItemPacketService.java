@@ -41,6 +41,7 @@ public class ItemPacketService {
 
 		EQUIP_UNEQUIP(-1, false), // internal usage only
 		CHARGE(-2, false), // internal usage only
+		TUNING(76, true),
 		STATS_CHANGE(0, true), // soul healer pay, manastone socketing, armor/weapons/arrows
 		INC_ITEM_MERGE(0x01, true),
 		INC_KINAH_MERGE(0x05, true),
@@ -54,6 +55,7 @@ public class ItemPacketService {
 		INC_KINAH_QUEST(0x32, true),
 		DEC_KINAH_LEARN(0x49, true), // craft skill learn
 		DEC_KINAH_FLY(0x4B, true), // teleport or fly
+		LUNA_UPDATE(0x49, true),
 		INC_CASH_ITEM(0x50, true), // event items, for exchange
 		INC_ITEM_REPURCHASE(0x51, true),
 		DEC_KINAH_CUBE(0x5A, true), // expand cube
@@ -101,6 +103,7 @@ public class ItemPacketService {
 		BUY(0x1C),
 		ITEM_COLLECT(0x19), // Item collect
 		QUEST_WORK_ITEM(0x35),
+		LUNA_ADD(0x36),
 		QUESTIONNAIRE(0x40),
 		MAGIC_MORPH(0xB0),
 		MAGIC_CRAFT(0xB2);

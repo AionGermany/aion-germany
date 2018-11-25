@@ -183,6 +183,10 @@
 		<spawn npc_id="837366" respawn_time="295">
 			<spot x="2850.4043" y="2563.8171" z="313.6862" h="30"/>
 		</spawn>
+		<!-- Malborun ||| LDF7_OP_D_pvp_weapon_seller -->
+		<spawn npc_id="837371" respawn_time="295">
+			<spot x="2861.2551" y="2581.0386" z="313.71005" h="90"/>
+		</spawn>
 		<!-- Osgu ||| LDF7_OP_D_pvp_armor_seller -->
 		<spawn npc_id="837372" respawn_time="295">
 			<spot x="2857.6602" y="2581.2366" z="313.69635" h="90"/>
@@ -3818,6 +3822,16 @@
             <spot x="527.4398" y="1644.9996" z="314.375" h="61" random_walk="1"/>
             <spot x="602.9101" y="1667.9187" z="324.125" h="93" random_walk="1"/>
             <spot x="755.7166" y="1568.2051" z="309.25793" h="63" random_walk="1"/>
+            <spot x="540.6902" y="1737.5573" z="325.51874" h="116" random_walk="1"/>
+            <spot x="527.47626" y="1767.7773" z="330.30954" h="87" random_walk="1"/>
+            <spot x="507.52838" y="1769.634" z="326.19104" h="63" random_walk="1"/>
+            <spot x="497.77722" y="1809.3271" z="327.87323" h="70" random_walk="1"/>
+            <spot x="484.57162" y="1705.3711" z="320.78574" h="24" random_walk="1"/>
+            <spot x="399.91647" y="1753.4001" z="333.35318" h="101" random_walk="1"/>
+            <spot x="404.6541" y="1784.4735" z="329.04553" h="27" random_walk="1"/>
+            <spot x="469.65164" y="1752.7974" z="327.77176" h="105" random_walk="1"/>
+            <spot x="458.6482" y="1845.7732" z="327.9682" h="15" random_walk="1"/>
+            <spot x="393.0125" y="1822.1558" z="332.20776" h="74" random_walk="1"/>
 		</spawn>
 		<!-- Dreaded Dargor ||| LDF7_E_PigNight_80_n -->
 		<spawn npc_id="655038" respawn_time="295">
@@ -3845,6 +3859,12 @@
             <spot x="725.411" y="1623.21" z="311.23547" h="8" random_walk="1"/>
             <spot x="738.4925" y="1704.5298" z="307.40393" h="14" random_walk="1"/>
             <spot x="706.3301" y="1683.5214" z="307.74792" h="106" random_walk="1"/>
+            <spot x="524.2723" y="1736.0823" z="322.1523" h="78" random_walk="1"/>
+            <spot x="503.10263" y="1785.4387" z="326.04666" h="34" random_walk="1"/>
+            <spot x="397.10223" y="1704.7886" z="319.61816" h="85" random_walk="1"/>
+            <spot x="430.753" y="1783.853" z="324.94708" h="100" random_walk="1"/>
+            <spot x="465.9212" y="1788.7302" z="325.5843" h="114" random_walk="1"/>
+            <spot x="443.0461" y="1884.157" z="330.01556" h="82" random_walk="1"/>
 		</spawn>
 		<!-- Loud Ventus ||| LDF7_E_ElephantBirdRe_80_An -->
 		<spawn npc_id="655039" respawn_time="295">
@@ -4056,7 +4076,6 @@
 		</spawn>
 		<!-- Special Foot Soldier of the 39th Reconnaissance Troop ||| LDF7_E_EreshDrakan_Wi_80_An -->
 		<spawn npc_id="655097" respawn_time="295">
-			<spot x="467.36856" y="1416.006" z="318.875" h="75"/>
 			<spot x="502.46747" y="1518.0249" z="319.375" h="0"/>
 			<spot x="541.4628" y="1545.4927" z="319.375" h="95"/>
 			<spot x="510.14688" y="1567.1073" z="319.5" h="105"/>
@@ -4064,7 +4083,14 @@
 			<spot x="420.85846" y="1528.0471" z="319.375" h="26"/>
 			<spot x="404.46817" y="1632.4342" z="319.2373" h="96"/>
 			<spot x="408.13254" y="1633.8169" z="319.125" h="95"/>
-			<spot x="448.30344" y="1669.3427" z="319.5" h="78"/>
+			<spot x="399.59235" y="1410.1735" z="319.25" h="87"/>
+            <spot x="396.23138" y="1411.1179" z="319.25" h="95"/>
+            <spot x="467.36856" y="1416.006" z="318.875" h="75"/>
+            <spot x="417.79858" y="1607.0149" z="319.25" h="92"/>
+            <spot x="448.30344" y="1669.3427" z="319.5" h="78"/>
+            <spot x="447.6719" y="1668.4954" z="319.5" h="66"/>
+            <spot x="448.8897" y="1682.7328" z="319.5" h="52"/>
+            <spot x="511.65268" y="1567.624" z="319.5" h="102"/>
 		</spawn>
 		<!-- Special Medic of the 39th Reconnaissance Troop ||| LDF7_E_EreshDrakan_Pr_80_An -->
 		<spawn npc_id="655098" respawn_time="295">
@@ -4226,7 +4252,6 @@
 			<spot x="574.11725" y="1363.6462" z="321.25" h="80"/>
 			<spot x="575.57996" y="1353.5321" z="321.27625" h="60"/>
 		</spawn>
-		
 		<!-- Exquisite Lirim Blossom ||| LDF7_FOBJ_Limflower_Q62538a -->
 		<spawn npc_id="703542" respawn_time="295">
 			<spot x="881.14075" y="703.6735" z="317.875" h="0" static_id="2788"/>
@@ -4520,9 +4545,7 @@
 		<!-- Teleporter ||| LDF7_OP3_Teleport_D -->
 		<spawn npc_id="731890" respawn_time="295">
 			<spot x="608.56" y="1671.9705" z="324.125" h="0" static_id="808"/>
-		</spawn>
-		
-		
+		</spawn>	
 		<!-- Obelisk ||| LDF7_OP_Binding_stone_L -->
 		<spawn npc_id="731914" respawn_time="295">
 			<spot x="326.65497" y="426.64972" z="369.76425" h="0" static_id="1672"/>
@@ -4592,7 +4615,6 @@
 		<spawn npc_id="836551" respawn_time="295">
 			<spot x="335.98584" y="372.3697" z="369.25" h="2"/>
 		</spawn>
-		
 		<!-- Jebe ||| LDF7_Jeve_E -->
 		<spawn npc_id="836626" respawn_time="295">
 			<spot x="336.64752" y="402.63586" z="369.25" h="113"/>
@@ -4605,7 +4627,6 @@
 		<spawn npc_id="836628" respawn_time="295">
 			<spot x="350.37448" y="416.09476" z="369.25" h="95"/>
 		</spawn>
-		
 		<!-- Euron ||| LDF7_Euron_E -->
 		<spawn npc_id="836614" respawn_time="295">
 			<spot x="585.1712" y="1356.8805" z="321.25" h="31"/>

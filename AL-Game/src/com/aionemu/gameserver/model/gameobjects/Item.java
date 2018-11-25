@@ -214,12 +214,6 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	}
 
 	public boolean hasTune() {
-		// Way #1
-		// if (!this.itemTemplate.isWeapon() || !this.itemTemplate.isArmor()) {
-		// return false;
-		// }
-		// return getRandomCount() < this.itemTemplate.getRandomBonusCount() && !isEquipped();
-		// Way #2
 		if (getOptionalSocket() == -1) {
 			return true;
 		}

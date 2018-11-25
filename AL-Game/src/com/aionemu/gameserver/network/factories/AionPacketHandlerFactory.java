@@ -96,7 +96,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_START_LOOT(0x166, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_CLOSE_DIALOG(0x2F0, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_DIALOG_SELECT(0x2F1, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_BUY_ITEM(0x2FE, State.IN_GAME)); // 5.6 EU
+		addPacket(new CM_BUY_ITEM(0x2FE, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_EQUIP_ITEM(0xE1, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_TELEPORT_SELECT(0x150, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LOOT_ITEM(0x167, State.IN_GAME)); // 6.x EU
