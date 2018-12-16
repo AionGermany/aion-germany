@@ -214,6 +214,100 @@
 					</spawn>
                 </spawn_map>
             </spawns>
-        </event> 
+        </event>
+        <event name="Snow in Atreia" start="2018-12-12T00:00:00+00:00" end="2019-01-09T00:00:00+00:00">
+            <quests>
+                <maintainable>80575;80576;80578;80579</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- Snorinerk ||| event_shugof_snow -->
+					<spawn npc_id="832041" respawn_time="295">
+						<spot x="1519.4" y="1506.9" z="565.9159" h="67"/>
+					</spawn>
+					<!-- Snorunerk ||| event_shugom_snow -->
+					<spawn npc_id="832042" respawn_time="295">
+						<spot x="1519.4" y="1515.8" z="565.91565" h="70"/>
+					</spawn>
+					<!-- New Year's Event_Scene NPC_Elyos_01 ||| Event_2018_Newyear_L_02 -->
+					<spawn npc_id="837145" respawn_time="295">
+						<spot x="1518.0" y="1511.4" z="565.9197" h="60"/>
+					</spawn>
+					<!-- New Year's Event_Scene NPC_Elyos_02 ||| Event_2018_Newyear_L_03 -->
+					<spawn npc_id="837146" respawn_time="295">
+						<spot x="1517.7" y="1512.0" z="565.9201" h="60"/>
+					</spawn>
+                </spawn_map>
+				<!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- Snorinerk ||| event_shugof_snow -->
+					<spawn npc_id="832041" respawn_time="295">
+						<spot x="1279.5" y="1347.4" z="204.58722" h="18"/>
+					</spawn>
+					<!-- Snorunerk ||| event_shugom_snow -->
+					<spawn npc_id="832042" respawn_time="295">
+						<spot x="1271.4" y="1346.9" z="204.58719" h="15"/>
+					</spawn>
+					<!-- New Year's Event_Scene NPC_Asmodian_01 ||| Event_2018_Newyear_D_02 -->
+					<spawn npc_id="837148" respawn_time="295">
+						<spot x="1275.1" y="1349.6" z="204.58719" h="30"/>
+					</spawn>
+					<!-- New Year's Event_Scene NPC_Asmodian_02 ||| Event_2018_Newyear_D_03 -->
+					<spawn npc_id="837149" respawn_time="295">
+						<spot x="1275.6" y="1349.5" z="204.58719" h="30"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Hungry Magpie" start="2018-12-12T00:00:00+00:00" end="2019-01-09T00:00:00+00:00">
+            <quests>
+                <maintainable>50148;51148</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- Hungry Magpie ||| Event_2018_Newyear_L_01 -->
+					<spawn npc_id="837144" respawn_time="295">
+						<spot x="1517.5" y="1511.6" z="565.921" h="60"/>
+					</spawn>
+                </spawn_map>
+				<!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- Starved Magpie ||| Event_2018_Newyear_D_01 -->
+					<spawn npc_id="837147" respawn_time="295">
+						<spot x="1275.4" y="1350.0" z="204.58719" h="30"/>
+					</spawn>
+                </spawn_map>
+				<!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Evil Scholar ||| LDF7_Event_BadMan_Normal -->
+					<spawn npc_id="656292" respawn_time="295">
+						<spot x="884.5339" y="731.1598" z="319.6975" h="108"/>
+						<spot x="832.809" y="849.19025" z="332.2408" h="65"/>
+						<spot x="675.62994" y="613.15814" z="323.375" h="94"/>
+						<spot x="758.63" y="1052.94" z="325.26373" h="60"/>
+						<spot x="828.52" y="1023.12" z="316.3161" h="75"/>
+						<spot x="525.8146" y="1575.2532" z="319.4217" h="114"/>
+						<spot x="705.79095" y="1802.0815" z="293.375" h="19"/>
+						<spot x="707.5679" y="1841.6727" z="293.33545" h="10"/>
+						<spot x="721.3634" y="1900.8812" z="295.3352" h="118"/>
+						<spot x="821.94196" y="1850.5902" z="290.66177" h="50"/>
+						<spot x="811.2792" y="1953.2559" z="292.5349" h="29"/>
+						<spot x="857.3432" y="1825.9988" z="289.4578" h="113"/>
+						<spot x="864.89484" y="1833.0696" z="289.59454" h="3"/>
+						<spot x="947.06696" y="1813.0138" z="289.27106" h="6"/>
+						<spot x="947.54517" y="1826.558" z="288.83722" h="66"/>
+						<spot x="761.72864" y="2000.0079" z="295.90808" h="97"/>
+						<spot x="788.6016" y="2069.4492" z="292.3361" h="85"/>
+						<spot x="755.70355" y="2079.3574" z="292.11243" h="89"/>
+						<spot x="777.7815" y="2095.274" z="292.07962" h="14"/>
+						<spot x="844.4884" y="2106.8623" z="284.26822" h="89"/>
+						<spot x="678.1304" y="2055.6724" z="290.77118" h="112"/>
+						<spot x="789.5592" y="2193.9172" z="264.51035" h="60"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
     </events>
 </events_config>

@@ -3,16 +3,28 @@
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
         [BEGIN] SUMMARY
-               80975 [XML] [Event] Mission from the Milky Way League 1
-               80976 [XML] [Event] Mission from the Milky Way League 2
-               80977 [XML] [Event] Mission from the Milky Way League 3
-               80978 [TODO] [Event] The Candy King
+				50148 [XML] [Event] Hunger! (Elyos)
+				51148 [XML] [Event] Hunger! (Asmodians)
+				80575 [XML] [Event] Snow in Atreia (Elyos)
+				80576 [XML] [Event] Another Chance (Elyos)
+				80578 [XML] [Event] Snow in Atreia (Asmodians)
+				80579 [XML] [Event] Another Chance (Asmodians)  
+				80975 [XML] [Event] Mission from the Milky Way League 1
+				80976 [XML] [Event] Mission from the Milky Way League 2
+				80977 [XML] [Event] Mission from the Milky Way League 3
+				80978 [TODO] [Event] The Candy King
         [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
+	<report_to id="80575" start_npc_ids="832041" end_npc_ids="832041"/>
+	<report_to id="80578" start_npc_ids="832041" end_npc_ids="832041"/>
     <!-- COLLECTING QUESTS -->
+    <item_collecting start_npc_ids="837144" id="50148"/>
+    <item_collecting start_npc_ids="837147" id="51148"/>
     <item_collecting start_npc_ids="835996" id="80975"/>
     <item_collecting start_npc_ids="835996" id="80976"/>
     <item_collecting start_npc_ids="835996" id="80977"/>
+    <item_collecting start_npc_ids="832042" id="80576"/>
+    <item_collecting start_npc_ids="832042" id="80579"/>
     <!-- HUNTING QUESTS -->
 </quest_scripts>
