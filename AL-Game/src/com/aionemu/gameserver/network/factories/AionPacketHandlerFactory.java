@@ -122,14 +122,14 @@ public class AionPacketHandlerFactory {
 		// ********************(LEGION)*********************
 		addPacket(new CM_LEGION(0x108, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_WH_KINAH(0x117, State.IN_GAME)); // 5.4 EU
-		// addPacket(new CM_LEGION_UPLOAD_INFO(0x178, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x179, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_LEGION_UPLOAD_INFO(0x16C, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x16D, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_SEARCH(0x1C4, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_LEGION_JOIN_REQUEST(0x1D9, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_JOIN_REQUEST_CANCEL(0x1DA, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0xEB, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_LEGION_SEND_EMBLEM(0x10A, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_LEGION_MODIFY_EMBLEM(0x106, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0x10A, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_LEGION_SEND_EMBLEM(0xEB, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_LEGION_MODIFY_EMBLEM(0x106, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_TABS(0x2F2, State.IN_GAME)); // 5.4 EU (Legion Message) ?
 		addPacket(new CM_STONESPEAR_SIEGE(0xE4, State.IN_GAME)); // 5.4 EU
 
