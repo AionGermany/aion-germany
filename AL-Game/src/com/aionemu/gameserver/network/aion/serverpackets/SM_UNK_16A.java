@@ -58,20 +58,21 @@ public class SM_UNK_16A extends AionServerPacket {
 		writeC(-128);
 		writeC(63);
 		writeC(1);
-		writeC(19);
+		writeC(5);
 		writeB(new byte[3]);
 		writeC(1);
-		writeC(-86);
-		writeC(5);
+		writeC(-32);
+		writeC(1);
 		writeH(0);
 		writeC(1);
-		writeC(8);
+		writeC(11);
 		writeH(0);
 		writeC(-128);
 		writeC(63);
-		writeB(new byte[11]);
 		writeC(1);
-		writeB(new byte[2]);
+		writeB(new byte[10]);
+		writeC(1);
+		writeH(0);
 		writeC(1);
 		writeC(0);
 	}

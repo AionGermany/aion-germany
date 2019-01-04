@@ -47,7 +47,7 @@ public class SM_HOUSE_RENDER extends AionServerPacket {
 		int playerObjectId = house.getOwnerId();
 		writeD(playerObjectId);
 		writeD(BuildingType.PERSONAL_FIELD.getId());
-		writeC(1); // unk
+		writeC(0); // unk
 
 		writeD(house.getBuilding().getId());
 		writeC(house.getHouseOwnerInfoFlags()); // unk 2 or 3 without owner, 5 or 3 with owner
