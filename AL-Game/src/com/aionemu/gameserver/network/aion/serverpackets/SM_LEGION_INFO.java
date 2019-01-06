@@ -53,14 +53,13 @@ public class SM_LEGION_INFO extends AionServerPacket {
 		writeH(legion.getVolunteerPermission());
 		writeQ(legion.getContributionPoints());
 		writeQ(0); // definatly some kind of points ... but what ?!
-		writeB(new byte[4]); // UNK but not a spacer ... ?!
 		writeD(legion.getTerritory().getId()); // TerritoryId colors the terrritory on map
 		writeD(0);
 		writeD(0);
 		writeS(legion.getLegionDiscription());
-		writeC(legion.getLegionJoinType());
+		writeH(legion.getLegionJoinType());
 		writeH(legion.getMinLevel());
-		writeH(-8161);// Unk
+		writeB(new byte [7]);// Unk TODO
 
 		/**
 		 * Get Announcements List From DB By Legion *

@@ -22,6 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.configs.main.SiegeConfig;
+import com.aionemu.gameserver.configs.network.NetworkConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.model.team.legion.LegionEmblem;
@@ -116,28 +117,29 @@ public class SM_SIEGE_LOCATION_INFO extends AionServerPacket {
 			// Next State (0 - invulnerable, 1 - vulnerable)
 			writeC(loc.getNextState());
 
-			writeH(0); // unk
-			writeH(0);
+			writeB(new byte [8]); // unk
 			switch (loc.getLocationId()) {
 				case 2111: // veille timer
 				case 3111: // mastarius timer
 					writeD(SiegeService.getInstance().getRemainingSiegeTimeInSeconds(loc.getLocationId()));
+					writeD(0);
 					break;
 				default:
 					writeD(0);
+					writeD(0);
 					break;
 			}
-			writeD(37);// unk 5.3
-			writeD(0);// TODO some DATE and TIME
-			writeD(0);// unk 5.3
-			writeD(0);// unk 5.3
-			writeD(0);// unk 5.3
+			writeD(NetworkConfig.GAMESERVER_ID);
+			writeD(1546201199);// Capture Time TODO
 			if (!loc.isVulnerable()) {
 				writeD(loc.getOccupyCount());// Occupy Count
 			}
 			else {
 				writeD(0); // TODO sometimes 0 or other Values
 			}
+			writeH(0);
+			writeD(0);
+			writeB(new byte [6]);
 		}
 	}
 }

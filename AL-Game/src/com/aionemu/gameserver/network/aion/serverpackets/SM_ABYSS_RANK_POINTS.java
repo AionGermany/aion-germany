@@ -43,22 +43,22 @@ public class SM_ABYSS_RANK_POINTS extends AionServerPacket {
 		writeB(new byte[8]);
 		writeD(150800);
 		writeB(new byte[16]);
-		writeD(1560);
+		writeD(1260);
 		writeB(new byte[8]);
-		writeD(12864);
+		writeD(1368);
 		writeB(new byte[8]);
-		writeD(61427);
+		writeD(1915);
 		writeB(new byte[8]);
-		writeD(214391);
+		writeD(3064);
 		writeB(new byte[8]);
-		writeD(689397);
+		writeD(463236);
 		writeB(new byte[8]);
-		writeD(1323699);
+		writeD(970795);
 		writeB(new byte[8]);
-		writeD(1815621);
+		writeD(1286076);
 		writeB(new byte[8]);
-		writeD(2373629);
+		writeD(1711117);
 		writeB(new byte[8]);
-		writeD(2764975);
+		writeD(2424692);
 	}
 }

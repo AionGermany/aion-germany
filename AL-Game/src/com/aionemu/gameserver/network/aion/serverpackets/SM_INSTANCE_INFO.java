@@ -77,7 +77,8 @@ public class SM_INSTANCE_INFO extends AionServerPacket {
 				writeD(cooldownList.getPortalCooldownItem(e.getValue().getWorldId()) != null ? cooldownList.getPortalCooldownItem(e.getValue().getWorldId()).getEntryCount() * -1 : 0);
 				writeD(0); // 4.9
 				writeD(0); // 4.9
-				writeD(1); // Unk 5.1
+				writeD(0); // Unk 5.1
+				writeD(0); // Unk 6.x
 				writeC(1); // activated
 			}
 			writeS(player.getName());
@@ -94,7 +95,7 @@ public class SM_INSTANCE_INFO extends AionServerPacket {
 																																														// (negative -)
 				writeD(0); // 4.9
 				writeD(0); // 4.9
-				writeD(1); // Unk 5.1
+				writeD(0); // Unk 5.1
 				writeD(0); // Unk 6.x
 				writeC(1); // activated
 			}

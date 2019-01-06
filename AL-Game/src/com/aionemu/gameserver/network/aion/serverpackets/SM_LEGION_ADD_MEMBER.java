@@ -47,12 +47,9 @@ public class SM_LEGION_ADD_MEMBER extends AionServerPacket {
 		writeC(player.getCommonData().getPlayerClass().getClassId());
 		writeC(player.getLevel());
 		writeD(player.getPosition().getMapId());
+		writeC(player.isOnline() ? 1 : 0);
+		writeD(0); // Unk
 		writeD(NetworkConfig.GAMESERVER_ID);
-		writeC(0);
-		writeC(0);
-		writeC(0);
-		writeC(0);
-		writeC(0);
 		writeD(msgId);
 		writeS(text);
 	}
