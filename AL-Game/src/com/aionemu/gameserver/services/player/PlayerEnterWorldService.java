@@ -108,6 +108,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TITLE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UI_SETTINGS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_106;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_12B;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_60;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_7E;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_A5;
@@ -639,7 +640,7 @@ public final class PlayerEnterWorldService {
 			client.sendPacket(new SM_YOUTUBE_VIDEO());
 			
 			// SM_UNK_12B
-			// client.sendPacket(new SM_UNK_12B()); // TODO - Null Pointer after Login
+			client.sendPacket(new SM_UNK_12B());
 
 			// SM_BOOST_EVENTS (new with Aion 5.1)
 			BoostEventService.getInstance().sendPacket(player); // TODO

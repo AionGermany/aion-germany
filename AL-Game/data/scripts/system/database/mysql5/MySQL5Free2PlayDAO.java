@@ -36,7 +36,7 @@ import com.aionemu.gameserver.model.gameobjects.player.f2p.F2pAccount;
 public class MySQL5Free2PlayDAO extends Free2PlayDAO {
 
 	private static final Logger log = LoggerFactory.getLogger(MySQL5Free2PlayDAO.class);
-	public static final String INSERT_QUERY = "INSERT INTO `f2paccount` (`account_id`, `time`) VALUES (?,?) ON DUPLICATE KEY UPDATE `account_id` = VALUES (`account_id`), `time` = VALUES(`time)";
+	public static final String INSERT_QUERY = "INSERT INTO `f2paccount` (`account_id`, `time`) VALUES (?,?) ON DUPLICATE KEY UPDATE `account_id` = VALUES (`account_id`), `time` = VALUES(`time`)";
 	public static final String SELECT_QUERY = "SELECT `time` FROM `f2paccount` WHERE `account_id`=?";
 	public static final String DELETE_QUERY = "DELETE FROM `f2paccount` WHERE `account_id`=?";
 	public static final String UPDATE_QUERY = "UPDATE `f2paccount` set `time`=? where `account_id`=?";
