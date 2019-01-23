@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.services.toypet;
 
+import java.sql.Timestamp;
 import java.util.Collection;
 
 import org.slf4j.Logger;
@@ -31,6 +32,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.team2.common.legacy.LootRuleType;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.minion.MinionTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MINIONS;
@@ -151,7 +153,14 @@ public class MinionService {
 	}
 
 	public void despawnMinion(Player player, int minionObjId) {
-		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
+		Minion minion = player.getMinion();
+		int despawnMinionObjId = 0;
+		if (minionObjId == 0) {
+			despawnMinionObjId = minion.getObjectId();
+		} else {
+			despawnMinionObjId = minionObjId;
+		}
+		MinionCommonData minionCommonData = player.getMinionList().getMinion(despawnMinionObjId);
 //		Iterator<MinionSkill> iterator = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId()).getAction().getSkillsCollections().iterator();
 //		while (iterator.hasNext()) {
 //			SkillLearnService.removeSkill(player, iterator.next().getSkillId());
@@ -186,29 +195,40 @@ public class MinionService {
 		player.getMinionList().updateMinionsList();
 	}
 	
-//	public void activateLoot(Player player, boolean activate) {
-//		Minion minion = player.getMinion();
-//		if(minion == null) {
-//			return;
-//		}
-//		if(!minion.getCommonData().isLooting()) {
-//			if (activate) {
-//				if (player.isInTeam()) {
-//					LootRuleType lootType = player.getLootGroupRules().getLootRule();
-//					if (lootType == LootRuleType.FREEFORALL) {
-//						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOTING_PET_MESSAGE03);
-//						return;
-//					}
-//				}
-//				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOTING_PET_MESSAGE01);
-//			}
-//			minion.getCommonData().setIsLooting(true);
-//			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, 0, true));
-//		} else {
-//			minion.getCommonData().setIsLooting(false);
-//			PacketSendUtility.sendPacket(player, new SM_MINIONS(8, 1, 0, false));
-//		}
-//	}
+	public void toggleAutoLoot(Player player, boolean activate) {
+		Minion minion = player.getMinion();
+		if(minion == null) {
+			return;
+		}
+		if(!minion.getCommonData().isLooting()) {
+			if (activate) {
+				if (player.isInTeam()) {
+					LootRuleType lootType = player.getLootGroupRules().getLootRule();
+					if (lootType == LootRuleType.FREEFORALL) {
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOTING_PET_MESSAGE03);
+						return;
+					}
+				}
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOTING_PET_MESSAGE01);
+			}
+			minion.getCommonData().setIsLooting(true);
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(true));
+		} else {
+			minion.getCommonData().setIsLooting(false);
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(false));
+		}
+	}
+	
+	public void activateMinionFunction(Player player) {
+		long leftTime = System.currentTimeMillis() + (30 * 24 * 60 * 60 * 1000); // + 30 Days
+		if (player.getInventory().tryDecreaseKinah(25000000)) {
+			player.getCommonData().setMinionFunctionTime(new Timestamp(leftTime)); // TODO
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(10, leftTime));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(12));
+		} else {
+			return;
+		}
+	}
 	
 	public static MinionService getInstance() {
 		return SingletonHolder.instance;
