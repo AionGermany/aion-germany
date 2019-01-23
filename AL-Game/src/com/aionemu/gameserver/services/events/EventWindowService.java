@@ -67,6 +67,7 @@ public class EventWindowService {
 	 * get events window start and end time
 	 * @return 
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	public Map<Integer, EventsWindow> getActiveEvents(Player player) {
 		for (EventsWindow eventsWindow : allEvents.values()) {
 			if (activeEvents.containsValue(eventsWindow.getId())) {

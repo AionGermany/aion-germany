@@ -60,7 +60,8 @@ public class BoostEventService implements StatOwner {
         return activeEvents;
     }
     
-    private void getBoostEvent(int eventId, BoostEvents boostEvents) {
+    @SuppressWarnings("unlikely-arg-type")
+	private void getBoostEvent(int eventId, BoostEvents boostEvents) {
         if (data.containsValue(eventId)) {
             return;
         }

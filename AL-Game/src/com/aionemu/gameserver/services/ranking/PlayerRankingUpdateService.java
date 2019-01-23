@@ -51,8 +51,8 @@ public class PlayerRankingUpdateService {
 	}
 
 	private List<SM_RANK_LIST> loadRankPacket(int tableid) {
-		ArrayList<PlayerRankingResult> list = getDAO().getCompetitionRankingPlayers(tableid);
-		int page = 1;
+		ArrayList<PlayerRankingResult> list = DAOManager.getDAO(PlayerRankingDAO.class).getCompetitionRankingPlayers(tableid);
+//		int page = 1;
 		List<SM_RANK_LIST> playerPackets = new ArrayList<SM_RANK_LIST>();
 		for (int i = 0; i < list.size(); i += 94) {
 			if (list.size() > i + 94) {
@@ -62,17 +62,13 @@ public class PlayerRankingUpdateService {
 				playerPackets.add(new SM_RANK_LIST(tableid, 0, list.subList(i, list.size()), lastUpdate));
 				playerPackets.add(new SM_RANK_LIST(tableid, 1, list.subList(i, list.size()), lastUpdate));
 			}
-			page++;
+//			page++;
 		}
 		return playerPackets;
 	}
 
 	public List<SM_RANK_LIST> getPlayers(int tableId) {
 		return players.get(tableId);
-	}
-
-	private PlayerRankingDAO getDAO() {
-		return DAOManager.getDAO(PlayerRankingDAO.class);
 	}
 
 	public static final PlayerRankingUpdateService getInstance() {

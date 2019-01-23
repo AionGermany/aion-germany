@@ -39,7 +39,7 @@ public class CM_MY_DOCUMENTATION extends AionClientPacket {
 
 	@Override
 	protected void runImpl() {
-		final Player player = this.getConnection().getActivePlayer();
+		final Player player = getConnection().getActivePlayer();
 		PlayerRankingService.getInstance().loadPacketPlayer(player, tableId);
 	}
 }

@@ -68,6 +68,7 @@ public class CM_DIALOG_SELECT extends AionClientPacket {
 	protected void readImpl() {
 		targetObjectId = readD();// empty
 		dialogId = readH(); // total no of choice
+		//System.out.println("DialogId: " + dialogId);
 		extendedRewardIndex = readH();
 		readH();//new 5.6 (1)
 		lastPage = readH();

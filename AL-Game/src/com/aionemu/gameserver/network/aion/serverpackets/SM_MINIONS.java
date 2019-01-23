@@ -38,6 +38,7 @@ public class SM_MINIONS extends AionServerPacket {
 	private int dopeSlot2;
 	private int minionObjectId;
 	private int ItemId;
+	private long expireTime;
 //	private boolean asMaterial;
 
 	public SM_MINIONS(int actionId) {
@@ -47,45 +48,45 @@ public class SM_MINIONS extends AionServerPacket {
 //	public SM_MINIONS(int actionId, int subType, int dopeAction, int minionObjectId, int ItemId2, int slot, int slot2, boolean isLooting) {
 //		this.actionId = actionId;
 //		switch (subType) {
-//		case 0: {
-//			switch (dopeAction) {
-//			case 0:
-//				this.dopeAction = 0;
-//				this.minionObjectId = minionObjectId;
-//				this.ItemId = ItemId2;
-//				this.dopeSlot = slot;
-//			case 2:
-//				this.dopeAction = 512;
-//				this.minionObjectId = minionObjectId;
-//				this.dopeSlot = slot;
-//				this.dopeSlot2 = slot2;
+//			case 0: {
+//				switch (dopeAction) {
+//					case 0:
+//						this.dopeAction = 0;
+//						this.minionObjectId = minionObjectId;
+//						this.ItemId = ItemId2;
+//						this.dopeSlot = slot;
+//					case 2:
+//						this.dopeAction = 512;
+//						this.minionObjectId = minionObjectId;
+//						this.dopeSlot = slot;
+//						this.dopeSlot2 = slot2;
+//					case 1:
+//						this.dopeAction = 256;
+//						this.minionObjectId = minionObjectId;
+//						this.dopeSlot = slot;
+//					case 3:
+//						this.dopeAction = 768;
+//						this.minionObjectId = minionObjectId;
+//						this.ItemId = ItemId2;
+//						this.dopeSlot = slot;
+//					}
+//				}
+//				break;
 //			case 1:
-//				this.dopeAction = 256;
-//				this.minionObjectId = minionObjectId;
-//				this.dopeSlot = slot;
-//			case 3:
-//				this.dopeAction = 768;
-//				this.minionObjectId = minionObjectId;
-//				this.ItemId = ItemId2;
-//				this.dopeSlot = slot;
-//			}
-//			}
-//			break;
-//		case 1:
-//			switch (dopeAction) {
-//			case 5: {
-//				this.minionObjectId = minionObjectId;
-//				this.isActing = isLooting;
-//			}
+//				switch (dopeAction) {
+//				case 5: {
+//					this.minionObjectId = minionObjectId;
+//					this.isActing = isLooting;
+//				}
 //			}
 //		}
 //	}
 
-//	public SM_MINIONS(boolean isLooting) {
-//		this.actionId = 8;
-//		this.isActing = isLooting;
+	public SM_MINIONS(boolean isLooting) {
+		this.actionId = 9;
+		this.isActing = isLooting;
 //		this.subType = 1;
-//	}
+	}
 
 	public SM_MINIONS(int actionId, Collection<MinionCommonData> minions) {
 		this.actionId = actionId;
@@ -95,6 +96,11 @@ public class SM_MINIONS extends AionServerPacket {
 	public SM_MINIONS(int actionId, MinionCommonData minion) {
 		this.actionId = actionId;
 		this.minionsCommonData = minion;
+	}
+	
+	public SM_MINIONS(int actionId, long expireTime) {
+		this.actionId = actionId;
+		this.expireTime = expireTime;
 	}
 
 //	public SM_MINIONS(int actionId, MinionCommonData minion, boolean asMaterial) {
@@ -219,60 +225,60 @@ public class SM_MINIONS extends AionServerPacket {
 //			break;
 		case 8:
 			switch (subType) {
-			case 0: {
-				switch (dopeAction) {
 				case 0: {
-					writeH(dopeAction);
-					writeD(minionObjectId);
-					writeD(ItemId);
-					writeD(dopeSlot);
-					break;
-				}
-				case 256: {
-					writeH(dopeAction);
-					writeD(minionObjectId);
-					writeD(dopeSlot);
-					break;
-				}
-				case 768: {
-					writeH(dopeAction);
-					writeD(minionObjectId);
-					writeD(ItemId);
-					break;
-				}
-				case 512: {
-					writeH(dopeAction);
-					writeD(minionObjectId);
-					writeD(dopeSlot);
-					writeD(dopeSlot2);
-				}
-				}
-				break;
-			}
-			case 1: {
-				switch (dopeAction) {
-				case 5: {
-					if (lootNpcId > 0) {
-						writeD(minionObjectId);
-						writeC(isActing ? 1 : 2);
-						writeD(lootNpcId);
-						break;
+					switch (dopeAction) {
+						case 0: {
+							writeH(dopeAction);
+							writeD(minionObjectId);
+							writeD(ItemId);
+							writeD(dopeSlot);
+							break;
+						}
+						case 256: {
+							writeH(dopeAction);
+							writeD(minionObjectId);
+							writeD(dopeSlot);
+							break;
+						}
+						case 768: {
+							writeH(dopeAction);
+							writeD(minionObjectId);
+							writeD(ItemId);
+							break;
+						}
+						case 512: {
+							writeH(dopeAction);
+							writeD(minionObjectId);
+							writeD(dopeSlot);
+							writeD(dopeSlot2);
+						}
 					}
-					writeD(minionObjectId);
-					writeC(0);
-					writeC(isActing ? 1 : 0);
+					break;
 				}
+				case 1: {
+					switch (dopeAction) {
+						case 5: {
+							if (lootNpcId > 0) {
+								writeD(minionObjectId);
+								writeC(isActing ? 1 : 2);
+								writeD(lootNpcId);
+								break;
+							}
+							writeD(minionObjectId);
+							writeC(0);
+							writeC(isActing ? 1 : 0);
+						}
+					}
 				}
-			}
 			}
 			break;
 		case 9:
-			writeD(1501224031);
-			writeD(1);
+			writeH(1);
+			writeC(isActing ? 1 : 0);
 			break;
 		case 10:
 		case 11:
-			writeD(1521877022);
+			writeD((int) expireTime);
 			writeD(0);
 			break;
 		case 12:

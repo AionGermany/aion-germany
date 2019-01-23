@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package quest.poeta;
+package quest.beluslan;
 
 import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -24,28 +24,27 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
- * @author FrozenKiller
+ * @author QuestGenerator by Mariella
  */
-public class _60008PursuitoftheOdiumTransportTrack extends QuestHandler {
+public class _70207ThePlaceWhereTheOdellaWasUsed extends QuestHandler {
 
-	private final static int questId = 60008;
+	private final static int questId = 70207;
 
-	public _60008PursuitoftheOdiumTransportTrack() {
+	public _70207ThePlaceWhereTheOdellaWasUsed() {
 		super(questId);
 	}
 
 	@Override
 	public void register() {
 		qe.registerOnLevelUp(questId);
-		qe.registerQuestNpc(820010).addOnTalkEvent(questId); // First Odium Transport Track
-		qe.registerQuestNpc(820011).addOnTalkEvent(questId); // Second Odium Transport Track
-		qe.registerQuestNpc(203086).addOnTalkEvent(questId); // Ino
+		qe.registerQuestNpc(204702).addOnTalkEvent(questId); // Nerita
+		qe.registerQuestNpc(204715).addOnTalkEvent(questId); // Grundt
+		qe.registerQuestNpc(798800).addOnTalkEvent(questId); // Agehia
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 60000, false);
-
+		return defaultOnLvlUpEvent(env, 70200, false);
 	}
 
 	@Override
@@ -54,36 +53,56 @@ public class _60008PursuitoftheOdiumTransportTrack extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
-			case 820010:
-				if (dialog == DialogAction.USE_OBJECT) {
-					qs.setQuestVar(1);
-					updateQuestStatus(env);
-					return false;
+				case 204702: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SETPRO1: {
+							qs.setQuestVar(1);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
+					break;
 				}
-				break;
-			case 820011:
-				if (dialog == DialogAction.USE_OBJECT) {
-					qs.setQuestVar(2);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return false;
+				case 204715: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1352);
+						}
+						case SET_SUCCEED: {
+							qs.setQuestVar(2);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
+					break;
 				}
-				break;
+				default:
+					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 203086) {
+			if (targetId == 798800) {
 				if (dialog == DialogAction.USE_OBJECT) {
 					return sendQuestDialog(env, 10002);
 				}
 				return sendQuestEndDialog(env);
 			}
 		}
+
 		return false;
 	}
 }

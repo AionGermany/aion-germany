@@ -24,8 +24,7 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
- * @author Falke_34
- * @Rework FrozenKiller
+ * @author QuestGenerator by Mariella
  */
 public class _60000PernosCall extends QuestHandler {
 
@@ -53,25 +52,31 @@ public class _60000PernosCall extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 820000) {
-				switch (dialog) {
-				case QUEST_SELECT: {
-					return sendQuestDialog(env, 1011);
-				}
-				case SET_SUCCEED: {
-					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
+			switch (targetId) {
+				case 820000: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SET_SUCCEED: {
+							qs.setQuestVar(1);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
+					break;
 				}
 				default:
 					break;
-				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 790001) {
@@ -81,6 +86,7 @@ public class _60000PernosCall extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
+
 		return false;
 	}
 }

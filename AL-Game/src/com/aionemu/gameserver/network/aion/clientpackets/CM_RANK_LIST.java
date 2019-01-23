@@ -29,7 +29,7 @@ import com.aionemu.gameserver.services.ranking.PlayerRankingUpdateService;
 public class CM_RANK_LIST extends AionClientPacket {
 
 	private int tableId;
-    private int serverSwitch;
+//    private int serverSwitch;
 
 	public CM_RANK_LIST(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -38,7 +38,7 @@ public class CM_RANK_LIST extends AionClientPacket {
 	@Override
 	protected void readImpl() {
         tableId = readD();
-        serverSwitch = readC();
+//        serverSwitch = readC();
 	}
 
     @Override

@@ -24,7 +24,7 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
- * @author FrozenKiller
+ * @author QuestGenerator by Mariella
  */
 public class _60001ANewAge extends QuestHandler {
 
@@ -38,9 +38,11 @@ public class _60001ANewAge extends QuestHandler {
 	public void register() {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(790001).addOnTalkEvent(questId); // Pernos
-		qe.registerQuestNpc(820134).addOnTalkEvent(questId); // Guid to Rare Poisons
+		qe.registerQuestNpc(820134).addOnTalkEvent(questId); // Guide to Rare Poisons
 		qe.registerQuestNpc(820135).addOnTalkEvent(questId); // Day of the Storm
 	}
+
+	// please check for movies!
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
@@ -53,49 +55,61 @@ public class _60001ANewAge extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
-			case 790001:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1011);
-				case SETPRO1:
-					qs.setQuestVar(1);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
+				case 790001: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SETPRO1: {
+							qs.setQuestVar(1);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
 					break;
 				}
-				break;
-			case 820134:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1352);
-				case SETPRO2:
-					qs.setQuestVar(2);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
+				case 820134: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1352);
+						}
+						case SETPRO2: {
+							qs.setQuestVar(2);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
 					break;
 				}
-				break;
-			case 820135:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1693);
-				case SET_SUCCEED:
-					qs.setQuestVar(3);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
+				case 820135: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1693);
+						}
+						case SET_SUCCEED: {
+							qs.setQuestVar(3);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
 					break;
 				}
-				break;
+				default:
+					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 790001) {
@@ -105,6 +119,7 @@ public class _60001ANewAge extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
+
 		return false;
 	}
 }

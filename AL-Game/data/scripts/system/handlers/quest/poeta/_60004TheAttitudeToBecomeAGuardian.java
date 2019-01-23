@@ -24,7 +24,7 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
- * @author FrozenKiller
+ * @author QuestGenerator by Mariella
  */
 public class _60004TheAttitudeToBecomeAGuardian extends QuestHandler {
 
@@ -51,23 +51,31 @@ public class _60004TheAttitudeToBecomeAGuardian extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 820006) {
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1011);
-				case SELECT_QUEST_REWARD:
-					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return sendQuestDialog(env, 5);
-				default:
+			switch (targetId) {
+				case 820006: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SELECT_QUEST_REWARD: {
+							qs.setQuestVar(1);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return sendQuestDialog(env, 5);
+						}
+						default: 
+							break;
+					}
 					break;
 				}
+				default:
+					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820006) {
@@ -77,6 +85,7 @@ public class _60004TheAttitudeToBecomeAGuardian extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
+
 		return false;
 	}
 }

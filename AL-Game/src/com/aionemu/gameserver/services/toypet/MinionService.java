@@ -69,6 +69,10 @@ public class MinionService {
 	}
 
 	private static boolean validateAdoption(Player player, ItemTemplate template, int minionId) {
+		if (player.getAccessLevel() > 3 && template == null) {
+			log.warn("Admin adopt minion. MinionId: " + minionId);
+			return true;
+		}
 		if (template == null || template.getActions() == null || template.getActions().getAdoptMinionAction() == null) {
 			return false;
 		}
@@ -155,7 +159,7 @@ public class MinionService {
 	public void despawnMinion(Player player, int minionObjId) {
 		Minion minion = player.getMinion();
 		int despawnMinionObjId = 0;
-		if (minionObjId == 0) {
+		if (minionObjId == 0) { // Despawn minion when normal pet is spawned.
 			despawnMinionObjId = minion.getObjectId();
 		} else {
 			despawnMinionObjId = minionObjId;

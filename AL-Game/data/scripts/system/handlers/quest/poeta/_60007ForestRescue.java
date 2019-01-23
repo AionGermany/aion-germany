@@ -25,7 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 
 /**
- * @author FrozenKiller
+ * @author QuestGenerator by Mariella
  */
 public class _60007ForestRescue extends QuestHandler {
 
@@ -47,7 +47,6 @@ public class _60007ForestRescue extends QuestHandler {
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60000, false);
-
 	}
 
 	@Override
@@ -56,60 +55,78 @@ public class _60007ForestRescue extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
-			case 730008:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1011);
-				case SETPRO1:
-					qs.setQuestVar(1);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
-					break;
-				}
-				break;
-			case 820002:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1352);
-				case SETPRO2:
-					qs.setQuestVar(2);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
-					break;
-				}
-				break;
-			case 820003:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1693);
-				case CHECK_USER_HAS_QUEST_ITEM:
-					if (QuestService.collectItemCheck(env, true)) {
-						qs.setQuestVar(3);
-						updateQuestStatus(env);
-						return sendQuestDialog(env, 10000);
-					} else {
-						return sendQuestDialog(env, 10001);
+				case 730008: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SETPRO1: {
+							qs.setQuestVar(1);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
 					}
-				default:
 					break;
 				}
-				break;
-			case 700030:
-				if (dialog == DialogAction.USE_OBJECT) {
-					qs.setQuestVar(4);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return false;
+				case 820002: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1352);
+						}
+						case SETPRO2: {
+							qs.setQuestVar(2);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
+					break;
 				}
-				break;
+				case 820003: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1693);
+						}
+						case CHECK_USER_HAS_QUEST_ITEM: {
+							if (QuestService.collectItemCheck(env,true)) {
+								qs.setQuestVar(3);
+								updateQuestStatus(env);
+								return sendQuestDialog(env, 10000);
+							} else {
+								return sendQuestDialog(env, 10001);
+							}
+						}
+						default: 
+							break;
+					}
+					break;
+				}
+				case 700030: {
+					switch (dialog) {
+						// ToDo: check correct action for this npc
+						case USE_OBJECT: {
+							qs.setQuestVar(4);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return false;
+						}
+						default: 
+							break;
+					}
+					break;
+				}
+				default:
+					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820003) {
@@ -119,6 +136,7 @@ public class _60007ForestRescue extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
+
 		return false;
 	}
 }

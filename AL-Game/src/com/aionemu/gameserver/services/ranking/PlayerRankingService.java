@@ -16,8 +16,6 @@
  */
 package com.aionemu.gameserver.services.ranking;
 
-import java.util.List;
-
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerRankingDAO;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -25,40 +23,38 @@ import com.aionemu.gameserver.model.gameobjects.player.ranking.ArenaOfCooperatio
 import com.aionemu.gameserver.model.gameobjects.player.ranking.ArenaOfDisciplineRank;
 import com.aionemu.gameserver.model.ranking.PlayerRankingEnum;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MY_DOCUMENTATION;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_RANK_LIST;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-
-import javolution.util.FastMap;
 
 public class PlayerRankingService {
 
-	private int lastUpdate;
-	private final FastMap<Integer, List<SM_RANK_LIST>> players = new FastMap<Integer, List<SM_RANK_LIST>>();
+//	private int lastUpdate;
+//	private final FastMap<Integer, List<SM_RANK_LIST>> players = new FastMap<Integer, List<SM_RANK_LIST>>();
 
 	public void loadPacketPlayer(Player player, int tableid) {
-		if (tableid == 541) {
-			loadArenaOfDisciplineScore(player);
-		} else if (tableid == 741) {
-			loadArenaOfCooperationScore(player);
-		} else {
-			return;
+		switch (tableid) {
+			case 541:{
+				loadArenaOfDisciplineScore(player);
+				break;
+			}
+			case 741: {
+				loadArenaOfCooperationScore(player);
+				break;
+			}
+			default:
+				break;
 		}
 	}
 
 	public void loadArenaOfDisciplineScore(Player player) {
-		ArenaOfDisciplineRank rank = getDAO().loadArenaOfDisciplineRank(player.getObjectId(), PlayerRankingEnum.ARENA_OF_DISCIPLINE.getId());
+		ArenaOfDisciplineRank rank = DAOManager.getDAO(PlayerRankingDAO.class).loadArenaOfDisciplineRank(player.getObjectId(), PlayerRankingEnum.ARENA_OF_DISCIPLINE.getId());
 		player.setDisciplineRank(rank);
 		PacketSendUtility.sendPacket(player, new SM_MY_DOCUMENTATION(PlayerRankingEnum.ARENA_OF_DISCIPLINE.getId(), player.getDisciplineRank()));
 	}
 
 	public void loadArenaOfCooperationScore(Player player) {
-		ArenaOfCooperationRank rank = getDAO().loadArenaOfCooperationRank(player.getObjectId(), PlayerRankingEnum.ARENA_OF_COOPERATION.getId());
+		ArenaOfCooperationRank rank = DAOManager.getDAO(PlayerRankingDAO.class).loadArenaOfCooperationRank(player.getObjectId(), PlayerRankingEnum.ARENA_OF_COOPERATION.getId());
 		player.setCooperationRank(rank);
 		PacketSendUtility.sendPacket(player, new SM_MY_DOCUMENTATION(PlayerRankingEnum.ARENA_OF_COOPERATION.getId(), player.getCooperationRank()));
-	}
-
-	private PlayerRankingDAO getDAO() {
-		return DAOManager.getDAO(PlayerRankingDAO.class);
 	}
 
 	public static final PlayerRankingService getInstance() {

@@ -18,49 +18,77 @@ package ai.worlds;
 
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.NpcAI2;
+import com.aionemu.gameserver.controllers.observer.GaleCycloneObserver;
 import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.SkillEngine;
-import com.aionemu.gameserver.utils.MathUtil;
-import com.aionemu.gameserver.world.geo.GeoService;
+
+import javolution.util.FastMap;
 
 /**
- * @author Falke_34
+ * @author xTz
  */
 @AIName("f2p_movespeedup")
 public class MovespeedUpAI2 extends NpcAI2 {
 
+	private FastMap<Integer, GaleCycloneObserver> observed = new FastMap<Integer, GaleCycloneObserver>().shared();
+	private boolean blocked;
+
 	@Override
 	protected void handleCreatureSee(Creature creature) {
-		checkDistance(this, creature);
+		if (blocked) {
+			return;
+		}
+		if (creature instanceof Player) {
+			final Player player = (Player) creature;
+			final GaleCycloneObserver observer = new GaleCycloneObserver(player, getOwner()) {
+
+				@Override
+				public void onMove() {
+					if (!blocked) {
+						SkillEngine.getInstance().getSkill(getOwner(), 22883, 540, player).useNoAnimationSkill();
+					}
+				}
+			};
+			player.getObserveController().addObserver(observer);
+			observed.put(player.getObjectId(), observer);
+		}
 	}
 
 	@Override
-	protected void handleCreatureMoved(Creature creature) {
-		checkDistance(this, creature);
+	protected void handleCreatureNotSee(Creature creature) {
+		if (blocked) {
+			return;
+		}
+		if (creature instanceof Player) {
+			Player player = (Player) creature;
+			Integer obj = player.getObjectId();
+			GaleCycloneObserver observer = observed.remove(obj);
+			if (observer != null) {
+				player.getObserveController().removeObserver(observer);
+			}
+		}
 	}
 
-	protected void checkDistance(NpcAI2 ai, Creature creature) {
-		Npc owner = ai.getOwner();
-		if (creature == null || creature.getLifeStats() == null) {
-			return;
-		}
-		if (creature.getLifeStats().isAlreadyDead()) {
-			return;
-		}
-		if (!owner.canSee(creature)) {
-			return;
-		}
-		if (!owner.getActiveRegion().isMapRegionActive()) {
-			return;
-		}
-		if (!(creature instanceof Player)) {
-			return;
-		}
-		if (MathUtil.isIn3dRange(owner, creature, 2.0F)) {
-			if (GeoService.getInstance().canSee(owner, creature)) {
-				SkillEngine.getInstance().getSkill(getOwner(), 22883, 1, getOwner()).useNoAnimationSkill();
+	@Override
+	protected void handleDied() {
+		clear();
+		super.handleDied();
+	}
+
+	@Override
+	protected void handleDespawned() {
+		clear();
+		super.handleDespawned();
+	}
+
+	private void clear() {
+		blocked = true;
+		for (Integer obj : observed.keySet()) {
+			Player player = getKnownList().getKnownPlayers().get(obj);
+			GaleCycloneObserver observer = observed.remove(obj);
+			if (player != null) {
+				player.getObserveController().removeObserver(observer);
 			}
 		}
 	}

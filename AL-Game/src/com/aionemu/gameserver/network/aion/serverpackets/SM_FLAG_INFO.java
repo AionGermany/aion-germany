@@ -18,7 +18,6 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -26,7 +25,6 @@ public class SM_FLAG_INFO extends AionServerPacket {
 
 	int count;
 	private Creature _npc;
-	private NpcTemplate npcTemplate;
 	private int npcId;
 
 	public SM_FLAG_INFO(int count, Npc npc) {

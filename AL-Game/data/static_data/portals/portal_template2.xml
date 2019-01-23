@@ -2,6 +2,9 @@
 <portal_templates2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portal_template2.xsd">
 	<!-- For exit Race is needed (moveToInstanceExit) function -->
     <!-- ***************** PORTAL USE ***************** -->
+	<portal_use npc_id="730318">
+        <portal_path loc_id="3002000" instance="true"/>
+    </portal_use>
     <!-- Haramel - Tower Lift -->
     <portal_use npc_id="730322">
         <portal_path loc_id="3002001"/>
