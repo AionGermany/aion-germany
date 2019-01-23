@@ -254,7 +254,14 @@ public class MinionService {
 	}
 
 	public void despawnMinion(Player player, int minionObjId) {
-		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
+		Minion minion = player.getMinion();
+		int despawnMinionObjId = 0;
+		if (minionObjId == 0) {
+			despawnMinionObjId = minion.getObjectId();
+		} else {
+			despawnMinionObjId = minionObjId;
+		}
+		MinionCommonData minionCommonData = player.getMinionList().getMinion(despawnMinionObjId);
 		Iterator<MinionSkill> iterator = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId()).getAction().getSkillsCollections().iterator();
 		while (iterator.hasNext()) {
 			SkillLearnService.removeSkill(player, iterator.next().getSkillId());
