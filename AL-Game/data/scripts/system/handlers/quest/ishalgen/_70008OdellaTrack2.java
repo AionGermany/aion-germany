@@ -22,84 +22,83 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author QuestGenerator by Mariella
  */
 public class _70008OdellaTrack2 extends QuestHandler {
 
-    private final static int questId = 70008;
+	private final static int questId = 70008;
 
-    public _70008OdellaTrack2() {
-        super(questId);
-    }
+	public _70008OdellaTrack2() {
+		super(questId);
+	}
 
-    @Override
-    public void register() {
-        qe.registerOnLevelUp(questId);
-        qe.registerQuestNpc(703486).addOnTalkEvent(questId);  // First Odella Transport Track
-        qe.registerQuestNpc(703487).addOnTalkEvent(questId);  // Second Odella Transport Track
-        qe.registerQuestNpc(203552).addOnTalkEvent(questId);  // Nalto
-    }
+	@Override
+	public void register() {
+		qe.registerOnLevelUp(questId);
+		qe.registerQuestNpc(703486).addOnTalkEvent(questId);  // First Odella Transport Track
+		qe.registerQuestNpc(703487).addOnTalkEvent(questId);  // Second Odella Transport Track
+		qe.registerQuestNpc(203552).addOnTalkEvent(questId);  // Nalto
+	}
 
-    @Override
-    public boolean onLvlUpEvent(QuestEnv env) {
-        return defaultOnLvlUpEvent(env, 70000, false);
-    }
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env, 70000, false);
+	}
 
-    @Override
-    public boolean onDialogEvent(QuestEnv env) {
-        Player player = env.getPlayer();
-        QuestState qs = player.getQuestStateList().getQuestState(questId);
-        DialogAction dialog = env.getDialog();
-        int targetId = env.getTargetId();
+	@Override
+	public boolean onDialogEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		DialogAction dialog = env.getDialog();
+		int targetId = env.getTargetId();
 
-        if (qs == null) {
-            return false;
-        }
+		if (qs == null) {
+			return false;
+		}
 
-        if (qs.getStatus() == QuestStatus.START) {
-            switch (targetId) {
-                case 703486: {
-                    switch (dialog) {
-                        // ToDo: check correct action for this npc
-                        case USE_OBJECT: {
-                            qs.setQuestVar(1);
-                            updateQuestStatus(env);
-                            return false;
-                        }
-                        default: 
-                            break;
-                    }
-                    break;
-                }
-                case 703487: {
-                    switch (dialog) {
-                        // ToDo: check correct action for this npc
-                        case USE_OBJECT: {
-                            qs.setQuestVar(2);
-                            qs.setStatus(QuestStatus.REWARD);
-                            updateQuestStatus(env);
-                            return false;
-                        }
-                        default: 
-                            break;
-                    }
-                    break;
-                }
-                default:
-                    break;
-            }
-        } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 203552) {
-                if (dialog == DialogAction.USE_OBJECT) {
-                    return sendQuestDialog(env, 10002);
-                }
-                return sendQuestEndDialog(env);
-            }
-        }
+		if (qs.getStatus() == QuestStatus.START) {
+			switch (targetId) {
+				case 703486: {
+					switch (dialog) {
+						// ToDo: check correct action for this npc
+						case USE_OBJECT: {
+							qs.setQuestVar(1);
+							updateQuestStatus(env);
+							return false;
+						}
+						default: 
+							break;
+					}
+					break;
+				}
+				case 703487: {
+					switch (dialog) {
+						// ToDo: check correct action for this npc
+						case USE_OBJECT: {
+							qs.setQuestVar(2);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return false;
+						}
+						default: 
+							break;
+					}
+					break;
+				}
+				default:
+					break;
+			}
+		} else if (qs.getStatus() == QuestStatus.REWARD) {
+			if (targetId == 203552) {
+				if (dialog == DialogAction.USE_OBJECT) {
+					return sendQuestDialog(env, 10002);
+				}
+				return sendQuestEndDialog(env);
+			}
+		}
 
-        return false;
-    }
+		return false;
+	}
 }
