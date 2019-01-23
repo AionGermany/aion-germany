@@ -76,6 +76,7 @@ public class CM_MINIONS extends AionClientPacket {
 		case GROWTH:
 			break;
 		case USE_FUNCTION:
+			MinionService.getInstance().activateMinionFunction(player);
 			break;
 		case STOP_FUNCTION:
 			break;
@@ -86,6 +87,7 @@ public class CM_MINIONS extends AionClientPacket {
 		case COMBINE:
 			break;
 		case SET_FUNCTION:
+			MinionService.getInstance().toggleAutoLoot(player, false);
 			break;
 		default:
 			break;
