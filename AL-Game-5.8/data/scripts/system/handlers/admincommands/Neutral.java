@@ -74,10 +74,14 @@ public class Neutral extends AdminCommand {
 		}
 
 		PacketSendUtility.sendMessage(admin, output);
-
+		
+		if (admin.getAdminNeutral() != 0) {
+			PacketSendUtility.broadcastPacket(admin, new SM_PLAYER_INFO(admin, true));
+		} else {
+			PacketSendUtility.broadcastPacket(admin, new SM_PLAYER_INFO(admin, false));
+		}
+		PacketSendUtility.broadcastPacket(admin, new SM_MOTION(admin.getObjectId(), admin.getMotions().getActiveMotions()));
 		admin.clearKnownlist();
-		PacketSendUtility.sendPacket(admin, new SM_PLAYER_INFO(admin, false));
-		PacketSendUtility.sendPacket(admin, new SM_MOTION(admin.getObjectId(), admin.getMotions().getActiveMotions()));
 		admin.updateKnownlist();
 	}
 
@@ -87,3 +91,4 @@ public class Neutral extends AdminCommand {
 		PacketSendUtility.sendMessage(player, syntax);
 	}
 }
+
