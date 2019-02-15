@@ -222,7 +222,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_RECONNECT_AUTH(0x173, State.AUTHED)); // 5.4
 		addPacket(new CM_BLOCK_SET_REASON(0x17F, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_INSTANCE_LEAVE(0x11F, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_APPEARANCE(0x18D, State.IN_GAME)); // 5.4
+		addPacket(new CM_APPEARANCE(0x181, State.IN_GAME)); // 6.x old 0x18D
 		// addPacket(new CM_CAPTCHA(0xC8, State.IN_GAME)); // 4.9
 		// addPacket(new CM_COMPOSITE_STONES(0x1AE, State.IN_GAME)); // 4.9
 		// addPacket(new CM_MEGAPHONE(0x1B5, State.IN_GAME)); // 5.4 EU
