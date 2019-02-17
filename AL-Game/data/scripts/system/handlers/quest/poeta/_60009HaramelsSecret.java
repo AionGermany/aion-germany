@@ -27,6 +27,7 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _60009HaramelsSecret extends QuestHandler {
 
@@ -46,6 +47,7 @@ public class _60009HaramelsSecret extends QuestHandler {
 		qe.registerQuestNpc(820006).addOnTalkEvent(questId); // Kasis
 		qe.registerQuestNpc(700834).addOnTalkEvent(questId); // Odella
 		qe.registerOnEnterWorld(questId);
+		qe.registerOnEnterZone(ZoneName.get("IDNOVICE_SENSORYAREA_Q60009A_300200000"), questId);
 		for (int mob : mobs) {
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -83,7 +85,7 @@ public class _60009HaramelsSecret extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs != null && qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			if (var == 4 && zoneName == ZoneName.get("HARAMEL_TOWER_300200000")) {
+			if (var == 4 && zoneName == ZoneName.get("IDNOVICE_SENSORYAREA_Q60009A_300200000")) {
 				changeQuestStep(env, 4, 5, false); // 5
 				return true;
 			}
@@ -106,7 +108,6 @@ public class _60009HaramelsSecret extends QuestHandler {
 			switch (targetId) {
 				case 820012: {
 					switch (dialog) {
-						// ToDo: check correct action for this npc
 						case USE_OBJECT: {
 							qs.setQuestVar(1);
 							updateQuestStatus(env);
@@ -173,9 +174,6 @@ public class _60009HaramelsSecret extends QuestHandler {
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820006) {
-				if (dialog == DialogAction.USE_OBJECT) {
-					return sendQuestDialog(env, 10002);
-				}
 				return sendQuestEndDialog(env);
 			}
 		}

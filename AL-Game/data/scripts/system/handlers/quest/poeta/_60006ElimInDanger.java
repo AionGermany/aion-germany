@@ -71,65 +71,80 @@ public class _60006ElimInDanger extends QuestHandler {
 
 		if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
-			case 730007:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1011);
-				case SETPRO1:
-					qs.setQuestVar(1);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
-					break;
-				}
-				break;
-			case 820007:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1352);
-				case SETPRO2:
-					qs.setQuestVar(2);
-					updateQuestStatus(env);
-					giveQuestItem(env, 182216248, 1);
-					return closeDialogWindow(env);
-				default:
-					break;
-				}
-				break;
-			case 820008:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1693);
-				case SETPRO3:
-					qs.setQuestVar(3);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
-					break;
-				}
-				break;
-			case 820009:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 2034);
-				case CHECK_USER_HAS_QUEST_ITEM:
-					if (QuestService.collectItemCheck(env, true)) {
-						removeQuestItem(env, 182216248, 1);
-						qs.setQuestVar(4);
-						updateQuestStatus(env);
-						return sendQuestDialog(env, 10000);
-					} else {
-						return sendQuestDialog(env, 10001);
+				case 730007: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SETPRO1: {
+							qs.setQuestVar(1);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default:
+							break;
 					}
-				case SETPRO5:
-					giveQuestItem(env, 182216250, 1);
-					qs.setQuestVar(5);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				default:
 					break;
 				}
-				break;
+				case 820007: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1352);
+						}
+						case SETPRO2: {
+							qs.setQuestVar(2);
+							updateQuestStatus(env);
+							giveQuestItem(env, 182216248, 1);
+							return closeDialogWindow(env);
+						}
+						default:
+							break;
+					}
+					break;
+				}
+				case 820008: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1693);
+						}
+						case SETPRO3: {
+							qs.setQuestVar(3);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default:
+							break;
+					}
+					break;
+				}
+				case 820009: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 2034);
+						}
+						case CHECK_USER_HAS_QUEST_ITEM: {
+							if (QuestService.collectItemCheck(env, true)) {
+								removeQuestItem(env, 182216248, 1);
+								qs.setQuestVar(4);
+								updateQuestStatus(env);
+								return sendQuestDialog(env, 10000);
+							} else {
+								return sendQuestDialog(env, 10001);
+							}
+						}
+						case SETPRO5: {
+							giveQuestItem(env, 182216250, 1);
+							qs.setQuestVar(5);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default:
+							break;
+					}
+					break;
+				}
+				default:
+					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 730008) {

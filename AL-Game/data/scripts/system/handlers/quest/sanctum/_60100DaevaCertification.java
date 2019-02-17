@@ -17,14 +17,17 @@
 package quest.sanctum;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.teleport.TeleportService2;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _60100DaevaCertification extends QuestHandler {
 
@@ -70,6 +73,7 @@ public class _60100DaevaCertification extends QuestHandler {
 						case SETPRO1: {
 							qs.setQuestVar(1);
 							updateQuestStatus(env);
+							TeleportService2.teleportTo(player, 110010000, 1324.164f, 1511.7838f, 567.8750f, (byte) 1, TeleportAnimation.BEAM_ANIMATION);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -116,6 +120,7 @@ public class _60100DaevaCertification extends QuestHandler {
 							qs.setQuestVar(4);
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
+							TeleportService2.teleportTo(player, 110020000, 2156.5278f, 1570.3329f, 1204.8967f, (byte) 16, TeleportAnimation.BEAM_ANIMATION);
 							return closeDialogWindow(env);
 						}
 						default: 

@@ -26,6 +26,7 @@ import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _61100InstancePreventionOfAethertapping extends QuestHandler {
 
@@ -40,7 +41,9 @@ public class _61100InstancePreventionOfAethertapping extends QuestHandler {
 	public void register() {
 		qe.registerOnEnterWorld(questId);
 		qe.registerQuestNpc(700950).addOnTalkEvent(questId); // Aether Cart
-		qe.registerQuestNpc(700953).addOnTalkEvent(questId); // Reprocessed Odella
+		qe.registerQuestNpc(703531).addOnTalkEvent(questId); // Reprocessed Odella
+		qe.registerQuestNpc(703532).addOnTalkEvent(questId); // Reprocessed Odella
+		qe.registerQuestNpc(703533).addOnTalkEvent(questId); // Reprocessed Odella
 
 		for (int mob : mobs) {
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);

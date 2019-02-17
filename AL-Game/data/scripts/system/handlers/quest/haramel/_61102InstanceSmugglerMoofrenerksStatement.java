@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _61102InstanceSmugglerMoofrenerksStatement extends QuestHandler {
 
@@ -36,7 +37,8 @@ public class _61102InstanceSmugglerMoofrenerksStatement extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(799524).addOnQuestStart(questId); // Gestanerk
+		qe.registerQuestNpc(799523).addOnQuestStart(questId); // Moofrenerk
+		qe.registerQuestNpc(799523).addOnTalkEvent(questId); // Moofrenerk
 		qe.registerQuestNpc(799524).addOnTalkEvent(questId); // Gestanerk
 	}
 
@@ -53,20 +55,13 @@ public class _61102InstanceSmugglerMoofrenerksStatement extends QuestHandler {
 		int targetId = env.getTargetId();
 
 		if (qs == null || qs.getStatus() == QuestStatus.NONE ) {
-	  		if (targetId == 799524) {
+	  		if (targetId == 799523) {
 				switch (dialog) {
 					case QUEST_SELECT: {
 						return sendQuestDialog(env, 4762);
 					}
-					case QUEST_ACCEPT_1:
-					case QUEST_ACCEPT_SIMPLE: {
-						return sendQuestStartDialog(env);
-					}
-					case QUEST_REFUSE_SIMPLE: {
-						return closeDialogWindow(env);
-					}
 					default:
-						break;
+						return sendQuestStartDialog(env);
 				}
 			}
 		}
@@ -75,10 +70,12 @@ public class _61102InstanceSmugglerMoofrenerksStatement extends QuestHandler {
 				case 799524: {
 					switch (dialog) {
 						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1011);
+							return sendQuestDialog(env, 10002);
 						}
-						case FINISH_DIALOG: {
-							return sendQuestSelectionDialog(env);
+						case SELECT_QUEST_REWARD: {
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return sendQuestDialog(env, 5);
 						}
 						default: 
 							break;
@@ -88,8 +85,11 @@ public class _61102InstanceSmugglerMoofrenerksStatement extends QuestHandler {
 				default:
 					break;
 			}
+		} else if (qs.getStatus() == QuestStatus.REWARD) {
+			if (targetId == 799524) {
+				return sendQuestEndDialog(env);
+			}
 		}
-
 		return false;
 	}
 }

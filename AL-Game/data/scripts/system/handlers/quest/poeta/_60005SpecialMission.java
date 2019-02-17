@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _60005SpecialMission extends QuestHandler {
 
@@ -126,7 +127,6 @@ public class _60005SpecialMission extends QuestHandler {
 
 		return false;
 	}
-	/*
 	@Override
 	public boolean onKillEvent(QuestEnv env) {
 		Player player = env.getPlayer();
@@ -147,5 +147,4 @@ public class _60005SpecialMission extends QuestHandler {
 		}
 		return false;
 	}
-	*/
 }

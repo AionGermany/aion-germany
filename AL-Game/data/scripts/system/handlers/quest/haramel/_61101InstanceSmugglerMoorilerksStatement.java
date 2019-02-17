@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _61101InstanceSmugglerMoorilerksStatement extends QuestHandler {
 
@@ -36,7 +37,8 @@ public class _61101InstanceSmugglerMoorilerksStatement extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(799523).addOnQuestStart(questId); // Moofrenerk
+		qe.registerQuestNpc(799522).addOnQuestStart(questId); // Moofrenerk
+		qe.registerQuestNpc(799522).addOnTalkEvent(questId); // Moofrenerk
 		qe.registerQuestNpc(799523).addOnTalkEvent(questId); // Moofrenerk
 	}
 
@@ -53,7 +55,7 @@ public class _61101InstanceSmugglerMoorilerksStatement extends QuestHandler {
 		int targetId = env.getTargetId();
 
 		if (qs == null || qs.getStatus() == QuestStatus.NONE ) {
-	  		if (targetId == 799523) {
+	  		if (targetId == 799522) {
 				switch (dialog) {
 					case QUEST_SELECT: {
 						return sendQuestDialog(env, 4762);
@@ -72,7 +74,7 @@ public class _61101InstanceSmugglerMoorilerksStatement extends QuestHandler {
 		}
 		else if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
-				case 799523: {
+				case 799522: {
 					switch (dialog) {
 						case QUEST_SELECT: {
 							return sendQuestDialog(env, 1011);
