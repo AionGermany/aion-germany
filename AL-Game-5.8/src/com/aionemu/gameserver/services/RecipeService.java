@@ -29,7 +29,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 public class RecipeService {
 
 	public static RecipeTemplate validateNewRecipe(Player player, int recipeId) {
-		if (player.getRecipeList().size() >= 1600) {
+		if ((player.getRecipeList().size() - 3) >= 1600) { // -3 for default MorphRecipes ;)
 			PacketSendUtility.sendMessage(player, "You are unable to have more than 1600 recipes at the same time.");
 			return null;
 		}
