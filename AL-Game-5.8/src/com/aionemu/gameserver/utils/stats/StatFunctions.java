@@ -76,8 +76,8 @@ public class StatFunctions {
 	public static long calculateSoloExperienceReward(Player player, Creature target) {
 		int playerLevel = player.getCommonData().getLevel();
 		int targetLevel = target.getLevel();
-		// int baseXP = ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp();
-		int baseXP = getBaseXp(((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp(), ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxHp());
+		int baseXP = ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp();
+		//int baseXP = getBaseXp(((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp(), ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxHp());
 		int xpPercentage = XPRewardEnum.xpRewardFrom(targetLevel - playerLevel);
 		long rewardXP = Math.round(baseXP * (xpPercentage / 100d));
 		return rewardXP;
@@ -90,8 +90,8 @@ public class StatFunctions {
 	 */
 	public static long calculateGroupExperienceReward(int maxLevelInRange, Creature target) {
 		int targetLevel = target.getLevel();
-		// int baseXP = ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp();
-		int baseXP = getBaseXp(((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp(), ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxHp());
+		int baseXP = ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp();
+		//int baseXP = getBaseXp(((Npc) target).getObjectTemplate().getStatsTemplate().getMaxXp(), ((Npc) target).getObjectTemplate().getStatsTemplate().getMaxHp());
 		int xpPercentage = XPRewardEnum.xpRewardFrom(targetLevel - maxLevelInRange);
 		long rewardXP = Math.round(baseXP * (xpPercentage / 100d));
 		return rewardXP;

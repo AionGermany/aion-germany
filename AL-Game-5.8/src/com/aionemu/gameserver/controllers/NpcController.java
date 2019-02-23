@@ -281,9 +281,9 @@ public class NpcController extends CreatureController<Npc> {
 					float rewardAp = 1;
 
 					// Dmg percent correction
-					rewardXp *= percentage;
-					rewardDp *= percentage;
-					rewardAp *= percentage;
+					//rewardXp *= percentage;
+					//rewardDp *= percentage;
+					//rewardAp *= percentage;
 
 					QuestEngine.getInstance().onKill(new QuestEnv(getOwner(), player, 0, 0));
 					// When a player defeat a "Boss" all ppls on server see!!!
