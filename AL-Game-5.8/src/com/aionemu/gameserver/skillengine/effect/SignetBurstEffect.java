@@ -52,9 +52,9 @@ public class SignetBurstEffect extends DamageEffect {
 
 		if (signetEffect == null) {
 			valueWithDelta *= 0.05f;
+			effect.setLaunchSubEffect(false);
 			AttackUtil.calculateMagicalSkillResult(effect, valueWithDelta, null, getElement(), true, true, false, getMode(),
 				this.critProbMod2, critAddDmg, shared, false);
-			effect.setLaunchSubEffect(false);
 		}
 		else {
 
@@ -105,7 +105,8 @@ public class SignetBurstEffect extends DamageEffect {
 					break;
 			}
 			effect.setAccModBoost(accmod);
-
+			
+			effect.setLaunchSubEffect(true);
 			AttackUtil.calculateMagicalSkillResult(effect, valueWithDelta, null, getElement(), true, true, false, getMode(),
 				this.critProbMod2, critAddDmg, shared, false);
 
