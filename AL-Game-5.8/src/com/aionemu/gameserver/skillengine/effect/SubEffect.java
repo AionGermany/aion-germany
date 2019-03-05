@@ -30,8 +30,8 @@ public class SubEffect {
 
 	@XmlAttribute(name = "skill_id", required = true)
 	private int skillId;
-	@XmlAttribute
-	private int chance = 100;
+	@XmlAttribute(name = "chance")
+	private int chance;
 	@XmlAttribute(name = "addeffect")
 	private boolean addEffect = false;
 
@@ -46,6 +46,9 @@ public class SubEffect {
 	 * @return the chance
 	 */
 	public int getChance() {
+		if (chance <= 0) {
+			return 90;
+		}
 		return chance;
 	}
 

@@ -490,8 +490,11 @@ public abstract class EffectTemplate {
 		}
 
 		// chance to trigger subeffect
-		if (Rnd.get(100) > subEffect.getChance()) {
-			return;
+		
+		if (subEffect.getChance() < 100) {
+			if (Rnd.get(subEffect.getChance()) < subEffect.getChance()) {
+				return;
+			}
 		}
 
 		SkillTemplate template = DataManager.SKILL_DATA.getSkillTemplate(subEffect.getSkillId());
