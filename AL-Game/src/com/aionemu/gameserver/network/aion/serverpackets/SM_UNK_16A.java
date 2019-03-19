@@ -30,7 +30,8 @@ public class SM_UNK_16A extends AionServerPacket {
 	
 	@Override
 	protected void writeImpl(AionConnection con) { //59
-		writeB(new byte[14]);
+		writeC(1);
+		writeB(new byte[13]);
 		writeC(1);
 		writeC(94);
 		writeC(1);
@@ -45,7 +46,7 @@ public class SM_UNK_16A extends AionServerPacket {
 		writeC(2);
 		writeC(0);
 		writeC(GSConfig.CHARACTER_REENTRY_TIME);
-		writeC(EventsConfig.ENABLE_DECOR);
+		writeC(EventsConfig.ENABLE_DECOR); //100 = Kirchblüten TODO ....
 		writeC(EventService.getInstance().getEventType().getId()); // 18 Summer Splash V1 / 20 Summer Splash V2
 		writeB(new byte[3]);
 		writeC(4);

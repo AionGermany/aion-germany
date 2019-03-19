@@ -268,12 +268,7 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeC(playerAppearance.getRemoveMane());
 		writeD(playerAppearance.getRightEyeRGB());
 		writeC(playerAppearance.getEyeLashShape());
-		if (player.getGender() == Gender.FEMALE) {
-			writeC(6);
-		}
-		else {
-			writeC(5);
-		}
+		writeC(player.getGender() == Gender.FEMALE ? 6 : 5);
 		writeC(playerAppearance.getJawLine());
 		writeC(playerAppearance.getForehead());
 		writeC(playerAppearance.getEyeHeight());
@@ -361,7 +356,7 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeH(player.getAbyssRank().getRank().getId()); // abyss rank
 
 		writeH(0x00); // unk - 0x01
-		writeD(0x08); // unk 5.4
+		writeD(0x00); // unk 5.4
 		writeD(player.getTarget() == null ? 0 : player.getTarget().getObjectId()); // target status
 		writeC(0); // suspect id
 		writeD(player.getBonusTime().isBonus() ? 1 : 0); // Abbey Return Bonus 1 - true, 0 - false
@@ -369,7 +364,7 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeD(player.getHouseOwnerId()); // 3.0
 		writeD(player.getBonusTime().getStatus().getId()); // Abbey Return Buff ID 1 -Normal, 2 - New, 3 Return
 		writeD(0x00);// unk 0x00 4.7 //TODO need to figure out
-		writeC(raceId == 0 ? 3 : 5); // language asmo:3 ely:5
+		writeC(raceId == 0 ? 5 : 3); // language asmo:3 ely:5
 		/**
 		 * === Conqueror === 0x01 = Conquerers Will Lvl 1 (Buff you get for killing enemies from their home map) 0x02 = Furious Conquerers Will Lvl 2 (Buff you get for killing enemies from their home
 		 * map) 0x03 = Berserk Conquerers Will Lvl 3 (Buff you get for killing enemies from their home map) === Protector == 0x01 = Protector Lvl 1 0x02 = Protector Lvl 2 0x03 = Protector Lvl 3
