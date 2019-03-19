@@ -18,6 +18,7 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 
 import java.util.Collection;
 
+import com.aionemu.gameserver.configs.network.NetworkConfig;
 import com.aionemu.gameserver.model.gameobjects.FindGroup;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
@@ -31,7 +32,6 @@ public class SM_FIND_GROUP extends AionServerPacket {
 	private int lastUpdate;
 	private Collection<FindGroup> findGroups;
 	private int groupSize;
-	private int unk;
 	private int instanceId;
 
 	public SM_FIND_GROUP(int action, int lastUpdate, Collection<FindGroup> findGroups) {
@@ -44,7 +44,6 @@ public class SM_FIND_GROUP extends AionServerPacket {
 	public SM_FIND_GROUP(int action, int lastUpdate, int unk) {
 		this.action = action;
 		this.lastUpdate = lastUpdate;
-		this.unk = unk;
 	}
 
 	public SM_FIND_GROUP(int action, int instanceId) {
@@ -59,10 +58,12 @@ public class SM_FIND_GROUP extends AionServerPacket {
 			case 0x00:
 				writeH(groupSize); // groupSize
 				writeH(groupSize); // groupSize
-				writeD(lastUpdate); // objId?
+				writeD(lastUpdate); // Date and Time
 				for (FindGroup findGroup : findGroups) {
 					writeD(findGroup.getObjectId()); // player object id
-					writeD(findGroup.getUnk()); // unk (0 or 65557)
+					writeH(NetworkConfig.GAMESERVER_ID); // ServerID
+					writeC(0);
+					writeC(16); // Register Group = 0x10 = DEC 16 ? Codes missing ?
 					writeC(findGroup.getGroupType()); // 0:group, 1:alliance
 					writeS(findGroup.getMessage()); // text
 					writeS(findGroup.getName()); // writer name
@@ -74,7 +75,9 @@ public class SM_FIND_GROUP extends AionServerPacket {
 				break;
 			case 0x01:
 				writeD(lastUpdate); // player object id
-				writeD(unk); // unk (0 or 65557)
+				writeH(NetworkConfig.GAMESERVER_ID); // ServerID
+				writeC(0);
+				writeC(16); // 0x10 = DEC 16 code for Grp Owner ?
 				break;
 			case 0x04:
 				writeH(groupSize); // groupSize

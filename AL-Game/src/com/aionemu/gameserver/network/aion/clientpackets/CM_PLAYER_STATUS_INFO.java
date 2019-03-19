@@ -61,6 +61,7 @@ public class CM_PLAYER_STATUS_INFO extends AionClientPacket {
 				break;
 			default:
 				PlayerTeamCommandService.executeCommand(activePlayer, command, playerObjId);
+				break;
 		}
 	}
 }
