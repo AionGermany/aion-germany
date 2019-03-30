@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+
+    <xs:include schemaLocation="../import.xsd"/>
+
+    <xs:element name="windstreams">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="windstream" type="WindFlight" minOccurs="0"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="WindFlight">
+        <xs:sequence>
+            <xs:element name="locations" type="StreamLocations"
+                        minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="mapid" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="StreamLocations">
+        <xs:sequence>
+            <xs:element name="location" type="Location2D" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Location2D">
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="state" type="xs:int"/>
+        <xs:attribute name="fly_path" type="FlyPathType"/>
+    </xs:complexType>
+
+    <xs:simpleType name="FlyPathType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GEYSER"/>
+            <xs:enumeration value="ONE_WAY"/>
+            <xs:enumeration value="TWO_WAY"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="npc_templates" type="npcTemplates"/>
+	<xs:complexType name="npcTemplates">
+		<xs:sequence>
+			<xs:element name="npc_template" type="npcTemplate" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="npcTemplate">
+		<xs:sequence>
+			<xs:element name="stats" type="npcStatsTemplate"/>
+			<xs:element name="equipment" type="npcEquipmentList" minOccurs="0"/>
+			<xs:element name="kisk_stats" type="KiskStats" minOccurs="0"/>
+			<xs:element name="bound_radius" type="BoundRadius" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="talk_info" type="TalkInfo" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="massive_looting" type="MassiveLooting" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="npc_id" type="npcId" use="required"/>
+		<xs:attribute name="level" type="xs:short" use="required"/>
+		<xs:attribute name="name" type="xs:string" default=""/>
+		<xs:attribute name="name_id" type="xs:int" use="required"/>
+		<xs:attribute name="name_desc" type="xs:string" default=""/>
+		<xs:attribute name="height" type="xs:float" default="0"/>
+		<xs:attribute name="title_id" type="xs:int" default="0"/>
+		<xs:attribute name="rank" type="NpcRank"/>
+		<xs:attribute name="rating" type="NpcRating"/>
+		<xs:attribute name="race" type="Race"/>
+		<xs:attribute name="tribe" type="TribeClass"/>
+		<xs:attribute name="type" type="NpcTemplateType"/>
+		<xs:attribute name="abyss_type" type="AbyssType"/>
+		<xs:attribute name="ai" type="xs:string" default="dummy"/>
+		<xs:attribute name="srange" type="xs:int" default="0"/>
+		<xs:attribute name="arange" type="xs:int"/>
+		<xs:attribute name="adelay" type="xs:int" default="2000"/>
+		<xs:attribute name="arate" type="xs:int"/>
+		<xs:attribute name="hpgauge" type="xs:int"/>
+		<xs:attribute name="state" type="xs:int"/>
+		<xs:attribute name="on_mist" type="xs:boolean"/>
+		<xs:attribute name="floatcorpse" type="xs:boolean" default="false"/>
+		<xs:attribute name="ammo_speed" type="xs:int"/>
+		<xs:attribute name="stare_range" type="xs:int" default="10"/>
+		<xs:attribute name="ui_type" type="NpcUiType"/><!--new-->
+	</xs:complexType>
+	<xs:complexType name="npcStatsTemplate">
+		<xs:sequence>
+			<xs:element name="speeds" type="CreatureSpeeds" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="maxHp" type="xs:int" use="required"/>
+		<xs:attribute name="maxXp" type="xs:int"/>
+		<xs:attribute name="main_hand_attack" type="xs:int"/>
+		<xs:attribute name="main_hand_accuracy" type="xs:int"/>
+		<xs:attribute name="pdef" type="xs:int"/>
+		<xs:attribute name="mresist" type="xs:int"/>
+		<xs:attribute name="power" type="xs:int"/>
+		<xs:attribute name="evasion" type="xs:int"/>
+		<xs:attribute name="accuracy" type="xs:int"/>
+	</xs:complexType>
+	<xs:complexType name="CreatureSpeeds">
+		<xs:attribute name="walk" type="xs:float"/>
+		<xs:attribute name="group_walk" type="xs:float"/>
+		<xs:attribute name="run" type="xs:float"/>
+		<xs:attribute name="run_fight" type="xs:float"/>
+		<xs:attribute name="group_run_fight" type="xs:float"/>
+	</xs:complexType>
+	<xs:complexType name="npcEquipmentList">
+		<xs:sequence>
+			<xs:element name="item" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KiskStats">
+		<xs:sequence/>
+		<xs:attribute name="usemask" type="xs:int" use="required"/>
+		<xs:attribute name="members" type="xs:int" use="required"/>
+		<xs:attribute name="resurrects" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="BoundRadius">
+		<xs:attribute name="front" type="xs:float"/>
+		<xs:attribute name="side" type="xs:float"/>
+		<xs:attribute name="upper" type="xs:float"/>
+	</xs:complexType>
+	<xs:complexType name="TalkInfo">
+		<xs:attribute name="distance" type="xs:int"/>
+		<xs:attribute name="delay" type="xs:int"/>
+		<xs:attribute name="is_dialog" type="xs:boolean" default="false"/>
+		<xs:attribute name="func_dialogs" type="IntListType"/>
+		<xs:attribute name="subdialog_type" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="MassiveLooting">
+		<xs:attribute name="looting_num" type="xs:int"/>
+		<xs:attribute name="itemid" type="xs:int"/>
+		<xs:attribute name="min_level" type="xs:int"/>
+		<xs:attribute name="max_level" type="xs:int"/>
+	</xs:complexType>
+	<xs:simpleType name="NpcTemplateType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MERCENARY"/>
+			<xs:enumeration value="GENERAL"/>
+			<xs:enumeration value="GUARD"/>
+			<xs:enumeration value="SUMMON_PET"/>
+			<xs:enumeration value="ABYSS_GUARD"/>
+			<xs:enumeration value="MONSTER"/>
+			<xs:enumeration value="HOUSING"/>
+			<xs:enumeration value="FLAG"/>
+			<xs:enumeration value="RAID_MONSTER"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NpcUiType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="GENERAL"/>
+			<xs:enumeration value="MONSTER"/>
+			<xs:enumeration value="HIDDEN_MONSTER"/>
+			<xs:enumeration value="CRAFT"/>
+			<xs:enumeration value="BACKGROUND"/>
+			<xs:enumeration value="GENERAL_NOREACTION"/>
+			<xs:enumeration value="MONSTER_NAMEDISPLAY"/>
+			<xs:enumeration value="TRAP"/>
+			<xs:enumeration value="GROUPGATE"/>
+			<xs:enumeration value="GENERAL_NOROTATE"/>
+			<xs:enumeration value="GENERAL_ACT"/>
+			<xs:enumeration value="GENERAL_PATH_EXPANDED"/>
+			<xs:enumeration value="ATTACKABLE_OBJ"/>
+			<xs:enumeration value="GENERAL_NOROTATE_NOTITLE"/>
+			<xs:enumeration value="GENERAL_NO_MARKER"/>
+			<xs:enumeration value="GENERAL_NOROTATE_NOTALK"/>
+			<xs:enumeration value="MONSTER_NOTITLE"/>
+			<xs:enumeration value="BOOK"/>
+			<xs:enumeration value="CARRIER_NOTITLE_NOHP"/>
+			<xs:enumeration value="BINDING_STONE"/>
+			<xs:enumeration value="SUMMONED"/>
+			<xs:enumeration value="MONSTER_RAID"/>
+			<xs:enumeration value="MONSTER_SUBORDINATE"/>
+			<xs:enumeration value="ONLY_OVER_UI_TITLE"/>
+			<xs:enumeration value="GENERAL_NO_UI_RADAR"/>
+			<xs:enumeration value="CRAFT_UI_ALWAYS"/>
+			<xs:enumeration value="NO_TARGET_MARKER"/>
+			<xs:enumeration value="ATTACKABLE_OBJ_SP"/>
+			<xs:enumeration value="FOBJ_SP"/>
+			<xs:enumeration value="POLYMORPH_RIDE"/>
+			<xs:enumeration value="ONLY_ALWAYS_UI_TITLE"/>
+			<xs:enumeration value="GENERAL_NOHP"/>
+			<xs:enumeration value="NO_TARGET_MARKER_ONLYTITLE"/>
+			<xs:enumeration value="HOUSING_NPCOBJ_UI"/>
+			<xs:enumeration value="NO_RADER_MONSTER"/>
+			<xs:enumeration value="ATTACKABLE_POLY_RIDE"/>
+			<xs:enumeration value="NONEBUTROTATE"/>
+			<xs:enumeration value="FOBJ_NOTITLE"/>
+			<xs:enumeration value="DOOR_OBJ"/>
+			<xs:enumeration value="MONSTER_NO_RADAR"/>
+			<xs:enumeration value="ATTACKABLE_OBJ_UI_HIDDEN"/>
+			<xs:enumeration value="SEIREN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AbyssType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SHIELDNPC_OFF"/>
+			<xs:enumeration value="RAID"/>
+			<xs:enumeration value="SHIELDNPC_ON"/>
+			<xs:enumeration value="DEFENDER"/>
+			<xs:enumeration value="BOSS"/>
+			<xs:enumeration value="DOOR"/>
+			<xs:enumeration value="GUARD"/>
+			<xs:enumeration value="TELEPORTER"/>
+			<xs:enumeration value="ETC"/>
+			<xs:enumeration value="ARTIFACT_EFFECT_CORE"/>
+			<xs:enumeration value="DOORREPAIR"/>
+			<xs:enumeration value="ARTIFACT"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NpcRank">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NOVICE"/>
+			<xs:enumeration value="DISCIPLINED"/>
+			<xs:enumeration value="SEASONED"/>
+			<xs:enumeration value="EXPERT"/>
+			<xs:enumeration value="VETERAN"/>
+			<xs:enumeration value="MASTER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NpcRating">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="JUNK"/>
+			<xs:enumeration value="NORMAL"/>
+			<xs:enumeration value="ELITE"/>
+			<xs:enumeration value="HERO"/>
+			<xs:enumeration value="LEGENDARY"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="npcId">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="200000"/>
+			<xs:maxInclusive value="1000000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TribeClass">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ABDARK_AABDRAGON"/>
+			<xs:enumeration value="ABDRAGON_AABDARK"/>
+			<xs:enumeration value="ABYSSDRAKANGATE"/>
+			<xs:enumeration value="AGGRESSIVE_ALL"/>
+			<xs:enumeration value="AGGRESSIVE_DARK"/>
+			<xs:enumeration value="AGGRESSIVE_DARK_HSPECTRE"/>
+			<xs:enumeration value="AGGRESSIVE_DRAGON"/>
+			<xs:enumeration value="AGGRESSIVE_LIGHT"/>
+			<xs:enumeration value="AGGRESSIVE_LIGHT_HSPECTRE"/>
+			<xs:enumeration value="AGGRESSIVE1_AAGGRESSIVE2"/>
+			<xs:enumeration value="AGGRESSIVE2_AAGGRESSIVE1"/>
+			<xs:enumeration value="AGGRESSIVEESCORT"/>
+			<xs:enumeration value="AGGRESSIVEMONSTER"/>
+			<xs:enumeration value="AGGRESSIVESINGLEMONSTER"/>
+			<xs:enumeration value="AGGRESSIVESUPPORTMONSTER"/>
+			<xs:enumeration value="AGGRESSIVESUPPORTMONSTER2"/>
+			<xs:enumeration value="AGGRESSIVETOIDELIM"/>
+			<xs:enumeration value="AGGRESSIVETOPCPET"/>
+			<xs:enumeration value="AGGRESSIVETOSHULACK"/>
+			<xs:enumeration value="AGGRESSIVETOSHULACK2"/>
+			<xs:enumeration value="AGRESSIVETOMONSTER"/>
+			<xs:enumeration value="AGRRESSIVEFRIENDLYVRITRA"/>
+			<xs:enumeration value="AGRRESSIVEFRIENDLYVRITRA2"/>
+			<xs:enumeration value="AGRRESSIVEVRITRAANDPC"/>
+			<xs:enumeration value="AHELLHOUND"/>
+			<xs:enumeration value="AIREL1"/>
+			<xs:enumeration value="AIREL2"/>
+			<xs:enumeration value="AIREL3"/>
+			<xs:enumeration value="AIRELBOSS"/>
+			<xs:enumeration value="ANTI_CRYSTAL"/>
+			<xs:enumeration value="APRETOR"/>
+			<xs:enumeration value="ARCHERYBASFELT_ATARGETBASFELT_DF1"/>
+			<xs:enumeration value="ARCHERYBASFELT_ATARGETBASFELT_LF1"/>
+			<xs:enumeration value="ARCHERYBASFELT2_ATARGETBASFELT2_DF1"/>
+			<xs:enumeration value="ARCHERYBASFELT2_ATARGETBASFELT2_LF1"/>
+			<xs:enumeration value="ASIST_D"/>
+			<xs:enumeration value="ATAURIC"/>
+			<xs:enumeration value="ATKDRAKAN"/>
+			<xs:enumeration value="BAT_FAMILY_ELITE"/>
+			<xs:enumeration value="BMDGUARDIAN"/>
+			<xs:enumeration value="BMLGUARDIAN"/>
+			<xs:enumeration value="BOMB_LIZARDMAN"/>
+			<xs:enumeration value="BRAX"/>
+			<xs:enumeration value="BROHUM"/>
+			<xs:enumeration value="BROWNIE"/>
+			<xs:enumeration value="BROWNIECOWARD"/>
+			<xs:enumeration value="BROWNIEFELLER_HZAIF_LF1"/>
+			<xs:enumeration value="BROWNIEGUARD"/>
+			<xs:enumeration value="CALYDON"/>
+			<xs:enumeration value="CALYDON_POLYMORPH"/>
+			<xs:enumeration value="CHERUBIM2ND"/>
+			<xs:enumeration value="CHILDMONSTER"/>
+			<xs:enumeration value="CYCLOPSBOSS"/>
+			<xs:enumeration value="CONSIADE"/>
+			<xs:enumeration value="CONSIADE_SUM"/>
+			<xs:enumeration value="CRESTLICH"/>
+			<xs:enumeration value="CRYSTAL"/>
+			<xs:enumeration value="CRYSTAL_NMDD"/>
+			<xs:enumeration value="CRYSTAL_SUM"/>
+			<xs:enumeration value="D1_HKERUBIM_LF1"/>
+			<xs:enumeration value="DARK_LICH"/>
+			<xs:enumeration value="DARK_MOB"/>
+			<xs:enumeration value="DARK_NPC"/>
+			<xs:enumeration value="DARK_SUR_MOB"/>
+			<xs:enumeration value="DARU"/>
+			<xs:enumeration value="DARU_HZAIF"/>
+			<xs:enumeration value="DECOY"/>
+			<xs:enumeration value="DECOY_HUNGER"/>
+			<xs:enumeration value="DRAGGMOB_ADRGUARD1"/>
+			<xs:enumeration value="DRAGON"/>
+			<xs:enumeration value="DRAGON_CTRL"/>
+			<xs:enumeration value="DRAGON_SLAVE"/>
+			<xs:enumeration value="DRAKAN_DGUARD"/>
+			<xs:enumeration value="DRAKAN_LGUARD"/>
+			<xs:enumeration value="DRAKANDF3BOSS"/>
+			<xs:enumeration value="DRAKANDF3SLAVE"/>
+			<xs:enumeration value="DRAKANDOOR"/>
+			<xs:enumeration value="DRAKANPOLYMORPH"/>
+			<xs:enumeration value="DRAKEPURPLE_MASTER"/>
+			<xs:enumeration value="DRAKEPURPLE_SLAVE"/>
+			<xs:enumeration value="DRAKY_BOMB_EX"/>
+			<xs:enumeration value="DRAKY_BOMB_MASTER"/>
+			<xs:enumeration value="DRAMA_EVE_NONPC_A"/>
+			<xs:enumeration value="DRAMA_EVE_NONPC_B"/>
+			<xs:enumeration value="DRAMA_EVE_NONPC_DARKA"/>
+			<xs:enumeration value="DRAMA_EVE_NONPC_DARKB"/>
+			<xs:enumeration value="DRAMA_KIMEIA_DARKNPC"/>
+			<xs:enumeration value="DRAMA_KIMEIA_MOB"/>
+			<xs:enumeration value="DRAMA_KIMEIA_NPC"/>
+			<xs:enumeration value="DRAMATA"/>
+			<xs:enumeration value="DRAMATATIMERA"/>
+			<xs:enumeration value="DRAMATATIMERB"/>
+			<xs:enumeration value="DUMMY"/>
+			<xs:enumeration value="DUMMY_DGUARD"/>
+			<xs:enumeration value="DUMMY_LGUARD"/>
+			<xs:enumeration value="DUMMY2"/>
+			<xs:enumeration value="DUMMY2_DGUARD"/>
+			<xs:enumeration value="DUMMY2_LGUARD"/>
+			<xs:enumeration value="ELEMENTAL_AIR"/>
+			<xs:enumeration value="ELEMENTAL_EARTH"/>
+			<xs:enumeration value="ELEMENTAL_FIRE"/>
+			<xs:enumeration value="ELEMENTAL_LIGHT"/>
+			<xs:enumeration value="ELEMENTAL_WATER"/>
+			<xs:enumeration value="ENEMY_AGUARD_DARK"/>
+			<xs:enumeration value="ESCORT"/>
+			<xs:enumeration value="ETTIN"/>
+			<xs:enumeration value="F4GUARD_DARK"/>
+			<xs:enumeration value="F4GUARD_DRAGON"/>
+			<xs:enumeration value="F4GUARD_LIGHT"/>
+			<xs:enumeration value="F4RAID"/>
+			<xs:enumeration value="FANATIC"/>
+			<xs:enumeration value="FARMER_HKERUBIM_LF1"/>
+			<xs:enumeration value="FETHLOT"/>
+			<xs:enumeration value="FIELD_OBJECT_ALL"/>
+			<xs:enumeration value="FIELD_OBJECT_ALL_HOSTILEMONSTER"/>
+			<xs:enumeration value="FIELD_OBJECT_ALL_MONSTER"/>
+			<xs:enumeration value="FIELD_OBJECT_DARK"/>
+			<xs:enumeration value="FIELD_OBJECT_LIGHT"/>
+			<xs:enumeration value="FIREEL1"/>
+			<xs:enumeration value="FIREEL2"/>
+			<xs:enumeration value="FIREEL3"/>
+			<xs:enumeration value="FIREELBOSS"/>
+			<xs:enumeration value="FIREFUNGY"/>
+			<xs:enumeration value="FIRETEMPLE_MOB"/>
+			<xs:enumeration value="FRIENDLYTOIDELIM"/>
+			<xs:enumeration value="FRILLFAIMAMBABY"/>
+			<xs:enumeration value="FRILLFAIMAMCOUPLE"/>
+			<xs:enumeration value="FRILLFAIMAMMOM"/>
+			<xs:enumeration value="FUNGY"/>
+			<xs:enumeration value="FUNGUS"/>
+			<xs:enumeration value="GAB1_KILLER"/>
+			<xs:enumeration value="GAB1_MONSTER"/>
+			<xs:enumeration value="GAB1_MONSTER_NONAGGRE"/>
+			<xs:enumeration value="GAB1_PEACE"/>
+			<xs:enumeration value="GAB1_SHUGO"/>
+			<xs:enumeration value="GAB1_TURRET"/>
+			<xs:enumeration value="GAB1_SUB_ATTACKABLE_FOBJ"/>
+			<xs:enumeration value="GAB1_SUB_DEST_69"/>
+			<xs:enumeration value="GAB1_SUB_DEST_70"/>
+			<xs:enumeration value="GAB1_SUB_DEST_71"/>
+			<xs:enumeration value="GAB1_SUB_DEST_72"/>
+			<xs:enumeration value="GAB1_SUB_DEST_69_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_DEST_70_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_DEST_71_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_DEST_72_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_DRAKAN"/>
+			<xs:enumeration value="GAB1_SUB_KILLER"/>
+			<xs:enumeration value="GAB1_SUB_NONAGGRESSIVE_DRAKAN"/>
+			<xs:enumeration value="GAB1_01_POINT_01"/>
+			<xs:enumeration value="GAB1_01_POINT_02"/>
+			<xs:enumeration value="GAB1_01_POINT_03"/>
+			<xs:enumeration value="GAB1_01_POINT_04"/>
+			<xs:enumeration value="GAB1_01_POINT_05"/>
+			<xs:enumeration value="GAB1_01_REMNANT"/>
+			<xs:enumeration value="GAB1_02_POINT_01"/>
+			<xs:enumeration value="GAB1_02_POINT_02"/>
+			<xs:enumeration value="GAB1_02_POINT_03"/>
+			<xs:enumeration value="GAB1_02_POINT_04"/>
+			<xs:enumeration value="GAB1_02_POINT_05"/>
+			<xs:enumeration value="GAB1_02_REMNANT"/>
+			<xs:enumeration value="GAB1_03_POINT_01"/>
+			<xs:enumeration value="GAB1_03_POINT_02"/>
+			<xs:enumeration value="GAB1_03_POINT_03"/>
+			<xs:enumeration value="GAB1_03_POINT_04"/>
+			<xs:enumeration value="GAB1_03_POINT_05"/>
+			<xs:enumeration value="GAB1_03_REMNANT"/>
+			<xs:enumeration value="GAB1_04_POINT_01"/>
+			<xs:enumeration value="GAB1_04_POINT_02"/>
+			<xs:enumeration value="GAB1_04_POINT_03"/>
+			<xs:enumeration value="GAB1_04_POINT_04"/>
+			<xs:enumeration value="GAB1_04_POINT_05"/>
+			<xs:enumeration value="GAB1_04_REMNANT"/>
+			<xs:enumeration value="GARGOYLE"/>
+			<xs:enumeration value="GARGOYLE_ELITE"/>
+			<xs:enumeration value="GENERAL"/>
+			<xs:enumeration value="GENERAL_ADADR"/>
+			<xs:enumeration value="GENERAL_DARK"/>
+			<xs:enumeration value="GENERAL_DARK_IDLDF4A_INTRO"/>
+			<xs:enumeration value="GENERAL_DARK_LYCAN"/>
+			<xs:enumeration value="GENERAL_DRAGON"/>
+			<xs:enumeration value="GENERAL_IDLDF4A_INTRO"/>
+			<xs:enumeration value="GENERAL_KRALL"/>
+			<xs:enumeration value="GENERAL_LDF4A_PUBLIC_YUN"/>
+			<xs:enumeration value="GENERALDA_ALIDR"/>
+			<xs:enumeration value="GENERALDR_ALIDA"/>
+			<xs:enumeration value="GENERALDR_ALIDA_SUPPORT"/>
+			<xs:enumeration value="GHOSTDARK"/>
+			<xs:enumeration value="GHOSTLIGHT"/>
+			<xs:enumeration value="GHTIMER"/>
+			<xs:enumeration value="GMASTER"/>
+			<xs:enumeration value="GOBLIN"/>
+			<xs:enumeration value="GOD_KAISINEL"/>
+			<xs:enumeration value="GOD_MARCHUTAN"/>
+			<xs:enumeration value="GOLEM_SWITCH"/>
+			<xs:enumeration value="GRIFFO"/>
+			<xs:enumeration value="GRIFFON"/>
+			<xs:enumeration value="GSLAVE"/>
+			<xs:enumeration value="GUARD"/>
+			<xs:enumeration value="GUARD_D1NOATTACK"/>
+			<xs:enumeration value="GUARD_DARK"/>
+			<xs:enumeration value="GUARD_DARK_ALYCANARATMAN_DF1"/>
+			<xs:enumeration value="GUARD_DARKAENEMY"/>
+			<xs:enumeration value="GUARD_DARKMA"/>
+			<xs:enumeration value="GUARD_DRAGON"/>
+			<xs:enumeration value="GUARD_DRAGONMA"/>
+			<xs:enumeration value="GUARD_FTARGETBASFELT_DF1"/>
+			<xs:enumeration value="GUARD_FTARGETBASFELT_LF1"/>
+			<xs:enumeration value="GUARD_LIGHT_AKERUBIM_LF1"/>
+			<xs:enumeration value="GUARD_LIGHTMA"/>
+			<xs:enumeration value="GUARDDARK_ALEHPAR"/>
+			<xs:enumeration value="GUARDIAN"/>
+			<xs:enumeration value="GURURU_D1"/>
+			<xs:enumeration value="GURURU_DECO"/>
+			<xs:enumeration value="HIPPOLIZARD"/>
+			<xs:enumeration value="HOLYSERVANT"/>
+			<xs:enumeration value="HOLYSERVANT_DEBUFFER"/>
+			<xs:enumeration value="HOLYSERVANT_DESPAWN"/>
+			<xs:enumeration value="HOSTILE_ALL"/>
+			<xs:enumeration value="HOSTILEONLYMONSTER"/>
+			<xs:enumeration value="IDASTERIA_IU_ATK"/>
+			<xs:enumeration value="IDASTERIA_IU_MONSTER"/>
+			<xs:enumeration value="IDASTERIA_IU_MONSTER2"/>
+			<xs:enumeration value="IDASTERIA_IU_NPC"/>
+			<xs:enumeration value="IDASTERIA_IU_POLYMORPHD"/>
+			<xs:enumeration value="IDASTERIA_IU_POLYMORPHL"/>
+			<xs:enumeration value="IDASTERIA_IU_WORLD_MONSTER"/>
+			<xs:enumeration value="IDASTERIA_IU_WORLD_MONSTER2"/>
+			<xs:enumeration value="IDASTERIA_IU_WORLD_NPC"/>
+			<xs:enumeration value="IDASTERIA_IU_WORLD_POLYMORPHD"/>
+			<xs:enumeration value="IDASTERIA_IU_WORLD_POLYMORPHL"/>
+			<xs:enumeration value="IDCATACOMBS_DRAKE"/>
+			<xs:enumeration value="IDCATACOMBS_DRAKE_SUM"/>
+			<xs:enumeration value="IDCATACOMBS_TAROS"/>
+			<xs:enumeration value="IDELEMENTAL2HEALSUM"/>
+			<xs:enumeration value="IDELIM"/>
+			<xs:enumeration value="IDELIM_FRIEND"/>
+			<xs:enumeration value="IDEVENT01_MC"/>
+			<xs:enumeration value="IDEVENT01_POLYMORPHD"/>
+			<xs:enumeration value="IDEVENT01_POLYMORPHL"/>
+			<xs:enumeration value="IDEVENT01_SUMMON"/>
+			<xs:enumeration value="IDEVENT01_TOWER"/>
+			<xs:enumeration value="IDF5_R2_CANNON"/>
+			<xs:enumeration value="IDF5_R2_CANNON_ATTACK"/>
+			<xs:enumeration value="IDF5_R2_SYNC1"/>
+			<xs:enumeration value="IDF5_R2_SYNC1_ATTACK"/>
+			<xs:enumeration value="IDF5_R2_SYNC2"/>
+			<xs:enumeration value="IDF5_R2_SYNC2_ATTACK"/>
+			<xs:enumeration value="IDF5_R2_SYNC3"/>
+			<xs:enumeration value="IDF5_R2_SYNC3_ATTACK"/>
+			<xs:enumeration value="IDF5_SIEGEWEAPON"/>
+			<xs:enumeration value="IDF5_SIEGEWEAPON_ATTACK"/>
+			<xs:enumeration value="IDF5_SIEGEWEAPON_PC_DARK"/>
+			<xs:enumeration value="IDF5_TD_ASSULT"/>
+			<xs:enumeration value="IDF5_TD_BOMBER"/>
+			<xs:enumeration value="IDF5_TD_COMMANDER_DA"/>
+			<xs:enumeration value="IDF5_TD_COMMANDER_LI"/>
+			<xs:enumeration value="IDF5_TD_DOOR"/>
+			<xs:enumeration value="IDF5_TD_GUARD_DARK"/>
+			<xs:enumeration value="IDF5_TD_GUARD_LIGHT"/>
+			<xs:enumeration value="IDF5_TD_SIEGE"/>
+			<xs:enumeration value="IDF5_TD_WAR_DARK"/>
+			<xs:enumeration value="IDF5_TD_WAR_LIGHT"/>
+			<xs:enumeration value="IDF5_TD_WEAPON_PC"/>
+			<xs:enumeration value="IDF5_TD_WEAPON_PC_DARK"/>
+			<xs:enumeration value="IDF5_U1_WAR_01_GUARD"/>
+			<xs:enumeration value="IDF5_U1_WAR_01_GUARD_DARK"/>
+			<xs:enumeration value="IDF5_U1_WAR_01_REWARD"/>
+			<xs:enumeration value="IDF5U1_AGGRESSIVETANK"/>
+			<xs:enumeration value="IDF5U1_PCFLAG"/>
+			<xs:enumeration value="IDF5U1_TANK"/>
+			<xs:enumeration value="IDF5U1_VRITRA"/>
+			<xs:enumeration value="IDF5U1_VRITRAFLAG"/>
+			<xs:enumeration value="IDF5U1_VRITRATRAP"/>
+			<xs:enumeration value="IDF5U1_VRITRAWEAPON"/>
+			<xs:enumeration value="IDF5U2_ARROWTRAP"/>
+			<xs:enumeration value="IDF5U2_FOBJ"/>
+			<xs:enumeration value="IDF5U2_GUARD"/>
+			<xs:enumeration value="IDF5U2_GUARD_DARK"/>
+			<xs:enumeration value="IDF5U2_SHULACK"/>
+			<xs:enumeration value="IDF5U2_SHULACK_ESCORT"/>
+			<xs:enumeration value="IDF5U2_SHULACK_SLAVE"/>
+			<xs:enumeration value="IDF5U2_VRITRA"/>
+			<xs:enumeration value="IDF5U2_VRITRATRAP"/>
+			<xs:enumeration value="IDF5U3_OBJ"/>
+			<xs:enumeration value="IDF5_U3_VRITRA"/>
+			<xs:enumeration value="IDF5_U3_VRITRA_01"/>
+			<xs:enumeration value="IDF5_U3_VRITRA_02"/>
+			<xs:enumeration value="IDF5_U3_VRITRA_HIDE"/>
+			<xs:enumeration value="IDYUN_ANCIENT"/>
+			<xs:enumeration value="IDYUN_ANTIBOMBER"/>
+			<xs:enumeration value="IDYUN_BOMBER"/>
+			<xs:enumeration value="IDYUN_D1"/>
+			<xs:enumeration value="IDYUN_DOOR"/>
+			<xs:enumeration value="IDYUN_FIST"/>
+			<xs:enumeration value="IDYUN_HDRAKAN"/>
+			<xs:enumeration value="IDYUN_MEROPS"/>
+			<xs:enumeration value="IDYUN_OBJECTS"/>
+			<xs:enumeration value="IDYUN_ODRAKAN"/>
+			<xs:enumeration value="IDYUN_POLYMORPH"/>
+			<xs:enumeration value="IDYUN_RDRAKAN"/>
+			<xs:enumeration value="IDYUN_SIEGEWEAPON"/>
+			<xs:enumeration value="IDYUN_TARGET"/>
+			<xs:enumeration value="IDYUN_VASARTI"/>
+			<xs:enumeration value="IDYUN_XDRAKAN"/>
+			<xs:enumeration value="IDKAMAR_CANNON"/>
+			<xs:enumeration value="IDKAMAR_PROTECTGUARD_DARK"/>
+			<xs:enumeration value="IDKAMAR_PROTECTGUARD_LIGHT"/>
+			<xs:enumeration value="IDKAMAR_SIEGEWEAPON_ATTACK"/>
+			<xs:enumeration value="IDKAMAR_SIEGEWEAPON_DARK"/>
+			<xs:enumeration value="IDKAMAR_SIEGEWEAPON_LIGHT"/>
+			<xs:enumeration value="IDKAMAR_VRITRA"/>
+			<xs:enumeration value="IDLDF4A_DECOY"/>
+			<xs:enumeration value="IDLDF5_UNDER_RUNE"/>
+			<xs:enumeration value="IDLDF5RE_SOLO_Q"/>
+			<xs:enumeration value="IDLF1_MONSTER"/>
+			<xs:enumeration value="IDRAKSHA_DRAGONTOOTH"/>
+			<xs:enumeration value="IDRAKSHA_DRAKAN"/>
+			<xs:enumeration value="IDRAKSHA_NORMAL"/>
+			<xs:enumeration value="IDRAKSHA_RAKSHA"/>
+			<xs:enumeration value="IDRUNEWP_AGGRESSIVEANCIENTARM"/>
+			<xs:enumeration value="IDRUNEWP_ANCIENTARM"/>
+			<xs:enumeration value="IDRUNEWP_ESCORT"/>
+			<xs:enumeration value="IDRUNEWP_RUNEDEVICE"/>
+			<xs:enumeration value="IDRUNEWP_VRITRA"/>
+			<xs:enumeration value="IDRUNEWP_VRITRADEVICE"/>
+			<xs:enumeration value="IDTEMPLE_BUGS"/>
+			<xs:enumeration value="IDTEMPLE_STONE"/>
+			<xs:enumeration value="IDTIAMAT_ANCIENT"/>
+			<xs:enumeration value="IDTIAMAT_AREAHIDE"/>
+			<xs:enumeration value="IDTIAMAT_SPAWNHEAL"/>
+			<xs:enumeration value="IDTIAMAT_XDRAKAN"/>
+			<xs:enumeration value="IDVRITRA_BASE_REBIRTH"/>
+			<xs:enumeration value="YDUMMY"/>
+			<xs:enumeration value="YDUMMY_DGUARD"/>
+			<xs:enumeration value="YDUMMY_GUARD"/>
+			<xs:enumeration value="YDUMMY_LGUARD"/>
+			<xs:enumeration value="YDUMMY2"/>
+			<xs:enumeration value="YDUMMY2_DGUARD"/>
+			<xs:enumeration value="YDUMMY2_GUARD"/>
+			<xs:enumeration value="YDUMMY2_LGUARD"/>
+			<xs:enumeration value="YUN_GUARD"/>
+			<xs:enumeration value="KAHRUN"/>
+			<xs:enumeration value="KALNIF_AMINX"/>
+			<xs:enumeration value="KALNIF_ATOG"/>
+			<xs:enumeration value="KERUBIM_AD1_LF1"/>
+			<xs:enumeration value="KERUBIM_AFARMER_LF1"/>
+			<xs:enumeration value="KRALL"/>
+			<xs:enumeration value="KRALL_PC"/>
+			<xs:enumeration value="KRALL_TRAINING"/>
+			<xs:enumeration value="KRALLMASTER"/>
+			<xs:enumeration value="KRALLWIZARDCY"/>
+			<xs:enumeration value="L_DRGUARD_ADRAGGMOB1"/>
+			<xs:enumeration value="LASBERG"/>
+			<xs:enumeration value="LDF4_ADVANCE_AGGRESSIVESINGLE"/>
+			<xs:enumeration value="LDF4_ADVANCE_CHAPIRE_SINGLE"/>
+			<xs:enumeration value="LDF4_ADVANCE_CHAPIRE_SUPPORT"/>
+			<xs:enumeration value="LDF4_ADVANCE_DACHAPIRE"/>
+			<xs:enumeration value="LDF4_ADVANCE_DGUARD"/>
+			<xs:enumeration value="LDF4_ADVANCE_DRGUARD"/>
+			<xs:enumeration value="LDF4_ADVANCE_LGUARD"/>
+			<xs:enumeration value="LDF4_ADVANCE_FNAMED_FOBJ"/>
+			<xs:enumeration value="LDF4_ADVANCE_GODELITEDM"/>
+			<xs:enumeration value="LDF4_ADVANCE_GODELITELF"/>
+			<xs:enumeration value="LDF4_ADVANCE_LIPOPOKU"/>
+			<xs:enumeration value="LDF4_ADVANCE_MANDURI"/>
+			<xs:enumeration value="LDF4_ADVANCE_MUDTHORN"/>
+			<xs:enumeration value="LDF4_ADVANCE_NEUTH"/>
+			<xs:enumeration value="LDF4_ADVANCE_POPOKU"/>
+			<xs:enumeration value="LDF4_ADVANCE_POTCRAB"/>
+			<xs:enumeration value="LDF4_ADVANCE_SAAM"/>
+			<xs:enumeration value="LDF4_ADVANCE_SINGLE"/>
+			<xs:enumeration value="LDF4_ADVANCE_TIAMAT"/>
+			<xs:enumeration value="LDF4_ADVANCE_WORKER"/>
+			<xs:enumeration value="LDF4_ADVANCE_XIPRTO"/>
+			<xs:enumeration value="LDF4A_CALYDON"/>
+			<xs:enumeration value="LDF4A_LG_SKILL"/>
+			<xs:enumeration value="LDF4A_LG_SKILL_RECEIVE"/>
+			<xs:enumeration value="LDF4A_NEPILIM"/>
+			<xs:enumeration value="LDF4A_NEPILIM_SUMMON"/>
+			<xs:enumeration value="LDF4A_OWLLAU"/>
+			<xs:enumeration value="LDF4A_POLY_SHULACK"/>
+			<xs:enumeration value="LDF4A_PUBLIC_MONSTER"/>
+			<xs:enumeration value="LDF4A_SANDWARM"/>
+			<xs:enumeration value="LDF4A_YUN_GUARD"/>
+			<xs:enumeration value="LDF4B_AGGRESSIVEYUNSOLDIER"/>
+			<xs:enumeration value="LDF4B_ATTACKWAGON"/>
+			<xs:enumeration value="LDF4B_FANATIC"/>
+			<xs:enumeration value="LDF4B_MINE"/>
+			<xs:enumeration value="LDF4B_SPARRING_DGUARD"/>
+			<xs:enumeration value="LDF4B_SPARRING_DGUARD2"/>
+			<xs:enumeration value="LDF4B_SPARRING_GUARD"/>
+			<xs:enumeration value="LDF4B_SPARRING_GUARD2"/>
+			<xs:enumeration value="LDF4B_SPARRING_Y"/>
+			<xs:enumeration value="LDF4B_SPARRING_Y2"/>
+			<xs:enumeration value="LDF4B_WAGON"/>
+			<xs:enumeration value="LDF_V_CHIEF_D"/>
+			<xs:enumeration value="LDF_V_CHIEF_L"/>
+			<xs:enumeration value="LDF_V_GUARD_DARK"/>
+			<xs:enumeration value="LDF_V_GUARD_LIGHT"/>
+			<xs:enumeration value="LDF_V_KILLER_KRALL"/>
+			<xs:enumeration value="LDF_V_KILLER_LEHPAR"/>
+			<xs:enumeration value="LDF_V_KILLER_LYCAN"/>
+			<xs:enumeration value="LDF4A_CALYDON"/>
+			<xs:enumeration value="LDF4A_YUN_GUARD"/>
+			<xs:enumeration value="LDF4A_LG_SKILL"/>
+			<xs:enumeration value="LDF4A_LG_SKILL_RECEIVE"/>
+			<xs:enumeration value="LDF4A_NEPILIM"/>
+			<xs:enumeration value="LDF4A_NEPILIM_SUMMON"/>
+			<xs:enumeration value="LDF4A_OWLLAU"/>
+			<xs:enumeration value="LDF4A_POLY_SHULACK"/>
+			<xs:enumeration value="LDF4A_PUBLIC_MONSTER"/>
+			<xs:enumeration value="LDF4A_SANDWARM"/>
+			<xs:enumeration value="LDF4B_AGGRESSIVEYUNSOLDIER"/>
+			<xs:enumeration value="LDF4B_ATTACKWAGON"/>
+			<xs:enumeration value="LDF4B_FANATIC"/>
+			<xs:enumeration value="LDF4B_MINE"/>
+			<xs:enumeration value="LDF4B_SPARRING_DGUARD"/>
+			<xs:enumeration value="LDF4B_SPARRING_DGUARD2"/>
+			<xs:enumeration value="LDF4B_SPARRING_GUARD"/>
+			<xs:enumeration value="LDF4B_SPARRING_GUARD2"/>
+			<xs:enumeration value="LDF4B_SPARRING_Y"/>
+			<xs:enumeration value="LDF4B_SPARRING_Y2"/>
+			<xs:enumeration value="LDF4B_WAGON"/>
+			<xs:enumeration value="LDF5_BABARIAN"/>
+			<xs:enumeration value="LDF5_BRAX"/>
+			<xs:enumeration value="LDF5_CALYDON"/>
+			<xs:enumeration value="LDF5_DARU"/>
+			<xs:enumeration value="LDF5_DEBRIE"/>
+			<xs:enumeration value="LDF5_FUNGY"/>
+			<xs:enumeration value="LDF5_GURURU"/>
+			<xs:enumeration value="LDF5_LUPYLLINI"/>
+			<xs:enumeration value="LDF5_MUTA"/>
+			<xs:enumeration value="LDF5_NATIVE_DIRECT"/>
+			<xs:enumeration value="LDF5_NEUT"/>
+			<xs:enumeration value="LDF5_OWLLAU"/>
+			<xs:enumeration value="LDF5_SHULACK_DIRECT"/>
+			<xs:enumeration value="LDF5_SHULACK_KEEPER"/>
+			<xs:enumeration value="LDF5_SPAKLE"/>
+			<xs:enumeration value="LDF5_V_CHIEF_D"/>
+			<xs:enumeration value="LDF5_V_CHIEF_DR"/>
+			<xs:enumeration value="LDF5_V_CHIEF_L"/>
+			<xs:enumeration value="LDF5_V_KILLER_D"/>
+			<xs:enumeration value="LDF5_V_KILLER_DR"/>
+			<xs:enumeration value="LDF5_V_KILLER_L"/>
+			<xs:enumeration value="LDF5_VESPA"/>
+			<xs:enumeration value="LDF5_WORKER"/>
+			<xs:enumeration value="LDF5B_DOOR_DA"/>
+			<xs:enumeration value="LDF5B_DOOR_DR"/>
+			<xs:enumeration value="LDF5B_DOOR_LI"/>
+			<xs:enumeration value="LDF5B_FOBJ_HOSTILEPC"/>
+			<xs:enumeration value="LDF5B_KILLER"/>
+			<xs:enumeration value="LDF5B_OUT_DOOR_KILLER_DA"/>
+			<xs:enumeration value="LDF5B_OUT_DOOR_KILLER_LI"/>
+			<xs:enumeration value="LEHPAR"/>
+			<xs:enumeration value="LEHPAR_AGUARDDARK"/>
+			<xs:enumeration value="LEHPAR_APRETOR"/>
+			<xs:enumeration value="LICH_SOULEDSTONE"/>
+			<xs:enumeration value="LIGHT_DENLABIS"/>
+			<xs:enumeration value="LIGHT_LICH"/>
+			<xs:enumeration value="LIGHT_LICH_DF2ADIRECTPORTAL"/>
+			<xs:enumeration value="LIGHT_MOB"/>
+			<xs:enumeration value="LIGHT_NPC"/>
+			<xs:enumeration value="LIGHT_SUR_MOB"/>
+			<xs:enumeration value="LIGHT_SUR_MOB_DF2ADIRECTPORTAL"/>
+			<xs:enumeration value="LIZARDMAN"/>
+			<xs:enumeration value="LIZARDMAN_BOMB"/>
+			<xs:enumeration value="LIZARDMAN_KB"/>
+			<xs:enumeration value="LYCAN"/>
+			<xs:enumeration value="LYCAN_AGUARD_DARK_DF1"/>
+			<xs:enumeration value="LYCAN_HUNTER"/>
+			<xs:enumeration value="LYCAN_MAGE"/>
+			<xs:enumeration value="LYCAN_PC"/>
+			<xs:enumeration value="LYCAN_PET"/>
+			<xs:enumeration value="LYCAN_PET_TRAINING"/>
+			<xs:enumeration value="LYCAN_SUM"/>
+			<xs:enumeration value="LYCAN_TRAINING"/>
+			<xs:enumeration value="LYCANDF2MASTER"/>
+			<xs:enumeration value="LYCANDF2SLAVE1"/>
+			<xs:enumeration value="LYCANDF2SLAVE2"/>
+			<xs:enumeration value="LYCANMASTER"/>
+			<xs:enumeration value="LUPYLLINI"/>
+			<xs:enumeration value="MAIDENGOLEM_ELITE"/>
+			<xs:enumeration value="MANDURITWEAK"/>
+			<xs:enumeration value="MERDION"/>
+			<xs:enumeration value="MINX"/>
+			<xs:enumeration value="MINX_HKALNIF"/>
+			<xs:enumeration value="MINX_HZAIF"/>
+			<xs:enumeration value="MONSTER"/>
+			<xs:enumeration value="MONSTER_FRIENDLY_LDFCHIEF"/>
+			<xs:enumeration value="MONSTER_LDF4A_PUBLIC_LIZARDMAN"/>
+			<xs:enumeration value="MOSBEARBABY"/>
+			<xs:enumeration value="MOSBEARFATHER"/>
+			<xs:enumeration value="MUTA"/>
+			<xs:enumeration value="MUTA_HOCTASIDE"/>
+			<xs:enumeration value="NEUT"/>
+			<xs:enumeration value="NEUTBUG"/>
+			<xs:enumeration value="NEUTQUEEN"/>
+			<xs:enumeration value="NEUTRAL_DGUARD"/>
+			<xs:enumeration value="NEUTRAL_GUARD"/>
+			<xs:enumeration value="NEUTRAL_GUARD_ON_ATTACK"/>
+			<xs:enumeration value="NEUTRAL_GUARD_ON_ATTACK01"/>
+			<xs:enumeration value="NEUTRAL_LGUARD"/>
+			<xs:enumeration value="NLIZARDMAN"/>
+			<xs:enumeration value="NLIZARDMAN2"/>
+			<xs:enumeration value="NLIZARDPET"/>
+			<xs:enumeration value="NLIZARDPRIEST"/>
+			<xs:enumeration value="NLIZARDRAISER"/>
+			<xs:enumeration value="NNAGA"/>
+			<xs:enumeration value="NNAGA_BOSS_SERVANT"/>
+			<xs:enumeration value="NNAGA_ELEMENTAL"/>
+			<xs:enumeration value="NNAGA_ELEMENTALIST"/>
+			<xs:enumeration value="NNAGA_PRIEST"/>
+			<xs:enumeration value="NNAGA_PRIESTBOSS"/>
+			<xs:enumeration value="NNAGA_SERVANT"/>
+			<xs:enumeration value="NOFIGHT"/>
+			<xs:enumeration value="NONAGRRESSIVEFRIENDLYVRITRA"/>
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="NPC"/>
+			<xs:enumeration value="OCTASIDE_AMUTA"/>
+			<xs:enumeration value="OCTASIDEBABY"/>
+			<xs:enumeration value="ORC"/>
+			<xs:enumeration value="PARENTSMONSTER"/>
+			<xs:enumeration value="PC"/>
+			<xs:enumeration value="PC_DARK"/>
+			<xs:enumeration value="PC_DRAGON"/>
+			<xs:enumeration value="PET"/>
+			<xs:enumeration value="PET_DARK"/>
+			<xs:enumeration value="POLYMORPHFUNGY"/>
+			<xs:enumeration value="POLYMORPHPARROT"/>
+			<xs:enumeration value="PREDATOR"/>
+			<xs:enumeration value="PREY"/>
+			<xs:enumeration value="PRETOR_ALEHPAR"/>
+			<xs:enumeration value="PROTECTGUARD_DARK"/>
+			<xs:enumeration value="PROTECTGUARD_DARK_SIEGEWEAPON"/>
+			<xs:enumeration value="PROTECTGUARD_LIGHT"/>
+			<xs:enumeration value="PROTECTGUARD_LIGHT_SIEGEWEAPON"/>
+			<xs:enumeration value="QUESTGUARD_DARK"/>
+			<xs:enumeration value="QUESTGUARD_LIGHT"/>
+			<xs:enumeration value="RANMARK"/>
+			<xs:enumeration value="RATMAN"/>
+			<xs:enumeration value="RATMAN_AGUARD_DARK_DF1"/>
+			<xs:enumeration value="RATMANDFWORKER"/>
+			<xs:enumeration value="RATMANWORKER"/>
+			<xs:enumeration value="ROBBERALDER_ASPRIGG_DF1"/>
+			<xs:enumeration value="SAM_ELITE"/>
+			<xs:enumeration value="SAMM"/>
+			<xs:enumeration value="SEIREN"/>
+			<xs:enumeration value="SEIREN_MASTER"/>
+			<xs:enumeration value="SEIREN_SNAKE"/>
+			<xs:enumeration value="SHELLIZARDBABY"/>
+			<xs:enumeration value="SHELLIZARDMOM"/>
+			<xs:enumeration value="SHULACK"/>
+			<xs:enumeration value="SHULACK_ATTACKED"/>
+			<xs:enumeration value="SHULACK_ATTACKING"/>
+			<xs:enumeration value="SHULACK_DECK"/>
+			<xs:enumeration value="SHULACK_DECK_KILLER"/>
+			<xs:enumeration value="SHULACK_SLAVE"/>
+			<xs:enumeration value="SHULACK_SLAVE_NOTAGGRESSIVE"/>
+			<xs:enumeration value="SHULACK_SUPPORT"/>
+			<xs:enumeration value="SOULEDSTONE"/>
+			<xs:enumeration value="SOULEDSTONE_MINI"/>
+			<xs:enumeration value="SPAKY"/>
+			<xs:enumeration value="SPALLER"/>
+			<xs:enumeration value="SPALLERCTRL"/>
+			<xs:enumeration value="SPECTRE_AALIGHTDARK"/>
+			<xs:enumeration value="SPRIGG_HROBBERALDER_DF1"/>
+			<xs:enumeration value="SPRIGGREFUSE_DF1"/>
+			<xs:enumeration value="SUCCUBUS_ELITE"/>
+			<xs:enumeration value="SWELLFISH"/>
+			<xs:enumeration value="TARGETBASFELT_DF1"/>
+			<xs:enumeration value="TARGETBASFELT2_DF1"/>
+			<xs:enumeration value="TAURIC"/>
+			<xs:enumeration value="TDOWN_DRAKAN"/>
+			<xs:enumeration value="TEST_ATTACKTONPC"/>
+			<xs:enumeration value="TEST_ATTACKTOPC"/>
+			<xs:enumeration value="TEST_ATTACKTOPC_DARK"/>
+			<xs:enumeration value="TEST_DARK_ADRAGON"/>
+			<xs:enumeration value="TEST_DARK_AETC"/>
+			<xs:enumeration value="TEST_DARK_ALIGHT"/>
+			<xs:enumeration value="TEST_DRAGON_ADARK"/>
+			<xs:enumeration value="TEST_DRAGON_AETC"/>
+			<xs:enumeration value="TEST_DRAGON_ALIGHT"/>
+			<xs:enumeration value="TEST_DRAKAN"/>
+			<xs:enumeration value="TEST_ETC_ADARK"/>
+			<xs:enumeration value="TEST_ETC_ADRAGON"/>
+			<xs:enumeration value="TEST_ETC_ALIGHT"/>
+			<xs:enumeration value="TEST_LIGHT_ADARK"/>
+			<xs:enumeration value="TEST_LIGHT_ADRAGON"/>
+			<xs:enumeration value="TEST_LIGHT_AETC"/>
+			<xs:enumeration value="TEST_SUPPORTNPC"/>
+			<xs:enumeration value="TESTBATTLE_NPC"/>
+			<xs:enumeration value="TIAMAT"/>
+			<xs:enumeration value="TIAMATREMNANT_DRAKAN"/>
+			<xs:enumeration value="TIAMATREMNANT_LIZARD"/>
+			<xs:enumeration value="TIAMATREMNANT_LIZARD_INJURY"/>
+			<xs:enumeration value="TIGRAN"/>
+			<xs:enumeration value="TOG"/>
+			<xs:enumeration value="TOG_AKALNIF"/>
+			<xs:enumeration value="TOG_AZAIF"/>
+			<xs:enumeration value="TOWERMAN"/>
+			<xs:enumeration value="TRICO"/>
+			<xs:enumeration value="TRICON"/>
+			<xs:enumeration value="UNDEADGRADIATOR_DF1"/>
+			<xs:enumeration value="UNDER_01_WAR_VRITRA"/>
+			<xs:enumeration value="USEALL"/>
+			<xs:enumeration value="USEALL_HOSTILEPC"/>
+			<xs:enumeration value="USEALL_LDF5_TOWER_DA"/>
+			<xs:enumeration value="USEALL_LDF5_TOWER_LI"/>
+			<xs:enumeration value="USEALL_TELEPORTER_DA"/>
+			<xs:enumeration value="USEALL_TELEPORTER_LI"/>
+			<xs:enumeration value="USEALLNONETOMONSTER"/>
+			<xs:enumeration value="VRITRA"/>
+			<xs:enumeration value="VRITRASUPPORT"/>
+			<xs:enumeration value="VRITRATANK"/>
+			<xs:enumeration value="WAVE_SWARM1"/>
+			<xs:enumeration value="WAVE_SWARM2"/>
+			<xs:enumeration value="WAVE_TREE"/>
+			<xs:enumeration value="WORLDRAID_MONSTER"/>
+			<xs:enumeration value="WORLDRAID_MONSTER_SANDWORMSUM"/>
+			<xs:enumeration value="WORLDRAID_NPC"/>
+			<xs:enumeration value="XDRAKAN"/>
+			<xs:enumeration value="XDRAKAN_DGUARD"/>
+			<xs:enumeration value="XDRAKAN_ELEMENTALIST"/>
+			<xs:enumeration value="XDRAKAN_LGUARD"/>
+			<xs:enumeration value="XDRAKAN_PET"/>
+			<xs:enumeration value="XDRAKAN_PRIEST"/>
+			<xs:enumeration value="XDRAKAN_SERVANT"/>
+			<xs:enumeration value="XDRAKAN_UNATTACK"/>
+			<xs:enumeration value="XIPETO"/>
+			<xs:enumeration value="XIPETOBABY"/>
+			<xs:enumeration value="ZAIF"/>
+			<xs:enumeration value="ZAIF_ABROWNIEFELLER_LF1"/>
+			<xs:enumeration value="ZAIF_ADARU"/>
+			<xs:enumeration value="ZAIF_AMINX"/>
+			<xs:enumeration value="ZAIF_ATOG"/>
+			<xs:enumeration value="IDRUNEWP_RUNEFRIEND"/>
+			<!-- 4.7 -->
+			<xs:enumeration value="IDLDF4_RE_01_FRIEND"/>
+			<xs:enumeration value="IDLDF4_RE_01"/>
+			<xs:enumeration value="LDF4_ADVANCE_SAAM"/>
+			<xs:enumeration value="LDF4_ADVANCE_NEUTH"/>
+			<xs:enumeration value="LDF4_ADVANCE_XIPRTO"/>
+			<xs:enumeration value="LDF4_ADVANCE_SINGLE"/>
+			<xs:enumeration value="LDF4_ADVANCE_TIAMAT"/>
+			<xs:enumeration value="LDF4_ADVANCE_POTCRAB"/>
+			<xs:enumeration value="LDF4_ADVANCE_POPOKU"/>
+			<xs:enumeration value="LDF4_ADVANCE_MUDTHORN"/>
+			<xs:enumeration value="LDF4_ADVANCE_WORKER"/>
+			<xs:enumeration value="LDF4_ADVANCE_MANDURI"/>
+			<xs:enumeration value="LDF4_ADVANCE_LGUARD"/>
+			<xs:enumeration value="LDF4_ADVANCE_DGUARD"/>
+			<xs:enumeration value="LDF4_ADVANCE_DRGUARD"/>
+			<xs:enumeration value="IDFORTRESS_VRITRA"/>
+			<xs:enumeration value="IDLDF4_RE_01_DOOR"/>
+			<xs:enumeration value="WORLDRAID_MONSTER"/>
+			<xs:enumeration value="LDF5_FORTRESS_VRITRA"/>
+			<xs:enumeration value="LDF5_FORTRESS_LIGHT"/>
+			<xs:enumeration value="LDF5_FORTRESS_DARK"/>
+			<xs:enumeration value="TELEPORTOR_LI"/>
+			<xs:enumeration value="TELEPORTOR_DA"/>
+			<xs:enumeration value="GCHIEF_LIGHT"/>
+			<xs:enumeration value="GCHIEF_DARK"/>
+			<xs:enumeration value="GCHIEF_DRAGON"/>
+			<xs:enumeration value="GAB1_SUB_DRAKAN"/>
+			<xs:enumeration value="GAB1_SUB_KILLER"/>
+			<xs:enumeration value="GAB1_SUB_DEST_69"/>
+			<xs:enumeration value="GAB1_SUB_DEST_70"/>
+			<xs:enumeration value="GAB1_SUB_DEST_71"/>
+			<xs:enumeration value="GAB1_SUB_DEST_72"/>
+			<xs:enumeration value="GAB1_SUB_NONAGGRESSIVE_DRAKAN"/>
+			<xs:enumeration value="GAB1_01_POINT_01"/>
+			<xs:enumeration value="GAB1_02_POINT_01"/>
+			<xs:enumeration value="GAB1_03_POINT_01"/>
+			<xs:enumeration value="GAB1_04_POINT_01"/>
+			<xs:enumeration value="GAB1_01_POINT_02"/>
+			<xs:enumeration value="GAB1_01_POINT_03"/>
+			<xs:enumeration value="GAB1_01_POINT_04"/>
+			<xs:enumeration value="GAB1_01_POINT_05"/>
+			<xs:enumeration value="GAB1_02_POINT_02"/>
+			<xs:enumeration value="GAB1_02_POINT_03"/>
+			<xs:enumeration value="GAB1_02_POINT_04"/>
+			<xs:enumeration value="GAB1_02_POINT_05"/>
+			<xs:enumeration value="GAB1_03_POINT_02"/>
+			<xs:enumeration value="GAB1_03_POINT_03"/>
+			<xs:enumeration value="GAB1_03_POINT_04"/>
+			<xs:enumeration value="GAB1_03_POINT_05"/>
+			<xs:enumeration value="GAB1_04_POINT_02"/>
+			<xs:enumeration value="GAB1_04_POINT_03"/>
+			<xs:enumeration value="GAB1_04_POINT_04"/>
+			<xs:enumeration value="GAB1_04_POINT_05"/>
+			<xs:enumeration value="GAB1_MONSTER"/>
+			<xs:enumeration value="GAB1_KILLER"/>
+			<xs:enumeration value="IDVRITRA_BASE_GI_CANNON"/>
+			<xs:enumeration value="IDVRITRA_BASE_GI_BEACON"/>
+			<xs:enumeration value="IDF5_U3_VRITRA_BOSS_SUM"/>
+			<xs:enumeration value="IDF5_U3_CANNON"/>
+			<xs:enumeration value="IDF5_U3_OBJ"/>
+			<xs:enumeration value="IDF5_U3_VRITRA_SUM"/>
+			<xs:enumeration value="IDF5_TELEPORT_MONSTER"/>
+			<xs:enumeration value="IDF5_TELEPORT_NPC"/>
+			<xs:enumeration value="IDKAMAR_PROTECTGUARD"/>
+			<xs:enumeration value="GAB1_TURRET"/>
+			<xs:enumeration value="LDF5_DUMMY1"/>
+			<xs:enumeration value="LDF5_DUMMY2"/>
+			<xs:enumeration value="LDF5_DUMMY1_LGUARD"/>
+			<xs:enumeration value="LDF5_DUMMY1_DGUARD"/>
+			<xs:enumeration value="LDF5_DUMMY2_LGUARD"/>
+			<xs:enumeration value="LDF5_DUMMY2_DGUARD"/>
+			<xs:enumeration value="LDF5_SPARRING1_LGUARD"/>
+			<xs:enumeration value="LDF5_SPARRING1_DGUARD"/>
+			<xs:enumeration value="LDF5_SPARRING2_LGUARD"/>
+			<xs:enumeration value="LDF5_SPARRING2_DGUARD"/>
+			<xs:enumeration value="LDF5_FORTRESS_TANK_LIGHT"/>
+			<xs:enumeration value="LDF5_FORTRESS_TANK_DARK"/>
+			<xs:enumeration value="IDFORTRESS_SWITCH_LIGHT"/>
+			<xs:enumeration value="IDFORTRESS_SWITCH_DARK"/>
+			<xs:enumeration value="DRAKAN"/>
+			<xs:enumeration value="IDLDF4_RE_01_GUARD"/>
+			<xs:enumeration value="IDLDF4_RE_01_GUARD_DARK"/>
+			<xs:enumeration value="GAB1_MONSTER_NONAGGRE"/>
+			<xs:enumeration value="GAB1_SHUGO"/>
+			<xs:enumeration value="LDF4_ADVANCE_CHAPIRE_SINGLE"/>
+			<xs:enumeration value="LDF4_ADVANCE_CHAPIRE_SUPPORT"/>
+			<xs:enumeration value="WORLDRAID_MONSTER_SANDWORMSUM"/>
+			<xs:enumeration value="GAB1_SUB_DEST_69_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_DEST_70_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_DEST_71_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_DEST_72_AGGRESSIVE"/>
+			<xs:enumeration value="GAB1_SUB_ATTACKABLE_FOBJ"/>
+			<xs:enumeration value="GAB1_01_REMNANT"/>
+			<xs:enumeration value="GAB1_02_REMNANT"/>
+			<xs:enumeration value="GAB1_03_REMNANT"/>
+			<xs:enumeration value="GAB1_04_REMNANT"/>
+			<xs:enumeration value="SIEGEWEAPON_PC" />
+			<xs:enumeration value="SIEGEWEAPON_PC_DARK" />
+			<!-- 4.8 -->
+			<xs:enumeration value="AB1_DOOR_LI" />
+			<xs:enumeration value="AB1_DOOR_DA" />
+			<xs:enumeration value="IDSEAL_BOSS_OBEY" />
+			<xs:enumeration value="AB1_DOORKILLER" />
+			<xs:enumeration value="IDSTATION_BOOM" />
+			<xs:enumeration value="IDSEAL_BOSS" />
+			<xs:enumeration value="IDSEAL_SEALGUARD" />
+			<xs:enumeration value="IDSEAL_BOSS_SKILL_01" />
+			<xs:enumeration value="IDSEAL_BOSS_SKILL_02" />
+			<xs:enumeration value="IDSEAL_BOSS_SKILL_03" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Race">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ASMODIANS" />
+			<xs:enumeration value="BARRIER" />
+			<xs:enumeration value="BEAST" />
+			<xs:enumeration value="BROWNIE" />
+			<xs:enumeration value="CARRIER" />
+			<xs:enumeration value="CONSTRUCT" />
+			<xs:enumeration value="DARK" />
+			<xs:enumeration value="DEFORM" />
+			<xs:enumeration value="DEMIHUMANOID" />
+			<xs:enumeration value="DRAGON" />
+			<xs:enumeration value="DRAGON_CASTLE_DOOR" />
+			<xs:enumeration value="DRAKAN" />
+			<xs:enumeration value="ELEMENTAL" />
+			<xs:enumeration value="ELYOS" />
+			<xs:enumeration value="EVENT_TOWER_DARK" />
+			<xs:enumeration value="EVENT_TOWER_LIGHT" />
+			<xs:enumeration value="GCHIEF_DARK" />
+			<xs:enumeration value="GCHIEF_LIGHT" />
+			<xs:enumeration value="GHENCHMAN_DARK" />
+			<xs:enumeration value="GHENCHMAN_LIGHT" />
+			<xs:enumeration value="GCHIEF_DRAGON" />
+			<xs:enumeration value="GOBLIN" />
+			<xs:enumeration value="KRALL" />
+			<xs:enumeration value="LIGHT" />
+			<xs:enumeration value="LIVINGWATER" />
+			<xs:enumeration value="LIZARDMAN" />
+			<xs:enumeration value="LYCAN" />
+			<xs:enumeration value="MAGICALMONSTER" />
+			<xs:enumeration value="NAGA" />
+			<xs:enumeration value="NEUT" />
+			<xs:enumeration value="NONE" />
+			<xs:enumeration value="NPC" />
+			<xs:enumeration value="OUTSIDER" />
+			<xs:enumeration value="PC_ALL" />
+			<xs:enumeration value="PC_DARK_CASTLE_DOOR" />
+			<xs:enumeration value="PC_LIGHT_CASTLE_DOOR" />
+			<xs:enumeration value="RATMAN" />
+			<xs:enumeration value="SHULACK" />
+			<xs:enumeration value="SIEGEDRAKAN" />
+			<xs:enumeration value="TELEPORTER" />
+			<xs:enumeration value="TRICODARK" />
+			<xs:enumeration value="UNDEAD" />
+			<xs:enumeration value="WORLD_EVENT_DEFTOWER" />
+			<xs:enumeration value="ORC" />
+			<xs:enumeration value="DRAGONET" />			
+			<xs:enumeration value="WORLD_EVENT_BONFIRE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IntListType">
+		<xs:list itemType="xs:int"/>
+	</xs:simpleType>
+</xs:schema>

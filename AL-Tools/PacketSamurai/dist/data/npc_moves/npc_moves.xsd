@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="npcMoves" type="NpcMoveList" />
+  
+  <xs:complexType name="NpcMove">
+    <xs:attribute name="x" type="xs:float" use="required" />
+    <xs:attribute name="y" type="xs:float" use="required" />
+    <xs:attribute name="z" type="xs:float" use="required" />
+    <xs:attribute default="0" name="mask" type="xs:byte" />
+    <xs:attribute default="0" name="speed" type="xs:float" />
+  </xs:complexType>
+  
+  <xs:complexType name="Npc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="step" type="NpcMove" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:int" use="required" />
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+  
+  <xs:complexType name="NpcMoveList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="npc" type="Npc" />
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

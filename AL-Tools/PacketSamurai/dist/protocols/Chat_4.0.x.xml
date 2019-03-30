@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol crypt="Null" checksumSize="3" name="Chat_4.0.x" port="10241"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="protocol.xsd">
+	<packetfamilly switchtype="c" way="ServerPackets">
+		<packet id="0x31" name="SM_CHAT_INI">
+			<part name="unk" type="d" />
+		</packet>
+		<packet id="0x02" name="SM_PLAYER_AUTH_RESPONSE">
+			<part name="unk" type="d" />
+			<part name="unk" type="h" />
+		</packet>
+		<packet id="0x11" name="SM_CHANNEL_RESPONSE">
+			<part name="unk" type="h" />
+			<part name="unk" type="h" />
+			<part name="channelId" type="d" />
+		</packet>
+		<packet id="0x1A" name="SM_CHANNEL_MESSAGE">
+			<part name="unk" type="d" />
+			<part name="unk" type="h" />
+			<part name="channelId" type="d" />
+			<part name="unk" type="h" />
+			<part name="unk" type="d" />
+			<part name="clientId" type="c" />
+			<part name="unk(0x00)" type="h" />
+			<part name="identifierLength" type="h" id="0" />
+			<for id="0">
+				<part name="identifier" type="b" size="2" />
+			</for>
+			<part name="messageLength" type="h" id="1" />
+			<for id="1">
+				<part name="text" type="b" size="2" />
+			</for>
+		</packet>
+	</packetfamilly>
+	<packetfamilly switchtype="c" way="ClientPackets">
+		<packet id="0x30" name="CM_CHAT_INI">
+			<part name="unk" type="d" />
+			<part name="unk" type="d" />
+			<part name="unk" type="d" />
+		</packet>
+		<packet id="0x05" name="CM_PLAYER_AUTH">
+			<part name="AION" type="b" size="26" />
+			<part name="playerId" type="d" />
+			<part name="unk" type="d" />
+			<part name="unk" type="d" />
+			<part name="unk" type="d" />
+			<part name="length" type="h" id="0" />
+			<for id="0">
+				<part name="identifier" type="b" size="2" />
+			</for>
+			<part name="accountLength" type="h" id="1" />
+			<for id="1">
+				<part name="accountName" type="s" />
+			</for>
+			<part name="tokenLength" type="h" id="2" />
+			<part name="token" type="b" sizeid="2" />
+		</packet>
+		<packet id="0x10" name="CM_CHANNEL_REQUEST">
+			<part name="channelIndex" type="h" />
+			<part name="unk" type="b" size="18" />
+			<part name="length" type="h" id="0" />
+			<for id="0">
+				<part name="channelIdentifier" type="s" />
+			</for>
+			<part name="unk" type="d" />
+		</packet>
+		<packet id="0x18" name="CM_CHANNEL_MESSAGE">
+			<part name="unk" type="b" size="16" />
+			<part name="channelId" type="d" />
+			<part name="unk" type="c" />
+			<part name="length" type="h" id="0" />
+			<for id="0">
+				<part name="content" type="b" size="2" />
+			</for>
+		</packet>
+		<packet id="0x2C" name="_________________CM_UNK_1">
+			<part name="unk" type="h" />
+		</packet>
+		<packet id="0xFF" name="_________________CM_UNK_PING">
+			<part name="unk" type="b" size="16" />
+		</packet>
+		<packet id="0x12" name="_________________CM_UNK_2">
+            <part name="unk" type="b" size="16" />
+			<part name="channelId" type="d" />
+		</packet>
+	</packetfamilly>
+</protocol>

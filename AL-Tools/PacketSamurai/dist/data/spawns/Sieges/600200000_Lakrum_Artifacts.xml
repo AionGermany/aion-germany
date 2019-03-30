@@ -1,0 +1,2461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="600200000">
+        <siege_spawn siege_id="1511">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 121st Defence Troop ||| LDF7_1511_Boss_Da_5 -->
+					<spawn npc_id="885655" respawn_time="295">
+						<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+					</spawn>
+					<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Da -->
+					<spawn npc_id="885782" respawn_time="295">
+						<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="421"/>
+					</spawn>
+					<!-- Denir ||| LDF7_Denir_E -->
+					<spawn npc_id="836603" respawn_time="295">
+						<spot x="1803.3745" y="1116.4492" z="261.875" h="60"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v01_Teleport_D -->
+					<spawn npc_id="731903" respawn_time="295">
+						<spot x="1803.2623" y="1119.7411" z="264.31198" h="100" static_id="1253"/>
+					</spawn>
+					<!-- None ||| LDF7_Event_Flag_D -->
+					<spawn npc_id="836870" respawn_time="295">
+						<spot x="1797.857" y="963.03253" z="232.6956" h="0" static_id="918"/>
+					</spawn>
+					<!-- None ||| LDF7_v01_Flyctrl_D -->
+					<spawn npc_id="836883" respawn_time="295">
+						<spot x="1787.7438" y="1117.4237" z="261.875" h="0"/>
+					</spawn>
+					<!-- Warrior of the 121st Occupation Troop ||| LDF7_1511_Da_Guard_Fi -->
+					<spawn npc_id="885839" respawn_time="295">
+						<spot x="1797.8284" y="1111.813" z="261.875" h="105"/>
+						<spot x="1776.347" y="1127.2982" z="261.875" h="90"/>
+					</spawn>
+					<!-- Scout of the 121st Occupation Troop ||| LDF7_1511_Da_Guard_As -->
+					<spawn npc_id="885840" respawn_time="295">
+						<spot x="1787.3534" y="1104.352" z="261.875" h="90"/>
+					</spawn>
+					<!-- Recruit of the 121st Occupation Troop ||| LDF7_1511_Da_Guard_Wi -->
+					<spawn npc_id="885841" respawn_time="295">
+						<spot x="1776.6486" y="1113.5549" z="261.875" h="75"/>
+					</spawn>
+					<!-- Healer of the 121st Occupation Troop ||| LDF7_1511_Da_Guard_Pr -->
+					<spawn npc_id="885842" respawn_time="295">
+						<spot x="1783.1279" y="1138.0376" z="261.875" h="105"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1511\\\\\\\\\\\\\\\\  -->
+					<!-- Warrior of the 121st Defence Squad ||| LDF7_1511_Dr_Normal_Fi -->
+					<spawn npc_id="885839" respawn_time="295">
+						<spot x="1801.3365" y="960.57477" z="230.125" h="90"/>
+						<spot x="1800.8654" y="970.13245" z="230.125" h="100"/>
+						<spot x="1788.2705" y="965.46313" z="230.25" h="71"/>
+						<spot x="1780.3235" y="979.90204" z="230.25" h="60"/>
+					</spawn>
+					<!-- Raider of the 121st Defence Squad ||| LDF7_1511_Dr_Normal_As -->
+					<spawn npc_id="885840" respawn_time="295">
+						<spot x="1793.5541" y="962.13794" z="230.25" h="90"/>
+					</spawn>
+					<!-- Dark Mage of the 121st Defence Squad ||| LDF7_1511_Dr_Normal_Wi -->
+					<spawn npc_id="885841" respawn_time="295">
+						<spot x="1794.5522" y="976.62274" z="230.25" h="60"/>
+					</spawn>
+					<!-- Healer of the 121st Defence Squad ||| LDF7_1511_Dr_Normal_Pr -->
+					<spawn npc_id="885842" respawn_time="295">
+						<spot x="1786.2008" y="971.9496" z="230.25" h="111"/>
+					</spawn>
+					<!-- Fighter of the 121st Scout Troop ||| LDF7_1511_Li_Recon_Fi -->
+					<spawn npc_id="885947" respawn_time="295">
+						<spot x="1780.3235" y="979.90204" z="230.25" h="60"/>
+						<spot x="1800.8654" y="970.13245" z="230.125" h="100"/>
+						<spot x="1788.2705" y="965.46313" z="230.25" h="71"/>
+						<spot x="1801.3365" y="960.57477" z="230.125" h="90"/>
+					</spawn>
+					<!-- Scout of the 121st Scout Troop ||| LDF7_1511_Li_Recon_As -->
+					<spawn npc_id="885948" respawn_time="295">
+						<spot x="1793.5541" y="962.13794" z="230.25" h="90"/>
+					</spawn>
+					<!-- Recruit of the 121st Scout Troop ||| LDF7_1511_Li_Recon_Wi -->
+					<spawn npc_id="885949" respawn_time="295">
+						<spot x="1794.5522" y="976.62274" z="230.25" h="60"/>
+					</spawn>
+					<!-- Healer of the 121st Search Party ||| LDF7_1511_Da_Recon_Pr -->
+					<spawn npc_id="885950" respawn_time="295">
+						<spot x="1786.2008" y="971.9496" z="230.25" h="111"/>
+					</spawn>
+					<!-- Fighter of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Fi -->
+					<spawn npc_id="885955" respawn_time="295">
+						<spot x="1801.3365" y="960.57477" z="230.125" h="90"/>
+						<spot x="1800.8654" y="970.13245" z="230.125" h="100"/>
+						<spot x="1788.2705" y="965.46313" z="230.25" h="71"/>
+						<spot x="1780.3235" y="979.90204" z="230.25" h="60"/>
+					</spawn>
+					<!-- Raider of the 121st Conquest Squad ||| LDF7_1511_Dr_Normal_As -->
+					<spawn npc_id="885944" respawn_time="295">
+						<spot x="1793.5541" y="962.13794" z="230.25" h="90"/>
+					</spawn>
+					<!-- Dark Mage of the 121st Conquest Squad ||| LDF7_1511_Dr_Normal_Wi -->
+					<spawn npc_id="885945" respawn_time="295">
+						<spot x="1794.5522" y="976.62274" z="230.25" h="60"/>
+					</spawn>
+					<!-- Healer of the 121st Conquest Squad ||| LDF7_1511_Dr_Normal_Pr -->
+					<spawn npc_id="885946" respawn_time="295">
+						<spot x="1786.2008" y="971.9496" z="230.25" h="111"/>
+					</spawn>	 
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 121st Conquest Squad ||| LDF7_1511_Boss_Dr_5 -->
+					<spawn npc_id="885660" respawn_time="295">
+						<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+					</spawn>
+					<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Dr -->
+					<spawn npc_id="885783">
+						<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="413"/>
+					</spawn>
+					<!-- Warrior of the 121st Conquest Squad ||| LDF7_1511_Dr_Guard_Fi -->
+					<spawn npc_id="885843" respawn_time="295">
+						<spot x="1797.8284" y="1111.813" z="261.875" h="105"/>
+						<spot x="1776.347" y="1127.2982" z="261.875" h="90"/>
+					</spawn>
+					<!-- Scout of the 121st Conquest Squad ||| LDF7_1511_Dr_Guard_As -->
+					<spawn npc_id="885844" respawn_time="295">
+						<spot x="1787.3534" y="1104.352" z="261.875" h="90"/>
+					</spawn>
+					<!-- Dark Mage of the 121st Conquest Squad ||| LDF7_1511_Dr_Guard_Wi -->
+					<spawn npc_id="885845" respawn_time="295">
+						<spot x="1776.6486" y="1113.5549" z="261.875" h="75"/>
+					</spawn>
+					<!-- Healer of the 121st Conquest Squad ||| LDF7_1511_Dr_Guard_Pr -->
+					<spawn npc_id="885846" respawn_time="295">
+						<spot x="1783.1279" y="1138.0376" z="261.875" h="105"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Dr_01 -->
+					<spawn npc_id="886330" respawn_time="295">
+						<spot x="1787.9502" y="1116.0804" z="261.875" h="0"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON DRAGONBOUND OCCUPYING 1511\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Fi -->
+					<spawn npc_id="885955" respawn_time="295">
+						<spot x="1974.2224" y="1043.4427" z="271.2117" h="60"/>
+						<spot x="1971.8225" y="1085.0042" z="270.8067" h="60"/>
+						<spot x="1974.482" y="1074.527" z="270.875" h="45"/>
+						<spot x="1973.8912" y="1057.0541" z="270.875" h="75"/>
+					</spawn>
+					<!-- Raider of the 121st Vanguard ||| LDF7_1511_Dr_Recon_As -->
+					<spawn npc_id="885956" respawn_time="295">
+						<spot x="1965.9564" y="1067.2903" z="270.75" h="56"/>
+					</spawn>
+					<!-- Dark Mage of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Wi -->
+					<spawn npc_id="885957" respawn_time="295">
+						<spot x="1986.8395" y="1065.8446" z="270.875" h="60"/>
+					</spawn>
+					<!-- Healer of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Pr -->
+					<spawn npc_id="885958" respawn_time="295">
+						<spot x="1985.0017" y="1076.3589" z="270.875" h="45"/>
+					</spawn>
+					<!-- Warrior of the 121st Conquest Squad ||| LDF7_1511_Dr_Normal_Fi -->
+					<spawn npc_id="885943" respawn_time="295">
+						<spot x="1780.3235" y="979.90204" z="230.25" h="60"/>
+						<spot x="1800.8654" y="970.13245" z="230.125" h="100"/>
+						<spot x="1788.2705" y="965.46313" z="230.25" h="71"/>
+						<spot x="1801.3365" y="960.57477" z="230.125" h="90"/>
+					</spawn>
+					<!-- Raider of the 121st Conquest Squad ||| LDF7_1511_Dr_Normal_As -->
+					<spawn npc_id="885944" respawn_time="295">
+						<spot x="1793.5541" y="962.13794" z="230.25" h="90"/>
+					</spawn>
+					<!-- Dark Mage of the 121st Conquest Squad ||| LDF7_1511_Dr_Normal_Wi -->
+					<spawn npc_id="885945" respawn_time="295">
+						<spot x="1794.5522" y="976.62274" z="230.25" h="60"/>
+					</spawn>
+					<!-- Healer of the 121st Conquest Squad ||| LDF7_1511_Dr_Normal_Pr -->
+					<spawn npc_id="885946" respawn_time="295">
+						<spot x="1786.2008" y="971.9496" z="230.25" h="111"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Dr_01 -->
+					<spawn npc_id="886330" respawn_time="295">
+						<spot x="1787.9502" y="1116.0804" z="261.875" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 121st Occupation Troop ||| LDF7_1511_Boss_Li_1 -->
+					<spawn npc_id="885646" respawn_time="295">
+						<spot x="1801.0" y="1136.0" z="261.875" h="75"/>
+					</spawn>
+					<!-- 121st Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15111_Li -->
+					<spawn npc_id="885781" respawn_time="295">
+						<spot x="1788.4799" y="1125.0891" z="261.875" h="0" static_id="432"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v01_Teleport_L -->
+					<spawn npc_id="731894" respawn_time="295">
+						<spot x="1803.2623" y="1119.7411" z="264.31198" h="100" static_id="1253"/>
+					</spawn>
+					<!-- Jeronos ||| LDF7_Jeronos_E -->
+					<spawn npc_id="836594" respawn_time="295">
+						<spot x="1803.3745" y="1116.4492" z="261.875" h="60"/>
+					</spawn>
+					<!-- None ||| LDF7_Event_Flag_L -->
+					<spawn npc_id="836869" respawn_time="295">
+						<spot x="1797.857" y="963.03253" z="232.6956" h="0" static_id="918"/>
+					</spawn>
+					<!-- None ||| LDF7_v01_Flyctrl_L -->
+					<spawn npc_id="836873" respawn_time="295">
+						<spot x="1787.7438" y="1117.4237" z="261.875" h="0"/>
+					</spawn>
+					<!-- Warrior of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_Fi -->
+					<spawn npc_id="885835" respawn_time="295">
+						<spot x="1797.8284" y="1111.813" z="261.875" h="105"/>
+						<spot x="1776.347" y="1127.2982" z="261.875" h="90"/>
+					</spawn>
+					<!-- Scout of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_As -->
+					<spawn npc_id="885836" respawn_time="295">
+						<spot x="1787.3534" y="1104.352" z="261.875" h="90"/>
+					</spawn>
+					<!-- Recruit of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_Wi -->
+					<spawn npc_id="885837" respawn_time="295">
+						<spot x="1776.6486" y="1113.5549" z="261.875" h="75"/>
+					</spawn>
+					<!-- Healer of the 121st Occupation Troop ||| LDF7_1511_Li_Guard_Pr -->
+					<spawn npc_id="885838" respawn_time="295">
+						<spot x="1783.1279" y="1138.0376" z="261.875" h="105"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1511\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 121st Search Party ||| LDF7_1511_Da_Recon_Fi -->
+					<spawn npc_id="885951" respawn_time="295">
+						<spot x="1780.3235" y="979.90204" z="230.25" h="60"/>
+						<spot x="1800.8654" y="970.13245" z="230.125" h="100"/>
+						<spot x="1788.2705" y="965.46313" z="230.25" h="71"/>
+						<spot x="1801.3365" y="960.57477" z="230.125" h="90"/>
+					</spawn>
+					<!-- Scout of the 121st Search Party ||| LDF7_1511_Da_Recon_As -->
+					<spawn npc_id="885952" respawn_time="295">
+						<spot x="1793.5541" y="962.13794" z="230.25" h="90"/>
+					</spawn>
+					<!-- Recruit of the 121st Search Party ||| LDF7_1511_Da_Recon_Wi -->
+					<spawn npc_id="885953" respawn_time="295">
+						<spot x="1794.5522" y="976.62274" z="230.25" h="60"/>
+					</spawn>
+					<!-- Healer of the 121st Search Party ||| LDF7_1511_Da_Recon_Pr -->
+					<spawn npc_id="885954" respawn_time="295">
+						<spot x="1786.2008" y="971.9496" z="230.25" h="111"/>
+					</spawn>
+					<!-- Fighter of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Fi -->
+					<spawn npc_id="885955" respawn_time="295">
+						<spot x="1971.8225" y="1085.0042" z="270.8067" h="60"/>
+						<spot x="1974.482" y="1074.527" z="270.875" h="45"/>
+						<spot x="1973.8912" y="1057.0541" z="270.875" h="75"/>
+						<spot x="1974.2224" y="1043.4427" z="271.2117" h="60"/>
+					</spawn>
+					<!-- Raider of the 121st Vanguard ||| LDF7_1511_Dr_Recon_As -->
+					<spawn npc_id="885956" respawn_time="295">
+						<spot x="1965.9564" y="1067.2903" z="270.75" h="56"/>
+					</spawn>
+					<!-- Dark Mage of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Wi -->
+					<spawn npc_id="885957" respawn_time="295">
+						<spot x="1986.8395" y="1065.8446" z="270.875" h="60"/>
+					</spawn>
+					<!-- Healer of the 121st Vanguard ||| LDF7_1511_Dr_Recon_Pr -->
+					<spawn npc_id="885958" respawn_time="295">
+						<spot x="1985.0017" y="1076.3589" z="270.875" h="45"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Li_01 -->
+					<spawn npc_id="886339" respawn_time="295">
+						<spot x="1787.9502" y="1116.0804" z="261.875" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1512">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 122nd Defence Troop ||| LDF7_1512_Boss_Da_5 -->
+					<spawn npc_id="885670" respawn_time="295">
+						<spot x="1052.5057" y="554.54" z="304.5" h="83"/>
+					</spawn>
+					<!-- 122nd Garrison - Battle Encouragement ||| LDF7_Artifact_15121_Da -->
+					<spawn npc_id="885785" respawn_time="295">
+						<spot x="1046.7" y="539.7716" z="304.5" h="0" static_id="1497"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v02_Teleport_D -->
+					<spawn npc_id="731904" respawn_time="295">
+						<spot x="1034.402" y="549.9618" z="304.5" h="116" />
+					</spawn>
+					<!-- Prodin ||| LDF7_Fordin_E -->
+					<spawn npc_id="836604" respawn_time="295">
+						<spot x="1042.38" y="553.3225" z="304.5" h="94"/>
+					</spawn>
+					<!-- Warrior of the 122nd Defence Squad ||| LDF7_1512_Dr_Guard_Fi -->
+					<spawn npc_id="885851" respawn_time="295">
+						<spot x="1056.5366" y="530.0116" z="304.375" h="90"/>
+						<spot x="1039.073" y="535.909" z="304.5" h="75"/>
+					</spawn>
+					<!-- Scout of the 122nd Defence Squad ||| LDF7_1512_Dr_Guard_As -->
+					<spawn npc_id="885852" respawn_time="295">
+						<spot x="1055.022" y="519.212" z="304.375" h="105"/>
+					</spawn>
+					<!-- Dark Mage of the 122nd Defence Squad ||| LDF7_1512_Dr_Guard_Wi -->
+					<spawn npc_id="885853" respawn_time="295">
+						<spot x="1040.7745" y="524.6127" z="304.5" h="90"/>
+					</spawn>
+					<!-- Healer of the 122nd Defence Squad ||| LDF7_1512_Dr_Guard_Pr -->
+					<spawn npc_id="885854" respawn_time="295">
+						<spot x="1062.1648" y="540.8894" z="304.375" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1512\\\\\\\\\\\\\\\\  -->	
+					<!-- Fighter of the 122nd Scout Troop ||| LDF7_1512_Li_Recon_Fi -->
+					<spawn npc_id="885963" respawn_time="295">
+						<spot x="1131.0309" y="473.3075" z="291.625" h="60"/>
+						<spot x="1127.9218" y="478.3962" z="291.625" h="45"/>
+						<spot x="1125.1613" y="464.02777" z="291.625" h="75"/>
+					</spawn>
+					<!-- Scout of the 122nd Scout Troop ||| LDF7_1512_Li_Recon_As -->
+					<spawn npc_id="885964" respawn_time="295">
+						<spot x="1119.4255" y="473.03812" z="291.625" h="60"/>
+					</spawn>
+					<!-- Recruit of the 122nd Scout Troop ||| LDF7_1512_Li_Recon_Wi -->
+					<spawn npc_id="885965" respawn_time="295">
+						<spot x="1133.7263" y="468.31604" z="291.625" h="66"/>
+					</spawn>
+					<!-- Healer of the 122nd Scout Troop ||| LDF7_1512_Li_Recon_Pr -->
+					<spawn npc_id="885966" respawn_time="295">
+						<spot x="1133.5143" y="458.444" z="291.625" h="90"/>
+					</spawn>
+					<!-- Fighter of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_Fi -->
+					<spawn npc_id="885971" respawn_time="295">
+						<spot x="1064.8561" y="432.6472" z="297.375" h="15"/>
+						<spot x="1049.3772" y="429.769" z="297.375" h="45"/>
+						<spot x="1043.4203" y="421.8305" z="297.375" h="45"/>
+						<spot x="1070.6351" y="422.61197" z="297.375" h="15"/>
+					</spawn>
+					<!-- Raider of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_As -->
+					<spawn npc_id="885972" respawn_time="295">
+						<spot x="1057.3383" y="440.45386" z="297.375" h="30"/>
+					</spawn>
+					<!-- Dark Mage of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_Wi -->
+					<spawn npc_id="885973" respawn_time="295">
+						<spot x="1061.1613" y="419.35028" z="297.375" h="30"/>
+					</spawn>
+					<!-- Healer of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_Pr -->
+					<spawn npc_id="885974" respawn_time="295">
+						<spot x="1076.1577" y="428.30023" z="297.375" h="0"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Dr_02 -->
+					<spawn npc_id="886331" respawn_time="295">
+						<spot x="1049.407" y="531.97473" z="304.5" h="0"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Li_02 -->
+					<spawn npc_id="886340" respawn_time="295">
+						<spot x="1049.407" y="531.97473" z="304.5" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 122nd Conquest Squad ||| LDF7_1512_Boss_Dr_1 -->
+					<spawn npc_id="885671" respawn_time="295">
+						<spot x="1052.5057" y="554.54" z="304.5" h="83"/>
+					</spawn>
+					<!-- 122nd Garrison - Battle Encouragement ||| LDF7_Artifact_15121_Dr -->
+					<spawn npc_id="885786" respawn_time="295">
+						<spot x="1046.7" y="539.7716" z="304.5" h="0" static_id="827"/>
+					</spawn>
+					<!-- Warrior of the 122nd Conquest Squad ||| LDF7_1512_Dr_Guard_Fi -->
+					<spawn npc_id="885855" respawn_time="295">
+						<spot x="1056.5366" y="530.0116" z="304.375" h="90"/>
+						<spot x="1039.073" y="535.909" z="304.5" h="75"/>
+					</spawn>
+					<!-- Scout of the 122nd Conquest Squad ||| LDF7_1512_Dr_Guard_As -->
+					<spawn npc_id="885856" respawn_time="295">
+						<spot x="1055.022" y="519.212" z="304.375" h="105"/>
+					</spawn>
+					<!-- Dark Mage of the 122nd Conquest Squad ||| LDF7_1512_Dr_Guard_Wi -->
+					<spawn npc_id="885857" respawn_time="295">
+						<spot x="1040.7745" y="524.6127" z="304.5" h="90"/>
+					</spawn>
+					<!-- Healer of the 122nd Conquest Squad ||| LDF7_1512_Dr_Guard_Pr -->
+					<spawn npc_id="885858" respawn_time="295">
+						<spot x="1062.1648" y="540.8894" z="304.375" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON DRAGONBOUND OCCUPYING 1512\\\\\\\\\\\\\\\\  -->	
+					<!-- Warrior of the 122nd Conquest Squad ||| LDF7_1512_Dr_Normal_Fi -->
+					<spawn npc_id="885959" respawn_time="295">
+						<spot x="1127.9218" y="478.3962" z="291.625" h="45"/>
+						<spot x="1131.0309" y="473.3075" z="291.625" h="60"/>
+						<spot x="1125.1613" y="464.02777" z="291.625" h="75"/>
+						<spot x="1127.151" y="456.10022" z="291.625" h="90"/>
+						<spot x="1064.8561" y="432.6472" z="297.375" h="15"/>
+						<spot x="1049.3772" y="429.769" z="297.375" h="45"/>
+						<spot x="1070.6351" y="422.61197" z="297.375" h="15"/>
+						<spot x="1043.4203" y="421.8305" z="297.375" h="45"/>
+					</spawn>
+					<!-- Raider of the 122nd Conquest Squad ||| LDF7_1512_Dr_Normal_As -->
+					<spawn npc_id="885960" respawn_time="295">
+						<spot x="1119.4255" y="473.03812" z="291.625" h="60"/>
+						<spot x="1057.3383" y="440.45386" z="297.375" h="30"/>
+					</spawn>
+					<!-- Dark Mage of the 122nd Conquest Squad ||| LDF7_1512_Dr_Normal_Wi -->
+					<spawn npc_id="885961" respawn_time="295">
+						<spot x="1133.7263" y="468.31604" z="291.625" h="66"/>
+						<spot x="1061.1613" y="419.35028" z="297.375" h="30"/>
+					</spawn>
+					<!-- Healer of the 122nd Conquest Squad ||| LDF7_1512_Dr_Normal_Pr -->
+					<spawn npc_id="885962" respawn_time="295">
+						<spot x="1133.5143" y="458.444" z="291.625" h="90"/>
+						<spot x="1076.1577" y="428.30023" z="297.375" h="0"/>
+					</spawn>
+					<!-- Warrior of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_Fi -->
+					<spawn npc_id="885971" respawn_time="295">
+						<spot x="1056.5366" y="530.0116" z="304.375" h="90"/>
+						<spot x="1039.073" y="535.909" z="304.5" h="75"/>
+					</spawn>
+					<!-- Scout of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_As -->
+					<spawn npc_id="885972" respawn_time="295">
+						<spot x="1055.022" y="519.212" z="304.375" h="105"/>
+					</spawn>
+					<!-- Recruit of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_Wi -->
+					<spawn npc_id="885849" respawn_time="295">
+						<spot x="1040.7745" y="524.6127" z="304.5" h="90"/>
+					</spawn>
+					<!-- Healer of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_Pr -->
+					<spawn npc_id="885973" respawn_time="295">
+						<spot x="1062.1648" y="540.8894" z="304.375" h="60"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 122nd Occupation Troop ||| LDF7_1512_Boss_Li_5 -->
+					<spawn npc_id="885665" respawn_time="295">
+						<spot x="1052.5057" y="554.54" z="304.5" h="83"/>
+					</spawn>
+					<!-- 122nd Garrison - Battle Encouragement ||| LDF7_Artifact_15121_Li -->
+					<spawn npc_id="885784" respawn_time="295">
+						<spot x="1046.7" y="539.7716" z="304.5" h="0" static_id="1498"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v02_Teleport_L -->
+					<spawn npc_id="731895" respawn_time="295">
+						<spot x="1034.402" y="549.9618" z="304.5" h="116"/>
+					</spawn>
+					<!-- Hibedon ||| LDF7_Hiveidon_E -->
+					<spawn npc_id="836595" respawn_time="295">
+						<spot x="1042.38" y="553.3225" z="304.5" h="94"/>
+					</spawn>
+					<!-- Warrior of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_Fi -->
+					<spawn npc_id="885847" respawn_time="295">
+						<spot x="1056.5366" y="530.0116" z="304.375" h="90"/>
+						<spot x="1039.073" y="535.909" z="304.5" h="75"/>
+					</spawn>
+					<!-- Scout of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_As -->
+					<spawn npc_id="885848" respawn_time="295">
+						<spot x="1055.022" y="519.212" z="304.375" h="105"/>
+					</spawn>
+					<!-- Recruit of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_Wi -->
+					<spawn npc_id="885849" respawn_time="295">
+						<spot x="1040.7745" y="524.6127" z="304.5" h="90"/>
+					</spawn>
+					<!-- Healer of the 122nd Occupation Troop ||| LDF7_1512_Li_Guard_Pr -->
+					<spawn npc_id="885850" respawn_time="295">
+						<spot x="1062.1648" y="540.8894" z="304.375" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1512\\\\\\\\\\\\\\\\  -->		
+					<!-- Fighter of the 122nd Search Party ||| LDF7_1512_Da_Recon_Fi -->
+					<spawn npc_id="885967" respawn_time="295">
+						<spot x="1125.1613" y="464.02777" z="291.625" h="75"/>
+						<spot x="1131.0309" y="473.3075" z="291.625" h="60"/>
+						<spot x="1127.9218" y="478.3962" z="291.625" h="45"/>
+						<spot x="1125.1613" y="464.02777" z="291.625" h="75"/>
+					</spawn>
+					<!-- Scout of the 122nd Search Party ||| LDF7_1512_Da_Recon_As -->
+					<spawn npc_id="885968" respawn_time="295">
+						<spot x="1119.4255" y="473.03812" z="291.625" h="60"/>
+					</spawn>
+					<!-- Recruit of the 122nd Search Party ||| LDF7_1512_Da_Recon_Wi -->
+					<spawn npc_id="885969" respawn_time="295">
+						<spot x="1133.7263" y="468.31604" z="291.625" h="66"/>
+					</spawn>
+					<!-- Healer of the 122nd Search Party ||| LDF7_1512_Da_Recon_Pr -->
+					<spawn npc_id="885970" respawn_time="295">
+						<spot x="1133.5143" y="458.444" z="291.625" h="90"/>
+					</spawn>
+					<!-- Fighter of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_Fi -->
+					<spawn npc_id="885971" respawn_time="295">
+						<spot x="1064.8561" y="432.6472" z="297.375" h="15"/>
+						<spot x="1049.3772" y="429.769" z="297.375" h="45"/>
+						<spot x="1043.4203" y="421.8305" z="297.375" h="45"/>
+						<spot x="1070.6351" y="422.61197" z="297.375" h="15"/>
+					</spawn>
+					<!-- Raider of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_As -->
+					<spawn npc_id="885972" respawn_time="295">
+						<spot x="1057.3383" y="440.45386" z="297.375" h="30"/>
+					</spawn>
+					<!-- Dark Mage of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_Wi -->
+					<spawn npc_id="885973" respawn_time="295">
+						<spot x="1061.1613" y="419.35028" z="297.375" h="30"/>
+					</spawn>
+					<!-- Healer of the 122nd Vanguard ||| LDF7_1512_Dr_Recon_Pr -->
+					<spawn npc_id="885974" respawn_time="295">
+						<spot x="1076.1577" y="428.30023" z="297.375" h="0"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Dr_02 -->
+					<spawn npc_id="886331" respawn_time="295">
+						<spot x="1049.407" y="531.97473" z="304.5" h="0"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Li_02 -->
+					<spawn npc_id="886340" respawn_time="295">
+						<spot x="1049.407" y="531.97473" z="304.5" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1513">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 123rd Defence Troop ||| LDF7_1513_Boss_Da_5 -->
+					<spawn npc_id="885685" respawn_time="295">
+						<spot x="732.50525" y="815.547" z="332.625" h="15"/>
+					</spawn>
+					<!-- 123rd Garrison - Fantastic Flame ||| LDF7_Artifact_15131_Da -->
+					<spawn npc_id="885788" respawn_time="295">
+						<spot x="744.6924" y="802.78467" z="332.625" h="0" static_id="1733"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v03_Teleport_D -->
+					<spawn npc_id="731905" respawn_time="295">
+						<spot x="727.9611" y="800.67224" z="334.95532" h="30" static_id="1405"/>
+					</spawn>
+					<!-- Germod ||| LDF7_Germod_E -->
+					<spawn npc_id="836605" respawn_time="295">
+						<spot x="752.3474" y="790.20306" z="332.625" h="30"/>
+					</spawn>
+					<!-- Warrior of the 123rd Defence Troop -->
+					<spawn npc_id="885863" respawn_time="295">
+						<spot x="741.41895" y="788.5394" z="332.53372" h="15"/>
+						<spot x="751.87494" y="817.8744" z="332.625" h="15"/>
+					</spawn>
+					<!-- Scout of the 123rd Defence Troop -->
+					<spawn npc_id="885864" respawn_time="295">
+						<spot x="733.8199" y="800.8668" z="332.625" h="0"/>
+					</spawn>
+					<!-- Recruit of the 123rd Defence Troop -->
+					<spawn npc_id="885865" respawn_time="295">
+						<spot x="758.32996" y="809.2275" z="332.625" h="0"/>
+					</spawn>
+					<!-- Healer of the 123rd Defence Troop -->
+					<spawn npc_id="885866" respawn_time="295">
+						<spot x="758.78296" y="796.97107" z="332.625" h="0"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1513\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 123rd Scout Troop ||| LDF7_1513_Li_Recon_Fi -->
+					<spawn npc_id="885979" respawn_time="295">
+						<spot x="800.35535" y="663.8436" z="319.9141" h="0"/>
+						<spot x="783.0667" y="676.3164" z="319.5" h="0"/>
+						<spot x="788.0576" y="682.80304" z="319.5" h="15"/>
+						<spot x="801.3609" y="679.6669" z="319.4291" h="30"/>
+					</spawn>
+					<!-- Scout of the 123rd Scout Troop ||| LDF7_1513_Li_Recon_As -->
+					<spawn npc_id="885980" respawn_time="295">
+						<spot x="798.42236" y="686.8023" z="319.338" h="15"/>
+					</spawn>
+					<!-- Recruit of the 123rd Scout Troop ||| LDF7_1513_Li_Recon_Wi -->
+					<spawn npc_id="885981" respawn_time="295">
+						<spot x="791.5959" y="673.20636" z="319.5" h="20"/>
+					</spawn>
+					<!-- Healer of the 123rd Search Party ||| LDF7_1513_Li_Recon_Pr -->
+					<spawn npc_id="885982" respawn_time="295">
+						<spot x="800.9144" y="672.27716" z="319.5" h="45"/>
+					</spawn>
+					<!-- Fighter of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Fi -->
+					<spawn npc_id="885987" respawn_time="295">
+						<spot x="852.34625" y="809.4587" z="323.875" h="110"/>
+						<spot x="839.20984" y="808.13306" z="323.875" h="105"/>
+						<spot x="841.5761" y="828.4933" z="323.875" h="0"/>
+						<spot x="851.22455" y="827.847" z="323.99045" h="8"/>
+					</spawn>
+					<!-- Raider of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_As -->
+					<spawn npc_id="885988" respawn_time="295">
+						<spot x="859.44604" y="815.6683" z="323.875" h="0"/>
+					</spawn>
+					<!-- Dark Mage of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Wi -->
+					<spawn npc_id="885989" respawn_time="295">
+						<spot x="840.9279" y="817.99615" z="323.875" h="110"/>
+					</spawn>
+					<!-- Healer of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Pr -->
+					<spawn npc_id="885990" respawn_time="295">
+						<spot x="843.1884" y="802.8509" z="323.875" h="90"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 123rd Conquest Squad ||| LDF7_1513_Boss_Dr_5 -->
+					<spawn npc_id="885690" respawn_time="295">
+						<spot x="735.2287" y="816.33466" z="332.625" h="105"/>
+					</spawn>
+					<!-- 123rd Garrison - Fantastic Flame ||| LDF7_Artifact_15131_Dr -->
+					<spawn npc_id="885789" respawn_time="295">
+						<spot x="744.6924" y="802.78467" z="332.625" h="0" static_id="1460"/>
+					</spawn>
+					<!-- Warrior of the 123rd Conquest Troop -->
+					<spawn npc_id="885867" respawn_time="295">
+						<spot x="741.41895" y="788.5394" z="332.53372" h="15"/>
+						<spot x="751.87494" y="817.8744" z="332.625" h="15"/>
+					</spawn>
+					<!-- Scout of the 123rd Conquest Troop -->
+					<spawn npc_id="885868" respawn_time="295">
+						<spot x="733.8199" y="800.8668" z="332.625" h="0"/>
+					</spawn>
+					<!-- Recruit of the 123rd Conquest Troop -->
+					<spawn npc_id="885869" respawn_time="295">
+						<spot x="758.32996" y="809.2275" z="332.625" h="0"/>
+					</spawn>
+					<!-- Healer of the 123rd Conquest Troop -->
+					<spawn npc_id="885870" respawn_time="295">
+						<spot x="758.78296" y="796.97107" z="332.625" h="0"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON DRAGONBOUND OCCUPYING 1513\\\\\\\\\\\\\\\\  -->
+					<!-- Warrior of the 123rd Conquest Squad ||| LDF7_1513_Dr_Normal_Fi -->
+					<spawn npc_id="885975" respawn_time="295">
+						<spot x="800.35535" y="663.8436" z="319.9141" h="0"/>
+						<spot x="801.3609" y="679.6669" z="319.4291" h="30"/>
+						<spot x="783.0667" y="676.3164" z="319.5" h="0"/>
+						<spot x="788.0576" y="682.80304" z="319.5" h="15"/>
+					</spawn>
+					<!-- Raider of the 123rd Conquest Squad ||| LDF7_1513_Dr_Normal_As -->
+					<spawn npc_id="885976" respawn_time="295">
+						<spot x="798.42236" y="686.8023" z="319.338" h="15"/>
+					</spawn>
+					<!-- Dark Mage of the 123rd Conquest Squad ||| LDF7_1513_Dr_Normal_Wi -->
+					<spawn npc_id="885977" respawn_time="295">
+						<spot x="791.5959" y="673.20636" z="319.5" h="20"/>
+					</spawn>
+					<!-- Healer of the 123rd Search Party ||| LDF7_1513_Da_Recon_Pr -->
+					<spawn npc_id="885978" respawn_time="295">
+						<spot x="800.9144" y="672.27716" z="319.5" h="45"/>
+					</spawn>
+					<!-- Fighter of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Fi -->
+					<spawn npc_id="885987" respawn_time="295">
+						<spot x="852.34625" y="809.4587" z="323.875" h="110"/>
+						<spot x="839.20984" y="808.13306" z="323.875" h="105"/>
+						<spot x="841.5761" y="828.4933" z="323.875" h="0"/>
+						<spot x="851.22455" y="827.847" z="323.99045" h="8"/>
+					</spawn>
+					<!-- Raider of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_As -->
+					<spawn npc_id="885988" respawn_time="295">
+						<spot x="859.44604" y="815.6683" z="323.875" h="0"/>
+					</spawn>
+					<!-- Dark Mage of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Wi -->
+					<spawn npc_id="885989" respawn_time="295">
+						<spot x="840.9279" y="817.99615" z="323.875" h="110"/>
+					</spawn>
+					<!-- Healer of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Pr -->
+					<spawn npc_id="885990" respawn_time="295">
+						<spot x="843.1884" y="802.8509" z="323.875" h="90"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 123rd Occupation Troop ||| LDF7_1513_Boss_Li_5 -->
+					<spawn npc_id="885680" respawn_time="295">
+						<spot x="735.2287" y="816.33466" z="332.625" h="105"/>
+					</spawn>
+					<!-- 123rd Garrison - Fantastic Flame -->
+					<spawn npc_id="885787" respawn_time="295">
+						<spot x="744.6924" y="802.78467" z="332.625" h="0" static_id="1734"/>
+					</spawn>
+					<!-- Eyetes ||| LDF7_Aites_E -->
+					<spawn npc_id="836596" respawn_time="295">
+						<spot x="752.3474" y="790.20306" z="332.625" h="30"/>
+					</spawn>
+					<!-- Warrior of the 123rd Occupation Troop -->
+					<spawn npc_id="885859" respawn_time="295">
+						<spot x="741.41895" y="788.5394" z="332.53372" h="15"/>
+						<spot x="751.87494" y="817.8744" z="332.625" h="15"/>
+					</spawn>
+					<!-- Scout of the 123rd Occupation Troop -->
+					<spawn npc_id="885860" respawn_time="295">
+						<spot x="733.8199" y="800.8668" z="332.625" h="0"/>
+					</spawn>
+					<!-- Recruit of the 123rd Occupation Troop -->
+					<spawn npc_id="885861" respawn_time="295">
+						<spot x="758.32996" y="809.2275" z="332.625" h="0"/>
+					</spawn>
+					<!-- Healer of the 123rd Occupation Troop -->
+					<spawn npc_id="885862" respawn_time="295">
+						<spot x="758.78296" y="796.97107" z="332.625" h="0"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v03_Teleport_L -->
+					<spawn npc_id="731896" respawn_time="295">
+						<spot x="727.9611" y="800.67224" z="334.95532" h="30" static_id="1405"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1513\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 123rd Search Party -->
+					<spawn npc_id="885983" respawn_time="295">
+						<spot x="800.35535" y="663.8436" z="319.9141" h="0"/>
+						<spot x="801.3609" y="679.6669" z="319.4291" h="30"/>
+						<spot x="783.0667" y="676.3164" z="319.5" h="0"/>
+						<spot x="788.0576" y="682.80304" z="319.5" h="15"/>
+					</spawn>
+					<!-- Scout of the 123rd Search Party ||| LDF7_1513_Li_Recon_As -->
+					<spawn npc_id="885984" respawn_time="295">
+						<spot x="798.42236" y="686.8023" z="319.338" h="15"/>
+					</spawn>
+					<!-- Recruit of the 123rd Search Party ||| LDF7_1513_Li_Recon_Wi -->
+					<spawn npc_id="885985" respawn_time="295">
+						<spot x="791.5959" y="673.20636" z="319.5" h="20"/>
+					</spawn>
+					<!-- Healer of the 123rd Search Party ||| LDF7_1513_Li_Recon_Pr -->
+					<spawn npc_id="885986" respawn_time="295">
+						<spot x="800.9144" y="672.27716" z="319.5" h="45"/>
+					</spawn>
+					<!-- Fighter of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Fi -->
+					<spawn npc_id="885987" respawn_time="295">
+						<spot x="852.34625" y="809.4587" z="323.875" h="110"/>
+						<spot x="839.20984" y="808.13306" z="323.875" h="105"/>
+						<spot x="841.5761" y="828.4933" z="323.875" h="0"/>
+						<spot x="851.22455" y="827.847" z="323.99045" h="8"/>
+					</spawn>
+					<!-- Raider of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_As -->
+					<spawn npc_id="885988" respawn_time="295">
+						<spot x="859.44604" y="815.6683" z="323.875" h="0"/>
+					</spawn>
+					<!-- Dark Mage of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Wi -->
+					<spawn npc_id="885989" respawn_time="295">
+						<spot x="840.9279" y="817.99615" z="323.875" h="110"/>
+					</spawn>
+					<!-- Healer of the 123rd Vanguard ||| LDF7_1513_Dr_Recon_Pr -->
+					<spawn npc_id="885990" respawn_time="295">
+						<spot x="843.1884" y="802.8509" z="323.875" h="90"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1514">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 124th Defence Troop ||| LDF7_1514_Boss_Da_1 -->
+					<spawn npc_id="885696" respawn_time="295">
+						<spot x="1912.4154" y="2142.0166" z="285.25" h="75"/>
+					</spawn>
+					<!-- 124th Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15141_Da -->
+					<spawn npc_id="885791" respawn_time="295">
+						<spot x="1901.9431" y="2131.7478" z="285.25" h="0" static_id="1484"/>
+					</spawn>
+					<!-- Warrior of the 124th Defence Troop ||| LDF7_1514_Da_Guard_Fi -->
+					<spawn npc_id="885875" respawn_time="295">
+						<spot x="1886.886" y="2133.7935" z="285.07544" h="60"/>
+						<spot x="1890.7764" y="2120.8142" z="285.25" h="75"/>
+					</spawn>
+					<!-- Scout of the 124th Defence Troop ||| LDF7_1514_Da_Guard_As -->
+					<spawn npc_id="885876" respawn_time="295">
+						<spot x="1900.4303" y="2108.2754" z="285.25" h="90"/>
+					</spawn>
+					<!-- Recruit of the 124th Defence Troop ||| LDF7_1514_Da_Guard_Wi -->
+					<spawn npc_id="885877" respawn_time="295">
+						<spot x="1898.7559" y="2141.826" z="285.25" h="90"/>
+					</spawn>
+					<!-- Healer of the 124th Defence Troop ||| LDF7_1514_Da_Guard_Pr -->
+					<spawn npc_id="885878" respawn_time="295">
+						<spot x="1910.8397" y="2121.7366" z="285.25" h="105"/>
+					</spawn>
+					<!-- Borkadi ||| LDF7_Borkadi_E -->
+					<spawn npc_id="836606" respawn_time="295">
+						<spot x="1917.4231" y="2124.9175" z="285.25" h="60"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v04_Teleport_D -->
+					<spawn npc_id="731906" respawn_time="295">
+						<spot x="1900.5701" y="2146.1726" z="287.91565" h="60" static_id="1308"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1514\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 124th Scout Troop ||| LDF7_1514_Li_Recon_Fi -->
+					<spawn npc_id="885995" respawn_time="295">
+						<spot x="1859.1204" y="2013.2102" z="273.0" h="30"/>
+						<spot x="1862.1328" y="2008.3872" z="273.0" h="60"/>
+						<spot x="1852.752" y="2001.3805" z="273.0" h="60"/>
+						<spot x="1847.9332" y="1994.2903" z="273.0" h="75"/>
+					</spawn>
+					<!-- Scout of the 124th Scout Troop ||| LDF7_1514_Li_Recon_As -->
+					<spawn npc_id="885996" respawn_time="295">
+						<spot x="1850.6998" y="2011.9655" z="273.0" h="45"/>
+					</spawn>
+					<!-- Recruit of the 124th Scout Troop ||| LDF7_1514_Li_Recon_Wi -->
+					<spawn npc_id="885997" respawn_time="295">
+						<spot x="1862.3756" y="2002.5903" z="273.0" h="55"/>
+					</spawn>
+					<!-- Healer of the 124th Scout Troop ||| LDF7_1514_Li_Recon_Pr -->
+					<spawn npc_id="885998" respawn_time="295">
+						<spot x="1855.8475" y="1991.7555" z="273.0" h="76"/>
+					</spawn>
+					<!-- Fighter of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Fi -->
+					<spawn npc_id="886262" respawn_time="295">
+						<spot x="1902.9868" y="2256.2405" z="267.125" h="85"/>
+						<spot x="1891.6984" y="2259.4988" z="267.10614" h="75"/>
+						<spot x="1915.5521" y="2277.441" z="267.125" h="15"/>
+						<spot x="1905.7666" y="2279.5386" z="267.125" h="30"/>
+					</spawn>
+					<!-- Raider of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_As -->
+					<spawn npc_id="886263" respawn_time="295">
+						<spot x="1895.9277" y="2279.078" z="267.125" h="41"/>
+					</spawn>
+					<!-- Dark Mage of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Wi -->
+					<spawn npc_id="886264" respawn_time="295">
+						<spot x="1910.195" y="2264.6558" z="267.125" h="45"/>
+					</spawn>
+					<!-- Healer of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Pr -->
+					<spawn npc_id="886265" respawn_time="295">
+						<spot x="1900.6023" y="2264.8735" z="267.125" h="15"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Da_04 -->
+					<spawn npc_id="886351" respawn_time="295">
+						<spot x="1901.2058" y="2123.1938" z="285.25" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 124th Conquest Squad ||| LDF7_1514_Boss_Dr_1 -->
+					<spawn npc_id="885701" respawn_time="295">
+						<spot x="1912.4154" y="2142.0166" z="285.25" h="75"/>
+					</spawn>
+					<!-- 124th Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15141_Dr -->
+					<spawn npc_id="885792" respawn_time="295">
+						<spot x="1901.9431" y="2131.7478" z="285.25" h="0" static_id="1270"/>
+					</spawn>
+					<!-- Warrior of the 124th Conquest Troop -->
+					<spawn npc_id="885879" respawn_time="295">
+						<spot x="1886.886" y="2133.7935" z="285.07544" h="60"/>
+						<spot x="1890.7764" y="2120.8142" z="285.25" h="75"/>
+					</spawn>
+					<!-- Scout of the 124th Conquest Troop -->
+					<spawn npc_id="885880" respawn_time="295">
+						<spot x="1900.4303" y="2108.2754" z="285.25" h="90"/>
+					</spawn>
+					<!-- Recruit of the 124th Conquest Troop ||| LDF7_1514_Da_Guard_Wi -->
+					<spawn npc_id="885881" respawn_time="295">
+						<spot x="1898.7559" y="2141.826" z="285.25" h="90"/>
+					</spawn>
+					<!-- Healer of the 124th Conquest Troop ||| LDF7_1514_Da_Guard_Pr -->
+					<spawn npc_id="885882" respawn_time="295">
+						<spot x="1910.8397" y="2121.7366" z="285.25" h="105"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON DRAGONBOUND OCCUPYING 1514\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 124th Conquest Squad ||| LDF7_1514_Dr_Normal_Fi -->
+					<spawn npc_id="885991" respawn_time="295">
+						<spot x="1859.1204" y="2013.2102" z="273.0" h="30"/>
+						<spot x="1862.1328" y="2008.3872" z="273.0" h="60"/>
+						<spot x="1852.752" y="2001.3805" z="273.0" h="60"/>
+						<spot x="1847.9332" y="1994.2903" z="273.0" h="75"/>
+					</spawn>
+					<!-- Scout of the 124th Conquest Squad ||| LDF7_1514_Dr_Normal_As -->
+					<spawn npc_id="885992" respawn_time="295">
+						<spot x="1850.6998" y="2011.9655" z="273.0" h="45"/>
+					</spawn>
+					<!-- Recruit of the 124th Conquest Squad ||| LDF7_1514_Dr_Normal_Wi -->
+					<spawn npc_id="885993" respawn_time="295">
+						<spot x="1862.3756" y="2002.5903" z="273.0" h="55"/>
+					</spawn>
+					<!-- Healer of the 124th Conquest Squad ||| LDF7_1514_Dr_Normal_Pr -->
+					<spawn npc_id="885994" respawn_time="295">
+						<spot x="1855.8475" y="1991.7555" z="273.0" h="76"/>
+					</spawn>
+					<!-- Fighter of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Fi -->
+					<spawn npc_id="886262" respawn_time="295">
+						<spot x="1902.9868" y="2256.2405" z="267.125" h="85"/>
+						<spot x="1891.6984" y="2259.4988" z="267.10614" h="75"/>
+						<spot x="1915.5521" y="2277.441" z="267.125" h="15"/>
+						<spot x="1905.7666" y="2279.5386" z="267.125" h="30"/>
+					</spawn>
+					<!-- Raider of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_As -->
+					<spawn npc_id="886263" respawn_time="295">
+						<spot x="1895.9277" y="2279.078" z="267.125" h="41"/>
+					</spawn>
+					<!-- Dark Mage of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Wi -->
+					<spawn npc_id="886264" respawn_time="295">
+						<spot x="1910.195" y="2264.6558" z="267.125" h="45"/>
+					</spawn>
+					<!-- Healer of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Pr -->
+					<spawn npc_id="886265" respawn_time="295">
+						<spot x="1900.6023" y="2264.8735" z="267.125" h="15"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Da_04 -->
+					<spawn npc_id="886351" respawn_time="295">
+						<spot x="1901.2058" y="2123.1938" z="285.25" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 124th Occupation Troop ||| LDF7_1514_Boss_Li_1 -->
+					<spawn npc_id="885691" respawn_time="295">
+						<spot x="1912.4154" y="2142.0166" z="285.25" h="75"/>
+					</spawn>
+					<!-- 124th Garrison - Trailblazer's Blessing ||| LDF7_Artifact_15141_Li -->
+					<spawn npc_id="885790" respawn_time="295">
+						<spot x="1901.9431" y="2131.7478" z="285.25" h="0" static_id="1270"/>
+					</spawn>
+					<!-- Amonisos ||| LDF7_Amonisos_E -->
+					<spawn npc_id="836597" respawn_time="295">
+						<spot x="1917.4231" y="2124.9175" z="285.25" h="60"/>
+					</spawn>
+					<!-- Warrior of the 124th Occupation Troop ||| LDF7_1514_Da_Guard_Fi -->
+					<spawn npc_id="885871" respawn_time="295">
+						<spot x="1886.886" y="2133.7935" z="285.07544" h="60"/>
+						<spot x="1890.7764" y="2120.8142" z="285.25" h="75"/>
+					</spawn>
+					<!-- Scout of the 124th Occupation Troop ||| LDF7_1514_Da_Guard_As -->
+					<spawn npc_id="885872" respawn_time="295">
+						<spot x="1900.4303" y="2108.2754" z="285.25" h="90"/>
+					</spawn>
+					<!-- Recruit of the 124th Occupation Troop ||| LDF7_1514_Da_Guard_Wi -->
+					<spawn npc_id="885873" respawn_time="295">
+						<spot x="1898.7559" y="2141.826" z="285.25" h="90"/>
+					</spawn>
+					<!-- Healer of the 124th Occupation Troop ||| LDF7_1514_Da_Guard_Pr -->
+					<spawn npc_id="885874" respawn_time="295">
+						<spot x="1910.8397" y="2121.7366" z="285.25" h="105"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v04_Teleport_L -->
+					<spawn npc_id="731897" respawn_time="295">
+						<spot x="1900.5701" y="2146.1726" z="287.91565" h="60" static_id="1308"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1514\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 124th Search Party ||| LDF7_1514_Da_Recon_Fi -->
+					<spawn npc_id="885999" respawn_time="295">
+						<spot x="1859.1204" y="2013.2102" z="273.0" h="30"/>
+						<spot x="1862.1328" y="2008.3872" z="273.0" h="60"/>
+						<spot x="1852.752" y="2001.3805" z="273.0" h="60"/>
+						<spot x="1847.9332" y="1994.2903" z="273.0" h="75"/>
+					</spawn>
+					<!-- Scout of the 124th Search Party ||| LDF7_1514_Da_Recon_As -->
+					<spawn npc_id="886000" respawn_time="295">
+						<spot x="1850.6998" y="2011.9655" z="273.0" h="45"/>
+					</spawn>
+					<!-- Recruit of the 124th Search Party ||| LDF7_1514_Da_Recon_Wi -->
+					<spawn npc_id="886001" respawn_time="295">
+						<spot x="1862.3756" y="2002.5903" z="273.0" h="55"/>
+					</spawn>
+					<!-- Healer of the 124th Search Party ||| LDF7_1514_Da_Recon_Pr -->
+					<spawn npc_id="886002" respawn_time="295">
+						<spot x="1855.8475" y="1991.7555" z="273.0" h="76"/>
+					</spawn>
+					<!-- Fighter of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Fi -->
+					<spawn npc_id="886262" respawn_time="295">
+						<spot x="1902.9868" y="2256.2405" z="267.125" h="85"/>
+						<spot x="1891.6984" y="2259.4988" z="267.10614" h="75"/>
+						<spot x="1915.5521" y="2277.441" z="267.125" h="15"/>
+						<spot x="1905.7666" y="2279.5386" z="267.125" h="30"/>
+					</spawn>
+					<!-- Raider of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_As -->
+					<spawn npc_id="886263" respawn_time="295">
+						<spot x="1895.9277" y="2279.078" z="267.125" h="41"/>
+					</spawn>
+					<!-- Dark Mage of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Wi -->
+					<spawn npc_id="886264" respawn_time="295">
+						<spot x="1910.195" y="2264.6558" z="267.125" h="45"/>
+					</spawn>
+					<!-- Healer of the 124th Vanguard ||| LDF7_1514_Dr_D_Recon_Pr -->
+					<spawn npc_id="886265" respawn_time="295">
+						<spot x="1900.6023" y="2264.8735" z="267.125" h="15"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Da_04 -->
+					<spawn npc_id="886351" respawn_time="295">
+						<spot x="1901.2058" y="2123.1938" z="285.25" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1515">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 125th Defence Troop ||| LDF7_1515_Boss_Da_5 -->
+					<spawn npc_id="885715" respawn_time="295">
+						<spot x="1088.1792" y="2767.1409" z="231.125" h="81"/>
+					</spawn>
+					<!-- 125th Garrison - Battle Encouragement ||| LDF7_Artifact_15151_Da -->
+					<spawn npc_id="885794" respawn_time="295">
+						<spot x="1075.5143" y="2757.4468" z="231.125" h="0" static_id="1742"/>
+					</spawn>
+					<!-- Warrior of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Fi -->
+					<spawn npc_id="885887" respawn_time="295">
+						<spot x="1078.2571" y="2742.2407" z="231.125" h="105"/>
+						<spot x="1061.9894" y="2750.7405" z="231.125" h="65"/>
+					</spawn>
+					<!-- Scout of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_As -->
+					<spawn npc_id="885888" respawn_time="295">
+						<spot x="1071.5984" y="2736.5244" z="231.125" h="83"/>
+					</spawn>
+					<!-- Recruit of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Wi -->
+					<spawn npc_id="885889" respawn_time="295">
+						<spot x="1087.1924" y="2749.323" z="231.125" h="100"/>
+					</spawn>
+					<!-- Healer of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Pr -->
+					<spawn npc_id="885890" respawn_time="295">
+						<spot x="1072.6725" y="2767.8423" z="231.125" h="90"/>
+					</spawn>
+					<!-- Slaydin ||| LDF7_Sulreidin_E -->
+					<spawn npc_id="836607" respawn_time="295">
+						<spot x="1084.4678" y="2742.3047" z="231.125" h="36"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v05_Teleport_D -->
+					<spawn npc_id="731907" respawn_time="295">
+						<spot x="1070.7462" y="2773.0452" z="232.34196" h="15" static_id="1298"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1515\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 125th Scout Troop ||| LDF7_1515_Li_Recon_Fi -->
+					<spawn npc_id="886011" respawn_time="295">
+						<spot x="1156.7368" y="2610.652" z="203.25" h="15"/>
+						<spot x="1147.9711" y="2610.1135" z="203.25" h="15"/>
+						<spot x="1160.0073" y="2596.6292" z="203.24968" h="105"/>
+						<spot x="1154.3682" y="2596.4426" z="203.25" h="15"/>
+					</spawn>
+					<!-- Scout of the 125th Scout Troop ||| LDF7_1515_Li_Recon_As -->
+					<spawn npc_id="886012" respawn_time="295">
+						<spot x="1164.6423" y="2603.1387" z="202.79471" h="0"/>
+					</spawn>
+					<!-- Recruit of the 125th Scout Troop ||| LDF7_1515_Li_Recon_Wi -->
+					<spawn npc_id="886013" respawn_time="295">
+						<spot x="1149.9481" y="2604.1184" z="203.25" h="0"/>
+					</spawn>
+					<!-- Healer of the 125th Scout Troop ||| LDF7_1515_Li_Recon_Pr -->
+					<spawn npc_id="886014" respawn_time="295">
+						<spot x="1146.6127" y="2616.9326" z="203.25" h="20"/>
+					</spawn>
+					<!-- Fighter of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Fi -->
+					<spawn npc_id="886019" respawn_time="295">
+						<spot x="1078.0328" y="2655.543" z="227.375" h="50"/>
+						<spot x="1075.3995" y="2646.4094" z="227.375" h="45"/>
+						<spot x="1088.1923" y="2660.2974" z="227.375" h="45"/>
+						<spot x="1097.3412" y="2666.324" z="227.375" h="15"/>
+					</spawn>
+					<!-- Raider of the 125th Vanguard ||| LDF7_1515_Dr_Recon_As -->
+					<spawn npc_id="886020" respawn_time="295">
+						<spot x="1080.9967" y="2668.267" z="227.36662" h="40"/>
+					</spawn>
+					<!-- Dark Mage of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Wi -->
+					<spawn npc_id="886021" respawn_time="295">
+						<spot x="1094.1198" y="2652.4783" z="227.375" h="41"/>
+					</spawn>
+					<!-- Healer of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Pr -->
+					<spawn npc_id="886022" respawn_time="295">
+						<spot x="1084.6901" y="2648.0662" z="227.375" h="15"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Li_05 -->
+					<spawn npc_id="886343" respawn_time="295">
+						<spot x="1073.6881" y="2748.4998" z="231.125" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 125th Conquest Squad ||| LDF7_1515_Boss_Dr_1 -->
+					<spawn npc_id="885716" respawn_time="295">
+						<spot x="1088.1792" y="2767.1409" z="231.125" h="81"/>
+					</spawn>
+					<!-- 125th Garrison - Battle Encouragement ||| LDF7_Artifact_15151_Dr -->
+					<spawn npc_id="885795" respawn_time="295">
+						<spot x="1075.5143" y="2757.4468" z="231.125" h="0" static_id="1743"/>
+					</spawn>
+					<!-- Warrior of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Fi -->
+					<spawn npc_id="885891" respawn_time="295">
+						<spot x="1078.2571" y="2742.2407" z="231.125" h="105"/>
+						<spot x="1061.9894" y="2750.7405" z="231.125" h="65"/>
+					</spawn>
+					<!-- Scout of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_As -->
+					<spawn npc_id="885892" respawn_time="295">
+						<spot x="1071.5984" y="2736.5244" z="231.125" h="83"/>
+					</spawn>
+					<!-- Recruit of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Wi -->
+					<spawn npc_id="885893" respawn_time="295">
+						<spot x="1087.1924" y="2749.323" z="231.125" h="100"/>
+					</spawn>
+					<!-- Healer of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Pr -->
+					<spawn npc_id="885894" respawn_time="295">
+						<spot x="1072.6725" y="2767.8423" z="231.125" h="90"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON DRAGONBOUND OCCUPYING 1515\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 125th Conquest Squad ||| LDF7_1515_Dr_Normal_Fi -->
+					<spawn npc_id="886007" respawn_time="295">
+						<spot x="1156.7368" y="2610.652" z="203.25" h="15"/>
+						<spot x="1147.9711" y="2610.1135" z="203.25" h="15"/>
+						<spot x="1160.0073" y="2596.6292" z="203.24968" h="105"/>
+						<spot x="1154.3682" y="2596.4426" z="203.25" h="15"/>
+					</spawn>
+					<!-- Scout of the 125th Conquest Squad ||| LDF7_1515_Dr_Normal_As -->
+					<spawn npc_id="886008" respawn_time="295">
+						<spot x="1164.6423" y="2603.1387" z="202.79471" h="0"/>
+					</spawn>
+					<!-- Recruit of the 125th Conquest Squad||| LDF7_1515_Dr_Normal_Wi -->
+					<spawn npc_id="886009" respawn_time="295">
+						<spot x="1149.9481" y="2604.1184" z="203.25" h="0"/>
+					</spawn>
+					<!-- Healer of the 125th Conquest Squad ||| LDF7_1515_Dr_Normal_Pr -->
+					<spawn npc_id="886010" respawn_time="295">
+						<spot x="1146.6127" y="2616.9326" z="203.25" h="20"/>
+					</spawn>
+					<!-- Fighter of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Fi -->
+					<spawn npc_id="886019" respawn_time="295">
+						<spot x="1078.0328" y="2655.543" z="227.375" h="50"/>
+						<spot x="1075.3995" y="2646.4094" z="227.375" h="45"/>
+						<spot x="1088.1923" y="2660.2974" z="227.375" h="45"/>
+						<spot x="1097.3412" y="2666.324" z="227.375" h="15"/>
+					</spawn>
+					<!-- Raider of the 125th Vanguard ||| LDF7_1515_Dr_Recon_As -->
+					<spawn npc_id="886020" respawn_time="295">
+						<spot x="1080.9967" y="2668.267" z="227.36662" h="40"/>
+					</spawn>
+					<!-- Dark Mage of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Wi -->
+					<spawn npc_id="886021" respawn_time="295">
+						<spot x="1094.1198" y="2652.4783" z="227.375" h="41"/>
+					</spawn>
+					<!-- Healer of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Pr -->
+					<spawn npc_id="886022" respawn_time="295">
+						<spot x="1084.6901" y="2648.0662" z="227.375" h="15"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 125th Occupation Troop ||| LDF7_1515_Boss_Li_5 -->
+					<spawn npc_id="885710" respawn_time="295">
+						<spot x="1088.1792" y="2767.1409" z="231.125" h="81"/>
+					</spawn>
+					<!-- 125th Garrison - Battle Encouragement ||| LDF7_Artifact_15151_Li -->
+					<spawn npc_id="885793" respawn_time="295">
+						<spot x="1075.5143" y="2757.4468" z="231.125" h="0" static_id="1743"/>
+					</spawn>
+					<!-- Warrior of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Fi -->
+					<spawn npc_id="885883" respawn_time="295">
+						<spot x="1078.2571" y="2742.2407" z="231.125" h="105"/>
+						<spot x="1061.9894" y="2750.7405" z="231.125" h="65"/>
+					</spawn>
+					<!-- Scout of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_As -->
+					<spawn npc_id="885884" respawn_time="295">
+						<spot x="1071.5984" y="2736.5244" z="231.125" h="83"/>
+					</spawn>
+					<!-- Recruit of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Wi -->
+					<spawn npc_id="885885" respawn_time="295">
+						<spot x="1087.1924" y="2749.323" z="231.125" h="100"/>
+					</spawn>
+					<!-- Healer of the 125th Occupation Troop ||| LDF7_1515_Li_Guard_Pr -->
+					<spawn npc_id="885886" respawn_time="295">
+						<spot x="1072.6725" y="2767.8423" z="231.125" h="90"/>
+					</spawn>
+					<!-- Pobota ||| LDF7_Povota_E -->
+					<spawn npc_id="836598" respawn_time="295">
+						<spot x="1084.4678" y="2742.3047" z="231.125" h="36"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v05_Teleport_L -->
+					<spawn npc_id="731898" respawn_time="295">
+						<spot x="1070.7462" y="2773.0452" z="232.34196" h="15" static_id="1298"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1515\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 125th Search Party ||| LDF7_1515_Da_Recon_Fi -->
+					<spawn npc_id="886015" respawn_time="295">
+						<spot x="1156.7368" y="2610.652" z="203.25" h="15"/>
+						<spot x="1147.9711" y="2610.1135" z="203.25" h="15"/>
+						<spot x="1160.0073" y="2596.6292" z="203.24968" h="105"/>
+						<spot x="1154.3682" y="2596.4426" z="203.25" h="15"/>
+					</spawn>
+					<!-- Scout of the 125th Search Party ||| LDF7_1515_Da_Recon_As -->
+					<spawn npc_id="886016" respawn_time="295">
+						<spot x="1164.6423" y="2603.1387" z="202.79471" h="0"/>
+					</spawn>
+					<!-- Recruit of the 125th Search Party ||| LDF7_1515_Da_Recon_Wi -->
+					<spawn npc_id="886017" respawn_time="295">
+						<spot x="1149.9481" y="2604.1184" z="203.25" h="0"/>
+					</spawn>
+					<!-- Healer of the 125th Search Party ||| LDF7_1515_Da_Recon_Pr -->
+					<spawn npc_id="886018" respawn_time="295">
+						<spot x="1146.6127" y="2616.9326" z="203.25" h="20"/>
+					</spawn>
+					<!-- Fighter of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Fi -->
+					<spawn npc_id="886019" respawn_time="295">
+						<spot x="1078.0328" y="2655.543" z="227.375" h="50"/>
+						<spot x="1075.3995" y="2646.4094" z="227.375" h="45"/>
+						<spot x="1088.1923" y="2660.2974" z="227.375" h="45"/>
+						<spot x="1097.3412" y="2666.324" z="227.375" h="15"/>
+					</spawn>
+					<!-- Raider of the 125th Vanguard ||| LDF7_1515_Dr_Recon_As -->
+					<spawn npc_id="886020" respawn_time="295">
+						<spot x="1080.9967" y="2668.267" z="227.36662" h="40"/>
+					</spawn>
+					<!-- Dark Mage of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Wi -->
+					<spawn npc_id="886021" respawn_time="295">
+						<spot x="1094.1198" y="2652.4783" z="227.375" h="41"/>
+					</spawn>
+					<!-- Healer of the 125th Vanguard ||| LDF7_1515_Dr_Recon_Pr -->
+					<spawn npc_id="886022" respawn_time="295">
+						<spot x="1084.6901" y="2648.0662" z="227.375" h="15"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Li_05 -->
+					<spawn npc_id="886343" respawn_time="295">
+						<spot x="1073.6881" y="2748.4998" z="231.125" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="1516">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 126th Defence Troop ||| LDF7_1516_Boss_Da_1 -->
+					<spawn npc_id="885726" respawn_time="295">
+						<spot x="543.4009" y="2183.3936" z="284.875" h="15"/>
+					</spawn>
+					<!-- 126th Garrison - Fantastic Flame ||| LDF7_Artifact_15161_Da -->
+					<spawn npc_id="885797" respawn_time="295">
+						<spot x="555.5819" y="2192.6445" z="284.875" h="0" static_id="1738"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Da_06 -->
+					<spawn npc_id="886353" respawn_time="295">
+						<spot x="557.0444" y="2201.3677" z="284.875" h="0"/>
+					</spawn>
+					<!-- Warrior of the 126th Defence Troop ||| LDF7_1516_Da_Guard_Fi -->
+					<spawn npc_id="885899" respawn_time="295">
+						<spot x="566.4621" y="2201.2507" z="284.875" h="15"/>
+						<spot x="540.50806" y="2195.787" z="284.875" h="0"/>
+					</spawn>
+					<!-- Scout of the 126th Defence Troop ||| LDF7_1516_Da_Guard_As -->
+					<spawn npc_id="885900" respawn_time="295">
+						<spot x="559.03955" y="2213.6174" z="284.875" h="30"/>
+					</spawn>
+					<!-- Recruit of the 126th Defence Troop ||| LDF7_1516_Da_Guard_Wi -->
+					<spawn npc_id="885901" respawn_time="295">
+						<spot x="549.9002" y="2206.594" z="284.875" h="45"/>
+					</spawn>
+					<!-- Healer of the 126th Defence Troop ||| LDF7_1516_Da_Guard_Pr -->
+					<spawn npc_id="885902" respawn_time="295">
+						<spot x="566.9937" y="2189.2505" z="284.875" h="0"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v06_Teleport_D -->
+					<spawn npc_id="731908" respawn_time="295">
+						<spot x="560.02747" y="2179.374" z="286.6562" h="45" static_id="1305"/>
+					</spawn>
+					<!-- Wybenk ||| Ab1_Webenk_E -->
+					<spawn npc_id="806790" respawn_time="295">
+						<spot x="557.9334" y="2177.3843" z="284.7529" h="30"/>
+					</spawn>
+					<!-- Aerolink ||| IDAb1_Heroes_D_In -->
+					<spawn npc_id="835683" respawn_time="295">
+						<spot x="560.8936" y="2173.4983" z="284.611" h="30"/>
+					</spawn>
+					<!-- Urki ||| LDF7_Urki_E -->
+					<spawn npc_id="836608" respawn_time="295">
+						<spot x="535.13965" y="2192.0613" z="284.875" h="15"/>
+					</spawn>
+					<!-- None ||| LDF7_Event_Flag_D -->
+					<spawn npc_id="836870" respawn_time="295">
+						<spot x="543.61597" y="2323.0715" z="277.82672" h="0" static_id="2011"/>
+					</spawn>
+					<!-- None ||| LDF7_v06_Flyctrl_D -->
+					<spawn npc_id="836888" respawn_time="295">
+						<spot x="555.87427" y="2199.8516" z="284.875" h="0"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1516\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 126th Scout Troop ||| LDF7_1516_Li_Recon_Fi -->
+					<spawn npc_id="886027" respawn_time="295">
+						<spot x="537.0973" y="2323.5647" z="274.125" h="105"/>
+						<spot x="533.29376" y="2316.3914" z="274.125" h="111"/>
+						<spot x="539.21265" y="2334.3733" z="274.125" h="15"/>
+						<spot x="544.9214" y="2328.7603" z="274.125" h="8"/>
+					</spawn>
+					<!-- Scout of the 126th Scout Troop ||| LDF7_1516_Li_Recon_As -->
+					<spawn npc_id="886028" respawn_time="295">
+						<spot x="541.91364" y="2317.068" z="274.06677" h="106"/>
+					</spawn>
+					<!-- Recruit of the 126th Scout Troop ||| LDF7_1516_Li_Recon_Wi -->
+					<spawn npc_id="886029" respawn_time="295">
+						<spot x="533.05444" y="2330.9236" z="274.125" h="105"/>
+					</spawn>
+					<!-- Healer of the 126th Scout Troop ||| LDF7_1516_Li_Recon_Pr -->
+					<spawn npc_id="886030" respawn_time="295">
+						<spot x="529.93884" y="2321.738" z="274.125" h="0"/>
+					</spawn>
+					<!-- Fighter of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Fi -->
+					<spawn npc_id="886270" respawn_time="295">
+						<spot x="608.2303" y="2261.6904" z="284.125" h="73"/>
+						<spot x="596.55786" y="2281.485" z="284.19196" h="48"/>
+						<spot x="603.4845" y="2277.0151" z="284.125" h="48"/>
+						<spot x="620.031" y="2272.8542" z="284.125" h="60"/>
+						<spot x="610.84314" y="2263.783" z="284.125" h="90"/>
+					</spawn>
+					<!-- Raider of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_As -->
+					<spawn npc_id="886271" respawn_time="295">
+						<spot x="602.4633" y="2262.201" z="284.125" h="6"/>
+						<spot x="601.1311" y="2261.1187" z="284.125" h="83"/>
+					</spawn>
+					<!-- Dark Mage of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Wi -->
+					<spawn npc_id="886272" respawn_time="295">
+						<spot x="613.2878" y="2278.5454" z="284.125" h="83"/>
+					</spawn>
+					<!-- Healer of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Pr -->
+					<spawn npc_id="886273" respawn_time="295">
+						<spot x="621.7528" y="2263.7942" z="284.125" h="110"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 126th Conquest Squad ||| LDF7_1516_Boss_Dr_1 -->
+					<spawn npc_id="885731" respawn_time="295">
+						<spot x="543.4009" y="2183.3936" z="284.875" h="15"/>
+					</spawn>
+					<!-- 126th Garrison - Fantastic Flame ||| LDF7_Artifact_15161_Dr -->
+					<spawn npc_id="885798" respawn_time="295">
+						<spot x="555.5819" y="2192.6445" z="284.875" h="0" static_id="1469"/>
+					</spawn>
+					<!-- Warrior of the 126th Conquest Squad ||| LDF7_1516_Dr_Guard_Fi -->
+					<spawn npc_id="885903" respawn_time="295">
+						<spot x="566.4621" y="2201.2507" z="284.875" h="15"/>
+						<spot x="540.50806" y="2195.787" z="284.875" h="0"/>
+					</spawn>
+					<!-- Scout of the 126th Conquest Squad ||| LDF7_1516_Dr_Guard_As -->
+					<spawn npc_id="885904" respawn_time="295">
+						<spot x="559.03955" y="2213.6174" z="284.875" h="30"/>
+					</spawn>
+					<!-- Dark Mage of the 126th Conquest Squad ||| LDF7_1516_Dr_Guard_Wi -->
+					<spawn npc_id="885905" respawn_time="295">
+						<spot x="549.9002" y="2206.594" z="284.875" h="45"/>
+					</spawn>
+					<!-- Healer of the 126th Conquest Squad ||| LDF7_1516_Dr_Guard_Pr -->
+					<spawn npc_id="885906" respawn_time="295">
+						<spot x="566.9937" y="2189.2505" z="284.875" h="0"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON DRAGONBOUND OCCUPYING 1516\\\\\\\\\\\\\\\\  -->
+					<!-- Warrior of the 126th Conquest Squad ||| LDF7_1516_Dr_Normal_Fi -->
+					<spawn npc_id="886023" respawn_time="295">
+						<spot x="537.0973" y="2323.5647" z="274.125" h="105"/>
+						<spot x="533.29376" y="2316.3914" z="274.125" h="111"/>
+						<spot x="539.21265" y="2334.3733" z="274.125" h="15"/>
+						<spot x="544.9214" y="2328.7603" z="274.125" h="8"/>
+					</spawn>
+					<!-- Scout of the 126th Search Party ||| LDF7_1516_Dr_Normal_As -->
+					<spawn npc_id="886024" respawn_time="295">
+						<spot x="541.91364" y="2317.068" z="274.06677" h="106"/>
+					</spawn>
+					<!-- Recruit of the 126th Search Party ||| LDF7_1516_Dr_Normal_Wi -->
+					<spawn npc_id="886025" respawn_time="295">
+						<spot x="533.05444" y="2330.9236" z="274.125" h="105"/>
+					</spawn>
+					<!-- Healer of the 126th Search Party ||| LDF7_1516_Dr_Normal_Pr -->
+					<spawn npc_id="886026" respawn_time="295">
+						<spot x="529.93884" y="2321.738" z="274.125" h="0"/>
+					</spawn>
+					<!-- Fighter of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Fi -->
+					<spawn npc_id="886270" respawn_time="295">
+						<spot x="608.2303" y="2261.6904" z="284.125" h="73"/>
+						<spot x="596.55786" y="2281.485" z="284.19196" h="48"/>
+						<spot x="603.4845" y="2277.0151" z="284.125" h="48"/>
+						<spot x="620.031" y="2272.8542" z="284.125" h="60"/>
+						<spot x="610.84314" y="2263.783" z="284.125" h="90"/>
+					</spawn>
+					<!-- Raider of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_As -->
+					<spawn npc_id="886271" respawn_time="295">
+						<spot x="602.4633" y="2262.201" z="284.125" h="6"/>
+						<spot x="601.1311" y="2261.1187" z="284.125" h="83"/>
+					</spawn>
+					<!-- Dark Mage of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Wi -->
+					<spawn npc_id="886272" respawn_time="295">
+						<spot x="613.2878" y="2278.5454" z="284.125" h="83"/>
+					</spawn>
+					<!-- Healer of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Pr -->
+					<spawn npc_id="886273" respawn_time="295">
+						<spot x="621.7528" y="2263.7942" z="284.125" h="110"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Dr_05 -->
+					<spawn npc_id="886352" respawn_time="295">
+						<spot x="1073.6881" y="2748.4998" z="231.125" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 126th Occupation Troop ||| LDF7_1516_Boss_Li_1 -->
+					<spawn npc_id="885721" respawn_time="295">
+						<spot x="543.4009" y="2183.3936" z="284.875" h="15"/>
+					</spawn>
+					<!-- 126th Garrison - Fantastic Flame ||| LDF7_Artifact_15161_Li -->
+					<spawn npc_id="885796" respawn_time="295">
+						<spot x="555.5819" y="2192.6445" z="284.875" h="0" static_id="1469"/>
+					</spawn>
+					<!-- None ||| LDF7_Event_Flag_L -->
+					<spawn npc_id="836869" respawn_time="295">
+						<spot x="543.61597" y="2323.0715" z="277.82672" h="0" static_id="2011"/>
+					</spawn>
+					<!-- None ||| LDF7_v06_Flyctrl_L -->
+					<spawn npc_id="836878" respawn_time="295">
+						<spot x="555.87427" y="2199.8516" z="284.875" h="0"/>
+					</spawn>
+					<!-- Aerolink ||| IDAb1_Heroes_L_In -->
+					<spawn npc_id="835682" respawn_time="295">
+						<spot x="560.8936" y="2173.4983" z="284.611" h="30"/>
+					</spawn>
+					<!-- Lekos ||| LDF7_Rekos_E -->
+					<spawn npc_id="836599" respawn_time="295">
+						<spot x="536.5521" y="2192.8577" z="284.875" h="18"/>
+					</spawn>
+					<!-- Invitos ||| Ab1_Invitos_E -->
+					<spawn npc_id="806789" respawn_time="295">
+						<spot x="557.9334" y="2177.3843" z="284.7529" h="30"/>
+					</spawn>
+					<!-- None ||| LDF7_Flag_Ctrl_Li_06 -->
+					<spawn npc_id="886344" respawn_time="295">
+						<spot x="557.0444" y="2201.3677" z="284.875" h="0"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v06_Teleport_L -->
+					<spawn npc_id="731899" respawn_time="295">
+						<spot x="560.02747" y="2179.374" z="286.6562" h="45" static_id="1305"/>
+					</spawn>
+					<!-- Warrior of the 126th Occupation Troop ||| LDF7_1516_Li_Guard_Fi -->
+					<spawn npc_id="885895" respawn_time="295">
+						<spot x="566.4621" y="2201.2507" z="284.875" h="15"/>
+						<spot x="540.50806" y="2195.787" z="284.875" h="0"/>
+					</spawn>
+					<!-- Scout of the 126th Occupation Troop ||| LDF7_1516_Li_Guard_As -->
+					<spawn npc_id="885896" respawn_time="295">
+						<spot x="559.03955" y="2213.6174" z="284.875" h="30"/>
+					</spawn>
+					<!-- Recruit of the 126th Occupation Troop ||| LDF7_1516_Li_Guard_Wi -->
+					<spawn npc_id="885897" respawn_time="295">
+						<spot x="549.9002" y="2206.594" z="284.875" h="45"/>
+					</spawn>
+					<!-- Healer of the 126th Occupation Troop ||| LDF7_1516_Li_Guard_Pr -->
+					<spawn npc_id="885898" respawn_time="295">
+						<spot x="566.9937" y="2189.2505" z="284.875" h="0"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1516\\\\\\\\\\\\\\\\  -->
+					<!-- Fighter of the 126th Search Party ||| LDF7_1516_Da_Recon_Fi -->
+					<spawn npc_id="886031" respawn_time="295">
+						<spot x="537.0973" y="2323.5647" z="274.125" h="105"/>
+						<spot x="533.29376" y="2316.3914" z="274.125" h="111"/>
+						<spot x="539.21265" y="2334.3733" z="274.125" h="15"/>
+						<spot x="544.9214" y="2328.7603" z="274.125" h="8"/>
+					</spawn>
+					<!-- Scout of the 126th Search Party ||| LDF7_1516_Da_Recon_As -->
+					<spawn npc_id="886032" respawn_time="295">
+						<spot x="541.91364" y="2317.068" z="274.06677" h="106"/>
+					</spawn>
+					<!-- Recruit of the 126th Search Party ||| LDF7_1516_Da_Recon_Wi -->
+					<spawn npc_id="886033" respawn_time="295">
+						<spot x="533.05444" y="2330.9236" z="274.125" h="105"/>
+					</spawn>
+					<!-- Healer of the 126th Search Party ||| LDF7_1516_Da_Recon_Pr -->
+					<spawn npc_id="886034" respawn_time="295">
+						<spot x="529.93884" y="2321.738" z="274.125" h="0"/>
+					</spawn>
+					<!-- Fighter of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Fi -->
+					<spawn npc_id="886270" respawn_time="295">
+						<spot x="608.2303" y="2261.6904" z="284.125" h="73"/>
+						<spot x="596.55786" y="2281.485" z="284.19196" h="48"/>
+						<spot x="603.4845" y="2277.0151" z="284.125" h="48"/>
+						<spot x="620.031" y="2272.8542" z="284.125" h="60"/>
+						<spot x="610.84314" y="2263.783" z="284.125" h="90"/>
+					</spawn>
+					<!-- Raider of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_As -->
+					<spawn npc_id="886271" respawn_time="295">
+						<spot x="602.4633" y="2262.201" z="284.125" h="6"/>
+						<spot x="601.1311" y="2261.1187" z="284.125" h="83"/>
+					</spawn>
+					<!-- Dark Mage of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Wi -->
+					<spawn npc_id="886272" respawn_time="295">
+						<spot x="613.2878" y="2278.5454" z="284.125" h="83"/>
+					</spawn>
+					<!-- Healer of the 126th Vanguard ||| LDF7_1516_Dr_D_Recon_Pr -->
+					<spawn npc_id="886273" respawn_time="295">
+						<spot x="621.7528" y="2263.7942" z="284.125" h="110"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1517">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 127th Defence Troop ||| LDF7_1517_Boss_Da_1 -->
+					<spawn npc_id="885741" respawn_time="295">
+						<spot x="2789.1172" y="1445.5415" z="199.60179" h="41"/>
+					</spawn>
+					<!-- 127th Garrison - Battle's Blessing ||| LDF7_Artifact_15171_Da -->
+					<spawn npc_id="885800" respawn_time="295">
+						<spot x="2760.708" y="1461.2642" z="197.84529" h="0" static_id="1185"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v07_Teleport_D -->
+					<spawn npc_id="731909" respawn_time="295">
+						<spot x="2769.993" y="1430.7734" z="200.49289" h="45" static_id="1280"/>
+					</spawn>
+					<!-- Obelisk ||| LDF7_N_Binding_stone_D -->
+					<spawn npc_id="731917" respawn_time="295">
+						<spot x="2610.3484" y="1421.1595" z="204.97375" h="0" static_id="2059"/>
+					</spawn>
+					<!-- Skerati ||| LDF7_Skerati_E -->
+					<spawn npc_id="836609" respawn_time="295">
+						<spot x="2768.547" y="1467.4651" z="197.75914" h="75"/>
+					</spawn>
+					<!-- None ||| LDF7_v07_Flyctrl_D -->
+					<spawn npc_id="836879" respawn_time="295">
+						<spot x="2754.0378" y="1465.7993" z="198.0" h="0"/>
+					</spawn>
+					<!-- Leanor ||| ldf7_v07_d_goods_seller -->
+					<spawn npc_id="836951" respawn_time="295">
+						<spot x="2788.9683" y="1442.5731" z="199.6018" h="50"/>
+					</spawn>
+					<!-- Helsa ||| ldf7_v07_d_potion_seller -->
+					<spawn npc_id="836952" respawn_time="295">
+						<spot x="2785.7627" y="1439.7311" z="199.6018" h="55"/>
+					</spawn>
+					<!-- Minian ||| ldf7_v07_d_food_seller -->
+					<spawn npc_id="836953" respawn_time="295">
+						<spot x="2794.1133" y="1448.6456" z="199.6018" h="45"/>
+					</spawn>
+					<!-- Guntas ||| ldf7_v07_d_special_goods_seller -->
+					<spawn npc_id="836954" respawn_time="295">
+						<spot x="2794.442" y="1452.1001" z="199.6018" h="40"/>
+					</spawn>
+					<!-- Pinko ||| ldf7_v07_d_pve_weapon_seller -->
+					<spawn npc_id="836955" respawn_time="295">
+						<spot x="2779.6865" y="1482.0016" z="197.64456" h="90"/>
+					</spawn>
+					<!-- Nikolai ||| ldf7_v07_d_pve_armor_seller -->
+					<spawn npc_id="836956" respawn_time="295">
+						<spot x="2776.7166" y="1482.0518" z="197.98741" h="90"/>
+					</spawn>
+					<!-- Giselle ||| ldf7_v07_d_pve_acc_seller -->
+					<spawn npc_id="836957" respawn_time="295">
+						<spot x="2773.8608" y="1481.9744" z="198.4985" h="90"/>
+					</spawn>
+					<!-- Brunhilde ||| ldf7_v07_d_pve_special_seller -->
+					<spawn npc_id="836958" respawn_time="295">
+						<spot x="2770.997" y="1482.0245" z="198.5" h="90"/>
+					</spawn>
+					<!-- Superior Fighter of the 127th Defence Troop ||| LDF7_1517_Da_Guard_Fi -->
+					<spawn npc_id="885911" respawn_time="295">
+						<spot x="2750.2346" y="1442.8137" z="198.75" h="30"/>
+						<spot x="2750.9307" y="1448.6802" z="198.75" h="99"/>
+						<spot x="2740.1726" y="1452.5087" z="198.47899" h="66"/>
+						<spot x="2777.8228" y="1430.9521" z="198.89188" h="90"/>
+						<spot x="2786.4229" y="1472.5876" z="197.625" h="75"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Defence Troop ||| LDF7_1517_Da_Guard_As -->
+					<spawn npc_id="885912" respawn_time="295">
+						<spot x="2734.0742" y="1469.5249" z="197.75" h="40"/>
+						<spot x="2750.9766" y="1473.0157" z="197.81152" h="33"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Defence Troop ||| LDF7_1517_Da_Guard_Wi -->
+					<spawn npc_id="885913" respawn_time="295">
+						<spot x="2764.876" y="1434.9078" z="198.9546" h="30"/>
+						<spot x="2789.8357" y="1417.2902" z="198.03511" h="85"/>
+						<spot x="2765.9192" y="1482.357" z="198.64732" h="30"/>
+						<spot x="2802.869" y="1463.7063" z="198.79907" h="15"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Defence Troop ||| LDF7_1517_Da_Guard_Pr -->
+					<spawn npc_id="885914" respawn_time="295">
+						<spot x="2791.1052" y="1448.9321" z="199.60178" h="41"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1517\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 127th Scout Troop ||| LDF7_1517_Li_Recon_Fi -->
+					<spawn npc_id="886043" respawn_time="295">
+						<spot x="2756.3188" y="1608.7346" z="198.49268" h="15"/>
+						<spot x="2733.2507" y="1594.7664" z="198.42429" h="90"/>
+						<spot x="2745.38" y="1611.8059" z="198.5" h="60"/>
+						<spot x="2734.4902" y="1602.9777" z="198.5" h="53"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Scout Troop ||| LDF7_1517_Li_Recon_As -->
+					<spawn npc_id="886044" respawn_time="295">
+						<spot x="2737.3503" y="1611.1052" z="198.5" h="45"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Scout Troop ||| LDF7_1517_Li_Recon_Wi -->
+					<spawn npc_id="886045" respawn_time="295">
+						<spot x="2744.7542" y="1600.1064" z="198.5" h="40"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Scout Troop ||| LDF7_1517_Li_Recon_Pr -->
+					<spawn npc_id="886046" respawn_time="295">
+						<spot x="2739.709" y="1588.5833" z="198.5" h="90"/>
+					</spawn>
+					<!-- Superior Fighter of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Fi -->
+					<spawn npc_id="886051" respawn_time="295">
+						<spot x="2689.1174" y="1370.7603" z="197.5" h="0"/>
+						<spot x="2664.2527" y="1374.4169" z="197.25" h="15"/>
+						<spot x="2673.8127" y="1380.7047" z="197.25" h="30"/>
+						<spot x="2657.8533" y="1376.801" z="197.25366" h="48"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Vanguard ||| LDF7_1517_Dr_Recon_As -->
+					<spawn npc_id="886052" respawn_time="295">
+						<spot x="2668.3247" y="1388.5624" z="197.25" h="30"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Wi -->
+					<spawn npc_id="886053" respawn_time="295">
+						<spot x="2670.464" y="1369.913" z="197.25" h="30"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Pr -->
+					<spawn npc_id="886054" respawn_time="295">
+						<spot x="2681.2295" y="1373.866" z="197.32684" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 127th Conquest Squad ||| LDF7_1517_Boss_Dr_5 -->
+					<spawn npc_id="885750" respawn_time="295">
+						<spot x="2789.1172" y="1445.5415" z="199.60179" h="41"/>
+					</spawn>
+					<!-- 127th Garrison - Battle's Blessing ||| LDF7_Artifact_15171_Dr -->
+					<spawn npc_id="885801" respawn_time="295">
+						<spot x="2760.708" y="1461.2642" z="197.84529" h="0" static_id="1184"/>
+					</spawn>
+					<!-- Superior Fighter of the 127th Defence Troop ||| LDF7_1517_Da_Guard_Fi -->
+					<spawn npc_id="885915" respawn_time="295">
+						<spot x="2750.2346" y="1442.8137" z="198.75" h="30"/>
+						<spot x="2750.9307" y="1448.6802" z="198.75" h="99"/>
+						<spot x="2740.1726" y="1452.5087" z="198.47899" h="66"/>
+						<spot x="2777.8228" y="1430.9521" z="198.89188" h="90"/>
+						<spot x="2786.4229" y="1472.5876" z="197.625" h="75"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Defence Troop ||| LDF7_1517_Da_Guard_As -->
+					<spawn npc_id="885916" respawn_time="295">
+						<spot x="2734.0742" y="1469.5249" z="197.75" h="40"/>
+						<spot x="2750.9766" y="1473.0157" z="197.81152" h="33"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Defence Troop ||| LDF7_1517_Da_Guard_Wi -->
+					<spawn npc_id="885917" respawn_time="295">
+						<spot x="2764.876" y="1434.9078" z="198.9546" h="30"/>
+						<spot x="2789.8357" y="1417.2902" z="198.03511" h="85"/>
+						<spot x="2765.9192" y="1482.357" z="198.64732" h="30"/>
+						<spot x="2802.869" y="1463.7063" z="198.79907" h="15"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Defence Troop ||| LDF7_1517_Da_Guard_Pr -->
+					<spawn npc_id="885918" respawn_time="295">
+						<spot x="2791.1052" y="1448.9321" z="199.60178" h="41"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON DRAGONBOUND OCCUPYING 1517\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 127th Conquest Squad ||| LDF7_1517_Dr_Normal_Fi -->
+					<spawn npc_id="886039" respawn_time="295">
+						<spot x="2756.3188" y="1608.7346" z="198.49268" h="15"/>
+						<spot x="2733.2507" y="1594.7664" z="198.42429" h="90"/>
+						<spot x="2745.38" y="1611.8059" z="198.5" h="60"/>
+						<spot x="2734.4902" y="1602.9777" z="198.5" h="53"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Conquest Squad ||| LDF7_1517_Dr_Normal_As -->
+					<spawn npc_id="886040" respawn_time="295">
+						<spot x="2737.3503" y="1611.1052" z="198.5" h="45"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Conquest Squad ||| LDF7_1517_Dr_Normal_Wi -->
+					<spawn npc_id="886041" respawn_time="295">
+						<spot x="2744.7542" y="1600.1064" z="198.5" h="40"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Conquest Squad ||| LDF7_1517_Dr_Normal_Pr -->
+					<spawn npc_id="886042" respawn_time="295">
+						<spot x="2739.709" y="1588.5833" z="198.5" h="90"/>
+					</spawn>
+					<!-- Superior Fighter of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Fi -->
+					<spawn npc_id="886051" respawn_time="295">
+						<spot x="2689.1174" y="1370.7603" z="197.5" h="0"/>
+						<spot x="2664.2527" y="1374.4169" z="197.25" h="15"/>
+						<spot x="2673.8127" y="1380.7047" z="197.25" h="30"/>
+						<spot x="2657.8533" y="1376.801" z="197.25366" h="48"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Vanguard ||| LDF7_1517_Dr_Recon_As -->
+					<spawn npc_id="886052" respawn_time="295">
+						<spot x="2668.3247" y="1388.5624" z="197.25" h="30"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Wi -->
+					<spawn npc_id="886053" respawn_time="295">
+						<spot x="2670.464" y="1369.913" z="197.25" h="30"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Pr -->
+					<spawn npc_id="886054" respawn_time="295">
+						<spot x="2681.2295" y="1373.866" z="197.32684" h="0"/>
+					</spawn>				
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- 127th Garrison - Battle's Blessing ||| LDF7_Artifact_15171_Li -->
+					<spawn npc_id="885799" respawn_time="295">
+						<spot x="2760.708" y="1461.2642" z="197.84529" h="0" static_id="1186"/>
+					</spawn>				
+					<!-- Teleporter ||| LDF7_v07_Teleport_L -->
+					<spawn npc_id="731900" respawn_time="295">
+						<spot x="2769.993" y="1430.7734" z="200.49289" h="45" static_id="1280"/>
+					</spawn>
+					<!-- Obelisk ||| LDF7_N_Binding_stone_L -->
+					<spawn npc_id="731916" respawn_time="295">
+						<spot x="2610.3484" y="1421.1595" z="204.97375" h="0" static_id="2059"/>
+					</spawn>
+					<!-- Veter ||| LDF7_Vetereu_E -->
+					<spawn npc_id="836600" respawn_time="295">
+						<spot x="2768.547" y="1467.4651" z="197.75914" h="75"/>
+					</spawn>
+					<!-- None ||| LDF7_v07_Flyctrl_L -->
+					<spawn npc_id="836879" respawn_time="295">
+						<spot x="2754.0378" y="1465.7993" z="198.0" h="0"/>
+					</spawn>
+					<!-- Tarazet ||| ldf7_v07_l_goods_seller -->
+					<spawn npc_id="836943" respawn_time="295">
+						<spot x="2788.9683" y="1442.5731" z="199.6018" h="50"/>
+					</spawn>
+					<!-- Retone ||| ldf7_v07_l_potion_seller -->
+					<spawn npc_id="836944" respawn_time="295">
+						<spot x="2785.7627" y="1439.7311" z="199.6018" h="55"/>
+					</spawn>
+					<!-- Gablera ||| ldf7_v07_l_food_seller -->
+					<spawn npc_id="836945" respawn_time="295">
+						<spot x="2794.1133" y="1448.6456" z="199.6018" h="45"/>
+					</spawn>
+					<!-- Kap ||| ldf7_v07_l_special_goods_seller -->
+					<spawn npc_id="836946" respawn_time="295">
+						<spot x="2794.442" y="1452.1001" z="199.6018" h="40"/>
+					</spawn>
+					<!-- Yudosos ||| ldf7_v07_l_pve_weapon_seller -->
+					<spawn npc_id="836947" respawn_time="295">
+						<spot x="2779.6865" y="1482.0016" z="197.64456" h="90"/>
+					</spawn>
+					<!-- Jiampaoro ||| ldf7_v07_l_pve_armor_seller -->
+					<spawn npc_id="836948" respawn_time="295">
+						<spot x="2776.7166" y="1482.0518" z="197.98741" h="90"/>
+					</spawn>
+					<!-- Shiba ||| ldf7_v07_l_pve_acc_seller -->
+					<spawn npc_id="836949" respawn_time="295">
+						<spot x="2773.8608" y="1481.9744" z="198.4985" h="90"/>
+					</spawn>
+					<!-- Vindemia ||| ldf7_v07_l_pve_special_seller -->
+					<spawn npc_id="836950" respawn_time="295">
+						<spot x="2770.997" y="1482.0245" z="198.5" h="90"/>
+					</spawn>
+					<!-- Superior Fighter of the 127th Occupation Troop ||| LDF7_1517_Li_Guard_Fi -->
+					<spawn npc_id="885907" respawn_time="295">
+						<spot x="2750.2346" y="1442.8137" z="198.75" h="30"/>
+						<spot x="2750.9307" y="1448.6802" z="198.75" h="99"/>
+						<spot x="2740.1726" y="1452.5087" z="198.47899" h="66"/>
+						<spot x="2777.8228" y="1430.9521" z="198.89188" h="90"/>
+						<spot x="2786.4229" y="1472.5876" z="197.625" h="75"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Occupation Troop ||| LDF7_1517_Li_Guard_As -->
+					<spawn npc_id="885908" respawn_time="295">
+						<spot x="2734.0742" y="1469.5249" z="197.75" h="40"/>
+						<spot x="2750.9766" y="1473.0157" z="197.81152" h="33"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Occupation Troop ||| LDF7_1517_Li_Guard_Wi -->
+					<spawn npc_id="885909" respawn_time="295">
+						<spot x="2764.876" y="1434.9078" z="198.9546" h="30"/>
+						<spot x="2789.8357" y="1417.2902" z="198.03511" h="85"/>
+						<spot x="2765.9192" y="1482.357" z="198.64732" h="30"/>
+						<spot x="2802.869" y="1463.7063" z="198.79907" h="15"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Occupation Troop ||| LDF7_1517_Li_Guard_Pr -->
+					<spawn npc_id="885910" respawn_time="295">
+						<spot x="2791.1052" y="1448.9321" z="199.60178" h="41"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1517\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 127th Search Party ||| LDF7_1517_Da_Recon_Fi -->
+					<spawn npc_id="886047" respawn_time="295">
+						<spot x="2756.3188" y="1608.7346" z="198.49268" h="15"/>
+						<spot x="2733.2507" y="1594.7664" z="198.42429" h="90"/>
+						<spot x="2745.38" y="1611.8059" z="198.5" h="60"/>
+						<spot x="2734.4902" y="1602.9777" z="198.5" h="53"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Search Party ||| LDF7_1517_Da_Recon_As -->
+					<spawn npc_id="886048" respawn_time="295">
+						<spot x="2737.3503" y="1611.1052" z="198.5" h="45"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Search Party ||| LDF7_1517_Da_Recon_Wi -->
+					<spawn npc_id="886049" respawn_time="295">
+						<spot x="2744.7542" y="1600.1064" z="198.5" h="40"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Search Party ||| LDF7_1517_Da_Recon_Pr -->
+					<spawn npc_id="886050" respawn_time="295">
+						<spot x="2739.709" y="1588.5833" z="198.5" h="90"/>
+					</spawn>
+					<!-- Superior Fighter of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Fi -->
+					<spawn npc_id="886051" respawn_time="295">
+						<spot x="2689.1174" y="1370.7603" z="197.5" h="0"/>
+						<spot x="2664.2527" y="1374.4169" z="197.25" h="15"/>
+						<spot x="2673.8127" y="1380.7047" z="197.25" h="30"/>
+						<spot x="2657.8533" y="1376.801" z="197.25366" h="48"/>
+					</spawn>
+					<!-- Superior Scout of the 127th Vanguard ||| LDF7_1517_Dr_Recon_As -->
+					<spawn npc_id="886052" respawn_time="295">
+						<spot x="2668.3247" y="1388.5624" z="197.25" h="30"/>
+					</spawn>
+					<!-- Superior Recruit of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Wi -->
+					<spawn npc_id="886053" respawn_time="295">
+						<spot x="2670.464" y="1369.913" z="197.25" h="30"/>
+					</spawn>
+					<!-- Superior Healer of the 127th Vanguard ||| LDF7_1517_Dr_Recon_Pr -->
+					<spawn npc_id="886054" respawn_time="295">
+						<spot x="2681.2295" y="1373.866" z="197.32684" h="0"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="1518">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 128th Defence Troop ||| LDF7_1518_Boss_Da_1 -->
+					<spawn npc_id="885756" respawn_time="295">
+						<spot x="1944.2816" y="1489.9724" z="215.6049" h="60"/>
+					</spawn>
+					<!-- 128th Garrison - Battlefield Encouragement ||| LDF7_Artifact_15181_Da -->
+					<spawn npc_id="885803" respawn_time="295">
+						<spot x="1915.1212" y="1488.3267" z="215.125" h="0" static_id="1475"/>
+					</spawn>
+					<!-- Superior Fighter of the 128th Defence Troop ||| LDF7_1518_Dr_Guard_Fi -->
+					<spawn npc_id="885923" respawn_time="295">
+						<spot x="1931.779" y="1456.0125" z="215.0" h="90"/>
+						<spot x="1904.0137" y="1468.727" z="215.125" h="75"/>
+						<spot x="1930.2089" y="1478.0591" z="215.125" h="17"/>
+						<spot x="1897.5023" y="1490.2877" z="215.15611" h="45"/>
+						<spot x="1950.189" y="1512.223" z="215.125" h="30"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Defence Troop ||| LDF7_1518_Dr_Guard_As -->
+					<spawn npc_id="885924" respawn_time="295">
+						<spot x="1885.4271" y="1481.14" z="215.25" h="60"/>
+						<spot x="1907.4852" y="1505.5623" z="215.25" h="45"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Defence Troop ||| LDF7_1518_Dr_Guard_Wi -->
+					<spawn npc_id="885925" respawn_time="295">
+						<spot x="1916.2505" y="1466.2567" z="215.10895" h="45"/>
+						<spot x="1930.5342" y="1468.4136" z="215.125" h="45"/>
+						<spot x="1948.4164" y="1467.073" z="215.0" h="90"/>
+						<spot x="1929.9235" y="1512.64" z="215.125" h="85"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Defence Troop ||| LDF7_1518_Dr_Guard_Pr -->
+					<spawn npc_id="885926" respawn_time="295">
+						<spot x="1943.9718" y="1493.4308" z="215.60495" h="60"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v08_Teleport_D -->
+					<spawn npc_id="731910" respawn_time="295">
+						<spot x="1941.375" y="1466.325" z="216.88646" h="45" static_id="1275"/>
+					</spawn>
+					<!-- Oliv ||| LDF7_Orip_E -->
+					<spawn npc_id="836610" respawn_time="295">
+						<spot x="1938.5515" y="1466.5758" z="215.11508" h="30"/>
+					</spawn>
+					<!-- None ||| LDF7_v08_Flyctrl_L -->
+					<spawn npc_id="836880" respawn_time="295">
+						<spot x="1906.9135" y="1488.4723" z="215.125" h="0"/>
+					</spawn>
+					<!-- Charlotte ||| ldf7_v08_d_goods_seller -->
+					<spawn npc_id="836967" respawn_time="295">
+						<spot x="1944.1105" y="1481.3042" z="215.6049" h="60"/>
+					</spawn>
+					<!-- Kolde ||| ldf7_v08_d_potion_seller -->
+					<spawn npc_id="836968" respawn_time="295">
+						<spot x="1944.0219" y="1484.6816" z="215.6049" h="60"/>
+					</spawn>
+					<!-- Varon ||| ldf7_v08_d_food_seller -->
+					<spawn npc_id="836969" respawn_time="295">
+						<spot x="1944.1105" y="1497.1859" z="215.60495" h="60"/>
+					</spawn>
+					<!-- Puko ||| ldf7_v08_d_special_goods_seller -->
+					<spawn npc_id="836970" respawn_time="295">
+						<spot x="1944.1486" y="1500.2999" z="215.60495" h="60"/>
+					</spawn>
+					<!-- Markon ||| ldf7_v08_d_pvp_weapon_seller -->
+					<spawn npc_id="836971" respawn_time="295">
+						<spot x="1923.8606" y="1514.155" z="215.125" h="90"/>
+					</spawn>
+					<!-- Oskar ||| ldf7_v08_d_pvp_armor_seller -->
+					<spawn npc_id="836972" respawn_time="295">
+						<spot x="1920.8053" y="1514.155" z="215.125" h="90"/>
+					</spawn>
+					<!-- Zankelar ||| ldf7_v08_l_pvp_acc_seller -->
+					<spawn npc_id="836965" respawn_time="295">
+						<spot x="1914.7422" y="1514.0704" z="215.25" h="90"/>
+					</spawn>
+					<!-- Jabijaba ||| ldf7_v08_d_pvp_special_seller -->
+					<spawn npc_id="836973" respawn_time="295">
+						<spot x="1917.649" y="1514.0704" z="215.14693" h="90"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1518\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 128th Scout Troop ||| LDF7_1518_Li_Recon_Fi -->
+					<spawn npc_id="886059" respawn_time="295">
+						<spot x="1991.2319" y="1656.3113" z="225.70947" h="30"/>
+						<spot x="1997.744" y="1652.7897" z="225.66805" h="75"/>
+						<spot x="2002.72" y="1645.4545" z="225.6709" h="75"/>
+						<spot x="2012.5768" y="1643.6044" z="225.75" h="90"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Scout Troop ||| LDF7_1518_Li_Recon_As -->
+					<spawn npc_id="886060" respawn_time="295">
+						<spot x="1995.274" y="1641.8986" z="225.70462" h="66"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Scout Troop ||| LDF7_1518_Li_Recon_Wi -->
+					<spawn npc_id="886061" respawn_time="295">
+						<spot x="2008.0217" y="1653.3298" z="225.625" h="96"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Scout Troop ||| LDF7_1518_Li_Recon_Pr -->
+					<spawn npc_id="886062" respawn_time="295">
+						<spot x="2001.4601" y="1659.6976" z="225.75" h="83"/>
+					</spawn>
+					<!-- Superior Fighter of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Fi -->
+					<spawn npc_id="886278" respawn_time="295">
+						<spot x="1951.9758" y="1285.5186" z="200.5" h="15"/>
+						<spot x="1943.7037" y="1289.4722" z="200.5" h="30"/>
+						<spot x="1929.9269" y="1272.8347" z="200.5" h="75"/>
+						<spot x="1925.4581" y="1269.7042" z="200.21603" h="60"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_As -->
+					<spawn npc_id="886279" respawn_time="295">
+						<spot x="1934.2817" y="1289.3774" z="200.5" h="41"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Wi -->
+					<spawn npc_id="886280" respawn_time="295">
+						<spot x="1944.3811" y="1272.3136" z="200.5" h="96"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Pr -->
+					<spawn npc_id="886281" respawn_time="295">
+						<spot x="1941.8743" y="1280.8743" z="200.43407" h="36"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 128th Conquest Squad ||| LDF7_1518_Boss_Dr_1 -->
+					<spawn npc_id="885761" respawn_time="295">
+						<spot x="1944.2816" y="1489.9724" z="215.6049" h="60"/>
+					</spawn>
+					<!-- 128th Garrison - Battlefield Encouragement ||| LDF7_Artifact_15181_Dr -->
+					<spawn npc_id="885804" respawn_time="295">
+						<spot x="1915.1212" y="1488.3267" z="215.125" h="0" static_id="1474"/>
+					</spawn>
+					<!-- Superior Fighter of the 128th Conquest Squad ||| LDF7_1518_Dr_Guard_Fi -->
+					<spawn npc_id="885927" respawn_time="295">
+						<spot x="1931.779" y="1456.0125" z="215.0" h="90"/>
+						<spot x="1904.0137" y="1468.727" z="215.125" h="75"/>
+						<spot x="1930.2089" y="1478.0591" z="215.125" h="17"/>
+						<spot x="1897.5023" y="1490.2877" z="215.15611" h="45"/>
+						<spot x="1950.189" y="1512.223" z="215.125" h="30"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Conquest Squad ||| LDF7_1518_Dr_Guard_As -->
+					<spawn npc_id="885928" respawn_time="295">
+						<spot x="1885.4271" y="1481.14" z="215.25" h="60"/>
+						<spot x="1907.4852" y="1505.5623" z="215.25" h="45"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Conquest Squad ||| LDF7_1518_Dr_Guard_Wi -->
+					<spawn npc_id="885929" respawn_time="295">
+						<spot x="1916.2505" y="1466.2567" z="215.10895" h="45"/>
+						<spot x="1930.5342" y="1468.4136" z="215.125" h="45"/>
+						<spot x="1948.4164" y="1467.073" z="215.0" h="90"/>
+						<spot x="1929.9235" y="1512.64" z="215.125" h="85"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Conquest Squad ||| LDF7_1518_Dr_Guard_Pr -->
+					<spawn npc_id="885930" respawn_time="295">
+						<spot x="1943.9718" y="1493.4308" z="215.60495" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON BALAUR OCCUPYING 1518\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 128th Conquest Squad ||| LDF7_1518_Dr_Normal_Fi -->
+					<spawn npc_id="886055" respawn_time="295">
+						<spot x="1925.4581" y="1269.7042" z="200.21603" h="60"/>
+						<spot x="1929.9269" y="1272.8347" z="200.5" h="75"/>
+						<spot x="1943.7037" y="1289.4722" z="200.5" h="30"/>
+						<spot x="1951.9758" y="1285.5186" z="200.5" h="15"/>
+						<spot x="2002.72" y="1645.4545" z="225.6709" h="75"/>
+						<spot x="2012.5768" y="1643.6044" z="225.75" h="90"/>
+						<spot x="1997.744" y="1652.7897" z="225.66805" h="75"/>
+						<spot x="1991.2319" y="1656.3113" z="225.70947" h="30"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Conquest Squad ||| LDF7_1518_Dr_Normal_As -->
+					<spawn npc_id="886056" respawn_time="295">
+						<spot x="1934.2817" y="1289.3774" z="200.5" h="41"/>
+						<spot x="1995.274" y="1641.8986" z="225.70462" h="66"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Conquest Squad ||| LDF7_1518_Dr_Normal_Wi -->
+					<spawn npc_id="886057" respawn_time="295">
+						<spot x="1944.3811" y="1272.3136" z="200.5" h="96"/>
+						<spot x="2008.0217" y="1653.3298" z="225.625" h="96"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Conquest Squad ||| LDF7_1518_Dr_Normal_Pr -->
+					<spawn npc_id="886058" respawn_time="295">
+						<spot x="1941.8743" y="1280.8743" z="200.43407" h="36"/>
+						<spot x="2001.4601" y="1659.6976" z="225.75" h="83"/>
+					</spawn>
+					<!-- Superior Fighter of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Fi -->
+					<spawn npc_id="886278" respawn_time="295">
+						<spot x="1951.9758" y="1285.5186" z="200.5" h="15"/>
+						<spot x="1943.7037" y="1289.4722" z="200.5" h="30"/>
+						<spot x="1929.9269" y="1272.8347" z="200.5" h="75"/>
+						<spot x="1925.4581" y="1269.7042" z="200.21603" h="60"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_As -->
+					<spawn npc_id="886279" respawn_time="295">
+						<spot x="1934.2817" y="1289.3774" z="200.5" h="41"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Wi -->
+					<spawn npc_id="886280" respawn_time="295">
+						<spot x="1944.3811" y="1272.3136" z="200.5" h="96"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Pr -->
+					<spawn npc_id="886281" respawn_time="295">
+						<spot x="1941.8743" y="1280.8743" z="200.43407" h="36"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 128th Occupation Troop ||| LDF7_1518_Boss_Li_1 -->
+					<spawn npc_id="885751" respawn_time="295">
+						<spot x="1944.2816" y="1489.9724" z="215.6049" h="60"/>
+					</spawn>
+					<!-- 128th Garrison - Battlefield Encouragement ||| LDF7_Artifact_15181_Li -->
+					<spawn npc_id="885802" respawn_time="295">
+						<spot x="1915.1212" y="1488.3267" z="215.125" h="0" static_id="1474"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v08_Teleport_L -->
+					<spawn npc_id="731901" respawn_time="295">
+						<spot x="1941.375" y="1466.325" z="216.88646" h="45" static_id="1275"/>
+					</spawn>
+					<!-- Luibus ||| LDF7_Ruivus_E -->
+					<spawn npc_id="836601" respawn_time="295">
+						<spot x="1938.5515" y="1466.5758" z="215.11508" h="30"/>
+					</spawn>
+					<!-- None ||| LDF7_v08_Flyctrl_L -->
+					<spawn npc_id="836880" respawn_time="295">
+						<spot x="1906.9135" y="1488.4723" z="215.125" h="0"/>
+					</spawn>
+					<!-- Dekano ||| ldf7_v08_l_goods_seller -->
+					<spawn npc_id="836959" respawn_time="295">
+						<spot x="1944.1105" y="1481.3042" z="215.6049" h="60"/>
+					</spawn>
+					<!-- Auber ||| ldf7_v08_l_potion_seller -->
+					<spawn npc_id="836960" respawn_time="295">
+						<spot x="1944.0219" y="1484.6816" z="215.6049" h="60"/>
+					</spawn>
+					<!-- Kitano ||| ldf7_v08_l_food_seller -->
+					<spawn npc_id="836961" respawn_time="295">
+						<spot x="1944.1105" y="1497.1859" z="215.60495" h="60"/>
+					</spawn>
+					<!-- Heje ||| ldf7_v08_l_special_goods_seller -->
+					<spawn npc_id="836962" respawn_time="295">
+						<spot x="1944.1486" y="1500.2999" z="215.60495" h="60"/>
+					</spawn>
+					<!-- Katan ||| ldf7_v08_l_pvp_weapon_seller -->
+					<spawn npc_id="836963" respawn_time="295">
+						<spot x="1923.8606" y="1514.155" z="215.125" h="90"/>
+					</spawn>
+					<!-- Mattis ||| ldf7_v08_l_pvp_armor_seller -->
+					<spawn npc_id="836964" respawn_time="295">
+						<spot x="1920.8053" y="1514.155" z="215.125" h="90"/>
+					</spawn>
+					<!-- Polima ||| ldf7_v08_l_pvp_acc_seller -->
+					<spawn npc_id="836965" respawn_time="295">
+						<spot x="1914.7422" y="1514.0704" z="215.25" h="90"/>
+					</spawn>
+					<!-- Jabijaba ||| ldf7_v08_l_pvp_special_seller -->
+					<spawn npc_id="836966" respawn_time="295">
+						<spot x="1917.649" y="1514.0704" z="215.14693" h="90"/>
+					</spawn>
+					<!-- Superior Fighter of the 128th Occupation Troop ||| LDF7_1518_Li_Guard_Fi -->
+					<spawn npc_id="885919" respawn_time="295">
+						<spot x="1931.779" y="1456.0125" z="215.0" h="90"/>
+						<spot x="1904.0137" y="1468.727" z="215.125" h="75"/>
+						<spot x="1930.2089" y="1478.0591" z="215.125" h="17"/>
+						<spot x="1897.5023" y="1490.2877" z="215.15611" h="45"/>
+						<spot x="1950.189" y="1512.223" z="215.125" h="30"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Occupation Troop ||| LDF7_1518_Li_Guard_As -->
+					<spawn npc_id="885920" respawn_time="295">
+						<spot x="1885.4271" y="1481.14" z="215.25" h="60"/>
+						<spot x="1907.4852" y="1505.5623" z="215.25" h="45"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Occupation Troop ||| LDF7_1518_Li_Guard_Wi -->
+					<spawn npc_id="885921" respawn_time="295">
+						<spot x="1916.2505" y="1466.2567" z="215.10895" h="45"/>
+						<spot x="1930.5342" y="1468.4136" z="215.125" h="45"/>
+						<spot x="1948.4164" y="1467.073" z="215.0" h="90"/>
+						<spot x="1929.9235" y="1512.64" z="215.125" h="85"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Occupation Troop ||| LDF7_1518_Li_Guard_Pr -->
+					<spawn npc_id="885922" respawn_time="295">
+						<spot x="1943.9718" y="1493.4308" z="215.60495" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1518\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 128th Search Party ||| LDF7_1518_Da_Recon_Fi -->
+					<spawn npc_id="886063" respawn_time="295">
+						<spot x="1991.2319" y="1656.3113" z="225.70947" h="30"/>
+						<spot x="1997.744" y="1652.7897" z="225.66805" h="75"/>
+						<spot x="2002.72" y="1645.4545" z="225.6709" h="75"/>
+						<spot x="2012.5768" y="1643.6044" z="225.75" h="90"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Search Party ||| LDF7_1518_Da_Recon_As -->
+					<spawn npc_id="886064" respawn_time="295">
+						<spot x="1995.274" y="1641.8986" z="225.70462" h="66"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Search Party ||| LDF7_1518_Da_Recon_Wi -->
+					<spawn npc_id="886065" respawn_time="295">
+						<spot x="2008.0217" y="1653.3298" z="225.625" h="96"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Search Party ||| LDF7_1518_Da_Recon_Pr -->
+					<spawn npc_id="886066" respawn_time="295">
+						<spot x="2001.4601" y="1659.6976" z="225.75" h="83"/>
+					</spawn>
+					<!-- Superior Fighter of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Fi -->
+					<spawn npc_id="886278" respawn_time="295">
+						<spot x="1951.9758" y="1285.5186" z="200.5" h="15"/>
+						<spot x="1943.7037" y="1289.4722" z="200.5" h="30"/>
+						<spot x="1929.9269" y="1272.8347" z="200.5" h="75"/>
+						<spot x="1925.4581" y="1269.7042" z="200.21603" h="60"/>
+					</spawn>
+					<!-- Superior Scout of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_As -->
+					<spawn npc_id="886279" respawn_time="295">
+						<spot x="1934.2817" y="1289.3774" z="200.5" h="41"/>
+					</spawn>
+					<!-- Superior Recruit of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Wi -->
+					<spawn npc_id="886280" respawn_time="295">
+						<spot x="1944.3811" y="1272.3136" z="200.5" h="96"/>
+					</spawn>
+					<!-- Superior Healer of the 128th Vanguard ||| LDF7_1518_Dr_D_Recon_Pr -->
+					<spawn npc_id="886281" respawn_time="295">
+						<spot x="1941.8743" y="1280.8743" z="200.43407" h="36"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="1519">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 129th Defence Troop ||| LDF7_1519_Boss_Da_5 -->
+					<spawn npc_id="885775" respawn_time="295">
+						<spot x="1315.6932" y="1505.5182" z="256.34888" h="60"/>
+					</spawn>
+					<!-- 129th Garrison - Battle's Blessing ||| LDF7_Artifact_15191_Da -->
+					<spawn npc_id="885806" respawn_time="295">
+						<spot x="1283.4933" y="1504.9915" z="253.625" h="0" static_id="969"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v09_Teleport_D -->
+					<spawn npc_id="731911" respawn_time="295">
+						<spot x="1265.4445" y="1517.5973" z="255.77545" h="115" static_id="1276"/>
+					</spawn>
+					<!-- Snobir ||| LDF7_Snobir_E -->
+					<spawn npc_id="836611" respawn_time="295">
+						<spot x="1314.3301" y="1492.1855" z="255.91159" h="45"/>
+					</spawn>
+					<!-- Aria ||| ldf7_v09_d_goods_seller -->
+					<spawn npc_id="836980" respawn_time="295">
+						<spot x="1316.7985" y="1497.1858" z="256.3489" h="60"/>
+					</spawn>
+					<!-- Lakrimosa ||| ldf7_v09_d_potion_seller -->
+					<spawn npc_id="836981" respawn_time="295">
+						<spot x="1316.7985" y="1500.8048" z="256.3489" h="60"/>
+					</spawn>
+					<!-- Ingbar ||| ldf7_v09_d_food_seller -->
+					<spawn npc_id="836982" respawn_time="295">
+						<spot x="1316.7985" y="1512.001" z="256.34888" h="60"/>
+					</spawn>
+					<!-- Gangradir ||| ldf7_v09_d_special_goods_seller -->
+					<spawn npc_id="836983" respawn_time="295">
+						<spot x="1316.7985" y="1515.62" z="256.34888" h="60"/>
+					</spawn>
+					<!-- Ladspid ||| ldf7_v09_d_matter_seller -->
+					<spawn npc_id="836984" respawn_time="295">
+						<spot x="1304.5563" y="1506.1786" z="255.91277" h="0"/>
+					</spawn>
+					<!-- Superior Fighter of the 129th Defence Troop ||| LDF7_1519_Da_Guard_Fi -->
+					<spawn npc_id="885935" respawn_time="295">
+						<spot x="1310.9359" y="1519.4281" z="255.91183" h="45"/>
+						<spot x="1310.3398" y="1492.4833" z="255.91182" h="75"/>
+						<spot x="1280.1389" y="1528.7108" z="253.625" h="30"/>
+						<spot x="1279.4172" y="1493.4242" z="253.625" h="119"/>
+						<spot x="1278.7837" y="1482.8413" z="253.625" h="90"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Defence Troop ||| LDF7_1519_Da_Guard_As -->
+					<spawn npc_id="885936" respawn_time="295">
+						<spot x="1267.4878" y="1493.3212" z="253.625" h="45"/>
+						<spot x="1253.9293" y="1506.6941" z="253.625" h="60"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Defence Troop ||| LDF7_1519_Da_Guard_Wi -->
+					<spawn npc_id="885937" respawn_time="295">
+						<spot x="1305.0637" y="1536.699" z="253.625" h="70"/>
+						<spot x="1315.7551" y="1474.6443" z="253.625" h="90"/>
+						<spot x="1270.6296" y="1517.1693" z="253.625" h="75"/>
+						<spot x="1291.3069" y="1474.9711" z="253.625" h="41"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Defence Troop ||| LDF7_1519_Da_Guard_Pr -->
+					<spawn npc_id="885938" respawn_time="295">
+						<spot x="1315.7286" y="1508.3203" z="256.34888" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ASMOS OCCUPYING 1518\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 129th Scout Troop ||| LDF7_1519_Li_Recon_Fi -->
+					<spawn npc_id="886075" respawn_time="295">
+						<spot x="1454.405" y="1472.1473" z="240.91858" h="15"/>
+						<spot x="1447.3053" y="1470.1415" z="241.0" h="30"/>
+						<spot x="1439.1252" y="1462.2487" z="241.375" h="45"/>
+						<spot x="1440.187" y="1455.5587" z="241.375" h="75"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Scout Troop ||| LDF7_1519_Li_Recon_As -->
+					<spawn npc_id="886076" respawn_time="295">
+						<spot x="1440.9363" y="1469.7532" z="241.31648" h="30"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Scout Troop ||| LDF7_1519_Li_Recon_Wi -->
+					<spawn npc_id="886077" respawn_time="295">
+						<spot x="1447.4174" y="1459.1788" z="241.375" h="45"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Scout Troop ||| LDF7_1519_Li_Recon_Pr -->
+					<spawn npc_id="886078" respawn_time="295">
+						<spot x="1453.8069" y="1461.848" z="241.375" h="45"/>
+					</spawn>
+					<!-- Superior Fighter of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Fi -->
+					<spawn npc_id="886282" respawn_time="295">
+						<spot x="1444.3986" y="1527.9529" z="241.09773" h="76"/>
+						<spot x="1439.0625" y="1536.1948" z="241.125" h="90"/>
+						<spot x="1437.3403" y="1546.8484" z="241.125" h="45"/>
+						<spot x="1428.8214" y="1548.67" z="241.39967" h="45"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_As -->
+					<spawn npc_id="886283" respawn_time="295">
+						<spot x="1432.4037" y="1539.0615" z="241.17181" h="75"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Wi -->
+					<spawn npc_id="886284" respawn_time="295">
+						<spot x="1446.1876" y="1546.2748" z="241.125" h="75"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Pr -->
+					<spawn npc_id="886285" respawn_time="295">
+						<spot x="1448.0734" y="1537.8634" z="241.125" h="60"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 129th Conquest Squad ||| LDF7_1519_Boss_Dr_5 -->
+					<spawn npc_id="885780" respawn_time="295">
+						<spot x="1315.6932" y="1505.5182" z="256.34888" h="60"/>
+					</spawn>
+					<!-- 129th Garrison - Battle's Blessing ||| LDF7_Artifact_15191_Dr -->
+					<spawn npc_id="885807" respawn_time="295">
+						<spot x="1283.4933" y="1504.9915" z="253.625" h="0" static_id="969"/>
+					</spawn>
+					<!-- Superior Fighter of the 129th Defence Troop ||| LDF7_1519_Dr_Guard_Fi -->
+					<spawn npc_id="885939" respawn_time="295">
+						<spot x="1310.9359" y="1519.4281" z="255.91183" h="45"/>
+						<spot x="1310.3398" y="1492.4833" z="255.91182" h="75"/>
+						<spot x="1280.1389" y="1528.7108" z="253.625" h="30"/>
+						<spot x="1279.4172" y="1493.4242" z="253.625" h="119"/>
+						<spot x="1278.7837" y="1482.8413" z="253.625" h="90"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Defence Troop ||| LDF7_1519_Dr_Guard_As -->
+					<spawn npc_id="885940" respawn_time="295">
+						<spot x="1267.4878" y="1493.3212" z="253.625" h="45"/>
+						<spot x="1253.9293" y="1506.6941" z="253.625" h="60"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Defence Troop ||| LDF7_1519_Dr_Guard_Wi -->
+					<spawn npc_id="885941" respawn_time="295">
+						<spot x="1305.0637" y="1536.699" z="253.625" h="70"/>
+						<spot x="1315.7551" y="1474.6443" z="253.625" h="90"/>
+						<spot x="1270.6296" y="1517.1693" z="253.625" h="75"/>
+						<spot x="1291.3069" y="1474.9711" z="253.625" h="41"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Defence Troop ||| LDF7_1519_Dr_Guard_Pr -->
+					<spawn npc_id="885942" respawn_time="295">
+						<spot x="1315.7286" y="1508.3203" z="256.34888" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON BALAUR OCCUPYING 1519\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 129th Conquest Squad ||| LDF7_1519_Dr_Normal_Fi -->
+					<spawn npc_id="886071" respawn_time="295">
+						<spot x="1454.405" y="1472.1473" z="240.91858" h="15"/>
+						<spot x="1447.3053" y="1470.1415" z="241.0" h="30"/>
+						<spot x="1439.1252" y="1462.2487" z="241.375" h="45"/>
+						<spot x="1440.187" y="1455.5587" z="241.375" h="75"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Conquest Squad ||| LDF7_1519_Dr_Normal_As -->
+					<spawn npc_id="886072" respawn_time="295">
+						<spot x="1440.9363" y="1469.7532" z="241.31648" h="30"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Conquest Squad ||| LDF7_1519_Dr_Normal_Wi -->
+					<spawn npc_id="886073" respawn_time="295">
+						<spot x="1447.4174" y="1459.1788" z="241.375" h="45"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Conquest Squad ||| LDF7_1519_Dr_Normal_Pr -->
+					<spawn npc_id="886074" respawn_time="295">
+						<spot x="1453.8069" y="1461.848" z="241.375" h="45"/>
+					</spawn>
+					<!-- Superior Fighter of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Fi -->
+					<spawn npc_id="886282" respawn_time="295">
+						<spot x="1444.3986" y="1527.9529" z="241.09773" h="76"/>
+						<spot x="1439.0625" y="1536.1948" z="241.125" h="90"/>
+						<spot x="1437.3403" y="1546.8484" z="241.125" h="45"/>
+						<spot x="1428.8214" y="1548.67" z="241.39967" h="45"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_As -->
+					<spawn npc_id="886283" respawn_time="295">
+						<spot x="1432.4037" y="1539.0615" z="241.17181" h="75"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Wi -->
+					<spawn npc_id="886284" respawn_time="295">
+						<spot x="1446.1876" y="1546.2748" z="241.125" h="75"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Pr -->
+					<spawn npc_id="886285" respawn_time="295">
+						<spot x="1448.0734" y="1537.8634" z="241.125" h="60"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+					<!-- Legate of the 129th Occupation Troop ||| LDF7_1519_Boss_Li_5 -->
+					<spawn npc_id="885770" respawn_time="295">
+						<spot x="1315.6932" y="1505.5182" z="256.34888" h="60"/>
+					</spawn>
+					<!-- 129th Garrison - Battle's Blessing ||| LDF7_Artifact_15191_Li -->
+					<spawn npc_id="885805" respawn_time="295">
+						<spot x="1283.4933" y="1504.9915" z="253.625" h="0" static_id="1024"/>
+					</spawn>
+					<!-- 129th Garrison - Battle's Blessing ||| LDF7_Artifact_15191_Li -->
+					<spawn npc_id="885805" respawn_time="295">
+						<spot x="1283.4933" y="1504.9915" z="253.625" h="0" static_id="1024"/>
+					</spawn>
+					<!-- Teleporter ||| LDF7_v09_Teleport_L -->
+					<spawn npc_id="731902" respawn_time="295">
+						<spot x="1265.4445" y="1517.5973" z="255.77545" h="115" static_id="1276"/>
+					</spawn>
+					<!-- Yubenros ||| LDF7_Yuvenros_E -->
+					<spawn npc_id="836602" respawn_time="295">
+						<spot x="1314.3301" y="1492.1855" z="255.91159" h="45"/>
+					</spawn>
+					<!-- Gabor ||| ldf7_v09_l_goods_seller -->
+					<spawn npc_id="836975" respawn_time="295">
+						<spot x="1316.7985" y="1497.1858" z="256.3489" h="60"/>
+					</spawn>
+					<!-- Awa ||| ldf7_v09_l_potion_seller -->
+					<spawn npc_id="836976" respawn_time="295">
+						<spot x="1316.7985" y="1500.8048" z="256.3489" h="60"/>
+					</spawn>
+					<!-- Koligan ||| ldf7_v09_l_food_seller -->
+					<spawn npc_id="836977" respawn_time="295">
+						<spot x="1316.7985" y="1512.001" z="256.34888" h="60"/>
+					</spawn>
+					<!-- Diadern ||| ldf7_v09_l_special_goods_seller -->
+					<spawn npc_id="836978" respawn_time="295">
+						<spot x="1316.7985" y="1515.62" z="256.34888" h="60"/>
+					</spawn>
+					<!-- Jerome ||| ldf7_v09_l_matter_seller -->
+					<spawn npc_id="836979" respawn_time="295">
+						<spot x="1304.5563" y="1506.1786" z="255.91277" h="0"/>
+					</spawn>
+					<!-- Superior Fighter of the 129th Occupation Troop ||| LDF7_1519_Li_Guard_Fi -->
+					<spawn npc_id="885931" respawn_time="295">
+						<spot x="1310.9359" y="1519.4281" z="255.91183" h="45"/>
+						<spot x="1310.3398" y="1492.4833" z="255.91182" h="75"/>
+						<spot x="1280.1389" y="1528.7108" z="253.625" h="30"/>
+						<spot x="1279.4172" y="1493.4242" z="253.625" h="119"/>
+						<spot x="1278.7837" y="1482.8413" z="253.625" h="90"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Occupation Troop ||| LDF7_1519_Li_Guard_As -->
+					<spawn npc_id="885932" respawn_time="295">
+						<spot x="1267.4878" y="1493.3212" z="253.625" h="45"/>
+						<spot x="1253.9293" y="1506.6941" z="253.625" h="60"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Occupation Troop ||| LDF7_1519_Li_Guard_Wi -->
+					<spawn npc_id="885933" respawn_time="295">
+						<spot x="1305.0637" y="1536.699" z="253.625" h="70"/>
+						<spot x="1315.7551" y="1474.6443" z="253.625" h="90"/>
+						<spot x="1270.6296" y="1517.1693" z="253.625" h="75"/>
+						<spot x="1291.3069" y="1474.9711" z="253.625" h="41"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Occupation Troop ||| LDF7_1519_Li_Guard_Pr -->
+					<spawn npc_id="885934" respawn_time="295">
+						<spot x="1315.7286" y="1508.3203" z="256.34888" h="60"/>
+					</spawn>
+					<!-- /////////////////SUB-BASES ON ELYOS OCCUPYING 1519\\\\\\\\\\\\\\\\  -->
+					<!-- Superior Fighter of the 129th Search Party ||| LDF7_1519_Da_Recon_Fi -->
+					<spawn npc_id="886079" respawn_time="295">
+						<spot x="1454.405" y="1472.1473" z="240.91858" h="15"/>
+						<spot x="1447.3053" y="1470.1415" z="241.0" h="30"/>
+						<spot x="1439.1252" y="1462.2487" z="241.375" h="45"/>
+						<spot x="1440.187" y="1455.5587" z="241.375" h="75"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Search Party ||| LDF7_1519_Da_Recon_As -->
+					<spawn npc_id="886080" respawn_time="295">
+						<spot x="1440.9363" y="1469.7532" z="241.31648" h="30"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Search Party ||| LDF7_1519_Da_Recon_Wi -->
+					<spawn npc_id="886081" respawn_time="295">
+						<spot x="1447.4174" y="1459.1788" z="241.375" h="45"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Search Party ||| LDF7_1519_Da_Recon_Pr -->
+					<spawn npc_id="886082" respawn_time="295">
+						<spot x="1453.8069" y="1461.848" z="241.375" h="45"/>
+					</spawn>
+					<!-- Superior Fighter of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Fi -->
+					<spawn npc_id="886282" respawn_time="295">
+						<spot x="1444.3986" y="1527.9529" z="241.09773" h="76"/>
+						<spot x="1439.0625" y="1536.1948" z="241.125" h="90"/>
+						<spot x="1437.3403" y="1546.8484" z="241.125" h="45"/>
+						<spot x="1428.8214" y="1548.67" z="241.39967" h="45"/>
+					</spawn>
+					<!-- Superior Scout of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_As -->
+					<spawn npc_id="886283" respawn_time="295">
+						<spot x="1432.4037" y="1539.0615" z="241.17181" h="75"/>
+					</spawn>
+					<!-- Superior Recruit of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Wi -->
+					<spawn npc_id="886284" respawn_time="295">
+						<spot x="1446.1876" y="1546.2748" z="241.125" h="75"/>
+					</spawn>
+					<!-- Superior Healer of the 129th Vanguard ||| LDF7_1519_Dr_D_Recon_Pr -->
+					<spawn npc_id="886285" respawn_time="295">
+						<spot x="1448.0734" y="1537.8634" z="241.125" h="60"/>
+					</spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+    </spawn_map>
+</spawns>

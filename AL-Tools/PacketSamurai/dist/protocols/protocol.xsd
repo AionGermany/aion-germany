@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="protocol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element maxOccurs="unbounded" name="bitset" type="BitSet" />
+          <xs:element maxOccurs="unbounded" name="multivalue" type="MultiValue" />
+          <xs:element name="packetfamilly" type="PacketFamily" />
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="crypt" type="xs:string" use="required" />
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="port" type="xs:unsignedShort" use="required" />
+      <xs:attribute name="checksumSize" type="xs:unsignedByte" use="required" />
+      <xs:attribute name="strictlength" type="xs:boolean" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Part">
+    <xs:sequence minOccurs="0">
+      <xs:element name="reader" type="Reader" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="type" type="xs:string" use="required" />
+    <xs:attribute name="id" type="xs:string" use="optional" />
+    <xs:attribute name="size" type="xs:unsignedInt" use="optional" />
+    <xs:attribute name="sizeid" type="xs:unsignedByte" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="Reader">
+    <xs:attribute name="type" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="optional" />
+    <xs:attribute name="real" type="xs:boolean" use="optional" />
+    <xs:attribute name="url" type="xs:anyURI" />
+  </xs:complexType>
+  <xs:complexType name="Switch">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="case" type="Flow" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="Flow">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element maxOccurs="unbounded" name="part" type="Part" />
+        <xs:element name="for" type="Flow" />
+        <xs:element name="while" type="Flow" />
+        <xs:element name="switch" type="Switch" />
+        <xs:element name="bitwise_switch" type="Switch" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="optional" />
+    <xs:attribute name="comment" type="xs:string" use="optional" />
+    <xs:attribute name="size" type="xs:unsignedInt" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="Enum">
+    <xs:attribute name="display" type="xs:string" use="required" />
+    <xs:attribute name="val" type="xs:long" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="Bit">
+    <xs:attribute name="num" type="xs:string" use="required" />
+    <xs:attribute name="display" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="BitSet">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="bit" type="Bit" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="MultiValue">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="enum" type="Enum" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="PacketFamily">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="packet" type="Flow" />
+    </xs:sequence>
+    <xs:attribute name="switchtype" type="xs:string" use="required" />
+    <xs:attribute name="way" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="optional" />
+  </xs:complexType>
+</xs:schema>

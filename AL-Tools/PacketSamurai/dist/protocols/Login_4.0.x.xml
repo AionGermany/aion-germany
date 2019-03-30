@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol port="2106" name="Login_4.0.x" crypt="AionLogin">
+	<packetfamilly switchtype="c" way="ServerPackets">
+		<packet id="0x00" name="SM_INIT">
+			<part name="session id" type="d" />
+			<part name="protocol revision" type="d" />
+			<part name="RSA key" type="b" size="0x80" />
+			<part name="unk" type="b" size="16"/>
+			<part name="Blowfish key" type="b" size="0x10"/>
+			<part name="unk" type="b" size="15"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+		</packet>
+		<packet id="0x01" name="SM_LOGIN_FAIL">
+			<part name="reason" type="d" />
+		</packet>
+		<packet id="0x02" name="SM_ACCOUNT_BLOCKED">
+			<part name="reason" type="d" />
+		</packet>
+		<packet id="0x03" name="SM_LOGIN_OK" >
+			<part name="accountId" type="d" />
+			<part name="loginOk" type="d" />
+			<part name="?" type="d" />
+			<part name="?" type="d" />
+			<part name="1002" type="d"/>
+			<part name="126282164" type="d"/>
+			<part name="garbage" type="b" size="47"/>
+		</packet>
+		<packet id="0x04" name="SM_SERVER_LIST" >
+			<part name="listSize" type="c" id="1" />
+			<part name="lastServer" type="c" />
+			<for id="1">
+				<part name="id" type="c" />
+				<part name="ip" type="d" >
+					<reader type="IPv4"/>
+				</part>
+				<part name="port" type="d" />
+				<part name="age" type="c" />
+				<part name="pvp" type="c" />
+				<part name="currentPlayers" type="h" />
+				<part name="maxPlayers" type="h" />
+				<part name="isOnline?" type="c" >
+					<reader type="Boolean"/>
+				</part>
+				<part name="bits(clock/test)" type="d" />
+				<part name="brackets" type="c" />
+			</for>
+			<part name="characterCountsSize" type="h"/>
+			<part name="autoConnect?" type="c" >
+				<reader type="Boolean"/>
+			</part>
+			<part name="unk0/?spacer?" type="b" size="49" />
+			<part name="characterCount" type="c" />
+			<part name="garbage" type="b" size="13" />
+		</packet>
+		<packet id="0x05" name="SM_SERVER_LIST_FAIL" >
+			<part name="reason" type="d" />
+		</packet>
+		<packet id="0x06" name="SM_PLAY_FAIL" >
+			<part name="reason" type="d" />
+		</packet>
+		<packet id="0x07" name="SM_PLAY_OK" >
+			<part name="playOk1" type="d" />
+			<part name="playOk2" type="d" />
+			<part name="serverId" type="c" />
+			<part name="garbage" type="b" size="14" />
+		</packet>
+		<packet id="0x08" name="SM_ACCOUNT_KICKED">
+			<part name="reason" type="d" />
+		</packet>
+		<packet id="0x09" name="SM_ACCOUNT_BLOCKED_WITH_MSG">
+			<part name="size" type="c" id="1" />
+			<for id="1">
+				<part name="?" type="h" />
+				<part name="msg ?" type="S">
+					<reader type="Text" />
+				</part>
+			</for>
+		</packet>
+		<packet id="0x0a" name="??">
+			<part name="?" type="d" />
+			<part name="?" type="c" />
+		</packet>
+		<packet id="0x0b" name="SM_AUTH_GG" >
+			<part name="sessionId" type="d" />
+			<part name="garbage" type="b" size="35" />
+		</packet>
+		<packet id="0x0c" name="SM_UPDATE_SESSION">
+			<part name="accountId" type="d" />
+			<part name="loginOk" type="d" />
+			<part name="sysMsgId" type="c" />
+			<part name="garbage" type="b" size="0x0e" />
+		</packet>
+	</packetfamilly>
+	<packetfamilly switchtype="c" way="ClientPackets">
+		<packet id="0x00" name="CM_LOGIN">
+			<part name="Revision" type="d" />
+			<part name="Rsa-Cipher" type="b" size="128"/>
+			<part name="garbage" type="b" size="51" />
+		</packet>
+		<packet id="0x02" name="CM_PLAY" >
+			<part name="accountId" type="d" />
+			<part name="loginOk" type="d" />
+			<part name="ServerId" type="c" />
+			<part name="garbage" type="b" size="14" />
+		</packet>
+		<packet id="0x03" name="CM_LOGOUT" >
+		</packet>
+		<packet id="0x05" name="CM_SERVER_LIST" >
+			<part name="accountId" type="d" />
+			<part name="loginOk" type="d" />
+			<part name="?" type="d" />
+			<part name="garbage" type="b" size="0xb" />
+		</packet>
+		<packet id="0x07" name="CM_AUTH_GG" >
+			<part name="sessionId" type="d" />
+			<part name="?" type="b" size="27" />
+		</packet>
+		<packet id="0x08" name="CM_UPDATE_SESSION" >
+			<part name="accountId" type="d" />
+			<part name="loginOk" type="d" />
+			<part name="reconnectKey" type="d" />
+			<part name="garbage" type="b" size="0xb" />
+		</packet>
+	</packetfamilly>
+</protocol>
