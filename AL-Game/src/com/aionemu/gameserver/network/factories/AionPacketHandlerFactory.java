@@ -207,7 +207,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_PLAYER_STATUS_INFO(0x12C, State.IN_GAME)); // 6.x EU (Mentor etc)
 		addPacket(new CM_MANASTONE(0x115, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_FUSION_WEAPONS(0x1AA, State.IN_GAME)); // 5.4
-		addPacket(new CM_ITEM_REMODEL(0x111, State.IN_GAME)); // 5.3
+		addPacket(new CM_ITEM_REMODEL(0x125, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xED, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_RECIPE_DELETE(0x110, State.IN_GAME)); // 5.3 EU
 		addPacket(new CM_REMOVE_ALTERED_STATE(0xEE, State.IN_GAME)); // 5.4 EU
