@@ -164,6 +164,12 @@ public class MailService {
 				case EPIC:
 					qualityPriceRate = 0.05f;
 					break;
+					
+				case ANCIENT:
+				case RELIC:
+				case FINALITY:					
+					qualityPriceRate = 0.06f;
+					break;
 
 				default:
 					qualityPriceRate = 0.02f;
@@ -404,6 +410,12 @@ public class MailService {
 				case MYTHIC:
 				case EPIC:
 					qualityPriceRate = 0.05f;
+					break;
+					
+				case ANCIENT:
+				case RELIC:
+				case FINALITY:					
+					qualityPriceRate = 0.06f;
 					break;
 
 				default:

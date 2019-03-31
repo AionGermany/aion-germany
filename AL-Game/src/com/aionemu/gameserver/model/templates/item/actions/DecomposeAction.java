@@ -50,7 +50,6 @@ import com.aionemu.gameserver.model.templates.decomposable.itemsets.IdianSets;
 import com.aionemu.gameserver.model.templates.decomposable.itemsets.WeaponSets;
 import com.aionemu.gameserver.model.templates.item.ExtractedItemsCollection;
 import com.aionemu.gameserver.model.templates.item.ItemCategory;
-import com.aionemu.gameserver.model.templates.item.ItemQuality;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.RandomItem;
 import com.aionemu.gameserver.model.templates.item.RandomType;
@@ -691,16 +690,23 @@ public class DecomposeAction extends AbstractItemAction {
 	private void uniqueDropAnnounce(final Player player, final ResultedItem resultItem, final Item parentItem) {
 		if (DropConfig.ENABLE_UNIQUE_CHEST_DROP_ANNOUNCE) {
 			final ItemTemplate itemTemplate = ItemInfoService.getItemTemplate(resultItem.getItemId());
-			if (itemTemplate.getItemQuality() == ItemQuality.EPIC || itemTemplate.getItemQuality() == ItemQuality.MYTHIC) {
-				final String lastGetName = player.getName();
-				String parents = parentItem.getName();
-				String results = resultItem.getItemName();
-				Iterator<Player> iter = World.getInstance().getPlayersIterator();
-				while (iter.hasNext()) {
-					Player player2 = iter.next();
-					PacketSendUtility.sendYellowMessage(player2, LanguageHandler.translate(CustomMessageId.DECOMPOSE_SERVICE_MESSAGE1, lastGetName, results, parents));
-				}
-
+			switch (itemTemplate.getItemQuality()) {
+				case EPIC:
+				case MYTHIC:
+				case ANCIENT: // TODO other Message ?
+				case RELIC: // TODO other Message ?
+				case FINALITY: // TODO other Message ?
+					final String lastGetName = player.getName();
+					String parents = parentItem.getName();
+					String results = resultItem.getItemName();
+					Iterator<Player> iter = World.getInstance().getPlayersIterator();
+					while (iter.hasNext()) {
+						Player player2 = iter.next();
+						PacketSendUtility.sendYellowMessage(player2, LanguageHandler.translate(CustomMessageId.DECOMPOSE_SERVICE_MESSAGE1, lastGetName, results, parents));
+					}
+					break;
+				default:
+					break;
 			}
 		}
 	}
@@ -708,24 +714,32 @@ public class DecomposeAction extends AbstractItemAction {
 	private void uniqueDropAnnounces(final Player player, final ResultedItem resultItem, final Item parentItem) {
 		if (MembershipConfig.ADD_CHEST_DROP_ANNOUNCE) {
 			final ItemTemplate itemTemplate = ItemInfoService.getItemTemplate(resultItem.getItemId());
-			if (itemTemplate.getItemQuality() == ItemQuality.EPIC || itemTemplate.getItemQuality() == ItemQuality.MYTHIC) {
-				final String lastGetName = player.getName();
-				String parents = parentItem.getName();
-				String results = resultItem.getItemName();
-				if (player.getClientConnection().getAccount().getMembership() == 2) {
-					Iterator<Player> iter = World.getInstance().getPlayersIterator();
-					while (iter.hasNext()) {
-						Player player2 = iter.next();
-						PacketSendUtility.sendYellowMessage(player2, LanguageHandler.translate(CustomMessageId.DECOMPOSE_SERVICE_MESSAGE3, lastGetName, results, parents));
+			switch (itemTemplate.getItemQuality()) {
+				case EPIC:
+				case MYTHIC:
+				case ANCIENT: // TODO other Message ?
+				case RELIC: // TODO other Message ?
+				case FINALITY: // TODO other Message ?
+					final String lastGetName = player.getName();
+					String parents = parentItem.getName();
+					String results = resultItem.getItemName();
+					if (player.getClientConnection().getAccount().getMembership() == 2) {
+						Iterator<Player> iter = World.getInstance().getPlayersIterator();
+						while (iter.hasNext()) {
+							Player player2 = iter.next();
+							PacketSendUtility.sendYellowMessage(player2, LanguageHandler.translate(CustomMessageId.DECOMPOSE_SERVICE_MESSAGE3, lastGetName, results, parents));
+						}
 					}
-				}
-				else if (player.getClientConnection().getAccount().getMembership() == 1) {
-					Iterator<Player> iter = World.getInstance().getPlayersIterator();
-					while (iter.hasNext()) {
-						Player player2 = iter.next();
-						PacketSendUtility.sendYellowMessage(player2, LanguageHandler.translate(CustomMessageId.DECOMPOSE_SERVICE_MESSAGE2, lastGetName, results, parents));
+					else if (player.getClientConnection().getAccount().getMembership() == 1) {
+						Iterator<Player> iter = World.getInstance().getPlayersIterator();
+						while (iter.hasNext()) {
+							Player player2 = iter.next();
+							PacketSendUtility.sendYellowMessage(player2, LanguageHandler.translate(CustomMessageId.DECOMPOSE_SERVICE_MESSAGE2, lastGetName, results, parents));
+						}
 					}
-				}
+					break;
+				default:
+					break;
 			}
 		}
 	}

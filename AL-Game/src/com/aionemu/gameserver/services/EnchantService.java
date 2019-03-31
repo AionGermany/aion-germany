@@ -199,6 +199,15 @@ public class EnchantService {
 			case MYTHIC:
 				qualityCap = 30;
 				break;
+			case ANCIENT: // Testing maybe it should be smaller for Ancient, Relic and Finality
+				qualityCap = 35;
+				break;
+			case RELIC:
+				qualityCap = 40;
+				break;
+			case FINALITY:
+				qualityCap = 45;
+				break;
 		}
 
 		// Start value of success
@@ -489,8 +498,16 @@ public class EnchantService {
 				number = Rnd.get(800, 1000);
 				break;
 			case 6: // MYTHIC
-			case 7:
 				number = Rnd.get(1000, 2000);
+				break;
+			case 7: // ANCIENT
+				number = Rnd.get(1200, 2200);
+				break;
+			case 8: // RELIC
+				number = Rnd.get(1500, 2500);
+				break;
+			case 9: // FINALITY
+				number = Rnd.get(2000, 3000);
 				break;
 		}
 		int enchantItemId = stone;
@@ -546,8 +563,16 @@ public class EnchantService {
 				number = Rnd.get(1, 1000);
 				break;
 			case 6: // MYTHIC
-			case 7:
 				number = Rnd.get(1, 2000);
+				break;
+			case 7: // ANCIENT
+				number = Rnd.get(1200, 2200);
+				break;
+			case 8: // RELIC
+				number = Rnd.get(1500, 2500);
+				break;
+			case 9: // FINALITY
+				number = Rnd.get(2000, 3000);
 				break;
 		}
 
@@ -740,6 +765,9 @@ public class EnchantService {
 				case UNIQUE:
 				case EPIC:
 				case MYTHIC:
+				case ANCIENT: // TODO
+				case RELIC: // TODO
+				case FINALITY: // TODO
 					if (targetItem.isAmplified()) { // Omega Enchantment Stone's
 						switch (stoneId) {
 							case 166020000: // Omega Enchantment Stone's
@@ -753,6 +781,30 @@ public class EnchantService {
 							case 166020006:
 							case 166022003:
 							case 166022007:
+								// 6.2 PVE STONES (TODO)
+							case 166023100: // ANCIENT
+							case 166023103: // ANCIENT
+							case 166023106: // ANCIENT
+								//
+							case 166023101:	// RELIC				
+							case 166023104: // RELIC
+							case 166023107: // RELIC
+								//
+							case 166023102: // FINALITY
+							case 166023105: // FINALITY
+							case 166023108: // FINALITY
+								// 6.2 PVP STONES (TODO)
+							case 166033100: // ANCIENT
+							case 166033103: // ANCIENT
+							case 166033106: // ANCIENT
+								//
+							case 166033101: // RELIC
+							case 166033104: // RELIC
+							case 166033107: // RELIC
+								//
+							case 166033102: // FINALITY
+							case 166033105: // FINALITY
+							case 166033108: // FINALITY
 								currentEnchant += 1;
 								break;
 							case 166022000: // Irridescent Omega Enchantment Stone's
@@ -975,6 +1027,9 @@ public class EnchantService {
 					addSuccessRate *= EnchantsConfig.GREATER_SUP;
 					break;
 				case MYTHIC:
+				case ANCIENT: // TODO
+				case RELIC: // TODO
+				case FINALITY: // TODO
 					addSuccessRate *= EnchantsConfig.MYTHIC_SUP;
 					break;
 				default:
@@ -1445,179 +1500,65 @@ public class EnchantService {
 		if (!item.isAmplified()) {
 			return 0;
 		}
-		if (item.getItemTemplate().getItemQuality() == ItemQuality.RARE) {
-			switch (item.getEnchantLevel()) {
-				case 0:
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-				case 8:
-				case 9:
-				case 10:
-				case 11:
-				case 12:
-				case 13:
-				case 14:
-				case 15:
-				case 16:
-					return 2500000;
-				case 17:
-					return 5000000;
-				case 18:
-					return 10000000;
-				case 19:
-					return 12500000;
-				case 20:
-					return 15000000;
-				case 21:
-					return 20000000;
-				case 22:
-					return 25000000;
-				case 23:
-					return 30000000;
-				case 24:
-					return 35000000;
-				case 25:
-					return 40000000;
-				default:
-					return 40000000;
-			}
-		}
-		if (item.getItemTemplate().getItemQuality() == ItemQuality.LEGEND) {
-			switch (item.getEnchantLevel()) {
-				case 0:
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-				case 8:
-				case 9:
-				case 10:
-				case 11:
-				case 12:
-				case 13:
-				case 14:
-				case 15:
-					return 2500000;
-				case 16:
-					return 5000000;
-				case 17:
-					return 10000000;
-				case 18:
-					return 12500000;
-				case 19:
-					return 15000000;
-				case 20:
-					return 20000000;
-				case 21:
-					return 25000000;
-				case 22:
-					return 30000000;
-				case 23:
-					return 35000000;
-				case 24:
-					return 40000000;
-				case 25:
-					return 45000000;
-				default:
-					return 40000000;
-			}
-		}
-		if (item.getItemTemplate().getItemQuality() == ItemQuality.EPIC) {
-			switch (item.getEnchantLevel()) {
-				case 0:
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-				case 8:
-				case 9:
-				case 10:
-				case 11:
-				case 12:
-				case 13:
-				case 14:
-				case 15:
-					return 5000000;
-				case 16:
-					return 10000000;
-				case 17:
-					return 20000000;
-				case 18:
-					return 25000000;
-				case 19:
-					return 30000000;
-				case 20:
-					return 40000000;
-				case 21:
-					return 50000000;
-				case 22:
-					return 60000000;
-				case 23:
-					return 70000000;
-				case 24:
-					return 80000000;
-				case 25:
-					return 90000000;
-				default:
-					return 90000000;
-			}
-		}
-		else if (item.getItemTemplate().getItemQuality() == ItemQuality.MYTHIC) {
-			switch (item.getEnchantLevel()) {
-				case 0:
-				case 1:
-				case 2:
-				case 3:
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-				case 8:
-				case 9:
-				case 10:
-				case 11:
-				case 12:
-				case 13:
-				case 14:
-				case 15:
-					return 10000000;
-				case 16:
-					return 20000000;
-				case 17:
-					return 40000000;
-				case 18:
-					return 50000000;
-				case 19:
-					return 60000000;
-				case 20:
-					return 80000000;
-				case 21:
-					return 100000000;
-				case 22:
-					return 120000000;
-				case 23:
-					return 140000000;
-				case 24:
-					return 160000000;
-				case 25:
-					return 180000000;
-				default:
-					return 180000000;
-			}
-		}
-		else {
-			return 0;
+		ItemQuality quality = item.getItemTemplate().getItemQuality();
+		int enchantLevel = item.getEnchantLevel();
+		int baseKinah = 2500000;
+		switch (quality) {
+			case RARE:
+				if (enchantLevel <= 16) {
+					return baseKinah;
+				} else if (enchantLevel == 17) {
+					return (baseKinah * 2);
+				} else if (enchantLevel > 17 && enchantLevel <= 20) {
+					return (enchantLevel - 14) * baseKinah;
+				} else if (enchantLevel > 20 && enchantLevel <= 25) {
+					return (enchantLevel - 17) * (baseKinah * 2);
+				} else {
+					return (16 * baseKinah);
+				}
+			case LEGEND:
+				if (enchantLevel <= 15) {
+					return baseKinah;
+				} else if (enchantLevel == 16) {
+					return (baseKinah * 2);
+				} else if (enchantLevel > 16 && enchantLevel <= 19) {
+					return (enchantLevel - 13) * baseKinah;
+				} else if (enchantLevel > 19 && enchantLevel <= 25) {
+					return (enchantLevel - 16) * (baseKinah * 2);
+				} else {
+					return (18 * baseKinah);
+				}
+			case EPIC:
+				baseKinah = 5000000;
+				if (enchantLevel <= 15) {
+					return baseKinah;
+				} else if (enchantLevel == 16) {
+					return (baseKinah * 2);
+				} else if (enchantLevel > 16 && enchantLevel <= 18) {
+					return (enchantLevel - 13) * baseKinah;
+				} else if (enchantLevel > 18) {
+					return (enchantLevel - 16) * (baseKinah * 2);
+				} else {
+					return (18 * baseKinah);
+				}
+			case MYTHIC:
+			case ANCIENT: // TODO
+			case RELIC: // TODO
+			case FINALITY: // TODO
+				baseKinah = 10000000;
+				if (enchantLevel <= 15) {
+					return baseKinah;
+				} else if (enchantLevel == 16) {
+					return (baseKinah * 2);
+				} else if (enchantLevel > 16 && enchantLevel <= 19) {
+					return (enchantLevel - 13) * baseKinah;
+				} else if (enchantLevel > 19 && enchantLevel <= 25) {
+					return (enchantLevel - 16) * (baseKinah * 2);
+				} else {
+					return (18 * baseKinah);
+				}
+			default:
+				return 0;
 		}
 	}
 

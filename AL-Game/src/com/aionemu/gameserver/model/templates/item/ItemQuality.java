@@ -33,7 +33,10 @@ public enum ItemQuality {
 	LEGEND(3), // Heroic - Blue
 	UNIQUE(4), // Fabled - Yellow
 	EPIC(5), // Eternal - Orange
-	MYTHIC(6); // Test - Purple
+	MYTHIC(6), // Test - Purple
+	ANCIENT(7), // Test - Light Yellow
+	RELIC(8), // Test - Pink
+	FINALITY(9); // Test - ??
 
 	private int qualityId;
 
