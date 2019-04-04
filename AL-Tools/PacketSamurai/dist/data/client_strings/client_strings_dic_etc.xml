@@ -4263,7 +4263,7 @@
   <string>
     <id>1076110</id>
     <name>STR_DIC_E_Raksha</name>
-    <body>Raksha;A dragon sealed in Raksang. Depending on the road you choose, you'll meet either [%dic:STR_DIC_M_IDRaksha_05_Raksha_Nmd_60_Ae] or [%dic:STR_DIC_M_IDRaksha_5F_Raksha_Nmd_57_Ae].</body>
+    <body>Raksha;A dragon sealed in Raksang. You encounter [%dic:STR_DIC_M_IDRaksha_05_Raksha_Nmd_60_Ae] or [%dic:STR_DIC_M_IDRaksha_5F_Raksha_Nmd_57_Ae] depending on the path you take.</body>
   </string>
   <string>
     <id>1076111</id>
@@ -10414,6 +10414,541 @@
     <id>1077379</id>
     <name>STR_DIC_E_Madrukin_Shulack_All</name>
     <body>Malarkin Defence Troop;A Shulack Defence Troop belonging to Malarkin's followers. It has occupied Kubrinerk's Cube Laboratory. Includes [%dic:STR_DIC_M_IDCubic_S1_Shulack_Ri_SN_Ae_02], [%dic:STR_DIC_M_IDCubic_S1_Shulack_Ri_SN_Ae_03] and [%dic:STR_DIC_M_IDCubic_S1_Shulack_Ri_SN_Ae_01].</body>
+  </string>
+  <string>
+    <id>1077380</id>
+    <name>STR_DIC_E_IDF7_Ere_SensoryArea_Q62810_L</name>
+    <body>Senekta;The faction which has captured Lakrum Fortress uses the [%dic:STR_DIC_E_IDF7_Ere_Entrance_L] to gain access to it. The [%dic:STR_DIC_E_IDF7_Ere_Penalty_Entrance_L] grants the other faction access.</body>
+  </string>
+  <string>
+    <id>1077381</id>
+    <name>STR_DIC_E_IDF7_Ere_SensoryArea_Q62810_D</name>
+    <body>Senekta;The faction which has captured Lakrum Fortress uses the [%dic:STR_DIC_E_IDF7_Ere_Entrance_D] to gain access to it. The [%dic:STR_DIC_E_IDF7_Ere_Penalty_Entrance_D] grants the other faction access.</body>
+  </string>
+  <string>
+    <id>1077382</id>
+    <name>STR_DIC_E_IDF7_Ere_Halidom_of_Aion</name>
+    <body>Aion's Relic;A sacred relic imbued with Aion's Power of Creation. It is allegedly kept in the depths of [%dic:STR_DIC_W_IDF7_Ere].</body>
+  </string>
+  <string>
+    <id>1077383</id>
+    <name>STR_DIC_E_IDF7_Ere_Entrance_L</name>
+    <body>Senekta Entrance;The entrance to the underground refuge in Lakrum. It appears in the middle of the fortress when the Elyos capture [%dic:STR_DIC_W_LDF7_SZ_E1].</body>
+  </string>
+  <string>
+    <id>1077384</id>
+    <name>STR_DIC_E_IDF7_Ere_Entrance_D</name>
+    <body>Senekta Entrance;The entrance to the underground refuge in Lakrum. It appears in the middle of the fortress when the Asmodians capture [%dic:STR_DIC_W_LDF7_SZ_E1].</body>
+  </string>
+  <string>
+    <id>1077385</id>
+    <name>STR_DIC_E_IDF7_Ere_Penalty_Entrance_L</name>
+    <body>Secret Senekta Entrance;The entrance to the underground refuge in Lakrum. It appears at the [%dic:STR_DIC_W_LDF7_SZ_LOP3] when the Asmodians occupy Lakrum Fortress.</body>
+  </string>
+  <string>
+    <id>1077386</id>
+    <name>STR_DIC_E_IDF7_Ere_Penalty_Entrance_D</name>
+    <body>Secret Senekta Entrance;The entrance to the underground refuge in Lakrum. It appears at the [%dic:STR_DIC_W_LDF7_SZ_DOP3] when the Elyos occupy Lakrum Fortress.</body>
+  </string>
+  <string>
+    <id>1077387</id>
+    <name>STR_DIC_E_LF3_Pandora_OtherRaces_01</name>
+    <body>Antrum the Messenger;A messenger of the Katakumba tribe who worship power. You can find these Mosbears with branching antlers in [%dic:STR_DIC_W_LF3_SZ_A2], at [%dic:STR_DIC_W_LF3_SZ_B] and in the [%dic:STR_DIC_W_LF3_SZ_C2] in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077388</id>
+    <name>STR_DIC_E_LF3_Pandora_OtherRaces_02</name>
+    <body>Dighum the Messenger;A messenger of the Rosebush Brohums who pray for peace in Atreia. The creature's body is concealed by a bush. You can find it in the [%dic:STR_DIC_W_LF3_SZ_C1], in [%dic:STR_DIC_W_LF3_SZ_002] and in the [%dic:STR_DIC_W_LF3_SZ_C4] in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077389</id>
+    <name>STR_DIC_E_LF3_Pandora_OtherRaces_03</name>
+    <body>Taudon the Messenger;A messenger of the Koinum Calydon who are forever at war. He was seen swinging a mighty axe in [%dic:STR_DIC_W_LF3_SZ_D7], at the [%dic:STR_DIC_W_LF3_SZ_D8] and at the [%dic:STR_DIC_W_LF3_SZ_D9] in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077390</id>
+    <name>STR_DIC_E_LF3_Pandora_OtherRaces_04</name>
+    <body>Teshinan the Messenger;A messenger of the Perum tribe, which hides within a deep a cave. You can find this rock-like Tesinon in the [%dic:STR_DIC_W_LF3_SZ_D4], in the [%dic:STR_DIC_W_LF3_SZ_D3] and at the [%dic:STR_DIC_W_LF3_SZ_F1] in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077391</id>
+    <name>STR_DIC_E_LF3_Pandora_OtherRaces_05</name>
+    <body>Poroto the Messenger;A messenger of the pure Spiritfall Forest Popoku. He is clothed in leaves. You can find him in the [%dic:STR_DIC_W_LF3_SZ_E1], in [%dic:STR_DIC_W_LF3_SZ_E3] and in the [%dic:STR_DIC_W_LF3_SZ_009] in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077392</id>
+    <name>STR_DIC_E_LF4_Pandora_Shugo_01</name>
+    <body>Mendorinerk;A Shugo who is hiding his identity. Found in [%dic:STR_DIC_W_LF4_SZ_A4] in [%dic:STR_DIC_W_LF4].</body>
+  </string>
+  <string>
+    <id>1077393</id>
+    <name>STR_DIC_E_LF4_Pandora_Deva_01</name>
+    <body>Allis;Wears the attire of the Inggison Guardians and appears at the [%dic:STR_DIC_W_LF4_SZ_B4] in the [%dic:STR_DIC_W_LF4_SZ_B9] and in [%dic:STR_DIC_W_LF4_SZ_B5] in [%dic:STR_DIC_W_LF4].</body>
+  </string>
+  <string>
+    <id>1077394</id>
+    <name>STR_DIC_E_LF4_Pandora_Shugo_02</name>
+    <body>Sitarunerk;A Shugo who is hiding his identity. Found in the [%dic:STR_DIC_W_LF4_SZ_C3], in the [%dic:STR_DIC_W_LF4_SZ_C2] and at the [%dic:STR_DIC_W_LF4_SZ_C1] in [%dic:STR_DIC_W_LF4].</body>
+  </string>
+  <string>
+    <id>1077395</id>
+    <name>STR_DIC_E_LF4_Pandora_Deva_02</name>
+    <body>Arius;Wears the attire of the Inggison Guardians and appears at the [%dic:STR_DIC_W_LF4_SZ_B3], in the [%dic:STR_DIC_W_LF4_SZ_B2] and in [%dic:STR_DIC_W_LF4_SZ_B1] in [%dic:STR_DIC_W_LF4].</body>
+  </string>
+  <string>
+    <id>1077396</id>
+    <name>STR_DIC_E_LF4_Pandora_Shugo_03</name>
+    <body>Superinerk;A Shugo who is hiding his identity. Found in [%dic:STR_DIC_W_LF4_SZ_A1], in [%dic:STR_DIC_W_LF4_SZ_A2] and in [%dic:STR_DIC_W_LF4_SZ_A3] in [%dic:STR_DIC_W_LF4].</body>
+  </string>
+  <string>
+    <id>1077397</id>
+    <name>STR_DIC_E_DF3_Pandora_OtherRaces_01</name>
+    <body>Lunka the Messenger;A messenger of the Katakumba tribe who worship power. You can find these Mosbears with branching antlers on the [%dic:STR_DIC_W_STR_DF3_SZ_C1] and in the [%dic:STR_DIC_W_STR_DF3_SZ_C2] in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077398</id>
+    <name>STR_DIC_E_DF3_Pandora_OtherRaces_02</name>
+    <body>Serhum the Messenger;A messenger of the Rosebush Brohums who pray for peace in Atreia. The creature's body is concealed by a bush. You can find it in [%dic:STR_DIC_W_STR_DF3_SZ_C3] and in the [%dic:STR_DIC_W_STR_DF3_SZ_C5] in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077399</id>
+    <name>STR_DIC_E_DF3_Pandora_OtherRaces_03</name>
+    <body>Kudson the Messenger;A messenger of the Koinum Calydon who are forever at war. He was seen swinging a mighty axe in [%dic:STR_DIC_W_STR_DF3_SZ_D1], at the [%dic:STR_DIC_W_STR_DF3_SZ_D3] and in the [%dic:STR_DIC_W_STR_DF3_SZ_D4] in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077400</id>
+    <name>STR_DIC_E_DF3_Pandora_OtherRaces_04</name>
+    <body>Teson the Messenger;A messenger of the Perum tribe, which hides within a deep a cave. You can find this rocklike Tesinon in the [%dic:STR_DIC_W_STR_DF3_SZ_G4] and in the [%dic:STR_DIC_W_STR_DF3_SZ_G3] in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077401</id>
+    <name>STR_DIC_E_DF3_Pandora_OtherRaces_05</name>
+    <body>Ponosso the Messenger;A messenger of the pure Spiritfall Forest Popoku. He is clothed in leaves. You can find him in the [%dic:STR_DIC_W_STR_DF3_SZ_G6], at the [%dic:STR_DIC_W_STR_DF3_SZ_G5] and at the [%dic:STR_DIC_W_DF3_Village_02] in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077402</id>
+    <name>STR_DIC_E_DF4_Pandora_Shugo_01</name>
+    <body>Mendorunerk;A Shugo who is hiding his identity. He appears on the [%dic:STR_DIC_W_SZ_DF4_A1] and on [%dic:STR_DIC_W_SZ_DF4_A5] in [%dic:STR_DIC_W_DF4].</body>
+  </string>
+  <string>
+    <id>1077403</id>
+    <name>STR_DIC_E_DF4_Pandora_Deva_01</name>
+    <body>Inke;Wears the attire of the Gelkmaros Archons and appears in the [%dic:STR_DIC_W_SZ_DF4_B4], in the [%dic:STR_DIC_W_SZ_DF4_B5] and in [%dic:STR_DIC_W_SZ_DF4_B6] in [%dic:STR_DIC_W_DF4].</body>
+  </string>
+  <string>
+    <id>1077404</id>
+    <name>STR_DIC_E_DF4_Pandora_Shugo_02</name>
+    <body>Sitarinerk;A Shugo who is hiding his identity. He appears in [%dic:STR_DIC_W_SZ_DF4_C4], the [%dic:STR_DIC_W_SZ_DF4_C5] and on the [%dic:STR_DIC_W_SZ_DF4_C3] in [%dic:STR_DIC_W_DF4].</body>
+  </string>
+  <string>
+    <id>1077405</id>
+    <name>STR_DIC_E_DF4_Pandora_Deva_02</name>
+    <body>Cheltus;Wears the attire of the Gelkmaros Archons and appears in the [%dic:STR_DIC_W_SZ_DF4_B1], in the [%dic:STR_DIC_W_SZ_DF4_B2] and in the [%dic:STR_DIC_W_SZ_DF4_B3] in [%dic:STR_DIC_W_DF4].</body>
+  </string>
+  <string>
+    <id>1077406</id>
+    <name>STR_DIC_E_DF4_Pandora_Shugo_03</name>
+    <body>Superunerk;A Shugo who is hiding his identity. He appears in the [%dic:STR_DIC_W_SZ_DF4_A6] and [%dic:STR_DIC_W_SZ_DF4_A2] in [%dic:STR_DIC_W_DF4].</body>
+  </string>
+  <string>
+    <id>1077407</id>
+    <name>STR_DIC_E_Pandora_HR</name>
+    <body>Pandora Recruitment Office;An association which prefers hard work over honourable sacrifice and promises fair payment for the same.</body>
+  </string>
+  <string>
+    <id>1077408</id>
+    <name>STR_DIC_E_LF3F3_Undead_All</name>
+    <body>Cursed Elyos Daeva Souls;They include the [plur][%dic:STR_DIC_M_LF3F3_UndeadLightWi] and the [plur][%dic:STR_DIC_M_LF3F3_UndeadLightPr].</body>
+  </string>
+  <string>
+    <id>1077409</id>
+    <name>STR_DIC_E_LF4_A5_Shulack_All</name>
+    <body>Shulack Elite Soldiers;They include the [plur][%dic:STR_DIC_M_LF4_A5_ShulackAs], the [plur][%dic:STR_DIC_M_LF4_A5_ShulackFi], [plur][%dic:STR_DIC_M_LF4_A5_ShulackPr] and the [plur][%dic:STR_DIC_M_LF4_A5_ShulackRa].</body>
+  </string>
+  <string>
+    <id>1077410</id>
+    <name>STR_DIC_E_LF4_C5_Drakan_All</name>
+    <body>Hanarkand Elite Soldiers;They include the [plur][%dic:STR_DIC_M_LF4_C5_DrakanAs_noble], the [plur][%dic:STR_DIC_M_LF4_C5_DrakanAs_vil], the [plur][%dic:STR_DIC_M_LF4_C5_DrakanFi_noble], the [plur][%dic:STR_DIC_M_LF4_C5_DrakanFi_vil], the [plur][%dic:STR_DIC_M_LF4_C5_DrakanRa_noble], the [plur][%dic:STR_DIC_M_LF4_C5_DrakanRa_vil], the [plur][%dic:STR_DIC_M_LF4_C5_DrakanWi_noble] and the [plur][%dic:STR_DIC_M_LF4_C5_DrakanWi_vil].</body>
+  </string>
+  <string>
+    <id>1077411</id>
+    <name>STR_DIC_E_Seiren_All</name>
+    <body>Alukina Palace Seiren;They include the [plur][%dic:STR_DIC_M_FlyingSeirenReD], [plur][%dic:STR_DIC_M_SeirenBreederD], [plur][%dic:STR_DIC_M_SeirenD] and [plur][%dic:STR_DIC_M_SeirenReD].</body>
+  </string>
+  <string>
+    <id>1077412</id>
+    <name>STR_DIC_E_DF4_Owllau_All</name>
+    <body>Strigik Elite Soldiers;They include the [plur][%dic:STR_DIC_M_DF4_Owllau_As], the [plur][%dic:STR_DIC_M_DF4_Owllau_Fi], [plur][%dic:STR_DIC_M_DF4_Owllau_Pr] and the [plur][%dic:STR_DIC_M_DF4_Owllau_Wi].</body>
+  </string>
+  <string>
+    <id>1077413</id>
+    <name>STR_DIC_E_DF4_Drakan_All</name>
+    <body>Mitrakand Elite Soldiers;They include the [plur][%dic:STR_DIC_M_DF4_DrakanAs_vil], the [plur][%dic:STR_DIC_M_DF4_DrakanFi_vil], the [plur][%dic:STR_DIC_M_DF4_DrakanRa_vil] and the [plur][%dic:STR_DIC_M_DF4_DrakanWi_vil].</body>
+  </string>
+  <string>
+    <id>1077414</id>
+    <name>STR_DIC_E_Quest_Q62700_Q62709_Item</name>
+    <body>Arena of Discipline Medal[pl:"Medals"];A medal for Daevas who achieve victory in the Arena of Discipline. Medals are awarded to ranks 1 to 9 based on the ranking list.</body>
+  </string>
+  <string>
+    <id>1077415</id>
+    <name>STR_DIC_E_Quest_Q62709_Q62717_Item</name>
+    <body>Arena of Cooperation Medal[pl:"Medals"];A medal for Daevas who achieve victory in the Arena of Cooperation. Medals are awarded to ranks 1 to 9 based on the ranking list.</body>
+  </string>
+  <string>
+    <id>1077416</id>
+    <name>STR_DIC_E_Quest_Q62718_Q62724_Item</name>
+    <body>Daeva's Honour Medal[pl:"Medals"];A medal for Daevas who have collected Honour Points. Medals are awarded to ranks 1 to 7 based on the ranking list.</body>
+  </string>
+  <string>
+    <id>1077417</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_l_01</name>
+    <body>Petrification Gauge[pl:"Gauges"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Tiamat which is concentrated in the air. Often found near Vaizel's Peak and the Poya Jungle in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077418</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_l_02</name>
+    <body>Contamination Gauge[pl:"Gauges"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Beritra which is concentrated in the air. Often found near the Research Centre Overwatch in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077419</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_l_03</name>
+    <body>Frost Gauge[pl:"Gauges"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Ereshkigal which is concentrated in the air. Often found near the Medeus Manor in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077420</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_l_04</name>
+    <body>Toxin Gauge[pl:"Gauges"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Meslamtaeda which is concentrated in the air. Often found near the Patema Ruins in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077421</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_l_05</name>
+    <body>Flame Gauge[pl:"Gauges"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Fregion which is concentrated in the air. Often found near Kishar Village in [%dic:STR_DIC_E_LF3_name].</body>
+  </string>
+  <string>
+    <id>1077422</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_d_01</name>
+    <body>Petrification Probe[pl:"Probes"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Tiamat which is concentrated in the air. Often found near the Besfer Ghost Village in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077423</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_d_02</name>
+    <body>Contamination Probe[pl:"Probes"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Beritra which is concentrated in the air. Often found near the Kidorun Campsite in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077424</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_d_03</name>
+    <body>Frost Probe[pl:"Probes"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Ereshkigal which is concentrated in the air. Often found near Kurngalfsberg in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077425</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_d_04</name>
+    <body>Toxin Probe[pl:"Probes"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Meslamtaeda which is concentrated in the air. Often found near the Hoarfrost Shelter in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077426</id>
+    <name>STR_DIC_E_gb_source_noblemetal_pandora_d_05</name>
+    <body>Flame Probe[pl:"Probes"];The Pandora Recruitment Office hopes this device will help them track down the power of Dragon Lord Fregion which is concentrated in the air. Often found near the Beluslan Observatory in [%dic:STR_DIC_E_DF3_name].</body>
+  </string>
+  <string>
+    <id>1077427</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_l_01</name>
+    <body>Filmy Drana;Often found near Wildheart Grove in [%dic:STR_DIC_W_LF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_l_02].</body>
+  </string>
+  <string>
+    <id>1077428</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_l_02</name>
+    <body>Dewy Drana;Often found near Inggison Outpost in [%dic:STR_DIC_W_LF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_l_02].</body>
+  </string>
+  <string>
+    <id>1077429</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_l_03</name>
+    <body>Faded Drana;Often found near the Angrief Ruins in [%dic:STR_DIC_W_LF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_l_02].</body>
+  </string>
+  <string>
+    <id>1077430</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_l_04</name>
+    <body>Budding Drana;Often found near the Weeping Valley in [%dic:STR_DIC_W_LF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_l_02].</body>
+  </string>
+  <string>
+    <id>1077431</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_l_05</name>
+    <body>Blossoming Drana;Often found near the Weeping Valley in [%dic:STR_DIC_W_LF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_l_02].</body>
+  </string>
+  <string>
+    <id>1077432</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_d_01</name>
+    <body>Puny Drana;Often found near Dragonspine Rise in [%dic:STR_DIC_W_DF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_d_02].</body>
+  </string>
+  <string>
+    <id>1077433</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_d_02</name>
+    <body>Pure Drana;Often found near Subterranea in [%dic:STR_DIC_W_DF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_d_02].</body>
+  </string>
+  <string>
+    <id>1077434</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_d_03</name>
+    <body>Withering Drana;Often found near the Vorgaltem Battlefield in [%dic:STR_DIC_W_DF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_d_02].</body>
+  </string>
+  <string>
+    <id>1077435</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_d_04</name>
+    <body>Sprouting Drana;Often found near Spiritfall Forest in [%dic:STR_DIC_W_DF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_d_02].</body>
+  </string>
+  <string>
+    <id>1077436</id>
+    <name>STR_DIC_E_gb_source_herb_pandora_d_05</name>
+    <body>Flowered Drana;Often found near the Krug Basin in [%dic:STR_DIC_W_DF4]. Can only be gathered with the [%dic:STR_DIC_I_shop_material_pandora_d_02].</body>
+  </string>
+  <string>
+    <id>1077437</id>
+    <name>STR_DIC_E_IDF7_Mine_Board_Q16050</name>
+    <body>Gallery Information Boards;They include the [%dic:STR_DIC_SEN_IDF7_Mine_SensoryArea_Q16050a], the [%dic:STR_DIC_SEN_IDF7_Mine_SensoryArea_Q16050b] and the [%dic:STR_DIC_SEN_IDF7_Mine_SensoryArea_Q16050c]. The boards contain records from the Vanguard.</body>
+  </string>
+  <string>
+    <id>1077438</id>
+    <name>STR_DIC_E_IDF7_Mine_Monster_Q16050</name>
+    <body>Occupier of the Mine's End;[%dic:STR_DIC_M_Idf7_mine_Prison_Undead_67_An_1] is guarding the mine passage in the Hererim Mine.</body>
+  </string>
+  <string>
+    <id>1077439</id>
+    <name>STR_DIC_E_IDF7_Mine_Hint_Q16050</name>
+    <body>Clue[pl:"Clues"] to the Suspect's Identity;A clue to the identity of Bukarota, who is acting suspiciously in the Hererim Mine.</body>
+  </string>
+  <string>
+    <id>1077440</id>
+    <name>STR_DIC_E_IDF7_Mine_FOBJ_Rim_Q16051a</name>
+    <body>Highly Refined Rim Ore;Highly refined Rim Ore can only be mined in the Hererim Mine.</body>
+  </string>
+  <string>
+    <id>1077441</id>
+    <name>STR_DIC_E_IDF7_Mine_Hint_Q16052</name>
+    <body>Clue[pl:"Clues"] to the Secret of the Hererim Mine;Isnir claims the [%dic:STR_DIC_I_QUEST_16052a], [%dic:STR_DIC_I_QUEST_16052b], [%dic:STR_DIC_I_QUEST_16052c] and [%dic:STR_DIC_I_QUEST_16052d] will help to uncover the secret of the Hererim Mine.</body>
+  </string>
+  <string>
+    <id>1077442</id>
+    <name>STR_DIC_E_IDF7_Mine_Hint_Q26052</name>
+    <body>Clue[pl:"Clues"] to the Secret of the Hererim Mine;Hergat claims the [%dic:STR_DIC_I_QUEST_26052a], [%dic:STR_DIC_I_QUEST_26052b], [%dic:STR_DIC_I_QUEST_26052c] and [%dic:STR_DIC_I_QUEST_26052d] will help to uncover the secret of the Hererim Mine.</body>
+  </string>
+  <string>
+    <id>1077443</id>
+    <name>STR_DIC_E_Pandora_HR_L</name>
+    <body>Pandora Recruiters;They include [%dic:STR_DIC_N_LDF7_Pandora_Shoes_L_E], [%dic:STR_DIC_N_LDF7_Pandora_Glove_L_E], [%dic:STR_DIC_N_LDF7_Pandora_Shoulder_L_E], [%dic:STR_DIC_N_LDF7_Pandora_Pants_L_E] and [%dic:STR_DIC_N_LDF7_Pandora_Torso_L_E].</body>
+  </string>
+  <string>
+    <id>1077444</id>
+    <name>STR_DIC_E_Pandora_HR_D</name>
+    <body>Pandora Recruiters;They include [%dic:STR_DIC_N_LDF7_Pandora_Shoes_D_E], [%dic:STR_DIC_N_LDF7_Pandora_Glove_D_E], [%dic:STR_DIC_N_LDF7_Pandora_Shoulder_D_E], [%dic:STR_DIC_N_LDF7_Pandora_Pants_D_E] and [%dic:STR_DIC_N_LDF7_Pandora_Torso_D_E].</body>
+  </string>
+  <string>
+    <id>1077445</id>
+    <name>STR_DIC_E_QUEST_39906_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_39906a], the [%dic:STR_DIC_I_QUEST_39906b] and [%dic:STR_DIC_I_QUEST_39906c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Shoes_L_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077446</id>
+    <name>STR_DIC_E_QUEST_39907_All</name>
+    <body>Mysterious Items;They include [%dic:STR_DIC_I_QUEST_39907a], [%dic:STR_DIC_I_QUEST_39907b] and [%dic:STR_DIC_I_QUEST_39907c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Glove_L_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077447</id>
+    <name>STR_DIC_E_QUEST_39908_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_39908a], [%dic:STR_DIC_I_QUEST_39908b] and [%dic:STR_DIC_I_QUEST_39908c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Shoulder_L_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077448</id>
+    <name>STR_DIC_E_QUEST_39909_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_39909a], [%dic:STR_DIC_I_QUEST_39909b] and [%dic:STR_DIC_I_QUEST_39909c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Pants_L_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077449</id>
+    <name>STR_DIC_E_QUEST_39910_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_39910a], [%dic:STR_DIC_I_QUEST_39910b] and [%dic:STR_DIC_I_QUEST_39910c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Torso_L_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077450</id>
+    <name>STR_DIC_E_QUEST_49906_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_49906a], the [%dic:STR_DIC_I_QUEST_49906b] and [%dic:STR_DIC_I_QUEST_49906c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Shoes_D_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077451</id>
+    <name>STR_DIC_E_QUEST_49907_All</name>
+    <body>Mysterious Items;They include [%dic:STR_DIC_I_QUEST_49907a], [%dic:STR_DIC_I_QUEST_49907b] and [%dic:STR_DIC_I_QUEST_49907c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Glove_D_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077452</id>
+    <name>STR_DIC_E_QUEST_49908_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_49908a], [%dic:STR_DIC_I_QUEST_49908b] and [%dic:STR_DIC_I_QUEST_49908c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Shoulder_D_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077453</id>
+    <name>STR_DIC_E_QUEST_49909_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_49909a], [%dic:STR_DIC_I_QUEST_49909b] and [%dic:STR_DIC_I_QUEST_49909c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Pants_D_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077454</id>
+    <name>STR_DIC_E_QUEST_49910_All</name>
+    <body>Mysterious Items;They include the [%dic:STR_DIC_I_QUEST_49910a], [%dic:STR_DIC_I_QUEST_49910b] and [%dic:STR_DIC_I_QUEST_49910c]. Complete a mission for [%dic:STR_DIC_N_LDF7_Pandora_Torso_D_E] to receive them.</body>
+  </string>
+  <string>
+    <id>1077455</id>
+    <name>STR_DIC_E_QUEST_50149_All</name>
+    <body>Plenshunerk's Travel Journal;Contains lots of useful information, including advice to be wary of [%dic:STR_DIC_M_TauricNamed_40_An], [%dic:STR_DIC_M_ElementalEarth4GiantNM_43_Ae], [%dic:STR_DIC_M_LabPo_LehparAsNamed_43_Ae], [%dic:STR_DIC_M_CatosNamed_35_An], [%dic:STR_DIC_M_KrallRangerKBoss_40_Ah], [%dic:STR_DIC_M_LF4_B2_Mimic_Cristal_Named_54_An], [%dic:STR_DIC_M_LF4_B6_FanaticEl_Named_54_Ah], [%dic:STR_DIC_M_LF4_C1_DragonFly_Named_55_An], [%dic:STR_DIC_M_LF5_E_ItemNM_Decoration_65_Ah], [%dic:STR_DIC_M_LF5_K_ItemNM_KingElemental_65_Af], [%dic:STR_DIC_M_LDF7_B_Named_01_80_Ah], [%dic:STR_DIC_M_LDF7_B_Named_02_80_Ah], [%dic:STR_DIC_M_LDF7_C_Named_01_80_Ah], [%dic:STR_DIC_M_LDF7_C_Named_02_80_Ah], [%dic:STR_DIC_M_LDF7_D_Named_01_80_Ah] and [%dic:STR_DIC_M_LDF7_D_Named_02_80_Ah].</body>
+  </string>
+  <string>
+    <id>1077456</id>
+    <name>STR_DIC_E_QUEST_51149_All</name>
+    <body>Plenshunerk's Travel Diary;Contains lots of useful information, including advice to be wary of [%dic:STR_DIC_M_DrakeVioletNamedDQ_35_An], [%dic:STR_DIC_M_LehparFiSupervisorBossD_38_Ae], [%dic:STR_DIC_M_UndeadDarkWiNamedDQ_38_An], [%dic:STR_DIC_M_LycanWaMGhostNamed_43_An], [%dic:STR_DIC_M_G6_DrakeNamedD_45_Ah], [%dic:STR_DIC_M_DF4_mammoth_DR_Nmd_52_An], [%dic:STR_DIC_M_DF4_DrakanWi_Re_Nmd_54_An], [%dic:STR_DIC_M_DF4_FanaticWi_Nmd_55_Ah], [%dic:STR_DIC_M_DF5_G_QNamde_Startutle_62_N], [%dic:STR_DIC_M_DF5_H_QNamde_Varanus_63_An], [%dic:STR_DIC_M_LDF7_B2_Named_01_80_Ah], [%dic:STR_DIC_M_LDF7_B2_Named_02_80_Ah], [%dic:STR_DIC_M_LDF7_C2_Named_01_80_Ah], [%dic:STR_DIC_M_LDF7_C2_Named_02_80_Ah], [%dic:STR_DIC_M_LDF7_D2_Named_01_80_Ah] and [%dic:STR_DIC_M_LDF7_D2_Named_02_80_Ah].</body>
+  </string>
+  <string>
+    <id>1077457</id>
+    <name>STR_DIC_E_QUEST_50150_All</name>
+    <body>Plenshunerk's Recommended Instances;They include: Fire Temple, Esoterrace, Beshmundir Temple, Rentus Base, Tiamat's Fortress, Garden of Knowledge, Garden of Knowledge (Bonus), Holy Tower, Narakkalli, Prometun's Workshop and Makarna of Bitterness.</body>
+  </string>
+  <string>
+    <id>1077458</id>
+    <name>STR_DIC_E_DF3_Pandora_Hunt_All</name>
+    <body>Alukina's Servants;They include the [%dic:STR_DIC_E_Seiren_Pandora_01], [%dic:STR_DIC_E_Seiren_Pandora_02], [plur][%dic:STR_DIC_M_ElementalWater4DF3_39_An] and [plur][%dic:STR_DIC_M_ShadowStalkerD_38_An].</body>
+  </string>
+  <string>
+    <id>1077459</id>
+    <name>STR_DIC_E_LF3_Pandora_Hunt_All</name>
+    <body>Wandering Daeva Souls;They include [%dic:STR_DIC_E_LF3F3_Undead_Pandora_01], [%dic:STR_DIC_E_LF3F3_Undead_Pandora_02], [plur][%dic:STR_DIC_M_UndeadLightWi_44_An] and [plur][%dic:STR_DIC_M_UndeadLightFi_43_An].</body>
+  </string>
+  <string>
+    <id>1077460</id>
+    <name>STR_DIC_E_IDBattle_Change_Boss_All</name>
+    <body>Illusory Kunax;An illusion for Lady Lumiel's training. The legion appears in [%dic:STR_DIC_W_IDBattle_Change].</body>
+  </string>
+  <string>
+    <id>1077461</id>
+    <name>STR_DIC_E_IDBattleChange_NPC_Li_All</name>
+    <body>Life Debt Legion;A Guardian Legion led by Lady Yustiel. Includes the Fighters, Assassins and Foot Soldiers of Life Debt. The legion appears in [%dic:STR_DIC_W_IDBattle_Change].</body>
+  </string>
+  <string>
+    <id>1077462</id>
+    <name>STR_DIC_E_IDBattleChange_NPC_Da_All</name>
+    <body>Wise Judgement Legion;An Archon legion led by Lady Lumiel. Includes the Fighters, Assassins and Foot Soldiers of Wise Judgement. The legion appears in [%dic:STR_DIC_W_IDBattle_Change].</body>
+  </string>
+  <string>
+    <id>1077463</id>
+    <name>STR_DIC_E_LF3F3_Undead_Pandora_01</name>
+    <body>Cursed Elyos Spirits;They include the [plur][%dic:STR_DIC_M_LF3F3_UndeadLightFi_01] and the [plur][%dic:STR_DIC_M_LF3F3_UndeadLightFi_02].</body>
+  </string>
+  <string>
+    <id>1077464</id>
+    <name>STR_DIC_E_LF3F3_Undead_Pandora_02</name>
+    <body>Forgotten Elyos Spirits;They include the [plur][%dic:STR_DIC_M_LF3F3_UndeadLightWi] and the [plur][%dic:STR_DIC_M_LF3F3_UndeadLightPr].</body>
+  </string>
+  <string>
+    <id>1077465</id>
+    <name>STR_DIC_E_Seiren_Pandora_01</name>
+    <body>Seiren Elite Soldiers;They include the [plur][%dic:STR_DIC_M_FlyingSeirenReD] and the [plur][%dic:STR_DIC_M_SeirenD].</body>
+  </string>
+  <string>
+    <id>1077466</id>
+    <name>STR_DIC_E_Seiren_Pandora_02</name>
+    <body>Seiren Expert Soldiers;They include the [plur][%dic:STR_DIC_M_SeirenBreederD] and [plur][%dic:STR_DIC_M_SeirenReD].</body>
+  </string>
+  <string>
+    <id>1077467</id>
+    <name>STR_DIC_E_SEN_LF3_ItemUseArea_Q39915</name>
+    <body>Bollvig's Dominion;Includes [%dic:STR_DIC_N_NoShowNPC_LF3_SZ_F3], the [%dic:STR_DIC_N_NoShowNPC_LF3_SZ_F4] and [%dic:STR_DIC_N_NoShowNPC_LF3_SZ_F5] in Heiron.</body>
+  </string>
+  <string>
+    <id>1077468</id>
+    <name>STR_DIC_E_SEN_DF3_ItemUseArea_Q49915</name>
+    <body>Alukina's Dominion;Includes [%dic:STR_DIC_N_NoShowNPC_DF3_SZ_E5], [%dic:STR_DIC_N_NoShowNPC_DF3_SZ_E3] and the [%dic:STR_DIC_N_NoShowNPC_DF3_SZ_E2] in Beluslan.</body>
+  </string>
+  <string>
+    <id>1077469</id>
+    <name>STR_DIC_E_Pandora_Named_L_All</name>
+    <body>Recruitment Office Provocateurs;They include [%dic:STR_DIC_M_AkanNamed_50_Al] from Heiron as well as [%dic:STR_DIC_M_LF4_A5_ShulackWi_Named_53_Ah] and [%dic:STR_DIC_M_LF4_C5_DrakanWi_noble_NamedQ_65_Ae] from Inggison.</body>
+  </string>
+  <string>
+    <id>1077470</id>
+    <name>STR_DIC_E_Pandora_Named_D_All</name>
+    <body>Recruitment Office Troublemakers;They include [%dic:STR_DIC_M_SeirenReBossD_46_Ah] from Beluslan as well as [%dic:STR_DIC_M_DF4_Owllau_Pr_Nmd_53_Ah] and [%dic:STR_DIC_M_DF4_DrakanWi_vil_Nmd_65_Ah] from Gelkmaros.</body>
+  </string>
+  <string>
+    <id>1077471</id>
+    <name>STR_DIC_E_Pandora_Drana_L_All</name>
+    <body>Inferior Drana Leaves;You can obtain them by gathering [%dic:STR_DIC_E_gb_source_herb_pandora_l_01], [%dic:STR_DIC_E_gb_source_herb_pandora_l_03] and [%dic:STR_DIC_E_gb_source_herb_pandora_l_05] in [%dic:STR_DIC_W_LF4].</body>
+  </string>
+  <string>
+    <id>1077472</id>
+    <name>STR_DIC_E_Pandora_Drana_D_All</name>
+    <body>Inferior Drana Leaves;You can obtain them by gathering [%dic:STR_DIC_E_gb_source_herb_pandora_d_01], [%dic:STR_DIC_E_gb_source_herb_pandora_d_03] and [%dic:STR_DIC_E_gb_source_herb_pandora_d_05] in [%dic:STR_DIC_W_DF4].</body>
+  </string>
+  <string>
+    <id>1077473</id>
+    <name>STR_DIC_E_Pandora_Craft_L_All</name>
+    <body>Inferior Special Sealing Waxes;They include [plur][%dic:STR_DIC_I_material_craft_f_quest_80a_L], [plur][%dic:STR_DIC_I_material_craft_f_quest_80c_L] and [plur][%dic:STR_DIC_I_material_craft_f_quest_80e_L].</body>
+  </string>
+  <string>
+    <id>1077474</id>
+    <name>STR_DIC_E_Pandora_Craft_D_All</name>
+    <body>Inferior Special Sealing Waxes;They include [plur][%dic:STR_DIC_I_material_craft_f_quest_80a_D], [plur][%dic:STR_DIC_I_material_craft_f_quest_80c_D] and [plur][%dic:STR_DIC_I_material_craft_f_quest_80e_D].</body>
+  </string>
+  <string>
+    <id>1077475</id>
+    <name>STR_DIC_E_Pandora_Raid_PvP</name>
+    <body>Pandora Projects Office Battlefields;They include the [%dic:STR_DIC_W_DF5_SZ_P1_01] and the [%dic:STR_DIC_W_DF5_SZ_P2_01] in Vengar and the [%dic:STR_DIC_W_LF5_SZ_P1_01] in Signia. Follow the [%dic:STR_DIC_E_Pandora_Portal_PvP] to reach the battlefields.</body>
+  </string>
+  <string>
+    <id>1077476</id>
+    <name>STR_DIC_E_Pandora_Raid_PvE</name>
+    <body>Settlements of the Pandora Projects Office;They include the [%dic:STR_DIC_W_LF5_SZ_P2_01] and the [%dic:STR_DIC_W_LF5_SZ_I_01] in Signia and the [%dic:STR_DIC_W_DF5_SZ_I_01] in Vengar. Follow the [%dic:STR_DIC_E_Pandora_Portal_PvE] to reach the settlements.</body>
+  </string>
+  <string>
+    <id>1077477</id>
+    <name>STR_DIC_E_Pandora_Raid_PvP_Boss_All</name>
+    <body>Battlefield Reward Chest[pl:"Chests"];Follow the Pandora Battlefield Path, enter the [plur][%dic:STR_DIC_E_Pandora_Raid_PvP] and successfully complete the Project Office tasks to receive the chest.</body>
+  </string>
+  <string>
+    <id>1077478</id>
+    <name>STR_DIC_E_Pandora_Raid_PvE_Boss_All</name>
+    <body>Settlement Reward Chest[pl:"Chests"];Follow the Pandora Settlement Path, enter the [plur][%dic:STR_DIC_E_Pandora_Raid_PvE] and successfully complete the Project Office tasks to receive the chest.</body>
+  </string>
+  <string>
+    <id>1077479</id>
+    <name>STR_DIC_E_Pandora_Raid_Village01_Boss</name>
+    <body>Black Fins Legates;They include the [plur][%dic:STR_DIC_M_PandoraRaid_LF5_v01_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_LF5_v02_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_LF5_v03_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_LF5_v04_Boss] and the [plur][%dic:STR_DIC_M_PandoraRaid_LF5_v05_Boss]. Follow the [%dic:STR_DIC_E_Pandora_Portal_PvP] to the [%dic:STR_DIC_W_LF5_SZ_P1_01] to find them.</body>
+  </string>
+  <string>
+    <id>1077480</id>
+    <name>STR_DIC_E_Pandora_Raid_Village02_Boss</name>
+    <body>Nazra Legates;They include the [plur][%dic:STR_DIC_M_PandoraRaid_DF5_v01_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_DF5_v02_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_DF5_v03_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_DF5_v04_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_DF5_v05_Boss], the [plur][%dic:STR_DIC_M_PandoraRaid_DF5_v06_Boss] and the [plur][%dic:STR_DIC_M_PandoraRaid_DF5_v07_Boss]. Follow the [%dic:STR_DIC_E_Pandora_Portal_PvP] to the [%dic:STR_DIC_W_DF5_SZ_P2_01] to find them.</body>
+  </string>
+  <string>
+    <id>1077481</id>
+    <name>STR_DIC_E_Pandora_Portal_PvP</name>
+    <body>Pandora Battlefield Path;At a certain time, the Elyos path will appear in the [%dic:STR_DIC_W_LDF7_SZ_LOP1] and the Asmodian path will appear in the [%dic:STR_DIC_W_LDF7_SZ_DOP1].</body>
+  </string>
+  <string>
+    <id>1077482</id>
+    <name>STR_DIC_E_Pandora_Portal_PvE</name>
+    <body>Pandora Settlement Path;At a certain time, the Elyos path will appear in the [%dic:STR_DIC_W_LDF7_SZ_LOP1] and the Asmodian path will appear in the [%dic:STR_DIC_W_LDF7_SZ_DOP1].</body>
+  </string>
+  <string>
+    <id>1077483</id>
+    <name>STR_DIC_E_Pandora_Raid_Defence01_Boss</name>
+    <body>Mist-Thorn Chieftains;They include the [%dic:STR_DIC_M_PandoraRaid_PandoraRaid_SpiderQueen] and the [%dic:STR_DIC_M_PandoraRaid_PandoraRaid_SkeletonKing] who ambushed the resource transport of the Pandora Projects Office.</body>
+  </string>
+  <string>
+    <id>1077484</id>
+    <name>STR_DIC_E_Pandora_Raid_Defence02_Boss</name>
+    <body>Ruins Chieftains;They include [%dic:STR_DIC_M_PandoraRaid_PandoraRaid_SandWorm], [%dic:STR_DIC_M_PandoraRaid_PandoraRaid_Agrint_Coral] and [%dic:STR_DIC_M_PandoraRaid_PandoraRaid_Chimera] who ambushed the resource transport of the Pandora Projects Office.</body>
+  </string>
+  <string>
+    <id>1077485</id>
+    <name>STR_DIC_E_Pandora_Raid_Defence01_Energy</name>
+    <body>Mist-Thorn Resource Transport[pl:"Transports"];A Pandora Projects Office transport carrying resources fresh from the Mist-Thorn Forest. Resource extraction has enraged the [plur][%dic:STR_DIC_E_Pandora_Raid_Defence01_Boss].</body>
+  </string>
+  <string>
+    <id>1077486</id>
+    <name>STR_DIC_E_Pandora_Raid_Defence02_Energy</name>
+    <body>Ruins Resource Transport[pl:"Transports"];A Pandora Projects Office transport carrying resources fresh from the Jotun Ruins. Resource extraction has enraged the [plur][%dic:STR_DIC_E_Pandora_Raid_Defence02_Boss].</body>
   </string>
   <string>
     <id>1077535</id>

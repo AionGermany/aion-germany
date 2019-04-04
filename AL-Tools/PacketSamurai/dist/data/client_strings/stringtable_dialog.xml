@@ -553,7 +553,7 @@
   <string>
     <id>900904</id>
     <name>STR_LOBBY_CREATE__CUSTOM_BUTTON_BODY</name>
-    <body>Body Frame</body>
+    <body>Physique</body>
   </string>
   <string>
     <id>901000</id>
@@ -688,7 +688,7 @@
   <string>
     <id>910023</id>
     <name>STR_CHAR_STATUS_DIALOG__TABFRAME_WIDGET8</name>
-    <body>Weapon Attack</body>
+    <body>Weapon Atk.</body>
   </string>
   <string>
     <id>910024</id>
@@ -768,7 +768,7 @@
   <string>
     <id>910039</id>
     <name>STR_CHAR_STATUS_DIALOG__TABFRAME_WIDGET25</name>
-    <body>Atk Speed</body>
+    <body>Atk. Speed</body>
   </string>
   <string>
     <id>910040</id>
@@ -913,7 +913,7 @@
   <string>
     <id>910068</id>
     <name>STR_CHAR_STATUS_OTHER_DIALOG__TABFRAME_WIDGET8</name>
-    <body>Weapon Attack</body>
+    <body>Weapon Atk.</body>
   </string>
   <string>
     <id>910069</id>
@@ -993,7 +993,7 @@
   <string>
     <id>910084</id>
     <name>STR_CHAR_STATUS_OTHER_DIALOG__TABFRAME_WIDGET25</name>
-    <body>Atk Speed</body>
+    <body>Atk. Speed</body>
   </string>
   <string>
     <id>910085</id>
@@ -5468,7 +5468,7 @@
   <string>
     <id>910982</id>
     <name>STR_STATUS_NEW_DIALOG__TABFRAME_WIDGET_7</name>
-    <body>Weapon Attack</body>
+    <body>Weapon Atk.</body>
   </string>
   <string>
     <id>910983</id>
@@ -7465,7 +7465,7 @@
   <string>
     <id>911381</id>
     <name>STR_GATE_FORTIFIER_DIALOG__FIRE</name>
-    <body>Use Gate Stone</body>
+    <body>Use Wardstone</body>
   </string>
   <string>
     <id>911382</id>
@@ -7700,7 +7700,7 @@
   <string>
     <id>911428</id>
     <name>STR_PLAYER_INFO_DIALOG__STAT_ATK</name>
-    <body>Weapon Attack</body>
+    <body>Weapon Atk.</body>
   </string>
   <string>
     <id>911429</id>
@@ -9429,7 +9429,7 @@
   <string>
     <id>911773</id>
     <name>STR_PLAYER_INFO_DIALOG__STAT_CASTING_SPEED</name>
-    <body>Cast Speed</body>
+    <body>Casting Spd.</body>
   </string>
   <string>
     <id>911774</id>
@@ -13113,17 +13113,17 @@
   <string>
     <id>912516</id>
     <name>STR_NEW_MAP_SHOW_LEGION_GIVABLE</name>
-    <body>[%gchar:legion_givable] available fortress quests</body>
+    <body>[%gchar:legion_givable] Available Special Quest (NPC)</body>
   </string>
   <string>
     <id>912517</id>
     <name>STR_NEW_MAP_SHOW_LEGION_WORKING</name>
-    <body>[%gchar:legion_working] active fortress quests</body>
+    <body>[%gchar:legion_working] Active Special Quest (NPC)</body>
   </string>
   <string>
     <id>912518</id>
     <name>STR_NEW_MAP_SHOW_LEGION_FINISHED</name>
-    <body>[%gchar:legion_finished] completed fortress quest</body>
+    <body>[%gchar:legion_finished] Completed Special Quest (NPC)</body>
   </string>
   <string>
     <id>912519</id>
@@ -19412,27 +19412,27 @@ You can find further information on the &lt;font color=#FFBB00&gt;official websi
   <string>
     <id>913775</id>
     <name>STR_PLAYER_INFO_DIALOG__STAT_PVP_POWER_BOOST</name>
-    <body>Additional PvP Attack</body>
+    <body>Add. PvP Atk.</body>
   </string>
   <string>
     <id>913776</id>
     <name>STR_PLAYER_INFO_DIALOG__STAT_PVP_POWER_BOOST_RESIST</name>
-    <body>Additional PvP Defence</body>
+    <body>Add. PvP Def.</body>
   </string>
   <string>
     <id>913777</id>
     <name>STR_PLAYER_INFO_DIALOG__STAT_PVE_POWER_BOOST</name>
-    <body>Additional PvE Attack</body>
+    <body>Add. PvE Atk.</body>
   </string>
   <string>
     <id>913778</id>
     <name>STR_PLAYER_INFO_DIALOG__STAT_PVE_POWER_BOOST_RESIST</name>
-    <body>Additional PvE Defence</body>
+    <body>Add. PvE Def.</body>
   </string>
   <string>
     <id>913779</id>
     <name>STR_PLAYER_INFO_DIALOG__STAT_WEAPON_ATK</name>
-    <body>Weapon Attack</body>
+    <body>Weapon Atk.</body>
   </string>
   <string>
     <id>913780</id>
@@ -19463,6 +19463,7 @@ You can find further information on the &lt;font color=#FFBB00&gt;official websi
     <id>913784</id>
     <name>STR_INSTANCE_DIALOG__QUNABUFF_TOOLTIP_INDICATOR</name>
     <body>Lunamonerk Cheer</body>
+    <__review__>0</__review__>
   </string>
   <string>
     <id>913785</id>
@@ -19590,28 +19591,154 @@ You can find further information on the &lt;font color=#FFBB00&gt;official websi
     <body>Detailed product information</body>
   </string>
   <string>
+    <id>913812</id>
+    <name>STR_RANK_DIALOG__COL_GLORY_POINT</name>
+    <body>Honour Points</body>
+  </string>
+  <string>
+    <id>913813</id>
+    <name>STR_RANK_INFO_DIALOG__THIS_SEASON_GLORY_POINT</name>
+    <body>Current Honour Points</body>
+  </string>
+  <string>
+    <id>913814</id>
+    <name>STR_RANK_INFO_DIALOG__PRE_SEASON_GLORY_POINT</name>
+    <body>Honour Points from last Season</body>
+  </string>
+  <string>
+    <id>913815</id>
+    <name>STR_RANK_INFO_DIALOG__HIGHEST_GLORY_POINT</name>
+    <body>Highest Honour Points of the Season</body>
+  </string>
+  <string>
+    <id>913816</id>
+    <name>STR_TRANSFORMATION_TAB_COLLECTION</name>
+    <body>Collections</body>
+  </string>
+  <string>
+    <id>913817</id>
+    <name>STR_TRANSFORMATION_COLLECTION_LIST_NAME</name>
+    <body>Owned</body>
+  </string>
+  <string>
+    <id>913818</id>
+    <name>STR_TRANSFORMATION_COLLECTION_PROGRESS_NAME</name>
+    <body>Progress</body>
+  </string>
+  <string>
+    <id>913819</id>
+    <name>STR_TRANSFORMATION_COLLECTION_SELECT_NAME</name>
+    <body>Collections used</body>
+  </string>
+  <string>
+    <id>913820</id>
+    <name>STR_DEVANIONSKILLENCHANT_REINFORCE_REGIST_TOOLTIP</name>
+    <body>&lt;html&gt;
+&lt;font font_xml = "tooltip_guide_title"&gt;Register enchantment slot&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;1. Open the skill window (K) and drag the applied Daevanion skill. Unapplied skills can be registered by right-clicking.&lt;br&gt;
+2. You can only register legendary Daevanion skills or higher.&lt;br&gt;
+3. Click on the slot with the target to enchant to select the skill to be registered.&lt;/font&gt;
+&lt;/html&gt;</body>
+  </string>
+  <string>
+    <id>913821</id>
+    <name>STR_TRANSFORMATION_TAB_COLLECTION_TOTAL</name>
+    <body>All collections</body>
+  </string>
+  <string>
+    <id>913822</id>
+    <name>STR_TRANSFORMATION_TAB_COLLECTION_LOCKED</name>
+    <body>Locked collections</body>
+  </string>
+  <string>
+    <id>913823</id>
+    <name>STR_TRANSFORMATION_TAB_COLLECTION_NONE</name>
+    <body>This collection is not available.</body>
+  </string>
+  <string>
+    <id>913824</id>
+    <name>STR_TRANSFORMATION_COLLECTION_NOTICE</name>
+    <body>Receive collections</body>
+  </string>
+  <string>
+    <id>913825</id>
+    <name>STR_QUNAMARKET_BUTTON_QUNA</name>
+    <body>Luna</body>
+  </string>
+  <string>
     <id>913826</id>
     <name>STR_GLOBAL_OPTION_DIALOG__GAME_TOYPET_HIDE_MINE</name>
     <body>Hide minion/pet</body>
   </string>
   <string>
+    <id>913827</id>
+    <name>STR_DEVANIONSKILLENCHANT_DIALOG</name>
+    <body>Identify Daevanion skills</body>
+  </string>
+  <string>
+    <id>913828</id>
+    <name>STR_DEVANIONSKILLENCHANT_REINFORCE_TAB</name>
+    <body>Skill enchantment</body>
+  </string>
+  <string>
+    <id>913829</id>
+    <name>STR_DEVANIONSKILLENCHANT_COMPOSE_TAB</name>
+    <body>Skill fusion</body>
+  </string>
+  <string>
+    <id>913830</id>
+    <name>STR_DEVANIONSKILLENCHANT_REINFORCE_SLOT_TARGET</name>
+    <body>Target to enchant</body>
+  </string>
+  <string>
+    <id>913831</id>
+    <name>STR_DEVANIONSKILLENCHANT_REINFORCE_SLOT_MATERIALORIGINAL</name>
+    <body>Enchantment material</body>
+  </string>
+  <string>
+    <id>913832</id>
+    <name>STR_DEVANIONSKILLENCHANT_REINFORCE_SLOT_MATERIALSPECIAL</name>
+    <body>Special material</body>
+  </string>
+  <string>
+    <id>913833</id>
+    <name>STR_DEVANIONSKILLENCHANT_COMPOSE_REGIST_TOOLTIP</name>
+    <body>&lt;html&gt;
+&lt;font font_xml = "tooltip_guide_title"&gt;Register fusion slot&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;1. Open your inventory (I) to drag out the Daevanion Skill Book and register it.&lt;br&gt;
+2. Click on an empty slot and select the Daevanion Skill Book you want to register.&lt;/font&gt;
+&lt;/html&gt;</body>
+  </string>
+  <string>
+    <id>913834</id>
+    <name>STR_DEVANIONSKILLENCHANT_REINFORCE_CALL_BUTTON</name>
+    <body>Enchantment</body>
+  </string>
+  <string>
     <id>913856</id>
     <name>STR_AUTO_PVE_PVP_ENCHANT_WISH</name>
-    <body>Target Enchantment Level</body>
+    <body>Target boost level</body>
   </string>
   <string>
     <id>913857</id>
     <name>STR_AUTO_PVE_PVP_ENCHANT</name>
-    <body>Attempts</body>
+    <body>Enchantment attempts</body>
   </string>
   <string>
     <id>913858</id>
     <name>STR_AUTO_STIGMA_ENCHANT_WISH</name>
-    <body>Next boost level</body>
+    <body>Target boost level</body>
   </string>
   <string>
     <id>913859</id>
     <name>STR_AUTO_STIGMA_ENCHANT</name>
-    <body>Attempts</body>
+    <body>Enchantment attempts</body>
+  </string>
+  <string>
+    <id>913892</id>
+    <name>STR_DEVANIONSKILLENCHANT_TEMPORARY</name>
+    <body>Will be shown later.</body>
   </string>
 </strings>
