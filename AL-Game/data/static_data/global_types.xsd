@@ -997,7 +997,7 @@
             <xs:enumeration value="IDRUN_POLYMORPH_L"/>
             <xs:enumeration value="IDRUN_POLYMORPH_D"/>
             <xs:enumeration value="IDRUN_NPC"/>
-            <!-- New 6.x -->
+            <!-- New 6.0 -->
             <xs:enumeration value="DOOR_GUARD"/>
             <xs:enumeration value="DOOR_GUARD_DARK"/>
             <xs:enumeration value="ERESUKIGAL_SOLO"/>
@@ -1020,6 +1020,37 @@
             <xs:enumeration value="LYCAN_DARK"/>
             <xs:enumeration value="NLIZARDMAN_GENERAL_DARK"/>
             <xs:enumeration value="ONLY_GUARD_AGRRESI"/>
+            <!-- New 6.5 -->
+            <xs:enumeration value="UNDEAD_DARK"/>
+            <xs:enumeration value="UNDEAD_LIGHT"/>
+            <xs:enumeration value="IDF7_MINE"/>
+            <xs:enumeration value="IDF7_MINE_MONSER"/>
+            <xs:enumeration value="IDF7_ERE"/>
+            <xs:enumeration value="IDF7_ERE_KILLER"/>
+            <xs:enumeration value="IDF7_ERE_GUARD_LI"/>
+            <xs:enumeration value="IDF7_ERE_GUARD_DA"/>
+            <xs:enumeration value="IDBC_LIGHT"/>
+            <xs:enumeration value="IDBC_DARK"/>
+            <xs:enumeration value="IDBC_BOSS"/>
+            <xs:enumeration value="IDF7_MINE_MONSER_SUPP"/>
+            <xs:enumeration value="IDBC_LIGHT_BOSS"/>
+            <xs:enumeration value="IDBC_DARK_BOSS"/>
+            <xs:enumeration value="IDBC_NPC_LIGHT"/>
+            <xs:enumeration value="IDF7_ERE_AGGRESSIVEGUARD"/>
+            <xs:enumeration value="IDF7_ERE_LI"/>
+            <xs:enumeration value="IDF7_ERE_DA"/>
+            <xs:enumeration value="IDBC_OBJ_BUFF"/>
+            <xs:enumeration value="IDWATER_MOB"/>
+            <xs:enumeration value="IDWATER_NPC"/>
+            <xs:enumeration value="IDWATER_PC"/>
+            <xs:enumeration value="IDBC_LIGHT_TANK"/>
+            <xs:enumeration value="IDBC_DARK_TANK"/>
+            <xs:enumeration value="IDBC_NPC_DARK"/>
+            <xs:enumeration value="PANDORARAID_ENERGY_LIGHT"/>
+            <xs:enumeration value="PANDORARAID_ENERGY_DARK"/>
+            <xs:enumeration value="IDBC_POL_LIGHT"/>
+            <xs:enumeration value="IDBC_POL_DARK"/>
+            <xs:enumeration value="PANDORARAID_WAVE_MONSTER"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Base types -->
