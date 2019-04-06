@@ -91,6 +91,7 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeD(pls.getCurrentFp());// [current fly time] <-- OK
 		writeH(player.getFlyState());// [fly state] <-- OK
 		writeH(0); // TODO
+		
 		writeD(0);//pgs.getMainHandPAttack().getCurrent());// // TODO base Attack without weapon(right Hand);
 		writeD(0); // No Off Weapon = 0 Attack When Off weapon equiped also 0
 		writeD(0);
@@ -112,8 +113,7 @@ public class SM_STATS_INFO extends AionServerPacket {
 		
 		writeD(pgs.getMResist().getCurrent());// [current mres]
 		writeF(pgs.getAttackRange().getCurrent() / 1000);// attack range
-		writeH(pgs.getAttackSpeed().getCurrent());// attack speed
-		writeH(97);//unk 97
+		writeD(pgs.getAttackSpeed().getCurrent());// attack speed
 		writeD(pgs.getEvasion().getCurrent());// [current evasion]
 		writeD(pgs.getParry().getCurrent());// [current parry]
 		writeD(pgs.getBlock().getCurrent());// [current block]
@@ -153,15 +153,15 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeQ(pcd.getCurrentReposteEnergy()); // <-- OK
 		writeQ(pcd.getMaxReposteEnergy()); // <-- OK
 		writeH(0);
-		writeH(16385);// Cleri  
+		writeH(0);// Cleri  
 		writeF(1.0f);// Default Base Casting Speed
-		writeD(8960);
-		writeH(0);
-		writeH(0);
-		writeQ(0);//pcd.getGoldenStarEnergy()); // Golden Star Energy (625000000 = 100%)
-		writeQ(0);//pcd.getGrowthEnergy()); // Energy of Growth (160000000 = 100%)
+		writeD(0);
+		writeD(0);
+		writeQ(pcd.getGrowthEnergy());// Energy of Growth (160000000 = 100%)
+		writeQ(pcd.getGoldenStarEnergy());// Golden Star Energy (625000000 = 100%)
 		writeQ(0); //SilverStarEnergy TODO (50000 = 5%, 100000 = 10% etc ) <-- OK
-		writeB(new byte[16]);
+		writeB(new byte[12]);
+		writeD(1000);
 		writeH(pgs.getPower().getBase());// [base power] <-- ok
 		writeH(pgs.getHealth().getBase());// [base health] <-- ok
 		writeH(pgs.getAgility().getBase());// [base agility] <-- ok

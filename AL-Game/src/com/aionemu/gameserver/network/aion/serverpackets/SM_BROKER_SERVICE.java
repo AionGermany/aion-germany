@@ -218,7 +218,7 @@ public class SM_BROKER_SERVICE extends AionServerPacket {
 				ItemInfoBlob.newBlobEntry(ItemBlobType.MANA_SOCKETS, null, item).writeThisBlob(getBuf());
 			}
 			else {
-				writeB(new byte[187]);
+				writeB(new byte[231]);
 			}
 
 			writeS(settledItem.getItemCreator());

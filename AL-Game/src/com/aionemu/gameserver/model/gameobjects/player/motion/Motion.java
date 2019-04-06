@@ -101,6 +101,9 @@ public class Motion implements IExpirable {
 		
 		// Spellbinding Rhythm
 		motionType.put(38, 1);
+		
+		//Leisurely Strol
+		motionType.put(39, 1);
 	}
 
 	private int id;

@@ -215,6 +215,6 @@ public class SM_NPC_INFO extends AionServerPacket {
 		writeC(0x00); // unk
 		writeD(_npc.getTarget() == null ? 0 : _npc.getTarget().getObjectId());
 		writeD(TownService.getInstance().getTownIdByPosition(_npc));
-		writeD(0);// unk 4.7.5
+		writeB(new byte [12]);// unk 6.5
 	}
 }
