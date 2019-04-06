@@ -1,9 +1,7 @@
 ![](http://falke34.bplaced.net/Splash01.png)
 
 # Aion EU Emulator
-### Version: 6.0
-
-**PTS-Client 6.0:** [Gameforge](http://dl.aion.gameforge.com/aion/client/20180806/2018-08-06_AION_Setup_PTS.exe)
+### Version: 6.5
 
 **Client:** [Gameforge](https://de.aion.gameforge.com/website/download/) **+** [Launcher](https://github.com/AionGermany/aion-germany/blob/master/AL-Tools/AionLauncherEU_5.x.rar)
 
@@ -19,16 +17,15 @@ Launcher Settings (add this to your config File):
 ### Todo:
 ```sh
 Static Data:
-* all
-```
-
-```sh
-Data:
-* all
+* update Static Data Files
+* add new Instances
 ```
 
 ```sh
 Source:
-* remove some old Code
-* add new Packets
+* add/write/rework Packets
+* rework Player and Creature Stats
+* add Transformations System (Account)
+* rework Cubics System (Account)
+* rework Minions System
 ```
