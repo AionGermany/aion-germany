@@ -474,6 +474,12 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("garden_bonus") || destination.equalsIgnoreCase("Garden of Knowledge (Bonus)")) {
 			goTo(player, 302490000, 1484.535f, 780.51636f, 1035.2672f, (byte) 60);
 		}
+		else if (destination.equalsIgnoreCase("hererim") || destination.equalsIgnoreCase("Hererim Mine")) {
+			goTo(player, 302500000, 855.55054f, 528.08954f, 295.125f, (byte) 60);
+		}
+		else if (destination.equalsIgnoreCase("senekta") || destination.equalsIgnoreCase("Senekta")) {
+			goTo(player, 302510000, 876.41376f, 567.6291f, 151.195f, (byte) 80);
+		}
 		else {
 			PacketSendUtility.sendMessage(player, "Could not find the specified destination !");
 		}
