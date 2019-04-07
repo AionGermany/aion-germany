@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -305,6 +305,23 @@
 						<spot x="844.4884" y="2106.8623" z="284.26822" h="89"/>
 						<spot x="678.1304" y="2055.6724" z="290.77118" h="112"/>
 						<spot x="789.5592" y="2193.9172" z="264.51035" h="60"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Floral Magic" start="2019-04-03T00:00:00+00:00" end="2019-04-17T00:00:00+00:00">
+            <spawns>
+                <!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- None ||| world_SpringEvent_F -->
+					<spawn npc_id="838342" respawn_time="295">
+						<spot x="2649.77" y="498.61" z="319.56696" h="12"/>
+						<spot x="2887.02" y="2491.11" z="309.9913" h="76"/>
+					</spawn>
+					<!-- None ||| world_SpringEvent_M -->
+					<spawn npc_id="838343" respawn_time="295">
+						<spot x="2647.22" y="496.07" z="319.56714" h="0"/>
+						<spot x="2886.41" y="2487.74" z="309.98938" h="60"/>
 					</spawn>
                 </spawn_map>
             </spawns>
