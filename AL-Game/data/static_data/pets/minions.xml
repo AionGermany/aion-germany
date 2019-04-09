@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-09-10 15:48 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-04-09 18:27 -->
 <minions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="minions.xsd">
     <minion id="980010" name="Kerubar" nameid="1614348" grade="D" level="1" growthPoints="4131074">
         <modifiers>
@@ -18,7 +18,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -39,7 +39,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -50,7 +50,7 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
@@ -60,7 +60,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -81,7 +81,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -96,14 +96,14 @@
             <add name="MAGICAL_CRITICAL" value="5"/>
         </modifiers>
         <actions>
-            <skill skill_id="4902" energyCost="50000"/>
+            <skill skill_id="4902" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200004" evolvedNum="150" evolvedCost="22000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -118,14 +118,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4903" energyCost="50000"/>
+            <skill skill_id="4903" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200004" evolvedNum="250" evolvedCost="37000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -140,7 +140,7 @@
             <add name="MAGICAL_CRITICAL" value="35"/>
         </modifiers>
         <actions>
-            <skill skill_id="4903" energyCost="50000"/>
+            <skill skill_id="4903" energyCost="5000"/>
             <skill skill_id="4904" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -148,7 +148,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -163,7 +163,7 @@
             <add name="MAGICAL_CRITICAL" value="50"/>
         </modifiers>
         <actions>
-            <skill skill_id="4903" energyCost="50000"/>
+            <skill skill_id="4903" energyCost="5000"/>
             <skill skill_id="4905" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -171,7 +171,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -186,14 +186,14 @@
             <add name="MAGICAL_CRITICAL" value="5"/>
         </modifiers>
         <actions>
-            <skill skill_id="4898" energyCost="50000"/>
+            <skill skill_id="4898" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.17" side="0.17" upper="0.47"/>
         <evolved itemId="190200004" evolvedNum="150" evolvedCost="22000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -208,14 +208,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4899" energyCost="50000"/>
+            <skill skill_id="4899" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.17" side="0.17" upper="0.47"/>
         <evolved itemId="190200004" evolvedNum="250" evolvedCost="37000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -230,7 +230,7 @@
             <add name="MAGICAL_CRITICAL" value="35"/>
         </modifiers>
         <actions>
-            <skill skill_id="4899" energyCost="50000"/>
+            <skill skill_id="4899" energyCost="5000"/>
             <skill skill_id="4900" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -238,7 +238,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -253,7 +253,7 @@
             <add name="MAGICAL_CRITICAL" value="50"/>
         </modifiers>
         <actions>
-            <skill skill_id="4899" energyCost="50000"/>
+            <skill skill_id="4899" energyCost="5000"/>
             <skill skill_id="4901" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -261,7 +261,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -272,18 +272,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4894" energyCost="50000"/>
+            <skill skill_id="4894" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -298,14 +298,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4895" energyCost="50000"/>
+            <skill skill_id="4895" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -320,7 +320,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4895" energyCost="50000"/>
+            <skill skill_id="4895" energyCost="5000"/>
             <skill skill_id="4896" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -328,7 +328,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -343,7 +343,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4895" energyCost="50000"/>
+            <skill skill_id="4895" energyCost="5000"/>
             <skill skill_id="4897" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -351,7 +351,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -362,18 +362,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4890" energyCost="50000"/>
+            <skill skill_id="4890" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -388,14 +388,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4891" energyCost="50000"/>
+            <skill skill_id="4891" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -410,7 +410,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4891" energyCost="50000"/>
+            <skill skill_id="4891" energyCost="5000"/>
             <skill skill_id="4892" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -418,7 +418,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -433,7 +433,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4891" energyCost="50000"/>
+            <skill skill_id="4891" energyCost="5000"/>
             <skill skill_id="4893" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -441,7 +441,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -456,14 +456,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4886" energyCost="50000"/>
+            <skill skill_id="4886" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.15" side="0.15" upper="0.60"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -478,14 +478,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4887" energyCost="50000"/>
+            <skill skill_id="4887" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.15" side="0.15" upper="0.60"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -500,7 +500,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4887" energyCost="50000"/>
+            <skill skill_id="4887" energyCost="5000"/>
             <skill skill_id="4888" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -508,7 +508,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -523,7 +523,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4887" energyCost="50000"/>
+            <skill skill_id="4887" energyCost="5000"/>
             <skill skill_id="4889" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -531,7 +531,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -546,14 +546,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4882" energyCost="50000"/>
+            <skill skill_id="4882" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -568,14 +568,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4883" energyCost="50000"/>
+            <skill skill_id="4883" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -590,7 +590,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4883" energyCost="50000"/>
+            <skill skill_id="4883" energyCost="5000"/>
             <skill skill_id="4884" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -598,7 +598,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -613,7 +613,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4883" energyCost="50000"/>
+            <skill skill_id="4883" energyCost="5000"/>
             <skill skill_id="4885" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -621,7 +621,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -632,18 +632,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4967" energyCost="50000"/>
+            <skill skill_id="4967" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -658,14 +658,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4968" energyCost="50000"/>
+            <skill skill_id="4968" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -680,7 +680,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4968" energyCost="50000"/>
+            <skill skill_id="4968" energyCost="5000"/>
             <skill skill_id="4969" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -688,7 +688,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -703,7 +703,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4968" energyCost="50000"/>
+            <skill skill_id="4968" energyCost="5000"/>
             <skill skill_id="4970" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -711,7 +711,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -722,18 +722,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4971" energyCost="50000"/>
+            <skill skill_id="4971" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -748,14 +748,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4972" energyCost="50000"/>
+            <skill skill_id="4972" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -770,7 +770,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4972" energyCost="50000"/>
+            <skill skill_id="4972" energyCost="5000"/>
             <skill skill_id="4973" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -778,7 +778,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -793,7 +793,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4972" energyCost="50000"/>
+            <skill skill_id="4972" energyCost="5000"/>
             <skill skill_id="4974" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -801,7 +801,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -816,14 +816,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4955" energyCost="50000"/>
+            <skill skill_id="4955" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -838,14 +838,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4956" energyCost="50000"/>
+            <skill skill_id="4956" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -860,7 +860,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4956" energyCost="50000"/>
+            <skill skill_id="4956" energyCost="5000"/>
             <skill skill_id="4957" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -868,7 +868,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -883,7 +883,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4956" energyCost="50000"/>
+            <skill skill_id="4956" energyCost="5000"/>
             <skill skill_id="4958" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -891,7 +891,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -906,14 +906,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4959" energyCost="50000"/>
+            <skill skill_id="4959" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -928,14 +928,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4960" energyCost="50000"/>
+            <skill skill_id="4960" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -950,7 +950,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4960" energyCost="50000"/>
+            <skill skill_id="4960" energyCost="5000"/>
             <skill skill_id="4961" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -958,7 +958,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -973,7 +973,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4960" energyCost="50000"/>
+            <skill skill_id="4960" energyCost="5000"/>
             <skill skill_id="4962" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -981,7 +981,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -996,14 +996,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4963" energyCost="50000"/>
+            <skill skill_id="4963" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1018,14 +1018,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4964" energyCost="50000"/>
+            <skill skill_id="4964" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1040,7 +1040,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4964" energyCost="50000"/>
+            <skill skill_id="4964" energyCost="5000"/>
             <skill skill_id="4965" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1048,7 +1048,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1063,7 +1063,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4964" energyCost="50000"/>
+            <skill skill_id="4964" energyCost="5000"/>
             <skill skill_id="4966" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1071,7 +1071,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1092,7 +1092,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1113,7 +1113,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1124,7 +1124,7 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
@@ -1134,7 +1134,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1155,7 +1155,7 @@
         <bound front="0.22" side="0.22" upper="0.49"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1170,14 +1170,14 @@
             <add name="MAGICAL_CRITICAL" value="5"/>
         </modifiers>
         <actions>
-            <skill skill_id="4902" energyCost="50000"/>
+            <skill skill_id="4902" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200004" evolvedNum="150" evolvedCost="22000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1192,14 +1192,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4903" energyCost="50000"/>
+            <skill skill_id="4903" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200004" evolvedNum="250" evolvedCost="37000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1214,7 +1214,7 @@
             <add name="MAGICAL_CRITICAL" value="35"/>
         </modifiers>
         <actions>
-            <skill skill_id="4903" energyCost="50000"/>
+            <skill skill_id="4903" energyCost="5000"/>
             <skill skill_id="4904" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1222,7 +1222,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1237,7 +1237,7 @@
             <add name="MAGICAL_CRITICAL" value="50"/>
         </modifiers>
         <actions>
-            <skill skill_id="4903" energyCost="50000"/>
+            <skill skill_id="4903" energyCost="5000"/>
             <skill skill_id="4905" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1245,7 +1245,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1260,14 +1260,14 @@
             <add name="MAGICAL_CRITICAL" value="5"/>
         </modifiers>
         <actions>
-            <skill skill_id="4898" energyCost="50000"/>
+            <skill skill_id="4898" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.17" side="0.17" upper="0.47"/>
         <evolved itemId="190200004" evolvedNum="150" evolvedCost="22000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1282,14 +1282,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4899" energyCost="50000"/>
+            <skill skill_id="4899" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.17" side="0.17" upper="0.47"/>
         <evolved itemId="190200004" evolvedNum="250" evolvedCost="37000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1304,7 +1304,7 @@
             <add name="MAGICAL_CRITICAL" value="35"/>
         </modifiers>
         <actions>
-            <skill skill_id="4899" energyCost="50000"/>
+            <skill skill_id="4899" energyCost="5000"/>
             <skill skill_id="4900" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1312,7 +1312,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1327,7 +1327,7 @@
             <add name="MAGICAL_CRITICAL" value="50"/>
         </modifiers>
         <actions>
-            <skill skill_id="4899" energyCost="50000"/>
+            <skill skill_id="4899" energyCost="5000"/>
             <skill skill_id="4901" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1335,7 +1335,7 @@
         <evolved itemId="190200004" evolvedNum="500" evolvedCost="74000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1346,18 +1346,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4894" energyCost="50000"/>
+            <skill skill_id="4894" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1372,14 +1372,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4895" energyCost="50000"/>
+            <skill skill_id="4895" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1394,7 +1394,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4895" energyCost="50000"/>
+            <skill skill_id="4895" energyCost="5000"/>
             <skill skill_id="4896" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1402,7 +1402,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1417,7 +1417,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4895" energyCost="50000"/>
+            <skill skill_id="4895" energyCost="5000"/>
             <skill skill_id="4897" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1425,7 +1425,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1436,18 +1436,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4890" energyCost="50000"/>
+            <skill skill_id="4890" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1462,14 +1462,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4891" energyCost="50000"/>
+            <skill skill_id="4891" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1484,7 +1484,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4891" energyCost="50000"/>
+            <skill skill_id="4891" energyCost="5000"/>
             <skill skill_id="4892" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1492,7 +1492,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1507,7 +1507,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4891" energyCost="50000"/>
+            <skill skill_id="4891" energyCost="5000"/>
             <skill skill_id="4893" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1515,7 +1515,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1530,14 +1530,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4886" energyCost="50000"/>
+            <skill skill_id="4886" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.15" side="0.15" upper="0.60"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1552,14 +1552,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4887" energyCost="50000"/>
+            <skill skill_id="4887" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.15" side="0.15" upper="0.60"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1574,7 +1574,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4887" energyCost="50000"/>
+            <skill skill_id="4887" energyCost="5000"/>
             <skill skill_id="4888" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1582,7 +1582,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1597,7 +1597,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4887" energyCost="50000"/>
+            <skill skill_id="4887" energyCost="5000"/>
             <skill skill_id="4889" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1605,7 +1605,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1620,14 +1620,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4882" energyCost="50000"/>
+            <skill skill_id="4882" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1642,14 +1642,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4883" energyCost="50000"/>
+            <skill skill_id="4883" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1664,7 +1664,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4883" energyCost="50000"/>
+            <skill skill_id="4883" energyCost="5000"/>
             <skill skill_id="4884" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1672,7 +1672,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1687,7 +1687,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4883" energyCost="50000"/>
+            <skill skill_id="4883" energyCost="5000"/>
             <skill skill_id="4885" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1695,7 +1695,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1706,18 +1706,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4967" energyCost="50000"/>
+            <skill skill_id="4967" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1732,14 +1732,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4968" energyCost="50000"/>
+            <skill skill_id="4968" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1754,7 +1754,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4968" energyCost="50000"/>
+            <skill skill_id="4968" energyCost="5000"/>
             <skill skill_id="4969" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1762,7 +1762,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1777,7 +1777,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4968" energyCost="50000"/>
+            <skill skill_id="4968" energyCost="5000"/>
             <skill skill_id="4970" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1785,7 +1785,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1796,18 +1796,18 @@
             <add name="PHYSICAL_CRITICAL" value="10"/>
             <add name="PHYSICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_ATTACK" value="8"/>
-            <add name="MAGICAL_ACCURACY" value="110"/>
+            <add name="MAGICAL_ACCURACY" value="11"/>
             <add name="MAGICAL_CRITICAL" value="10"/>
         </modifiers>
         <actions>
-            <skill skill_id="4971" energyCost="50000"/>
+            <skill skill_id="4971" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="300" evolvedCost="300000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1822,14 +1822,14 @@
             <add name="MAGICAL_CRITICAL" value="40"/>
         </modifiers>
         <actions>
-            <skill skill_id="4972" energyCost="50000"/>
+            <skill skill_id="4972" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200003" evolvedNum="500" evolvedCost="600000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1844,7 +1844,7 @@
             <add name="MAGICAL_CRITICAL" value="70"/>
         </modifiers>
         <actions>
-            <skill skill_id="4972" energyCost="50000"/>
+            <skill skill_id="4972" energyCost="5000"/>
             <skill skill_id="4973" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1852,7 +1852,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1867,7 +1867,7 @@
             <add name="MAGICAL_CRITICAL" value="100"/>
         </modifiers>
         <actions>
-            <skill skill_id="4972" energyCost="50000"/>
+            <skill skill_id="4972" energyCost="5000"/>
             <skill skill_id="4974" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1875,7 +1875,7 @@
         <evolved itemId="190200003" evolvedNum="1000" evolvedCost="1000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1890,14 +1890,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4955" energyCost="50000"/>
+            <skill skill_id="4955" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1912,14 +1912,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4956" energyCost="50000"/>
+            <skill skill_id="4956" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1934,7 +1934,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4956" energyCost="50000"/>
+            <skill skill_id="4956" energyCost="5000"/>
             <skill skill_id="4957" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1942,7 +1942,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1957,7 +1957,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4956" energyCost="50000"/>
+            <skill skill_id="4956" energyCost="5000"/>
             <skill skill_id="4958" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -1965,7 +1965,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -1980,14 +1980,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4959" energyCost="50000"/>
+            <skill skill_id="4959" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -2002,14 +2002,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4960" energyCost="50000"/>
+            <skill skill_id="4960" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -2024,7 +2024,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4960" energyCost="50000"/>
+            <skill skill_id="4960" energyCost="5000"/>
             <skill skill_id="4961" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -2032,7 +2032,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -2047,7 +2047,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4960" energyCost="50000"/>
+            <skill skill_id="4960" energyCost="5000"/>
             <skill skill_id="4962" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -2055,7 +2055,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -2070,14 +2070,14 @@
             <add name="MAGICAL_CRITICAL" value="20"/>
         </modifiers>
         <actions>
-            <skill skill_id="4963" energyCost="50000"/>
+            <skill skill_id="4963" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -2092,14 +2092,14 @@
             <add name="MAGICAL_CRITICAL" value="80"/>
         </modifiers>
         <actions>
-            <skill skill_id="4964" energyCost="50000"/>
+            <skill skill_id="4964" energyCost="5000"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
         <bound front="0.24" side="0.24" upper="0.49"/>
         <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -2114,7 +2114,7 @@
             <add name="MAGICAL_CRITICAL" value="140"/>
         </modifiers>
         <actions>
-            <skill skill_id="4964" energyCost="50000"/>
+            <skill skill_id="4964" energyCost="5000"/>
             <skill skill_id="4965" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -2122,7 +2122,7 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>
@@ -2137,7 +2137,7 @@
             <add name="MAGICAL_CRITICAL" value="200"/>
         </modifiers>
         <actions>
-            <skill skill_id="4964" energyCost="50000"/>
+            <skill skill_id="4964" energyCost="5000"/>
             <skill skill_id="4966" energyCost="0"/>
         </actions>
         <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
@@ -2145,7 +2145,315 @@
         <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
         <!-- skill_point_rate_from_exp     = 50-->
         <!-- skill_point_from_pc_kill      = 2500-->
-        <!-- skill_point_max               = 50000-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981094" name="Nanachi" nameid="1614391" grade="A" level="1" growthPoints="55769499" growthMax="136023168" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="27"/>
+            <add name="PHYSICAL_CRITICAL" value="34"/>
+            <add name="MAGICAL_ATTACK" value="27"/>
+            <add name="MAGICAL_CRITICAL" value="34"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4886" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981095" name="Nanachi" nameid="1614391" grade="A" level="2" growthPoints="114259461" growthMax="238040544" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="125"/>
+            <add name="PHYSICAL_CRITICAL" value="136"/>
+            <add name="MAGICAL_ATTACK" value="125"/>
+            <add name="MAGICAL_CRITICAL" value="136"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4887" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981096" name="Nanachi" nameid="1614391" grade="A" level="3" growthPoints="238040544" growthMax="340057920" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="224"/>
+            <add name="PHYSICAL_CRITICAL" value="238"/>
+            <add name="MAGICAL_ATTACK" value="224"/>
+            <add name="MAGICAL_CRITICAL" value="238"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4887" energyCost="5000"/>
+            <skill skill_id="4888" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981097" name="Nanachi" nameid="1614391" grade="A" level="4" growthPoints="510086880" growthMax="0" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="323"/>
+            <add name="PHYSICAL_CRITICAL" value="340"/>
+            <add name="MAGICAL_ATTACK" value="323"/>
+            <add name="MAGICAL_CRITICAL" value="340"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4887" energyCost="5000"/>
+            <skill skill_id="4889" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981098" name="Riko" nameid="1614393" grade="A" level="1" growthPoints="55769499" growthMax="136023168" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="24"/>
+            <add name="PHYSICAL_CRITICAL" value="30"/>
+            <add name="PHYSICAL_ACCURACY" value="33"/>
+            <add name="MAXHP" value="810"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4882" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981099" name="Riko" nameid="1614393" grade="A" level="2" growthPoints="114259461" growthMax="238040544" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="111"/>
+            <add name="PHYSICAL_CRITICAL" value="120"/>
+            <add name="PHYSICAL_ACCURACY" value="132"/>
+            <add name="MAXHP" value="3042"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4883" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981100" name="Riko" nameid="1614393" grade="A" level="3" growthPoints="238040544" growthMax="340057920" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="198"/>
+            <add name="PHYSICAL_CRITICAL" value="210"/>
+            <add name="PHYSICAL_ACCURACY" value="231"/>
+            <add name="MAXHP" value="5274"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4883" energyCost="5000"/>
+            <skill skill_id="4884" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981101" name="Riko" nameid="1614393" grade="A" level="4" growthPoints="510086880" growthMax="0" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ATTACK" value="285"/>
+            <add name="PHYSICAL_CRITICAL" value="300"/>
+            <add name="PHYSICAL_ACCURACY" value="330"/>
+            <add name="MAXHP" value="7500"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4883" energyCost="5000"/>
+            <skill skill_id="4885" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981102" name="Marulk" nameid="1614395" grade="A" level="1" growthPoints="55769499" growthMax="136023168" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ACCURACY" value="37"/>
+            <add name="MAXHP" value="1080"/>
+            <add name="MAGICAL_ACCURACY" value="37"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4886" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981103" name="Marulk" nameid="1614395" grade="A" level="2" growthPoints="114259461" growthMax="238040544" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ACCURACY" value="149"/>
+            <add name="MAXHP" value="4056"/>
+            <add name="MAGICAL_ACCURACY" value="149"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4887" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981104" name="Marulk" nameid="1614395" grade="A" level="3" growthPoints="238040544" growthMax="340057920" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ACCURACY" value="261"/>
+            <add name="MAXHP" value="7032"/>
+            <add name="MAGICAL_ACCURACY" value="261"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4887" energyCost="5000"/>
+            <skill skill_id="4888" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981105" name="Marulk" nameid="1614395" grade="A" level="4" growthPoints="510086880" growthMax="0" growthCost="30000">
+        <modifiers>
+            <add name="PHYSICAL_ACCURACY" value="374"/>
+            <add name="MAXHP" value="10000"/>
+            <add name="MAGICAL_ACCURACY" value="374"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4887" energyCost="5000"/>
+            <skill skill_id="4889" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.15" side="0.15" upper="0.60"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981106" name="Reg" nameid="1614397" grade="A" level="1" growthPoints="55769499" growthMax="136023168" growthCost="30000">
+        <modifiers>
+            <add name="MAGICAL_ATTACK" value="24"/>
+            <add name="MAGICAL_CRITICAL" value="30"/>
+            <add name="MAGICAL_ACCURACY" value="33"/>
+            <add name="MAXHP" value="810"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4959" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="600" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981107" name="Reg" nameid="1614397" grade="A" level="2" growthPoints="114259461" growthMax="238040544" growthCost="30000">
+        <modifiers>
+            <add name="MAGICAL_ATTACK" value="111"/>
+            <add name="MAGICAL_CRITICAL" value="120"/>
+            <add name="MAGICAL_ACCURACY" value="132"/>
+            <add name="MAXHP" value="3042"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4960" energyCost="5000"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="1000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981108" name="Reg" nameid="1614397" grade="A" level="3" growthPoints="238040544" growthMax="340057920" growthCost="30000">
+        <modifiers>
+            <add name="MAGICAL_ATTACK" value="198"/>
+            <add name="MAGICAL_CRITICAL" value="210"/>
+            <add name="MAGICAL_ACCURACY" value="231"/>
+            <add name="MAXHP" value="5274"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4960" energyCost="5000"/>
+            <skill skill_id="4961" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
+        <!-- growth_point_rate_from_exp    = 10000-->
+        <!-- growth_point_from_pc_kill     = 0-->
+    </minion>
+    <minion id="981109" name="Reg" nameid="1614397" grade="A" level="4" growthPoints="510086880" growthMax="0" growthCost="30000">
+        <modifiers>
+            <add name="MAGICAL_ATTACK" value="285"/>
+            <add name="MAGICAL_CRITICAL" value="300"/>
+            <add name="MAGICAL_ACCURACY" value="330"/>
+            <add name="MAXHP" value="7500"/>
+        </modifiers>
+        <actions>
+            <skill skill_id="4960" energyCost="5000"/>
+            <skill skill_id="4962" energyCost="0"/>
+        </actions>
+        <minionstats run_speed="6.0" walk_speed="1.132" height="1.2" altitude="1.5"/>
+        <bound front="0.24" side="0.24" upper="0.49"/>
+        <evolved itemId="190200000" evolvedNum="2000" evolvedCost="10000000"/>
+        <!-- skill_point_rate_from_exp     = 50-->
+        <!-- skill_point_from_pc_kill      = 2500-->
+        <!-- skill_point_max               = 5000-->
         <!-- growth_point_rate_from_exp    = 10000-->
         <!-- growth_point_from_pc_kill     = 0-->
     </minion>

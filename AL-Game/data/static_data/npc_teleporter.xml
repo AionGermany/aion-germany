@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-09-16 21:04 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-04-09 18:22 -->
 <npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <teleporter_template npc_ids="203726" teleportId="1">
         <locations>
@@ -192,6 +192,7 @@
         <locations>
             <telelocation loc_id="80" teleportid="50001" price="240" pricePvp="240" type="FLIGHT" />
             <telelocation loc_id="129" teleportid="108001" price="161" pricePvp="161" type="FLIGHT" />
+            <telelocation loc_id="79" teleportid="48001" price="182" pricePvp="182" type="FLIGHT" />
         </locations>
     </teleporter_template>
     <teleporter_template npc_ids="204756" teleportId="213">
@@ -1237,6 +1238,20 @@
     <teleporter_template npc_ids="731913" teleportId="1224">
         <locations>
             <telelocation loc_id="7" price="20027" pricePvp="20027" type="REGULAR" />
+        </locations>
+    </teleporter_template>
+    <teleporter_template npc_ids="820221" teleportId="1225">
+        <locations>
+            <telelocation loc_id="593" price="21150" pricePvp="21150" type="REGULAR" />
+            <telelocation loc_id="594" price="24119" pricePvp="24119" type="REGULAR" />
+            <telelocation loc_id="595" price="24119" pricePvp="24119" type="REGULAR" />
+        </locations>
+    </teleporter_template>
+    <teleporter_template npc_ids="820222" teleportId="1226">
+        <locations>
+            <telelocation loc_id="596" price="21150" pricePvp="21150" type="REGULAR" />
+            <telelocation loc_id="597" price="24119" pricePvp="24119" type="REGULAR" />
+            <telelocation loc_id="598" price="24119" pricePvp="24119" type="REGULAR" />
         </locations>
     </teleporter_template>
 </npc_teleporter>
