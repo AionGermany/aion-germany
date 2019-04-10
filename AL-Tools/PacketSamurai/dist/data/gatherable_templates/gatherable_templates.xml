@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-04-08 14:35 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-04-09 18:29 -->
 <gatherable_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gatherable_templates.xsd">
     <gatherable_template id="400001" name="Kukuru" nameId="701957" sourceType="VEGETABLE" harvestCount="1" skillLevel="20" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100">
         <materials>
@@ -3610,674 +3610,758 @@
     </gatherable_template>
     <gatherable_template id="403000" name="Rootless Aria" nameId="791609" sourceType="HERB" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="200000" nameid="791657" itemid="182006782" name="Rootless Aria"/>
-            <material rate="5000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="1000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791657" itemid="182006782" name="Rootless Aria"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </materials>
         <exmaterials>
-            <material rate="1700000" nameid="791657" itemid="182006782" name="Rootless Aria"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="4000000" nameid="791657" itemid="182006782" name="Rootless Aria"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403001" name="Inina Shell" nameId="791610" sourceType="SHELL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
+    <gatherable_template id="403001" name="Inina Shell" nameId="791610" sourceType="SHELL" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="200000" nameid="791658" itemid="182006783" name="Inina Shell"/>
-            <material rate="5000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="1000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791658" itemid="182006783" name="Inina Shell"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="1700000" nameid="791658" itemid="182006783" name="Inina Shell"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791658" itemid="182006783" name="Inina Shell"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403002" name="Impure Iron Ore" nameId="791611" sourceType="METAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
+    <gatherable_template id="403002" name="Impure Iron Ore" nameId="791611" sourceType="METAL" harvestCount="1" skillLevel="400" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="200000" nameid="791659" itemid="182006784" name="Impure Iron Ore"/>
-            <material rate="5000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="1000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791659" itemid="182006784" name="Impure Iron Ore"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="1700000" nameid="791659" itemid="182006784" name="Impure Iron Ore"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791659" itemid="182006784" name="Impure Iron Ore"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403003" name="Rootless Targena" nameId="791612" sourceType="HERB" harvestCount="1" skillLevel="40" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791660" itemid="182006785" name="Rootless Targena"/>
-            <material rate="5000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791660" itemid="182006785" name="Rootless Targena"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791660" itemid="182006785" name="Rootless Targena"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="4000000" nameid="791660" itemid="182006785" name="Rootless Targena"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403004" name="Small Modida" nameId="791613" sourceType="FISH" harvestCount="1" skillLevel="40" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
+    <gatherable_template id="403004" name="Small Modida" nameId="791613" sourceType="FISH" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791661" itemid="182006786" name="Small Modida"/>
-            <material rate="5000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791661" itemid="182006786" name="Small Modida"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791661" itemid="182006786" name="Small Modida"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791661" itemid="182006786" name="Small Modida"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403005" name="Impure Silver" nameId="791614" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="40" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
+    <gatherable_template id="403005" name="Impure Silver" nameId="791614" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="400" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791662" itemid="182006787" name="Impure Silver"/>
-            <material rate="5000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791662" itemid="182006787" name="Impure Silver"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791662" itemid="182006787" name="Impure Silver"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791662" itemid="182006787" name="Impure Silver"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403006" name="Seedless Caprauna" nameId="791615" sourceType="BERRY" harvestCount="1" skillLevel="80" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791663" itemid="182006788" name="Seedless Caprauna"/>
-            <material rate="5000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791663" itemid="182006788" name="Seedless Caprauna"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791663" itemid="182006788" name="Seedless Caprauna"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="4000000" nameid="791663" itemid="182006788" name="Seedless Caprauna"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403007" name="Venera Shell" nameId="791616" sourceType="SHELL" harvestCount="1" skillLevel="80" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
+    <gatherable_template id="403007" name="Venera Shell" nameId="791616" sourceType="SHELL" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791664" itemid="182006789" name="Venera Shell"/>
-            <material rate="5000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791664" itemid="182006789" name="Venera Shell"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791664" itemid="182006789" name="Venera Shell"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791664" itemid="182006789" name="Venera Shell"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403008" name="Impure Amethyst" nameId="791617" sourceType="JEWELRY" harvestCount="1" skillLevel="80" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
+    <gatherable_template id="403008" name="Impure Amethyst" nameId="791617" sourceType="JEWELRY" harvestCount="1" skillLevel="440" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791665" itemid="182006790" name="Impure Amethyst"/>
-            <material rate="5000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791665" itemid="182006790" name="Impure Amethyst"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791665" itemid="182006790" name="Impure Amethyst"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791665" itemid="182006790" name="Impure Amethyst"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403009" name="Seedless Rubashi" nameId="791618" sourceType="VEGETABLE" harvestCount="1" skillLevel="120" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791666" itemid="182006791" name="Seedless Rubashi"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791666" itemid="182006791" name="Seedless Rubashi"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791666" itemid="182006791" name="Seedless Rubashi"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791666" itemid="182006791" name="Seedless Rubashi"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403010" name="Small Lapia" nameId="791619" sourceType="FISH" harvestCount="1" skillLevel="120" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
+    <gatherable_template id="403010" name="Small Lapia" nameId="791619" sourceType="FISH" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791667" itemid="182006792" name="Small Lapia"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791667" itemid="182006792" name="Small Lapia"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791667" itemid="182006792" name="Small Lapia"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791667" itemid="182006792" name="Small Lapia"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403011" name="Impure Titanium" nameId="791620" sourceType="METAL" harvestCount="1" skillLevel="120" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
+    <gatherable_template id="403011" name="Impure Titanium" nameId="791620" sourceType="METAL" harvestCount="1" skillLevel="440" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791668" itemid="182006793" name="Impure Titanium"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791668" itemid="182006793" name="Impure Titanium"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791668" itemid="182006793" name="Impure Titanium"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791668" itemid="182006793" name="Impure Titanium"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403012" name="Seedless Omblic" nameId="791621" sourceType="BERRY" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791669" itemid="182006794" name="Seedless Omblic"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791669" itemid="182006794" name="Seedless Omblic"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791669" itemid="182006794" name="Seedless Omblic"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791669" itemid="182006794" name="Seedless Omblic"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403013" name="Small Bacora" nameId="791622" sourceType="FISH" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
+    <gatherable_template id="403013" name="Small Bacora" nameId="791622" sourceType="FISH" harvestCount="1" skillLevel="320" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791670" itemid="182006795" name="Small Bacora"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791670" itemid="182006795" name="Small Bacora"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791670" itemid="182006795" name="Small Bacora"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791670" itemid="182006795" name="Small Bacora"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403014" name="Impure Topaz" nameId="791623" sourceType="JEWELRY" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
+    <gatherable_template id="403014" name="Impure Topaz" nameId="791623" sourceType="JEWELRY" harvestCount="1" skillLevel="440" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791671" itemid="182006796" name="Impure Topaz"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791671" itemid="182006796" name="Impure Topaz"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791671" itemid="182006796" name="Impure Topaz"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791671" itemid="182006796" name="Impure Topaz"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403015" name="Rootless Sobi" nameId="791624" sourceType="PLANT" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403015" name="Rootless Sobi" nameId="791624" sourceType="PLANT" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4500000" nameid="791672" itemid="182006797" name="Rootless Sobi"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791672" itemid="182006797" name="Rootless Sobi"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4500000" nameid="791672" itemid="182006797" name="Rootless Sobi"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791672" itemid="182006797" name="Rootless Sobi"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403016" name="Small Pleuro" nameId="791625" sourceType="FISH" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403016" name="Small Pleuro" nameId="791625" sourceType="FISH" harvestCount="1" skillLevel="320" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4500000" nameid="791673" itemid="182006798" name="Small Pleuro"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791673" itemid="182006798" name="Small Pleuro"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4500000" nameid="791673" itemid="182006798" name="Small Pleuro"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791673" itemid="182006798" name="Small Pleuro"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403017" name="Impure Platinum" nameId="791626" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403017" name="Impure Platinum" nameId="791626" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="480" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4500000" nameid="791674" itemid="182006799" name="Impure Platinum"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791674" itemid="182006799" name="Impure Platinum"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4500000" nameid="791674" itemid="182006799" name="Impure Platinum"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791674" itemid="182006799" name="Impure Platinum"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403018" name="Seedless Meon" nameId="791627" sourceType="BERRY" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403018" name="Seedless Meon" nameId="791627" sourceType="BERRY" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791675" itemid="182006800" name="Seedless Meon"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791675" itemid="182006800" name="Seedless Meon"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791675" itemid="182006800" name="Seedless Meon"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791675" itemid="182006800" name="Seedless Meon"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403019" name="Small Megrim" nameId="791628" sourceType="FISH" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403019" name="Small Megrim" nameId="791628" sourceType="FISH" harvestCount="1" skillLevel="360" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791676" itemid="182006801" name="Small Megrim"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791676" itemid="182006801" name="Small Megrim"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791676" itemid="182006801" name="Small Megrim"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791676" itemid="182006801" name="Small Megrim"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403020" name="Impure Lazuli" nameId="791629" sourceType="JEWELRY" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403020" name="Impure Lazuli" nameId="791629" sourceType="JEWELRY" harvestCount="1" skillLevel="480" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791677" itemid="182006802" name="Impure Lazuli"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791677" itemid="182006802" name="Impure Lazuli"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791677" itemid="182006802" name="Impure Lazuli"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791677" itemid="182006802" name="Impure Lazuli"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403021" name="Rootless Amalil" nameId="791630" sourceType="HERB" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403021" name="Rootless Amalil" nameId="791630" sourceType="HERB" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791678" itemid="182006803" name="Rootless Amalil"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791678" itemid="182006803" name="Rootless Amalil"/>
+            <material rate="2000000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791678" itemid="182006803" name="Rootless Amalil"/>
-            <material rate="2500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791678" itemid="182006803" name="Rootless Amalil"/>
+            <material rate="1500000" nameid="794538" itemid="182006858" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403022" name="Litrea Shell" nameId="791631" sourceType="SHELL" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403022" name="Litrea Shell" nameId="791631" sourceType="SHELL" harvestCount="1" skillLevel="360" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791679" itemid="182006804" name="Litrea Shell"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791679" itemid="182006804" name="Litrea Shell"/>
+            <material rate="2000000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791679" itemid="182006804" name="Litrea Shell"/>
-            <material rate="2500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791679" itemid="182006804" name="Litrea Shell"/>
+            <material rate="1500000" nameid="794536" itemid="182006856" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403023" name="Impure Moonstone" nameId="791632" sourceType="JEWELRY" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
+    <gatherable_template id="403023" name="Impure Moonstone" nameId="791632" sourceType="JEWELRY" harvestCount="1" skillLevel="480" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405197" reqItemNameId="791705" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791680" itemid="182006805" name="Impure Moonstone"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791680" itemid="182006805" name="Impure Moonstone"/>
+            <material rate="2000000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791680" itemid="182006805" name="Impure Moonstone"/>
-            <material rate="2500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791680" itemid="182006805" name="Impure Moonstone"/>
+            <material rate="1500000" nameid="794537" itemid="182006857" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881929" itemid="188058747" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403500" name="Rootless Azpha" nameId="791633" sourceType="HERB" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="200000" nameid="791681" itemid="182006806" name="Rootless Azpha"/>
-            <material rate="5000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="1000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791681" itemid="182006806" name="Rootless Azpha"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </materials>
         <exmaterials>
-            <material rate="1700000" nameid="791681" itemid="182006806" name="Rootless Azpha"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="4000000" nameid="791681" itemid="182006806" name="Rootless Azpha"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403501" name="Conide Shell" nameId="791634" sourceType="SHELL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
+    <gatherable_template id="403501" name="Conide Shell" nameId="791634" sourceType="SHELL" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="200000" nameid="791682" itemid="182006807" name="Conide Shell"/>
-            <material rate="5000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="1000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791682" itemid="182006807" name="Conide Shell"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="1700000" nameid="791682" itemid="182006807" name="Conide Shell"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791682" itemid="182006807" name="Conide Shell"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403502" name="Impure Iron Ore" nameId="791635" sourceType="METAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
+    <gatherable_template id="403502" name="Impure Iron Ore" nameId="791635" sourceType="METAL" harvestCount="1" skillLevel="400" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="200000" nameid="791683" itemid="182006808" name="Impure Iron Ore"/>
-            <material rate="5000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="1000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791683" itemid="182006808" name="Impure Iron Ore"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="1700000" nameid="791683" itemid="182006808" name="Impure Iron Ore"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="3800000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791683" itemid="182006808" name="Impure Iron Ore"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403503" name="Rootless Kandula" nameId="791636" sourceType="HERB" harvestCount="1" skillLevel="40" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791684" itemid="182006809" name="Rootless Kandula"/>
-            <material rate="5000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791684" itemid="182006809" name="Rootless Kandula"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791684" itemid="182006809" name="Rootless Kandula"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="4000000" nameid="791684" itemid="182006809" name="Rootless Kandula"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403504" name="Small Blueta" nameId="791637" sourceType="FISH" harvestCount="1" skillLevel="40" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
+    <gatherable_template id="403504" name="Small Blueta" nameId="791637" sourceType="FISH" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791685" itemid="182006810" name="Small Blueta"/>
-            <material rate="5000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791685" itemid="182006810" name="Small Blueta"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791685" itemid="182006810" name="Small Blueta"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791685" itemid="182006810" name="Small Blueta"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403505" name="Impure Silver" nameId="791638" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="40" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
+    <gatherable_template id="403505" name="Impure Silver" nameId="791638" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="400" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791686" itemid="182006811" name="Impure Silver"/>
-            <material rate="5000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791686" itemid="182006811" name="Impure Silver"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791686" itemid="182006811" name="Impure Silver"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795304" itemid="152011092" name="Minor Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791686" itemid="182006811" name="Impure Silver"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403506" name="Seedless Ringa" nameId="791639" sourceType="BERRY" harvestCount="1" skillLevel="80" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791687" itemid="182006812" name="Seedless Ringa"/>
-            <material rate="5000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791687" itemid="182006812" name="Seedless Ringa"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791687" itemid="182006812" name="Seedless Ringa"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="4000000" nameid="791687" itemid="182006812" name="Seedless Ringa"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403507" name="Impure Amethyst" nameId="791641" sourceType="JEWELRY" harvestCount="1" skillLevel="80" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
+    <gatherable_template id="403507" name="Impure Amethyst" nameId="791641" sourceType="JEWELRY" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791689" itemid="182006814" name="Impure Amethyst"/>
-            <material rate="5000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791689" itemid="182006814" name="Impure Amethyst"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791689" itemid="182006814" name="Impure Amethyst"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791689" itemid="182006814" name="Impure Amethyst"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403508" name="Blicora Shell" nameId="791640" sourceType="SHELL" harvestCount="1" skillLevel="80" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
+    <gatherable_template id="403508" name="Blicora Shell" nameId="791640" sourceType="SHELL" harvestCount="1" skillLevel="440" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="1">
         <materials>
-            <material rate="1225000" nameid="791688" itemid="182006813" name="Blicora Shell"/>
-            <material rate="5000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791688" itemid="182006813" name="Blicora Shell"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="3725000" nameid="791688" itemid="182006813" name="Blicora Shell"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1775000" nameid="795305" itemid="152011093" name="Lesser Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791688" itemid="182006813" name="Blicora Shell"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403509" name="Seedless Rabano" nameId="791642" sourceType="VEGETABLE" harvestCount="1" skillLevel="120" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791690" itemid="182006815" name="Seedless Rabano"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791690" itemid="182006815" name="Seedless Rabano"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791690" itemid="182006815" name="Seedless Rabano"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791690" itemid="182006815" name="Seedless Rabano"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403510" name="Small Gadill" nameId="791643" sourceType="FISH" harvestCount="1" skillLevel="120" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
+    <gatherable_template id="403510" name="Small Gadill" nameId="791643" sourceType="FISH" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791691" itemid="182006816" name="Small Gadill"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791691" itemid="182006816" name="Small Gadill"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791691" itemid="182006816" name="Small Gadill"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791691" itemid="182006816" name="Small Gadill"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403511" name="Impure Titanium" nameId="791644" sourceType="METAL" harvestCount="1" skillLevel="120" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
+    <gatherable_template id="403511" name="Impure Titanium" nameId="791644" sourceType="METAL" harvestCount="1" skillLevel="440" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791692" itemid="182006817" name="Impure Titanium"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791692" itemid="182006817" name="Impure Titanium"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791692" itemid="182006817" name="Impure Titanium"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791692" itemid="182006817" name="Impure Titanium"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="403512" name="Seedless Kirka" nameId="791645" sourceType="BERRY" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791693" itemid="182006818" name="Seedless Kirka"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791693" itemid="182006818" name="Seedless Kirka"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791693" itemid="182006818" name="Seedless Kirka"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791693" itemid="182006818" name="Seedless Kirka"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403513" name="Small Dorado" nameId="791646" sourceType="FISH" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
+    <gatherable_template id="403513" name="Small Dorado" nameId="791646" sourceType="FISH" harvestCount="1" skillLevel="320" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791694" itemid="182006819" name="Small Dorado"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791694" itemid="182006819" name="Small Dorado"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791694" itemid="182006819" name="Small Dorado"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791694" itemid="182006819" name="Small Dorado"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403514" name="Impure Topaz" nameId="791647" sourceType="JEWELRY" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
+    <gatherable_template id="403514" name="Impure Topaz" nameId="791647" sourceType="JEWELRY" harvestCount="1" skillLevel="440" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30 " reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="2">
         <materials>
-            <material rate="4000000" nameid="791695" itemid="182006820" name="Impure Topaz"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791695" itemid="182006820" name="Impure Topaz"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4000000" nameid="791695" itemid="182006820" name="Impure Topaz"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1500000" nameid="795306" itemid="152011094" name="Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791695" itemid="182006820" name="Impure Topaz"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403515" name="Rootless Xilix" nameId="791648" sourceType="PLANT" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403515" name="Rootless Xilix" nameId="791648" sourceType="PLANT" harvestCount="1" skillLevel="160" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4500000" nameid="791696" itemid="182006821" name="Rootless Xilix"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791696" itemid="182006821" name="Rootless Xilix"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4500000" nameid="791696" itemid="182006821" name="Rootless Xilix"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791696" itemid="182006821" name="Rootless Xilix"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403516" name="Small Jardine" nameId="791649" sourceType="FISH" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403516" name="Small Jardine" nameId="791649" sourceType="FISH" harvestCount="1" skillLevel="320" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4500000" nameid="791697" itemid="182006822" name="Small Jardine"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791697" itemid="182006822" name="Small Jardine"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4500000" nameid="791697" itemid="182006822" name="Small Jardine"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791697" itemid="182006822" name="Small Jardine"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403517" name="Impure Platinum" nameId="791650" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403517" name="Impure Platinum" nameId="791650" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="480" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4500000" nameid="791698" itemid="182006823" name="Impure Platinum"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791698" itemid="182006823" name="Impure Platinum"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4500000" nameid="791698" itemid="182006823" name="Impure Platinum"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="1000000" nameid="795307" itemid="152011095" name="Greater Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791698" itemid="182006823" name="Impure Platinum"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403518" name="Seedless Brommel" nameId="791651" sourceType="BERRY" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403518" name="Seedless Brommel" nameId="791651" sourceType="BERRY" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791699" itemid="182006824" name="Seedless Brommel"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791699" itemid="182006824" name="Seedless Brommel"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791699" itemid="182006824" name="Seedless Brommel"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791699" itemid="182006824" name="Seedless Brommel"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403519" name="Small Rask" nameId="791652" sourceType="FISH" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403519" name="Small Rask" nameId="791652" sourceType="FISH" harvestCount="1" skillLevel="360" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791700" itemid="182006825" name="Small Rask"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791700" itemid="182006825" name="Small Rask"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791700" itemid="182006825" name="Small Rask"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791700" itemid="182006825" name="Small Rask"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403520" name="Impure Lazuli" nameId="791653" sourceType="JEWELRY" harvestCount="1" skillLevel="240" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403520" name="Impure Lazuli" nameId="791653" sourceType="JEWELRY" harvestCount="1" skillLevel="480" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791701" itemid="182006826" name="Impure Lazuli"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791701" itemid="182006826" name="Impure Lazuli"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791701" itemid="182006826" name="Impure Lazuli"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791701" itemid="182006826" name="Impure Lazuli"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403521" name="Rootless Subella" nameId="791654" sourceType="HERB" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403521" name="Rootless Subella" nameId="791654" sourceType="HERB" harvestCount="1" skillLevel="200" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791702" itemid="182006827" name="Rootless Subella"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3300000" nameid="791702" itemid="182006827" name="Rootless Subella"/>
+            <material rate="2000000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791702" itemid="182006827" name="Rootless Subella"/>
-            <material rate="2500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3800000" nameid="791702" itemid="182006827" name="Rootless Subella"/>
+            <material rate="1500000" nameid="794674" itemid="182006861" name="Cycle Flower"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="200000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403522" name="Almeha Shell" nameId="791655" sourceType="SHELL" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403522" name="Almeha Shell" nameId="791655" sourceType="SHELL" harvestCount="1" skillLevel="360" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791703" itemid="182006828" name="Almeha Shell"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3200000" nameid="791703" itemid="182006828" name="Almeha Shell"/>
+            <material rate="2000000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791703" itemid="182006828" name="Almeha Shell"/>
-            <material rate="2500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3700000" nameid="791703" itemid="182006828" name="Almeha Shell"/>
+            <material rate="1500000" nameid="794672" itemid="182006859" name="Pearl Whelkus"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="300000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
-    <gatherable_template id="403523" name="Impure Moonstone" nameId="791656" sourceType="JEWELRY" harvestCount="1" skillLevel="280" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
+    <gatherable_template id="403523" name="Impure Moonstone" nameId="791656" sourceType="JEWELRY" harvestCount="1" skillLevel="480" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="30" reqItem="169405200" reqItemNameId="791708" checkType="2" eraseValue="3">
         <materials>
-            <material rate="4700000" nameid="791704" itemid="182006829" name="Impure Moonstone"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3000000" nameid="791704" itemid="182006829" name="Impure Moonstone"/>
+            <material rate="2000000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </materials>
         <exmaterials>
-            <material rate="4700000" nameid="791704" itemid="182006829" name="Impure Moonstone"/>
-            <material rate="2500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
-            <material rate="800000" nameid="795308" itemid="152011096" name="Major Construction Flux"/>
-            <material rate="2000000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="3500000" nameid="791704" itemid="182006829" name="Impure Moonstone"/>
+            <material rate="1500000" nameid="794673" itemid="182006860" name="Aether Meteorite"/>
+            <material rate="2000000" nameid="791899" itemid="186000146" name="Guestpetal"/>
+            <material rate="2500000" nameid="800993" itemid="182006983" name="Gold Aventurine"/>
+            <material rate="500000" nameid="881930" itemid="188058748" name="Furniture Bundle"/>
         </exmaterials>
     </gatherable_template>
     <gatherable_template id="405000" name="Ore of Life (1250 Points)" nameId="791765" sourceType="METAL" harvestCount="1" skillLevel="350" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="40">
@@ -6851,5 +6935,170 @@
         <exmaterials>
             <material rate="10000000" nameid="848767" itemid="152003019" name="Aerith Essence"/>
         </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409240" name="Petrification Gauge" nameId="891759" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040000" reqItemNameId="891709" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891717" itemid="152003020" name="Petrification Measurement Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891717" itemid="152003020" name="Petrification Measurement Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409241" name="Contamination Gauge" nameId="891760" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040000" reqItemNameId="891709" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891718" itemid="152003021" name="Contamination Measurement Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891718" itemid="152003021" name="Contamination Measurement Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409242" name="Frost Gauge" nameId="891761" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040000" reqItemNameId="891709" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891719" itemid="152003022" name="Frost Measurement Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891719" itemid="152003022" name="Frost Measurement Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409243" name="Toxin Gauge" nameId="891762" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040000" reqItemNameId="891709" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891720" itemid="152003023" name="Toxin Measurement Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891720" itemid="152003023" name="Toxin Measurement Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409244" name="Flame Gauge" nameId="891763" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040000" reqItemNameId="891709" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891721" itemid="152003024" name="Flame Measurement Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891721" itemid="152003024" name="Flame Measurement Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409245" name="Petrification Probe" nameId="891764" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040001" reqItemNameId="891710" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891722" itemid="152003025" name="Petrification Probe Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891722" itemid="152003025" name="Petrification Probe Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409246" name="Contamination Probe" nameId="891765" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040001" reqItemNameId="891710" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891723" itemid="152003026" name="Contamination Probe Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891723" itemid="152003026" name="Contamination Probe Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409247" name="Frost Probe" nameId="891766" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040001" reqItemNameId="891710" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891724" itemid="152003027" name="Frost Probe Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891724" itemid="152003027" name="Frost Probe Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409248" name="Toxin Probe" nameId="891767" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040001" reqItemNameId="891710" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891725" itemid="152003028" name="Toxin Probe Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891725" itemid="152003028" name="Toxin Probe Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409249" name="Flame Probe" nameId="891768" sourceType="NOBLEMETAL" harvestCount="1" skillLevel="1" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040001" reqItemNameId="891710" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891726" itemid="152003029" name="Flame Probe Results Report"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891726" itemid="152003029" name="Flame Probe Results Report"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409250" name="Filmy Drana" nameId="891769" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040002" reqItemNameId="891711" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891727" itemid="152003030" name="Filmy Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891727" itemid="152003030" name="Filmy Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409251" name="Dewy Drana" nameId="891770" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040002" reqItemNameId="891711" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891728" itemid="152003031" name="Dewy Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891728" itemid="152003031" name="Dewy Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409252" name="Faded Drana" nameId="891771" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040002" reqItemNameId="891711" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891729" itemid="152003032" name="Faded Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891729" itemid="152003032" name="Faded Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409253" name="Budding Drana" nameId="891772" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040002" reqItemNameId="891711" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891730" itemid="152003033" name="Budding Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891730" itemid="152003033" name="Budding Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409254" name="Blossoming Drana" nameId="891773" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040002" reqItemNameId="891711" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891731" itemid="152003034" name="Blossoming Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891731" itemid="152003034" name="Blossoming Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409255" name="Puny Drana" nameId="891774" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040003" reqItemNameId="891712" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891732" itemid="152003035" name="Puny Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891732" itemid="152003035" name="Puny Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409256" name="Pure Drana" nameId="891775" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040003" reqItemNameId="891712" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891733" itemid="152003036" name="Pure Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891733" itemid="152003036" name="Pure Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409257" name="Withering Drana" nameId="891776" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040003" reqItemNameId="891712" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891734" itemid="152003037" name="Dried Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891734" itemid="152003037" name="Dried Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409258" name="Sprouting Drana" nameId="891777" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040003" reqItemNameId="891712" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891735" itemid="152003038" name="Sprouting Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891735" itemid="152003038" name="Sprouting Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409259" name="Flowered Drana" nameId="891778" sourceType="HERB" harvestCount="1" skillLevel="100" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80" reqItem="152040003" reqItemNameId="891712" checkType="2" eraseValue="1">
+        <materials>
+            <material rate="10000000" nameid="891736" itemid="152003039" name="Flowered Drana Leaf"/>
+        </materials>
+        <exmaterials>
+            <material rate="10000000" nameid="891736" itemid="152003039" name="Flowered Drana Leaf"/>
+        </exmaterials>
+    </gatherable_template>
+    <gatherable_template id="409260" name="Enormous Tree" nameId="891779" sourceType="TREE" harvestCount="1" skillLevel="499" harvestSkill="30002" successAdj="100" failureAdj="100" aerialAdj="100" lvlLimit="80">
+        <materials>
+            <material rate="10000000" nameid="891757" itemid="182010050" name="Branch"/>
+        </materials>
     </gatherable_template>
 </gatherable_templates>
