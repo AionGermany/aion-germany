@@ -44,6 +44,9 @@ public class CM_DISTRIBUTION_SETTINGS extends AionClientPacket {
 	private int fabled_item_above;
 	private int ethernal_item_above;
 	private int mythic_item_above;
+	private int ancient_item_above;
+	private int relic_item_above;
+	private int finality_item_above;
 	@SuppressWarnings("unused")
 	private int unk2;
 	// private int autodistr;
@@ -77,6 +80,9 @@ public class CM_DISTRIBUTION_SETTINGS extends AionClientPacket {
 		fabled_item_above = readD();
 		ethernal_item_above = readD();
 		mythic_item_above = readD();
+		ancient_item_above = readD();
+		relic_item_above = readD();
+		finality_item_above = readD();
 		// autodistr = readD(); // Removed in 4.7
 		unk2 = readD();
 
@@ -109,11 +115,11 @@ public class CM_DISTRIBUTION_SETTINGS extends AionClientPacket {
 
 		PlayerGroup group = leader.getPlayerGroup2();
 		if (group != null) {
-			PlayerGroupService.changeGroupRules(group, new LootGroupRules(lootrules, autodistribution, common_item_above, superior_item_above, heroic_item_above, fabled_item_above, ethernal_item_above, mythic_item_above, misc));
+			PlayerGroupService.changeGroupRules(group, new LootGroupRules(lootrules, autodistribution, common_item_above, superior_item_above, heroic_item_above, fabled_item_above, ethernal_item_above, mythic_item_above, ancient_item_above, relic_item_above, finality_item_above, misc));
 		}
 		com.aionemu.gameserver.model.team2.alliance.PlayerAlliance alliance = leader.getPlayerAlliance2();
 		if (alliance != null) {
-			PlayerAllianceService.changeGroupRules(alliance, new LootGroupRules(lootrules, autodistribution, common_item_above, superior_item_above, heroic_item_above, fabled_item_above, ethernal_item_above, mythic_item_above, misc));
+			PlayerAllianceService.changeGroupRules(alliance, new LootGroupRules(lootrules, autodistribution, common_item_above, superior_item_above, heroic_item_above, fabled_item_above, ethernal_item_above, mythic_item_above, ancient_item_above, relic_item_above, finality_item_above, misc));
 		}
 	}
 }
