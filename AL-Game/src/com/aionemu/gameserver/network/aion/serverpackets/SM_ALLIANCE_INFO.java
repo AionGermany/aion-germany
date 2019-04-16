@@ -79,7 +79,10 @@ public class SM_ALLIANCE_INFO extends AionServerPacket {
 		writeD(lootRules.getHeroicItemAbove());
 		writeD(lootRules.getFabledItemAbove());
 		writeD(lootRules.getEthernalItemAbove());
-		writeD(lootRules.getAutodistribution().getId());
+		writeD(lootRules.getMythicItemAbove());
+		writeD(lootRules.getAncientItemAbove());
+		writeD(lootRules.getRelicItemAbove());
+		writeD(lootRules.getFinalityItemAbove());
 		writeD(0x02);
 		writeC(0x00);
 		writeD(alliance.getTeamType().getType());// Need to update 3F to FF ?
