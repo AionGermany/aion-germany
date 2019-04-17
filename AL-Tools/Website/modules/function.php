@@ -73,7 +73,17 @@ if (isset($row["exp"]))
     elseif ($row["exp"] < 1667422949) $exp = 62;
     elseif ($row["exp"] < 1793319043) $exp = 63;
     elseif ($row["exp"] < 1926765410) $exp = 64;
-    else                              $exp = 65;
+    elseif ($row["exp"] < 2066885620) $exp = 65;
+    elseif ($row["exp"] < 2631427377) $exp = 66;
+    elseif ($row["exp"] < 4271005600) $exp = 67;
+    elseif ($row["exp"] < 8023982311) $exp = 68;
+    elseif ($row["exp"] < 15826312699) $exp = 69;
+    elseif ($row["exp"] < 31430688278) $exp = 70;
+    elseif ($row["exp"] < 62660507393) $exp = 71;
+    elseif ($row["exp"] < 117158523579) $exp = 72;
+    elseif ($row["exp"] < 212151338979) $exp = 73;
+    elseif ($row["exp"] < 374747480973) $exp = 74;
+    else                              $exp = 75;
 }
 
 // Race
@@ -141,6 +151,7 @@ if (isset ($row["world_id"])) {
 	else if($row["world_id"] == 210050000) {$world_id = "Inggison";}
 	else if($row["world_id"] == 210060000) {$world_id = "Theobomos";}
 	else if($row["world_id"] == 210070000) {$world_id = "Cygnea";}
+	else if($row["world_id"] == 210100000) {$world_id = "Iluma";}
 	else if($row["world_id"] == 220010000) {$world_id = "Ishalgen";}
 	else if($row["world_id"] == 220020000) {$world_id = "Morheim";}
 	else if($row["world_id"] == 220030000) {$world_id = "Altgard";}
@@ -148,6 +159,7 @@ if (isset ($row["world_id"])) {
 	else if($row["world_id"] == 220050000) {$world_id = "Brusthonin";}
 	else if($row["world_id"] == 220070000) {$world_id = "Gelkmaros";}
 	else if($row["world_id"] == 220080000) {$world_id = "Enshar";}
+	else if($row["world_id"] == 220110000) {$world_id = "Norsvold";}
 	else if($row["world_id"] == 300030000) {$world_id = "Nochsana Training Camp";}
 	else if($row["world_id"] == 300040000) {$world_id = "Dark Poeta";}
 	else if($row["world_id"] == 300050000) {$world_id = "Asteria Chamber";}
@@ -248,6 +260,9 @@ if (isset ($row["world_id"])) {
 	else if($row["world_id"] == 710010000) {$world_id = "Pernon";}
 	else if($row["world_id"] == 720010000) {$world_id = "Studio";}
 	else if($row["world_id"] == 730010000) {$world_id = "Studio";}	
+	else if($row["world_id"] == 900020000) {$world_id = "Test Basic";}
+	else if($row["world_id"] == 900030000) {$world_id = "Test Server";}
+	else if($row["world_id"] == 900100000) {$world_id = "Test Giant Moster";}
 }
 
 // Titles
