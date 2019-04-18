@@ -6,7 +6,7 @@
 // Name
 $name = $row["name"];
 
-// XP for Client 4.9, Aion EU
+// XP for Client 5.8, Aion EU
 if (isset($row["exp"]))
 {
     if     ($row["exp"] <        400) $exp =  1;
