@@ -3,17 +3,17 @@
     Mariella, 01/2016, added Language-Support
 */
 /*
-	&ntilde; = ñ	&Ntilde; = Ñ
-	&iacute; = í	&Iacute; = Í
-	&oacute; = ó	&Oacute; = Ó
-	&aacute; = á	&Aacute; = Á
-	&eacute; = é	&Eacute; = É
-	&uacute; = ú	&Uacute; = Ú
-	&iexcl;  = ¡
+	&ntilde; = Ã±	&Ntilde; = Ã‘
+	&iacute; = Ã­	&Iacute; = Ã
+	&oacute; = Ã³	&Oacute; = Ã“
+	&aacute; = Ã¡	&Aacute; = Ã
+	&eacute; = Ã©	&Eacute; = Ã‰
+	&uacute; = Ãº	&Uacute; = Ãš
+	&iexcl;  = Â¡
 	
 */
 $lang = array(
-        // für die Sprachauswahl
+        // fÃ¼r die Sprachauswahl
         "de" => "German",
 		"gb" => "English",
         "ru" => "Russian",
@@ -21,7 +21,7 @@ $lang = array(
         "it" => "Italian",
 		"sp" => "Espa&ntilde;ol",
 
-        // für die Seitentexte
+        // fÃ¼r die Seitentexte
         "login" => "Conectar",
         "game"  => "Juego",
         "home" => "Inicio",
