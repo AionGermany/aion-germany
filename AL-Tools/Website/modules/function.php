@@ -100,6 +100,13 @@ if (isset ($row["rank"])) {
 	else {$rank_leg = $lang['recruit'];}
 }
 
+//Legion Name
+if (isset ($row["legions_id"])){
+	$legion_id = $row["legions_id"];
+	$legion = $row["legions_name"];
+}else{
+	$legion = "No Legion";
+}
 
 // Class
 if (isset ($row["player_class"])) {
@@ -542,6 +549,7 @@ if (isset ($row["title_id"])) {
 		elseif($row["title_id"] == '272') {$title_id = "Dreamstrider";}
 		elseif($row["title_id"] == '273') {$title_id = "Ultimate Duo";}
 		elseif($row["title_id"] == '274') {$title_id = "Glorious Number One";}
+		elseif($row["title_id"] == '306') {$title_id = "Atreia's Protector";}
 }
 
 // Abyss Rank
