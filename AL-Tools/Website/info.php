@@ -81,7 +81,7 @@ while ($row = $sql_gs->fetch_assoc($res))
 	</tr>
 	<tr height="32">
 		<td class="toptext"><?php echo $lang['legions']; ?></td>
-		<td class="toptext"><?php if(isset($legion_id)) echo '<a href="info_leg.php?action=info&id='.$legion_id.'">'.$legion.'</a>';if(isset($legion)) echo $legion?></td>
+		<td class="toptext"><?php if(isset($legion_id)) {echo '<a href="info_leg.php?action=info&id='.$legion_id.'">'.$legion.'</a>';}elseif(isset($legion)) echo $legion?></td>
 	</tr>
 	<tr height="32">
 		<td class="toptext"><?php echo $lang['created']; ?></td>
