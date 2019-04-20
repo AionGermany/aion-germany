@@ -62,7 +62,7 @@ public class GMMode extends AdminCommand {
 
 			}
 		}
-		if (params[0].equals("off")) {
+		if (params[0].toLowerCase().equals("off")) {
 			if (admin.isGmMode()) {
 				admin.setGmMode(false);
 				admin.setUnWispable();
