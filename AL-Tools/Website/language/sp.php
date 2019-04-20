@@ -2,50 +2,60 @@
 /*
     Mariella, 01/2016, added Language-Support
 */
+/*
+	&ntilde; = ñ	&Ntilde; = Ñ
+	&iacute; = í	&Iacute; = Í
+	&oacute; = ó	&Oacute; = Ó
+	&aacute; = á	&Aacute; = Á
+	&eacute; = é	&Eacute; = É
+	&uacute; = ú	&Uacute; = Ú
+	&iexcl;  = ¡
+	
+*/
 $lang = array(
-        // f�r die Sprachauswahl
+        // für die Sprachauswahl
         "de" => "German",
 		"gb" => "English",
         "ru" => "Russian",
         "fr" => "French",
         "it" => "Italian",
-		"sp" => "Espanol",
+		"sp" => "Espa&ntilde;ol",
 
-        // f�r die Seitentexte
+        // für die Seitentexte
         "login" => "Conectar",
         "game"  => "Juego",
         "home" => "Inicio",
-        "statistics" => "Estadisticas",
-        "onlinePlayers" => "Jugadores en linea",
+        "statistics" => "Estad&iacute;sticas",
+        "onlinePlayers" => "Jugadores en l&iacute;nea",
         "top100" => "Top 100",
         "topLegions" => "Top Legions",
         "topRich" => "Top Millonarios",
         "topAbyss" => "Top Abyss",
-        "searchPlayers" => "Buscar Jugador",
+        "searchPlayers" => "Ver Jugador",
         "downloads" => "Descargas",
         "forum" => "Foro",
         "loginbox" => "Conectar",
         "createAccount" => "Crear Cuenta",
-        "forgotPassword" => "Olvide mi contrasena",
-        "serverStatistics" => "Estadisticas del Servidor",
+        "forgotPassword" => "Olvid&eacute; mi contrase&ntilde;a",
+        "serverStatistics" => "Estad&iacute;sticas del Servidor",
         "accounts" => "Cuentas",
         "characters" => "Personajes",
         "gms" => "GMs",
         "legions" => "Legions",
-        "statistic" => "Estadisticas",
+        "statistic" => "Estad&iacute;sticas",
         "gmsOnline" => "GM Conectado",
         "vote" => "Votar",
         "counters" => "Counter",
         "loginName" => "Nombre de Cuenta",
-        "loginPassword" => "Contrasena",
+        "loginPassword" => "Contrase&ntilde;a",
         "nogmonline" => "No hay GMs",
         
         // Login box
-        "loggedinas" => "Estas conectado como",
+        "loggedinas" => "Est&aacute;s conectado como",
         "addministratorAccount" => "Cuenta de Administrador",
-        "addDrops" => "Anadir Drops",
-        "addnews" => "Anadir News",
-        "changepassword" => "Cambiar Contrasena",
+        "addDrops" => "A&ntilde;adir Drops",
+        "addnews" => "A&ntilde;adir News",
+        "changepassword" => "Cambiar Contrase&ntilde;a",
         "changeemail" => "Cambiar E-Mail",
         "exit" => "Desconectar",        
 
@@ -58,8 +68,8 @@ $lang = array(
         "legate" => "Legado",
         "member" => "Miembro",
         "level" => "Nivel",
-        "class" => "Clases",
-        "location" => "Localizacion",
+        "class" => "Clase",
+        "location" => "Localizaci&oacute;n",
         "sex" => "Sexo",
         "male" => "Hombre",
         "female" => "Mujer",
@@ -69,15 +79,15 @@ $lang = array(
         "rank" => "Rango",
         "kills" => "Muertes",
         "status" => "Estado",
-        "title" => "Titulo",
+        "title" => "T&iacute;tulo",
         "created" => "Creado",
-        "lastVisit" => "Ultima Visita",
-        "infoaboutPlayer" => "Informacion Sobre el Jugador",
-        "infoaboutLegion" => "Informacion Sobre la Legion",
+        "lastVisit" => "&Uacute;ltima Visita",
+        "infoaboutPlayer" => "Informaci&oacute;n Sobre el Jugador",
+        "infoaboutLegion" => "Informaci&oacute;n Sobre la Legion",
         "listLegion" => "Lista de Legion",
         "ratingAbyss" => "Rating Abyss (AP)",
         "ratingAbyssGp" => "Rating Abyss (GP)",
-        "onlineplayers" => "Jugadores en Linea",
+        "onlineplayers" => "Jugadores en L&iacute;nea",
         "top10players" => "Jugadores del Top 10",
         "top100players" => "Jugadores del Top 100",
         "choice" => "Elige una clase: ",
@@ -127,24 +137,24 @@ $lang = array(
         "setup" => "Instalar",
         
         // Account
-        "accountInformation" => "Informacion de la cuenta",
-        "generalInformation" => "Informacion General",
+        "accountInformation" => "Informaci&oacute;n de la cuenta",
+        "generalInformation" => "Informaci&oacute;n General",
         "charactersList" => "Lista de Personajes",
         
         // Lost Password
-        "lostpassword" => "Hola ~name~\nAlguien (Alomejor tu) intento cambiar la contrasena para conectar.\n\nTu nueva contrasena es: ~newpassword~\n\nUn saludo la Administracion!",
-        "pwresetmail" => "Reestablecer contrasena",
+        "lostpassword" => "Hola ~name~\nAlguien (Alomejor t&uacute;) intent&oacute; cambiar la contrase&ntilde;a para conectar.\n\nTu nueva contrase&ntilde;a es: ~newpassword~\n\n &iexcl;Un saludo la Administraci&oacute;n!",
+        "pwresetmail" => "Reestablecer contrase&ntilde;a",
         "fillallfields" => "Llenar en todos los campos",
-        "pwsendok" => "Se ha enviado un correo con la nueva contrasena",
+        "pwsendok" => "Se ha enviado un correo con la nueva contrase&ntilde;a",
         "pwnomatch" => "Los datos introducidos no coinciden",
         // Change Password
-        "pwchangenomatch" => "Las contrasenas no coinciden",
-        "pcchangeok" => "Contrasena cambiada con exito.",
-        "pschangelogin" => "Contrasena cambiada. Conecta de nuevo usando tu nueva contrasena",
+        "pwchangenomatch" => "Las contrase&ntilde;as no coinciden",
+        "pcchangeok" => "Contrase&ntilde;a cambiada con &eacute;xito.",
+        "pschangelogin" => "Contrase&ntilde;a cambiada. Conecta de nuevo usando tu nueva contrase;ntilde;a",
         // Change eMail
         "emailoldnew" => "El nuevo e-mail coincide con uno antiguo.",
         "emailformat" => "El campo E-Mail no fue rellenado correctamente",
-        "emailchangeok" => "E-Mail cambiado con exito",
-        "emailnotfound" => "No se encontro un usuario con este e-mail."
+        "emailchangeok" => "E-Mail cambiado con &eacute;xito",
+        "emailnotfound" => "No se encontr&oacute; un usuario con este e-mail."
         );
 ?>

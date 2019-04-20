@@ -6,7 +6,7 @@
 // Name
 $name = $row["name"];
 
-// XP for Client 4.9, Aion EU
+// XP for Client 5.8, Aion EU
 if (isset($row["exp"]))
 {
     if     ($row["exp"] <        400) $exp =  1;
@@ -100,6 +100,13 @@ if (isset ($row["rank"])) {
 	else {$rank_leg = $lang['recruit'];}
 }
 
+//Legion Name
+if (isset ($row["legions_id"])){
+	$legion_id = $row["legions_id"];
+	$legion = $row["legions_name"];
+}else{
+	$legion = "No Legion";
+}
 
 // Class
 if (isset ($row["player_class"])) {
@@ -542,6 +549,101 @@ if (isset ($row["title_id"])) {
 		elseif($row["title_id"] == '272') {$title_id = "Dreamstrider";}
 		elseif($row["title_id"] == '273') {$title_id = "Ultimate Duo";}
 		elseif($row["title_id"] == '274') {$title_id = "Glorious Number One";}
+		elseif($row["title_id"] == '275') {$title_id = "Panesterra Conqueror";}
+		elseif($row["title_id"] == '276') {$title_id = "Ahserion Conqueror";}
+		elseif($row["title_id"] == '277') {$title_id = "Lord Anoha";}
+		elseif($row["title_id"] == '278') {$title_id = "Kaldor Champion";}
+		elseif($row["title_id"] == '279') {$title_id = "Forgotten Ruler";}
+		elseif($row["title_id"] == '280') {$title_id = "Forgotten Conqueror";}
+		elseif($row["title_id"] == '281') {$title_id = "Forgotten Hero";}
+		elseif($row["title_id"] == '282') {$title_id = "Happy Anniversary to Me";}
+		elseif($row["title_id"] == '283') {$title_id = "Beritra Resistance";}
+		elseif($row["title_id"] == '284') {$title_id = "Mastariu\'s Adversary";}
+		elseif($row["title_id"] == '285') {$title_id = "Veille\'s Adversary";}
+		elseif($row["title_id"] == '286') {$title_id = "Shugo Samaritan";}
+		elseif($row["title_id"] == '287') {$title_id = "Victor of the Henor Territory Battle";}
+		elseif($row["title_id"] == '288') {$title_id = "Victor of the Aedra Territory Battle";}
+		elseif($row["title_id"] == '289') {$title_id = "Victor of the Erivale Territory Battle";}
+		elseif($row["title_id"] == '290') {$title_id = "Victor of the Arden Territory Battle";}
+		elseif($row["title_id"] == '291') {$title_id = "Victor of the Cet Territory Battle";}
+		elseif($row["title_id"] == '292') {$title_id = "Victor of the Bomire Territory Battle";}
+		elseif($row["title_id"] == '293') {$title_id = "Beritra\'s Dread";}
+		elseif($row["title_id"] == '294') {$title_id = "Beritra\'s Dread";}
+		elseif($row["title_id"] == '295') {$title_id = "Quick Feet";}
+		elseif($row["title_id"] == '296') {$title_id = "Season 1 Champion";}
+		elseif($row["title_id"] == '297') {$title_id = "Season 2 Champion";}
+		elseif($row["title_id"] == '298') {$title_id = "Unbound";}
+		elseif($row["title_id"] == '299') {$title_id = "Dragon King\'s Champion";}
+		elseif($row["title_id"] == '300') {$title_id = "AION Executor";}
+		elseif($row["title_id"] == '301') {$title_id = "Kaisinel\'s Protector";}
+		elseif($row["title_id"] == '302') {$title_id = "Marchutan\'s Protector";}
+		elseif($row["title_id"] == '303') {$title_id = "New Friend";}
+		elseif($row["title_id"] == '304') {$title_id = "Returned Friend";}
+		elseif($row["title_id"] == '305') {$title_id = "The Master of Masters in Aion";}
+		elseif($row["title_id"] == '306') {$title_id = "Protector of Atreia";}
+		elseif($row["title_id"] == '307') {$title_id = "Prestigious Initiate";}
+		elseif($row["title_id"] == '308') {$title_id = "Enlighthened of Prophecies";}
+		elseif($row["title_id"] == '309') {$title_id = "Eternal Daeva";}
+		elseif($row["title_id"] == '310') {$title_id = "Legendary Archdaeva";}
+		elseif($row["title_id"] == '311') {$title_id = "Creature of Atreia";}
+		elseif($row["title_id"] == '312') {$title_id = "Santarunerk\'s Friend";}
+		elseif($row["title_id"] == '313') {$title_id = "Grove Gardener";}
+		elseif($row["title_id"] == '314') {$title_id = "Friend of the Grove";}
+		elseif($row["title_id"] == '315') {$title_id = "Agility Master";}
+		elseif($row["title_id"] == '316') {$title_id = "Honored for 10 times.";}
+		elseif($row["title_id"] == '317') {$title_id = "Honored for 20 times.";}
+		elseif($row["title_id"] == '318') {$title_id = "Honored for 30 times.";}
+		elseif($row["title_id"] == '319') {$title_id = "Honored for 40 times.";}
+		elseif($row["title_id"] == '320') {$title_id = "Kaisinel\'s Acknowledgement";}
+		elseif($row["title_id"] == '321') {$title_id = "Honored for 10 times.";}
+		elseif($row["title_id"] == '322') {$title_id = "Honored for 20 times.";}
+		elseif($row["title_id"] == '323') {$title_id = "Honored for 30 times.";}
+		elseif($row["title_id"] == '324') {$title_id = "Honored for 40 times.";}
+		elseif($row["title_id"] == '325') {$title_id = "Marchutan\'s Acknowledgement";}
+		elseif($row["title_id"] == '326') {$title_id = "Capable";}
+		elseif($row["title_id"] == '327') {$title_id = "Mogul";}
+		elseif($row["title_id"] == '328') {$title_id = "Nutcase";}
+		elseif($row["title_id"] == '329') {$title_id = "Many Issues";}
+		elseif($row["title_id"] == '330') {$title_id = "Complicated Issues";}
+		elseif($row["title_id"] == '331') {$title_id = "9th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '332') {$title_id = "8th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '333') {$title_id = "7th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '334') {$title_id = "6th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '335') {$title_id = "5th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '336') {$title_id = "4th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '337') {$title_id = "3rd Rank Valiant Soldier";}
+		elseif($row["title_id"] == '338') {$title_id = "2nd Rank Valiant Soldier";}
+		elseif($row["title_id"] == '339') {$title_id = "1st Rank Valiant Soldier";}
+		elseif($row["title_id"] == '340') {$title_id = "Valiant Officer";}
+		elseif($row["title_id"] == '341') {$title_id = "Valiant General";}
+		elseif($row["title_id"] == '342') {$title_id = "9th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '343') {$title_id = "8th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '344') {$title_id = "7th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '345') {$title_id = "6th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '346') {$title_id = "5th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '347') {$title_id = "4th Rank Valiant Soldier";}
+		elseif($row["title_id"] == '348') {$title_id = "3rd Rank Valiant Soldier";}
+		elseif($row["title_id"] == '349') {$title_id = "2nd Rank Valiant Soldier";}
+		elseif($row["title_id"] == '350') {$title_id = "1st Rank Valiant Soldier";}
+		elseif($row["title_id"] == '351') {$title_id = "Valiant Officer";}
+		elseif($row["title_id"] == '352') {$title_id = "Valiant General";}
+		elseif($row["title_id"] == '353') {$title_id = "Ascend to the Lonely Throne";}
+		elseif($row["title_id"] == '354') {$title_id = "Ascend to the Lonely Throne";}
+		elseif($row["title_id"] == '355') {$title_id = "Special Daeva";}
+		elseif($row["title_id"] == '356') {$title_id = "Ginseng Digger";}
+		elseif($row["title_id"] == '357') {$title_id = "1st Place of Crucible Spire";}
+		elseif($row["title_id"] == '358') {$title_id = "1st Place of Crucible Spire";}
+		elseif($row["title_id"] == '359') {$title_id = "Gufrinerk\'s Friendly Patron";}
+		elseif($row["title_id"] == '360') {$title_id = "Jielinlinerk\'s Friendly Patron";}
+		elseif($row["title_id"] == '361') {$title_id = "Ikarinerk\'s Friendly Patron";}
+		elseif($row["title_id"] == '362') {$title_id = "Skilled and Capable";}
+		elseif($row["title_id"] == '363') {$title_id = "Wise Mogul";}
+		elseif($row["title_id"] == '364') {$title_id = "The Slayer of Asmodians";}
+		elseif($row["title_id"] == '365') {$title_id = "The One Who Walks over Corpses";}
+		elseif($row["title_id"] == '366') {$title_id = "White-winged Reaper";}
+		elseif($row["title_id"] == '367') {$title_id = "The Slayer of Elyos";}
+		elseif($row["title_id"] == '368') {$title_id = "The One Who Walks over Carcasses";}
+		elseif($row["title_id"] == '369') {$title_id = "Black-winged Reaper";}
 }
 
 // Abyss Rank

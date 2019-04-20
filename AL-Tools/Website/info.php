@@ -11,7 +11,8 @@ require "header.php";
 			<div class="news-title"><?php echo $lang['infoaboutPlayer']; ?></div>
 <?php
 $id  = intval($_GET['id']);
-$res = $sql_gs->query("SELECT ap, gp, all_kill, rank, id, name, exp, world_id, gender, race, player_class, creation_date, last_online, title_id, online FROM abyss_rank LEFT JOIN players ON player_id = id WHERE id = '$id'");
+$res = $sql_gs->query("SELECT ap, gp, all_kill, abyss_rank.rank, players.id, players.name, exp, world_id, gender, race, player_class, creation_date, last_online, title_id, online, legions.name as legions_name, legions.id as legions_id FROM abyss_rank".
+						" LEFT JOIN players ON player_id = players.id LEFT JOIN legion_members ON players.id = legion_members.player_id LEFT JOIN legions ON legion_id = legions.id WHERE players.id = '$id'");
 
 while ($row = $sql_gs->fetch_assoc($res)) 
 {
@@ -22,7 +23,6 @@ while ($row = $sql_gs->fetch_assoc($res))
 	$gp = $row['gp'];
 	$rank = $row['rank'];
 	$all_kill = $row['all_kill'];
-	
 	require 'modules/function.php';
 }
 ?>
@@ -78,6 +78,10 @@ while ($row = $sql_gs->fetch_assoc($res))
 	<tr height="32">
 		<td class="toptext"><?php echo $lang['title']; ?></td>
 		<td class="toptext"><?php if (isset($title_id)) echo $title_id; ?></td>
+	</tr>
+	<tr height="32">
+		<td class="toptext"><?php echo $lang['legions']; ?></td>
+		<td class="toptext"><?php if(isset($legion_id)) {echo '<a href="info_leg.php?action=info&id='.$legion_id.'">'.$legion.'</a>';}elseif(isset($legion)) echo $legion?></td>
 	</tr>
 	<tr height="32">
 		<td class="toptext"><?php echo $lang['created']; ?></td>
