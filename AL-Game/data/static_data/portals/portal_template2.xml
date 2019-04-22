@@ -46,6 +46,7 @@
     <portal_use npc_id="834002">
         <portal_path loc_id="3015505"/>
     </portal_use>
+
     <!-- **************** PORTAL DIALOG **************** -->
 	<!-- Lower Udas - Teleport to Jodun Studio -->
     <portal_dialog npc_id="837099">
@@ -78,6 +79,19 @@
             <portal_req min_level="80"/>
         </portal_path>
     </portal_dialog>
+
+	<!-- Hererim Mine Entry -->
+    <portal_dialog npc_id="837477">
+        <portal_path dialog="10000" loc_id="3025000">
+            <portal_req min_level="80"/>
+        </portal_path>
+    </portal_dialog>
+    <portal_dialog npc_id="837478">
+        <portal_path dialog="10000" loc_id="3025000">
+            <portal_req min_level="80"/>
+        </portal_path>
+    </portal_dialog>
+
     <!-- **************** PORTAL SCROLL **************** -->
     <!-- SCROLL TELEPORTS ELYOS -->
     <portal_scroll name="LC1_RETURN_AREA_1">

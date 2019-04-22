@@ -278,6 +278,10 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EQUIPMENT_SETTING_SAVE(0x1D3, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_EQUIPMENT_SETTING_USE(0x1E4, State.IN_GAME)); // 6.x TODO
 
+		// // //////////////// DAEVANION SKILL //////////////////
+		//addPacket(new CM_DAEVANION_SKILL_ENCHANT(0x1EF, State.IN_GAME)); // 6.x TODO
+		//addPacket(new CM_DAEVANION_SKILL_FUSION(0x1E0, State.IN_GAME)); // 6.x TODO
+
 		// // /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0x2F5, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_GM_BOOKMARK(0x2F4, State.IN_GAME)); // 6.x EU
@@ -303,6 +307,8 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_TRANSFOMATION(0x1F8, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_CUBIC(0x1D1, State.IN_GAME)); // 6.x TODO
 		//addPacket(new CM_ATREIAN_PASSPORT(0x1C4, State.IN_GAME)); // 6.x TODO
+		addPacket(new CM_STIGMA(0x1EE, State.IN_GAME)); // 6.x TODO
+
 	}
 
 	public AionPacketHandler getPacketHandler() {
