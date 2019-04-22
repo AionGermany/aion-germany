@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-08-11 18:54 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-04-22 17:45 -->
 <instance_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_bonusattr.xsd">
     <instance_bonusattr buff_id="1">
         <penalty_attr stat="PHYSICAL_ACCURACY" func="ADD" value="1100"/>
@@ -39,20 +39,22 @@
         <penalty_attr stat="HEAL_SKILL_BOOST" func="ADD" value="50"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="7">
-        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="9999"/>
-        <penalty_attr stat="SPEED" func="PERCENT" value="50"/>
-        <penalty_attr stat="MAGICAL_RESIST" func="ADD" value="9999"/>
+        <penalty_attr stat="PHYSICAL_DEFENSE" func="ADD" value="99999"/>
+        <penalty_attr stat="MAGICAL_RESIST" func="ADD" value="99999"/>
+        <penalty_attr stat="EVASION" func="ADD" value="99999"/>
+        <penalty_attr stat="MAGICAL_RESIST" func="ADD" value="99999"/>
         <penalty_attr stat="ABNORMAL_RESISTANCE_ALL" func="ADD" value="9999"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="8">
-        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="9999"/>
-        <penalty_attr stat="SPEED" func="PERCENT" value="50"/>
+        <penalty_attr stat="PHYSICAL_DEFENSE" func="ADD" value="9999"/>
         <penalty_attr stat="MAGICAL_RESIST" func="ADD" value="9999"/>
+        <penalty_attr stat="EVASION" func="ADD" value="99999"/>
+        <penalty_attr stat="MAGICAL_RESIST" func="ADD" value="99999"/>
         <penalty_attr stat="ABNORMAL_RESISTANCE_ALL" func="ADD" value="9999"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="9">
-        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="100"/>
-        <penalty_attr stat="PVP_ATTACK_RATIO" func="ADD" value="100"/>
+        <penalty_attr stat="PVP_ATTACK_RATIO" func="ADD" value="400"/>
+        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="400"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="10">
         <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="1000"/>
@@ -82,14 +84,14 @@
         <penalty_attr stat="HEAL_SKILL_BOOST" func="ADD" value="50"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="15">
-        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="300"/>
-        <penalty_attr stat="PVP_ATTACK_RATIO" func="ADD" value="300"/>
+        <penalty_attr stat="PVP_ATTACK_RATIO" func="ADD" value="400"/>
+        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="400"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="16">
-        <penalty_attr stat="PHYSICAL_DEFENSE" func="PERCENT" value="10"/>
+        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="400"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="17">
-        <penalty_attr stat="MAXHP" func="ADD" value="10000"/>
+        <penalty_attr stat="MAXHP" func="ADD" value="30000"/>
     </instance_bonusattr>
     <instance_bonusattr buff_id="18">
         <penalty_attr stat="MAXHP" func="ADD" value="5000"/>

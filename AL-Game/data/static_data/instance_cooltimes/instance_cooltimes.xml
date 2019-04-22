@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-10-05 10:22 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-04-22 17:45 -->
 <instance_cooltimes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_cooltimes.xsd">
     <!-- Indratu Fortress -->
     <instance_cooltime race="ELYOS" worldId="310090000" id="1">
@@ -242,7 +242,7 @@
         <enter_min_level_light>6</enter_min_level_light>
         <enter_min_level_dark>6</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
-        <maxcount>3</maxcount>
+        <maxcount>7</maxcount>
     </instance_cooltime>
     <!-- Rentus Base -->
     <instance_cooltime race="PC_ALL" worldId="300280000" id="49">
@@ -254,7 +254,7 @@
         <enter_min_level_light>60</enter_min_level_light>
         <enter_min_level_dark>60</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
-        <maxcount>1</maxcount>
+        <maxcount>2</maxcount>
     </instance_cooltime>
     <!-- Esoterrace -->
     <instance_cooltime race="PC_ALL" worldId="300250000" id="51">
@@ -295,8 +295,8 @@
     <!-- Arena of Discipline -->
     <instance_cooltime race="PC_ALL" worldId="300360000" id="62">
         <type>WEEKLY</type>
-        <typevalue>Mon</typevalue>
-        <ent_cool_time>100</ent_cool_time>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
         <max_member_light>2</max_member_light>
         <max_member_dark>2</max_member_dark>
@@ -308,8 +308,8 @@
     <!-- Arena of Cooperation -->
     <instance_cooltime race="PC_ALL" worldId="300450000" id="74">
         <type>WEEKLY</type>
-        <typevalue>Mon</typevalue>
-        <ent_cool_time>100</ent_cool_time>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
         <max_member_light>6</max_member_light>
         <max_member_dark>6</max_member_dark>
@@ -328,7 +328,7 @@
         <enter_min_level_light>68</enter_min_level_light>
         <enter_min_level_dark>68</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
-        <maxcount>1</maxcount>
+        <maxcount>2</maxcount>
     </instance_cooltime>
     <!-- Tiamat's Hideout -->
     <instance_cooltime race="PC_ALL" worldId="300520000" id="81">
@@ -341,7 +341,7 @@
         <enter_min_level_light>57</enter_min_level_light>
         <enter_min_level_dark>57</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
-        <maxcount>3</maxcount>
+        <maxcount>5</maxcount>
     </instance_cooltime>
     <!-- Runatorium -->
     <instance_cooltime race="PC_ALL" worldId="301310000" id="125">
@@ -366,7 +366,7 @@
         <enter_min_level_light>80</enter_min_level_light>
         <enter_min_level_dark>80</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>1</maxcount>
+        <maxcount>4</maxcount>
     </instance_cooltime>
     <!-- Trillonerk's Gold Vault -->
     <instance_cooltime race="PC_ALL" worldId="301400000" id="136">
@@ -393,7 +393,7 @@
         <enter_min_level_dark>66</enter_min_level_dark>
         <alarm_unit_score>0</alarm_unit_score>
         <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>3</maxcount>
+        <maxcount>5</maxcount>
     </instance_cooltime>
     <!-- Garden of Knowledge -->
     <instance_cooltime race="PC_ALL" worldId="301550000" id="146">
@@ -458,7 +458,7 @@
         <enter_min_level_dark>76</enter_min_level_dark>
         <alarm_unit_score>500</alarm_unit_score>
         <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>1</maxcount>
+        <maxcount>2</maxcount>
     </instance_cooltime>
     <!-- Fire Temple of Memory -->
     <instance_cooltime race="PC_ALL" worldId="302000000" id="161">
@@ -702,8 +702,34 @@
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>1</maxcount>
     </instance_cooltime>
-    <!-- Mirash Refuge (Bonus) -->
-    <instance_cooltime race="PC_ALL" worldId="301730000" id="192">
+    <!-- Hererim Mine -->
+    <instance_cooltime race="PC_ALL" worldId="302500000" id="195">
+        <type>WEEKLY</type>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>6</max_member_light>
+        <max_member_dark>6</max_member_dark>
+        <enter_min_level_light>80</enter_min_level_light>
+        <enter_min_level_dark>80</enter_min_level_dark>
+        <can_enter_mentor>false</can_enter_mentor>
+        <maxcount>4</maxcount>
+    </instance_cooltime>
+    <!-- Senekta -->
+    <instance_cooltime race="PC_ALL" worldId="302510000" id="196">
+        <type>WEEKLY</type>
+        <typevalue>Wed</typevalue>
+        <ent_cool_time>900</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>18</max_member_light>
+        <max_member_dark>18</max_member_dark>
+        <enter_min_level_light>80</enter_min_level_light>
+        <enter_min_level_dark>80</enter_min_level_dark>
+        <can_enter_mentor>false</can_enter_mentor>
+        <maxcount>3</maxcount>
+    </instance_cooltime>
+    <!-- Steel Rake Fortress -->
+    <instance_cooltime race="PC_ALL" worldId="302520000" id="198">
         <type>DAILY</type>
         <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
@@ -714,15 +740,15 @@
         <can_enter_mentor>true</can_enter_mentor>
         <maxcount>1</maxcount>
     </instance_cooltime>
-    <!-- Garden of Knowledge (Bonus) -->
-    <instance_cooltime race="PC_ALL" worldId="302490000" id="193">
+    <!-- Illumiel -->
+    <instance_cooltime race="PC_ALL" worldId="302530000" id="199">
         <type>DAILY</type>
         <ent_cool_time>900</ent_cool_time>
-        <indun_type>NORMAL</indun_type>
+        <indun_type>BATTLEFIELD</indun_type>
         <max_member_light>3</max_member_light>
         <max_member_dark>3</max_member_dark>
-        <enter_min_level_light>78</enter_min_level_light>
-        <enter_min_level_dark>78</enter_min_level_dark>
+        <enter_min_level_light>76</enter_min_level_light>
+        <enter_min_level_dark>76</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>1</maxcount>
     </instance_cooltime>
