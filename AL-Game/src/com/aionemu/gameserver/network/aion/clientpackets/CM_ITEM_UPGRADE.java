@@ -62,7 +62,7 @@ public class CM_ITEM_UPGRADE extends AionClientPacket {
 		playerObjectId = readD();
 		upgradedItemObjectId = readD();
 		resultItemId = readD();
-
+		readH(); // unk
 		requireItemObjectId1 = readD();
 		requireItemObjectId2 = readD();
 		requireItemObjectId3 = readD();

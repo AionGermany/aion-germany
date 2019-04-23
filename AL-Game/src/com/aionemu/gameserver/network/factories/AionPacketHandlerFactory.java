@@ -257,7 +257,7 @@ public class AionPacketHandlerFactory {
 
 		// // /////////////////// NEW 4.7 //////////////////////
 		addPacket(new CM_HOTSPOT_TELEPORT(0x1B0, State.IN_GAME)); // 6.x EU
-		// addPacket(new CM_ITEM_UPGRADE(0x115, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_ITEM_UPGRADE(0x1B3, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_UPGRADE_ARCADE(0x1B2, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_FILE_VERIFY(0x119, State.IN_GAME)); // 6.x EU
 
