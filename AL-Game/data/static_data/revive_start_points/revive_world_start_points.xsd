@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+	<xs:include schemaLocation="../global_types.xsd"/>
+	<xs:element name="revive_world_start_points">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="revive_world_start_point" type="WorldStartPoints" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="WorldStartPoints">
+		<xs:attribute name="world_id" type="xs:int"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="race" type="Race" default="PC_ALL"/>
+		<xs:attribute name="x" type="xs:float"/>
+		<xs:attribute name="y" type="xs:float"/>
+		<xs:attribute name="z" type="xs:float"/>
+		<xs:attribute name="h" type="xs:byte"/>
+		<xs:attribute name="max_level" type="xs:int"/>
+		<xs:attribute name="min_level" type="xs:int"/>
+	</xs:complexType>
+</xs:schema>

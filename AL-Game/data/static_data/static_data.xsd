@@ -107,6 +107,8 @@
 	<xs:include schemaLocation="events_config/shugo_sweep.xsd"/>
 	<xs:include schemaLocation="cubics/cubics_templates.xsd"/>
 	<xs:include schemaLocation="transformation/transformations.xsd"/>
+	<xs:include schemaLocation="revive_start_points/revive_world_start_points.xsd"/>
+	<xs:include schemaLocation="revive_start_points/instance_revive_start_points.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -218,6 +220,8 @@
 				<xs:element ref="shugo_sweeps" minOccurs="0"/>
 				<xs:element ref="cubics_templates" minOccurs="0"/>
 				<xs:element ref="transformations" minOccurs="0"/>
+				<xs:element ref="revive_world_start_points" minOccurs="0"/>
+				<xs:element ref="instance_revive_start_points" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

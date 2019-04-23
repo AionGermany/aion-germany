@@ -247,6 +247,10 @@ public class StaticData {
     public CubicsData cubicsData;
 	@XmlElement(name = "transformations")	
 	public TransformationData transformationData;
+	@XmlElement(name = "revive_world_start_points")
+	public ReviveWorldStartPointsData reviveWorldStartPoints;
+	@XmlElement(name = "instance_revive_start_points")
+	public ReviveInstanceStartPointsData reviveInstanceStartPoints;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -359,5 +363,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + shugoSweepsRewardData.size() + " Shugo Sweep Reward entries");
 		DataManager.log.info("[DataManager] Loaded " + cubicsData.size() + " Cubics entries");
 		DataManager.log.info("[DataManager] Loaded " + transformationData.size() + " Transformation entries");
+		DataManager.log.info("[DataManager] Loaded " + reviveWorldStartPoints.size() + " Revive World Start Point entrys");
+		DataManager.log.info("[DataManager] Loaded " + reviveInstanceStartPoints.size() + " Revive Instance Start Point entrys");
 	}
 }

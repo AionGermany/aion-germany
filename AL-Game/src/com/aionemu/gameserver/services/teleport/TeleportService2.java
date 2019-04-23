@@ -45,6 +45,8 @@ import com.aionemu.gameserver.model.templates.portal.InstanceExit;
 import com.aionemu.gameserver.model.templates.portal.PortalLoc;
 import com.aionemu.gameserver.model.templates.portal.PortalPath;
 import com.aionemu.gameserver.model.templates.portal.PortalScroll;
+import com.aionemu.gameserver.model.templates.revive_start_points.InstanceReviveStartPoints;
+import com.aionemu.gameserver.model.templates.revive_start_points.WorldReviveStartPoints;
 import com.aionemu.gameserver.model.templates.robot.RobotInfo;
 import com.aionemu.gameserver.model.templates.spawns.SpawnSearchResult;
 import com.aionemu.gameserver.model.templates.spawns.SpawnSpotTemplate;
@@ -287,6 +289,7 @@ public class TeleportService2 {
 			PacketSendUtility.sendPacket(player, new SM_CHANNEL_INFO(player.getPosition()));
 			player.setPortAnimation(4); // Beam exit animation
 			PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+			player.getController().startProtectionActiveTask();
 			PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
 			// Pet
 			if (pet != null) {
@@ -422,9 +425,11 @@ public class TeleportService2 {
 			World.getInstance().setPosition(summon, worldId, instanceId, x, y, z, heading);
 		}
 		player.setPortAnimation(animation.getEndAnimationId());
+		player.getController().startProtectionActiveTask();
 		if (currentWorldId == worldId) {
 			PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
 			PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
+			player.getController().startProtectionActiveTask();
 			PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
 			World.getInstance().spawn(player);
 			player.getEffectController().updatePlayerEffectIcons();
@@ -672,6 +677,14 @@ public class TeleportService2 {
 		return DataManager.INSTANCE_EXIT_DATA.getInstanceExit(worldId, race);
 	}
 
+	public static InstanceReviveStartPoints getReviveInstanceStartPoints(int worldId) {
+		return DataManager.REVIVE_INSTANCE_START_POINTS.getReviveStartPoint(worldId);
+	}
+
+	public static WorldReviveStartPoints getReviveWorldStartPoints(int worldId, Race race, int level) {
+		return DataManager.REVIVE_WORLD_START_POINTS.getReviveStartPoint(worldId, race, level);
+	}
+
 	/**
 	 * @param portalName
 	 */
@@ -696,12 +709,49 @@ public class TeleportService2 {
 		teleportTo(player, worldId, loc.getX(), loc.getY(), loc.getZ(), player.getHeading(), TeleportAnimation.BEAM_ANIMATION);
 	}
 
+	public static void teleportWorldStartPoint(Player player, int worldId) {
+		player.getController().onLeaveWorld();
+		World.getInstance().despawn(player);
+		WorldReviveStartPoints startPoint = getReviveWorldStartPoints(worldId, player.getRace(), player.getLevel());
+		if (startPoint != null) {
+			World.getInstance().setPosition(player, startPoint.getReviveWorld(), 0, startPoint.getX(), startPoint.getY(), startPoint.getZ(), (byte) startPoint.getH());
+		} else {
+			moveToBindLocation(player, false);
+		}
+		PacketSendUtility.sendPacket(player, new SM_CHANNEL_INFO(player.getPosition()));
+		PacketSendUtility.sendPacket(player, new SM_PLAYER_SPAWN(player));
+		player.setPortAnimation(4);
+		PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+		if (player.isLegionMember()) {
+			PacketSendUtility.broadcastPacketToLegion(player.getLegion(), new SM_LEGION_UPDATE_MEMBER(player, 0, ""));
+		}
+	}
+
+	public static void teleportInstanceStartPoint(Player player, int worldId) {
+		player.getController().onLeaveWorld();
+		World.getInstance().despawn(player);
+		InstanceReviveStartPoints revivePoint = getReviveInstanceStartPoints(worldId);
+		if (revivePoint != null) {
+			TeleportService2.teleportTo(player, worldId, worldId, revivePoint.getX(), revivePoint.getY(), revivePoint.getY(), (byte) revivePoint.getY());
+		} else {
+			moveToBindLocation(player, false);
+		}
+		PacketSendUtility.sendPacket(player, new SM_CHANNEL_INFO(player.getPosition()));
+		PacketSendUtility.sendPacket(player, new SM_PLAYER_SPAWN(player));
+		player.setPortAnimation(4);
+		PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+		if (player.isLegionMember()) {
+			PacketSendUtility.broadcastPacketToLegion(player.getLegion(), new SM_LEGION_UPDATE_MEMBER(player, 0, ""));
+		}
+	}
+
 	/**
 	 * @param channel
 	 */
 	public static void changeChannel(Player player, int channel) {
 		World.getInstance().despawn(player);
 		World.getInstance().setPosition(player, player.getWorldId(), channel + 1, player.getX(), player.getY(), player.getZ(), player.getHeading());
+		player.getController().startProtectionActiveTask();
 		PacketSendUtility.sendPacket(player, new SM_CHANNEL_INFO(player.getPosition()));
 		PacketSendUtility.sendPacket(player, new SM_PLAYER_SPAWN(player));
 		playerTransformation(player);
@@ -715,6 +765,7 @@ public class TeleportService2 {
 			playerTransformation(player);
 			World.getInstance().despawn(player);
 			World.getInstance().setPosition(player, player.getWorldId(), player.getX(), player.getY(), player.getZ(), player.getHeading());
+            player.getController().startProtectionActiveTask();
 			player.FAST_TRACK_TYPE = 0;
 			PacketSendUtility.sendPacket(player, new SM_FAST_TRACK_MOVE(NetworkConfig.GAMESERVER_ID, serverId, player.getWorldId()));
 			PacketSendUtility.sendPacket(player, new SM_FAST_TRACK(NetworkConfig.GAMESERVER_ID, serverId, false));
@@ -724,6 +775,7 @@ public class TeleportService2 {
 		else {
 			World.getInstance().despawn(player);
 			World.getInstance().setPosition(player, player.getWorldId(), player.getX(), player.getY(), player.getZ(), player.getHeading());
+            player.getController().startProtectionActiveTask();
 			player.FAST_TRACK_TYPE = 1;
 			PacketSendUtility.sendPacket(player, new SM_FAST_TRACK_MOVE(serverId, NetworkConfig.GAMESERVER_ID, player.getWorldId()));
 			PacketSendUtility.sendPacket(player, new SM_FAST_TRACK(serverId, NetworkConfig.GAMESERVER_ID, false));

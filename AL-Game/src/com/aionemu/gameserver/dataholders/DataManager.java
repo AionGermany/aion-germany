@@ -141,6 +141,8 @@ public final class DataManager {
 	public static ShugoSweepRewardData SHUGO_SWEEP_REWARD_DATA;
 	public static CubicsData CUBICS_DATA;
 	public static TransformationData TRANSFORMATION_DATA;
+	public static ReviveWorldStartPointsData REVIVE_WORLD_START_POINTS;
+	public static ReviveInstanceStartPointsData REVIVE_INSTANCE_START_POINTS;
 	private XmlDataLoader loader;
 
 	/**
@@ -267,6 +269,8 @@ public final class DataManager {
 		SHUGO_SWEEP_REWARD_DATA = data.shugoSweepsRewardData;
 		CUBICS_DATA = data.cubicsData;
 		TRANSFORMATION_DATA = data.transformationData;
+		REVIVE_WORLD_START_POINTS = data.reviveWorldStartPoints;
+		REVIVE_INSTANCE_START_POINTS = data.reviveInstanceStartPoints;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

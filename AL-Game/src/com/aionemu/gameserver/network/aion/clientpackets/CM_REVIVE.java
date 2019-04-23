@@ -64,9 +64,6 @@ public class CM_REVIVE extends AionClientPacket {
 			case OBELISK_REVIVE:
 				PlayerReviveService.bindRevive(activePlayer);
 				break;
-			case IN_CURRENT_WORLD_REVIVE:
-				PlayerReviveService.inCurrentWorldRevive(activePlayer);
-				break;
 			case REBIRTH_REVIVE:
 				PlayerReviveService.rebirthRevive(activePlayer);
 				break;
@@ -81,6 +78,12 @@ public class CM_REVIVE extends AionClientPacket {
 				break;
 			case INSTANCE_REVIVE:
 				PlayerReviveService.instanceRevive(activePlayer);
+				break;
+			case START_POINT_REVIVE:
+				PlayerReviveService.startPositionRevive(activePlayer);
+				break;
+			case LUNA_REVIVE:
+				PlayerReviveService.startLunaRevive(activePlayer);
 				break;
 			default:
 				break;
