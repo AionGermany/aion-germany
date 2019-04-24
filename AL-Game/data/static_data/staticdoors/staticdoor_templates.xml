@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-09-15 12:46 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-04-22 17:11 -->
 <staticdoor_templates>
     <!-- Kaisinel Academy -->
     <world world="110070000">
@@ -25,22 +25,22 @@
     </world>
     <!-- Heiron -->
     <world world="210040000">
+        <staticdoor type="ABYSS" doorid="919" x="236.0219" y="533.479" z="158.8089" mesh="lf3_instance_door.cgf"/>
         <staticdoor type="HOUSE" doorid="11"/>
-        <staticdoor type="HOUSE" doorid="49"/>
-        <staticdoor type="HOUSE" doorid="41"/>
+        <staticdoor type="HOUSE" doorid="2"/>
         <staticdoor type="HOUSE" doorid="4">
             <box x1="2710.7832" y1="615.1212" z1="353.816" x2="2711.0437" y2="615.3816" z2="354.016022"/>
         </staticdoor>
-        <staticdoor type="ABYSS" doorid="919" x="236.0219" y="533.479" z="158.8089" mesh="lf3_instance_door.cgf"/>
-        <staticdoor type="HOUSE" doorid="28"/>
-        <staticdoor type="HOUSE" doorid="1"/>
+        <staticdoor type="HOUSE" doorid="49"/>
+        <staticdoor type="HOUSE" doorid="41"/>
         <staticdoor type="ABYSS" doorid="1043" x="400.92224" y="717.64343" z="130.03922" mesh="bu_d_doorone01_3fa_door_01a.cgf"/>
-        <staticdoor type="ABYSS" doorid="1044" x="459.70313" y="1049.3334" z="124.76933" mesh="bu_d_doorone01_3fa_door_01a.cgf"/>
         <staticdoor type="HOUSE" doorid="17">
             <box x1="1769.80408" y1="1632.29065" z1="130.560089" x2="1770.0625" y2="1632.54907" z2="130.760086"/>
         </staticdoor>
-        <staticdoor type="HOUSE" doorid="23"/>
+        <staticdoor type="ABYSS" doorid="1044" x="459.70313" y="1049.3334" z="124.76933" mesh="bu_d_doorone01_3fa_door_01a.cgf"/>
+        <staticdoor type="HOUSE" doorid="28"/>
         <staticdoor type="HOUSE" doorid="35"/>
+        <staticdoor type="HOUSE" doorid="23"/>
     </world>
     <!-- Inggison -->
     <world world="210050000">
@@ -786,6 +786,11 @@
             <box x1="547.409363" y1="1778.74792" z1="170.900879" x2="551.852661" y2="1783.18372" z2="181.850235"/>
         </staticdoor>
     </world>
+    <!-- Battlefield Of Survival -->
+    <world world="300490000">
+        <staticdoor type="ABYSS" doorid="445" x="2347.7847" y="160.01048" z="246.25" mesh="door_castlein_01a.cgf"/>
+        <staticdoor type="ABYSS" doorid="28" x="1841.83" y="887.85535" z="59.019474" mesh="door_castleout.cgf"/>
+    </world>
     <!-- Tiamats Fortress -->
     <world world="300510000">
         <staticdoor doorid="706" x="1030.1339" y="334.95306" z="408.43253" mesh="Door_Collision_01a.cga" state="0x1">
@@ -1515,6 +1520,75 @@
         <staticdoor doorid="112" x="680.31696" y="722.70044" z="547.80804" mesh="IDEternity_02_door_01.cga"/>
         <staticdoor type="ABYSS" doorid="381" x="1001.7742" y="774.64069" z="1031.4943" mesh="IDEternity_02_Treasure_door.cgf"/>
     </world>
+    <!-- Hererim Mine -->
+    <world world="302500000">
+        <staticdoor type="ABYSS" doorid="183" x="831.46777" y="507.12811" z="300.10376" mesh="IDF7_mine_waitingDoor_02b.cgf"/>
+        <staticdoor doorid="217" x="207.87697" y="197.54904" z="249.30502" mesh="IDF7_mine_Bouns_door_2.cga"/>
+        <staticdoor type="ABYSS" doorid="382" x="461.96689" y="934.00604" z="280.68341" mesh="IDF7_mine_door_1.cgf"/>
+        <staticdoor type="ABYSS" doorid="232" x="380.49155" y="830.9433" z="289.05472" mesh="F6_IDDoor_IN.cgf"/>
+        <staticdoor type="ABYSS" doorid="221" x="552.11639" y="251.31679" z="282.14734" mesh="IDF7_mine_door_1.cgf"/>
+        <staticdoor type="ABYSS" doorid="268" x="414.97485" y="932.62671" z="280.52301" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor type="ABYSS" doorid="269" x="516.11182" y="218.27147" z="276.45596" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor type="ABYSS" doorid="9" x="490.0824" y="528.99738" z="298.99756" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor doorid="86" x="395.95612" y="805.70929" z="289.37973" mesh="IDF7_mine_Bouns_door_1.cga"/>
+        <staticdoor type="ABYSS" doorid="4" x="187.25737" y="206.65428" z="249.23361" mesh="F6_IDDoor_IN.cgf"/>
+        <staticdoor type="ABYSS" doorid="36" x="161.62746" y="886.8454" z="276.60095" mesh="IDF7_mine_door_4_col.cgf"/>
+        <staticdoor type="ABYSS" doorid="1" x="373.41095" y="203.79805" z="262.27368" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor type="ABYSS" doorid="407" x="266.61246" y="469.8186" z="313.24121" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor type="ABYSS" doorid="215" x="829.74268" y="550.4201" z="299.35748" mesh="IDF7_mine_waitingDoor_01a.cgf"/>
+        <staticdoor doorid="39" x="214.04362" y="469.55435" z="316.12247" mesh="IDF7_mine_Stage3_door.cga"/>
+        <staticdoor type="ABYSS" doorid="41" x="199.33333" y="469.43732" z="314.28854" mesh="F6_IDDoor_IN.cgf"/>
+        <staticdoor type="ABYSS" doorid="377" x="538.59851" y="800.00568" z="285.9346" mesh="IDF7_mine_door_1.cgf"/>
+        <staticdoor type="ABYSS" doorid="233" x="423.93771" y="200.07071" z="267.74417" mesh="IDF7_mine_door_1.cgf"/>
+        <staticdoor type="ABYSS" doorid="422" x="414.63995" y="818.09656" z="289.01956" mesh="IDF7_mine_door_1.cgf"/>
+        <staticdoor type="ABYSS" doorid="350" x="413.04715" y="490.29614" z="308.16223" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor type="ABYSS" doorid="423" x="514.9024" y="572.35455" z="298.91162" mesh="IDF7_mine_door_2.cgf"/>
+        <staticdoor type="ABYSS" doorid="294" x="824.99854" y="528.57727" z="302.27005" mesh="IDF7_mine_waitingDoor_03c.cgf"/>
+        <staticdoor type="ABYSS" doorid="363" x="368.82626" y="489.51596" z="308.24258" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor type="ABYSS" doorid="353" x="508.0376" y="825.94489" z="285.69635" mesh="IDF7_mine_door_3.cgf"/>
+        <staticdoor doorid="481" x="160.9436" y="886.83093" z="276.09702" mesh="IDRun_Start_shield_01a.cga" state="0x2"/>
+        <staticdoor type="ABYSS" doorid="328" x="262.55188" y="191.59694" z="253.98318" mesh="IDF7_mine_door_1.cgf"/>
+    </world>
+    <!-- Senekta -->
+    <world world="302510000">
+        <staticdoor type="ABYSS" doorid="101" x="501.65268" y="503.66379" z="153.12537" mesh="idf7_ere_boss_door.cgf"/>
+        <staticdoor type="ABYSS" doorid="111" x="422.90747" y="338.52002" z="158.19789" mesh="idf7_ere_Door.cgf"/>
+        <staticdoor type="ABYSS" doorid="102" x="501.65268" y="503.66379" z="153.12537" mesh="idf7_ere_boss_door_open.cgf"/>
+        <staticdoor doorid="89" x="870.17633" y="676.1842" z="148.89687" mesh="idf7_ere_start_door.cga"/>
+        <staticdoor doorid="109" x="461.47827" y="649.63196" z="160.0027" mesh="idf7_ere_middle_door.cga" state="0x8"/>
+        <staticdoor keyid="185001007" doorid="174" x="530.90649" y="274.58322" z="172.35382" mesh="idf7_ere_prison_door.cga" state="0x2"/>
+        <staticdoor doorid="175" x="594.21173" y="341.81128" z="158.43199" mesh="idf7_ere_middle_door.cga" state="0x8"/>
+        <staticdoor type="ABYSS" doorid="250" x="501.65268" y="503.66379" z="153.12537" mesh="idf7_ere_boss_door_effect.cgf"/>
+        <staticdoor keyid="185001008" doorid="176" x="291.84949" y="706.70795" z="138.1404" mesh="idf7_ere_prison_door.cga" state="0x2"/>
+        <staticdoor doorid="190" x="873.57495" y="564.76984" z="150.51001" mesh="idf7_ere_start_door.cga"/>
+    </world>
+    <!-- Steel Rake Fortress -->
+    <world world="302520000">
+        <staticdoor type="ABYSS" doorid="43" x="596.21204" y="427.29855" z="124.36647" mesh="waterworld_mongate_door.cgf"/>
+        <staticdoor type="ABYSS" doorid="56" x="454.90329" y="460.12762" z="124.36647" mesh="waterworld_mongate_door.cgf"/>
+        <staticdoor type="ABYSS" doorid="87" x="780.66229" y="735.5285" z="120.26588" mesh="idwaterworld_maindoor01afobj.cgf"/>
+        <staticdoor type="ABYSS" doorid="73" x="438.56152" y="565.08197" z="124.25705" mesh="waterworld_mongate_doorC.cgf"/>
+        <staticdoor type="ABYSS" doorid="54" x="596.23749" y="427.32864" z="124.36647" mesh="waterworld_mongate_doorC.cgf"/>
+        <staticdoor type="ABYSS" doorid="74" x="438.56442" y="565.12128" z="124.25705" mesh="waterworld_mongate_door.cgf"/>
+        <staticdoor type="ABYSS" doorid="151" x="671.41107" y="495.40433" z="124.54547" mesh="idwaterworld_subdoor01a.cgf"/>
+        <staticdoor type="ABYSS" doorid="55" x="454.93735" y="460.10779" z="124.36647" mesh="waterworld_mongate_doorC.cgf"/>
+    </world>
+    <!-- Illumiel -->
+    <world world="302530000">
+        <staticdoor doorid="99" x="280.38498" y="338.57532" z="79.8601" mesh="IDLDF5_Fortress_Re_door.cga"/>
+        <staticdoor doorid="1" x="248.91376" y="179.70729" z="79.847305" mesh="IDLDF5_Fortress_Re_door.cga"/>
+    </world>
+    <!-- Kumuki Hideout In Cooperation With Made In Abyss -->
+    <world world="302540000">
+        <staticdoor type="ABYSS" doorid="92" x="239.84866" y="307.69699" z="145.44226" mesh="IDEvent_solo_door02b.cgf"/>
+        <staticdoor doorid="2" x="223.77625" y="346.91376" z="143.32706" mesh="IDEvent_solo_door01a.cga"/>
+        <staticdoor doorid="3" x="149.12807" y="117.49464" z="144.67064" mesh="IDEvent_solo_door01a.cga"/>
+        <staticdoor type="ABYSS" doorid="114" x="239.71652" y="332.05554" z="145.46539" mesh="IDEvent_solo_door02b.cgf"/>
+        <staticdoor type="ABYSS" doorid="144" x="206.42039" y="307.6756" z="145.47144" mesh="IDEvent_solo_door02b.cgf"/>
+        <staticdoor doorid="7" x="346.47076" y="287.72131" z="95.756058" mesh="incinerator_door_01.cga"/>
+        <staticdoor doorid="19" x="149.78369" y="44.49958" z="144.67064" mesh="IDEvent_solo_door01a.cga"/>
+        <staticdoor type="ABYSS" doorid="119" x="206.47694" y="331.99286" z="145.45778" mesh="IDEvent_solo_door02b.cgf"/>
+    </world>
     <!-- Aetherogenetics Lab -->
     <world world="310050000">
         <staticdoor keyid="185000002" doorid="167" x="308.90347" y="230.24333" z="144.24834" mesh="door_lp.cga" state="0x2">
@@ -1605,11 +1679,9 @@
         <staticdoor type="ABYSS" doorid="50" x="925.95441" y="799.50476" z="1513.0491" mesh="?">
             <box x1="1420.0282" y1="1214.25293" z1="1513.0509" x2="1427.405" y2="1221.99609" z2="1525.504"/>
         </staticdoor>
-        <staticdoor type="ABYSS" doorid="2876" x="1400.5433" y="883.0741" z="2945.3445" mesh="ab_Crotan_door.cgf"/>
         <staticdoor type="ABYSS" doorid="25" x="2103.8127" y="2020.3872" z="1502.4543" mesh="?">
             <box x1="2842.37476" y1="2606.04248" z1="1502.45093" x2="2847.08643" y2="2612.19849" z2="1514.904"/>
         </staticdoor>
-        <staticdoor type="ABYSS" doorid="2877" x="1204.2413" y="1953.0266" z="2931.3469" mesh="ab_LaMiren_door.cgf"/>
         <staticdoor type="ABYSS" doorid="49" x="835.62836" y="737.07166" z="1513.0491" mesh="?">
             <box x1="1329.01282" y1="1151.343" z1="1513.0509" x2="1336.38965" y2="1159.08618" z2="1525.504"/>
         </staticdoor>
@@ -1628,7 +1700,6 @@
         </staticdoor>
         <staticdoor type="ABYSS" doorid="2575" x="869.27051" y="760.36761" z="1507.4741" mesh="?"/>
         <staticdoor type="ABYSS" doorid="3119" x="1526.6644" y="1443.0881" z="2321.3398" mesh="?"/>
-        <staticdoor type="ABYSS" doorid="2878" x="1927.4242" y="1655.9883" z="2992.3704" mesh="ab_Dkisas_door.cgf"/>
         <staticdoor type="ABYSS" doorid="1213" x="1759.1133" y="2204.8823" z="1488.8503" mesh="Door_Treasure.cgf"/>
     </world>
     <!-- Belus Territory -->
