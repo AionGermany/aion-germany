@@ -309,6 +309,9 @@ public class ServerPacketsOpcodes {
 		// -------------------SHUGO SWEEP/LUCKY DICE----------------------//
 		addPacketOpcode(SM_SHUGO_SWEEP.class, 0x14B, idSet); //5.8 EU
 		addPacketOpcode(SM_YOUTUBE_VIDEO.class, 0x146, idSet);
+		// ----------------------DEAVANION SKILL-------------------------//
+		addPacketOpcode(SM_DAEVANION_SKILL_ENCHANT.class, 0x179, idSet); // 6.5 TODO
+		addPacketOpcode(SM_DAEVANION_SKILL_FUSION.class, 0x17A, idSet); // 6.5 TODO
 		// --------------------UNKNOWN PACKETS-----------------------//
 		addPacketOpcode(SM_UNK_60.class, 0x60, idSet);
 		addPacketOpcode(SM_UNK_106.class, 0x106, idSet);
@@ -338,6 +341,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_CUBIC.class, 0x176, idSet); // 6.x TODO
 		//addPacketOpcode(SM_ATREIAN_PASSPORT.class, 0x12D, idSet); // 6.x TODO
 		addPacketOpcode(SM_REMOVE_DYE.class, 0x1DF, idSet); // 6.x TODO
+		
 		// --------------------UNKNOWN PACKETS-----------------------//
 	}
 

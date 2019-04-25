@@ -1148,16 +1148,23 @@
 	</xs:simpleType>
 	<xs:simpleType name="itemQuality">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="COMMON"/>
 			<xs:enumeration value="RARE"/>
 			<xs:enumeration value="LEGEND"/>
 			<xs:enumeration value="UNIQUE"/>
 			<xs:enumeration value="RELIC"/>
 			<xs:enumeration value="FINALITY"/>
 			<xs:enumeration value="EPIC"/>
-			<xs:enumeration value="MYTHIC"/>
-			<xs:enumeration value="ANCIENT"/>
-			<xs:enumeration value="JUNK"/>
+			 <!-- 6.x New Item Quality -->
+			<xs:enumeration value="JUNK"/> <!-- 5.x white -->
+			<xs:enumeration value="COMMON"/> <!-- 5.x white -->
+			<xs:enumeration value="SUPERIOR"/> <!-- 5.x green -->
+			<xs:enumeration value="HEROIC"/> <!-- 5.x blue -->
+			<xs:enumeration value="FABLED"/> <!-- 5.x gold -->
+			<xs:enumeration value="ETERNAL"/> <!-- 5.x orange -->
+			<xs:enumeration value="MYTHIC"/> <!-- 5.x lila -->
+			<xs:enumeration value="ANCIENT"/> <!-- 6.x gold -->
+			<xs:enumeration value="LEGENDARY"/> <!-- 6.x lila -->
+			<xs:enumeration value="ULTIMATE"/> <!-- 6.x red -->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IntListType">

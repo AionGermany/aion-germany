@@ -279,8 +279,8 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EQUIPMENT_SETTING_USE(0x1E4, State.IN_GAME)); // 6.x TODO
 
 		// // //////////////// DAEVANION SKILL //////////////////
-		//addPacket(new CM_DAEVANION_SKILL_ENCHANT(0x1EF, State.IN_GAME)); // 6.x TODO
-		//addPacket(new CM_DAEVANION_SKILL_FUSION(0x1E0, State.IN_GAME)); // 6.x TODO
+		addPacket(new CM_DAEVANION_SKILL_ENCHANT(0x1EF, State.IN_GAME)); // 6.x TODO
+		addPacket(new CM_DAEVANION_SKILL_FUSION(0x1E0, State.IN_GAME)); // 6.x TODO
 
 		// // /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0x2F5, State.IN_GAME)); // 6.x EU
