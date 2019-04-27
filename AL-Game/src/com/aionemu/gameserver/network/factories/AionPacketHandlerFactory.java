@@ -308,7 +308,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_CUBIC(0x1D1, State.IN_GAME)); // 6.x TODO
 		//addPacket(new CM_ATREIAN_PASSPORT(0x1C4, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_STIGMA(0x1EE, State.IN_GAME)); // 6.x TODO
-
+		addPacket(new CM_REMOVE_DYE(0x1DF, State.IN_GAME)); // 6.x TODO
 	}
 
 	public AionPacketHandler getPacketHandler() {
