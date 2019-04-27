@@ -64,24 +64,14 @@ public class CM_EQUIP_ITEM extends AionClientPacket {
 		if (activePlayer.getEffectController().isAbnormalState(AbnormalState.CANT_ATTACK_STATE)) {
 			PacketSendUtility.sendPacket(activePlayer, SM_SYSTEM_MESSAGE.STR_SKILL_CAN_NOT_ACT_WHILE_IN_ABNORMAL_STATE);
 			return;
-		} 
+		}
+
 		switch (action) {
 			case 0:
-				Item targetItem = activePlayer.getInventory().getItemByObjId(itemUniqueId);
-				if (targetItem == null)
-					return;
 				resultItem = equipment.equipItem(itemUniqueId, slotRead);
-				// System.out.println("PVP ATTACK: " + activePlayer.getGameStats().getStat(StatEnum.PVP_ATTACK_RATIO, 0).getCurrent() * 0.1f + " EnchantBonus: " +
-				// activePlayer.getGameStats().getPvpAttack().getCurrent() * 0.1f);
-				// System.out.println("PVP DEFEND: " + activePlayer.getGameStats().getStat(StatEnum.PVP_DEFEND_RATIO, 0).getCurrent() * 0.1f + " EnchantBonus: " +
-				// activePlayer.getGameStats().getPvpDeff().getCurrent() * 0.1f);
 				break;
 			case 1:
 				resultItem = equipment.unEquipItem(itemUniqueId, slotRead);
-				// System.out.println("PVP ATTACK: " + activePlayer.getGameStats().getStat(StatEnum.PVP_ATTACK_RATIO, 0).getCurrent() * 0.1f + " EnchantBonus: " +
-				// activePlayer.getGameStats().getPvpAttack().getCurrent() * 0.1f);
-				// System.out.println("PVP DEFEND: " + activePlayer.getGameStats().getStat(StatEnum.PVP_DEFEND_RATIO, 0).getCurrent() * 0.1f + " EnchantBonus: " +
-				// activePlayer.getGameStats().getPvpDeff().getCurrent() * 0.1f);
 				break;
 			case 2:
 				if (activePlayer.getController().hasTask(TaskId.ITEM_USE) && !activePlayer.getController().getTask(TaskId.ITEM_USE).isDone()) {
@@ -95,10 +85,8 @@ public class CM_EQUIP_ITEM extends AionClientPacket {
 				equipment.switchHands();
 				break;
 		}
-
 		if (resultItem != null || action == 2) {
 			PacketSendUtility.broadcastPacket(activePlayer, new SM_UPDATE_PLAYER_APPEARANCE(activePlayer.getObjectId(), equipment.getEquippedForApparence()), true);
 		}
-
 	}
 }
