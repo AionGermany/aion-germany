@@ -137,6 +137,7 @@ import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.StigmaService;
 import com.aionemu.gameserver.services.SurveyService;
 import com.aionemu.gameserver.services.TownService;
+import com.aionemu.gameserver.services.TransformationService;
 import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
@@ -666,6 +667,9 @@ public final class PlayerEnterWorldService {
 
 			// SM_RECIPE_LIST
 			client.sendPacket(new SM_RECIPE_LIST(player.getRecipeList().getRecipeList()));
+
+			// SM_Transformation
+			TransformationService.getInstance().onPlayerLogin(player);
 
 			// Welcome message
 			PacketSendUtility.sendWhiteMessage(player, serverName);

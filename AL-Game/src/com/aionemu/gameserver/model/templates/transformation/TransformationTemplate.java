@@ -25,30 +25,27 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Falke_34
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "transformation")
+@XmlRootElement(name = "TransformationTemplate")
 public class TransformationTemplate {
 
 	@XmlAttribute(name = "id", required = true)
 	private int id;
-	@XmlAttribute(name = "grade", required = true)
-	private int grade;
-	@XmlAttribute(name = "skill", required = true)
-	private int skill;
+
 	@XmlAttribute(name = "name", required = true)
 	private String name;
+
 	@XmlAttribute(name = "name_id", required = true)
 	private int nameId;
 
+	@XmlAttribute(name = "grade", required = true)
+	private String grade;
+
+	@XmlAttribute(name = "skill", required = true)
+	private int skill;
+
+
 	public int getId() {
 		return id;
-	}
-
-	public int getGrade() {
-		return grade;
-	}
-
-	public int getSkill() {
-		return skill;
 	}
 
 	public String getName() {
@@ -57,5 +54,13 @@ public class TransformationTemplate {
 
 	public int getNameId() {
 		return nameId;
+	}
+
+    public String getGrade() {
+        return this.grade;
+    }
+
+	public int getSkill() {
+		return skill;
 	}
 }

@@ -31,8 +31,13 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 	private Collection<TransformationCommonData> transformations;
 	private TransformationCommonData transformationsCommonData;
 
-	public SM_TRANSFORMATION(int actionId) {
+	public SM_TRANSFORMATION(int actionId, Collection<TransformationCommonData> transformations) {
 		this.actionId = actionId;
+	}
+
+	public SM_TRANSFORMATION(int actionId, TransformationCommonData transformation) {
+		this.actionId = actionId;
+		this.transformationsCommonData = transformation;
 	}
 
 	@Override
@@ -45,10 +50,10 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 				writeH(0);
 				break;
 			}
-			writeH(transformations.size());
+			writeH(transformations != null ? transformations.size() : 0);
 			for (TransformationCommonData commonData : transformations) {
 				writeD(commonData.getTransformationId());
-				writeD(0); // 0/1
+				writeD(0); // count?
 			}
 			break;
 		case 1: //Add
@@ -58,6 +63,9 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 			writeH(1);
 			writeD(transformationsCommonData.getTransformationId());
 			writeD(1);
+		case 3:
+			writeD(0);
+			writeC(0);
 		}
 	}
 }
