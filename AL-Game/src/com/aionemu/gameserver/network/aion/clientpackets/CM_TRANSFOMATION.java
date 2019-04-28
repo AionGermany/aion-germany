@@ -35,7 +35,7 @@ public class CM_TRANSFOMATION extends AionClientPacket {
 	private TransformationAction action;
 	private int ItemObjectId;
 	private int transformId;
-	private int unk;
+	private int itemObjId;
 
 	public CM_TRANSFOMATION(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -51,7 +51,7 @@ public class CM_TRANSFOMATION extends AionClientPacket {
 			break;
 		case TRANSFORM: // Transform
 			transformId = readD();
-			unk = readD(); // 8487
+			itemObjId = readD(); // 8487
 			break;
 		case COMBINE:
 			readD(); // Transformation Id
@@ -73,25 +73,24 @@ public class CM_TRANSFOMATION extends AionClientPacket {
 			return;
 		}
 		switch (action) {
-		case ADOPT: {
-			Item item = player.getInventory().getItemByObjId(this.ItemObjectId);
-			ItemActions itemActions = item.getItemTemplate().getActions();
-			player.getObserveController().notifyItemuseObservers(item);
-			
-			for (AbstractItemAction itemAction : itemActions.getItemActions()) {
-				if (itemAction instanceof AdoptTransformationAction) {
-					AdoptTransformationAction action = (AdoptTransformationAction) itemAction;
-					action.act(player, item, item);
+			case ADOPT: {
+				Item item = player.getInventory().getItemByObjId(this.ItemObjectId);
+				ItemActions itemActions = item.getItemTemplate().getActions();
+				player.getObserveController().notifyItemuseObservers(item);
+				for (AbstractItemAction itemAction : itemActions.getItemActions()) {
+					if (itemAction instanceof AdoptTransformationAction) {
+						AdoptTransformationAction action = (AdoptTransformationAction) itemAction;
+						action.act(player, item, item);
+					}
 				}
+				break;
 			}
-			break;
-		}
-		case TRANSFORM: {
-			TransformationService.getInstance().transform(player, transformId, unk);
-			break;
-		}
-		default:
-			break;
+			case TRANSFORM: {
+				TransformationService.getInstance().transform(player, transformId, itemObjId);
+				break;
+			}
+			default:
+				break;
 		}
 	}
 }

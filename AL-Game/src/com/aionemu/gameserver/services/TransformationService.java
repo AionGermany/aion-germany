@@ -23,11 +23,14 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.TransformationCommonData;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.transformation.TransformationTemplate;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TRANSFORMATION;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -66,6 +69,7 @@ public class TransformationService {
 
 	public void onPlayerLogin(Player player) {
 		Collection<TransformationCommonData> playerTransformations = player.getTransformationList().getTransformations();
+		System.out.println("Transform Size: " + playerTransformations.size());
 		PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(0, playerTransformations));
 		PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(3, playerTransformations));
 	}
@@ -106,9 +110,14 @@ public class TransformationService {
 		addTransformation(player, transformationId, transformationName, transformationGrade);
 	}
 	
-	public void transform(Player player, int transformId, int unk) {
+	public void transform(Player player, int transformId, int itemObjId) {
+		Item item = player.getInventory().getItemByObjId(itemObjId);
+		PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, item.getObjectId(), item.getItemId(), 0, 1));
+		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_USE_ITEM(new DescriptionId(item.getItemTemplate().getNameId())));
+		player.getInventory().decreaseByItemId(item.getItemId(), 1);
 		int skillId = DataManager.TRANSFORMATION_DATA.getTransformationTemplate(transformId).getSkill();
-		SkillEngine.getInstance().getSkill(player, skillId, 1, player).useWithoutPropSkill();
+		player.setUsingItem(item); //When scroll ID changes, update ID @ TransformEffect if (itemId == 190099001) {
+		SkillEngine.getInstance().applyEffectDirectly(skillId, player, player, 0);
 	}
 
 	public static TransformationService getInstance() {

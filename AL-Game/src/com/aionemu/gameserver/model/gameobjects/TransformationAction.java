@@ -26,6 +26,7 @@ public enum TransformationAction {
 	ADOPT(0),
 	TRANSFORM(1),
 	COMBINE(2),
+	USEBONUS(3), // Collection
 	UNKNOWN(255);
 
 	private static TIntObjectHashMap<TransformationAction> transformationActions;
