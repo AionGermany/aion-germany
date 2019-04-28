@@ -19,12 +19,12 @@ package com.aionemu.gameserver.model.gameobjects;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
- * @author Falke_34
+ * @author Falke_34, FrozenKiller
  */
 public enum TransformationAction {
 
 	ADOPT(0),
-	DELETE(1),
+	TRANSFORM(1),
 	COMBINE(2),
 	UNKNOWN(255);
 

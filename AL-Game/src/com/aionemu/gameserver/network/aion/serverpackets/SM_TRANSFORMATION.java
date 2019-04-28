@@ -23,49 +23,56 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
- * @author Falke_34
+ * @author Falke_34, FrozenKiller
  */
 public class SM_TRANSFORMATION extends AionServerPacket {
 
 	private int actionId;
 	private Collection<TransformationCommonData> transformations;
-	private TransformationCommonData transformationsCommonData;
+	private int transformationId;
 
 	public SM_TRANSFORMATION(int actionId, Collection<TransformationCommonData> transformations) {
 		this.actionId = actionId;
 	}
 
-	public SM_TRANSFORMATION(int actionId, TransformationCommonData transformation) {
+	public SM_TRANSFORMATION(int actionId, int transformationId) {
 		this.actionId = actionId;
-		this.transformationsCommonData = transformation;
+		this.transformationId = transformationId;
 	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
 		writeH(actionId);
 		switch (actionId) {
-		case 0: //List
-			writeC(0);
-			if (transformations == null) {
-				writeH(0);
+			case 0: { //List
+				writeC(0);
+				if (transformations != null) {
+					writeH(transformations.size());
+					for (TransformationCommonData commonData : transformations) {
+						writeD(commonData.getTransformationId());
+						writeD(1);
+					}
+				} else {
+					writeH(0);
+				}
 				break;
 			}
-			writeH(transformations != null ? transformations.size() : 0);
-			for (TransformationCommonData commonData : transformations) {
-				writeD(commonData.getTransformationId());
-				writeD(0); // count?
+			case 1: { //Add
+				writeH(1);
+				writeD(transformationId);
+				break;
 			}
-			break;
-		case 1: //Add
-			writeH(1);
-			writeD(transformationsCommonData.getTransformationId());
-		case 2: //Delete
-			writeH(1);
-			writeD(transformationsCommonData.getTransformationId());
-			writeD(1);
-		case 3:
-			writeD(0);
-			writeC(0);
+			case 2: { //Delete
+				writeH(1);
+				writeD(transformationId);
+				writeD(1);
+				break;
+			}
+			case 3: {
+				writeD(0);
+				writeC(0);
+				break;
+			}
 		}
 	}
 }

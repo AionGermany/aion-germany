@@ -26,7 +26,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import javolution.util.FastMap;
 
 /**
- * @author Falke_34
+ * @author Falke_34, FrozenKiller
  */
 public class TransformationList {
 
@@ -78,7 +78,7 @@ public class TransformationList {
 			transformations.put(transformationCommonData.getObjectId(), transformationCommonData);
 		}
 		if (this.transformations != null) {
-			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(1, player.getTransformationList().getTransformations()));
+			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(0, player.getTransformationList().getTransformations()));
 		}
 	}
 }

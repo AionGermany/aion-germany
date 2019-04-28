@@ -28,25 +28,25 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.TransformationCommonData;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.transformation.TransformationTemplate;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TRANSFORMATION;
+import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
 /**
- * @author Falke_34
+ * @author Falke_34, FrozenKiller
  */
 public class TransformationService {
 
 	private static Logger log = LoggerFactory.getLogger(TransformationService.class);
 
-	public void addTransformation(Player player, int transformationId, String name, String grade) {
+	private void addTransformation(Player player, int transformationId, String name, String grade) {
 		TransformationCommonData transformationCommonData = player.getTransformationList().addNewTransformation(player, transformationId, name, grade);
 		if (transformationCommonData != null) {
-			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(1, transformationCommonData));
-			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404316, name));
+			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(1, transformationId));
 		}
+		player.getTransformationList().updateTransformationsList();
 	}
 
 	private static boolean validateAdoption(Player player, ItemTemplate template, int transformationId) {
@@ -66,10 +66,8 @@ public class TransformationService {
 
 	public void onPlayerLogin(Player player) {
 		Collection<TransformationCommonData> playerTransformations = player.getTransformationList().getTransformations();
-		if (playerTransformations != null && playerTransformations.size() > 0) {
-			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(0, playerTransformations));
-			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(3, playerTransformations));
-		}
+		PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(0, playerTransformations));
+		PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(3, playerTransformations));
 	}
 
 	public void adoptTransformation(Player player, Item item, String grade) {
@@ -97,7 +95,6 @@ public class TransformationService {
 			return;
 		}
 		addTransformation(player, transformationId, transformationName, transformationGrade);
-		player.getTransformationList().updateTransformationsList();
 	}
 
 	public void adoptTransformation(Player player, Item item, int transformationId) {
@@ -107,6 +104,11 @@ public class TransformationService {
 			return;
 		}
 		addTransformation(player, transformationId, transformationName, transformationGrade);
+	}
+	
+	public void transform(Player player, int transformId, int unk) {
+		int skillId = DataManager.TRANSFORMATION_DATA.getTransformationTemplate(transformId).getSkill();
+		SkillEngine.getInstance().getSkill(player, skillId, 1, player).useWithoutPropSkill();
 	}
 
 	public static TransformationService getInstance() {

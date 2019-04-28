@@ -30,7 +30,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
- * @author Falke_34
+ * @author Falke_34, FrozenKiller
  */
 public class AdoptTransformationAction extends AbstractItemAction {
 
@@ -68,8 +68,8 @@ public class AdoptTransformationAction extends AbstractItemAction {
 				if (!player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1)) {
 					return;
 				}
-				if (transformationId != 0) {
-					TransformationService.getInstance().adoptTransformation(player, targetItem, transformationId);
+				if (getTransformationId() != 0) {
+					TransformationService.getInstance().adoptTransformation(player, targetItem, getTransformationId());
 				} else {
 					TransformationService.getInstance().adoptTransformation(player, targetItem, getGrade());
 				}
