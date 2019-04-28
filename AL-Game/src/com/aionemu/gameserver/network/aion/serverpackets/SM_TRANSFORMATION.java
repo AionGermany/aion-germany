@@ -33,6 +33,7 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 
 	public SM_TRANSFORMATION(int actionId, Collection<TransformationCommonData> transformations) {
 		this.actionId = actionId;
+		this.transformations = transformations;
 	}
 
 	public SM_TRANSFORMATION(int actionId, int transformationId) {
