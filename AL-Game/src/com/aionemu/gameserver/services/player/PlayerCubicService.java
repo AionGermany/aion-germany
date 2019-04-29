@@ -55,7 +55,7 @@ public class PlayerCubicService implements StatOwner {
 		maxMonsterCubic = player.getMonsterCubic().getAllMC();
 		Storage bag = player.getInventory();
 
-		for (int i = 1; i < 39; i++) { // Limpiar el visual de cubos en el juego
+		for (int i = 1; i < 45; i++) { // Limpiar el visual de cubos en el juego
 			PacketSendUtility.sendPacket(player, new SM_CUBIC(i, 0, 0, 0));
 		}
 		HashMap<Integer, Integer> cubic = new HashMap<>();

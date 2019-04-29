@@ -229,6 +229,7 @@
 			<xs:element name="skill_enhance" type="SkillEnhanceAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="sweep" type="ShugoSweepAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="adoptminion" type="AdoptMinionAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="adopttransformation" type="AdoptTransformationAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ShugoSweepAction">
@@ -417,6 +418,14 @@
         <xs:complexContent>
             <xs:extension base="AbstractItemAction">
                 <xs:attribute name="minion_id" type="xs:int" use="optional"/>
+				<xs:attribute name="tier_grade" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	<xs:complexType name="AdoptTransformationAction">
+        <xs:complexContent>
+            <xs:extension base="AbstractItemAction">
+                <xs:attribute name="transformation_id" type="xs:int" use="optional"/>
 				<xs:attribute name="tier_grade" type="xs:string" use="optional"/>
             </xs:extension>
         </xs:complexContent>

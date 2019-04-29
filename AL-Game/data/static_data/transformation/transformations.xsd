@@ -3,16 +3,16 @@
     <xs:element name="transformations">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="transformation" type="transformation" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="transformation" type="TransformationTemplate" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="transformation">
+    <xs:complexType name="TransformationTemplate">
         <xs:attribute name="id" type="xs:int"/>
-        <xs:attribute name="grade" type="xs:int"/>
-        <xs:attribute name="skill" type="xs:int"/>
         <xs:attribute name="name" type="xs:string"/>
         <xs:attribute name="name_id" type="xs:int"/>
+        <xs:attribute name="grade" type="xs:int"/>
+        <xs:attribute name="skill" type="xs:int"/>
     </xs:complexType>
 </xs:schema>

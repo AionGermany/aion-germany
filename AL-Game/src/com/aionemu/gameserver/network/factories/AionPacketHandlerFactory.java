@@ -103,7 +103,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_QUESTIONNAIRE(0x15D, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_ATTACK(0xFB, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_PET(0xD1, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_PET_EMOTE(0xDC, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_PET_EMOTE(0xD0, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_CHALLENGE_LIST(0x1B4, State.IN_GAME)); // 6.x EU
 
 		// ********************(FRIEND LIST)*********************
@@ -308,7 +308,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_CUBIC(0x1D1, State.IN_GAME)); // 6.x TODO
 		//addPacket(new CM_ATREIAN_PASSPORT(0x1C4, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_STIGMA(0x1EE, State.IN_GAME)); // 6.x TODO
-
+		addPacket(new CM_REMOVE_DYE(0x1DF, State.IN_GAME)); // 6.x TODO
 	}
 
 	public AionPacketHandler getPacketHandler() {

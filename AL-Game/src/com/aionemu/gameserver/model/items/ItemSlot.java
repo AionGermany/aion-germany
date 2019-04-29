@@ -66,8 +66,10 @@ public enum ItemSlot {
 	STIGMA4(1L << 33), // 8589934592L Greater Stigma
 	STIGMA5(1L << 34), // 17179869184L Greater Stigma
 	STIGMA6(1L << 35), // 34359738368L Major Stigma
+	STIGMA7(1L << 36), // 6.x New Stigma Slot 68719476736 
+	STIGMA8(1L << 37), // 6.x New Stigma Slot 137438953472 
 
-	REGULAR_STIGMAS(STIGMA1.slotIdMask | STIGMA2.slotIdMask | STIGMA3.slotIdMask | STIGMA4.slotIdMask | STIGMA5.slotIdMask | STIGMA6.slotIdMask, true),
+	REGULAR_STIGMAS(STIGMA1.slotIdMask | STIGMA2.slotIdMask | STIGMA3.slotIdMask | STIGMA4.slotIdMask | STIGMA5.slotIdMask | STIGMA6.slotIdMask | STIGMA7.slotIdMask | STIGMA8.slotIdMask, true),
 
 	ADV_STIGMA1(1L << 47),
 	ADV_STIGMA2(1L << 48),

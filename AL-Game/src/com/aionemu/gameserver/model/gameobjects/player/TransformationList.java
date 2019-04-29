@@ -19,46 +19,66 @@ package com.aionemu.gameserver.model.gameobjects.player;
 import java.util.Collection;
 
 import com.aionemu.commons.database.dao.DAOManager;
-import com.aionemu.gameserver.dao.PlayerTransformationsDAO;
+import com.aionemu.gameserver.dao.TransformationsDAO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_TRANSFORMATION;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
 /**
- * @author Falke_34
+ * @author Falke_34, FrozenKiller
  */
 public class TransformationList {
 
 	private final Player player;
 	private FastMap<Integer, TransformationCommonData> transformations = new FastMap<Integer, TransformationCommonData>();
 
-	TransformationList(Player player) {
+	public TransformationList(final Player player) {
 		this.player = player;
 		loadTransformations();
 	}
 
 	public void loadTransformations() {
-		for (TransformationCommonData transformationCommonData : DAOManager.getDAO(PlayerTransformationsDAO.class).getPlayerTransformations(player)) {
+		for (TransformationCommonData transformationCommonData : DAOManager.getDAO(TransformationsDAO.class).getTransformations(player)) {
 			transformations.put(transformationCommonData.getObjectId(), transformationCommonData);
 		}
 	}
 
 	public Collection<TransformationCommonData> getTransformations() {
-		return transformations.values();
+		return (Collection<TransformationCommonData>) transformations.values();
 	}
 
-	/**
-	 * @param transformationId
-	 * @return
-	 */
-	public TransformationCommonData getTransformation(int transformationId) {
-		return transformations.get(transformationId);
+	public TransformationCommonData getTransformation(int transformationObjId) {
+		return transformations.get(transformationObjId);
 	}
 
-	/**
-	 * @param transformationId
-	 * @return
-	 */
+	public TransformationCommonData addNewTransformation(Player player, int transformationId, String name, String grade) {
+		TransformationCommonData transformationCommonData = new TransformationCommonData(transformationId, player.getObjectId(), name, grade);
+		transformationCommonData.setName(name);
+		transformationCommonData.setGrade(grade);
+		DAOManager.getDAO(TransformationsDAO.class).insertTransformation(transformationCommonData);
+		transformations.put(transformationCommonData.getObjectId(), transformationCommonData);
+		return transformationCommonData;
+	}
+
 	public boolean hasTransformation(int transformationId) {
 		return transformations.containsKey(transformationId);
+	}
+
+	public void deleteTransformation(int transformationObjId) {
+		if (hasTransformation(transformationObjId)) {
+			DAOManager.getDAO(TransformationsDAO.class).removeTransformation(player, transformationObjId);
+			transformations.remove(transformationObjId);
+		}
+	}
+
+	public void updateTransformationsList() {
+		transformations.clear();
+		for (TransformationCommonData transformationCommonData : DAOManager.getDAO(TransformationsDAO.class).getTransformations(player)) {
+			transformations.put(transformationCommonData.getObjectId(), transformationCommonData);
+		}
+		if (this.transformations != null) {
+			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(0, player.getTransformationList().getTransformations()));
+		}
 	}
 }

@@ -50,7 +50,7 @@ public abstract class TransformEffect extends EffectTemplate {
 	protected int panelid;
 
 	@XmlAttribute
-	protected int itemId;
+	protected int itemId = 0;
 
 	@XmlAttribute
 	protected AbnormalState state = AbnormalState.BUFF;
@@ -118,24 +118,30 @@ public abstract class TransformEffect extends EffectTemplate {
 		final Creature effected = effect.getEffected();
 		DAOManager.getDAO(PlayerTransformationDAO.class).deletePlTransfo(effected.getObjectId());
 		
-		if (itemId == 0) {
-			if (effected.getUsingItemId() != 0) {
-				itemId = effected.getUsingItemId();
-			}
+		if (effected.getUsingItemId() != 0) {
+			itemId = effected.getUsingItemId();
 		}
-
-		effected.getTransformModel().setModelId(model);
+		if (itemId == 190099001) {
+			//System.out.println("ItemID " + itemId + " Model 100001 setItem " + itemId);
+			effected.getTransformModel().setModelId(100001);
+		} else {
+			effected.getTransformModel().setModelId(model);
+			//System.out.println("ItemID " + itemId + " Model " + model + " setItem " + itemId);
+			
+		}
+		effected.getTransformModel().setItemId(itemId);		
 		effected.getTransformModel().setPanelId(panelid);
-
-		effected.getTransformModel().setItemId(itemId);
 		effected.getTransformModel().setTransformType(effect.getTransformType());
 		PacketSendUtility.broadcastPacketAndReceive(effected, new SM_TRANSFORM(effected, panelid, true, itemId, effect.getSkillId()));
 
 		if (effected instanceof Player) {
 			((Player) effected).setTransformed(true);
 			((Player) effected).setTransformedModelId(model);
+//			System.out.println("Model: " + model);
 			((Player) effected).setTransformedPanelId(panelid);
+//			System.out.println("Panel: " + panelid);
 			((Player) effected).setTransformedItemId(itemId);
+//			System.out.println("ItemId: " + itemId);
 			DAOManager.getDAO(PlayerTransformationDAO.class).storePlTransfo(effected.getObjectId(), panelid, itemId);
 			PacketSendUtility.broadcastPacket(effected, new SM_PLAYER_INFO((Player) effected, true), 100);
 		}

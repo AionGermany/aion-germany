@@ -321,6 +321,7 @@ public class Player extends Creature {
 	private boolean setMinionSpawned;
 	private EquipmentSettingList equipmentSettingList;
 	private PlayerMCList mc;
+	private TransformationList transformationList;
 
 	/**
 	 * Player Skill Skin List
@@ -377,6 +378,7 @@ public class Player extends Creature {
 		setLifeStats(new PlayerLifeStats(this));
 		absStatsHolder = new AbsoluteStatOwner(this, 0);
 		this.setMinionSpawned = false;
+		this.transformationList = new TransformationList(this);
 	}
 
 	public boolean isInPlayerMode(PlayerMode mode) {
@@ -3137,5 +3139,12 @@ public class Player extends Creature {
 
 	public void setCooperationRank(ArenaOfCooperationRank cr) {
 		this.cooperationRank = cr;
-	}	
+	}
+
+	/**
+	 * Transformation System
+	 */
+	public final TransformationList getTransformationList() {
+		return transformationList;
+	}
 }
