@@ -51,7 +51,7 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 					writeH(transformations.size());
 					for (TransformationCommonData commonData : transformations) {
 						writeD(commonData.getTransformationId());
-						writeD(1);
+						writeD(commonData.getCount());
 					}
 				} else {
 					writeH(0);

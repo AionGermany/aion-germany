@@ -43,12 +43,12 @@ public class MySQL5TransformationsDAO extends TransformationsDAO {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("INSERT INTO transformations(player_id, object_id, transformation_id, name, grade) VALUES(?, ?, ?, ?, ?)");
+			PreparedStatement stmt = con.prepareStatement("INSERT INTO transformations(player_id, transformation_id, name, grade, count) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `player_id` = VALUES (`player_id`), `count` = VALUES(`count`)");
 			stmt.setInt(1, transformationCommonData.getMasterObjectId());
-			stmt.setInt(2, transformationCommonData.getObjectId());
-			stmt.setInt(3, transformationCommonData.getTransformationId());
-			stmt.setString(4, transformationCommonData.getName());
-			stmt.setString(5, transformationCommonData.getTransformationGrade());
+			stmt.setInt(2, transformationCommonData.getTransformationId());
+			stmt.setString(3, transformationCommonData.getName());
+			stmt.setString(4, transformationCommonData.getTransformationGrade());
+			stmt.setInt(5, transformationCommonData.getCount());
 			stmt.execute();
 			stmt.close();
 		} catch (Exception e) {
@@ -59,17 +59,17 @@ public class MySQL5TransformationsDAO extends TransformationsDAO {
 	}
 
 	@Override
-	public void removeTransformation(Player player, int transformationObjectId) {
+	public void removeTransformation(Player player, int transformationId) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement("DELETE FROM transformations WHERE player_id = ? AND transformation_id = ?");
 			stmt.setInt(1, player.getObjectId());
-			stmt.setInt(2, transformationObjectId);
+			stmt.setInt(2, transformationId);
 			stmt.execute();
 			stmt.close();
 		} catch (Exception e) {
-			log.error("Error removing transformation #" + transformationObjectId, e);
+			log.error("Error removing transformation #" + transformationId, e);
 		} finally {
 			DatabaseFactory.close(con);
 		}
@@ -85,9 +85,10 @@ public class MySQL5TransformationsDAO extends TransformationsDAO {
 			stmt.setInt(1, player.getObjectId());
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				TransformationCommonData transformationCommonData = new TransformationCommonData(rs.getInt("transformation_id"), player.getObjectId(), rs.getString("name"), rs.getString("grade"));
+				TransformationCommonData transformationCommonData = new TransformationCommonData(rs.getInt("transformation_id"), player.getObjectId(), rs.getString("name"), rs.getString("grade"), rs.getInt("count"));
 				transformationCommonData.setName(rs.getString("name"));
 				transformationCommonData.setGrade(rs.getString("grade"));
+				transformationCommonData.setCount(rs.getInt("count"));
 				transformations.add(transformationCommonData);
 			}
 			stmt.close();
@@ -99,24 +100,46 @@ public class MySQL5TransformationsDAO extends TransformationsDAO {
 		return transformations;
 	}
 
-	public boolean Transformations(int playerid, int transformationObjId) {
+	@Override
+	public void updateTransformation(TransformationCommonData transformationCommonData) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("SELECT * FROM transformations WHERE player_id = ? ");
-			stmt.setInt(1, playerid);
+			PreparedStatement stmt = con.prepareStatement("UPDATE transformations SET count = ? WHERE player_id = ? AND transformation_id = ?");
+			stmt.setInt(1, transformationCommonData.getCount());
+			stmt.setInt(2, transformationCommonData.getMasterObjectId());
+			stmt.setInt(3, transformationCommonData.getTransformationId());
+			stmt.execute();
+			stmt.close();
+		}
+		catch (Exception e) {
+			log.error("Error update transformations #" + transformationCommonData.getTransformationId(), e);
+		}
+		finally {
+			DatabaseFactory.close(con);
+		}
+	}
+	
+	@Override
+	public int getCount(int playerObjId, int transformationId) {
+		Connection con = null;
+		int transformCount = 0;
+		try {
+			con = DatabaseFactory.getConnection();
+			PreparedStatement stmt = con.prepareStatement("SELECT * FROM transformations WHERE player_id = ? AND transformation_id = ? ");
+			stmt.setInt(1, playerObjId);
+			stmt.setInt(2, transformationId);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				if (rs.getInt("transformation_id") == transformationObjId)
-					return true;
+				transformCount = rs.getInt("count");
 			}
 			stmt.close();
 		} catch (Exception e) {
-			log.error("Error getting transformations for " + playerid, e);
+			log.error("Error getting TransformationId count for " + playerObjId, e);
 		} finally {
 			DatabaseFactory.close(con);
 		}
-		return false;
+		return transformCount;
 	}
 
 	@Override

@@ -48,14 +48,15 @@ public class TransformationList {
 		return (Collection<TransformationCommonData>) transformations.values();
 	}
 
-	public TransformationCommonData getTransformation(int transformationObjId) {
-		return transformations.get(transformationObjId);
+	public TransformationCommonData getTransformation(int transformationId) {
+		return transformations.get(transformationId);
 	}
 
-	public TransformationCommonData addNewTransformation(Player player, int transformationId, String name, String grade) {
-		TransformationCommonData transformationCommonData = new TransformationCommonData(transformationId, player.getObjectId(), name, grade);
+	public TransformationCommonData addNewTransformation(Player player, int transformationId, String name, String grade, int count) {
+		TransformationCommonData transformationCommonData = new TransformationCommonData(transformationId, player.getObjectId(), name, grade, count);
 		transformationCommonData.setName(name);
 		transformationCommonData.setGrade(grade);
+		transformationCommonData.setCount(count);
 		DAOManager.getDAO(TransformationsDAO.class).insertTransformation(transformationCommonData);
 		transformations.put(transformationCommonData.getObjectId(), transformationCommonData);
 		return transformationCommonData;
@@ -65,10 +66,10 @@ public class TransformationList {
 		return transformations.containsKey(transformationId);
 	}
 
-	public void deleteTransformation(int transformationObjId) {
-		if (hasTransformation(transformationObjId)) {
-			DAOManager.getDAO(TransformationsDAO.class).removeTransformation(player, transformationObjId);
-			transformations.remove(transformationObjId);
+	public void deleteTransformation(int transformationId) {
+		if (hasTransformation(transformationId)) {
+			DAOManager.getDAO(TransformationsDAO.class).removeTransformation(player, transformationId);
+			transformations.remove(transformationId);
 		}
 	}
 

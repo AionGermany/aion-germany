@@ -21,7 +21,9 @@ import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.Rnd;
+import com.aionemu.gameserver.dao.TransformationsDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.Item;
@@ -45,7 +47,9 @@ public class TransformationService {
 	private static Logger log = LoggerFactory.getLogger(TransformationService.class);
 
 	private void addTransformation(Player player, int transformationId, String name, String grade) {
-		TransformationCommonData transformationCommonData = player.getTransformationList().addNewTransformation(player, transformationId, name, grade);
+		int count = DAOManager.getDAO(TransformationsDAO.class).getCount(player.getObjectId(), transformationId);
+		count++;
+		TransformationCommonData transformationCommonData = player.getTransformationList().addNewTransformation(player, transformationId, name, grade, count);
 		if (transformationCommonData != null) {
 			PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(1, transformationId));
 		}
@@ -69,7 +73,6 @@ public class TransformationService {
 
 	public void onPlayerLogin(Player player) {
 		Collection<TransformationCommonData> playerTransformations = player.getTransformationList().getTransformations();
-		System.out.println("Transform Size: " + playerTransformations.size());
 		PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(0, playerTransformations));
 		PacketSendUtility.sendPacket(player, new SM_TRANSFORMATION(3, playerTransformations));
 	}
@@ -99,6 +102,7 @@ public class TransformationService {
 			return;
 		}
 		addTransformation(player, transformationId, transformationName, transformationGrade);
+		player.getTransformationList().updateTransformationsList();
 	}
 
 	public void adoptTransformation(Player player, Item item, int transformationId) {
@@ -109,7 +113,7 @@ public class TransformationService {
 		}
 		addTransformation(player, transformationId, transformationName, transformationGrade);
 	}
-	
+
 	public void transform(Player player, int transformId, int itemObjId) {
 		Item item = player.getInventory().getItemByObjId(itemObjId);
 		PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, item.getObjectId(), item.getItemId(), 0, 1));

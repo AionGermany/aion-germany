@@ -18,8 +18,6 @@ package com.aionemu.gameserver.model.gameobjects.player;
 
 import java.sql.Timestamp;
 
-import com.aionemu.commons.database.dao.DAOManager;
-import com.aionemu.gameserver.dao.PlayerMinionsDAO;
 import com.aionemu.gameserver.model.IExpirable;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
 import com.aionemu.gameserver.model.templates.minion.MinionDopingBag;
@@ -44,20 +42,7 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	private Timestamp minionFunctionTime;
 
 	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int miniongrowthpoint) {
-		switch (this.minionObjId) {
-			case 0: {
-				this.minionObjId = IDFactory.getInstance().nextId();
-				break;
-			}
-			default:
-				do {
-					if (DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId)) {
-						this.minionObjId = IDFactory.getInstance().nextId();
-					}
-				}
-				while (DAOManager.getDAO(PlayerMinionsDAO.class).PlayerMinions(masterObjectId, minionObjId));
-				break;
-		}
+		this.minionObjId = IDFactory.getInstance().nextId();
 		this.minionId = minionId;
 		this.masterObjectId = masterObjectId;
 		this.name = name;

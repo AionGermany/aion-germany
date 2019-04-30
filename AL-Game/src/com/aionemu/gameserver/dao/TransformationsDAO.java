@@ -30,10 +30,12 @@ public abstract class TransformationsDAO implements DAO {
 	public abstract void insertTransformation(TransformationCommonData transformationCommonData);
 
 	public abstract void removeTransformation(Player player, int transformationId);
+	
+	public abstract void updateTransformation(TransformationCommonData transformationCommonData);
 
 	public abstract List<TransformationCommonData> getTransformations(Player player);
-
-	public abstract boolean Transformations(int playerid, int transformationIdObjId);
+	
+	public abstract int getCount(int playerObjId, int transformationId);
 
 	@Override
 	public final String getClassName() {

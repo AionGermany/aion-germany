@@ -30,13 +30,15 @@ public class TransformationCommonData extends VisibleObjectTemplate implements I
 	private int masterObjectId;
 	private String transformationGrade;
 	private String name;
+	private int count;
 
-	public TransformationCommonData(int transformationId, int masterObjectId, String name, String grade) {
+	public TransformationCommonData(int transformationId, int masterObjectId, String name, String grade, int count) {
 		this.transformationObjId = IDFactory.getInstance().nextId();
 		this.transformationId = transformationId;
 		this.masterObjectId = masterObjectId;
 		this.name = name;
 		this.transformationGrade = grade;
+		this.count = count;
 	}
 
 	public int getObjectId() {
@@ -84,6 +86,14 @@ public class TransformationCommonData extends VisibleObjectTemplate implements I
 
 	public String getGrade() {
 		return transformationGrade;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	public int getCount() {
+		return count;
 	}
 
 	@Override
