@@ -18,6 +18,7 @@ package com.aionemu.gameserver.services.toypet;
 
 import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -136,23 +137,30 @@ public class MinionService {
 		}
 		addMinion(player, minionId, minionName, minionGrade, minionLvl, minionGrowthPoints);
 	}
-	
+
+    public void deleteMinion(Player player, int minionObjId, boolean isMaterial) {
+        for (MinionCommonData list : player.getMinionList().getMinions()) {
+            if (list.getObjectId() == minionObjId) {
+                player.getMinionList().getMinions().remove(list.getObjectId());
+                DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, list.getMinionId());
+                PacketSendUtility.broadcastPacket(player, new SM_MINIONS(3, list), true);
+                break;
+            }
+        }
+    }
+
 	public void spawnMinion(Player player, int minionObjId) {
 		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
 		MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId());
 		MinionController controller = new MinionController();
 		Minion minion = new Minion(minionTemplate, controller, minionCommonData, player);
-//		Iterator<MinionSkill> iterator = minionTemplate.getAction().getSkillsCollections().iterator();
-//		while (iterator.hasNext()) {
-//			player.getSkillList().addSkill(player, iterator.next().getSkillId(), 1);
-//		}
 		if (player.getMinion() != null) {
 			despawnMinion(player, player.getMinionList().getLastUsed());
 		}
 		minion.setKnownlist(new PlayerAwareKnownList(minion));
 		player.setMinion(minion);
 		player.getMinionList().setLastUsed(minionObjId);
-//		minionbuff.apply(player, minionCommonData.getMinionId());
+		//minionbuff.apply(player, minionCommonData.getMinionId());
 		PacketSendUtility.broadcastPacketAndReceive(player,	new SM_MINIONS(6, minionCommonData));
 	}
 
@@ -165,15 +173,11 @@ public class MinionService {
 			despawnMinionObjId = minionObjId;
 		}
 		MinionCommonData minionCommonData = player.getMinionList().getMinion(despawnMinionObjId);
-//		Iterator<MinionSkill> iterator = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId()).getAction().getSkillsCollections().iterator();
-//		while (iterator.hasNext()) {
-//			SkillLearnService.removeSkill(player, iterator.next().getSkillId());
-//		}
 		minionCommonData.setIsLooting(false);
 		minionCommonData.setIsBuffing(false);
 		player.getMinion().getController().delete();
 		player.setMinion(null);
-//		minionbuff.end(player);
+		//minionbuff.end(player);
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(7, minionCommonData));
 	}
 	
@@ -182,22 +186,24 @@ public class MinionService {
 		if (lock == 1) {
 			minion.setLock(true);
 			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 1);
-	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, minion));
+	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(5, minion));
 		} else {
 			minion.setLock(false);
 			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 0);
-	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(4, minion));
+	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(5, minion));
 		}
 		player.getMinionList().updateMinionsList();
 	}
 	
 	public void renameMinion(Player player, int minionObjId, String name) {
 		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
-		minion.setName(name);
-		DAOManager.getDAO(PlayerMinionsDAO.class).updateMinionName(minion);
-		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(3, minion));
-		player.getMinionList().updateMinionsList();
-	}
+        if (minion != null) {
+            minion.setName(name);
+            DAOManager.getDAO(PlayerMinionsDAO.class).updateMinionName(minion);
+            PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(4, minion));
+            player.getMinionList().updateMinionsList();
+        }
+    }
 	
 	public void toggleAutoLoot(Player player, boolean activate) {
 		Minion minion = player.getMinion();
@@ -233,7 +239,27 @@ public class MinionService {
 			return;
 		}
 	}
-	
+
+	public void evolutionUpMinion(Player player, int minionObjId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void CombinationMinion(Player player, List<Integer> material) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void chargeSkillPoint(Player player, boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void growthUpMinion(Player player, int minionObjId, List<Integer> material) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public static MinionService getInstance() {
 		return SingletonHolder.instance;
 	}

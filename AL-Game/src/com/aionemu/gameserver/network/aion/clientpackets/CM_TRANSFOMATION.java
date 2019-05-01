@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.TransformationAction;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -36,6 +39,13 @@ public class CM_TRANSFOMATION extends AionClientPacket {
 	private int ItemObjectId;
 	private int transformId;
 	private int itemObjId;
+	List<Integer> material = new ArrayList<Integer>();
+	private int Upgradeslot;
+	private int Upgradeslot2;
+	private int Upgradeslot3;
+	private int Upgradeslot4;
+	private int Upgradeslot5;
+	private int Upgradeslot6;
 
 	public CM_TRANSFOMATION(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -54,12 +64,23 @@ public class CM_TRANSFOMATION extends AionClientPacket {
 			itemObjId = readD(); // 8487
 			break;
 		case COMBINE:
-			readD(); // Transformation Id
-			readD(); // Transformation Id
-			readD(); // Transformation Id
-			readD(); // Transformation Id
-			readD(); // Transformation Id
-			readD(); // Transformation Id
+			material.clear();
+			Upgradeslot = readD();
+			Upgradeslot2 = readD();
+			Upgradeslot3 = readD();
+			Upgradeslot4 = readD();
+			Upgradeslot5 = readD();
+			Upgradeslot6 = readD();
+			material.add(Upgradeslot);
+			material.add(Upgradeslot2);
+			material.add(Upgradeslot3);
+			material.add(Upgradeslot4);
+			material.add(Upgradeslot5);
+			material.add(Upgradeslot6);
+			break;
+		case USEBONUS: // Collection
+			readD(); // Id?
+			readC(); // 0 or 1 
 			break;
 		default:
 			break;
@@ -87,6 +108,10 @@ public class CM_TRANSFOMATION extends AionClientPacket {
 			}
 			case TRANSFORM: {
 				TransformationService.getInstance().transform(player, transformId, itemObjId);
+				break;
+			}
+			case COMBINE: {
+				TransformationService.getInstance().CombinationTransformation(player, material);
 				break;
 			}
 			default:

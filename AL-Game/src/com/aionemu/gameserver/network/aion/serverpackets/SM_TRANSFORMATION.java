@@ -69,9 +69,9 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 				writeD(1);
 				break;
 			}
-			case 3: {
-				writeD(0);
-				writeC(0);
+			case 3: { //Collection
+				writeD(0); // Id?
+				writeC(0); // 0 or 1 
 				break;
 			}
 		}

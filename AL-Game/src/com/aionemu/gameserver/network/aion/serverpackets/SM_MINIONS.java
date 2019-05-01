@@ -132,6 +132,10 @@ public class SM_MINIONS extends AionServerPacket {
 			break;
 		case 1: //Send player MinionList
 			writeC(0);
+			if (minions == null) {
+				writeH(0);
+				break;
+			}
 			writeH(minions != null ? minions.size() : 0);
 			for (MinionCommonData commonData : minions) {
 				writeD(commonData.getObjectId());
@@ -185,14 +189,18 @@ public class SM_MINIONS extends AionServerPacket {
 //			writeH(asMaterial ? 1 : 0);
 //			writeD(minionsCommonData.getObjectId());
 //			break;
-		case 3: // Rename
+		case 3: // Delete
+			writeH(0);
+			writeD(minionsCommonData.getObjectId());
+			break;
+		case 4: // Rename
 			if (minionsCommonData == null) {
 				return;
 			}
 			writeD(minionsCommonData.getObjectId());
 			writeS(minionsCommonData.getName());
 			break;
-		case 4: // Lock / Unlock
+		case 5: // Lock / Unlock
 			if (minionsCommonData == null) {
 				return;
 			}

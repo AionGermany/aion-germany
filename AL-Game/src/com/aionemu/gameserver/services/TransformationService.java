@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.services;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -122,6 +123,14 @@ public class TransformationService {
 		int skillId = DataManager.TRANSFORMATION_DATA.getTransformationTemplate(transformId).getSkill();
 		player.setUsingItem(item); //When scroll ID changes, update ID @ TransformEffect if (itemId == 190099001) {
 		SkillEngine.getInstance().applyEffectDirectly(skillId, player, player, 0);
+	}
+
+
+	public void CombinationTransformation(Player player, List<Integer> material) {
+		if (player.getInventory().getKinah() < 50000) {
+			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404348, new Object[0]));
+			return;
+		}
 	}
 
 	public static TransformationService getInstance() {
