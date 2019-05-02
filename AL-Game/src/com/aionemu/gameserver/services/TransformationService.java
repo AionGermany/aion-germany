@@ -90,11 +90,11 @@ public class TransformationService {
 		}
 		int rnd = Rnd.get((int) 1, (int) transformationTemplate.size());
 		int i = 1;
-		for (TransformationTemplate mt : transformationTemplate.values()) {
+		for (TransformationTemplate tt : transformationTemplate.values()) {
 			if (i == rnd) {
-				transformationId = mt.getId();
-				transformationName = mt.getName();
-				transformationGrade = mt.getGrade();
+				transformationId = tt.getId();
+				transformationName = tt.getName();
+				transformationGrade = tt.getGrade();
 				break;
 			}
 			++i;
