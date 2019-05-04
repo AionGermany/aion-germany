@@ -119,10 +119,12 @@
     </portal_use>
 	<!-- Adma's Fall Exit StartPoint -->
 	<portal_use npc_id="806222">
+		<portal_path loc_id="3016003" race="ASMODIANS"/>
         <portal_path loc_id="3016002" race="ELYOS"/>
     </portal_use>
 	<!-- Adma's Fall Exit -->
 	<portal_use npc_id="806205">
+		<portal_path loc_id="3016003" race="ASMODIANS"/>
         <portal_path loc_id="3016002" race="ELYOS"/>
     </portal_use>
 
@@ -132,10 +134,12 @@
     </portal_use>
 	<!-- Theobomos Test Chamber Exit StartPoint -->
 	<portal_use npc_id="806223">
+		<portal_path loc_id="3016103" race="ASMODIANS"/>
         <portal_path loc_id="3016102" race="ELYOS"/>
     </portal_use>
 	<!-- Theobomos Test Chamber Exit -->
 	<portal_use npc_id="806206">
+		<portal_path loc_id="3016103" race="ASMODIANS"/>
         <portal_path loc_id="3016102" race="ELYOS"/>
     </portal_use>
     
@@ -2764,12 +2768,12 @@
 
     <!-- Admas Fall Entrance -->
     <portal_dialog npc_id="806201">
-        <portal_path dialog="10000" loc_id="3016000" player_count="6" instance="true" race="ELYOS">
+        <portal_path dialog="10000" loc_id="3016000" player_count="3" instance="true" race="ELYOS">
             <portal_req min_level="66"/>
         </portal_path>
     </portal_dialog>
     <portal_dialog npc_id="806203">
-        <portal_path dialog="10000" loc_id="3016000" player_count="6" instance="true" race="ASMODIANS">
+        <portal_path dialog="10000" loc_id="3016000" player_count="3" instance="true" race="ASMODIANS">
             <portal_req min_level="66"/>
         </portal_path>
     </portal_dialog>
