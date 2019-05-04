@@ -84,7 +84,6 @@ public class Rift extends AdminCommand {
 	}
 
 	protected void showHelp(Player player) {
-		PacketSendUtility.sendMessage(player, "AdminCommand //rift open|close <Id|worldId> (open with boolean for guards)");
-		PacketSendUtility.sendMessage(player, "AdminCommand //rift list (Shows an HTML with a rift list)");
+		PacketSendUtility.sendMessage(player, "AdminCommand //rift open|close <Id|worldId> (open with boolean for guards)\nAdminCommand //rift list (Shows an HTML with a rift list)");
 	}
 }
