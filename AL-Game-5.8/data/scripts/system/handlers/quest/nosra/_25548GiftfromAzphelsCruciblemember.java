@@ -61,8 +61,6 @@ public class _25548GiftfromAzphelsCruciblemember extends QuestHandler {
 	public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
 		if (zoneName == ZoneName.get("AZPHELS_TEMPLE_220110000")) {
 			Player player = env.getPlayer();
-			if (player == null)
-				return false;
 			QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null || qs.getStatus() == QuestStatus.NONE) {
 				QuestService.startQuest(env);
@@ -70,7 +68,8 @@ public class _25548GiftfromAzphelsCruciblemember extends QuestHandler {
 				qs.setStatus(QuestStatus.REWARD);
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 				return true;
-
+			} else {
+				return false;
 			}
 		}
 		return false;
