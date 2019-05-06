@@ -51,6 +51,7 @@ public class ElementalLordsLaboratory extends GeneralInstanceHandler {
 				break;
 			case 220426: // Desecrated Ifrit
 				spawn(806206, 299.05817f, 119.53783f, 197.43944f, (byte) 61); // Elemental Lords Laboratory Exit
+				spawn(806221, 284.9678f, 119.596206f, 196.01682f, (byte) 59); // Blood-sealed Coffer
 				break;
 		}
 	}

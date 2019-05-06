@@ -91,10 +91,19 @@
         <drop_group name="OTHER_MYTHIC_LVL40" use_category="true" race="PC_ALL">
             <drop item_id="166100010" chance="10.00" min_amount="1" max_amount="5" no_reduce="false" eachmember="false" name="Normal Supplements (Mythical)" />
         </drop_group>
+        <drop_group name="CURSED_ADMA_KEY" use_category="true" race="PC_ALL">
+            <drop item_id="185000263" chance="25.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Black Cloud Box Key (Fabled)" />
+        </drop_group>
     </npc_drop>
     <npc_drop npc_id="220427">
         <drop_group name="OTHER_MYTHIC_LVL69" use_category="true" race="PC_ALL">
             <drop item_id="188055343" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fiend's Loot" />
         </drop_group>
     </npc_drop>
+	<npc_drop npc_id="806221">
+		<drop_group name="OTHER_MYTHIC_LVL69" use_category="true" race="PC_ALL">
+            <drop item_id="110000049" chance="50.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Galateias Loot" />
+            <drop item_id="125004518" chance="50.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Galateias Loot" />
+        </drop_group>
+	</npc_drop>
 </npc_drops>
