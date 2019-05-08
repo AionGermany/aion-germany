@@ -30,9 +30,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_STIGMA extends AionClientPacket {
 
-	public int action;
-	public long slotRead;
-	public int itemObjectId;
+	private int action;
+	private long slotRead;
+	private int itemObjectId;
 
 	public CM_STIGMA(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
