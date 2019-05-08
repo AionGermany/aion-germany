@@ -60,36 +60,24 @@ public enum ItemSlot {
 	// TORSO_GLOVE_FOOT_SHOULDER_LEG(0, true), // TODO
 
 	// STIGMA slots
-	STIGMA1(1L << 30), // 1073741824L Normal
+	STIGMA1(1L << 30), // 1073741824L Normal 
 	STIGMA2(1L << 31), // 2147483648L Normal
 	STIGMA3(1L << 32), // 4294967296L Normal
-	STIGMA4(1L << 33), // 8589934592L Greater Stigma
-	STIGMA5(1L << 34), // 17179869184L Greater Stigma
-	STIGMA6(1L << 35), // 34359738368L Major Stigma
-	STIGMA7(1L << 36), // 6.x New Stigma Slot 68719476736 
-	STIGMA8(1L << 37), // 6.x New Stigma Slot 137438953472 
+	REGULAR_STIGMAS(STIGMA1.slotIdMask | STIGMA2.slotIdMask | STIGMA3.slotIdMask, true),
+	
+	ADV_STIGMA1(1L << 33), // 8589934592L Greater Stigma
+	ADV_STIGMA2(1L << 34), // 17179869184L Greater Stigma
+	ADVANCED_STIGMAS(ADV_STIGMA1.slotIdMask | ADV_STIGMA2.slotIdMask, true),
+	
+	MAJ_STIGMA(1L << 35), // 34359738368L Major Stigma
+	MAJOR_STIGMAS(MAJ_STIGMA.slotIdMask, true),
+	
+	SPECIAL_STIGMA1(1L << 36), // 6.x New Stigma Slot 68719476736 
+	SPECIAL_STIGMA2(1L << 37), // 6.x New Stigma Slot 137438953472
+	SPECIAL_STIGMAS(SPECIAL_STIGMA1.slotIdMask | SPECIAL_STIGMA2.slotIdMask, true),
+	
+	ALL_STIGMA(REGULAR_STIGMAS.slotIdMask | ADVANCED_STIGMAS.slotIdMask | MAJOR_STIGMAS.slotIdMask | SPECIAL_STIGMAS.slotIdMask, true),
 
-	REGULAR_STIGMAS(STIGMA1.slotIdMask | STIGMA2.slotIdMask | STIGMA3.slotIdMask | STIGMA4.slotIdMask | STIGMA5.slotIdMask | STIGMA6.slotIdMask | STIGMA7.slotIdMask | STIGMA8.slotIdMask, true),
-
-	ADV_STIGMA1(1L << 47),
-	ADV_STIGMA2(1L << 48),
-	ADV_STIGMA3(1L << 49),
-	ADV_STIGMA4(1L << 50),
-	ADV_STIGMA5(1L << 51),
-	ADV_STIGMA6(1L << 52),
-
-	ADVANCED_STIGMAS(ADV_STIGMA1.slotIdMask | ADV_STIGMA2.slotIdMask | ADV_STIGMA3.slotIdMask | ADV_STIGMA4.slotIdMask | ADV_STIGMA5.slotIdMask | ADV_STIGMA6.slotIdMask, true),
-	ALL_STIGMA(REGULAR_STIGMAS.slotIdMask | ADVANCED_STIGMAS.slotIdMask, true),
-
-	// ESTIMA slots
-	ESTIMA1(1L << 40), // 1099511627776L
-	ESTIMA2(1L << 41), // 2199023255552L
-	ESTIMA3(1L << 42), // 4398046511104L
-	ESTIMA4(1L << 43), // 8796093022208L
-	ESTIMA5(1L << 44), // 17592186044416L
-	ESTIMA6(1L << 45), // 35184372088832L
-
-	ESTIMA(ESTIMA1.slotIdMask | ESTIMA2.slotIdMask | ESTIMA3.slotIdMask | ESTIMA4.slotIdMask | ESTIMA5.slotIdMask | ESTIMA6.slotIdMask, true),
 	VIEW_DISPLAY(MAIN_HAND.slotIdMask | SUB_HAND.slotIdMask | HELMET.slotIdMask | TORSO.slotIdMask | GLOVES.slotIdMask | BOOTS.slotIdMask
 			| EARRINGS_LEFT.slotIdMask | EARRINGS_RIGHT.slotIdMask | RING_LEFT.slotIdMask | RING_RIGHT.slotIdMask | NECKLACE.slotIdMask | SHOULDER.slotIdMask
 			| PANTS.slotIdMask | WINGS.slotIdMask | WAIST.slotIdMask | PLUME.slotIdMask, true);//13 * 16 = 208...
@@ -117,20 +105,24 @@ public enum ItemSlot {
 		return combo;
 	}
 
+	public static boolean isRegularStigma(long slot) {
+		return (REGULAR_STIGMAS.slotIdMask & slot) == slot;
+	}
+	
 	public static boolean isAdvancedStigma(long slot) {
 		return (ADVANCED_STIGMAS.slotIdMask & slot) == slot;
 	}
-
-	public static boolean isRegularStigma(long slot) {
-		return (REGULAR_STIGMAS.slotIdMask & slot) == slot;
+	
+	public static boolean isMajorStigma (long slot) {
+		return (MAJOR_STIGMAS.slotIdMask & slot) == slot;
+	}
+	
+	public static boolean isSpecialStigma (long slot) {
+		return (SPECIAL_STIGMAS.slotIdMask & slot) == slot;
 	}
 
 	public static boolean isStigma(long slot) {
 		return (ALL_STIGMA.slotIdMask & slot) == slot;
-	}
-
-	public static boolean isEstima(long slot) {
-		return (ESTIMA.slotIdMask & slot) == slot;
 	}
 
 	public static ItemSlot[] getSlotsFor(long slot) {
