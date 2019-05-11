@@ -42,6 +42,7 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Gatherable;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.Kisk;
+import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.Pet;
 import com.aionemu.gameserver.model.gameobjects.StaticObject;
@@ -77,6 +78,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_HEADING_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEVEL_UPDATE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MINIONS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_NEARBY_QUESTS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_NPC_INFO;
@@ -109,6 +111,7 @@ import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
+import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.services.toypet.PetSpawnService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
@@ -202,6 +205,9 @@ public class PlayerController extends CreatureController<Player> {
 		else if (object instanceof Pet) {
 			PacketSendUtility.sendPacket(getOwner(), new SM_PET(3, (Pet) object));
 		}
+		else if (object instanceof Minion) {
+			PacketSendUtility.sendPacket(getOwner(), new SM_MINIONS(5));
+		}
 	}
 
 	private RobotInfo getRobotInfo(Player player) {
@@ -214,6 +220,9 @@ public class PlayerController extends CreatureController<Player> {
 		super.notSee(object, isOutOfRange);
 		if (object instanceof Pet) {
 			PacketSendUtility.sendPacket(getOwner(), new SM_PET(4, (Pet) object));
+		}
+		else if (object instanceof Minion) {
+			PacketSendUtility.sendPacket(getOwner(), new SM_MINIONS(6));
 		}
 		else {
 			PacketSendUtility.sendPacket(getOwner(), new SM_DELETE(object, isOutOfRange ? 0 : 15));
@@ -441,6 +450,10 @@ public class PlayerController extends CreatureController<Player> {
 		Pet pet = player.getPet();
 		if (pet != null) {
 			PetSpawnService.dismissPet(player, true);
+		}
+		Minion minion = player.getMinion();
+		if (minion != null) {
+			MinionService.getInstance().despawnMinion(player, player.getMinionList().getLastUsed());
 		}
 		if (player.isInState(CreatureState.FLYING)) {
 			player.setIsFlyingBeforeDeath(true);

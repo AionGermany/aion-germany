@@ -52,7 +52,7 @@ public class MinionService {
 	private static Logger log = LoggerFactory.getLogger(MinionService.class);
 
 	public void addMinion(Player player, int minionId, String name, String grade, int level, int growthPoints) {
-		MinionCommonData minionCommonData = player.getMinionList().addNewMinion(player, minionId, name, grade, level);
+		MinionCommonData minionCommonData = player.getMinionList().addNewMinion(player, minionId, name, grade, level, growthPoints);
 		if (minionCommonData != null) {
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(2, minionCommonData));
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404316, name));
@@ -138,16 +138,16 @@ public class MinionService {
 		addMinion(player, minionId, minionName, minionGrade, minionLvl, minionGrowthPoints);
 	}
 
-    public void deleteMinion(Player player, int minionObjId, boolean isMaterial) {
-        for (MinionCommonData list : player.getMinionList().getMinions()) {
-            if (list.getObjectId() == minionObjId) {
-                player.getMinionList().getMinions().remove(list.getObjectId());
-                DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, list.getMinionId());
-                PacketSendUtility.broadcastPacket(player, new SM_MINIONS(3, list), true);
-                break;
-            }
-        }
-    }
+	public void deleteMinion(Player player, int minionObjId, boolean isMaterial) {
+		for (MinionCommonData list : player.getMinionList().getMinions()) {
+			if (list.getObjectId() == minionObjId) {
+				player.getMinionList().getMinions().remove(list.getObjectId());
+				DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, list.getMinionId());
+				PacketSendUtility.broadcastPacket(player, new SM_MINIONS(3, list), true);
+				break;
+			}
+		}
+	}
 
 	public void spawnMinion(Player player, int minionObjId) {
 		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
@@ -186,24 +186,24 @@ public class MinionService {
 		if (lock == 1) {
 			minion.setLock(true);
 			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 1);
-	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(5, minion));
+			PacketSendUtility.broadcastPacket(player, new SM_MINIONS(5, minion));
 		} else {
 			minion.setLock(false);
 			DAOManager.getDAO(PlayerMinionsDAO.class).lockMinions(player, minionObjId, 0);
-	        PacketSendUtility.broadcastPacket(player, new SM_MINIONS(5, minion));
+			PacketSendUtility.broadcastPacket(player, new SM_MINIONS(5, minion));
 		}
 		player.getMinionList().updateMinionsList();
 	}
 	
 	public void renameMinion(Player player, int minionObjId, String name) {
 		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
-        if (minion != null) {
-            minion.setName(name);
-            DAOManager.getDAO(PlayerMinionsDAO.class).updateMinionName(minion);
-            PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(4, minion));
-            player.getMinionList().updateMinionsList();
-        }
-    }
+		if (minion != null) {
+			minion.setName(name);
+			DAOManager.getDAO(PlayerMinionsDAO.class).updateMinionName(minion);
+			PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(4, minion));
+			player.getMinionList().updateMinionsList();
+		}
+	}
 	
 	public void toggleAutoLoot(Player player, boolean activate) {
 		Minion minion = player.getMinion();
@@ -231,7 +231,7 @@ public class MinionService {
 	
 	public void activateMinionFunction(Player player) {
 		long leftTime = System.currentTimeMillis() + (30 * 24 * 60 * 60 * 1000); // + 30 Days
-		if (player.getInventory().tryDecreaseKinah(25000000)) {
+		if (player.getInventory().tryDecreaseKinah(2500000)) {
 			player.getCommonData().setMinionFunctionTime(new Timestamp(leftTime)); // TODO
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(10, leftTime));
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(12));

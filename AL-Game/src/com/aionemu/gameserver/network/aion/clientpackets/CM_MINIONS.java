@@ -138,6 +138,9 @@ public class CM_MINIONS extends AionClientPacket {
 		case SET_FUNCTION:
 			MinionService.getInstance().toggleAutoLoot(player, false);
 			break;
+		case FUNCTION_RENEW:
+			readC();
+			break;
 		default:
 			break;
 		}
@@ -149,6 +152,7 @@ public class CM_MINIONS extends AionClientPacket {
 		if (player == null) {
 			return;
 		}
+		System.out.println("Action: " + action);
 		switch (action) {
 		case ADOPT: {
 			if (player.getMinionList().getMinions().size() >= CustomConfig.MAX_MINION_LIST) {
@@ -177,7 +181,7 @@ public class CM_MINIONS extends AionClientPacket {
 		case RENAME: {
 			if (NameRestrictionService.isForbiddenWord(rename)) {
 				PacketSendUtility.sendMessage(player, "You are trying to use a forbidden name. Choose another one!");
-				break;
+				return;
 			}
 			MinionService.getInstance().renameMinion(player, minionObjId, rename);
 			break;

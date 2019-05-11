@@ -64,7 +64,7 @@ public class MinionList {
 		return minions.get(minionObjId);
 	}
 
-	public MinionCommonData addNewMinion(Player player, int minionId, String name, String grade, int level) {
+	public MinionCommonData addNewMinion(Player player, int minionId, String name, String grade, int level, int growthPoints) {
 		MinionCommonData minionCommonData = new MinionCommonData(minionId, player.getObjectId(), name, grade, level, 0);
 		DAOManager.getDAO(PlayerMinionsDAO.class).insertPlayerMinion(minionCommonData);
 		DAOManager.getDAO(PlayerMinionsDAO.class).saveBirthday(minionCommonData);
@@ -72,13 +72,13 @@ public class MinionList {
 		return minionCommonData;
 	}
 
-	public boolean hasMinion(int n) {
-		return minions.containsKey(n);
+	public boolean hasMinion(int minionId) {
+		return minions.containsKey(minionId);
 	}
 
 	public void deleteMinion(int minionObjId) {
 		if (hasMinion(minionObjId)) {
-            DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, minionObjId);
+			DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, minionObjId);
 			minions.remove(minionObjId);
 		}
 	}
