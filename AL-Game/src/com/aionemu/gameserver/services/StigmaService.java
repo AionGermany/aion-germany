@@ -545,29 +545,29 @@ public class StigmaService {
 		}
 		// Major Stigma
 		else if (ItemSlot.isMajorStigma(itemSlotToEquip)) {
-            int majStigmaCount = getPossibleMajorStigmaCount(player);
-            if (majStigmaCount == 1) {
-                if (itemSlotToEquip == ItemSlot.MAJ_STIGMA.getSlotIdMask()) {
-                    return true;
-                }
-            }
-        }
+			int majStigmaCount = getPossibleMajorStigmaCount(player);
+			if (majStigmaCount == 1) {
+				if (itemSlotToEquip == ItemSlot.MAJ_STIGMA.getSlotIdMask()) {
+					return true;
+				}
+			}
+		}
 		// Special Stigma
 		else if (ItemSlot.isSpecialStigma(itemSlotToEquip)) {
 			int count = 0;			
 			if (player.getEquipment().getEquippedItemsAllStigmaIds().size() == 6) {
-            	for (Item stigma : player.getEquipment().getEquippedItemsAllStigma()) {
-            		if (stigma.getEnchantLevel() >= 9) {
-            			count++;
-            		}
-	            }
-            	if (count == 6) {
-            		return true;
-            	}
-	        }
+				for (Item stigma : player.getEquipment().getEquippedItemsAllStigma()) {
+					if (stigma.getEnchantLevel() >= 9) {
+						count++;
+					}
+				}
+				if (count == 6) {
+					return true;
+				}
+			}
 		}
-        return false;
-    }
+		return false;
+	}
 
 	public static void reparseHiddenStigmas() {
 		for (HiddenStigmasTemplate classStigmas : DataManager.HIDDEN_STIGMA_DATA.getHiddenStigmasByClass()) {
