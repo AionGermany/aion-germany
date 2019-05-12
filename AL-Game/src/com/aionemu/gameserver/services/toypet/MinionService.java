@@ -48,7 +48,7 @@ import javolution.util.FastMap;
 
 public class MinionService {
 
-//	private MinionBuff minionbuff;
+	//private MinionBuff minionbuff;
 	private static Logger log = LoggerFactory.getLogger(MinionService.class);
 
 	public void addMinion(Player player, int minionId, String name, String grade, int level, int growthPoints) {
@@ -160,8 +160,15 @@ public class MinionService {
 		minion.setKnownlist(new PlayerAwareKnownList(minion));
 		player.setMinion(minion);
 		player.getMinionList().setLastUsed(minionObjId);
-		//minionbuff.apply(player, minionCommonData.getMinionId());
+		//minionbuff.apply(player);
 		PacketSendUtility.broadcastPacketAndReceive(player,	new SM_MINIONS(6, minionCommonData));
+
+		//int skillId1 = DataManager.MINION_DATA.getMinionTemplate(minionObjId).getSkill1();
+		//int skillId2 = DataManager.MINION_DATA.getMinionTemplate(minionObjId).getSkill2();
+		//player.getSkillList().addSkillWithoutSave(player, skillId1, 1);
+		//if (skillId2 != 0) {
+		//	player.getSkillList().addSkillWithoutSave(player, skillId2, 1);
+		//}
 	}
 
 	public void despawnMinion(Player player, int minionObjId) {
@@ -180,7 +187,7 @@ public class MinionService {
 		//minionbuff.end(player);
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(7, minionCommonData));
 	}
-	
+
 	public void lockMinion(Player player, int minionObjId, int lock) {
 		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
 		if (lock == 1) {
@@ -233,16 +240,51 @@ public class MinionService {
 		long leftTime = System.currentTimeMillis() + (30 * 24 * 60 * 60 * 1000); // + 30 Days
 		if (player.getInventory().tryDecreaseKinah(2500000)) {
 			player.getCommonData().setMinionFunctionTime(new Timestamp(leftTime)); // TODO
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(10, leftTime));
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(9, leftTime));
 			PacketSendUtility.sendPacket(player, new SM_MINIONS(12));
 		} else {
 			return;
 		}
 	}
 
-	public void evolutionUpMinion(Player player, int minionObjId) {
-		// TODO Auto-generated method stub
-		
+	public void evolutionUpMinion(Player player, int minionObjId) { 
+		MinionCommonData minion = player.getMinionList().getMinion(minionObjId);
+		String groupset = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getGroupSet();
+		int minionLevel = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getLevel();
+		int minionMaxGrowthLevel = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getMaxGrowthValue();
+		int evoItemId = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getItemId();
+		int evolveItemCount = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getEvolvedNum();
+		long evoCost = DataManager.MINION_DATA.getMinionTemplate(player.getMinionList().getMinion(minionObjId).getMinionId()).getEvolvedCost();
+		if (minion.getMinionLevel() >= 4) {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_EVOLVE_MSG_NOEVOLVE);
+			return;
+		}
+		if (player.getInventory().getKinah() < evoCost) {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_EVOLVE_MSG_NOGOLD);
+			return;
+		}
+		if (player.getInventory().getItemCountByItemId(evoItemId) < evolveItemCount) {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_EVOLVE_MSG_LACK_ITEM);
+			return;
+		}
+		player.getInventory().decreaseKinah(evoCost);
+		player.getInventory().decreaseByItemId(evoItemId, evolveItemCount);
+		int minionNewId = 0;
+		for (final MinionTemplate template : DataManager.MINION_DATA.getMinionData().valueCollection()) {
+			if (template.getLevel() == minionLevel + 1 && template.getGroupSet().equalsIgnoreCase(groupset)) {
+				minionNewId = template.getId();
+				break;
+			}
+		}
+		minion.setMinionId(minionNewId);
+		minion.setMinionGrowthPoint(minion.getMinionGrowthPoint() - minionMaxGrowthLevel);
+		DAOManager.getDAO(PlayerMinionsDAO.class).evolutionMinion(player, minionNewId, minion);
+		PacketSendUtility.broadcastPacket(player, new SM_MINIONS(7, minion), true);
+		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1404350, new Object[] { minion.getName(), minionLevel + 1 }));
+		Collection<MinionCommonData> playerMinions = player.getMinionList().getMinions();
+		if (playerMinions != null && playerMinions.size() > 0) {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(0, playerMinions));
+		}
 	}
 
 	public void CombinationMinion(Player player, List<Integer> material) {
@@ -250,14 +292,65 @@ public class MinionService {
 		
 	}
 
-	public void chargeSkillPoint(Player player, boolean b) {
-		// TODO Auto-generated method stub
-		
+	public void chargeSkillPoint(Player player, boolean charge, boolean autoCharge) {
+		int maxSkillPoints = 50000;
+		int currentSkillPoints = player.getMinionSkillPoints();
+		int skillPointsToAdd = maxSkillPoints - currentSkillPoints;
+		int price = skillPointsToAdd * 20;
+		if (player.getInventory().getKinah() < price) {
+			return;
+		}
+		if (charge) {
+			player.getInventory().decreaseKinah(price);
+			player.setMinionSkillPoints(maxSkillPoints);
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(11, maxSkillPoints , autoCharge));
+		} else {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(11, currentSkillPoints , autoCharge));
+		}
 	}
 
-	public void growthUpMinion(Player player, int minionObjId, List<Integer> material) {
-		// TODO Auto-generated method stub
-		
+	public void growthUpMinion(Player player, int minionObjectId, List<Integer> material) {
+		int growthPoint = 0;
+		long growthCost = 0;
+		String tierGrade = "";
+		MinionCommonData playerMinion = player.getMinionList().getMinion(minionObjectId);
+		tierGrade = DataManager.MINION_DATA.getMinionTemplate(playerMinion.getMinionId()).getGrade();
+		int maxgrowthMax = DataManager.MINION_DATA.getMinionTemplate(playerMinion.getMinionId()).getMaxGrowthValue();
+		for (MinionCommonData list : player.getMinionList().getMinions()) {
+			for (int matObjt : material) {
+				if (list.getObjectId() == matObjt) {
+					int minionGrowth = 0;
+					if (DataManager.MINION_DATA.getMinionTemplate(list.getMinionId()).getGrade().equalsIgnoreCase(tierGrade)) {
+						minionGrowth = DataManager.MINION_DATA.getMinionTemplate(list.getMinionId()).getGrowthPt() * 2;
+					}
+					else {
+						minionGrowth = DataManager.MINION_DATA.getMinionTemplate(list.getMinionId()).getGrowthPt();
+					}
+					growthPoint += minionGrowth;
+					growthCost += DataManager.MINION_DATA.getMinionTemplate(list.getMinionId()).getGrowthCost();
+				}
+			}
+		}
+		if (growthPoint <= 0) {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_GROWTH_MSG_NOTSELECT);
+			return;
+		}
+		if (player.getInventory().getKinah() < growthCost) {
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_GROWTH_MSG_NOGOLD);
+			return;
+		}
+		player.getInventory().decreaseKinah(growthCost);
+		if (playerMinion.getMinionGrowthPoint() + growthPoint > maxgrowthMax) {
+			playerMinion.setMinionGrowthPoint(maxgrowthMax);
+		} else {
+			playerMinion.setMinionGrowthPoint(playerMinion.getMinionGrowthPoint() + growthPoint);
+		}
+		DAOManager.getDAO(PlayerMinionsDAO.class).updatePlayerMinionGrowthPoint(player, playerMinion);
+		PacketSendUtility.broadcastPacket(player, new SM_MINIONS(7, playerMinion), true);
+		for (int matObjt2 : material) {
+			deleteMinion(player, matObjt2, true);
+		}
+		player.getMinionList().updateMinionsList();
 	}
 
 	public static MinionService getInstance() {

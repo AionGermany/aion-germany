@@ -57,6 +57,7 @@
 		<xs:attribute name="remove_flyend" type="xs:boolean"/>
 		<xs:attribute name="noremoveatdie" type="xs:boolean"/>
 		<xs:attribute name="boost_casting_time" type="xs:boolean"/>
+		<xs:attribute name="is_minion_skill" type="xs:boolean" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="Effects">
 		<xs:sequence minOccurs="0" maxOccurs="unbounded">

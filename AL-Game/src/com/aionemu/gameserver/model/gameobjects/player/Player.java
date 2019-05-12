@@ -507,6 +507,10 @@ public class Player extends Creature {
 		return setMinionSpawned;
 	}
 
+	public boolean isMagicalTypeClass() {
+		return playerCommonData.getPlayerClass() == PlayerClass.ARTIST || playerCommonData.getPlayerClass() == PlayerClass.BARD || playerCommonData.getPlayerClass() == PlayerClass.CLERIC || playerCommonData.getPlayerClass() == PlayerClass.SORCERER || playerCommonData.getPlayerClass() == PlayerClass.SPIRIT_MASTER || playerCommonData.getPlayerClass() == PlayerClass.RIDER;
+	}
+
 	/**
 	 * Gets this players Friend List
 	 *

@@ -44,6 +44,8 @@ public class CM_MINIONS extends AionClientPacket {
 	private int ItemObjectId;
 	private int minionObjId;
 	private int lock;
+	private int charge;
+	private int autoCharge;
 	private String rename = "";
 	List<Integer> material = new ArrayList<Integer>();
 	private int Upgradeslot;
@@ -120,6 +122,8 @@ public class CM_MINIONS extends AionClientPacket {
 		case STOP_FUNCTION:
 			break;
 		case CHARGE:
+			charge = readC(); // Charge 1 = true / 0 = false ? 
+			autoCharge = readC(); // Auto Recharge on/off Todo
 			break;
 		case EVOLVE:
 			minionObjId = readD();
@@ -214,7 +218,7 @@ public class CM_MINIONS extends AionClientPacket {
 			break;
 		}
 		case CHARGE: {
-			MinionService.getInstance().chargeSkillPoint(player, false);
+			MinionService.getInstance().chargeSkillPoint(player, charge == 1 ? true : false, autoCharge == 1 ? true : false);
 			break;
 		}
 		case USE_FUNCTION: {

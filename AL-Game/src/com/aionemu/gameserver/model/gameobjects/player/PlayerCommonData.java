@@ -110,8 +110,9 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	private int consumeCount = 0;
 	private int wardrobeSlot;
 	private int floor;
-    private int minionSkillPoints;
-    private Timestamp minionFunctionTime;
+	private int minionSkillPoints;
+	private Timestamp minionFunctionTime;
+	private boolean minionAutoCharge;
 
 	//Shugo Sweep 5.1
 	private int goldenDice;
@@ -1028,30 +1029,38 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	/**
 	 * @Tower of Challenge
 	 */
-    public void setFloor(final int floor) {
-        this.floor = floor;
-    }
+	public void setFloor(final int floor) {
+		this.floor = floor;
+	}
 
-    public int getFloor() {
-        return this.floor;
-    }
+	public int getFloor() {
+		return this.floor;
+	}
 
 	/**
 	 * @Minions
 	 */
-    public int getMinionSkillPoints() {
-        return minionSkillPoints;
-    }
-    
-    public void setMinionSkillPoints(int minionSkillPoints) {
-        this.minionSkillPoints = minionSkillPoints;
-    }
-    
-    public Timestamp getMinionFunctionTime() {
-        return minionFunctionTime;
-    }
-    
-    public void setMinionFunctionTime(Timestamp minionFunctionTime) {
-        this.minionFunctionTime = minionFunctionTime;
-    }
+	public int getMinionSkillPoints() {
+		return minionSkillPoints;
+	}
+
+	public void setMinionSkillPoints(int minionSkillPoints) {
+		this.minionSkillPoints = minionSkillPoints;
+	}
+
+	public Timestamp getMinionFunctionTime() {
+		return minionFunctionTime;
+	}
+
+	public void setMinionFunctionTime(Timestamp minionFunctionTime) {
+		this.minionFunctionTime = minionFunctionTime;
+	}
+
+	public boolean isMinionAutoCharge() {
+		return minionAutoCharge;
+	}
+
+	public void setMinionAutoCharge(boolean auto) {
+		this.minionAutoCharge = auto;
+	}
 }
