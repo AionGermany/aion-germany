@@ -18,27 +18,31 @@ package com.aionemu.gameserver.model.templates.item.actions;
 
 import javax.xml.bind.annotation.XmlAttribute;
 
+import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * Created by Alex on 23.12.2014.
+ * Reworked by FrozenKiller 15.05.2019
  */
 public class ExpAction extends AbstractItemAction {
 
-	@XmlAttribute
-	protected int cost;
+	@XmlAttribute(name = "cost")
+	protected Integer cost;
 
 	@XmlAttribute(name = "percent")
 	protected boolean isPercent;
 
 	@Override
 	public boolean canAct(Player player, Item parentItem, Item targetItem) {
-		return cost > 0;
+		if (cost != null) {
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -47,11 +51,10 @@ public class ExpAction extends AbstractItemAction {
 		long expPercent = isPercent ? (exp * cost / 100) : cost;
 		if (player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1)) {
 			player.getCommonData().setExp(player.getCommonData().getExp() + expPercent);
-			player.getObserveController().notifyItemuseObservers(parentItem);
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GET_EXP2(expPercent));
-			ItemTemplate itemTemplate = parentItem.getItemTemplate();
-			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), itemTemplate.getTemplateId()), true);
-			// PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_USE_ITEM(new DescriptionId(itemTemplate.getNameId())));
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId()));
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(parentItem.getNameId()), expPercent));
+		} else {
+			return;
 		}
 	}
 }
