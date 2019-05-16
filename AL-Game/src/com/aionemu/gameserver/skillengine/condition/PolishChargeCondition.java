@@ -39,9 +39,10 @@ public class PolishChargeCondition extends ChargeCondition {
 			for (Item item : effector.getEquipment().getEquippedItems()) {
 				if (item.getItemTemplate().isWeapon() && item.getIdianStone() != null) {
 					item.getIdianStone().decreasePolishCharge(effector, value);
+					return true;
 				}
 			}
 		}
-		return true;
+		return false;
 	}
 }
