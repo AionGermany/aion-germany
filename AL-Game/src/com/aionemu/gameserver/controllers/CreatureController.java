@@ -362,7 +362,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	 * @param target
 	 * @param time
 	 */
-	public void attackTarget(final Creature target, int time) {
+	public void attackTarget(final Creature target, int attackNo, int time, int type) {
 		boolean addAttackObservers = true;
 		/**
 		 * Check all prerequisites
@@ -398,9 +398,9 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 			damage += result.getDamage();
 		}
 
-		PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_ATTACK(getOwner(), target, getOwner().getGameStats().getAttackCounter(), time, attackType, attackResult));
+//		getOwner().getGameStats().increaseAttackCounter();
+		PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_ATTACK(getOwner(), target, attackNo, time, attackType, attackResult));
 
-		getOwner().getGameStats().increaseAttackCounter();
 		if (addAttackObservers) {
 			getOwner().getObserveController().notifyAttackObservers(target);
 		}

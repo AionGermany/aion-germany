@@ -111,10 +111,10 @@ public class SM_VERSION_CHECK extends AionServerPacket {
 		}
 		writeC(0x00);
 		writeC(NetworkConfig.GAMESERVER_ID);
-		writeD(180205);// start year month day
-		writeD(171201);// start year month day
+		writeD(190219);// start year month day
+		writeD(190122);// start year month day
 		writeD(0x00);// spacing
-		writeD(180205);// year month day
+		writeD(181122);// year month day
 		writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000)); // Start Server Time in Seconds Unit (Need to Implements in Config Files)
 		writeC(0x00);// unk
 		writeC(GSConfig.SERVER_COUNTRY_CODE);// country code;
@@ -130,7 +130,8 @@ public class SM_VERSION_CHECK extends AionServerPacket {
 		// MOVED TO PACKET 168
 		writeD(0);
 		writeD(68536);
-		writeB(new byte[20]);
+		writeD(-3600);
+		writeB(new byte[16]);
 		for (int i = 0; i < 11; i++) {
 			writeD(1000);
 		}

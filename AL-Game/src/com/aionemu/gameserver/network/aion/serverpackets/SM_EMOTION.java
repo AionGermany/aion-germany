@@ -144,7 +144,7 @@ public class SM_EMOTION extends AionServerPacket {
 			case JUMP:
 			case SIT: // sit
 			case STAND: // stand
-			case ATTACKMODE: // toggle attack mode
+			case ATTACKMODE: // toggle attack mode TODO STATE and SPEED
 			case NEUTRALMODE: // toggle normal mode
 			case WALK: // toggle walk
 			case RUN: // toggle run

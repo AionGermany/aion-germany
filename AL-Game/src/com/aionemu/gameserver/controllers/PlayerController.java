@@ -563,7 +563,7 @@ public class PlayerController extends CreatureController<Player> {
 	}
 
 	@Override
-	public void attackTarget(Creature target, int time) {
+	public void attackTarget(Creature target, int attackNo, int time, int type) {
 
 		PlayerGameStats gameStats = getOwner().getGameStats();
 
@@ -598,7 +598,7 @@ public class PlayerController extends CreatureController<Player> {
 		/**
 		 * notify attack observers
 		 */
-		super.attackTarget(target, time);
+		super.attackTarget(target, attackNo, time, type);
 
 	}
 

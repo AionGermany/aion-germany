@@ -47,11 +47,9 @@ import javolution.util.FastMap.Entry;
 public abstract class CreatureGameStats<T extends Creature> {
 
 	protected static final Logger log = LoggerFactory.getLogger(CreatureGameStats.class);
-	private static final int ATTACK_MAX_COUNTER = Integer.MAX_VALUE;
 	private long lastGeoUpdate = 0;
 	private FastMap<StatEnum, TreeSet<IStatFunction>> stats;
 	private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
-	private int attackCounter = 0;
 	protected T owner = null;
 	private Stat2 cachedHPStat;
 	private Stat2 cachedMPStat;
@@ -59,35 +57,6 @@ public abstract class CreatureGameStats<T extends Creature> {
 	protected CreatureGameStats(T owner) {
 		this.owner = owner;
 		this.stats = new FastMap<StatEnum, TreeSet<IStatFunction>>();
-	}
-
-	/**
-	 * @return the atcount
-	 */
-	public int getAttackCounter() {
-		return attackCounter;
-	}
-
-	/**
-	 * @param atcount
-	 *            the atcount to set
-	 */
-	protected void setAttackCounter(int attackCounter) {
-		if (attackCounter <= 0) {
-			this.attackCounter = 1;
-		}
-		else {
-			this.attackCounter = attackCounter;
-		}
-	}
-
-	public void increaseAttackCounter() {
-		if (attackCounter == ATTACK_MAX_COUNTER) {
-			this.attackCounter = 1;
-		}
-		else {
-			this.attackCounter++;
-		}
 	}
 
 	public final void addEffectOnly(StatOwner statOwner, List<? extends IStatFunction> functions) {

@@ -460,9 +460,7 @@ public class StigmaService {
 		switch (player.getRace()) {
 			case ELYOS: {
 				if (player.isCompleteQuest(1929)) {
-					if (player.getLevel() < 55) {
-						return 1;
-					} else {
+					if (player.getLevel() > 54) {
 						return 1;
 					}
 				}
@@ -470,9 +468,7 @@ public class StigmaService {
 			}
 			case ASMODIANS: {
 				if (player.isCompleteQuest(2900)) {
-					if (player.getLevel() < 55) {
-						return 1;
-					} else {
+					if (player.getLevel() > 54) {
 						return 1;
 					}
 				}

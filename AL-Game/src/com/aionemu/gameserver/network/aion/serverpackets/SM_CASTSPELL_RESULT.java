@@ -140,6 +140,8 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 				writeF(skill.getY());
 				writeF(skill.getZ());
 				break;
+			default:
+				break;
 		}
 
 		writeH(skinId);
@@ -228,6 +230,7 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket {
 			}
 
 			writeC(effect.getShieldDefense());
+			writeB(new byte[16]); // TEMP FIX maybe this values are not needed
 
 			if (dualSkill) {
 				writeC(1);

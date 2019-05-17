@@ -109,7 +109,7 @@ public class SimpleAttackManager {
 				return;
 			}
 			if (isTargetInAttackRange(npc)) {
-				npc.getController().attackTarget(target, 0);
+				npc.getController().attackTarget(target, 0, 0, 0);
 				npcAI.onGeneralEvent(AIEventType.ATTACK_COMPLETE);
 				return;
 			}
