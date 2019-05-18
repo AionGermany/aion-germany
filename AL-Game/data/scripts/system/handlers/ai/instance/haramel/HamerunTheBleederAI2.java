@@ -130,9 +130,9 @@ public class HamerunTheBleederAI2 extends AggressiveNpcAI2 {
 		// Sets target against player and attack it
 		Creature player = getAggroList().getMostHated();
 		servant1spawn.setTarget(player);
-		servant1spawn.getController().attackTarget(player, 0);
+		servant1spawn.getController().attackTarget(player, 0, 0, 0);
 		servant2spawn.setTarget(player);
-		servant2spawn.getController().attackTarget(player, 0);
+		servant2spawn.getController().attackTarget(player, 0, 0, 0);
 
 		// Sets owner's target as itself
 		getOwner().setTarget(getOwner());
