@@ -333,6 +333,9 @@ public class EnchantService {
 					addSuccessRate *= EnchantsConfig.GREATER_SUP;
 					break;
 				case MYTHIC:
+				case ANCIENT:
+				case RELIC:
+				case FINALITY:
 					addSuccessRate *= EnchantsConfig.MYTHIC_SUP;
 					break;
 				default:
@@ -399,7 +402,7 @@ public class EnchantService {
 		}
 
 		ItemPacketService.updateItemAfterInfoChange(player, targetItem);
-
+		
 		if (targetItem.isEquipped()) {
 			player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
 		}
@@ -966,7 +969,7 @@ public class EnchantService {
 		if (targetWeapon == 1) {
 			// Find all free slots in the primary weapon
 			if (stoneCount >= targetItem.getSockets(false)) {
-				AuditLogger.info(player, "Manastone socket overload");
+				AuditLogger.info(player, "Manastone socket overload [ItemId]: " + targetItem.getItemTemplate().getTemplateId());
 				return false;
 			}
 		} // Fusioned weapon. Secondary weapon slots.
@@ -1075,6 +1078,12 @@ public class EnchantService {
 
 		if (player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1) && result) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTION_SUCCEED(new DescriptionId(targetItem.getNameId())));
+			
+//			if (targetItem.getItemTemplate().getArmorType() == ArmorType.WING && parentItem.getItemTemplate().getTemplateId() == 166401000) {
+//				targetItem.setOptionalSocket(targetItem.getItemTemplate().getOptionSlotBonus());
+//				ItemPacketService.updateItemAfterInfoChange(player, targetItem);
+//				return;
+//			}
 
 			if (targetWeapon == 1) {
 				ManaStone manaStone = ItemSocketService.addManaStone(targetItem, parentItem.getItemTemplate().getTemplateId());

@@ -119,7 +119,7 @@ public class EnchantItemAction extends AbstractItemAction {
 		// Current enchant level
 		final int currentEnchant = targetItem.getEnchantLevel();
 		final boolean isSuccess = isSuccess(player, parentItem, targetItem, supplementItem, targetWeapon);
-		if (!targetItem.getItemTemplate().getExceedEnchant() && targetItem.getEnchantLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
+		if (targetItem.getItemTemplate().getArmorType() != ArmorType.WING && !targetItem.getItemTemplate().getExceedEnchant() && targetItem.getEnchantLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
 			// You cannot enchant %0 any further.
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
 			return;

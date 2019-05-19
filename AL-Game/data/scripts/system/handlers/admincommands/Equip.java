@@ -26,6 +26,7 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.ManaStone;
 import com.aionemu.gameserver.model.stats.listeners.ItemEquipmentListener;
+import com.aionemu.gameserver.model.templates.item.ArmorType;
 import com.aionemu.gameserver.model.templates.item.GodstoneInfo;
 import com.aionemu.gameserver.model.templates.item.ItemCategory;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
@@ -293,15 +294,24 @@ public class Equip extends AdminCommand {
 						targetItem.setAuthorize(enchant);
 					}
 				}
+				else if (targetItem.getItemTemplate().isAccessory()) {
+					targetItem.setAuthorize(enchant);
+				}
+				else if (targetItem.getItemTemplate().getArmorType() == ArmorType.WING) {
+					if (enchant > targetItem.getItemTemplate().getMaxEnchantLevel()) {
+						enchant = targetItem.getItemTemplate().getMaxEnchantLevel();
+						targetItem.setEnchantLevel(enchant);
+					} else {
+						targetItem.setEnchantLevel(enchant);
+					}
+				}
 				else {
 					targetItem.setEnchantLevel(enchant);
 				}
+				
 				if (targetItem.isEquipped()) {
 					player.getGameStats().updateStatsVisually();
-				}
-				ItemPacketService.updateItemAfterInfoChange(player, targetItem);
-
-				if (targetItem.isEquipped()) {
+					ItemPacketService.updateItemAfterInfoChange(player, targetItem);
 					player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
 				}
 			}
@@ -382,8 +392,14 @@ public class Equip extends AdminCommand {
 		if (item.getItemTemplate().isWeapon()) {
 			return true;
 		}
+		if (item.getItemTemplate().isAccessory()) {
+			return true;
+		}
 		if (item.getItemTemplate().getCategory() == ItemCategory.STIGMA) {
 			return false;
+		}
+		if (item.getItemTemplate().getArmorType() == ArmorType.WING) {
+			return true;
 		}
 		if (item.getItemTemplate().isArmor()) {
 			int at = item.getItemTemplate().getItemSlot();
