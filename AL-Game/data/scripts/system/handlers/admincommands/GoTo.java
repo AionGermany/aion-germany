@@ -480,6 +480,9 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("senekta") || destination.equalsIgnoreCase("Senekta")) {
 			goTo(player, 302510000, 876.41376f, 567.6291f, 151.195f, (byte) 80);
 		}
+		else if (destination.equalsIgnoreCase("steelrake") || destination.equalsIgnoreCase("Steel Rake Fortress")) {
+			goTo(player, 302520000, 946.12317f, 890.967f, 120.74587f, (byte) 75);
+		}
 		else {
 			PacketSendUtility.sendMessage(player, "Could not find the specified destination !");
 		}
