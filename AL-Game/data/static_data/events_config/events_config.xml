@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -322,6 +322,29 @@
 					<spawn npc_id="838343" respawn_time="295">
 						<spot x="2647.22" y="496.07" z="319.56714" h="0"/>
 						<spot x="2886.41" y="2487.74" z="309.98938" h="60"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Capt’n Grogget’s Revenge" start="2019-05-29T00:00:00+00:00" end="2019-06-12T00:00:00+00:00">
+            <spawns>
+                <!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Wasseronerk ||| IDWaterworld_L_01_In -->
+					<spawn npc_id="837443" respawn_time="295">
+						<spot x="2667.5" y="485.9" z="323.51578" h="43"/>
+					</spawn>
+					<!-- Hatanerk ||| IDWaterworld_D_01_In -->
+					<spawn npc_id="837444" respawn_time="295">
+						<spot x="2908.9" y="2491.9" z="313.93933" h="75"/>
+					</spawn>
+					<!-- Katoshunerk ||| Event_NPC_L_waterworld_sell_E -->
+					<spawn npc_id="837680" respawn_time="295">
+						<spot x="2665.1" y="489.0" z="323.51572" h="30"/>
+					</spawn>
+					<!-- Katoshunerk ||| Event_NPC_D_waterworld_sell_E -->
+					<spawn npc_id="837681" respawn_time="295">
+						<spot x="2904.8" y="2492.7" z="313.93924" h="75"/>
 					</spawn>
                 </spawn_map>
             </spawns>
