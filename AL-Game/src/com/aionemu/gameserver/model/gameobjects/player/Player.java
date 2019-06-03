@@ -3119,8 +3119,8 @@ public class Player extends Creature {
 		return mc;
 	}
 
-	public void setMonsterCubic(PlayerMCList playerABList) {
-		this.mc = playerABList;
+	public void setMonsterCubic(PlayerMCList playerMcList) {
+		this.mc = playerMcList;
 	}
 
 	/**

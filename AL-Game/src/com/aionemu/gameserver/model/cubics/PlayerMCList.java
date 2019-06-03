@@ -43,6 +43,7 @@ public final class PlayerMCList implements MCList<Player> {
 
 	public PlayerMCEntry[] getAllMC() {
 		ArrayList<PlayerMCEntry> list = new ArrayList<PlayerMCEntry>();
+		list.clear();
 		list.addAll(entry.values());
 		return (PlayerMCEntry[]) list.toArray(new PlayerMCEntry[list.size()]);
 	}

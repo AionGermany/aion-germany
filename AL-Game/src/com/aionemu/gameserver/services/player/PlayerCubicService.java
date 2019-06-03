@@ -25,14 +25,14 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.cubics.PlayerMCEntry;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.Storage;
-import com.aionemu.gameserver.model.stats.calc.Stat2;
 import com.aionemu.gameserver.model.stats.calc.StatOwner;
 import com.aionemu.gameserver.model.stats.calc.functions.IStatFunction;
-import com.aionemu.gameserver.model.stats.calc.functions.StatFunction;
+import com.aionemu.gameserver.model.stats.calc.functions.StatAddFunction;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.model.templates.cubics.CubicsTemplate;
 import com.aionemu.gameserver.model.templates.cubics.StatCoreList;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_CUBIC;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_CUBIC_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
@@ -46,26 +46,30 @@ public class PlayerCubicService implements StatOwner {
 	private PlayerCubicService() {
 		GameServer.log.info("[PlayerCubic] loaded ...");
 	}
+	private List<IStatFunction> modifiers = new ArrayList<IStatFunction>();
+	private HashMap<Integer, Integer> cubic = new HashMap<>();
+	private HashMap<Integer, Integer> rank = new HashMap<>();
+	private HashMap<Integer, Integer> level = new HashMap<>();
+	private HashMap<Integer, Integer> statValue = new HashMap<>();
 
 	/**
 	 *
 	 * @param player
 	 */
 	public void onLogin(Player player) {
-		maxMonsterCubic = player.getMonsterCubic().getAllMC();
-		Storage bag = player.getInventory();
-
-		PacketSendUtility.sendPacket(player, new SM_CUBIC(45, true)); // 45  = Cubic Size Login true
-		HashMap<Integer, Integer> cubic = new HashMap<>();
-		HashMap<Integer, Integer> rank = new HashMap<>();
-		HashMap<Integer, Integer> level = new HashMap<>();
-		HashMap<Integer, Integer> statValue = new HashMap<>();
 		player.getGameStats().endEffect(this);
+		player.setBonus(false);
+		modifiers.clear();
+		
+		player.setMonsterCubic(null);
+		player.setMonsterCubic(DAOManager.getDAO(PlayerCubicsDAO.class).load(player));
+		maxMonsterCubic = player.getMonsterCubic().getAllMC();
+		
+		PacketSendUtility.sendPacket(player, new SM_CUBIC_INFO(45));
+		
 		for (PlayerMCEntry playerMonsterCubic : maxMonsterCubic) {
-			List<IStatFunction> modifiers = new ArrayList<IStatFunction>();
 			try {
-				modifiers.add(new ExecuteStatAdd(getStatValueByCategory(playerMonsterCubic.getCategory()), playerMonsterCubic.getStatValue()));
-				player.getGameStats().addEffect(this, modifiers);
+				modifiers.add(new StatAddFunction(getStatValueByCategory(playerMonsterCubic.getCategory()), playerMonsterCubic.getStatValue(), true));
 			} catch (Exception ex) {
 				GameServer.log.error("Error on add stat.", ex);
 			}
@@ -73,18 +77,22 @@ public class PlayerCubicService implements StatOwner {
 			rank.put(playerMonsterCubic.getCubeId(), playerMonsterCubic.getRank());
 			level.put(playerMonsterCubic.getCubeId(), playerMonsterCubic.getLevel());
 			statValue.put(playerMonsterCubic.getCubeId(), playerMonsterCubic.getStatValue());
-			for (int i = 0; i < 39; i++) {
-				if (cubic.containsKey(i)) { // Enviar los cubus obtenidos por el personaje
-					CubicsTemplate monsterCubic = DataManager.CUBICS_DATA.getCubicsId(i);
-					long itemsCubicInBag = bag.getItemCountByItemId(monsterCubic.getItemIdCubic());
-					// Activar el registro de Cubus para aquellos que no hayan sido registrado
-					if (itemsCubicInBag > 0 && monsterCubic.getMaxRank() != playerMonsterCubic.getRank()) {
-						PacketSendUtility.sendPacket(player, new SM_CUBIC(cubic.get(i), rank.get(cubic.get(i)),level.get(cubic.get(i)), (int) itemsCubicInBag));
-					}
+			
+			for (int cubicId = 1; cubicId <= 45; cubicId++) {
+				if (cubic.containsKey(cubicId)) { // Enviar los cubus obtenidos por el personaje
+					CubicsTemplate monsterCubic = DataManager.CUBICS_DATA.getCubicsId(cubicId);
+					long itemsCubicInBag = player.getInventory().getItemCountByItemId(monsterCubic.getItemIdCubic());
+					PacketSendUtility.sendPacket(player, new SM_CUBIC(cubic.get(cubicId), rank.get(cubic.get(cubicId)),level.get(cubic.get(cubicId)), (int) itemsCubicInBag));
 				}
 			}
 		}
+		player.setBonus(true);
+		player.getGameStats().addEffect(this, modifiers);
 		PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
+		cubic.clear();
+		rank.clear();
+		level.clear();
+		statValue.clear();
 	}
 
 	/*
@@ -146,60 +154,38 @@ public class PlayerCubicService implements StatOwner {
 		int rankById = DAOManager.getDAO(PlayerCubicsDAO.class).getRankById(player.getObjectId(), cubicId);
 		int level = DAOManager.getDAO(PlayerCubicsDAO.class).getLevelById(player.getObjectId(), cubicId);
 		int statValue = DAOManager.getDAO(PlayerCubicsDAO.class).getStatValueById(player.getObjectId(), cubicId);
-		System.out.println("Player: " + player.getName());
-		System.out.println("CubeId: " + cubicId);
-		System.out.println("Category: " + monsterCubic.getCategory());
-		player.getMonsterCubic().add(player, cubicId, 0, 0, 0, monsterCubic.getCategory()); // Inicial valores
+		level++;
 		for (StatCoreList coreList : monsterCubic.getStatLists()) {
-			if (monsterCubic.getMaxRank() != rankById) {
+			if (rankById <= monsterCubic.getMaxRank()) {
 				if (level == coreList.getLevel()) {
-					rankById += 1;
+					rankById++;
 					statValue = coreList.getValue();
+					break;
 				}
 			}
 		}
-		level += 1;
 		player.getMonsterCubic().add(player, cubicId, rankById, level, statValue, monsterCubic.getCategory());
-		maxMonsterCubic = player.getMonsterCubic().getAllMC();
 		player.getGameStats().endEffect(this);
-		for (PlayerMCEntry playerMonsterCubic : maxMonsterCubic) {
-			List<IStatFunction> modifiers = new ArrayList<IStatFunction>();
+		player.setBonus(false);
+		modifiers.clear();
+		player.setMonsterCubic(null);
+		player.setMonsterCubic(DAOManager.getDAO(PlayerCubicsDAO.class).load(player));
+		for (PlayerMCEntry playerMonsterCubic : player.getMonsterCubic().getAllMC()) {
 			try {
-				modifiers.add(new ExecuteStatAdd(getStatValueByCategory(playerMonsterCubic.getCategory()),playerMonsterCubic.getStatValue()));
-				player.getGameStats().addEffect(this, modifiers);
+				modifiers.add(new StatAddFunction(getStatValueByCategory(playerMonsterCubic.getCategory()), playerMonsterCubic.getStatValue(), true));
 			} catch (Exception ex) {
 				GameServer.log.error("Error on add stat.", ex);
 			}
 		}
 		player.getInventory().decreaseByItemId(monsterCubic.getItemIdCubic(), 1);
 		PacketSendUtility.sendPacket(player, new SM_CUBIC(cubicId, rankById, level, 0));
-		Storage bag = player.getInventory();
-		long itemsCubicInBag = bag.getItemCountByItemId(monsterCubic.getItemIdCubic());
+		long itemsCubicInBag = player.getInventory().getItemCountByItemId(monsterCubic.getItemIdCubic());
 		if (itemsCubicInBag > 0 && monsterCubic.getMaxRank() != rankById) {
 			PacketSendUtility.sendPacket(player, new SM_CUBIC(cubicId, rankById, level, (int) itemsCubicInBag));
 		}
+		player.setBonus(true);
+		player.getGameStats().addEffect(this, modifiers);
 		PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
-	}
-
-	class ExecuteStatAdd extends StatFunction {
-
-		int modifier = 1;
-
-		ExecuteStatAdd(StatEnum stat, int modifier) {
-			this.stat = stat;
-			this.modifier = modifier;
-		}
-
-		@Override
-		public void apply(Stat2 stat) {
-			stat.addToBonus(this.modifier);
-
-		}
-
-		@Override
-		public int getPriority() {
-			return 60;
-		}
 	}
 
 	public static PlayerCubicService getInstance() {

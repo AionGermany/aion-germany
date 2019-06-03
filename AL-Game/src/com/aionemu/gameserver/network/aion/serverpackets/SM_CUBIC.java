@@ -24,8 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CUBIC extends AionServerPacket {
 	
-	private int count;
-	private boolean login;
 	private int cubicId;
     private int rank;
     private int level;
@@ -38,26 +36,12 @@ public class SM_CUBIC extends AionServerPacket {
         this.level = level;
         this.register = register;
     }
-    
-    public SM_CUBIC(int count, boolean login) {
-    	this.count = count; 
-        this.login = login;
-    }
 
-	@Override
+    @Override
 	protected void writeImpl(AionConnection con) {
-		if (login) {
-			for (int cubicId = 1; cubicId <= count; cubicId++) { // should be Cube 1 - 45
-				writeD(cubicId); // Cube
-				writeD(rank); // Rank
-				writeD(level); // Level
-				writeD(register); // Count of Cubic to Register
-			}
-		} else {
-			writeD(cubicId); // Cube
-			writeD(rank); // Rank
-			writeD(level); // Level
-			writeD(register); // Count of Cubic to Register
-		}
+		writeD(cubicId); // Cube
+		writeD(rank); // Rank
+		writeD(level); // Level
+		writeD(register); // Count of Cubic to Register
 	}
 }
