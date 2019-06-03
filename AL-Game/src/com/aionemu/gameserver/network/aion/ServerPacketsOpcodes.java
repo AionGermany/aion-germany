@@ -338,7 +338,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_TOWER_OF_CHALLENGE.class, 0xEE, idSet); // 5.6
 		addPacketOpcode(SM_GODSTONE_DESTROY.class, 0x12E, idSet); // 5.6
 		addPacketOpcode(SM_TRANSFORMATION.class, 0x170, idSet); // 6.x TODO
-		addPacketOpcode(SM_CUBIC.class, 0x176, idSet); // 6.x TODO
+		addPacketOpcode(SM_CUBIC.class, 0x175, idSet); // 6.x TODO
 		//addPacketOpcode(SM_ATREIAN_PASSPORT.class, 0x12D, idSet); // 6.x TODO
 		addPacketOpcode(SM_REMOVE_DYE.class, 0x1DF, idSet); // 6.x TODO
 		

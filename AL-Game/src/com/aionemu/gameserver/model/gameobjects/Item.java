@@ -691,10 +691,7 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 				numSockets = getItemTemplate().getManastoneSlots();
 				numSockets += hasOptionalSocket() ? getOptionalSocket() : 0;
 			}
-			if (numSockets < 6) {
-				return numSockets;
-			}
-			return 6;
+			return numSockets;
 		}
 		return 0;
 	}

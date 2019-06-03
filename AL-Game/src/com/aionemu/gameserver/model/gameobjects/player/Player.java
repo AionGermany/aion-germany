@@ -3109,14 +3109,14 @@ public class Player extends Creature {
 	 * Add Tag Wedding
 	 */
 	public int getPartnerId() { 
-		return this.partnerId;
+		return partnerId;
 	}
 
 	/**
 	 * Cubics System
 	 */
 	public PlayerMCList getMonsterCubic() {
-		return this.mc;
+		return mc;
 	}
 
 	public void setMonsterCubic(PlayerMCList playerABList) {

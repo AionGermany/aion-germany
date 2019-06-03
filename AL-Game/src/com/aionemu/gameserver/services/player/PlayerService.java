@@ -46,6 +46,7 @@ import com.aionemu.gameserver.dao.OldNamesDAO;
 import com.aionemu.gameserver.dao.PlayerAppearanceDAO;
 import com.aionemu.gameserver.dao.PlayerBindPointDAO;
 import com.aionemu.gameserver.dao.PlayerCooldownsDAO;
+import com.aionemu.gameserver.dao.PlayerCubicsDAO;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerEffectsDAO;
 import com.aionemu.gameserver.dao.PlayerEmotionListDAO;
@@ -215,6 +216,7 @@ public class PlayerService {
 		DAOManager.getDAO(AbyssRankDAO.class).loadAbyssRank(player);
 		DAOManager.getDAO(PlayerNpcFactionsDAO.class).loadNpcFactions(player);
 		DAOManager.getDAO(MotionDAO.class).loadMotionList(player);
+		player.setMonsterCubic(DAOManager.getDAO(PlayerCubicsDAO.class).load(player));
 		player.setVars(DAOManager.getDAO(PlayerVarsDAO.class).load(player.getObjectId()));
 		player.setEffectController(new PlayerEffectController(player));
 		player.setFlyController(new FlyController(player));
@@ -312,7 +314,6 @@ public class PlayerService {
 		}
 		
 		DAOManager.getDAO(PlayerEquipmentSettingDAO.class).loadEquipmentSetting(player);
-
 		return player;
 	}
 

@@ -41,7 +41,6 @@ import com.aionemu.gameserver.configs.main.PeriodicSaveConfig;
 import com.aionemu.gameserver.configs.main.RateConfig;
 import com.aionemu.gameserver.configs.main.SecurityConfig;
 import com.aionemu.gameserver.dao.PlayerDAO;
-import com.aionemu.gameserver.dao.PlayerLunaShopDAO;
 import com.aionemu.gameserver.dao.PlayerPasskeyDAO;
 import com.aionemu.gameserver.dao.PlayerPunishmentsDAO;
 import com.aionemu.gameserver.dao.WeddingDAO;
@@ -459,8 +458,6 @@ public final class PlayerEnterWorldService {
 			// SM_SKILL_ANIMATION
 			client.sendPacket(new SM_SKILL_ANIMATION(player));
 
-			DAOManager.getDAO(PlayerLunaShopDAO.class).load(player);
-
 			// SM_TITLE_INFO
 			// Seems crazy but this is correct on official server [Patch 4.9.1]
 			if (player.getLevel() == 1) {
@@ -655,6 +652,9 @@ public final class PlayerEnterWorldService {
 
 			// SM_SHUGO_SWEEP
 			ShugoSweepService.getInstance().onLogin(player);
+			
+			// SM_CUBIC
+			PlayerCubicService.getInstance().onLogin(player);
 
 			// SM_BROKER_SERVICE
 			BrokerService.getInstance().onPlayerLogin(player);

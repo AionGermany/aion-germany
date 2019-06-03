@@ -930,7 +930,9 @@ public class EnchantService {
 	public static boolean socketManastone(Player player, Item parentItem, Item targetItem, Item supplementItem, int targetWeapon) {
 
 		int targetItemLevel = 1;
-
+		
+		System.out.println("Target Weapon: " + targetWeapon);
+		
 		// Fusioned weapon. Primary weapon level.
 		if (targetWeapon == 1) {
 			targetItemLevel = targetItem.getItemTemplate().getLevel();
@@ -947,38 +949,37 @@ public class EnchantService {
 		float success = EnchantsConfig.MANA_STONE;
 
 		// The current amount of socketed stones
-		int stoneCount;
+		int stoneCount = 0;
 
 		// Manastone level shouldn't be greater as 20 + item level
 		// Example: item level: 1 - 10. Manastone level should be <= 20
 		if (stoneLevel > slotLevel) {
 			return false;
 		}
-
-		// Fusioned weapon. Primary weapon slots.
-		if (targetWeapon == 1) // Count the inserted stones in the primary weapon
-		{
-			stoneCount = targetItem.getItemStones().size();
-		} // Fusioned weapon. Secondary weapon slots.
-		else // Count the inserted stones in the secondary weapon
-		{
-			stoneCount = targetItem.getFusionStones().size();
-		}
-
-		// Fusioned weapon. Primary weapon slots.
-		if (targetWeapon == 1) {
+		
+		if (targetItem.getItemTemplate().isWeapon() && targetWeapon == 1) { // Fusioned weapon. Primary weapon slots.
+			stoneCount = targetItem.getItemStones().size(); // Count the inserted stones in the primary weapon
 			// Find all free slots in the primary weapon
-			if (stoneCount >= targetItem.getSockets(false)) {
+			if (stoneCount > targetItem.getSockets(false)) {
 				AuditLogger.info(player, "Manastone socket overload [ItemId]: " + targetItem.getItemTemplate().getTemplateId());
 				return false;
 			}
-		} // Fusioned weapon. Secondary weapon slots.
-		else if (!targetItem.hasFusionedItem() || stoneCount >= targetItem.getSockets(true)) {
-			// Find all free slots in the secondary weapon
-			AuditLogger.info(player, "Manastone socket overload");
-			return false;
 		}
-
+		else if (targetItem.getItemTemplate().isWeapon() && targetWeapon == 0) { // Fusioned weapon. Secondary weapon slots.
+			stoneCount = targetItem.getFusionStones().size(); // Count the inserted stones in the secondary weapon
+			if (!targetItem.hasFusionedItem() || stoneCount > targetItem.getSockets(true)) {
+				// Find all free slots in the secondary weapon
+				AuditLogger.info(player, "Fusion Manastone socket overload [ItemId]: " + targetItem.getItemTemplate().getTemplateId());
+				return false;
+			}
+		} else {
+			stoneCount = targetItem.getItemStones().size();
+			if (stoneCount > targetItem.getSockets(false)) {
+				AuditLogger.info(player, "Manastone socket overload [ItemId2]: " + targetItem.getItemTemplate().getTemplateId());
+				return false;
+			}
+		}
+		
 		// Stone quality modifier
 		success += parentItem.getItemTemplate().getItemQuality() == ItemQuality.COMMON ? 25f : 15f;
 
@@ -1075,35 +1076,38 @@ public class EnchantService {
 
 		// Decrease required supplements
 		player.updateSupplements();
-
+		
 		if (player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1) && result) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTION_SUCCEED(new DescriptionId(targetItem.getNameId())));
 			
-//			if (targetItem.getItemTemplate().getArmorType() == ArmorType.WING && parentItem.getItemTemplate().getTemplateId() == 166401000) {
-//				targetItem.setOptionalSocket(targetItem.getItemTemplate().getOptionSlotBonus());
-//				ItemPacketService.updateItemAfterInfoChange(player, targetItem);
-//				return;
-//			}
-
-			if (targetWeapon == 1) {
-				ManaStone manaStone = ItemSocketService.addManaStone(targetItem, parentItem.getItemTemplate().getTemplateId());
-				if (targetItem.isEquipped()) {
-					ItemEquipmentListener.addStoneStats(targetItem, manaStone, player.getGameStats());
-					player.getGameStats().updateStatsAndSpeedVisually();
-				}
+			if (parentItem.getItemTemplate().getTemplateId() == 166401000) {
+				targetItem.setOptionalSocket(targetItem.getItemTemplate().getOptionSlotBonus());
 			}
-			else {
-				ManaStone manaStone = ItemSocketService.addFusionStone(targetItem, parentItem.getItemTemplate().getTemplateId());
-				if (targetItem.isEquipped()) {
-					ItemEquipmentListener.addStoneStats(targetItem, manaStone, player.getGameStats());
-					player.getGameStats().updateStatsAndSpeedVisually();
+					
+			switch (targetWeapon) {
+				case 0: {
+					if (targetItem.isEquipped()) {
+						ManaStone fusionStone = ItemSocketService.addFusionStone(targetItem, parentItem.getItemTemplate().getTemplateId());
+						ItemEquipmentListener.addStoneStats(targetItem, fusionStone, player.getGameStats());
+						player.getGameStats().updateStatsAndSpeedVisually();
+					}
+					break;
 				}
+				case 1: {
+					if (targetItem.isEquipped()) {
+						ManaStone manaStone = ItemSocketService.addManaStone(targetItem, parentItem.getItemTemplate().getTemplateId());
+						ItemEquipmentListener.addStoneStats(targetItem, manaStone, player.getGameStats());
+						player.getGameStats().updateStatsAndSpeedVisually();
+					}
+					break;
+				}
+				default:
+					break;
 			}
 		}
 		else {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTION_FAILED(new DescriptionId(targetItem.getNameId())));
 		}
-
 		ItemPacketService.updateItemAfterInfoChange(player, targetItem);
 	}
 

@@ -55,9 +55,7 @@ public class PlayerCubicService implements StatOwner {
 		maxMonsterCubic = player.getMonsterCubic().getAllMC();
 		Storage bag = player.getInventory();
 
-		for (int i = 1; i < 45; i++) { // Limpiar el visual de cubos en el juego
-			PacketSendUtility.sendPacket(player, new SM_CUBIC(i, 0, 0, 0));
-		}
+		PacketSendUtility.sendPacket(player, new SM_CUBIC(45, true)); // 45  = Cubic Size Login true
 		HashMap<Integer, Integer> cubic = new HashMap<>();
 		HashMap<Integer, Integer> rank = new HashMap<>();
 		HashMap<Integer, Integer> level = new HashMap<>();
@@ -105,16 +103,16 @@ public class PlayerCubicService implements StatOwner {
 			statName = StatEnum.HEAL_BOOST;
 			break;
 		case 103:
-			// statName = StatEnum.PHYSICALPOWERBOOST; //Not Added in Src
+			statName = StatEnum.PHYSICAL_ATTACK; // TODO .PHYSICALPOWERBOOST; //Not Added in Src
 			break;
 		case 104:
-			// statName = StatEnum.MAGICALPOWERBOOST; //Not Added in Src
+			statName = StatEnum.BOOST_MAGICAL_SKILL; // TODO .MAGICALPOWERBOOST; //Not Added in Src
 			break;
 		case 105:
-			// statName = StatEnum.PHYSICALPOWERBOOSTRESIST; //Not Added in Src
+			statName = StatEnum.PHYSICAL_DEFENSE; // TODO .PHYSICALPOWERBOOSTRESIST; //Not Added in Src
 			break;
 		case 106:
-			// statName = StatEnum.MAGICALPOWERBOOSTRESIST; //Not Added in Src
+			statName = StatEnum.MAGICAL_RESIST; // TODO .MAGICALPOWERBOOSTRESIST; //Not Added in Src
 			break;
 		case 107:
 			statName = StatEnum.PHYSICAL_ACCURACY;
@@ -148,6 +146,9 @@ public class PlayerCubicService implements StatOwner {
 		int rankById = DAOManager.getDAO(PlayerCubicsDAO.class).getRankById(player.getObjectId(), cubicId);
 		int level = DAOManager.getDAO(PlayerCubicsDAO.class).getLevelById(player.getObjectId(), cubicId);
 		int statValue = DAOManager.getDAO(PlayerCubicsDAO.class).getStatValueById(player.getObjectId(), cubicId);
+		System.out.println("Player: " + player.getName());
+		System.out.println("CubeId: " + cubicId);
+		System.out.println("Category: " + monsterCubic.getCategory());
 		player.getMonsterCubic().add(player, cubicId, 0, 0, 0, monsterCubic.getCategory()); // Inicial valores
 		for (StatCoreList coreList : monsterCubic.getStatLists()) {
 			if (monsterCubic.getMaxRank() != rankById) {
