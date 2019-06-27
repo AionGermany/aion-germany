@@ -143,6 +143,7 @@ public final class DataManager {
 	public static TransformationData TRANSFORMATION_DATA;
 	public static ReviveWorldStartPointsData REVIVE_WORLD_START_POINTS;
 	public static ReviveInstanceStartPointsData REVIVE_INSTANCE_START_POINTS;
+	public static ItemEnchantChancesData ITEM_ENCHANT_CHANCES_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -271,6 +272,7 @@ public final class DataManager {
 		TRANSFORMATION_DATA = data.transformationData;
 		REVIVE_WORLD_START_POINTS = data.reviveWorldStartPoints;
 		REVIVE_INSTANCE_START_POINTS = data.reviveInstanceStartPoints;
+		ITEM_ENCHANT_CHANCES_DATA = data.itemEnchantChancesData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

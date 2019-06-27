@@ -553,18 +553,26 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	}
 
 	/**
-	 * @return the echantLevel
+	 * @return the echantLevel or authorizeLevel
 	 */
-	public int getEnchantLevel() {
-		return enchantLevel;
+	public int getEnchantOrAuthorizeLevel() {
+		if (this.getItemTemplate().getMaxAuthorize() > 0) {
+			return authorize;
+		} else {
+			return enchantLevel;
+		}
 	}
 
 	/**
 	 * @param enchantLevel
 	 *            the echantLevel to set
 	 */
-	public void setEnchantLevel(int enchantLevel) {
-		this.enchantLevel = enchantLevel;
+	public void setEnchantOrAuthorizeLevel(int level) {
+		if (this.getItemTemplate().getMaxAuthorize() > 0) {
+			this.authorize = level;
+		} else {
+			this.enchantLevel = level;
+		}
 		setPersistentState(PersistentState.UPDATE_REQUIRED);
 	}
 
@@ -976,15 +984,6 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 		return packCount;
 	}
 
-	public void setAuthorize(int authorize) {
-		this.authorize = authorize;
-		setPersistentState(PersistentState.UPDATE_REQUIRED);
-	}
-
-	public int getAuthorize() {
-		return authorize;
-	}
-
 	public boolean isPacked() {
 		return isPacked;
 	}
@@ -1003,8 +1002,9 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	}
 
 	public int getAmplificationSkill() {
-		if (EnchantsConfig.ENCHANT_SKILL_ENABLE)
+		if (EnchantsConfig.ENCHANT_SKILL_ENABLE) {
 			return amplificationSkill;
+		}
 		return 0;
 	}
 

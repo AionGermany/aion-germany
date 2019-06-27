@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.items.ItemSlot;
 import com.aionemu.gameserver.model.stats.calc.Stat2;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.model.templates.item.ArmorType;
-import com.aionemu.gameserver.model.templates.item.ItemCategory;
 
 /**
  * @author ATracer (based on Mr.Poke EnchantModifier)
@@ -33,12 +32,10 @@ public class StatEnchantFunction extends StatAddFunction {
 
 	private static final Logger log = LoggerFactory.getLogger(StatEnchantFunction.class);
 	private Item item;
-	private int point;
 
-	public StatEnchantFunction(Item owner, StatEnum stat, int point) {
+	public StatEnchantFunction(Item owner, StatEnum stat) {
 		this.stat = stat;
 		this.item = owner;
-		this.point = point;
 	}
 
 	@Override
@@ -51,10 +48,7 @@ public class StatEnchantFunction extends StatAddFunction {
 		if (!item.isEquipped()) {
 			return;
 		}
-		int enchantLvl = this.item.getEnchantLevel();
-		if (item.getItemTemplate().isAccessory() || item.getItemTemplate().getCategory() == ItemCategory.HELMET) {
-			enchantLvl = item.getAuthorize();
-		}
+		int enchantLvl = this.item.getEnchantOrAuthorizeLevel();
 		if (enchantLvl == 0) {
 			return;
 		}
@@ -72,20 +66,17 @@ public class StatEnchantFunction extends StatAddFunction {
 	private int getEnchantAdditionModifier(int enchantLvl, Stat2 stat) {
 		// Enchantment stats gained each level at +21 and higher for wep is doubled
 		if (item.getItemTemplate().isWeapon()) {
-			if (item.getEnchantLevel() > 20) {
+			if (item.getEnchantOrAuthorizeLevel() > 20) {
 				return (getWeaponModifiers(enchantLvl) * 2);
 			}
 			return getWeaponModifiers(enchantLvl);
 		}
 		if (item.getItemTemplate().isAccessory() && !item.getItemTemplate().isPlume()) {
-			if (point == 0) {
-				return getAccessoryModifiers(enchantLvl);
-			}
-			return point;
+			return getAccessoryModifiers(enchantLvl);
 		}
 		if (item.getItemTemplate().isArmor() || item.getItemTemplate().isPlume()) {
 			// Enchantment stats gained each level at +21 and higher for armor is doubled
-			if (item.getItemTemplate().isArmor() && item.getEnchantLevel() > 20) {
+			if (item.getItemTemplate().isArmor() && item.getEnchantOrAuthorizeLevel() > 20) {
 				return (getArmorModifiers(enchantLvl, stat) * 2);
 			}
 			return getArmorModifiers(enchantLvl, stat);
@@ -483,7 +474,7 @@ public class StatEnchantFunction extends StatAddFunction {
 					case MAXHP: // TODO
 					case PHYSICAL_DEFENSE: // TODO
 					case MAGIC_SKILL_BOOST_RESIST: // TODO
-						if (item.getEnchantLevel() > 20) {
+						if (item.getEnchantOrAuthorizeLevel() > 20) {
 							// Need to find how much it adds per level.
 							// How it works..
 							// After enchanting to +21 or higher HP, Physical Defense and

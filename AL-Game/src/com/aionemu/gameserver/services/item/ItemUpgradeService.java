@@ -81,7 +81,7 @@ public class ItemUpgradeService {
 		UpgradeResultItem resultItem = resultItemMap.get(resultItemId);
 		Item resultItemName = ItemService.newItem(resultItemId, 1, null, 0, 0, 0);
 
-		if (baseItem.getEnchantLevel() < resultItem.getCheck_enchant_count()) {
+		if (baseItem.getEnchantOrAuthorizeLevel() < resultItem.getCheck_enchant_count()) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_REGISTER_ITEM_MSG_UPGRADE_CANNOT(new DescriptionId(baseItem.getNameId())));
 			return false;
 		}

@@ -80,25 +80,8 @@ public class EnchantItemAction extends AbstractItemAction {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_MONEY);
 			return false;
 		}
-		int msID = parentItem.getItemTemplate().getTemplateId() / 1000000;
-		int tID = targetItem.getItemTemplate().getTemplateId() / 1000000;
-		int wID = targetItem.getItemTemplate().getTemplateId() / 1000000;
-
-		if (msID != 166 && msID != 167 || msID != 166 && tID >= 120 || msID !=140 && tID !=140 ) {
-			if (targetItem.getItemTemplate().isBracelet() || targetItem.getItemTemplate().isEstima()) { // Allows Enchant for Estima and Bracelet
-				return true;
-			}
-		} else if (msID != 166) {
-			if (tID >= 120 && wID != 187) {
-				return false;
-			}
-		}
-
-		if (targetItem.getItemTemplate().getArmorType() == ArmorType.WING) {
-			return true;
-		}
 		
-		if ((targetItem.canAmplify()) && parentItem.getItemTemplate().isEnchantmentStone() && targetItem.getEnchantLevel() == targetItem.getItemTemplate().getMaxEnchantLevel() && !targetItem.isAmplified()) {
+		if ((targetItem.canAmplify()) && parentItem.getItemTemplate().isEnchantmentStone() && targetItem.getEnchantOrAuthorizeLevel() == targetItem.getItemTemplate().getMaxEnchantLevel() && !targetItem.isAmplified()) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EXCEED_ENCHANT_CANNOT_01(new DescriptionId(targetItem.getNameId())));
 			return false;
 		}
@@ -117,12 +100,25 @@ public class EnchantItemAction extends AbstractItemAction {
 			return;
 		}
 		// Current enchant level
-		final int currentEnchant = targetItem.getEnchantLevel();
+		final int currentEnchant = targetItem.getEnchantOrAuthorizeLevel();
 		final boolean isSuccess = isSuccess(player, parentItem, targetItem, supplementItem, targetWeapon);
-		if (targetItem.getItemTemplate().getArmorType() != ArmorType.WING && !targetItem.getItemTemplate().getExceedEnchant() && targetItem.getEnchantLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
-			// You cannot enchant %0 any further.
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
-			return;
+		switch (targetItem.getItemTemplate().getItemQuality()) {
+			case ANCIENT:
+			case RELIC:
+			case FINALITY:
+				if (currentEnchant == targetItem.getItemTemplate().getMaxAuthorize()) {
+					//You cannot enchant %0 any further.
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
+					return;
+				}
+				break;
+			default:
+				if (targetItem.getItemTemplate().getArmorType() != ArmorType.WING && !targetItem.getItemTemplate().getExceedEnchant() && targetItem.getEnchantOrAuthorizeLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
+					// You cannot enchant %0 any further.
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
+					return;
+				}
+				break;
 		}
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), EnchantsConfig.ENCHANT_CAST_DELAY, 0));
 
@@ -133,8 +129,7 @@ public class EnchantItemAction extends AbstractItemAction {
 				player.getController().cancelTask(TaskId.ITEM_USE);
 				player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300457, new DescriptionId(targetItem.getNameId()))); // Enchant Item canceled
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, 2), true);
-
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, 2));
 				player.getObserveController().removeObserver(this);
 			}
 		};
@@ -146,41 +141,56 @@ public class EnchantItemAction extends AbstractItemAction {
 			public void run() {
 				player.getObserveController().removeObserver(observer);
 				// Enchantment stone
-				if (parentItem.getItemTemplate().getCategory() == ItemCategory.ENCHANTMENT || parentItem.getItemTemplate().getCategory() == ItemCategory.AMPLIFICATION) {
-					 // Stigma
-					if (parentItem.getItemTemplate().getCategory() == ItemCategory.ENCHANTMENT && targetItem.getItemTemplate().getCategory() == ItemCategory.STIGMA) {
-						EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);
-					} else {
-						// Item
-						EnchantService.enchantItemAct(player, parentItem, targetItem, currentEnchant, isSuccess);
+				switch (parentItem.getItemTemplate().getCategory()) {
+					case ENCHANTMENT:
+					case AMPLIFICATION: {
+						if (targetItem.getItemTemplate().getCategory() == ItemCategory.STIGMA) {
+							EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);
+						} else { // Item
+							EnchantService.enchantItemAct(player, parentItem, targetItem, currentEnchant, isSuccess);
+						}
+						break;
 					}
-				} else if (parentItem.getItemTemplate().getCategory() == ItemCategory.STIGMA && parentItem.getItemTemplate().getCategory() == targetItem.getItemTemplate().getCategory()) {
-					EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);
+					case STIGMA: {
+						if (parentItem.getItemTemplate().getCategory() == targetItem.getItemTemplate().getCategory()) {
+							EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);
+						}
+						break;
+					}
+					default:
+						EnchantService.socketManastoneAct(player, parentItem, targetItem, targetWeapon, isSuccess);
+						break;
 				}
-				// Manastone
-				else {
-					EnchantService.socketManastoneAct(player, parentItem, targetItem, targetWeapon, isSuccess);
-				}
-
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isSuccess ? 1 : 2));
 				if (CustomConfig.ENABLE_ENCHANT_ANNOUNCE) {
-					if (parentItem.getItemTemplate().getCategory() == ItemCategory.ENCHANTMENT || parentItem.getItemTemplate().getCategory() == ItemCategory.AMPLIFICATION) {
-						Iterator<Player> iter = World.getInstance().getPlayersIterator();
-						while (iter.hasNext()) {
-							Player player2 = iter.next();
-							if (targetItem.getEnchantLevel() == 15 && isSuccess) {
-								if (player2.getRace() == player.getRace()) {
-									PacketSendUtility.sendPacket(player2, SM_SYSTEM_MESSAGE.STR_MSG_ENCHANT_ITEM_SUCCEEDED_15(player.getName(), targetItem.getItemTemplate().getNameId()));
-								}
-							}
-							if (targetItem.getEnchantLevel() == 20 && isSuccess) {
-								if (player2.getRace() == player.getRace()) {
-									PacketSendUtility.sendPacket(player2, SM_SYSTEM_MESSAGE.STR_MSG_ENCHANT_ITEM_SUCCEEDED_20(player.getName(), targetItem.getItemTemplate().getNameId()));
+					switch (parentItem.getItemTemplate().getCategory()) {
+						case ENCHANTMENT:
+						case AMPLIFICATION: {
+							Iterator<Player> iter = World.getInstance().getPlayersIterator();
+							while (iter.hasNext()) {
+								Player player2 = iter.next();
+								switch (targetItem.getEnchantOrAuthorizeLevel()) {
+									case 15: {
+										if (player2.getRace() == player.getRace() && isSuccess) {
+											PacketSendUtility.sendPacket(player2, SM_SYSTEM_MESSAGE.STR_MSG_ENCHANT_ITEM_SUCCEEDED_15(player.getName(), targetItem.getItemTemplate().getNameId()));	
+										}
+										break;
+									}
+									case 20: {
+										if (player2.getRace() == player.getRace() && isSuccess) {
+											PacketSendUtility.sendPacket(player2, SM_SYSTEM_MESSAGE.STR_MSG_ENCHANT_ITEM_SUCCEEDED_20(player.getName(), targetItem.getItemTemplate().getNameId()));	
+										}
+										break;
+									}
+									default:
+										break;
 								}
 							}
 						}
+						default:
+							break;
 					}
 				}
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isSuccess ? 1 : 2));
 			}
 		}, EnchantsConfig.ENCHANT_CAST_DELAY));
 	}
@@ -203,14 +213,15 @@ public class EnchantItemAction extends AbstractItemAction {
 	 */
 	private boolean isSuccess(final Player player, final Item parentItem, final Item targetItem, final Item supplementItem, final int targetWeapon) {
 		if (parentItem.getItemTemplate() != null) {
-			// Item template
-			ItemTemplate itemTemplate = parentItem.getItemTemplate();
-			// Enchantment stone // stigma
-			if (itemTemplate.getCategory() == ItemCategory.ENCHANTMENT || itemTemplate.getCategory() == ItemCategory.AMPLIFICATION || (parentItem.getItemTemplate().getCategory() == targetItem.getItemTemplate().getCategory() && itemTemplate.getCategory() == ItemCategory.STIGMA)) {
-				return EnchantService.enchantItem(player, parentItem, targetItem, supplementItem);
+			switch (parentItem.getItemTemplate().getCategory()) {
+				case ENCHANTMENT:
+				case AMPLIFICATION:
+				case STIGMA: {
+					return EnchantService.enchantItem(player, parentItem, targetItem, supplementItem);
+				}
+				default:
+					return EnchantService.socketManastone(player, parentItem, targetItem, supplementItem, targetWeapon);
 			}
-			// Manastone
-			return EnchantService.socketManastone(player, parentItem, targetItem, supplementItem, targetWeapon);
 		}
 		return false;
 	}
@@ -219,11 +230,11 @@ public class EnchantItemAction extends AbstractItemAction {
 		return count;
 	}
 
-	public int getMaxLevel() {
+	private int getMaxLevel() {
 		return max_level != null ? max_level : 0;
 	}
 
-	public int getMinLevel() {
+	private int getMinLevel() {
 		return min_level != null ? min_level : 0;
 	}
 
@@ -235,7 +246,7 @@ public class EnchantItemAction extends AbstractItemAction {
 		return chance;
 	}
 
-	boolean isSupplementAction() {
+	private boolean isSupplementAction() {
 		return getMinLevel() > 0 || getMaxLevel() > 0 || getChance() > 0 || isManastoneOnly();
 	}
 

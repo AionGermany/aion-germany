@@ -109,6 +109,7 @@
 	<xs:include schemaLocation="transformation/transformations.xsd"/>
 	<xs:include schemaLocation="revive_start_points/revive_world_start_points.xsd"/>
 	<xs:include schemaLocation="revive_start_points/instance_revive_start_points.xsd"/>
+	<xs:include schemaLocation="items/enchant_chances.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -222,6 +223,7 @@
 				<xs:element ref="transformations" minOccurs="0"/>
 				<xs:element ref="revive_world_start_points" minOccurs="0"/>
 				<xs:element ref="instance_revive_start_points" minOccurs="0"/>
+				<xs:element ref="enchant_chances" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

@@ -55,7 +55,7 @@ public class cmd_enchant extends PlayerCommand {
 					enchantLevel = maxEnchant;
 				}
 
-				targetItem.setEnchantLevel(enchantLevel);
+				targetItem.setEnchantOrAuthorizeLevel(enchantLevel);
 
 				if (targetItem.isEquipped()) {
 					player.getGameStats().updateStatsVisually();
@@ -80,7 +80,7 @@ public class cmd_enchant extends PlayerCommand {
 		if (item.getItemTemplate().getCategory() == ItemCategory.STIGMA) {
 			return false;
 		}
-		if (item.getEnchantLevel() == 15) {
+		if (item.getEnchantOrAuthorizeLevel() == 15) {
 			return false;
 		}
 		if (item.getItemTemplate().isArmor()) {

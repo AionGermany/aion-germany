@@ -245,7 +245,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
 					item.addGodStone(godstone);
 				}
 
-				String itemTxt = "(cube)#itemId=" + itemId + "; objectIdChange[" + objIdOld + "->" + newId + "] " + item.getItemCount() + ";" + item.getItemColor() + ";" + item.getItemCreator() + ";" + item.getExpireTime() + ";" + item.getActivationCount() + ";" + item.getEnchantLevel() + ";" + item.getItemSkinTemplate().getTemplateId() + ";" + item.getFusionedItemTemplate() + ";" + item.getOptionalSocket() + ";" + item.getOptionalFusionSocket() + ";" + item.getChargePoints();
+				String itemTxt = "(cube)#itemId=" + itemId + "; objectIdChange[" + objIdOld + "->" + newId + "] " + item.getItemCount() + ";" + item.getItemColor() + ";" + item.getItemCreator() + ";" + item.getExpireTime() + ";" + item.getActivationCount() + ";" + item.getEnchantOrAuthorizeLevel() + ";" + item.getItemSkinTemplate().getTemplateId() + ";" + item.getFusionedItemTemplate() + ";" + item.getOptionalSocket() + ";" + item.getOptionalFusionSocket() + ";" + item.getChargePoints();
 				itemOut.add(itemTxt);
 				item.setPersistentState(PersistentState.NEW);
 				player.getInventory().add(item);
@@ -328,7 +328,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
 					item.addGodStone(godstone);
 				}
 
-				String itemTxt = "(warehouse)#itemId=" + itemId + "; objectIdChange[" + objIdOld + "->" + newId + "] " + item.getItemCount() + ";" + item.getItemColor() + ";" + item.getItemCreator() + ";" + item.getExpireTime() + ";" + item.getActivationCount() + ";" + item.getEnchantLevel() + ";" + item.getItemSkinTemplate().getTemplateId() + ";" + item.getFusionedItemTemplate() + ";" + item.getOptionalSocket() + ";" + item.getOptionalFusionSocket() + ";" + item.getChargePoints();
+				String itemTxt = "(warehouse)#itemId=" + itemId + "; objectIdChange[" + objIdOld + "->" + newId + "] " + item.getItemCount() + ";" + item.getItemColor() + ";" + item.getItemCreator() + ";" + item.getExpireTime() + ";" + item.getActivationCount() + ";" + item.getEnchantOrAuthorizeLevel() + ";" + item.getItemSkinTemplate().getTemplateId() + ";" + item.getFusionedItemTemplate() + ";" + item.getOptionalSocket() + ";" + item.getOptionalFusionSocket() + ";" + item.getChargePoints();
 				itemOut.add(itemTxt);
 				item.setPersistentState(PersistentState.NEW);
 				player.getWarehouse().add(item);

@@ -222,8 +222,8 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 			writeD(item.getItemColor());
 			if (item.getItemTemplate().isAccessory()) {
 				if (item.getItemTemplate().isPlume()) {
-					float authorize = item.getAuthorize() / 5;
-					if (item.getAuthorize() >= 5) {
+					float authorize = item.getEnchantOrAuthorizeLevel() / 5;
+					if (item.getEnchantOrAuthorizeLevel() >= 5) {
 						authorize = authorize > 2.0F ? 2.0F : authorize;
 						writeD((int) authorize << 3);
 					}
@@ -232,10 +232,10 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 					}
 				}
 				else if (item.getItemTemplate().isBracelet()) {
-					if (item.getAuthorize() >= 5 && item.getAuthorize() < 10) {
+					if (item.getEnchantOrAuthorizeLevel() >= 5 && item.getEnchantOrAuthorizeLevel() < 10) {
 						writeD(96);
 					}
-					else if (item.getAuthorize() >= 10) {
+					else if (item.getEnchantOrAuthorizeLevel() >= 10) {
 						writeD(160);
 					}
 					else {
@@ -243,11 +243,11 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 					}
 				}
 				else {
-					writeD(item.getAuthorize() >= 5 ? 2 : 0);
+					writeD(item.getEnchantOrAuthorizeLevel() >= 5 ? 2 : 0);
 				}
 			}
 			else if ((item.getItemTemplate().isWeapon()) || (item.getItemTemplate().isTwoHandWeapon())) {
-				writeD(item.getEnchantLevel() == 15 ? 2 : item.getEnchantLevel() >= 20 ? 4 : 0);
+				writeD(item.getEnchantOrAuthorizeLevel() == 15 ? 2 : item.getEnchantOrAuthorizeLevel() >= 20 ? 4 : 0);
 			}
 			else {
 				writeD(0);
@@ -364,7 +364,7 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeD(player.getHouseOwnerId()); // 3.0
 		writeD(player.getBonusTime().getStatus().getId()); // Abbey Return Buff ID 1 -Normal, 2 - New, 3 Return
 		writeD(0x00);// unk 0x00 4.7 //TODO need to figure out
-		writeC(raceId == 0 ? 5 : 3); // language asmo:3 ely:5
+		writeC(3);//raceId == 0 ? 5 : 3); // language asmo:3 ely:5
 		/**
 		 * === Conqueror === 0x01 = Conquerers Will Lvl 1 (Buff you get for killing enemies from their home map) 0x02 = Furious Conquerers Will Lvl 2 (Buff you get for killing enemies from their home
 		 * map) 0x03 = Berserk Conquerers Will Lvl 3 (Buff you get for killing enemies from their home map) === Protector == 0x01 = Protector Lvl 1 0x02 = Protector Lvl 2 0x03 = Protector Lvl 3
@@ -394,6 +394,6 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		        writeC(0); // 4.9
 		        break;
 		    }
-		writeD(0x00); // 5.4 found value 1000,2000 and 0
+		writeD(1000); // 5.4 found value 1000,2000 and 0
 	}
 }

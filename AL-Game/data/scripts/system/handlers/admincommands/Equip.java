@@ -275,7 +275,7 @@ public class Equip extends AdminCommand {
 	private void enchant(Player admin, Player player, int enchant) {
 		for (Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma()) {
 			if (isUpgradeble(targetItem)) {
-				if (targetItem.getEnchantLevel() == enchant) {
+				if (targetItem.getEnchantOrAuthorizeLevel() == enchant) {
 					continue;
 				}
 				if (enchant > 50) {
@@ -284,29 +284,30 @@ public class Equip extends AdminCommand {
 				if (enchant < 0) {
 					enchant = 0;
 				}
-
-				if (targetItem.getItemTemplate().isBracelet()) {
-					if (enchant > 10) {
-						targetItem.setOptionalSocket(3);
-						targetItem.setAuthorize(10);
+				
+				if (targetItem.getItemTemplate().getMaxAuthorize() > 0) {
+					if (targetItem.getItemTemplate().isBracelet()) {
+						if (enchant > 10) {
+							targetItem.setOptionalSocket(3);
+							targetItem.setEnchantOrAuthorizeLevel(10);
+						} else {
+							targetItem.setEnchantOrAuthorizeLevel(enchant);
+						}
+					} else if (enchant > targetItem.getItemTemplate().getMaxAuthorize()) {
+						targetItem.setEnchantOrAuthorizeLevel(targetItem.getItemTemplate().getMaxAuthorize());
+					} else {
+						targetItem.setEnchantOrAuthorizeLevel(enchant);
 					}
-					else {
-						targetItem.setAuthorize(enchant);
-					}
-				}
-				else if (targetItem.getItemTemplate().isAccessory()) {
-					targetItem.setAuthorize(enchant);
 				}
 				else if (targetItem.getItemTemplate().getArmorType() == ArmorType.WING) {
 					if (enchant > targetItem.getItemTemplate().getMaxEnchantLevel()) {
-						enchant = targetItem.getItemTemplate().getMaxEnchantLevel();
-						targetItem.setEnchantLevel(enchant);
+						targetItem.setEnchantOrAuthorizeLevel(targetItem.getItemTemplate().getMaxEnchantLevel());
 					} else {
-						targetItem.setEnchantLevel(enchant);
+						targetItem.setEnchantOrAuthorizeLevel(enchant);
 					}
 				}
 				else {
-					targetItem.setEnchantLevel(enchant);
+					targetItem.setEnchantOrAuthorizeLevel(enchant);
 				}
 				
 				if (targetItem.isEquipped()) {
@@ -335,7 +336,7 @@ public class Equip extends AdminCommand {
 				if (plume < 0) {
 					plume = 0;
 				}
-				targetItem.setAuthorize(plume);
+				targetItem.setEnchantOrAuthorizeLevel(plume);
 				if (targetItem.isEquipped()) {
 					player.getGameStats().updateStatsVisually();
 				}

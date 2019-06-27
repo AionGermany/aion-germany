@@ -21036,7 +21036,7 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	}
 
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_AUTHORIZE_SUCCEEDED(int nameId, int level) {
-		return new SM_SYSTEM_MESSAGE(1402148, new Object[] { new DescriptionId(nameId), Integer.valueOf(level) });
+		return new SM_SYSTEM_MESSAGE(1402148, new Object[] { new DescriptionId(nameId), level});
 	}
 
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_AUTHORIZE_FAILED(int nameId) {

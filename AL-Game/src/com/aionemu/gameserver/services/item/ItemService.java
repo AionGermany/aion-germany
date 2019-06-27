@@ -163,8 +163,8 @@ public class ItemService {
 		if (sourceItem.getGodStone() != null) {
 			newItem.addGodStone(sourceItem.getGodStone().getItemId());
 		}
-		if (sourceItem.getEnchantLevel() > 0) {
-			newItem.setEnchantLevel(sourceItem.getEnchantLevel());
+		if (sourceItem.getEnchantOrAuthorizeLevel() > 0) {
+			newItem.setEnchantOrAuthorizeLevel(sourceItem.getEnchantOrAuthorizeLevel());
 		}
 		if (sourceItem.isSoulBound()) {
 			newItem.setSoulBound(true);
@@ -344,7 +344,7 @@ public class ItemService {
 	public static void makeUpgradeItem(Player player, Item sourceItem, Item newItem) {
 		Storage inventory = player.getInventory();
 		newItem.setOptionalSocket(sourceItem.getOptionalSocket());
-		int enchantLevel = sourceItem.getEnchantLevel();
+		int enchantLevel = sourceItem.getEnchantOrAuthorizeLevel();
 		
 		if (sourceItem.getFusionedItemId() != 0) {
 			newItem.setFusionedItem(sourceItem.getFusionedItemTemplate());
@@ -359,16 +359,16 @@ public class ItemService {
 		}
 		
 		if (sourceItem.getItemTemplate().isPlume()) {
-			newItem.setAuthorize(1);
-			newItem.setEnchantLevel(0);
+			newItem.setEnchantOrAuthorizeLevel(1);
+			newItem.setEnchantOrAuthorizeLevel(0);
 		} else {
 			if (enchantLevel >= 20) {
-				newItem.setEnchantLevel(enchantLevel - 5);
+				newItem.setEnchantOrAuthorizeLevel(enchantLevel - 5);
 				newItem.setAmplificationSkill(sourceItem.getAmplificationSkill());
 				newItem.setAmplified(true);
 			}
 			else {
-				newItem.setEnchantLevel(enchantLevel);
+				newItem.setEnchantOrAuthorizeLevel(enchantLevel);
 			}
 		}
 

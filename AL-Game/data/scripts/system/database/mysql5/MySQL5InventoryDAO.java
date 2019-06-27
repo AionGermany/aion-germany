@@ -415,7 +415,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(11, item.isSoulBound() ? 1 : 0);
 				stmt.setLong(12, item.getEquipmentSlot());
 				stmt.setInt(13, item.getItemLocation());
-				stmt.setInt(14, item.getEnchantLevel());
+				stmt.setInt(14, item.getItemTemplate().getMaxAuthorize() > 0 ? 0 : item.getEnchantOrAuthorizeLevel());
 				stmt.setInt(15, item.getItemSkinTemplate().getTemplateId());
 				stmt.setInt(16, item.getFusionedItemId());
 				stmt.setInt(17, item.getOptionalSocket());
@@ -424,7 +424,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(20, item.getBonusNumber());
 				stmt.setInt(21, item.getRandomCount());
 				stmt.setInt(22, item.getPackCount());
-				stmt.setInt(23, item.getAuthorize());
+				stmt.setInt(23, item.getItemTemplate().getMaxAuthorize() > 0 ? item.getEnchantOrAuthorizeLevel() : 0);
 				stmt.setBoolean(24, item.isPacked());
 				stmt.setBoolean(25, item.isAmplified());
 				stmt.setInt(26, item.getAmplificationSkill());
@@ -471,7 +471,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(9, item.isSoulBound() ? 1 : 0);
 				stmt.setLong(10, item.getEquipmentSlot());
 				stmt.setInt(11, item.getItemLocation());
-				stmt.setInt(12, item.getEnchantLevel());
+				stmt.setInt(12, item.getItemTemplate().getMaxAuthorize() > 0 ? 0 : item.getEnchantOrAuthorizeLevel());
 				stmt.setInt(13, item.getItemSkinTemplate().getTemplateId());
 				stmt.setInt(14, item.getFusionedItemId());
 				stmt.setInt(15, item.getOptionalSocket());
@@ -480,7 +480,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(18, item.getBonusNumber());
 				stmt.setInt(19, item.getRandomCount());
 				stmt.setInt(20, item.getPackCount());
-				stmt.setInt(21, item.getAuthorize());
+				stmt.setInt(21, item.getItemTemplate().getMaxAuthorize() > 0 ? item.getEnchantOrAuthorizeLevel() : 0);
 				stmt.setBoolean(22, item.isPacked());
 				stmt.setBoolean(23, item.isAmplified());
 				stmt.setInt(24, item.getAmplificationSkill());

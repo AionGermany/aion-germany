@@ -80,13 +80,13 @@ public class PackAction extends AbstractItemAction {
 
 		int enchantPack = 0; // Added with 4.9 Enchant > 10 = PackCount +1 , Enchant > 20 = PackCount +2
 
-		if (targetItem.getEnchantLevel() > 10 && targetItem.getEnchantLevel() < 20 && targetItem.getPackCount() < targetItem.getItemTemplate().getPackCount() + 1) {
+		if (targetItem.getEnchantOrAuthorizeLevel() > 10 && targetItem.getEnchantOrAuthorizeLevel() < 20 && targetItem.getPackCount() < targetItem.getItemTemplate().getPackCount() + 1) {
 			enchantPack += 1;
 		}
-		else if (targetItem.getEnchantLevel() > 20 && targetItem.getPackCount() < targetItem.getItemTemplate().getPackCount() + 2) {
+		else if (targetItem.getEnchantOrAuthorizeLevel() > 20 && targetItem.getPackCount() < targetItem.getItemTemplate().getPackCount() + 2) {
 			enchantPack += 2;
 		}
-		else if (targetItem.getEnchantLevel() <= 10 && targetItem.getPackCount() > targetItem.getItemTemplate().getPackCount()) {
+		else if (targetItem.getEnchantOrAuthorizeLevel() <= 10 && targetItem.getPackCount() > targetItem.getItemTemplate().getPackCount()) {
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402015, new Object[] { new DescriptionId(targetItem.getNameId()) }));
 			return false;
 		}

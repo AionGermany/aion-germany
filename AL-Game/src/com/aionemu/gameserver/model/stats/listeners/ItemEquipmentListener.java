@@ -125,7 +125,7 @@ public class ItemEquipmentListener {
 		if (randomStats != null) {
 			randomStats.onUnEquip(owner);
 		}
-		if (item.isAmplified() && item.getEnchantLevel() >= 20) {
+		if (item.isAmplified() && item.getEnchantOrAuthorizeLevel() >= 20) {
 			SkillLearnService.removeSkill(owner, item.getAmplificationSkill());
 		}
 		if (item.getItemTemplate().isStigma()) {

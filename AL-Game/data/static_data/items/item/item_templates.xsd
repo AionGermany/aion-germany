@@ -155,6 +155,7 @@
 		<xs:attribute name="minion_ticket" type="xs:boolean" use="optional"/>
 		<xs:attribute name="is_cash_contract" type="xs:boolean" use="optional"/>
 		<xs:attribute name="skill_enchant" type="xs:int" use="optional"/>
+		<xs:attribute name="enchant_type" type="enchantType"/>
 	</xs:complexType>
 	<xs:simpleType name="itemSlot">
 		<xs:restriction base="xs:string">
@@ -723,5 +724,12 @@
 	</xs:simpleType>
 	<xs:simpleType name="StigmaSkillList">
 		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="enchantType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PVP"/>
+			<xs:enumeration value="PVE"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

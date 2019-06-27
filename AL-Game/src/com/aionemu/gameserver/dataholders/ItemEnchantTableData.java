@@ -67,10 +67,12 @@ public class ItemEnchantTableData {
 
 	public ItemEnchantTable getTableArmor(ArmorType aType, ItemCategory cType) {
 		for (ItemEnchantTable it : this.enchantTables) {
-			if (it.getPart() == null)
+			if (it.getPart() == null) {
 				continue;
-			else if (aType == ArmorType.NO_ARMOR)
+			}
+			else if (aType == ArmorType.NO_ARMOR) {
 				continue;
+			}
 			if (it.getType().equalsIgnoreCase(aType.toString()) && it.getPart().equalsIgnoreCase(cType.toString())) {
 				return it;
 			}

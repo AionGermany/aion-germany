@@ -116,7 +116,7 @@ public class StigmaService {
 					stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), id); // only 2 skill here '1:534 1:434
 					if (stigmaUpperLvls != null) {
 						for (StigmaSkill stigma : stigmaUpperLvls) {
-							player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), resultItem.getEnchantLevel() + 1, false, true);
+							player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), resultItem.getEnchantOrAuthorizeLevel() + 1, false, true);
 						}
 					}
 				}
@@ -126,7 +126,7 @@ public class StigmaService {
 				stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), stigmaData.get(0)); // only 1 skill here '1:534'
 				if (stigmaUpperLvls != null) {
 					for (StigmaSkill stigma : stigmaUpperLvls) {
-						player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), resultItem.getEnchantLevel() + 1, false, true);
+						player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), resultItem.getEnchantOrAuthorizeLevel() + 1, false, true);
 					}
 				}
 			}
@@ -303,7 +303,7 @@ public class StigmaService {
 						stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), id); // only 2 skill here '1:534 1:434'
 						if (stigmaUpperLvls != null) {
 							for (StigmaSkill stigma : stigmaUpperLvls) {
-								player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), item.getEnchantLevel() + 1, false, false);
+								player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), item.getEnchantOrAuthorizeLevel() + 1, false, false);
 							}
 						}
 					}
@@ -312,7 +312,7 @@ public class StigmaService {
 					stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), stigmaData.get(0)); // only 1 skill here '1:534'
 					if (stigmaUpperLvls != null) {
 						for (StigmaSkill stigma : stigmaUpperLvls) {
-							player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), item.getEnchantLevel() + 1, false, false);
+							player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), item.getEnchantOrAuthorizeLevel() + 1, false, false);
 						}
 					}
 				}
@@ -553,7 +553,7 @@ public class StigmaService {
 			int count = 0;			
 			if (player.getEquipment().getEquippedItemsAllStigmaIds().size() == 6) {
 				for (Item stigma : player.getEquipment().getEquippedItemsAllStigma()) {
-					if (stigma.getEnchantLevel() >= 9) {
+					if (stigma.getEnchantOrAuthorizeLevel() >= 9) {
 						count++;
 					}
 				}

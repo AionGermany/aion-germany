@@ -418,9 +418,8 @@ public class BrokerService {
 		if (oldItem.getGodStone() != null) {
 			newItem.addGodStone(oldItem.getGodStone().getItemId());
 		}
-		if (oldItem.getEnchantLevel() > 0) {
-			newItem.setEnchantLevel(oldItem.getEnchantLevel());
-		}
+		
+		newItem.setEnchantOrAuthorizeLevel(oldItem.getItemTemplate().getMaxAuthorize() > 0 ? 0 : oldItem.getEnchantOrAuthorizeLevel());
 		if (oldItem.isSoulBound()) {
 			newItem.setSoulBound(true);
 		}
@@ -440,7 +439,7 @@ public class BrokerService {
 		newItem.setFusionedItem(oldItem.getFusionedItemTemplate());
 		newItem.setOptionalFusionSocket(oldItem.getOptionalFusionSocket());
 		newItem.setPackCount(oldItem.getPackCount());
-		newItem.setAuthorize(oldItem.getAuthorize());
+		newItem.setEnchantOrAuthorizeLevel(oldItem.getItemTemplate().getMaxAuthorize() > 0 ? oldItem.getEnchantOrAuthorizeLevel() : 0);
 		newItem.setPacked(oldItem.isPacked());
 		newItem.setAmplified(oldItem.isAmplified());
 		newItem.setAmplificationSkill(oldItem.getAmplificationSkill());

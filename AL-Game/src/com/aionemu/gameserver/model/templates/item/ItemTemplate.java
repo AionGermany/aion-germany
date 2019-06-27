@@ -237,7 +237,10 @@ public class ItemTemplate extends VisibleObjectTemplate {
 
     @XmlAttribute(name = "skill_enchant")
     private int skill_enchant;
-
+    
+    @XmlAttribute(name = "enchant_type")
+	private EnchantType enchantType;
+    
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	@XmlTransient
 	private boolean isQuestUpdateItem;
@@ -719,7 +722,7 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return category == ItemCategory.EARRINGS || category == ItemCategory.RINGS || category == ItemCategory.NECKLACE || category == ItemCategory.PLUME || category == ItemCategory.BRACELET || category == ItemCategory.BELT || category == ItemCategory.HELMET;
 	}
 
-	public int getAuthorize() {
+	public int getMaxAuthorize() {
 		return max_authorize;
 	}
 
@@ -758,4 +761,8 @@ public class ItemTemplate extends VisibleObjectTemplate {
     public int getSkillEnhance() {
         return skill_enchant;
     }
+    
+    public EnchantType getEnchantType() {
+		return enchantType;
+	}
 }
