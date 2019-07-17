@@ -394,8 +394,14 @@
     <npcskills npcid="247394">
         <npcskill skillid="21494" skilllevel="1" probability="100" maxhp="100"/>
     </npcskills>
+    <npcskills npcid="247554">
+        <npcskill skillid="11349" skilllevel="65" probability="25" minhp="0" maxhp="100"/>
+    </npcskills>
     <npcskills npcid="248175">
         <npcskill skillid="18039" skilllevel="1" probability="25" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="248966">
+        <npcskill skillid="21494" skilllevel="1" probability="100"/>
     </npcskills>
     <npcskills npcid="280467">
         <npcskill skillid="16996" skilllevel="29" probability="25"/>
@@ -6211,13 +6217,21 @@
         <npcskill skillid="17510" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
     </npcskills>
     <npcskills npcid="656704">
-        <npcskill skillid="16536" skilllevel="30" probability="4"/>
-        <npcskill skillid="16519" skilllevel="30" probability="17"/>
+        <npcskill skillid="16536" skilllevel="30" probability="25"/>
+        <npcskill skillid="16519" skilllevel="30" probability="63"/>
+        <npcskill skillid="16525" skilllevel="30" probability="13"/>
     </npcskills>
     <npcskills npcid="656705">
         <npcskill skillid="20557" skilllevel="10" probability="10" maxhp="100"/>
         <npcskill skillid="19792" skilllevel="10" probability="40"/>
         <npcskill skillid="21300" skilllevel="54" probability="50"/>
+    </npcskills>
+    <npcskills npcid="656709">
+        <npcskill skillid="21211" skilllevel="80" probability="3" maxhp="100"/>
+        <npcskill skillid="21212" skilllevel="80" probability="63" maxhp="100"/>
+        <npcskill skillid="21213" skilllevel="100" probability="29"/>
+        <npcskill skillid="21214" skilllevel="100" probability="3" minhp="0"/>
+        <npcskill skillid="21215" skilllevel="100" probability="3" minhp="0"/>
     </npcskills>
     <npcskills npcid="656800">
         <npcskill skillid="16662" skilllevel="15" probability="25" minhp="0" maxhp="100"/>
@@ -6274,49 +6288,68 @@
         <npcskill skillid="18658" skilllevel="65" probability="25" minhp="89" maxhp="100"/>
     </npcskills>
     <npcskills npcid="657226">
-        <npcskill skillid="18541" skilllevel="20" probability="25" minhp="95" maxhp="100"/>
+        <npcskill skillid="18541" skilllevel="20" probability="25" minhp="0" maxhp="100"/>
+        <npcskill skillid="16554" skilllevel="20" probability="25" minhp="0" maxhp="16"/>
+        <npcskill skillid="18159" skilllevel="20" probability="25" minhp="0" maxhp="16"/>
     </npcskills>
     <npcskills npcid="657227">
-        <npcskill skillid="16576" skilllevel="43" probability="73"/>
-        <npcskill skillid="16698" skilllevel="43" probability="27"/>
+        <npcskill skillid="16576" skilllevel="43" probability="88"/>
+        <npcskill skillid="16698" skilllevel="43" probability="13"/>
+        <npcskill skillid="16701" skilllevel="43" probability="0"/>
+    </npcskills>
+    <npcskills npcid="657229">
+        <npcskill skillid="16457" skilllevel="20" probability="25" minhp="95" maxhp="100"/>
     </npcskills>
     <npcskills npcid="657230">
-        <npcskill skillid="16722" skilllevel="20" probability="25" minhp="30" maxhp="100"/>
+        <npcskill skillid="16722" skilllevel="20" probability="25" minhp="0" maxhp="100"/>
     </npcskills>
     <npcskills npcid="657231">
-        <npcskill skillid="18248" skilllevel="42" probability="25" minhp="81" maxhp="100"/>
-        <npcskill skillid="16543" skilllevel="42" probability="25" minhp="11" maxhp="16"/>
+        <npcskill skillid="18248" skilllevel="42" probability="25" minhp="0" maxhp="100"/>
+        <npcskill skillid="16543" skilllevel="42" probability="25" minhp="0" maxhp="16"/>
     </npcskills>
     <npcskills npcid="657232">
-        <npcskill skillid="16666" skilllevel="34" probability="25" minhp="43" maxhp="48"/>
+        <npcskill skillid="16666" skilllevel="34" probability="25" minhp="0" maxhp="48"/>
     </npcskills>
     <npcskills npcid="657237">
         <npcskill skillid="17479" skilllevel="20" probability="25" minhp="0" maxhp="35"/>
+        <npcskill skillid="16401" skilllevel="20" probability="25" minhp="23" maxhp="28"/>
     </npcskills>
     <npcskills npcid="657241">
-        <npcskill skillid="16666" skilllevel="34" probability="25" minhp="22" maxhp="100"/>
+        <npcskill skillid="16666" skilllevel="34" probability="70" minhp="22" maxhp="100"/>
+        <npcskill skillid="16536" skilllevel="34" probability="30"/>
     </npcskills>
     <npcskills npcid="657244">
-        <npcskill skillid="18541" skilllevel="20" probability="38" maxhp="100"/>
-        <npcskill skillid="16782" skilllevel="20" probability="25"/>
-        <npcskill skillid="18589" skilllevel="20" probability="13"/>
-        <npcskill skillid="16554" skilllevel="20" probability="13"/>
-        <npcskill skillid="18159" skilllevel="20" probability="13"/>
+        <npcskill skillid="18541" skilllevel="20" probability="25" minhp="0" maxhp="100"/>
+        <npcskill skillid="16782" skilllevel="20" probability="25" minhp="0" maxhp="0"/>
+        <npcskill skillid="18589" skilllevel="20" probability="25" minhp="0" maxhp="0"/>
+        <npcskill skillid="16554" skilllevel="20" probability="25" minhp="0" maxhp="0"/>
+        <npcskill skillid="18159" skilllevel="20" probability="25" minhp="0" maxhp="0"/>
     </npcskills>
     <npcskills npcid="657245">
-        <npcskill skillid="16576" skilllevel="43" probability="64" maxhp="100"/>
-        <npcskill skillid="16698" skilllevel="43" probability="27"/>
-        <npcskill skillid="16701" skilllevel="43" probability="9"/>
+        <npcskill skillid="16576" skilllevel="43" probability="60" maxhp="100"/>
+        <npcskill skillid="16698" skilllevel="43" probability="40"/>
+        <npcskill skillid="16701" skilllevel="43" probability="0"/>
+    </npcskills>
+    <npcskills npcid="657246">
+        <npcskill skillid="17479" skilllevel="20" probability="100"/>
+    </npcskills>
+    <npcskills npcid="657247">
+        <npcskill skillid="16457" skilllevel="20" probability="25" minhp="64" maxhp="100"/>
+        <npcskill skillid="16519" skilllevel="20" probability="25" minhp="78" maxhp="83"/>
+        <npcskill skillid="16531" skilllevel="20" probability="25" minhp="0" maxhp="13"/>
     </npcskills>
     <npcskills npcid="657248">
-        <npcskill skillid="16722" skilllevel="20" probability="25" minhp="95" maxhp="100"/>
-        <npcskill skillid="16519" skilllevel="20" probability="25" minhp="64" maxhp="69"/>
+        <npcskill skillid="16722" skilllevel="20" probability="25" minhp="0" maxhp="100"/>
+        <npcskill skillid="16519" skilllevel="20" probability="25" minhp="0" maxhp="69"/>
     </npcskills>
     <npcskills npcid="657249">
-        <npcskill skillid="18248" skilllevel="42" probability="50" maxhp="100"/>
-        <npcskill skillid="17031" skilllevel="42" probability="13" maxhp="100"/>
-        <npcskill skillid="16543" skilllevel="42" probability="25" maxhp="100"/>
-        <npcskill skillid="16746" skilllevel="42" probability="13"/>
+        <npcskill skillid="18248" skilllevel="42" probability="44" maxhp="100"/>
+        <npcskill skillid="17031" skilllevel="42" probability="0" maxhp="100"/>
+        <npcskill skillid="16543" skilllevel="42" probability="0" maxhp="100"/>
+        <npcskill skillid="16746" skilllevel="42" probability="56"/>
+    </npcskills>
+    <npcskills npcid="657250">
+        <npcskill skillid="16666" skilllevel="34" probability="25" minhp="0" maxhp="0"/>
     </npcskills>
     <npcskills npcid="657295">
         <npcskill skillid="21300" skilllevel="1" probability="25" minhp="92" maxhp="100"/>
@@ -6329,8 +6362,16 @@
         <npcskill skillid="17031" skilllevel="42" probability="25" minhp="95" maxhp="100"/>
         <npcskill skillid="16543" skilllevel="42" probability="25" minhp="95" maxhp="100"/>
     </npcskills>
+    <npcskills npcid="657332">
+        <npcskill skillid="16457" skilllevel="20" probability="33"/>
+    </npcskills>
     <npcskills npcid="657335">
         <npcskill skillid="16666" skilllevel="34" probability="25" minhp="0" maxhp="2"/>
+    </npcskills>
+    <npcskills npcid="657353">
+        <npcskill skillid="21211" skilllevel="80" probability="25" minhp="94" maxhp="100"/>
+        <npcskill skillid="21212" skilllevel="80" probability="25" minhp="85" maxhp="90"/>
+        <npcskill skillid="21213" skilllevel="100" probability="25" minhp="76" maxhp="81"/>
     </npcskills>
     <npcskills npcid="700596">
         <npcskill skillid="19120" skilllevel="10" probability="100" maxhp="100"/>
@@ -6592,7 +6633,7 @@
         <npcskill skillid="21936" skilllevel="1" probability="100" minhp="0" maxhp="100"/>
     </npcskills>
     <npcskills npcid="833416">
-        <npcskill skillid="21936" skilllevel="5" probability="100" maxhp="100"/>
+        <npcskill skillid="21936" skilllevel="1" probability="100" maxhp="100"/>
     </npcskills>
     <npcskills npcid="833417">
         <npcskill skillid="21937" skilllevel="1" probability="100" minhp="20" maxhp="73"/>
@@ -6676,7 +6717,7 @@
         <npcskill skillid="21953" skilllevel="5" probability="100" maxhp="100"/>
     </npcskills>
     <npcskills npcid="833450">
-        <npcskill skillid="21953" skilllevel="4" probability="100" minhp="0" maxhp="100"/>
+        <npcskill skillid="21953" skilllevel="1" probability="100" minhp="0" maxhp="100"/>
     </npcskills>
     <npcskills npcid="833454">
         <npcskill skillid="22655" skilllevel="1" probability="100" minhp="0" maxhp="100"/>
@@ -6857,11 +6898,36 @@
     <npcskills npcid="835441">
         <npcskill skillid="17421" skilllevel="1" probability="100" maxhp="100"/>
     </npcskills>
+    <npcskills npcid="835545">
+        <npcskill skillid="11278" skilllevel="1" probability="25" minhp="0" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="835546">
+        <npcskill skillid="11279" skilllevel="1" probability="25" minhp="0" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="835594">
+        <npcskill skillid="11309" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
+    </npcskills>
     <npcskills npcid="835785">
         <npcskill skillid="11375" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
     </npcskills>
+    <npcskills npcid="835802">
+        <npcskill skillid="11348" skilllevel="50" probability="100" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="835803">
+        <npcskill skillid="11413" skilllevel="50" probability="100" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="835808">
+        <npcskill skillid="11386" skilllevel="50" probability="100" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="835812">
+        <npcskill skillid="11376" skilllevel="1" probability="100" maxhp="100"/>
+    </npcskills>
     <npcskills npcid="835989">
         <npcskill skillid="11385" skilllevel="1" probability="100" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="836189">
+        <npcskill skillid="20295" skilllevel="1" probability="93" maxhp="100"/>
+        <npcskill skillid="20296" skilllevel="1" probability="7" maxhp="100"/>
     </npcskills>
     <npcskills npcid="836728">
         <npcskill skillid="11121" skilllevel="65" probability="100" maxhp="100"/>
@@ -7096,6 +7162,9 @@
         <npcskill skillid="20327" skilllevel="1" probability="100" maxhp="100"/>
     </npcskills>
     <npcskills npcid="837593">
+        <npcskill skillid="20321" skilllevel="1" probability="25" minhp="0" maxhp="100"/>
+    </npcskills>
+    <npcskills npcid="837594">
         <npcskill skillid="20321" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
     </npcskills>
     <npcskills npcid="837597">
@@ -7123,13 +7192,13 @@
         <npcskill skillid="21494" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
     </npcskills>
     <npcskills npcid="837634">
-        <npcskill skillid="21494" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
+        <npcskill skillid="21494" skilllevel="1" probability="25" minhp="0" maxhp="100"/>
     </npcskills>
     <npcskills npcid="837645">
-        <npcskill skillid="19522" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
+        <npcskill skillid="19522" skilllevel="1" probability="25" minhp="0" maxhp="100"/>
     </npcskills>
     <npcskills npcid="837646">
-        <npcskill skillid="19522" skilllevel="1" probability="25" minhp="95" maxhp="100"/>
+        <npcskill skillid="19522" skilllevel="1" probability="25" minhp="0" maxhp="100"/>
     </npcskills>
     <npcskills npcid="855009">
         <npcskill skillid="21557" skilllevel="56" probability="25" minhp="0" maxhp="100"/>
