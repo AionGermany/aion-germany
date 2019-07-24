@@ -599,7 +599,7 @@
 			<xs:enumeration value="SHIELD"/>
 			<xs:enumeration value="WING"/>
 			<xs:enumeration value="PLUME"/>
-	    		<xs:enumeration value="ACCESSORY"/>
+	    	<xs:enumeration value="ACCESSORY"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="WeaponList">
@@ -625,6 +625,7 @@
 			<xs:enumeration value="GUN_2H"/>
 			<xs:enumeration value="KEYBLADE_2H"/>
 			<xs:enumeration value="KEYHAMMER_2H"/>
+			<xs:enumeration value="SPRAY_2H"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Category">
@@ -657,6 +658,7 @@
 			<xs:enumeration value="GUN"/>
 			<xs:enumeration value="CANNON"/>
 			<xs:enumeration value="KEYBLADE"/>
+			<xs:enumeration value="SPRAY"/>
 			<xs:enumeration value="JACKET"/>
 			<xs:enumeration value="PANTS"/>
 			<xs:enumeration value="SHARD"/>

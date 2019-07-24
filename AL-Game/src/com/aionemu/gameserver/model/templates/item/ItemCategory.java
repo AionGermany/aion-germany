@@ -78,5 +78,6 @@ public enum ItemCategory {
 	STENCHANTMENT,
 	BRACELET,
 	ESTIMA,
+	SPRAY,
 	NONE
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-03-12 14:30 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-07-24 13:30 -->
 <item_sets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_sets.xsd">
     <itemset id="1" name="Cloth Armour Set (Test)">
         <itempart itemid="100900544"/>
@@ -60,6 +60,7 @@
     <itemset id="2" name="Sword Shield Set (Test)">
         <itempart itemid="110100506"/>
         <itempart itemid="110100507"/>
+        <itempart itemid="111150059"/>
         <partbonus count="2">
             <modifiers>
                 <add name="PVE_ATTACK_RATIO" value="10" bonus="true"/>
@@ -18857,5 +18858,295 @@
                 <add name="PVP_DEFEND_RATIO" value="30" bonus="true"/>
             </modifiers>
         </fullbonus>
+    </itemset>
+    <itemset id="713" name="Blinding Starlight Battle Accessory Set">
+        <itempart itemid="121003174"/>
+        <itempart itemid="120003170"/>
+        <itempart itemid="122003171"/>
+        <itempart itemid="123003170"/>
+        <partbonus count="4">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="252" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="148" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="714" name="Blinding Starlight Magic Accessory Set">
+        <itempart itemid="121003175"/>
+        <itempart itemid="120003171"/>
+        <itempart itemid="122003172"/>
+        <itempart itemid="123003171"/>
+        <partbonus count="4">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="252" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="148" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="715" name="Blinding Starlight Battle Feather Set">
+        <itempart itemid="187010182"/>
+        <itempart itemid="187105173"/>
+        <itempart itemid="187205170"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="234" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="227" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="716" name="Blinding Starlight Magic Feather Set">
+        <itempart itemid="187010183"/>
+        <itempart itemid="187105174"/>
+        <itempart itemid="187205171"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="234" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="227" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="717" name="Blinding Starlight Battle Cloth Armour Set">
+        <itempart itemid="110150197"/>
+        <itempart itemid="111150193"/>
+        <itempart itemid="112150193"/>
+        <itempart itemid="113150193"/>
+        <itempart itemid="114150193"/>
+        <itempart itemid="125101850"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="718" name="Blinding Starlight Magic Cloth Armour Set">
+        <itempart itemid="110150196"/>
+        <itempart itemid="111150192"/>
+        <itempart itemid="112150192"/>
+        <itempart itemid="113150192"/>
+        <itempart itemid="114150192"/>
+        <itempart itemid="125101849"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="719" name="Blinding Starlight Battle Leather Armour Set">
+        <itempart itemid="110350241"/>
+        <itempart itemid="111350237"/>
+        <itempart itemid="112350237"/>
+        <itempart itemid="113350237"/>
+        <itempart itemid="114350237"/>
+        <itempart itemid="125101851"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="720" name="Blinding Starlight Magic Leather Armour Set">
+        <itempart itemid="110350242"/>
+        <itempart itemid="111350238"/>
+        <itempart itemid="112350238"/>
+        <itempart itemid="113350238"/>
+        <itempart itemid="114350238"/>
+        <itempart itemid="125101852"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="721" name="Blinding Starlight Battle Chain Armour Set">
+        <itempart itemid="110550241"/>
+        <itempart itemid="111550237"/>
+        <itempart itemid="112550237"/>
+        <itempart itemid="113550237"/>
+        <itempart itemid="114550237"/>
+        <itempart itemid="125101853"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="722" name="Blinding Starlight Magic Chain Armour Set">
+        <itempart itemid="110550242"/>
+        <itempart itemid="111550238"/>
+        <itempart itemid="112550238"/>
+        <itempart itemid="113550238"/>
+        <itempart itemid="114550238"/>
+        <itempart itemid="125101854"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="723" name="Blinding Starlight Magic War Plate Armour Set">
+        <itempart itemid="110650191"/>
+        <itempart itemid="111650189"/>
+        <itempart itemid="112650189"/>
+        <itempart itemid="113650189"/>
+        <itempart itemid="114650189"/>
+        <itempart itemid="125101855"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="724" name="Blinding Starlight Magic Plate Armour Set">
+        <itempart itemid="110650192"/>
+        <itempart itemid="111650190"/>
+        <itempart itemid="112650190"/>
+        <itempart itemid="113650190"/>
+        <itempart itemid="114650190"/>
+        <itempart itemid="125101856"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
+            </modifiers>
+        </partbonus>
+        <partbonus count="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="725" name="Blinding Starlight Longsword Set">
+        <itempart itemid="100050182"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="726" name="Blinding Starlight Mace Set">
+        <itempart itemid="100150178"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="727" name="Blinding Starlight Dagger Set">
+        <itempart itemid="100250180"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="728" name="Blinding Starlight Orb Set">
+        <itempart itemid="100550176"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="729" name="Blinding Starlight Spellbook Set">
+        <itempart itemid="100650177"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="730" name="Blinding Starlight Greatsword Set">
+        <itempart itemid="100950178"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="731" name="Blinding Starlight Polearm Set">
+        <itempart itemid="101350178"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="732" name="Blinding Starlight Staff Set">
+        <itempart itemid="101550180"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="733" name="Blinding Starlight Bow Set">
+        <itempart itemid="101750177"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="734" name="Blinding Starlight Aether Revolver Set">
+        <itempart itemid="101850178"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="735" name="Blinding Starlight Aether Cannon Set">
+        <itempart itemid="101950173"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="736" name="Blinding Starlight Stringed Instrument Set">
+        <itempart itemid="102050177"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="737" name="Blinding Starlight Aether Key Set">
+        <itempart itemid="102150182"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="738" name="Blinding Starlight Paint Rings Set">
+        <itempart itemid="102220107"/>
+        <partbonus>
+            <modifiers />
+        </partbonus>
     </itemset>
 </item_sets>
