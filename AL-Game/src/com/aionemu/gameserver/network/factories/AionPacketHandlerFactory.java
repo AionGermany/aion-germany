@@ -75,7 +75,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EMOTION(0x2FD, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_TITLE_SET(0x152, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_DELETE_ITEM(0x13B, State.IN_GAME)); // 7.x EU
-		//addPacket(new CM_QUEST_SHARE(0x160, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_QUEST_SHARE(0x16B, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_DELETE_QUEST(0x126, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_ABYSS_RANKING_PLAYERS(0x183, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_ABYSS_RANKING_LEGIONS(0x139, State.IN_GAME)); // 7.x EU
@@ -103,7 +103,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_ATTACK(0xF6, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_PET(0xD8, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_PET_EMOTE(0xD0, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_CHALLENGE_LIST(0x1B4, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_CHALLENGE_LIST(0x1BF, State.IN_GAME)); // 7.x EU
 
 		// ********************(FRIEND LIST)*********************
 		addPacket(new CM_SHOW_FRIENDLIST(0x1A9, State.IN_GAME)); // 7.x EU
@@ -119,11 +119,11 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_PLAYER_SEARCH(0x176, State.IN_GAME)); // 7.x EU
 
 		// ********************(LEGION)*********************
-		//addPacket(new CM_LEGION(0x108, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_LEGION(0x2F3, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_LEGION_WH_KINAH(0x117, State.IN_GAME)); // 5.4 EU
 		//addPacket(new CM_LEGION_UPLOAD_INFO(0x16C, State.IN_GAME)); // 6.x EU
 		//addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x16D, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_LEGION_SEARCH(0x1D8, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_LEGION_SEARCH(0x1C3, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_LEGION_JOIN_REQUEST(0x1D9, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_JOIN_REQUEST_CANCEL(0x1DA, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0x10A, State.IN_GAME)); // 6.x EU
@@ -134,11 +134,11 @@ public class AionPacketHandlerFactory {
 
 		// ******************(GROUP)******************* (BUGGY)
 		addPacket(new CM_FIND_GROUP(0x113, State.IN_GAME)); // 7.x EU
-		//addPacket(new CM_AUTO_GROUP(0x180, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_AUTO_GROUP(0x19F, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_INVITE_TO_GROUP(0x134, State.IN_GAME)); // 7.x EU
 		//addPacket(new CM_GROUP_DISTRIBUTION(0x134, State.IN_GAME)); // 5.4 EU
 		//addPacket(new CM_GROUP_LOOT(0x184, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_GROUP_DATA_EXCHANGE(0x12A, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_GROUP_DATA_EXCHANGE(0x111, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_DISTRIBUTION_SETTINGS(0x18C, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_SHOW_BRAND(0x178, State.IN_GAME)); // 7.x EU (Group Mark Target etc)
 
@@ -150,7 +150,7 @@ public class AionPacketHandlerFactory {
 		//addPacket(new CM_BROKER_SETTLE_LIST(0x159, State.IN_GAME)); // 5.4 EU
 		// addPacket(new CM_BROKER_REGISTERED(0x145, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_BUY_BROKER_ITEM(0x15A, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_BROKER_CANCEL_REGISTERED(0x14C, State.IN_GAME)); // 6.x EU
+		//addPacket(new CM_BROKER_CANCEL_REGISTERED(0x14C, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_BROKER_SETTLE_ACCOUNT(0x14E, State.IN_GAME)); // 5.4 EU
 
 		// ******************(PING)******************
@@ -158,11 +158,11 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_PING(0x2F7, State.AUTHED, State.IN_GAME)); // 5.3 EU
 
 		// ******************(SUMMON)******************
-		addPacket(new CM_SUMMON_EMOTION(0x196, State.IN_GAME)); // 5.4 EU
-		//addPacket(new CM_SUMMON_ATTACK(0x197, State.IN_GAME)); // 5.4 EU
-		//addPacket(new CM_SUMMON_CASTSPELL(0x1A9, State.IN_GAME)); // 6.x EU
-		//addPacket(new CM_SUMMON_COMMAND(0x145, State.IN_GAME)); // 6.x EU
-		addPacket(new CM_SUMMON_MOVE(0x195, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_SUMMON_EMOTION(0x19D, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_SUMMON_ATTACK(0x192, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_SUMMON_CASTSPELL(0x190, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_SUMMON_COMMAND(0x14C, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_SUMMON_MOVE(0x19C, State.IN_GAME)); // 7.x EU
 
 		// ******************(MAIL)******************
 		addPacket(new CM_CHECK_MAIL_SIZE(0x148, State.IN_GAME)); // 7.x EU
@@ -184,7 +184,7 @@ public class AionPacketHandlerFactory {
 		// *************(HOUSE)***************************
 		addPacket(new CM_HOUSE_OPEN_DOOR(0x1AE, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_HOUSE_TELEPORT_BACK(0x13A, State.IN_GAME)); // 5.0
-		addPacket(new CM_HOUSE_SCRIPT(0xF9, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_HOUSE_SCRIPT(0xE0, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_HOUSE_TELEPORT(0x1BA, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_HOUSE_EDIT(0x124, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_USE_HOUSE_OBJECT(0x1AC, State.IN_GAME)); // 6.x EU
@@ -204,7 +204,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_TELEPORT_DONE(0xD1, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_CHARACTER_EDIT(0xC2, State.AUTHED)); // 5.3
 		addPacket(new CM_PLAYER_STATUS_INFO(0x137, State.IN_GAME)); // 7.x EU (Mentor etc)
-		//addPacket(new CM_MANASTONE(0x115, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_MANASTONE(0x11C, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_FUSION_WEAPONS(0x1AA, State.IN_GAME)); // 5.4
 		addPacket(new CM_ITEM_REMODEL(0x125, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xED, State.IN_GAME)); // 6.x EU
@@ -218,7 +218,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_BREAK_WEAPONS(0x1AB, State.IN_GAME)); // 5.4
 		// addPacket(new CM_CHARGE_ITEM(0x115, State.IN_GAME)); // 5.4
 		addPacket(new CM_USE_CHARGE_SKILL(0x1B6, State.IN_GAME)); // 5.4
-		addPacket(new CM_RECONNECT_AUTH(0x173, State.AUTHED)); // 5.4
+		//addPacket(new CM_RECONNECT_AUTH(0x173, State.AUTHED)); // 5.4
 		addPacket(new CM_BLOCK_SET_REASON(0x17F, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_INSTANCE_LEAVE(0x11F, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_APPEARANCE(0x181, State.IN_GAME)); // 6.x old 0x18D
@@ -229,13 +229,13 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MOVE_ITEM(0x163, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_SELECTITEM_OK(0x1C8, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_GAMEGUARD(0x13F, State.IN_GAME)); // 7.x EU
-		addPacket(new CM_CHANGE_CHANNEL(0x188, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_CHANGE_CHANNEL(0x173, State.IN_GAME)); // 7.x EU
 
 		// // ******************(Fast Track Server)******************
 		addPacket(new CM_FAST_TRACK_CHECK(0x193, State.IN_GAME)); // 5.4
 		// addPacket(new CM_FAST_TRACK(0x191, State.IN_GAME)); // 5.4
 		// addPacket(new CM_DIRECT_ENTER_WORLD(0x19D, State.IN_GAME)); // 5.0
-		addPacket(new CM_FAST_TRACK_MOVE(0x190, State.IN_GAME)); // 5.4 TODO
+		//addPacket(new CM_FAST_TRACK_MOVE(0x190, State.IN_GAME)); // 5.4 TODO
 
 		// // ******************(CHAT)******************
 		addPacket(new CM_CHAT_AUTH(0x171, State.IN_GAME)); // 7.x EU
@@ -268,7 +268,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_SHUGO_SWEEP(0x1D6, State.IN_GAME)); //5.8 EU
 
 		// // /////////////////// NEW 5.0 //////////////////////
-		addPacket(new CM_LUNA_SYSTEM(0x1C3, State.IN_GAME)); // 5.6
+		addPacket(new CM_LUNA_SYSTEM(0x1DE, State.IN_GAME)); // 7.x EU
 
 		// // ////////////////// MAGIC CRAFT //////////////////
 		addPacket(new CM_MAGIC_CRAFT(0x1D3, State.IN_GAME)); // 7.x
@@ -299,7 +299,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_USE_PACK_ITEM(0x1C8, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_SELL_BROKEN_ITEMS(0x1D4, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_AUTOMATIC_GOLDENSTAR(0x1EA, State.IN_GAME)); // 5.6
-		//addPacket(new CM_TELEPORT_BACK(0x13B, State.IN_GAME)); // 5.4 TODO
+		addPacket(new CM_TELEPORT_BACK(0x121, State.IN_GAME)); // 7.x EU TODO
 		addPacket(new CM_SKILL_ANIMATION(0x1E9, State.IN_GAME)); // 6.x TODO
 		addPacket(new CM_MINIONS(0x1ED, State.IN_GAME)); // 7.x TODO
 		addPacket(new CM_NEVIWIND_CANYON(0x1E5, State.IN_GAME)); // 6.x EU TODO
