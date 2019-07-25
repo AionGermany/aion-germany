@@ -36,7 +36,7 @@ public class Crypt {
 	/**
 	 * Second byte of server packet must be equal to this
 	 */
-	public final static byte staticServerPacketCode = 0x54; // 4.9 => 0x56 || 4.7 | 4.6 | 4.5 => 0x44 | 4.3 => 0x46
+	public final static byte staticServerPacketCode = 0x56; // 7.x
 	/**
 	 * Crypt is enabled after first server packet was send.
 	 */
@@ -66,7 +66,7 @@ public class Crypt {
 		/**
 		 * false key that will be sent to aion client in SM_KEY packet
 		 */
-		return (key ^ 0xCD92E4D7) + 0x3FF2CCD7; // 6.x
+		return (key ^ 0xCD92E4D9) + 0x3FF2CCDF; // 7.x
 	}
 
 	/**
@@ -109,6 +109,6 @@ public class Crypt {
 	 * @return obfuscated opcodec
 	 */
 	public static final int encodeOpcodec(int op) {
-		return (op + 0xD7) ^ 0xD7; // 6.x
+		return (op + 0xD8) ^ 0xD9; // 7.x
 	}
 }

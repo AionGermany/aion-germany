@@ -98,16 +98,16 @@ public class SM_VERSION_CHECK extends AionServerPacket {
 		// aion 4.7.0.7 = 205
 		// aion 4.7.5.x = 206
 		// aion 5.1.x.x = 212
-		if (version < 215) {
+		if (version < 216) {
 			// Send wrong client version
 			writeC(0x02);
 			return;
 		}
-		if (version == 215) {
-			log.info("Authentication with Client Version 6.x");
+		if (version == 216) {
+			log.info("Authentication with Client Version 7.x");
 		}
-		else if (version < 215) {
-			log.info("Authentication with Client Version lower than 6.x");
+		else if (version < 216) {
+			log.info("Authentication with Client Version lower than 7.x");
 		}
 		writeC(0x00);
 		writeC(NetworkConfig.GAMESERVER_ID);
