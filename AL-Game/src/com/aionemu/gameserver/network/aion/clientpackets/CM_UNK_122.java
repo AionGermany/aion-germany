@@ -23,9 +23,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_98;
 /**
  * @author Falke_34
  */
-public class CM_UNK_127 extends AionClientPacket {
+public class CM_UNK_122 extends AionClientPacket {
 
-	public CM_UNK_127(int opcode, State state, State... restStates) {
+	public CM_UNK_122(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 
