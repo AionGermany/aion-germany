@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-04-05 19:17 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-07-25 13:01 -->
 <npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_trade_list.xsd">
     <!-- TRADE LIST -->
     <tradelist_template npc_id="203060" buy_price_rate="50">
@@ -3626,13 +3626,11 @@
     </tradelist_template>
     <tradelist_template npc_id="800448" npc_type="REWARD">
         <tradelist id="1577"/>
-        <tradelist id="1578"/>
         <tradelist id="1579"/>
         <tradelist id="1615"/>
     </tradelist_template>
     <tradelist_template npc_id="800453" npc_type="REWARD">
         <tradelist id="1580"/>
-        <tradelist id="1581"/>
         <tradelist id="1582"/>
         <tradelist id="1616"/>
     </tradelist_template>
@@ -8072,6 +8070,14 @@
     <tradelist_template npc_id="806912" npc_type="REWARD">
         <tradelist id="3013"/>
     </tradelist_template>
+    <tradelist_template npc_id="806976" npc_type="REWARD">
+        <tradelist id="3140"/>
+        <tradelist id="3145"/>
+    </tradelist_template>
+    <tradelist_template npc_id="806987" npc_type="REWARD">
+        <tradelist id="3141"/>
+        <tradelist id="3146"/>
+    </tradelist_template>
     <tradelist_template npc_id="810013" buy_price_rate="50">
         <tradelist id="2958"/>
         <tradelist id="2962"/>
@@ -8143,6 +8149,26 @@
     <tradelist_template npc_id="810064" buy_price_rate="50">
         <tradelist id="2982"/>
         <tradelist id="2986"/>
+    </tradelist_template>
+    <tradelist_template npc_id="820348" npc_type="REWARD">
+        <tradelist id="3137"/>
+    </tradelist_template>
+    <tradelist_template npc_id="820349" npc_type="REWARD">
+        <tradelist id="3138"/>
+    </tradelist_template>
+    <tradelist_template npc_id="820350" npc_type="REWARD">
+        <tradelist id="3139"/>
+    </tradelist_template>
+    <tradelist_template npc_id="820504" npc_type="REWARD">
+        <tradelist id="3161"/>
+        <tradelist id="5376"/>
+    </tradelist_template>
+    <tradelist_template npc_id="820505" npc_type="REWARD">
+        <tradelist id="3162"/>
+        <tradelist id="5377"/>
+    </tradelist_template>
+    <tradelist_template npc_id="820516">
+        <tradelist id="5378"/>
     </tradelist_template>
     <tradelist_template npc_id="830034" buy_price_rate="50">
         <tradelist id="1365"/>
@@ -10298,8 +10324,8 @@
     <tradelist_template npc_id="835868" npc_type="ABYSS">
         <tradelist id="5291"/>
     </tradelist_template>
-    <tradelist_template npc_id="835869" npc_type="ABYSS">
-        <tradelist id="5292"/>
+    <tradelist_template npc_id="835869" npc_type="REWARD">
+        <tradelist id="3123"/>
     </tradelist_template>
     <tradelist_template npc_id="835873" buy_price_rate="50" sell_price_rate="900">
         <tradelist id="239"/>
@@ -11181,7 +11207,6 @@
     <tradelist_template npc_id="837214" npc_type="REWARD">
         <tradelist id="3032"/>
         <tradelist id="5356"/>
-        <tradelist id="5368"/>
     </tradelist_template>
     <tradelist_template npc_id="837252" npc_type="REWARD">
         <tradelist id="3035"/>
@@ -11334,22 +11359,353 @@
         <tradelist id="5354"/>
     </tradelist_template>
     <tradelist_template npc_id="837682" npc_type="REWARD">
-        <tradelist id="3121"/>
-        <tradelist id="5355"/>
+        <tradelist id="3148"/>
     </tradelist_template>
     <tradelist_template npc_id="837683" npc_type="REWARD">
-        <tradelist id="3121"/>
-        <tradelist id="5355"/>
+        <tradelist id="3148"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837739" npc_type="REWARD">
+        <tradelist id="3122"/>
+        <tradelist id="5358"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837740" npc_type="REWARD">
+        <tradelist id="3122"/>
+        <tradelist id="5358"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837741" npc_type="REWARD">
+        <tradelist id="5359"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837742" npc_type="REWARD">
+        <tradelist id="5359"/>
     </tradelist_template>
     <tradelist_template npc_id="837761" npc_type="ABYSS">
+        <tradelist id="3149"/>
         <tradelist id="5360"/>
     </tradelist_template>
     <tradelist_template npc_id="837762" npc_type="ABYSS">
+        <tradelist id="3150"/>
         <tradelist id="5360"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837826" buy_price_rate="50">
+        <tradelist id="3123"/>
+        <tradelist id="3128"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837827" buy_price_rate="50">
+        <tradelist id="3125"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837828" buy_price_rate="50">
+        <tradelist id="3124"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837829" buy_price_rate="50">
+        <tradelist id="3126"/>
+        <tradelist id="3127"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837836" buy_price_rate="50">
+        <tradelist id="3129"/>
+        <tradelist id="3136"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837837" buy_price_rate="50">
+        <tradelist id="3131"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837838" buy_price_rate="50">
+        <tradelist id="3130"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837839" buy_price_rate="50">
+        <tradelist id="3132"/>
+        <tradelist id="3133"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837842" buy_price_rate="50">
+        <tradelist id="3123"/>
+        <tradelist id="3128"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837843" buy_price_rate="50">
+        <tradelist id="3125"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837844" buy_price_rate="50">
+        <tradelist id="3124"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837845" buy_price_rate="50">
+        <tradelist id="3126"/>
+        <tradelist id="3127"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837847" buy_price_rate="50">
+        <tradelist id="3129"/>
+        <tradelist id="3136"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837848" buy_price_rate="50">
+        <tradelist id="3131"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837849" buy_price_rate="50">
+        <tradelist id="3130"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837850" buy_price_rate="50">
+        <tradelist id="3132"/>
+        <tradelist id="3133"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837852" buy_price_rate="50">
+        <tradelist id="3123"/>
+        <tradelist id="3128"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837853" buy_price_rate="50">
+        <tradelist id="3125"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837854" buy_price_rate="50">
+        <tradelist id="3124"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837855" buy_price_rate="50">
+        <tradelist id="3126"/>
+        <tradelist id="3127"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837857" buy_price_rate="50">
+        <tradelist id="3129"/>
+        <tradelist id="3136"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837858" buy_price_rate="50">
+        <tradelist id="3131"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837859" buy_price_rate="50">
+        <tradelist id="3130"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837860" buy_price_rate="50">
+        <tradelist id="3132"/>
+        <tradelist id="3133"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837862" buy_price_rate="50">
+        <tradelist id="3123"/>
+        <tradelist id="3128"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837863" buy_price_rate="50">
+        <tradelist id="3125"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837864" buy_price_rate="50">
+        <tradelist id="3124"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837865" buy_price_rate="50">
+        <tradelist id="3126"/>
+        <tradelist id="3127"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837867" buy_price_rate="50">
+        <tradelist id="3129"/>
+        <tradelist id="3136"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837868" buy_price_rate="50">
+        <tradelist id="3131"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837869" buy_price_rate="50">
+        <tradelist id="3130"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837870" buy_price_rate="50">
+        <tradelist id="3132"/>
+        <tradelist id="3133"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837871" npc_type="REWARD">
+        <tradelist id="3140"/>
+        <tradelist id="3147"/>
+        <tradelist id="5361"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837872" npc_type="REWARD">
+        <tradelist id="3141"/>
+        <tradelist id="3147"/>
+        <tradelist id="5362"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837873" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837874" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837875" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837876">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837877" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837878" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837879" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837880">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837881" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837882" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837883" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837884">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837885" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837886" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837887" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837888">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837889" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837890" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837891" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837892">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837893" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837894" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837895" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837896">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837897" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837898" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837899" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837900">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837901" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837902" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837903" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837904">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837905" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837906" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837907" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837908">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837909" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837910" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837911" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837912">
+        <tradelist id="5366"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837913" npc_type="REWARD">
+        <tradelist id="5363"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837914" npc_type="REWARD">
+        <tradelist id="5364"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837915" npc_type="REWARD">
+        <tradelist id="5365"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837916">
+        <tradelist id="5366"/>
     </tradelist_template>
     <tradelist_template npc_id="837920" npc_type="REWARD">
         <tradelist id="3134"/>
         <tradelist id="3135"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837970" buy_price_rate="50">
+        <tradelist id="3142"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837972" buy_price_rate="50">
+        <tradelist id="3142"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837978" npc_type="REWARD">
+        <tradelist id="3143"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837979" npc_type="REWARD">
+        <tradelist id="3144"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837980" npc_type="REWARD">
+        <tradelist id="3143"/>
+    </tradelist_template>
+    <tradelist_template npc_id="837981" npc_type="REWARD">
+        <tradelist id="3144"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838042" npc_type="REWARD">
+        <tradelist id="5367"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838080" npc_type="REWARD">
+        <tradelist id="3151"/>
+        <tradelist id="3152"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838081" npc_type="REWARD">
+        <tradelist id="3151"/>
+        <tradelist id="3152"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838169" npc_type="REWARD">
+        <tradelist id="3140"/>
+        <tradelist id="3147"/>
+        <tradelist id="5361"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838170" npc_type="REWARD">
+        <tradelist id="3141"/>
+        <tradelist id="3147"/>
+        <tradelist id="5362"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838197" npc_type="REWARD">
+        <tradelist id="5372"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838198" npc_type="REWARD">
+        <tradelist id="5373"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838199" npc_type="REWARD">
+        <tradelist id="5372"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838200" npc_type="REWARD">
+        <tradelist id="5373"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838206" buy_price_rate="50" sell_price_rate="750">
+        <tradelist id="3155"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838207" buy_price_rate="50" sell_price_rate="750">
+        <tradelist id="3155"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838208" buy_price_rate="50">
+        <tradelist id="3154"/>
+    </tradelist_template>
+    <tradelist_template npc_id="838209" npc_type="REWARD">
+        <tradelist id="5374"/>
     </tradelist_template>
     <tradelist_template npc_id="838214" npc_type="REWARD">
         <tradelist id="3157"/>
@@ -11363,6 +11719,12 @@
     </tradelist_template>
     <tradelist_template npc_id="838343" npc_type="REWARD">
         <tradelist id="3165"/>
+    </tradelist_template>
+    <tradelist_template npc_id="839607" npc_type="REWARD">
+        <tradelist id="3194"/>
+    </tradelist_template>
+    <tradelist_template npc_id="839608" npc_type="REWARD">
+        <tradelist id="3194"/>
     </tradelist_template>
     <!-- TRADE_IN LIST -->
     <trade_in_list_template npc_id="205315">
@@ -12395,6 +12757,22 @@
         <tradelist id="449"/>
         <tradelist id="450"/>
     </trade_in_list_template>
+    <trade_in_list_template npc_id="837161">
+        <tradelist id="439"/>
+        <tradelist id="440"/>
+        <tradelist id="441"/>
+        <tradelist id="442"/>
+        <tradelist id="443"/>
+        <tradelist id="444"/>
+    </trade_in_list_template>
+    <trade_in_list_template npc_id="837162">
+        <tradelist id="445"/>
+        <tradelist id="446"/>
+        <tradelist id="447"/>
+        <tradelist id="448"/>
+        <tradelist id="449"/>
+        <tradelist id="450"/>
+    </trade_in_list_template>
     <trade_in_list_template npc_id="837250">
         <tradelist id="510"/>
         <tradelist id="511"/>
@@ -12625,6 +13003,18 @@
     <trade_in_list_template npc_id="837530">
         <tradelist id="544"/>
     </trade_in_list_template>
+    <trade_in_list_template npc_id="837628">
+        <tradelist id="545"/>
+    </trade_in_list_template>
+    <trade_in_list_template npc_id="837629">
+        <tradelist id="546"/>
+    </trade_in_list_template>
+    <trade_in_list_template npc_id="837830">
+        <tradelist id="552"/>
+    </trade_in_list_template>
+    <trade_in_list_template npc_id="837840">
+        <tradelist id="552"/>
+    </trade_in_list_template>
     <trade_in_list_template npc_id="837917">
         <tradelist id="548"/>
         <tradelist id="549"/>
@@ -12638,6 +13028,12 @@
         <tradelist id="550"/>
         <tradelist id="551"/>
         <tradelist id="554"/>
+    </trade_in_list_template>
+    <trade_in_list_template npc_id="837935">
+        <tradelist id="553"/>
+    </trade_in_list_template>
+    <trade_in_list_template npc_id="837936">
+        <tradelist id="553"/>
     </trade_in_list_template>
     <!-- PURCHASE LIST -->
     <purchase_template npc_id="206352" buy_price_rate="200" npc_type="ABYSS">
@@ -13639,6 +14035,9 @@
     </purchase_template>
     <purchase_template npc_id="806562" buy_price_rate="1000" npc_type="ABYSS">
         <tradelist id="173"/>
+    </purchase_template>
+    <purchase_template npc_id="820453" buy_price_rate="1000" npc_type="ABYSS">
+        <tradelist id="185"/>
     </purchase_template>
     <purchase_template npc_id="831995" buy_price_rate="1000" npc_type="ABYSS">
         <tradelist id="79"/>

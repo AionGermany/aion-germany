@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum QualityCoreType {
 
+	PLATINUM,
 	GOLD,
 	SILVER,
 	BRONZE;
