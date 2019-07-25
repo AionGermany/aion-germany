@@ -252,7 +252,7 @@ public class ClassChangeService {
 					break;
 				}
 			case ARTIST:
-				if (playerClass == PlayerClass.BARD) {
+				if (playerClass == PlayerClass.BARD || playerClass == PlayerClass.PAINTER) {
 					break;
 				}
 			default:
