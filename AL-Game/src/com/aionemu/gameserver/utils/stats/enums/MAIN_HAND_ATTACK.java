@@ -37,6 +37,7 @@ public enum MAIN_HAND_ATTACK {
 	RIDER(19),
 	GUNNER(18),
 	ARTIST(16),
+	PAINTER(16),
 	BARD(16);
 
 	private int value;

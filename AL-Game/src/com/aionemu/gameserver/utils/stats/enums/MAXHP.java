@@ -37,6 +37,7 @@ public enum MAXHP {
 	RIDER(0.9277f, 35.988f, 229),
 	GUNNER(1.0303f, 40.824f, 201),
 	ARTIST(1.0303f, 40.824f, 201),
+	PAINTER(1, 20.6f, 157),
 	BARD(1, 20.6f, 157);
 
 	private float a;

@@ -37,6 +37,7 @@ public enum HEALTH {
 	RIDER(90),
 	GUNNER(100),
 	ARTIST(90),
+	PAINTER(95),
 	BARD(95);
 
 	private int value;
