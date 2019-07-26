@@ -255,6 +255,10 @@ public final class QuestService {
 						classRewardItem = getQuestItemsbyClass(id, template.getBardSelectableReward(), selRewIndex);
 						break;
 					}
+					case PAINTER: {
+						classRewardItem = getQuestItemsbyClass(id, template.getPainterSelectableReward(), selRewIndex);
+						break;
+					}
 					case RIDER: {
 						classRewardItem = getQuestItemsbyClass(id, template.getRiderSelectableReward(), selRewIndex);
 						break;
@@ -325,6 +329,10 @@ public final class QuestService {
 					}
 					case BARD: {
 						classRewardItem = getQuestItemsbyClass(id, template.getBardSelectableReward(), selRewIndex);
+						break;
+					}
+					case PAINTER: {
+						classRewardItem = getQuestItemsbyClass(id, template.getPainterSelectableReward(), selRewIndex);
 						break;
 					}
 					case RIDER: {
