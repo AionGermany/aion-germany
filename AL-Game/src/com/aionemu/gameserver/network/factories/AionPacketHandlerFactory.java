@@ -302,7 +302,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_NEVIWIND_CANYON(0x1EC, State.IN_GAME)); // 7.x EU TODO
 		addPacket(new CM_TRANSFOMATION(0x1E3, State.IN_GAME)); // 7.x TODO
 		addPacket(new CM_CUBIC(0x1D8, State.IN_GAME)); // 7.x EU TODO
-		addPacket(new CM_ATREIAN_PASSPORT(0x1CF, State.IN_GAME)); // 7.x EU TODO
+		//addPacket(new CM_ATREIAN_PASSPORT(0x1CF, State.IN_GAME)); // 7.x EU TODO
 		addPacket(new CM_STIGMA(0x1F5, State.IN_GAME)); // 7.x TODO
 		addPacket(new CM_REMOVE_DYE(0x1DA, State.IN_GAME)); // 7.x EU TODO
 	}
