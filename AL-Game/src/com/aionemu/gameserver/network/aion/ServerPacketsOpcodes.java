@@ -334,7 +334,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_SKILL_ANIMATION.class, 0x150, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_15E.class, 0x15E, idSet); // 5.4 TODO
 		addPacketOpcode(SM_SILVER_STAR.class, 0x164, idSet); // 6.x TODO Lodas Silver Star
-		addPacketOpcode(SM_NEVIWIND_CANYON.class, 0x16B, idSet); // 6.x TODO
+		addPacketOpcode(SM_NEVIWIND_CANYON.class, 0x16B, idSet); // 7.x TODO
 		addPacketOpcode(SM_TOWER_OF_CHALLENGE.class, 0xEE, idSet); // 5.6
 		addPacketOpcode(SM_GODSTONE_DESTROY.class, 0x12E, idSet); // 5.6
 		addPacketOpcode(SM_TRANSFORMATION.class, 0x170, idSet); // 6.x TODO
