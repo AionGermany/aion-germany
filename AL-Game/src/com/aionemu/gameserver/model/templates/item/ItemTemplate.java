@@ -254,13 +254,13 @@ public class ItemTemplate extends VisibleObjectTemplate {
 			setItemId(Integer.parseInt(id));
 		}
 		String[] parts = restrict.split(",");
-		restricts = new int[17]; // 4.5
+		restricts = new int[18]; // 18 (7.x Painter)
 		for (int i = 0; i < parts.length; i++) {
 			restricts[i] = Integer.parseInt(parts[i]);
 		}
 		if (restrictMax != null) {
 			String[] partsMax = restrictMax.split(",");
-			restrictsMax = new byte[17];
+			restrictsMax = new byte[18]; // 18 (7.x Painter)
 			for (int i = 0; i < partsMax.length; i++) {
 				restrictsMax[i] = Byte.parseByte(partsMax[i]);
 			}
