@@ -32,7 +32,8 @@ public class CM_INSTANCE_INFO extends AionClientPacket {
 
 	private static Logger log = LoggerFactory.getLogger(CM_INSTANCE_INFO.class);
 	@SuppressWarnings("unused")
-	private int unk1, unk2;
+	private int unk1;
+	private boolean isInTeam;
 
 	public CM_INSTANCE_INFO(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -44,7 +45,7 @@ public class CM_INSTANCE_INFO extends AionClientPacket {
 	@Override
 	protected void readImpl() {
 		unk1 = readD();
-		unk2 = readC(); // team?
+		isInTeam = readC() == 0 ? false : true;
 	}
 
 	/**
@@ -52,37 +53,43 @@ public class CM_INSTANCE_INFO extends AionClientPacket {
 	 */
 	@Override
 	protected void runImpl() {
-		if (unk2 == 1 && !getConnection().getActivePlayer().isInTeam()) {
+		Player player = getConnection().getActivePlayer();
+		
+//		if (getConnection().getState() == State.AUTHED) {
+//			return;
+//		}
+
+		if (isInTeam && !getConnection().getActivePlayer().isInTeam()) {
 			log.debug("Received CM_INSTANCE_INFO with teamdata request but player has no team!");
 		}
-		if (unk2 == 1) {
-			Player player = getConnection().getActivePlayer();
+		
+		if (isInTeam) {
 			if (player.isInAlliance2()) {
 				boolean answer = true;
-				for (Player p : player.getPlayerAlliance2().getMembers()) {
+				for (Player players : player.getPlayerAlliance2().getMembers()) {
 					if (answer) {
-						PacketSendUtility.sendPacket(p, new SM_INSTANCE_INFO(p, true, p.getCurrentTeam()));
+						PacketSendUtility.sendPacket(players, new SM_INSTANCE_INFO(players, true, players.getCurrentTeam()));
 						answer = false;
 					}
 					else {
-						PacketSendUtility.sendPacket(p, new SM_INSTANCE_INFO(p, false, p.getCurrentTeam()));
+						PacketSendUtility.sendPacket(players, new SM_INSTANCE_INFO(players, false, players.getCurrentTeam()));
 					}
 				}
 			}
 			else if (player.isInGroup2()) {
 				boolean answer = true;
-				for (Player p : player.getPlayerGroup2().getMembers()) {
+				for (Player players : player.getPlayerGroup2().getMembers()) {
 					if (answer) {
-						PacketSendUtility.sendPacket(p, new SM_INSTANCE_INFO(p, true, p.getCurrentTeam()));
+						PacketSendUtility.sendPacket(players, new SM_INSTANCE_INFO(players, true, players.getCurrentTeam()));
 						answer = false;
 					}
 					else {
-						PacketSendUtility.sendPacket(p, new SM_INSTANCE_INFO(p, false, p.getCurrentTeam()));
+						PacketSendUtility.sendPacket(players, new SM_INSTANCE_INFO(players, false, players.getCurrentTeam()));
 					}
 				}
 			}
+		} else {
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_INFO(player, true, player.getCurrentTeam()));
 		}
-		else
-			sendPacket(new SM_INSTANCE_INFO(getConnection().getActivePlayer(), true, getConnection().getActivePlayer().getCurrentTeam()));
 	}
 }
