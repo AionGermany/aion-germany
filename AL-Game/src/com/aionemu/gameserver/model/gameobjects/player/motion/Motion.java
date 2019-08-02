@@ -104,6 +104,10 @@ public class Motion implements IExpirable {
 		
 		//Leisurely Strol
 		motionType.put(39, 1);
+		
+		//Dream Wedding
+		motionType.put(40, 1);
+		
 	}
 
 	private int id;
