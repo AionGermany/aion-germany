@@ -31,7 +31,8 @@ require "header.php";
                                    array("Bard",         "bard"),
                                    array("Engineer",     "engineer"),
                                    array("Gunner",       "gunner"),
-                                   array("Rider",        "rider")
+                                   array("Rider",        "rider"),
+								   array("Painter",      "painter")
                                  );
                     $class = isset($_GET['class']) ? $_GET['class'] : "All";
                     
@@ -65,6 +66,7 @@ require "header.php";
 					<OPTION VALUE="Engineer"><?php echo $lang['engineer']; ?></OPTION>
 					<OPTION VALUE="Gunner"><?php echo $lang['gunner']; ?></OPTION>
 					<OPTION VALUE="Rider"><?php echo $lang['rider']; ?></OPTION>
+					<OPTION VALUE="Painter"><?php echo $lang['painter']; ?></OPTION>
                   */          
                   ?>
 				  </SELECT>
