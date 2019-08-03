@@ -6,7 +6,7 @@
 // Name
 $name = $row["name"];
 
-// XP for Client 5.8, Aion EU
+// XP for Client 7.0, Aion EU
 if (isset($row["exp"]))
 {
     if     ($row["exp"] <        400) $exp =  1;
@@ -73,17 +73,23 @@ if (isset($row["exp"]))
     elseif ($row["exp"] < 1667422949) $exp = 62;
     elseif ($row["exp"] < 1793319043) $exp = 63;
     elseif ($row["exp"] < 1926765410) $exp = 64;
-    elseif ($row["exp"] < 2066885620) $exp = 65;
-    elseif ($row["exp"] < 2631427377) $exp = 66;
-    elseif ($row["exp"] < 4271005600) $exp = 67;
-    elseif ($row["exp"] < 8023982311) $exp = 68;
-    elseif ($row["exp"] < 15826312699) $exp = 69;
-    elseif ($row["exp"] < 31430688278) $exp = 70;
-    elseif ($row["exp"] < 62660507393) $exp = 71;
-    elseif ($row["exp"] < 117158523579) $exp = 72;
-    elseif ($row["exp"] < 212151338979) $exp = 73;
-    elseif ($row["exp"] < 374747480973) $exp = 74;
-    else                              $exp = 75;
+    elseif ($row["exp"] < 2070319842) $exp = 65;
+    elseif ($row["exp"] < 2223885608) $exp = 66;
+    elseif ($row["exp"] < 2387996897) $exp = 67;
+    elseif ($row["exp"] < 2563207914) $exp = 68;
+    elseif ($row["exp"] < 2750093321) $exp = 69;
+    elseif ($row["exp"] < 2949248682) $exp = 70;
+    elseif ($row["exp"] < 3161290908) $exp = 71;
+    elseif ($row["exp"] < 3386858711) $exp = 72;
+    elseif ($row["exp"] < 3626613055) $exp = 73;
+    elseif ($row["exp"] < 3881237613) $exp = 74;
+	elseif ($row["exp"] < 4151439229) $exp = 75;
+	elseif ($row["exp"] < 4437948377) $exp = 76;
+	elseif ($row["exp"] < 4741519631) $exp = 77;
+	elseif ($row["exp"] < 5062932130) $exp = 78;
+	elseif ($row["exp"] < 5402990050) $exp = 79;
+	elseif ($row["exp"] < 5762523081) $exp = 80;
+    else                              $exp = 81;
 }
 
 // Race
@@ -127,6 +133,7 @@ if (isset ($row["player_class"])) {
 	elseif($row["player_class"] == 'RIDER') {$player_class = "<img src='img_top/rider.png' title='".$lang['rider']."'>";}
 	elseif($row["player_class"] == 'ARTIST') {$player_class = "<img src='img_top/artist.png' title='".$lang['artist']."'>";}
 	elseif($row["player_class"] == 'BARD') {$player_class = "<img src='img_top/bard.png' title='".$lang['bard']."'>";}
+	elseif($row["player_class"] == 'PAINTER') {$player_class = "<img src='img_top/painter.png' title='".$lang['painter']."'>";}
 }
 
 
