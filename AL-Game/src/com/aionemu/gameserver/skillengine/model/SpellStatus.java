@@ -33,7 +33,7 @@ public enum SpellStatus {
 	BLOCK(32),
 	PARRY(64),
 	DODGE(128),
-	RESIST(256);
+	RESIST(256); // TODO SNARE
 
 	private int id;
 
