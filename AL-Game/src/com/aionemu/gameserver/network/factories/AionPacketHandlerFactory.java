@@ -227,7 +227,7 @@ public class AionPacketHandlerFactory {
 		// addPacket(new CM_MEGAPHONE(0x1B5, State.IN_GAME)); // 5.4 EU
 		// addPacket(new CM_SUBZONE_CHANGE(0x17D, State.IN_GAME)); // 5.0 NOT SURE
 		addPacket(new CM_MOVE_ITEM(0x163, State.IN_GAME)); // 7.x EU
-		addPacket(new CM_SELECTITEM_OK(0x1C8, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_SELECTITEM_OK(0x1B3, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_GAMEGUARD(0x13F, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_CHANGE_CHANNEL(0x173, State.IN_GAME)); // 7.x EU
 
@@ -253,7 +253,7 @@ public class AionPacketHandlerFactory {
 
 		// // /////////////////// NEW 4.7 //////////////////////
 		addPacket(new CM_HOTSPOT_TELEPORT(0x1BB, State.IN_GAME)); // 7.x EU
-		addPacket(new CM_ITEM_UPGRADE(0x1B3, State.IN_GAME)); // 6.x EU
+		//addPacket(new CM_ITEM_UPGRADE(0x1B3, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_UPGRADE_ARCADE(0x1B9, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_FILE_VERIFY(0x100, State.IN_GAME)); // 7.x EU
 
@@ -264,8 +264,10 @@ public class AionPacketHandlerFactory {
 		// // /////////////////// SHUGO SWEEP/LUCKY DICE //////////////////////
 		addPacket(new CM_SHUGO_SWEEP(0x1D6, State.IN_GAME)); //5.8 EU
 
-		// // /////////////////// NEW 5.0 //////////////////////
+		// // ////////////////// LUNA SYSTEM /////////////////////
 		addPacket(new CM_LUNA_SYSTEM(0x1DE, State.IN_GAME)); // 7.x EU
+		//addPacket(new CM_LUNA_INSTANCE(0x1E1, State.IN_GAME)); // 7.x EU
+		//addPacket(new CM_LUNA_INSTANCE_ENTRY(0x1E1, State.IN_GAME));
 
 		// // ////////////////// MAGIC CRAFT //////////////////
 		addPacket(new CM_MAGIC_CRAFT(0x1D3, State.IN_GAME)); // 7.x
