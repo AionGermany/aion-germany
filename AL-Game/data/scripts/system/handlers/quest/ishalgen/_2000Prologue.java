@@ -41,7 +41,7 @@ public class _2000Prologue extends QuestHandler {
 	@Override
 	public void register() {
 		qe.registerOnEnterWorld(questId);
-		qe.registerOnMovieEndQuest(2, questId);
+		qe.registerOnMovieEndQuest(1, questId);
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class _2000Prologue extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null && player.getRace() == Race.ASMODIANS) {
 			if (QuestService.startQuest(env)) {
-				PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(1, 2));
+				PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(1, 1));
 				return true;
 			}
 		}
@@ -64,7 +64,7 @@ public class _2000Prologue extends QuestHandler {
 		if (qs == null || qs.getStatus() != QuestStatus.START) {
 			return false;
 		}
-		if (movieId == 2 && player.getRace() == Race.ASMODIANS) {
+		if (movieId == 1 && player.getRace() == Race.ASMODIANS) {
 			qs.setStatus(QuestStatus.REWARD);
 			QuestService.finishQuest(env);
 			return true;

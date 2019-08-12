@@ -42,6 +42,33 @@ public class ExamScareCrowAI2 extends AggressiveNpcAI2 {
 	protected void handleAttack(Creature creature) {
 		if (creature instanceof Player) {
 			Player player = (Player) creature;
+			switch (player.getRace()) {
+				case ASMODIANS: {
+					if (player.getQuestStateList().hasQuest(70003) && player.getInventory().getItemCountByItemId(182216247) < 1) {
+						attackCount++;
+						if (attackCount == rewardCount) {
+							ItemService.addItem(player, 182216247, 1);
+							rewardCount = Rnd.get(3, 10);
+							attackCount = 0;
+						}
+					}
+					break;
+				}
+				case ELYOS: {
+					if (player.getQuestStateList().hasQuest(60003) && player.getInventory().getItemCountByItemId(182216247) < 1) {
+						attackCount++;
+						if (attackCount == rewardCount) {
+							ItemService.addItem(player, 182216247, 1);
+							rewardCount = Rnd.get(3, 10);
+							attackCount = 0;
+						}
+					}
+					break;
+				}
+				default:
+					break;
+				
+			}
 			if (player.getQuestStateList().hasQuest(60003) && player.getInventory().getItemCountByItemId(182216247) < 1) {
 				attackCount++;
 				if (attackCount == rewardCount) {

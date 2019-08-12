@@ -37,6 +37,7 @@ public class _70000MuninsReputation extends QuestHandler {
 
 	@Override
 	public void register() {
+		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(806810).addOnTalkEvent(questId); // Old Friend Cheska
 		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
 	}
@@ -58,20 +59,25 @@ public class _70000MuninsReputation extends QuestHandler {
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 806810) {
-				switch (dialog) {
-				case QUEST_SELECT: {
-					return sendQuestDialog(env, 1011);
-				}
-				case SET_SUCCEED: {
-					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
+			switch (targetId) {
+				case 806810: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SET_SUCCEED: {
+							qs.setQuestVar(1);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default:
+							break;
+					}
+					break;
 				}
 				default:
 					break;
-				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 203550) {
@@ -81,6 +87,7 @@ public class _70000MuninsReputation extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
+		
 		return false;
 	}
 }
