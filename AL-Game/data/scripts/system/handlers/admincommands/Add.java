@@ -117,7 +117,7 @@ public class Add extends AdminCommand {
 					}
 				}
 				else if (item.contains("[@item:")) {
-					Pattern id = Pattern.compile("\\[item:(\\d{9})");
+					Pattern id = Pattern.compile("\\[@item:(\\d{9})");
 					Matcher result = id.matcher(item);
 					
 					if (result.find()) {
