@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -345,6 +345,136 @@
 					<!-- Katoshunerk ||| Event_NPC_D_waterworld_sell_E -->
 					<spawn npc_id="837681" respawn_time="295">
 						<spot x="2904.8" y="2492.7" z="313.93924" h="75"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="The Matryoshka Event" start="2019-07-24T00:00:00+00:00" end="2019-08-24T00:00:00+00:00">
+            <quests>
+                <maintainable>80744;80745;80746;80747;80748;80749</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- 1st Matryoshka ||| event_matryoshka_01 -->
+					<spawn npc_id="833622" respawn_time="295">
+						<spot x="1520.5" y="1507.4" z="565.913" h="81"/>
+					</spawn>
+					<!-- 2nd Matryoshka ||| event_matryoshka_02 -->
+					<spawn npc_id="833623" respawn_time="295">
+						<spot x="1520.05" y="1509.9" z="565.91284" h="63"/>
+					</spawn>
+					<!-- 3rd Matryoshka ||| event_matryoshka_03 -->
+					<spawn npc_id="833624" respawn_time="295">
+						<spot x="1519.7" y="1512.61" z="565.9143" h="63"/>
+					</spawn>
+					<!-- Smallest Matryoshka ||| event_matryoshka_04 -->
+					<spawn npc_id="833625" respawn_time="295">
+						<spot x="1519.56" y="1515.02" z="565.9147" h="63"/>
+					</spawn>
+                </spawn_map>
+				<!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- 1st Matryoshka ||| event_matryoshka_01 -->
+					<spawn npc_id="833622" respawn_time="295">
+						<spot x="1209.97" y="1406.89" z="208.125" h="6"/>
+					</spawn>
+					<!-- 2nd Matryoshka ||| event_matryoshka_02 -->
+					<spawn npc_id="833623" respawn_time="295">
+						<spot x="1210.98" y="1404.49" z="208.125" h="6"/>
+					</spawn>
+					<!-- 3rd Matryoshka ||| event_matryoshka_03 -->
+					<spawn npc_id="833624" respawn_time="295">
+						<spot x="1211.77" y="1402.44" z="208.125" h="6"/>
+					</spawn>
+					<!-- Smallest Matryoshka ||| event_matryoshka_04 -->
+					<spawn npc_id="833625" respawn_time="295">
+						<spot x="1212.45" y="1400.75" z="208.125" h="6"/>
+					</spawn>
+                </spawn_map>
+				<!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- 1st Matryoshka ||| event_matryoshka_01 -->
+					<spawn npc_id="833622" respawn_time="295">
+						<spot x="2651.7" y="502.7" z="319.55206" h="46"/>
+						<spot x="2888.2" y="2500.0" z="309.9822" h="60"/>
+					</spawn>
+					<!-- 2nd Matryoshka ||| event_matryoshka_02 -->
+					<spawn npc_id="833623" respawn_time="295">
+						<spot x="2647.0" y="498.5" z="319.56683" h="45"/>
+						<spot x="2886.0" y="2494.0" z="309.9854" h="59"/>
+					</spawn>
+					<!-- 3rd Matryoshka ||| event_matryoshka_03 -->
+					<spawn npc_id="833624" respawn_time="295">
+						<spot x="2644.2" y="496.2" z="319.55844" h="42"/>
+						<spot x="2886.2" y="2489.8" z="309.993" h="58"/>
+					</spawn>
+					<!-- Smallest Matryoshka ||| event_matryoshka_04 -->
+					<spawn npc_id="833625" respawn_time="295">
+						<spot x="2655.5" y="506.1" z="319.5606" h="49"/>
+						<spot x="2889.2" y="2504.2" z="309.9862" h="63"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="The Ice Sculpture Event" start="2019-07-31T00:00:00+00:00" end="2019-08-14T00:00:00+00:00">
+        <!-- Weda Skill: 5335, Kromede Skill: 5334, Grendal Skill: 5333 -->
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_l -->
+					<spawn npc_id="837649" respawn_time="295">
+						<spot x="1547.7" y="1511.6" z="565.9186" h="60"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_l -->
+					<spawn npc_id="837650" respawn_time="295">
+						<spot x="1545.3" y="1504.3" z="565.9183" h="45"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_l -->
+					<spawn npc_id="837651" respawn_time="295">
+						<spot x="1545.3" y="1519.0" z="565.9175" h="75"/>
+					</spawn>
+                </spawn_map>
+				<!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_d -->
+					<spawn npc_id="837652" respawn_time="295">
+						<spot x="1275.5" y="1364.3" z="204.5872" h="90"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_d -->
+					<spawn npc_id="837653" respawn_time="295">
+						<spot x="1281.8" y="1361.1" z="204.5872" h="75"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_d -->
+					<spawn npc_id="837654" respawn_time="295">
+						<spot x="1269.6" y="1361.4" z="204.58719" h="105"/>
+					</spawn>
+                </spawn_map>
+				<!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_l -->
+					<spawn npc_id="837649" respawn_time="295">
+						<spot x="2669.9" y="510.1" z="319.56436" h="60"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_l -->
+					<spawn npc_id="837650" respawn_time="295">
+						<spot x="2665.5" y="504.2" z="319.564" h="45"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_l -->
+					<spawn npc_id="837651" respawn_time="295">
+						<spot x="2669.7" y="516.9" z="319.564" h="75"/>
+					</spawn>
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_d -->
+					<spawn npc_id="837652" respawn_time="295">
+						<spot x="2896.9" y="2512.7" z="309.98798" h="66"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_d -->
+					<spawn npc_id="837653" respawn_time="295">
+						<spot x="2896.0" y="2506.3" z="309.98752" h="51"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_d -->
+					<spawn npc_id="837654" respawn_time="295">
+						<spot x="2892.1" y="2517.1" z="309.9874" h="81"/>
 					</spawn>
                 </spawn_map>
             </spawns>
