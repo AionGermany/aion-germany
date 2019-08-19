@@ -70,12 +70,17 @@ public class PlayerLunaShop {
 		return persistentState;
 	}
 
-	public void save(Player player) {
-		this.persistentState = PersistentState.UPDATE_REQUIRED;
-		DAOManager.getDAO(PlayerLunaShopDAO.class).store(player);
+	public void setLunaShopByObjId(int playerId) {
+		DAOManager.getDAO(PlayerLunaShopDAO.class).setLunaShopByObjId(playerId, isFreeUnderpath(), isFreeFactory(), isFreeChest());
 	}
 
 	public void setPersistentState(PersistentState persistentState) {
-		this.persistentState = persistentState;
+		switch (persistentState) {
+			case UPDATE_REQUIRED:
+				if (this.persistentState == PersistentState.NEW)
+					break;
+			default:
+				this.persistentState = persistentState;
+		}
 	}
 }

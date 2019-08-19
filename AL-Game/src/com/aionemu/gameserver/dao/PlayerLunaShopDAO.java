@@ -28,13 +28,11 @@ public abstract class PlayerLunaShopDAO implements DAO {
 
 	public abstract void load(Player player);
 
-	public abstract boolean insert(Player player);
-	
-	public abstract boolean update(Player player);
+	public abstract boolean add(final int playerId, boolean freeUnderpath, boolean freeFactory, boolean freeChest);
 
-	public abstract boolean delete(Player player);
-	
-	public abstract void reset();
-	
+	public abstract boolean delete();
+
 	public abstract boolean store(Player player);
+
+	public abstract boolean setLunaShopByObjId(final int obj, boolean freeUnderpath, boolean freeFactory, boolean freeChest);
 }

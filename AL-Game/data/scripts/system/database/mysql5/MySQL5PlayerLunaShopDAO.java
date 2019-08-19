@@ -39,10 +39,9 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO {
 
 	public static final String ADD_QUERY = "INSERT INTO `player_luna_shop` (`player_id`, `free_under`, `free_munition`, `free_chest`) VALUES (?,?,?,?)";
 	public static final String SELECT_QUERY = "SELECT * FROM `player_luna_shop` WHERE `player_id`=?";
-	public static final String DELETE_QUERY = "DELETE FROM `player_luna_shop` WHERE `player_id`=?";
+	public static final String DELETE_QUERY = "DELETE FROM `player_luna_shop`";
 	public static final String UPDATE_QUERY = "UPDATE player_luna_shop set `free_under`=?, `free_munition`=?, `free_chest`=? WHERE `player_id`=?";
-	public static final String RESET_QUERY = "DELETE FROM `player_luna_shop`";
-	
+
 	@Override
 	public void load(Player player) {
 		Connection con = null;
@@ -71,39 +70,69 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO {
 	}
 
 	@Override
-	public boolean insert(Player player) {
+	public boolean add(final int playerId, final boolean freeUnderpath, final boolean freeFactory, final boolean freeChest) {
+		return DB.insertUpdate(ADD_QUERY, new IUStH() {
+
+			@Override
+			public void handleInsertUpdate(PreparedStatement ps) throws SQLException {
+				ps.setInt(1, playerId);
+				ps.setBoolean(2, freeUnderpath);
+				ps.setBoolean(3, freeFactory);
+				ps.setBoolean(4, freeChest);
+				ps.execute();
+				ps.close();
+			}
+		});
+	}
+
+	@Override
+	public boolean delete() {
+		return DB.insertUpdate(DELETE_QUERY, new IUStH() {
+
+			@Override
+			public void handleInsertUpdate(PreparedStatement ps) throws SQLException {
+				ps.execute();
+				ps.close();
+			}
+		});
+	}
+
+	@Override
+	public boolean store(Player player) {
 		Connection con = null;
+		boolean insert = false;
 		try {
-			PlayerLunaShop pls = player.getPlayerLunaShop();
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement(ADD_QUERY);
-			stmt.setInt(1, player.getObjectId());
-			stmt.setBoolean(1, pls.isFreeUnderpath());
-			stmt.setBoolean(2, pls.isFreeFactory());
-			stmt.setBoolean(3, pls.isFreeChest());
-			stmt.execute();
-			stmt.close();
+			con.setAutoCommit(false);
+			PlayerLunaShop bind = player.getPlayerLunaShop();
+			switch (bind.getPersistentState()) {
+				case UPDATE_REQUIRED:
+				case NEW:
+					insert = updateLunaShop(con, player);
+					log.info("LunaShop DB updated.");
+					break;
+				default:
+					break;
+			}
+			bind.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (Exception e) {
-			log.error("Could not insert PlayerLunaShop data for playerObjId: " + player.getObjectId(), e);
-			return false;
+		catch (SQLException e) {
+			log.error("Can't open connection to save player updateLunaShop: " + player.getObjectId());
 		}
 		finally {
 			DatabaseFactory.close(con);
 		}
-		return true;
+		return insert;
 	}
-	
-	@Override
-	public boolean update(Player player) {
-		Connection con = null;
+
+	public boolean updateLunaShop(Connection con, Player player) {
+		PreparedStatement stmt = null;
 		try {
-			PlayerLunaShop pls = player.getPlayerLunaShop();
-			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement(UPDATE_QUERY);
-			stmt.setBoolean(1, pls.isFreeUnderpath());
-			stmt.setBoolean(2, pls.isFreeFactory());
-			stmt.setBoolean(3, pls.isFreeChest());
+			stmt = con.prepareStatement(UPDATE_QUERY);
+			PlayerLunaShop lr = player.getPlayerLunaShop();
+			stmt.setBoolean(1, lr.isFreeUnderpath());
+			stmt.setBoolean(2, lr.isFreeFactory());
+			stmt.setBoolean(3, lr.isFreeChest());
 			stmt.setInt(4, player.getObjectId());
 			stmt.addBatch();
 			stmt.executeBatch();
@@ -114,85 +143,31 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO {
 			return false;
 		}
 		finally {
-			DatabaseFactory.close(con);
+			DatabaseFactory.close(stmt);
 		}
 		return true;
 	}
 
 	@Override
-	public boolean delete(Player player) {
+	public boolean setLunaShopByObjId(int obj, final boolean freeUnderpath, final boolean freeFactory, final boolean freeChest) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement(DELETE_QUERY);
-			stmt.setInt(1, player.getObjectId());
-			stmt.addBatch();
-			stmt.executeBatch();
-			con.commit();
+			PreparedStatement stmt = con.prepareStatement(UPDATE_QUERY);
+			stmt.setBoolean(1, freeUnderpath);
+			stmt.setBoolean(2, freeFactory);
+			stmt.setBoolean(3, freeChest);
+			stmt.setInt(4, obj);
+			stmt.execute();
+			stmt.close();
 		}
 		catch (Exception e) {
-			log.error("Could not delete PlayerLunaShop data for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 			return false;
 		}
 		finally {
 			DatabaseFactory.close(con);
 		}
 		return true;
-	}
-	
-	@Override
-	public void reset() {
-		Connection con = null;
-		try {
-			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement(RESET_QUERY);
-			stmt.addBatch();
-			stmt.executeBatch();
-			con.commit();
-		}
-		catch (Exception e) {
-			log.error("Could not reset PlayerLunaShop from DB: " + e.getMessage(), e);
-		}
-		finally {
-			DatabaseFactory.close(con);
-		}
-	}
-
-	@Override
-	public boolean store(Player player) {
-		Connection con = null;
-		boolean query = false;
-		try {
-			con = DatabaseFactory.getConnection();
-			con.setAutoCommit(false);
-			PlayerLunaShop pls = player.getPlayerLunaShop();
-			switch (pls.getPersistentState()) {
-				case NEW:
-					query = insert(player);
-					pls.setPersistentState(PersistentState.UPDATED);
-					log.info("LunaShop DB updated.");
-					break;
-				case UPDATE_REQUIRED:
-					query = update(player);
-					pls.setPersistentState(PersistentState.UPDATED);
-					log.info("LunaShop DB updated.");
-					break;
-				case DELETED:
-					query = delete(player);
-					player.setPlayerLunaShop(null);
-					log.info("LunaShop DB updated.");
-					break;
-				default:
-					break;
-			}
-		}
-		catch (SQLException e) {
-			log.error("Can't open connection to save player updateLunaShop: " + player.getObjectId());
-		}
-		finally {
-			DatabaseFactory.close(con);
-		}
-		return query;
 	}
 
 	@Override
