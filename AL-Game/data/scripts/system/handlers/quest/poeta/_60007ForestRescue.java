@@ -113,7 +113,6 @@ public class _60007ForestRescue extends QuestHandler {
 				}
 				case 700030: {
 					switch (dialog) {
-						// ToDo: check correct action for this npc
 						case USE_OBJECT: {
 							qs.setQuestVar(4);
 							qs.setStatus(QuestStatus.REWARD);

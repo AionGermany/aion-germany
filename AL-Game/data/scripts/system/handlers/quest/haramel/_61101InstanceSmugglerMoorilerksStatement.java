@@ -40,6 +40,8 @@ public class _61101InstanceSmugglerMoorilerksStatement extends QuestHandler {
 		qe.registerQuestNpc(799522).addOnQuestStart(questId); // Moofrenerk
 		qe.registerQuestNpc(799522).addOnTalkEvent(questId); // Moofrenerk
 		qe.registerQuestNpc(799523).addOnTalkEvent(questId); // Moofrenerk
+		qe.registerQuestNpc(700951).addOnTalkEvent(questId); // Raw Odium
+		qe.registerQuestNpc(700833).addOnTalkEvent(questId); // Fine Odium
 	}
 
 	@Override
@@ -74,7 +76,7 @@ public class _61101InstanceSmugglerMoorilerksStatement extends QuestHandler {
 		}
 		else if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
-				case 799522: {
+				case 799523: {
 					switch (dialog) {
 						case QUEST_SELECT: {
 							return sendQuestDialog(env, 1011);
@@ -90,6 +92,17 @@ public class _61101InstanceSmugglerMoorilerksStatement extends QuestHandler {
 					}
 					break;
 				}
+				case 700951:
+				case 700833: {
+					switch (dialog) {
+						case USE_OBJECT: {
+							return true;
+						}
+						default:
+							break;
+					}
+				}
+					
 				default:
 					break;
 			}

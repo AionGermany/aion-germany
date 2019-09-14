@@ -62,7 +62,6 @@ public class _60008PursuitOfTheOdiumTransportTrack extends QuestHandler {
 			switch (targetId) {
 				case 820010: {
 					switch (dialog) {
-						// ToDo: check correct action for this npc
 						case USE_OBJECT: {
 							qs.setQuestVar(1);
 							updateQuestStatus(env);
@@ -75,7 +74,6 @@ public class _60008PursuitOfTheOdiumTransportTrack extends QuestHandler {
 				}
 				case 820011: {
 					switch (dialog) {
-						// ToDo: check correct action for this npc
 						case USE_OBJECT: {
 							qs.setQuestVar(2);
 							qs.setStatus(QuestStatus.REWARD);

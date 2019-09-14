@@ -17,14 +17,18 @@
 package quest.sanctum;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.teleport.TeleportService2;
+import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _60101TheOngoingSearchForOdium extends QuestHandler {
 
@@ -38,14 +42,33 @@ public class _60101TheOngoingSearchForOdium extends QuestHandler {
 	public void register() {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(798600).addOnTalkEvent(questId); // Eremitia
-		qe.registerQuestNpc(800349).addOnTalkEvent(questId); // Kaisinel
+		qe.registerQuestNpc(805362).addOnTalkEvent(questId); // Kaisinel
 		qe.registerQuestNpc(203726).addOnTalkEvent(questId); // Polyidus
 		qe.registerQuestNpc(820016).addOnTalkEvent(questId); // Royer 2
+		qe.registerOnEnterZone(ZoneName.get("NEW_HEIRON_GATE_210040000"), questId);
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 60000, false);
+		return defaultOnLvlUpEvent(env, 60100, false);
+	}
+	
+	@Override
+	public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
+		Player player = env.getPlayer();
+		if (player == null) {
+			return false;
+		}
+
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
+			if (var == 3 && zoneName == ZoneName.get("NEW_HEIRON_GATE_210040000")) {
+				changeQuestStep(env, 3, 4, true);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
@@ -69,6 +92,7 @@ public class _60101TheOngoingSearchForOdium extends QuestHandler {
 						case SETPRO1: {
 							qs.setQuestVar(1);
 							updateQuestStatus(env);
+							TeleportService2.teleportTo(player, 110020000, 490.2671f, 499.5278f, 499.8765f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -76,7 +100,7 @@ public class _60101TheOngoingSearchForOdium extends QuestHandler {
 					}
 					break;
 				}
-				case 800349: {
+				case 805362: {
 					switch (dialog) {
 						case QUEST_SELECT: {
 							return sendQuestDialog(env, 1352);
@@ -84,6 +108,7 @@ public class _60101TheOngoingSearchForOdium extends QuestHandler {
 						case SETPRO2: {
 							qs.setQuestVar(2);
 							updateQuestStatus(env);
+							TeleportService2.teleportTo(player, 110010000, 1337.5769f, 1511.124f, 569.03876f, (byte) 57, TeleportAnimation.BEAM_ANIMATION);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -117,7 +142,6 @@ public class _60101TheOngoingSearchForOdium extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
-
 		return false;
 	}
 }
