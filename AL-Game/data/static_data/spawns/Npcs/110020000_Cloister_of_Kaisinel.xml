@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Parsed via PacketSamurai AionGer-Edtion - [Mon Sep 10 16:38:54 CEST 2018] -->
+<!-- Parsed via PacketSamurai AionGer-Edtion - [Sat Sep 14 23:05:40 CEST 2019] -->
 <spawns>
 	<!-- Cloister of Kaisinel -->
 	<spawn_map map_id="110020000">
@@ -88,6 +88,14 @@
 		<spawn npc_id="731807" respawn_time="295">
 			<spot x="2134.5955" y="1619.1097" z="1206.7213" h="10" static_id="148"/>
 		</spawn>
+		<!-- Ereshkigal's Possession ||| LC2_StoryBook_Ab1 -->
+		<spawn npc_id="731920" respawn_time="295">
+			<spot x="2192.126" y="1547.7421" z="1204.9725" h="10" static_id="110"/>
+		</spawn>
+		<!-- Ereshkigal Legend ||| LC2_StoryBook_Eresukigal -->
+		<spawn npc_id="731922" respawn_time="295">
+			<spot x="2145.8953" y="1627.8092" z="1204.9724" h="10" static_id="111"/>
+		</spawn>
 		<!-- Steel Beard ||| LC1_StoryBook_14 -->
 		<spawn npc_id="748006" respawn_time="295">
 			<spot x="2192.7874" y="1547.0076" z="1206.7175" h="10" static_id="132"/>
@@ -114,7 +122,7 @@
 		</spawn>
 		<!-- Mysteris ||| Hilarus -->
 		<spawn npc_id="798500" respawn_time="295">
-			<spot x="2177.9" y="1588.8" z="1206.1138" h="70"/>
+			<spot x="2178.8403" y="1588.3612" z="1206.1139" h="70"/>
 		</spawn>
 		<!-- Chatia ||| Chatia -->
 		<spawn npc_id="798501" respawn_time="295">
@@ -146,7 +154,7 @@
 		</spawn>
 		<!-- Eremitia ||| Eremitia -->
 		<spawn npc_id="798600" respawn_time="295">
-			<spot x="2177.8542" y="1591.145" z="1206.1138" h="70"/>
+			<spot x="2177.9673" y="1590.9443" z="1206.1138" h="70"/>
 		</spawn>
 		<!-- Konopas ||| Konopas -->
 		<spawn npc_id="798601" respawn_time="295">
@@ -160,21 +168,9 @@
 		<spawn npc_id="801217" respawn_time="295">
 			<spot x="2197.1807" y="1586.2917" z="1212.266" h="60"/>
 		</spawn>
-		<!-- Kaisinel ||| LC2_Kaisinel_E -->
-		<spawn npc_id="805362" respawn_time="295">
-			<spot x="500.0557" y="500.06332" z="499.72083" h="60"/>
-		</spawn>
-		<!-- Dike ||| LC2_Dike_E -->
-		<spawn npc_id="805692" respawn_time="295">
-			<spot x="461.4756" y="499.32193" z="499.5998" h="0"/>
-		</spawn>
 		<!-- Gerion ||| LC2_Geryon_E -->
 		<spawn npc_id="806247" respawn_time="295">
-			<spot x="2175.6619" y="1593.6228" z="1206.114" h="70"/>
-		</spawn>
-		<!-- Eremitia ||| LC2_Eremitia_E -->
-		<spawn npc_id="820170" respawn_time="295">
-			<spot x="468.0" y="532.0" z="499.5998" h="105"/>
+			<spot x="2176.2861" y="1592.8245" z="1206.1138" h="70"/>
 		</spawn>
 	</spawn_map>
 </spawns>

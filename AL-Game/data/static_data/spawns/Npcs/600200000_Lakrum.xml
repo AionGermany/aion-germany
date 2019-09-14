@@ -3771,6 +3771,10 @@
 		<spawn npc_id="731546" respawn_time="295">
 			<spot x="571.45087" y="1394.8398" z="321.25" h="91"/>
 		</spawn>
+		<!-- Entrance to Makarna of Bitterness ||| IDSeal_D_Entrance_In01 -->
+		<spawn npc_id="731547" respawn_time="295">
+			<spot x="623.89667" y="1670.5248" z="324.0" h="60"/>
+		</spawn>
 		<!-- Kaisinel Academy Teleport Statue ||| LF6_LC2_teleport -->
 		<spawn npc_id="731699" respawn_time="295">
 			<spot x="2669.378" y="454.9889" z="323.29913" h="41"/>
@@ -3778,10 +3782,6 @@
 		<!-- Marchutan Priory Teleport Statue ||| DF6_DC2_teleport -->
 		<spawn npc_id="731700" respawn_time="295">
 			<spot x="2928.5076" y="2468.4714" z="313.72293" h="53"/>
-		</spawn>
-		<!-- Narakkalli Entrance ||| IDAb1_Ere_Entrance_In01 -->
-		<spawn npc_id="731792" respawn_time="295">
-			<spot x="2537.9004" y="1505.3698" z="229.81638" h="0" static_id="2173"/>
 		</spawn>
 		<!-- Teleporter ||| LDF7_OP1_Teleport_L -->
 		<spawn npc_id="731882" respawn_time="295">
@@ -3846,18 +3846,18 @@
 			<spot x="1659.431" y="1377.8295" z="254.15121" h="0" static_id="2078"/>
 			<spot x="2610.3484" y="1421.1595" z="204.97375" h="0" static_id="2059"/>
 		</spawn>
+		<!-- Narakkalli Entrance (Elyos) ||| IDAb1_Ere_Entrance_In_L -->
+		<spawn npc_id="731937" respawn_time="295">
+			<spot x="1917.7073" y="732.74915" z="218.25" h="75"/>
+		</spawn>
+		<!-- Narakkalli Entrance (Asmodian) ||| IDAb1_Ere_Entrance_In_D -->
+		<spawn npc_id="731938" respawn_time="295">
+			<spot x="1733.3258" y="2343.3337" z="254.15358" h="0"/>
+		</spawn>
 		<!-- Obelisk ||| LDF7_N_Binding_stone_D -->
 		<spawn npc_id="731917" respawn_time="295">
 			<spot x="1600.9253" y="1659.4858" z="255.36853" h="0" static_id="2068"/>
 			<spot x="2683.3118" y="1591.4467" z="204.56795" h="0" static_id="2062"/>
-		</spawn>
-		<!-- Entrance to the Garden of Knowledge ||| IDEternity_02_L_Entrance -->
-		<spawn npc_id="806030" respawn_time="295">
-			<spot x="1467.2999" y="925.819" z="261.125" h="60"/>
-		</spawn>
-		<!-- Entrance to the Garden of Knowledge ||| IDEternity_02_D_Entrance -->
-		<spawn npc_id="806031" respawn_time="295">
-			<spot x="1408.5535" y="2196.7104" z="224.7846" h="40"/>
 		</spawn>
 		<!-- Bastiel ||| Ab1_Bastiel_E -->
 		<spawn npc_id="806582" respawn_time="295">
@@ -4021,19 +4021,11 @@
 		</spawn>
 		<!-- Aerolink ||| IDAb1_Heroes_L_In -->
 		<spawn npc_id="835682" respawn_time="295">
-			<spot x="722.20233" y="799.8513" z="332.87067" h="0"/>
+			<spot x="1915.0492" y="716.9185" z="218.25" h="45"/>
 		</spawn>
 		<!-- Aerolink ||| IDAb1_Heroes_D_In -->
 		<spawn npc_id="835683" respawn_time="295">
-			<spot x="560.8936" y="2173.4983" z="284.611" h="30"/>
-		</spawn>
-		<!-- Mirash Refuge Entrance ||| IDAbRe_Core_L_01_In -->
-		<spawn npc_id="835686" respawn_time="295">
-			<spot x="1901.6681" y="720.94165" z="218.25" h="8"/>
-		</spawn>
-		<!-- Mirash Refuge Entrance ||| IDAbRe_Core_D_01_In -->
-		<spawn npc_id="835687" respawn_time="295">
-			<spot x="1733.3258" y="2343.3337" z="254.15358" h="0"/>
+			<spot x="1745.2043" y="2329.837" z="254.07527" h="15"/>
 		</spawn>
 		<!-- Kerubar ||| Deco_Cherubim_D_MINION -->
 		<spawn npc_id="836120" respawn_time="295">
@@ -4618,11 +4610,6 @@
 		<!-- Lajibad ||| LDF7_OP_D_matter_seller -->
 		<spawn npc_id="837376" respawn_time="295">
 			<spot x="2874.1912" y="2578.0342" z="313.73996" h="83"/>
-		</spawn>
-		<!-- Narakkalli Abyss Rift ||| IDAb1_Ere_Entrance_02 -->
-		<spawn npc_id="837433" respawn_time="295">
-			<spot x="917.4033" y="718.4973" z="326.9957" h="0"/>
-			<spot x="1997.6554" y="2331.851" z="277.6015" h="0"/>
 		</spawn>
 		<!-- Prometun's Workshop Abyss Rift ||| IDF7_Weapon_Entrance_02 -->
 		<spawn npc_id="837434" respawn_time="295">
