@@ -88,6 +88,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_PROTECTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STANCE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PRIVATE_STORE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_QUEST_ACTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_RIDE_ROBOT;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_CANCEL;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_LIST;
@@ -96,6 +97,8 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TRANSFORM;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
+import com.aionemu.gameserver.questEngine.model.QuestState;
+import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.services.ClassChangeService;
 import com.aionemu.gameserver.services.DuelService;
@@ -820,6 +823,26 @@ public class PlayerController extends CreatureController<Player> {
 
 		// Temporal
 		ClassChangeService.showClassChangeDialog(player);
+		
+		if (player.getLevel() == 14) {
+			switch (player.getRace()) {
+				case ELYOS: {
+					if (player.getQuestStateList().hasQuest(61601)) {
+						QuestState qs = player.getQuestStateList().getQuestState(61601);
+						if (qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 0) {
+							qs.setQuestVar(1);
+							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(61601, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+						}
+					}
+					break;
+				}
+				case ASMODIANS: {
+					// TODO
+				}
+				default:
+					break;
+			}
+		}
 
 		QuestEngine.getInstance().onLvlUp(new QuestEnv(null, player, 0, 0));
 		player.getController().updateZone();

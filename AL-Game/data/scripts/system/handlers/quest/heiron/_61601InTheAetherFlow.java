@@ -22,6 +22,7 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author QuestGenerator by Mariella
@@ -39,11 +40,32 @@ public class _61601InTheAetherFlow extends QuestHandler {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(204513).addOnTalkEvent(questId); // Amene
 		qe.registerQuestNpc(204549).addOnTalkEvent(questId); // Aphesius
+		qe.registerOnEnterZone(ZoneName.get("HEIRON_OBSERVATORY_210040000"), questId);
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60200, false);
+	}
+	
+	@Override
+	public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
+		Player player = env.getPlayer();
+		if (player == null) {
+			return false;
+		}
+
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
+			if (var == 2 && zoneName == ZoneName.get("HEIRON_OBSERVATORY_210040000")) {
+				qs.setQuestVar(3);
+				qs.setStatus(QuestStatus.REWARD);
+				updateQuestStatus(env);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
@@ -85,7 +107,6 @@ public class _61601InTheAetherFlow extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
-
 		return false;
 	}
 }
