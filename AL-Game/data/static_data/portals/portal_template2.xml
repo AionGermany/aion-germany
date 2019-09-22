@@ -118,6 +118,30 @@
         <portal_path dialog="10000" loc_id="1100102"/>
     </portal_dialog>
 
+	<!-- Holy Tower Entry -->
+    <portal_dialog npc_id="835682">
+        <portal_path dialog="10000" loc_id="3101600" instance="true">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+    <portal_dialog npc_id="835683">
+        <portal_path dialog="10000" loc_id="3101600" instance="true">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+
+	<!-- Narakkalli Entry -->
+    <portal_dialog npc_id="731937">
+        <portal_path dialog="10000" loc_id="3023400" instance="true">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+    <portal_dialog npc_id="731938">
+        <portal_path dialog="10000" loc_id="3023400" instance="true">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+
     <!-- **************** PORTAL SCROLL **************** -->
     <!-- SCROLL TELEPORTS ELYOS -->
     <portal_scroll name="LC1_RETURN_AREA_1">
