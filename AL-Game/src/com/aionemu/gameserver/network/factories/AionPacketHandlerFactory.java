@@ -297,7 +297,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_ENCHANTMENT_EXTRACTION(0x1CC, State.IN_GAME)); // 5.4
 		addPacket(new CM_USE_PACK_ITEM(0x1C8, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_SELL_BROKEN_ITEMS(0x1D4, State.IN_GAME)); // 6.x TODO
-		// addPacket(new CM_AUTOMATIC_GOLDENSTAR(0x1EA, State.IN_GAME)); // 5.6
+		addPacket(new CM_AUTOMATIC_GOLDENSTAR(0x1D1, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_TELEPORT_BACK(0x121, State.IN_GAME)); // 7.x EU TODO
 		addPacket(new CM_SKILL_ANIMATION(0x1D0, State.IN_GAME)); // 7.x EU TODO
 		addPacket(new CM_MINIONS(0x1ED, State.IN_GAME)); // 7.x TODO
