@@ -212,6 +212,14 @@ public class GoTo extends AdminCommand {
 				goTo(player, 600200000, 2925.3015f, 2505.124f, 313.80035f, (byte) 90);
 			}
 		}
+		else if (destination.equalsIgnoreCase("dumaha") || destination.equalsIgnoreCase("dumaha")) {
+			if (player.getRace() == Race.ELYOS) {
+				goTo(player, 600300000, 236.2123f, 184.28629f, 735.00195f, (byte) 30);
+			}
+			else if (player.getRace() == Race.ASMODIANS) {
+				goTo(player, 600300000, 206.73439f, 2832.7263f, 673.3695f, (byte) 30);
+			}
+		}
 		/**
 		 * Quest Instance Maps
 		 */
