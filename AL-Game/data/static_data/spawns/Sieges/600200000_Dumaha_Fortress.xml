@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="600300000">
+        <siege_spawn siege_id="1921">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+					<!-- NCO Sentries of Dumaha Fortress ||| LDF8_1921_Boss_Dr_3 -->
+					<spawn npc_id="886922" respawn_time="295">
+						<spot x="2933.2551" y="672.64325" z="872.93585" h="40"/>
+					</spawn>
+					<!-- Outer Fortress Gate of Dumaha Fortress ||| LDF8_1921_Door_01_Dr -->
+					<spawn npc_id="887125" respawn_time="295">
+						<spot x="2805.1187" y="784.11035" z="844.8668" h="89" static_id="1392"/>
+					</spawn>
+					<!-- Inner Fortress Gate of Dumaha Fortress ||| LDF8_1921_Door_02_Dr -->
+					<spawn npc_id="887126" respawn_time="295">
+						<spot x="2873.4746" y="723.1562" z="884.73584" h="25" static_id="1296"/>
+					</spawn>
+					<!-- Iron Fence ||| LDF8_1921_barricade_4 -->
+					<spawn npc_id="887134" respawn_time="295">
+						<spot x="2888.7522" y="815.1389" z="854.23145" h="80" static_id="2019"/>
+						<spot x="2874.3135" y="784.1579" z="862.6154" h="104" static_id="2018"/>
+						<spot x="2814.5723" y="714.8422" z="862.6367" h="80" static_id="2016"/>
+						<spot x="2786.6204" y="697.65875" z="854.23145" h="20" static_id="2014"/>
+						<spot x="2799.7737" y="683.73474" z="872.76666" h="20" static_id="2015"/>
+					</spawn>
+					<!-- Iron Fence ||| LDF8_1921_barricade_ex_01 -->
+					<spawn npc_id="887137" respawn_time="295">
+						<spot x="2866.371" y="866.06647" z="842.0963" h="40" static_id="1311"/>
+					</spawn>
+					<!-- Dumaha Outer Fortress Gate Protector ||| LDF8_1921_Miston_ExDoorGuard_Fi_Dr_3 -->
+					<spawn npc_id="887143" respawn_time="295">
+						<spot x="2801.0657" y="787.95874" z="843.95" h="40"/>
+					</spawn>
+					<!-- Dumaha Inner Fortress Gate Protector ||| LDF8_1921_Miston_InDoorGuard_Fi_Dr_3 -->
+					<spawn npc_id="887158" respawn_time="295">
+						<spot x="2872.9006" y="725.5828" z="884.74207" h="62"/>
+					</spawn>
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+    </spawn_map>
+</spawns>
