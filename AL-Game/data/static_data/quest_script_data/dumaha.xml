@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-10-26 15:32 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!-- 120 Quests listed -->
+    <!--
+        [BEGIN] SUMMARY
+               60600 [SCRIPT] A New Connection
+               60601 [SCRIPT] A Strange Encounter
+               60602 [SCRIPT] A Strange Girl Called Inanna
+               60603 [SCRIPT] Evidence
+               60604 [SCRIPT] Intervention
+               60605 [SCRIPT] Uncovering the Truth
+               63000 [SCRIPT] Radio Silence
+               63001 [SCRIPT] Support for the 1st Apsu Altar
+               63002 [SCRIPT] Distribution of Gifts for Completing the New Company Building
+               63003 [SCRIPT] Support in the Stella Excavation Site
+               63004 [SCRIPT] Material for Stella Serum 1
+               63005 [SCRIPT] [Group] Material for Stella Serum 2
+               63006 [SCRIPT] Investigate the Environment of the Dumaha Sand Squall
+               63007 [SCRIPT] [Group] In the Outlaw Region
+               63008 [SCRIPT] Lost Stella Medal
+               63009 [SCRIPT] Researching the Mysterious Ruins
+               63010 [SCRIPT] Creatures of the Volcanic Region
+               63011 [SCRIPT] The Source of Apsu's Energy
+               63012 [SCRIPT] The Secret of Dumaha Fortress
+               63013 [SCRIPT] Gifts for Completing the New Company Building 2
+               63014 [SCRIPT] Governor Medena's Call to Besiege the Alter
+               63098 [SCRIPT] [League] The Guardian General of Dumaha Fortress
+               63099 [SCRIPT] [League] Attack on the Fortress the Rega are Occupying
+               63100 [SCRIPT] [Daily/Hero] Eliminating the Asmodian Officer in Dumaha
+               63101 [SCRIPT] [Weekly/Hero] Eliminating the Asmodian General in Dumaha
+               63102 [SCRIPT] [Weekly/Group] Offensive in the Dumaha Prairie
+               63103 [SCRIPT] [Weekly/Group] Offensive in the Dumaha Rocky Desert
+               63104 [SCRIPT] [Weekly/Group] Offensive at the Dumaha's Magma Chamber
+               63105 [SCRIPT] [Daily] Development Assistance for Apsu's Ara Minima
+               63106 [SCRIPT] [Daily] Development Assistance for Apsu's Ara Mediocra
+               63107 [SCRIPT] [Daily] Development Assistance for Apsu's Ara Magna
+               63108 [SCRIPT] [Daily] Avert the Danger Posed by Apsu's Altar
+               63109 [TODO]   [Weekly] Avert the Danger Posed by Ara Mediocra (Hold)
+               63110 [TODO]   [Weekly] Avert the Danger Posed by Ara Magna (Hold)
+               63111 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 1st Apsu Altar
+               63112 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 2nd Apsu Altar
+               63113 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 3rd Apsu Altar
+               63114 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 4th Apsu Altar
+               63115 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 5th Apsu Altar
+               63116 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 6th Apsu Altar
+               63117 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 7th Apsu Altar
+               63118 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 8th Apsu Altar
+               63119 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 9th Apsu Altar
+               63120 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 10th Apsu Altar
+               63121 [SCRIPT] [Weekly/Legion] Eliminating the Scout Troop of the 11th Apsu Altar
+               63122 [SCRIPT] [Urgent Orders] Secure the Dumaha Prairie
+               63123 [SCRIPT] [Urgent Orders] Secure the Dumaha Rocky Desert
+               63124 [SCRIPT] [Urgent Orders] Secure the Dumaha No-Man's Land
+               63125 [SCRIPT] [Urgent Orders] Secure the Dumaha Sand Flows
+               63126 [SCRIPT] [Urgent Orders] Secure Dumaha's Magma Chamber
+               63127 [TODO]   [Urgent Orders] Avert the Danger Posed by Subzone F (Hold)
+               63128 [TODO]   [Urgent Orders] Avert the Danger Posed by Subzone G (Hold)
+               63129 [TODO]   [Urgent Orders] Avert the Danger Posed by Subzone H (Hold)
+               63130 [TODO]   [Urgent Orders] Avert the Danger Posed by Subzone I (Hold)
+               63131 [TODO]   [Urgent Orders] Avert the Danger Posed by Subzone J (Hold)
+               63132 [TODO]   [Urgent Orders] Avert the Danger Posed by Subzone K (Hold)
+               63150 [TODO]   [Weekly] Rega Conquest Training (Hold)
+               63151 [TODO]   [Weekly/Group] Snuwa Conquest Training (Hold)
+               63152 [TODO]   [Weekly/Group] Outlaw Conquest Training (Hold)
+               63153 [TODO]   [Weekly/Group] Special Rega Conquest Training (Hold)
+               70600 [SCRIPT] New Cooperation
+               70601 [SCRIPT] Unexpected Encounter
+               70602 [SCRIPT] The Strange Connection to Inanna
+               70603 [SCRIPT] Tip of the Iceberg
+               70604 [SCRIPT] Espionage
+               70605 [SCRIPT] Revealing the Intrigue
+               73000 [SCRIPT] Radio Silence
+               73001 [SCRIPT] Support for the 2nd Apsu Altar
+               73002 [SCRIPT] Delivery of Gifts for Completing the New Company Building
+               73003 [SCRIPT] To the Stella Excavation Site
+               73004 [SCRIPT] The Development of Stella Serum 1
+               73005 [SCRIPT] [Group] The Development of Stella Serum 2
+               73006 [SCRIPT] Research the Environment of the Dumaha Sand Squall
+               73007 [SCRIPT] [Group] In the Outlaw Region
+               73008 [SCRIPT] Precious Lost Medal
+               73009 [SCRIPT] Researching the Mysterious Desert Ruins
+               73010 [SCRIPT] Creatures of the Volcanic Region
+               73011 [SCRIPT] The Source of Apsu's Life Force
+               73012 [SCRIPT] The Secret of Dumaha Fortress
+               73013 [SCRIPT] Delivery of Gifts for Completing the New Company Building 2
+               73014 [SCRIPT] Governor Nulla's Call to Besiege the Alter
+               73098 [SCRIPT] [League] Eliminating the Guardian General of Dumaha Fortress
+               73099 [SCRIPT] [League] Attack on the Fortress the Rega Captured
+               73100 [SCRIPT] [Daily/Hero] Eliminating the Elyos Officer in Dumaha
+               73101 [SCRIPT] [Weekly/Hero] Eliminating the Elyos General in Dumaha
+               73102 [SCRIPT] [Weekly/Group] Manoeuvre in the Dumaha Prairie
+               73103 [SCRIPT] [Weekly/Group] Manoeuvre in the Dumaha Rocky Desert
+               73104 [SCRIPT] [Weekly/Group] Manoeuvre at Dumaha's Magma Chamber
+               73105 [SCRIPT] [Daily] Development Assistance for Apsu's Ara Minima
+               73106 [SCRIPT] [Daily] Development Assistance for Apsu's Ara Mediocra
+               73107 [SCRIPT] [Daily] Development Assistance for Apsu's Ara Magna
+               73108 [SCRIPT] [Daily] Avert the Danger Posed by Apsu's Altar
+               73109 [TODO]   [Weekly] Eliminate the Danger Posed by Ara Mediocra (Hold)
+               73110 [TODO]   [Weekly] Eliminate the Danger Posed by Ara Magna (Hold)
+               73111 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 1st Apsu Altar
+               73112 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 2nd Apsu Altar
+               73113 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 3rd Apsu Altar
+               73114 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 4th Apsu Altar
+               73115 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 5th Apsu Altar
+               73116 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 6th Apsu Altar
+               73117 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 7th Apsu Altar
+               73118 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 8th Apsu Altar
+               73119 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 9th Apsu Altar
+               73120 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 10th Apsu Altar
+               73121 [SCRIPT] [Weekly/Legion] Annihilating the Scout Troop of the 11th Apsu Altar
+               73122 [SCRIPT] [Urgent Orders] Defend the Dumaha Prairie
+               73123 [SCRIPT] [Urgent Orders] Defend the Dumaha Rocky Desert
+               73124 [SCRIPT] [Urgent Orders] Defend the Dumaha No-Man's Land
+               73125 [SCRIPT] [Urgent Orders] Defend the Dumaha Sand Flows
+               73126 [SCRIPT] [Urgent Orders] Defend Dumaha's Magma Chamber
+               73127 [TODO]   [Urgent Orders] Eliminate the Danger Posed by Subzone F (Hold)
+               73128 [TODO]   [Urgent Orders] Eliminate the Danger Posed by Subzone G (Hold)
+               73129 [TODO]   [Urgent Orders] Eliminate the Danger Posed by Subzone H (Hold)
+               73130 [TODO]   [Urgent Orders] Eliminate the Danger Posed by Subzone I (Hold)
+               73131 [TODO]   [Urgent Orders] Eliminate the Danger Posed by Subzone J (Hold)
+               73132 [TODO]   [Urgent Orders] Eliminate the Danger Posed by Subzone K (Hold)
+               73150 [TODO]   [Weekly] Rega Purge (Hold)
+               73151 [TODO]   [Weekly/Group] Snuwa Purge (Hold)
+               73152 [TODO]   [Weekly/Group] Outlaw Purge (Hold)
+               73153 [TODO]   [Weekly/Group] Special Rega Purge (Hold)
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

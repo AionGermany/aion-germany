@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-07-26 08:28 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-10-26 15:19 -->
 <quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <quest id="1000" name="Prologue" category_name="Poeta" nameId="1102000" minlevel_permitted="1" max_repeat_count="1" race_permitted="ELYOS" category="QUEST">
         <rewards exp="1"/>
@@ -5091,7 +5091,7 @@
         <quest_kill npc_ids="244100" seq="0"/>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
     </quest>
-    <quest id="51153" name="[Event] Eliminating Angry Lanzenerk" category_name="Event" nameId="1806158" minlevel_permitted="76" max_repeat_count="5" race_permitted="PC_ALL" category="EVENT">
+    <quest id="51153" name="[Event] Elimination of Bawling Lanzenerk" category_name="Event" nameId="1806158" minlevel_permitted="76" max_repeat_count="5" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="1">
             <reward_item item_id="186020017" count="30"/>
         </rewards>
@@ -5287,6 +5287,64 @@
         <start_conditions>
             <finished quest_id="51803"/>
         </start_conditions>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55012" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="1000000">
+            <reward_item item_id="188072971" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55013" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="10000000">
+            <reward_item item_id="188073111" count="3"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55014" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="17000000">
+            <reward_item item_id="188073111" count="5"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55015" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="17000000">
+            <reward_item item_id="188073111" count="5"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55016" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="17000000">
+            <reward_item item_id="188073111" count="5"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55017" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
+        <rewards exp="17000000">
+            <reward_item item_id="188073111" count="5"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55018" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="ASMODIANS" category="EVENT">
+        <rewards exp="5000000">
+            <reward_item item_id="188120053" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55019" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="ELYOS" category="EVENT">
+        <rewards exp="5000000">
+            <reward_item item_id="188120053" count="1"/>
+        </rewards>
+        <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
+    </quest>
+    <quest id="55020" name="" category_name="Event" nameId="" minlevel_permitted="80" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
+        <collect_items>
+            <collect_item item_id="188073111" count="20"/>
+            <collect_item item_id="188120053" count="1"/>
+        </collect_items>
+        <rewards exp="1">
+            <reward_item item_id="188073112" count="1"/>
+        </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
     </quest>
     <quest id="60000" name="Pernos' Call" category_name="1. Poeta" nameId="1803984" minlevel_permitted="1" max_repeat_count="1" race_permitted="ELYOS" category="MISSION">
@@ -23397,7 +23455,7 @@
         </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
     </quest>
-    <quest id="80689" name="[Event] Trillonerk's Gold Vault" category_name="Event" nameId="1800557" minlevel_permitted="40" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
+    <quest id="80689" name="[Event] Trillonerk's Secret Gold Vault" category_name="Event" nameId="1800557" minlevel_permitted="40" max_repeat_count="1" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="1">
             <reward_item item_id="188600310" count="1"/>
         </rewards>
@@ -25281,7 +25339,7 @@
         </start_conditions>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
     </quest>
-    <quest id="80975" name="[Event] Mission from the Milky Way League 1" category_name="Event" nameId="1803777" minlevel_permitted="65" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
+    <quest id="80975" name="[Event] Mission from the Milky Way League 1" category_name="Event" nameId="1803777" minlevel_permitted="76" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
         <collect_items>
             <collect_item item_id="182216245" count="10"/>
         </collect_items>
@@ -25290,7 +25348,7 @@
         </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
     </quest>
-    <quest id="80976" name="[Event] Mission from the Milky Way League 2" category_name="Event" nameId="1803778" minlevel_permitted="65" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
+    <quest id="80976" name="[Event] Mission from the Milky Way League 2" category_name="Event" nameId="1803778" minlevel_permitted="76" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
         <collect_items>
             <collect_item item_id="182216245" count="20"/>
         </collect_items>
@@ -25299,7 +25357,7 @@
         </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
     </quest>
-    <quest id="80977" name="[Event] Mission from the Milky Way League 3" category_name="Event" nameId="1803779" minlevel_permitted="65" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
+    <quest id="80977" name="[Event] Mission from the Milky Way League 3" category_name="Event" nameId="1803779" minlevel_permitted="76" max_repeat_count="255" race_permitted="PC_ALL" category="EVENT">
         <collect_items>
             <collect_item item_id="182216245" count="35"/>
         </collect_items>
@@ -25309,7 +25367,7 @@
         </rewards>
         <class_permitted>WARRIOR SCOUT MAGE CLERIC ENGINEER ARTIST GLADIATOR TEMPLAR ASSASSIN RANGER SORCERER SPIRIT_MASTER CHANTER PRIEST GUNNER BARD RIDER PAINTER</class_permitted>
     </quest>
-    <quest id="80978" name="[Event] The Candy King" category_name="Event" nameId="1803780" minlevel_permitted="65" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
+    <quest id="80978" name="[Event] The Candy King" category_name="Event" nameId="1803780" minlevel_permitted="76" max_repeat_count="255" repeat_cycle="ALL" race_permitted="PC_ALL" category="EVENT">
         <rewards exp="1">
             <reward_item item_id="188058955" count="2"/>
         </rewards>

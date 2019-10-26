@@ -16,7 +16,7 @@
  */
 package ai.worlds.conquest;
 
-import com.aionemu.commons.network.util.ThreadPoolManager;
+import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
