@@ -17,7 +17,7 @@
 package com.aionemu.gameserver.network.aion.serverpackets;
 
 import com.aionemu.gameserver.model.gameobjects.Summon;
-import com.aionemu.gameserver.model.stats.calc.Stat2;
+import com.aionemu.gameserver.model.stats.container.SummonGameStats;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -34,63 +34,49 @@ public class SM_SUMMON_UPDATE extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
+		
+		SummonGameStats stats = summon.getGameStats();
+		
 		writeC(summon.getLevel());
 		writeH(summon.getMode().getId());
-		writeD(0);// unk
-		writeD(0);// unk
+		writeD(0);
+		writeD(0);
+		//Current
 		writeD(summon.getLifeStats().getCurrentHp());
-
-		Stat2 maxHp = summon.getGameStats().getMaxHp();
-		writeD(maxHp.getCurrent());
-
-		Stat2 mainHandPAttack = summon.getGameStats().getMainHandPAttack();
-		writeD(mainHandPAttack.getCurrent());
-
-		Stat2 pDef = summon.getGameStats().getPDef();
-		writeD(pDef.getCurrent());
-
-		Stat2 mResist = summon.getGameStats().getMResist();
-		writeH(mResist.getCurrent());
-
-		Stat2 mDef = summon.getGameStats().getMDef();
-		writeD(mDef.getCurrent());
-
-		Stat2 accuracy = summon.getGameStats().getMainHandPAccuracy();
-		writeH(accuracy.getCurrent());
-
-		Stat2 mainHandPCritical = summon.getGameStats().getMainHandPCritical();
-		writeH(mainHandPCritical.getCurrent());
-
-		Stat2 mBoost = summon.getGameStats().getMBoost();
-		writeH(mBoost.getCurrent());
-
-		Stat2 suppression = summon.getGameStats().getMBResist();
-		writeH(suppression.getCurrent());
-
-		Stat2 mAccuracy = summon.getGameStats().getMAccuracy();
-		writeH(mAccuracy.getCurrent());
-
-		Stat2 mCritical = summon.getGameStats().getMCritical();
-		writeH(mCritical.getCurrent());
-
-		Stat2 parry = summon.getGameStats().getParry();
-		writeH(parry.getCurrent());
-
-		Stat2 evasion = summon.getGameStats().getEvasion();
-		writeH(evasion.getCurrent());
-
-		writeD(maxHp.getBase());
-		writeD(mainHandPAttack.getBase());
-		writeD(pDef.getBase());
-		writeH(mResist.getBase());
-		writeD(mDef.getBase());
-		writeH(accuracy.getBase());
-		writeH(mainHandPCritical.getBase());
-		writeH(mBoost.getBase());
-		writeH(suppression.getBase());
-		writeH(mAccuracy.getBase());
-		writeH(mCritical.getBase());
-		writeH(parry.getBase());
-		writeH(evasion.getBase());
+		writeD(stats.getMaxHp().getCurrent());
+		writeD(stats.getMainHandPAttack().getCurrent()); // TODO Weapon Attack
+		writeD(stats.getPDef().getBonus()); // TODO
+		writeD(stats.getMResist().getCurrent());
+		writeD(0); // TODO
+		writeD(stats.getAccuracy().getCurrent());
+		writeH(stats.getMainHandPCritical().getCurrent()); // TODO CritStrike
+		writeD(0); // TODO
+		writeD(0); // TODO
+		writeD(stats.getMAccuracy().getCurrent());
+		writeH(stats.getMCritical().getCurrent()); // TODO ? Critspell
+		writeD(stats.getParry().getCurrent());
+		writeD(stats.getEvasion().getCurrent());
+		writeD(stats.getMainHandPAttack().getCurrent());
+		writeD(stats.getPDef().getCurrent());
+		writeD(stats.getMAttack().getCurrent());
+		writeD(stats.getMDef().getCurrent());
+		//Base
+		writeD(stats.getMaxHp().getBase());
+		writeD(stats.getMainHandPAttack().getBase()); // TODO Weapon Attack
+		writeD(0); // TODO
+		writeD(stats.getMResist().getBase());
+		writeD(0); // TODO
+		writeD(stats.getAccuracy().getBase());
+		writeH(stats.getMainHandPCritical().getBase()); // TODO CritStrike
+		writeD(0); // TODO
+		writeD(0); // TODO
+		writeD(stats.getMAccuracy().getBase());
+		writeH(stats.getMCritical().getBase()); // TODO ? Critspell
+		writeD(stats.getParry().getBase());
+		writeD(stats.getEvasion().getBase());
+		writeD(stats.getMainHandPAttack().getBase());
+		writeD(stats.getPDef().getBase());
+		writeD(stats.getMAttack().getBase());
+		writeD(stats.getMDef().getBase());
 	}
 }
