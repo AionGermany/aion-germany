@@ -44,7 +44,7 @@ public class CmdTeleportTo extends AbstractGMHandler {
 			goTo(admin, WorldMapType.SANCTUM.getId(), 1322, 1511, 568);
 		// Kaisinel
 		else if (destination.equalsIgnoreCase("Kaisinel"))
-			goTo(admin, WorldMapType.KAISINEL.getId(), 2155, 1567, 1205);
+			goTo(admin, WorldMapType.KAISINEL_ACADEMY.getId(), 2155, 1567, 1205);
 		// Poeta
 		else if (destination.equalsIgnoreCase("Poeta"))
 			goTo(admin, WorldMapType.POETA.getId(), 806, 1242, 119);
@@ -111,7 +111,7 @@ public class CmdTeleportTo extends AbstractGMHandler {
 			goTo(admin, WorldMapType.PANDAEMONIUM.getId(), 1679, 1400, 195);
 		// Marchutran
 		else if (destination.equalsIgnoreCase("Marchutan"))
-			goTo(admin, WorldMapType.MARCHUTAN.getId(), 1557, 1429, 266);
+			goTo(admin, WorldMapType.MARCHUTAN_PRIORY.getId(), 1557, 1429, 266);
 		// Ishalgen
 		else if (destination.equalsIgnoreCase("Ishalgen"))
 			goTo(admin, WorldMapType.ISHALGEN.getId(), 529, 2449, 281);

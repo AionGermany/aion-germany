@@ -524,7 +524,7 @@ public class TeleportService2 {
 
 	public static void teleportToPrison(Player player) {
 		if (player.getRace() == Race.ELYOS) {
-			teleportTo(player, WorldMapType.DE_PRISON.getId(), 275, 239, 49);
+			teleportTo(player, WorldMapType.LF_PRISON.getId(), 275, 239, 49);
 		}
 		else if (player.getRace() == Race.ASMODIANS) {
 			teleportTo(player, WorldMapType.DF_PRISON.getId(), 275, 239, 49);

@@ -91,7 +91,7 @@ public class MovePlayerTo extends AdminCommand {
 			goTo(player1, WorldMapType.SANCTUM.getId(), 1322, 1511, 568);
 		} // Kaisinel
 		else if (destination.equalsIgnoreCase("Kaisinel")) {
-			goTo(player1, WorldMapType.KAISINEL.getId(), 2155, 1567, 1205);
+			goTo(player1, WorldMapType.KAISINEL_ACADEMY.getId(), 2155, 1567, 1205);
 		} // Poeta
 		else if (destination.equalsIgnoreCase("Poeta")) {
 			goTo(player1, WorldMapType.POETA.getId(), 806, 1242, 119);
@@ -182,7 +182,7 @@ public class MovePlayerTo extends AdminCommand {
 			goTo(player1, WorldMapType.PANDAEMONIUM.getId(), 1679, 1400, 195);
 		} // Marchutran
 		else if (destination.equalsIgnoreCase("Marchutan")) {
-			goTo(player1, WorldMapType.MARCHUTAN.getId(), 1557, 1429, 266);
+			goTo(player1, WorldMapType.MARCHUTAN_PRIORY.getId(), 1557, 1429, 266);
 		} // Ishalgen
 		else if (destination.equalsIgnoreCase("Ishalgen")) {
 			goTo(player1, WorldMapType.ISHALGEN.getId(), 529, 2449, 281);

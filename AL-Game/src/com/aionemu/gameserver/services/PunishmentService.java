@@ -163,7 +163,7 @@ public class PunishmentService {
 				player.setStartPrison(System.currentTimeMillis());
 			}
 
-			if (player.getWorldId() != WorldMapType.DF_PRISON.getId() && player.getWorldId() != WorldMapType.DE_PRISON.getId()) {
+			if (player.getWorldId() != WorldMapType.DF_PRISON.getId() && player.getWorldId() != WorldMapType.LF_PRISON.getId()) {
 				PacketSendUtility.sendMessage(player, "You will be teleported to prison in one minute!");
 				ThreadPoolManager.getInstance().schedule(new Runnable() {
 

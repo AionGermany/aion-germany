@@ -60,7 +60,7 @@ public class ReloadSpawn extends AdminCommand {
 				worldId = WorldMapType.SANCTUM.getId();
 			}
 			else if (destination.equalsIgnoreCase("Kaisinel")) {
-				worldId = WorldMapType.KAISINEL.getId();
+				worldId = WorldMapType.KAISINEL_ACADEMY.getId();
 			}
 			else if (destination.equalsIgnoreCase("Poeta")) {
 				worldId = WorldMapType.POETA.getId();
@@ -81,7 +81,7 @@ public class ReloadSpawn extends AdminCommand {
 				worldId = WorldMapType.PANDAEMONIUM.getId();
 			}
 			else if (destination.equalsIgnoreCase("Marchutan")) {
-				worldId = WorldMapType.MARCHUTAN.getId();
+				worldId = WorldMapType.MARCHUTAN_PRIORY.getId();
 			}
 			else if (destination.equalsIgnoreCase("Ishalgen")) {
 				worldId = WorldMapType.ISHALGEN.getId();
@@ -134,14 +134,14 @@ public class ReloadSpawn extends AdminCommand {
 		// despawn specified map, no instance
 		if (destination.equalsIgnoreCase("All")) {
 			reloadMap(WorldMapType.SANCTUM.getId(), player, "Sanctum");
-			reloadMap(WorldMapType.KAISINEL.getId(), player, "Kaisinel");
+			reloadMap(WorldMapType.KAISINEL_ACADEMY.getId(), player, "Kaisinel");
 			reloadMap(WorldMapType.POETA.getId(), player, "Poeta");
 			reloadMap(WorldMapType.VERTERON.getId(), player, "Verteron");
 			reloadMap(WorldMapType.ELTNEN.getId(), player, "Eltnen");
 			reloadMap(WorldMapType.THEOBOMOS.getId(), player, "Theobomos");
 			reloadMap(WorldMapType.HEIRON.getId(), player, "Heiron");
 			reloadMap(WorldMapType.PANDAEMONIUM.getId(), player, "Pandaemonium");
-			reloadMap(WorldMapType.MARCHUTAN.getId(), player, "Marchutan");
+			reloadMap(WorldMapType.MARCHUTAN_PRIORY.getId(), player, "Marchutan");
 			reloadMap(WorldMapType.ISHALGEN.getId(), player, "Ishalgen");
 			reloadMap(WorldMapType.ALTGARD.getId(), player, "Altgard");
 			reloadMap(WorldMapType.MORHEIM.getId(), player, "Morheim");

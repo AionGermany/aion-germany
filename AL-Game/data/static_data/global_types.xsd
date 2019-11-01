@@ -1069,6 +1069,20 @@
             <xs:enumeration value="LDF8_SP_BUFF"/>
             <xs:enumeration value="LDF8_STELLA_L_D"/>
             <xs:enumeration value="LDF8_PC_POLYMORPH"/>
+            <!-- New 7.2 -->
+            <xs:enumeration value="LDF8_DEF_NAKI"/>
+            <xs:enumeration value="IDF8_HOUSE_BOSS"/>
+            <xs:enumeration value="IDF8_HOUSE_FIRE"/>
+            <xs:enumeration value="LDF5_LI_MOB_AGGRESSIVE"/>
+            <xs:enumeration value="LDF5_DA_MOB_AGGRESSIVE"/>
+            <xs:enumeration value="LDF5_LI_MOB"/>
+            <xs:enumeration value="LDF5_DA_MOB"/>
+            <xs:enumeration value="IDINFINITY_SLAYER"/>
+            <xs:enumeration value="IDINFINITY_TRAP"/>
+            <xs:enumeration value="IDINFINITY_ESSENCE"/>
+            <xs:enumeration value="PROTECTGUARD_DRAGON"/>
+            <xs:enumeration value="EVENT_V72_THEWAR"/>
+            <xs:enumeration value="EVENT_V72_THEWAR_BBOO"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Base types -->
