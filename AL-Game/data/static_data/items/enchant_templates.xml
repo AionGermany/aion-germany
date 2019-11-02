@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-07-24 13:29 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-10-30 19:32 -->
 <enchant_templates>
     <enchant_template id="10000">
         <item_enchant level="1">
@@ -46670,6 +46670,880 @@
             <modifiers>
                 <add name="PVP_ATTACK_RATIO" value="816"/>
                 <add name="PVP_DEFEND_RATIO" value="221"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10474">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="1"/>
+                <add name="PVP_DEFEND_RATIO" value="6"/>
+                <add name="DAMAGE_REDUCE" value="1"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="3"/>
+                <add name="PVP_DEFEND_RATIO" value="13"/>
+                <add name="DAMAGE_REDUCE" value="2"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="4"/>
+                <add name="PVP_DEFEND_RATIO" value="19"/>
+                <add name="DAMAGE_REDUCE" value="3"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="6"/>
+                <add name="PVP_DEFEND_RATIO" value="25"/>
+                <add name="DAMAGE_REDUCE" value="4"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="7"/>
+                <add name="PVP_DEFEND_RATIO" value="32"/>
+                <add name="DAMAGE_REDUCE" value="5"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="9"/>
+                <add name="PVP_DEFEND_RATIO" value="38"/>
+                <add name="DAMAGE_REDUCE" value="6"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="10"/>
+                <add name="PVP_DEFEND_RATIO" value="44"/>
+                <add name="DAMAGE_REDUCE" value="7"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="12"/>
+                <add name="PVP_DEFEND_RATIO" value="51"/>
+                <add name="DAMAGE_REDUCE" value="8"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="13"/>
+                <add name="PVP_DEFEND_RATIO" value="57"/>
+                <add name="DAMAGE_REDUCE" value="9"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="15"/>
+                <add name="PVP_DEFEND_RATIO" value="63"/>
+                <add name="DAMAGE_REDUCE" value="10"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="16"/>
+                <add name="PVP_DEFEND_RATIO" value="70"/>
+                <add name="DAMAGE_REDUCE" value="11"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="18"/>
+                <add name="PVP_DEFEND_RATIO" value="79"/>
+                <add name="DAMAGE_REDUCE" value="12"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="22"/>
+                <add name="PVP_DEFEND_RATIO" value="95"/>
+                <add name="DAMAGE_REDUCE" value="14"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="28"/>
+                <add name="PVP_DEFEND_RATIO" value="120"/>
+                <add name="DAMAGE_REDUCE" value="16"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="36"/>
+                <add name="PVP_DEFEND_RATIO" value="158"/>
+                <add name="DAMAGE_REDUCE" value="20"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="42"/>
+                <add name="PVP_DEFEND_RATIO" value="183"/>
+                <add name="DAMAGE_REDUCE" value="22"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="17">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="48"/>
+                <add name="PVP_DEFEND_RATIO" value="208"/>
+                <add name="DAMAGE_REDUCE" value="24"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="18">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="54"/>
+                <add name="PVP_DEFEND_RATIO" value="233"/>
+                <add name="DAMAGE_REDUCE" value="26"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="19">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="60"/>
+                <add name="PVP_DEFEND_RATIO" value="258"/>
+                <add name="DAMAGE_REDUCE" value="28"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="20">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="66"/>
+                <add name="PVP_DEFEND_RATIO" value="283"/>
+                <add name="DAMAGE_REDUCE" value="30"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10475">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="1"/>
+                <add name="PVP_DEFEND_RATIO" value="6"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="3"/>
+                <add name="PVP_DEFEND_RATIO" value="13"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="4"/>
+                <add name="PVP_DEFEND_RATIO" value="19"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="6"/>
+                <add name="PVP_DEFEND_RATIO" value="25"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="7"/>
+                <add name="PVP_DEFEND_RATIO" value="32"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="9"/>
+                <add name="PVP_DEFEND_RATIO" value="38"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="10"/>
+                <add name="PVP_DEFEND_RATIO" value="44"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="12"/>
+                <add name="PVP_DEFEND_RATIO" value="51"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="13"/>
+                <add name="PVP_DEFEND_RATIO" value="57"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="15"/>
+                <add name="PVP_DEFEND_RATIO" value="63"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="16"/>
+                <add name="PVP_DEFEND_RATIO" value="70"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="18"/>
+                <add name="PVP_DEFEND_RATIO" value="79"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="22"/>
+                <add name="PVP_DEFEND_RATIO" value="95"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="28"/>
+                <add name="PVP_DEFEND_RATIO" value="120"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="36"/>
+                <add name="PVP_DEFEND_RATIO" value="158"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="42"/>
+                <add name="PVP_DEFEND_RATIO" value="183"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="17">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="48"/>
+                <add name="PVP_DEFEND_RATIO" value="208"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="18">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="54"/>
+                <add name="PVP_DEFEND_RATIO" value="233"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="19">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="60"/>
+                <add name="PVP_DEFEND_RATIO" value="258"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="20">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="66"/>
+                <add name="PVP_DEFEND_RATIO" value="283"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10476">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="1"/>
+                <add name="PVP_DEFEND_RATIO" value="6"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="3"/>
+                <add name="PVP_DEFEND_RATIO" value="13"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="4"/>
+                <add name="PVP_DEFEND_RATIO" value="19"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="6"/>
+                <add name="PVP_DEFEND_RATIO" value="25"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="7"/>
+                <add name="PVP_DEFEND_RATIO" value="32"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="9"/>
+                <add name="PVP_DEFEND_RATIO" value="38"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="10"/>
+                <add name="PVP_DEFEND_RATIO" value="44"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="12"/>
+                <add name="PVP_DEFEND_RATIO" value="51"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="13"/>
+                <add name="PVP_DEFEND_RATIO" value="57"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="15"/>
+                <add name="PVP_DEFEND_RATIO" value="63"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="16"/>
+                <add name="PVP_DEFEND_RATIO" value="70"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="18"/>
+                <add name="PVP_DEFEND_RATIO" value="79"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="22"/>
+                <add name="PVP_DEFEND_RATIO" value="95"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="28"/>
+                <add name="PVP_DEFEND_RATIO" value="120"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="36"/>
+                <add name="PVP_DEFEND_RATIO" value="158"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="42"/>
+                <add name="PVP_DEFEND_RATIO" value="183"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="17">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="48"/>
+                <add name="PVP_DEFEND_RATIO" value="208"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="18">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="54"/>
+                <add name="PVP_DEFEND_RATIO" value="233"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="19">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="60"/>
+                <add name="PVP_DEFEND_RATIO" value="258"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="20">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="66"/>
+                <add name="PVP_DEFEND_RATIO" value="283"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10477">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="1"/>
+                <add name="PVP_DEFEND_RATIO" value="6"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="3"/>
+                <add name="PVP_DEFEND_RATIO" value="13"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="4"/>
+                <add name="PVP_DEFEND_RATIO" value="19"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="6"/>
+                <add name="PVP_DEFEND_RATIO" value="25"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="7"/>
+                <add name="PVP_DEFEND_RATIO" value="32"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="9"/>
+                <add name="PVP_DEFEND_RATIO" value="38"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="10"/>
+                <add name="PVP_DEFEND_RATIO" value="44"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="12"/>
+                <add name="PVP_DEFEND_RATIO" value="51"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="13"/>
+                <add name="PVP_DEFEND_RATIO" value="57"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="15"/>
+                <add name="PVP_DEFEND_RATIO" value="63"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="16"/>
+                <add name="PVP_DEFEND_RATIO" value="70"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="18"/>
+                <add name="PVP_DEFEND_RATIO" value="79"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="22"/>
+                <add name="PVP_DEFEND_RATIO" value="95"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="28"/>
+                <add name="PVP_DEFEND_RATIO" value="120"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="36"/>
+                <add name="PVP_DEFEND_RATIO" value="158"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="42"/>
+                <add name="PVP_DEFEND_RATIO" value="183"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="17">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="48"/>
+                <add name="PVP_DEFEND_RATIO" value="208"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="18">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="54"/>
+                <add name="PVP_DEFEND_RATIO" value="233"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="19">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="60"/>
+                <add name="PVP_DEFEND_RATIO" value="258"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="20">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="66"/>
+                <add name="PVP_DEFEND_RATIO" value="283"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10478">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="1"/>
+                <add name="PVP_DEFEND_RATIO" value="6"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="3"/>
+                <add name="PVP_DEFEND_RATIO" value="13"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="4"/>
+                <add name="PVP_DEFEND_RATIO" value="19"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="6"/>
+                <add name="PVP_DEFEND_RATIO" value="25"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="7"/>
+                <add name="PVP_DEFEND_RATIO" value="32"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="9"/>
+                <add name="PVP_DEFEND_RATIO" value="38"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="10"/>
+                <add name="PVP_DEFEND_RATIO" value="44"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="12"/>
+                <add name="PVP_DEFEND_RATIO" value="51"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="13"/>
+                <add name="PVP_DEFEND_RATIO" value="57"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="15"/>
+                <add name="PVP_DEFEND_RATIO" value="63"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="16"/>
+                <add name="PVP_DEFEND_RATIO" value="70"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="18"/>
+                <add name="PVP_DEFEND_RATIO" value="79"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="22"/>
+                <add name="PVP_DEFEND_RATIO" value="95"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="28"/>
+                <add name="PVP_DEFEND_RATIO" value="120"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="36"/>
+                <add name="PVP_DEFEND_RATIO" value="158"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="42"/>
+                <add name="PVP_DEFEND_RATIO" value="183"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="17">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="48"/>
+                <add name="PVP_DEFEND_RATIO" value="208"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="18">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="54"/>
+                <add name="PVP_DEFEND_RATIO" value="233"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="19">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="60"/>
+                <add name="PVP_DEFEND_RATIO" value="258"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="20">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="66"/>
+                <add name="PVP_DEFEND_RATIO" value="283"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10479">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="1"/>
+                <add name="PVP_DEFEND_RATIO" value="6"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="3"/>
+                <add name="PVP_DEFEND_RATIO" value="13"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="4"/>
+                <add name="PVP_DEFEND_RATIO" value="19"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="6"/>
+                <add name="PVP_DEFEND_RATIO" value="25"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="7"/>
+                <add name="PVP_DEFEND_RATIO" value="32"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="9"/>
+                <add name="PVP_DEFEND_RATIO" value="38"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="10"/>
+                <add name="PVP_DEFEND_RATIO" value="44"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="12"/>
+                <add name="PVP_DEFEND_RATIO" value="51"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="13"/>
+                <add name="PVP_DEFEND_RATIO" value="57"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="15"/>
+                <add name="PVP_DEFEND_RATIO" value="63"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="16"/>
+                <add name="PVP_DEFEND_RATIO" value="70"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="18"/>
+                <add name="PVP_DEFEND_RATIO" value="79"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="22"/>
+                <add name="PVP_DEFEND_RATIO" value="95"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="28"/>
+                <add name="PVP_DEFEND_RATIO" value="120"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="36"/>
+                <add name="PVP_DEFEND_RATIO" value="158"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="42"/>
+                <add name="PVP_DEFEND_RATIO" value="183"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="17">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="48"/>
+                <add name="PVP_DEFEND_RATIO" value="208"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="18">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="54"/>
+                <add name="PVP_DEFEND_RATIO" value="233"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="19">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="60"/>
+                <add name="PVP_DEFEND_RATIO" value="258"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="20">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="66"/>
+                <add name="PVP_DEFEND_RATIO" value="283"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_template>
+    <enchant_template id="10480">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="1"/>
+                <add name="PVP_DEFEND_RATIO" value="6"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="3"/>
+                <add name="PVP_DEFEND_RATIO" value="13"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="4"/>
+                <add name="PVP_DEFEND_RATIO" value="19"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="6"/>
+                <add name="PVP_DEFEND_RATIO" value="25"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="7"/>
+                <add name="PVP_DEFEND_RATIO" value="32"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="9"/>
+                <add name="PVP_DEFEND_RATIO" value="38"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="10"/>
+                <add name="PVP_DEFEND_RATIO" value="44"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="12"/>
+                <add name="PVP_DEFEND_RATIO" value="51"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="13"/>
+                <add name="PVP_DEFEND_RATIO" value="57"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="15"/>
+                <add name="PVP_DEFEND_RATIO" value="63"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="16"/>
+                <add name="PVP_DEFEND_RATIO" value="70"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="18"/>
+                <add name="PVP_DEFEND_RATIO" value="79"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="22"/>
+                <add name="PVP_DEFEND_RATIO" value="95"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="28"/>
+                <add name="PVP_DEFEND_RATIO" value="120"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="36"/>
+                <add name="PVP_DEFEND_RATIO" value="158"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="42"/>
+                <add name="PVP_DEFEND_RATIO" value="183"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="17">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="48"/>
+                <add name="PVP_DEFEND_RATIO" value="208"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="18">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="54"/>
+                <add name="PVP_DEFEND_RATIO" value="233"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="19">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="60"/>
+                <add name="PVP_DEFEND_RATIO" value="258"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="20">
+            <modifiers>
+                <add name="PVP_ATTACK_RATIO" value="66"/>
+                <add name="PVP_DEFEND_RATIO" value="283"/>
             </modifiers>
         </item_enchant>
     </enchant_template>

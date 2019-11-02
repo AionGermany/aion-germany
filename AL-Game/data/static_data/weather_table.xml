@@ -59,6 +59,20 @@
     <map id="300450000" zone_count="1" weather_count="1">
         <table zone_id="1" rank="1" code="1" name="RAIN"/>
     </map>
+    <map id="300490000" zone_count="2" weather_count="10">
+        <table zone_id="1" rank="2" code="1" name="RAIN"/>
+        <table zone_id="1" rank="1" code="2" name="RAIN" before="true"/>
+        <table zone_id="1" rank="1" code="3" name="RAIN" after="true"/>
+        <table zone_id="1" rank="2" code="4" name="SNOW"/>
+        <table zone_id="2" rank="1" code="5" name="SNOW_BEACH"/>
+        <table zone_id="1" rank="1" code="6" name="SNOW" before="true"/>
+        <table zone_id="1" rank="0" code="6" name="SNOW" after="true"/>
+        <table zone_id="2" rank="1" code="7" name="SNOW2" before="true"/>
+        <table zone_id="2" rank="0" code="7" name="SNOW2" after="true"/>
+        <table zone_id="2" rank="2" code="8" name="RAIN_BEACH"/>
+        <table zone_id="2" rank="1" code="9" name="RAIN_BEACH" before="true"/>
+        <table zone_id="2" rank="1" code="10" name="RAIN_BEACH" after="true"/>
+    </map>
     <map id="310090000" zone_count="0" weather_count="1">
         <table zone_id="0" rank="2" code="1" name="INDRATOO"/>
     </map>
@@ -109,7 +123,24 @@
         <table zone_id="1" rank="1" code="5" name="SNOW" before="true"/>
         <table zone_id="1" rank="0" code="5" name="SNOW" after="true"/>
     </map>
-    <map id="900020000" zone_count="1" weather_count="1">
-        <table zone_id="1" rank="2" code="1" name="RAIN2"/>
+    <map id="800030000" zone_count="2" weather_count="6">
+        <table zone_id="1" rank="2" code="1" name="RAIN"/>
+        <table zone_id="1" rank="1" code="2" name="RAIN" before="true"/>
+        <table zone_id="1" rank="1" code="3" name="RAIN" after="true"/>
+        <table zone_id="2" rank="2" code="4" name="SNOW"/>
+        <table zone_id="2" rank="1" code="5" name="SNOW" before="true"/>
+        <table zone_id="2" rank="0" code="5" name="SNOW" after="true"/>
+        <table zone_id="2" rank="1" code="6" name="SNOW2" before="true"/>
+        <table zone_id="2" rank="0" code="6" name="SNOW2" after="true"/>
+    </map>
+    <map id="800040000" zone_count="2" weather_count="8">
+        <table zone_id="2" rank="2" code="1" name="SNOW_A_WZ02"/>
+        <table zone_id="2" rank="2" code="2" name="SNOW_A_WZ02" before="true"/>
+        <table zone_id="2" rank="2" code="3" name="SNOW_A_WZ02" after="true"/>
+        <table zone_id="2" rank="2" code="4" name="SNOW_B_WZ02"/>
+        <table zone_id="2" rank="2" code="5" name="SNOW_B_WZ02" before="true"/>
+        <table zone_id="2" rank="2" code="6" name="SNOW_B_WZ02" after="true"/>
+        <table zone_id="1" rank="2" code="7" name="SANDRAIN"/>
+        <table zone_id="1" rank="2" code="8" name="SANDRAIN" before="true"/>
     </map>
 </weather>

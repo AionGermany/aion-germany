@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-07-24 13:30 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-10-30 19:32 -->
 <item_upgrades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_upgrades.xsd">
     <item_upgrade base_item="100002069" name="Ambitious Challenger's Sword">
         <upgrade_result_item item_id="100002070" name="Aspiring Challenger's Sword" enchant_count="1">
@@ -10271,6 +10271,51 @@
                 <sub_material_item id="152080094" name="Legendary Etium" count="38"/>
             </required_materials>
             <abyss_point_needed count="4395383"/>
+        </upgrade_result_item>
+    </item_upgrade>
+    <item_upgrade base_item="187010153" name="Ultimate Bold Protector's Wings of War">
+        <upgrade_result_item item_id="187010184" name="Ultimate Stella Wings of War" enchant_count="0">
+            <required_materials>
+                <sub_material_item id="152080143" name="Concentrated Crystal of Ambition" count="1"/>
+                <sub_material_item id="164010028" name="Stellium" count="464"/>
+            </required_materials>
+            <abyss_point_needed count="546000"/>
+        </upgrade_result_item>
+    </item_upgrade>
+    <item_upgrade base_item="187010154" name="Ultimate Bold Protector's Magic Wings">
+        <upgrade_result_item item_id="187010185" name="Ultimate Stella Magic Wings" enchant_count="0">
+            <required_materials>
+                <sub_material_item id="152080143" name="Concentrated Crystal of Ambition" count="1"/>
+                <sub_material_item id="164010028" name="Stellium" count="464"/>
+            </required_materials>
+            <abyss_point_needed count="546000"/>
+        </upgrade_result_item>
+    </item_upgrade>
+    <item_upgrade base_item="187010186" name="Legendary Stella Wings of War">
+        <upgrade_result_item item_id="187010184" name="Ultimate Stella Wings of War" enchant_count="0">
+            <required_materials>
+                <sub_material_item id="152080143" name="Concentrated Crystal of Ambition" count="1"/>
+                <sub_material_item id="164010028" name="Stellium" count="697"/>
+            </required_materials>
+            <abyss_point_needed count="819000"/>
+        </upgrade_result_item>
+    </item_upgrade>
+    <item_upgrade base_item="187010187" name="Legendary Stella Magic Wings">
+        <upgrade_result_item item_id="187010185" name="Ultimate Stella Magic Wings" enchant_count="0">
+            <required_materials>
+                <sub_material_item id="152080143" name="Concentrated Crystal of Ambition" count="1"/>
+                <sub_material_item id="164010028" name="Stellium" count="697"/>
+            </required_materials>
+            <abyss_point_needed count="819000"/>
+        </upgrade_result_item>
+    </item_upgrade>
+    <item_upgrade base_item="110050039" name="Ancient Windrider's Top">
+        <upgrade_result_item item_id="110050040" name="Legendary Windrider's Top" enchant_count="0">
+            <required_materials>
+                <sub_material_item id="152080002" name="Fragment of the Fighting Spirit" count="43"/>
+                <sub_material_item id="152080094" name="Legendary Etium" count="19"/>
+            </required_materials>
+            <abyss_point_needed count="2197691"/>
         </upgrade_result_item>
     </item_upgrade>
 </item_upgrades>
