@@ -48,6 +48,7 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
  *
  * @author -Nemesiss-
  * @modified cura
+ * @rework FrozenKiller
  */
 public class CM_CREATE_CHARACTER extends AionClientPacket {
 
@@ -59,9 +60,73 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 	 * Player base data
 	 */
 	private PlayerCommonData playerCommonData;
+	private String charName; 
+	private int raceValue;
+	private int genderValue;
+	private int classId;
+	private int voice;
+	private int skinRGB;
+	private int hairRGB;
+	private int eyeRGB;
+	private int lipRGB;
+	private int face;
+	private int hair;
+	private int deco;
+	private int tattoo;
+	private int faceContour;
+	private int expression;
+	private int pupilShape;
+	private int removeMane;
+	private int rightEyeRGB;
+	private int eyeLashShape;
+	private int jawLine;
+	private int forehead;
+	private int eyeHeight;
+	private int eyeSpace;
+	private int eyeWidth;
+	private int eyeSize;
+	private int eyeShape;
+	private int eyeAngle;
+	private int browHeight;
+	private int browAngle;
+	private int browShape;
+	private int nose;
+	private int noseBridge;
+	private int noseWidth;
+	private int noseTip;
+	private int cheek;
+	private int lipHeight;
+	private int mouthSize;
+	private int lipSize;
+	private int smile;
+	private int lipShape;
+	private int jawHeigh;
+	private int chinJut;
+	private int earShape;
+	private int headSize;
+	private int neck;
+	private int neckLength;
+	private int shoulderSize;
+	private int torso;
+	private int chest;
+	private int waist;
+	private int hips;
+	private int armThickness;
+	private int handSize;
+	private int legThickness;
+	private int footSize;
+	private int facialRate;
+	private int armLength;
+	private int legLength;
+	private int shoulders;
+	private int faceShape;
+	private int pupilSize;
+	private int upperTorso;
+	private int foreArmThickness;
+	private int handSpan;
+	private int calfThickness;
+	private float height;
 	private boolean isCreate = false;
-	private int raceValue = 0;
-	private int genderValue = 0;
 
 	/**
 	 * Constructs new instance of <tt>CM_CREATE_CHARACTER </tt> packet
@@ -77,117 +142,81 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 	 */
 	@Override
 	protected void readImpl() {
-		readD(); // ignored for now
-		readS(); // something + accointId
-
-		playerCommonData = new PlayerCommonData(IDFactory.getInstance().nextId());
-		String name = Util.convertName(readS());
-
-		playerCommonData.setName(name);
-
-		readB(52 - (name.length() * 2 + 2)); // some shit? 2.5.x
-
-		playerCommonData.setLevel(GSConfig.STARTING_LEVEL);
+		readD(); // AccountID
+		readS(); // Account Name
+		charName = Util.convertName(readS());
+		readB(52 - (charName.length() * 2 + 2)); // some shit? 2.5.x
 		genderValue = readD();
 		raceValue = readD();
-		switch (genderValue) {
-			case 0:
-				playerCommonData.setGender(Gender.MALE);
-				break;
-			case 1:
-				playerCommonData.setGender(Gender.FEMALE);
-				break;
-			case 8:
-				playerCommonData.setGender(Gender.DUMMY);
-				break;
-		}
-		switch (raceValue) {
-			case 0:
-				playerCommonData.setRace(Race.ELYOS);
-				break;
-			case 1:
-				playerCommonData.setRace(Race.ASMODIANS);
-				break;
-			case 8:
-				playerCommonData.setRace(Race.NAGA);
-				break;
-		}
-		playerCommonData.setPlayerClass(PlayerClass.getPlayerClassById((byte) readD()));
-
-		if (getConnection().getAccount().getMembership() >= MembershipConfig.STIGMA_SLOT_QUEST) {
-			playerCommonData.setAdvancedStigmaSlotSize(11);
-		}
-
-		playerAppearance = new PlayerAppearance();
-
-		playerAppearance.setVoice(readD());
-		playerAppearance.setSkinRGB(readD());
-		playerAppearance.setHairRGB(readD());
-		playerAppearance.setEyeRGB(readD()); // TODO LeftEyeRGB
-		playerAppearance.setLipRGB(readD());
-		playerAppearance.setFace(readC());
-		playerAppearance.setHair(readC());
-		playerAppearance.setDeco(readC());
-		playerAppearance.setTattoo(readC());
-		playerAppearance.setFaceContour(readC());
-		playerAppearance.setExpression(readC());
-		playerAppearance.setPupilShape(readC());
-		playerAppearance.setRemoveMane(readC());
-		playerAppearance.setRightEyeRGB(readD());
-		playerAppearance.setEyeLashShape(readC());
-		readC(); // TODO Unk 6 or 7
-		playerAppearance.setJawLine(readC());
-		playerAppearance.setForehead(readC());
-		playerAppearance.setEyeHeight(readC());
-		playerAppearance.setEyeSpace(readC());
-		playerAppearance.setEyeWidth(readC());
-		playerAppearance.setEyeSize(readC());
-		playerAppearance.setEyeShape(readC());
-		playerAppearance.setEyeAngle(readC());
-		playerAppearance.setBrowHeight(readC());
-		playerAppearance.setBrowAngle(readC());
-		playerAppearance.setBrowShape(readC());
-		playerAppearance.setNose(readC());
-		playerAppearance.setNoseBridge(readC());
-		playerAppearance.setNoseWidth(readC());
-		playerAppearance.setNoseTip(readC());
-		playerAppearance.setCheek(readC());
-		playerAppearance.setLipHeight(readC());
-		playerAppearance.setMouthSize(readC());
-		playerAppearance.setLipSize(readC());
-		playerAppearance.setSmile(readC());
-		playerAppearance.setLipShape(readC());
-		playerAppearance.setJawHeigh(readC());
-		playerAppearance.setChinJut(readC());
-		playerAppearance.setEarShape(readC());
-		playerAppearance.setHeadSize(readC());
-		playerAppearance.setNeck(readC());
-		playerAppearance.setNeckLength(readC());
-		playerAppearance.setShoulderSize(readC());
-		playerAppearance.setTorso(readC());
-		playerAppearance.setChest(readC()); // only woman
-		playerAppearance.setWaist(readC());
-		playerAppearance.setHips(readC());
-		playerAppearance.setArmThickness(readC());
-		playerAppearance.setHandSize(readC());
-		playerAppearance.setLegThickness(readC());
-		playerAppearance.setFootSize(readC());
-		playerAppearance.setFacialRate(readC());
-		readC(); // Unk
-		playerAppearance.setArmLength(readC());
-		playerAppearance.setLegLength(readC());
-		playerAppearance.setShoulders(readC());
-		playerAppearance.setFaceShape(readC());
-		playerAppearance.setPupilSize(readC());
-		playerAppearance.setUpperTorso(readC());
-		playerAppearance.setForeArmThickness(readC());
-		playerAppearance.setHandSpan(readC());
-		playerAppearance.setCalfThickness(readC());
-		readC(); // UNK 0
-		readC(); // UNK 0
-		readC(); // UNK 0
-		playerAppearance.setHeight(readF());
-		this.isCreate = (readC() == 0);
+		classId = readD();
+		voice = readD();
+		skinRGB = readD();
+		hairRGB = readD();
+		eyeRGB = readD();
+		lipRGB = readD();
+		face = readC();
+		hair = readC();
+		deco = readC();
+		tattoo = readC();
+		faceContour = readC();
+		expression = readC();
+		pupilShape = readC();
+		removeMane = readC();
+		rightEyeRGB = readD();
+		eyeLashShape = readC();
+		readC(); 
+		jawLine = readC();
+		forehead = readC();
+		eyeHeight = readC();
+		eyeSpace = readC();
+		eyeWidth = readC();
+		eyeSize = readC();
+		eyeShape = readC();
+		eyeAngle = readC();
+		browHeight = readC();
+		browAngle = readC();
+		browShape = readC();
+		nose = readC();
+		noseBridge = readC();
+		noseWidth = readC();
+		noseTip = readC();
+		cheek = readC();
+		lipHeight = readC();
+		mouthSize = readC();
+		lipSize = readC();
+		smile = readC();
+		lipShape = readC();
+		jawHeigh = readC();
+		chinJut = readC();
+		earShape = readC();
+		headSize = readC();
+		neck = readC();
+		neckLength = readC();
+		shoulderSize = readC();
+		torso = readC();
+		chest = readC();
+		waist = readC();
+		hips = readC();
+		armThickness = readC();
+		handSize = readC();
+		legThickness = readC();
+		footSize = readC();
+		facialRate = readC();
+		readC();
+		armLength = readC();
+		legLength = readC();
+		shoulders = readC();
+		faceShape = readC();
+		pupilSize = readC();
+		upperTorso = readC();
+		foreArmThickness = readC();
+		handSpan = readC();
+		calfThickness = readC();
+		readC();
+		readC();
+		readC();
+		height = readF();
+		isCreate = (readC() == 0 ? false : true);
 	}
 
 	/**
@@ -198,16 +227,119 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 		AionConnection client = getConnection();
 
 		Account account = client.getAccount();
+		
+		playerCommonData = new PlayerCommonData(IDFactory.getInstance().nextId());
 
 		/* Some reasons why player can' be created */
 		if (client.getActivePlayer() != null) {
 			return;
 		}
-		if (!this.isCreate) {
+		if (isCreate) {
 			client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_CREATE_CHAR));
-			IDFactory.getInstance().releaseId(this.playerCommonData.getPlayerObjId());
+			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
 			return;
 		}
+		
+		playerCommonData.setName(charName);
+		playerCommonData.setLevel(GSConfig.STARTING_LEVEL);
+		playerCommonData.setPlayerClass(PlayerClass.getPlayerClassById((byte) classId));
+		switch (genderValue) {
+			case 0: {
+				playerCommonData.setGender(Gender.MALE);
+				break;
+			}
+			case 1: {
+				playerCommonData.setGender(Gender.FEMALE);
+				break;
+			}
+			case 8: {
+				playerCommonData.setGender(Gender.DUMMY);
+				break;
+			}
+		}
+		switch (raceValue) {
+			case 0: {
+				playerCommonData.setRace(Race.ELYOS);
+				break;
+			}
+			case 1: {
+				playerCommonData.setRace(Race.ASMODIANS);
+				break;
+			}
+			case 8: {
+				playerCommonData.setRace(Race.NAGA);
+				break;
+			}
+		}
+
+		if (getConnection().getAccount().getMembership() >= MembershipConfig.STIGMA_SLOT_QUEST) {
+			playerCommonData.setAdvancedStigmaSlotSize(11);
+		}
+		
+		playerAppearance = new PlayerAppearance();
+		playerAppearance.setVoice(voice);
+		playerAppearance.setSkinRGB(skinRGB);
+		playerAppearance.setHairRGB(hairRGB);
+		playerAppearance.setEyeRGB(eyeRGB); // TODO LeftEyeRGB
+		playerAppearance.setLipRGB(lipRGB);
+		playerAppearance.setFace(face);
+		playerAppearance.setHair(hair);
+		playerAppearance.setDeco(deco);
+		playerAppearance.setTattoo(tattoo);
+		playerAppearance.setFaceContour(faceContour);
+		playerAppearance.setExpression(expression);
+		playerAppearance.setPupilShape(pupilShape);
+		playerAppearance.setRemoveMane(removeMane);
+		playerAppearance.setRightEyeRGB(rightEyeRGB);
+		playerAppearance.setEyeLashShape(eyeLashShape);
+		playerAppearance.setJawLine(jawLine);
+		playerAppearance.setForehead(forehead);
+		playerAppearance.setEyeHeight(eyeHeight);
+		playerAppearance.setEyeSpace(eyeSpace);
+		playerAppearance.setEyeWidth(eyeWidth);
+		playerAppearance.setEyeSize(eyeSize);
+		playerAppearance.setEyeShape(eyeShape);
+		playerAppearance.setEyeAngle(eyeAngle);
+		playerAppearance.setBrowHeight(browHeight);
+		playerAppearance.setBrowAngle(browAngle);
+		playerAppearance.setBrowShape(browShape);
+		playerAppearance.setNose(nose);
+		playerAppearance.setNoseBridge(noseBridge);
+		playerAppearance.setNoseWidth(noseWidth);
+		playerAppearance.setNoseTip(noseTip);
+		playerAppearance.setCheek(cheek);
+		playerAppearance.setLipHeight(lipHeight);
+		playerAppearance.setMouthSize(mouthSize);
+		playerAppearance.setLipSize(lipSize);
+		playerAppearance.setSmile(smile);
+		playerAppearance.setLipShape(lipShape);
+		playerAppearance.setJawHeigh(jawHeigh);
+		playerAppearance.setChinJut(chinJut);
+		playerAppearance.setEarShape(earShape);
+		playerAppearance.setHeadSize(headSize);
+		playerAppearance.setNeck(neck);
+		playerAppearance.setNeckLength(neckLength);
+		playerAppearance.setShoulderSize(shoulderSize);
+		playerAppearance.setTorso(torso);
+		playerAppearance.setChest(chest); // only woman
+		playerAppearance.setWaist(waist);
+		playerAppearance.setHips(hips);
+		playerAppearance.setArmThickness(armThickness);
+		playerAppearance.setHandSize(handSize);
+		playerAppearance.setLegThickness(legThickness);
+		playerAppearance.setFootSize(footSize);
+		playerAppearance.setFacialRate(facialRate);
+		playerAppearance.setArmLength(armLength);
+		playerAppearance.setLegLength(legLength);
+		playerAppearance.setShoulders(shoulders);
+		playerAppearance.setFaceShape(faceShape);
+		playerAppearance.setPupilSize(pupilSize);
+		playerAppearance.setUpperTorso(upperTorso);
+		playerAppearance.setForeArmThickness(foreArmThickness);
+		playerAppearance.setHandSpan(handSpan);
+		playerAppearance.setCalfThickness(calfThickness);
+		playerAppearance.setHeight(height);
+		
 		if (account.getMembership() >= MembershipConfig.CHARACTER_ADDITIONAL_ENABLE) {
 			if (MembershipConfig.CHARACTER_ADDITIONAL_COUNT <= account.size()) {
 				client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_SERVER_LIMIT_EXCEEDED));
@@ -215,12 +347,14 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 				return;
 			}
 		}
-		else if (GSConfig.CHARACTER_LIMIT_COUNT <= account.size()) {
+		
+		if (GSConfig.CHARACTER_LIMIT_COUNT <= account.size()) {
 			client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_SERVER_LIMIT_EXCEEDED));
 			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
 			return;
 		}
-		if (!PlayerService.isFreeName(playerCommonData.getName())) {
+		
+		if (!PlayerService.isFreeName(charName)) {
 			if (GSConfig.CHARACTER_CREATION_MODE == 2) {
 				client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_NAME_RESERVED));
 			}
@@ -230,26 +364,31 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
 			return;
 		}
+		
 		if (PlayerService.isOldName(playerCommonData.getName())) {
 			client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_NAME_ALREADY_USED));
 			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
 			return;
 		}
-		if (!NameRestrictionService.isValidName(playerCommonData.getName())) {
+		
+		if (!NameRestrictionService.isValidName(charName)) {
 			client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_INVALID_NAME));
 			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
 			return;
 		}
-		if (NameRestrictionService.isForbiddenWord(playerCommonData.getName())) {
+		
+		if (NameRestrictionService.isForbiddenWord(charName)) {
 			client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_FORBIDDEN_CHAR_NAME));
 			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
 			return;
 		}
+		
 		if (!playerCommonData.getPlayerClass().isStartingClass()) {
 			client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.FAILED_TO_CREATE_THE_CHARACTER));
 			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
 			return;
 		}
+		
 		if (GSConfig.CHARACTER_CREATION_MODE == 0) {
 			for (PlayerAccountData data : account.getSortedAccountsList()) {
 				if (data.getPlayerCommonData().getRace() != playerCommonData.getRace()) {
@@ -266,11 +405,9 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 		if (!PlayerService.storeNewPlayer(player, account.getName(), account.getId())) {
 			client.sendPacket(new SM_CREATE_CHARACTER(null, SM_CREATE_CHARACTER.RESPONSE_DB_ERROR));
 			IDFactory.getInstance().releaseId(playerCommonData.getPlayerObjId());
-		}
-		else {
+		} else {
 			List<Item> equipment = DAOManager.getDAO(InventoryDAO.class).loadEquipment(player.getObjectId());
 			PlayerAccountData accPlData = new PlayerAccountData(playerCommonData, null, playerAppearance, equipment, null);
-
 			accPlData.setCreationDate(new Timestamp(System.currentTimeMillis()));
 			PlayerService.storeCreationTime(player.getObjectId(), accPlData.getCreationDate());
 			playerCommonData.setCreationDate(accPlData.getCreationDate());
