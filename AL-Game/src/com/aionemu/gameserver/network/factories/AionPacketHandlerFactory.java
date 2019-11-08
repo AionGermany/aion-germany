@@ -57,7 +57,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_STOP_TRAINING(0x119, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_REVIVE(0xF0, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_DUEL_REQUEST(0x162, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_CRAFT(0x155, State.IN_GAME)); // 5.4
+		//addPacket(new CM_CRAFT(0x155, State.IN_GAME)); // 5.4 EU removed?
 		addPacket(new CM_QUESTION_RESPONSE(0x104, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_OPEN_STATICDOOR(0xC6, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_SPLIT_ITEM(0x149, State.IN_GAME)); // 7.2 EU
@@ -204,7 +204,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_CHARACTER_EDIT(0xB6, State.AUTHED)); // 7.2 EU
 		addPacket(new CM_PLAYER_STATUS_INFO(0x10C, State.IN_GAME)); // 7.2 EU (Mentor etc)
 		addPacket(new CM_MANASTONE(0x2F5, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_FUSION_WEAPONS(0x191, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_FUSION_WEAPONS(0x17E, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_ITEM_REMODEL(0x105, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xED, State.IN_GAME)); // 6.x EU
 		//addPacket(new CM_RECIPE_DELETE(0x110, State.IN_GAME)); // 5.3 EU
@@ -252,7 +252,7 @@ public class AionPacketHandlerFactory {
 
 		// // /////////////////// NEW 4.7 //////////////////////
 		addPacket(new CM_HOTSPOT_TELEPORT(0x1E0, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_ITEM_UPGRADE(0x1B3, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_ITEM_UPGRADE(0x1E7, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_UPGRADE_ARCADE(0x1B9, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_FILE_VERIFY(0x129, State.IN_GAME)); // 7.2 EU
 
