@@ -191,7 +191,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_HOUSE_KICK(0x2F7, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_GET_HOUSE_BIDS(0x1AD, State.IN_GAME)); // 7.x EU
 		//addPacket(new CM_HOUSE_PAY_RENT(0x1BB, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_REGISTER_HOUSE(0x1A7, State.IN_GAME)); // 5.4 EU
+		//addPacket(new CM_REGISTER_HOUSE(0x1A7, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_PLACE_BID(0x1A0, State.IN_GAME)); // 7.x EU
 		//addPacket(new CM_HOUSE_DECORATE(0x116, State.IN_GAME)); // 5.3 EU
 		addPacket(new CM_RELEASE_OBJECT(0x18D, State.IN_GAME)); // 7.2 EU
@@ -233,7 +233,7 @@ public class AionPacketHandlerFactory {
 		// // ******************(Fast Track Server)******************
 		addPacket(new CM_FAST_TRACK_CHECK(0x1AE, State.IN_GAME)); // 7.x EU
 		// addPacket(new CM_FAST_TRACK(0x191, State.IN_GAME)); // 5.4
-		// addPacket(new CM_DIRECT_ENTER_WORLD(0x19D, State.IN_GAME)); // 5.0
+		addPacket(new CM_DIRECT_ENTER_WORLD(0x187, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_FAST_TRACK_MOVE(0x190, State.IN_GAME)); // 5.4 TODO
 
 		// // ******************(CHAT)******************
@@ -253,7 +253,7 @@ public class AionPacketHandlerFactory {
 		// // /////////////////// NEW 4.7 //////////////////////
 		addPacket(new CM_HOTSPOT_TELEPORT(0x1E0, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_ITEM_UPGRADE(0x1E7, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_UPGRADE_ARCADE(0x1B9, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_UPGRADE_ARCADE(0x1E6, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_FILE_VERIFY(0x129, State.IN_GAME)); // 7.2 EU
 
 		// // /////////////////// NEW 4.9 //////////////////////
