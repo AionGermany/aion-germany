@@ -148,7 +148,7 @@ public class Main implements IUserInterface {
 
 	public void init() {
 		
-		_frame = new JFrame("Packet Samurai [Aion-Lightning - 6.x EU Edition] reworked for AionGer");
+		_frame = new JFrame("Packet Samurai [Aion-Lightning - 7.x EU Edition] reworked for AionGer");
 		_frame.setLayout(new BorderLayout());
 		_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -503,7 +503,7 @@ public class Main implements IUserInterface {
 	}
 
 	public void showAboutDialog() {
-		JOptionPane.showMessageDialog(this.getMainFrame(), "Packet Samurai Aion-Lightning\n6.x EU Edition\n\nGilles Duboscq\nUlysses R. Ribeiro\n\nUpdated by AionGer:\nFalke34\nFrozenKiller\nKev\nCooly\n", "About Packet Samurai 5.x EU Edition", JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(this.getMainFrame(), "Packet Samurai Aion-Lightning\n7.x EU Edition\n\nGilles Duboscq\nUlysses R. Ribeiro\n\nUpdated by AionGer:\nFalke34\nFrozenKiller\nKev\nCooly\n", "About Packet Samurai 7.x EU Edition", JOptionPane.PLAIN_MESSAGE);
 	}
 
 	public void close() {

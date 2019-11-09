@@ -68,7 +68,11 @@ public abstract class AionGameCrypter implements ProtocolCrypter {
                 return false;
             }
             int key = part.getIntValue();
-			if ((this instanceof AionGame6_0_0_0Crypter)) {
+			if ((this instanceof AionGame7_2_0_0Crypter)) {
+                key = key - 0x3FF2CCDF ^ 0xCD92E4D9;
+			} else if ((this instanceof AionGame7_0_0_0Crypter)) {
+                key = key - 0x3FF2CCDF ^ 0xCD92E4D9;
+			} else if ((this instanceof AionGame6_0_0_0Crypter)) {
                 key = key - 0x3FF2CCD7 ^ 0xCD92E4D7;
 			} else if ((this instanceof AionGame5_8_0_0Crypter)) {
                 key = key - 0x3FF2CCD7 ^ 0xCD92E4D5;
