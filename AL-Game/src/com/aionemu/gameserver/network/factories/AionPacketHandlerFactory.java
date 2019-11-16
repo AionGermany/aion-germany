@@ -215,7 +215,7 @@ public class AionPacketHandlerFactory {
 		//addPacket(new CM_BONUS_TITLE(0x1BC, State.IN_GAME)); // 7.x EU
 		//addPacket(new CM_BUY_TRADE_IN_TRADE(0x113, State.IN_GAME)); // 5.6 (Machtkampf aufwertung)
 		addPacket(new CM_BREAK_WEAPONS(0x17F, State.IN_GAME)); // 7.2 EU
-		// addPacket(new CM_CHARGE_ITEM(0x115, State.IN_GAME)); // 5.4
+		addPacket(new CM_CHARGE_ITEM(0x2F9, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_USE_CHARGE_SKILL(0x1B6, State.IN_GAME)); // 5.4
 		//addPacket(new CM_RECONNECT_AUTH(0x18E, State.AUTHED)); // 7.x EU
 		addPacket(new CM_BLOCK_SET_REASON(0x1A3, State.IN_GAME)); // 7.2 EU
@@ -303,7 +303,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_NEVIWIND_CANYON(0x1C5, State.IN_GAME)); // 7.2 EU TODO
 		addPacket(new CM_TRANSFOMATION(0x1C8, State.IN_GAME)); // 7.2 TODO
 		addPacket(new CM_CUBIC(0x1C1, State.IN_GAME)); // 7.2 EU TODO
-		//addPacket(new CM_ATREIAN_PASSPORT(0x1CF, State.IN_GAME)); // 7.x EU TODO
+		//addPacket(new CM_ATREIAN_PASSPORT(0x1E4, State.IN_GAME)); // 7.2 EU TODO
 		addPacket(new CM_STIGMA(0x1D2, State.IN_GAME)); // 7.2 TODO
 		addPacket(new CM_REMOVE_DYE(0x1C3, State.IN_GAME)); // 7.2 EU TODO
 	}

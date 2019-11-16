@@ -22,7 +22,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Falke_34
  */
-public class SM_UNK_11C extends AionServerPacket {
+public class SM_UNK_EMOTION extends AionServerPacket {
 
 	// TODO - after/before SM_EMOTION
 

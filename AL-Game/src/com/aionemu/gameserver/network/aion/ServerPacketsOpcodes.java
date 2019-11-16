@@ -70,6 +70,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_GATHER_UPDATE.class, 0x23, idSet);
 		addPacketOpcode(SM_UPDATE_PLAYER_APPEARANCE.class, 0x24, idSet);
 		addPacketOpcode(SM_EMOTION.class, 0x25, idSet);
+		addPacketOpcode(SM_UNK_EMOTION.class, 0x11C, idSet); // 6.x TODO after/before Emotion
 		addPacketOpcode(SM_GAME_TIME.class, 0x26, idSet);
 		addPacketOpcode(SM_TIME_CHECK.class, 0x27, idSet);
 		addPacketOpcode(SM_LOOKATOBJECT.class, 0x28, idSet);
@@ -330,7 +331,6 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_UNK_12B.class, 0x12B, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_16A.class, 0x168, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_165.class, 0x165, idSet); // 6.x TODO after/before Title_Info
-		addPacketOpcode(SM_UNK_11C.class, 0x11C, idSet); // 6.x TODO after/before Emotion
 		addPacketOpcode(SM_SKILL_ANIMATION.class, 0x150, idSet); // 5.6 TODO
 		addPacketOpcode(SM_UNK_15E.class, 0x15E, idSet); // 5.4 TODO
 		addPacketOpcode(SM_SILVER_STAR.class, 0x164, idSet); // 6.x TODO Lodas Silver Star
