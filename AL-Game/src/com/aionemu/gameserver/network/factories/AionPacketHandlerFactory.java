@@ -79,11 +79,11 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_ABYSS_RANKING_PLAYERS(0x1A8, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_ABYSS_RANKING_LEGIONS(0x166, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_PRIVATE_STORE(0x133, State.IN_GAME)); // 5.4 EU removed?
+		//addPacket(new CM_PRIVATE_STORE_NAME(0x144, State.IN_GAME)); // 6.x EU removed?
 		addPacket(new CM_USE_ITEM(0xD0, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_TARGET_SELECT(0xCE, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_SHOW_DIALOG(0x123, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_CHECK_NICKNAME(0x19D, State.AUTHED)); // 7.2 EU
-		//addPacket(new CM_PRIVATE_STORE_NAME(0x144, State.IN_GAME)); // 6.x EU removed?
 		addPacket(new CM_DELETE_CHARACTER(0x144, State.AUTHED)); // 7.2 EU
 		addPacket(new CM_RESTORE_CHARACTER(0x145, State.AUTHED)); // 7.2 EU
 		addPacket(new CM_MACRO_CREATE(0x19F, State.IN_GAME)); // 7.2 EU
@@ -98,7 +98,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EQUIP_ITEM(0xD1, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_TELEPORT_SELECT(0x140, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_LOOT_ITEM(0x14A, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_QUESTIONNAIRE(0x164, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_QUESTIONNAIRE(0x11D, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_ATTACK(0xCF, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_PET(0xC1, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_PET_EMOTE(0xC0, State.IN_GAME)); // 7.2 EU
@@ -120,14 +120,14 @@ public class AionPacketHandlerFactory {
 		// ********************(LEGION)*********************
 		addPacket(new CM_LEGION(0x118, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_LEGION_WH_KINAH(0x117, State.IN_GAME)); // 5.4 EU
-		//addPacket(new CM_LEGION_UPLOAD_INFO(0x16C, State.IN_GAME)); // 6.x EU
-		//addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x16D, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_LEGION_UPLOAD_INFO(0x14C, State.IN_GAME)); // 7.2 EU
+		addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x14D, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_LEGION_SEARCH(0x1E8, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_LEGION_JOIN_REQUEST(0x1D9, State.IN_GAME)); // 6.x EU
 		//addPacket(new CM_LEGION_JOIN_REQUEST_CANCEL(0x1DA, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0xBF, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_LEGION_SEND_EMBLEM(0x11E, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_LEGION_MODIFY_EMBLEM(0x106, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_LEGION_MODIFY_EMBLEM(0x12A, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_LEGION_TABS(0x126, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_STONESPEAR_SIEGE(0xE4, State.IN_GAME)); // 5.4 EU
 
@@ -189,10 +189,10 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_USE_HOUSE_OBJECT(0x18C, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_SETTINGS(0x114, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_HOUSE_KICK(0x2F7, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_GET_HOUSE_BIDS(0x1AD, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_GET_HOUSE_BIDS(0x18A, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_HOUSE_PAY_RENT(0x1BB, State.IN_GAME)); // 5.4 EU
 		//addPacket(new CM_REGISTER_HOUSE(0x1A7, State.IN_GAME)); // 5.4 EU
-		addPacket(new CM_PLACE_BID(0x1A0, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_PLACE_BID(0x189, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_HOUSE_DECORATE(0x116, State.IN_GAME)); // 5.3 EU
 		addPacket(new CM_RELEASE_OBJECT(0x18D, State.IN_GAME)); // 7.2 EU
 
@@ -211,13 +211,13 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_REMOVE_ALTERED_STATE(0xD2, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_MAY_QUIT(0xF3, State.AUTHED, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_REPORT_PLAYER(0x1E1, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_PLAYER_LISTENER(0x1A8, State.IN_GAME)); // 7.x EU NOT SURE (TODO)
+		addPacket(new CM_PLAYER_LISTENER(0x1DA, State.IN_GAME)); // 7.2 EU NOT SURE (TODO)
 		//addPacket(new CM_BONUS_TITLE(0x1BC, State.IN_GAME)); // 7.x EU
 		//addPacket(new CM_BUY_TRADE_IN_TRADE(0x113, State.IN_GAME)); // 5.6 (Machtkampf aufwertung)
 		addPacket(new CM_BREAK_WEAPONS(0x17F, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_CHARGE_ITEM(0x2F9, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_USE_CHARGE_SKILL(0x1B6, State.IN_GAME)); // 5.4
-		//addPacket(new CM_RECONNECT_AUTH(0x18E, State.AUTHED)); // 7.x EU
+		addPacket(new CM_RECONNECT_AUTH(0x1A7, State.AUTHED)); // 7.2 EU
 		addPacket(new CM_BLOCK_SET_REASON(0x1A3, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_INSTANCE_LEAVE(0x11F, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_APPEARANCE(0x181, State.IN_GAME)); // 6.x old 0x18D
