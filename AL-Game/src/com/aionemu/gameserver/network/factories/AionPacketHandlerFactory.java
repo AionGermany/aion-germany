@@ -126,7 +126,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_LEGION_JOIN_REQUEST(0x1D9, State.IN_GAME)); // 6.x EU
 		//addPacket(new CM_LEGION_JOIN_REQUEST_CANCEL(0x1DA, State.IN_GAME)); // 5.4 EU
 		addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0xBF, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_LEGION_SEND_EMBLEM(0xE6, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_LEGION_SEND_EMBLEM(0x11E, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_LEGION_MODIFY_EMBLEM(0x106, State.IN_GAME)); // 6.x EU
 		addPacket(new CM_LEGION_TABS(0x126, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_STONESPEAR_SIEGE(0xE4, State.IN_GAME)); // 5.4 EU
@@ -206,7 +206,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MANASTONE(0x2F5, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_FUSION_WEAPONS(0x17E, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_ITEM_REMODEL(0x105, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xED, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xCD, State.IN_GAME)); // 7.2 EU (Rider Skill deactivate)
 		//addPacket(new CM_RECIPE_DELETE(0x110, State.IN_GAME)); // 5.3 EU
 		addPacket(new CM_REMOVE_ALTERED_STATE(0xD2, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_MAY_QUIT(0xF3, State.AUTHED, State.IN_GAME)); // 7.2 EU
