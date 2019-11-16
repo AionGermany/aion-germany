@@ -61,7 +61,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_QUESTION_RESPONSE(0x104, State.IN_GAME)); // 7.x EU
 		addPacket(new CM_OPEN_STATICDOOR(0xC6, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_SPLIT_ITEM(0x149, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_CUSTOM_SETTINGS(0xD2, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_CUSTOM_SETTINGS(0xBB, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_PLAY_MOVIE_END(0x2FC, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_LEVEL_READY(0xB4, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_ENTER_WORLD(0xC3, State.AUTHED)); // 5.4 EU
@@ -284,7 +284,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_GM_BOOKMARK(0x2FF, State.IN_GAME)); // 7.x EU
 
 		// // ////////////////// UNK PACKET ////////////////////
-		addPacket(new CM_UNK_122(0x10B, State.AUTHED)); // 7.2 EU
+		addPacket(new CM_GF_WEBSHOP_TOKEN(0x10B, State.AUTHED)); // 7.2 EU
 		// addPacket(new CM_UNK_1DB(0x1DB, State.IN_GAME)); // 5.0 TODO
 		addPacket(new CM_UNK_E3(0x117, State.IN_GAME)); // 7.2 EU
 		// addPacket(new CM_UNK_1EA(0x1EA, State.IN_GAME)); // 5.3 EU

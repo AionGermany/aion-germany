@@ -14,28 +14,19 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.network.aion.clientpackets;
+package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.network.aion.AionClientPacket;
-import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_UNK_98;
+import com.aionemu.gameserver.network.aion.AionConnection;
+import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
  * @author Falke_34
  */
-public class CM_UNK_122 extends AionClientPacket {
-
-	public CM_UNK_122(int opcode, State state, State... restStates) {
-		super(opcode, state, restStates);
-	}
+public class SM_GF_WEBSHOP_TOKEN extends AionServerPacket {
 
 	@Override
-	protected void readImpl() {
-		// empty
-	}
-
-	@Override
-	protected void runImpl() {
-		sendPacket(new SM_UNK_98());
+	protected void writeImpl(AionConnection con) {
+		writeC(2);
+		writeB(new byte[16]);
 	}
 }

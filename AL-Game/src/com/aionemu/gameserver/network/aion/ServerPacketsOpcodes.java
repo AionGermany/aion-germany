@@ -320,7 +320,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_UNK_BD.class, 0xBD, idSet);
 		addPacketOpcode(SM_UNK_A5.class, 0xA5, idSet);
 		addPacketOpcode(SM_UNK_127.class, 0x127, idSet);
-		addPacketOpcode(SM_UNK_98.class, 0x98, idSet); // TODO
+		addPacketOpcode(SM_GF_WEBSHOP_TOKEN.class, 0x98, idSet);
 		addPacketOpcode(SM_ABYSS_RANK_POINTS.class, 0x133, idSet); // TODO
 		addPacketOpcode(SM_UNK_7E.class, 0x7E, idSet); // TODO
 		addPacketOpcode(SM_UNK_14F.class, 0x14F, idSet); // 5.6 TODO
