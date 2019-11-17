@@ -181,19 +181,19 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EXCHANGE_REQUEST(0x12E, State.IN_GAME)); // 7.2 EU
 
 		// *************(HOUSE)***************************
-		//addPacket(new CM_HOUSE_OPEN_DOOR(0x1AE, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_HOUSE_OPEN_DOOR(0x192, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_TELEPORT_BACK(0x13A, State.IN_GAME)); // 5.0
-		addPacket(new CM_HOUSE_SCRIPT(0xE0, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_HOUSE_SCRIPT(0xC9, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_TELEPORT(0x18E, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_EDIT(0x2FD, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_USE_HOUSE_OBJECT(0x18C, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_HOUSE_SETTINGS(0x114, State.IN_GAME)); // 6.x EU
+		addPacket(new CM_HOUSE_SETTINGS(0x2F4, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_KICK(0x2F7, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_GET_HOUSE_BIDS(0x18A, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_HOUSE_PAY_RENT(0x1BB, State.IN_GAME)); // 5.4 EU
-		//addPacket(new CM_REGISTER_HOUSE(0x1A7, State.IN_GAME)); // 5.4 EU
+		addPacket(new CM_HOUSE_PAY_RENT(0x18F, State.IN_GAME)); // 7.2 EU
+		addPacket(new CM_REGISTER_HOUSE(0x18B, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_PLACE_BID(0x189, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_HOUSE_DECORATE(0x116, State.IN_GAME)); // 5.3 EU
+		addPacket(new CM_HOUSE_DECORATE(0x2FA, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_RELEASE_OBJECT(0x18D, State.IN_GAME)); // 7.2 EU
 
 		// ******************(OTHERS)******************

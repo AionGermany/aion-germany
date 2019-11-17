@@ -99,8 +99,8 @@ public class SM_CHARACTER_LIST extends PlayerInfo {
 					writeD(0); // unk
 					writeD(0); // unk
 					writeD(0); // unk
-					writeD(BrokerService.getInstance().getCollectedMoney(pcd)); // collected money from broker
-					writeB(new byte[154]); // unk 5.0 TODO
+					writeQ(BrokerService.getInstance().getCollectedMoney(pcd)); // collected money from broker
+					writeB(new byte[150]); // unk 5.0 TODO
 				}
 			}
 		}
