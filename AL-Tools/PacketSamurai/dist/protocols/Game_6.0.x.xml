@@ -72,6 +72,12 @@
 		<enum val="37" display="Silence Cube Gold"/><!-- checked -->
 		<enum val="38" display="Silence Cube Silver"/><!-- checked -->
 		<enum val="39" display="Silence Cube Bronze"/><!-- checked -->
+		<enum val="40" display="Ereshkigal Hunters Cube Gold"/><!-- checked -->
+		<enum val="41" display="Ereshkigal Hunters Cube Silver"/><!-- checked -->
+		<enum val="42" display="Ereshkigal Hunters Cube Bronze"/><!-- checked -->
+		<enum val="43" display="Ereshkigal Experts Cube Gold"/><!-- checked -->
+		<enum val="44" display="Ereshkigal Experts Cube Silver"/><!-- checked -->
+		<enum val="45" display="Ereshkigal Experts Cube Bronze"/><!-- checked -->
 	</multivalue>
 	<multivalue name="race">
 		<enum display="Elyos"/>
@@ -811,8 +817,8 @@
 			<part name="TODO" type="d"/>
 			<part name="currentMagicalResist" type="d"/>
 			<part name="currentAttackRange" type="f"/>
-			<part name="currentAttackSpeed" type="h"/>
-			<part name="unk 97 LVL 66 Cleri" type="h"/>
+			<part name="currentAttackSpeed" type="d"/>
+			<!-- <part name="unk 97 LVL 66 Cleri" type="h"/> -->
 			<part name="currentEvasion" type="d"/>
 			<part name="currentParry" type="d"/>
 			<part name="currentBlock" type="d"/>
@@ -855,13 +861,13 @@
 			<part name="unk 0 LVL 66 Cleri" type="h"/>
 			<part name="unk 0 LVL 66 Cleri" type="h"/>
 			<part name="baseCastingSpeed" type="f"/>
-            		<part name="unk 0 LVL 66 Cleri" type="d"/>
-			<part name="unk 0 LVL 66 Cleri" type="h"/>
-			<part name="unk 0 LVL 66 Cleri " type="h"/>
-            		<part name="GrowthEnergy" type="Q"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="GrowthEnergy" type="Q"/>
 			<part name="GoldenStarEnergy" type="Q"/>
 			<part name="SilverStarEnergy(TODO)" type="Q"/>
-			<part name="unk 16 * 0" type="b" size="16"/>
+			<part name="unk 12 * 0" type="b" size="12"/>
+			<part name="unk 1000" type="d"/>
 			<part name="basePower" type="h"/>
 			<part name="baseHealth" type="h"/>
 			<part name="baseAccuracy" type="h"/>
@@ -1019,7 +1025,7 @@
 			<part name="unk(0x00)" type="c" />
 			<part name="npcTargetObjId" type="d" />
 			<part name="townId" type="d" />
-			<part name="unk" type="d" />
+			<part name="unk" type="b" size="12" />
 		</packet>
 		<packet id="0x0F" name="SM_PLAYER_SPAWN">
 			<part name="worldId" type="d"/>
@@ -1359,6 +1365,9 @@
 							<part name="Unk" type="d"/>
 							<part name="ItemReductionLevel" type="c"/>
 							<part name="TODO size = 40" type="b" size="40"/>
+							<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
 						</case>
 						<case id="0x0D">
 							<!-- SLOTS_WING -->
@@ -1656,7 +1665,7 @@
 			<part name="playerObjId" type="d"/>
 			<part name="nickname" type="S"/>
 		</packet>
-		<packet id="0x0C" name="SM_LEGION_TABS"> <!-- TODO -->
+		<packet id="0x0C" name="SM_LEGION_TABS">
 			<part name="historySize" type="d"/>
 			<part name="currentPage" type="d"/>
 			<part name="pageSize" type="d" id="0"/>
@@ -1853,6 +1862,9 @@
 							<part name="Unk" type="d"/>
 							<part name="ItemReductionLevel" type="c"/>
 							<part name="TODO" type="b" size="40"/>
+							<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
 						</case>
 						<case id="0x0D">
 							<!-- SLOTS_WING -->
@@ -2075,6 +2087,9 @@
 								<part name="Unk" type="d"/>
 								<part name="ItemReductionLevel" type="c"/>
 								<part name="TODO" type="b" size="40"/>
+								<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+									<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+								</part>
 							</case>
 							<case id="0x0D">
 								<!-- SLOTS_WING -->
@@ -2634,6 +2649,7 @@
 							</case>
 							<case id="default" comment="Default"/>
 						</switch>
+						<part name="test" type="b" size="16"/>
 					</case>
 					<case id="2" comment="TODO">
 						<part name="TODO" type="c"/>
@@ -2728,6 +2744,7 @@
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="effectorId" type="d"/>
+				<part name="unk 6.x" type="d"/>
 				<part name="skillId" type="h">
 					<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 				</part>
@@ -2735,7 +2752,6 @@
 				<part name="targetSlot" type="c"/>
 				<part name="remainingTime" type="d"/>
 				<part name="unk 5.3" type="h"/>
-				<part name="unk 6.x" type="d"/>
 			</for>
 		</packet>
 		<packet id="0x32" name="SM_ABNORMAL_EFFECT">
@@ -2769,8 +2785,8 @@
 						</part>
 						<part name="skillLevel" type="c"/>
 						<part name="targetSlot" type="c"/>
-						<part name="EffectId" type="h"/>
 						<part name="remainingTime ??" type="d"/>
+						<part name="unk" type="h"/>
 						<!-- <part name="skillLevel" type="c"/> -->
 						<!-- <part name="targetSlot" type="c"/> -->
 						<!-- <part name="remainingTime" type="d"/> -->
@@ -2845,6 +2861,7 @@
 				<part name="damage" type="d"/>
 				<part name="attackStatus" type="c"/>
 				<part name="shieldType" type="c" id="1"/>
+				<part name="todo" type="b" size="16"/>
 				<bitwise_switch id="1">
 					<case id="0x5">
 						<part name="unk" type="d"/>
@@ -3170,6 +3187,9 @@
 							<part name="Unk" type="d"/>
 							<part name="ItemReductionLevel" type="c"/>
 							<part name="TODO" type="b" size="40"/>
+							<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
 						</case>
 						<case id="0x0D">
 							<!-- SLOTS_WING -->
@@ -3475,6 +3495,9 @@
 			<part name="fabledItem" type="d"/>
 			<part name="ethernalItem" type="d"/>
 			<part name="mythicItem" type="d"/>
+			<part name="ancientItem" type="d"/>
+			<part name="relicItem" type="d"/>
+			<part name="finalityItem" type="d"/>
 			<!-- <part name="autodistribution" type="d"/> -->
 			<part name="0x02" type="d"/>
 			<part name="0x00" type="c"/>
@@ -3881,16 +3904,16 @@
 			<part name="legionTerretoryId" type="d"/>
 			<part name="unk 0x4" type="d"/>
 			<part name="unk 0x4" type="d"/>
+			<part name="unk 0x4" type="d"/>
 			<part name="LegionDescription" type="S"/>
 			<part name="joinType" type="h"/>
-			<part name="minJoinLevel" type="h"/>
-			<part name="unk" type="b" size="7"/>
-			<for id="-1" size="7">
+			<part name="minJoinLevel" type="c"/>
+			<!-- <for id="-1" size="7">
 				<part name="announcement" type="S"/>
 				<part name="date" type="d">
 					<reader type="UnixDate"/>
 				</part>
-			</for>
+			</for> -->
 		</packet>
 		<packet id="0x6F" name="SM_LEGION_ADD_MEMBER">
 			<part name="playerObjId" type="d"/>
@@ -5373,6 +5396,10 @@
 					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
 				</case>
+				<case id="302510000" comment="Senekta">
+				</case>
+				<case id="302530000" comment="Illumiel">
+				</case>
 				<case id="default"/>
 			</switch>
 		</packet>
@@ -5681,7 +5708,7 @@
 						<part name="setId" type="c"/>
 						<part name="unk" type="c"/>
 						<part name="unk" type="h"/>
-						<part name="PLUME STATS ?" type="b" size="128"/>
+						<part name="PLUME STATS ?" type="b" size="168"/>
 						<part name="randomCount" type="c" />
 						<part name="bonusUnk" type="c" />
 						<part name="sellerName" type="S"/>
@@ -6246,6 +6273,9 @@
 										<part name="Unk" type="d"/>
 										<part name="ItemReductionLevel" type="c"/>
 										<part name="TODO" type="b" size="40"/>
+										<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+											<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+										</part>
 									</case>
 									<case id="0x0D">
 										<!-- SLOTS_WING -->
@@ -6330,7 +6360,9 @@
 					</part>
 					<for id="1">
 						<part name="playerObjId" type="d"/>
-						<part name="unk(0 or 65557)" type="d"/>
+						<part name="serverID" type="h"/>
+						<part name="unk(0)" type="c"/>
+						<part name="GroupCode group owner (16)" type="c"/>
 						<part name="party kind(0:party, 1:force)" type="c"/>
 						<part name="text" type="S"/>
 						<part name="playerName" type="S"/>
@@ -6344,7 +6376,9 @@
 				</case>
 				<case id="1">
 					<part name="playerObjId" type="d"/>
-					<part name="unk(0 or 65557)" type="d"/>
+					<part name="serverID" type="h"/>
+					<part name="unk(0)" type="c"/>
+					<part name="GroupCode group owner (16)" type="c"/>
 				</case>
 				<case id="4">
 					<part name="size" type="h" id="1"/>
@@ -6703,6 +6737,9 @@
 							<part name="Unk" type="d"/>
 							<part name="ItemReductionLevel" type="c"/>
 							<part name="TODO" type="b" size="40"/>
+							<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
 						</case>
 						<case id="0x0D">
 							<!-- SLOTS_WING -->
@@ -6917,6 +6954,9 @@
 							<part name="Unk" type="d"/>
 							<part name="ItemReductionLevel" type="c"/>
 							<part name="TODO" type="b" size="40"/>
+							<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
 						</case>
 						<case id="0x0D">
 							<!-- SLOTS_WING -->
@@ -7127,6 +7167,9 @@
 							<part name="Unk" type="d"/>
 							<part name="ItemReductionLevel" type="c"/>
 							<part name="TODO" type="b" size="40"/>
+							<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
 						</case>
 						<case id="0x0D">
 							<!-- SLOTS_WING -->
@@ -7332,6 +7375,9 @@
 						<part name="Unk" type="d"/>
 						<part name="ItemReductionLevel" type="c"/>
 						<part name="TODO" type="b" size="40"/>
+						<part name="skinTemplateId" type="d"> <!-- Why skinTemplateId again ? -->
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
 					</case>
 					<case id="0x0D">
 						<!-- SLOTS_WING -->
@@ -7663,7 +7709,7 @@
 			<part name="time" type="d"/>
 			<part name="actionType" type="c"/>
 		</packet>
-		<packet id="0xC66" name="SM_EMOTION_SWITCH">
+		<packet id="0xC6" name="SM_EMOTION_SWITCH">
 			<part name="npcObjId" type="d"/>
 			<part name="state" type="c">
 				<reader type="BitSet" name="creatureUpdates"/>
@@ -8106,7 +8152,7 @@
 		<packet id="0xD0" name="SM_MANTRA_EFFECT">
 			<part name="unk(0)" type="d"/>
 			<part name="playerObjId" type="d"/>
-			<part name="subEffectId" type="h"/>
+			<part name="subEffectId" type="d"/>
 		</packet>
 		<packet id="0xD1" name="SM_SIEGE_LOCATION_INFO">
 			<part name="infoType" type="c" id="0"/>
@@ -9007,26 +9053,15 @@
 			<part name="id" type="d"/>
 		</packet>
 		<packet id="0xF0" name="SM_ACCOUNT_ACCESS_PROPERTIES">
-			<part name="isGM 3 : 0" type="c"/> <!-- Name's from java file -->
-			<part name="unk" type="d"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="c"/>
-			<part name="isGM 32768 : 0" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="Korea Value" type="c"/>
-			<part name="unk" type="d"/>
+			<part name="isGM 3 : 0" type="c"/>
+			<part name="unk [20*0]" type="b" size="20"/>
+			<part name="ActiveGold 31 : 0" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="GoldPaketActive8:0" type="d"/>
 			<part name="Veteran:4/Starter:2" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
+			<part name="unk[12*0]" type="b" size="12"/>
 			<part name="GoldPaket Time" type="d"/>
-			<part name="unk 4.9 [0]" type="b" size="32"/> <!-- unk 4.9 -->
+			<part name="unk[32*0]" type="b" size="32"/>
 		</packet>
 		<!-- Upgrade Arcade Event 4.7 -->
 		<packet id="0x12C" name="SM_UPGRADE_ARCADE">
@@ -9131,7 +9166,7 @@
 				<part name="ClothEnchanted" type="c"/>
 			</for>    
 		</packet>							
-		<packet id="0x1200" name="SM_SELECT_ITEM_ADD">
+		<packet id="0x120" name="SM_SELECT_ITEM_ADD">
 			<part name="ItemId" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="index" type="c"/>
@@ -9437,6 +9472,22 @@
 							<part name="unk" type="d"/>
 							<part name="unk" type="d"/>
 						</case>
+						<case id="7">
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+						</case>
 						<case id="default"/>
 					</switch>
 				</case>
@@ -9517,8 +9568,8 @@
 				<case id="6">
 					<part name="unk(53)" type="d"/>
 				</case>
-				<case id="7">
-					<part name="unk(55)" type="d"/>
+				<case id="7"><!-- Teleport -->
+					<part name="unk" type="c"/>
 				</case>
 				<case id="8"><!-- TODO - Wardrobe -->
 					<part name="0x00" type="c"/>
@@ -9558,6 +9609,14 @@
 				</case>	
 				<case id="default"/>	
 			</switch>					
+		</packet>
+		<packet id="0x172" name="________________SM_LUNA_COSTS"> <!-- TODO -->
+			<part name="unk" type="h"/>
+			<part name="Luna_Coins" type="Q"/>
+		</packet>
+		<packet id="0x177" name="________________SM_LUNA_IDENTIFICATION"> <!-- TODO -->
+			<part name="unk" type="d"/>
+			<part name="unk" type="c"/>
 		</packet>
 		<packet id="0x14B" name="________________SM_LUCKY_DICE"> <!-- 5.3 TODO -->
 			<part name="boardId" type="d"/> <!-- Board ID -->
@@ -9641,6 +9700,23 @@
 				<part name="itemObjId" type="d"/>
 				<part name="itemObjId" type="d"/>
 			</for>
+		</packet>
+		<packet id="0x179" name="________________SM_DAEVANION_SKILL_ENCHANT"> <!-- 6.5 TODO -->
+			<part name="unk" type="d"/>
+			<part name="unk" type="h"/>
+			<part name="unk" type="d"/>
+		</packet>
+		<packet id="0x17A" name="________________SM_DAEVANION_SKILL_FUSION"> <!-- 6.5 TODO -->
+			<part name="unk" type="d"/>
+			<part name="itemTemplateId" type="d">
+				<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+			</part>
+			<part name="itemTemplateId" type="d">
+				<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+			</part>
+			<part name="itemTemplateId" type="d">
+				<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+			</part>
 		</packet>
 
 		<!-- ============= -->
@@ -9840,7 +9916,7 @@
 			</for>
 		</packet>
 		<packet id="0x12B" name="________________SM_UNK_12B">
-			<part name="objectId" type="d"/>
+			<part name="playerObjId" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
 		<packet id="0x154" name="________________SM_EVENT_WINDOW_ITEMS">
@@ -10063,10 +10139,10 @@
 				<case id="0">
 					<part name="unk" type="c"/>
 					<part name="count" type="h" id="1"/>
-                    <for id="1">
-                        <part name="transformation_id" type="d"/>
-                        <part name="0 / 1" type="d"/>
-                    </for>
+					<for id="1">
+						<part name="transformation_id" type="d"/>
+						<part name="0 / 1" type="d"/>
+					</for>
 				</case>
 				<case id="1">
 					<part name="unk" type="h"/>
@@ -10076,6 +10152,10 @@
 					<part name="unk" type="h"/>
 					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
+				</case>
+				<case id="3"> <!-- Collection -->
+					<part name="unk" type="d"/>
+					<part name="activate/deactivate" type="c"/>
 				</case>
 				<case id="default"/>
 			</switch>
@@ -10106,9 +10186,17 @@
 		<packet id="0x14F" name="________________SM_UNK_14F">
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x12D" name="________________SM_UNK_12D">
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
+		<packet id="0x12D" name="________________SM_ATREIAN_PASSPORT">
+			<part name="Time to Daeva - Year" type="h"/>
+			<part name="Time to Daeva - Month" type="h"/>
+			<part name="Time to Daeva - Day ?" type="h"/>
+			<part name="PassportCount" type="h" id="0"/>
+			<for id="0">
+				<part name="Passport_Id" type="d"/>
+				<part name="Stamp erhalten" type="d"/>
+				<part name="Passport_Stamp" type="d"/>
+				<part name="hasCollected" type="c"/>
+			</for>
 		</packet>
         <packet id="0x127" name="________________SM_UNK_127">
             <part name="unk" type="h"/>
@@ -10136,13 +10224,22 @@
 				<case id="default"/>
 			</switch>
 		</packet>
+		<packet id="0x175" name="________________SM_CUBIC_INFO">
+			<part name="size" type="h" id="0"/>
+			<for id="0">
+				<part name="cubicId" type="d"/>
+				<part name="rank" type="d"/>
+				<part name="level" type="d"/>
+				<part name="register" type="d"/>
+			</for>
+		</packet>
 		<packet id="0x176" name="________________SM_CUBIC">
-			<part name="unk" type="d">
+			<part name="cubicId" type="d">
 				<reader type="MultiValue" name="cubics"/>
 			</part>
+			<part name="rank" type="d"/>
 			<part name="level" type="d"/>
-			<part name="points" type="d"/>
-			<part name="unk" type="d"/>
+			<part name="register" type="d"/>
 		</packet>
 		<packet id="0x146" name="________________SM_YOUTUBE_VIDEO">
 			<part name="video" type="h"/>
@@ -10151,20 +10248,11 @@
 			<part name="video" type="S"/>
 			<part name="unk" type="b" size="960"/>
 		</packet>
-		<packet id="0x175" name="________________SM_UNK_175">
-			<part name="count" type="h" id="0"/>
-			<for id="0">
-				<part name="unk" type="d"/>
-				<part name="unk" type="d"/>
-				<part name="unk" type="d"/>
-				<part name="unk" type="d"/>
-			</for>
-		</packet>
 		<packet id="0x11C" name="________________SM_UNK_EMOTION">
 			<part name="senderId" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0xC6" name="________________SM_UNK_C6"> <!-- after sm_lookatobject -->
+		<packet id="0xC666" name="________________SM_UNK_C6"> <!-- after sm_lookatobject -->
 			<part name="objectId" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
@@ -10173,8 +10261,8 @@
 		<packet id="0x136" name="________________SM_UNK_136">
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x173" name="________________SM_UNK_173">
-
+		<packet id="0x173" name="________________SM_LUNA_INSTANCE">
+			<part name="unk" type="c"/>
 		</packet>
 	</packetfamilly>
 	<!-- ============= -->
@@ -10306,7 +10394,9 @@
 			</part>
 		</packet>
 		<packet id="0xEC" name="CM_CASTSPELL"> 
-			<part name="spellId" type="h"/>
+			<part name="spellId" type="h">
+				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
+			</part>
 			<part name="level" type="c"/>
 			<part name="targetType" type="c" id="0"/>
 			<switch id="0">
@@ -10664,7 +10754,9 @@
 				<case id="0x00" comment="recruit list"/>
 				<case id="0x01" comment="recruit delete">
 					<part name="playerObjId" type="d"/>
-					<part name="unk(65557)" type="d"/>
+					<part name="ServerId" type="h"/>
+					<part name="unk" type="c"/>
+					<part name="Code for Groupe owner?" type="c"/>
 				</case>
 				<case id="0x02" comment="recruit create">
 					<part name="playerObjId" type="d"/>
@@ -10673,7 +10765,9 @@
 				</case>
 				<case id="0x03" comment="recruit update">
 					<part name="playerObjId" type="d"/>
-					<part name="unk(65557)" type="d"/>
+					<part name="ServerId" type="h"/>
+					<part name="unk" type="c"/>
+					<part name="Code for Groupe owner?" type="c"/>
 					<part name="message" type="S"/>
 					<part name="group kind(0:group, 1:alliance)" type="c"/>
 				</case>
@@ -10729,8 +10823,8 @@
 			<part name="itemNumber" type="h" id="0"/>
 			<for id="0">
 				<part name="itemId" type="d">
-                    <reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
-                </part>
+					<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+				</part>
 				<part name="count" type="Q"/>
 			</for>
 		</packet>
@@ -10937,40 +11031,17 @@
 		<packet id="0x185" name="CM_DISTRIBUTION_SETTINGS">
 			<part name="unk" type="d"/>
 			<part name="lootRuleType" type="d"/>
-			<part name="misc" type="d"/>
+			<part name="autodistribution" type="d"/>
 			<part name="common_item_above" type="d"/>
 			<part name="superior_item_above" type="d"/>
 			<part name="heroic_item_above" type="d"/>
 			<part name="fabled_item_above" type="d"/>
 			<part name="ethernal_item_above" type="d"/>
-			<part name="autodistribution" type="d"/>
+			<part name="mythic_item_above" type="d"/>
+			<part name="ancient_item_above" type="d"/>
+			<part name="legendary_item_above" type="d"/>
+			<part name="ultimate_item_above" type="d"/>
 			<part name="unk" type="d"/>
-		</packet>
-		<packet id="0x101000" name="CM_MANASTONE">
-			<part name="actionType" type="c" id="0" />
-			<part name="targetFusedSlot" type="c" />
-			<part name="targetItemUniqueId" type="d" />
-			<switch id="0">
-				<case id="0x01" comment="ENCHANTMENT_STONE">
-					<part name="stoneUniqueId" type="d" />
-					<part name="supplementUniqueId" type="d" />
-				</case>
-				<case id="0x02" comment="ENCHANTMENT_STONE">
-					<part name="stoneUniqueId" type="d" />
-					<part name="supplementUniqueId" type="d" />
-				</case>
-				<case id="0x03" comment="REMOVE_MANASTONE">
-					<part name="slotNum" type="c" />
-					<part name="unk" type="c" />
-					<part name="unk" type="h" />
-					<part name="npcObjId" type="d" />
-				</case>
-				<case id="0x04" comment="GODSTONE">
-					<part name="stoneUniqueId" type="d" />
-					<part name="supplementUniqueId" type="d" />
-				</case>
-				<case id="default" comment="UNKNOWN" />
-			</switch>
 		</packet>
 		<packet id="0x2FC" name="CM_MOVE_IN_AIR"> <!-- Flighttranport -->
 			<part name="worldId" type="d"/>
@@ -11003,7 +11074,7 @@
 		<packet id="0xD6" name="CM_OBJECT_SEARCH"> 
 			<part name="npcId" type="d"/>
 		</packet>
-		<packet id="0x111" name="CM_ITEM_REMODEL"> 
+		<packet id="0x125" name="CM_ITEM_REMODEL"> 
 			<part name="npcId" type="d"/>
 			<part name="keepItemId" type="d"/>
 			<part name="extractItemId" type="d"/>
@@ -11259,21 +11330,49 @@
 		<packet id="0x163" name="CM_BLOCK_DEL"> 
 			<part name="targetName" type="S"/>
 		</packet>
-		<packet id="0x115" name="________________CM_UPGRADE_ITEM">
-			<part name="Case/Switch" type="h" id="0"/>
+		<packet id="0x115" name="________________CM_MANASTONE">
+			<part name="actionType" type="h" id="0"/>
 			<switch id="0">
-				<case id="257"> <!-- PVE Enchant -->
+				<case id="257" comment="ENCHANTMENT_STONE"> <!-- PVE Enchant -->
 					<part name="targetObjId" type="d"/>
 					<part name="itemObjId" type="d"/>
 					<part name="unk" type="d"/>
 				</case>
-				<case id="258"> <!-- Manastone Slot Expansion -->
+				<case id="258" comment="ADD_MANASTONE"> <!-- Manastone Slot Expansion / Manastone Socket -->
 					<part name="targetObjId" type="d"/>
 					<part name="itemObjId" type="d"/>
 					<part name="unk" type="d"/>
 				</case>
-				<case id="default"/>
+				<case id="259" comment="REMOVE_MANASTONE"> <!-- Manastone remove -->
+					<part name="targetObjId" type="d"/>
+					<part name="itemObjId" type="d"/>
+					<part name="unk" type="d"/>
+				</case>
+				<case id="514" comment="ADD_MANASTONE"> <!-- Fused  -->
+					<part name="targetObjId" type="d"/>
+					<part name="itemObjId" type="d"/>
+					<part name="unk" type="d"/>
+				</case>
+				<case id="260" comment="SOCKET_GODSTONE">
+					<part name="targetObjId" type="d"/>
+					<part name="itemObjId" type="d"/>
+					<part name="unk" type="d"/>
+				</case>
+				<case id="default" comment="UNKNOWN"/>
 			</switch>
+		</packet>
+		<packet id="0x1B3" name="________________CM_ITEM_UPGRADE">
+			<part name="senderObjectId" type="d"/>
+			<part name="upgradedItemObjectId" type="d"/>
+			<part name="resultItemId" type="d">
+				<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+			</part>
+			<part name="unk" type="h"/>
+			<part name="requireItemObjectId1" type="d"/>
+			<part name="requireItemObjectId2" type="d"/>
+			<part name="requireItemObjectId3" type="d"/>
+			<part name="requireItemObjectId4" type="d"/>
+			<part name="requireItemObjectId5" type="d"/>
 		</packet>
 		<packet id="0x106" name="CM_LEGION_MODIFY_EMBLEM"> 
 			<part name="legionId" type="d"/>
@@ -11703,6 +11802,9 @@
 					<part name="unk" type="d"/>
 					<part name="unk" type="c"/>
 				</case>
+				<case id="7"><!-- Teleport -->
+					<part name="unk" type="d"/>
+				</case>
 				<case id="10">
 					<part name="unk" type="c"/>
 					<part name="itemObjectId" type="d"/>
@@ -11712,6 +11814,10 @@
 				</case>	
 				<case id="default"/>	
 			</switch>					
+		</packet>
+		<packet id="0x1FB" name="________________CM_LUNA_IDENTIFICATION"><!-- TODO -->
+			<part name="unk" type="d"/>
+			<part name="unk" type="c"/>
 		</packet>
 		<packet id="0x1E8" name="________________CM_MAGIC_CRAFT"> <!-- 5.4 TODO -->
 			<part name="Case/Switch" type="c" id="0"/>
@@ -11959,13 +12065,17 @@
 					<part name="Transformation_Id" type="d"/>
 					<part name="Transformation_Id" type="d"/>
 				</case>
-				<case id="2"> <!--Fusion-->
+				<case id="2"> <!-- Fusion -->
 					<part name="Transformation_Id" type="d"/>
 					<part name="Transformation_Id" type="d"/>
 					<part name="Transformation_Id" type="d"/>
 					<part name="Transformation_Id" type="d"/>
 					<part name="Transformation_Id" type="d"/>
 					<part name="Transformation_Id" type="d"/>
+				</case>
+				<case id="3"> <!-- Collection -->
+					<part name="unk" type="d"/>
+					<part name="activate/deactivate" type="c"/>
 				</case>
 				<case id="default"/>
 			</switch>
@@ -11989,6 +12099,30 @@
 		</packet>
 		<packet id="0x1CD" name="________________CM_UNK_1CD"> <!-- Assa? -->
 			<part name="objectId" type="d"/>
+		</packet>
+		<packet id="0x1C4" name="________________CM_ATREIAN_PASSPORT">
+			<part name="unk" type="d"/>
+		</packet>
+		<packet id="0x1EE" name="________________CM_STIGMA">
+			<part name="add 0 / remove 1" type="c"/>
+			<part name="slot?" type="Q"/>
+			<part name="itemObjectId" type="d"/>
+		</packet>
+		<packet id="0x1EF" name="________________CM_DAEVANION_SKILL_ENCHANT">
+			<part name="unk" type="h"/>
+			<part name="itemObjectId" type="d"/>
+			<part name="unk" type="d"/>
+		</packet>
+		<packet id="0x1E0" name="________________CM_DAEVANION_SKILL_FUSION">
+			<part name="unk" type="d"/>
+			<part name="unk" type="h"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+		</packet>
+		<packet id="0x1DF" name="________________CM_REMOVE_DYE">
+			<part name="itemObjectId" type="d"/>
 		</packet>
 	</packetfamilly>
 </protocol>

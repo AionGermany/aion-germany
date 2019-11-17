@@ -7781,7 +7781,7 @@
 						<part name="Hair" type="c"/>
 						<part name="Deco" type="c"/>
 						<part name="Tattoo" type="c"/>
-						<part name="OLD" type="c"/>
+						<part name="FaceContour" type="c"/>
 						<part name="Expression" type="c"/>
 						<part name="PupilShape" type="c"/>
 						<part name="RemoveMane" type="c"/>
@@ -7811,8 +7811,8 @@
 						<part name="LipSize" type="c"/>
 						<part name="Smile" type="c"/>
 						<part name="LipShape" type="c"/>
-						<part name="ChinHight" type="c"/>
-						<part name="CheekBones" type="c"/>
+						<part name="JawHeigh" type="c"/>
+						<part name="ChinJut" type="c"/>
 						<part name="EarShape" type="c"/>
 						<part name="HeadSize" type="c"/>
 						<part name="Neck" type="c"/>
@@ -7850,7 +7850,7 @@
 						<part name="level" type="h"/>
 						<part name="unk" type="h"/>
 						<part name="title" type="d"/>
-						<part name="legionID ??" type="d"/>
+						<part name="legionID" type="d"/>
 						<part name="legionName" type="Ss" size="52"/>
 						<part name="UNK" type="b" size="30"/>
 						<part name="isInLegion?" type="h"/>
@@ -7876,55 +7876,81 @@
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#4Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#5Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#6Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#7Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#8Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#9Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#10Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#11Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#12Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#13Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#14Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#15Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="item#16Equipped?" type="c"/>
-						<part name="itemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
 						<part name="Spacer/Garbage ?" type="b" size="40"/>
@@ -7939,8 +7965,8 @@
 						<part name="unk(0x00)" type="d"/>
 						<part name="unk(0x00)" type="d"/>
 						<part name="unk(0x00)" type="d"/>
-						<part name="broker/kinah" type="d"/> <!-- checked -->
-						<part name="unk" type="b" size="154"/>
+						<part name="broker/kinah" type="Q"/> <!-- checked -->
+						<part name="unk" type="b" size="150"/>
 					</for>
 				</case>
 			</switch>
@@ -9743,12 +9769,9 @@
 			<part name="value" type="c"/>
 			<part name="unk 0" type="h"/>
 		</packet>
-		<packet id="0x98" name="________________SM_UNK_98"> <!-- TODO -->
+		<packet id="0x98" name="SM_GF_WEBSHOP_TOKEN"> <!-- TODO -->
 			<part name="0x0" type="c"/>
-			<part name="unk1" type="d"/>
-			<part name="unk2" type="d"/>
-			<part name="unk1" type="d"/>
-			<part name="unk2" type="d"/>			
+			<part name="token" type="b" size="16"/>			
 		</packet>
 		<packet id="0x118" name="________________SM_UNK_117"> <!-- Kisk: Stigmameister -->
 			<part name="objectId" type="d"/>
@@ -10159,6 +10182,16 @@
 				</case>
 				<case id="1">
 					<part name="unk" type="h"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
 				</case>
 				<case id="2">
@@ -10950,7 +10983,7 @@
 			<part name="targetObjectId" type="d"/>
 			<part name="index" type="c"/>
 		</packet>
-		<packet id="0x164" name="CM_QUESTIONNAIRE"> <!-- 7.0 EU -->
+		<packet id="0x11D" name="CM_QUESTIONNAIRE"> <!-- 7.2 EU Skill House Portal-->
 			<part name="objectId" type="d"/>
 			<part name="itemSize" type="h" id="0"/>
 			<for id="0">
@@ -11151,7 +11184,7 @@
 			<part name="unk" type="d"/>
 		</packet>
 		<packet id="0x132" name="CM_EXCHANGE_LOCK"/> <!-- 7.2 EU -->
-		<packet id="0xD200" name="CM_CUSTOM_SETTINGS"> <!-- 7.x EU -->
+		<packet id="0xBB" name="CM_CUSTOM_SETTINGS"> <!-- 7.2 EU -->
 			<part name="display(1:show legion mantle,2:priority equipment,4:show helmet)" type="h"/>
 			<part name="dney(1:view detail player,2:trade,4:party/force,8:legion,16:friend,32:dual(pvp))" type="h"/>
 		</packet>
@@ -11433,7 +11466,7 @@
 			<part name="requireItemObjectId4" type="d"/>
 			<part name="requireItemObjectId5" type="d"/>
 		</packet>
-		<packet id="0x10600" name="CM_LEGION_MODIFY_EMBLEM"> 
+		<packet id="0x12A" name="CM_LEGION_MODIFY_EMBLEM"> <!-- 7.2 EU --> 
 			<part name="legionId" type="d"/>
 			<part name="emblemId" type="c"/>
 			<part name="emblemType" type="c"/>
@@ -11442,14 +11475,14 @@
 			<part name="green" type="c"/>
 			<part name="blue" type="c"/>
 		</packet>
-		<packet id="0x16C00" name="CM_LEGION_UPLOAD_INFO">
+		<packet id="0x14C" name="CM_LEGION_UPLOAD_INFO"> <!-- 7.2 EU -->
 			<part name="totalSize" type="d"/>
 			<part name="unk(0xFF)" type="c"/>
 			<part name="red" type="c"/>
 			<part name="green" type="c"/>
 			<part name="blue" type="c"/>
 		</packet>
-		<packet id="0x16D00" name="CM_LEGION_UPLOAD_EMBLEM"> 
+		<packet id="0x14D" name="CM_LEGION_UPLOAD_EMBLEM"> <!-- 7.2 EU -->
 			<part name="size" type="d" id="1"/>
 			<part name="data" type="b" sizeid="1"/>
 		</packet>
@@ -11604,7 +11637,7 @@
 		<packet id="0x198" name="CM_CHANGE_CHANNEL"> <!-- 7.2 EU -->
 			<part name="channel" type="d"/>
 		</packet>
-		<packet id="0x1AE00" name="CM_HOUSE_OPEN_DOOR"> <!-- only Houses have Doors (not Appartments) -->
+		<packet id="0x192" name="CM_HOUSE_OPEN_DOOR"> <!-- 7.2 EU only Houses have Doors (not Appartments) -->
 			<part name="address" type="d"/>
 			<part name="entry/exit 0/1" type="c"/>
 		</packet>
@@ -11642,7 +11675,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x114" name="CM_HOUSE_SETTINGS"> 
+		<packet id="0x2F4" name="CM_HOUSE_SETTINGS"> <!-- 7.2 EU -->
 			<part name="visitPermisions" type="c">
 				<reader type="MultiValue" name="houseVisitPermisions"/>
 			</part>
@@ -11651,14 +11684,14 @@
 			</part>
 			<part name="signNotice" type="S"/>
 		</packet>
-		<packet id="0x1AD" name="CM_GET_HOUSE_BIDS"/> <!-- 7.x EU -->
+		<packet id="0x18A" name="CM_GET_HOUSE_BIDS"/> <!-- 7.2 EU -->
 		<packet id="0x13400" name="CM_GROUP_DISTRIBUTION"> 
 			<part name="amount" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="partyType" type="c"/>
 		</packet>
-		<packet id="0x18E00" name="CM_RECONNECT_AUTH"/> <!-- 7.x EU -->
-		<packet id="0xED00" name="CM_TOGGLE_SKILL_DEACTIVATE">
+		<packet id="0x1A7" name="CM_RECONNECT_AUTH"/> <!-- 7.2 EU Select Server in Character Screen-->
+		<packet id="0xCD" name="CM_TOGGLE_SKILL_DEACTIVATE"> <!-- 7.2 EU deactivate the Rider Skill-->
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -11669,7 +11702,7 @@
 			<part name="usingPlayerId" type="d"/>
 			<part name="destPlayerId" type="d"/>
 		</packet>
-		<packet id="0x11600" name="CM_HOUSE_DECORATE">
+		<packet id="0x2FA" name="CM_HOUSE_DECORATE"> <!-- 7.2 EU -->
 			<part name="objectId" type="d"/>
 			<part name="partId" type="d"/>
 			<part name="list_nr" type="h"/>
@@ -11688,7 +11721,7 @@
 		<packet id="0x18C" name="CM_USE_HOUSE_OBJECT"> <!-- 7.2 EU -->
 			<part name="itemObjectId" type="d"/>
 		</packet>
-		<packet id="0xE0" name="CM_HOUSE_SCRIPT"> <!-- 7.x EU -->
+		<packet id="0xC9" name="CM_HOUSE_SCRIPT"> <!-- 7.2 EU -->
 			<part name="address" type="d"/>
 			<part name="index" type="c"/>
 			<part name="totalSize" type="h" id="0"/>
@@ -11703,25 +11736,25 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x1A0" name="CM_PLACE_BID"> 
+		<packet id="0x189" name="CM_PLACE_BID"> <!-- 7.2 EU --> 
 			<part name="entryIndex" type="d"/>
 			<part name="price" type="Q"/>
 		</packet>
 		<packet id="0xBE" name="CM_TELEPORT_DONE"/> <!-- 7.2 EU -->
-		<packet id="0x1BB00" name="CM_HOUSE_PAY_RENT"> <!-- House Miete bezahlen -->
+		<packet id="0x18F" name="CM_HOUSE_PAY_RENT"> <!-- 7.2 EU House Miete bezahlen -->
 			<part name="weekCount" type="c"/>
 		</packet>
-		<packet id="0x1A700" name="CM_REGISTER_HOUSE"> 
+		<packet id="0x18B" name="CM_REGISTER_HOUSE"> <!-- 7.2 EU -->
 			<part name="bidKinah" type="Q"/>
 			<part name="100000" type="Q"/>
 		</packet>
-		<packet id="0x1A800" name="CM_PLAYER_LISTENER"/>
+		<packet id="0x1DA" name="CM_PLAYER_LISTENER"/> <!-- 7.2 EU -->
 		<packet id="0x1B6" name="CM_USE_CHARGE_SKILL"/>
 		<packet id="0x171" name="CM_CHECK_MAIL_SIZE"> <!-- 7.2 EU -->
 			<part name="onlyExpress" type="c"/>
 		</packet>
 		<packet id="0x181" name="CM_CHECK_MAIL_SIZE2"/> <!-- 7.2 EU -->
-		<packet id="0xE6" name="CM_LEGION_SEND_EMBLEM"> <!-- 7.0 EU -->
+		<packet id="0x11E" name="CM_LEGION_SEND_EMBLEM"> <!-- 7.2 EU -->
 			<part name="legionId" type="d"/>
 		</packet>
 		<packet id="0x19600" name="CM_REPORT_PLAYER"> <!-- 7.0 EU -->
@@ -11734,7 +11767,7 @@
 		<packet id="0x13A" name="CM_HOUSE_TELEPORT_BACK"/>
 
 		<!-- New 4.7 EU -->
-		<packet id="0x1B900" name="CM_UPGRADE_ARCADE"> <!-- 7.0 EU -->
+		<packet id="0x1E6" name="CM_UPGRADE_ARCADE"> <!-- 7.2 EU -->
 			<part name="action" type="c"/>
 			<part name="sessionId" type="d"/>
 		</packet>
@@ -11775,7 +11808,7 @@
 			<part name="unk" type="d"/>
 			<part name="index" type="c"/>
 		</packet>
-		<packet id="0x1C2" name="CM_EXPAND_CUBE"> <!-- 7.0 EU -->
+		<packet id="0x1EB" name="CM_EXPAND_CUBE"> <!-- 7.2 EU -->
 			<part name="actionType" type="c" id="0" />
 			<switch id="0">
 				<case id="0x00" comment="Expand_Kinah"/>
@@ -11909,6 +11942,14 @@
 			<part name="message" type="S"/>
 			<part name="unk" type="d"/>
 		</packet>
+		<packet id="0x2F9" name="CM_CHARGE_ITEM"> <!-- 7.2 EU -->
+			<part name="targetNpcObjectId" type="d"/>
+			<part name="chargeLevel" type="c"/>
+			<part name="itemsSize" type="h" id="0"/>
+			<for id="0">
+				<part name="itemId" type="d"/>
+			</for>
+		</packet>
 
 		<!-- ============= -->
 		<!--     UNK       -->
@@ -11917,7 +11958,7 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x10B" name="________________CM_UNK_122"/> <!-- TODO -->
+		<packet id="0x10B" name="CM_GF_WEBSHOP_TOKEN"/>
 		<packet id="0x1EB00" name="________________CM_AUTO_UNION"> <!-- 5.3 TODO -->
 			<part name="unk" type="d"/>
 		</packet>
@@ -12111,6 +12152,7 @@
 			<switch id="0">
 				<case id="0">
 					<part name="itemObjId" type="d"/>
+					<part name="unk" type="c"/>
 				</case>
 				<case id="1">
 					<part name="Transformation_Id" type="d"/>
@@ -12151,7 +12193,7 @@
 		<packet id="0x1CD00" name="________________CM_UNK_1CD"> <!-- Assa? -->
 			<part name="objectId" type="d"/>
 		</packet>
-		<packet id="0x1CF00" name="________________CM_ATREIAN_PASSPORT"> <!-- 7.x EU -->
+		<packet id="0x1E4" name="________________CM_ATREIAN_PASSPORT"> <!-- 7.2 EU -->
 			<part name="unk" type="d"/>
 		</packet>
 		<packet id="0x1D2" name="________________CM_STIGMA"> <!-- 7.2 EU -->
@@ -12176,8 +12218,13 @@
 			<part name="itemObjectId" type="d"/>
 		</packet>
 		<packet id="0x216" name="________________CM_LUGBUG_MISSION_REWARD"> <!-- 7.2 TODO -->
+			<part name="questId" type="h"/>
 			<part name="unk" type="h"/>
 			<part name="unk" type="h"/>
+			<part name="unk" type="h"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
 		</packet>
 	</packetfamilly>
 </protocol>
