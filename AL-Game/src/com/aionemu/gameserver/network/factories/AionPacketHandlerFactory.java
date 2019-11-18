@@ -133,7 +133,7 @@ public class AionPacketHandlerFactory {
 
 		// ******************(GROUP)******************* (BUGGY)
 		addPacket(new CM_FIND_GROUP(0x2F8, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_AUTO_GROUP(0x19F, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_AUTO_GROUP(0x174, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_INVITE_TO_GROUP(0x10D, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_GROUP_DISTRIBUTION(0x134, State.IN_GAME)); // 5.4 EU
 		//addPacket(new CM_GROUP_LOOT(0x184, State.IN_GAME)); // 6.x EU
@@ -150,7 +150,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_BROKER_REGISTERED(0x169, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_BUY_BROKER_ITEM(0x16E, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_BROKER_CANCEL_REGISTERED(0x16C, State.IN_GAME)); // 7.2 EU
-		//addPacket(new CM_BROKER_SETTLE_ACCOUNT(0x154, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_BROKER_SETTLE_ACCOUNT(0x172, State.IN_GAME)); // 7.2 EU
 
 		// ******************(PING)******************
 		addPacket(new CM_PING_REQUEST(0x13E, State.IN_GAME)); // 7.x EU
