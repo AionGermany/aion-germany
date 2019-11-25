@@ -74,94 +74,100 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeH(pgs.getStat(StatEnum.ELEMENTAL_RESISTANCE_LIGHT, 0).getCurrent());// [current light resistance] <-- TODO
 		writeH(pgs.getStat(StatEnum.ELEMENTAL_RESISTANCE_DARK, 0).getCurrent());// [current dark resistance] <-- TODO
 		writeH(player.getLevel());// [level]
-		writeH(16386);// [unk 16386]
+		writeH(0);// [unk 16386]
 		writeH(1);// 1
 		writeH(0);// [unk]
 		writeQ(pcd.getExpNeed());// [xp till next lv] <-- OK
 		writeQ(pcd.getExpRecoverable());// [recoverable exp] <-- OK
 		writeQ(pcd.getExpShown());// [current xp] <-- OK
 		writeD(0);// [unk 0]
-		writeD(pgs.getMaxHp().getCurrent());// [max hp] ok
-		writeD(pls.getCurrentHp());// [current hp] ok
-		writeD(pgs.getMaxMp().getCurrent());// [max mana] ok
-		writeD(pls.getCurrentMp());// [current mana] ok
-		writeH(pgs.getMaxDp().getCurrent());// [max dp] ok
-		writeH(pcd.getDp());// [current dp]
+		writeD(pgs.getMaxHp().getCurrent());// [max hp] <-- OK
+		writeD(pls.getCurrentHp());// [current hp] <-- OK
+		writeD(pgs.getMaxMp().getCurrent());// [max mana] <-- OK
+		writeD(pls.getCurrentMp());// [current mana] <-- OK
+		writeH(pgs.getMaxDp().getCurrent());// [max dp] <-- OK
+		writeH(pcd.getDp());// [current dp] <-- OK
 		writeD(pgs.getFlyTime().getCurrent());// [max fly time] <-- OK
 		writeD(pls.getCurrentFp());// [current fly time] <-- OK
-		writeH(player.getFlyState());// [fly state] <-- OK
+		writeH(player.getFlyState());// [fly state] TODO (Naked Char changes Val)
 		writeH(0); // TODO
 		
-		writeD(0);//pgs.getMainHandPAttack().getCurrent());// // TODO base Attack without weapon(right Hand);
+		if (player.getEquipment().getMainHandWeapon() != null) {
+			writeD(0);
+		} else {
+			writeD(19);
+		}
 		writeD(0); // No Off Weapon = 0 Attack When Off weapon equiped also 0
 		writeD(0);
-		writeD(pgs.getMainHandPAttack().getCurrent());
-		writeD(0);
+		if (player.getEquipment().getMainHandWeapon() != null) {
+			int mainHandminDMG = player.getEquipment().getMainHandWeapon().getItemTemplate().getWeaponStats().getMinDamage();
+			int mainHandmaxDMG = player.getEquipment().getMainHandWeapon().getItemTemplate().getWeaponStats().getMaxDamage();
+			int mainHandfinalDamage = mainHandminDMG + mainHandmaxDMG;
+			writeD(mainHandfinalDamage / 2); // TODO add Mboost
+		} else {
+			writeD(0);
+		}
+		if (player.getEquipment().getOffHandWeapon() != null) {
+			int offHandminDMG = player.getEquipment().getOffHandWeapon().getItemTemplate().getWeaponStats().getMinDamage();
+			int offHandmaxDMG = player.getEquipment().getOffHandWeapon().getItemTemplate().getWeaponStats().getMaxDamage();
+			int offHandfinalDamage = offHandminDMG + offHandmaxDMG;
+			writeD(offHandfinalDamage / 2); // TODO add Mboost
+		} else {
+			writeD(0);
+		}
 		writeD(0);	
-//		if (player.getEquipment().getMainHandWeapon() != null && (player.getEquipment().getMainHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getMainHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.KEYBLADE_2H)) {
-//			writeD(pgs.getMAttack().getCurrent());
-//		}
-//		else {
-//			writeD(0);//pgs.getMainHandPAttack().getCurrent());
-//		}
-//		if (player.getEquipment().getOffHandWeaponType() != null && (player.getEquipment().getOffHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getOffHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getOffHandWeaponType() == WeaponType.KEYBLADE_2H)) {
-//			writeD(0);//pgs.getOffHandMAttack().getCurrent());
-//		}
-//		else {
-//			writeD(0);//pgs.getOffHandPAttack().getCurrent());
-//		}
+		writeD(pgs.getMResist().getCurrent());// [current mres] Checked 7.2
+		writeF(pgs.getAttackRange().getCurrent() / 1000);// attack range Checked 7.2
+		writeD(pgs.getAttackSpeed().getCurrent());// attack speed TODO
+		writeD(pgs.getEvasion().getCurrent());// [current evasion] Checked 7.2
+		writeD(pgs.getParry().getCurrent());// [current parry] Checked 7.2
+		writeD(pgs.getBlock().getCurrent());// [current block] Checked 7.2
 		
-		writeD(pgs.getMResist().getCurrent());// [current mres]
-		writeF(pgs.getAttackRange().getCurrent() / 1000);// attack range
-		writeD(pgs.getAttackSpeed().getCurrent());// attack speed
-		writeD(pgs.getEvasion().getCurrent());// [current evasion]
-		writeD(pgs.getParry().getCurrent());// [current parry]
-		writeD(pgs.getBlock().getCurrent());// [current block]
+		writeH(pgs.getMainHandPCritical().getCurrent());// [current main hand crit rate] Checked 7.2
+		writeH(pgs.getOffHandPCritical().getCurrent());// [current off hand crit rate] ???
 		
-		writeH(pgs.getMainHandPCritical().getCurrent());// [current main hand crit rate]
-		writeH(pgs.getOffHandPCritical().getCurrent());// [current off hand crit rate]
 		writeD(pgs.getMainHandPAccuracy().getCurrent());// [current main_hand_accuracy]
-		writeD(pgs.getOffHandPAccuracy().getCurrent());// [current off_hand_accuracy]
+		writeD(pgs.getOffHandPAccuracy().getCurrent());// [current off_hand_accuracy] ??
 		
-		writeH(3);
-		writeH(84);
-		writeD(pgs.getMAccuracy().getCurrent());
-		writeH(pgs.getMCritical().getCurrent());
-		writeH(0);//TODO
-		writeF(pgs.getReverseStat(StatEnum.BOOST_CASTING_TIME, 1000).getCurrent() / 1000f);// [current casting speed] <-- OK
-		writeH(0);
-		writeH(7); //Cleri
+		writeH(257); // <-- TOOD
+		writeH(0); // <-- TOOD
+		
+		writeD(pgs.getMAccuracy().getCurrent()); //Checked 7.2
+		writeH(pgs.getMCritical().getCurrent()); //Checked 7.2
+		writeH(pgs.getMCritical().getCurrent()); //Checked 7.2
+		writeF(pgs.getReverseStat(StatEnum.BOOST_CASTING_TIME, 1000).getCurrent() / 1000f);// [current casting speed] Checked 7.2
+		writeH(0); // ??
+		writeH(17); // ??
 		writeD(pgs.getMainHandPAttack().getCurrent());//Phy Attack realy MainHandpAttack ?
-		writeD(pgs.getPDef().getCurrent());//Phy Def
-		writeD(pgs.getMAttack().getCurrent());//Mag Attack
-		writeD(pgs.getMDef().getCurrent());// Cleri
-		writeB(new byte[16]);
-		writeD(pgs.getMBoost().getCurrent());
-		writeD(0); // TODO add Magie abwehr + Magie Ausgleich
-		writeD(pgs.getStat(StatEnum.HEAL_BOOST, 0).getCurrent());
-		writeH(96); // Cleri
-		writeH(130);// Cleri
-		writeH(0);// Cleri
-		writeH(0);// Cleri
-		
+		writeD(pgs.getPDef().getCurrent());//Phy Def Checked 7.2
+		writeD(pgs.getMAttack().getCurrent());//Mag Attack Checked 7.2
+		writeD(pgs.getMDef().getCurrent());//Mag Def Checked 7.2
+		writeD(0);// TODO Zus. PVP-Angr. Checked 7.2
+		writeD(0);// TODO Zus. PVP-Abwehr Checked 7.2
+		writeD(0);// TODO Zus. PVE-Angr. Checked 7.2
+		writeD(0);// TODO Zus. PVE-Abwehr Checked 7.2
+		writeD(0);// TODO Phys. krit. Schaden Checked 7.2
+		writeD(pgs.getMBoost().getCurrent()); // TODO add Magie Abwehr + Magie Ausgleich (Mag. Angriff)
+		writeD(pgs.getMDef().getCurrent()); // Checked 7.2
+		writeD(pgs.getStat(StatEnum.HEAL_BOOST, 0).getCurrent());// Checked 7.2
+		writeD(90);// ??
 		writeD(player.getInventory().getLimit());
 		writeD(player.getInventory().size());
+		writeD(61); // TODO
 		writeQ(0);
-		writeD(pcd.getPlayerClass().getClassId());// [Player Class id] <-- OK
+		writeD(pcd.getPlayerClass().getClassId());// [Player Class id] Checked 7.2
 		writeH(player.getPlayerSettings().getDisplay()); //<-- OK
 		writeH(player.getPlayerSettings().getDeny()); //<-- OK
 		writeQ(pcd.getCurrentReposteEnergy()); // <-- OK
 		writeQ(pcd.getMaxReposteEnergy()); // <-- OK
-		writeH(0);
-		writeH(0);// Cleri  
+		writeQ(0); // TODO
 		writeF(1.0f);// Default Base Casting Speed
 		writeD(0);
 		writeD(0);
 		writeQ(pcd.getGrowthEnergy());// Energy of Growth (160000000 = 100%)
 		writeQ(pcd.getGoldenStarEnergy());// Golden Star Energy (625000000 = 100%)
 		writeQ(0); //SilverStarEnergy TODO (50000 = 5%, 100000 = 10% etc ) <-- OK
-		writeB(new byte[12]);
-		writeD(1000);
+		writeB(new byte[16]);
 		writeH(pgs.getPower().getBase());// [base power] <-- ok
 		writeH(pgs.getHealth().getBase());// [base health] <-- ok
 		writeH(pgs.getAgility().getBase());// [base agility] <-- ok
@@ -176,52 +182,55 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeH(pgs.getStat(StatEnum.ELEMENTAL_RESISTANCE_DARK, 0).getBase());// [base dark resistance] <-- TODO
 		writeD(pgs.getMaxHp().getBase());// [base hp] <-- ok
 		writeD(pgs.getMaxMp().getBase());// [base mana] <-- ok
-		writeD(pgs.getMaxDp().getBase());// [base dp] <-- ok
-		writeD(pgs.getFlyTime().getBase());// [fly time] <-- ok
-
-		writeD(0);// TODO base Attack without weapon(right Hand);
-		writeD(0);// No Off Weapon = 0 Attack When Off weapon equiped also 0
-		writeD(pgs.getMainHandPAttack().getBase());
-		writeD(0);
-		writeD(0);//pgs.getPDef().getBase());
-		writeD(0);//pgs.getMDef().getBase());
-//		if (player.getEquipment().getMainHandWeapon() != null && (player.getEquipment().getMainHandWeaponType() == WeaponType.BOOK_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.ORB_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.GUN_1H || player.getEquipment().getMainHandWeaponType() == WeaponType.CANNON_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.HARP_2H || player.getEquipment().getMainHandWeaponType() == WeaponType.KEYBLADE_2H)) {
-//			writeD(pgs.getMainHandMAttack().getBase()); // TODO Right Hand
-//			writeD(0); // TODO Left Hand
-//		}
-//		else {
-//			writeD(pgs.getMainHandPAttack().getBase()); // TODO Right Hand
-//			writeD(0);// TODO Left Hand
-//		}
-		
-		writeD(pgs.getMResist().getBase());
-		writeF(pgs.getAttackRange().getBase() / 1000);// [base attack range] <-- OK
-		writeD(pgs.getEvasion().getBase());
-		writeD(pgs.getParry().getBase());
-		writeD(pgs.getBlock().getBase());
-		
-		writeH(pgs.getMainHandPCritical().getBase());// [current main hand crit rate]
-		writeH(pgs.getOffHandPCritical().getBase());// [current off hand crit rate]
-		writeH(pgs.getMCritical().getBase()); // Magic Crit main
-		writeH(0);// Magic Crit off
-		writeD(pgs.getMainHandPAccuracy().getBase());// [current main_hand_accuracy]
-		writeD(pgs.getOffHandPAccuracy().getBase());// [current off_hand_accuracy]
-		
-		writeH(3); //unk value 1 = no Weapon or maybe weaponSlot ?
+		writeH(pgs.getMaxDp().getBase());// [base dp] <-- ok
 		writeH(0);
-		writeD(pgs.getMAccuracy().getBase());
-		writeD(7); // Unk Cleri
-		writeD(pgs.getMainHandPAttack().getBase());//Phy Attack realy MainHandpAttack ?
-		writeD(pgs.getPDef().getBase());//Phy Def
-		writeD(pgs.getMAttack().getBase());//Mag Attack
-		writeD(pgs.getMDef().getBase());//
-		writeD(pgs.getMBoost().getBase()); 
-		writeD(pgs.getMDef().getBase()); // TODO Magic Abwehr (Mdef)+ Ausgleich
-		writeD(pgs.getStat(StatEnum.HEAL_BOOST, 0).getBase());
-		writeH(96); //unk Cleri
-		writeH(50); //unk Cleri
-		writeH(0); //unk Cleri
-		writeH(0); //unk Cleri
+		writeD(pgs.getFlyTime().getBase());// [fly time] <-- ok
+		writeD(0);
+		writeD(0);
+		
+		if (player.getEquipment().getMainHandWeapon() != null) {
+			int mainHandminDMG = player.getEquipment().getMainHandWeapon().getItemTemplate().getWeaponStats().getMinDamage();
+			int mainHandmaxDMG = player.getEquipment().getMainHandWeapon().getItemTemplate().getWeaponStats().getMaxDamage();
+			int mainHandfinalDamage = mainHandminDMG + mainHandmaxDMG;
+			writeD(mainHandfinalDamage / 2); // TODO add Mboost
+		} else {
+			writeD(0);
+		}
+		if (player.getEquipment().getOffHandWeapon() != null) {
+			int offHandminDMG = player.getEquipment().getOffHandWeapon().getItemTemplate().getWeaponStats().getMinDamage();
+			int offHandmaxDMG = player.getEquipment().getOffHandWeapon().getItemTemplate().getWeaponStats().getMaxDamage();
+			int offHandfinalDamage = offHandminDMG + offHandmaxDMG;
+			writeD(offHandfinalDamage / 2); // TODO add Mboost
+		} else {
+			writeD(0);
+		}
+		
+		writeD(0);//pgs.getPDef().getBase()); ???
+		writeD(0);//pgs.getMDef().getBase()); ???
+		writeD(pgs.getMResist().getBase()); // <-- OK
+		writeF(pgs.getAttackRange().getBase() / 1000);// [base attack range] <-- OK
+		writeD(pgs.getEvasion().getBase()); // <-- OK
+		writeD(pgs.getParry().getBase()); // <-- OK
+		writeD(pgs.getBlock().getBase()); // <-- OK
+		writeH(pgs.getMainHandPCritical().getBase());// [current main hand crit rate] <-- OK
+		writeH(pgs.getOffHandPCritical().getBase());// [current off hand crit rate] UNK
+		writeH(pgs.getMCritical().getBase()); // Magic Crit main <-- OK
+		writeH(pgs.getMCritical().getBase());
+		writeD(pgs.getMainHandPAccuracy().getBase());// [current main_hand_accuracy] <-- OK
+		writeD(pgs.getOffHandPAccuracy().getBase());
+		writeD(257);// UNK
+		writeD(pgs.getMAccuracy().getBase()); // <-- OK
+		writeD(17); // UNK
+		writeD(pgs.getMainHandPAttack().getBase()); // <-- OK
+		writeD(pgs.getPDef().getBase());//Phy Def  <-- OK
+		writeD(0);
+		writeD(0);
+		writeD(0);// TODO Phys. krit. Schaden <-- OK
+		writeD(pgs.getMAttack().getBase()); // UNK
+		writeD(0);
+		writeD(pgs.getStat(StatEnum.HEAL_BOOST, 0).getBase()); // <-- OK
+		writeD(90);
+		writeD(0);
 	}
 }
 
