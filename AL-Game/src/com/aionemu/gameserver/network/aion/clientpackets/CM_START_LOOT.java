@@ -46,7 +46,7 @@ public class CM_START_LOOT extends AionClientPacket {
 	 */
 	@Override
 	protected void readImpl() {
-		targetObjectId = readD();// empty
+		targetObjectId = readD();
 		action = readC();
 	}
 
