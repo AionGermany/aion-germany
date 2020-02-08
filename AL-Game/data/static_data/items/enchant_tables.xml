@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-07-24 13:29 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-02-08 13:52 -->
 <enchant_tables>
     <enchant_table id="1" type="WEAPON_TEST">
         <item_enchant level="1">
@@ -67416,6 +67416,170 @@
             <modifiers>
                 <add name="PVE_ATTACK_RATIO" value="75"/>
                 <add name="PVE_DEFEND_RATIO" value="325"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="MAXHP" value="1"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_table>
+    <enchant_table id="609" type="T2_80_EVENT_PVE_1H">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="96"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="192"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="288"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="384"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="480"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="624"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="768"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="912"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1056"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1200"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1440"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1680"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1920"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="2160"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="2400"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="16">
+            <modifiers>
+                <add name="MAXHP" value="1"/>
+            </modifiers>
+        </item_enchant>
+    </enchant_table>
+    <enchant_table id="610" type="T2_80_EVENT_PVE_2H">
+        <item_enchant level="1">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="120"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="2">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="240"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="3">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="360"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="4">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="480"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="5">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="600"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="6">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="780"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="7">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="960"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="8">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1140"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="9">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1320"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="10">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1500"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="11">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="1800"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="12">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="2100"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="13">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="2400"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="14">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="2700"/>
+            </modifiers>
+        </item_enchant>
+        <item_enchant level="15">
+            <modifiers>
+                <add name="PVE_ATTACK_RATIO" value="3000"/>
             </modifiers>
         </item_enchant>
         <item_enchant level="16">
