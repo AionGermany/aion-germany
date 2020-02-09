@@ -21980,6 +21980,16 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
     public static final SM_SYSTEM_MESSAGE STR_MSG_CANT_ENCHANT_EQUIPED = new SM_SYSTEM_MESSAGE(1403358);
 
 	/**
+	 * Katalam
+	 */
+    public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5a_Open_01 = new SM_SYSTEM_MESSAGE(1405283);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5a_Open_02 = new SM_SYSTEM_MESSAGE(1405284);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5_Weapon_Box = new SM_SYSTEM_MESSAGE(1405807);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5_WarBox_01 = new SM_SYSTEM_MESSAGE(1405811);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5_WarBox_02 = new SM_SYSTEM_MESSAGE(1405812);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5b_MSG_01 = new SM_SYSTEM_MESSAGE(1405870);
+
+	/**
 	 * Constructs new <tt>SM_SYSTEM_MESSAGE </tt> packet
 	 *
 	 * @param code

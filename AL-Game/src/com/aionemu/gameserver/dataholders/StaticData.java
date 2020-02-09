@@ -253,6 +253,8 @@ public class StaticData {
 	public ReviveInstanceStartPointsData reviveInstanceStartPoints;
 	@XmlElement(name = "enchant_chances")
 	public ItemEnchantChancesData itemEnchantChancesData;
+	@XmlElement(name = "dynamic_portal")
+	public DynamicPortalData dynamicPortalData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -368,5 +370,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + reviveWorldStartPoints.size() + " Revive World Start Point entrys");
 		DataManager.log.info("[DataManager] Loaded " + reviveInstanceStartPoints.size() + " Revive Instance Start Point entrys");
 		DataManager.log.info("[DataManager] Loaded " + itemEnchantChancesData.size() + " Item Enchant Chances entrys");
+		DataManager.log.info("[DataManager] Loaded " + dynamicPortalData.size() + " Dynamic Portal entrys");
 	}
 }

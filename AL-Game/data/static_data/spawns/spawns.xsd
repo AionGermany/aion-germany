@@ -17,11 +17,7 @@
             <xs:element name="rift_spawn" type="RiftSpawn" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="siege_spawn" type="SiegeSpawn" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="vortex_spawn" type="VortexSpawn" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="beritra_spawn" type="BeritraSpawn" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="landing_spawn" type="LandingSpawn" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="landing_special_spawn" type="LandingSpecialSpawn" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="svs_spawn" type="SvsSpawn" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="rvr_spawn" type="RvrSpawn" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="dynamic_portal_spawn" type="DynamicPortalSpawn" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
         <xs:attribute name="map_id" type="xs:int"/>
     </xs:complexType>
@@ -63,104 +59,22 @@
             <xs:enumeration value="PEACE"/>
         </xs:restriction>
     </xs:simpleType>
-	<xs:complexType name="BeritraSpawn">
+	<xs:complexType name="DynamicPortalSpawn">
 		<xs:sequence>
-			<xs:element name="beritra_type" type="BeritraStateTemplate" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="dynamic_portal_type" type="DynamicPortalStateTemplate" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:int"/>
 	</xs:complexType>
-	<xs:complexType name="BeritraStateTemplate">
+	<xs:complexType name="DynamicPortalStateTemplate">
 		<xs:sequence>
 			<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="bstate" type="BeritraType"/>
+		<xs:attribute name="dstate" type="DynamicPortalType"/>
 	</xs:complexType>
-	<xs:simpleType name="BeritraType">
+	<xs:simpleType name="DynamicPortalType">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="INVASION"/>
-			<xs:enumeration value="PEACE"/>
-		</xs:restriction>
-	</xs:simpleType>
-    <xs:complexType name="LandingSpawn">
-        <xs:sequence>
-            <xs:element name="landing_level" type="LandingStateTemplate" minOccurs="0" maxOccurs="unbounded"/>
-       </xs:sequence>
-        <xs:attribute name="id" type="xs:int"/>
-        <xs:attribute name="name_id" type="xs:int"/>
-    </xs:complexType>
-    <xs:complexType name="LandingStateTemplate">
-        <xs:sequence>
-            <xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
-       </xs:sequence>
-        <xs:attribute name="level" type="LandingLevel"/>
-    </xs:complexType>
-    <xs:simpleType name="LandingLevel">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="LVL1"/>
-            <xs:enumeration value="LVL2"/>
-            <xs:enumeration value="LVL3"/>
-            <xs:enumeration value="LVL4"/>
-            <xs:enumeration value="LVL5"/>
-            <xs:enumeration value="LVL6"/>
-            <xs:enumeration value="LVL7"/>
-            <xs:enumeration value="LVL8"/>
-            <xs:enumeration value="NONE"/>
-        </xs:restriction>
-    </xs:simpleType>
-	<xs:complexType name="LandingSpecialSpawn">
-		<xs:sequence>
-			<xs:element name="landing_special_type" type="LandingSpStateTemplate" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="id" type="xs:int"/>
-	</xs:complexType>
-	<xs:complexType name="LandingSpStateTemplate">
-		<xs:sequence>
-			<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="fstate" type="LandingType"/>
-	</xs:complexType>
-	<xs:simpleType name="LandingType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="SPAWN"/>
-			<xs:enumeration value="DESPAWN"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<!-- Panesterra 4.7 -->
-	<xs:complexType name="SvsSpawn">
-		<xs:sequence>
-			<xs:element name="svs_type" type="SvsStateTemplate" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="id" type="xs:int"/>
-	</xs:complexType>
-	<xs:complexType name="SvsStateTemplate">
-		<xs:sequence>
-			<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="pstate" type="SvsType"/>
-	</xs:complexType>
-	<xs:simpleType name="SvsType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="SVS"/>
-			<xs:enumeration value="PEACE"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<!-- Rvr 4.9 -->
-	<xs:complexType name="RvrSpawn">
-		<xs:sequence>
-			<xs:element name="rvr_type" type="RvrStateTemplate" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="id" type="xs:int"/>
-	</xs:complexType>
-	<xs:complexType name="RvrStateTemplate">
-		<xs:sequence>
-			<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="rstate" type="RvrType"/>
-	</xs:complexType>
-	<xs:simpleType name="RvrType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="RVR"/>
-			<xs:enumeration value="PEACE"/>
+			<xs:enumeration value="OPEN"/>
+			<xs:enumeration value="CLOSED"/>
 		</xs:restriction>
 	</xs:simpleType>
     <xs:complexType name="SiegeSpawn">

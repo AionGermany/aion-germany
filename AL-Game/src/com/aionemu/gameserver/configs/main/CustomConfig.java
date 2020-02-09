@@ -348,5 +348,14 @@ public class CustomConfig {
 
 	// Minions
 	@Property(key = "gameserver.max.minion.list", defaultValue = "200")
-	public static int MAX_MINION_LIST;	
+	public static int MAX_MINION_LIST;
+
+	// Dynamic Portal
+	@Property(key = "gameserver.dynamic.portal.enable", defaultValue = "true")
+	public static boolean DYNAMIC_PORTAL_ENABLED;
+	@Property(key = "gameserver.dynamic.portal.duration", defaultValue = "1")
+	public static int DYNAMIC_PORTAL_DURATION;
+	// Katalam Portal
+	@Property(key = "gameserver.dynamic.portal.katalam.schedule", defaultValue = "0 0 2 ? * *")
+	public static String DYNAMIC_PORTAL_KATALAM_SCHEDULE;
 }

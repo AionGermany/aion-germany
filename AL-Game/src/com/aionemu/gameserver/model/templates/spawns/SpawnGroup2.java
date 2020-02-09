@@ -26,9 +26,11 @@ import org.slf4j.LoggerFactory;
 import com.aionemu.commons.taskmanager.AbstractLockManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.model.Race;
+import com.aionemu.gameserver.model.dynamicportal.DynamicPortalStateType;
 import com.aionemu.gameserver.model.siege.SiegeModType;
 import com.aionemu.gameserver.model.siege.SiegeRace;
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawnTemplate;
+import com.aionemu.gameserver.model.templates.spawns.dynamicportalspawns.DynamicPortalSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawnTemplate;
@@ -104,6 +106,17 @@ public class SpawnGroup2 extends AbstractLockManager {
 			spawnTemplate.setSiegeId(siegeId);
 			spawnTemplate.setSiegeRace(race);
 			spawnTemplate.setSiegeModType(mod);
+			spots.add(spawnTemplate);
+		}
+	}
+
+	public SpawnGroup2(int worldId, Spawn spawn, int id, DynamicPortalStateType type) {
+		this.worldId = worldId;
+		initializing(spawn);
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates()) {
+			DynamicPortalSpawnTemplate spawnTemplate = new DynamicPortalSpawnTemplate(this, template);
+			spawnTemplate.setId(id);
+			spawnTemplate.setDStateType(type);
 			spots.add(spawnTemplate);
 		}
 	}

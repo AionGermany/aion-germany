@@ -144,6 +144,7 @@ public final class DataManager {
 	public static ReviveWorldStartPointsData REVIVE_WORLD_START_POINTS;
 	public static ReviveInstanceStartPointsData REVIVE_INSTANCE_START_POINTS;
 	public static ItemEnchantChancesData ITEM_ENCHANT_CHANCES_DATA;
+	public static DynamicPortalData DYNAMIC_PORTAL_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -273,6 +274,7 @@ public final class DataManager {
 		REVIVE_WORLD_START_POINTS = data.reviveWorldStartPoints;
 		REVIVE_INSTANCE_START_POINTS = data.reviveInstanceStartPoints;
 		ITEM_ENCHANT_CHANCES_DATA = data.itemEnchantChancesData;
+		DYNAMIC_PORTAL_DATA = data.dynamicPortalData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

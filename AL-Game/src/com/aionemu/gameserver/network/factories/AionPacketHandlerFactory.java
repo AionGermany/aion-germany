@@ -98,7 +98,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_EQUIP_ITEM(0xD1, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_TELEPORT_SELECT(0x140, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_LOOT_ITEM(0x14B, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_QUESTIONNAIRE(0x11D, State.IN_GAME)); // 7.2 EU
+		addPacket(new CM_QUESTIONNAIRE(0x13D, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_ATTACK(0xCF, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_PET(0xC1, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_PET_EMOTE(0xC0, State.IN_GAME)); // 7.2 EU

@@ -58,6 +58,7 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnSearchResult;
 import com.aionemu.gameserver.model.templates.spawns.SpawnSpotTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawn;
+import com.aionemu.gameserver.model.templates.spawns.dynamicportalspawns.DynamicPortalSpawn;
 import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawn;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawn;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawn;
@@ -87,9 +88,7 @@ public class SpawnsData2 {
 	private TIntObjectHashMap<List<SpawnGroup2>> riftSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
 	private TIntObjectHashMap<List<SpawnGroup2>> siegeSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
 	private TIntObjectHashMap<List<SpawnGroup2>> vortexSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
-	private TIntObjectHashMap<List<SpawnGroup2>> beritraSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
-	private TIntObjectHashMap<List<SpawnGroup2>> rvrSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
-	private TIntObjectHashMap<List<SpawnGroup2>> svsSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
+	private TIntObjectHashMap<List<SpawnGroup2>> dynamicPortalSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
 	private TIntObjectHashMap<Spawn> customs = new TIntObjectHashMap<Spawn>();
 
 	/**
@@ -213,6 +212,29 @@ public class SpawnsData2 {
 						}
 					}
 				}
+				for (DynamicPortalSpawn DynamicPortalSpawn : spawnMap.getDynamicPortalSpawns()) {
+					int id = DynamicPortalSpawn.getId();
+					if (!dynamicPortalSpawnMaps.containsKey(id)) {
+						dynamicPortalSpawnMaps.put(id, new ArrayList<SpawnGroup2>());
+					}
+					for (DynamicPortalSpawn.DynamicPortalStateTemplate type : DynamicPortalSpawn.getSiegeModTemplates()) {
+						if (type == null || type.getSpawns() == null) {
+							continue;
+						}
+						for (Spawn spawn : type.getSpawns()) {
+							if (spawn.isCustom()) {
+								if (allSpawnMaps.get(mapId).containsKey(spawn.getNpcId())) {
+									allSpawnMaps.get(mapId).remove(spawn.getNpcId());
+								}
+								customs.put(spawn.getNpcId(), spawn);
+							} else if (customs.containsKey(spawn.getNpcId())) {
+								continue;
+							}
+							SpawnGroup2 spawnGroup = new SpawnGroup2(mapId, spawn, id, type.getDynamicPortalType());
+							dynamicPortalSpawnMaps.get(id).add(spawnGroup);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -254,16 +276,8 @@ public class SpawnsData2 {
 		return vortexSpawnMaps.get(id);
 	}
 
-	public List<SpawnGroup2> getBeritraSpawnsByLocId(int id) {
-		return beritraSpawnMaps.get(id);
-	}
-
-	public List<SpawnGroup2> getRvrSpawnsByLocId(int id) {
-		return rvrSpawnMaps.get(id);
-	}
-
-	public List<SpawnGroup2> getSvsSpawnsByLocId(int id) {
-		return svsSpawnMaps.get(id);
+	public List<SpawnGroup2> getDynamicPortalSpawnsByLocId(int id) {
+		return dynamicPortalSpawnMaps.get(id);
 	}
 
 	public synchronized boolean saveSpawn(Player admin, VisibleObject visibleObject, boolean delete) throws IOException {

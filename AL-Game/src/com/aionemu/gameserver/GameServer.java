@@ -76,6 +76,7 @@ import com.aionemu.gameserver.services.ChallengeTaskService;
 import com.aionemu.gameserver.services.DatabaseCleaningService;
 import com.aionemu.gameserver.services.DebugService;
 import com.aionemu.gameserver.services.DisputeLandService;
+import com.aionemu.gameserver.services.DynamicPortalService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FlyRingService;
 import com.aionemu.gameserver.services.GameTimeService;
@@ -275,6 +276,7 @@ public class GameServer {
 		SiegeService.getInstance().initSiegeLocations();
 		VortexService.getInstance().initVortexLocations();
 		RiftService.getInstance().initRiftLocations();
+		DynamicPortalService.getInstance().initDynamicPortalLocations();
 		Util.printSection(" ### Spawns ### ");
 		SpawnEngine.spawnAll();
 		if (EventsConfig.EVENT_ENABLED) {
