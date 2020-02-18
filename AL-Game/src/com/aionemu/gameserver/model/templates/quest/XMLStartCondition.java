@@ -73,7 +73,7 @@ public class XMLStartCondition {
 				}
 				QuestTemplate template = DataManager.QUEST_DATA.getQuestById(questId);
 				if (template != null && template.isRepeatable()) {
-					if (qs.getCompleteCount() != template.getMaxRepeatCount()) {
+					if (template.getMaxRepeatCount() != 255 && qs.getCompleteCount() != template.getMaxRepeatCount()) {
 						return false;
 					}
 				}
@@ -104,7 +104,7 @@ public class XMLStartCondition {
 		if (noacquired != null && noacquired.size() > 0) {
 			for (Integer questId : noacquired) {
 				QuestState qs = qsl.getQuestState(questId);
-				if (qs != null && (qs.getStatus() == QuestStatus.START || qs.getStatus() == QuestStatus.REWARD)) {
+				if (qs != null && (qs.getStatus() == QuestStatus.START || qs.getStatus() == QuestStatus.REWARD || qs.getStatus() == QuestStatus.COMPLETE)) {
 					return false;
 				}
 			}

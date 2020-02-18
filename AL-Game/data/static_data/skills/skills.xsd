@@ -224,6 +224,7 @@
 			<xs:element name="absstatdebuff" type="AbsoluteStatToPCDebuff" minOccurs="0" maxOccurs="1"/>
             <xs:element name="stunalways" type="StunAlwaysEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="targetchange" type="TargetChangeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="silverstar" type="SilverStarEffect" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Properties">
@@ -707,6 +708,13 @@
 	<xs:complexType name="FPHealInstantEffect">
 		<xs:complexContent>
 			<xs:extension base="AbstractHealEffect"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SilverStarEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect">
+				<xs:attribute name="points" type="xs:int"/>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="DamageEffect" abstract="true">

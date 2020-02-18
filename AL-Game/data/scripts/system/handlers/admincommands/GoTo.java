@@ -499,8 +499,20 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("steelrake") || destination.equalsIgnoreCase("Steel Rake Fortress")) {
 			goTo(player, 302520000, 946.12317f, 890.967f, 120.74587f, (byte) 75);
 		}
+		else if (destination.equalsIgnoreCase("stella") || destination.equalsIgnoreCase("Stella Laboratory")) {
+			goTo(player, 302550000, 486.5162f, 253.22096f, 377.68323f, (byte) 60);
+		}
+		else if (destination.equalsIgnoreCase("stella_easy") || destination.equalsIgnoreCase("Stella Laboratory (easy)")) {
+			goTo(player, 302610000, 486.5162f, 253.22096f, 377.68323f, (byte) 60);
+		}
 		else if (destination.equalsIgnoreCase("manor") || destination.equalsIgnoreCase("Beninerk's Manor")) {
+			goTo(player, 302660000, 627.652f, 458.885f, 169.5f, (byte) 0);
+		}
+		else if (destination.equalsIgnoreCase("manor_easy") || destination.equalsIgnoreCase("Beninerk's Manor (easy)")) {
 			goTo(player, 302690000, 627.652f, 458.885f, 169.5f, (byte) 0);
+		}
+		else if (destination.equalsIgnoreCase("minium") || destination.equalsIgnoreCase("Minium Vault")) {
+			goTo(player, 302641000, 527.2168f, 121.103f, 175.90004f, (byte) 30);
 		}
 		else {
 			PacketSendUtility.sendMessage(player, "Could not find the specified destination !");

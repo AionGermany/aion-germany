@@ -361,7 +361,9 @@ public final class PlayerEnterWorldService {
 				if (pcd.isReadyForGoldenStarEnergy()) {
 					pcd.checkGoldenStarPercent();
 				}
-
+				if (pcd.isReadyForSilverStarEnergy()) {
+					pcd.checkSilverStarPercent();
+				}
 				if (pcd.isReadyForReposteEnergy()) {
 					pcd.updateMaxReposte();
 					// more than 4 hours offline = start counting Reposte Energy addition.

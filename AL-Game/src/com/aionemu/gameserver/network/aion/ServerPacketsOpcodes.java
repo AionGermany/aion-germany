@@ -313,6 +313,8 @@ public class ServerPacketsOpcodes {
 		// ----------------------DEAVANION SKILL-------------------------//
 		addPacketOpcode(SM_DAEVANION_SKILL_ENCHANT.class, 0x179, idSet); // 6.5 TODO
 		addPacketOpcode(SM_DAEVANION_SKILL_FUSION.class, 0x17A, idSet); // 6.5 TODO
+		// ------------------DIMENSIONALHOURGLASS---------------------//
+		addPacketOpcode(SM_DIMENSIONAL_HOURGLASS.class, 0x185, idSet); // 7.x
 		// --------------------UNKNOWN PACKETS-----------------------//
 		addPacketOpcode(SM_UNK_60.class, 0x60, idSet);
 		addPacketOpcode(SM_UNK_106.class, 0x106, idSet);

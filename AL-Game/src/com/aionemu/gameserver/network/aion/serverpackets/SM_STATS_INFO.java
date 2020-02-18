@@ -166,7 +166,7 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeD(0);
 		writeQ(pcd.getGrowthEnergy());// Energy of Growth (160000000 = 100%)
 		writeQ(pcd.getGoldenStarEnergy());// Golden Star Energy (625000000 = 100%)
-		writeQ(0); //SilverStarEnergy TODO (50000 = 5%, 100000 = 10% etc ) <-- OK
+		writeQ(pcd.getSilverStarEnergy()); //SilverStarEnergy TODO (50000 = 5%, 100000 = 10% etc ) <-- OK
 		writeB(new byte[16]);
 		writeH(pgs.getPower().getBase());// [base power] <-- ok
 		writeH(pgs.getHealth().getBase());// [base health] <-- ok

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -475,6 +475,22 @@
 					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_d -->
 					<spawn npc_id="837654" respawn_time="295">
 						<spot x="2892.1" y="2517.1" z="309.9874" h="81"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <!-- TODO - Perma Event EU and NA -->
+        <event name="Windstream" start="2020-01-01T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+            <quests>
+                <maintainable>63405;63410;63415;63420;63425;63430;63435;63440;63445;63450;63455;73405;73410;73415;73420;73425;73430;73435;73440;73445;73450;73455</maintainable>
+            </quests>
+            <spawns>
+                <!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Risiel ||| NewServer_Event_NPC -->
+					<spawn npc_id="820475" respawn_time="295">
+						<spot x="2647.98" y="480.46" z="323.40546" h="0"/>
+						<spot x="2897.3" y="2474.4" z="313.829" h="20"/>
 					</spawn>
                 </spawn_map>
             </spawns>

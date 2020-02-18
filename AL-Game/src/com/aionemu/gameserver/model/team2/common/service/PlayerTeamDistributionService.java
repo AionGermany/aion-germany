@@ -145,6 +145,7 @@ public class PlayerTeamDistributionService {
 				rewardAp *= StatFunctions.calculatePvEApGained(member, owner);
 				int ap = (int) rewardAp / filteredStats.players.size();
 				if (ap >= 1) {
+					member.getCommonData().addSilverStarEnergy(1500); // 0.15%
 					AbyssPointsService.addAp(member, owner, ap);
 				}
 			}

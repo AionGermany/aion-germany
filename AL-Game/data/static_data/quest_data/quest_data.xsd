@@ -93,6 +93,7 @@
         <xs:attribute name="dp" type="xs:int"/>
         <xs:attribute name="reward_abyss_point" type="xs:int"/>
         <xs:attribute name="reward_glory_point" type="xs:int"/>
+        <xs:attribute name="reward_abyss_op_point" type="xs:int"/>
         <xs:attribute name="expBoost" type="xs:int"/>
         <xs:attribute name="reward_creativity_point" type="xs:int"/>
         <xs:attribute name="title" type="xs:int"/>
@@ -180,6 +181,7 @@
             <xs:enumeration value="LEGION"/>
             <xs:enumeration value="PRIMARY"/>
             <xs:enumeration value="TUTORIAL"/>
+            <xs:enumeration value="GUIDE"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="QuestExtraCategory">

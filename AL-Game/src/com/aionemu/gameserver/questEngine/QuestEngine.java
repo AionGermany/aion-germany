@@ -1197,10 +1197,12 @@ public class QuestEngine implements GameEngine {
 							questsToRepeat.add(qs.getQuestId());
 							QuestTemplate template = DataManager.QUEST_DATA.getQuestById(qs.getQuestId());
 							if (template.isDaily()) {
+								player.getController().updateZone();
 								player.getController().updateNearbyQuests();
 								PacketSendUtility.sendPacket(player, dailyMessage);
 							}
 							else if (template.isWeekly()) {
+								player.getController().updateZone();
 								player.getController().updateNearbyQuests();
 								PacketSendUtility.sendPacket(player, weeklyMessage);
 							}

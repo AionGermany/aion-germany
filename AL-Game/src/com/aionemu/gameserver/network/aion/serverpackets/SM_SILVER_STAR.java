@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -28,7 +29,8 @@ public class SM_SILVER_STAR extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeD(50000); // Percent (50000 = 5%, 100000 = 10%)
-		writeD(0); // TODO
+		Player player = con.getActivePlayer();
+		// Percent (50000 = 5%, 100000 = 10%)
+		writeQ(player.getCommonData().getSilverStarEnergy());
 	}
 }

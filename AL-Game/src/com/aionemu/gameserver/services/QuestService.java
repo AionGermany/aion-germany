@@ -448,6 +448,7 @@ public final class QuestService {
 			PacketSendUtility.sendMessage(player, "You're GM! So system won't apply countNextRepeatTime()");
 		}
 		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(id, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		QuestEngine.getInstance().onLvlUp(env);
 		if (template.getNpcFactionId() != 0) {
@@ -706,7 +707,7 @@ public final class QuestService {
 		if (!checkStartConditions(env, true)) {
 			return false;
 		}
-		if ((player.getLevel() < template.getMinlevelPermitted()) && (template.getMinlevelPermitted() != 99)) {
+		if ((player.getLevel() < template.getMinlevelPermitted()) && (template.getMinlevelPermitted() != 999)) {
 			return false;
 		}
 
@@ -730,6 +731,7 @@ public final class QuestService {
 		}
 
 		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(id, status.value(), step));
+		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		return true;
 	}
@@ -879,6 +881,7 @@ public final class QuestService {
 				qs.setQuestVar(0);
 			}
 		}
+		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		return true;
 	}
@@ -903,6 +906,7 @@ public final class QuestService {
 		qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 		qs.setStatus(QuestStatus.REWARD);
 		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(id, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		return true;
 	}
@@ -1294,6 +1298,7 @@ public final class QuestService {
 		}
 
 		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(questId));
+		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		return true;
 	}
