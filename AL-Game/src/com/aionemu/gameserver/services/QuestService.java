@@ -117,10 +117,12 @@ public final class QuestService {
 		QuestState qs = player.getQuestStateList().getQuestState(id);
 		Rewards rewards = new Rewards();
 		Rewards extendedRewards = new Rewards();
-		if (qs == null || qs.getStatus() != QuestStatus.REWARD) {
+		QuestTemplate template = questsData.getQuestById(id);
+		
+		if (qs == null || template.getCategory() != QuestCategory.TUTORIAL &&  qs.getStatus() != QuestStatus.REWARD) {
 			return false;
 		}
-		QuestTemplate template = questsData.getQuestById(id);
+		
 		if (template.getCategory() == QuestCategory.MISSION && qs.getCompleteCount() != 0) {
 			return false; // prevent repeatable reward because of wrong quest handling
 		}
@@ -895,17 +897,25 @@ public final class QuestService {
 		return (qsl.getNormalQuestListSize() + 1) <= CustomConfig.BASIC_QUEST_SIZE_LIMIT;
 	}
 
-	public boolean completeQuest(QuestEnv env) {
+	public static boolean completeQuest(QuestEnv env) {
 		Player player = env.getPlayer();
 		int id = env.getQuestId();
 		QuestState qs = player.getQuestStateList().getQuestState(id);
+		QuestTemplate template = DataManager.QUEST_DATA.getQuestById(env.getQuestId());
+		
 		if (qs == null || qs.getStatus() != QuestStatus.START) {
 			return false;
 		}
 
-		qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-		qs.setStatus(QuestStatus.REWARD);
-		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(id, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+		if (template.getCategory() == QuestCategory.TUTORIAL) {
+			qs.setStatus(QuestStatus.COMPLETE);
+			PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(id, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+		} else {
+			qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
+			qs.setStatus(QuestStatus.REWARD);
+			PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(id, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+		}
+
 		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		return true;
