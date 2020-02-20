@@ -52,6 +52,7 @@ public class CM_DELETE_QUEST extends AionClientPacket {
 		if (!QuestService.abandonQuest(player, questId)) {
 			return;
 		}
+		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-07-28 11:15 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-02-20 22:07 -->
 <zones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
     <!-- Sanctum -->
     <zone mapid="110010000" name="LC1_SENSORYAREA_Q10530A_110010000" area_type="SPHERE" zone_type="SUB">
@@ -487,7 +487,17 @@
     <zone mapid="220140000" name="IDTEMPLE_SENSORYAREA_Q30103_220140000" area_type="SPHERE" zone_type="SUB">
         <sphere x="2260.9106" y="1732.5909" z="310.09164" r="10.0"/>
     </zone>
-    <!-- Lower_udas_temple -->
+    <!-- Nochsana_training_camp -->
+    <zone mapid="300030000" name="IDAB1_MINICASTLE_SENSORYAREA_Q60622_300030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="332.05103" y="279.90955" z="386.81781" r="10.0"/>
+    </zone>
+    <zone mapid="300030000" name="IDAB1_MINICASTLE_SENSORYAREA_Q60623_300030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="332.05103" y="279.90955" z="388.26028" r="10.0"/>
+    </zone>
+    <zone mapid="300030000" name="IDAB1_MINICASTLE_SENSORYAREA_Q60624_300030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="332.05103" y="279.90955" z="389.78427" r="10.0"/>
+    </zone>
+    <!-- [campaign]_lower_udas_temple -->
     <zone mapid="300160000" name="IDTEMPLE_QUESTAREA_Q62113_300160000" area_type="SPHERE" zone_type="SUB">
         <sphere x="450.30585" y="1371.1392" z="192.0" r="10.0"/>
     </zone>
@@ -501,18 +511,18 @@
     <zone mapid="300170000" name="IDCATACOME_SENSORYAREA_Q20025_300170000" area_type="SPHERE" zone_type="SUB">
         <sphere x="1355.4243" y="119.87096" z="253.0" r="10.0"/>
     </zone>
-    <!-- Talocs_hollow -->
+    <!-- [campaign]_talocs_hollow -->
     <zone mapid="300190000" name="IDELIM_QUESTAREA_Q62001_300190000" area_type="SPHERE" zone_type="SUB">
         <sphere x="140.16002" y="534.86896" z="1148.9113" r="10.0"/>
     </zone>
     <zone mapid="300190000" name="IDELIM_QUESTAREA_Q62003_300190000" area_type="SPHERE" zone_type="SUB">
         <sphere x="139.7874" y="531.2522" z="1148.9113" r="10.0"/>
     </zone>
-    <!-- Haramel -->
+    <!-- [campaign]_haramel -->
     <zone mapid="300200000" name="IDNOVICE_SENSORYAREA_Q60009A_300200000" area_type="SPHERE" zone_type="SUB">
         <sphere x="223.0" y="159.0" z="140.13179" r="10.0"/>
     </zone>
-    <!-- Kromedes_trial -->
+    <!-- [campaign]_nightmare -->
     <zone mapid="300230000" name="IDCROMEDE_QUESTAREA_Q61710_300230000" area_type="SPHERE" zone_type="SUB">
         <sphere x="648.45074" y="775.3515" z="219.20288" r="10.0"/>
     </zone>
@@ -576,11 +586,11 @@
     <zone mapid="300510000" name="IDTIAMAT_SENSORYAREA_Q30759A_300510000" area_type="SPHERE" zone_type="SUB">
         <sphere x="1053.1968" y="1069.891" z="792.14795" r="10.0"/>
     </zone>
-    <!-- Makarna_of_Bitterness -->
+    <!-- Makarna_of_bitterness -->
     <zone mapid="301390000" name="IDSEAL_SENSORYAREA_Q50150_301390000" area_type="SPHERE" zone_type="SUB">
         <sphere x="362.94141" y="182.02713" z="1687.8359" r="10.0"/>
     </zone>
-    <!-- Makarna -->
+    <!-- [campaign]_makarna -->
     <zone mapid="301520000" name="IDSEAL_Q_QUESTAREA_Q62310_301520000" area_type="SPHERE" zone_type="SUB">
         <sphere x="438.95306" y="182.73611" z="1686.0052" r="10.0"/>
     </zone>
@@ -666,7 +676,7 @@
     <zone mapid="302340000" name="IDAB1_ERE_SENSORYAREA_Q16007A_302340000" area_type="SPHERE" zone_type="SUB">
         <sphere x="1321.2894" y="1362.5541" z="496.26422" r="10.0"/>
     </zone>
-    <!-- Narakkalli_Bonus -->
+    <!-- [internet_café]_narakkalli_bonus -->
     <zone mapid="302341000" name="IDAB1_ERE_SENSORYAREA_Q10011A_302341000" area_type="SPHERE" zone_type="SUB">
         <sphere x="238.51854" y="748.09528" z="426.45322" r="10.0"/>
     </zone>
@@ -695,7 +705,7 @@
     <zone mapid="302350000" name="IDETERNITY_WAR_SENSORYAREA_Q13977A_B_302350000" area_type="SPHERE" zone_type="SUB">
         <sphere x="213.16565" y="460.29169" z="310.34097" r="10.0"/>
     </zone>
-    <!-- Prometuns_workshop -->
+    <!-- Prometuns_workshop_normal -->
     <zone mapid="302430000" name="IDF7_WEAPON_SENSORYAREA_Q13980A_302430000" area_type="SPHERE" zone_type="SUB">
         <sphere x="881.74805" y="771.03229" z="758.52887" r="10.0"/>
     </zone>
@@ -879,6 +889,42 @@
     <zone mapid="302630000" name="IDF7_WEAPON_SENSORYAREA_Q13980B_302630000" area_type="SPHERE" zone_type="SUB">
         <sphere x="1002.1022" y="820.31616" z="699.64276" r="10.0"/>
     </zone>
+    <!-- Beninerks_manor_normal -->
+    <zone mapid="302660000" name="IDF8_HOUSE_SENSORYAREA_Q62830A_302660000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="636.28015" y="460.99356" z="170.10915" r="10.0"/>
+    </zone>
+    <zone mapid="302660000" name="IDF8_HOUSE_SENSORYAREA_Q62830B_302660000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="636.20074" y="462.80896" z="170.10915" r="10.0"/>
+    </zone>
+    <zone mapid="302660000" name="IDF8_HOUSE_SENSORYAREA_Q62830C_302660000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="614.51788" y="464.07336" z="170.10915" r="10.0"/>
+    </zone>
+    <zone mapid="302660000" name="IDF8_HOUSE_SENSORYAREA_Q62830D_302660000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="549.6944" y="685.0874" z="187.87329" r="10.0"/>
+    </zone>
+    <!-- Shadow_of_suffering -->
+    <zone mapid="302670000" name="IDF8_MISSION04_SENSORYAREA_Q60606A_302670000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="585.03064" y="662.85779" z="354.80194" r="10.0"/>
+    </zone>
+    <zone mapid="302670000" name="IDF8_MISSION04_SENSORYAREA_Q60606B_302670000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="573.63861" y="596.85144" z="354.80194" r="10.0"/>
+    </zone>
+    <zone mapid="302670000" name="IDF8_MISSION04_SENSORYAREA_Q60606C_302670000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="505.5372" y="539.01831" z="352.74561" r="10.0"/>
+    </zone>
+    <!-- Beninerks_manor_easy -->
+    <zone mapid="302690000" name="IDF8_HOUSE_SENSORYAREA_Q62830A_302690000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="636.28015" y="460.99356" z="170.10915" r="10.0"/>
+    </zone>
+    <zone mapid="302690000" name="IDF8_HOUSE_SENSORYAREA_Q62830B_302690000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="636.20074" y="462.80896" z="170.10915" r="10.0"/>
+    </zone>
+    <zone mapid="302690000" name="IDF8_HOUSE_SENSORYAREA_Q62830C_302690000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="614.51788" y="464.07336" z="170.10915" r="10.0"/>
+    </zone>
+    <zone mapid="302690000" name="IDF8_HOUSE_SENSORYAREA_Q62830D_302690000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="549.6944" y="685.0874" z="187.87329" r="10.0"/>
+    </zone>
     <!-- [campaign]_aetherogenetics_lab -->
     <zone mapid="310050000" name="IDLF3LP_QUESTAREA_Q61700_310050000" area_type="SPHERE" zone_type="SUB">
         <sphere x="190.56833" y="313.75281" z="136.15514" r="10.0"/>
@@ -889,7 +935,7 @@
     <zone mapid="310050000" name="IDLF3LP_SENSORYAREA_Q61605A_310050000" area_type="SPHERE" zone_type="SUB">
         <sphere x="256.23358" y="315.58978" z="128.8741" r="10.0"/>
     </zone>
-    <!-- Indratu_fortress -->
+    <!-- [campaign]_indratu_fortress -->
     <zone mapid="310090000" name="IDINDRATOO_QUESTAREA_Q61722_310090000" area_type="SPHERE" zone_type="SUB">
         <sphere x="506.58539" y="495.81549" z="969.84003" r="10.0"/>
     </zone>
@@ -900,11 +946,11 @@
     <zone mapid="320100000" name="IDDF2_DFLAME_SENSORYAREA_Q50150_320100000" area_type="SPHERE" zone_type="SUB">
         <sphere x="148.70219" y="452.40631" z="143.83913" r="10.0"/>
     </zone>
-    <!-- Alquimia_research_center -->
+    <!-- [campaign]_alquimia_research_centre -->
     <zone mapid="320110000" name="IDDF3_LP_SENSORYAREA_Q71606A_320110000" area_type="SPHERE" zone_type="SUB">
         <sphere x="285.63147" y="501.27988" z="213.56883" r="10.0"/>
     </zone>
-    <!-- Bakarma_fortress -->
+    <!-- [campaign]_bakarma_fortress -->
     <zone mapid="320170000" name="IDDF3_CASTLE_VAKARMA_SENSORYAREA_Q70206_320170000" area_type="SPHERE" zone_type="SUB">
         <sphere x="503.4823" y="491.5184" z="969.84003" r="10.0"/>
     </zone>
@@ -945,6 +991,9 @@
         <sphere x="145.6181" y="768.25568" z="1207.7681" r="10.0"/>
     </zone>
     <!-- Lakrum -->
+    <zone mapid="600200000" name="LDF7_ITEMUSEAREA_Q60505A_600200000" area_type="SPHERE" zone_type="ITEM_USE">
+        <sphere x="247.22339" y="1393.7094" z="320.93915" r="10.0"/>
+    </zone>
     <zone mapid="600200000" name="LDF7_LDF7_SENSORYAREA_Q60502A_600200000" area_type="SPHERE" zone_type="SUB">
         <sphere x="1479.423" y="523.08844" z="204.09232" r="10.0"/>
     </zone>
@@ -1021,6 +1070,24 @@
     <zone mapid="600300000" name="LDF8_ITEMUSEAREA_Q73010B_600300000" area_type="SPHERE" zone_type="ITEM_USE">
         <sphere x="2394.5842" y="2880.0676" z="641.62781" r="10.0"/>
     </zone>
+    <zone mapid="600300000" name="LDF8_QUESTAREA_Q62950_600300000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2288.8298" y="2102.8179" z="739.72516" r="10.0"/>
+    </zone>
+    <zone mapid="600300000" name="LDF8_QUESTAREA_Q62980_A_600300000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2813.7361" y="2846.0798" z="649.32898" r="10.0"/>
+    </zone>
+    <zone mapid="600300000" name="LDF8_QUESTAREA_Q62980_B_600300000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2896.3123" y="164.56589" z="733.90082" r="10.0"/>
+    </zone>
+    <zone mapid="600300000" name="LDF8_QUESTAREA_Q72950_600300000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2288.8298" y="2102.8179" z="741.896" r="10.0"/>
+    </zone>
+    <zone mapid="600300000" name="LDF8_QUESTAREA_Q72980_A_600300000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2823.3237" y="2846.1626" z="649.32898" r="10.0"/>
+    </zone>
+    <zone mapid="600300000" name="LDF8_QUESTAREA_Q72980_B_600300000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2902.3989" y="154.92813" z="733.90082" r="10.0"/>
+    </zone>
     <zone mapid="600300000" name="LDF8_SENSORYAREA_Q63015A_600300000" area_type="SPHERE" zone_type="SUB">
         <sphere x="402.80106" y="1482.5826" z="788.91309" r="10.0"/>
     </zone>
@@ -1029,5 +1096,226 @@
     </zone>
     <zone mapid="600300000" name="LDF8_SENSORYAREA_Q63015C_600300000" area_type="SPHERE" zone_type="SUB">
         <sphere x="2936.5583" y="1494.5251" z="710.14038" r="10.0"/>
+    </zone>
+    <!-- Red_katalam_north -->
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63360A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1108.7538" y="498.16019" z="197.10359" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63360A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1311.6505" y="152.1037" z="197.10359" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63360A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="249.0" y="835.0" z="211.64651" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63361A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2376.7393" y="224.70581" z="222.85136" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63361A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2740.6133" y="483.71207" z="289.17511" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63361A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2798.6968" y="814.0639" z="313.68207" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63362A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1353.6919" y="2948.6245" z="218.22243" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63362A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="148.22095" y="2207.3042" z="193.1698" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63362A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="866.13458" y="2765.5947" z="193.1698" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63363A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2164.7808" y="2868.8889" z="319.91159" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63363A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2726.8005" y="2787.0288" z="299.16476" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63363A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2754.332" y="2268.2805" z="291.42731" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63364A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1354.1143" y="1333.0934" z="119.85631" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63364A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="830.6488" y="1480.5765" z="106.69744" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63364A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="903.50964" y="949.29297" z="199.62396" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63365A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1320.5662" y="2240.2205" z="89.69873" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63365A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1354.1143" y="1333.0934" z="124.38184" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63365A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="966.18384" y="2273.2766" z="89.69873" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63366A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1567.0275" y="1477.8495" z="150.47359" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63366A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1670.8101" y="1081.2651" z="200.34651" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63366A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1905.2408" y="1171.5823" z="294.36292" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63366A_D_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2417.5718" y="767.99121" z="210.25981" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63367A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1546.4309" y="2235.8979" z="197.27312" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63367A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1567.0275" y="1477.8495" z="154.96974" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63367A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2214.7871" y="2474.5295" z="175.31387" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63367A_D_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2485.9944" y="1831.9324" z="349.50137" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63368A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="387.46387" y="1596.5383" z="284.59717" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63369A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="469.60883" y="973.58344" z="211.64651" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63370A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2911.1213" y="649.6123" z="279.72256" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63371A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="328.56812" y="2132.8203" z="208.9147" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63372A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2888.7212" y="2110.6348" z="278.2804" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63373A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1045.0518" y="1456.0979" z="105.9656" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63375A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="195.51331" y="1587.6427" z="249.77225" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63377A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2666.7891" y="885.86139" z="299.60803" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q63378A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1673.8564" y="2856.6099" z="261.58185" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73360A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1311.6505" y="152.1037" z="199.12004" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73360A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="249.0" y="835.0" z="213.66296" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73361A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2376.7393" y="224.70581" z="224.86778" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73361A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2740.6133" y="483.71207" z="291.19153" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73361A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2798.6968" y="814.0639" z="315.27176" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73362A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1353.6919" y="2948.6245" z="219.81212" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73362A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="148.22095" y="2207.3042" z="194.75949" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73362A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="866.13458" y="2765.5947" z="194.75949" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73363A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2164.7808" y="2868.8889" z="321.50128" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73363A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2726.8005" y="2787.0288" z="300.75446" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73363A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2754.332" y="2268.2805" z="293.017" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73364A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1354.1143" y="1333.0934" z="121.446" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73364A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="830.6488" y="1480.5765" z="108.28713" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73364A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="903.50964" y="949.29297" z="201.21365" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73365A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1320.5662" y="2240.2205" z="91.288422" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73365A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1354.1143" y="1333.0934" z="125.97153" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73366A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1567.0275" y="1477.8495" z="152.06325" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73366A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1670.8101" y="1081.2651" z="201.93617" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73366A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1905.2408" y="1171.5823" z="295.95258" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73366A_D_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2417.5718" y="767.99121" z="211.8495" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73367A_A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1546.4309" y="2235.8979" z="198.86278" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73367A_B_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1567.0275" y="1477.8495" z="156.5594" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73367A_C_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2214.7871" y="2474.5295" z="176.90353" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73367A_D_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2485.9944" y="1831.9324" z="351.09103" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73368A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="387.46387" y="1596.5383" z="286.18683" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73369A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="469.60883" y="973.58344" z="214.74927" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73370A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2911.1213" y="649.6123" z="282.42468" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73371A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="328.56812" y="2132.8203" z="211.43216" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73372A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2888.7212" y="2110.6348" z="282.42508" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73373A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1045.0518" y="1456.0979" z="110.74243" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73374A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1958.7197" y="1955.5365" z="332.90833" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73375A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="195.51331" y="1587.6427" z="252.92546" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73376A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2887.5537" y="1792.0217" z="266.16498" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73377A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2666.7891" y="885.86139" z="301.92331" r="10.0"/>
+    </zone>
+    <zone mapid="800030000" name="LDF5A_SENSORYAREA_Q73378A_800030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1764.0538" y="547.37231" z="176.11482" r="10.0"/>
+    </zone>
+    <!-- South_katalam -->
+    <zone mapid="800040000" name="LDF5B_SENSORYAREA_Q13048A_800040000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2660.2449" y="1036.7792" z="85.450447" r="10.0"/>
+    </zone>
+    <zone mapid="800040000" name="LDF5B_SENSORYAREA_Q13048B_800040000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="2430.8479" y="1040.0709" z="85.268738" r="10.0"/>
+    </zone>
+    <zone mapid="800040000" name="LDF5B_SENSORYAREA_Q13337_800040000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1373.2601" y="1960.4716" z="200.98836" r="10.0"/>
     </zone>
 </zones>

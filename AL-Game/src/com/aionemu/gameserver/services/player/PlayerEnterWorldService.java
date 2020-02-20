@@ -951,6 +951,9 @@ public final class PlayerEnterWorldService {
 
 			// EnchantService.getGloryShield(player);
 			LunaShopService.getInstance().onLogin(player);
+
+			player.getController().updateZone();
+			player.getController().updateNearbyQuests();
 		}
 		else
 			log.info("[DEBUG] enter world" + objectId + ", Player: " + player);

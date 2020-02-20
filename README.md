@@ -1,7 +1,7 @@
 ![](http://falke34.bplaced.net/Splash01.png)
 
 # Aion EU Emulator
-### Version: 7.0
+### Version: 7.2
 
 **Client:** [Gameforge](https://de.aion.gameforge.com/website/download/) **+** [Launcher](https://github.com/AionGermany/aion-germany/blob/master/AL-Tools/AionLauncherEU_5.x.rar)
 
