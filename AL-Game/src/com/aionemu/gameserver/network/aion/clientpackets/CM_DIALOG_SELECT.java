@@ -50,6 +50,8 @@ public class CM_DIALOG_SELECT extends AionClientPacket {
 	@SuppressWarnings("unused")
 	private int lastPage;
 	private int questId;
+	private int unk;
+	
 	@SuppressWarnings("unused")
 	private static final Logger log = LoggerFactory.getLogger(CM_DIALOG_SELECT.class);
 
@@ -71,7 +73,7 @@ public class CM_DIALOG_SELECT extends AionClientPacket {
 		dialogId = readH(); // total no of choice
 		//System.out.println("DialogId: " + dialogId);
 		extendedRewardIndex = readH();
-		readH();//new 5.6 (1)
+		unk = readH();//new 5.6 (1)
 		lastPage = readH();
 		questId = readD();
 		readH();// unk 4.7.0.7
@@ -116,7 +118,7 @@ public class CM_DIALOG_SELECT extends AionClientPacket {
 
 		if (obj != null && obj instanceof Creature) {
 			Creature creature = (Creature) obj;
-			creature.getController().onDialogSelect(dialogId, player, questId, extendedRewardIndex);
+			creature.getController().onDialogSelect(dialogId, player, questId, extendedRewardIndex, unk);
 		}
 		// log.info("id: "+targetObjectId+" dialogId: " + dialogId +" unk1: " + unk1 + " questId: "+questId);
 	}

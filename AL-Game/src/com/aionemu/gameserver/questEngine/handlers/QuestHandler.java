@@ -1192,7 +1192,6 @@ public abstract class QuestHandler extends AbstractQuestHandler implements Const
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(questId, qs.getStatus(), qs.getQuestVars().getQuestVars()));
 		if (qs.getStatus() == QuestStatus.COMPLETE || qs.getStatus() == QuestStatus.REWARD) {
-			QuestEngine.getInstance().onLvlUp(env);
 			player.getController().updateZone();
 			player.getController().updateNearbyQuests();
 		}

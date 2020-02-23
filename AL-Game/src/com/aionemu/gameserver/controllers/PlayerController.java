@@ -794,7 +794,7 @@ public class PlayerController extends CreatureController<Player> {
 	}
 
 	@Override
-	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex) {
+	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex, int unk) {
 		switch (dialogId) {
 			case 2:
 				PacketSendUtility.sendPacket(player, new SM_PRIVATE_STORE(getOwner().getStore(), player));

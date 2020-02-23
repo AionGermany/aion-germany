@@ -359,7 +359,7 @@ public class NpcController extends CreatureController<Npc> {
 	}
 
 	@Override
-	public void onDialogSelect(int dialogId, final Player player, int questId, int extendedRewardIndex) {
+	public void onDialogSelect(int dialogId, final Player player, int questId, int extendedRewardIndex, int unk) {
 		QuestEnv env = new QuestEnv(getOwner(), player, questId, dialogId);
 		if (!MathUtil.isInRange(getOwner(), player, getOwner().getObjectTemplate().getTalkDistance() + 2) && !QuestEngine.getInstance().onDialog(env)) {
 			return;

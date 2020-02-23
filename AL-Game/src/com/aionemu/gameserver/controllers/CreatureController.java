@@ -431,7 +431,7 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	 * @param questId
 	 * @param extendedRewardIndex
 	 */
-	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex) {
+	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex, int unk) {
 		// TODO Auto-generated method stub
 	}
 
