@@ -81,7 +81,8 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 		FPHEAL(133),
 		REGULARHEAL(170),
 		REGULAR(189),
-		ATTACK(203); // Old 195 (5.4) 196 (5.6) 197 (5.8) 198 (6.5) 203(7.x)
+		LEECH_HP(200), // new 7.x - Painter Life Binding, Time Holding and Band of Rage
+		ATTACK(204); // Old 195 (5.4) 196 (5.6) 197 (5.8) 198 (6.5) 204(7.x)
 
 		private int value;
 

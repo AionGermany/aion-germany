@@ -80,8 +80,9 @@
 		<enum val="45" display="Ereshkigal Experts Cube Bronze"/><!-- checked -->
 	</multivalue>
 	<multivalue name="race">
-		<enum display="Elyos"/>
-		<enum display="Asmodian"/>
+		<enum val="0" display="Elyos"/>
+		<enum val="1" display="Asmodian"/>
+		<enum val="2" display="Balaur"/>
 	</multivalue>
 	<multivalue name="gender">
 		<enum display="Male"/>
@@ -240,18 +241,21 @@
 	</multivalue>
 	<multivalue name="attackType">
 		<enum val="3" display="Natural HP"/>
-		<enum val="4" display="Cost HP"/>
+		<enum val="4" display="Used HP"/>
 		<enum val="5" display="Regular"/>
+		<enum val="6" display="Absorbed HP"/>
 		<enum val="7" display="HP"/>
+		<enum val="8" display="Protect Damage"/>
 		<enum val="10" display="Delay Damage"/>
 		<enum val="17" display="Fall Damage"/>
 		<enum val="19" display="Healed HP"/>
-		<enum display="Absorbed MP"/>
-		<enum display="MP"/>
-		<enum display="Natural MP"/>
-		<enum display="Flight Ring"/>
-		<enum display="FP"/>
-		<enum display="Natural FP"/>
+		<enum val="20" display="Absorbed MP"/>
+		<enum val="21" display="MP"/>
+		<enum val="22" display="Natural MP"/>
+		<enum val="23" display="Attack"/>
+		<enum val="24" display="FP Rings"/>
+		<enum val="25" display="FP"/>
+		<enum val="27" display="Natural FP"/>
 	</multivalue>
 	<multivalue name="shieldType">
 		<enum display="No Shield"/>
@@ -288,6 +292,23 @@
 		<enum val="64" display="Parry"/>
 		<enum val="128" display="Dodge"/>
 		<enum val="256" display="Resist"/>
+	</multivalue>
+	<multivalue name="logIds">
+		<enum val="1" display="Spell ATK"/>
+		<enum val="3" display="Heal"/>
+		<enum val="4" display="MP Heal"/>
+		<enum val="23" display="Skill ATK Drain Instant"/>
+		<enum val="24" display="Spell ATK Drain Instant"/>
+		<enum val="25" display="Poison"/>
+		<enum val="26" display="Bleed"/>
+		<enum val="93" display="Proc ATK Instant"/>
+		<enum val="97" display="Delayed Spell ATK Instand"/>
+		<enum val="130" display="Spell ATK Drain"/>
+		<enum val="133" display="FP Heal"/>
+		<enum val="170" display="Regulat Heal"/>
+		<enum val="189" display="Regular"/>
+		<enum val="200" display="Leech HP"/> <!-- New - Painter Life Binding Skill -->
+		<enum val="204" display="Attack"/> <!-- New -->
 	</multivalue>
 	<multivalue name="chatType">
 		<enum display="Normal (white)"/>
@@ -929,13 +950,17 @@
 			<part name="creatureObjectId" type="d"/>
 			<part name="SomeObjectId/ TODO" type="d"/>
 			<part name="value" type="d"/>
-			<part name="type" type="c" id="0"/>
+			<part name="type" type="c">
+				<reader type="MultiValue" name="attackType"/>
+			</part>
 			<part name="currHpPercent" type="c"/>
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
 			<part name="unk 5.3" type="h"/>
-			<part name="logId" type="h"/>
+			<part name="logId" type="h">
+				<reader type="MultiValue" name="logIds"/>
+			</part>
 		</packet>
 		<packet id="0x06" name="SM_STATUPDATE_DP">
 			<part name="currentDp" type="h"/>
@@ -3911,12 +3936,12 @@
 			<part name="LegionDescription" type="S"/>
 			<part name="joinType" type="h"/>
 			<part name="minJoinLevel" type="c"/>
-			<!-- <for id="-1" size="7">
+			<for id="-1" size="7">
 				<part name="announcement" type="S"/>
 				<part name="date" type="d">
 					<reader type="UnixDate"/>
 				</part>
-			</for> -->
+			</for>
 		</packet>
 		<packet id="0x6F" name="SM_LEGION_ADD_MEMBER">
 			<part name="playerObjId" type="d"/>
@@ -5444,6 +5469,7 @@
 					<part name="unk(0)" type="c"/>
 					<part name="step" type="d"/>
 					<part name="unk(0)" type="h"/>
+					<part name="unk" type="c"/>
 				</case>
 				<case id="2" comment="step">
 					<part name="questStatus" type="c">
@@ -10821,7 +10847,7 @@
 		<packet id="0x1A4" name="CM_CLIENT_COMMAND_ROLL"> <!-- 7.2 EU -->
 			<part name="maxRoll" type="d"/>
 		</packet>
-		<packet id="0x14B" name="CM_START_LOOT"> <!-- 7.2 EU -->
+		<packet id="0x14A" name="CM_START_LOOT"> <!-- 7.2 EU -->
 			<part name="targetObjectId" type="d"/>
 			<part name="action" type="c"/>
 		</packet>
@@ -10979,7 +11005,7 @@
 		<packet id="0x162" name="CM_DUEL_REQUEST"> <!-- 7.2 EU -->
 			<part name="objectId" type="d"/>
 		</packet>
-		<packet id="0x14A" name="CM_LOOT_ITEM"> <!-- 7.2 EU -->
+		<packet id="0x14B" name="CM_LOOT_ITEM"> <!-- 7.2 EU -->
 			<part name="targetObjectId" type="d"/>
 			<part name="index" type="c"/>
 		</packet>
@@ -11000,7 +11026,7 @@
 			<part name="time" type="h"/>
 			<part name="type" type="c"/>
 		</packet>
-		<packet id="0x19F00" name="CM_AUTO_GROUP"> <!-- 7.x EU -->
+		<packet id="0x174" name="CM_AUTO_GROUP"> <!-- 7.2 EU -->
 			<part name="instanceMaskId" type="d"/>
 			<part name="windowId" type="c"/>
 			<part name="entryRequestId" type="c"/>
@@ -11228,7 +11254,7 @@
 		<packet id="0x169" name="CM_BROKER_REGISTERED"> <!-- 7.2 EU -->
 			<part name="npcId" type="d"/>
 		</packet>
-		<packet id="0x15400" name="CM_BROKER_SETTLE_ACCOUNT"> <!-- 7.x EU -->
+		<packet id="0x172" name="CM_BROKER_SETTLE_ACCOUNT"> <!-- 7.2 EU -->
 			<part name="npcId" type="d"/>
 		</packet>
 		<packet id="0x16F" name="CM_BROKER_ADD_ITEM"> <!-- 7.2 EU -->
