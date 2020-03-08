@@ -65,9 +65,7 @@ public class _60000PernosCall extends QuestHandler {
 							return sendQuestDialog(env, 1011);
 						}
 						case SET_SUCCEED: {
-							qs.setQuestVar(1);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, true);
 							return closeDialogWindow(env);
 						}
 						default: 

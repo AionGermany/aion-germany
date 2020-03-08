@@ -137,6 +137,9 @@ public abstract class QuestHandler extends AbstractQuestHandler implements Const
 		QuestState qs = env.getPlayer().getQuestStateList().getQuestState(questId);
 		if (qs != null && qs.getQuestVarById(varNum) == step) {
 			if (reward) { // ignore nextStep
+				if (nextStep != step) {
+					qs.setQuestVarById(varNum, nextStep);
+				}
 				qs.setStatus(QuestStatus.REWARD);
 			}
 			else { // quest can be rolled back if nextStep < step
@@ -144,9 +147,7 @@ public abstract class QuestHandler extends AbstractQuestHandler implements Const
 					qs.setQuestVarById(varNum, nextStep);
 				}
 			}
-			if (reward || nextStep != step) {
-				updateQuestStatus(env);
-			}
+			updateQuestStatus(env);
 		}
 	}
 

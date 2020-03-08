@@ -68,8 +68,7 @@ public class _60001ANewAge extends QuestHandler {
 							return sendQuestDialog(env, 1011);
 						}
 						case SETPRO1: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, false);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -83,8 +82,7 @@ public class _60001ANewAge extends QuestHandler {
 							return sendQuestDialog(env, 1352);
 						}
 						case SETPRO2: {
-							qs.setQuestVar(2);
-							updateQuestStatus(env);
+							changeQuestStep(env, 1, 2, false);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -98,8 +96,7 @@ public class _60001ANewAge extends QuestHandler {
 							return sendQuestDialog(env, 1693);
 						}
 						case SET_SUCCEED: {
-							qs.setQuestVar(3);
-							qs.setStatus(QuestStatus.REWARD);
+							changeQuestStep(env, 2, 3, true);
 							updateQuestStatus(env);
 							return closeDialogWindow(env);
 						}

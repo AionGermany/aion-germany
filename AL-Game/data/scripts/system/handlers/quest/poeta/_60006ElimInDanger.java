@@ -77,8 +77,7 @@ public class _60006ElimInDanger extends QuestHandler {
 							return sendQuestDialog(env, 1011);
 						}
 						case SETPRO1: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, false);
 							return closeDialogWindow(env);
 						}
 						default:
@@ -92,8 +91,7 @@ public class _60006ElimInDanger extends QuestHandler {
 							return sendQuestDialog(env, 1352);
 						}
 						case SETPRO2: {
-							qs.setQuestVar(2);
-							updateQuestStatus(env);
+							changeQuestStep(env, 1, 2, false);
 							giveQuestItem(env, 182216248, 1);
 							return closeDialogWindow(env);
 						}
@@ -108,8 +106,7 @@ public class _60006ElimInDanger extends QuestHandler {
 							return sendQuestDialog(env, 1693);
 						}
 						case SETPRO3: {
-							qs.setQuestVar(3);
-							updateQuestStatus(env);
+							changeQuestStep(env, 2, 3, false);
 							return closeDialogWindow(env);
 						}
 						default:
@@ -125,8 +122,7 @@ public class _60006ElimInDanger extends QuestHandler {
 						case CHECK_USER_HAS_QUEST_ITEM: {
 							if (QuestService.collectItemCheck(env, true)) {
 								removeQuestItem(env, 182216248, 1);
-								qs.setQuestVar(4);
-								updateQuestStatus(env);
+								changeQuestStep(env, 3, 4, false);
 								return sendQuestDialog(env, 10000);
 							} else {
 								return sendQuestDialog(env, 10001);
@@ -134,8 +130,7 @@ public class _60006ElimInDanger extends QuestHandler {
 						}
 						case SETPRO5: {
 							giveQuestItem(env, 182216250, 1);
-							qs.setQuestVar(5);
-							updateQuestStatus(env);
+							changeQuestStep(env, 4, 5, false);
 							return closeDialogWindow(env);
 						}
 						default:
@@ -160,7 +155,6 @@ public class _60006ElimInDanger extends QuestHandler {
 	@Override
 	public HandlerResult onItemUseEvent(final QuestEnv env, Item item) {
 		final Player player = env.getPlayer();
-		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int id = item.getItemTemplate().getTemplateId();
 		final int itemObjId = item.getObjectId();
 
@@ -174,9 +168,7 @@ public class _60006ElimInDanger extends QuestHandler {
 			public void run() {
 				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, itemObjId, id, 0, 1), true);
 				TeleportService2.teleportTo(player, 210010000, 502.2042f, 1529.8256f, 104.6827f, (byte) 45,	TeleportAnimation.BEAM_ANIMATION);
-				qs.setQuestVar(6);
-				qs.setStatus(QuestStatus.REWARD);
-				updateQuestStatus(env);
+				changeQuestStep(env, 5, 6, true);
 			}
 		}, 2000);
 		return HandlerResult.SUCCESS;

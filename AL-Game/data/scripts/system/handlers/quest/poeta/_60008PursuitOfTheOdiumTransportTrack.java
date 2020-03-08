@@ -63,8 +63,7 @@ public class _60008PursuitOfTheOdiumTransportTrack extends QuestHandler {
 				case 820010: {
 					switch (dialog) {
 						case USE_OBJECT: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, false);
 							return false;
 						}
 						default: 
@@ -75,9 +74,7 @@ public class _60008PursuitOfTheOdiumTransportTrack extends QuestHandler {
 				case 820011: {
 					switch (dialog) {
 						case USE_OBJECT: {
-							qs.setQuestVar(2);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
+							changeQuestStep(env, 1, 2, true);
 							return false;
 						}
 						default: 

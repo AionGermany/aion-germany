@@ -60,7 +60,6 @@ public class _60003TheStrengthToBecomeAGuardian extends QuestHandler {
 
 		if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-
 			switch (targetId) {
 				case 820006: {
 					switch (dialog) {
@@ -72,15 +71,12 @@ public class _60003TheStrengthToBecomeAGuardian extends QuestHandler {
 							}
 						}
 						case SETPRO1: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, false);
 							return closeDialogWindow(env);
 						}
 						case CHECK_USER_HAS_QUEST_ITEM: {
 							if (QuestService.collectItemCheck(env,true)) {
-								qs.setQuestVar(2);
-								qs.setStatus(QuestStatus.REWARD);
-								updateQuestStatus(env);
+								changeQuestStep(env, 1, 2, true);
 								return sendQuestDialog(env, 5);
 							} else {
 								return sendQuestDialog(env, 10001);

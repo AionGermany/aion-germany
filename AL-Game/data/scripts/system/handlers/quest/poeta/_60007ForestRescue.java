@@ -68,8 +68,7 @@ public class _60007ForestRescue extends QuestHandler {
 							return sendQuestDialog(env, 1011);
 						}
 						case SETPRO1: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, false);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -83,8 +82,7 @@ public class _60007ForestRescue extends QuestHandler {
 							return sendQuestDialog(env, 1352);
 						}
 						case SETPRO2: {
-							qs.setQuestVar(2);
-							updateQuestStatus(env);
+							changeQuestStep(env, 1, 2, false);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -99,8 +97,7 @@ public class _60007ForestRescue extends QuestHandler {
 						}
 						case CHECK_USER_HAS_QUEST_ITEM: {
 							if (QuestService.collectItemCheck(env,true)) {
-								qs.setQuestVar(3);
-								updateQuestStatus(env);
+								changeQuestStep(env, 2, 3, false);
 								return sendQuestDialog(env, 10000);
 							} else {
 								return sendQuestDialog(env, 10001);
@@ -114,9 +111,7 @@ public class _60007ForestRescue extends QuestHandler {
 				case 700030: {
 					switch (dialog) {
 						case USE_OBJECT: {
-							qs.setQuestVar(4);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
+							changeQuestStep(env, 3, 4, true);
 							return false;
 						}
 						default: 

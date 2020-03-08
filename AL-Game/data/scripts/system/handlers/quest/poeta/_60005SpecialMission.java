@@ -73,8 +73,7 @@ public class _60005SpecialMission extends QuestHandler {
 							return sendQuestDialog(env, 1011);
 						}
 						case SETPRO1: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, false);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -88,8 +87,7 @@ public class _60005SpecialMission extends QuestHandler {
 							return sendQuestDialog(env, 1352);
 						}
 						case SETPRO2: {
-							qs.setQuestVar(2);
-							updateQuestStatus(env);
+							changeQuestStep(env, 1, 2, false);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -103,9 +101,7 @@ public class _60005SpecialMission extends QuestHandler {
 							return sendQuestDialog(env, 2034);
 						}
 						case SET_SUCCEED: {
-							qs.setQuestVar(4);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
+							changeQuestStep(env, 3, 4, true);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -141,8 +137,8 @@ public class _60005SpecialMission extends QuestHandler {
 			if (var == 2 && var1 < 2) {
 			   return defaultOnKillEvent(env, mobs, var1, var1 + 1, 1);
 			} else {
-				qs.setQuestVar(3);
-				updateQuestStatus(env);
+				qs.setQuestVarById(1, 0);;
+				changeQuestStep(env, 2, 3, false);
 			}
 		}
 		return false;
