@@ -182,7 +182,7 @@ public class AionPacketHandlerFactory {
 
 		// *************(HOUSE)***************************
 		addPacket(new CM_HOUSE_OPEN_DOOR(0x192, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_HOUSE_TELEPORT_BACK(0x13A, State.IN_GAME)); // 5.0
+		addPacket(new CM_HOUSE_TELEPORT_BACK(0x11D, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_SCRIPT(0xC9, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_TELEPORT(0x18E, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_EDIT(0x2FD, State.IN_GAME)); // 7.2 EU
