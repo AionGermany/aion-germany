@@ -83,6 +83,7 @@ public class PlayerStatsData {
 		playerTemplates.put(makeHash(PlayerClass.ENGINEER, 0), new CalculatedPlayerStatsTemplate(PlayerClass.ENGINEER)); // 4.3
 		playerTemplates.put(makeHash(PlayerClass.GUNNER, 0), new CalculatedPlayerStatsTemplate(PlayerClass.GUNNER)); // 4.3
 		playerTemplates.put(makeHash(PlayerClass.RIDER, 0), new CalculatedPlayerStatsTemplate(PlayerClass.RIDER)); // 4.5
+		playerTemplates.put(makeHash(PlayerClass.PAINTER, 0), new CalculatedPlayerStatsTemplate(PlayerClass.PAINTER)); // 6.x
 		templatesList.clear();
 		templatesList = null;
 	}

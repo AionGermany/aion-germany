@@ -231,6 +231,7 @@
 			<xs:element name="sweep" type="ShugoSweepAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="adoptminion" type="AdoptMinionAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="adopttransformation" type="AdoptTransformationAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="unseal" type="UnsealAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ShugoSweepAction">
@@ -550,7 +551,14 @@
 				<xs:attribute name="count" type="xs:int"/>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>    
+	</xs:complexType>
+	<xs:complexType name="UnsealAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="action" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:simpleType name="equipType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ARMOR"/>

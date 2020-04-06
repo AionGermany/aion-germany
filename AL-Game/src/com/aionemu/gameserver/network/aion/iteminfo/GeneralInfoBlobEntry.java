@@ -44,7 +44,7 @@ public class GeneralInfoBlobEntry extends ItemBlobEntry {
 		writeD(buf, item.getExpireTimeRemaining()); // Disappears time
 		writeD(buf, 0);
 		writeD(buf, item.getTemporaryExchangeTimeRemaining());
-		writeH(buf, 0);
+		writeH(buf, item.getUnSeal());
 		writeD(buf, 0);
 	}
 

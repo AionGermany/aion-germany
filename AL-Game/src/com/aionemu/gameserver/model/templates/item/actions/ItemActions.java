@@ -75,6 +75,7 @@ public class ItemActions {
 		@XmlElement(name = "skill_enhance", type = SkillEnhanceAction.class),
 		@XmlElement(name = "sweep", type = ShugoSweepAction.class),
 		@XmlElement(name = "adoptminion", type = AdoptMinionAction.class),
+		@XmlElement(name = "unseal", type = UnSealAction.class),
 		@XmlElement(name = "adopttransformation", type = AdoptTransformationAction.class),})
 
 	protected List<AbstractItemAction> itemActions;
