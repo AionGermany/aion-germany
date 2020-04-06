@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-11-02 13:44 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-04-06 21:08 -->
 <skill_tree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skill_tree.xsd">
     <skill minLevel="1" race="PC_ALL" autolearn="true" name="Stringed Instrument" skillLevel="1" skillId="114" classId="ARTIST" />
     <skill minLevel="1" race="PC_ALL" autolearn="true" name="Basic Garment" skillLevel="1" skillId="40" classId="ARTIST" />
@@ -1750,7 +1750,7 @@
     <skill minLevel="69" race="PC_ALL" autolearn="true" name="Seismic Billow" skillLevel="1" skillId="561" classId="GLADIATOR" />
     <skill minLevel="73" race="PC_ALL" autolearn="true" name="Seismic Billow" skillLevel="1" skillId="562" classId="GLADIATOR" />
     <skill minLevel="50" race="PC_ALL" autolearn="true" name="Unwavering Devotion" skillLevel="1" skillId="2932" classId="GLADIATOR" />
-    <skill minLevel="15" race="PC_ALL" autolearn="true" name="Deadly Abandon" skillLevel="1" skillId="563" classId="GLADIATOR" />
+    <skill minLevel="15" race="PC_ALL" autolearn="true" name="Tenacity" skillLevel="1" skillId="563" classId="GLADIATOR" />
     <skill minLevel="20" race="PC_ALL" stigma="true" name="Dauntless Spirit" skillLevel="1" skillId="564" classId="GLADIATOR" />
     <skill minLevel="26" race="PC_ALL" stigma="true" name="Dauntless Spirit" skillLevel="1" skillId="565" classId="GLADIATOR" />
     <skill minLevel="32" race="PC_ALL" stigma="true" name="Dauntless Spirit" skillLevel="1" skillId="566" classId="GLADIATOR" />
@@ -2080,8 +2080,7 @@
     <skill minLevel="55" race="PC_ALL" stigma="true" name="Lightning Arrow" skillLevel="1" skillId="869" classId="RANGER" />
     <skill minLevel="59" race="PC_ALL" stigma="true" name="Lightning Arrow" skillLevel="1" skillId="870" classId="RANGER" />
     <skill minLevel="63" race="PC_ALL" stigma="true" name="Lightning Arrow" skillLevel="1" skillId="871" classId="RANGER" />
-    <skill minLevel="10" race="ASMODIANS" autolearn="true" name="Transformation: Mau" skillLevel="1" skillId="872" classId="RANGER" />
-    <skill minLevel="10" race="ELYOS" autolearn="true" name="Transformation: Mau" skillLevel="1" skillId="4610" classId="RANGER" />
+    <skill minLevel="10" race="PC_ALL" autolearn="true" name="Transformation: Mau" skillLevel="1" skillId="872" classId="RANGER" />
     <skill minLevel="20" race="PC_ALL" autolearn="true" name="Penetrating Arrows" skillLevel="1" skillId="397" classId="RANGER" />
     <skill minLevel="20" race="PC_ALL" stigma="true" name="Seal Arrow" skillLevel="1" skillId="873" classId="RANGER" />
     <skill minLevel="26" race="PC_ALL" stigma="true" name="Seal Arrow" skillLevel="1" skillId="874" classId="RANGER" />
@@ -2438,7 +2437,7 @@
     <skill minLevel="50" race="PC_ALL" stigma="true" name="Curse of Weakness" skillLevel="1" skillId="1334" classId="SORCERER" />
     <skill minLevel="56" race="PC_ALL" stigma="true" name="Curse of Weakness" skillLevel="1" skillId="1335" classId="SORCERER" />
     <skill minLevel="62" race="PC_ALL" stigma="true" name="Curse of Weakness" skillLevel="1" skillId="1336" classId="SORCERER" />
-    <skill minLevel="10" race="PC_ALL" autolearn="true" name="Sleep Cloud" skillLevel="1" skillId="1338" classId="SORCERER" />
+    <skill minLevel="10" race="PC_ALL" autolearn="true" name="Tranquillising Cloud" skillLevel="1" skillId="1338" classId="SORCERER" />
     <skill minLevel="45" race="PC_ALL" stigma="true" name="Sleeping Storm" skillLevel="1" skillId="1339" classId="SORCERER" />
     <skill minLevel="20" race="PC_ALL" autolearn="true" name="Blind Leap" skillLevel="1" skillId="1347" classId="SORCERER" />
     <skill minLevel="50" race="ELYOS" autolearn="true" name="Illusion Gate" skillLevel="1" skillId="1349" classId="SORCERER" />
@@ -3809,13 +3808,12 @@
     <skill minLevel="80" race="PC_ALL" autolearn="true" name="Bloodstorm Blow" skillLevel="1" skillId="4872" classId="TEMPLAR" />
     <skill minLevel="70" race="PC_ALL" autolearn="true" name="Nightmare Scream" skillLevel="1" skillId="4873" classId="SPIRIT_MASTER" />
     <skill minLevel="80" race="PC_ALL" autolearn="true" name="Materialised Magic Form" skillLevel="1" skillId="4874" classId="GUNNER" />
-    <skill minLevel="70" race="ASMODIANS" autolearn="true" name="Mau Blessing" skillLevel="1" skillId="4875" classId="RANGER" />
+    <skill minLevel="70" race="PC_ALL" autolearn="true" name="Mau Blessing" skillLevel="1" skillId="4875" classId="RANGER" />
     <skill minLevel="80" race="PC_ALL" autolearn="true" name="Overcoming Limits" skillLevel="1" skillId="4876" classId="RIDER" />
     <skill minLevel="80" race="PC_ALL" autolearn="true" name="Armour of Vengeance" skillLevel="1" skillId="4877" classId="GLADIATOR" />
     <skill minLevel="80" race="ELYOS" autolearn="true" name="Mist Butcher" skillLevel="1" skillId="4878" classId="ASSASSIN" />
     <skill minLevel="80" race="ASMODIANS" autolearn="true" name="Mist Butcher" skillLevel="1" skillId="4879" classId="ASSASSIN" />
     <skill minLevel="70" race="PC_ALL" autolearn="true" name="Fiery Roller" skillLevel="1" skillId="4880" classId="SORCERER" />
-    <skill minLevel="70" race="ELYOS" autolearn="true" name="Mau Blessing" skillLevel="1" skillId="4881" classId="RANGER" />
     <skill minLevel="30" race="PC_ALL" autolearn="true" name="Sleep: Scarecrow" skillLevel="1" skillId="17" classId="SORCERER" />
     <skill minLevel="80" race="PC_ALL" name="Absorb Bloodlust" skillLevel="1" skillId="5081" classId="GLADIATOR" />
     <skill minLevel="80" race="PC_ALL" name="Bloodlust Explosion" skillLevel="1" skillId="5082" classId="GLADIATOR" />
@@ -4198,134 +4196,435 @@
     <skill minLevel="66" race="ASMODIANS" autolearn="true" name="Colour Bomb" skillLevel="1" skillId="5672" classId="PAINTER" />
     <skill minLevel="72" race="ASMODIANS" autolearn="true" name="Colour Bomb" skillLevel="1" skillId="5673" classId="PAINTER" />
     <skill minLevel="78" race="ASMODIANS" autolearn="true" name="Colour Bomb" skillLevel="1" skillId="5674" classId="PAINTER" />
-    <!-- TODO
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Absorb Bloodlust" skillLevel="1" skillId="5718" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Bloodlust Explosion" skillLevel="1" skillId="5719" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Shattering Strike" skillLevel="1" skillId="5720" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Shattering Blow" skillLevel="1" skillId="5721" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Vow of the Charge" skillLevel="1" skillId="5722" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Attack Position" skillLevel="1" skillId="5723" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Martial Cleave" skillLevel="1" skillId="5724" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Blade Leap" skillLevel="1" skillId="5725" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Wild Tremor" skillLevel="1" skillId="5726" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Leaping Strike" skillLevel="1" skillId="5727" classId="GLADIATOR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Comrade's Aegis" skillLevel="1" skillId="5728" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Cover Comrade" skillLevel="1" skillId="5729" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Shield Blow" skillLevel="1" skillId="5730" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Heavy Shield Blow" skillLevel="1" skillId="5731" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Dual Provocation Armour" skillLevel="1" skillId="5732" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Iron Skin" skillLevel="1" skillId="5733" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Shatter Strength" skillLevel="1" skillId="5734" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Ankle Blow" skillLevel="1" skillId="5735" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Bloodstorm Splitter" skillLevel="1" skillId="5736" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Depriving Strike" skillLevel="1" skillId="5737" classId="TEMPLAR" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Seal Eruption" skillLevel="1" skillId="5738" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Seal Destruction" skillLevel="1" skillId="5739" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Whirling Slicer" skillLevel="1" skillId="5740" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Whirlwind Slash" skillLevel="1" skillId="5741" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Swift Heavy Attack" skillLevel="1" skillId="5742" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Swift Storm Attack" skillLevel="1" skillId="5743" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Second Slash" skillLevel="1" skillId="5744" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Soulbreak" skillLevel="1" skillId="5745" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Bestial Surprise Attack" skillLevel="1" skillId="5746" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Crushing Surprise Attack" skillLevel="1" skillId="5747" classId="ASSASSIN" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Shackling Arrow" skillLevel="1" skillId="5748" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Shackling Arrow Torrent" skillLevel="1" skillId="5749" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Arrow Rain of Destruction" skillLevel="1" skillId="5750" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Sustained Arrow Rain" skillLevel="1" skillId="5751" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Knock-back" skillLevel="1" skillId="5752" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Rear Strike" skillLevel="1" skillId="5753" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Silencing Thrust" skillLevel="1" skillId="5754" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Binding Arrow" skillLevel="1" skillId="5755" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Arrow of Destruction" skillLevel="1" skillId="5756" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Arrow of Death" skillLevel="1" skillId="5757" classId="RANGER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Ray of Restoration" skillLevel="1" skillId="5758" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Restoration Strike" skillLevel="1" skillId="5759" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Discharge Paralysis" skillLevel="1" skillId="5760" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Chain Discharge" skillLevel="1" skillId="5761" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Indestructible Shield Wall" skillLevel="1" skillId="5762" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Indestructible Protective Shield" skillLevel="1" skillId="5763" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Thunder" skillLevel="1" skillId="5764" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Chain Lightning" skillLevel="1" skillId="5765" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Miracle Healing" skillLevel="1" skillId="5766" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Hand of Healing" skillLevel="1" skillId="5767" classId="CLERIC" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Penetrating Wave" skillLevel="1" skillId="5768" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Blind Breakthrough" skillLevel="1" skillId="5769" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Dissolution Spell" skillLevel="1" skillId="5770" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Protection Spell" skillLevel="1" skillId="5771" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Chain Decapitation" skillLevel="1" skillId="5772" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Blind Pursuit" skillLevel="1" skillId="5773" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Resonance Disruption" skillLevel="1" skillId="5774" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Second Resonance Slash" skillLevel="1" skillId="5775" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Seismic Blast" skillLevel="1" skillId="5776" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Seismic Termination" skillLevel="1" skillId="5777" classId="CHANTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Summon Heat" skillLevel="1" skillId="5778" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Frosty Fire" skillLevel="1" skillId="5779" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Arcane Growth" skillLevel="1" skillId="5780" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Arcane Combustion" skillLevel="1" skillId="5781" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Flameshot" skillLevel="1" skillId="5782" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Flame Spurt" skillLevel="1" skillId="5783" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Major Eruption" skillLevel="1" skillId="5784" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Massive Seismic Blast" skillLevel="1" skillId="5785" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Swift Spear" skillLevel="1" skillId="5786" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Space-Time Spear" skillLevel="1" skillId="5787" classId="SORCERER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Command: Elemental Destruction" skillLevel="1" skillId="5788" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Command: Elemental Wave" skillLevel="1" skillId="5789" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Nightmare Curse" skillLevel="1" skillId="5790" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Nightmare Sorrow" skillLevel="1" skillId="5791" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Titanic Vacuum Explosion" skillLevel="1" skillId="5792" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Vacuum Chain Explosion" skillLevel="1" skillId="5793" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Soul Theft" skillLevel="1" skillId="5794" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Soul Burn" skillLevel="1" skillId="5795" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Decaying Mind" skillLevel="1" skillId="5796" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Paralysed Mind" skillLevel="1" skillId="5797" classId="SPIRIT_MASTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Load Cannonball" skillLevel="1" skillId="5798" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Load Magic Projectile" skillLevel="1" skillId="5799" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Concentrated Bombardment" skillLevel="1" skillId="5800" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Concentrated Chain Shot" skillLevel="1" skillId="5801" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Fire Head Throughshot" skillLevel="1" skillId="5802" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Concentrated Headshot" skillLevel="1" skillId="5803" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Rapid Fire of Restoration" skillLevel="1" skillId="5804" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Gun Salute" skillLevel="1" skillId="5805" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Paralysing Projectile" skillLevel="1" skillId="5806" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Binding Projectile" skillLevel="1" skillId="5807" classId="GUNNER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Idium Blow" skillLevel="1" skillId="5808" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Idium Blow" skillLevel="1" skillId="5809" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Idium Blow" skillLevel="1" skillId="5810" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Idium Surface Strike" skillLevel="1" skillId="5811" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Idium Surface Strike" skillLevel="1" skillId="5812" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Idium Surface Strike" skillLevel="1" skillId="5813" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Chain Shot" skillLevel="1" skillId="5814" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Loaded Cannon Fire" skillLevel="1" skillId="5815" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Emergency Shroud of Protection" skillLevel="1" skillId="5816" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Protective Shroud of Resistance" skillLevel="1" skillId="5817" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Counter Cannon Fire" skillLevel="1" skillId="5818" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Large-scale Cannon Shot" skillLevel="1" skillId="5819" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Heavy Silencing Blow" skillLevel="1" skillId="5820" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Silencing Cannon Fire" skillLevel="1" skillId="5821" classId="RIDER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Illusion Ensemble" skillLevel="1" skillId="5822" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Illusion Ensemble" skillLevel="1" skillId="5823" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Illusion Ensemble" skillLevel="1" skillId="5824" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Illusion Symphony" skillLevel="1" skillId="5825" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Illusion Symphony" skillLevel="1" skillId="5826" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Illusion Symphony" skillLevel="1" skillId="5827" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Purifying Snowflower Melody" skillLevel="1" skillId="5828" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Protective Snowflower Melody" skillLevel="1" skillId="5829" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Soft Resonance" skillLevel="1" skillId="5830" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Soft Reverb" skillLevel="1" skillId="5831" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Boosted Storm Variation" skillLevel="1" skillId="5832" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Storm Harmony" skillLevel="1" skillId="5833" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Ironclad Tank Harmony" skillLevel="1" skillId="5834" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Harmony of Vengeance" skillLevel="1" skillId="5835" classId="BARD" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Band of Fierceness" skillLevel="1" skillId="5836" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Band of Forbearance" skillLevel="1" skillId="5837" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Colour of Resistance" skillLevel="1" skillId="5838" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Colour of Transcendence" skillLevel="1" skillId="5839" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Sudden Smash" skillLevel="1" skillId="5840" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Shocking Blast" skillLevel="1" skillId="5841" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Sustained Colour Immersion" skillLevel="1" skillId="5842" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Colour Explosion" skillLevel="1" skillId="5843" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Gravity Binding" skillLevel="1" skillId="5844" classId="PAINTER" />
-    <skill minLevel="80" race="PC_ALL" autolearn="reinforce" name="(Improved) Time Binding" skillLevel="1" skillId="5845" classId="PAINTER" />
-	-->
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Absorb Bloodlust" skillLevel="1" skillId="5718" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Bloodlust Explosion" skillLevel="1" skillId="5719" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shattering Strike" skillLevel="1" skillId="5720" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shattering Blow" skillLevel="1" skillId="5721" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Vow of the Charge" skillLevel="1" skillId="5722" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Attack Position" skillLevel="1" skillId="5723" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Martial Cleave" skillLevel="1" skillId="5724" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Blade Leap" skillLevel="1" skillId="5725" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Wild Tremor" skillLevel="1" skillId="5726" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Leaping Strike" skillLevel="1" skillId="5727" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Comrade's Aegis" skillLevel="1" skillId="5728" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Cover Comrade" skillLevel="1" skillId="5729" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shield Blow" skillLevel="1" skillId="5730" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Heavy Shield Blow" skillLevel="1" skillId="5731" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Dual Provocation Armour" skillLevel="1" skillId="5732" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Iron Skin" skillLevel="1" skillId="5733" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Shatter Strength" skillLevel="1" skillId="5734" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Ankle Blow" skillLevel="1" skillId="5735" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Bloodstorm Splitter" skillLevel="1" skillId="5736" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Depriving Strike" skillLevel="1" skillId="5737" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Seal Eruption" skillLevel="1" skillId="5738" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Seal Destruction" skillLevel="1" skillId="5739" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Whirling Slicer" skillLevel="1" skillId="5740" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Whirlwind Slash" skillLevel="1" skillId="5741" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Swift Heavy Attack" skillLevel="1" skillId="5742" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Swift Storm Attack" skillLevel="1" skillId="5743" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Second Slash" skillLevel="1" skillId="5744" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Soulbreak" skillLevel="1" skillId="5745" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Bestial Surprise Attack" skillLevel="1" skillId="5746" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Crushing Surprise Attack" skillLevel="1" skillId="5747" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shackling Arrow" skillLevel="1" skillId="5748" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shackling Arrow Torrent" skillLevel="1" skillId="5749" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Arrow Rain of Destruction" skillLevel="1" skillId="5750" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Sustained Arrow Rain" skillLevel="1" skillId="5751" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Knock-back" skillLevel="1" skillId="5752" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Rear Strike" skillLevel="1" skillId="5753" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Silencing Thrust" skillLevel="1" skillId="5754" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Binding Arrow" skillLevel="1" skillId="5755" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Arrow of Destruction" skillLevel="1" skillId="5756" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Arrow of Death" skillLevel="1" skillId="5757" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Ray of Restoration" skillLevel="1" skillId="5758" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Restoration Strike" skillLevel="1" skillId="5759" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Discharge Paralysis" skillLevel="1" skillId="5760" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Chain Discharge" skillLevel="1" skillId="5761" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Indestructible Shield Wall" skillLevel="1" skillId="5762" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Indestructible Protective Shield" skillLevel="1" skillId="5763" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Thunder" skillLevel="1" skillId="5764" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Chain Lightning" skillLevel="1" skillId="5765" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Miracle Healing" skillLevel="1" skillId="5766" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Hand of Healing" skillLevel="1" skillId="5767" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Penetrating Wave" skillLevel="1" skillId="5768" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Blind Breakthrough" skillLevel="1" skillId="5769" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Dissolution Spell" skillLevel="1" skillId="5770" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Protection Spell" skillLevel="1" skillId="5771" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Chain Decapitation" skillLevel="1" skillId="5772" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Blind Pursuit" skillLevel="1" skillId="5773" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Resonance Disruption" skillLevel="1" skillId="5774" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Second Resonance Slash" skillLevel="1" skillId="5775" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Seismic Blast" skillLevel="1" skillId="5776" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Seismic Termination" skillLevel="1" skillId="5777" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Summon Heat" skillLevel="1" skillId="5778" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Frosty Fire" skillLevel="1" skillId="5779" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Arcane Growth" skillLevel="1" skillId="5780" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Arcane Combustion" skillLevel="1" skillId="5781" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Flameshot" skillLevel="1" skillId="5782" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Flame Spurt" skillLevel="1" skillId="5783" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Major Eruption" skillLevel="1" skillId="5784" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Massive Seismic Blast" skillLevel="1" skillId="5785" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Swift Spear" skillLevel="1" skillId="5786" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Space-Time Spear" skillLevel="1" skillId="5787" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Command: Elemental Destruction" skillLevel="1" skillId="5788" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Command: Elemental Wave" skillLevel="1" skillId="5789" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Nightmare Curse" skillLevel="1" skillId="5790" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Nightmare Sorrow" skillLevel="1" skillId="5791" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Titanic Vacuum Explosion" skillLevel="1" skillId="5792" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Vacuum Chain Explosion" skillLevel="1" skillId="5793" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Soul Theft" skillLevel="1" skillId="5794" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Soul Burn" skillLevel="1" skillId="5795" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Decaying Mind" skillLevel="1" skillId="5796" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Paralysed Mind" skillLevel="1" skillId="5797" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Load Cannonball" skillLevel="1" skillId="5798" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Load Magic Projectile" skillLevel="1" skillId="5799" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Concentrated Bombardment" skillLevel="1" skillId="5800" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Concentrated Chain Shot" skillLevel="1" skillId="5801" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Fire Head Throughshot" skillLevel="1" skillId="5802" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Concentrated Headshot" skillLevel="1" skillId="5803" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Rapid Fire of Restoration" skillLevel="1" skillId="5804" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Gun Salute" skillLevel="1" skillId="5805" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Paralysing Projectile" skillLevel="1" skillId="5806" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Binding Projectile" skillLevel="1" skillId="5807" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Idium Blow" skillLevel="1" skillId="5808" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Idium Blow" skillLevel="1" skillId="5809" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Idium Blow" skillLevel="1" skillId="5810" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Idium Surface Strike" skillLevel="1" skillId="5811" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Idium Surface Strike" skillLevel="1" skillId="5812" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Idium Surface Strike" skillLevel="1" skillId="5813" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Chain Shot" skillLevel="1" skillId="5814" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Loaded Cannon Fire" skillLevel="1" skillId="5815" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Emergency Shroud of Protection" skillLevel="1" skillId="5816" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Protective Shroud of Resistance" skillLevel="1" skillId="5817" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Counter Cannon Fire" skillLevel="1" skillId="5818" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Large-scale Cannon Shot" skillLevel="1" skillId="5819" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Heavy Silencing Blow" skillLevel="1" skillId="5820" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Silencing Cannon Fire" skillLevel="1" skillId="5821" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Illusion Ensemble" skillLevel="1" skillId="5822" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Illusion Ensemble" skillLevel="1" skillId="5823" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Illusion Ensemble" skillLevel="1" skillId="5824" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Illusion Symphony" skillLevel="1" skillId="5825" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Illusion Symphony" skillLevel="1" skillId="5826" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Illusion Symphony" skillLevel="1" skillId="5827" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Purifying Snowflower Melody" skillLevel="1" skillId="5828" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Protective Snowflower Melody" skillLevel="1" skillId="5829" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Soft Resonance" skillLevel="1" skillId="5830" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Soft Reverb" skillLevel="1" skillId="5831" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boosted Storm Variation" skillLevel="1" skillId="5832" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Storm Harmony" skillLevel="1" skillId="5833" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Ironclad Tank Harmony" skillLevel="1" skillId="5834" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Harmony of Vengeance" skillLevel="1" skillId="5835" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Band of Fierceness" skillLevel="1" skillId="5836" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Band of Forbearance" skillLevel="1" skillId="5837" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Colour of Resistance" skillLevel="1" skillId="5838" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Colour of Transcendence" skillLevel="1" skillId="5839" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Sudden Smash" skillLevel="1" skillId="5840" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shocking Blast" skillLevel="1" skillId="5841" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Sustained Colour Immersion" skillLevel="1" skillId="5842" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Colour Explosion" skillLevel="1" skillId="5843" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Gravity Binding" skillLevel="1" skillId="5844" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Time Binding" skillLevel="1" skillId="5845" classId="PAINTER" />
+    <skill minLevel="80" race="ASMODIANS" name="(Improved) Summon Battlefield Flag" skillLevel="1" skillId="6021" classId="GLADIATOR" />
+    <skill minLevel="80" race="ELYOS" name="(Improved) Summon Battlefield Flag" skillLevel="1" skillId="6022" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Blade All-round Strike" skillLevel="1" skillId="6023" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Mangling Cyclone" skillLevel="1" skillId="6024" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Whirling Strike" skillLevel="1" skillId="6025" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Draining Sword" skillLevel="1" skillId="6026" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Exhausting Wave" skillLevel="1" skillId="6027" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Revival Wave" skillLevel="1" skillId="6028" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Spite Strike" skillLevel="1" skillId="6029" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Tendon Slice" skillLevel="1" skillId="6030" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sharp Strike" skillLevel="1" skillId="6031" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sure Strike" skillLevel="1" skillId="6032" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Severe Precision Cut" skillLevel="1" skillId="6033" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Lockdown" skillLevel="1" skillId="6034" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Dauntless Spirit" skillLevel="1" skillId="6035" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Crippling Cut" skillLevel="1" skillId="6036" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Magic Defence" skillLevel="1" skillId="6037" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Ankle Snare" skillLevel="1" skillId="6038" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Siegebreaker" skillLevel="1" skillId="6039" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Howl" skillLevel="1" skillId="6040" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Earthquake Wave" skillLevel="1" skillId="6041" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Draining Blow" skillLevel="1" skillId="6042" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Bloodsucking Punishment" skillLevel="1" skillId="6043" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Barrier Shield" skillLevel="1" skillId="6044" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Reflection of Chastisement" skillLevel="1" skillId="6045" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Empyrean Providence" skillLevel="1" skillId="6046" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Shield Blast" skillLevel="1" skillId="6047" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Prayer of Resilience" skillLevel="1" skillId="6048" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Prayer of Victory" skillLevel="1" skillId="6049" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Divine Justice" skillLevel="1" skillId="6050" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Magic Smash" skillLevel="1" skillId="6051" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Punishing Wave" skillLevel="1" skillId="6052" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Shield of Faith" skillLevel="1" skillId="6053" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Holy Shield" skillLevel="1" skillId="6054" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Divine Fury" skillLevel="1" skillId="6055" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Incur Wrath" skillLevel="1" skillId="6056" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Barricade of Steel" skillLevel="1" skillId="6057" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Elimination Strike" skillLevel="1" skillId="6058" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Siegebreaker" skillLevel="1" skillId="6039" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Punishment" skillLevel="1" skillId="6059" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Aether Armour" skillLevel="1" skillId="6060" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Inquisitor's Blow" skillLevel="1" skillId="6061" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Lightning Ambush" skillLevel="1" skillId="6062" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Repeated Rune Carve" skillLevel="1" skillId="6063" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Flash Grenade" skillLevel="1" skillId="6064" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Quickening Doom" skillLevel="1" skillId="6065" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Dagger Oath" skillLevel="1" skillId="6066" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Lightning Slash" skillLevel="1" skillId="6067" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Apply Lethal Venom" skillLevel="1" skillId="6068" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Dash and Slash" skillLevel="1" skillId="6069" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Agony Rune" skillLevel="1" skillId="6070" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Fleeing Posture" skillLevel="1" skillId="6071" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sensory Boost" skillLevel="1" skillId="6072" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Rune Carve – Sigil Strike" skillLevel="1" skillId="6073" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Deadly Abandon" skillLevel="1" skillId="6074" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Oath of Accuracy" skillLevel="1" skillId="6075" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Shadow Walk" skillLevel="1" skillId="6076" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Shadowfall" skillLevel="1" skillId="6077" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Venomous Strike" skillLevel="1" skillId="6078" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Eye of Wrath" skillLevel="1" skillId="6079" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Rune Knife" skillLevel="1" skillId="6080" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Ambush Raid" skillLevel="1" skillId="6081" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Spear of Penetration" skillLevel="1" skillId="6082" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shadowbound" skillLevel="1" skillId="6083" classId="RANGER" />
+    <skill minLevel="80" race="ASMODIANS" name="(Improved) Collision Trap" skillLevel="1" skillId="6084" classId="RANGER" />
+    <skill minLevel="80" race="ELYOS" name="(Improved) Collision Trap" skillLevel="1" skillId="6085" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Agonising Arrow" skillLevel="1" skillId="6086" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Lightning Arrow" skillLevel="1" skillId="6087" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Lethal Arrow" skillLevel="1" skillId="6088" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Raging Wind Arrow" skillLevel="1" skillId="6089" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Hunter's Might" skillLevel="1" skillId="6090" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Gale Arrow" skillLevel="1" skillId="6091" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Explosive Arrow" skillLevel="1" skillId="6092" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sharpen Arrows" skillLevel="1" skillId="6093" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Focused Shots" skillLevel="1" skillId="6094" classId="RANGER" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Trap of Slowing" skillLevel="1" skillId="6095" classId="RANGER" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Trap of Slowing" skillLevel="1" skillId="6096" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Seal Arrow" skillLevel="1" skillId="6097" classId="RANGER" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Skybound Trap" skillLevel="1" skillId="6098" classId="RANGER" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Skybound Trap" skillLevel="1" skillId="6099" classId="RANGER" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Blazing Trap" skillLevel="1" skillId="6100" classId="RANGER" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Blazing Trap" skillLevel="1" skillId="6101" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Nature's Resolve" skillLevel="1" skillId="6102" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Bow of Blessing" skillLevel="1" skillId="6103" classId="RANGER" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Trap of Clairvoyance" skillLevel="1" skillId="6104" classId="RANGER" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Trap of Clairvoyance" skillLevel="1" skillId="6105" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Arrow Deluge" skillLevel="1" skillId="6106" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Boon of Flame" skillLevel="1" skillId="6107" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Refuge Barrier" skillLevel="1" skillId="6108" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Wind of Torpor" skillLevel="1" skillId="6109" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Winter Armour" skillLevel="1" skillId="6110" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Glacial Shard" skillLevel="1" skillId="6111" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sleeping Storm" skillLevel="1" skillId="6112" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Summon Stone" skillLevel="1" skillId="6113" classId="SORCERER" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Summon Whirlwind" skillLevel="1" skillId="6114" classId="SORCERER" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Summon Whirlwind" skillLevel="1" skillId="6115" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Flame Spray" skillLevel="1" skillId="6116" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Illusion Storm" skillLevel="1" skillId="6117" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Wind Cut Down" skillLevel="1" skillId="6118" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Arcane Thunderbolt" skillLevel="1" skillId="6119" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Absolute Zero" skillLevel="1" skillId="6120" classId="SORCERER" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Ice Sheet" skillLevel="1" skillId="6121" classId="SORCERER" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Ice Sheet" skillLevel="1" skillId="6122" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Exchange Vitality" skillLevel="1" skillId="6123" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Curse of Weakness" skillLevel="1" skillId="6124" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Boon of Quickness" skillLevel="1" skillId="6125" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Ice Harpoon" skillLevel="1" skillId="6126" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Elemental Ward" skillLevel="1" skillId="6127" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Cyclone Strike" skillLevel="1" skillId="6128" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Spirit Bundling" skillLevel="1" skillId="6129" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Large-Scale Absorption" skillLevel="1" skillId="6130" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Command: Faithful Substitution" skillLevel="1" skillId="6131" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Infernal Blight" skillLevel="1" skillId="6132" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Strengthening Spirit: Spirit Armour" skillLevel="1" skillId="6133" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Magic Implosion" skillLevel="1" skillId="6134" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Infernal Pain" skillLevel="1" skillId="6135" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Command: Ruinous Offensive" skillLevel="1" skillId="6136" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Summon Cyclone Servant" skillLevel="1" skillId="6137" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Summon Cyclone Servant" skillLevel="1" skillId="6138" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Healing Spirit" skillLevel="1" skillId="6139" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Enmity Swap" skillLevel="1" skillId="6140" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Earth Protection" skillLevel="1" skillId="6141" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Curse of Magic Power" skillLevel="1" skillId="6142" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Wilderness Rage" skillLevel="1" skillId="6143" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Command: Burn-to-Ashes" skillLevel="1" skillId="6146" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Cyclone of Wrath" skillLevel="1" skillId="6147" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Withering Gloom" skillLevel="1" skillId="6148" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Command: Wall of Protection" skillLevel="1" skillId="6149" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Cloaking Word" skillLevel="1" skillId="6150" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Roaring Wind Bludgeon" skillLevel="1" skillId="6151" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Blast Spell" skillLevel="1" skillId="6152" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Magic of Incitement" skillLevel="1" skillId="6153" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Elemental Screen" skillLevel="1" skillId="6154" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Numbing Blow" skillLevel="1" skillId="6155" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Blessing of Stone" skillLevel="1" skillId="6156" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Blessing of Wind" skillLevel="1" skillId="6157" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Word of Protection" skillLevel="1" skillId="6158" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Mountain Crash" skillLevel="1" skillId="6159" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Disorientating Blow" skillLevel="1" skillId="6160" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Healing Burst" skillLevel="1" skillId="6161" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Raging Encouragement" skillLevel="1" skillId="6162" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Word of Inspiration" skillLevel="1" skillId="6163" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Word of Life" skillLevel="1" skillId="6164" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Rise" skillLevel="1" skillId="6165" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Soul Lock" skillLevel="1" skillId="6166" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Splash Swing" skillLevel="1" skillId="6167" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Blast" skillLevel="1" skillId="6168" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Annihilation" skillLevel="1" skillId="6169" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Deadly Blow" skillLevel="1" skillId="6170" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Healing Conduit" skillLevel="1" skillId="6171" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Seal of Judgement" skillLevel="1" skillId="6172" classId="CLERIC" />
+    <skill minLevel="80" race="ELYOS" name="(Improved) Summon Taunting Energy" skillLevel="1" skillId="6173" classId="CLERIC" />
+    <skill minLevel="80" race="ASMODIANS" name="(Improved) Summon Taunting Energy" skillLevel="1" skillId="6174" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Life-Saving Splendour" skillLevel="1" skillId="6175" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Benevolence" skillLevel="1" skillId="6176" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Call Lightning" skillLevel="1" skillId="6177" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sacrificial Power" skillLevel="1" skillId="6178" classId="CLERIC" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Summon Healing Servant" skillLevel="1" skillId="6179" classId="CLERIC" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Summon Healing Servant" skillLevel="1" skillId="6180" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Ripple of Purification" skillLevel="1" skillId="6181" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Splendour of Rebirth" skillLevel="1" skillId="6182" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Chain of Suffering" skillLevel="1" skillId="6183" classId="CLERIC" />
+    <skill minLevel="80" race="ELYOS" stigma="true" name="(Improved) Summon Noble Energy" skillLevel="1" skillId="6184" classId="CLERIC" />
+    <skill minLevel="80" race="ASMODIANS" stigma="true" name="(Improved) Summon Noble Energy" skillLevel="1" skillId="6185" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sprint Skill" skillLevel="1" skillId="6186" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Reverse Condition" skillLevel="1" skillId="6187" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Saving Grace" skillLevel="1" skillId="6188" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Sympathetic Heal" skillLevel="1" skillId="6189" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Festering Wound" skillLevel="1" skillId="6190" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Blinding Light" skillLevel="1" skillId="6191" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Lightning Bolt of Retaliation" skillLevel="1" skillId="6192" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Enfeebling Burst" skillLevel="1" skillId="6193" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Noble Grace" skillLevel="1" skillId="6194" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Repeated Bombardment" skillLevel="1" skillId="6195" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Pursuit Stance" skillLevel="1" skillId="6198" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Wild Magic Projectile" skillLevel="1" skillId="6199" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Soul Cannon" skillLevel="1" skillId="6200" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Between the Eyes" skillLevel="1" skillId="6203" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Binding Cannonball" skillLevel="1" skillId="6204" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Fissure Cannonball" skillLevel="1" skillId="6205" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Enhance Magic Projectile" skillLevel="1" skillId="6206" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Gift of Magic Power" skillLevel="1" skillId="6207" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Load Magic Projectile" skillLevel="1" skillId="6208" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Lifeline Penetration" skillLevel="1" skillId="6209" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Trueshot Magic Eye" skillLevel="1" skillId="6210" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Firebug Cannon" skillLevel="1" skillId="6211" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Frost Cannon" skillLevel="1" skillId="6214" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Breath of Magic Power" skillLevel="1" skillId="6215" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Soulsucker Shot" skillLevel="1" skillId="6216" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Rapid Volley" skillLevel="1" skillId="6217" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Shock Cannon" skillLevel="1" skillId="6218" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Spirit Cannon" skillLevel="1" skillId="6221" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Flame Bombardment" skillLevel="1" skillId="6224" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Serenade of Purification" skillLevel="1" skillId="6227" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Fantastic Variation" skillLevel="1" skillId="6228" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Illusion Tone" skillLevel="1" skillId="6229" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Clearing Melody" skillLevel="1" skillId="6230" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Disharmony" skillLevel="1" skillId="6231" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Melody of Joy" skillLevel="1" skillId="6232" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Paralysis Resonation" skillLevel="1" skillId="6233" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Mosky Requiem" skillLevel="1" skillId="6234" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Rejuvenation Melody" skillLevel="1" skillId="6235" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Healing Mode" skillLevel="1" skillId="6236" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Magic Boost Mode" skillLevel="1" skillId="6237" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Variation of Peace" skillLevel="1" skillId="6238" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Melody of Courage" skillLevel="1" skillId="6239" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Melody of Discipline" skillLevel="1" skillId="6240" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Healing Variation" skillLevel="1" skillId="6241" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Dance of the Jester" skillLevel="1" skillId="6244" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Attack Melody" skillLevel="1" skillId="6245" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Requiem of Oblivion" skillLevel="1" skillId="6246" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) March of the Bees" skillLevel="1" skillId="6247" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Harmony of Desolation" skillLevel="1" skillId="6248" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Electric Air Wave" skillLevel="1" skillId="6249" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Idium Explosion" skillLevel="1" skillId="6250" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Quick Recharge" skillLevel="1" skillId="6253" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Id Shield" skillLevel="1" skillId="6254" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Leap of Destruction" skillLevel="1" skillId="6255" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Electric Binding" skillLevel="1" skillId="6256" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Magic Veil" skillLevel="1" skillId="6257" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Power Increase" skillLevel="1" skillId="6258" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Storm Strike" skillLevel="1" skillId="6259" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Mobility Boost" skillLevel="1" skillId="6260" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Lifeline Slash" skillLevel="1" skillId="6261" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Idium Ray" skillLevel="1" skillId="6262" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Idium Bombardment" skillLevel="1" skillId="6265" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Magic Focus" skillLevel="1" skillId="6268" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Magic Regeneration" skillLevel="1" skillId="6269" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Idium Whip" skillLevel="1" skillId="6272" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Wave of Destruction" skillLevel="1" skillId="6275" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Absorbing Reflector Shield" skillLevel="1" skillId="6276" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Cleave Armour" skillLevel="1" skillId="6277" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Perception Boost" skillLevel="1" skillId="6278" classId="RIDER" />
+    <skill minLevel="80" race="ELYOS" name="(Improved) Flash Band" skillLevel="1" skillId="6279" classId="PAINTER" />
+    <skill minLevel="80" race="ASMODIANS" name="(Improved) Flash Band" skillLevel="1" skillId="6280" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Colour Monster" skillLevel="1" skillId="6281" classId="PAINTER" />
+    <skill minLevel="80" race="ELYOS" name="(Improved) Portrait of Gravity" skillLevel="1" skillId="6284" classId="PAINTER" />
+    <skill minLevel="80" race="ASMODIANS" name="(Improved) Portrait of Gravity" skillLevel="1" skillId="6285" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Colour Fist" skillLevel="1" skillId="6286" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Imprisonment" skillLevel="1" skillId="6287" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Work Destruction" skillLevel="1" skillId="6288" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Flash Portrait" skillLevel="1" skillId="6289" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Colour Outbreak" skillLevel="1" skillId="6290" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Into the Black" skillLevel="1" skillId="6291" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) New Work" skillLevel="1" skillId="6292" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Viscous Colour" skillLevel="1" skillId="6295" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Colour Protection Shield" skillLevel="1" skillId="6296" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Life Binding" skillLevel="1" skillId="6297" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Colour Fight" skillLevel="1" skillId="6298" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Time Bomb" skillLevel="1" skillId="6299" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Colourful Rain" skillLevel="1" skillId="6300" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Colour of Silence" skillLevel="1" skillId="6301" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Glaze Coating" skillLevel="1" skillId="6302" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Healing Seal" skillLevel="1" skillId="6303" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="Raving Madness" skillLevel="1" skillId="5969" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="Short Fuse" skillLevel="1" skillId="5970" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Raving Madness" skillLevel="1" skillId="5971" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Short Fuse" skillLevel="1" skillId="5972" classId="GLADIATOR" />
+    <skill minLevel="80" race="PC_ALL" name="Repeated Divine Grasp" skillLevel="1" skillId="5973" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="Concentrated Divine Grasp" skillLevel="1" skillId="5974" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Repeated Divine Grasp" skillLevel="1" skillId="5975" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Concentrated Divine Grasp" skillLevel="1" skillId="5976" classId="TEMPLAR" />
+    <skill minLevel="80" race="PC_ALL" name="Shadow of Resistance" skillLevel="1" skillId="5977" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="Speed's Shadow" skillLevel="1" skillId="5978" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shadow of Resistance" skillLevel="1" skillId="5979" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Speed's Shadow" skillLevel="1" skillId="5980" classId="ASSASSIN" />
+    <skill minLevel="80" race="PC_ALL" name="Mau's Honour" skillLevel="1" skillId="5981" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="Mau's Glory" skillLevel="1" skillId="5982" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Mau's Honour" skillLevel="1" skillId="5983" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Mau's Glory" skillLevel="1" skillId="5984" classId="RANGER" />
+    <skill minLevel="80" race="PC_ALL" name="Swift Intervention" skillLevel="1" skillId="5989" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="Guarding Intervention" skillLevel="1" skillId="5990" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Swift Intervention" skillLevel="1" skillId="5991" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Guarding Intervention" skillLevel="1" skillId="5992" classId="CLERIC" />
+    <skill minLevel="80" race="PC_ALL" name="Shelter of Regeneration" skillLevel="1" skillId="5993" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="Shelter of Resistance" skillLevel="1" skillId="5994" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shelter of Regeneration" skillLevel="1" skillId="5995" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Shelter of Resistance" skillLevel="1" skillId="5996" classId="CHANTER" />
+    <skill minLevel="80" race="PC_ALL" name="Greater Tranquillising Cloud" skillLevel="1" skillId="5997" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="Concentrated Tranquillising Cloud" skillLevel="1" skillId="5998" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Greater Tranquillising Cloud" skillLevel="1" skillId="5999" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Concentrated Tranquillising Cloud" skillLevel="1" skillId="6000" classId="SORCERER" />
+    <skill minLevel="80" race="PC_ALL" name="Greater Disenchantment" skillLevel="1" skillId="6001" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="Concentrated Disenchantment" skillLevel="1" skillId="6002" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Greater Disenchantment" skillLevel="1" skillId="6003" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Concentrated Disenchantment" skillLevel="1" skillId="6004" classId="SPIRIT_MASTER" />
+    <skill minLevel="80" race="PC_ALL" name="Precision Colour Boost" skillLevel="1" skillId="6005" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="Attack Colour Boost" skillLevel="1" skillId="6006" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Precision Colour Boost" skillLevel="1" skillId="6007" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Attack Colour Boost" skillLevel="1" skillId="6008" classId="PAINTER" />
+    <skill minLevel="80" race="PC_ALL" name="Symphony of Rage" skillLevel="1" skillId="6009" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="Aether Symphony" skillLevel="1" skillId="6010" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Symphony of Rage" skillLevel="1" skillId="6011" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Aether Symphony" skillLevel="1" skillId="6012" classId="BARD" />
+    <skill minLevel="80" race="PC_ALL" name="Magic's Blessing" skillLevel="1" skillId="6013" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="Focused Magic" skillLevel="1" skillId="6014" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Magic's Blessing" skillLevel="1" skillId="6015" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Focused Magic" skillLevel="1" skillId="6016" classId="GUNNER" />
+    <skill minLevel="80" race="PC_ALL" name="Extreme Effort" skillLevel="1" skillId="6017" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="Limitless Power" skillLevel="1" skillId="6018" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Extreme Effort" skillLevel="1" skillId="6019" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" name="(Improved) Limitless Power" skillLevel="1" skillId="6020" classId="RIDER" />
+    <skill minLevel="80" race="PC_ALL" stigma="true" name="(Improved) Shackle of Vulnerability" skillLevel="1" skillId="6310" classId="SPIRIT_MASTER" />
 </skill_tree>
