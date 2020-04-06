@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-11-02 13:16 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-04-06 20:45 -->
 <staticdoor_templates>
     <!-- Kaisinel Academy -->
     <world world="110070000">
@@ -406,7 +406,7 @@
             <box x1="1576.04858" y1="1471.0697" z1="328.890564" x2="1581.688" y2="1483.00635" z2="343.60907"/>
         </staticdoor>
     </world>
-    <!-- [campaign] Talocs Hollow -->
+    <!-- Talocs Hollow -->
     <world world="300190000">
         <staticdoor doorid="49" x="260.43698" y="755.55737" z="1184.0713" mesh="Root_Door.cga" state="0x5">
             <box x1="248.495865" y1="752.477844" z1="1179.37109" x2="274.879852" y2="757.779846" z2="1193.46619"/>
@@ -429,7 +429,7 @@
         <staticdoor type="ABYSS" doorid="114" x="189.57213" y="307.18369" z="143.00366" mesh="idnovice_prisondoor.cgf"/>
         <staticdoor type="ABYSS" doorid="119" x="189.56" y="332.31" z="142.99001" mesh="idnovice_prisondoor.cgf"/>
     </world>
-    <!-- [campaign] Nightmare -->
+    <!-- Nightmare -->
     <world world="300230000">
         <staticdoor keyid="185000098" doorid="2" x="387.24979" y="205.22096" z="145.98535" mesh="id_cromede_san_door_01a.cga" state="0x2">
             <box x1="380.589233" y1="198.90744" z1="145.97316" x2="393.898376" y2="211.882034" z2="162.5763"/>
@@ -570,6 +570,25 @@
         <staticdoor doorid="135" x="315.84482" y="1220.9026" z="263.30887" mesh="arena_start_sphere.cga">
             <box x1="313.592529" y1="1218.82837" z1="262.612427" x2="318.035828" y2="1223.26416" z2="273.561768"/>
         </staticdoor>
+    </world>
+    <!-- Discipline Training Grounds -->
+    <world world="300430000">
+        <staticdoor doorid="140" x="1868.5752" y="1068.5641" z="337.47598" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="143" x="693.29163" y="1771.7109" z="236.55487" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="151" x="1817.5234" y="1737.3136" z="311.6712" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="150" x="1887.1031" y="1737.4261" z="311.74271" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="141" x="1842.0732" y="1069.1798" z="338.1329" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="121" x="346.24402" y="1184.8339" z="244.62112" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="139" x="1869.2085" y="1041.8925" z="337.94186" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="145" x="709.78845" y="1766.1855" z="183.5928" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="142" x="1841.151" y="1041.2416" z="338.28973" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="149" x="1851.7861" y="1765.2975" z="305.45444" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="144" x="694.03607" y="1760.9331" z="196.2556" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="148" x="1851.7029" y="1709.1219" z="305.36346" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="137" x="278.12811" y="1265.6525" z="263.1441" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="146" x="686.38452" y="1756.8234" z="163.549" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="138" x="251.14659" y="1297.4462" z="248.15509" mesh="arena_start_sphere.cga"/>
+        <staticdoor doorid="135" x="315.84482" y="1220.9026" z="263.30887" mesh="arena_start_sphere.cga"/>
     </world>
     <!-- Arena Of Cooperation -->
     <world world="300450000">
@@ -1349,7 +1368,7 @@
         <staticdoor keyid="185000269" doorid="182" x="514.01819" y="811.98712" z="415.79102" mesh="Dreadgion_Captaindoor2.cga" state="0x2"/>
         <staticdoor keyid="185000269" doorid="183" x="456.263" y="812.12207" z="415.96036" mesh="Dreadgion_Captaindoor2.cga" state="0x2"/>
     </world>
-    <!-- Treasure Island Of Courage -->
+    <!-- [event] Farm Race -->
     <world world="301700000">
         <staticdoor doorid="8" x="1331.2253" y="1380.0688" z="372.57504" mesh="IDRun_Start_shield_01a.cga"/>
         <staticdoor doorid="93" x="1048.875" y="1379.0743" z="372.54999" mesh="IDRun_Start_shield_01a.cga"/>
@@ -1554,7 +1573,7 @@
         <staticdoor doorid="232" x="218.43848" y="249.40367" z="971.32599" mesh="idinfinity_boss_door.cga" state="0x6"/>
         <staticdoor doorid="151" x="263.86716" y="249.42151" z="240.84766" mesh="idinfinity_boss_door.cga" state="0x2"/>
     </world>
-    <!-- Kubrinerks Cube Laboratory -->
+    <!-- Kubrinerks Monster Cube Laboratory -->
     <world world="302460000">
         <staticdoor doorid="27" x="375.79837" y="285.72388" z="198.00841" mesh="IDLuna_siege_Portfire.cga" state="0x6"/>
     </world>
@@ -1720,9 +1739,38 @@
         <staticdoor type="ABYSS" doorid="411" x="445.06699" y="805.74689" z="820.89001" mesh="IDF7_weapon_start_door.cgf"/>
         <staticdoor doorid="206" x="926.18536" y="697.53552" z="749.97491" mesh="IDF7_A_door_02b.cga" state="0x8"/>
     </world>
-    <!-- Nochsana Novice Training Camp -->
-    <world world="302640000">
-        <staticdoor type="ABYSS" doorid="23" x="346.37997" y="356.94745" z="378.26767" mesh="?"/>
+    <!-- Hidden Minionite Warehouse -->
+    <world world="302641000">
+        <staticdoor keyid="1" doorid="1" x="554.00104" y="194.81346" z="179.32158" mesh="ab_up3_Naga.cga" state="0x8"/>
+        <staticdoor type="ABYSS" doorid="450" x="413.37881" y="553.98511" z="189.59091" mesh="ab_up3_door_01a.cgf"/>
+        <staticdoor type="ABYSS" doorid="122" x="636.784" y="388.58676" z="197.67433" mesh="ab_up3_door_01a.cgf"/>
+        <staticdoor keyid="185000059" doorid="79" x="561.7348" y="864.30389" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="13" x="526.31799" y="655.10724" z="180.6422" mesh="ab_up3_door_03a.cgf"/>
+        <staticdoor keyid="185000059" doorid="20" x="489.97031" y="851.83215" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="31" x="637.92114" y="553.3877" z="189.82173" mesh="ab_up3_door_01a.cgf"/>
+        <staticdoor keyid="185000059" doorid="18" x="503.20822" y="874.72076" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="5" x="412.30396" y="488.97006" z="193.34682" mesh="ab_up3_door_01a.cgf"/>
+        <staticdoor keyid="185000059" doorid="11" x="541.50482" y="881.35974" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor keyid="1" doorid="2" x="501.3952" y="194.08116" z="179.24924" mesh="ab_up3_Lizard.cga" state="0x8"/>
+        <staticdoor keyid="185000059" doorid="80" x="566.28241" y="851.64075" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="12" x="553.59564" y="703.68848" z="191.67325" mesh="ab_up3_door_03a.cgf"/>
+        <staticdoor keyid="1" doorid="3" x="525.20099" y="241.20856" z="179.16214" mesh="ab_up3_Drakan.cga" state="0x8"/>
+        <staticdoor type="ABYSS" doorid="10" x="410.40826" y="290.06943" z="190.42143" mesh="ab_up3_door_01a.cgf"/>
+        <staticdoor keyid="185000059" doorid="74" x="494.53024" y="825.64215" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="8" x="526.3338" y="456.68433" z="179.1468" mesh="ab_up3_door_01a.cgf"/>
+        <staticdoor type="ABYSS" doorid="7" x="526.38458" y="683.4679" z="191.72318" mesh="ab_up3_door_03a.cgf"/>
+        <staticdoor keyid="185000060" doorid="14" x="577.49182" y="845.16333" z="199.39857" mesh="ab_up3_door_04a.cga" state="0xA"/>
+        <staticdoor keyid="185000059" doorid="15" x="528.20135" y="883.72211" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="16" x="527.93677" y="740.36084" z="195.70323" mesh="ab_up3_door_03a.cgf"/>
+        <staticdoor keyid="185000059" doorid="17" x="514.95459" y="881.43506" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="32" x="638.16968" y="608.37262" z="189.93639" mesh="ab_up3_door_02a.cgf"/>
+        <staticdoor keyid="185000059" doorid="19" x="494.55392" y="864.5708" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor keyid="185000059" doorid="28" x="489.89212" y="838.30884" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="30" x="497.29648" y="703.56592" z="191.72318" mesh="ab_up3_door_03a.cgf"/>
+        <staticdoor keyid="185000059" doorid="76" x="553.11902" y="874.65997" z="199.61107" mesh="ab_up3_door_glass.cga" state="0xA"/>
+        <staticdoor type="ABYSS" doorid="9" x="526.3338" y="465.1546" z="179.1468" mesh="ab_up3_door_01a.cgf"/>
+        <staticdoor type="ABYSS" doorid="6" x="413.56653" y="608.16156" z="189.98061" mesh="ab_up3_door_02a.cgf"/>
+        <staticdoor type="ABYSS" doorid="185" x="636.88458" y="489.37619" z="193.09598" mesh="ab_up3_door_01a.cgf"/>
     </world>
     <!-- [event] Legion Banquet Hall -->
     <world world="302650000">
@@ -1756,6 +1804,10 @@
     <!-- Beninerks Manor Easy -->
     <world world="302690000">
         <staticdoor doorid="60" x="623.75891" y="461.23611" z="170.16049" mesh="idf8_H_gate_01a.cga" state="0x4"/>
+    </world>
+    <!-- Shattered Abyssal Splinter -->
+    <world world="302710000">
+        <staticdoor keyid="185001080" doorid="98" x="235.92061" y="162.61552" z="198.37282" mesh="door_od_01b.cga" state="0xA"/>
     </world>
     <!-- [campaign] Aetherogenetics Lab -->
     <world world="310050000">
@@ -1821,6 +1873,13 @@
     <world world="320170000">
         <staticdoor type="ABYSS" doorid="52" x="524.15771" y="481.23468" z="1013.5057" mesh="ab_castledoor_01a.cgf"/>
         <staticdoor type="ABYSS" doorid="53" x="480.01099" y="575.73517" z="1013.5405" mesh="ab_castledoor_01a.cgf"/>
+    </world>
+    <!-- Genesis Battle Arena -->
+    <world world="320180000">
+        <staticdoor type="ABYSS" doorid="201" x="92.228699" y="770.83923" z="60.479645" mesh="id_lobby_door_01.cgf"/>
+        <staticdoor doorid="7" x="269.21512" y="251.94495" z="73.970268" mesh="IDTM_Arena_01_door_01.cga"/>
+        <staticdoor type="ABYSS" doorid="211" x="92.856506" y="700.38788" z="60.479645" mesh="id_lobby_door_01.cgf"/>
+        <staticdoor doorid="157" x="269.21106" y="311.49655" z="73.9533" mesh="IDTM_Arena_01_door_01.cga"/>
     </world>
     <!-- Reshanta -->
     <world world="400010000">
@@ -5193,7 +5252,7 @@
         <staticdoor type="ABYSS" doorid="1668" x="2103.3579" y="1872.5542" z="317.12799" mesh="?"/>
         <staticdoor type="ABYSS" doorid="1417" x="828.64929" y="2550.3635" z="220.51332" mesh="dramata_door.cgf"/>
     </world>
-    <!-- South Katalam -->
+    <!-- Red Katalam South -->
     <world world="800040000">
         <staticdoor type="ABYSS" doorid="2443" x="1433.1864" y="718.14374" z="130.57367" mesh="?"/>
         <staticdoor type="ABYSS" doorid="916" x="494.1615" y="1818.0231" z="391.05334" mesh="Bu_ru_Enterance_door.cgf"/>
