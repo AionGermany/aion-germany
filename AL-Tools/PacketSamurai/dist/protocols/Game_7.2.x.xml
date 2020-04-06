@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <protocol crypt="AionGame7_2_0_0" name="Game_7.2.x" port="7777" checksumSize="3" strictlength="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="protocol.xsd">
+	<bitset name="basicState">
+		<bit num="1" display="Active"/>
+		<bit num="2" display="Flying"/>
+		<bit num="4" display="On ground"/>
+		<bit num="8" display="Floating corpse"/>
+		<bit num="16" display="0x16"/>
+		<bit num="32" display="Stance"/>
+		<bit num="64" display="Idle/Walk"/>
+		<bit num="128" display="Treatment"/>
+	</bitset>
+	<bitset name="buildingOwnerInfo">
+		<bit num="1" display="Has owner"/>
+		<bit num="2" display="Buy allowed"/>
+		<bit num="4" display="Can sell"/>
+	</bitset>
+	<bitset name="creatureUpdates">
+		<bit num="1" display="Active"/>
+		<bit num="2" display="Running"/>
+		<bit num="4" display="Resting"/>
+		<bit num="8" display="Floating Corpse"/>
+		<bit num="16" display="0x16"/>
+		<bit num="32" display="Combat mode"/>
+		<bit num="64" display="Walking"/>
+		<bit num="128" display="Powershard"/>
+		<bit num="256" display="Treatment"/>
+		<bit num="512" display="Gliding"/>
+	</bitset>
 	<bitset name="effectIds">
 		<bit num="1" display="POISON"/>
 		<bit num="2" display="BLEED"/>
@@ -28,105 +55,191 @@
 		<bit num="16777216" display="KNOCKBACK"/>
 		<bit num="536870912" display="INVISIBLE_RELATED"/>
 	</bitset>
-	<multivalue name="lunaCraft">
-		<enum val="0" display="NormalCraft"/>
-		<enum val="1" display="DailyCraft"/>
+	<bitset name="houseSettings">
+		<bit num="1" display="Owner"/>
+		<bit num="2" display="Need studio"/>
+		<bit num="4" display="Can bid"/>
+	</bitset>
+	<bitset name="itemMasks">
+		<bit num="1" display="Limit One"/>
+		<bit num="2" display="Tradable from Shop"/>
+		<bit num="4" display="Tradable to Marchants"/>
+		<bit num="8" display="Storable in WH"/>
+		<bit num="16" display="Storable in Acc. WH"/>
+		<bit num="32" display="Storable in Leg. WH"/>
+		<bit num="64" display="Breakable"/>
+		<bit num="128" display="Soul Bound"/>
+		<bit num="256" display="Remove on Logoff"/>
+		<bit num="512" display="No Enchant"/>
+		<bit num="1024" display="Can proc. Enchant"/>
+		<bit num="2048" display="Can Fuse"/>
+		<bit num="4096" display="Can Remodel"/>
+		<bit num="8192" display="Can Split"/>
+		<bit num="16384" display="Can Delete"/>
+		<bit num="32768" display="Can Dye"/>
+	</bitset>
+	<bitset name="itemSlots">
+		<bit num="0x1" display="Main hand"/>
+		<bit num="0x2" display="Sub hand"/>
+		<bit num="0x4" display="Helmet"/>
+		<bit num="0x8" display="Torso"/>
+		<bit num="0x10" display="Gloves"/>
+		<bit num="0x20" display="Boots"/>
+		<bit num="0x40" display="Left earring"/>
+		<bit num="0x80" display="Right earring"/>
+		<bit num="0x100" display="Left ring"/>
+		<bit num="0x200" display="Right ring"/>
+		<bit num="0x400" display="Necklace"/>
+		<bit num="0x800" display="Shoulder"/>
+		<bit num="0x1000" display="Pants"/>
+		<bit num="0x2000" display="Right shard"/>
+		<bit num="0x4000" display="Left shard"/>
+		<bit num="0x8000" display="Wings"/>
+		<bit num="0x10000" display="Waist"/>
+		<bit num="0x20000" display="Main Off-hand"/>
+		<bit num="0x40000" display="Sub Off-hand"/>
+		<bit num="0x40000000" display="Stigma 1"/>
+		<bit num="0x80000000" display="Stigma 2"/>
+		<bit num="0x100000000" display="Stigma 3"/>
+		<bit num="0x200000000" display="Stigma 4"/>
+		<bit num="0x400000000" display="Stigma 5"/>
+		<bit num="0x800000000" display="Stigma 6"/>
+		<bit num="0x800000000000" display="Adv. Stigma 1"/>
+		<bit num="0x1000000000000" display="Adv. Stigma 2"/>
+		<bit num="0x2000000000000" display="Adv. Stigma 3"/>
+		<bit num="0x4000000000000" display="Adv. Stigma 4"/>
+		<bit num="0x8000000000000" display="Adv. Stigma 5"/>
+		<bit num="0x10000000000000" display="Adv. Stigma 6"/>
+	</bitset>
+	<bitset name="playerHouseOwnerInfo">
+		<bit num="1" display="Owner"/>
+		<bit num="2" display="Studio acquired"/>
+		<bit num="4" display="Can bid"/>
+		<bit num="8" display="Unk 0x8"/>
+		<bit num="16" display="Unk 0x16"/>
+	</bitset>
+	<bitset name="visualState">
+		<bit num="1" display="Hide I"/>
+		<bit num="2" display="Hide II"/>
+		<bit num="4" display="0x4"/>
+		<bit num="8" display="0x8"/>
+		<bit num="16" display="0x10"/>
+		<bit num="32" display="0x20"/>
+		<bit num="64" display="Blinking"/>
+		<bit num="128" display="Invisible"/>
+	</bitset>
+	<multivalue name="abyssRankType">
+		<enum val="1" display="GRADE 9 SOLDIER"/>
+		<enum val="2" display="GRADE 8 SOLDIER"/>
+		<enum val="3" display="GRADE 7 SOLDIER"/>
+		<enum val="4" display="GRADE 6 SOLDIER"/>
+		<enum val="5" display="GRADE 5 SOLDIER"/>
+		<enum val="6" display="GRADE 4 SOLDIER"/>
+		<enum val="7" display="GRADE 3 SOLDIER"/>
+		<enum val="8" display="GRADE 2 SOLDIER"/>
+		<enum val="9" display="GRADE 1 SOLDIER"/>
+		<enum val="10" display="STAR 1 OFFICER"/>
+		<enum val="11" display="STAR 2 OFFICER"/>
+		<enum val="12" display="STAR 3 OFFICER"/>
+		<enum val="13" display="STAR 4 OFFICER"/>
+		<enum val="14" display="STAR 5 OFFICER"/>
+		<enum val="15" display="GENERAL"/>
+		<enum val="16" display="GREAT GENERAL"/>
+		<enum val="17" display="COMMANDER"/>
+		<enum val="18" display="SUPREME COMMANDER"/>
 	</multivalue>
-	<multivalue name="cubics">
-		<enum val="1" display="Life Cube Gold"/><!-- checked -->
-		<enum val="2" display="Life Cube Silver"/><!-- checked -->
-		<enum val="3" display="Life Cube Bronze"/><!-- checked -->
-		<enum val="4" display="Thought Cube Gold"/><!-- checked -->
-		<enum val="5" display="Thought Cube Silver"/><!-- checked -->
-		<enum val="6" display="Thought Cube Bronze"/><!-- checked -->
-		<enum val="7" display="Blessing Cube Gold"/><!-- checked -->
-		<enum val="8" display="Blessing Cube Silver"/><!-- checked -->
-		<enum val="9" display="Blessing Cube Bronze"/><!-- checked -->
-		<enum val="10" display="Madness Cube Gold"/><!-- checked -->
-		<enum val="11" display="Madness Cube Silver"/><!-- checked -->
-		<enum val="12" display="Madness Cube Bronze"/><!-- checked -->
-		<enum val="13" display="Wisdom Cube Gold"/><!-- checked -->
-		<enum val="14" display="Wisdom Cube Silver"/><!-- checked -->
-		<enum val="15" display="Wisdom Cube Bronze"/><!-- checked -->
-		<enum val="16" display="Protection Cube Gold"/><!-- checked -->
-		<enum val="17" display="Protection Cube Silver"/><!-- checked -->
-		<enum val="18" display="Protection Cube Bronze"/><!-- checked -->
-		<enum val="19" display="Defence Cube Gold"/><!-- checked -->
-		<enum val="20" display="Defence Cube Silver"/><!-- checked -->
-		<enum val="21" display="Defence Cube Bronze"/><!-- checked -->
-		<enum val="22" display="Will Cube Gold"/><!-- checked -->
-		<enum val="23" display="Will Cube Silver"/><!-- checked -->
-		<enum val="24" display="Will Cube Bronze"/><!-- checked -->
-		<enum val="25" display="Reason Cube Gold"/><!-- checked -->
-		<enum val="26" display="Reason Cube Silver"/><!-- checked -->
-		<enum val="27" display="Reason Cube Bronze"/><!-- checked -->
-		<enum val="28" display="Dexterity Cube Gold"/><!-- checked -->
-		<enum val="29" display="Dexterity Cube Silver"/><!-- checked -->
-		<enum val="30" display="Dexterity Cube Bronze"/><!-- checked -->
-		<enum val="31" display="Honour Cube Gold"/><!-- checked -->
-		<enum val="32" display="Honour Cube Silver"/><!-- checked -->
-		<enum val="33" display="Honour Cube Bronze"/><!-- checked -->
-		<enum val="34" display="Vow Cube Gold"/><!-- checked -->
-		<enum val="35" display="Vow Cube Silver"/><!-- checked -->
-		<enum val="36" display="Vow Cube Bronze"/><!-- checked -->
-		<enum val="37" display="Silence Cube Gold"/><!-- checked -->
-		<enum val="38" display="Silence Cube Silver"/><!-- checked -->
-		<enum val="39" display="Silence Cube Bronze"/><!-- checked -->
-		<enum val="40" display="Ereshkigal Hunters Cube Gold"/><!-- checked -->
-		<enum val="41" display="Ereshkigal Hunters Cube Silver"/><!-- checked -->
-		<enum val="42" display="Ereshkigal Hunters Cube Bronze"/><!-- checked -->
-		<enum val="43" display="Ereshkigal Experts Cube Gold"/><!-- checked -->
-		<enum val="44" display="Ereshkigal Experts Cube Silver"/><!-- checked -->
-		<enum val="45" display="Ereshkigal Experts Cube Bronze"/><!-- checked -->
+	<multivalue name="attackStatus">
+		<enum display="Dodge"/>
+		<enum display="Off. Dodge"/>
+		<enum display="Parry"/>
+		<enum display="Off. Parry"/>
+		<enum display="Block"/>
+		<enum display="Off. Block"/>
+		<enum display="Resist"/>
+		<enum display="Off. Resist"/>
+		<enum display="Buf?"/>
+		<enum display="Off. Buf"/>
+		<enum display="Normal Hit"/>
+		<enum display="Off. Normal Hit"/>
+		<enum val="-64" display="Critical Dodge"/>
+		<enum val="-62" display="Critical Parry"/>
+		<enum val="-60" display="Critical Block"/>
+		<enum val="-58" display="Critical Resist"/>
+		<enum val="-54" display="Critical"/>
+		<enum val="-47" display="Off. Critical Dodge"/>
+		<enum val="-45" display="Off. Critical Parry"/>
+		<enum val="-43" display="Off. Critical Block"/>
+		<enum val="-41" display="Off. Critical Resist"/>
+		<enum val="-37" display="Off. Critical"/>
 	</multivalue>
-	<multivalue name="race">
-		<enum val="0" display="Elyos"/>
-		<enum val="1" display="Asmodian"/>
-		<enum val="2" display="Balaur"/>
+	<multivalue name="attackType">
+		<enum val="3" display="Natural HP"/>
+		<enum val="4" display="Used HP"/>
+		<enum val="5" display="Regular"/>
+		<enum val="6" display="Absorbed HP"/>
+		<enum val="7" display="HP"/>
+		<enum val="8" display="Protect Damage"/>
+		<enum val="10" display="Delay Damage"/>
+		<enum val="17" display="Fall Damage"/>
+		<enum val="19" display="Healed HP"/>
+		<enum val="20" display="Absorbed MP"/>
+		<enum val="21" display="MP"/>
+		<enum val="22" display="Natural MP"/>
+		<enum val="23" display="Attack"/>
+		<enum val="24" display="FP Rings"/>
+		<enum val="25" display="FP"/>
+		<enum val="27" display="Natural FP"/>
 	</multivalue>
-	<multivalue name="gender">
-		<enum display="Male"/>
-		<enum display="Female"/>
-	</multivalue>
-	<multivalue name="skillType">
-		<enum display="Normal"/>
-		<enum display="Stigma"/>
-		<enum display="Adv. Stigma"/>
-	</multivalue>
-	<multivalue name="questStatus">
-		<enum display="None"/>
-		<enum val="3" display="Start"/>
-		<enum display="Reward"/>
-		<enum display="Complete"/>
-		<enum display="Locked"/>
+	<multivalue name="blobIds">
+		<enum val="0" display="General Info"/>
+		<enum val="1" display="Weapon Info"/>
+		<enum val="2" display="Armor Info"/>
+		<enum val="3" display="Shield Info"/>
+		<enum val="4" display="Accessory Info"/>
+		<enum val="5" display="Arrow Info"/>
+		<enum val="6" display="Equip Info"/>
+		<enum val="7" display="Stigma Info"/>
+		<enum val="8" display="Stigma Shard"/>
+		<enum val="10" display="Stats Info"/>
+		<enum val="11" display="Manastone Info"/>
+		<enum val="13" display="Cloth Info"/>
+		<enum val="14" display="Fusion Info"/>
+		<enum val="15" display="Charge Info"/>
+		<enum val="16" display="Premium Info"/>
+		<enum val="17" display="Polish Info"/>
+		<enum val="18" display="Pack Info"/>
+		<enum val="19" display="Plume Info"/>
+		<enum val="20" display="Bracelet Info"/>
 	</multivalue>
 	<multivalue name="challengeType">
 		<enum val="1" display="Legion"/>
 		<enum val="2" display="Town"/>
 	</multivalue>
-	<multivalue name="playerClass">
-		<enum display="Warrior"/>
-		<enum display="Gladiator"/>
-		<enum display="Templar"/>
-		<enum display="Scout"/>
-		<enum display="Assassin"/>
-		<enum display="Ranger"/>
-		<enum display="Mage"/>
-		<enum display="Sorcerer"/>
-		<enum display="Spirit Master"/>
-		<enum display="Priest"/>
-		<enum display="Cleric"/>
-		<enum display="Chanter"/>
-		<enum display="Engineer"/>
-		<enum display="Rider"/>
-		<enum display="Gunner"/>
-		<enum display="Artist"/>
-		<enum display="Bard"/>
+	<multivalue name="chatType">
+		<enum display="Normal (white)"/>
+		<enum val="3" display="Shout (orange)"/>
+		<enum display="Whisper (green)"/>
+		<enum display="Group (blue)"/>
+		<enum display="Alliance (aqua)"/>
+		<enum display="Group Leader"/>
+		<enum display="Legion (dark blue)"/>
+		<enum val="10" display="Legion New (green)"/>
+		<enum val="12" display="Shout New (orange)"/>
+		<enum val="25" display="Announce (yellow)"/>
+		<enum val="26" display="Notice (white)"/>
+		<enum val="28" display="Periodic Announce (yellow)"/>
+		<enum val="30" display="Welcome"/>
+		<enum display="Reminder"/>
+		<enum display="Announcement"/>
+		<enum display="Balloon Old"/>
+		<enum display="Balloon New"/>
 	</multivalue>
-	<multivalue name="legionRank">
-		<enum display="Brigade General"/>
-		<enum display="Centurion"/>
-		<enum display="Legionary"/>
+	<multivalue name="counterSkillStatus">
+		<enum display="None"/>
+		<enum val="32" display="Block"/>
+		<enum val="64" display="Parry"/>
+		<enum val="128" display="Dodge"/>
+		<enum val="256" display="Resist"/>
 	</multivalue>
 	<multivalue name="editAction">
 		<enum val="1" display="Decor. Enter"/>
@@ -188,42 +301,6 @@
 		<enum display="Pet Emotion 3"/>
 		<enum display="Pet Emotion 4"/>
 	</multivalue>
-	<multivalue name="motion">
-		<enum display="Normal"/>
-		<enum display="Ninja Idle"/>
-		<enum display="Ninja Run"/>
-		<enum display="Ninja Jump"/>
-		<enum display="Ninja Rest"/>
-		<enum display="Hovering Idle"/>
-		<enum display="Hovering Run"/>
-		<enum display="Hovering Jump"/>
-		<enum display="Hovering Rest"/>
-	</multivalue>
-	<multivalue name="petAction">
-		<enum display="List"/>
-		<enum display="Adopt"/>
-		<enum display="Surrender"/>
-		<enum display="Spawn"/>
-		<enum display="Dismiss"/>
-		<enum val="9" display="Feed"/>
-		<enum display="Rename"/>
-		<enum val="12" display="Pet Status"/>
-		<enum display="Loot"/>
-	</multivalue>
-	<multivalue name="petFunction">
-		<enum val="0" display="Warehouse"/>
-		<enum val="1" display="Appearance"/>
-		<enum val="4" display="Absent"/>
-		<enum val="5" display="StatBoost"/>
-		<enum val="6" display="Alert"/>
-		<enum val="259" display="Loot"/>
-		<enum val="2049" display="Feed"/>
-		<enum val="8194" display="Buff"/>
-	</multivalue>
-	<multivalue name="feedType">
-		<enum val="1" display="Normal"/>
-		<enum val="3" display="AutoLoot"/>
-	</multivalue>
 	<multivalue name="feedAction">
 		<enum val="1" display="Start Eat"/>
 		<enum display="Stop Eat"/>
@@ -234,127 +311,13 @@
 		<enum display="Gift Notification"/>
 		<enum display="Not Hungry"/>
 	</multivalue>
-	<multivalue name="titleAction">
-		<enum display="List"/>
-		<enum display="Set"/>
-		<enum val="3" display="Update"/>
-	</multivalue>
-	<multivalue name="attackType">
-		<enum val="3" display="Natural HP"/>
-		<enum val="4" display="Used HP"/>
-		<enum val="5" display="Regular"/>
-		<enum val="6" display="Absorbed HP"/>
-		<enum val="7" display="HP"/>
-		<enum val="8" display="Protect Damage"/>
-		<enum val="10" display="Delay Damage"/>
-		<enum val="17" display="Fall Damage"/>
-		<enum val="19" display="Healed HP"/>
-		<enum val="20" display="Absorbed MP"/>
-		<enum val="21" display="MP"/>
-		<enum val="22" display="Natural MP"/>
-		<enum val="23" display="Attack"/>
-		<enum val="24" display="FP Rings"/>
-		<enum val="25" display="FP"/>
-		<enum val="27" display="Natural FP"/>
-	</multivalue>
-	<multivalue name="shieldType">
-		<enum display="No Shield"/>
-		<enum display="Reflected Damage"/>
-		<enum val="4" display="Protect"/>
-	</multivalue>
-	<multivalue name="attackStatus">
-		<enum display="Dodge"/>
-		<enum display="Off. Dodge"/>
-		<enum display="Parry"/>
-		<enum display="Off. Parry"/>
-		<enum display="Block"/>
-		<enum display="Off. Block"/>
-		<enum display="Resist"/>
-		<enum display="Off. Resist"/>
-		<enum display="Buf?"/>
-		<enum display="Off. Buf"/>
-		<enum display="Normal Hit"/>
-		<enum display="Off. Normal Hit"/>
-		<enum val="-64" display="Critical Dodge"/>
-		<enum val="-62" display="Critical Parry"/>
-		<enum val="-60" display="Critical Block"/>
-		<enum val="-58" display="Critical Resist"/>
-		<enum val="-54" display="Critical"/>
-		<enum val="-47" display="Off. Critical Dodge"/>
-		<enum val="-45" display="Off. Critical Parry"/>
-		<enum val="-43" display="Off. Critical Block"/>
-		<enum val="-41" display="Off. Critical Resist"/>
-		<enum val="-37" display="Off. Critical"/>
-	</multivalue>
-	<multivalue name="counterSkillStatus">
-		<enum display="None"/>
-		<enum val="32" display="Block"/>
-		<enum val="64" display="Parry"/>
-		<enum val="128" display="Dodge"/>
-		<enum val="256" display="Resist"/>
-	</multivalue>
-	<multivalue name="logIds">
-		<enum val="1" display="Spell ATK"/>
-		<enum val="3" display="Heal"/>
-		<enum val="4" display="MP Heal"/>
-		<enum val="23" display="Skill ATK Drain Instant"/>
-		<enum val="24" display="Spell ATK Drain Instant"/>
-		<enum val="25" display="Poison"/>
-		<enum val="26" display="Bleed"/>
-		<enum val="93" display="Proc ATK Instant"/>
-		<enum val="97" display="Delayed Spell ATK Instand"/>
-		<enum val="130" display="Spell ATK Drain"/>
-		<enum val="133" display="FP Heal"/>
-		<enum val="170" display="Regulat Heal"/>
-		<enum val="189" display="Regular"/>
-		<enum val="200" display="Leech HP"/> <!-- New - Painter Life Binding Skill -->
-		<enum val="204" display="Attack"/> <!-- New -->
-	</multivalue>
-	<multivalue name="chatType">
-		<enum display="Normal (white)"/>
-		<enum val="3" display="Shout (orange)"/>
-		<enum display="Whisper (green)"/>
-		<enum display="Group (blue)"/>
-		<enum display="Alliance (aqua)"/>
-		<enum display="Group Leader"/>
-		<enum display="Legion (dark blue)"/>
-		<enum val="10" display="Legion New (green)"/>
-		<enum val="12" display="Shout New (orange)"/>
-		<enum val="25" display="Announce (yellow)"/>
-		<enum val="26" display="Notice (white)"/>
-		<enum val="28" display="Periodic Announce (yellow)"/>
-		<enum val="30" display="Welcome"/>
-		<enum display="Reminder"/>
-		<enum display="Announcement"/>
-		<enum display="Balloon Old"/>
-		<enum display="Balloon New"/>
-	</multivalue>
-	<multivalue name="npcObjectType">
+	<multivalue name="feedType">
 		<enum val="1" display="Normal"/>
-		<enum val="2" display="Summon"/>
-		<enum val="4" display="Unknown1"/>
-		<enum val="8" display="Unknown2"/>
-		<enum val="16" display="Homing"/>
-		<enum val="32" display="Trap"/>
-		<enum val="64" display="Skill Area NPC"/>
-		<enum val="128" display="Totem"/>
-		<enum val="256" display="Group Gate"/>
-		<enum val="512" display="Unknown3"/>
-		<enum val="1024" display="Servant"/>
-		<enum val="2048" display="Pet"/>
+		<enum val="3" display="AutoLoot"/>
 	</multivalue>
-	<multivalue name="transformType">
-		<enum val="0" display="None"/>
-		<enum val="1" display="PC"/>
-		<enum val="2" display="Avatar"/>
-		<enum val="3" display="Form1"/>
-	</multivalue>
-	<multivalue name="houseSize">
-		<enum val="0" display="Unknown"/>
-		<enum val="1" display="House"/>
-		<enum val="2" display="Mansion"/>
-		<enum val="3" display="Estate"/>
-		<enum val="4" display="Palace"/>
+	<multivalue name="gender">
+		<enum val="0" display="Male"/>
+		<enum val="1" display="Female"/>
 	</multivalue>
 	<multivalue name="houseObjectType">
 		<enum val="0" display="Passive"/>
@@ -369,6 +332,27 @@
 		<enum val="9" display="Not known"/>
 		<enum val="10" display="Not known"/>
 		<enum val="11" display="Emblem"/>
+	</multivalue>
+	<multivalue name="housePrivacy">
+		<enum val="0" display="Hide owner"/>
+		<enum val="1" display="Show owner"/>
+	</multivalue>
+	<multivalue name="houseSize">
+		<enum val="0" display="Unknown"/>
+		<enum val="1" display="House"/>
+		<enum val="2" display="Mansion"/>
+		<enum val="3" display="Estate"/>
+		<enum val="4" display="Palace"/>
+	</multivalue>
+	<multivalue name="houseType">
+		<enum val="1" display="Studio"/>
+		<enum val="2" display="House"/>
+	</multivalue>
+	<multivalue name="houseVisitPermisions">
+		<enum val="0" display="Not set"/>
+		<enum val="1" display="Opened All"/>
+		<enum val="2" display="Opened Friends"/>
+		<enum val="3" display="Closed"/>
 	</multivalue>
 	<multivalue name="itemGroup">
 		<enum val="0" display="Craft/Egg"/>
@@ -405,6 +389,183 @@
 		<enum val="50" display="Reset scroll"/>
 		<enum val="52" display="Assembly component"/>
 		<enum val="53" display="Pack"/>
+	</multivalue>
+	<multivalue name="itemUpdateType">
+		<enum val="0" display="TOOLTIP/DEL_Q_REWARD"/>
+		<!-- Also Kinah after soul heal and quest item delete before reward -->
+		<enum val="6" display="DEC_ITEM_SPLIT"/>
+		<enum val="7" display="PARTIAL_WITH_SLOT"/>
+		<enum val="10" display="DEC_ITEM_SPLIT_MOVE"/>
+		<enum val="19" display="ALL_SLOT"/>
+		<enum val="20" display="DEL_ITEM_MOVE"/>
+		<enum val="22" display="DEC_ITEM_USE"/>
+		<enum val="23" display="DEL_ITEM_USE"/>
+		<enum val="25" display="INC_ITEM_COLLECT"/>
+		<enum val="26" display="INC_KINAH_COLLECT"/>
+		<enum val="28" display="DEL_ITEM_BUY"/>
+		<enum val="29" display="DEC_KINAH_BUY"/>
+		<enum val="31" display="DEL_ITEM_SELL"/>
+		<enum val="32" display="INC_KINAH_SELL"/>
+		<enum val="48" display="INC_ITEM_QUEST"/>
+		<enum val="49" display="DEL_ITEM_QUEST_COMPLETE"/>
+		<enum val="50" display="INC_KINAH_QUEST"/>
+		<enum val="52" display="DEL_QUEST_START"/>
+		<enum val="53" display="ADD_QUEST_WORK_ITEM"/>
+		<enum val="75" display="DEC_KINAH_FLY"/>
+		<enum val="80" display="INC_CASH_ITEM"/>
+		<enum val="90" display="DEC_KINAH_CUBE"/>
+		<!-- Cube space -->
+		<enum val="94" display="DEC_PET_FOOD"/>
+		<enum val="102" display="DEL_ITEM_DECOMPOSE"/>
+		<enum val="120" display="DEL_REGISTER"/>
+	</multivalue>
+	<multivalue name="legionRank">
+		<enum display="Brigade General"/>
+		<enum display="Centurion"/>
+		<enum display="Legionary"/>
+	</multivalue>
+	<multivalue name="modifierIds">
+		<enum val="13" display="WIND_RESISTANCE"/>
+		<enum val="14" display="EARTH_RESISTANCE"/>
+		<enum val="15" display="FIRE_RESISTANCE"/>
+		<enum val="18" display="MAXHP"/>
+		<enum val="20" display="MAXMP"/>
+		<enum val="23" display="FLY_TIME"/>
+		<enum val="25" display="PHYSICAL_ATTACK"/>
+		<enum val="26" display="PHYSICAL_DEFENSE"/>
+		<enum val="27" display="MAGICAL_ATTACK"/>
+		<enum val="28" display="MAGICAL_RESIST"/>
+		<enum val="29" display="ATTACK_SPEED"/>
+		<enum val="30" display="PHYSICAL_ACCURACY"/>
+		<enum val="31" display="EVASION"/>
+		<enum val="33" display="BLOCK"/>
+		<enum val="34" display="PHYSICAL_CRITICAL"/>
+		<enum val="36" display="SPEED"/>
+		<enum val="37" display="FLY_SPEED"/>
+		<enum val="40" display="MAGICAL_CRITICAL"/>
+		<enum val="41" display="CONCENTRATION"/>
+		<enum val="51" display="SILENCE_RESISTANCE"/>
+		<enum val="77" display="SILENCE_RESISTANCE_PENETRATION"/>
+		<enum val="104" display="BOOST_MAGICAL_SKILL"/>
+		<enum val="105" display="MAGICAL_ACCURACY"/>
+		<enum val="106" display="PVP_ATTACK_RATIO"/>
+		<enum val="107" display="PVP_DEFEND_RATIO"/>
+		<enum val="108" display="BOOST_CASTING_TIME"/>
+		<enum val="109" display="BOOST_HATE"/>
+		<enum val="110" display="HEAL_BOOST"/>
+		<enum val="112" display="PVP_DEFEND_RATIO_PHYSICAL"/>
+		<enum val="114" display="PVP_DEFEND_RATIO_MAGICAL"/>
+		<enum val="115" display="PHYSICAL_CRITICAL_RESIST"/>
+		<enum val="117" display="PHYSICAL_CRITICAL_DAMAGE_REDUCE"/>
+		<enum val="126" display="MAGIC_SKILL_BOOST_RESIST"/>
+	</multivalue>
+	<multivalue name="motion">
+		<enum display="Normal"/>
+		<enum display="Ninja Idle"/>
+		<enum display="Ninja Run"/>
+		<enum display="Ninja Jump"/>
+		<enum display="Ninja Rest"/>
+		<enum display="Hovering Idle"/>
+		<enum display="Hovering Run"/>
+		<enum display="Hovering Jump"/>
+		<enum display="Hovering Rest"/>
+	</multivalue>
+	<multivalue name="npcObjectType">
+		<enum val="1" display="Normal"/>
+		<enum val="2" display="Summon"/>
+		<enum val="4" display="Unknown1"/>
+		<enum val="8" display="Unknown2"/>
+		<enum val="16" display="Homing"/>
+		<enum val="32" display="Trap"/>
+		<enum val="64" display="Skill Area NPC"/>
+		<enum val="128" display="Totem"/>
+		<enum val="256" display="Group Gate"/>
+		<enum val="512" display="Unknown3"/>
+		<enum val="1024" display="Servant"/>
+		<enum val="2048" display="Pet"/>
+	</multivalue>
+	<multivalue name="petAction">
+		<enum display="List"/>
+		<enum display="Adopt"/>
+		<enum display="Surrender"/>
+		<enum display="Spawn"/>
+		<enum display="Dismiss"/>
+		<enum val="9" display="Feed"/>
+		<enum display="Rename"/>
+		<enum val="12" display="Pet Status"/>
+		<enum display="Loot"/>
+	</multivalue>
+	<multivalue name="petFunction">
+		<enum val="0" display="Warehouse"/>
+		<enum val="1" display="Appearance"/>
+		<enum val="4" display="Absent"/>
+		<enum val="5" display="StatBoost"/>
+		<enum val="6" display="Alert"/>
+		<enum val="259" display="Loot"/>
+		<enum val="2049" display="Feed"/>
+		<enum val="8194" display="Buff"/>
+	</multivalue>
+	<multivalue name="playerClass">
+		<enum val="0" display="Warrior"/>
+		<enum val="1" display="Gladiator"/>
+		<enum val="2" display="Templar"/>
+		<enum val="3" display="Scout"/>
+		<enum val="4" display="Assassin"/>
+		<enum val="5" display="Ranger"/>
+		<enum val="6" display="Mage"/>
+		<enum val="7" display="Sorcerer"/>
+		<enum val="8" display="Spirit Master"/>
+		<enum val="9" display="Priest"/>
+		<enum val="10" display="Cleric"/>
+		<enum val="11" display="Chanter"/>
+		<enum val="12" display="Engineer"/>
+		<enum val="13" display="Rider"/>
+		<enum val="14" display="Gunner"/>
+		<enum val="15" display="Artist"/>
+		<enum val="16" display="Bard"/>
+		<enum val="17" display="Painter"/>
+	</multivalue>
+	<multivalue name="questStatus">
+		<enum display="None"/>
+		<enum val="3" display="Start"/>
+		<enum display="Reward"/>
+		<enum display="Complete"/>
+		<enum display="Locked"/>
+	</multivalue>
+	<multivalue name="race">
+		<enum val="0" display="Elyos"/>
+		<enum val="1" display="Asmodian"/>
+		<enum val="2" display="Balaur"/>
+	</multivalue>
+	<multivalue name="shieldType">
+		<enum display="No Shield"/>
+		<enum display="Reflected Damage"/>
+		<enum val="4" display="Protect"/>
+	</multivalue>
+	<multivalue name="skillType">
+		<enum display="Normal"/>
+		<enum display="Stigma"/>
+		<enum display="Adv. Stigma"/>
+	</multivalue>
+	<multivalue name="titleAction">
+		<enum display="List"/>
+		<enum display="Set"/>
+		<enum val="3" display="Update"/>
+	</multivalue>
+	<multivalue name="tradeAction">
+		<enum val="0" display="Private Sell"/>
+		<enum val="1" display="Merchant Sell"/>
+		<enum val="2" display="Repurchase"/>
+		<enum val="13" display="Kinah buy"/>
+		<enum val="14" display="AP buy"/>
+		<enum val="15" display="Reward buy"/>
+		<enum val="18" display="Inventory sell"/>
+	</multivalue>
+	<multivalue name="transformType">
+		<enum val="0" display="None"/>
+		<enum val="1" display="PC"/>
+		<enum val="2" display="Avatar"/>
+		<enum val="3" display="Form1"/>
 	</multivalue>
 	<multivalue name="warehouseType">
 		<enum val="0" display="Cube"/>
@@ -449,233 +610,73 @@
 		<enum val="126" display="Broker"/>
 		<enum val="127" display="Mailbox"/>
 	</multivalue>
-	<multivalue name="blobIds">
-		<enum val="0" display="General Info"/>
-		<enum val="1" display="Weapon Info"/>
-		<enum val="2" display="Armor Info"/>
-		<enum val="3" display="Shield Info"/>
-		<enum val="4" display="Accessory Info"/>
-		<enum val="5" display="Arrow Info"/>
-		<enum val="6" display="Equip Info"/>
-		<enum val="7" display="Stigma Info"/>
-		<enum val="8" display="Stigma Shard"/>
-		<enum val="10" display="Stats Info"/>
-		<enum val="11" display="Manastone Info"/>
-		<enum val="13" display="Cloth Info"/>
-		<enum val="14" display="Fusion Info"/>
-		<enum val="15" display="Charge Info"/>
-		<enum val="16" display="Premium Info"/>
-		<enum val="17" display="Polish Info"/>
-		<enum val="18" display="Pack Info"/>
-		<enum val="19" display="Plume Info"/>
-		<enum val="20" display="Bracelet Info"/>
+	<multivalue name="lunaCraft">
+		<enum val="0" display="NormalCraft"/>
+		<enum val="1" display="DailyCraft"/>
 	</multivalue>
-	<multivalue name="modifierIds">
-		<enum val="13" display="WIND_RESISTANCE"/>
-		<enum val="14" display="EARTH_RESISTANCE"/>
-		<enum val="15" display="FIRE_RESISTANCE"/>
-		<enum val="18" display="MAXHP"/>
-		<enum val="20" display="MAXMP"/>
-		<enum val="23" display="FLY_TIME"/>
-		<enum val="25" display="PHYSICAL_ATTACK"/>
-		<enum val="26" display="PHYSICAL_DEFENSE"/>
-		<enum val="27" display="MAGICAL_ATTACK"/>
-		<enum val="28" display="MAGICAL_RESIST"/>
-		<enum val="29" display="ATTACK_SPEED"/>
-		<enum val="30" display="PHYSICAL_ACCURACY"/>
-		<enum val="31" display="EVASION"/>
-		<enum val="33" display="BLOCK"/>
-		<enum val="34" display="PHYSICAL_CRITICAL"/>
-		<enum val="36" display="SPEED"/>
-		<enum val="37" display="FLY_SPEED"/>
-		<enum val="40" display="MAGICAL_CRITICAL"/>
-		<enum val="41" display="CONCENTRATION"/>
-		<enum val="51" display="SILENCE_RESISTANCE"/>
-		<enum val="77" display="SILENCE_RESISTANCE_PENETRATION"/>
-		<enum val="104" display="BOOST_MAGICAL_SKILL"/>
-		<enum val="105" display="MAGICAL_ACCURACY"/>
-		<enum val="106" display="PVP_ATTACK_RATIO"/>
-		<enum val="107" display="PVP_DEFEND_RATIO"/>
-		<enum val="108" display="BOOST_CASTING_TIME"/>
-		<enum val="109" display="BOOST_HATE"/>
-		<enum val="110" display="HEAL_BOOST"/>
-		<enum val="112" display="PVP_DEFEND_RATIO_PHYSICAL"/>
-		<enum val="114" display="PVP_DEFEND_RATIO_MAGICAL"/>
-		<enum val="115" display="PHYSICAL_CRITICAL_RESIST"/>
-		<enum val="117" display="PHYSICAL_CRITICAL_DAMAGE_REDUCE"/>
-		<enum val="126" display="MAGIC_SKILL_BOOST_RESIST"/>
+	<multivalue name="cubics">
+		<enum val="1" display="Life Cube Gold"/><!-- checked -->
+		<enum val="2" display="Life Cube Silver"/><!-- checked -->
+		<enum val="3" display="Life Cube Bronze"/><!-- checked -->
+		<enum val="4" display="Thought Cube Gold"/><!-- checked -->
+		<enum val="5" display="Thought Cube Silver"/><!-- checked -->
+		<enum val="6" display="Thought Cube Bronze"/><!-- checked -->
+		<enum val="7" display="Blessing Cube Gold"/><!-- checked -->
+		<enum val="8" display="Blessing Cube Silver"/><!-- checked -->
+		<enum val="9" display="Blessing Cube Bronze"/><!-- checked -->
+		<enum val="10" display="Madness Cube Gold"/><!-- checked -->
+		<enum val="11" display="Madness Cube Silver"/><!-- checked -->
+		<enum val="12" display="Madness Cube Bronze"/><!-- checked -->
+		<enum val="13" display="Wisdom Cube Gold"/><!-- checked -->
+		<enum val="14" display="Wisdom Cube Silver"/><!-- checked -->
+		<enum val="15" display="Wisdom Cube Bronze"/><!-- checked -->
+		<enum val="16" display="Protection Cube Gold"/><!-- checked -->
+		<enum val="17" display="Protection Cube Silver"/><!-- checked -->
+		<enum val="18" display="Protection Cube Bronze"/><!-- checked -->
+		<enum val="19" display="Defence Cube Gold"/><!-- checked -->
+		<enum val="20" display="Defence Cube Silver"/><!-- checked -->
+		<enum val="21" display="Defence Cube Bronze"/><!-- checked -->
+		<enum val="22" display="Will Cube Gold"/><!-- checked -->
+		<enum val="23" display="Will Cube Silver"/><!-- checked -->
+		<enum val="24" display="Will Cube Bronze"/><!-- checked -->
+		<enum val="25" display="Reason Cube Gold"/><!-- checked -->
+		<enum val="26" display="Reason Cube Silver"/><!-- checked -->
+		<enum val="27" display="Reason Cube Bronze"/><!-- checked -->
+		<enum val="28" display="Dexterity Cube Gold"/><!-- checked -->
+		<enum val="29" display="Dexterity Cube Silver"/><!-- checked -->
+		<enum val="30" display="Dexterity Cube Bronze"/><!-- checked -->
+		<enum val="31" display="Honour Cube Gold"/><!-- checked -->
+		<enum val="32" display="Honour Cube Silver"/><!-- checked -->
+		<enum val="33" display="Honour Cube Bronze"/><!-- checked -->
+		<enum val="34" display="Vow Cube Gold"/><!-- checked -->
+		<enum val="35" display="Vow Cube Silver"/><!-- checked -->
+		<enum val="36" display="Vow Cube Bronze"/><!-- checked -->
+		<enum val="37" display="Silence Cube Gold"/><!-- checked -->
+		<enum val="38" display="Silence Cube Silver"/><!-- checked -->
+		<enum val="39" display="Silence Cube Bronze"/><!-- checked -->
+		<enum val="40" display="Ereshkigal Hunters Cube Gold"/><!-- checked -->
+		<enum val="41" display="Ereshkigal Hunters Cube Silver"/><!-- checked -->
+		<enum val="42" display="Ereshkigal Hunters Cube Bronze"/><!-- checked -->
+		<enum val="43" display="Ereshkigal Experts Cube Gold"/><!-- checked -->
+		<enum val="44" display="Ereshkigal Experts Cube Silver"/><!-- checked -->
+		<enum val="45" display="Ereshkigal Experts Cube Bronze"/><!-- checked -->
 	</multivalue>
-	<bitset name="visualState">
-		<bit num="1" display="Hide I"/>
-		<bit num="2" display="Hide II"/>
-		<bit num="4" display="0x4"/>
-		<bit num="8" display="0x8"/>
-		<bit num="16" display="0x10"/>
-		<bit num="32" display="0x20"/>
-		<bit num="64" display="Blinking"/>
-		<bit num="128" display="Invisible"/>
-	</bitset>
-	<bitset name="basicState">
-		<bit num="1" display="Active"/>
-		<bit num="2" display="Flying"/>
-		<bit num="4" display="On ground"/>
-		<bit num="8" display="Floating corpse"/>
-		<bit num="16" display="0x16"/>
-		<bit num="32" display="Stance"/>
-		<bit num="64" display="Idle/Walk"/>
-		<bit num="128" display="Treatment"/>
-	</bitset>
-	<bitset name="creatureUpdates">
-		<bit num="1" display="Active"/>
-		<bit num="2" display="Running"/>
-		<bit num="4" display="Resting"/>
-		<bit num="8" display="Floating Corpse"/>
-		<bit num="16" display="0x16"/>
-		<bit num="32" display="Combat mode"/>
-		<bit num="64" display="Walking"/>
-		<bit num="128" display="Powershard"/>
-		<bit num="256" display="Treatment"/>
-		<bit num="512" display="Gliding"/>
-	</bitset>
-	<bitset name="playerHouseOwnerInfo">
-		<bit num="1" display="Owner"/>
-		<bit num="2" display="Studio acquired"/>
-		<bit num="4" display="Can bid"/>
-		<bit num="8" display="Unk 0x8"/>
-		<bit num="16" display="Unk 0x16"/>
-	</bitset>
-	<bitset name="buildingOwnerInfo">
-		<bit num="1" display="Has owner"/>
-		<bit num="2" display="Buy allowed"/>
-		<bit num="4" display="Can sell"/>
-	</bitset>
-	<bitset name="houseSettings">
-		<bit num="1" display="Owner"/>
-		<bit num="2" display="Need studio"/>
-		<bit num="4" display="Can bid"/>
-	</bitset>
-	<multivalue name="housePrivacy">
-		<enum val="0" display="Hide owner"/>
-		<enum val="1" display="Show owner"/>
-	</multivalue>
-	<multivalue name="houseVisitPermisions">
-		<enum val="0" display="Not set"/>
-		<enum val="1" display="Opened All"/>
-		<enum val="2" display="Opened Friends"/>
-		<enum val="3" display="Closed"/>
-	</multivalue>
-	<multivalue name="houseType">
-		<enum val="1" display="Studio"/>
-		<enum val="2" display="House"/>
-	</multivalue>
-	<bitset name="itemSlots">
-		<bit num="0x1" display="Main hand"/>
-		<bit num="0x2" display="Sub hand"/>
-		<bit num="0x4" display="Helmet"/>
-		<bit num="0x8" display="Torso"/>
-		<bit num="0x10" display="Gloves"/>
-		<bit num="0x20" display="Boots"/>
-		<bit num="0x40" display="Left earring"/>
-		<bit num="0x80" display="Right earring"/>
-		<bit num="0x100" display="Left ring"/>
-		<bit num="0x200" display="Right ring"/>
-		<bit num="0x400" display="Necklace"/>
-		<bit num="0x800" display="Shoulder"/>
-		<bit num="0x1000" display="Pants"/>
-		<bit num="0x2000" display="Right shard"/>
-		<bit num="0x4000" display="Left shard"/>
-		<bit num="0x8000" display="Wings"/>
-		<bit num="0x10000" display="Waist"/>
-		<bit num="0x20000" display="Main Off-hand"/>
-		<bit num="0x40000" display="Sub Off-hand"/>
-		<bit num="0x40000000" display="Stigma 1"/>
-		<bit num="0x80000000" display="Stigma 2"/>
-		<bit num="0x100000000" display="Stigma 3"/>
-		<bit num="0x200000000" display="Stigma 4"/>
-		<bit num="0x400000000" display="Stigma 5"/>
-		<bit num="0x800000000" display="Stigma 6"/>
-		<bit num="0x800000000000" display="Adv. Stigma 1"/>
-		<bit num="0x1000000000000" display="Adv. Stigma 2"/>
-		<bit num="0x2000000000000" display="Adv. Stigma 3"/>
-		<bit num="0x4000000000000" display="Adv. Stigma 4"/>
-		<bit num="0x8000000000000" display="Adv. Stigma 5"/>
-		<bit num="0x10000000000000" display="Adv. Stigma 6"/>
-	</bitset>
-	<bitset name="itemMasks">
-		<bit num="1" display="Limit One"/>
-		<bit num="2" display="Tradable from Shop"/>
-		<bit num="4" display="Tradable to Marchants"/>
-		<bit num="8" display="Storable in WH"/>
-		<bit num="16" display="Storable in Acc. WH"/>
-		<bit num="32" display="Storable in Leg. WH"/>
-		<bit num="64" display="Breakable"/>
-		<bit num="128" display="Soul Bound"/>
-		<bit num="256" display="Remove on Logoff"/>
-		<bit num="512" display="No Enchant"/>
-		<bit num="1024" display="Can proc. Enchant"/>
-		<bit num="2048" display="Can Fuse"/>
-		<bit num="4096" display="Can Remodel"/>
-		<bit num="8192" display="Can Split"/>
-		<bit num="16384" display="Can Delete"/>
-		<bit num="32768" display="Can Dye"/>
-	</bitset>
-	<multivalue name="itemUpdateType">
-		<enum val="0" display="TOOLTIP/DEL_Q_REWARD"/>
-		<!-- Also Kinah after soul heal and quest item delete before reward -->
-		<enum val="6" display="DEC_ITEM_SPLIT"/>
-		<enum val="7" display="PARTIAL_WITH_SLOT"/>
-		<enum val="10" display="DEC_ITEM_SPLIT_MOVE"/>
-		<enum val="19" display="ALL_SLOT"/>
-		<enum val="20" display="DEL_ITEM_MOVE"/>
-		<enum val="22" display="DEC_ITEM_USE"/>
-		<enum val="23" display="DEL_ITEM_USE"/>
-		<enum val="25" display="INC_ITEM_COLLECT"/>
-		<enum val="26" display="INC_KINAH_COLLECT"/>
-		<enum val="28" display="DEL_ITEM_BUY"/>
-		<enum val="29" display="DEC_KINAH_BUY"/>
-		<enum val="31" display="DEL_ITEM_SELL"/>
-		<enum val="32" display="INC_KINAH_SELL"/>
-		<enum val="48" display="INC_ITEM_QUEST"/>
-		<enum val="49" display="DEL_ITEM_QUEST_COMPLETE"/>
-		<enum val="50" display="INC_KINAH_QUEST"/>
-		<enum val="52" display="DEL_QUEST_START"/>
-		<enum val="53" display="ADD_QUEST_WORK_ITEM"/>
-		<enum val="75" display="DEC_KINAH_FLY"/>
-		<enum val="80" display="INC_CASH_ITEM"/>
-		<enum val="90" display="DEC_KINAH_CUBE"/>
-		<!-- Cube space -->
-		<enum val="94" display="DEC_PET_FOOD"/>
-		<enum val="102" display="DEL_ITEM_DECOMPOSE"/>
-		<enum val="120" display="DEL_REGISTER"/>
-	</multivalue>
-	<multivalue name="tradeAction">
-		<enum val="0" display="Private Sell"/>
-		<enum val="1" display="Merchant Sell"/>
-		<enum val="2" display="Repurchase"/>
-		<enum val="13" display="Kinah buy"/>
-		<enum val="14" display="AP buy"/>
-		<enum val="15" display="Reward buy"/>
-		<enum val="18" display="Inventory sell"/>
-	</multivalue>
-	<multivalue name="abyssRankType">
-		<enum val="1" display="GRADE 9 SOLDIER"/>
-		<enum val="2" display="GRADE 8 SOLDIER"/>
-		<enum val="3" display="GRADE 7 SOLDIER"/>
-		<enum val="4" display="GRADE 6 SOLDIER"/>
-		<enum val="5" display="GRADE 5 SOLDIER"/>
-		<enum val="6" display="GRADE 4 SOLDIER"/>
-		<enum val="7" display="GRADE 3 SOLDIER"/>
-		<enum val="8" display="GRADE 2 SOLDIER"/>
-		<enum val="9" display="GRADE 1 SOLDIER"/>
-		<enum val="10" display="STAR 1 OFFICER"/>
-		<enum val="11" display="STAR 2 OFFICER"/>
-		<enum val="12" display="STAR 3 OFFICER"/>
-		<enum val="13" display="STAR 4 OFFICER"/>
-		<enum val="14" display="STAR 5 OFFICER"/>
-		<enum val="15" display="GENERAL"/>
-		<enum val="16" display="GREAT GENERAL"/>
-		<enum val="17" display="COMMANDER"/>
-		<enum val="18" display="SUPREME COMMANDER"/>
+	<multivalue name="logIds">
+		<enum val="1" display="Spell ATK"/>
+		<enum val="3" display="Heal"/>
+		<enum val="4" display="MP Heal"/>
+		<enum val="23" display="Skill ATK Drain Instant"/>
+		<enum val="24" display="Spell ATK Drain Instant"/>
+		<enum val="25" display="Poison"/>
+		<enum val="26" display="Bleed"/>
+		<enum val="93" display="Proc ATK Instant"/>
+		<enum val="97" display="Delayed Spell ATK Instand"/>
+		<enum val="130" display="Spell ATK Drain"/>
+		<enum val="133" display="FP Heal"/>
+		<enum val="170" display="Regulat Heal"/>
+		<enum val="189" display="Regular"/>
+		<enum val="200" display="Leech HP"/> <!-- New - Painter Life Binding Skill -->
+		<enum val="204" display="Attack"/> <!-- New -->
 	</multivalue>
 	<multivalue name="Stonespear_SiegeId">
 		<enum val="1" display="Mura"/>
@@ -7979,7 +7980,13 @@
 						</part>
 						<part name="GodStone" type="d"/>
 						<part name="ItemColor" type="d"/>
-						<part name="Spacer/Garbage ?" type="b" size="40"/>
+						<part name="item#17Equipped?" type="c"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/us/item/%s"/>
+						</part>
+						<part name="GodStone" type="d"/>
+						<part name="ItemColor" type="d"/>
+						<part name="Spacer/Garbage ?" type="b" size="27"/>
 						<part name="TODO BAN INFO ETC" type="b" size="52"/>
 						<part name="CharacterDeletionDate" type="d">
 							<reader type="UnixDate"/>
@@ -9103,10 +9110,14 @@
 			<for id="0">
 				<part name="active" type="d"/>
 				<part name="world_id" type="d"/>
-				<part name="unk" type="Q"/>
-				<part name="unk" type="Q"/>
-				<part name="unk" type="Q"/>
-				<part name="unk" type="Q"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
 			</for>
 		</packet>
 		<packet id="0xE4" name="SM_FRIEND_STATUS">
@@ -10199,8 +10210,7 @@
 			</part>
 			<switch id="0">
 				<case id="0">
-					<part name="unk" type="c"/>
-					<part name="count" type="h" id="1"/>
+					<part name="unk" type="c" id="1"/>
 					<for id="1">
 						<part name="transformation_id" type="d"/>
 						<part name="0 / 1" type="d"/>
@@ -10373,7 +10383,181 @@
 			<part name="unk" type="h"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x184" name="________________SM__UNK_184"/> <!-- 7.x TODO -->
+		<packet id="0x184" name="________________SM_UNK_184"/> <!-- 7.x TODO -->
+		<packet id="0x185" name="________________SM_DIMENSIONAL_HOURGLASS"> <!-- 7.x -->
+			<part name="minutes" type="d"/>
+		</packet>
+		<packet id="0x182" name="________________SM_SIEGE_LOCATION_INFO_TODO"> <!-- 7.2 EU NEW TODO -->
+			<part name="infoType" type="h" id="0"/>
+			<switch id="0">
+				<case id="0">
+					<part name="siegeLocationSize" type="h" id="1"/>
+					<for id="1">
+						<part name="locationId" type="d"/>
+						<part name="legionId" type="d"/>
+						<part name="emblemId" type="d"/>
+						<part name="unk(255)" type="c"/>
+						<part name="color_r" type="c"/>
+						<part name="color_g" type="c"/>
+						<part name="color_b" type="c"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+					</for>
+				</case>
+				<case id="256">
+					<part name="siegeLocationSize" type="h" id="1"/>
+					<for id="1">
+						<part name="locationId" type="d"/>
+						<part name="legionId" type="d"/>
+						<part name="emblemId" type="d"/>
+						<part name="unk(255)" type="c"/>
+						<part name="color_r" type="c"/>
+						<part name="color_g" type="c"/>
+						<part name="color_b" type="c"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+					</for>
+				</case>
+				<case id="257">
+					<part name="siegeLocationSize" type="h" id="1"/>
+					<for id="1">
+						<part name="locationId" type="d"/>
+						<part name="legionId" type="d"/>
+						<part name="emblemId" type="d"/>
+						<part name="unk(255)" type="c"/>
+						<part name="color_r" type="c"/>
+						<part name="color_g" type="c"/>
+						<part name="color_b" type="c"/>
+						<part name="raceId" type="c"/>
+						<part name="isVulnerable(0:no,1:yes)" type="c"/>
+						<part name="canTeleport" type="c"/>
+						<part name="nextState(0:invulnerable,1:vulnerable)" type="c"/>
+						<part name="unk(0)" type="h"/>
+						<part name="unk(1)" type="h"/>
+						<part name="siegeTime" type="d"/>
+						<part name="ServerId" type="d"/>
+						<part name="captured(Time)" type="d">
+							<reader type="UnixDate"/>
+						</part>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+					</for>
+				</case>
+				<case id="default"/>
+			</switch>
+		</packet>
 	</packetfamilly>
 	<!-- ============= -->
 	<!-- ClientPackets -->
@@ -11009,7 +11193,7 @@
 			<part name="targetObjectId" type="d"/>
 			<part name="index" type="c"/>
 		</packet>
-		<packet id="0x11D" name="CM_QUESTIONNAIRE"> <!-- 7.2 EU Skill House Portal-->
+		<packet id="0x13D" name="CM_QUESTIONNAIRE"> <!-- 7.2 EU -->
 			<part name="objectId" type="d"/>
 			<part name="itemSize" type="h" id="0"/>
 			<for id="0">
@@ -11790,7 +11974,7 @@
 		<packet id="0x1E1" name="CM_REPORT_CHAT"> <!-- 7.2 EU -->
 			<part name="player" type="S"/>
 		</packet>
-		<packet id="0x13A" name="CM_HOUSE_TELEPORT_BACK"/>
+		<packet id="0x11D" name="CM_HOUSE_TELEPORT_BACK"/> <!-- 7.2 EU -->
 
 		<!-- New 4.7 EU -->
 		<packet id="0x1E6" name="CM_UPGRADE_ARCADE"> <!-- 7.2 EU -->
@@ -12251,6 +12435,10 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
+		</packet>
+		<packet id="0x1BA" name="________________CM_LUCKY_DICE"> <!-- 7.2 EU -->
+			<part name="unk" type="c"/>
+			<part name="unk" type="c"/>
 		</packet>
 	</packetfamilly>
 </protocol>

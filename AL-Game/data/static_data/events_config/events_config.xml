@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -491,6 +491,44 @@
 					<spawn npc_id="820475" respawn_time="295">
 						<spot x="2647.98" y="480.46" z="323.40546" h="0"/>
 						<spot x="2897.3" y="2474.4" z="313.829" h="20"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Hungry Hatchlings" start="2020-03-01T00:00:00+00:00" end="2020-03-31T00:00:00+00:00">
+            <spawns>
+                <!-- Dumaha -->
+                <spawn_map map_id="600300000">
+					<!-- Zudra ||| event_Rudra_Reward_upgrade_01 -->
+					<spawn npc_id="840621" respawn_time="295">
+						<spot x="935.1" y="1588.5" z="713.2346" h="37"/>
+						<spot x="935.1" y="1671.0" z="713.23456" h="89"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Rainbow Snake Festival" start="2020-04-03T00:00:00+00:00" end="2020-04-30T00:00:00+00:00">
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- Serpente Rumin ||| event_snake_l_1 -->
+					<spawn npc_id="832963" respawn_time="295">
+						<spot x="1454.0" y="1493.0" z="573.0719" h="60"/>
+					</spawn>
+					<!-- Ahas Rumin ||| event_snake_l_2 -->
+					<spawn npc_id="832964" respawn_time="295">
+						<spot x="1453.53" y="1491.37" z="573.0719" h="59"/>
+					</spawn>
+                </spawn_map>
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- Serpente Rumin ||| event_snake_d_1 -->
+					<spawn npc_id="832974" respawn_time="295">
+						<spot x="1308.0" y="1402.0" z="208.125" h="21"/>
+					</spawn>
+					<!-- Ahas Rumin ||| event_snake_d_2 -->
+					<spawn npc_id="832975" respawn_time="295">
+						<spot x="1306.39" y="1402.95" z="208.125" h="23"/>
 					</spawn>
                 </spawn_map>
             </spawns>

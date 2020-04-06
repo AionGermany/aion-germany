@@ -131,7 +131,7 @@ public class SM_MINIONS extends AionServerPacket {
 				writeC(0);
 			}
 			break;
-		case 2:
+		case 2: //Adopt
 			if (minionsCommonData == null) {
 				return;
 			}
@@ -199,7 +199,8 @@ public class SM_MINIONS extends AionServerPacket {
 		//	writeH(1);
 		//	writeC(isActing ? 1 : 0);
 		//	break;
-		case 9: // add bufffood and activate loot etc
+		case 9:
+		case 10: // add bufffood and activate loot etc
 			switch (subType) {
 				case 0: {
 					switch (dopeAction) {
@@ -248,11 +249,9 @@ public class SM_MINIONS extends AionServerPacket {
 				}
 			}
 			break;
-		case 10: // use function
+		case 11: // use function
 			writeD((int) expireTime);
 			writeD(0);
-		case 11: // stop function
-			break;
 		case 12: // skill use or skill points 
 			writeD(minionSkillPoints); // Minion SkillPoints
 			writeC(autoCharge ? 1 : 0); // Auto Recharge
