@@ -58,7 +58,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_REVIVE(0xF0, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_DUEL_REQUEST(0x162, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_CRAFT(0x155, State.IN_GAME)); // 5.4 EU removed?
-		addPacket(new CM_QUESTION_RESPONSE(0x104, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_QUESTION_RESPONSE(0x11D, State.IN_GAME)); // 7.3 EU
 		addPacket(new CM_OPEN_STATICDOOR(0xC6, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_SPLIT_ITEM(0x149, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_CUSTOM_SETTINGS(0xBB, State.IN_GAME)); // 7.2 EU
@@ -182,7 +182,6 @@ public class AionPacketHandlerFactory {
 
 		// *************(HOUSE)***************************
 		addPacket(new CM_HOUSE_OPEN_DOOR(0x192, State.IN_GAME)); // 7.2 EU
-		addPacket(new CM_HOUSE_TELEPORT_BACK(0x11D, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_SCRIPT(0xC9, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_TELEPORT(0x18E, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_HOUSE_EDIT(0x2FD, State.IN_GAME)); // 7.2 EU
