@@ -315,6 +315,12 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_DAEVANION_SKILL_FUSION.class, 0x17A, idSet); // 6.5 TODO
 		// ------------------DIMENSIONALHOURGLASS---------------------//
 		addPacketOpcode(SM_DIMENSIONAL_HOURGLASS.class, 0x185, idSet); // 7.x
+		// ----------------------LUGBUG QUESTS-------------------------//
+		addPacketOpcode(SM_LUGBUG_MISSION.class, 0x17B, idSet); // 7.x
+		addPacketOpcode(SM_LUGBUG_MISSION_COUNT.class, 0x17C, idSet); // 7.x
+		addPacketOpcode(SM_LUGBUG_MISSION_REWARD.class, 0x17D, idSet); // 7.x
+		addPacketOpcode(SM_LUGBUG_EVENT.class, 0x17E, idSet); // 7.x
+		addPacketOpcode(SM_LUGBUG_EVENT_REWARD.class, 0x181, idSet); // 7.x
 		// --------------------UNKNOWN PACKETS-----------------------//
 		addPacketOpcode(SM_UNK_60.class, 0x60, idSet);
 		addPacketOpcode(SM_UNK_106.class, 0x106, idSet);

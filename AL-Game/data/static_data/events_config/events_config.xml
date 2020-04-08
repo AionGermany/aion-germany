@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -507,7 +507,7 @@
                 </spawn_map>
             </spawns>
         </event>
-        <event name="Rainbow Snake Festival" start="2020-04-03T00:00:00+00:00" end="2020-04-30T00:00:00+00:00">
+        <event name="Rainbow Snake Festival" start="2020-04-01T00:00:00+00:00" end="2020-04-30T00:00:00+00:00">
             <spawns>
                 <!-- Sanctum -->
                 <spawn_map map_id="110010000">
@@ -529,6 +529,95 @@
 					<!-- Ahas Rumin ||| event_snake_d_2 -->
 					<spawn npc_id="832975" respawn_time="295">
 						<spot x="1306.39" y="1402.95" z="208.125" h="23"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Green Thumbs" start="2020-04-08T00:00:00+00:00" end="2020-04-30T00:00:00+00:00">
+            <spawns>
+                <!-- Dumaha -->
+                <spawn_map map_id="600300000">
+					<!-- Gretchen ||| LDF8_AIONFarm_Script_NPC -->
+					<spawn npc_id="820629" respawn_time="295">
+						<spot x="899.9" y="1627.4" z="713.23456" h="15"/>
+					</spawn>
+					<!-- Mumu Rang ||| LDF8_AIONFarm_AP_NPC -->
+					<spawn npc_id="820630" respawn_time="295">
+						<spot x="899.8" y="1632.9" z="713.23456" h="107"/>
+					</spawn>
+					<!-- Mumu Chen ||| LDF8_AIONFarm_Better_NPC -->
+					<spawn npc_id="820631" respawn_time="295">
+						<spot x="898.0" y="1631.9" z="713.23456" h="15"/>
+					</spawn>
+					<!-- Mumu Sang ||| LDF8_AIONFarm_Normal_NPC -->
+					<spawn npc_id="820632" respawn_time="295">
+						<spot x="898.0" y="1629.8" z="713.23456" h="3"/>
+					</spawn>
+					<!-- None ||| LDF8_AIONFarm_cart -->
+					<spawn npc_id="820633" respawn_time="295">
+						<spot x="897.0" y="1627.0" z="713.23456" h="45"/>
+					</spawn>
+					<!-- None ||| LDF8_AIONFarm_basket -->
+					<spawn npc_id="820647" respawn_time="295">
+						<spot x="897.0" y="1633.3" z="713.23456" h="10"/>
+						<spot x="897.4" y="1633.9" z="713.23456" h="20"/>
+						<spot x="897.8" y="1633.3" z="713.23456" h="0"/>
+					</spawn>
+					<!-- None ||| LDF8_AIONFarm_barrel -->
+					<spawn npc_id="820648" respawn_time="295">
+						<spot x="896.1" y="1631.7" z="713.23456" h="0"/>
+						<spot x="896.1" y="1630.7" z="713.23456" h="0"/>
+					</spawn>
+
+					<!-- Weedy Vine ||| LDF8_AIONFarm_Weed_NPC -->
+					<spawn npc_id="820642" respawn_time="295">
+						<spot x="1330.7" y="1246.7" z="611.70337" h="105"/>
+						<spot x="1197.0" y="1362.4" z="596.9125" h="105"/>
+						<spot x="1269.1" y="1315.8" z="590.8081" h="0"/>
+						<spot x="1228.0" y="1428.5" z="588.28125" h="75"/>
+						<spot x="1227.7" y="1321.1" z="588.2085" h="0"/>
+						<spot x="1201.5" y="942.7" z="611.6188" h="0"/>
+						<spot x="1245.7" y="982.6" z="600.5744" h="60"/>
+						<spot x="1281.8" y="1014.4" z="599.5" h="105"/>
+						<spot x="1249.1" y="1166.5" z="604.2391" h="30"/>
+						<spot x="1409.1" y="1058.8" z="614.7337" h="60"/>
+						<spot x="1685.3" y="1718.1" z="572.425" h="45"/>
+						<spot x="1599.8" y="1801.8" z="605.57556" h="0"/>
+						<spot x="1657.2" y="1833.7" z="610.1363" h="15"/>
+						<spot x="1591.0" y="1845.0" z="595.3125" h="105"/>
+						<spot x="1516.3" y="1963.2" z="570.5062" h="75"/>
+						<spot x="1530.8" y="2028.5" z="572.10785" h="60"/>
+						<spot x="1111.8" y="1886.3" z="580.7607" h="45"/>
+						<spot x="1049.0" y="1972.4" z="587.8875" h="60"/>
+						<spot x="1025.3" y="2183.3" z="587.6472" h="105"/>
+						<spot x="1057.3" y="2244.9" z="578.7419" h="0"/>
+						<spot x="1011.5" y="2345.3" z="560.53125" h="15"/>
+						<spot x="1039.8" y="2426.7" z="549.02936" h="30"/>
+						<spot x="1023.5" y="2504.3" z="543.4281" h="45"/>
+						<spot x="1032.8" y="2619.4" z="538.89" h="60"/>
+						<spot x="932.0" y="2636.6" z="538.26245" h="75"/>
+						<spot x="951.4" y="2711.7" z="545.0706" h="90"/>
+						<spot x="940.2" y="2766.9" z="546.1125" h="105"/>
+						<spot x="902.8" y="2818.2" z="549.5125" h="0"/>
+						<spot x="1003.1" y="2829.1" z="548.725" h="30"/>
+						<spot x="952.7" y="2860.3" z="546.2378" h="15"/>
+						<spot x="1245.2" y="2845.8" z="581.09503" h="105"/>
+						<spot x="1368.4" y="2818.5" z="585.4938" h="0"/>
+						<spot x="1351.2" y="2733.0" z="571.36255" h="15"/>
+						<spot x="1384.8" y="2633.2" z="573.32495" h="30"/>
+						<spot x="1422.3" y="2468.9" z="571.12067" h="60"/>
+						<spot x="1599.8" y="1801.8" z="605.57556" h="0"/>
+						<spot x="1307.7" y="1465.6" z="575.9313" h="30"/>
+						<spot x="1247.0" y="1578.8" z="571.325" h="15"/>
+						<spot x="1340.9" y="1586.8" z="577.5587" h="0"/>
+						<spot x="1206.6" y="1626.6" z="570.13873" h="45"/>
+						<spot x="1791.4" y="768.1" z="610.101" h="45"/>
+						<spot x="1292.1" y="2657.4" z="558.775" h="45"/>
+						<spot x="1201.5" y="2662.4" z="552.5688" h="75"/>
+						<spot x="1211.4" y="2768.4" z="565.9224" h="90"/>
+						<spot x="1023.5" y="2504.3" z="543.4281" h="45"/>
+						<spot x="1011.5" y="2345.3" z="560.53125" h="15"/>
+						<spot x="1025.3" y="2183.3" z="587.6472" h="105"/>
 					</spawn>
                 </spawn_map>
             </spawns>

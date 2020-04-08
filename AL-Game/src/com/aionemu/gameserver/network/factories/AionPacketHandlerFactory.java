@@ -278,6 +278,10 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_DAEVANION_SKILL_ENCHANT(0x1D3, State.IN_GAME)); // 7.2 TODO
 		addPacket(new CM_DAEVANION_SKILL_FUSION(0x1D0, State.IN_GAME)); // 7.2 TODO
 
+		// // ///////////////// LUGBUG QUESTS ///////////////////
+		addPacket(new CM_LUGBUG_MISSION_REWARD(0x216, State.IN_GAME)); // 7.2 TODO
+		addPacket(new CM_LUGBUG_EVENT_REWARD(0x217, State.IN_GAME)); // 7.2 TODO
+
 		// // /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0x115, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_GM_BOOKMARK(0x2FF, State.IN_GAME)); // 7.x EU
