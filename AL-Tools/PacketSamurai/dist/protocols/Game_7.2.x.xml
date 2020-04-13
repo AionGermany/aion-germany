@@ -10454,7 +10454,11 @@
 				<part name="unk" type="d" />
 				<part name="questId" type="d" />
 				<part name="unk1" type="d" />
-				<part name="unk 32" type="b" size="32" />
+				<part name="unk2" type="d" />
+				<part name="unk3" type="h" />
+				<part name="unk4" type="c" />
+				<part name="unk5" type="c" />
+				<part name="unk 24" type="b" size="24" />
 				<part name="start time?" type="d">
 					<reader type="UnixDate" />
 				</part>
@@ -10469,7 +10473,13 @@
 				<part name="diff?" type="d" />
 				<part name="unk" type="d" />
 				<part name="questId" type="d" />
-				<part name="unk 36" type="b" size="36" />
+				<part name="unk1" type="d" />
+				<part name="unk2" type="d" />
+				<part name="unk3" type="c" />
+				<part name="unk4" type="c" />
+				<part name="unk5" type="c" />
+				<part name="unk6" type="c" />
+				<part name="unk 24" type="b" size="24" />
 				<part name="start time?" type="d">
 					<reader type="UnixDate" />
 				</part>
@@ -10485,7 +10495,11 @@
 				<part name="unk" type="d" />
 				<part name="questId" type="d" />
 				<part name="unk1" type="d" />
-				<part name="unk 32" type="b" size="32" />
+				<part name="unk2" type="d" />
+				<part name="unk3" type="h" />
+				<part name="unk4" type="c" />
+				<part name="unk5" type="c" />
+				<part name="unk 24" type="b" size="24" />
 				<part name="start time?" type="d">
 					<reader type="UnixDate" />
 				</part>
@@ -10501,7 +10515,12 @@
 				<part name="unk" type="d" />
 				<part name="questId" type="d" />
 				<part name="unk1" type="d" />
-				<part name="unk 32" type="b" size="32" />
+				<part name="unk2" type="d" />
+				<part name="unk3" type="c" />
+				<part name="unk4" type="c" />
+				<part name="unk5" type="c" />
+				<part name="unk6" type="c" />
+				<part name="unk 24" type="b" size="24" />
 				<part name="start time?" type="d">
 					<reader type="UnixDate" />
 				</part>
@@ -10516,8 +10535,7 @@
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="unk" type="c"/>
-				<part name="unk" type="h"/>
-				<part name="unk" type="h"/>
+				<part name="unk" type="d"/>
 				<part name="unk" type="d"/>
 				<part name="questId" type="d"/>
 				<part name="unk" type="d"/>
@@ -10542,10 +10560,7 @@
 		<packet id="0x17C" name="________________SM_LUGBUG_MISSION_COUNT"> <!-- 7.x TODO -->
 			<part name="size" type="h" id="0"/>
 			<for id="0">
-				<part name="unk" type="c"/>
-				<part name="unk" type="c"/>
-				<part name="unk" type="c"/>
-				<part name="unk" type="c"/>
+				<part name="unk" type="d"/>
 				<part name="unk" type="d"/>
 				<part name="unk" type="c"/>
 				<part name="count" type="d"/>
@@ -10570,10 +10585,7 @@
 			<part name="size" type="c" id="0"/>
 			<for id="0">
 				<part name="questId" type="d"/>
-				<part name="unk" type="c"/>
-				<part name="unk" type="c"/>
-				<part name="unk" type="c"/>
-				<part name="unk" type="c"/>
+				<part name="unk" type="d"/>
 				<part name="unk" type="d"/>
 				<part name="unk" type="c"/>
 			</for>
@@ -12658,10 +12670,7 @@
 		</packet>
 		<packet id="0x217" name="________________CM_LUGBUG_EVENT_REWARD"> <!-- 7.3 TODO -->
 			<part name="questId" type="d"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
+			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
