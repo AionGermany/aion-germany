@@ -660,6 +660,55 @@
 		<enum val="43" display="Ereshkigal Experts Cube Gold"/><!-- checked -->
 		<enum val="44" display="Ereshkigal Experts Cube Silver"/><!-- checked -->
 		<enum val="45" display="Ereshkigal Experts Cube Bronze"/><!-- checked -->
+		<enum val="46" display="Life Cube Platinum"/>
+		<enum val="47" display="Thought Cube Platinum"/>
+		<enum val="48" display="Blessing Cube Platinum"/>
+		<enum val="49" display="Madness Cube Platinum"/>
+		<enum val="50" display="Wisdom Cube Platinum"/>
+		<enum val="51" display="Protection Cube Platinum"/>
+		<enum val="52" display="Defence Cube Platinum"/>
+		<enum val="53" display="Will Cube Platinum"/>
+		<enum val="54" display="Reason Cube Platinum"/>
+		<enum val="55" display="Dexterity Cube Platinum"/>
+		<enum val="56" display="Honour Cube Platinum"/>
+		<enum val="57" display="Vow Cube Platinum"/>
+		<enum val="58" display="Silence Cube Platinum"/>
+		<enum val="59" display="Raging Yarkhan/Barkhan Hunters Cube Silver"/><!-- checked -->
+		<enum val="60" display="Raging Yarkhan/Barkhan Hunters Cube Gold"/>
+		<enum val="61" display="Raging Yarkhan/Barkhan Hunters Cube Platinum"/><!-- checked -->
+		<enum val="62" display="Raging Prometun Hunters Cube Silver"/><!-- checked -->
+		<enum val="63" display="Raging Prometun Hunters Cube Gold"/><!-- checked -->
+		<enum val="64" display="Raging Prometun Hunters Cube Platinum"/><!-- checked -->
+		<enum val="65" display="Raging Tarukkan Hunters Cube Silver"/><!-- checked -->
+		<enum val="66" display="Raging Tarukkan Hunters Cube Gold"/><!-- checked -->
+		<enum val="67" display="Raging Tarukkan Hunters Cube Platinum"/>
+		<enum val="68" display="Raging Prigga Hunters Cube Silver"/><!-- checked -->
+		<enum val="69" display="Raging Prigga Hunters Cube Gold"/><!-- checked -->
+		<enum val="70" display="Raging Prigga Hunters Cube Platinum"/>
+		<enum val="71" display="Mob Leader Hunters Cube Silver"/><!-- checked -->
+		<enum val="72" display="Mob Leader Hunters Cube Gold"/>
+		<enum val="73" display="Mob Leader Hunters Cube Platinum"/>
+		<enum val="74" display="SVR-07 Hunters Cube Silver"/><!-- checked -->
+		<enum val="75" display="SVR-07 Hunters Cube Gold"/><!-- checked -->
+		<enum val="76" display="SVR-07 Hunters Cube Platinum"/>
+		<enum val="77" display="Raging Yarkhan/Barkhan Expert Cube Silver"/><!-- checked -->
+		<enum val="78" display="Raging Yarkhan/Barkhan Expert Cube Gold"/>
+		<enum val="79" display="Raging Yarkhan/Barkhan Expert Cube Platinum"/>
+		<enum val="80" display="Raging Prometun Expert Cube Silver"/><!-- checked -->
+		<enum val="81" display="Raging Prometun Expert Cube Gold"/><!-- checked -->
+		<enum val="82" display="Raging Prometun Expert Cube Platinum"/><!-- checked -->
+		<enum val="83" display="Raging Tarukkan Expert Cube Silver"/>
+		<enum val="84" display="Raging Tarukkan Expert Cube Gold"/><!-- checked -->
+		<enum val="85" display="Raging Tarukkan Expert Cube Platinum"/>
+		<enum val="86" display="Raging Prigga Expert Cube Silver"/><!-- checked -->
+		<enum val="87" display="Raging Prigga Expert Cube Gold"/><!-- checked -->
+		<enum val="88" display="Raging Prigga Expert Cube Platinum"/>
+		<enum val="89" display="Mob Leader Expert Cube Silver"/>
+		<enum val="90" display="Mob Leader Expert Cube Gold"/><!-- checked -->
+		<enum val="91" display="Mob Leader Expert Cube Platinum"/>
+		<enum val="92" display="SVR-07 Expert Cube Silver"/><!-- checked -->
+		<enum val="93" display="SVR-07 Expert Cube Gold"/><!-- checked -->
+		<enum val="94" display="SVR-07 Expert Cube Platinum"/>
 	</multivalue>
 	<multivalue name="logIds">
 		<enum val="1" display="Spell ATK"/>
@@ -707,21 +756,22 @@
 		<enum val="6" display="todo"/>
 	</multivalue>
 	<multivalue name="minionAction">
-		<enum val="0" display="Unk"/>
-		<enum val="1" display="List"/>
-		<enum val="2" display="Adopt"/>
-		<enum val="3" display="Rename"/>
-		<enum val="4" display="Lock"/>
-		<enum val="5" display="Delete ?"/>
-		<enum val="6" display="Spawn"/>
-		<enum val="7" display="Despawn"/>
-		<enum val="8" display="Evolve"/>
-		<enum val="9" display=""/>
-		<enum val="10" display="Use Function"/>
-		<enum val="11" display="Stop Function"/>
-		<enum val="12" display="Skill Use"/>
-		<enum val="13" display=""/>
-		<enum val="13" display="Unkact"/>
+		<enum val="0" display="Unk"/> <!-- checked -->
+		<enum val="1" display="List"/> <!-- checked -->
+		<enum val="2" display="Adopt"/> <!-- checked -->
+		<enum val="3" display="Delete"/> <!-- checked -->
+		<enum val="4" display="Rename"/> <!-- checked -->
+		<enum val="5" display="Lock"/> <!-- checked -->
+		<enum val="6" display="Spawn"/> <!-- checked -->
+		<enum val="7" display="Despawn"/> <!-- checked -->
+		<enum val="8" display="Evolve"/> <!-- checked -->
+		<enum val="9" display="Todo"/>
+		<enum val="10" display="Use Buff Food?"/>
+		<enum val="11" display="Use Function"/> <!-- checked -->
+		<enum val="12" display="Todo"/>
+		<enum val="13" display="Skill Use"/>
+		<enum val="14" display="Todo"/>
+		<enum val="15" display="Todo"/>
 	</multivalue>
 	<multivalue name="transformationAction">
 		<enum val="0" display="List"/>
@@ -831,16 +881,15 @@
 			<part name="curFlyTime" type="d"/>
 			<part name="FlyState" type="h"/>
 			<part name="TODO" type="h"/>
-			<part name="CurrentMainHandAttack" type="d"/> <!--Char base damage + WeaponMeanDamage(max + min damage value / 2) + Mboost Don't add EnchantMboost Values!! -->
-			<part name="CurrentOffHandAttack (No weapon equiped)" type="d"/>
-			<part name="TODO" type="d"/>
+			<part name="CurrentMainHandAttack (R)" type="d"/>
+			<part name="CurrentMainHandAttack (L)" type="d"/>
+			<part name="TODO" type="d"/>	
 			<part name="currentMainHandAttack M or P" type="d"/>
 			<part name="currentOffHandAttack M or P" type="d"/>
 			<part name="TODO" type="d"/>
 			<part name="currentMagicalResist" type="d"/>
 			<part name="currentAttackRange" type="f"/>
 			<part name="currentAttackSpeed" type="d"/>
-			<!-- <part name="unk 97 LVL 66 Cleri" type="h"/> -->
 			<part name="currentEvasion" type="d"/>
 			<part name="currentParry" type="d"/>
 			<part name="currentBlock" type="d"/>
@@ -852,48 +901,46 @@
 			<part name="unk 84 LVL 66 Cleri" type="h"/>
 			<part name="currentMagicalAccuracy" type="d"/>
 			<part name="currentMagicalCritical" type="h"/>
-			<part name="TODO" type="h"/>
+			<part name="currentMagicalCritical" type="h"/>
 			<part name="currentCastingSpeed" type="f"/>
 			<part name="unk 0 LVL 66 Cleri" type="h"/>
 			<part name="unk 7 LVL 66 Cleri" type="h"/>
-			<part name="currentMainHandAttack" type="d"/><!-- Mboost + bonus + enchant Bonus + ??? magical Attack ???-->
+			<part name="currentMainHandAttack" type="d"/>
 			<part name="currentPhysicalDefense" type="d"/>
 			<part name="currentMagicAttack" type="d"/>
 			<part name="currentMagicDef" type="d"/>
-			<part name="currentAdditional 1" type="d"/>
-			<part name="currentAdditional 2" type="d"/>
-			<part name="unk 8 * 0" type="b" size="8"/>
+			<part name="currentPvpAttack" type="d"/>
+			<part name="currentPvpDefence" type="d"/>
+			<part name="currentPveAttack" type="d"/>
+			<part name="currentPveDefence" type="d"/>
+			<part name="TODO Phys Krit" type="d"/>
 			<part name="currentMagicBoost" type="d"/>
-			<part name="currentMagicDef+ausgleich" type="d"/>
+			<part name="TODO MDef" type="d"/>
 			<part name="currentHealBoost" type="d"/>
-			<part name="unk 96 LVL 66 Cleri" type="h"/>
-			<part name="unk 130 LVL 66 Cleri" type="h"/>
-			<part name="unk 0 LVL 66 Cleri" type="h"/>
-			<part name="unk 0 LVL 66 Cleri" type="h"/>
+			<part name="TODO" type="d"/>
+			<part name="TODO" type="d"/>
 			<part name="cubeSize" type="d"/>
 			<part name="inventorySize" type="d"/>
 			<part name="unk(0x00)" type="Q"/>
 			<part name="classId" type="d">
 				<reader type="MultiValue" name="playerClass"/>
-			</part>
+			</part>		
 			<part name="display ?" type="h"/>
 			<part name="deny ?" type="h"/>
 			<part name="currentReposteEnergy" type="Q"/>
 			<part name="maxReposteEnergy" type="Q"/>
-			<part name="unk 0 LVL 66 Cleri" type="h"/>
-			<part name="unk 0 LVL 66 Cleri" type="h"/>
+			<part name="TODO" type="Q"/>
 			<part name="baseCastingSpeed" type="f"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
-			<part name="GrowthEnergy" type="Q"/>
 			<part name="GoldenStarEnergy" type="Q"/>
+			<part name="GrowthEnergy" type="Q"/>
 			<part name="SilverStarEnergy(TODO)" type="Q"/>
-			<part name="unk 12 * 0" type="b" size="12"/>
-			<part name="unk 1000" type="d"/>
+			<part name="unk 16 * 0" type="b" size="16"/>
 			<part name="basePower" type="h"/>
 			<part name="baseHealth" type="h"/>
-			<part name="baseAccuracy" type="h"/>
 			<part name="baseAgility" type="h"/>
+			<part name="baseAccuracy" type="h"/>
 			<part name="baseKnowledge" type="h"/>
 			<part name="baseWill" type="h"/>
 			<part name="baseWaterResist" type="h"/>
@@ -906,38 +953,38 @@
 			<part name="baseMaxMp" type="d"/>
 			<part name="baseMaxDp" type="d"/>
 			<part name="baseFlyTime" type="d"/>
-			<part name="baseWeaponAttack Without Weapon" type="d"/>
-			<part name="baseWeaponAttack Without Weapon" type="d"/>
-			<part name="baseWeaponAttackMainHand" type="d"/>
-			<part name="baseWeaponAttackOffHand" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
+			<part name="baseMainHandAttack (R)" type="d"/>
+			<part name="baseMainHandAttack (L)" type="d"/>
+			<part name="Todo" type="d"/>
+			<part name="Todo" type="d"/>
+			<part name="Todo" type="d"/>
+			<part name="Todo" type="d"/>
 			<part name="baseMagicalResist" type="d"/>
-			<part name="baseAttackRange or Speed ?" type="f"/>
+			<part name="baseAttackRange" type="f"/>
 			<part name="baseEvasion" type="d"/>
 			<part name="BaseParry" type="d"/>
-			<part name="baseBlock" type="d"/>	
+			<part name="baseBlock" type="d"/>
 			<part name="baseMainHPhyCritical" type="h"/>
 			<part name="baseOffHPhyCritical" type="h"/>
 			<part name="baseMagCritMainHand" type="h"/>
 			<part name="baseMagCritOffHand" type="h"/>
 			<part name="baseMainHPhyAccuracy" type="d"/>
 			<part name="baseOffHPhyAccuracy" type="d"/>
-			<part name="unk 1 = no weapon 257 = two weapons ??? looks like waeapon slot" type="h"/>
-			<part name="unk 0 LVL 66 Cleri" type="h"/>
+			<part name="unk 257" type="d"/>
 			<part name="baseMagicalAccuracy" type="d"/>
-			<part name="unk 7 LVL 66 Cleri" type="d"/>
+			<part name="unk" type="d"/>
 			<part name="basePhyiscalAttack" type="d"/>
 			<part name="basePhyiscalDef" type="d"/>
 			<part name="baseMagicAttack" type="d"/>
 			<part name="baseMagicDef" type="d"/>
-			<part name="baseMagicAttack + mboost" type="d"/>
-			<part name="baseMagicDef + ausgleich" type="d"/>
 			<part name="baseHealBoost" type="d"/>
-			<part name="unk 96 LVL 66 Cleri" type="h"/>
-			<part name="baseMagicalCritical" type="h"/>
-			<part name="unk 0" type="h"/>
-			<part name="unk 0" type="h"/>
+			<part name="Todo" type="d"/>
+			<part name="Todo" type="d"/>
+			<part name="Todo" type="d"/>
+			<part name="Todo" type="h"/>
+			<part name="Todo" type="h"/>
+			<part name="Todo" type="h"/>
+			<part name="Todo" type="h"/>
 		</packet>
 		<packet id="0x03" name="SM_STATUPDATE_HP">
 			<part name="currentHp" type="d"/>
@@ -2954,6 +3001,9 @@
 			<part name="unk" type="c"/>
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
+			</part>
+			<part name="Transformation_Id" type="d">
+				<reader type="UrlOpen" url="http://aioncodex.com/en/transformation/%s"/>
 			</part>
 		</packet>
 		<packet id="0x3C" name="SM_DIALOG_WINDOW">
@@ -8371,7 +8421,7 @@
 				<part name="shieldStatus?1:0" type="c"/>
 			</for>
 		</packet>
-		<packet id="0xDD000" name="SM_HOUSE_TELEPORT">
+		<packet id="0xDD" name="SM_HOUSE_TELEPORT">
 			<part name="address" type="d"/>
 			<part name="player" type="d"/>
 		</packet>
@@ -9630,7 +9680,9 @@
 				<case id="3">
 					<part name="Success/0/Fail/1" type="c"/>
 					<part name="unk" type="h"/>
-					<part name="craftItemId" type="d"/>
+					<part name="craftItemId" type="d">
+						<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+					</part>
 					<part name="craftItemCount" type="Q"/>
 				</case>
 				<case id="4">
@@ -9653,7 +9705,9 @@
 					<part name="ItemSize" type="h" id="1"/>
 					<for id="1">
 						<part name="Slot" type="c"/>
-						<part name="ItemId" type="d"/>
+						<part name="itemId" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+						</part>
 						<part name="0x00" type="d"/>
 						<part name="0x01" type="d"/>
 					</for>
@@ -9665,7 +9719,9 @@
 				<case id="10">
 					<part name="isApply" type="c"/>
 					<part name="slot" type="c"/>
-					<part name="itemId" type="d"/>
+					<part name="itemId" type="d">
+						<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+					</part>
 					<part name="unk" type="d"/>
 				</case>
 				<case id="11">
@@ -9676,12 +9732,31 @@
 				<case id="12">
 					<part name="unk" type="c"/>
 					<part name="unk" type="h"/>
-					<part name="itemId" type="d"/>
+					<part name="itemId" type="d">
+						<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+					</part>
 					<part name="count" type="Q"/>
 				</case>
 				<case id="14"><!-- Taki´s Mission -->
 					<part name="Instance Daily" type="c"/>
 					<part name="Instance Weekly" type="d"/>
+				</case>
+				<case id="15"><!-- Game -->
+					<part name="unk" type="d"/>
+				</case>
+				<case id="16"><!-- Game -->
+					<part name="unk" type="h"/>
+					<part name="unk" type="c"/>
+					<part name="itemId" type="d">
+						<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+					</part>
+					<part name="count" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="itemId" type="d">
+						<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+					</part>
+					<part name="count" type="d"/>
+					<part name="unk" type="d"/>
 				</case>	
 				<case id="default"/>	
 			</switch>					
@@ -9810,7 +9885,7 @@
 			<part name="0x0" type="c"/>
 			<part name="token" type="b" size="16"/>			
 		</packet>
-		<packet id="0x118" name="________________SM_UNK_117"> <!-- Kisk: Stigmameister -->
+		<packet id="0x118" name="________________SM_UNK_117"> <!-- Kisk: Stigmameister and QuestHelper -->
 			<part name="objectId" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
@@ -10097,13 +10172,18 @@
 						<part name="unk" type="d"/>
 						<part name="minion_points" type="d"/>
 						<part name="isLocked" type="c"/>
-						<part name="itemObjId" type="d"/>
-						<part name="itemObjId" type="d"/>
-						<part name="itemObjId" type="d"/>
-						<part name="itemObjId" type="d"/>
-						<part name="itemObjId" type="d"/>
-						<part name="itemObjId" type="d"/>
+						<part name="itemId (buff food 1)" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+						</part>
+						<part name="itemId (buff food 1)" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+						</part>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
+						<part name="unk" type="d"/>
 						<part name="unk" type="c"/>
+						<part name="unk" type="d"/>
 					</for>
 				</case>
 				<case id="2">
@@ -10117,31 +10197,23 @@
 					<part name="petId" type="d">
 						<reader type="UrlOpen" url="http://aioncodex.com/en/familiar/%s"/>
 					</part>
-					<part name="unk" type="h"/>
+					<part name="name" type="S"/>
 					<part name="petBirthday" type="d">
 						<reader type="UnixDate"/>
 					</part>
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
-					<part name="unk" type="h"/>
-				</case>
-				<case id="5"><!-- TODO -->
-					<part name="unk" type="h"/> <!-- 
-					<part name="petUniqueId" type="d"/> -->
+
 				</case>
 				<case id="3"> <!-- Combine -->
 					<part name="unk" type="h"/>
 					<part name="petUniqueId" type="d"/>
 				</case>
-				<case id="4">
+				<case id="4"> <!-- rename minion -->
 					<part name="petUniqueId" type="d"/>
-					<part name="Locked 0/1" type="c"/>
+					<part name="name" type="S"/>
+				</case>
+				<case id="5"> <!-- lock minion -->
+					<part name="petUniqueId" type="d"/>
+					<part name="lock/unlock" type="c"/>
 				</case>
 				<case id="6">
 					<part name="name" type="S"/>
@@ -10157,14 +10229,15 @@
 				</case>
 				<case id="8">
 					<part name="petUniqueId" type="d"/>
-					<part name="minion_points" type="d"/>
+					<part name="growth_points" type="d"/>
 				</case>
-				<case id="9"><!-- Set Function -->
+				<case id="9"/>
+				<case id="10"><!-- Set Function -->
 					<part name="unk" type="h" id="0"/>
 					<switch id="0">
 						<case id="0">
 							<!-- Buff -->
-							<part name="object_id" type="d"/>
+							<part name="petUniqueId" type="d"/>
 							<part name="item_id" type="d">
 								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
 							</part>
@@ -10175,20 +10248,20 @@
 							<part name="Autoloot on/off" type="c"/>
 						</case>
 						<case id="768">
-							<part name="object_id" type="d"/>
+							<part name="petUniqueId" type="d"/>
 							<part name="item_id" type="d">
 								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
 							</part>
 						</case>
 						<case id="default">
-							<part name="object_id" type="d"/>
+							<part name="petUniqueId" type="d"/>
 							<part name="item_id" type="d">
 								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
 							</part>
 						</case>
 					</switch>
 				</case>
-				<case id="10"><!-- Use Function -->
+				<case id="11"><!-- Use Function -->
 					<part name="useExpireDate" type="d">
 						<reader type="UnixDate"/>
 					</part>
@@ -10198,8 +10271,17 @@
 					<part name="skill_points" type="d"/>
 					<part name="unk" type="c"/>
 				</case>
-				<case id="13">
+				<case id="13"><!-- Use Skill -->
 					<part name="unk" type="c"/>
+					<part name="unk" type="d"/>
+				</case>
+				<case id="14">
+					<part name="unk" type="c"/>
+				</case>
+				<case id="15">
+					<part name="petUniqueId" type="d"/>
+					<part name="unk" type="c"/>
+					<part name="unk" type="h"/>
 				</case>
 				<case id="default"/>
 			</switch>
@@ -10210,15 +10292,21 @@
 			</part>
 			<switch id="0">
 				<case id="0">
-					<part name="unk" type="c" id="1"/>
+					<part name="unk" type="c"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="h" id="1"/>
 					<for id="1">
-						<part name="transformation_id" type="d"/>
-						<part name="0 / 1" type="d"/>
+						<part name="Transformation_Id" type="d">
+							<reader type="UrlOpen" url="http://aioncodex.com/en/transformation/%s"/>
+						</part>
+						<part name="count" type="d"/>
 					</for>
 				</case>
 				<case id="1">
 					<part name="unk" type="h"/>
-					<part name="unk" type="d"/>
+					<part name="Transformation_Id" type="d">
+						<reader type="UrlOpen" url="http://aioncodex.com/en/transformation/%s"/>
+					</part>
 					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
@@ -10237,7 +10325,13 @@
 				</case>
 				<case id="3"> <!-- Collection -->
 					<part name="unk" type="d"/>
-					<part name="activate/deactivate" type="c"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
 				</case>
 				<case id="default"/>
 			</switch>
@@ -10309,7 +10403,9 @@
 		<packet id="0x175" name="________________SM_CUBIC_INFO">
 			<part name="size" type="h" id="0"/>
 			<for id="0">
-				<part name="cubicId" type="d"/>
+				<part name="cubicId" type="d">
+					<reader type="MultiValue" name="cubics"/>
+				</part>
 				<part name="rank" type="d"/>
 				<part name="level" type="d"/>
 				<part name="register" type="d"/>
@@ -10347,41 +10443,140 @@
 			<part name="unk" type="c"/>
 		</packet>
 		<packet id="0x17B" name="________________SM_LUGBUG_MISSION"> <!-- 7.x TODO -->
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="c"/>
-			<part name="questId" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
-			<part name="unk" type="d"/>
+			<part name="date" type="d">
+				<reader type="UnixDate" />
+			</part>
+			<part name="unk" type="d" />
+			<part name="unk" type="h" />
+			<part name="Daily Quest" type="c" id="0" />
+			<for id="0" name="Daily Quest">
+				<part name="diff?" type="d" />
+				<part name="unk" type="d" />
+				<part name="questId" type="d" />
+				<part name="unk1" type="d" />
+				<part name="unk 32" type="b" size="32" />
+				<part name="start time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+				<part name="end time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+			</for>
+			<part name="size" type="h" id="1" />
+			<for id="1" name="Weekly Quest">
+				<part name="diff?" type="d" />
+				<part name="unk" type="d" />
+				<part name="questId" type="d" />
+				<part name="unk 36" type="b" size="36" />
+				<part name="start time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+				<part name="end time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+			</for>
+			<part name="Weekly Quest" type="c" id="2" />
+			<for id="2">
+				<part name="diff?" type="d" />
+				<part name="unk" type="d" />
+				<part name="questId" type="d" />
+				<part name="unk1" type="d" />
+				<part name="unk 32" type="b" size="32" />
+				<part name="start time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+				<part name="end time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+			</for>
+			<part name="size" type="h" id="3" />
+			<for id="3">
+				<part name="diff?" type="d" />
+				<part name="unk" type="d" />
+				<part name="questId" type="d" />
+				<part name="unk1" type="d" />
+				<part name="unk 32" type="b" size="32" />
+				<part name="start time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+				<part name="end time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+			</for>
+		</packet>
+		<packet id="0x17E" name="________________SM_LUGBUG_EVENT"> <!-- 7.3 TODO -->
+			<part name="size" type="h" id="0"/>
+			<for id="0">
+				<part name="unk" type="c"/>
+				<part name="unk" type="h"/>
+				<part name="unk" type="h"/>
+				<part name="unk" type="d"/>
+				<part name="questId" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="active" type="c"/>
+				<part name="killcount?" type="h"/>
+				<part name="unk" type="h"/>
+				<part name="unk" type="c"/>
+				<part name="unk 20" type="b" size="20"/>
+				<part name="start time?" type="d">
+					<reader type="UnixDate"/>
+				</part>
+				<part name="unk" type="d"/>
+				<part name="end time?" type="d">
+					<reader type="UnixDate"/>
+				</part>
+				<part name="unk" type="d"/>
+			</for>
 		</packet>
 		<packet id="0x17C" name="________________SM_LUGBUG_MISSION_COUNT"> <!-- 7.x TODO -->
-			<part name="unk" type="d"/>
-			<part name="questId" type="d"/>
+			<part name="size" type="h" id="0"/>
+			<for id="0">
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="c"/>
+				<part name="count" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+			</for>
 		</packet>
 		<packet id="0x17D" name="________________SM_LUGBUG_MISSION_REWARD"> <!-- 7.x TODO -->
-			<part name="unk" type="c"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="c"/>
+			<part name="size" type="c" id="0"/>
+			<for id="0">
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+			</for>
+		</packet>
+		<packet id="0x181" name="________________SM_LUGBUG_EVENT_REWARD"> <!-- 7.3 TODO -->
+			<part name="size" type="c" id="0"/>
+			<for id="0">
+				<part name="questId" type="d"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="c"/>
+			</for>
 		</packet>
 		<packet id="0x184" name="________________SM_UNK_184"/> <!-- 7.x TODO -->
 		<packet id="0x185" name="________________SM_DIMENSIONAL_HOURGLASS"> <!-- 7.x -->
@@ -10546,7 +10741,9 @@
 						<part name="unk" type="d"/>
 						<part name="unk" type="d"/>
 						<part name="unk" type="d"/>
-						<part name="unk" type="d"/>
+						<part name="captured(Time)" type="d">
+							<reader type="UnixDate"/>
+						</part>
 						<part name="unk" type="d"/>
 						<part name="unk" type="d"/>
 						<part name="unk" type="d"/>
@@ -11248,7 +11445,7 @@
 			</switch>
 		</packet>
 		<packet id="0x119" name="CM_STOP_TRAINING"/> <!-- 7.2 EU -->
-		<packet id="0x104" name="CM_QUESTION_RESPONSE"> <!-- 7.x EU --> 
+		<packet id="0x11D" name="CM_QUESTION_RESPONSE"> <!-- 7.3 EU --> 
 			<part name="questionId" type="d">
 				<reader type="ClientString" real="true"/>
 			</part>
@@ -11373,7 +11570,7 @@
 		<packet id="0x1DA00" name="CM_LEGION_JOIN_REQUEST_CANCEL"> 
 			<part name="LegionID" type="d"/>
 		</packet>
-		<packet id="0xDD" name="CM_OBJECT_SEARCH"> <!-- 7.x EU -->
+		<packet id="0xBA" name="CM_OBJECT_SEARCH"> <!-- 7.3 EU -->
 			<part name="npcId" type="d"/>
 		</packet>
 		<packet id="0x105" name="CM_ITEM_REMODEL"> <!-- 7.2 EU -->
@@ -11974,7 +12171,6 @@
 		<packet id="0x1E1" name="CM_REPORT_CHAT"> <!-- 7.2 EU -->
 			<part name="player" type="S"/>
 		</packet>
-		<packet id="0x11D" name="CM_HOUSE_TELEPORT_BACK"/> <!-- 7.2 EU -->
 
 		<!-- New 4.7 EU -->
 		<packet id="0x1E6" name="CM_UPGRADE_ARCADE"> <!-- 7.2 EU -->
@@ -12343,16 +12539,40 @@
 					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
 				</case>
-				<case id="10"/> <!-- Use Function -->
-				<case id="11">
-					<part name="unk" type="c"/>
-					<part name="auto_recharge on/off" type="c"/>
+				<case id="10"> <!-- Set Function -->
+					<part name="unk" type="d" id="0"/>
+					<switch id="0">
+						<case id="0">
+							<!-- Buff -->
+							<part name="unk" type="d"/>
+							<part name="petUniqueId" type="d"/>
+							<part name="itemId" type="d">
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
+							<part name="itemId" type="d">
+								<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
+							</part>
+						</case>
+						<case id="1">
+							<!-- Auto Loot -->
+							<part name="petUniqueId" type="d"/>
+							<part name="Autoloot on/off" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+						</case>
+						<case id="default"/>
+					</switch>
 				</case>
+				<case id="11"/>
 				<case id="13"/>
 				<case id="14">
 					<part name="unk" type="c"/>
 					<part name="unk" type="c"/>
 					<part name="unk" type="c"/>
+				</case>
+				<case id="15">
+					<part name="unk" type="c"/>
+					<part name="unk" type="h"/>
 				</case>
 				<case id="default"/>
 			</switch>
@@ -12365,8 +12585,10 @@
 					<part name="unk" type="c"/>
 				</case>
 				<case id="1">
-					<part name="Transformation_Id" type="d"/>
-					<part name="Transformation_Id" type="d"/>
+					<part name="Transformation_Id" type="d">
+						<reader type="UrlOpen" url="http://aioncodex.com/en/transformation/%s"/>
+					</part>
+					<part name="itemObjId" type="d"/>
 				</case>
 				<case id="2"> <!-- Fusion -->
 					<part name="Transformation_Id" type="d"/>
@@ -12428,13 +12650,20 @@
 			<part name="itemObjectId" type="d"/>
 		</packet>
 		<packet id="0x216" name="________________CM_LUGBUG_MISSION_REWARD"> <!-- 7.2 TODO -->
-			<part name="questId" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
+			<part name="questId" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+		</packet>
+		<packet id="0x217" name="________________CM_LUGBUG_EVENT_REWARD"> <!-- 7.3 TODO -->
+			<part name="questId" type="d"/>
+			<part name="unk" type="c"/>
+			<part name="unk" type="c"/>
+			<part name="unk" type="c"/>
+			<part name="unk" type="c"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="c"/>
 		</packet>
 		<packet id="0x1BA" name="________________CM_LUCKY_DICE"> <!-- 7.2 EU -->
 			<part name="unk" type="c"/>
