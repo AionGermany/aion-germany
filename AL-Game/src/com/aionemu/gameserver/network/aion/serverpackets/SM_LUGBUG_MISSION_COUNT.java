@@ -40,7 +40,7 @@ public class SM_LUGBUG_MISSION_COUNT extends AionServerPacket {
 			writeC(2);
 			writeD(0);
 			writeC(2);
-			writeD(3);
+			writeD(3); // count
 			writeD(0);
 			writeD(0);
 			writeD(0);

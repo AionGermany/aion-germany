@@ -255,6 +255,12 @@ public class StaticData {
 	public ItemEnchantChancesData itemEnchantChancesData;
 	@XmlElement(name = "dynamic_portal")
 	public DynamicPortalData dynamicPortalData;
+	@XmlElement(name = "lugbug_events")
+	public LugbugEventData lugbugEventData;
+	@XmlElement(name = "lugbug_quests")
+	public LugbugQuestData lugbugQuestData;
+	@XmlElement(name = "lugbug_special_quests")
+	public LugbugSpecialQuestData lugbugSpecialQuestData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -371,5 +377,8 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + reviveInstanceStartPoints.size() + " Revive Instance Start Point entrys");
 		DataManager.log.info("[DataManager] Loaded " + itemEnchantChancesData.size() + " Item Enchant Chances entrys");
 		DataManager.log.info("[DataManager] Loaded " + dynamicPortalData.size() + " Dynamic Portal entrys");
+		DataManager.log.info("[DataManager] Loaded " + lugbugEventData.size() + " Lugbug Event entrys");
+		DataManager.log.info("[DataManager] Loaded " + lugbugQuestData.size() + " Lugbug Quest entrys");
+		DataManager.log.info("[DataManager] Loaded " + lugbugSpecialQuestData.size() + " Lugbug Special Quest entrys");
 	}
 }

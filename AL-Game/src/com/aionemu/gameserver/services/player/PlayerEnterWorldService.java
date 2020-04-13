@@ -89,6 +89,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEGION_JOIN_REQUEST_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_LUGBUG_MISSION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MACRO_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
@@ -147,6 +148,7 @@ import com.aionemu.gameserver.services.events.EventService;
 import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.instance.InstanceService;
+import com.aionemu.gameserver.services.lugbug.LugbugEventService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.territory.TerritoryService;
@@ -658,6 +660,9 @@ public final class PlayerEnterWorldService {
 			// SM_CUBIC
 			PlayerCubicService.getInstance().onLogin(player);
 
+			// SM_LUGBUG_EVENT
+			LugbugEventService.getInstance().onLogin(player);
+
 			// SM_BROKER_SERVICE
 			BrokerService.getInstance().onPlayerLogin(player);
 
@@ -666,6 +671,9 @@ public final class PlayerEnterWorldService {
 
 			// SM_HOUSE_OWNER_INFO
 			HousingService.getInstance().onPlayerLogin(player);
+
+			// SM_LUGBUG_MISSION
+			client.sendPacket(new SM_LUGBUG_MISSION());
 
 			// SM_RECIPE_LIST
 			client.sendPacket(new SM_RECIPE_LIST(player.getRecipeList().getRecipeList()));

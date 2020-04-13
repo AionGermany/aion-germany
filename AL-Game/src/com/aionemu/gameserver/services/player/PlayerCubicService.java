@@ -24,7 +24,6 @@ import com.aionemu.gameserver.dao.PlayerCubicsDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.cubics.PlayerMCEntry;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.model.stats.calc.StatOwner;
 import com.aionemu.gameserver.model.stats.calc.functions.IStatFunction;
 import com.aionemu.gameserver.model.stats.calc.functions.StatAddFunction;

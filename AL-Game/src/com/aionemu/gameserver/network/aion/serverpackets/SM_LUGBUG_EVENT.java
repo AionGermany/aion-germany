@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import java.util.HashMap;
+
+import com.aionemu.gameserver.model.templates.lugbug.LugbugEventTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -24,35 +27,34 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LUGBUG_EVENT extends AionServerPacket {
 
-	private int size;
+	private HashMap<Integer, LugbugEventTemplate> activeLugbugEventsForPlayer;
 
-	public SM_LUGBUG_EVENT(int size) {
-		this.size = size;
+	public SM_LUGBUG_EVENT(HashMap<Integer, LugbugEventTemplate> activeLugbugEventsForPlayer) {
+		this.activeLugbugEventsForPlayer = activeLugbugEventsForPlayer;
 	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeC(size);
-		if (size > 0) {
+		writeH(activeLugbugEventsForPlayer.size());
+		System.out.println("Active Player Events: " + activeLugbugEventsForPlayer.size());
+		for (LugbugEventTemplate lugbugEventTemplate : activeLugbugEventsForPlayer.values()) {
 			writeC(1);
-			writeC(-16);
-			writeC(-64);
-			writeC(-118);
-			writeC(2);
+			writeH(-16144);
+			writeH(650);
 			writeD(0);
-			writeD(0); // questId
+			writeD(lugbugEventTemplate.getId());
 			writeD(0);
 			writeD(0);
+			writeC(0);
+			writeC(0);
+			writeC(1); // Active
+			writeH(0); // count / killcount
+			writeH(0);
+			writeC(0);
+			writeB(new byte[20]);
+			writeD((int) (lugbugEventTemplate.getStartday().getMillis() / 1000));
 			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0); // 1586329200
-			writeD(0);
-			writeD(0); // 1586356647
+			writeD((int) (lugbugEventTemplate.getEndday().getMillis() / 1000));
 			writeD(0);
 		}
 	}
