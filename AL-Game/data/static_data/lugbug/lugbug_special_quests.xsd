@@ -14,10 +14,18 @@
 			<xs:attribute name="name" type="xs:string"/>
 			<xs:attribute name="title" type="xs:string"/>
 			<xs:attribute name="name_id" type="xs:int"/>
+			<xs:attribute name="type"  type="Type"/>
 			<xs:attribute name="race" type="Race" default="PC_ALL"/>
 			<xs:attribute name="minlevel" type="xs:int" use="required"/>
 			<xs:attribute name="maxlevel" type="xs:int" use="required"/>
 			<xs:attribute name="completecount" type="xs:int"/>
 		</xs:complexType>
 	</xs:element>
+
+    <xs:simpleType name="Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DAILY"/>
+            <xs:enumeration value="WEEKLY"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

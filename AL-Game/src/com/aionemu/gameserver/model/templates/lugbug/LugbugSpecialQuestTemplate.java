@@ -42,6 +42,9 @@ public class LugbugSpecialQuestTemplate {
 	@XmlAttribute(name = "name_id")
 	protected int nameId;
 
+	@XmlAttribute(name = "type")
+	private LugbugQuestType lugbugQuestType;
+
 	@XmlAttribute
 	private Race race = Race.PC_ALL;
 
@@ -68,6 +71,10 @@ public class LugbugSpecialQuestTemplate {
 
 	public int getNameId() {
 		return this.nameId;
+	}
+
+	public LugbugQuestType getLugbugQuestType() {
+		return lugbugQuestType;
 	}
 
 	public Race getRace() {
