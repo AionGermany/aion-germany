@@ -31,10 +31,7 @@ public class CM_LUGBUG_EVENT_REWARD extends AionClientPacket {
 	@Override
 	protected void readImpl() {
 		readD(); // questId
-		readC();
-		readC();
-		readC();
-		readC();
+		readD();
 		readD();
 		readC();
 	}

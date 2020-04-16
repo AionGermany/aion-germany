@@ -88,4 +88,10 @@ public class EventsConfig {
 	
 	@Property(key = "gameserver.event.youtube_video", defaultValue = "https://www.youtube.com/embed/0_OzU6GVGLw")
 	public static String EVENT_YOUTUBE_VIDEO;
+
+	@Property(key = "gameserver.atreian.passport.enable", defaultValue = "0")
+	public static int ENABLE_ATREIAN_PASSPORT;
+
+	@Property(key = "gameserver.atreian.passport.id", defaultValue = "11")
+	public static int ATREIAN_PASSPORT_ID;
 }

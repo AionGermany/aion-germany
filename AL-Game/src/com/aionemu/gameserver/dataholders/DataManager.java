@@ -148,6 +148,7 @@ public final class DataManager {
 	public static LugbugEventData LUGBUG_EVENT_DATA;
 	public static LugbugQuestData LUGBUG_QUEST_DATA;
 	public static LugbugSpecialQuestData LUGBUG_SPECIAL_QUEST_DATA;
+	public static AtreianPassportData ATREIAN_PASSPORT_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -281,6 +282,7 @@ public final class DataManager {
 		LUGBUG_EVENT_DATA = data.lugbugEventData;
 		LUGBUG_QUEST_DATA = data.lugbugQuestData;
 		LUGBUG_SPECIAL_QUEST_DATA = data.lugbugSpecialQuestData;
+		ATREIAN_PASSPORT_DATA = data.atreianPassportData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

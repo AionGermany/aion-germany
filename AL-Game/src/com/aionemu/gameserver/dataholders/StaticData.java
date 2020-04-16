@@ -261,6 +261,8 @@ public class StaticData {
 	public LugbugQuestData lugbugQuestData;
 	@XmlElement(name = "lugbug_special_quests")
 	public LugbugSpecialQuestData lugbugSpecialQuestData;
+	@XmlElement(name = "atreian_passports")
+	public AtreianPassportData atreianPassportData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -380,5 +382,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + lugbugEventData.size() + " Lugbug Event entrys");
 		DataManager.log.info("[DataManager] Loaded " + lugbugQuestData.size() + " Lugbug Quest entrys");
 		DataManager.log.info("[DataManager] Loaded " + lugbugSpecialQuestData.size() + " Lugbug Special Quest entrys");
+		DataManager.log.info("[DataManager] Loaded " + atreianPassportData.size() + " Atreian Passport entrys");
 	}
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs;Lost Ring Event</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -618,6 +618,58 @@
 						<spot x="1023.5" y="2504.3" z="543.4281" h="45"/>
 						<spot x="1011.5" y="2345.3" z="560.53125" h="15"/>
 						<spot x="1025.3" y="2183.3" z="587.6472" h="105"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Lost Ring Event" start="2020-04-15T00:00:00+00:00" end="2020-05-13T00:00:00+00:00">
+            <spawns>
+                <!-- Dumaha -->
+                <spawn_map map_id="600300000">
+					<!-- Deino ||| LDF8_OP_RingWitch_01 -->
+					<spawn npc_id="820727" respawn_time="295">
+						<spot x="957.2" y="1632.0" z="713.23456" h="60"/>
+					</spawn>
+					<!-- Pamred ||| LDF8_OP_RingWitch_02 -->
+					<spawn npc_id="820728" respawn_time="295">
+						<spot x="957.2" y="1627.8" z="713.23456" h="60"/>
+					</spawn>
+					<!-- Enio ||| LDF8_OP_RingWitch_03 -->
+					<spawn npc_id="820729" respawn_time="295">
+						<spot x="956.3" y="1624.6" z="713.23456" h="45"/>
+					</spawn>
+					<!-- Kind Lover Angmu ||| LDF8_RingBird_02 -->
+					<spawn npc_id="820731" respawn_time="295">
+						<spot x="2706.0" y="2129.1" z="683.125" h="66"/>
+						<spot x="2658.0" y="2144.2" z="683.125" h="21"/>
+						<spot x="2615.4" y="2141.0" z="683.125" h="30"/>
+					</spawn>
+					<!-- Tamed Lover Angmu ||| LDF8_OP_RingDeco_01 -->
+					<spawn npc_id="820733" respawn_time="295">
+						<spot x="956.3" y="1635.2" z="713.23456" h="81"/>
+					</spawn>
+					<!-- None ||| LDF8_OP_RingDeco_02 -->
+					<spawn npc_id="820734" respawn_time="295">
+						<spot x="955.7" y="1630.0" z="713.23456" h="75"/>
+					</spawn>
+
+					<!-- Cursed Ribbit ||| Event_V72_RingFrog_01 -->
+					<spawn npc_id="858689" respawn_time="295">
+						<spot x="2775.5737" y="2033.9221" z="717.0718" h="83"/>
+						<spot x="2788.0" y="2062.6" z="717.2125" h="0"/>
+						<spot x="2803.4" y="2073.1" z="716.41064" h="100"/>
+						<spot x="2823.2" y="2064.4" z="713.86" h="80"/>
+						<spot x="2829.5" y="2064.6" z="713.0625" h="60"/>
+						<spot x="2803.4" y="2073.1" z="716.41064" h="100"/>
+					</spawn>
+					<!-- Cursed Ribbit ||| Event_V72_RingFrog_02 -->
+					<spawn npc_id="858690" respawn_time="295">
+						<spot x="2779.1" y="2065.0" z="717.125" h="10"/>
+						<spot x="2795.6" y="2063.1" z="717.2925" h="110"/>
+						<spot x="2824.7" y="2070.1" z="713.6625" h="70"/>
+						<spot x="2830.4" y="2061.2" z="712.975" h="90"/>
+						<spot x="2792.6" y="2092.3" z="714.3506" h="30"/>
+						<spot x="2792.6" y="2092.3" z="714.3506" h="30"/>
 					</spawn>
                 </spawn_map>
             </spawns>

@@ -39,18 +39,17 @@ public class SM_LUGBUG_EVENT extends AionServerPacket {
 		System.out.println("Active Player Events: " + activeLugbugEventsForPlayer.size());
 		for (LugbugEventTemplate lugbugEventTemplate : activeLugbugEventsForPlayer.values()) {
 			writeC(1);
-			writeH(-16144);
-			writeH(650);
+			writeD(42647792);
 			writeD(0);
 			writeD(lugbugEventTemplate.getId());
 			writeD(0);
 			writeD(0);
-			writeC(0);
-			writeC(0);
+			writeC(5);
+			writeC(4);
 			writeC(1); // Active
 			writeH(0); // count / killcount
 			writeH(0);
-			writeC(0);
+			writeC(4);
 			writeB(new byte[20]);
 			writeD((int) (lugbugEventTemplate.getStartday().getMillis() / 1000));
 			writeD(0);

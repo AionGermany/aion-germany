@@ -119,6 +119,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_YOUTUBE_VIDEO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.AccessLevelEnum;
+import com.aionemu.gameserver.services.AtreianPassportService;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ClassChangeService;
@@ -668,6 +669,9 @@ public final class PlayerEnterWorldService {
 
 			// SM_UNK_106
 			client.sendPacket(new SM_UNK_106());
+
+			// SM_ATREIAN_PASSPORT
+			AtreianPassportService.getInstance().onLogin(player);
 
 			// SM_HOUSE_OWNER_INFO
 			HousingService.getInstance().onPlayerLogin(player);

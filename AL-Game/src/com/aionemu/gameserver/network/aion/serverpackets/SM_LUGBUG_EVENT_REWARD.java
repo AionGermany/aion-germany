@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.gameserver.model.templates.lugbug.LugbugEventTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -25,6 +26,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 public class SM_LUGBUG_EVENT_REWARD extends AionServerPacket {
 
 	private int size;
+	private LugbugEventTemplate lugbugEventTemplate;
 
 	public SM_LUGBUG_EVENT_REWARD(int size) {
 		this.size = size;
@@ -34,11 +36,7 @@ public class SM_LUGBUG_EVENT_REWARD extends AionServerPacket {
 	protected void writeImpl(AionConnection con) {
 		writeC(size);
 		if (size > 0) {
-			writeD(10082); // questID
-			writeC(-15);
-			writeC(-64);
-			writeC(-118);
-			writeC(2);
+			writeD(lugbugEventTemplate.getId()); // questID
 			writeD(0);
 			writeC(0);
 		}

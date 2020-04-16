@@ -114,6 +114,7 @@
 	<xs:include schemaLocation="lugbug/lugbug_events.xsd"/>
 	<xs:include schemaLocation="lugbug/lugbug_quests.xsd"/>
 	<xs:include schemaLocation="lugbug/lugbug_special_quests.xsd"/>
+	<xs:include schemaLocation="events_config/atreian_passports.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -232,6 +233,7 @@
 				<xs:element ref="lugbug_events" minOccurs="0"/>
 				<xs:element ref="lugbug_quests" minOccurs="0"/>
 				<xs:element ref="lugbug_special_quests" minOccurs="0"/>
+				<xs:element ref="atreian_passports" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

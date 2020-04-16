@@ -32,17 +32,12 @@ public class SM_LUGBUG_MISSION_COUNT extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeC(size);
+		writeH(size);
 		if (size > 0) {
-			writeC(-15);
-			writeC(-64);
-			writeC(-118);
-			writeC(2);
+			writeD(0);
 			writeD(0);
 			writeC(2);
-			writeD(3); // count
-			writeD(0);
-			writeD(0);
+			writeD(1);
 			writeD(0);
 			writeD(0);
 			writeD(0);

@@ -350,7 +350,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_CUBIC_INFO.class, 0x175, idSet); // 6.x TODO
 		addPacketOpcode(SM_CUBIC.class, 0x176, idSet); // 6.x TODO
 		
-		//addPacketOpcode(SM_ATREIAN_PASSPORT.class, 0x12D, idSet); // 6.x TODO
+		addPacketOpcode(SM_ATREIAN_PASSPORT.class, 0x12D, idSet); // 7.x TODO
 		addPacketOpcode(SM_REMOVE_DYE.class, 0x1DF, idSet); // 6.x TODO
 		
 		// --------------------UNKNOWN PACKETS-----------------------//
