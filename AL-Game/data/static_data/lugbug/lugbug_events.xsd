@@ -21,7 +21,9 @@
 			<xs:attribute name="race" type="Race" default="PC_ALL"/>
 			<xs:attribute name="minlevel" type="xs:int" use="required"/>
 			<xs:attribute name="maxlevel" type="xs:int" use="required"/>
+			<xs:attribute name="maxrewardcount" type="xs:int"/>
 			<xs:attribute name="completepoint" type="xs:int"/>
+			<xs:attribute name="maxstage" type="xs:int"/>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>

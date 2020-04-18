@@ -70,8 +70,14 @@ public class LugbugEventTemplate {
 	@XmlAttribute(name = "maxlevel")
 	protected int maxlevel;
 
+	@XmlAttribute(name = "maxrewardcount")
+	protected int maxrewardcount;
+
 	@XmlAttribute(name = "completepoint")
 	protected int completePoint;
+
+	@XmlAttribute(name = "maxstage")
+	protected int maxstage;
 
 	public int getId() {
 		return this.id;
@@ -117,7 +123,15 @@ public class LugbugEventTemplate {
 		return maxlevel;
 	}
 
+	public int getMaxrewardcount() {
+		return maxrewardcount;
+	}
+
 	public int getCompletePoint() {
 		return completePoint;
+	}
+
+	public int getMaxstage() {
+		return maxstage;
 	}
 }
