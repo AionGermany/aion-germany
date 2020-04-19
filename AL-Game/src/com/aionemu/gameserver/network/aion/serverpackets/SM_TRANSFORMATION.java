@@ -30,6 +30,15 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 	private int actionId;
 	private Collection<TransformationCommonData> transformations;
 	private int transformationId;
+	private int transformationId1;
+	private int transformationId2;
+	private int transformationId3;
+	private int transformationId4;
+	private int transformationId5;
+	private int transformationId6;
+	private int transformationId7;
+	private int transformationId8;
+	private int transformationId9;
 
 	public SM_TRANSFORMATION(int actionId, Collection<TransformationCommonData> transformations) {
 		this.actionId = actionId;
@@ -45,8 +54,9 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 	protected void writeImpl(AionConnection con) {
 		writeH(actionId);
 		switch (actionId) {
-			case 0: { //List
-				writeC(0);
+			case 0: { // List
+				writeC(0); // 43?
+				writeD(0); // 3836?
 				if (transformations != null) {
 					writeH(transformations.size());
 					for (TransformationCommonData commonData : transformations) {
@@ -58,20 +68,36 @@ public class SM_TRANSFORMATION extends AionServerPacket {
 				}
 				break;
 			}
-			case 1: { //Add
+			case 1: { // Add
 				writeH(1);
 				writeD(transformationId);
+				writeD(transformationId1);
+				writeD(transformationId2);
+				writeD(transformationId3);
+				writeD(transformationId4);
+				writeD(transformationId5);
+				writeD(transformationId6);
+				writeD(transformationId7);
+				writeD(transformationId8);
+				writeD(transformationId9);
+				writeD(1);
 				break;
 			}
-			case 2: { //Delete
+			case 2: { // Delete
 				writeH(1);
 				writeD(transformationId);
 				writeD(1);
 				break;
 			}
-			case 3: { //Collection
-				writeD(0); // Id?
-				writeC(0); // 0 or 1 
+			case 3: { // ??
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
 				break;
 			}
 		}

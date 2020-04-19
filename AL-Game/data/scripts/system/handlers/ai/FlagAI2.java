@@ -74,6 +74,7 @@ public class FlagAI2 extends NoActionAI2 {
 		});
 	}
 
+	@SuppressWarnings("unused")
 	private void cancelTask() {
 		if (sendPacketTask != null && !sendPacketTask.isCancelled()) {
 			sendPacketTask.cancel(true);

@@ -24,8 +24,11 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_DAEVANION_SKILL_ENCHANT extends AionClientPacket {
 
+	@SuppressWarnings("unused")
 	private int unk;
+	@SuppressWarnings("unused")
 	private int itemObjectId1;
+	@SuppressWarnings("unused")
 	private int itemObjectId2;
 
 	public CM_DAEVANION_SKILL_ENCHANT(int opcode, State state, State... restStates) {

@@ -19,6 +19,7 @@ package com.aionemu.gameserver.services;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -47,6 +48,10 @@ public class AtreianPassportService {
 
 	public Map<Integer, AtreianPassportTemplate> getPlayerPassports(int accountId) {
 		Map<Integer, AtreianPassportTemplate> passports = new HashMap<Integer, AtreianPassportTemplate>();
+        List<Integer> ids = DAOManager.getDAO(AtreianPassportDAO.class).getPassports(accountId);
+        for (Integer i : ids) {
+            passports.put(i, data.get(i));
+        }
 		return passports;
 	}
 

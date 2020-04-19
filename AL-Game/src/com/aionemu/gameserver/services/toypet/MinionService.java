@@ -138,6 +138,7 @@ public class MinionService {
 		addMinion(player, minionId, minionName, minionGrade, minionLvl, minionGrowthPoints);
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	public void deleteMinion(Player player, int minionObjId, boolean isMaterial) {
 		for (MinionCommonData list : player.getMinionList().getMinions()) {
 			if (list.getObjectId() == minionObjId) {

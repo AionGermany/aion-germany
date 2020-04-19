@@ -24,11 +24,17 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_DAEVANION_SKILL_FUSION extends AionClientPacket {
 
+	@SuppressWarnings("unused")
 	private int unk;
+	@SuppressWarnings("unused")
 	private int count;
+	@SuppressWarnings("unused")
 	private int itemObjectId1;
+	@SuppressWarnings("unused")
 	private int itemObjectId2;
+	@SuppressWarnings("unused")
 	private int itemObjectId3;
+	@SuppressWarnings("unused")
 	private int itemObjectId4;
 
 	public CM_DAEVANION_SKILL_FUSION(int opcode, State state, State... restStates) {

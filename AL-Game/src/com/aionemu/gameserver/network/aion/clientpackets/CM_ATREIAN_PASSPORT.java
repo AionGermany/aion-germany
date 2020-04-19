@@ -26,6 +26,7 @@ import com.aionemu.gameserver.services.AtreianPassportService;
  */
 public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 
+	@SuppressWarnings("unused")
 	private int passportId;
 
 	public CM_ATREIAN_PASSPORT(int opcode, State state, State... restStates) {

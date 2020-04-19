@@ -28,7 +28,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LUGBUG_MISSION extends AionServerPacket {
 
+	@SuppressWarnings("unused")
 	private Collection<LugbugQuestTemplate> lugbug_quests;
+	@SuppressWarnings("unused")
 	private Collection<LugbugSpecialQuestTemplate> lugbug_special_quests;
 
 	public SM_LUGBUG_MISSION(Collection<LugbugQuestTemplate> lugbug_quests) {

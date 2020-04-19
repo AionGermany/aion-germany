@@ -58,6 +58,7 @@ public class CM_TRANSFOMATION extends AionClientPacket {
 		switch (action) {
 		case ADOPT:
 			ItemObjectId = readD();
+			readC();
 			break;
 		case TRANSFORM: // Transform
 			transformId = readD();
