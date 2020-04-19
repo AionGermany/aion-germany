@@ -320,6 +320,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_LUGBUG_MISSION_COUNT.class, 0x17C, idSet); // 7.x
 		addPacketOpcode(SM_LUGBUG_MISSION_REWARD.class, 0x17D, idSet); // 7.x
 		addPacketOpcode(SM_LUGBUG_EVENT.class, 0x17E, idSet); // 7.x
+		// addPacketOpcode(SM_LUGBUG_EVENTS.class, 0x180, idSet); // 7.x
 		addPacketOpcode(SM_LUGBUG_EVENT_REWARD.class, 0x181, idSet); // 7.x
 		// --------------------UNKNOWN PACKETS-----------------------//
 		addPacketOpcode(SM_UNK_60.class, 0x60, idSet);

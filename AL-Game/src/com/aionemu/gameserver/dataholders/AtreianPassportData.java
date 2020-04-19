@@ -48,9 +48,9 @@ public class AtreianPassportData {
 	private final Map<Integer, AtreianPassportTemplate> passportDataMap = new HashMap<>(1);
 
 	void afterUnmarshal(Unmarshaller paramUnmarshaller, Object paramObject) {
-		for (AtreianPassportTemplate atreianPassport : tlist) {
-			passportData.put(atreianPassport.getId(), atreianPassport);
-			passportDataMap.put(atreianPassport.getId(), atreianPassport);
+		for (AtreianPassportTemplate id : tlist) {
+			passportData.put(id.getId(), id);
+			passportDataMap.put(id.getId(), id);
 		}
 	}
 

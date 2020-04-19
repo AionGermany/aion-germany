@@ -34,8 +34,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class LugbugEventService {
 
-	private static final Logger log = LoggerFactory.getLogger(LugbugEventService.class);
-
+	private static final Logger log = LoggerFactory.getLogger("LUGBUG_EVENT_QUEST_LOG"); 
 	private Map<Integer, LugbugEventTemplate> allEvents = DataManager.LUGBUG_EVENT_DATA.getAll();
 	private HashMap<Integer, LugbugEventTemplate> activeEvents = new HashMap<Integer, LugbugEventTemplate>();
 	private HashMap<Integer, LugbugEventTemplate> activeLugbugEventsForPlayer = new HashMap<Integer, LugbugEventTemplate>();

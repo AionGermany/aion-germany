@@ -29,7 +29,7 @@ import com.aionemu.gameserver.model.templates.lugbug.LugbugSpecialQuestTemplate;
  */
 public class LugbugSpecialQuestService {
 
-	private static final Logger log = LoggerFactory.getLogger(LugbugSpecialQuestService.class);
+	private static final Logger log = LoggerFactory.getLogger("LUGBUG_QUEST_LOG"); 
 	private Map<Integer, LugbugSpecialQuestTemplate> allSpecialQuests = DataManager.LUGBUG_SPECIAL_QUEST_DATA.getAll();
 
 	/**

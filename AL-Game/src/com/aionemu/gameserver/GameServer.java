@@ -245,6 +245,8 @@ public class GameServer {
 		EventWindowService.getInstance().initialize();
 		Util.printSsSection(" ### Shugo Sweep initialization ### ");
 		ShugoSweepService.getInstance().initShugoSweep();
+		Util.printSsSection(" ### Atreian Passport initialization ### ");
+		AtreianPassportService.getInstance().onStart();
 		Util.printSsSection(" ### Cubic initialization ### ");
         PlayerCubicService.getInstance();
 		Util.printSection(" ### Lugbug Quest System ### ");
@@ -321,7 +323,6 @@ public class GameServer {
 		if (EventsConfig.ENABLE_BOOST_EVENTS) {
 			BoostEventService.getInstance().onStart();
 		}
-		AtreianPassportService.getInstance().onStart();
 		Util.printSsSection("HTML");
 		HTMLCache.getInstance();
 		if (CustomConfig.ENABLE_REWARD_SERVICE) {

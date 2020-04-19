@@ -16,10 +16,7 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import java.util.Map;
-
 import com.aionemu.gameserver.configs.main.EventsConfig;
-import com.aionemu.gameserver.model.templates.atreianpassport.AtreianPassportTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -28,29 +25,27 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ATREIAN_PASSPORT extends AionServerPacket {
 
-	private final Map<Integer, AtreianPassportTemplate> rewards;
-	private final int year;
-	private final int month;
-	private final int day;
+	private int passportId;
+	private int countCollected;
+	private int lastStampRecived;
+	private boolean hasCollected;
 
-	public SM_ATREIAN_PASSPORT(Map<Integer, AtreianPassportTemplate> rewards, int year, int month, int day) {
-		this.year = year;
-		this.month = month;
-		this.day = day;
-		this.rewards = rewards;
+	public SM_ATREIAN_PASSPORT(int passportId, int countCollected, int lastStampRecived, boolean hasCollected) {
+		this.passportId = passportId;
+		this.countCollected = countCollected;
+		this.lastStampRecived = lastStampRecived;
+		this.hasCollected = hasCollected;
 	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeH(year); // Year?
-		writeH(month); // Month?
-		writeH(day); // Day?
+		writeH(2011); // Year?
+		writeH(4); // Month?
+		writeH(14); // Day?
 		writeH(EventsConfig.ENABLE_ATREIAN_PASSPORT); // 1=on, 0=off
-		for (AtreianPassportTemplate rewards : rewards.values()) {
-			writeD(EventsConfig.ATREIAN_PASSPORT_ID); // Id
-			writeD(0);
-			writeD(0);
-			writeC(0);
-		}
+		writeD(passportId); // Id
+		writeD(lastStampRecived);
+		writeD(countCollected);
+		writeC(hasCollected ? 0 : 1);
 	}
 }
