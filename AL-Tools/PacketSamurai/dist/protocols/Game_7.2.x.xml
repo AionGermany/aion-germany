@@ -2998,7 +2998,7 @@
 			<part name="unk6" type="c"/>
 			<part name="panelId" type="d"/>
 			<part name="itemId" type="d"/>
-			<part name="unk" type="c"/>
+			<part name="1=normal, 0=transparent?" type="c"/>
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -10446,60 +10446,85 @@
 			<part name="date" type="d">
 				<reader type="UnixDate" />
 			</part>
+			<part name="unk 0" type="d" />
+			<part name="case ?" type="h" />
+			<!-- Final Daily Reward Start -->
+			<part name="unk" type="c" />
+			<part name="Identifyer Daily" type="d" />
+			<part name="unk 0" type="d" />
+			<part name="RewardId" type="d" />
+			<part name="unk 0" type="d" />
+			<part name="unk 0" type="d" />
+			<part name="unk 1" type="h" />
+			<part name="unk 1" type="c" />
+			<part name="unk 0" type="c" />
+			<part name="unk 24 x 0" type="b" size="24" />
+			<part name="start time?" type="d">
+				<reader type="UnixDate"/>
+			</part>
+			<part name="unk 0" type="d" />
+			<part name="end time?" type="d">
+				<reader type="UnixDate"/>
+			</part>
+			<part name="unk 0" type="d" />
+			<!-- // Final Daily Reward End -->
+			<!-- Daily Quests Start -->
+			<part name="Daily Size" type="h" id="1" />
+			<for id="1" name="Daily Quests">
+				<part name="diff?" type="d" />
+				<part name="unk 0" type="d" />
+				<part name="questId" type="d" />
+				<part name="Identifyer Daily" type="d" />
+				<part name="unk 0" type="d" />
+				<part name="Always 3" type="c" />
+				<part name="KillCount ?" type="c" />
+				<part name="Always 1" type="c" />
+				<part name="unk 0" type="c" />
+				<part name="unk 24 x 0" type="b" size="24" />
+				<part name="start time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+				<part name="end time?" type="d">
+					<reader type="UnixDate" />
+				</part>
+				<part name="unk" type="d" />
+			</for>
+			<!-- Daily Quests End -->
+			<!-- Final Weekly Reward Start -->
+			<part name="Weekly Quests Reward" type="c" />
+			<part name="diff?" type="d" />
+			<part name="unk 0" type="d" />
+			<part name="questId" type="d" />
+			<part name="Identifyer Weekly" type="d" />
+			<part name="unk 0" type="d" />
+			<part name="unk 2" type="c" />
+			<part name="unk 0" type="c" />
+			<part name="Always 1" type="c" />
+			<part name="unk 0" type="c" />
+			<part name="unk 24 x 0" type="b" size="24" />
+			<part name="start time?" type="d">
+				<reader type="UnixDate" />
+			</part>
 			<part name="unk" type="d" />
-			<part name="unk" type="h" />
-			<part name="Daily Quest" type="c" id="0" />
-			<for id="0" name="Daily Quest">
-				<part name="diff?" type="d" />
-				<part name="unk" type="d" />
-				<part name="questId" type="d" />
-				<part name="unk1" type="d" />
-				<part name="unk2" type="d" />
-				<part name="unk3" type="h" />
-				<part name="unk4" type="c" />
-				<part name="unk5" type="c" />
-				<part name="unk 24" type="b" size="24" />
-				<part name="start time?" type="d">
-					<reader type="UnixDate" />
-				</part>
-				<part name="unk" type="d" />
-				<part name="end time?" type="d">
-					<reader type="UnixDate" />
-				</part>
-				<part name="unk" type="d" />
-			</for>
-			<part name="size" type="h" id="1" />
-			<for id="1" name="Weekly Quest">
-				<part name="diff?" type="d" />
-				<part name="unk" type="d" />
-				<part name="questId" type="d" />
-				<part name="unk1" type="d" />
-				<part name="unk2" type="d" />
-				<part name="unk3" type="c" />
-				<part name="unk4" type="c" />
-				<part name="unk5" type="c" />
-				<part name="unk6" type="c" />
-				<part name="unk 24" type="b" size="24" />
-				<part name="start time?" type="d">
-					<reader type="UnixDate" />
-				</part>
-				<part name="unk" type="d" />
-				<part name="end time?" type="d">
-					<reader type="UnixDate" />
-				</part>
-				<part name="unk" type="d" />
-			</for>
-			<part name="Weekly Quest" type="c" id="2" />
+			<part name="end time?" type="d">
+				<reader type="UnixDate" />
+			</part>
+			<part name="unk" type="d" />
+			<!-- Final Weekly Reward End -->
+			<!-- Weekly Quests Start -->
+			<part name="Weekly Quests" type="h" id="2" />
 			<for id="2">
 				<part name="diff?" type="d" />
-				<part name="unk" type="d" />
+				<part name="unk 0" type="d" />
 				<part name="questId" type="d" />
-				<part name="unk1" type="d" />
-				<part name="unk2" type="d" />
-				<part name="unk3" type="h" />
-				<part name="unk4" type="c" />
-				<part name="unk5" type="c" />
-				<part name="unk 24" type="b" size="24" />
+				<part name="Identifyer Weekly" type="d" />
+				<part name="unk 0" type="d" />
+				<part name="Always 3" type="c" />
+				<part name="KillCount ?" type="c" />
+				<part name="Always 1" type="c" />
+				<part name="unk 0" type="c" />
+				<part name="unk 24 x 0" type="b" size="24" />
 				<part name="start time?" type="d">
 					<reader type="UnixDate" />
 				</part>
@@ -10509,29 +10534,35 @@
 				</part>
 				<part name="unk" type="d" />
 			</for>
-			<part name="size" type="h" id="3" />
-			<for id="3">
-				<part name="diff?" type="d" />
-				<part name="unk" type="d" />
-				<part name="questId" type="d" />
-				<part name="unk1" type="d" />
-				<part name="unk2" type="d" />
-				<part name="unk3" type="c" />
-				<part name="unk4" type="c" />
-				<part name="unk5" type="c" />
-				<part name="unk6" type="c" />
-				<part name="unk 24" type="b" size="24" />
-				<part name="start time?" type="d">
-					<reader type="UnixDate" />
-				</part>
-				<part name="unk" type="d" />
-				<part name="end time?" type="d">
-					<reader type="UnixDate" />
-				</part>
-				<part name="unk" type="d" />
-			</for>
+			<!-- Weekly Quests End -->
 		</packet>
 		<packet id="0x17E" name="________________SM_LUGBUG_EVENT"> <!-- 7.3 TODO -->
+			<part name="size" type="h" id="0"/>
+			<for id="0">
+				<part name="unk" type="c"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="questId" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="d"/>
+				<part name="unk" type="c"/>
+				<part name="unk" type="c"/>
+				<part name="active" type="c"/>
+				<part name="killcount?" type="h"/>
+				<part name="unk" type="h"/>
+				<part name="unk" type="c"/>
+				<part name="unk 20" type="b" size="20"/>
+				<part name="start time?" type="d">
+					<reader type="UnixDate"/>
+				</part>
+				<part name="unk" type="d"/>
+				<part name="end time?" type="d">
+					<reader type="UnixDate"/>
+				</part>
+				<part name="unk" type="d"/>
+			</for>
+		</packet>
+		<packet id="0x180" name="________________SM_LUGBUG_EVENTS"> <!-- 7.3 TODO -->
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="unk" type="c"/>
@@ -12638,7 +12669,7 @@
 			<part name="objectId" type="d"/>
 		</packet>
 		<packet id="0x1E4" name="________________CM_ATREIAN_PASSPORT"> <!-- 7.2 EU -->
-			<part name="unk" type="d"/>
+			<part name="Passport_Id" type="d"/>
 		</packet>
 		<packet id="0x1D2" name="________________CM_STIGMA"> <!-- 7.2 EU -->
 			<part name="add 0 / remove 1" type="c"/>
