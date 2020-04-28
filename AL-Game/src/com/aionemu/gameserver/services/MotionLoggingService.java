@@ -264,6 +264,7 @@ public class MotionLoggingService {
 			listofWeapons.add(new WeaponTypeWrapper(WeaponType.GUN_2H, null));
 			listofWeapons.add(new WeaponTypeWrapper(WeaponType.KEYBLADE_2H, null));
 			listofWeapons.add(new WeaponTypeWrapper(WeaponType.KEYHAMMER_2H, null));
+			listofWeapons.add(new WeaponTypeWrapper(WeaponType.SPRAY_2H, null));
 
 			// create MotionTime
 			MotionTime motion = new MotionTime();
