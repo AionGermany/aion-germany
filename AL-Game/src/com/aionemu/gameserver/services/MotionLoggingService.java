@@ -363,6 +363,7 @@ public class MotionLoggingService {
 		list.put(WeaponType.GUN_2H, polearm);
 		list.put(WeaponType.KEYBLADE_2H, polearm);
 		list.put(WeaponType.KEYHAMMER_2H, polearm);
+		list.put(WeaponType.SPRAY_2H, polearm);
 		float staff[] = { 1000f, 2000f };
 		list.put(WeaponType.STAFF_2H, staff);
 		list.put(WeaponType.HARP_2H, staff);
