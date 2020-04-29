@@ -463,7 +463,7 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	}
 
 	public boolean isStigma() {
-		return itemId > 140001101 && itemId < 140001493;
+		return itemId > 140001101 && itemId < 140001930;
 	}
 
 	public boolean isInertStigma() {
