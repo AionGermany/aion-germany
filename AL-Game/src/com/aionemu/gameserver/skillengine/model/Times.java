@@ -79,5 +79,6 @@ public class Times {
 		timeForWeaponType.put(new WeaponTypeWrapper(WeaponType.GUN_2H, null), Integer.parseInt(tokens[19]));
 		timeForWeaponType.put(new WeaponTypeWrapper(WeaponType.KEYBLADE_2H, null), Integer.parseInt(tokens[20]));
 		timeForWeaponType.put(new WeaponTypeWrapper(WeaponType.KEYHAMMER_2H, null), Integer.parseInt(tokens[21]));
+		timeForWeaponType.put(new WeaponTypeWrapper(WeaponType.SPRAY_2H, null), Integer.parseInt(tokens[22]));
 	}
 }
