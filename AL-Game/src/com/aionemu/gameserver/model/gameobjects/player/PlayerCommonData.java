@@ -1140,8 +1140,8 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 		return lastStamp;
 	}
 
-	public void setLastStamp(Timestamp setTime) {
-		lastStamp = setTime;
+	public void setLastStamp(Timestamp timestamp) {
+		lastStamp = timestamp;
 	}
 
 	public int getPassportStamps() {

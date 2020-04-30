@@ -76,6 +76,13 @@ public class StigmaService {
 					return false;
 				}
 			}
+			else if (ItemSlot.isSpecialStigma(slot)) {
+				// check the number of Special stigma wearing
+				if (getPossibleSpecialStigmaCount(player) <= player.getEquipment().getEquippedItemsSpecialStigma().size()) {
+					AuditLogger.info(player, "Possible client hack Major stigma count big :O");
+					return false;
+				}
+			}
 
 			if (!resultItem.getItemTemplate().isClassSpecific(player.getCommonData().getPlayerClass())) {
 				AuditLogger.info(player, "Possible client hack not valid for class.");
@@ -481,6 +488,21 @@ public class StigmaService {
 	}
 	
 	/**
+	 * Get the number of available Special Stigma
+	 *
+	 * @param player
+	 * @return
+	 */
+	private static int getPossibleSpecialStigmaCount(Player player) {
+		// No check needed (checked by Client)
+		if (player == null) {
+			return 0;
+		} else {
+			return 3;
+		}
+	}
+	
+	/**
 	 * Stigma is a worn check available slots
 	 *
 	 * @param player
@@ -499,21 +521,24 @@ public class StigmaService {
 			int stigmaCount = getPossibleRegulerStigmaCount(player);
 			if (stigmaCount > 0) {
 				switch (stigmaCount) {
-					case 1:
+					case 1: {
 						if (itemSlotToEquip == ItemSlot.STIGMA1.getSlotIdMask()) {
 							return true;
 						}
 						break;
-					case 2:
+					}
+					case 2: {
 						if (itemSlotToEquip == ItemSlot.STIGMA1.getSlotIdMask() || itemSlotToEquip == ItemSlot.STIGMA2.getSlotIdMask()) {
 							return true;
 						}
 						break;
-					case 3:
+					}
+					case 3: {
 						if (itemSlotToEquip == ItemSlot.STIGMA1.getSlotIdMask() || itemSlotToEquip == ItemSlot.STIGMA2.getSlotIdMask() || itemSlotToEquip == ItemSlot.STIGMA3.getSlotIdMask()) {
 							return true;
 						}
 						break;
+					}
 					default:
 						break;
 				}
@@ -524,16 +549,18 @@ public class StigmaService {
 			int advStigmaCount = getPossibleAdvancedStigmaCount(player);
 			if (advStigmaCount > 0) {
 				switch (advStigmaCount) {
-					case 1:
+					case 1: {
 						if (itemSlotToEquip == ItemSlot.ADV_STIGMA1.getSlotIdMask()) {
 							return true;
 						}
 						break;
-					case 2:
+					}
+					case 2: {
 						if (itemSlotToEquip == ItemSlot.ADV_STIGMA1.getSlotIdMask() || itemSlotToEquip == ItemSlot.ADV_STIGMA2.getSlotIdMask()) {
 							return true;
 						}
 						break;
+					}
 					default:
 						break;
 				}
@@ -550,15 +577,29 @@ public class StigmaService {
 		}
 		// Special Stigma
 		else if (ItemSlot.isSpecialStigma(itemSlotToEquip)) {
-			int count = 0;			
-			if (player.getEquipment().getEquippedItemsAllStigmaIds().size() == 6) {
-				for (Item stigma : player.getEquipment().getEquippedItemsAllStigma()) {
-					if (stigma.getEnchantOrAuthorizeLevel() >= 9) {
-						count++;
+			int specStigmaCount = getPossibleSpecialStigmaCount(player);
+			if (specStigmaCount > 0) {
+				switch (specStigmaCount) {
+					case 1: {
+						if (itemSlotToEquip == ItemSlot.SPECIAL_STIGMA1.getSlotIdMask()) {
+							return true;
+						}
+						break;
 					}
-				}
-				if (count == 6) {
-					return true;
+					case 2: {
+						if (itemSlotToEquip == ItemSlot.SPECIAL_STIGMA1.getSlotIdMask() || itemSlotToEquip == ItemSlot.SPECIAL_STIGMA2.getSlotIdMask()) {
+							return true;
+						}
+						break;
+					}
+					case 3: {
+						if (itemSlotToEquip == ItemSlot.SPECIAL_STIGMA1.getSlotIdMask() || itemSlotToEquip == ItemSlot.SPECIAL_STIGMA2.getSlotIdMask() || itemSlotToEquip == ItemSlot.SPECIAL_STIGMA3.getSlotIdMask()){
+							return true;
+						}
+						break;
+					}
+					default:
+						break;
 				}
 			}
 		}

@@ -74,10 +74,11 @@ public enum ItemSlot {
 	
 	SPECIAL_STIGMA1(1L << 36), // 6.x New Stigma Slot 68719476736 
 	SPECIAL_STIGMA2(1L << 37), // 6.x New Stigma Slot 137438953472
-	SPECIAL_STIGMAS(SPECIAL_STIGMA1.slotIdMask | SPECIAL_STIGMA2.slotIdMask, true),
+	SPECIAL_STIGMA3(1L << 38), // 6.x New Stigma Slot 274877906944
+	SPECIAL_STIGMAS(SPECIAL_STIGMA1.slotIdMask | SPECIAL_STIGMA2.slotIdMask | SPECIAL_STIGMA3.slotIdMask, true),
 	
 	ALL_STIGMA(REGULAR_STIGMAS.slotIdMask | ADVANCED_STIGMAS.slotIdMask | MAJOR_STIGMAS.slotIdMask | SPECIAL_STIGMAS.slotIdMask, true),
-
+	
 	VIEW_DISPLAY(MAIN_HAND.slotIdMask | SUB_HAND.slotIdMask | HELMET.slotIdMask | TORSO.slotIdMask | GLOVES.slotIdMask | BOOTS.slotIdMask
 			| EARRINGS_LEFT.slotIdMask | EARRINGS_RIGHT.slotIdMask | RING_LEFT.slotIdMask | RING_RIGHT.slotIdMask | NECKLACE.slotIdMask | SHOULDER.slotIdMask
 			| PANTS.slotIdMask | WINGS.slotIdMask | WAIST.slotIdMask | PLUME.slotIdMask, true);//13 * 16 = 208...
@@ -124,7 +125,7 @@ public enum ItemSlot {
 	public static boolean isStigma(long slot) {
 		return (ALL_STIGMA.slotIdMask & slot) == slot;
 	}
-
+	
 	public static ItemSlot[] getSlotsFor(long slot) {
 		List<ItemSlot> slots = new ArrayList<ItemSlot>();
 		for (ItemSlot itemSlot : values()) {
