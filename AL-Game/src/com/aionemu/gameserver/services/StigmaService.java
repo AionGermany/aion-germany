@@ -76,13 +76,6 @@ public class StigmaService {
 					return false;
 				}
 			}
-			else if (ItemSlot.isSpecialStigma(slot)) {
-				// check the number of Major stigma wearing
-				if (getPossibleSpecialStigmaCount(player) <= player.getEquipment().getEquippedItemsSpecialStigma().size()) {
-					AuditLogger.info(player, "Possible client hack Major stigma count big :O");
-					return false;
-				}
-			}
 
 			if (!resultItem.getItemTemplate().isClassSpecific(player.getCommonData().getPlayerClass())) {
 				AuditLogger.info(player, "Possible client hack not valid for class.");
@@ -488,44 +481,6 @@ public class StigmaService {
 	}
 	
 	/**
-	 * Get the number of available Special Stigma
-	 *
-	 * @param player
-	 * @return
-	 */
-	private static int getPossibleSpecialStigmaCount(Player player) {
-		if (player == null || player.getLevel() < 55) {
-			return 0;
-		}
-
-		if (player.havePermission(MembershipConfig.STIGMA_SLOT_QUEST)) {
-			return 1;
-		}
-		
-		switch (player.getRace()) {
-			case ELYOS: {
-				if (player.isCompleteQuest(1929)) {
-					if (player.getLevel() > 54) {
-						return 2;
-					}
-				}
-				break;
-			}
-			case ASMODIANS: {
-				if (player.isCompleteQuest(2900)) {
-					if (player.getLevel() > 54) {
-						return 2;
-					}
-				}
-				break;
-			}
-			default:
-				break;
-		}
-		return 0;
-	}
-	
-	/**
 	 * Stigma is a worn check available slots
 	 *
 	 * @param player
@@ -603,23 +558,7 @@ public class StigmaService {
 					}
 				}
 				if (count == 6) {
-					int specStigmaCount = getPossibleSpecialStigmaCount(player);
-					if (specStigmaCount > 0) {
-						switch (specStigmaCount) {
-							case 1:
-								if (itemSlotToEquip == ItemSlot.SPECIAL_STIGMA1.getSlotIdMask()) {
-									return true;
-								}
-								break;
-							case 2:
-								if (itemSlotToEquip == ItemSlot.SPECIAL_STIGMA1.getSlotIdMask() || itemSlotToEquip == ItemSlot.SPECIAL_STIGMA2.getSlotIdMask()) {
-									return true;
-								}
-								break;
-							default:
-								break;
-						}
-					}
+					return true;
 				}
 			}
 		}
