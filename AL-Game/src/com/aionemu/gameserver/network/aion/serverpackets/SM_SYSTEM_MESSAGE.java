@@ -21098,10 +21098,16 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	}
 
 	/**
-	 * You have successfully enchanted %0 and the Stigma's enchantment level has increased by 1 level
+	 * Stigma Enchant
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_ENCHANT_SUCCESS(DescriptionId descriptionId) {
 		return new SM_SYSTEM_MESSAGE(1402930, descriptionId);
+	}
+	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_ENCHANT_FAIL(DescriptionId descriptionId) {
+		return new SM_SYSTEM_MESSAGE(1402931, descriptionId);
+	}
+	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_ENCHANT_CANCEL(DescriptionId descriptionId) {
+		return new SM_SYSTEM_MESSAGE(1402936, descriptionId);
 	}
 	
 	/**
@@ -21109,13 +21115,6 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_MATTER_ENCHANT_SUCCESS(DescriptionId descriptionId, int level) {
 		return new SM_SYSTEM_MESSAGE(1404544, descriptionId, level);
-	}
-
-	/**
-	 * You have failed to enchant %0 and the Stigma has been destroyed.
-	 */
-	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_ENCHANT_FAIL(DescriptionId descriptionId) {
-		return new SM_SYSTEM_MESSAGE(1402931, descriptionId);
 	}
 
 	/**

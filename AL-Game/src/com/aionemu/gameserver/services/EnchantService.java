@@ -352,8 +352,8 @@ public class EnchantService {
 		
 		if (result) {
 			currentEnchant += Rnd.get(1, 3);
-			if (currentEnchant > 10) {
-				currentEnchant = 10;
+			if (currentEnchant > 15) {
+				currentEnchant = 15;
 			}
 			finalPlusMessage = currentEnchant - oldEnchant;
 		} else {

@@ -106,14 +106,14 @@ public class EnchantItemAction extends AbstractItemAction {
 			case ANCIENT:
 			case RELIC:
 			case FINALITY:
-				if (currentEnchant == targetItem.getItemTemplate().getMaxAuthorize()) {
+				if (currentEnchant == targetItem.getEnchantOrAuthorizeLevel()) {
 					//You cannot enchant %0 any further.
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
 					return;
 				}
 				break;
 			default:
-				if (targetItem.getItemTemplate().getArmorType() != ArmorType.WING && !targetItem.getItemTemplate().getExceedEnchant() && targetItem.getEnchantOrAuthorizeLevel() == 10 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
+				if (targetItem.getItemTemplate().getArmorType() != ArmorType.WING && !targetItem.getItemTemplate().getExceedEnchant() && targetItem.getEnchantOrAuthorizeLevel() == 15 && parentItem.getItemTemplate().getTemplateId() / 1000000 == 166 ) {
 					// You cannot enchant %0 any further.
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getNameId()));
 					return;

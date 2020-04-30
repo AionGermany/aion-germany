@@ -458,20 +458,12 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return itemId == ItemId.LUNA.value();
 	}
 
-	public boolean isOldStigma() {
-		return itemId > 140000004 && itemId < 140001103;
-	}
-
 	public boolean isStigma() {
 		return itemId > 140001101 && itemId < 140001930;
 	}
 
 	public boolean isInertStigma() {
-		return itemId > 140001297 && itemId < 140001493;
-	}
-
-	public boolean isUpgradableStigma() {
-		return itemId > 140001101 && itemId < 140001298;
+		return name.endsWith("(damaged)");
 	}
 
 	public boolean isPlume() {
