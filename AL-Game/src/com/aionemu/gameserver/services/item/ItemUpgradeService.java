@@ -44,69 +44,65 @@ public class ItemUpgradeService {
 		FastMap<Integer, UpgradeResultItem> resultItemMap = DataManager.ITEM_UPGRADE_DATA.getResultItemMap(baseItem.getItemId());
 
 		UpgradeResultItem resultItem = resultItemMap.get(resultItemId);
-		for (SubMaterialItem item : resultItem.getUpgrade_materials().getSubMaterialItem()) {
-			if (!player.getInventory().decreaseByItemId(item.getId(), item.getCount())) {
-				AuditLogger.info(player, "try item upgrade without sub material");
-				return false;
+		if (resultItem.getNeed_kinah() == null) {
+			for (SubMaterialItem item : resultItem.getUpgrade_materials().getSubMaterialItem()) {
+				if (!player.getInventory().decreaseByItemId(item.getId(), item.getCount())) {
+					AuditLogger.info(player, "try item upgrade without sub material");
+					return false;
+				}
 			}
+		} 
+		else {
+			player.getInventory().decreaseKinah(-resultItem.getNeed_kinah().getCount());
 		}
-
 		if (resultItem.getNeed_abyss_point() != null) {
 			AbyssPointsService.setAp(player, -resultItem.getNeed_abyss_point().getCount());
 		}
-
 		if (resultItem.getNeed_kinah() != null) {
 			player.getInventory().decreaseKinah(-resultItem.getNeed_kinah().getCount());
 		}
-
 		player.getInventory().decreaseByObjectId(baseItem.getObjectId(), 1);
-
 		return true;
 	}
 
 	public static boolean checkItemUpgrade(Player player, Item baseItem, int resultItemId) {
-		ItemUpgradeTemplate itemUpgradeTemplate = DataManager.ITEM_UPGRADE_DATA.getItemUpgradeTemplate(baseItem.getItemId());
-		if (itemUpgradeTemplate == null) {
-			log.warn(resultItemId + " item's upgrade template is null");
+		ItemUpgradeTemplate itemUpgardeTemplate = DataManager.ITEM_UPGRADE_DATA.getItemUpgradeTemplate(baseItem.getItemId());
+		if (itemUpgardeTemplate == null) {
+			log.warn(resultItemId + " item's itemupgrade template is null");
 			return false;
 		}
-
 		FastMap<Integer, UpgradeResultItem> resultItemMap = DataManager.ITEM_UPGRADE_DATA.getResultItemMap(baseItem.getItemId());
-
 		if (!resultItemMap.containsKey(resultItemId)) {
 			AuditLogger.info(player, resultItemId + " item's baseItem and resultItem is not matched (possible client modify)");
 			return false;
 		}
-
 		UpgradeResultItem resultItem = resultItemMap.get(resultItemId);
-		Item resultItemName = ItemService.newItem(resultItemId, 1, null, 0, 0, 0);
-
-		if (baseItem.getEnchantOrAuthorizeLevel() < resultItem.getCheck_enchant_count()) {
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_REGISTER_ITEM_MSG_UPGRADE_CANNOT(new DescriptionId(baseItem.getNameId())));
-			return false;
-		}
-
-		for (SubMaterialItem sub : resultItem.getUpgrade_materials().getSubMaterialItem()) {
-			if (player.getInventory().getItemCountByItemId(sub.getId()) < sub.getCount()) {
-				// sub Metarial is not enough
+		if (resultItem.getCheck_enchant_count() > 0) {
+			if (baseItem.getEnchantOrAuthorizeLevel() < resultItem.getCheck_enchant_count()) {
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_REGISTER_ITEM_MSG_UPGRADE_CANNOT(new DescriptionId(baseItem.getNameId())));
 				return false;
 			}
 		}
-
 		if (resultItem.getNeed_abyss_point() != null) {
 			if (player.getAbyssRank().getAp() < resultItem.getNeed_abyss_point().getCount()) {
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_REGISTER_ITEM_MSG_UPGRADE_CANNOT_NEED_AP);
 				return false;
 			}
 		}
-		if (resultItem.getNeed_kinah() != null) {
+		if (resultItem.getNeed_kinah() == null) {
+			for (SubMaterialItem sub : resultItem.getUpgrade_materials().getSubMaterialItem()) {
+				if (player.getInventory().getItemCountByItemId(sub.getId()) < sub.getCount()) {
+					// SubMaterial is not enough
+					return false;
+				}
+			}
+		} 
+		else {
 			if (player.getInventory().getKinah() < resultItem.getNeed_kinah().getCount()) {
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_REGISTER_ITEM_MSG_UPGRADE_CANNOT_NEED_QINA);
 				return false;
 			}
 		}
-		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_UPGRADE_MSG_UPGRADE_SUCCESS(new DescriptionId(baseItem.getNameId()), new DescriptionId(resultItemName.getNameId())));
-		ItemService.releaseItemId(resultItemName);
 		return true;
 	}
 }
