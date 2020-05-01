@@ -85,6 +85,9 @@ public class ItemEquipmentListener {
 		if (item.getItemTemplate().isStigma()) {
 			StigmaService.recheckHiddenStigma(owner);
 		}
+		if (item.getItemSkinSkill() > 0) {
+			owner.getSkillList().addSkill(owner, item.getItemSkinSkill(), 1);
+		}
 		EnchantService.onItemEquip(owner, item);
 		EnchantService.getGloryShield(owner);
 	}
@@ -130,6 +133,11 @@ public class ItemEquipmentListener {
 		}
 		if (item.getItemTemplate().isStigma()) {
 			StigmaService.recheckHiddenStigma(owner);
+		}
+		if (item.getItemSkinSkill() > 0) {
+			if (owner.getSkillList().isSkillPresent(item.getItemSkinSkill())) {
+				SkillLearnService.removeSkill(owner, item.getItemSkinSkill());
+			}
 		}
 		EnchantService.getGloryShield(owner);
 	}

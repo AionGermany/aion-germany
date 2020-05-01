@@ -28,6 +28,7 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.actions.ItemActions;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEARANCE;
+import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
@@ -127,6 +128,9 @@ public class ItemRemodelService {
 		// Transfer Dye
 		keepItem.setItemColor(extractItem.getItemColor());
 
+		// Skin Skill
+		keepItem.setItemSkinSkill(extractItem.getItemSkinSkill());
+
 		// Notify Player
 		ItemPacketService.updateItemAfterInfoChange(player, keepItem);
 		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300483, new DescriptionId(keepItem.getItemTemplate().getNameId())));
@@ -193,9 +197,16 @@ public class ItemRemodelService {
 	}
 
 	public static void systemRemodelItem(Player player, Item keepItem, ItemTemplate template) {
+		if (keepItem.getItemSkinSkill() > 0) {
+			SkillLearnService.removeSkill(player, keepItem.getItemSkinSkill());
+		}
 		keepItem.setItemSkinTemplate(template);
+		keepItem.setItemSkinSkill(template.getSkinSkill());
 		ItemPacketService.updateItemAfterInfoChange(player, keepItem);
 		PacketSendUtility.sendPacket(player, new SM_UPDATE_PLAYER_APPEARANCE(player.getObjectId(), player.getEquipment().getEquippedForApparence()));
 		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300483, new DescriptionId(keepItem.getItemTemplate().getNameId())));
+		if (keepItem.getItemSkinSkill() > 0) {
+			player.getSkillList().addSkill(player, keepItem.getItemSkinSkill(), 1);
+		} 
 	}
 }

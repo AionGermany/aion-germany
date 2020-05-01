@@ -240,6 +240,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
     
     @XmlAttribute(name = "enchant_type")
 	private EnchantType enchantType;
+
+	@XmlAttribute(name = "skin_skill")
+	private int skin_skill;
     
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	@XmlTransient
@@ -756,5 +759,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
     
     public EnchantType getEnchantType() {
 		return enchantType;
+	}
+
+	public int getSkinSkill() {
+		return skin_skill;
 	}
 }

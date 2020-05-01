@@ -216,6 +216,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
 			int enhanceSkillId = readD();
 			int enhanceSkillEnchant = readD();
 			int unSeal = readD();
+			int skinSkill = readD();
 
 			if (PlayerTransferConfig.ALLOW_INV) {
 				ItemTemplate template = DataManager.ITEM_DATA.getItemTemplate(itemId);
@@ -231,7 +232,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
 				int newId = IDFactory.getInstance().nextId();
 				// bonus probably is lost, don't know [RR]
 				// dye expiration is lost
-				Item item = new Item(newId, itemId, itemCnt, itemColor, colorExpires, itemCreator, itemExpireTime, itemActivationCnt, itemEquipped, itemSoulBound, equipSlot, location, enchant, skinId, fusionId, optSocket, optFusion, charge, bonusNum, randomNum, packNum, authorizeNum, itemPacked, itemAmplified, buffSkill, requireLevel, false, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal);
+				Item item = new Item(newId, itemId, itemCnt, itemColor, colorExpires, itemCreator, itemExpireTime, itemActivationCnt, itemEquipped, itemSoulBound, equipSlot, location, enchant, skinId, fusionId, optSocket, optFusion, charge, bonusNum, randomNum, packNum, authorizeNum, itemPacked, itemAmplified, buffSkill, requireLevel, false, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal, skinSkill);
 				if (manastones.size() > 0) {
 					for (int[] stone : manastones) {
 						ItemSocketService.addManaStone(item, stone[0], stone[1]);
@@ -300,6 +301,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
 			int enhanceSkillId = readD();
 			int enhanceSkillEnchant = readD();
 			int unSeal = readD();
+			int skinSkill = readD();
 
 			if (PlayerTransferConfig.ALLOW_WAREHOUSE) {
 				ItemTemplate template = DataManager.ITEM_DATA.getItemTemplate(itemId);
@@ -315,7 +317,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
 				int newId = IDFactory.getInstance().nextId();
 				// bonus probably is lost, don't know [RR]
 				// dye expiration is lost
-				Item item = new Item(newId, itemId, itemCnt, itemColor, colorExpires, itemCreator, itemExpireTime, itemActivationCnt, itemEquipped, itemSoulBound, equipSlot, location, enchant, skinId, fusionId, optSocket, optFusion, charge, bonusNum, randomNum, packNum, authorizeNum, itemPacked, itemAmplified, buffSkill, requireLevel, false, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal);
+				Item item = new Item(newId, itemId, itemCnt, itemColor, colorExpires, itemCreator, itemExpireTime, itemActivationCnt, itemEquipped, itemSoulBound, equipSlot, location, enchant, skinId, fusionId, optSocket, optFusion, charge, bonusNum, randomNum, packNum, authorizeNum, itemPacked, itemAmplified, buffSkill, requireLevel, false, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal, skinSkill);
 				if (manastones.size() > 0) {
 					for (int[] stone : manastones) {
 						ItemSocketService.addManaStone(item, stone[0], stone[1]);

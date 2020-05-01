@@ -156,6 +156,7 @@
 		<xs:attribute name="is_cash_contract" type="xs:boolean" use="optional"/>
 		<xs:attribute name="skill_enchant" type="xs:int" use="optional"/>
 		<xs:attribute name="enchant_type" type="enchantType"/>
+		<xs:attribute name="skin_skill" type="xs:int" use="optional"/>
 	</xs:complexType>
 	<xs:simpleType name="itemSlot">
 		<xs:restriction base="xs:string">
