@@ -66,8 +66,8 @@ public class ItemUpgradeService {
 	}
 
 	public static boolean checkItemUpgrade(Player player, Item baseItem, int resultItemId) {
-		ItemUpgradeTemplate itemUpgardeTemplate = DataManager.ITEM_UPGRADE_DATA.getItemUpgradeTemplate(baseItem.getItemId());
-		if (itemUpgardeTemplate == null) {
+		ItemUpgradeTemplate itemUpgradeTemplate = DataManager.ITEM_UPGRADE_DATA.getItemUpgradeTemplate(baseItem.getItemId());
+		if (itemUpgradeTemplate == null) {
 			log.warn(resultItemId + " item's itemupgrade template is null");
 			return false;
 		}
