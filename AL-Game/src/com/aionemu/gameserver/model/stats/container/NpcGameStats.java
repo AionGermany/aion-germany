@@ -481,4 +481,25 @@ public class NpcGameStats extends CreatureGameStats<Npc> {
 	public Stat2 getPvpDeff() {
 		return null;
 	}
+
+	// new 7.x
+	@Override
+	public Stat2 getPVPAttack() {
+		return getStat(StatEnum.PVP_ATTACK, 0);
+	}
+
+	@Override
+	public Stat2 getPVPDefense() {
+		return getStat(StatEnum.PVP_DEFENSE, 0);
+	}
+
+	@Override
+	public Stat2 getPVEAttack() {
+		return getStat(StatEnum.PVE_ATTACK, 0);
+	}
+
+	@Override
+	public Stat2 getPVEDefense() {
+		return getStat(StatEnum.PVE_DEFENSE, 0);
+	}
 }

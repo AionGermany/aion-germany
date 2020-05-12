@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.model.stats.container;
 
-import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.EmotionType;
@@ -90,7 +89,8 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 
 	@Override
 	public Stat2 getStrikeResist() {
-		return getStat(StatEnum.PHYSICAL_CRITICAL_RESIST, 96); // Gunner LVL 66(naked) 96 TODO Check other
+		PlayerStatsTemplate pst = DataManager.PLAYER_STATS_DATA.getTemplate(owner.getPlayerClass(), owner.getLevel());
+		return getStat(StatEnum.PHYSICAL_CRITICAL_RESIST, pst.getStrikeResist());
 	}
 
 	@Override
@@ -100,12 +100,8 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 
 	@Override
 	public Stat2 getSpellResist() {
-		int base = 0;
-		int Pclass = owner.getPlayerClass().getClassId();
-		if (Pclass == 7 || Pclass == 8 || Pclass == 10) {
-			base = 50;
-		}
-		return getStat(StatEnum.MAGICAL_CRITICAL_RESIST, base);
+		PlayerStatsTemplate pst = DataManager.PLAYER_STATS_DATA.getTemplate(owner.getPlayerClass(), owner.getLevel());
+		return getStat(StatEnum.MAGICAL_CRITICAL_RESIST, pst.getSpellResist());
 	}
 
 	@Override
@@ -409,7 +405,8 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 
 	@Override
 	public Stat2 getMainHandPAttack() {
-		int base = 18;
+		int base = 0;
+		PlayerStatsTemplate pst = DataManager.PLAYER_STATS_DATA.getTemplate(owner.getPlayerClass(), owner.getLevel());
 		Equipment equipment = owner.getEquipment();
 		Item mainHandWeapon = equipment.getMainHandWeapon();
 		if (mainHandWeapon != null) {
@@ -417,6 +414,8 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 				return new AdditionStat(StatEnum.MAIN_HAND_POWER, 0, owner);
 			}
 			base = mainHandWeapon.getItemTemplate().getWeaponStats().getMeanDamage();
+		} else {
+			base = pst.getMainHandAttack();			
 		}
 		Stat2 stat = getStat(StatEnum.PHYSICAL_ATTACK, base);
 		return getStat(StatEnum.MAIN_HAND_POWER, stat);
@@ -482,7 +481,7 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 
 	@Override
 	public Stat2 getMAttack() {
-		int base;
+		int base = 0;
 		Equipment equipment = owner.getEquipment();
 		Item mainHandWeapon = equipment.getMainHandWeapon();
 		if (mainHandWeapon != null) {
@@ -490,9 +489,6 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 				return new AdditionStat(StatEnum.MAGICAL_ATTACK, 0, owner);
 			}
 			base = mainHandWeapon.getItemTemplate().getWeaponStats().getMeanDamage();
-		}
-		else {
-			base = Rnd.get(16, 20);// hand attack
 		}
 		return getStat(StatEnum.MAGICAL_ATTACK, base);
 	}
@@ -546,6 +542,31 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 	public Stat2 getPvpDeff() {
 		int base = 0;
 		return getStat(StatEnum.PVP_DEFEND_RATIO_PHYSICAL, base);
+	}
+
+	// new 7.x
+	@Override
+	public Stat2 getPVPAttack() {
+		int base = 0;
+		return getStat(StatEnum.PVP_ATTACK, base);
+	}
+
+	@Override
+	public Stat2 getPVPDefense() {
+		int base = 0;
+		return getStat(StatEnum.PVP_DEFENSE, base);
+	}
+
+	@Override
+	public Stat2 getPVEAttack() {
+		int base = 0;
+		return getStat(StatEnum.PVE_ATTACK, base);
+	}
+
+	@Override
+	public Stat2 getPVEDefense() {
+		int base = 0;
+		return getStat(StatEnum.PVE_DEFENSE, base);
 	}
 
 	/*

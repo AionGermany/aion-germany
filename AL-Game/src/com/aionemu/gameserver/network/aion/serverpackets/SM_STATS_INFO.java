@@ -142,10 +142,10 @@ public class SM_STATS_INFO extends AionServerPacket {
 		writeD(pgs.getPDef().getCurrent());//Phy Def Checked 7.2
 		writeD(pgs.getMAttack().getCurrent());//Mag Attack Checked 7.2
 		writeD(pgs.getMDef().getCurrent());//Mag Def Checked 7.2
-		writeD(0);// TODO Zus. PVP-Angr. Checked 7.2
-		writeD(0);// TODO Zus. PVP-Abwehr Checked 7.2
-		writeD(0);// TODO Zus. PVE-Angr. Checked 7.2
-		writeD(0);// TODO Zus. PVE-Abwehr Checked 7.2
+		writeD(pgs.getPVPAttack().getCurrent());// TODO Zus. PVP-Angr. Checked 7.2
+		writeD(pgs.getPVPDefense().getCurrent());// TODO Zus. PVP-Abwehr Checked 7.2
+		writeD(pgs.getPVEAttack().getCurrent());// TODO Zus. PVE-Angr. Checked 7.2
+		writeD(pgs.getPVEDefense().getCurrent());// TODO Zus. PVE-Abwehr Checked 7.2
 		writeD(0);// TODO Phys. krit. Schaden Checked 7.2
 		writeD(pgs.getMBoost().getCurrent()); // TODO add Magie Abwehr + Magie Ausgleich (Mag. Angriff)
 		writeD(pgs.getMDef().getCurrent()); // Checked 7.2

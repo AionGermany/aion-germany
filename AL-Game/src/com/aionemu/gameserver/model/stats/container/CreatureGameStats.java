@@ -259,6 +259,12 @@ public abstract class CreatureGameStats<T extends Creature> {
 
 	public abstract Stat2 getPvpDeff();
 
+	// New 7.x
+	public abstract Stat2 getPVPAttack();
+	public abstract Stat2 getPVPDefense();
+	public abstract Stat2 getPVEAttack();
+	public abstract Stat2 getPVEDefense();
+
 	public int getMagicalDefenseFor(SkillElement element) {
 		switch (element) {
 			case EARTH:
