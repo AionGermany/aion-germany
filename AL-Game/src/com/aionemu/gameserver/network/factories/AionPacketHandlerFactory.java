@@ -211,7 +211,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MAY_QUIT(0xF3, State.AUTHED, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_REPORT_PLAYER(0x1E1, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_PLAYER_LISTENER(0x1DA, State.IN_GAME)); // 7.2 EU NOT SURE (TODO)
-		//addPacket(new CM_BONUS_TITLE(0x1BC, State.IN_GAME)); // 7.x EU
+		addPacket(new CM_BONUS_TITLE(0x13B, State.IN_GAME)); // 7.2 EU
 		//addPacket(new CM_BUY_TRADE_IN_TRADE(0x113, State.IN_GAME)); // 5.6 (Machtkampf aufwertung)
 		addPacket(new CM_BREAK_WEAPONS(0x17F, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_CHARGE_ITEM(0x2F9, State.IN_GAME)); // 7.2 EU
