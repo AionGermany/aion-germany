@@ -8709,7 +8709,7 @@
   <string>
     <id>911629</id>
     <name>STR_QUEST_DIALOG__NO_MISSION</name>
-    <body>There are no missions in progress.</body>
+    <body>No activities right now.</body>
   </string>
   <string>
     <id>911630</id>
@@ -10332,12 +10332,12 @@
   <string>
     <id>911975</id>
     <name>STR_NEW_MAP_SHOW_MISSION_WORKING</name>
-    <body>[%gchar:mission_working] active campaigns</body>
+    <body>[%gchar:mission_working] active campaigns and episodes</body>
   </string>
   <string>
     <id>911976</id>
     <name>STR_NEW_MAP_SHOW_MISSION_FINISHED</name>
-    <body>[%gchar:mission_finished] completed campaigns</body>
+    <body>[%gchar:mission_finished] completed campaigns and episodes</body>
   </string>
   <string>
     <id>911977</id>
@@ -18570,8 +18570,8 @@ You can sell or remove the item by double-clicking (or right-clicking), even if 
   <string>
     <id>913602</id>
     <name>STR_FAMILIAR_COMPOSE_TAB_BUTOONTIP</name>
-    <body>&lt;html&gt;&lt;font font_xml = "tooltip_guide_title"&gt;Minion Fusion&lt;/font&gt;&lt;br&gt;&lt;br&gt;
-&lt;font font_xml = "tooltip_guide_body"&gt;1. If you &lt;font color="ff0000"&gt;successfully&lt;/font&gt; combine two or more minions with evolution level 4 &lt;font color="ffff00"&gt;(Class A, B, C, D)&lt;/font&gt;, you receive one random minion of a higher class. &lt;font color="ff0000"&gt;If the fusion fails&lt;/font&gt;, you receive a random minion with evolution level 4.&lt;br&gt;2. If you fuse two or more &lt;font color="ffff00"&gt;(Class S)&lt;/font&gt; minions regardless of their evolution level, you will receive a random (Class S) minion.&lt;br&gt;3. The more minions you fuse, the higher the chances of success. There's a certain probability that you will receive a minion with evolution level 2 to 4. (A &lt;font color="ffff00"&gt;Class S&lt;/font&gt; minion only increases the probability of receiving a minion with evolution level 2 to 4.)&lt;/font&gt;&lt;/html&gt;</body>
+    <body>&lt;html&gt;&lt;font font_xml = "tooltip_guide_title"&gt;Minion Combination&lt;/font&gt;&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;1. If you &lt;font color="ff0000"&gt;successfully&lt;/font&gt; combine two or more minions at evolution level 4 &lt;font color="ffff00"&gt;(Class A, B, C)&lt;/font&gt;, you will receive one random minion of a higher class. &lt;font color="ff0000"&gt;If the fusion fails&lt;/font&gt;, you receive a random minion at evolution level 4.&lt;br&gt;2. If you fuse two or more &lt;font color="ffff00"&gt;(Class S)&lt;/font&gt; minions regardless of their evolution level, you will receive a random (Class S) minion.&lt;br&gt;3. The more minions you fuse, the higher the chances of success. There's a certain probability that you will receive a minion at evolution level 2 to 4. (A &lt;font color="ffff00"&gt;Class S&lt;/font&gt; minion only increases the probability of receiving a minion at evolution level 2 to 4.)&lt;/font&gt;&lt;/html&gt;</body>
   </string>
   <string>
     <id>913603</id>
@@ -19485,7 +19485,7 @@ You can find further information on the &lt;font color=#FFBB00&gt;official websi
   <string>
     <id>913789</id>
     <name>STR_INGAME_MARKET_DIALOG__TAP_CUSTOM_DRESS</name>
-    <body>High</body>
+    <body>Jacket</body>
   </string>
   <string>
     <id>913790</id>
@@ -19641,7 +19641,7 @@ You can find further information on the &lt;font color=#FFBB00&gt;official websi
   <string>
     <id>913821</id>
     <name>STR_TRANSFORMATION_TAB_COLLECTION_TOTAL</name>
-    <body>All collections</body>
+    <body>Total collection</body>
   </string>
   <string>
     <id>913822</id>
@@ -19746,7 +19746,7 @@ You can find further information on the &lt;font color=#FFBB00&gt;official websi
   <string>
     <id>913841</id>
     <name>STR_TRANSFORMATION_COLLECTION_PROFILE</name>
-    <body>Collections</body>
+    <body>Collection effect</body>
   </string>
   <string>
     <id>913842</id>
@@ -20190,7 +20190,67 @@ But the reward will be suitably large!</body>
   <string>
     <id>913934</id>
     <name>STR_FAMILIAR_EVOLVE_UI_FAIL_ADD_PROB_ZERO</name>
-    <body>&lt;p align="CENTER"&gt;&lt;font color="808080"&gt;&lt;del&gt;Additional chance of success on a failed evolution:&lt;/del&gt;&lt;/font&gt; (&lt;font color="ff0000"&gt;x&lt;/font&gt;)&lt;/p&gt;</body>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="808080"&gt;Additional chance of success on a failed evolution: (+0.0%)&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>913935</id>
+    <name>STR_DISASSEMBLY_ITEM_LIST_BUTTON</name>
+    <body>Details</body>
+  </string>
+  <string>
+    <id>913936</id>
+    <name>STR_DISASSEMBLY_ITEM_LIST_DIALOG</name>
+    <body>Confirm Result</body>
+  </string>
+  <string>
+    <id>913937</id>
+    <name>STR_DISASSEMBLY_ITEM_LIST_DIALOG__DESC</name>
+    <body>You could receive one of the items listed below depending on the probability:</body>
+  </string>
+  <string>
+    <id>913938</id>
+    <name>STR_DISASSEMBLY_ITEM_LIST_DIALOG__CLOSE</name>
+    <body>Close</body>
+  </string>
+  <string>
+    <id>913939</id>
+    <name>STR_NEW_MAP_DIALOG__QUEST_EPISODE_LIST</name>
+    <body>Active Episode</body>
+  </string>
+  <string>
+    <id>913940</id>
+    <name>STR_QUEST_DIALOG__QUEST_TABFRAME_QUEST_TAB_EPISODE</name>
+    <body>Episode</body>
+  </string>
+  <string>
+    <id>913941</id>
+    <name>STR_VENDOR_DIALOG__VENDOR_TAB_FRAME_ACCOUNT_LIST_BTN</name>
+    <body>Bill details</body>
+  </string>
+  <string>
+    <id>913942</id>
+    <name>STR_VENDOR_DIALOG__TOTAL_SELL</name>
+    <body>Sold: %num0 piece(s)</body>
+  </string>
+  <string>
+    <id>913943</id>
+    <name>STR_VENDOR_DIALOG__TOTAL_NO_ITEM</name>
+    <body>No bill found.</body>
+  </string>
+  <string>
+    <id>913944</id>
+    <name>STR_VENDOR_DIALOG__TOTAL_ITEM_AMOUNT</name>
+    <body>The items sold in the last 30 days will be displayed.</body>
+  </string>
+  <string>
+    <id>913945</id>
+    <name>STR_QUEST_DIALOG__WORKING_EPISODE_TEXT1</name>
+    <body>Active Episode</body>
+  </string>
+  <string>
+    <id>913946</id>
+    <name>STR_QUEST_DIALOG__FINISHED_EPISODE_TEXT1</name>
+    <body>Completed Episode</body>
   </string>
   <string>
     <id>913947</id>
@@ -20216,5 +20276,115 @@ But the reward will be suitably large!</body>
     <id>913951</id>
     <name>STR_INDUN_TIMER__TOOLTIP_PARTY_DMG</name>
     <body>Total damage</body>
+  </string>
+  <string>
+    <id>913952</id>
+    <name>STR_ENCHANT_PURIFICATION_OBJECT</name>
+    <body>Cleaning Target</body>
+  </string>
+  <string>
+    <id>913953</id>
+    <name>STR_ENCHANT_PURIFICATION_CLEANSER</name>
+    <body>Purifier</body>
+  </string>
+  <string>
+    <id>913954</id>
+    <name>STR_ENCHANT_ALL_DIALOG__OK_ENCHANT_GRIND</name>
+    <body>Polisher</body>
+  </string>
+  <string>
+    <id>913955</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TARGET_ENCHANT_GRIND</name>
+    <body>Polish Target</body>
+  </string>
+  <string>
+    <id>913956</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TOOL_TITLE_ENCHANT_GRIND</name>
+    <body>Polish Material</body>
+  </string>
+  <string>
+    <id>913957</id>
+    <name>STR_AUTO_ENCHANT_GRIND_WISH</name>
+    <body>Target polish level</body>
+  </string>
+  <string>
+    <id>913958</id>
+    <name>STR_AUTO_ENCHANT_GRIND_COUNT</name>
+    <body>Polishing Attempts</body>
+  </string>
+  <string>
+    <id>913959</id>
+    <name>STR_ENCHANT_ALL_DIALOG__ENCHANT_GRIND_MY_COST</name>
+    <body>Polishing Cost</body>
+  </string>
+  <string>
+    <id>913961</id>
+    <name>STR_ENCHANT_ALL_DIALOG__PREDICT_COMPOUND_GRIND</name>
+    <body>Expected Result</body>
+  </string>
+  <string>
+    <id>913962</id>
+    <name>STR_ENCHANT_ALL_DIALOG__RESULT_COMPOUND_GRIND</name>
+    <body>Fusion Result</body>
+  </string>
+  <string>
+    <id>913963</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ASSETS</name>
+    <body>Kinah</body>
+  </string>
+  <string>
+    <id>913964</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_COST</name>
+    <body>Removal Cost</body>
+  </string>
+  <string>
+    <id>913965</id>
+    <name>STR_FAME_DIALOG__TITEL</name>
+    <body>Field Glory</body>
+  </string>
+  <string>
+    <id>913966</id>
+    <name>STR_FAME_DIALOG__LEVEL</name>
+    <body>Field Glory Level</body>
+  </string>
+  <string>
+    <id>913967</id>
+    <name>STR_FAME_DIALOG__DESC</name>
+    <body>Glory Details</body>
+  </string>
+  <string>
+    <id>913968</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_TITLE_EQUIPMENT</name>
+    <body>Equipped Rune</body>
+  </string>
+  <string>
+    <id>913969</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_TITLE_TREINFORCE_NAME</name>
+    <body>Transformation Enchantment</body>
+  </string>
+  <string>
+    <id>913970</id>
+    <name>STR_PLAYER_INFO_DIALOG__TOOLTIP_BADGE</name>
+    <body>Seal</body>
+  </string>
+  <string>
+    <id>913971</id>
+    <name>STR_CHAT_OPTION_DIALOG__COMBAT_MY_FEXP_GAIN</name>
+    <body>Get Glory Points</body>
+  </string>
+  <string>
+    <id>913972</id>
+    <name>STR_QUEST_DIALOG_FAMEREWARD_LIST_TITLE</name>
+    <body>Details of additional rewards</body>
+  </string>
+  <string>
+    <id>913973</id>
+    <name>STR_QUEST_DIALOG_FAMEREWARD_LIST_TITLE_DESC</name>
+    <body>You receive a reward item when you complete the task satisfactorily. (No reward for repeating lower levels.)</body>
+  </string>
+  <string>
+    <id>913974</id>
+    <name>STR_LOBBY_LOGIN__CREDIT_SHOW_VER_7_5</name>
+    <body>Land of Storms, Balaurea</body>
   </string>
 </strings>

@@ -12154,7 +12154,7 @@
   <string>
     <id>1300756</id>
     <name>STR_MSG_LIGHT_SIDE_DIRECT_PORTAL_OPEN</name>
-    <body>A one-way Rift into Elysea has appeared.</body>
+    <body>A rift opened in Asmodae.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -13383,7 +13383,7 @@
   <string>
     <id>1300930</id>
     <name>STR_MISSION_SYSTEMMSG_ACQUIRE</name>
-    <body>Campaign quest acquired: %0</body>
+    <body>Campaign/episode available in %0!</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
   </string>
@@ -14876,14 +14876,14 @@
   <string>
     <id>1320001</id>
     <name>STR_MSG_DARK_SIDE_DIRECT_PORTAL_OPEN</name>
-    <body>A one-way Rift into Asmodae has appeared.</body>
+    <body>A rift opened in Elysea.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1320002</id>
     <name>STR_GUILD_EVENT_WIN_ARTIFACT</name>
-    <body>%1 of %0 has captured the %2 Artefact.</body>
+    <body>%1 has acquired %2 from %0.</body>
     <message_type>55</message_type>
     <display_type>3</display_type>
     <ment>ab_artifact_get_fix</ment>
@@ -14899,7 +14899,7 @@
   <string>
     <id>1320004</id>
     <name>STR_GUILD_EVENT_LOSE_ARTIFACT</name>
-    <body>The %0 Artefact has been lost to %1.</body>
+    <body>%1 took %0 from you.</body>
     <message_type>55</message_type>
     <display_type>1</display_type>
     <ment>ab_artifact_lose_fix</ment>
@@ -16356,7 +16356,7 @@
   <string>
     <id>1390203</id>
     <name>STR_EVENT_WIN_ARTIFACT</name>
-    <body>%0 captured the %1 Artefact.</body>
+    <body>%0 has acquired %1.</body>
     <message_type>55</message_type>
     <display_type>1</display_type>
     <ment>ab_artifact_get_fix</ment>
@@ -16364,7 +16364,7 @@
   <string>
     <id>1390204</id>
     <name>STR_EVENT_LOSE_ARTIFACT</name>
-    <body>%0 lost the %1 Artefact.</body>
+    <body>%0 has been taken from %1.</body>
     <message_type>55</message_type>
     <display_type>1</display_type>
     <ment>ab_artifact_lose_fix</ment>
@@ -16387,7 +16387,7 @@
   <string>
     <id>1390207</id>
     <name>STR_ARTIFACT_WIN_FORT_TO_ME</name>
-    <body>You have captured the %0 Artefact.</body>
+    <body>%0 has been captured.</body>
     <message_type>55</message_type>
     <display_type>1</display_type>
     <ment>ab_artifact_get_fix</ment>
@@ -16395,7 +16395,7 @@
   <string>
     <id>1390208</id>
     <name>STR_ARTIFACT_WIN_FORT</name>
-    <body>%1 of %0 has captured the %2 Artefact.</body>
+    <body>%1 from %0 has conquered %2.</body>
     <message_type>55</message_type>
     <display_type>3</display_type>
     <ment>ab_artifact_get_fix</ment>
@@ -16403,7 +16403,7 @@
   <string>
     <id>1390209</id>
     <name>STR_ARTIFACT_LOSE_FORT</name>
-    <body>The %0 Artefact has been lost to %1.</body>
+    <body>%1 took %0 from you.</body>
     <message_type>55</message_type>
     <display_type>1</display_type>
     <ment>ab_artifact_lose_fix</ment>
@@ -18995,7 +18995,7 @@ Enter the commands /G or /Legion in the Chat Window to start the Legion Chat.</b
   <string>
     <id>1400301</id>
     <name>STR_GUILD_EVENT_WIN_FIELDARTIFACT</name>
-    <body>%1 of %0 obtained the Artefact %2.</body>
+    <body>%1 has acquired %2 from %0.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_artifact_get_fix</ment>
@@ -19003,7 +19003,7 @@ Enter the commands /G or /Legion in the Chat Window to start the Legion Chat.</b
   <string>
     <id>1400302</id>
     <name>STR_GUILD_EVENT_LOSE_FIELDARTIFACT</name>
-    <body>%1 lost the Artefact %0.</body>
+    <body>%1 took %0 from you.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_artifact_lose_fix</ment>
@@ -19123,14 +19123,14 @@ Enter the commands /G or /Legion in the Chat Window to start the Legion Chat.</b
   <string>
     <id>1400317</id>
     <name>STR_FIELDABYSS_LIGHTBOSS_SPAWN</name>
-    <body>Kaisinel's Agent Veille has appeared.</body>
+    <body>The Asmodian have captured all of the fortresses in Inggison.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1400318</id>
     <name>STR_FIELDABYSS_DARKBOSS_SPAWN</name>
-    <body>Marchutan's Agent Mastarius has appeared.</body>
+    <body>The Elyos have captured all of the fortresses in Gelkmaros.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -24310,7 +24310,7 @@ Enter the commands /G or /Legion in the Chat Window to start the Legion Chat.</b
   <string>
     <id>1401046</id>
     <name>STR_MSG_IDStation_Guide_Area3</name>
-    <body>East of Hariken and by the Steam Tachysphere, you'll find the Command Center.</body>
+    <body>East of Hariken and by the Steam Tachysphere, you’ll find the Command Centre.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -28635,7 +28635,7 @@ Enter the commands /G or /Legion in the Chat Window to start the Legion Chat.</b
   <string>
     <id>1401658</id>
     <name>STR_MSG_INSTANCE_START_IDLDF5RE_SOLO</name>
-    <body>The Battle in the Hall of Knowledge has begun.</body>
+    <body>The battle in the Unstable Hall of Knowledge has begun.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>score_game_start_fix</ment>
@@ -29061,7 +29061,7 @@ Enter the commands /G or /Legion in the Chat Window to start the Legion Chat.</b
   <string>
     <id>1401719</id>
     <name>STR_MSG_FAIL_MOVE_SERVER</name>
-    <body>Changing to the novice or instance server failed.</body>
+    <body>Changing to the novice/instance server failed.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -31627,7 +31627,7 @@ Enter the commands /G or /Legion in the Chat Window to start the Legion Chat.</b
     <id>1402079</id>
     <name>STR_POPUP_CAN_NOT_SETUP_BINDSTONE</name>
     <body>You cannot put up %1 as %0 is already up.
-A personal Kisk can only be activated again if it has been activated previously.</body>
+A Personal Kisk can only be activated again if it has been activated previously.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -37366,14 +37366,14 @@ A personal Kisk can only be activated again if it has been activated previously.
   <string>
     <id>1402875</id>
     <name>STR_MSG_LIGHT_SIDE_CHAOS_DIRECT_PORTAL_OPEN</name>
-    <body>The Chaos Rift to Elysea has opened.</body>
+    <body>A Mystery Rift opened in Asmodae.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1402876</id>
     <name>STR_MSG_DARK_SIDE_CHAOS_DIRECT_PORTAL_OPEN</name>
-    <body>A Chaos Rift to Asmodae has opened.</body>
+    <body>A Mystery Rift opened in Elysea.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -51115,7 +51115,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1404831</id>
     <name>STR_MSG_IDF7_Mine_3Line_Alert_13</name>
-    <body>If you defeat everyone who is protecting the galleries, you'll receive an even better reward.</body>
+    <body>The harder the toil, the richer the rewards!</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_danger_alert_fix</ment>
@@ -52387,7 +52387,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405012</id>
     <name>STR_MSG_10th_DevaDay_Level</name>
-    <body>Access only after level 76.</body>
+    <body>Access possible from level 80 only.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -52436,7 +52436,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405019</id>
     <name>STR_MSG_IDLDF8_Lab_Boss_04_Skill_MSG_05</name>
-    <body>The slime that was clogging up the circuit has been eliminated. The suspicious switch can now be operated.</body>
+    <body>The suspicious switch can now be operated.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -52457,7 +52457,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405022</id>
     <name>STR_MSG_IDLDF8_Lab_Boss_04_Skill_MSG_08</name>
-    <body>Draug wants to restore his energy by absorbing decayed cells.</body>
+    <body>Draug's cell division has begun.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -52520,9 +52520,9 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405031</id>
     <name>STR_MSG_IDLDF8_Lab_Boss_04_Skill_MSG_17</name>
-    <body>Boss System Message 17</body>
-    <message_type>53</message_type>
-    <display_type>3</display_type>
+    <body>Mortasha is growing angry.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
   </string>
   <string>
     <id>1405032</id>
@@ -52639,7 +52639,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405048</id>
     <name>STR_MSG_LDF8_fort_1921_fever_01</name>
-    <body>Stella has sent reinforcements. You will reach the Guardian General by using the teleporter at the Outer Fortress Gate.</body>
+    <body>Stella has sent reinforcements. You will reach the Protector by using the teleporter at the Outer Fortress Gate.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>score_alert_30s_fix</ment>
@@ -52647,7 +52647,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405049</id>
     <name>STR_MSG_LDF8_fort_1921_fever_02</name>
-    <body>Stella has sent reinforcements. The Daevas near the Guardian General receive powerful forces.</body>
+    <body>Stella has sent reinforcements. The Daevas near the Protector receive strong powers.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>score_alert_30s_fix</ment>
@@ -52655,7 +52655,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405050</id>
     <name>STR_MSG_LDF8_fort_1921_dmg</name>
-    <body>At the Rega's behest, powerful skills were activated in a particular district. Be careful!</body>
+    <body>The Snuwa will unleash a powerful explosion in a fixed area. Be careful!</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_danger_alert_fix</ment>
@@ -53987,14 +53987,14 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <id>1405236</id>
     <name>STR_MSG_LDF5a_Nt_raid_J</name>
     <body>Test notification before raid spawn in area J.</body>
-    <message_type>0</message_type>
+    <message_type>8</message_type>
     <display_type>1024</display_type>
   </string>
   <string>
     <id>1405237</id>
     <name>STR_MSG_LDF5a_Nt_raid_K</name>
     <body>Test notification before raid spawn in area K.</body>
-    <message_type>0</message_type>
+    <message_type>8</message_type>
     <display_type>1024</display_type>
   </string>
   <string>
@@ -55559,6 +55559,1378 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>3</display_type>
   </string>
   <string>
+    <id>1405461</id>
+    <name>STR_MSG_LDF5b_Nt_raid_A</name>
+    <body>The 9th Battle Venoid will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405462</id>
+    <name>STR_MSG_LDF5b_Nt_raid_B</name>
+    <body>The 11th Battle Magnoid will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405463</id>
+    <name>STR_MSG_LDF5b_Nt_raid_C</name>
+    <body>The 10th Battle Magnoid will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405464</id>
+    <name>STR_MSG_LDF5b_Nt_raid_D</name>
+    <body>The 12th Battle Magnoid will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405465</id>
+    <name>STR_MSG_LDF5b_Nt_raid_E</name>
+    <body>The 13th Battle Aitoid will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405466</id>
+    <name>STR_MSG_LDF5b_Nt_raid_F</name>
+    <body>Adversary Phrades will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405467</id>
+    <name>STR_MSG_LDF5b_Nt_raid_G</name>
+    <body>The Guardian General of the 16th Indra Depot will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405468</id>
+    <name>STR_MSG_LDF5b_Nt_raid_H</name>
+    <body>The Guardian General of the 15th Indra Depot will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405469</id>
+    <name>STR_MSG_LDF5b_Nt_raid_I</name>
+    <body>The 17th Battle Aitoid will appear in 3 minutes.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405470</id>
+    <name>STR_MSG_LDF5b_killer_v01</name>
+    <body>The Assassin Reconquistador has appeared and is trying to attack the Legates.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405471</id>
+    <name>STR_MSG_LDF5b_Nt_raid_A_on</name>
+    <body>The 9th Battle Venoid has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405472</id>
+    <name>STR_MSG_LDF5b_Nt_raid_B_on</name>
+    <body>The 11th Battle Magnoid has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405473</id>
+    <name>STR_MSG_LDF5b_Nt_raid_C_on</name>
+    <body>The 10th Battle Magnoid has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405474</id>
+    <name>STR_MSG_LDF5b_Nt_raid_D_on</name>
+    <body>The 12th Battle Magnoid has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405475</id>
+    <name>STR_MSG_LDF5b_Nt_raid_E_on</name>
+    <body>The 13th Battle Aitoid has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405476</id>
+    <name>STR_MSG_LDF5b_Nt_raid_F_on</name>
+    <body>Adversary Phrades has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405477</id>
+    <name>STR_MSG_LDF5b_Nt_raid_G_on</name>
+    <body>The Guardian General of the 16th Indra Depot has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405478</id>
+    <name>STR_MSG_LDF5b_Nt_raid_H_on</name>
+    <body>The Guardian General of the 15th Indra Depot has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405479</id>
+    <name>STR_MSG_LDF5b_Nt_raid_I_on</name>
+    <body>The 17th Battle Aitoid has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405480</id>
+    <name>STR_MSG_LDF5b_Nt_raid_J_on</name>
+    <body>The Thermon Antar Bomber has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405481</id>
+    <name>STR_MSG_LDF5b_Nt_raid_K_on</name>
+    <body>The Thermon Antar Bomber has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405482</id>
+    <name>STR_MSG_LDF5b_li_eliv01</name>
+    <body>The Elyos have conquered the 726th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405483</id>
+    <name>STR_MSG_LDF5b_da_eliv01</name>
+    <body>The Asmodians have conquered the 726th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405484</id>
+    <name>STR_MSG_LDF5b_dr_eliv01</name>
+    <body>The Beritra Army has conquered the 726th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405485</id>
+    <name>STR_MSG_LDF5b_li_eliv02</name>
+    <body>The Elyos have conquered the 727th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405486</id>
+    <name>STR_MSG_LDF5b_da_eliv02</name>
+    <body>The Asmodians have conquered the 727th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405487</id>
+    <name>STR_MSG_LDF5b_dr_eliv02</name>
+    <body>The Beritra Army has conquered the 727th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405488</id>
+    <name>STR_MSG_LDF5b_li_eliv03</name>
+    <body>The Elyos have conquered the 728th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405489</id>
+    <name>STR_MSG_LDF5b_da_eliv03</name>
+    <body>The Asmodians have conquered the 728th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405490</id>
+    <name>STR_MSG_LDF5b_dr_eliv03</name>
+    <body>The Beritra Army has conquered the 728th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405491</id>
+    <name>STR_MSG_LDF5b_li_eliv04</name>
+    <body>The Elyos have conquered the 729th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405492</id>
+    <name>STR_MSG_LDF5b_da_eliv04</name>
+    <body>The Asmodians have conquered the 729th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405493</id>
+    <name>STR_MSG_LDF5b_dr_eliv04</name>
+    <body>The Beritra Army has conquered the 729th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405494</id>
+    <name>STR_MSG_LDF5b_li_eliv05</name>
+    <body>The Elyos have conquered the 730th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405495</id>
+    <name>STR_MSG_LDF5b_da_eliv05</name>
+    <body>The Asmodians have conquered the 730th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405496</id>
+    <name>STR_MSG_LDF5b_dr_eliv05</name>
+    <body>The Beritra Army has conquered the 730th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405497</id>
+    <name>STR_MSG_LDF5b_li_eliv06</name>
+    <body>The Elyos have conquered the 731st Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405498</id>
+    <name>STR_MSG_LDF5b_da_eliv06</name>
+    <body>The Asmodians have conquered the 731st Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405499</id>
+    <name>STR_MSG_LDF5b_dr_eliv06</name>
+    <body>The Beritra Army has conquered the 731st Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405500</id>
+    <name>STR_MSG_LDF5b_li_eliv07</name>
+    <body>The Elyos have conquered the 732nd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405501</id>
+    <name>STR_MSG_LDF5b_da_eliv07</name>
+    <body>The Asmodians have conquered the 732nd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405502</id>
+    <name>STR_MSG_LDF5b_dr_eliv07</name>
+    <body>The Beritra Army has conquered the 732nd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405503</id>
+    <name>STR_MSG_LDF5b_li_eliv08</name>
+    <body>The Elyos have conquered the 733rd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405504</id>
+    <name>STR_MSG_LDF5b_da_eliv08</name>
+    <body>The Asmodians have conquered the 733rd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405505</id>
+    <name>STR_MSG_LDF5b_dr_eliv08</name>
+    <body>The Beritra Army has conquered the 733rd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405506</id>
+    <name>STR_MSG_LDF5b_li_eliv09</name>
+    <body>The Elyos have conquered the 734th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405507</id>
+    <name>STR_MSG_LDF5b_da_eliv09</name>
+    <body>The Asmodians have conquered the 734th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405508</id>
+    <name>STR_MSG_LDF5b_dr_eliv09</name>
+    <body>The Beritra Army has conquered the 734th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405509</id>
+    <name>STR_MSG_LDF5b_li_eliv10</name>
+    <body>The Elyos have conquered the 735th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405510</id>
+    <name>STR_MSG_LDF5b_da_eliv10</name>
+    <body>The Asmodians have conquered the 735th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405511</id>
+    <name>STR_MSG_LDF5b_dr_eliv10</name>
+    <body>The Beritra Army has conquered the 735th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405512</id>
+    <name>STR_MSG_LDF5b_li_eliv11</name>
+    <body>The Elyos have conquered the 736th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405513</id>
+    <name>STR_MSG_LDF5b_da_eliv11</name>
+    <body>The Asmodians have conquered the 736th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405514</id>
+    <name>STR_MSG_LDF5b_dr_eliv11</name>
+    <body>The Beritra Army has conquered the 736th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405515</id>
+    <name>STR_MSG_LDF5b_li_eliv12</name>
+    <body>The Elyos have conquered the 737th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405516</id>
+    <name>STR_MSG_LDF5b_da_eliv12</name>
+    <body>The Asmodians have conquered the 737th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405517</id>
+    <name>STR_MSG_LDF5b_dr_eliv12</name>
+    <body>The Beritra Army has conquered the 737th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405518</id>
+    <name>STR_MSG_LDF5b_li_eliv13</name>
+    <body>The Elyos have conquered the 738th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405519</id>
+    <name>STR_MSG_LDF5b_da_eliv13</name>
+    <body>The Asmodians have conquered the 738th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405520</id>
+    <name>STR_MSG_LDF5b_dr_eliv13</name>
+    <body>The Beritra Army has conquered the 738th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405521</id>
+    <name>STR_MSG_LDF5b_li_eliv14</name>
+    <body>The Elyos have conquered the 739th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405522</id>
+    <name>STR_MSG_LDF5b_da_eliv14</name>
+    <body>The Asmodians have conquered the 739th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405523</id>
+    <name>STR_MSG_LDF5b_dr_eliv14</name>
+    <body>The Beritra Army has conquered the 739th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405524</id>
+    <name>STR_MSG_LDF5b_li_eliv15</name>
+    <body>The Elyos have conquered the 740th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405525</id>
+    <name>STR_MSG_LDF5b_da_eliv15</name>
+    <body>The Asmodians have conquered the 740th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405526</id>
+    <name>STR_MSG_LDF5b_dr_eliv15</name>
+    <body>The Beritra Army has conquered the 740th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405527</id>
+    <name>STR_MSG_LDF5b_li_eliv16</name>
+    <body>The Elyos have conquered the 741st Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405528</id>
+    <name>STR_MSG_LDF5b_da_eliv16</name>
+    <body>The Asmodians have conquered the 741st Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405529</id>
+    <name>STR_MSG_LDF5b_dr_eliv16</name>
+    <body>The Beritra Army has conquered the 741st Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405530</id>
+    <name>STR_MSG_LDF5b_li_eliv17</name>
+    <body>The Elyos have conquered the 742nd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405531</id>
+    <name>STR_MSG_LDF5b_da_eliv17</name>
+    <body>The Asmodians have conquered the 742nd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405532</id>
+    <name>STR_MSG_LDF5b_dr_eliv17</name>
+    <body>The Beritra Army has conquered the 742nd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405533</id>
+    <name>STR_MSG_LDF5b_li_eliv18</name>
+    <body>The Elyos have conquered the 743rd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405534</id>
+    <name>STR_MSG_LDF5b_da_eliv18</name>
+    <body>The Asmodians have conquered the 743rd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405535</id>
+    <name>STR_MSG_LDF5b_dr_eliv18</name>
+    <body>The Beritra Army has conquered the 743rd Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405536</id>
+    <name>STR_MSG_LDF5b_li_eliv19</name>
+    <body>The Elyos have conquered the 744th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405537</id>
+    <name>STR_MSG_LDF5b_da_eliv19</name>
+    <body>The Asmodians have conquered the 744th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405538</id>
+    <name>STR_MSG_LDF5b_dr_eliv19</name>
+    <body>The Beritra Army has conquered the 744th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405539</id>
+    <name>STR_MSG_LDF5b_li_eliv20</name>
+    <body>The Elyos have conquered the 745th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405540</id>
+    <name>STR_MSG_LDF5b_da_eliv20</name>
+    <body>The Asmodians have conquered the 745th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405541</id>
+    <name>STR_MSG_LDF5b_dr_eliv20</name>
+    <body>The Beritra Army has conquered the 745th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405542</id>
+    <name>STR_MSG_LDF5b_li_eliv21</name>
+    <body>The Elyos have conquered the 746th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405543</id>
+    <name>STR_MSG_LDF5b_da_eliv21</name>
+    <body>The Asmodians have conquered the 746th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405544</id>
+    <name>STR_MSG_LDF5b_dr_eliv21</name>
+    <body>The Beritra Army has conquered the 746th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405545</id>
+    <name>STR_MSG_LDF5b_li_eliv22</name>
+    <body>The Elyos have conquered the 747th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405546</id>
+    <name>STR_MSG_LDF5b_da_eliv22</name>
+    <body>The Asmodians have conquered the 747th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405547</id>
+    <name>STR_MSG_LDF5b_dr_eliv22</name>
+    <body>The Beritra Army has conquered the 747th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405548</id>
+    <name>STR_MSG_LDF5b_li_eliv23</name>
+    <body>The Elyos have conquered the 748th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405549</id>
+    <name>STR_MSG_LDF5b_da_eliv23</name>
+    <body>The Asmodians have conquered the 748th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405550</id>
+    <name>STR_MSG_LDF5b_dr_eliv23</name>
+    <body>The Beritra Army has conquered the 748th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405551</id>
+    <name>STR_MSG_LDF5b_li_eliv24</name>
+    <body>The Elyos have conquered the 749th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405552</id>
+    <name>STR_MSG_LDF5b_da_eliv24</name>
+    <body>The Asmodians have conquered the 749th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405553</id>
+    <name>STR_MSG_LDF5b_dr_eliv24</name>
+    <body>The Beritra Army has conquered the 749th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405554</id>
+    <name>STR_MSG_LDF5b_li_eliv25</name>
+    <body>The Elyos have conquered the 750th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405555</id>
+    <name>STR_MSG_LDF5b_da_eliv25</name>
+    <body>The Asmodians have conquered the 750th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405556</id>
+    <name>STR_MSG_LDF5b_dr_eliv25</name>
+    <body>The Beritra Army has conquered the 750th Garrison.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405557</id>
+    <name>STR_MSG_LDF5b_up2_v01</name>
+    <body>The conquest level of the 726th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405558</id>
+    <name>STR_MSG_LDF5b_up3_v01</name>
+    <body>The conquest level of the 726th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405559</id>
+    <name>STR_MSG_LDF5b_up4_v01</name>
+    <body>The conquest level of the 726th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405560</id>
+    <name>STR_MSG_LDF5b_up5_v01</name>
+    <body>The conquest level of the 726th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405561</id>
+    <name>STR_MSG_LDF5b_up2_v02</name>
+    <body>The conquest level of the 727th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405562</id>
+    <name>STR_MSG_LDF5b_up3_v02</name>
+    <body>The conquest level of the 727th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405563</id>
+    <name>STR_MSG_LDF5b_up4_v02</name>
+    <body>The conquest level of the 727th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405564</id>
+    <name>STR_MSG_LDF5b_up5_v02</name>
+    <body>The conquest level of the 727th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405565</id>
+    <name>STR_MSG_LDF5b_up2_v03</name>
+    <body>The conquest level of the 728th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405566</id>
+    <name>STR_MSG_LDF5b_up3_v03</name>
+    <body>The conquest level of the 728th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405567</id>
+    <name>STR_MSG_LDF5b_up4_v03</name>
+    <body>The conquest level of the 728th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405568</id>
+    <name>STR_MSG_LDF5b_up5_v03</name>
+    <body>The conquest level of the 728th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405569</id>
+    <name>STR_MSG_LDF5b_up2_v04</name>
+    <body>The conquest level of the 729th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405570</id>
+    <name>STR_MSG_LDF5b_up3_v04</name>
+    <body>The conquest level of the 729th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405571</id>
+    <name>STR_MSG_LDF5b_up4_v04</name>
+    <body>The conquest level of the 729th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405572</id>
+    <name>STR_MSG_LDF5b_up5_v04</name>
+    <body>The conquest level of the 729th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405573</id>
+    <name>STR_MSG_LDF5b_up2_v05</name>
+    <body>The conquest level of the 730th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405574</id>
+    <name>STR_MSG_LDF5b_up3_v05</name>
+    <body>The conquest level of the 730th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405575</id>
+    <name>STR_MSG_LDF5b_up4_v05</name>
+    <body>The conquest level of the 730th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405576</id>
+    <name>STR_MSG_LDF5b_up5_v05</name>
+    <body>The conquest level of the 730th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405577</id>
+    <name>STR_MSG_LDF5b_up2_v06</name>
+    <body>The conquest level of the 731st Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405578</id>
+    <name>STR_MSG_LDF5b_up3_v06</name>
+    <body>The conquest level of the 731st Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405579</id>
+    <name>STR_MSG_LDF5b_up4_v06</name>
+    <body>The conquest level of the 731st Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405580</id>
+    <name>STR_MSG_LDF5b_up5_v06</name>
+    <body>The conquest level of the 731st Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405581</id>
+    <name>STR_MSG_LDF5b_up2_v07</name>
+    <body>The conquest level of the 732nd Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405582</id>
+    <name>STR_MSG_LDF5b_up3_v07</name>
+    <body>The conquest level of the 732nd Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405583</id>
+    <name>STR_MSG_LDF5b_up4_v07</name>
+    <body>The conquest level of the 732nd Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405584</id>
+    <name>STR_MSG_LDF5b_up5_v07</name>
+    <body>The conquest level of the 732nd Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405585</id>
+    <name>STR_MSG_LDF5b_up2_v08</name>
+    <body>The conquest level of the 733rd Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405586</id>
+    <name>STR_MSG_LDF5b_up3_v08</name>
+    <body>The conquest level of the 733rd Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405587</id>
+    <name>STR_MSG_LDF5b_up4_v08</name>
+    <body>The conquest level of the 733rd Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405588</id>
+    <name>STR_MSG_LDF5b_up5_v08</name>
+    <body>The conquest level of the 733rd Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405589</id>
+    <name>STR_MSG_LDF5b_up2_v09</name>
+    <body>The conquest level of the 734th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405590</id>
+    <name>STR_MSG_LDF5b_up3_v09</name>
+    <body>The conquest level of the 734th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405591</id>
+    <name>STR_MSG_LDF5b_up4_v09</name>
+    <body>The conquest level of the 734th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405592</id>
+    <name>STR_MSG_LDF5b_up5_v09</name>
+    <body>The conquest level of the 734th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405593</id>
+    <name>STR_MSG_LDF5b_up2_v10</name>
+    <body>The conquest level of the 735th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405594</id>
+    <name>STR_MSG_LDF5b_up3_v10</name>
+    <body>The conquest level of the 735th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405595</id>
+    <name>STR_MSG_LDF5b_up4_v10</name>
+    <body>The conquest level of the 735th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405596</id>
+    <name>STR_MSG_LDF5b_up5_v10</name>
+    <body>The conquest level of the 735th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405597</id>
+    <name>STR_MSG_LDF5b_up2_v11</name>
+    <body>The conquest level of the 736th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405598</id>
+    <name>STR_MSG_LDF5b_up3_v11</name>
+    <body>The conquest level of the 736th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405599</id>
+    <name>STR_MSG_LDF5b_up4_v11</name>
+    <body>The conquest level of the 736th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405600</id>
+    <name>STR_MSG_LDF5b_up5_v11</name>
+    <body>The conquest level of the 736th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405601</id>
+    <name>STR_MSG_LDF5b_up2_v12</name>
+    <body>The conquest level of the 737th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405602</id>
+    <name>STR_MSG_LDF5b_up3_v12</name>
+    <body>The conquest level of the 737th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405603</id>
+    <name>STR_MSG_LDF5b_up4_v12</name>
+    <body>The conquest level of the 737th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405604</id>
+    <name>STR_MSG_LDF5b_up5_v12</name>
+    <body>The conquest level of the 737th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405605</id>
+    <name>STR_MSG_LDF5b_up2_v13</name>
+    <body>The conquest level of the 738th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405606</id>
+    <name>STR_MSG_LDF5b_up3_v13</name>
+    <body>The conquest level of the 738th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405607</id>
+    <name>STR_MSG_LDF5b_up4_v13</name>
+    <body>The conquest level of the 738th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405608</id>
+    <name>STR_MSG_LDF5b_up5_v13</name>
+    <body>The conquest level of the 738th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405609</id>
+    <name>STR_MSG_LDF5b_up2_v14</name>
+    <body>The conquest level of the 739th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405610</id>
+    <name>STR_MSG_LDF5b_up3_v14</name>
+    <body>The conquest level of the 739th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405611</id>
+    <name>STR_MSG_LDF5b_up4_v14</name>
+    <body>The conquest level of the 739th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405612</id>
+    <name>STR_MSG_LDF5b_up5_v14</name>
+    <body>The conquest level of the 739th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405613</id>
+    <name>STR_MSG_LDF5b_up2_v15</name>
+    <body>The conquest level of the 740th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405614</id>
+    <name>STR_MSG_LDF5b_up3_v15</name>
+    <body>The conquest level of the 740th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405615</id>
+    <name>STR_MSG_LDF5b_up4_v15</name>
+    <body>The conquest level of the 740th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405616</id>
+    <name>STR_MSG_LDF5b_up5_v15</name>
+    <body>The conquest level of the 740th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405617</id>
+    <name>STR_MSG_LDF5b_up2_v16</name>
+    <body>The conquest level of the 741st Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405618</id>
+    <name>STR_MSG_LDF5b_up3_v16</name>
+    <body>The conquest level of the 741st Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405619</id>
+    <name>STR_MSG_LDF5b_up4_v16</name>
+    <body>The conquest level of the 741st Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405620</id>
+    <name>STR_MSG_LDF5b_up5_v16</name>
+    <body>The conquest level of the 741st Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405621</id>
+    <name>STR_MSG_LDF5b_up2_v17</name>
+    <body>The conquest level of the 742nd Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405622</id>
+    <name>STR_MSG_LDF5b_up3_v17</name>
+    <body>The conquest level of the 742nd Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405623</id>
+    <name>STR_MSG_LDF5b_up4_v17</name>
+    <body>The conquest level of the 742nd Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405624</id>
+    <name>STR_MSG_LDF5b_up5_v17</name>
+    <body>The conquest level of the 742nd Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405625</id>
+    <name>STR_MSG_LDF5b_up2_v18</name>
+    <body>The conquest level of the 743rd Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405626</id>
+    <name>STR_MSG_LDF5b_up3_v18</name>
+    <body>The conquest level of the 743rd Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405627</id>
+    <name>STR_MSG_LDF5b_up4_v18</name>
+    <body>The conquest level of the 743rd Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405628</id>
+    <name>STR_MSG_LDF5b_up5_v18</name>
+    <body>The conquest level of the 743rd Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405629</id>
+    <name>STR_MSG_LDF5b_up2_v19</name>
+    <body>The conquest level of the 744th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405630</id>
+    <name>STR_MSG_LDF5b_up3_v19</name>
+    <body>The conquest level of the 744th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405631</id>
+    <name>STR_MSG_LDF5b_up4_v19</name>
+    <body>The conquest level of the 744th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405632</id>
+    <name>STR_MSG_LDF5b_up5_v19</name>
+    <body>The conquest level of the 744th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405633</id>
+    <name>STR_MSG_LDF5b_up2_v20</name>
+    <body>The conquest level of the 745th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405634</id>
+    <name>STR_MSG_LDF5b_up3_v20</name>
+    <body>The conquest level of the 745th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405635</id>
+    <name>STR_MSG_LDF5b_up4_v20</name>
+    <body>The conquest level of the 745th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405636</id>
+    <name>STR_MSG_LDF5b_up5_v20</name>
+    <body>The conquest level of the 745th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405637</id>
+    <name>STR_MSG_LDF5b_up2_v21</name>
+    <body>The conquest level of the 746th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405638</id>
+    <name>STR_MSG_LDF5b_up3_v21</name>
+    <body>The conquest level of the 746th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405639</id>
+    <name>STR_MSG_LDF5b_up4_v21</name>
+    <body>The conquest level of the 746th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405640</id>
+    <name>STR_MSG_LDF5b_up5_v21</name>
+    <body>The conquest level of the 746th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405641</id>
+    <name>STR_MSG_LDF5b_up2_v22</name>
+    <body>The conquest level of the 747th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405642</id>
+    <name>STR_MSG_LDF5b_up3_v22</name>
+    <body>The conquest level of the 747th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405643</id>
+    <name>STR_MSG_LDF5b_up4_v22</name>
+    <body>The conquest level of the 747th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405644</id>
+    <name>STR_MSG_LDF5b_up5_v22</name>
+    <body>The conquest level of the 747th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405645</id>
+    <name>STR_MSG_LDF5b_up2_v23</name>
+    <body>The conquest level of the 748th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405646</id>
+    <name>STR_MSG_LDF5b_up3_v23</name>
+    <body>The conquest level of the 748th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405647</id>
+    <name>STR_MSG_LDF5b_up4_v23</name>
+    <body>The conquest level of the 748th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405648</id>
+    <name>STR_MSG_LDF5b_up5_v23</name>
+    <body>The conquest level of the 748th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405649</id>
+    <name>STR_MSG_LDF5b_up2_v24</name>
+    <body>The conquest level of the 749th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405650</id>
+    <name>STR_MSG_LDF5b_up3_v24</name>
+    <body>The conquest level of the 749th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405651</id>
+    <name>STR_MSG_LDF5b_up4_v24</name>
+    <body>The conquest level of the 749th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405652</id>
+    <name>STR_MSG_LDF5b_up5_v24</name>
+    <body>The conquest level of the 749th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405653</id>
+    <name>STR_MSG_LDF5b_up2_v25</name>
+    <body>The conquest level of the 750th Garrison has been increased by 2 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405654</id>
+    <name>STR_MSG_LDF5b_up3_v25</name>
+    <body>The conquest level of the 750th Garrison has been increased by 3 levels and is now at the maximum.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405655</id>
+    <name>STR_MSG_LDF5b_up4_v25</name>
+    <body>The conquest level of the 750th Garrison has been increased by 4 levels.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405656</id>
+    <name>STR_MSG_LDF5b_up5_v25</name>
+    <body>The conquest level of the 750th Garrison is now at the maximum (level 5).</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
     <id>1405657</id>
     <name>STR_MSG_LDF5a_li_elimiv01</name>
     <body>The Elyos have conquered the 701st Garrison.</body>
@@ -56084,6 +57456,510 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>1</display_type>
   </string>
   <string>
+    <id>1405732</id>
+    <name>STR_MSG_LDF5b_li_elimiv01</name>
+    <body>The Elyos have conquered the 726th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405733</id>
+    <name>STR_MSG_LDF5b_da_elimiv01</name>
+    <body>The Asmodians have conquered the 726th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405734</id>
+    <name>STR_MSG_LDF5b_dr_elimiv01</name>
+    <body>The Beritra Army has conquered the 726th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405735</id>
+    <name>STR_MSG_LDF5b_li_elimiv02</name>
+    <body>The Elyos have conquered the 727th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405736</id>
+    <name>STR_MSG_LDF5b_da_elimiv02</name>
+    <body>The Asmodians have conquered the 727th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405737</id>
+    <name>STR_MSG_LDF5b_dr_elimiv02</name>
+    <body>The Beritra Army has conquered the 727th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405738</id>
+    <name>STR_MSG_LDF5b_li_elimiv03</name>
+    <body>The Elyos have conquered the 728th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405739</id>
+    <name>STR_MSG_LDF5b_da_elimiv03</name>
+    <body>The Asmodians have conquered the 728th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405740</id>
+    <name>STR_MSG_LDF5b_dr_elimiv03</name>
+    <body>The Beritra Army has conquered the 728th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405741</id>
+    <name>STR_MSG_LDF5b_li_elimiv04</name>
+    <body>The Elyos have conquered the 729th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405742</id>
+    <name>STR_MSG_LDF5b_da_elimiv04</name>
+    <body>The Asmodians have conquered the 729th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405743</id>
+    <name>STR_MSG_LDF5b_dr_elimiv04</name>
+    <body>The Beritra Army has conquered the 729th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405744</id>
+    <name>STR_MSG_LDF5b_li_elimiv05</name>
+    <body>The Elyos have conquered the 730th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405745</id>
+    <name>STR_MSG_LDF5b_da_elimiv05</name>
+    <body>The Asmodians have conquered the 730th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405746</id>
+    <name>STR_MSG_LDF5b_dr_elimiv05</name>
+    <body>The Beritra Army has conquered the 730th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405747</id>
+    <name>STR_MSG_LDF5b_li_elimiv06</name>
+    <body>The Elyos have conquered the 731st Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405748</id>
+    <name>STR_MSG_LDF5b_da_elimiv06</name>
+    <body>The Asmodians have conquered the 731st Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405749</id>
+    <name>STR_MSG_LDF5b_dr_elimiv06</name>
+    <body>The Beritra Army has conquered the 731st Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405750</id>
+    <name>STR_MSG_LDF5b_li_elimiv07</name>
+    <body>The Elyos have conquered the 732nd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405751</id>
+    <name>STR_MSG_LDF5b_da_elimiv07</name>
+    <body>The Asmodians have conquered the 732nd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405752</id>
+    <name>STR_MSG_LDF5b_dr_elimiv07</name>
+    <body>The Beritra Army has conquered the 732nd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405753</id>
+    <name>STR_MSG_LDF5b_li_elimiv08</name>
+    <body>The Elyos have conquered the 733rd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405754</id>
+    <name>STR_MSG_LDF5b_da_elimiv08</name>
+    <body>The Asmodians have conquered the 733rd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405755</id>
+    <name>STR_MSG_LDF5b_dr_elimiv08</name>
+    <body>The Beritra Army has conquered the 733rd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405756</id>
+    <name>STR_MSG_LDF5b_li_elimiv09</name>
+    <body>The Elyos have conquered the 734th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405757</id>
+    <name>STR_MSG_LDF5b_da_elimiv09</name>
+    <body>The Asmodians have conquered the 734th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405758</id>
+    <name>STR_MSG_LDF5b_dr_elimiv09</name>
+    <body>The Beritra Army has conquered the 734th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405759</id>
+    <name>STR_MSG_LDF5b_li_elimiv10</name>
+    <body>The Elyos have conquered the 735th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405760</id>
+    <name>STR_MSG_LDF5b_da_elimiv10</name>
+    <body>The Asmodians have conquered the 735th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405761</id>
+    <name>STR_MSG_LDF5b_dr_elimiv10</name>
+    <body>The Beritra Army has conquered the 735th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405762</id>
+    <name>STR_MSG_LDF5b_li_elimiv11</name>
+    <body>The Elyos have conquered the 736th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405763</id>
+    <name>STR_MSG_LDF5b_da_elimiv11</name>
+    <body>The Asmodians have conquered the 736th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405764</id>
+    <name>STR_MSG_LDF5b_dr_elimiv11</name>
+    <body>The Beritra Army has conquered the 736th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405765</id>
+    <name>STR_MSG_LDF5b_li_elimiv12</name>
+    <body>The Elyos have conquered the 737th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405766</id>
+    <name>STR_MSG_LDF5b_da_elimiv12</name>
+    <body>The Asmodians have conquered the 737th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405767</id>
+    <name>STR_MSG_LDF5b_dr_elimiv12</name>
+    <body>The Beritra Army has conquered the 737th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405768</id>
+    <name>STR_MSG_LDF5b_li_elimiv13</name>
+    <body>The Elyos have conquered the 738th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405769</id>
+    <name>STR_MSG_LDF5b_da_elimiv13</name>
+    <body>The Asmodians have conquered the 738th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405770</id>
+    <name>STR_MSG_LDF5b_dr_elimiv13</name>
+    <body>The Beritra Army has conquered the 738th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405771</id>
+    <name>STR_MSG_LDF5b_li_elimiv14</name>
+    <body>The Elyos have conquered the 739th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405772</id>
+    <name>STR_MSG_LDF5b_da_elimiv14</name>
+    <body>The Asmodians have conquered the 739th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405773</id>
+    <name>STR_MSG_LDF5b_dr_elimiv14</name>
+    <body>The Beritra Army has conquered the 739th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405774</id>
+    <name>STR_MSG_LDF5b_li_elimiv15</name>
+    <body>The Elyos have conquered the 740th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405775</id>
+    <name>STR_MSG_LDF5b_da_elimiv15</name>
+    <body>The Asmodians have conquered the 740th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405776</id>
+    <name>STR_MSG_LDF5b_dr_elimiv15</name>
+    <body>The Beritra Army has conquered the 740th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405777</id>
+    <name>STR_MSG_LDF5b_li_elimiv16</name>
+    <body>The Elyos have conquered the 741st Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405778</id>
+    <name>STR_MSG_LDF5b_da_elimiv16</name>
+    <body>The Asmodians have conquered the 741st Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405779</id>
+    <name>STR_MSG_LDF5b_dr_elimiv16</name>
+    <body>The Beritra Army has conquered the 741st Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405780</id>
+    <name>STR_MSG_LDF5b_li_elimiv17</name>
+    <body>The Elyos have conquered the 742nd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405781</id>
+    <name>STR_MSG_LDF5b_da_elimiv17</name>
+    <body>The Asmodians have conquered the 742nd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405782</id>
+    <name>STR_MSG_LDF5b_dr_elimiv17</name>
+    <body>The Beritra Army has conquered the 742nd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405783</id>
+    <name>STR_MSG_LDF5b_li_elimiv18</name>
+    <body>The Elyos have conquered the 743rd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405784</id>
+    <name>STR_MSG_LDF5b_da_elimiv18</name>
+    <body>The Asmodians have conquered the 743rd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405785</id>
+    <name>STR_MSG_LDF5b_dr_elimiv18</name>
+    <body>The Beritra Army has conquered the 743rd Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405786</id>
+    <name>STR_MSG_LDF5b_li_elimiv19</name>
+    <body>The Elyos have conquered the 744th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405787</id>
+    <name>STR_MSG_LDF5b_da_elimiv19</name>
+    <body>The Asmodians have conquered the 744th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405788</id>
+    <name>STR_MSG_LDF5b_dr_elimiv19</name>
+    <body>The Beritra Army has conquered the 744th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405789</id>
+    <name>STR_MSG_LDF5b_li_elimiv20</name>
+    <body>The Elyos have conquered the 745th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405790</id>
+    <name>STR_MSG_LDF5b_da_elimiv20</name>
+    <body>The Asmodians have conquered the 745th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405791</id>
+    <name>STR_MSG_LDF5b_dr_elimiv20</name>
+    <body>The Beritra Army has conquered the 745th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405792</id>
+    <name>STR_MSG_LDF5b_li_elimiv21</name>
+    <body>The Elyos have conquered the 746th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405793</id>
+    <name>STR_MSG_LDF5b_da_elimiv21</name>
+    <body>The Asmodians have conquered the 746th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405794</id>
+    <name>STR_MSG_LDF5b_dr_elimiv21</name>
+    <body>The Beritra Army has conquered the 746th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405795</id>
+    <name>STR_MSG_LDF5b_li_elimiv22</name>
+    <body>The Elyos have conquered the 747th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405796</id>
+    <name>STR_MSG_LDF5b_da_elimiv22</name>
+    <body>The Asmodians have conquered the 747th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405797</id>
+    <name>STR_MSG_LDF5b_dr_elimiv22</name>
+    <body>The Beritra Army has conquered the 747th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405798</id>
+    <name>STR_MSG_LDF5b_li_elimiv23</name>
+    <body>The Elyos have conquered the 748th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405799</id>
+    <name>STR_MSG_LDF5b_da_elimiv23</name>
+    <body>The Asmodians have conquered the 748th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405800</id>
+    <name>STR_MSG_LDF5b_dr_elimiv23</name>
+    <body>The Beritra Army has conquered the 748th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405801</id>
+    <name>STR_MSG_LDF5b_li_elimiv24</name>
+    <body>The Elyos have conquered the 749th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405802</id>
+    <name>STR_MSG_LDF5b_da_elimiv24</name>
+    <body>The Asmodians have conquered the 749th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405803</id>
+    <name>STR_MSG_LDF5b_dr_elimiv24</name>
+    <body>The Beritra Army has conquered the 749th Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
     <id>1405804</id>
     <name>STR_MSG_LDF5b_li_elimiv25</name>
     <body>You lost a game of Rock-Paper-Scissors. Nothing happened.</body>
@@ -56135,21 +58011,21 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405811</id>
     <name>STR_MSG_LDF5_WarBox_01</name>
-    <body>In 3 minutes the Katalam Kinah Box will appear near the garrison.</body>
+    <body>The Katalam Kinah Box will appear nearby in 3 minutes.</body>
     <message_type>0</message_type>
     <display_type>1024</display_type>
   </string>
   <string>
     <id>1405812</id>
     <name>STR_MSG_LDF5_WarBox_02</name>
-    <body>A Katalam Kinah Box has appeared near the garrison.</body>
+    <body>A Katalam Kinah Box has appeared nearby.</body>
     <message_type>0</message_type>
     <display_type>1024</display_type>
   </string>
   <string>
     <id>1405813</id>
     <name>STR_MSG_NOT_ENOUGH_ENTER_BUFF</name>
-    <body>The Hourglass is not full yet.</body>
+    <body>The Dimension Hourglass is not fully charged yet.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -56394,6 +58270,78 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405848</id>
     <name>STR_MSG_CUSTOMIZING_Mode_setting_30</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405849</id>
+    <name>STR_MSG_IDTag_War_System_01</name>
+    <body>Inanna has appeared in the stronghold.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_carrier_start_fix</ment>
+  </string>
+  <string>
+    <id>1405850</id>
+    <name>STR_MSG_IDTag_War_System_02</name>
+    <body>Inanna's location has been detected.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_carrier_start_fix</ment>
+  </string>
+  <string>
+    <id>1405851</id>
+    <name>STR_MSG_IDTag_War_System_03</name>
+    <body>Inanna has disappeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405852</id>
+    <name>STR_MSG_IDTag_War_System_04</name>
+    <body>A portal has opened.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405853</id>
+    <name>STR_MSG_IDTag_War_System_05</name>
+    <body>Inanna's Illusion has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405854</id>
+    <name>STR_MSG_IDTag_War_System_06</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405855</id>
+    <name>STR_MSG_IDTag_War_System_07</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405856</id>
+    <name>STR_MSG_IDTag_War_System_08</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405857</id>
+    <name>STR_MSG_IDTag_War_System_09</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405858</id>
+    <name>STR_MSG_IDTag_War_System_10</name>
     <body>Test notification</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
@@ -56686,6 +58634,195 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>3</display_type>
   </string>
   <string>
+    <id>1405900</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANT_TOOLITEM</name>
+    <body>%0 is contaminated and can only be polished after cleaning.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405901</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_SUCCEEDED</name>
+    <body>%0 successfully cleaned. Polishing is now possible.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405902</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANCEL</name>
+    <body>The cleaning of %0 was cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405903</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_FAIL</name>
+    <body>The cleaning of %0 failed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405904</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_CANT_ITEM</name>
+    <body>%0 is not a polishable item.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405905</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_CANT_TOOLITEM</name>
+    <body>%0 is an item that can't be polished into %1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405906</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_CANT_STATUS</name>
+    <body>%0 is contaminated and can only be polished after cleaning.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405907</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_CANT_SEAL</name>
+    <body>Sealed items cannot be polished.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405908</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_CANT_UNIDENTIFIED</name>
+    <body>Unidentified items cannot be polished.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405909</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_CANT_PACKING</name>
+    <body>Wrapped items cannot be polished.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405910</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_SUCCEEDED</name>
+    <body>The polishing of %0 was successful. %num1 levels have been added.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405911</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_CANCEL</name>
+    <body>The polishing of %0 has been cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405912</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_FAIL</name>
+    <body>The polishing of %0 failed. The current level is now %1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405913</id>
+    <name>STR_MSG_ITEM_ENCHANT_GRIND_LIMIT</name>
+    <body>%0 has already reached the maximum polish level.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405914</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_SUCCEEDED</name>
+    <body>The Odian enchantment of %0 was successful.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405915</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_RUNE_SUCCEEDED</name>
+    <body>The rune enchantment of %0 was successful.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405916</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_FAIL_COLOR</name>
+    <body>The colour of %1 does no match the slot colour for %0.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405917</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_FAIL_SLOT</name>
+    <body>There is no slot available for enchantment.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405918</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_FAIL_LEVEL</name>
+    <body>Your character level is not high enough to enchant %0.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405919</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_FAIL_JOB</name>
+    <body>%0 cannot be enchanted with this class.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405920</id>
+    <name>STR_MSG_ITEM_ENCHANT_OP_ODIAN_SUCCEEDED</name>
+    <body>The Odian slot expansion of %0 was successful.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405921</id>
+    <name>STR_MSG_ITEM_ENCHANT_OP_RUNE_SUCCEEDED</name>
+    <body>The rune slot expansion of %0 was successful.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405922</id>
+    <name>STR_MSG_ITEM_ENCHANT_OP_ODIAN_CANCEL</name>
+    <body>The Odian slot expansion of %0 was cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405923</id>
+    <name>STR_MSG_ITEM_ENCHANT_OP_RUNE_CANCEL</name>
+    <body>The rune slot expansion of %0 was cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405924</id>
+    <name>STR_MSG_ITEM_ENCHANT_OFF_ODIAN_SUCCEEDED</name>
+    <body>The Odian removal from%0 was successful. %1 received.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405925</id>
+    <name>STR_MSG_ITEM_ENCHANT_OFF_RUNE_SUCCEEDED</name>
+    <body>The rune removal from %0 was successful. %1 received.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405926</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_JOB_FAIL</name>
+    <body>%0 cannot equip the enchanted item %1 with their current class.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
     <id>1405927</id>
     <name>STR_MSG_72_Boss_Time_Check_01</name>
     <body>Complete the mission quickly and you will also receive Prometun's Loot Chest.</body>
@@ -56772,42 +58909,42 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405939</id>
     <name>STR_MSG_72_Boss_Time_Check_13</name>
-    <body>Test notification</body>
+    <body>Complete the mission quickly and you will also receive the Ara Infernalia Reward Chest (normal).</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1405940</id>
     <name>STR_MSG_72_Boss_Time_Check_14</name>
-    <body>Test notification</body>
+    <body>Complete the mission quickly and you will also receive the Ara Infernalia Reward Chest (easy).</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1405941</id>
     <name>STR_MSG_72_Boss_Time_Check_15</name>
-    <body>Test notification</body>
+    <body>Complete the mission quickly and you will also receive the Ara Infernalia Reward Chest (bonus).</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1405942</id>
     <name>STR_MSG_72_Boss_Time_Check_16</name>
-    <body>Test notification</body>
+    <body>You did not receive the Ara Infernalia Reward Chest (normal).</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1405943</id>
     <name>STR_MSG_72_Boss_Time_Check_17</name>
-    <body>Test notification</body>
+    <body>You did not receive the Ara Infernalia Reward Chest (easy).</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1405944</id>
     <name>STR_MSG_72_Boss_Time_Check_18</name>
-    <body>Test notification</body>
+    <body>You did not receive the Ara Infernalia Reward Chest (bonus).</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -56828,7 +58965,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405947</id>
     <name>STR_MSG_LDF5b_MSG_31</name>
-    <body>Robbers have appeared to destroy the Dynastic Key.</body>
+    <body>Balaur Robbers have appeared to destroy the Dynastic Key.</body>
     <message_type>0</message_type>
     <display_type>1024</display_type>
   </string>
@@ -56924,11 +59061,1606 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>3</display_type>
   </string>
   <string>
+    <id>1405961</id>
+    <name>STR_GET_FEXP</name>
+    <body>You gained %num1 %2 glory from %0.</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405962</id>
+    <name>STR_GET_FEXP_VITAL_BONUS</name>
+    <body>You gained %num1 %2 glory from %0 (Energy of Repose %num3).</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405963</id>
+    <name>STR_GET_FEXP_PCBANG_VITAL_BONUS</name>
+    <body>%0에게 %num1만큼의 %2 명성을 얻었습니다.(PC방 휴식의 기운 %num3)</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405964</id>
+    <name>STR_GET_FEXP_PCBANG_VITAL_MAKEUP_BONUS</name>
+    <body>%0에게 %num1만큼의 %2 명성을 얻었습니다.(PC방 휴식의 기운 %num3, 구원의 기운 %num4)</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405965</id>
+    <name>STR_GET_FEXP_ABSOLUTEEXP_BONUS</name>
+    <body>You gained %num1 %2 glory from %0 (Elim energy %num3).</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405966</id>
+    <name>STR_GET_FEXP_VITAL_ABSOLUTEEXP_BONUS</name>
+    <body>You gained %num1 %2 glory from %0 (Energy of Repose %num3, Elim energy %num4).</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405967</id>
+    <name>STR_GET_FEXP_PCBANG_VITAL_ABSOLUTEEXP_BONUS</name>
+    <body>%0에게 %num1만큼의 %2 명성을 얻었습니다.(PC방 휴식의 기운 %num3, 엘림의 기운 %num4)</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1405968</id>
+    <name>STR_CANNOT_RECOVER_FEXPERIENCE_NOT_ENOUGH_FEE</name>
+    <body>You do not have enough Kinah to recover your glory.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405969</id>
+    <name>STR_DONOT_HAVE_RECOVER_FEXPERIENCE</name>
+    <body>You have no glory to restore.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405970</id>
+    <name>STR_FAME_CHANGE_LEVEL_DONE</name>
+    <body>%0 has achieved glory level %num1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405971</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_01</name>
+    <body>An awakened creature is stirring at the Yanohas Sighting Area.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405972</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_02</name>
+    <body>An awakened creature is stirring at the Volcanic Relics Excavation Site.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405973</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_03</name>
+    <body>An awakened creature is stirring at the Brodelgeysir.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405974</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_04</name>
+    <body>An awakened creature is stirring at the Ashwind Cliff.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405975</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_05</name>
+    <body>An awakened creature is stirring at the Exitus Camp.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405976</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_06</name>
+    <body>An awakened creature is stirring at the Prisoner Valley.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405977</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_07</name>
+    <body>An awakened creature is stirring at the Drytongue.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405978</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_08</name>
+    <body>An awakened creature is stirring at the 10th Altar Square.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>ab_danger_alert_fix</ment>
+  </string>
+  <string>
+    <id>1405979</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_09</name>
+    <body>Help the protectors and put an end to the awakened creature.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405980</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_10</name>
+    <body>The awakened creature has disappeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405981</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_11</name>
+    <body>You angered the residents of the Spirit Grove, but the solution is close at hand!</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405982</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_12</name>
+    <body>You left the Spirit Grove.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405983</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_13</name>
+    <body>Mortasha's power has flowed into the Relic Extractor.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405984</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_14</name>
+    <body>An unknown healing force is rising in the Spirit Forest.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405985</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_15</name>
+    <body>Yanohas has awakened from his slumber.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405986</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_16</name>
+    <body>The Artefact at the 12th Altar has been activated.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405987</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_17</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405988</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_18</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405989</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_19</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405990</id>
+    <name>STR_MSG_IDF8_Dragon_Altar_MSG_20</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
     <id>1405991</id>
     <name>STR_MSG_INSTANCE_START_IDEvent_Damage_01</name>
     <body>The battle in the Shattered Abyssal Splinter has begun.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>score_game_start_fix</ment>
+  </string>
+  <string>
+    <id>1405992</id>
+    <name>STR_MSG_EVENT_Halloween_01</name>
+    <body>The abandoned secret entrance to The Dreadful Guesthouse will open shortly.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405993</id>
+    <name>STR_MSG_EVENT_Halloween_02</name>
+    <body>The creepy secret entrance to The Dreadful Guesthouse will open shortly.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405994</id>
+    <name>STR_MSG_EVENT_Halloween_03</name>
+    <body>A competitive raid will start shortly. You can enter the event instance through Dumaha's own Space-Time Rift.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1405995</id>
+    <name>STR_MSG_NOParty_Reject_Send</name>
+    <body>A target located in a restricted area automatically rejects the group invitation.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405996</id>
+    <name>STR_MSG_NOParty_Reject_Recive</name>
+    <body>You are in a restricted area. You cannot accept the group invitation.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405997</id>
+    <name>STR_MSG_NOParty_Leave</name>
+    <body>You have entered a restricted area and left the group.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405998</id>
+    <name>STR_MSG_NOParty_Reject_Send2</name>
+    <body>You are in a restricted area. You cannot send an invitation.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1405999</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_RUNE_FAIL_COLOR</name>
+    <body>The form of %0 does not match the form of the slot for %1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406000</id>
+    <name>STR_MSG_LDF8_Camp_01</name>
+    <body>The High Priest's Assistant was summoned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406001</id>
+    <name>STR_MSG_LDF8_Camp_02</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406002</id>
+    <name>STR_MSG_LDF8_Camp_03</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406003</id>
+    <name>STR_MSG_LDF8_Camp_04</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406004</id>
+    <name>STR_MSG_LDF8_Camp_05</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406005</id>
+    <name>STR_MSG_LDF8_Camp_06</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406006</id>
+    <name>STR_MSG_LDF8_Camp_07</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406007</id>
+    <name>STR_MSG_LDF8_Camp_08</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406008</id>
+    <name>STR_MSG_LDF8_Camp_09</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406009</id>
+    <name>STR_MSG_LDF8_Camp_10</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406010</id>
+    <name>STR_MSG_LDF5b_panda_01</name>
+    <body>The battle will begin in 3 minutes.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406011</id>
+    <name>STR_MSG_LDF5b_panda_02</name>
+    <body>The battle will begin in 1 minute.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406012</id>
+    <name>STR_MSG_LDF5b_panda_03</name>
+    <body>The battle has begun.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406013</id>
+    <name>STR_MSG_LDF5b_panda_04</name>
+    <body>Find the Freight Box.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406014</id>
+    <name>STR_MSG_LDF5b_panda_05</name>
+    <body>Summon the cargo.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406015</id>
+    <name>STR_MSG_LDF5b_panda_06</name>
+    <body>A special Freight Box was summoned.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406016</id>
+    <name>STR_MSG_LDF5b_panda_07</name>
+    <body>A special Freight Box has arrived.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406017</id>
+    <name>STR_MSG_LDF5b_panda_08</name>
+    <body>The battle will be ended because someone received the special Freight.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406018</id>
+    <name>STR_MSG_LDF5b_panda_09</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406019</id>
+    <name>STR_MSG_LDF5b_panda_10</name>
+    <body>Test notification</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406020</id>
+    <name>STR_MSG_INSTANCE_OPEN_IDTag_War</name>
+    <body>You can take part in the Raging Valley Battle.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406021</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_GET_S_GRADE</name>
+    <body>%0 successfully performed a minion combination to evolution level %1 for %2.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406022</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_GET</name>
+    <body>%0 has awakened minion %2 to level %1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406023</id>
+    <name>STR_MSG_LDF7_Base_Buff_01</name>
+    <body>The Buff Support Statue infuses you with strong powers.</body>
+    <message_type>53</message_type>
+    <display_type>2</display_type>
+  </string>
+  <string>
+    <id>1406024</id>
+    <name>STR_MSG_LDF5a_Assembly_Key_01</name>
+    <body>You used a Red Crystal Key and are now entering the Unstable Hall of Knowledge.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406025</id>
+    <name>STR_MSG_LDF5a_Assembly_Key_02</name>
+    <body>You need the Yellow Crystal Key to open the box.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406026</id>
+    <name>STR_MSG_LDF5a_Assembly_Key_03</name>
+    <body>You need the Green Crystal Key to open the box.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406027</id>
+    <name>STR_MSG_LDF5a_Assembly_Key_04</name>
+    <body>You need the Blue Crystal Key to open the box.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406028</id>
+    <name>STR_MSG_LDF5a_Assembly_Key_05</name>
+    <body>You need the Violet Crystal Key to open the box.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406029</id>
+    <name>STR_MSG_LF4_Dreadgion_01</name>
+    <body>The Prahma Dredgion has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406030</id>
+    <name>STR_MSG_LF4_Dreadgion_02</name>
+    <body>The Prahma Dredgion has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406031</id>
+    <name>STR_MSG_LF4_Dreadgion_03</name>
+    <body>The Prahma Dredgion has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406032</id>
+    <name>STR_MSG_LF4_Dreadgion_04</name>
+    <body>A tunnel to the Prahma Dredgion has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406033</id>
+    <name>STR_MSG_LF4_Dreadgion_05</name>
+    <body>A tunnel to the Prahma Dredgion has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406034</id>
+    <name>STR_MSG_LF4_Dreadgion_06</name>
+    <body>A tunnel to the Prahma Dredgion has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406035</id>
+    <name>STR_MSG_LF4_Dreadgion_07</name>
+    <body>The Prahma Dredgion is beating a retreat.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406036</id>
+    <name>STR_MSG_LF4_Dreadgion_08</name>
+    <body>The Prahma Dredgion is beating a retreat.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406037</id>
+    <name>STR_MSG_LF4_Dreadgion_09</name>
+    <body>The Prahma Dredgion is beating a retreat.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406038</id>
+    <name>STR_MSG_LF4_V01_01</name>
+    <body>The 1st Wisplight Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406039</id>
+    <name>STR_MSG_LF4_V01_02</name>
+    <body>An Assassin appeared at the 1st Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406040</id>
+    <name>STR_MSG_LF4_V01_03</name>
+    <body>The 1st Wisplight Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406041</id>
+    <name>STR_MSG_LF4_V01_04</name>
+    <body>The Balaur have conquered the 1st Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406042</id>
+    <name>STR_MSG_LF4_V02_01</name>
+    <body>The 2nd Wisplight Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406043</id>
+    <name>STR_MSG_LF4_V02_02</name>
+    <body>An Assassin appeared at the 2nd Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406044</id>
+    <name>STR_MSG_LF4_V02_03</name>
+    <body>The 2nd Wisplight Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406045</id>
+    <name>STR_MSG_LF4_V02_04</name>
+    <body>The Balaur have conquered the 2nd Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406046</id>
+    <name>STR_MSG_LF4_V03_01</name>
+    <body>The 3rd Wisplight Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406047</id>
+    <name>STR_MSG_LF4_V03_02</name>
+    <body>An Assassin appeared at the 3rd Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406048</id>
+    <name>STR_MSG_LF4_V03_03</name>
+    <body>The 3rd Wisplight Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406049</id>
+    <name>STR_MSG_LF4_V03_04</name>
+    <body>The Balaur have conquered the 3rd Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406050</id>
+    <name>STR_MSG_LF4_V04_01</name>
+    <body>The 4th Wisplight Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406051</id>
+    <name>STR_MSG_LF4_V04_02</name>
+    <body>An Assassin appeared at the 4th Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406052</id>
+    <name>STR_MSG_LF4_V04_03</name>
+    <body>The 4th Wisplight Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406053</id>
+    <name>STR_MSG_LF4_V04_04</name>
+    <body>The Balaur have conquered the 4th Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406054</id>
+    <name>STR_MSG_LF4_V05_01</name>
+    <body>The 5th Wisplight Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406055</id>
+    <name>STR_MSG_LF4_V05_02</name>
+    <body>An Assassin appeared at the 5th Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406056</id>
+    <name>STR_MSG_LF4_V05_03</name>
+    <body>The 5th Wisplight Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406057</id>
+    <name>STR_MSG_LF4_V05_04</name>
+    <body>The Balaur have conquered the 5th Wisplight Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406058</id>
+    <name>STR_MSG_DF4_Dreadgion_01</name>
+    <body>The Prahma Dredgion has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406059</id>
+    <name>STR_MSG_DF4_Dreadgion_02</name>
+    <body>The Prahma Dredgion has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406060</id>
+    <name>STR_MSG_DF4_Dreadgion_03</name>
+    <body>The Prahma Dredgion has appeared.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406061</id>
+    <name>STR_MSG_DF4_Dreadgion_04</name>
+    <body>A tunnel to the Prahma Dredgion has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406062</id>
+    <name>STR_MSG_DF4_Dreadgion_05</name>
+    <body>A tunnel to the Prahma Dredgion has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406063</id>
+    <name>STR_MSG_DF4_Dreadgion_06</name>
+    <body>A tunnel to the Prahma Dredgion has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406064</id>
+    <name>STR_MSG_DF4_Dreadgion_07</name>
+    <body>The Prahma Dredgion is beating a retreat.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406065</id>
+    <name>STR_MSG_DF4_Dreadgion_08</name>
+    <body>The Prahma Dredgion is beating a retreat.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406066</id>
+    <name>STR_MSG_DF4_Dreadgion_09</name>
+    <body>The Prahma Dredgion is beating a retreat.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406067</id>
+    <name>STR_MSG_DF4_V01_01</name>
+    <body>The 1st Fatebound Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406068</id>
+    <name>STR_MSG_DF4_V01_02</name>
+    <body>An Assassin has appeared at the 1st Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406069</id>
+    <name>STR_MSG_DF4_V01_03</name>
+    <body>The 1st Fatebound Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406070</id>
+    <name>STR_MSG_DF4_V01_04</name>
+    <body>The Balaur have conquered the 1st Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406071</id>
+    <name>STR_MSG_DF4_V02_01</name>
+    <body>The 2nd Fatebound Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406072</id>
+    <name>STR_MSG_DF4_V02_02</name>
+    <body>An Assassin has appeared at the 2nd Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406073</id>
+    <name>STR_MSG_DF4_V02_03</name>
+    <body>The 2nd Fatebound Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406074</id>
+    <name>STR_MSG_DF4_V02_04</name>
+    <body>The Balaur have conquered the 2nd Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406075</id>
+    <name>STR_MSG_DF4_V03_01</name>
+    <body>The 3rd Fatebound Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406076</id>
+    <name>STR_MSG_DF4_V03_02</name>
+    <body>An Assassin has appeared at the 3rd Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406077</id>
+    <name>STR_MSG_DF4_V03_03</name>
+    <body>The 3rd Fatebound Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406078</id>
+    <name>STR_MSG_DF4_V03_04</name>
+    <body>The Balaur have conquered the 3rd Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406079</id>
+    <name>STR_MSG_DF4_V04_01</name>
+    <body>The 4th Fatebound Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406080</id>
+    <name>STR_MSG_DF4_V04_02</name>
+    <body>An Assassin has appeared at the 4th Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406081</id>
+    <name>STR_MSG_DF4_V04_03</name>
+    <body>The 4th Fatebound Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406082</id>
+    <name>STR_MSG_DF4_V04_04</name>
+    <body>The Balaur have conquered the 4th Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406083</id>
+    <name>STR_MSG_DF4_V05_01</name>
+    <body>The 5th Fatebound Garrison has been conquered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406084</id>
+    <name>STR_MSG_DF4_V05_02</name>
+    <body>An Assassin has appeared at the 5th Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406085</id>
+    <name>STR_MSG_DF4_V05_03</name>
+    <body>The 5th Fatebound Garrison has been destroyed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406086</id>
+    <name>STR_MSG_DF4_V05_04</name>
+    <body>The Balaur have conquered the 5th Fatebound Garrison.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406087</id>
+    <name>STR_MSG_DF4_Colosseum_01</name>
+    <body>The entrance to the Gelkmaros Arena has opened.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406088</id>
+    <name>STR_MSG_DF4_Colosseum_02</name>
+    <body>The battle in the Gelkmaros Arena will start in 5 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406089</id>
+    <name>STR_MSG_DF4_Colosseum_03</name>
+    <body>The battle in the Gelkmaros Arena will start in 4 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406090</id>
+    <name>STR_MSG_DF4_Colosseum_04</name>
+    <body>The battle in the Gelkmaros Arena will start in 3 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406091</id>
+    <name>STR_MSG_DF4_Colosseum_05</name>
+    <body>The battle in the Gelkmaros Arena will start in 2 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406092</id>
+    <name>STR_MSG_DF4_Colosseum_06</name>
+    <body>The battle in the Gelkmaros Arena will start in 1 minute.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406093</id>
+    <name>STR_MSG_DF4_Colosseum_07</name>
+    <body>The battle in the Gelkmaros Arena has begun.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406094</id>
+    <name>STR_MSG_DF4_Colosseum_08</name>
+    <body>The Gelkmaros Arena Treasure Chest will appear soon.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406095</id>
+    <name>STR_MSG_DF4_Colosseum_09</name>
+    <body>The Gelkmaros Arena Treasure Chest has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406096</id>
+    <name>STR_MSG_DF4_Colosseum_10</name>
+    <body>The Gelkmaros Arena will close in 10 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406097</id>
+    <name>STR_MSG_DF4_Colosseum_11</name>
+    <body>The Gelkmaros Arena will close in 5 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406098</id>
+    <name>STR_MSG_DF4_Colosseum_12</name>
+    <body>The Gelkmaros Arena will close in 4 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406099</id>
+    <name>STR_MSG_DF4_Colosseum_13</name>
+    <body>The Gelkmaros Arena will close in 3 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406100</id>
+    <name>STR_MSG_DF4_Colosseum_14</name>
+    <body>The Gelkmaros Arena will close in 2 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406101</id>
+    <name>STR_MSG_DF4_Colosseum_15</name>
+    <body>The Gelkmaros Arena will close in 1 minute.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406102</id>
+    <name>STR_MSG_LF4_Colosseum_01</name>
+    <body>The entrance to the Inggison Arena has opened.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406103</id>
+    <name>STR_MSG_LF4_Colosseum_02</name>
+    <body>The battle in the Inggison Arena will start in 5 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406104</id>
+    <name>STR_MSG_LF4_Colosseum_03</name>
+    <body>The battle in the Inggison Arena will start in 4 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406105</id>
+    <name>STR_MSG_LF4_Colosseum_04</name>
+    <body>The battle in the Inggison Arena will start in 3 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406106</id>
+    <name>STR_MSG_LF4_Colosseum_05</name>
+    <body>The battle in the Inggison Arena will start in 2 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406107</id>
+    <name>STR_MSG_LF4_Colosseum_06</name>
+    <body>The battle in the Inggison Arena will start in 1 minute.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406108</id>
+    <name>STR_MSG_LF4_Colosseum_07</name>
+    <body>The battle in the Inggison Arena has begun.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406109</id>
+    <name>STR_MSG_LF4_Colosseum_08</name>
+    <body>The Inggison Arena Treasure Chest will appear soon.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406110</id>
+    <name>STR_MSG_LF4_Colosseum_09</name>
+    <body>The Inggison Arena Treasure Chest has appeared.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406111</id>
+    <name>STR_MSG_LF4_Colosseum_10</name>
+    <body>The Inggison Arena will close in 10 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406112</id>
+    <name>STR_MSG_LF4_Colosseum_11</name>
+    <body>The Inggison Arena will close in 5 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406113</id>
+    <name>STR_MSG_LF4_Colosseum_12</name>
+    <body>The Inggison Arena will close in 4 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406114</id>
+    <name>STR_MSG_LF4_Colosseum_13</name>
+    <body>The Inggison Arena will close in 3 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406115</id>
+    <name>STR_MSG_LF4_Colosseum_14</name>
+    <body>The Inggison Arena will close in 2 minutes.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406116</id>
+    <name>STR_MSG_LF4_Colosseum_15</name>
+    <body>The Inggison Arena will close in 1 minute.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406117</id>
+    <name>STR_MSG_Aion_Event_Start</name>
+    <body>The Label Competition is starting!</body>
+    <message_type>15</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406118</id>
+    <name>STR_MSG_Aion_Event_End_L</name>
+    <body>The winner of this Label Competition: the Elyos!</body>
+    <message_type>15</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406119</id>
+    <name>STR_MSG_Aion_Event_End_D</name>
+    <body>The winner of this Label Competition: the Asmodians!</body>
+    <message_type>15</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406120</id>
+    <name>STR_MSG_Aion_Event_End_Draw</name>
+    <body>The winner of this Label Competition: undecided!</body>
+    <message_type>15</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406121</id>
+    <name>STR_MSG_Aion_Event_ing_Win_L</name>
+    <body>The Elyos are ahead! Asmodians, give it your best effort!</body>
+    <message_type>17</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406122</id>
+    <name>STR_MSG_Aion_Event_ing_Win_D</name>
+    <body>The Asmodians are ahead! Elyos, give it your best effort!</body>
+    <message_type>17</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406123</id>
+    <name>STR_MSG_Aion_Event_ing_Draw</name>
+    <body>Neck and neck, the tension is rising! Elyos or Asmodians, who will be victorious?</body>
+    <message_type>17</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406124</id>
+    <name>STR_MSG_Fortress_Lugbug_Request_NPC</name>
+    <body>Talk to Lugbug at the fortress and recover all of your HP and MP!</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406125</id>
+    <name>STR_MSG_ITEM_ENCHANT_CONTAMINATION</name>
+    <body>%0 is contaminated and cannot be enchanted.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406126</id>
+    <name>STR_POPUP_ADDFEXP_USE_ITEM_CONFIRM</name>
+    <body>&lt;p&gt;Use &lt;font color="00CCCC"&gt;%0&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;to receive a total of &lt;font color="00CCCC"&gt;%1%num2 glory points&lt;/font&gt;.&lt;/p&gt;
+&lt;p&gt;Do you want to use &lt;font color="00CCCC"&gt;%0%&lt;/font&gt;?&lt;/p&gt;</body>
+    <message_type>53</message_type>
+    <display_type>4</display_type>
+  </string>
+  <string>
+    <id>1406127</id>
+    <name>STR_MSG_ITEM_ENCHANT_CONTAMINATION_DEF</name>
+    <body>%0 is no longer contaminated and has been enchanted to level %1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406128</id>
+    <name>STR_MSG_ITEM_ENCHANT_S_PURIFICATION_SUCCEEDED</name>
+    <body>The full clean of %0 was successful, polishing is now possible. The contamination will be removed after 3 successful polishing attempts.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406129</id>
+    <name>STR_MSG_ATREIA_Event_victory_flag_L_01</name>
+    <body>An Agent Insignia is required.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406130</id>
+    <name>STR_MSG_ATREIA_Event_victory_flag_D_01</name>
+    <body>An Agent Insignia is required.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406131</id>
+    <name>STR_CAN_NOT_BUY_FAME_LEVEL</name>
+    <body>The glory conditions have not been met. You cannot make a purchase.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406132</id>
+    <name>STR_GET_FEXP2</name>
+    <body>You gained %num0 glory from %1.</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1406133</id>
+    <name>STR_MSG_event_2019_dday_01</name>
+    <body>This is your moment! Let the games begin!</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+    <ment>score_alert_30s_fix</ment>
+  </string>
+  <string>
+    <id>1406134</id>
+    <name>STR_MSG_event_2019_dec_01</name>
+    <body>It sounds like the swift footsteps of Shugo delivery agent Henchinerk.</body>
+    <message_type>15</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406135</id>
+    <name>STR_MSG_event_2019_dec_02</name>
+    <body>The unmasked traitor has appeared.</body>
+    <message_type>15</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406136</id>
+    <name>STR_POPUP_ADDFEXP_USE_ITEM_OVERCHARGE</name>
+    <body>&lt;p align="CENTER"&gt;Using it exceeds the maximum number of glory points. The excess points will be deleted.&lt;/p&gt;
+&lt;p align="CENTER"&gt;(%num1/%num2)&lt;/p&gt;&lt;br&gt;
+&lt;p align="CENTER"&gt;Do you want to use &lt;font color="00CCCC"&gt;%3%&lt;/font&gt;?&lt;/p&gt;</body>
+    <message_type>53</message_type>
+    <display_type>4</display_type>
+  </string>
+  <string>
+    <id>1406137</id>
+    <name>STR_POPUP_ADDFEXP_USE_ITEM_FULL</name>
+    <body>You have already reached the highest glory level.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406138</id>
+    <name>STR_MSG_ITEM_ENCHANT_OP_ODIAN_BLESS_SUCCEEDED</name>
+    <body>The +%1 expansion with blessing slot with the option of a %0 Odian enchantment was successful.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406139</id>
+    <name>STR_MSG_ITEM_ENCHANT_OP_RUNE_BLESS_SUCCEEDED</name>
+    <body>The +%1 expansion with blessing slot with the option of a %0 rune enchantment was successful.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406140</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANT_ITEM</name>
+    <body>%0 cannot be cleaned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406141</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANT_NORMAL</name>
+    <body>%0 can only be used on contaminated items.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406142</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANT_USE_TOOLITEM</name>
+    <body>%0 is an item that can't be cleaned into %1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406143</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANT_SEAL</name>
+    <body>Sealed items cannot be cleaned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406144</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANT_UNIDENTIFIED</name>
+    <body>Unidentified items cannot be cleaned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406145</id>
+    <name>STR_MSG_ITEM_ENCHANT_PURIFICATION_CANT_PACKING</name>
+    <body>Wrapped items cannot be cleaned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406146</id>
+    <name>STR_MSG_ITEM_ENCHANT_MOUNT_CANT_ITEM</name>
+    <body>There is no slot available for enchanting %0.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406147</id>
+    <name>STR_MSG_IDUnite_legion_01</name>
+    <body>The battle is starting.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406148</id>
+    <name>STR_MSG_IDUnite_legion_02</name>
+    <body>The Snuwa slaves are at large.</body>
+    <message_type>17</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406149</id>
+    <name>STR_MSG_IDUnite_legion_03</name>
+    <body>The battle is over.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406150</id>
+    <name>STR_MSG_IDUnite_legion_04</name>
+    <body>Temporary Legion 4</body>
+    <message_type>17</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406151</id>
+    <name>STR_MSG_IDUnite_legion_05</name>
+    <body>Temporary Legion 5</body>
+    <message_type>17</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406152</id>
+    <name>STR_MSG_ITEM_ENCHANT_COMPOUND_RESOURCE_FAIL</name>
+    <body>This item cannot be registered for fusion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406153</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_FAIL_SEAL</name>
+    <body>Sealed items cannot be polished.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406154</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_FAIL_UNIDENTIFIED</name>
+    <body>Unidentified items cannot be polished.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406155</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_FAIL_PACKING</name>
+    <body>Wrapped items cannot be polished.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406156</id>
+    <name>STR_MSG_LF4_Dreadgion_10</name>
+    <body>The Prahma Dredgion is about to explode. Get yourself to safety quickly.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406157</id>
+    <name>STR_MSG_LF4_Dreadgion_11</name>
+    <body>Temporary Message</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406158</id>
+    <name>STR_MSG_LF4_Dreadgion_12</name>
+    <body>Temporary Message</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406159</id>
+    <name>STR_MSG_DF4_Dreadgion_10</name>
+    <body>The Prahma Dredgion is about to explode. Get yourself to safety quickly.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406160</id>
+    <name>STR_MSG_DF4_Dreadgion_11</name>
+    <body>Temporary Message</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406161</id>
+    <name>STR_MSG_DF4_Dreadgion_12</name>
+    <body>Temporary Message</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406162</id>
+    <name>STR_MSG_DF4_Colosseum_16</name>
+    <body>The arena will explode soon. Pull back before it does.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406163</id>
+    <name>STR_MSG_LF4_Colosseum_16</name>
+    <body>The arena will explode soon. Pull back before it does.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406164</id>
+    <name>STR_MSG_ITEM_ENCHANT_COMPOUND_CANCEL</name>
+    <body>The fusion of %0 and %1 was cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406165</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_ODIAN_CANCEL</name>
+    <body>The Odian enchantment for %0 was cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406166</id>
+    <name>STR_MSG_ITEM_ENCHANT_EQ_RUNE_CANCEL</name>
+    <body>The rune enchantment of %0 has been cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406167</id>
+    <name>STR_MSG_ENCHANT_ITEM_SUCCEEDED_DESTRUCTION</name>
+    <body>%0 has successfully enchanted %1 to level %2.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406168</id>
+    <name>STR_MSG_GUILD_CHAT_ERROR01</name>
+    <body>An error has occurred in the legion chat. (%0)</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406170</id>
+    <name>STR_MSG_AUTO_CHARGE_ABSOLUTEFAMEPOINT_END</name>
+    <body>Automatic recharging of %0 will end.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406171</id>
+    <name>STR_MSG_CANT_AUTO_CHARGE_ABSOLUTEFAMEPOINT_START</name>
+    <body>Cannot be carried out as you do not have an item for restoring %0%.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406172</id>
+    <name>STR_MSG_event_2019_dec_03</name>
+    <body>Shugo delivery agent Henchinerk's steps retreat again.</body>
+    <message_type>15</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406173</id>
+    <name>STR_MSG_v75_FieldDrop_Event_01</name>
+    <body>Merorinerk calls for Meririnerk.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406174</id>
+    <name>STR_MSG_v75_FieldDrop_Event_02</name>
+    <body>Meririnerk will arrive soon.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406175</id>
+    <name>STR_MSG_v75_FieldDrop_Event_03</name>
+    <body>Meririnerk has arrived!</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1406176</id>
+    <name>STR_MSG_v75_FieldDrop_Event_04</name>
+    <body>Exchange Meluna for gifts in the Inggison Illusion Fortress.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406177</id>
+    <name>STR_MSG_v75_FieldDrop_Event_05</name>
+    <body>Exchange Meluna for gifts in the Gelkmaros Fortress.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406178</id>
+    <name>STR_MSG_CHARGE_ABSOLUTEFAMEPOINT</name>
+    <body>The Elim energy has been charged. Amount: %0%%.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406179</id>
+    <name>STR_MSG_ABSOLUTEFAMEPOINT_BONUS_BOOST_ON</name>
+    <body>The Elim energy is more than %0%%. The glory points effect has been activated.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406180</id>
+    <name>STR_MSG_ABSOLUTEFAMEPOINT_BONUS_BOOST_OFF</name>
+    <body>The Elim energy is less than %0%%. The glory points effect has been deactivated.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406181</id>
+    <name>STR_GET_FEXP3</name>
+    <body>You gained %num0 glory from %1 (Elim energy %num2).</body>
+    <message_type>75</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1406259</id>
+    <name>STR_MSG_ITEM_SLOT_ODIAN_RESTORE_CANCEL</name>
+    <body>The Odian slot reset for %0 has been cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406260</id>
+    <name>STR_MSG_ITEM_SLOT_RUNE_RESTORE_CANCEL</name>
+    <body>The rune slot reset for %0 has been cancelled.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406261</id>
+    <name>STR_MSG_ITEM_SLOT_ODIAN_RESTORE_DONE</name>
+    <body>The Odian slot for %0 has been reset.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406262</id>
+    <name>STR_MSG_ITEM_SLOT_RUNE_RESTORE_DONE</name>
+    <body>The rune slot for %0 has been reset.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406263</id>
+    <name>STR_MSG_ITEM_SLOT_RESTORE_OCCUPIED_CANT_TOOLITEM</name>
+    <body>%0 cannot be used on equipment with enchanted slots.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406264</id>
+    <name>STR_MSG_ITEM_SLOT_RESTORE_ODIAN_CANT_TOOLITEM</name>
+    <body>%1 cannot be used on %0.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406265</id>
+    <name>STR_MSG_CANNOT_USE_SLOT_RESTORE_ITEM_NOW</name>
+    <body>You cannot use %0 while in this state.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
   </string>
 </strings>

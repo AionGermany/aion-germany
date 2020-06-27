@@ -577,6 +577,11 @@
     <body>The price of the item offered is &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt;. A registration fee of &lt;font font_xml="v3_msgbox_money"&gt;%qina1&lt;/font&gt; will be paid. The fee of &lt;font font_xml="v3_msgbox_money"&gt;%qina2&lt;/font&gt; will be deducted from the sale price for a successful sale. The estimated end amount is &lt;font font_xml="v3_msgbox_money"&gt;%qina3&lt;/font&gt;. Do you want to go ahead and make this offer?</body>
   </string>
   <string>
+    <id>160035</id>
+    <name>STR_VENDOR_CONFIRM_SELL_QUNA</name>
+    <body>The price of the item offered is %quna0 %qunaname. A registration fee of %qina0 will be paid. The fee of %quna1 %qunaname will be deducted from the sale price for a successful sale. The estimated end amount is %quna2 %qunaname. Do you want to go ahead and make this offer?</body>
+  </string>
+  <string>
     <id>230000</id>
     <name>STR_CMD_GUILD_INVITE</name>
     <body>/InvitetoLegion,[%chatcmd:/ginvite]</body>
@@ -3803,7 +3808,7 @@
   <string>
     <id>900328</id>
     <name>STR_SKILL_CONDITION</name>
-    <body>%0 can be used when equipped</body>
+    <body>%0 required</body>
   </string>
   <string>
     <id>900329</id>
@@ -10612,7 +10617,7 @@ You can contact us any time on the official website www.aionfreetoplay.com to fi
   <string>
     <id>901709</id>
     <name>STR_CHARGE_CASH_WEB_PAGE</name>
-    <body>https://en.aion.gameforge.com/?link=ingame</body>
+    <body>https://en.web.pts.aion.gameforge.com/website/shop/?link=ingame</body>
   </string>
   <string>
     <id>901710</id>
@@ -16595,14 +16600,10 @@ at the %0 Starting Point.&lt;/p&gt;</body>
   <string>
     <id>903282</id>
     <name>STR_INSTANCE_DUNGEON_PARTY_MATCH_DESC</name>
-    <body>&lt;p&gt;&lt;font color="FFCC00"&gt;[New Group/Alliance Access]&lt;/font&gt; Allows you to firstly create a new group/alliance and then enter the instance.&lt;/p&gt;&lt;p&gt;&lt;font color="FFCC00"&gt;[Quick Group/Alliance Access]&lt;/font&gt; Search for individual players with requests to join and also for existing groups/alliances that allow you to enter the instance more quickly. This type of search expires after a period of time.&lt;/p&gt;
+    <body>&lt;p&gt;&lt;font color="FFCC00"&gt;[New Group/Alliance Access]&lt;/font&gt; Allows you to create a new group/alliance and then enter the instance.&lt;/p&gt;&lt;p&gt;&lt;font color="FFCC00"&gt;[Quick Group/Alliance Access]&lt;/font&gt; Search for individual players with requests to join and also for existing groups/alliances that allow you to enter the instance more quickly. This type of search expires after a period of time.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font color="FFCC00"&gt;[Area for Join Requests/Access to Growth Zone]&lt;/font&gt;&lt;/p&gt;
-&lt;p&gt;▶ Fire Temple: Level 31-39&lt;/p&gt;
-&lt;p&gt;▶ Esoterrace: Level 40-48&lt;/p&gt;
-&lt;p&gt;▶ Beshmundir's Temple: Level 49-57&lt;/p&gt;
-&lt;p&gt;▶ Rentus Base: Level 58-66&lt;/p&gt;
-&lt;p&gt;▶ Tiamat's Fortress: Level 67-75&lt;/p&gt;
+&lt;p&gt;&lt;font color="FFCC00"&gt;[Area for Entry Requests/Access to Growth Zone]&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;▶ Fire Temple: Level 43-55&lt;/p&gt;
 &lt;p&gt;※ If the entry options for an instance are limited after levelling up, you can form a group directly by the entrance to the instance and then enter it.&lt;/p&gt;</body>
   </string>
   <string>
@@ -29998,7 +29999,7 @@ To use again, please activate the cabinet or the inventory.\n</body>
   <string>
     <id>905951</id>
     <name>STR_TOOLTIP_PORTAL_NAME_CHAOS_DIRECT_PORTAL</name>
-    <body>Chaos Rift</body>
+    <body>Mystery Rift</body>
   </string>
   <string>
     <id>905952</id>
@@ -30038,7 +30039,7 @@ To use again, please activate the cabinet or the inventory.\n</body>
   <string>
     <id>905959</id>
     <name>STR_ASK_PASS_BY_CHAOS_DIRECT_PORTAL</name>
-    <body>Would you like to travel through the Chaos Rift?</body>
+    <body>Do you want to teleport through the Mystery Rift?</body>
   </string>
   <string>
     <id>905960</id>
@@ -31560,66 +31561,67 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>906255</id>
     <name>STR_ABYSS_OP_BENEFIT_1</name>
-    <body>&lt;p&gt;Kysis Fortress Invasion Corridor&lt;/p&gt; &lt;p&gt;[Elyos] Signia Corridor, Esterra Canyon&lt;/p&gt; &lt;p&gt;[Asmodians] Vengar Corridor, Nosra Canyon&lt;/p&gt;</body>
+    <body>&lt;p&gt;Kysis Fortress Invasion Corridor appears&lt;/p&gt;</body>
   </string>
   <string>
     <id>906256</id>
     <name>STR_ABYSS_OP_BENEFIT_2</name>
     <body>&lt;font color="ff0000"&gt;Contains all benefits of Level 1 Landing Sites&lt;/font&gt;
-&lt;p&gt;Reinforcement Vice Captain appears and awards additional quests&lt;/p&gt;
-&lt;p&gt;Consumable Item Distributor appears&lt;/p&gt;
-&lt;p&gt;Krotan Refuge Invasion Corridor appears&lt;/p&gt;
-&lt;p&gt;Miren Fortress Invasion Corridor appears&lt;/p&gt;
-&lt;p&gt;[Elyos] Sanctum Corridor appears&lt;/p&gt;
-&lt;p&gt;[Asmodian] Pandaemonium Corridor appears&lt;/p&gt;</body>
+&lt;p&gt;Miren Fortress Invasion Corridor appears&lt;/p&gt;</body>
   </string>
   <string>
     <id>906257</id>
     <name>STR_ABYSS_OP_BENEFIT_3</name>
-    <body>&lt;font color="ff0000"&gt;Contains all the benefits of Level 2 Landing Sites&lt;/font&gt; &lt;p&gt;Flight Energy appears, which helps to restore flight time&lt;/p&gt; &lt;p&gt;Merchants for crafting materials, designs and consumable items as well as one distributor appear&lt;/p&gt; &lt;p&gt;Akaron Corridor and Kaldor appear&lt;/p&gt;</body>
+    <body>&lt;font color="ff0000"&gt;Contains all benefits of Level 2 Landing Sites&lt;/font&gt;
+&lt;p&gt;Consumables Merchant appears&lt;/p&gt;
+&lt;p&gt;Krotan Refuge Invasion Corridor appears&lt;/p&gt;
+&lt;p&gt;[Elyos] Inggison Corridor appears&lt;/p&gt;
+&lt;p&gt;[Asmodian] Gelkmaros Corridor appears&lt;/p&gt;</body>
   </string>
   <string>
     <id>906258</id>
     <name>STR_ABYSS_OP_BENEFIT_4</name>
     <body>&lt;font color="ff0000"&gt;Contains all benefits of Level 3 Landing Sites&lt;/font&gt;
 &lt;p&gt;Life Energy appears, which increases the maximum HP&lt;/p&gt;
-&lt;p&gt;Reinforcement soldier appears for Garrisons 60 to 65&lt;/p&gt;
-&lt;p&gt;Consumables merchant (Insignias of Honour) appears&lt;/p&gt;
-&lt;p&gt;A Relic Administrator appears&lt;/p&gt;
-&lt;p&gt;Entry assistant for the Rift of Oblivion appears&lt;/p&gt;</body>
+&lt;p&gt;Landing Site Reinforcements appear for Garrisons 60 to 65&lt;/p&gt;
+&lt;p&gt;Administrator for Special Consumables appears&lt;/p&gt;</body>
   </string>
   <string>
     <id>906259</id>
     <name>STR_ABYSS_OP_BENEFIT_5</name>
     <body>&lt;font color="ff0000"&gt;Contains all benefits of Level 4 Landing Sites&lt;/font&gt;
-&lt;p&gt;Materials for Magical Crafting and a Flux seller appear&lt;/p&gt;
-&lt;p&gt;Energy of the Final Battle appears and increases Attack&lt;/p&gt;
-&lt;p&gt;Entry Assistant for the Elemental Lord's Laboratory appears&lt;/p&gt;
-&lt;p&gt;Entry Assistant for the Adma Ruins appears&lt;/p&gt;
-&lt;p&gt;Entry number increased by 1 for the Rift of Oblivion&lt;/p&gt;</body>
+&lt;p&gt;Energy of the Final Battle appears and increases attack power&lt;/p&gt;
+&lt;p&gt;Enchantment Assistant for PvP quest appears&lt;/p&gt;
+&lt;p&gt;Entry Assistant for Ara Infernalia appears&lt;/p&gt;
+&lt;p&gt;Entry Scroll for Prometun's Workshop (difficult)&lt;/p&gt;
+&lt;p&gt;Entry Assistant for Makarna of Bitterness (difficult) appears&lt;/p&gt;
+&lt;p&gt;Entry Assistant for Kubrinerk's Monster Cube Laboratory appears&lt;/p&gt;</body>
   </string>
   <string>
     <id>906260</id>
     <name>STR_ABYSS_OP_BENEFIT_6</name>
     <body>&lt;font color="ff0000"&gt;Contains all benefits of Level 5 Landing Sites&lt;/font&gt;
-&lt;p&gt;Reinforcement soldier appears for Garrisons 50 to 55&lt;/p&gt;
-&lt;p&gt;Equipment Merchant (Insignias of Honour) appears&lt;/p&gt;
-&lt;p&gt;Entry Assistant for Arkhal's Hideout appears&lt;/p&gt;
-&lt;p&gt;Increases entry number for Elemental Lord's Laboratory by 2&lt;/p&gt;
-&lt;p&gt;Increases entry number for Adma Ruins by 2&lt;/p&gt;</body>
+&lt;p&gt;Armour Steward for Encircling Battle Equipment appears&lt;/p&gt;
+&lt;p&gt;Increases entry number for Ara Infernalia (easy/normal) by 1&lt;/p&gt;
+&lt;p&gt;Increases entry number for Prometun's Workshop (difficult) by 1&lt;/p&gt;
+&lt;p&gt;Increases entry number for Makarna of Bitterness (difficult) by 1&lt;/p&gt;
+&lt;p&gt;Increases entry number for Kubrinerk’s Monster Cube Laboratory by 1&lt;/p&gt;</body>
   </string>
   <string>
     <id>906261</id>
     <name>STR_ABYSS_OP_BENEFIT_7</name>
     <body>&lt;font color="ff0000"&gt;Contains all benefits of Level 6 Landing Sites&lt;/font&gt;
-&lt;p&gt;Greater DP enhancer appears&lt;/p&gt;
-&lt;p&gt;Entry Assistant for the Kroban Base appears&lt;/p&gt;
-&lt;p&gt;Entry number increased by 3 for Arkhal's Hideout&lt;/p&gt;</body>
+&lt;p&gt;Weapons Merchant for Encircling Battle Equipment appears&lt;/p&gt;
+&lt;p&gt;Increases entry number for Kysis War Fortress by 1&lt;/p&gt;
+&lt;p&gt;Increases entry number for Miren War Fortress by 1&lt;/p&gt;
+&lt;p&gt;Increases entry number for Krotan War Fortress by 1&lt;/p&gt;</body>
   </string>
   <string>
     <id>906262</id>
     <name>STR_ABYSS_OP_BENEFIT_8</name>
-    <body>&lt;font color="ff0000"&gt;Contains all the benefits of Level 7 Landing Sites&lt;/font&gt; &lt;p&gt;Reinforcement soldier for Garrisons 56 to 59 appears&lt;/p&gt; &lt;p&gt;Greater Augmenter appears&lt;/p&gt; &lt;p&gt;Entry number increased by 3 for the Kroban Base&lt;/p&gt; &lt;p&gt;Entry number increased by 4 for the Library of Knowledge&lt;/p&gt; &lt;p&gt;Entry number increased by 4 for the Garden of Knowledge&lt;/p&gt;</body>
+    <body>&lt;font color="ff0000"&gt;Contains all benefits of Level 7 Landing Sites&lt;/font&gt;
+&lt;p&gt;Landing Site Reinforcements appear for Garrisons 56 to 59&lt;/p&gt;
+&lt;p&gt;Administrator for Special Consumables appears&lt;/p&gt;</body>
   </string>
   <string>
     <id>906263</id>
@@ -32265,7 +32267,7 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>906389</id>
     <name>STR_ENCHANT_PREDICT_ENCHANT_COUNT</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If successful, you will achieve enchantment level %0 &amp;rarr; %1 - %2.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If successful, you will achieve enchantment level %0 &amp;rarr; %1-%2.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>906390</id>
@@ -32280,7 +32282,7 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>906392</id>
     <name>STR_ENCHANT_PREDICT_ENCHANT_WARNING_ABOVE</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the enchantment level will be reduced to level %0.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the enchantment level will be reduced to %0.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>906393</id>
@@ -32345,7 +32347,7 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>906405</id>
     <name>STR_ENCHANT_PREDICT_EXCEED_ENCHANT_WARNING_02</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the enchantment level will be reduced to level %0.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the enchantment level will be reduced to %0.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>906406</id>
@@ -32405,7 +32407,7 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>906417</id>
     <name>STR_ENCHANT_PREDICT_AUTHORIZE_WARNING_FAILED</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If a strike misses, the upgrade level is reduced.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If unsuccessful, the upgrade level is reduced.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>906418</id>
@@ -35923,12 +35925,12 @@ The higher the number, the less powerful the enemy's crit spell.</body>
     <id>907133</id>
     <name>STR_ENCHANT_PREDICT_EQUIPLEVEL_ADJ</name>
     <body>&lt;p&gt;If successful, the level is decreased by 1 to 3 levels.&lt;/p&gt;
-&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the deployed materials are destroyed. The level will not be reduced.&lt;/font&gt;&lt;/p&gt;</body>
+&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the deployed materials are destroyed and the level is not reduced&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>907134</id>
     <name>STR_ENCHANT_PREDICT_EQUIPLEVEL_ADJ_WARNING</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the deployed materials are destroyed. The level will not be reduced.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the deployed materials are destroyed and the level is not reduced&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>907135</id>
@@ -36470,7 +36472,7 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>907243</id>
     <name>STR_ENCHANT_PREDICT_AUTHORIZE_WARNING</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;In the event of a failure, the upgrade level is reduced by 1.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If unsuccessful, the upgrade level is reduced by 1.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>907244</id>
@@ -36945,7 +36947,7 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>907338</id>
     <name>STR_KISK_BATTLEGROUP</name>
-    <body>Kisk for the league leader</body>
+    <body>League Leader Kisk</body>
   </string>
   <string>
     <id>907339</id>
@@ -39164,7 +39166,7 @@ The higher the number, the less powerful the enemy's crit spell.</body>
   <string>
     <id>907789</id>
     <name>STR_ENCHANT_SUB_MATTER_ENCHANT_OPTION_V70</name>
-    <body>&lt;p&gt;&amp;bull;You can use socketing aids to improve the success rate of Manastone Socketing.&lt;/p&gt;</body>
+    <body>&lt;p&gt;&amp;bull;You can increase the chances of success for Manastone socketing with a socketing aid.&lt;/p&gt;&lt;p&gt;&amp;bull;If you attempt Manastone socketing again, the socketing aid only works on the first attempt.&lt;/p&gt;</body>
   </string>
   <string>
     <id>913536</id>
@@ -41945,7 +41947,7 @@ Use &lt;font font_xml = "tooltip_guide_body"&gt;%0 to activate the minion functi
   <string>
     <id>914090</id>
     <name>STR_ENCHANT_PREDICT_ENCHANT_COUNT2</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If successful, you will achieve enchantment level %0 &amp;rarr; %1 - %2.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If successful, you will achieve enchantment level %0 &amp;rarr; %1-%2.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>914091</id>
@@ -41955,7 +41957,7 @@ Use &lt;font font_xml = "tooltip_guide_body"&gt;%0 to activate the minion functi
   <string>
     <id>914092</id>
     <name>STR_ENCHANT_PREDICT_ENCHANT_WARNING_ABOVE2</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the enchantment level will be reduced to level %0.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If it fails, the enchantment level will be reduced to %0.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>914093</id>
@@ -42017,7 +42019,7 @@ Use &lt;font font_xml = "tooltip_guide_body"&gt;%0 to activate the minion functi
   <string>
     <id>914104</id>
     <name>STR_ENCHANT_PREDICT_ENCHANT_OPTIONSLOT_ADD_WARNING</name>
-    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If an attempt fails, the Slot Stone used for the expansion is destroyed.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If unsuccessful, the Slot Stone used for the expanding the Manastone slot is destroyed.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>914105</id>
@@ -42087,7 +42089,7 @@ Use &lt;font font_xml = "tooltip_guide_body"&gt;%0 to activate the minion functi
   <string>
     <id>914119</id>
     <name>STR_RESURRECT_QUNA_DESC</name>
-    <body>Use %quna0 %qunaname to restore your HP and MP. You are resurrected immediately.\nYou do not contract Soul Sickness. You can reset the amount via (holy) soul healing.</body>
+    <body>Use %quna0 %qunaname to restore your HP and MP. You are resurrected immediately.\nThe cost and waiting time for resurrection depend on the number of Lunamon's Rescues.\nThis number can be reset via Soul Healing.</body>
   </string>
   <string>
     <id>914120</id>
@@ -42455,7 +42457,7 @@ Use &lt;font font_xml = "tooltip_guide_body"&gt;%0 to activate the minion functi
   <string>
     <id>914192</id>
     <name>STR_ENCHANT_TOOL_EXTRACT2</name>
-    <body>&lt;p&gt;&amp;bull;You receive additional Slot Stones if you use socketing aids.&lt;/p&gt;</body>
+    <body>&lt;p&gt;&amp;bull;If you use a socketing aid, you'll get a better result.&lt;/p&gt;</body>
   </string>
   <string>
     <id>914193</id>
@@ -44008,12 +44010,12 @@ The higher the number, the lower the power of an attack by a monster.</body>
   <string>
     <id>914505</id>
     <name>STR_INDUN_ITEM_INFO_IDF7_WEAPON</name>
-    <body>Ancient And Legendary Armour, Feathers/Ultimate Shoulder Gear, Fist Guards</body>
+    <body>Ancient and Legendary Armour, Legendary Feathers/Ultimate Shoulder Gear, Fist Guards</body>
   </string>
   <string>
     <id>914506</id>
     <name>STR_INDUN_ITEM_INFO_IDSEAL</name>
-    <body>Ancient and Legendary Weapons, Accessories/Ultimate Leg Protectors, Foot Protectors</body>
+    <body>Legendary Weapons, Accessories/Ultimate Leg Protectors, Foot Protectors</body>
   </string>
   <string>
     <id>914507</id>
@@ -44154,7 +44156,7 @@ The higher the number, the lower the power of an attack by a monster.</body>
   <string>
     <id>914535</id>
     <name>STR_FAMILIAR_COMPOSE_UI_INFO</name>
-    <body>A fusion is only possible if you have four minions at evolution level 4.</body>
+    <body>A fusion requires at least 2 minions of the same class.</body>
   </string>
   <string>
     <id>914536</id>
@@ -44436,20 +44438,17 @@ The higher the number, the lower the power of an attack by a monster.</body>
   <string>
     <id>914592</id>
     <name>STR_ZONE_COMMENT_IDDREADGION_04_REWARD_DESC</name>
-    <body>This is the Ashunatal Dredgion. Keep the opposing faction in check and kill Captain Ashunatal.&lt;/p&gt;
-&lt;p&gt;Main rewards include 'Legendary and Ultimate Etium' and 'Bundle of PvP Enchantment Stones', etc.</body>
+    <body>This is the Ashunatal Dredgion. Keep the opposing faction in check and kill Captain Ashunatal.&lt;/p&gt;</body>
   </string>
   <string>
     <id>914593</id>
     <name>STR_IDLDF5_FORTRESS_RE_MATCH_REWARD_DESC</name>
-    <body>Elyos and Asmodians will face off for a fixed time in this instance. You win if you gain more points than the opposing faction. All enhancing effects are removed when entering the instance.&lt;/p&gt;
-&lt;p&gt;Main rewards include 'Legendary and Ultimate Etium' and 'Bundle of PvP Enchantment Stones', etc.</body>
+    <body>Elyos and Asmodians will face off for a fixed time in this instance. You win if you gain more points than the opposing faction. All enhancing effects are removed when entering the instance.&lt;/p&gt;</body>
   </string>
   <string>
     <id>914594</id>
     <name>STR_IDETERNITY_WAR_REWARD_DESC</name>
-    <body>You win if you use the landing site and gain more points than the opposing faction. All enhancing effects are removed when entering the instance.&lt;/p&gt;
-&lt;p&gt;Main rewards include 'Legendary and Ultimate Etium' and 'Bundle of PvP Enchantment Stones', etc.</body>
+    <body>You win if you use the landing site and gain more points than the opposing faction. All enhancing effects are removed when entering the instance.&lt;/p&gt;</body>
   </string>
   <string>
     <id>914595</id>
@@ -46604,7 +46603,7 @@ Are you sure you want to equip it?</body>
   <string>
     <id>915030</id>
     <name>STR_WEBSERVICE_URL_FILTER</name>
-    <body />
+    <body>aion.plaync.com;kr.plaync.com;pm.plaync.com;</body>
   </string>
   <string>
     <id>915031</id>
@@ -47665,12 +47664,12 @@ But the reward will be suitably large!</body>
   <string>
     <id>915241</id>
     <name>STR_INDUN_ITEM_INFO_IDDF2_Dflame</name>
-    <body>Ancient and Legendary Weapons and Armour/Ancient PvE Enchantment Stones</body>
+    <body>Legendary Weapons and Equipment</body>
   </string>
   <string>
     <id>915242</id>
     <name>STR_INDUN_ITEM_INFO_IDF4Re_Drana</name>
-    <body>Ancient and Legendary Weapons and Armour/Ancient PvE Enchantment Stones</body>
+    <body>Ancient Accessories, Feathers/Legendary Shoulder Gear, Fist Guards</body>
   </string>
   <string>
     <id>915243</id>
@@ -47695,7 +47694,7 @@ But the reward will be suitably large!</body>
   <string>
     <id>915247</id>
     <name>STR_INDUN_ITEM_INFO_IDLDF8_LAB_E</name>
-    <body>Ancient and Legendary Armour, Feathers/Ultimate Jackets, Hair/Ancient PvE Enchantment Stones and Legendary PvE Enchantment Stones</body>
+    <body>Ancient and Legendary Armour, Feathers/Ultimate Shoulder Gear, Fist Guards/Ancient PvE Enchantment Stones, Legendary PvE Enchantment Stones</body>
   </string>
   <string>
     <id>915248</id>
@@ -47855,7 +47854,7 @@ But the reward will be suitably large!</body>
   <string>
     <id>915279</id>
     <name>STR_EVENTMISSION_BANNER_URL_LIVE</name>
-    <body>http://aion.plaync.com/events/ingame-banner</body>
+    <body>https://cmsstatic.aion.gameforge.com/Misc/2019-11-28_AI_Ingame_banner_adjustments_764x110.jpg</body>
   </string>
   <string>
     <id>915280</id>
@@ -48010,7 +48009,7 @@ But the reward will be suitably large!</body>
   <string>
     <id>915310</id>
     <name>STR_INDUN_ITEM_INFO_IDF7_WEAPON_H</name>
-    <body>Light Fragment Earrings, Rings, Belts, Necklace/Ultimate Starlight Anima Stones/Legendary Manastones, Gold Cubelets</body>
+    <body>Light Fragment Earrings, Rings, Belts, Necklace/Ultimate Starlight Anima Stones/Legendary Manastones</body>
   </string>
   <string>
     <id>915311</id>
@@ -48551,6 +48550,56 @@ The higher the number, the more powerful the crit spell.</body>
     <body>Next %0 Contracts</body>
   </string>
   <string>
+    <id>915418</id>
+    <name>STR_Lugbug_event_V70_Hardmode_01</name>
+    <body>[25 Pts/Weekly] No Matter How Tough</body>
+  </string>
+  <string>
+    <id>915419</id>
+    <name>STR_Lugbug_event_V70_Hardmode_02</name>
+    <body>[10 Pts/Weekly] We Can Do It Blindfolded 1</body>
+  </string>
+  <string>
+    <id>915420</id>
+    <name>STR_Lugbug_event_V70_Hardmode_03</name>
+    <body>[15 Pts/Weekly] We Can Do It Blindfolded 2</body>
+  </string>
+  <string>
+    <id>915421</id>
+    <name>STR_Lugbug_event_V70_Hardmode_04</name>
+    <body>[10 Pts/Weekly] We Can Do It Blindfolded 3</body>
+  </string>
+  <string>
+    <id>915422</id>
+    <name>STR_Lugbug_event_V70_Hardmode_05</name>
+    <body>[15 Pts/Weekly] We Can Do It Blindfolded 4</body>
+  </string>
+  <string>
+    <id>915423</id>
+    <name>STR_Lugbug_event_V70_Hardmode_01_DESC</name>
+    <body>&lt;p&gt;Defeat Raging Yarkhan 1x in Prometun's Workshop (difficult).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Raging Yarkhan is the first boss monster that you'll meet in Prometun's Workshop (difficult).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915424</id>
+    <name>STR_Lugbug_event_V70_Hardmode_02_DESC</name>
+    <body>&lt;p&gt;Defeat Ereshkigal's Dragonbound in Prometun's Workshop (difficult) 60 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can enter Prometun's Workshop (difficult) through the &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF7_SZ_F"&gt;Temple of Endorim&lt;/a&gt; in Lakrum.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915425</id>
+    <name>STR_Lugbug_event_V70_Hardmode_03_DESC</name>
+    <body>&lt;p&gt;Defeat Ereshkigal's Dragonbound in Prometun's Workshop (difficult) 120 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can enter Prometun's Workshop (difficult) through the &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF7_SZ_F"&gt;Temple of Endorim&lt;/a&gt; in Lakrum.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915426</id>
+    <name>STR_Lugbug_event_V70_Hardmode_04_DESC</name>
+    <body>&lt;p&gt;Defeat Drakans or Draconutes from the 39th Legion in Prometun's Workshop (difficult) 40 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can enter Prometun's Workshop (difficult) through the &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF7_SZ_F"&gt;Temple of Endorim&lt;/a&gt; in Lakrum.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915427</id>
+    <name>STR_Lugbug_event_V70_Hardmode_05_DESC</name>
+    <body>&lt;p&gt;Defeat Drakans or Draconutes from the 39th Legion in Prometun's Workshop (difficult) 80 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can enter Prometun's Workshop (difficult) through the &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF7_SZ_F"&gt;Temple of Endorim&lt;/a&gt; in Lakrum.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
     <id>915428</id>
     <name>STR_Lugbug_event_V70_AIONFarm_01</name>
     <body>[Daily] First Weeding then Farming!</body>
@@ -48833,7 +48882,7 @@ The higher the number, the more powerful the crit spell.</body>
   <string>
     <id>915484</id>
     <name>STR_TOOLTIP_TotalWorldPlayTime_BODY</name>
-    <body>You can now enter the Abyss Rift. This entry permit disappears when you enter Red Katalam. If the Abyss Rift disappears, you'll be denied entry to Red Katalam or you'll be expelled from Red Katalam.</body>
+    <body>You can now enter the Abyss Rift. This entry permit disappears when you enter Lakrum, Dumaha or Red Katalam. If the Abyss Rift disappears, you'll be denied entry to Lakrum, Dumaha and Red Katalam or you'll be expelled from Lakrum, Dumaha or Red Katalam.</body>
   </string>
   <string>
     <id>915485</id>
@@ -48916,6 +48965,11 @@ The higher the number, the more powerful the crit spell.</body>
     <body>&lt;p&gt;Take out the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_LDF8_RaidMonster_All"&gt;Ancient Creatures&lt;/a&gt; and receive [Event] Ancient Trophy 3 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You'll receive the Ancient Trophy by taking out Ancient Creatures in Dumaha.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
+    <id>915501</id>
+    <name>STR_INDUN_ITEM_INFO_IDSEAL_H</name>
+    <body>Light Fragment Bracelet/Ultimate Starlight Anima Stones/Legendary Manastones</body>
+  </string>
+  <string>
     <id>915502</id>
     <name>STR_Lugbug_Collect_v72_04</name>
     <body>[Katalam] Collection Passion</body>
@@ -48958,12 +49012,12 @@ The higher the number, the more powerful the crit spell.</body>
   <string>
     <id>915510</id>
     <name>STR_INDUN_ITEM_INFO_IDF8_HOUSE_NORMAL</name>
-    <body>Legendary and ultimate weapons /ultimate accessories /ultimate weapon chests crafting designs</body>
+    <body>Ultimate Weapons/Ultimate Accessories/Ultimate Weapon Chest Crafting Designs</body>
   </string>
   <string>
     <id>915511</id>
     <name>STR_INDUN_ITEM_INFO_IDF8_HOUSE_EASY</name>
-    <body>Legendary and ultimate accessories, feathers</body>
+    <body>Legendary Weapons, Accessories/Ultimate Leg Protectors, Foot Protectors</body>
   </string>
   <string>
     <id>915512</id>
@@ -48996,6 +49050,36 @@ The higher the number, the more powerful the crit spell.</body>
     <body>Additional PvE attack is increased by 100 points.</body>
   </string>
   <string>
+    <id>915518</id>
+    <name>STR_TOOLTIP_LIMIT_ATTRIBUTE_idf7_weapon_hard_boss_1st_atk</name>
+    <body>Additional damage when fighting Raging Yarkhan/Barkhan</body>
+  </string>
+  <string>
+    <id>915519</id>
+    <name>STR_TOOLTIP_LIMIT_ATTRIBUTE_idf7_weapon_hard_boss_2nd_atk</name>
+    <body>Additional damage when fighting Raging Prometun</body>
+  </string>
+  <string>
+    <id>915520</id>
+    <name>STR_TOOLTIP_LIMIT_ATTRIBUTE_idf7_weapon_hard_boss_3rd_atk</name>
+    <body>Additional damage when fighting Raging Tarukkan</body>
+  </string>
+  <string>
+    <id>915521</id>
+    <name>STR_TOOLTIP_LIMIT_ATTRIBUTE_idf7_weapon_hard_boss_final_dragon_atk</name>
+    <body>Additional damage when fighting Raging Prigga</body>
+  </string>
+  <string>
+    <id>915522</id>
+    <name>STR_TOOLTIP_LIMIT_ATTRIBUTE_bidldf8_lab_boss_04_atk</name>
+    <body>Additional damage when fighting the Daeva Mob Leader</body>
+  </string>
+  <string>
+    <id>915523</id>
+    <name>STR_TOOLTIP_LIMIT_ATTRIBUTE_idf8_house_hugerider_atk</name>
+    <body>Additional damage when fighting SVR-07</body>
+  </string>
+  <string>
     <id>915524</id>
     <name>STR_CUBIC_CATEGORY_weapon_hard_boss_1st_Info</name>
     <body>Raging Yarkhan/Barkhan's Cube</body>
@@ -49024,6 +49108,36 @@ The higher the number, the more powerful the crit spell.</body>
     <id>915529</id>
     <name>STR_CUBIC_CATEGORY_idf8_house_hugerider_Info</name>
     <body>SVR-07's Cube</body>
+  </string>
+  <string>
+    <id>915530</id>
+    <name>STR_TOOLTIP_IDF7_WEAPON_HARD_BOSS_1ST</name>
+    <body>Damage reduction when fighting Raging Yarkhan/Barkhan</body>
+  </string>
+  <string>
+    <id>915531</id>
+    <name>STR_TOOLTIP_IDF7_WEAPON_HARD_BOSS_2ND</name>
+    <body>Damage reduction when fighting Raging Prometun</body>
+  </string>
+  <string>
+    <id>915532</id>
+    <name>STR_TOOLTIP_IDF7_WEAPON_HARD_BOSS_3RD</name>
+    <body>Damage reduction when fighting Raging Tarukkan</body>
+  </string>
+  <string>
+    <id>915533</id>
+    <name>STR_TOOLTIP_IDF7_WEAPON_HARD_BOSS_FINAL</name>
+    <body>Damage reduction when fighting Raging Prigga</body>
+  </string>
+  <string>
+    <id>915534</id>
+    <name>STR_TOOLTIP_IDLDF8_LAB_BOSS</name>
+    <body>Damage reduction when fighting the Daeva Mob Leader</body>
+  </string>
+  <string>
+    <id>915535</id>
+    <name>STR_TOOLTIP_IDF8_HOUSE_HUGERIDER</name>
+    <body>Damage reduction when fighting SVR-07</body>
   </string>
   <string>
     <id>915536</id>
@@ -49143,12 +49257,12 @@ The higher the number, the more powerful the crit spell.</body>
   <string>
     <id>915559</id>
     <name>STR_Lugbug_event_V72_Run_03_DESC</name>
-    <body>&lt;p&gt;Win the Farm Race 2x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt; Tip: When you receive a Farm Race Victory Cup, the rank will be modified.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;Win the Farm Race 2x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt; Tip: When you receive a Farm Victory Trophy, the rank will be modified.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>915560</id>
     <name>STR_Lugbug_event_V72_Run_04_DESC</name>
-    <body>&lt;p&gt;Run the Farm Race to the finish line 5x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: When you receive a Farm Race Participation Trophy, the rank will be modified.&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p&gt;Run the Farm Race to the finish line 5x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: When you receive a Farm Trophy, the rank will be modified.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>915561</id>
@@ -49243,8 +49357,8 @@ The higher the number, the more powerful the crit spell.</body>
   <string>
     <id>915579</id>
     <name>STR_TOOLTIP_FAMILIAR_UNLEARNED_BUFF_CON_AUTH_DESC</name>
-    <body>Upgrade %0, evolution level %0, Growth Points
-%1 achieved</body>
+    <body>Upgrade %0, evolution level %1, Growth Points
+%2 achieved</body>
   </string>
   <string>
     <id>915580</id>
@@ -49362,9 +49476,109 @@ The higher the number, the more powerful the crit spell.</body>
     <body>%0/%1 pieces</body>
   </string>
   <string>
+    <id>915603</id>
+    <name>STR_UI_Gauge_Title_IDAbRe_Up3_urf_B</name>
+    <body>Remaining reward</body>
+  </string>
+  <string>
+    <id>915604</id>
+    <name>STR_UI_Gauge_Desc_IDAbRe_Up3_urf_B</name>
+    <body>You receive more rewards when you complete the training faster.</body>
+  </string>
+  <string>
+    <id>915605</id>
+    <name>STR_UI_Gauge_Unit_Desc_IDAbRe_Up3_urf_B</name>
+    <body>%0/%1 pieces</body>
+  </string>
+  <string>
+    <id>915606</id>
+    <name>STR_World_dmaha_mind_larak</name>
+    <body>[Weekly] Discovering the Dumaha Distillate</body>
+  </string>
+  <string>
+    <id>915607</id>
+    <name>STR_World_dmaha_mind_larak_DESC</name>
+    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Mahorosh in Narakkalli.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915608</id>
+    <name>STR_World_dmaha_mind_holytower</name>
+    <body>[Weekly] Detecting the Dumaha Distillate</body>
+  </string>
+  <string>
+    <id>915609</id>
+    <name>STR_World_dmaha_mind_holytower_DESC</name>
+    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Nergal in the Holy Tower.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915610</id>
+    <name>STR_World_dmaha_mind_prigida</name>
+    <body>[Weekly] Prigga's Dumaha Distillate</body>
+  </string>
+  <string>
+    <id>915611</id>
+    <name>STR_World_dmaha_mind_prigida_DESC</name>
+    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Prigga 2x in Prometun's Workshop (normal).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915612</id>
+    <name>STR_World_dmaha_mind_mana</name>
+    <body>[Weekly] The Dumaha Distillate in Beritra's Costume</body>
+  </string>
+  <string>
+    <id>915613</id>
+    <name>STR_World_dmaha_mind_mana_DESC</name>
+    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Beritra 2x in Makarna of Bitterness.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915614</id>
+    <name>STR_World_dmaha_mind_easy_lab</name>
+    <body>[Weekly] Retrieving the Dumaha Distillate (easy)</body>
+  </string>
+  <string>
+    <id>915615</id>
+    <name>STR_World_dmaha_mind_easy_lab_DESC</name>
+    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Kill the Weakling Daeva Mob Leader 2x in the Stella Development Laboratory (easy).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915616</id>
+    <name>STR_World_dmaha_mind_hard_lab</name>
+    <body>[Weekly] Discovering the Dumaha Distillate (normal)</body>
+  </string>
+  <string>
+    <id>915617</id>
+    <name>STR_World_dmaha_mind_hard_lab_DESC</name>
+    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Hint: Defeat the Weakling Daeva Mob Leader 2x in the Stella Development Laboratory (normal).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915618</id>
+    <name>STR_World_dmaha_mind_easy_bighouse</name>
+    <body>[Weekly] Beninerk's Hidden Dumaha Distillate (easy)</body>
+  </string>
+  <string>
+    <id>915619</id>
+    <name>STR_World_dmaha_mind_easy_bighouse_DESC</name>
+    <body>&lt;p&gt;Enter Beninerk's Manor (easy).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Attack the highest-level named monster in Beninerk's Manor (easy) 2 times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915620</id>
+    <name>STR_World_dmaha_mind_normal_bighouse</name>
+    <body>[Weekly] Beninerk's Hidden Dumaha Distillate (difficult)</body>
+  </string>
+  <string>
+    <id>915621</id>
+    <name>STR_World_dmaha_mind_normal_bighouse_DESC</name>
+    <body>&lt;p&gt;Enter Beninerk's Manor (normal).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Attack the highest-level named monster in Beninerk's Manor (normal) 2 times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
     <id>915622</id>
     <name>STR_TransCollection_049</name>
     <body>Ours are the best!</body>
+  </string>
+  <string>
+    <id>915623</id>
+    <name>STR_Auction_Total_Sell</name>
+    <body>Sold: %num0 piece(s)</body>
   </string>
   <string>
     <id>915624</id>
@@ -49390,6 +49604,653 @@ The higher the number, the more powerful the crit spell.</body>
     <id>915628</id>
     <name>STR_INDUN_TIMER_BOARD_DMG_RANK</name>
     <body>Rank</body>
+  </string>
+  <string>
+    <id>915629</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_EXIST_TITLE</name>
+    <body>Skill enchantment</body>
+  </string>
+  <string>
+    <id>915630</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_EXIST_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915631</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_NEW_TITLE</name>
+    <body>Collective skills</body>
+  </string>
+  <string>
+    <id>915632</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_NEW_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915633</id>
+    <name>STR_TOOLTIP_ITEM_BSKILL_SET_REINFORCE_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915634</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_RANDOM</name>
+    <body>Identification upon receipt</body>
+  </string>
+  <string>
+    <id>915635</id>
+    <name>STR_TOOLTIP_ITEM_CONTAMINATION_STATUS</name>
+    <body>(Contamination)</body>
+  </string>
+  <string>
+    <id>915636</id>
+    <name>STR_TOOLTIP_ITEM_CONTAMINATION_PURIFICATION</name>
+    <body>Polishing not possible because of contamination, number of cleans %0</body>
+  </string>
+  <string>
+    <id>915637</id>
+    <name>STR_TOOLTIP_ITEM_CONTAMINATION_PURIFICATION_LIMIT</name>
+    <body>Polishing not possible because of contamination, number of cleans %0/%1</body>
+  </string>
+  <string>
+    <id>915638</id>
+    <name>STR_ENCHANT_ENCHANT_GRIND_DESC</name>
+    <body>&lt;p&gt;&amp;bull;The Polishing Stone can be used to increased the polish level of polishable items. A higher polish level increases an item's effects. Contamination can occur if polishing fails. The item cannot be polished any more.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915639</id>
+    <name>STR_ENCHANT_ENCHANT_GRIND_FAILED_TITLE</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="ff0000" size="5" &gt;Contamination&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915640</id>
+    <name>STR_ENCHANT_ENCHANT_GRIND_FAILED_DESC</name>
+    <body>&lt;p&gt;Polish level %0 &amp;rarr; %1&lt;/p&gt;&lt;p&gt;You cannot polish any more because of contamination.&lt;/p&gt;&lt;p&gt;To continue polishing you will need to remove the contamination first via cleaning.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915641</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_PURIFICATION</name>
+    <body>Cleaning</body>
+  </string>
+  <string>
+    <id>915642</id>
+    <name>STR_ENCHANT_MENU_PURIFICATION_BUTTON</name>
+    <body>Cleaning</body>
+  </string>
+  <string>
+    <id>915643</id>
+    <name>STR_ENCHANT_PURIFICATION_PREDICT_COUNT</name>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If successful, you will achieve polish level %0 &amp;rarr; %1 &lt;font&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="6871bd"&gt;If successful, the number of cleans will be %2 &amp;rarr; %3. &lt;font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915644</id>
+    <name>STR_ENCHANT_MENU_PURIFICATION_BUTTON_CANCEL</name>
+    <body>Cancel</body>
+  </string>
+  <string>
+    <id>915645</id>
+    <name>STR_ENCHANT_PURIFICATION_SUCCEEDED_DESC</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Cleaning successful&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font color="6871bd"&gt;Polish level %0 &amp;rarr; %1 &lt;font&gt;&lt;/p&gt;&lt;p&gt;&lt;font color="6871bd"&gt; Number of cleans %2 &amp;rarr; %3 &lt;font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915646</id>
+    <name>STR_ENCHANT_MENU_PURIFICATION_BUTTON_OK</name>
+    <body>Confirm</body>
+  </string>
+  <string>
+    <id>915647</id>
+    <name>STR_ENCHANT_PURIFICATION_FAILED_DESC</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="ff0000" size="5" &gt;Cleaning failed&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font color="6871bd"&gt;Number of cleans unchanged&lt;font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915648</id>
+    <name>STR_TOOLTIP_ITEM_PURIFICATION_G_STATUS</name>
+    <body>(Full clean)</body>
+  </string>
+  <string>
+    <id>915649</id>
+    <name>STR_TOOLTIP_ITEM_PURIFICATION_NORMAL</name>
+    <body>Number of cleans %0</body>
+  </string>
+  <string>
+    <id>915650</id>
+    <name>STR_TOOLTIP_ITEM_PURIFICATION_NORMAL_LIMIT</name>
+    <body>Number of cleans %0/%1</body>
+  </string>
+  <string>
+    <id>915651</id>
+    <name>STR_TOOLTIP_ITEM_PURIFICATION_BLESS</name>
+    <body>Full clean (%0), Number of cleans %1</body>
+  </string>
+  <string>
+    <id>915652</id>
+    <name>STR_TOOLTIP_ITEM_PURIFICATION_BLESS_LIMIT</name>
+    <body>Full clean (%0), Number of cleans %1/%2</body>
+  </string>
+  <string>
+    <id>915653</id>
+    <name>STR_ENCHANT_PURIFICATION_COUNT</name>
+    <body>Number of cleans %0/%1</body>
+  </string>
+  <string>
+    <id>915654</id>
+    <name>STR_ENCHANT_PURIFICATION_COST</name>
+    <body>(%0/%1)</body>
+  </string>
+  <string>
+    <id>915655</id>
+    <name>STR_ENCHANT_DESC_PURIFICATION_COMMON</name>
+    <body>&lt;p&gt;* %0 has been successfully cleaned %1 times.&lt;/p&gt;&lt;p&gt;* Cleaning removed the contamination, so polishing is possible again.&lt;/p&gt;&lt;p&gt;* The number of required materials changes depending on the number of successful cleans.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915656</id>
+    <name>STR_ENCHANT_DESC_PURIFICATION_COMMON_LIMIT</name>
+    <body>&lt;p&gt;* %0 has been successfully cleaned %1 times (max. %2 times).&lt;/p&gt;&lt;p&gt;* Cleaning removed the contamination, so polishing is possible again.&lt;/p&gt;&lt;p&gt;* The number of required materials changes depending on the number of successful cleans.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915657</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_GRIND_ODIAN</name>
+    <body>Odian Polishing</body>
+  </string>
+  <string>
+    <id>915658</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_GRIND_RUNE</name>
+    <body>Rune Polishing</body>
+  </string>
+  <string>
+    <id>915659</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_GRIND_UNDEFINED</name>
+    <body>Polish Odian/rune</body>
+  </string>
+  <string>
+    <id>915660</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_GRIND</name>
+    <body>&lt;p&gt;&amp;bull;The Polishing Stone can be used to increased the polish level of polishable items. A higher polish level increases an item's effects. Contamination can occur if polishing fails. The item cannot be polished any more.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915661</id>
+    <name>STR_ENCHANT_TARGET_ENCHANT_GRIND</name>
+    <body>&lt;p&gt;&amp;bull;Place the item you want to polish in the appropriate slot.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915662</id>
+    <name>STR_ENCHANT_TOOL_ENCHANT_GRIND</name>
+    <body>&lt;p&gt;&amp;bull;Place the material item to be polished into the appropriate material slot.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915663</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_COUNT_GRIND</name>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If successful, you will achieve polish level %0 &amp;rarr; %1.&amp;sim;%2&lt;font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915664</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_WARNING_GRIND</name>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If unsuccessful, the polish level will be reduced by one level.&lt;font&gt;&lt;/p&gt;&lt;p&gt;&lt;font color="6871bd"&gt;If contaminated, the enchantment level will be retained and the contamination effect will be applied.&lt;font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915665</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_GRIND</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Polishing successful.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915666</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_COUNT_GRIND</name>
+    <body>&lt;p&gt;Polish level %0 &amp;rarr; %1&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915667</id>
+    <name>STR_ENCHANT_FAILED_ENCHANT_GRIND</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="ff0000" size="5" &gt;Polishing failed&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915668</id>
+    <name>STR_ENCHANT_FAILED_ENCHANT_COUNT_GRIND</name>
+    <body>&lt;p&gt;Polish level %0 &amp;rarr; %1&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915669</id>
+    <name>STR_ENCHANT_PREDICT_EXTRACT_GRIND_ODIAN</name>
+    <body>&lt;p&gt;&amp;bull;You receive a Slot Stone when you extract an Odian. You also receive an additional item when you use a socketing aid.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915670</id>
+    <name>STR_ENCHANT_PREDICT_EXTRACT_GRIND_RUNE</name>
+    <body>&lt;p&gt;&amp;bull;You receive a Slot Stone when you extract a rune. You also receive an additional item when you use a socketing aid.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915671</id>
+    <name>STR_ENCHANT_MENU_COMPOUND_GRIND_ODIAN</name>
+    <body>Odian Fusion</body>
+  </string>
+  <string>
+    <id>915672</id>
+    <name>STR_ENCHANT_MENU_COMPOUND_GRIND_RUNE</name>
+    <body>Rune Fusion</body>
+  </string>
+  <string>
+    <id>915673</id>
+    <name>STR_ENCHANT_MENU_COMPOUND_GRIND_UNDEFINED</name>
+    <body>Fuse Odian/rune</body>
+  </string>
+  <string>
+    <id>915674</id>
+    <name>STR_ENCHANT_PREDICT_COMPOUND_GRIND_QUALITY</name>
+    <body>(Maintain quality)</body>
+  </string>
+  <string>
+    <id>915675</id>
+    <name>STR_ENCHANT_DESC_COMPOUND_GRIND_ODIAN</name>
+    <body>&lt;p&gt;* Fuse Odians to get a new Odian. &lt;/p&gt;&lt;p&gt;* If you fuse Odians of the same colour, you will get an Odian of that colour. &lt;/p&gt;&lt;p&gt;* If you fuse Odians of the same colour and quality, you will get an Odian of that colour and quality. &lt;/p&gt;&lt;p&gt;* If you fuse Odians of different colours, you will get an Odian of a third colour. &lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915676</id>
+    <name>STR_ENCHANT_DESC_COMPOUND_GRIND_RUNE</name>
+    <body>&lt;p&gt;* Fuse runes to get new runes. &lt;/p&gt;&lt;p&gt;* If you fuse runes of the same form, you will get a rune of that form. &lt;/p&gt;&lt;p&gt;* If you fuse different forms, you will get a rune of a third form. &lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915677</id>
+    <name>STR_ENCHANT_MENU_COMPOUND_GRIND_BUTTON</name>
+    <body>Fusion</body>
+  </string>
+  <string>
+    <id>915678</id>
+    <name>STR_ENCHANT_PREDICT_COMPOUND_GRIND_WARNING</name>
+    <body>&lt;p&gt;* %0 will be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt; after the fusion.&lt;/p&gt;&lt;p&gt;* %1 will be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt; after the fusion.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915679</id>
+    <name>STR_ENCHANT_MENU_COMPOUND_GRIND_BUTTON_CANCEL</name>
+    <body>Cancel</body>
+  </string>
+  <string>
+    <id>915680</id>
+    <name>STR_ENCHANT_COMPOUND_SUCCEEDED_DESC</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Fusion complete.&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;You receive the fusion result %0.&lt;/p&gt;
+&lt;p&gt;The fusion material (%1 and %2) will be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915681</id>
+    <name>STR_ENCHANT_MENU_COMPOUND_GRIND_BUTTON_OK</name>
+    <body>Confirm</body>
+  </string>
+  <string>
+    <id>915682</id>
+    <name>STR_TOOLTIP_ITEM_TYPE_ODIAN</name>
+    <body>Odians</body>
+  </string>
+  <string>
+    <id>915683</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_TITLE</name>
+    <body>Odians</body>
+  </string>
+  <string>
+    <id>915684</id>
+    <name>STR_TOOLTIP_ITEM_OSKILL_TITLE</name>
+    <body>Odian skill</body>
+  </string>
+  <string>
+    <id>915685</id>
+    <name>STR_TOOLTIP_ITEM_OSKILL_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915686</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_TITLE_EFFECT</name>
+    <body>Polishing Effect</body>
+  </string>
+  <string>
+    <id>915687</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_C</name>
+    <body>Current polishing effect (level %0)</body>
+  </string>
+  <string>
+    <id>915688</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_C_RESKILL_DECS_</name>
+    <body>%0 +%1 enchantment</body>
+  </string>
+  <string>
+    <id>915689</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_C_OSKILL_DECS</name>
+    <body>+%0 %1 received</body>
+  </string>
+  <string>
+    <id>915690</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_C_OSKILL_EFFECT_DECS</name>
+    <body>%0 %1</body>
+  </string>
+  <string>
+    <id>915691</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_N</name>
+    <body>Next polishing effect (level %0)</body>
+  </string>
+  <string>
+    <id>915692</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_N_RESKILL_DECS</name>
+    <body>%0 +%1 enchantment</body>
+  </string>
+  <string>
+    <id>915693</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_N_OSKILL_DECS</name>
+    <body>+%0 %1 received</body>
+  </string>
+  <string>
+    <id>915694</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_EFFECT_N_OSKILL_EFFECT_DECS</name>
+    <body>%0 %1</body>
+  </string>
+  <string>
+    <id>915695</id>
+    <name>STR_VENDOR_KIND_TYPE_ODIAN</name>
+    <body>Odians</body>
+  </string>
+  <string>
+    <id>915696</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_OSKILL_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915697</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_OSKILL_REQUIRE</name>
+    <body>%0/%1</body>
+  </string>
+  <string>
+    <id>915698</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_OSKILL_DESC_1</name>
+    <body>%1 with an enchantment of +%0</body>
+  </string>
+  <string>
+    <id>915699</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_OSKILL_DESC_2</name>
+    <body>%1 with an enchantment of +%0</body>
+  </string>
+  <string>
+    <id>915700</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_OSKILL_DESC_3</name>
+    <body>%1 with an enchantment of +%0</body>
+  </string>
+  <string>
+    <id>915701</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_RSKILL_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915702</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_ITEM_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915703</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_EFFECT_C</name>
+    <body>Current polishing effect (level %0)</body>
+  </string>
+  <string>
+    <id>915704</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_EFFECT_C_SE</name>
+    <body>Current polishing effect (level %0) (+%1)</body>
+  </string>
+  <string>
+    <id>915705</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_EFFECT_C_DECS</name>
+    <body>Enchant skill level %0</body>
+  </string>
+  <string>
+    <id>915706</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_EFFECT_N</name>
+    <body>[Level %0]</body>
+  </string>
+  <string>
+    <id>915707</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_EFFECT_N_DECS</name>
+    <body>Enchant skill level %0</body>
+  </string>
+  <string>
+    <id>915708</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_BLESS_SLOT</name>
+    <body>+%0</body>
+  </string>
+  <string>
+    <id>915709</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_EQ_ODIAN</name>
+    <body>Odian Enchantment</body>
+  </string>
+  <string>
+    <id>915710</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_EQ_RUNE</name>
+    <body>Rune Enchantment</body>
+  </string>
+  <string>
+    <id>915711</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_EQ_ODIAN_RUNE</name>
+    <body>Enchant Odian/rune</body>
+  </string>
+  <string>
+    <id>915712</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_ODIAN</name>
+    <body>&lt;p&gt;&amp;bull;Items enchanted with an Odian receive higher stats.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915713</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_ODIAN_TOOL</name>
+    <body>&lt;p&gt;&amp;bull;Place the material item to be used for the Odian Enchantment into the appropriate material slot.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915714</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_RUNE</name>
+    <body>&lt;p&gt;&amp;bull;Items enchanted with runes receive higher stats.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915715</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_RUNE_TOOL</name>
+    <body>&lt;p&gt;&amp;bull;Place the material item to be used for the Rune Enchantment into the appropriate material slot.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915716</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_EQ_EFFECT</name>
+    <body>&lt;p&gt;Effect on enchantment&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915717</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_EQ_ODIAN_EFFECT</name>
+    <body>&lt;p&gt;Skill enchantment %0&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915718</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_EQ_ODIAN</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Enchantment successful.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915719</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_ODIAN_SLOT_OPEN</name>
+    <body>Odian Slot Expansion</body>
+  </string>
+  <string>
+    <id>915720</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_RUNE_SLOT_OPEN</name>
+    <body>Rune Slot Expansion</body>
+  </string>
+  <string>
+    <id>915721</id>
+    <name>STR_ENCHANT_MENU_ENCHANT_ODIAN_RUNE_SLOT_OPEN</name>
+    <body>Odian/Rune Slot Expansion</body>
+  </string>
+  <string>
+    <id>915722</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OP_ODIAN</name>
+    <body>&lt;p&gt;&amp;bull;You can expand your gear's Odian slots.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915723</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OP_ODIAN_TOOL</name>
+    <body>&lt;p&gt;&amp;bull;After the Odian slot expansion you can socket a suitable Odian.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915724</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OP_RUNE</name>
+    <body>&lt;p&gt;&amp;bull;You can expand your gear's rune slots.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915725</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OP_RUNE_TOOL</name>
+    <body>&lt;p&gt;&amp;bull;After the rune slot expansion you can socket a suitable rune.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915726</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OP_ODIAN</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;The Odian slot expansion was successful.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915727</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OP_RUNE</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Rune slot expansion was successful.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915728</id>
+    <name>STR_ENCHANT_MENU_REMOVE_ODIAN</name>
+    <body>Remove Odian</body>
+  </string>
+  <string>
+    <id>915729</id>
+    <name>STR_ENCHANT_MENU_REMOVE_RUNE</name>
+    <body>Remove rune</body>
+  </string>
+  <string>
+    <id>915730</id>
+    <name>STR_ENCHANT_MENU_REMOVE_ODIAN_RUNE</name>
+    <body>Remove Odian/rune</body>
+  </string>
+  <string>
+    <id>915731</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OFF_ODIAN</name>
+    <body>&lt;p&gt;&amp;bull;An enchanted Odian can be removed from this item. Lets you reuse removed Odians.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915732</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OFF_ODIAN_OS_UNABLE</name>
+    <body>&lt;p&gt;&amp;bull;If %0% are removed, %1% of the Odian skill cannot be used. &lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915733</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OFF_ODIAN_OS_UNABLE_R</name>
+    <body>&lt;p&gt;&amp;bull;If +%0 %1% are removed, +%2 %3% of the Odian skill cannot be used. &lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915734</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OFF_ODIAN</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Odian removal complete.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915735</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OFF_RUNE</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Rune removal complete.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915736</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_TITLE</name>
+    <body>Odians</body>
+  </string>
+  <string>
+    <id>915737</id>
+    <name>STR_TOOLTIP_ITEM_OSKILL_EQED_TITLE</name>
+    <body>Odian skill</body>
+  </string>
+  <string>
+    <id>915738</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_EXIST_EQED_TITLE</name>
+    <body>Skill enchantment</body>
+  </string>
+  <string>
+    <id>915739</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_EXIST_EQED_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915740</id>
+    <name>STR_TOOLTIP_ITEM_OSKILL_EQED_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915741</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_DETAIL_UND_TITLE</name>
+    <body>Odian (unknown)</body>
+  </string>
+  <string>
+    <id>915742</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_DEATIL_TITLE</name>
+    <body>Odians</body>
+  </string>
+  <string>
+    <id>915743</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_DETAIL_BLESS_TITLE</name>
+    <body>Odian (blessing +%0)</body>
+  </string>
+  <string>
+    <id>915744</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_DETAIL_SLOT</name>
+    <body>+%0</body>
+  </string>
+  <string>
+    <id>915745</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_DETAIL_ITEM_NAME_BLESS</name>
+    <body>+%0 %1 (+%2)</body>
+  </string>
+  <string>
+    <id>915746</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_DETAIL_ITEM_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915747</id>
+    <name>STR_TOOLTIP_ITEM_OSKILL_EQED_DETAIL_TITLE</name>
+    <body>Odian skill</body>
+  </string>
+  <string>
+    <id>915748</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_EXIST_EQED_DETAIL_TITLE</name>
+    <body>Skill enchantment</body>
+  </string>
+  <string>
+    <id>915749</id>
+    <name>STR_TOOLTIP_ITEM_RSKILL_SET_EXIST_EQED_DETAIL_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915750</id>
+    <name>STR_TOOLTIP_ITEM_OSKILL_EQED_DETAIL_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915751</id>
+    <name>STR_TOOLTIP_PIECE_EQUIPMENT_ODIAN_CONDITION</name>
+    <body>Status of Odian enchantment for %0</body>
+  </string>
+  <string>
+    <id>915752</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915753</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_RS_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915754</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_OS_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915755</id>
+    <name>STR_EQUIPMENT_CHANGE_NAME_5</name>
+    <body>Set 6</body>
+  </string>
+  <string>
+    <id>915756</id>
+    <name>STR_EQUIPMENT_CHANGE_NAME_6</name>
+    <body>Set 7</body>
+  </string>
+  <string>
+    <id>915757</id>
+    <name>STR_EQUIPMENT_CHANGE_NAME_7</name>
+    <body>Set 8</body>
   </string>
   <string>
     <id>915758</id>
@@ -49467,9 +50328,184 @@ The higher the number, the more powerful the crit spell.</body>
     <body>&lt;p&gt;Carry out the quest 'Maumi's Request: Find Kekirinerk!' 15x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get this quest from &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_SHUGOS2CAKE_01"&gt;Maumi&lt;/a&gt; in Stellusia.</body>
   </string>
   <string>
+    <id>915773</id>
+    <name>STR_GRIND_INFO_DIALOG_TITLE_GRIND</name>
+    <body>Odian/rune information</body>
+  </string>
+  <string>
+    <id>915774</id>
+    <name>STR_GRIND_INFO_DIALOG_TAB_ODIAN</name>
+    <body>Odians</body>
+  </string>
+  <string>
+    <id>915775</id>
+    <name>STR_GRIND_INFO_DIALOG_TAB_RUNE</name>
+    <body>Runes</body>
+  </string>
+  <string>
+    <id>915776</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_TITLE_OSKILL</name>
+    <body>Odian skill</body>
+  </string>
+  <string>
+    <id>915777</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_TITLE_RSKILL</name>
+    <body>Skill Enchantment Effect</body>
+  </string>
+  <string>
+    <id>915778</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_TITLE_DETAIL</name>
+    <body>Use Odian</body>
+  </string>
+  <string>
+    <id>915779</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_EQ_ODIAN_TARGET</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915780</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_EQ_ODIAN_TOOL</name>
+    <body>Material</body>
+  </string>
+  <string>
+    <id>915781</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_EQ_ODIAN_BUTTON</name>
+    <body>Odian Enchantment</body>
+  </string>
+  <string>
+    <id>915782</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_EQ_RUNE_TARGET</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915783</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_EQ_RUNE_TOOL</name>
+    <body>Material</body>
+  </string>
+  <string>
+    <id>915784</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_EQ_RUNE_BUTTON</name>
+    <body>Rune Enchantment</body>
+  </string>
+  <string>
+    <id>915785</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OP_ODIAN_TARGET</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915786</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OP_ODIAN_TOOL</name>
+    <body>Material</body>
+  </string>
+  <string>
+    <id>915787</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OP_ODIAN_BUTTON</name>
+    <body>Odian Slot Expansion</body>
+  </string>
+  <string>
+    <id>915788</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OP_RUNE_TARGET</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915789</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OP_RUNE_TOOL</name>
+    <body>Material</body>
+  </string>
+  <string>
+    <id>915790</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OP_RUNE_BUTTON</name>
+    <body>Rune Slot Expansion</body>
+  </string>
+  <string>
+    <id>915791</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_TARGET</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915792</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_TOOL</name>
+    <body>Removable Odian</body>
+  </string>
+  <string>
+    <id>915793</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_BUTTON</name>
+    <body>Remove Odian</body>
+  </string>
+  <string>
+    <id>915794</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_TARGET</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915795</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_TOOL</name>
+    <body>Removable runes</body>
+  </string>
+  <string>
+    <id>915796</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_BUTTON</name>
+    <body>Remove rune</body>
+  </string>
+  <string>
+    <id>915797</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_RS_EN</name>
+    <body>Skill enchantment</body>
+  </string>
+  <string>
+    <id>915798</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_ODIAN_OS_EN</name>
+    <body>Odian skill</body>
+  </string>
+  <string>
     <id>915799</id>
     <name>STR_INDUN_TIMER_BOARD_DMG_DAILY</name>
     <body>(Daily from %0 to %1)</body>
+  </string>
+  <string>
+    <id>915800</id>
+    <name>STR_DIALOG_ODIAN_TEST_BA_RED_80A_01_SKILL_DESC_1</name>
+    <body>Activation of Blood Sucking effect</body>
+  </string>
+  <string>
+    <id>915801</id>
+    <name>STR_DIALOG_ODIAN_TEST_BA_RED_80A_01_SKILL_DESC_2</name>
+    <body>Activation of Reduce Physical Defence effect</body>
+  </string>
+  <string>
+    <id>915802</id>
+    <name>STR_DIALOG_ODIAN_TEST_BA_RED_80A_01_SKILL_DESC_3</name>
+    <body>Activation of Petrification effect</body>
+  </string>
+  <string>
+    <id>915803</id>
+    <name>STR_FAME_GROUP_STRING_TEST01</name>
+    <body>Lakrum region</body>
+  </string>
+  <string>
+    <id>915804</id>
+    <name>STR_FAME_GROUP_STRING_TEST02</name>
+    <body>Dumaha region</body>
+  </string>
+  <string>
+    <id>915805</id>
+    <name>STR_FAME_GROUP_STRING_TEST03</name>
+    <body>Katalam region</body>
+  </string>
+  <string>
+    <id>915806</id>
+    <name>STR_FAME_GROUP_STRING_DESC_TEST_L</name>
+    <body>An Elyos description.</body>
+  </string>
+  <string>
+    <id>915807</id>
+    <name>STR_FAME_GROUP_STRING_DESC_TEST_D</name>
+    <body>An Asmodian description.</body>
+  </string>
+  <string>
+    <id>915808</id>
+    <name>STR_IDTag_War_MATCH_DESC</name>
+    <body>&lt;p&gt;You follow Inanna into the Raging Valley.&lt;/p&gt;&lt;p&gt;You have to find the real Inanna as fast as possible and win the war.&lt;/p&gt;&lt;p&gt;Everyone who enters receives the same combat stats.&lt;/p&gt;</body>
   </string>
   <string>
     <id>915809</id>
@@ -49513,63 +50549,253 @@ The higher the number, the more powerful the crit spell.</body>
   </string>
   <string>
     <id>915817</id>
-    <name>STR_World_dmaha_mind_larak</name>
-    <body>[Weekly] Discovering the Dumaha Distillate</body>
+    <name>STR_EXTRACT_RESULT_STRING_01</name>
+    <body>You receive a Slot Stone when you extract a piece of PvE equipment. You also receive a Fighting Spirit Fragment for extracting PvP equipment.</body>
   </string>
   <string>
     <id>915818</id>
-    <name>STR_World_dmaha_mind_larak_DESC</name>
-    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Mahorosh in Narakkalli.&lt;/font&gt;&lt;/p&gt;</body>
+    <name>STR_EXTRACT_TOOL_USE_RESULT_STRING_01</name>
+    <body>You receive a Slot Stone when you extract a piece of PvE equipment. You also receive a Fighting Spirit Fragment for extracting PvP equipment.</body>
   </string>
   <string>
     <id>915819</id>
-    <name>STR_World_dmaha_mind_holytower</name>
-    <body>[Weekly] Detecting the Dumaha Distillate</body>
+    <name>STR_EXTRACT_RESULT_STRING_02</name>
+    <body>You receive a Slot Stone when you extract a piece of PvE equipment. You also receive a Fighting Spirit Fragment for extracting PvP equipment. (Test 02)</body>
   </string>
   <string>
     <id>915820</id>
-    <name>STR_World_dmaha_mind_holytower_DESC</name>
-    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Nergal in the Holy Tower.&lt;/font&gt;&lt;/p&gt;</body>
+    <name>STR_EXTRACT_TOOL_USE_RESULT_STRING_02</name>
+    <body>You receive a Slot Stone when you extract a piece of PvE equipment. You also receive a Fighting Spirit Fragment for extracting PvP equipment. (Socketing Aids Test 02)</body>
   </string>
   <string>
     <id>915821</id>
-    <name>STR_World_dmaha_mind_prigida</name>
-    <body>[Weekly] Prigga's Dumaha Distillate</body>
+    <name>STR_FAME_GROUP_DIALOG_LEVEL</name>
+    <body>Level %0</body>
   </string>
   <string>
     <id>915822</id>
-    <name>STR_World_dmaha_mind_prigida_DESC</name>
-    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Prigga 2x in Prometun's Workshop (normal).&lt;/font&gt;&lt;/p&gt;</body>
+    <name>STR_FAME_GROUP_HUD_TOOLTIP</name>
+    <body>%0: %1%%</body>
   </string>
   <string>
     <id>915823</id>
-    <name>STR_World_dmaha_mind_mana</name>
-    <body>[Weekly] The Dumaha Distillate in Beritra's Costume</body>
+    <name>STR_TRANS_CATEGORY_VAIZEL_01</name>
+    <body>Purity</body>
   </string>
   <string>
     <id>915824</id>
-    <name>STR_World_dmaha_mind_mana_DESC</name>
-    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Defeat Beritra 2x in Makarna of Bitterness.&lt;/font&gt;&lt;/p&gt;</body>
+    <name>STR_TRANS_CATEGORY_MARCHUTAN_01</name>
+    <body>Fate</body>
   </string>
   <string>
     <id>915825</id>
-    <name>STR_World_dmaha_mind_easy_lab</name>
-    <body>[Weekly] Retrieving the Dumaha Distillate (easy)</body>
+    <name>STR_TRANS_CATEGORY_KAISINEL_01</name>
+    <body>Illusion</body>
   </string>
   <string>
     <id>915826</id>
-    <name>STR_World_dmaha_mind_easy_lab_DESC</name>
-    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Kill the Weakling Daeva Mob Leader 2x in the Stella Development Laboratory (easy).&lt;/font&gt;&lt;/p&gt;</body>
+    <name>STR_TRANS_CATEGORY_KAISINEL_02</name>
+    <body>Arrogance</body>
   </string>
   <string>
     <id>915827</id>
-    <name>STR_World_dmaha_mind_hard_lab</name>
-    <body>[Weekly] Discovering the Dumaha Distillate (normal)</body>
+    <name>STR_TRANS_CATEGORY_SIEL_02</name>
+    <body>Protection</body>
   </string>
   <string>
     <id>915828</id>
-    <name>STR_World_dmaha_mind_hard_lab_DESC</name>
-    <body>&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Hint: Defeat the Weakling Daeva Mob Leader 2x in the Stella Development Laboratory (normal).&lt;/font&gt;&lt;/p&gt;</body>
+    <name>STR_TRANS_CATEGORY_NEZAKAN_02</name>
+    <body>Circumspection</body>
+  </string>
+  <string>
+    <id>915829</id>
+    <name>STR_FAME_GROUP_HUD_TOOLTIP_WITH_TEMP</name>
+    <body>%0: %1%% (Recoverable: %2%%)</body>
+  </string>
+  <string>
+    <id>915830</id>
+    <name>STR_RESURRECT_UI_QUNA_COOLTIME</name>
+    <body>Can be used after %0 seconds.</body>
+  </string>
+  <string>
+    <id>915831</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_ODIAN_BLESS</name>
+    <body>&lt;p&gt;&amp;bull;When you equip an Odian in a +%0 blessing slot you receive an additional +%0 polishing effect.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915832</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_RUNE_BLESS</name>
+    <body>&lt;p&gt;&amp;bull;When you equip a rune in a +%0 blessing slot you receive an additional +%0 polishing effect.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915833</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_EQ_RUNE_EFFECT</name>
+    <body>&lt;p&gt;Collective skills %0&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915834</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915835</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_OS_EN</name>
+    <body>Collective skills</body>
+  </string>
+  <string>
+    <id>915836</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_TE_EN</name>
+    <body>Transformation Enchantment</body>
+  </string>
+  <string>
+    <id>915837</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_OS_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915838</id>
+    <name>STR_ENCHANT_ALL_DIALOG_ENCHANT_OFF_RUNE_TE_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915839</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OFF_RUNE</name>
+    <body>&lt;p&gt;&amp;bull;An enchanted rune can be removed from this item. Lets you reuse removed runes.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915840</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OFF_RUNE_OS_UNABLE_R</name>
+    <body>&lt;p&gt;&amp;bull;If +%0 %1% are removed, +%2 %3 of the transformation enchantments cannot be used. &lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915841</id>
+    <name>STR_TOOLTIP_PIECE_EQUIPMENT_RUNE_CONDITION</name>
+    <body>Status of rune enchantment for %0</body>
+  </string>
+  <string>
+    <id>915842</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_TREINFORCE_GOD_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915843</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_TITLE_DESC</name>
+    <body>Collective skills</body>
+  </string>
+  <string>
+    <id>915844</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_OSKILL_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915845</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_RUNE_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915846</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_RUNE_BLESS_NAME</name>
+    <body>+%0 %1 (+%2)</body>
+  </string>
+  <string>
+    <id>915847</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_NEXT_DESC</name>
+    <body>[Level %0]</body>
+  </string>
+  <string>
+    <id>915848</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_OSKILL_NAME_NEXT</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915849</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_RUNE_NAME_NEXT</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915850</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_TR_TITLE</name>
+    <body>Transformation Enchantment</body>
+  </string>
+  <string>
+    <id>915851</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_TR_CATEGORY</name>
+    <body>Class %0</body>
+  </string>
+  <string>
+    <id>915852</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_TR_DESC_QUALITY</name>
+    <body>%0</body>
+  </string>
+  <string>
+    <id>915853</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_TR_DESC_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915854</id>
+    <name>STR_GRIND_INFO_DIALOG_RUNE_DETAIL_BLESS_SLOT</name>
+    <body>+%0</body>
+  </string>
+  <string>
+    <id>915855</id>
+    <name>STR_TOOLTIP_ITEM_TYPE_RUNE</name>
+    <body>Runes</body>
+  </string>
+  <string>
+    <id>915856</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_TITLE</name>
+    <body>Runes</body>
+  </string>
+  <string>
+    <id>915857</id>
+    <name>STR_TOOLTIP_ITEM_TRANS_RSKILL_TITLE</name>
+    <body>Transformation Enchantment</body>
+  </string>
+  <string>
+    <id>915858</id>
+    <name>STR_TOOLTIP_ITEM_TRANS_RSKILL_DESC</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915859</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_RUNE_EFFECT_C_OSKILL_DECS</name>
+    <body>+%0 %1 received</body>
+  </string>
+  <string>
+    <id>915860</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_RUNE_EFFECT_C_TR_RSKILL_DECS</name>
+    <body>%0 +%1 enchantment</body>
+  </string>
+  <string>
+    <id>915861</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_RUNE_EFFECT_N</name>
+    <body>Next polishing effect (level %0)</body>
+  </string>
+  <string>
+    <id>915862</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_RUNE_EFFECT_N_OSKILL_DECS</name>
+    <body>+%0 %1 received</body>
+  </string>
+  <string>
+    <id>915863</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_RUNE_EFFECT_N_TR_RSKILL_DECS</name>
+    <body>%0 +%1 enchantment</body>
+  </string>
+  <string>
+    <id>915864</id>
+    <name>STR_VENDOR_KIND_TYPE_RUNE</name>
+    <body>Runes</body>
+  </string>
+  <string>
+    <id>915865</id>
+    <name>STR_TOOLTIP_ITEM_BADGE</name>
+    <body>Seal</body>
+  </string>
+  <string>
+    <id>915866</id>
+    <name>STR_VENDOR_KIND_BADGE</name>
+    <body>Seal</body>
   </string>
   <string>
     <id>915867</id>
@@ -49585,6 +50811,1555 @@ The higher the number, the more powerful the crit spell.</body>
     <id>915869</id>
     <name>STR_TransCollection_052</name>
     <body>Our Last Dance</body>
+  </string>
+  <string>
+    <id>915870</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_01</name>
+    <body>[Daily] A Star Daeva Must Be Diligent!</body>
+  </string>
+  <string>
+    <id>915871</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_02</name>
+    <body>[Daily] A Star Daeva Must Be Diligent!</body>
+  </string>
+  <string>
+    <id>915872</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_03</name>
+    <body>[Daily] A Star Daeva Must Be Exceptional!</body>
+  </string>
+  <string>
+    <id>915873</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_04</name>
+    <body>[Daily] A Star Daeva Can Transform Themselves!</body>
+  </string>
+  <string>
+    <id>915874</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_05</name>
+    <body>[Weekly] A Star Daeva Must Be Brave!</body>
+  </string>
+  <string>
+    <id>915875</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_06</name>
+    <body>[Weekly] A Star Daeva Must Be Brave!</body>
+  </string>
+  <string>
+    <id>915876</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_07</name>
+    <body>[Weekly] A Star Daeva Is Faster Than Anyone Else!</body>
+  </string>
+  <string>
+    <id>915877</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_08</name>
+    <body>[Weekly] A Star Daeva Tackles Any Task!</body>
+  </string>
+  <string>
+    <id>915878</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_09</name>
+    <body>[Weekly] A Star Daeva Researches Cubes!</body>
+  </string>
+  <string>
+    <id>915879</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_01_DESC</name>
+    <body>&lt;p&gt;Complete a &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_LDF8_Altar_Quest_L"&gt;Quest for Altar Development Assistance&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You are assigned the Quest for Altar Development Assistance when the Elyos capture an altar in Dumaha.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915880</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_02_DESC</name>
+    <body>&lt;p&gt;Complete a &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_LDF8_Altar_Quest_D"&gt;Quest for Altar Development Assistance&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You are assigned the Quest for Altar Development Assistance when the Asmodians capture an altar in Dumaha.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915881</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_03_DESC</name>
+    <body>&lt;p&gt;Go to the Transformation Statue in &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDBattle_Change"&gt;Illumiel&lt;/a&gt; to purchase a &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDBattle_Change_Transform"&gt;Transformation Scroll&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only enter Illumiel at certain times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915882</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_04_DESC</name>
+    <body>&lt;p&gt;Use a Transparency Transformation Scroll or a Transformation Potion 30 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Can also be used with the minion's [Buff Master] function.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915883</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_05_DESC</name>
+    <body>&lt;p&gt;Complete 3 Dumaha Altar Offensive quests.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get these quests from &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LDF8_Medena_E"&gt;Medena&lt;/a&gt;, &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LDF8_Zerona_E"&gt;Zerona&lt;/a&gt; and &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LDF8_Rolina_E"&gt;Rolina&lt;/a&gt; in Dumaha.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915884</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_06_DESC</name>
+    <body>&lt;p&gt;Complete 3 Dumaha Altar Manoeuvre quests.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get these quests from &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_Lugbug_LDF8_Nulla_E"&gt;Nulla&lt;/a&gt;, &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LDF8_Zella_E"&gt;Zella&lt;/a&gt; and &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LDF8_Kulla_E"&gt;Kulla&lt;/a&gt; in Dumaha.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915885</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_07_DESC</name>
+    <body>&lt;p&gt;Search 3x for Lugbug's Hidden Treasure.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You'll find the treasure if you enter the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_TwinkleDeva_01"&gt;Special Instance&lt;/a&gt; at certain times.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915886</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_08_DESC</name>
+    <body>&lt;p&gt;Defeat the Acid Mist Shaman 1x in the 15th Basement.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can enter the Tower of Challenge through the lobby of the Empyrean Crucible.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915887</id>
+    <name>STR_Lugbug_event_V72_TwinkleDeva_09_DESC</name>
+    <body>&lt;p&gt;Kill Malarkin 5x in Kubrinerk’s Monster Cube Laboratory.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: The entrance to Kubrinerk’s Cube Laboratory appears near the Dumaha altar.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915888</id>
+    <name>STR_TRANSFORMATION_DIALOG_LIST_TRANSFORM_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915889</id>
+    <name>STR_TRANSFORMATION_DIALOG_VIEWER_TRANSFORM_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915890</id>
+    <name>STR_TRANSFORMATION_DIALOG_INFO_REINFORCE_TITLE</name>
+    <body>Transformation Enchantment</body>
+  </string>
+  <string>
+    <id>915891</id>
+    <name>STR_TRANSFORMATION_DIALOG_INFO_REINFORCE_DESC</name>
+    <body>%0</body>
+  </string>
+  <string>
+    <id>915892</id>
+    <name>STR_TRANSFORMATION_DIALOG_INFO_EFFECT_TITLE</name>
+    <body>Effect</body>
+  </string>
+  <string>
+    <id>915893</id>
+    <name>STR_TRANSFORMATION_DIALOG_INFO_EFFECT_DESC_REIN</name>
+    <body>%0 +%1 (+%2)</body>
+  </string>
+  <string>
+    <id>915894</id>
+    <name>STR_TRANSFORMATION_DIALOG_INFO_EFFECT_DESC_REIN_PER</name>
+    <body>%0 +%1% (+%2%)</body>
+  </string>
+  <string>
+    <id>915895</id>
+    <name>STR_TOOLTIP_ITEM_GRIND_STONE</name>
+    <body>Polishing Stone</body>
+  </string>
+  <string>
+    <id>915896</id>
+    <name>STR_TOOLTIP_ITEM_PURIFICATION_ABRASIVE</name>
+    <body>Purifier</body>
+  </string>
+  <string>
+    <id>915897</id>
+    <name>STR_FAME_GROUP_NPCSHOP_ITEMTOOLTIP_USELEVEL</name>
+    <body>Glory level %0 can be purchased from %1.</body>
+  </string>
+  <string>
+    <id>915898</id>
+    <name>STR_FAME_GROUP_HUD_BUTTON_TOOLTIP</name>
+    <body>Field Glory</body>
+  </string>
+  <string>
+    <id>915899</id>
+    <name>STR_FAME_QUEST_REWARD_FEXP</name>
+    <body>%0 FXP (%1%%%%) (%2)</body>
+  </string>
+  <string>
+    <id>915900</id>
+    <name>STR_FAME_DIALOG_REWARD_FEXP</name>
+    <body>%0 FXP (%1%%) (%2)</body>
+  </string>
+  <string>
+    <id>915901</id>
+    <name>STR_FAME_REWARD_FEXP</name>
+    <body>%0 FXP (%1)</body>
+  </string>
+  <string>
+    <id>915902</id>
+    <name>STR_TOOLTIP_Give_Exp</name>
+    <body>You receive XP.</body>
+  </string>
+  <string>
+    <id>915903</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_UNED_UND_TITLE</name>
+    <body>Odian Slot Expansion</body>
+  </string>
+  <string>
+    <id>915904</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_UNED_UND_COUNT</name>
+    <body>%0/%1</body>
+  </string>
+  <string>
+    <id>915905</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_UNED_UND_DESC</name>
+    <body>Expansion possible with %0 Slot Stones.</body>
+  </string>
+  <string>
+    <id>915906</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_D_TITLE</name>
+    <body>Odian Enchantment</body>
+  </string>
+  <string>
+    <id>915907</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_D_COUNT</name>
+    <body>%0/%1</body>
+  </string>
+  <string>
+    <id>915908</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_D_DESC</name>
+    <body>%0 Odian(s) possible</body>
+  </string>
+  <string>
+    <id>915909</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_COLOR_0</name>
+    <body>All</body>
+  </string>
+  <string>
+    <id>915910</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_COLOR_1</name>
+    <body>Red</body>
+  </string>
+  <string>
+    <id>915911</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_COLOR_2</name>
+    <body>Green</body>
+  </string>
+  <string>
+    <id>915912</id>
+    <name>STR_TOOLTIP_ITEM_ODIAN_EQED_COLOR_3</name>
+    <body>Blue</body>
+  </string>
+  <string>
+    <id>915913</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_UNED_UND_TITLE</name>
+    <body>Rune Slot Expansion</body>
+  </string>
+  <string>
+    <id>915914</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_UNED_UND_COUNT</name>
+    <body>%0/%1</body>
+  </string>
+  <string>
+    <id>915915</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_UNED_UND_DESC</name>
+    <body>Expansion possible with %0 Slot Stones.</body>
+  </string>
+  <string>
+    <id>915916</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_D_TITLE</name>
+    <body>Rune Enchantment</body>
+  </string>
+  <string>
+    <id>915917</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_D_COUNT</name>
+    <body>%0/%1</body>
+  </string>
+  <string>
+    <id>915918</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_D_DESC</name>
+    <body>%0 rune(s) possible</body>
+  </string>
+  <string>
+    <id>915919</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_COLOR_0</name>
+    <body>All</body>
+  </string>
+  <string>
+    <id>915920</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_COLOR_1</name>
+    <body>of attack</body>
+  </string>
+  <string>
+    <id>915921</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_COLOR_2</name>
+    <body>of amplification</body>
+  </string>
+  <string>
+    <id>915922</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_COLOR_3</name>
+    <body>of support</body>
+  </string>
+  <string>
+    <id>915923</id>
+    <name>STR_QUEST_REWARD_OPTIONAL2</name>
+    <body>Additional Reward Amount</body>
+  </string>
+  <string>
+    <id>915924</id>
+    <name>STR_CUBIC_CATEGORY_IDSEAL_HARD_boss_1st_Info</name>
+    <body>Raging Magma/Heat Protector’s Cube</body>
+  </string>
+  <string>
+    <id>915925</id>
+    <name>STR_CUBIC_CATEGORY_IDF8_DRAGON_ALTAR_Info</name>
+    <body>Mortasha Cube</body>
+  </string>
+  <string>
+    <id>915926</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_DEATIL_TITLE</name>
+    <body>Runes</body>
+  </string>
+  <string>
+    <id>915927</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_DETAIL_BLESS_TITLE</name>
+    <body>Rune (blessing +%0)</body>
+  </string>
+  <string>
+    <id>915928</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_DETAIL_ITEM_NAME</name>
+    <body>+%0 %1</body>
+  </string>
+  <string>
+    <id>915929</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_OSKILL_EQED_TITLE</name>
+    <body>Collective skills</body>
+  </string>
+  <string>
+    <id>915930</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_TE_EQED_TITLE</name>
+    <body>Transformation Enchantment</body>
+  </string>
+  <string>
+    <id>915931</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_DETAIL_ITEM_NAME_BLESS</name>
+    <body>+%0 %1 (+%2)</body>
+  </string>
+  <string>
+    <id>915932</id>
+    <name>STR_QUEST_RANDOMREWARD_LIST_DESC</name>
+    <body>On completion, you will receive a random item from the rewards listed below.</body>
+  </string>
+  <string>
+    <id>915933</id>
+    <name>STR_QUEST_FAMEREWARD_LIST_TITLE_DESC</name>
+    <body>You receive a reward item when you complete the task satisfactorily. (No reward for repeating lower levels.)</body>
+  </string>
+  <string>
+    <id>915934</id>
+    <name>STR_QUEST_FAMEREWARD_REWARD_ALLLEVEL</name>
+    <body>All Regions</body>
+  </string>
+  <string>
+    <id>915935</id>
+    <name>STR_TOOLTIP_ITEM_RUNE_EQED_DETAIL_UND_TITLE</name>
+    <body>Rune (unknown)</body>
+  </string>
+  <string>
+    <id>915936</id>
+    <name>STR_FAME_GROUP_QUEST_ITEMTOOLTIP_USELEVEL</name>
+    <body>Glory level %0 from %1.</body>
+  </string>
+  <string>
+    <id>915937</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_01</name>
+    <body>[1 Pt] C for Celebrate!</body>
+  </string>
+  <string>
+    <id>915938</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_02</name>
+    <body>[1 Pt] E for Entertaining!</body>
+  </string>
+  <string>
+    <id>915939</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_03</name>
+    <body>[1 Pt] LE for Levity!</body>
+  </string>
+  <string>
+    <id>915940</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_04</name>
+    <body>[1 Pt] B for Birthday!</body>
+  </string>
+  <string>
+    <id>915941</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_05</name>
+    <body>[1 Pt] R for Rousing!</body>
+  </string>
+  <string>
+    <id>915942</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_06</name>
+    <body>[1 Pt] A for Amazing!</body>
+  </string>
+  <string>
+    <id>915943</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_07</name>
+    <body>[1 Pt] T for Tremendous!</body>
+  </string>
+  <string>
+    <id>915944</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_08</name>
+    <body>[1 Pt] I for Incredible!</body>
+  </string>
+  <string>
+    <id>915945</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_09</name>
+    <body>[1 Pt] O for Out of This World!</body>
+  </string>
+  <string>
+    <id>915946</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_10</name>
+    <body>[1 Pt] N for Non-stop Fun!</body>
+  </string>
+  <string>
+    <id>915947</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_11</name>
+    <body>[1 Pt] Congratulations!</body>
+  </string>
+  <string>
+    <id>915948</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_01_DESC</name>
+    <body>&lt;p&gt;Hunt down the Bundle of Lights for the 11th Anniversary of Daeva Day in the air 10x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Bundles of Lights for the 11th Anniversary of Daeva Day appear all over Dumaha.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915949</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_02_DESC</name>
+    <body>&lt;p&gt;Craft Dreamscape Lights (E) 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_2019_Dday_01"&gt;Morphing Book: Dreamscape Light Box (E)&lt;/a&gt; teaches the Substance Transformation for crafting fireworks.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915950</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_03_DESC</name>
+    <body>&lt;p&gt;Get 1x Dreamscape Lights (LE).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can find them in the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_2019_Dday_02"&gt;Dreamscape Light Box (LE)&lt;/a&gt;.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915951</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_04_DESC</name>
+    <body>&lt;p&gt;Get 1x Dreamscape Lights (B).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Track 'Dreamscape Lights (B) - Clue I' in the quest cube.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915952</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_05_DESC</name>
+    <body>&lt;p&gt;Get 1x Black Powder for Dreamscape Lights (R).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get the Black Powder from the Bundle of Dreamscape Lights (R) that appears every 5 minutes at 2 Dumaha altars.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915953</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_06_DESC</name>
+    <body>&lt;p&gt;Kill 'Congratulating Aukwi', who swallowed the fireworks, 1 time.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: He shows up near the Orbis Training Arena (Stellusia, Dumaha).&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915954</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_07_DESC</name>
+    <body>&lt;p&gt;Craft Dreamscape Lights (T) 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get the Black Powder for the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_2019_Dday_06"&gt;Dreamscape Lights (T)&lt;/a&gt; by completing Lugbug's daily mission.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915955</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_08_DESC</name>
+    <body>&lt;p&gt;Craft 1 Dreamscape Lights (I).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Accept a quest from the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_2019_Dday_05"&gt;merchant&lt;/a&gt; in Katalam, who will give you &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_2019_Dday_04"&gt;crafting materials&lt;/a&gt;.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915956</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_09_DESC</name>
+    <body>&lt;p&gt;Craft 1 Dreamscape Lights (O).&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can purchase Dreamscape Lights (O) 1x per account in the Luna Market.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915957</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_10_DESC</name>
+    <body>&lt;p&gt;Play the quest 'Lost Dreamscape Lights (N)' 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get this quest from &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_EVENT_2019_Dday_07"&gt;Celebrinerk&lt;/a&gt;.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915958</id>
+    <name>STR_Lugbug_event_V72_2019_Dday_11_DESC</name>
+    <body>&lt;p&gt;Kill 200 monsters in Red Katalam.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get to Red Katalam through the Abyss Rift in Stellusia in Dumaha.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915959</id>
+    <name>STR_fame_LF4</name>
+    <body>Inggison</body>
+  </string>
+  <string>
+    <id>915960</id>
+    <name>STR_fame_DF4</name>
+    <body>Gelkmaros</body>
+  </string>
+  <string>
+    <id>915961</id>
+    <name>STR_fame_Underpass</name>
+    <body>Silentera Canyon</body>
+  </string>
+  <string>
+    <id>915962</id>
+    <name>STR_fame_LDF5</name>
+    <body>Red Katalam</body>
+  </string>
+  <string>
+    <id>915963</id>
+    <name>STR_fame_LDF7</name>
+    <body>Lakrum</body>
+  </string>
+  <string>
+    <id>915964</id>
+    <name>STR_fame_LDF8</name>
+    <body>Dumaha</body>
+  </string>
+  <string>
+    <id>915965</id>
+    <name>STR_fame_LF4_L_DESC</name>
+    <body>&lt;P&gt;[Lv1 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (700,000))&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (1.5 million), Bundle of Nabaru’s Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Slot Stone Bundle, Bundle of AP Jam)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (3 million), Bundle of Stigma Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»You receive the right to open the Glory Rift for up to 24 players; new items as rewards (Lodas’ Silver Star)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (5 million), 500,000 AP, Extraction Material, Power Liquid)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»You receive the right to open the Glory Rift for up to 24 players; new items as rewards (Bundle with Ariel's Apostle Transformation Fragment, Bundle of Ultimate Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (7 million), 1 million AP, Heavy Bundle of Class A Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»You receive the right to open the Glory Rift for up to 96 players; new items as rewards (Bundle with Ariel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915966</id>
+    <name>STR_fame_DF4_L_DESC</name>
+    <body>&lt;P&gt;[Lv1 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Enchantment Stone, Manastone)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Bundle of Minion Contract Stones, Bundle of Nabaru's Giant Fruit, Bundle of XP Jam)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Cubelets, Leibo Protection, Bundle of AP Jam)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Bundle of Ultimate Etium, Bundle of Legendary Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Platinum Monster Cubelets, Bundle with Azphel's Apostle Transformation Fragment, Bundle of Ultimate Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Transformation Contract, Heavy Bundle of Class A Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Platinum Monster Cubelets, Bundle with Azphel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915967</id>
+    <name>STR_fame_Underpass_L_DESC</name>
+    <body>&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»Teleport to the opposing field; new items as rewards (Box of Odian Fragments, Box of Normal Rune Fragments)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Bundle with Ariel's Apostle Transformation Fragment, Bundle with Azphel's Apostle Transformation Fragment, Bundle of Ultimate Manastones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Bundle with Ariel's Apostle Transformation Fragment, Bundle with Azphel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Box of Noble Odian Fragments, Box of Greater Rune Fragments, Polishing Powder Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Coupon for Ultimate Extreme Enchantment Stone, Bundle with Ariel's Apostle Transformation Fragment, Bundle with Azphel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915968</id>
+    <name>STR_fame_LDF5_L_DESC</name>
+    <body>&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Normal Rune Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Dimension Hourglass (60 min))&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»Publish product list (Discount Coupon for Ultimate Katalam Equipment, Daevanion Wisdom Insignia Chest, Box of Stigma Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Legendary Daevanion Skill Chest)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Ticket for the Unstable Hall of Knowledge, Heavy Bundle of Class A Minionite, Polishing Powder Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Greater Rune Fragment, Daevanion Essence Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Coupon for Extreme Enchantment Stone, Heavy Bundle of Class S Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915969</id>
+    <name>STR_fame_LDF7_L_DESC</name>
+    <body>&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»Publish quests (Order Ticket (daily))&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Dimension Hourglass (60 min), Teleport Scroll Box: Neutral Lakrum Base)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Discount Coupon for Lakrum Equipment, Daevanion Wisdom Insignia Chest)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Box of Ancient Fragments of Memory)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Ticket for the Hererim Mine)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Transformation Contract, Box of Legendary Fragments of Memory)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Ultimate Transformation Potion, Bundle of Class S Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915970</id>
+    <name>STR_fame_LDF8_L_DESC</name>
+    <body>&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Odian Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Dimension Hourglass (60 min), Teleport Scroll Box: Neutral Dumaha Base)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Sale of Upgrade Material, Daevanion Wisdom Insignia Chest, Box of Stigma Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Legendary Daevanion Skill Chest)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Ticket for the Minionite Instance, Heavy Bundle of Class A Minionite, Polishing Powder Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Noble Odian Fragment, Daevanion Essence Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Ultimate Enchantment Stone Coupon, Heavy Bundle of Class S Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915971</id>
+    <name>STR_fame_LF4_D_DESC</name>
+    <body>&lt;P&gt;[Lv1 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Enchantment Stone, Manastone)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Bundle of Minion Contract Stones, Bundle of Nabaru's Giant Fruit, Bundle of XP Jam)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Cubelets, Leibo Protection, Bundle of AP Jam)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Bundle of Ultimate Etium, Bundle of Legendary Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Platinum Monster Cubelets, Bundle with Azphel's Apostle Transformation Fragment, Bundle of Ultimate Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Transformation Contract, Heavy Bundle of Class A Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Platinum Monster Cubelets, Bundle with Azphel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915972</id>
+    <name>STR_fame_DF4_D_DESC</name>
+    <body>&lt;P&gt;[Lv1 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (700,000))&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (1.5 million), Bundle of Nabaru’s Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Slot Stone Bundle, Bundle of AP Jam)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (3 million), Bundle of Stigma Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»You receive the right to open the Glory Rift for up to 24 players; new items as rewards (Lodas’ Silver Star)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (5 million), 500,000 AP, Extraction Material, Power Liquid)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»You receive the right to open the Glory Rift for up to 24 players; new items as rewards (Bundle with Ariel's Apostle Transformation Fragment, Bundle of Ultimate Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Kinah Bundle (7 million), 1 million AP, Heavy Bundle of Class A Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»You receive the right to open the Glory Rift for up to 96 players; new items as rewards (Bundle with Ariel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915973</id>
+    <name>STR_fame_Underpass_D_DESC</name>
+    <body>&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»Teleport to the opposing field; new items as rewards (Box of Odian Fragments, Box of Normal Rune Fragments)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Bundle with Ariel's Apostle Transformation Fragment, Bundle with Azphel's Apostle Transformation Fragment, Bundle of Ultimate Manastones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Bundle with Ariel's Apostle Transformation Fragment, Bundle with Azphel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Box of Noble Odian Fragments, Box of Greater Rune Fragments, Polishing Powder Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Coupon for Ultimate Extreme Enchantment Stone, Bundle with Ariel's Apostle Transformation Fragment, Bundle with Azphel's Apostle Transformation Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915974</id>
+    <name>STR_fame_LDF5_D_DESC</name>
+    <body>&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Normal Rune Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Dimension Hourglass (60 min))&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»Publish product list (Discount Coupon for Ultimate Katalam Equipment, Daevanion Wisdom Insignia Chest, Box of Stigma Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Legendary Daevanion Skill Chest)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Ticket for the Unstable Hall of Knowledge, Heavy Bundle of Class A Minionite, Polishing Powder Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Greater Rune Fragment, Daevanion Essence Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Coupon for Extreme Enchantment Stone, Heavy Bundle of Class S Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915975</id>
+    <name>STR_fame_LDF7_D_DESC</name>
+    <body>&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»Publish quests (Order Ticket (daily))&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Dimension Hourglass (60 min), Teleport Scroll Box: Neutral Lakrum Base)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Discount Coupon for Lakrum Equipment, Daevanion Wisdom Insignia Chest)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Box of Ancient Fragments of Memory)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Ticket for the Hererim Mine)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Transformation Contract, Box of Legendary Fragments of Memory)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Ultimate Transformation Potion, Bundle of Class S Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915976</id>
+    <name>STR_fame_LDF8_D_DESC</name>
+    <body>&lt;P&gt;[Lv2 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Odian Fragment)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv3 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Leibo Protection, Bundle of Nabaru's Giant Fruit)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv4 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Dimension Hourglass (60 min), Teleport Scroll Box: Neutral Dumaha Base)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv5 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Sale of Upgrade Material, Daevanion Wisdom Insignia Chest, Box of Stigma Enchantment Stones)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv6 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extraction Material, Legendary Daevanion Skill Chest)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv7 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Extra Ticket for the Minionite Instance, Heavy Bundle of Class A Minionite, Polishing Powder Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv8 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Noble Odian Fragment, Daevanion Essence Bundle)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;[Lv9 perk]&lt;/span&gt;&lt;/P&gt;
+&lt;P&gt;»New items as rewards (Ultimate Enchantment Stone Coupon, Heavy Bundle of Class S Minionite)&lt;/P&gt;&lt;br&gt;
+&lt;P&gt;*You can purchase glory rewards with Insignias of Experience.*&lt;/span&gt;&lt;/P&gt;&lt;br&gt;</body>
+  </string>
+  <string>
+    <id>915977</id>
+    <name>STR_WINDOW_FAME</name>
+    <body>Field Glory</body>
+  </string>
+  <string>
+    <id>915978</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_OFF_RUNE_OS_UNABLE</name>
+    <body>&lt;p&gt;&amp;bull;If %0% are removed, %1 of the transformation enchantments cannot be used. &lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915979</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_EQ_ODIAN_EFFECT_OS</name>
+    <body>&lt;p&gt;Odian skill %0&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915980</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_EQ_RUNE_EFFECT_TR</name>
+    <body>&lt;p&gt;Transformation Enchantment %0&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915981</id>
+    <name>STR_PLAYER_INFO_DIALOG__STAT_SKILL_LV</name>
+    <body>Skill Level</body>
+  </string>
+  <string>
+    <id>915982</id>
+    <name>STR_INDUN_ITEM_INFO_IDF8_DRAGON_ALTAR</name>
+    <body>Ultimate accessories, feathers</body>
+  </string>
+  <string>
+    <id>915983</id>
+    <name>STR_INDUN_ITEM_INFO_IDF8_DRAGON_ALTAR_E</name>
+    <body>Ultimate accessories, feathers</body>
+  </string>
+  <string>
+    <id>915984</id>
+    <name>STR_GRIND_INFO_DIALOG_ODIAN_DETAIL_ODIAN_BLESS_NAME</name>
+    <body>+%0 %1 (+%2)</body>
+  </string>
+  <string>
+    <id>915985</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_DESTRUCTION</name>
+    <body>&lt;p&gt;&amp;bull;Extreme Enchantment Stones can be used to increase the enchantment level of certain items. A higher enchantment level also increases the item's stats.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915986</id>
+    <name>STR_ENCHANT_TOOL_ENCHANT_DESTRUCTION</name>
+    <body>&lt;p&gt;&amp;bull;Place the material item to be used for the Extreme Enchantment into the appropriate material slot.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915987</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_WARNING4</name>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If unsuccessful, the enchantment level will be retained or the target of the enchantment will be destroyed.&lt;font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915988</id>
+    <name>STR_ENCHANT_FAILED_ENCHANT3</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="ff0000" size="5" &gt;Enchantment failed&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915989</id>
+    <name>STR_ENCHANT_FAILED_ENCHANT_COUNT3</name>
+    <body>&lt;p&gt;The failed enchantment destroyed the enchantment target.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>915990</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TARGET_ENCHANT_DESTRUCTION</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915991</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TOOL_TITLE_ENCHANT_DESTRUCTION</name>
+    <body>Material</body>
+  </string>
+  <string>
+    <id>915992</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TARGET_ENCHANT_PVE</name>
+    <body>Target</body>
+  </string>
+  <string>
+    <id>915993</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TOOL_TITLE_ENCHANT_PVE</name>
+    <body>Material</body>
+  </string>
+  <string>
+    <id>915994</id>
+    <name>STR_DIALOG_ODIAN_RED_80A_01_SKILL_DESC</name>
+    <body>Additional reduction of HP regeneration effect</body>
+  </string>
+  <string>
+    <id>915995</id>
+    <name>STR_DIALOG_ODIAN_BLUE_80A_01_SKILL_DESC</name>
+    <body>Reduction of additional PvP defence and additional PvE defence</body>
+  </string>
+  <string>
+    <id>915996</id>
+    <name>STR_DIALOG_ODIAN_GREEN_80A_01_SKILL_DESC</name>
+    <body>Additional reduction of cooldown for Remove Shock</body>
+  </string>
+  <string>
+    <id>915997</id>
+    <name>STR_Lugbug_Quest_v75_01</name>
+    <body>[Universal] Curtailment of Rapid Growth</body>
+  </string>
+  <string>
+    <id>915998</id>
+    <name>STR_Lugbug_Quest_v75_02_L</name>
+    <body>[Lakrum] Support for the Life Debt Legion</body>
+  </string>
+  <string>
+    <id>915999</id>
+    <name>STR_Lugbug_Quest_v75_02_D</name>
+    <body>[Lakrum] Support for the Wise Judgement Legion</body>
+  </string>
+  <string>
+    <id>916000</id>
+    <name>STR_Lugbug_Quest_v75_03</name>
+    <body>[Universal] Daevas Are Hardworking</body>
+  </string>
+  <string>
+    <id>916001</id>
+    <name>STR_Lugbug_hunt_v75_01</name>
+    <body>[Universal] Field Mouse</body>
+  </string>
+  <string>
+    <id>916002</id>
+    <name>STR_Lugbug_hunt_v75_02</name>
+    <body>[Instance] No Mercy!</body>
+  </string>
+  <string>
+    <id>916003</id>
+    <name>STR_Lugbug_hunt_v75_03</name>
+    <body>[Lakrum] Better Than Being Alone (unused)</body>
+  </string>
+  <string>
+    <id>916004</id>
+    <name>STR_Lugbug_hunt_v75_04</name>
+    <body>[Lakrum] To Take the Garrison</body>
+  </string>
+  <string>
+    <id>916005</id>
+    <name>STR_Lugbug_hunt_v75_05</name>
+    <body>[Lakrum] Alone Works Too</body>
+  </string>
+  <string>
+    <id>916006</id>
+    <name>STR_Lugbug_hunt_v75_06</name>
+    <body>[Inggison] A Rare Guest</body>
+  </string>
+  <string>
+    <id>916007</id>
+    <name>STR_Lugbug_hunt_v75_07</name>
+    <body>[Gelkmaros] A Rare Guest</body>
+  </string>
+  <string>
+    <id>916008</id>
+    <name>STR_Lugbug_hunt_v75_08</name>
+    <body>[Inggison] An Auger Falls to Earth</body>
+  </string>
+  <string>
+    <id>916009</id>
+    <name>STR_Lugbug_hunt_v75_09</name>
+    <body>[Gelkmaros] An Auger Falls to Earth</body>
+  </string>
+  <string>
+    <id>916010</id>
+    <name>STR_Lugbug_hunt_v75_10</name>
+    <body>[Gelkmaros] Space-time or Corridor?</body>
+  </string>
+  <string>
+    <id>916011</id>
+    <name>STR_Lugbug_hunt_v75_11</name>
+    <body>[Inggison] Space-time or Corridor?</body>
+  </string>
+  <string>
+    <id>916012</id>
+    <name>STR_Lugbug_hunt_v75_12</name>
+    <body>[Inggison] Protect Our Land!</body>
+  </string>
+  <string>
+    <id>916013</id>
+    <name>STR_Lugbug_hunt_v75_13</name>
+    <body>[Gelkmaros] Protect Our Land!</body>
+  </string>
+  <string>
+    <id>916014</id>
+    <name>STR_Lugbug_hunt_v75_14</name>
+    <body>[Battlefield] The Annoying Ashunatal Legion</body>
+  </string>
+  <string>
+    <id>916015</id>
+    <name>STR_Lugbug_hunt_v75_15</name>
+    <body>[Battlefield] Oh, how confusing!</body>
+  </string>
+  <string>
+    <id>916016</id>
+    <name>STR_Lugbug_hunt_v75_16</name>
+    <body>[Battlefield] Interest in Rune Civilisation</body>
+  </string>
+  <string>
+    <id>916017</id>
+    <name>STR_Lugbug_hunt_v75_17</name>
+    <body>[Battlefield] The History of the Reians</body>
+  </string>
+  <string>
+    <id>916018</id>
+    <name>STR_Lugbug_hunt_v75_18</name>
+    <body>[Instance] Hide and Seek</body>
+  </string>
+  <string>
+    <id>916019</id>
+    <name>STR_Lugbug_Collect_v75_01</name>
+    <body>[Dumaha] Lugbug in Search of Leibos</body>
+  </string>
+  <string>
+    <id>916020</id>
+    <name>STR_Lugbug_Collect_v75_02</name>
+    <body>[Katalam] Lugbug in Search of Leibos</body>
+  </string>
+  <string>
+    <id>916021</id>
+    <name>STR_Lugbug_Collect_v75_03</name>
+    <body>[Dumaha/Katalam] Lugbug in Search of Leibos</body>
+  </string>
+  <string>
+    <id>916022</id>
+    <name>STR_Lugbug_Collect_v75_04</name>
+    <body>[Fortress Battle] Proof of the Courageous Fighter</body>
+  </string>
+  <string>
+    <id>916023</id>
+    <name>STR_Lugbug_Collect_v75_05</name>
+    <body>[Inggison] Coming from All Sides</body>
+  </string>
+  <string>
+    <id>916024</id>
+    <name>STR_Lugbug_Collect_v75_06</name>
+    <body>[Gelkmaros] Coming from All Sides</body>
+  </string>
+  <string>
+    <id>916025</id>
+    <name>STR_Lugbug_Collect_v75_07</name>
+    <body>[Battlefield] Illumiel Transformation Statue</body>
+  </string>
+  <string>
+    <id>916026</id>
+    <name>STR_Lugbug_Collect_v75_08</name>
+    <body>[Arena] Battle Faction</body>
+  </string>
+  <string>
+    <id>916027</id>
+    <name>STR_Lugbug_Collect_v75_09</name>
+    <body>[Battlefield] Interest in Jotun Civilisation</body>
+  </string>
+  <string>
+    <id>916028</id>
+    <name>STR_Lugbug_Collect_v75_10</name>
+    <body>[Universal] Illustrious Daeva</body>
+  </string>
+  <string>
+    <id>916029</id>
+    <name>STR_Lugbug_Collect_v75_11</name>
+    <body>[Universal] Develop New Skills</body>
+  </string>
+  <string>
+    <id>916030</id>
+    <name>STR_Lugbug_Collect_v75_12</name>
+    <body>[Battlefield] Lord of the Battleground</body>
+  </string>
+  <string>
+    <id>916031</id>
+    <name>STR_Lugbug_Collect_v75_13</name>
+    <body>[Universal] Atreia's Day</body>
+  </string>
+  <string>
+    <id>916032</id>
+    <name>STR_Lugbug_Collect_v75_14</name>
+    <body>[Universal] Indefatigable Daeva</body>
+  </string>
+  <string>
+    <id>916033</id>
+    <name>STR_Lugbug_Collect_v75_15</name>
+    <body>[Universal] Diligent Daeva</body>
+  </string>
+  <string>
+    <id>916034</id>
+    <name>STR_Lugbug_itemplay_v75_01_low</name>
+    <body>[Universal] Constant Hunger</body>
+  </string>
+  <string>
+    <id>916035</id>
+    <name>STR_Lugbug_itemplay_v75_01_high</name>
+    <body>[Universal] Constant Hunger</body>
+  </string>
+  <string>
+    <id>916036</id>
+    <name>STR_Lugbug_itemplay_v75_02</name>
+    <body>[Universal] Curtailment of Steady Growth</body>
+  </string>
+  <string>
+    <id>916037</id>
+    <name>STR_Lugbug_itemplay_v75_03</name>
+    <body>[Universal] There's No End to the Gathering</body>
+  </string>
+  <string>
+    <id>916038</id>
+    <name>STR_Lugbug_Enter_v75_01_low</name>
+    <body>[Universal] Welcome, Daeva!</body>
+  </string>
+  <string>
+    <id>916039</id>
+    <name>STR_Lugbug_Enter_v75_01_high</name>
+    <body>[Universal] Welcome, Daeva!</body>
+  </string>
+  <string>
+    <id>916040</id>
+    <name>STR_Lugbug_Enter_v75_02</name>
+    <body>[Universal] A Driven Spirit of Adventure</body>
+  </string>
+  <string>
+    <id>916041</id>
+    <name>STR_Lugbug_Enter_v75_03</name>
+    <body>[Lakrum] Where is the Rim Ore?</body>
+  </string>
+  <string>
+    <id>916042</id>
+    <name>STR_Lugbug_Enter_v75_04</name>
+    <body>[Silentera Canyon] Infiltration Corridor</body>
+  </string>
+  <string>
+    <id>916043</id>
+    <name>STR_Lugbug_pvp_V75_01</name>
+    <body>[PvP] The Glory of Victory</body>
+  </string>
+  <string>
+    <id>916044</id>
+    <name>STR_Lugbug_pvp_V75_02</name>
+    <body>[PvP] Faction Honour</body>
+  </string>
+  <string>
+    <id>916045</id>
+    <name>STR_Lugbug_Quest_v75_01_DESC</name>
+    <body>&lt;p&gt;Complete 10 quests.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: this does not apply to Event Quests.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916046</id>
+    <name>STR_Lugbug_Quest_v75_02_L_DESC</name>
+    <body>&lt;p&gt;Complete 3 repeat quests for the Life Debt Legion in Lakrum.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only complete them if you have an Order Ticket from &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LDF7_Support_Unit_Captain_L"&gt;Karaia&lt;/a&gt; in the Everlasting Life Refuge.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916047</id>
+    <name>STR_Lugbug_Quest_v75_02_D_DESC</name>
+    <body>&lt;p&gt;Complete 3 repeat quests for the Wise Judgement Legion in Lakrum.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only complete them if you have an Order Ticket from &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LDF7_Support_Unit_Captain_D"&gt;Hinden&lt;/a&gt; in the Temple of Perpetual Wisdom.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916048</id>
+    <name>STR_Lugbug_Quest_v75_03_DESC</name>
+    <body>&lt;p&gt;Complete 50 quests.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: this does not apply to Event Quests.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916049</id>
+    <name>STR_Lugbug_hunt_v75_01_DESC</name>
+    <body>&lt;p&gt;Kill 30 monsters in the field.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: This will not be activated if the level of the target is more than 5 levels lower than your character.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916050</id>
+    <name>STR_Lugbug_hunt_v75_02_DESC</name>
+    <body>&lt;p&gt;Kill 3 boss monsters in an instance.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: This does not apply if the level of the target is more than 20 levels lower than your character.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916051</id>
+    <name>STR_Lugbug_hunt_v75_03_DESC</name>
+    <body>&lt;p&gt;An unused mission.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916052</id>
+    <name>STR_Lugbug_hunt_v75_04_DESC</name>
+    <body>&lt;p&gt;Kill the Legate of the Artefact Garrison in Lakrum 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Only the group with the highest number of target monster hit points is updated.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916053</id>
+    <name>STR_Lugbug_hunt_v75_05_DESC</name>
+    <body>&lt;p&gt;Kill 50 Lakrum Monsters.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Only the group with the highest number of target monster hit points is updated.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916054</id>
+    <name>STR_Lugbug_hunt_v75_06_DESC</name>
+    <body>&lt;p&gt;Finish off a named field monster in Inggison.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Only the group with the highest number of target monster hit points is updated.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916055</id>
+    <name>STR_Lugbug_hunt_v75_07_DESC</name>
+    <body>&lt;p&gt;Finish off a named field monster in Gelkmaros.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Only the group with the highest number of target monster hit points is updated.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916056</id>
+    <name>STR_Lugbug_hunt_v75_08_DESC</name>
+    <body>&lt;p&gt;Kill 3 Drakans in the 46th Inggison Infiltrator.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: The entrance to the Prahma Dredgion appears when you destroy a specific drill.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916057</id>
+    <name>STR_Lugbug_hunt_v75_09_DESC</name>
+    <body>&lt;p&gt;Kill 3 Drakans in the 46th Gelkmaros Infiltrator.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: The entrance to the Prahma Dredgion appears when you destroy a specific drill.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916058</id>
+    <name>STR_Lugbug_hunt_v75_10_DESC</name>
+    <body>&lt;p&gt;Kill 5 Monsters in Gelkmaros.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can travel through space-time or the Silentera Canyon in Inggison to reach Gelkmaros.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916059</id>
+    <name>STR_Lugbug_hunt_v75_11_DESC</name>
+    <body>&lt;p&gt;Kill 5 Monsters in Inggison.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can travel through space-time or the Silentera Canyon in Gelkmaros to reach Inggison.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916060</id>
+    <name>STR_Lugbug_hunt_v75_12_DESC</name>
+    <body>&lt;p&gt;Finish off 50 monsters in Inggison.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Only the group with the highest number of target monster hit points is updated.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916061</id>
+    <name>STR_Lugbug_hunt_v75_13_DESC</name>
+    <body>&lt;p&gt;Finish off 50 monsters in Gelkmaros.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Only the group with the highest number of target monster hit points is updated.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916062</id>
+    <name>STR_Lugbug_hunt_v75_14_DESC</name>
+    <body>&lt;p&gt;Destroy the Ashunatal Legion on the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDDreadgion_04"&gt;Ashunatal Dredgion&lt;/a&gt; 5x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only enter the Ashunatal Dredgion at certain times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916063</id>
+    <name>STR_Lugbug_hunt_v75_15_DESC</name>
+    <body>&lt;p&gt;Kill 5 monsters in the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDTag_War"&gt;Raging Valley&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only enter the Raging Valley at certain times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916064</id>
+    <name>STR_Lugbug_hunt_v75_16_DESC</name>
+    <body>&lt;p&gt;Defeat the Reconnaissance Troop of the 40th Army in the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDLDF5_Fortress_Re"&gt;Runatorium&lt;/a&gt; 3 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only enter the Runatorium at certain times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916065</id>
+    <name>STR_Lugbug_hunt_v75_17_DESC</name>
+    <body>&lt;p&gt;Kill 3 monsters on the &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_IDKamar"&gt;Kamar Battlefield&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only enter the Kamar Battlefield at certain times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916066</id>
+    <name>STR_Lugbug_hunt_v75_18_DESC</name>
+    <body>&lt;p&gt;Kill 10 boss monsters in an instance.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: This does not apply if the level of the target is more than 5 levels lower than your character.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916067</id>
+    <name>STR_Lugbug_Collect_v75_01_DESC</name>
+    <body>&lt;p&gt;Search in &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF8"&gt;Dumaha&lt;/a&gt; 1x for Lost Lugbug.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Explain to Lost Lugbug how to get to the village.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916068</id>
+    <name>STR_Lugbug_Collect_v75_02_DESC</name>
+    <body>&lt;p&gt;Search in &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF5a_Red"&gt;Red Katalam (North)&lt;/a&gt; 1x for Lost Lugbug.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Explain to Lost Lugbug how to get to the village.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916069</id>
+    <name>STR_Lugbug_Collect_v75_03_DESC</name>
+    <body>&lt;p&gt;Search in &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF8"&gt;Dumaha&lt;/a&gt; or in &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_LDF5a_Red"&gt;Red Katalam (North)&lt;/a&gt; 1x for Lost Lugbug.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Explain to Lost Lugbug how to get to the village.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916070</id>
+    <name>STR_Lugbug_Collect_v75_04_DESC</name>
+    <body>&lt;p&gt;Get 2 Fortress Conquest Insignias from &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_Fortress_Lugbug_Request_NPC"&gt;Grinning Lugbug&lt;/a&gt; after the fortress is conquered.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get one Fortress Conquest Insignia on each day the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_Fortress_v75_All"&gt;Fortress Battle&lt;/a&gt; takes place.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916071</id>
+    <name>STR_Lugbug_Collect_v75_05_DESC</name>
+    <body>&lt;p&gt;Collect a pure soul from the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_F4_Hunt_All"&gt;Harsh Wilders&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can purchase Knockout Bombs for the hunt from the trader for magical crafting items &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LF4_L_op_highcraft_material_Seller"&gt;Edios&lt;/a&gt;.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916072</id>
+    <name>STR_Lugbug_Collect_v75_06_DESC</name>
+    <body>&lt;p&gt;Collect a pure soul from the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_F4_Hunt_All"&gt;Harsh Wilders&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can purchase Knockout Bombs for the hunt from the trader for magical crafting items &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_DF4_D_op_highcraft_material_Seller"&gt;Magata&lt;/a&gt;.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916073</id>
+    <name>STR_Lugbug_Collect_v75_07_DESC</name>
+    <body>&lt;p&gt;Go to the Transformation Statue in &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDBattle_Change"&gt;Illumiel&lt;/a&gt; to purchase a &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDBattle_Change_Transform"&gt;Transformation Scroll&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only enter Illumiel at certain times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916074</id>
+    <name>STR_Lugbug_Collect_v75_08_DESC</name>
+    <body>&lt;p&gt;Win 1 time in the Arena of Discipline or the Arena of Cooperation.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can only enter the Arena of Discipline and the Arena of Cooperation at certain times.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916075</id>
+    <name>STR_Lugbug_Collect_v75_09_DESC</name>
+    <body>&lt;p&gt;Purchase items from the Battlefield Supply Quartermaster or the Battlefield Supply Enchanter in &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_IDEternity_War"&gt;Neviwind Canyon&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can earn the Battlefield Points you need to make a purchase in a variety of ways in the Neviwind Canyon.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916076</id>
+    <name>STR_Lugbug_Collect_v75_10_DESC</name>
+    <body>&lt;p&gt;Purchase&lt;a rel="dic" href="HACTION_DIC STR_DIC_I_LUGBUG_POTION_SHIELD_ALL_01_v75"&gt;Leibo Protection&lt;/a&gt; 2x from the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_Fame_reward_seller_lv1_3"&gt;Field Prize Giver&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can buy Leibo Protection 1x per week from a level 3 Field Prize Giver.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916077</id>
+    <name>STR_Lugbug_Collect_v75_11_DESC</name>
+    <body>&lt;p&gt;Use &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_Highdeva_Manufacture"&gt;magical crafting&lt;/a&gt; to make a legendary Daevanion Skill Chest.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LF4_op_L_material_ApSeller"&gt;Kaunas&lt;/a&gt; or &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_DF4_op_D_material_ApSeller"&gt;Oradena&lt;/a&gt; will give you a Daevanion Wisdom Insignia for crafting.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916078</id>
+    <name>STR_Lugbug_Collect_v75_12_DESC</name>
+    <body>&lt;p&gt;Collect 20 [plur]&lt;a rel="dic" href="HACTION_DIC STR_DIC_I_coin_battlefield_reward_01"&gt;Battlefield Coins&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can swap Battlefield Coins with &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_LF4_Charmichael_E"&gt;Shamichael&lt;/a&gt; or &lt;a rel="dic" href="HACTION_DIC STR_DIC_N_DF4_Skirmish_E"&gt;Skamish&lt;/a&gt; for cool items.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916079</id>
+    <name>STR_Lugbug_Collect_v75_13_DESC</name>
+    <body>&lt;p&gt;Receive 1 final daily reward.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: If a player completes a set amount of daily missions, they will receive a final daily reward.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916080</id>
+    <name>STR_Lugbug_Collect_v75_14_DESC</name>
+    <body>&lt;p&gt;Receive final daily rewards 3 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: If a player completes a set amount of daily missions, they will receive a final daily reward.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916081</id>
+    <name>STR_Lugbug_Collect_v75_15_DESC</name>
+    <body>&lt;p&gt;Receive final daily rewards 5 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: If a player completes a set amount of daily missions, they will receive a final daily reward.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916082</id>
+    <name>STR_Lugbug_itemplay_v75_01_low_DESC</name>
+    <body>&lt;p&gt;Use food, a potion or a drink 15 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Can also be used with the minion's [Buff Master] function.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916083</id>
+    <name>STR_Lugbug_itemplay_v75_01_high_DESC</name>
+    <body>&lt;p&gt;Use food, a potion or a drink 30 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: Can also be used with the minion's [Buff Master] function.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916084</id>
+    <name>STR_Lugbug_itemplay_v75_02_DESC</name>
+    <body>&lt;p&gt;Enchant your equipment with an Enchantment Stone 5 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: It can be used directly by double-clicking (right-clicking) in the inventory (cube).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916085</id>
+    <name>STR_Lugbug_itemplay_v75_03_DESC</name>
+    <body>&lt;p&gt;Use the &lt;a rel="dic" href="HACTION_DIC STR_DIC_item_exp_extraction_80a"&gt;Combat Experience Extractor&lt;/a&gt; 1 time.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You consume a certain amount of XP when you use the Combat Experience Extractor and produce &lt;a rel="dic" href="HACTION_DIC STR_DIC_item_exp_coin_80a"&gt;Insignias of Experience&lt;/a&gt; in the process.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916086</id>
+    <name>STR_Lugbug_Enter_v75_01_low_DESC</name>
+    <body>&lt;p&gt;A New Day Dawns in Atreia.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can complete this quest by logging in or teleporting.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916087</id>
+    <name>STR_Lugbug_Enter_v75_01_high_DESC</name>
+    <body>&lt;p&gt;A New Day Dawns in Atreia.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can complete this quest by logging in or teleporting.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916088</id>
+    <name>STR_Lugbug_Enter_v75_02_DESC</name>
+    <body>&lt;p&gt;Teleport 3 times.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get to other places via teleporters, the Abyss Rift, Dynastic Rift and instance entrances.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916089</id>
+    <name>STR_Lugbug_Enter_v75_03_DESC</name>
+    <body>&lt;p&gt;Enter the &lt;a rel="dic" href="HACTION_DIC STR_DIC_IDF7_Mine"&gt;Hererim Mine&lt;/a&gt; 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: The entrance to the Hererim Mine opens at the last garrison occupied (127th, 128th or 129th).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916090</id>
+    <name>STR_Lugbug_Enter_v75_04_DESC</name>
+    <body>&lt;p&gt;Enter the &lt;a rel="dic" href="HACTION_DIC STR_DIC_W_ZONE_NAME_Underpass"&gt;Silentera Canyon&lt;/a&gt; 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: The Silentera Canyon is a corridor that connects Inggison and Gelkmaros.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916091</id>
+    <name>STR_Lugbug_pvp_V75_01_DESC</name>
+    <body>&lt;p&gt;Complete 30 PvP battles.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: This does not apply if the level of the target is more than 5 levels lower than your character.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916092</id>
+    <name>STR_Lugbug_pvp_V75_02_DESC</name>
+    <body>&lt;p&gt;Complete 200 PvP battles.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: This does not apply if the level of the target is more than 5 levels lower than your character.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916093</id>
+    <name>STR_TRANS_CATEGORY_YUSTIEL_01</name>
+    <body>Resonance</body>
+  </string>
+  <string>
+    <id>916094</id>
+    <name>STR_TRANS_CATEGORY_ARIEL_01</name>
+    <body>Faith</body>
+  </string>
+  <string>
+    <id>916095</id>
+    <name>STR_TRANS_CATEGORY_HAMERUN_01</name>
+    <body>Lunacy</body>
+  </string>
+  <string>
+    <id>916096</id>
+    <name>STR_TRANS_CATEGORY_GRANDAL_01</name>
+    <body>Frost</body>
+  </string>
+  <string>
+    <id>916097</id>
+    <name>STR_TRANS_CATEGORY_HERENAS_01</name>
+    <body>Patience</body>
+  </string>
+  <string>
+    <id>916098</id>
+    <name>STR_TRANS_CATEGORY_VAMPIRE_01</name>
+    <body>Heat</body>
+  </string>
+  <string>
+    <id>916099</id>
+    <name>STR_TRANS_CATEGORY_IRRNYN_01</name>
+    <body>Tenacity</body>
+  </string>
+  <string>
+    <id>916100</id>
+    <name>STR_TRANS_CATEGORY_BRICK_01</name>
+    <body>Holiday</body>
+  </string>
+  <string>
+    <id>916101</id>
+    <name>STR_TRANS_CATEGORY_PUMPKIN_01</name>
+    <body>Halloween</body>
+  </string>
+  <string>
+    <id>916102</id>
+    <name>STR_TRANS_CATEGORY_TAIWAN_01</name>
+    <body>Taiwanese Holiday</body>
+  </string>
+  <string>
+    <id>916103</id>
+    <name>STR_Lugbug_event_V75__New_Generation_01</name>
+    <body>[Battle] Old New World: The Thrill of the Fight!</body>
+  </string>
+  <string>
+    <id>916104</id>
+    <name>STR_Lugbug_event_V75__New_Generation_02</name>
+    <body>[Field] Old New World: Oppress Balaurea!</body>
+  </string>
+  <string>
+    <id>916105</id>
+    <name>STR_Lugbug_event_V75__New_Generation_03</name>
+    <body>[Glory] Old New World: For Glory!</body>
+  </string>
+  <string>
+    <id>916106</id>
+    <name>STR_Lugbug_event_V75__New_Generation_04</name>
+    <body>[Item] Old New World: Collect Coins!</body>
+  </string>
+  <string>
+    <id>916107</id>
+    <name>STR_Lugbug_event_V75__New_Generation_05</name>
+    <body>[Instance] Old New World: Kill the Boss!</body>
+  </string>
+  <string>
+    <id>916108</id>
+    <name>STR_Lugbug_event_V75__New_Generation_06</name>
+    <body>[Battlefield] Old New World: To Battle!</body>
+  </string>
+  <string>
+    <id>916109</id>
+    <name>STR_Lugbug_event_V75__New_Generation_07</name>
+    <body>[Legion] Old New World: For the Legion!</body>
+  </string>
+  <string>
+    <id>916110</id>
+    <name>STR_Lugbug_event_V75__New_Generation_01_DESC</name>
+    <body>&lt;p&gt;Complete the Urgent Orders Quest 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get the quest in Inggison, Gelkmaros and the Silentera Canyon.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916111</id>
+    <name>STR_Lugbug_event_V75__New_Generation_02_DESC</name>
+    <body>&lt;p&gt;Kill 30 Storm Cyclones.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can find Storm Cyclones in Inggison and Gelkmaros.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916112</id>
+    <name>STR_Lugbug_event_V75__New_Generation_03_DESC</name>
+    <body>&lt;p&gt;Use Glory Essence 1x.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get Glory Essence on Lugbug's missions.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916113</id>
+    <name>STR_Lugbug_event_V75__New_Generation_04_DESC</name>
+    <body>&lt;p&gt;Collect 30 Titan Coins.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;
+Tip: You get Titan Coins from hunting and quests in Inggison and Gelkmaros.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916114</id>
+    <name>STR_Lugbug_event_V75__New_Generation_05_DESC</name>
+    <body>&lt;p&gt;Kill a boss monster in an instance.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: This does not apply if the level of the target is more than 5 levels lower than your character.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916115</id>
+    <name>STR_Lugbug_event_V75__New_Generation_06_DESC</name>
+    <body>&lt;p&gt;Collect a Battlefield Coin.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You get the Battlefield Coin when you win a battle or if you make a certain contribution.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916116</id>
+    <name>STR_Lugbug_event_V75__New_Generation_07_DESC</name>
+    <body>&lt;p&gt;Complete a Legion Mission quest.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can get this quest in the Legion Menu - Mission.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916117</id>
+    <name>STR_KEYMAP_FAMEDIALOG</name>
+    <body>Field Glory</body>
+  </string>
+  <string>
+    <id>916118</id>
+    <name>STR_Lugbug_Collect_v75_16</name>
+    <body>[Inggison] Are Titan Coins Cool?</body>
+  </string>
+  <string>
+    <id>916119</id>
+    <name>STR_Lugbug_Collect_v75_17</name>
+    <body>[Gelkmaros] Are Titan Coins Cool?</body>
+  </string>
+  <string>
+    <id>916120</id>
+    <name>STR_Lugbug_Collect_v75_16_DESC</name>
+    <body>&lt;p&gt;Collect 20 [plur]&lt;a rel="dic" href="HACTION_DIC STR_DIC_I_coin_f4_reward_01"&gt;Titan Coins&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can exchange Titan Coins with the traders in Inggison for cool items.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916121</id>
+    <name>STR_Lugbug_Collect_v75_17_DESC</name>
+    <body>&lt;p&gt;Collect 20 [plur]&lt;a rel="dic" href="HACTION_DIC STR_DIC_I_coin_f4_reward_01"&gt;Titan Coins&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can exchange Titan Coins with the traders in Gelkmaros for cool items.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916122</id>
+    <name>STR_ENCHANT_PREDICT_EXTRACT_GRIND_01</name>
+    <body>&lt;p&gt;&amp;bull;You receive a Slot Stone when you extract an accessory or feather. You receive additional Polishing Powder when you use a socketing aid.&lt;/p&gt;&lt;p&gt;&amp;bull;Extracting accessories and feathers also destroys the Odians and runes equipped in them.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916123</id>
+    <name>STR_ENCHANT_PREDICT_EXTRACT_PURIFY_01</name>
+    <body>&lt;p&gt;&amp;bull;You receive a Slot Stone when you extract an Odian or Rune. You receive additional Cleaning Powder when you use a socketing aid.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916124</id>
+    <name>STR_INDUN_ITEM_INFO_IDTemple_Low</name>
+    <body>Weapons and armour from ancient times</body>
+  </string>
+  <string>
+    <id>916125</id>
+    <name>STR_DECOMPOSE_ITEM_DO_YOU_EXTRACT_ITEM_ODIAN_1</name>
+    <body>&lt;p&gt;Do you want to extract %0?&lt;/p&gt;
+&lt;p&gt;Once the extraction is complete, &lt;font color="ff0000"&gt;%0&lt;/font&gt; will be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;
+&lt;p&gt;Once the extraction is complete, &lt;font color="ff0000"&gt;%1&lt;/font&gt; (enchanted) will also be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916126</id>
+    <name>STR_DECOMPOSE_ITEM_DO_YOU_EXTRACT_ITEM_ODIAN_2</name>
+    <body>&lt;p&gt;Do you want to use %0 to extract %1?&lt;/p&gt;
+&lt;p&gt;&lt;font color="ff0000"&gt;%0&lt;/font&gt; and %1 will be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt; during the extraction.&lt;/p&gt;
+&lt;p&gt;Once the extraction is complete, &lt;font color="ff0000"&gt;%2&lt;/font&gt; (enchanted) will be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916127</id>
+    <name>STR_MSG_DESTROY_ITEM_ODIAN</name>
+    <body>&lt;p&gt;Do you want to &lt;font color="ff0000"&gt;destroy&lt;/font&gt; &lt;font color="ff0000"&gt;%0&lt;/font&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;font color="ff0000"&gt;%1&lt;/font&gt; (enchanted) will also be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916128</id>
+    <name>STR_DESTROY_CASH_ITEM_ODIAN</name>
+    <body>&lt;p&gt;&lt;font color="ff0000"&gt;%0&lt;/font&gt; is an item sold by the Black Cloud Merchants.&lt;p/&gt;
+&lt;p&gt;&lt;font color="ff0000"&gt;%1&lt;/font&gt; (enchanted) will also be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;
+&lt;p&gt;To &lt;font color="ff0000"&gt;destroy&lt;/font&gt; it, enter '&lt;font color="ff0000"&gt;%2&lt;/font&gt;'.&lt;p/&gt;</body>
+  </string>
+  <string>
+    <id>916129</id>
+    <name>STR_DESTROY_CASH_ITEM_CONFIRM_ODIAN</name>
+    <body>&lt;p&gt;Do you want to &lt;font color="ff0000"&gt;destroy&lt;/font&gt; &lt;font color="ff0000"&gt;%0&lt;/font&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;font color="ff0000"&gt;%1&lt;/font&gt; (enchanted) will also be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;
+&lt;p&gt;This item cannot be restored once destroyed.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916130</id>
+    <name>STR_DESTROY_RARE_ITEM_CONFIRM_ODIAN</name>
+    <body>&lt;p&gt;Do you want to &lt;font color="ff0000"&gt;destroy&lt;/font&gt; &lt;font color="ff0000"&gt;%0&lt;/font&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;font color="ff0000"&gt;%1&lt;/font&gt; (enchanted) will also be &lt;font color="ff0000"&gt;destroyed&lt;/font&gt;.&lt;/p&gt;
+&lt;p&gt;If yes, enter '&lt;font color="ff0000"&gt;%2&lt;/font&gt;'.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916131</id>
+    <name>STR_EVENT_ALL_TITLE_483</name>
+    <body>Balaurea Adventurer</body>
+  </string>
+  <string>
+    <id>916132</id>
+    <name>STR_EVENT_ALL_TITLE_483_DESC</name>
+    <body>A title for the Balaurea Adventurer.</body>
+  </string>
+  <string>
+    <id>916133</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OP_ODIAN_DEFINE</name>
+    <body>The expansion with slot with the option of a %0 Odian enchantment was successful.</body>
+  </string>
+  <string>
+    <id>916134</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OP_ODIAN_BLESS_DEFINE</name>
+    <body>The +%1 expansion with blessing slot with the option of a %0 Odian enchantment was successful.</body>
+  </string>
+  <string>
+    <id>916135</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OP_RUNE_DEFINE</name>
+    <body>The expansion with slot with the option of a %0 rune enchantment was successful.</body>
+  </string>
+  <string>
+    <id>916136</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_OP_RUNE_BLESS_DEFINE</name>
+    <body>The +%1 expansion with blessing slot with the option of a %0 rune enchantment was successful.</body>
+  </string>
+  <string>
+    <id>916137</id>
+    <name>STR_ENCHANT_PURIFICATION_S_SUCCEEDED_DESC</name>
+    <body>&lt;p align="CENTER"&gt;&lt;font color="d1d100" size="5" &gt;Full clean successful&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color="6871bd"&gt;Polish level %0 &amp;rarr; %1&lt;font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color="6871bd"&gt;Number of cleans %2 &amp;rarr; %3&lt;font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color="6871bd"&gt;A full clean prevents contamination on the next three polishing attempts.&lt;font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916138</id>
+    <name>STR_DAILYMISSION_BANNER_EVENT</name>
+    <body>That's an event mission for Daevas.
+You receive a cool reward when you complete the mission!</body>
   </string>
   <string>
     <id>916139</id>
@@ -49612,6 +52387,41 @@ The higher the number, the more powerful the crit spell.</body>
     <body>https://en.aion.gameforge.com/website/shop/clientlogin/?0=%0&amp;1=%1&amp;link=ingame</body>
   </string>
   <string>
+    <id>916144</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_EQ_ODIAN_DESC</name>
+    <body>&lt;p&gt;The Odian enchantment of %0 was successful.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916145</id>
+    <name>STR_ENCHANT_SUCCEEDED_ENCHANT_EQ_RUNE_DESC</name>
+    <body>&lt;p&gt;The rune enchantment of %0 was successful.&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916146</id>
+    <name>STR_TOOLTIP_NOTICE_ENCHANT_DESTRUCTION</name>
+    <body>Extreme Enchantment</body>
+  </string>
+  <string>
+    <id>916147</id>
+    <name>STR_RANK_MAIL_TITLE_IDEVENT_DAMAGE_01_L_Total</name>
+    <body>Special Reward for the Shattered Abyssal Splinter</body>
+  </string>
+  <string>
+    <id>916148</id>
+    <name>STR_RANK_MAIL_BODY_IDEVENT_DAMAGE_01_L_Total</name>
+    <body>These are the rewards for your excellent performance in the Shattered Abyssal Splinter.</body>
+  </string>
+  <string>
+    <id>916149</id>
+    <name>STR_RANK_MAIL_TITLE_IDEVENT_DAMAGE_01_D_Total</name>
+    <body>Reward for the Shattered Abyssal Splinter</body>
+  </string>
+  <string>
+    <id>916150</id>
+    <name>STR_RANK_MAIL_BODY_IDEVENT_DAMAGE_01_D_Total</name>
+    <body>These are the rewards for your excellent performance in the Shattered Abyssal Splinter.</body>
+  </string>
+  <string>
     <id>916152</id>
     <name>STR_INGAME_POPUP_INFO_LINK_1_RC</name>
     <body>https://en.aion.gameforge.com/?link=ingame</body>
@@ -49630,6 +52440,11 @@ The higher the number, the more powerful the crit spell.</body>
     <id>916155</id>
     <name>STR_INGAME_POPUP_INFO_LINK_5_RC</name>
     <body>https://en.aion.gameforge.com/?link=ingame</body>
+  </string>
+  <string>
+    <id>916157</id>
+    <name>STR_ENCHANT_PREDICT_ENCHANT_COUNT_GRIND_CRIX</name>
+    <body>&lt;p&gt;&lt;font color="6871bd"&gt;If successful, you will achieve polish level %0 &amp;rarr; %1.&lt;font&gt;&lt;/p&gt;</body>
   </string>
   <string>
     <id>916158</id>
@@ -49660,6 +52475,176 @@ The higher the number, the more powerful the crit spell.</body>
     <id>916163</id>
     <name>STR_Lugbug_Collect_v75_18_DESC</name>
     <body>&lt;p&gt;Collect 50 &lt;a rel="dic" href="HACTION_DIC STR_DIC_I_coin_f3_reward_01"&gt;Acorns.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: You can exchange the Acorns for fabulous rewards from the &lt;a rel="dic" href="HACTION_DIC STR_DIC_E_Acorn_UnionMember"&gt;Acorn Merchant&lt;/a&gt;.&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916164</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAMEPOINT_NAME</name>
+    <body>Elim Energy</body>
+  </string>
+  <string>
+    <id>916165</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAMEPOINT_EXTRA_BOOST_BODY</name>
+    <body>The Elim energy has been charged. Your glory points for hunting and completing quests increase by %0%% while the effect lasts. The effect vanishes once all of the stored energy is consumed.</body>
+  </string>
+  <string>
+    <id>916166</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAMEPOINT_AUTO_BODY</name>
+    <body>When automatic charging drops below %0%%, items for charging are used automatically.</body>
+  </string>
+  <string>
+    <id>916167</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAMEPOINT_PCBANG_BOOST_BODY</name>
+    <body>&lt;PC방 효과: [color: %0%%의 추가 명성치;0.2 1 0.2] 획득&gt;</body>
+  </string>
+  <string>
+    <id>916168</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAMEPOINT_NON_OVER_BOOST_BODY</name>
+    <body>If the charge exceeds %0%%, you will receive %1%% additional Glory Points for which no energy will be consumed.</body>
+  </string>
+  <string>
+    <id>916169</id>
+    <name>STR_AUTO_CHARGE_ABSOLUTEFAMEPOINT</name>
+    <body>Automatic charging</body>
+  </string>
+  <string>
+    <id>916170</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAME_AUTO_BODY</name>
+    <body>When automatic charging drops below %0%%, items for charging are used automatically.</body>
+  </string>
+  <string>
+    <id>916171</id>
+    <name>STR_AUTO_CHARGE_COND_ABSOLUTEFAMEPOINT</name>
+    <body>Automatic charging active</body>
+  </string>
+  <string>
+    <id>916172</id>
+    <name>STR_STOP_AUTO_CHARGE_ABSOLUTEFAMEPOINT</name>
+    <body>Quit automatic charging</body>
+  </string>
+  <string>
+    <id>916173</id>
+    <name>STR_AUTO_CHARGE_POSSIBLE_ABSOLUTEFAMEPOINT</name>
+    <body>Automatic charging available</body>
+  </string>
+  <string>
+    <id>916174</id>
+    <name>STR_TransCollection_053</name>
+    <body>Eternal Death</body>
+  </string>
+  <string>
+    <id>916175</id>
+    <name>STR_TransCollection_054</name>
+    <body>Muscles complement the outfit perfectly</body>
+  </string>
+  <string>
+    <id>916176</id>
+    <name>STR_TransCollection_055</name>
+    <body>Pyjama Party</body>
+  </string>
+  <string>
+    <id>916177</id>
+    <name>STR_TransCollection_056</name>
+    <body>Do you know the way?</body>
+  </string>
+  <string>
+    <id>916178</id>
+    <name>STR_TransCollection_057</name>
+    <body>Black &amp; White Theory</body>
+  </string>
+  <string>
+    <id>916179</id>
+    <name>STR_TransCollection_058</name>
+    <body>Extravagant Ball Costume</body>
+  </string>
+  <string>
+    <id>916180</id>
+    <name>STR_TransCollection_059</name>
+    <body>Polyamorous</body>
+  </string>
+  <string>
+    <id>916181</id>
+    <name>STR_TransCollection_060</name>
+    <body>Gods and Apostles of Fantasy</body>
+  </string>
+  <string>
+    <id>916182</id>
+    <name>STR_TransCollection_061</name>
+    <body>Gods and Apostles of Fate</body>
+  </string>
+  <string>
+    <id>916183</id>
+    <name>STR_Lugbug_itemplay_v75_04_L</name>
+    <body>[Inggison] Full of Energy!</body>
+  </string>
+  <string>
+    <id>916184</id>
+    <name>STR_Lugbug_itemplay_v75_04_D</name>
+    <body>[Gelkmaros] Full of Energy!</body>
+  </string>
+  <string>
+    <id>916185</id>
+    <name>STR_Lugbug_itemplay_v75_04_L_DESC</name>
+    <body>&lt;p&gt;&lt;a rel="dic" href="HACTION_DIC STR_DIC_I_coin_f4_reward_01"&gt;Use Titan Coins directly 5 times.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: After level 80, they can be used directly by double-clicking (right-clicking) in the inventory (cube).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916186</id>
+    <name>STR_Lugbug_itemplay_v75_04_D_DESC</name>
+    <body>&lt;p&gt;&lt;a rel="dic" href="HACTION_DIC STR_DIC_I_coin_f4_reward_01"&gt;Use Titan Coins directly 5 times.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Tip: After level 80, they can be used directly by double-clicking (right-clicking) in the inventory (cube).&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>916187</id>
+    <name>STR_TRANS_CATEGORY_VAIZEL_02</name>
+    <body>Purity</body>
+  </string>
+  <string>
+    <id>916188</id>
+    <name>STR_TRANS_CATEGORY_YUSTIEL_02</name>
+    <body>Resonance</body>
+  </string>
+  <string>
+    <id>916189</id>
+    <name>STR_TRANS_CATEGORY_ARIEL_02</name>
+    <body>Faith</body>
+  </string>
+  <string>
+    <id>916190</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_ODIAN_PADDING</name>
+    <body>&lt;tr&gt;&lt;td width="80" align="left" valign="top"&gt;%s&lt;td align="left" valign="top"&gt;&lt;font&gt;%s&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;</body>
+  </string>
+  <string>
+    <id>916191</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_ODIAN_TABLE</name>
+    <body>&lt;table width="100%%" cellpadding="0" cellspacing="0" cellheightspacing="4" border="0"&gt;</body>
+  </string>
+  <string>
+    <id>916192</id>
+    <name>STR_TOOLTIP_ITEM_TRANS_RSKILL_ELLPSIS</name>
+    <body>...</body>
+  </string>
+  <string>
+    <id>916193</id>
+    <name>STR_ENCHANT_DESC_ENCHANT_EQ_RUNE_PADDING</name>
+    <body>&lt;tr&gt;&lt;td width="60" align="left" valign="top"&gt;%s&lt;td align="left" valign="top"&gt;&lt;font&gt;%s&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;</body>
+  </string>
+  <string>
+    <id>916194</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAME_NON_PCBANG_BOOST_BODY</name>
+    <body>PC방에서 접속 시 %0%%의 추가 명성치를 획득할 수 있습니다.</body>
+  </string>
+  <string>
+    <id>916195</id>
+    <name>STR_TOOLTIP_ABSOLUTEFAME_OVER_BOOST_BODY</name>
+    <body>[lt]Charge via %0%%: You receive [color:%1%% additional Glory Points for which no energy is consumed;0.2 1 0.2].[gt]</body>
+  </string>
+  <string>
+    <id>916196</id>
+    <name>STR_INDUN_ITEM_INFO_IDABRE_UP3_URF</name>
+    <body>Class S Minionite, Class A Minionite, Minion Contract</body>
+  </string>
+  <string>
+    <id>916202</id>
+    <name>STR_INDUN_ITEM_INFO_IDUNITE_LEGION</name>
+    <body>Glowing Odian Fragment, Noble Odian Fragment, Odian Fragment</body>
   </string>
   <string>
     <id>916295</id>
@@ -49702,6 +52687,21 @@ The higher the number, the more powerful the crit spell.</body>
     <body>&lt;p&gt;Kill 200 Carefree Singles.&lt;/p&gt;&lt;p&gt;&lt;font color="A6A6A6"&gt;&lt;font size="2"&gt;Hint: You can find Carefree Singles in Lakrum during the event period.&lt;/font&gt;&lt;/p&gt;</body>
   </string>
   <string>
+    <id>916303</id>
+    <name>STR_TransCollection_065</name>
+    <body>Ereshkigal Legion</body>
+  </string>
+  <string>
+    <id>916304</id>
+    <name>STR_TransCollection_066</name>
+    <body>Tiamat Legion</body>
+  </string>
+  <string>
+    <id>916305</id>
+    <name>STR_TransCollection_067</name>
+    <body>Here for Raid</body>
+  </string>
+  <string>
     <id>916348</id>
     <name>STR_TransCollection_068</name>
     <body>Serious &amp; Smart</body>
@@ -49715,5 +52715,40 @@ The higher the number, the more powerful the crit spell.</body>
     <id>916350</id>
     <name>STR_TransCollection_070</name>
     <body>Beautiful Hanfu</body>
+  </string>
+  <string>
+    <id>916362</id>
+    <name>STR_TRANS_CATEGORY_Eresh_01</name>
+    <body>Ice Type</body>
+  </string>
+  <string>
+    <id>916363</id>
+    <name>STR_TRANS_CATEGORY_Tiamat_01</name>
+    <body>Earth Type</body>
+  </string>
+  <string>
+    <id>917223</id>
+    <name>STR_TRANS_CATEGORY_JAPAN_01</name>
+    <body>Japanese Holiday Classes</body>
+  </string>
+  <string>
+    <id>917224</id>
+    <name>STR_TRANS_CATEGORY_CHINA_01</name>
+    <body>Hanfu Pixel Classes</body>
+  </string>
+  <string>
+    <id>917228</id>
+    <name>STR_ITEM_ODIAN_SLOT_RESTORE_CONFIRM</name>
+    <body>With the help of &lt;p&gt;%0 you can reset Odian slots expanded in %1 and expand them again. If the Odian slot is simply removed, you can not &lt;font color="ff0000"&gt;restore it.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;Do you want to reset the Odian slot for &lt;font color="ff0000"&gt;%1&lt;/font&gt; &lt;font color="ff0000"&gt;?&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>917229</id>
+    <name>STR_ITEM_RUNE_SLOT_RESTORE_CONFIRM</name>
+    <body>With the help of &lt;p&gt;%0 you can reset rune slots expanded in %1 and expand them again. If the rune slot is simply removed, you can not &lt;font color="ff0000"&gt;restore it.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;Do you want to reset the rune slot for &lt;font color="ff0000"&gt;%1&lt;/font&gt; &lt;font color="ff0000"&gt;?&lt;/font&gt;&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>917230</id>
+    <name>STR_ITEM_SLOT_RESTORE_RESTORING</name>
+    <body>Slot will be reset</body>
   </string>
 </strings>
