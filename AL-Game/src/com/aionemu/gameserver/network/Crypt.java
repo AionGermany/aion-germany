@@ -36,7 +36,7 @@ public class Crypt {
 	/**
 	 * Second byte of server packet must be equal to this
 	 */
-	public final static byte staticServerPacketCode = 0x50; // 7.2
+	public final static byte staticServerPacketCode = 0x56; // 7.5
 	/**
 	 * Crypt is enabled after first server packet was send.
 	 */
@@ -109,6 +109,6 @@ public class Crypt {
 	 * @return obfuscated opcodec
 	 */
 	public static final int encodeOpcodec(int op) {
-		return (op + 0xD9) ^ 0xDB; // 7.2
+		return (op + 0xD8) ^ 0xD9; // 7.5
 	}
 }

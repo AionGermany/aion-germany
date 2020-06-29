@@ -217,6 +217,7 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 		readC();
 		height = readF();
 		isCreate = (readC() == 0 ? false : true);
+		readC(); //new
 	}
 
 	/**

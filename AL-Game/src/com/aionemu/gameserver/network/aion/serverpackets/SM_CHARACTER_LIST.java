@@ -93,14 +93,17 @@ public class SM_CHARACTER_LIST extends PlayerInfo {
 					writeB(new byte[52]); // unk 4.9
 					writeD(playerData.getDeletionTimeInSeconds()); // v4.9
 					writeH(player.getPlayerSettings().getDisplay());// display helmet 0 show, 5 dont show
-					writeH(129); // unk 129
+					writeH(0); // unk
+					writeD(0); // unk
+					writeD(0); // unk
+					writeD(0); // unk
 					writeD(DAOManager.getDAO(MailDAO.class).mailCount(pcd.getPlayerObjId())); // All Mail Count
 					writeD(DAOManager.getDAO(MailDAO.class).unreadedMails(pcd.getPlayerObjId())); // Unread Mail Count
 					writeD(0); // unk
 					writeD(0); // unk
-					writeD(0); // unk
 					writeQ(BrokerService.getInstance().getCollectedMoney(pcd)); // collected money from broker
-					writeB(new byte[150]); // unk 5.0 TODO
+					writeD(0); // unk
+					writeB(new byte[146]); // unk 5.0 TODO
 				}
 			}
 		}

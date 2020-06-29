@@ -42,7 +42,7 @@ public class EncryptionKeyPair {
 	/**
 	 * Second byte of client packet must be equal to this
 	 */
-	private final static byte staticClientPacketCode = 0x51; // 7D 4.3 | 4.5 | 4.6 | 4.7 | 4.8 | 4.9
+	private final static byte staticClientPacketCode = 0x75; // 7D 4.3 | 4.5 | 4.6 | 4.7 | 4.8 | 4.9
 	/**
 	 * Base key used to generate client/server keys
 	 */

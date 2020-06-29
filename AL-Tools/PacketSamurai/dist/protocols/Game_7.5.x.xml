@@ -846,7 +846,7 @@
 			</part>
 			<part name="chatServerPort" type="h"/>
 		</packet>
-		<packet id="0xFFFF" name="SM_STATS_INFO">
+		<packet id="0x01" name="SM_STATS_INFO">
 			<part name="objectId" type="d"/>
 			<part name="gameTime" type="d">
 				<reader type="UnixDate"/>
@@ -986,7 +986,7 @@
 			<part name="Todo" type="h"/>
 			<part name="Todo" type="h"/>
 		</packet>
-		<packet id="0x01" name="SM_STATUPDATE_HP">
+		<packet id="0x03" name="SM_STATUPDATE_HP">
 			<part name="currentHp" type="d"/>
 			<part name="maxHp" type="d"/>
 		</packet>
@@ -994,7 +994,7 @@
 			<part name="currentMp" type="d"/>
 			<part name="maxMp" type="d"/>
 		</packet>
-		<packet id="0x03" name="SM_ATTACK_STATUS"> <!-- 7.5 EU -->
+		<packet id="0x05" name="SM_ATTACK_STATUS">
 			<part name="creatureObjectId" type="d"/>
 			<part name="SomeObjectId/ TODO" type="d"/>
 			<part name="value" type="d"/>
@@ -1026,7 +1026,7 @@
 			<part name="eventExp" type="Q"/>
 			<part name="growthEnergy" type="Q"/>
 		</packet>
-		<packet id="0x0B" name="SM_ENTER_WORLD_CHECK"> <!-- 7.5 EU -->
+		<packet id="0x0D" name="SM_ENTER_WORLD_CHECK">
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
@@ -1100,7 +1100,7 @@
 			<part name="townId" type="d" />
 			<part name="unk" type="b" size="12" />
 		</packet>
-		<packet id="0x0D" name="SM_PLAYER_SPAWN"> <!-- 7.5 EU -->
+		<packet id="0x0F" name="SM_PLAYER_SPAWN">
 			<part name="worldId" type="d"/>
 			<part name="worldId + chnl" type="d"/>
 			<part name="unk" type="d"/>
@@ -1116,7 +1116,7 @@
 			<part name="unk(4.0)" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x0F" name="SM_GATHERABLE_INFO"> <!-- 7.5 EU -->
+		<packet id="0x11" name="SM_GATHERABLE_INFO">
 			<part name="x" type="f"/>
 			<part name="y" type="f"/>
 			<part name="z" type="f"/>
@@ -1153,7 +1153,7 @@
 			<part name="deleteTime" type="c"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x175888" name="SM_LOGIN_QUEUE">
+		<packet id="0x17" name="SM_LOGIN_QUEUE">
 			<part name="waitingPosition" type="d"/>
 			<part name="waitingTime" type="d"/>
 			<part name="waitingCount" type="d"/>
@@ -1497,7 +1497,7 @@
 				<reader type="Inflate"/>
 			</part>
 		</packet>
-		<packet id="0x1F5554" name="SM_PLAYER_STANCE">
+		<packet id="0x1F" name="SM_PLAYER_STANCE">
 			<part name="playerObjId" type="d"/>
 			<part name="state" type="c"/>
 		</packet>
@@ -1507,7 +1507,7 @@
 			<part name="unk(0x00)" type="h"/>
 			<part name="status" type="c"/>
 		</packet>
-		<packet id="0x212222" name="SM_CASTSPELL">
+		<packet id="0x21" name="SM_CASTSPELL">
 			<part name="attackerObjectId" type="d"/>
 			<part name="spellId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
@@ -1718,7 +1718,7 @@
 			<part name="AbyssRankIcon" type="c"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x17" name="SM_SYSTEM_MESSAGE"> <!-- 7.5 EU -->
+		<packet id="0x19" name="SM_SYSTEM_MESSAGE">
 			<part name="textColorId" type="c"/>
 			<part name="unk" type="c"/>
 			<part name="npcObjId" type="d"/>
@@ -1735,7 +1735,7 @@
 				<reader type="Boolean"/>
 			</part>
 		</packet>
-		<packet id="0x0B2222" name="SM_LEGION_UPDATE_NICKNAME">
+		<packet id="0x0B" name="SM_LEGION_UPDATE_NICKNAME">
 			<part name="playerObjId" type="d"/>
 			<part name="nickname" type="S"/>
 		</packet>
@@ -1759,7 +1759,7 @@
 			<part name="tabId" type="c"/>
 			<part name="unk2 (special handling of tabs if != 0)" type="c"/>
 		</packet>
-		<packet id="0x1B5555" name="SM_INVENTORY_ADD_ITEM">
+		<packet id="0x1B" name="SM_INVENTORY_ADD_ITEM">
 			<part name="addType" type="h">
 				<reader type="MultiValue" name="itemUpdateType"/>
 			</part>
@@ -1977,7 +1977,7 @@
 				<reader type="MultiValue" name="itemUpdateType"/>
 			</part>
 		</packet>
-		<packet id="0x1B" name="SM_INVENTORY_UPDATE_ITEM"> <!-- 7.5 EU -->
+		<packet id="0x1D" name="SM_INVENTORY_UPDATE_ITEM">
 			<part name="itemObjectId" type="d"/>
 			<part name="unk(0x24)" type="h"/>
 			<part name="itemNameId" type="d" id="0">
@@ -2198,7 +2198,7 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x21" name="SM_GATHER_UPDATE"> <!-- 7.5 EU -->
+		<packet id="0x23" name="SM_GATHER_UPDATE">
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -2284,7 +2284,7 @@
 				<part name="authorized?" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x23" name="SM_EMOTION"> <!-- 7.5 EU -->
+		<packet id="0x25" name="SM_EMOTION">
 			<part name="senderId" type="d"/>
 			<part name="emotionTypeId" type="c" id="0">
 				<reader type="MultiValue" name="emotion"/>
@@ -2564,7 +2564,7 @@
 				<reader type="UnixDate"/>
 			</part>
 		</packet>
-		<packet id="0x25" name="SM_TIME_CHECK"> <!-- 7.5 EU -->
+		<packet id="0x27" name="SM_TIME_CHECK">
 			<part name="time" type="d"/>
 			<part name="nanoTime" type="d"/>
 		</packet>
@@ -2573,7 +2573,7 @@
 			<part name="targetObjId" type="d"/>
 			<part name="heading" type="c"/>
 		</packet>
-		<packet id="0x27" name="SM_TARGET_SELECTED"> <!-- 7.5 EU -->
+		<packet id="0x29" name="SM_TARGET_SELECTED">
 			<part name="targetObjId" type="d"/>
 			<part name="level" type="h"/>
 			<part name="maxHp" type="d"/>
@@ -2588,7 +2588,7 @@
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
 		</packet>
-		<packet id="0x2B000" name="SM_CASTSPELL_END">
+		<packet id="0x2b" name="SM_CASTSPELL_END">
 			<part name="effectorId" type="d"/>
 			<part name="targetType" type="c" id="0"/>
 			<switch id="0">
@@ -2796,7 +2796,7 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x2B" name="SM_SKILL_REMOVE"> <!-- 7.5 EU -->
+		<packet id="0x2D" name="SM_SKILL_REMOVE">
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -2810,7 +2810,7 @@
 			<part name="unk" type="d"/>
 			<part name="isActive" type="c"/>
 		</packet>
-		<packet id="0x2F" name="SM_ABNORMAL_STATE"> <!-- 7.5 EU -->
+		<packet id="0x31" name="SM_ABNORMAL_STATE">
 			<part name="abnormals" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
@@ -2828,7 +2828,7 @@
 				<part name="unk 5.3" type="h"/>
 			</for>
 		</packet>
-		<packet id="0x32" name="SM_ABNORMAL_EFFECT"> <!-- 7.5 EU -->
+		<packet id="0x32" name="SM_ABNORMAL_EFFECT">
 			<part name="effectedId" type="d"/>
 			<part name="effectType" type="c" id="0"/>
 			<part name="unk1" type="d"/>
@@ -2958,7 +2958,7 @@
 				<part name="unk" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x35" name="SM_MOVE"> <!-- 7.5 EU -->
+		<packet id="0x37" name="SM_MOVE">
 			<part name="objectId" type="d"/>
 			<part name="x" type="f"/>
 			<part name="y" type="f"/>
@@ -2979,7 +2979,7 @@
 			<part name="objectId" type="d"/>
 			<part name="heading" type="c"/>
 		</packet>
-		<packet id="0x3A" name="SM_TRANSFORM"> <!-- 7.5 EU -->
+		<packet id="0x3A" name="SM_TRANSFORM">
 			<part name="objId" type="d"/>
 			<part name="transformedModelId" type="d"/>
 			<part name="state" type="h"/>
@@ -3091,7 +3091,7 @@
 				<part name="tradeTablId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x415577" name="SM_VIEW_PLAYER_DETAILS">
+		<packet id="0x41" name="SM_VIEW_PLAYER_DETAILS">
 			<part name="playerId" type="d"/>
 			<part name="0x0B" type="c"/>
 			<part name="itemCount" type="h" id="0"/>
@@ -3323,7 +3323,7 @@
 			<part name="level" type="h"/>
 			<part name="unk(0x00)" type="h"/>
 		</packet>
-		<packet id="0x45" name="SM_QUEST_LIST"> <!-- 7.5 EU -->
+		<packet id="0x47" name="SM_QUEST_LIST">
 			<part name="unk" type="h"/>
 			<part name="startedQuestListSize" type="c" id="1"/>
 			<part name="unk" type="c"/>
@@ -3341,7 +3341,7 @@
 		<packet id="0x48" name="SM_KEY"> 
 			<part name="key" type="d"/>
 		</packet>
-		<packet id="0x47" name="SM_SUMMON_PANEL_REMOVE"> <!-- 7.5 EU -->
+		<packet id="0x49" name="SM_SUMMON_PANEL_REMOVE">
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -3361,7 +3361,7 @@
 			<part id="0" name="detailsSize" type="h"/>
 			<part name="itemDetails" sizeid="0" type="b"/>
 		</packet>
-		<packet id="0x4D2224" name="SM_EXCHANGE_ADD_KINAH">
+		<packet id="0x4D" name="SM_EXCHANGE_ADD_KINAH">
 			<part name="action" type="c"/>
 			<part name="count" type="d"/>
 			<part name="unk" type="d"/>
@@ -3369,7 +3369,7 @@
 		<packet id="0x4E" name="SM_EXCHANGE_CONFIRMATION">
 			<part name="action" type="c"/>
 		</packet>
-		<packet id="0x4D" name="SM_EMOTION_LIST"> <!-- 7.5 EU -->
+		<packet id="0x4F" name="SM_EMOTION_LIST">
 			<part name="unk(0x00)" type="c"/>
 			<part name="count" type="h" id="0"/>
 			<for id="0">
@@ -3445,7 +3445,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x535888" name="SM_PLASTIC_SURGERY">
+		<packet id="0x53" name="SM_PLASTIC_SURGERY">
 			<part name="playerObjId" type="d"/>
 			<part name="checkTicket" type="c"/>
 			<part name="changeSex" type="c"/>
@@ -3499,7 +3499,7 @@
 				</switch>
 			</for>
 		</packet>
-		<packet id="0x53" name="SM_INFLUENCE_RATIO"> <!-- 7.5 EU -->
+		<packet id="0x55" name="SM_INFLUENCE_RATIO">
 			<part name="fortressesTimer" type="d"/>
 			<part name="elyos" type="f"/>
 			<part name="asmodian" type="f"/>
@@ -3671,7 +3671,7 @@
 			<part name="0xFF" type="c"/>
 			<part name="0xFF" type="c"/>
 		</packet>
-		<packet id="0x638555" name="SM_CHAT_WINDOW">
+		<packet id="0x63" name="SM_CHAT_WINDOW">
 			<part name="size" type="c" id="0"/>
 			<switch id="0">
 				<case id="1"> <!-- Chat Player Info -->
@@ -3701,7 +3701,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x63" name="SM_PET"> <!-- 7.5 EU -->
+		<packet id="0x65" name="SM_PET">
 			<part id="0" name="actionId" type="h">
 				<reader type="MultiValue" name="petAction"/>
 			</part>
@@ -3953,7 +3953,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x65" name="SM_ITEM_COOLDOWN"> <!-- 7.5 EU -->
+		<packet id="0x67" name="SM_ITEM_COOLDOWN">
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="left" type="d"/>
@@ -3964,7 +3964,7 @@
 			<part name="targetObjId" type="d"/>
 			<part name="note" type="S"/>
 		</packet>
-		<packet id="0x67" name="SM_PLAY_MOVIE"> <!-- 7.5 EU -->
+		<packet id="0x69" name="SM_PLAY_MOVIE">
 			<part name="type" type="c"/>
 			<part name="unk" type="d"/>
 			<part name="id" type="d"/>
@@ -3995,7 +3995,7 @@
 				</part>
 			</for>
 		</packet>
-		<packet id="0x6D" name="SM_LEGION_ADD_MEMBER"> <!-- 7.5 EU -->
+		<packet id="0x6F" name="SM_LEGION_ADD_MEMBER">
 			<part name="playerObjId" type="d"/>
 			<part name="playerName" type="S"/>
 			<part name="rankId" type="c"/>
@@ -4023,7 +4023,7 @@
 			<part name="name" type="S"/>
 			<part name="name1" type="S"/>
 		</packet>
-		<packet id="0x6F" name="SM_LEGION_UPDATE_MEMBER"> <!-- 7.5 EU -->
+		<packet id="0x71" name="SM_LEGION_UPDATE_MEMBER">
 			<part name="playerObjId" type="d"/>
 			<part name="rankId" type="c"/>
 			<part name="classId" type="c">
@@ -4089,7 +4089,7 @@
 			<part name="playerObjId" type="d"/>
 			<part name="selfintro" type="S"/>
 		</packet>
-		<packet id="0x79777" name="___________________SM_INSTANCE_SCORE">
+		<packet id="0x79" name="___________________SM_INSTANCE_SCORE">
 			<part name="mapId" type="d" id="0"/>
 			<part name="instanceTime" type="d"/>
 			<part name="scoreType" type="d"/>
@@ -5497,7 +5497,7 @@
 			<part name="unk" type="c"/>
 			<part name="playerName" type="S"/>
 		</packet>
-		<packet id="0x79" name="SM_QUEST_COMPLETED_LIST"> <!-- 7.5 EU -->
+		<packet id="0x7B" name="SM_QUEST_COMPLETED_LIST">
 			<part name="unk" type="h"/>
 			<part name="completeQuestListSize" type="h" id="0"/>
 			<for id="0">
@@ -5508,7 +5508,7 @@
 				<part name="completeCount?" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x7C" name="SM_QUEST_ACTION"> <!-- 7.5 EU -->
+		<packet id="0x7C" name="SM_QUEST_ACTION">
 			<part name="action" type="c" id="0"/>
 			<part name="questId" type="d">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/quest/%s"/>
@@ -5598,7 +5598,7 @@
 				</switch>
 			</for>
 		</packet>
-		<packet id="0x84" name="SM_FRIEND_LIST"> <!-- 7.x EU -->
+		<packet id="0x84" name="SM_FRIEND_LIST"> <!-- 7.5 EU -->
 			<part name="size" type="h" id="0"/>
 			<part name="unk" type="c"/>
 			<for id="0">
@@ -5626,7 +5626,7 @@
 		</packet>
 		<packet id="0x86" name="SM_PRIVATE_STORE">
 		</packet>
-		<packet id="0x870114" name="SM_GROUP_LOOT">
+		<packet id="0x87" name="SM_GROUP_LOOT">
 			<part name="groupId" type="d"/>
 			<part name="index" type="d"/>
 			<part name="unk" type="d"/>
@@ -5658,7 +5658,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x87" name="SM_MAY_LOGIN_INTO_GAME"> <!-- 7.5 EU -->
+		<packet id="0x89" name="SM_MAY_LOGIN_INTO_GAME">
 			<part name="result" type="d"/>
 		</packet>
 		<packet id="0x8A" name="SM_ABYSS_RANKING_PLAYERS">
@@ -5690,7 +5690,7 @@
 				<part name="legion name" type="b" size="86"/>
 			</for>
 		</packet>
-		<packet id="0x89" name="SM_ABYSS_RANKING_LEGIONS"> <!-- 7.5 EU -->
+		<packet id="0x8B" name="SM_ABYSS_RANKING_LEGIONS">
 			<part name="raceId" type="d">
 				<reader type="MultiValue" name="race"/>
 			</part>
@@ -5711,7 +5711,7 @@
 				<part name="legionName" type="b" size="82"/>
 			</for>
 		</packet>
-		<packet id="0x8B" name="SM_INSTANCE_INFO"> <!-- 7.5 EU -->
+		<packet id="0x8D" name="SM_INSTANCE_INFO">
 			<part name="unk" type="c"/>
 			<part name="cooldownId" type="c"/>
 			<part name="unk (unused?)" type="d"/>
@@ -5999,7 +5999,7 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x970014" name="SM_TRADE_IN_LIST">
+		<packet id="0x97" name="SM_TRADE_IN_LIST">
 			<part name="objectId" type="d"/>
 			<part name="reward" type="c"/>
 			<part name="vendor buy price modifier" type="d"/>
@@ -6009,7 +6009,7 @@
 				<part name="tradeTablId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x97" name="SM_SUMMON_PANEL"> <!-- 7.5 EU -->
+		<packet id="0x99" name="SM_SUMMON_PANEL">
 			<part name="objectId" type="d"/>
 			<part name="level" type="h"/>
 			<part name="unk" type="d"/>
@@ -6027,7 +6027,7 @@
 		<packet id="0x9A" name="SM_SUMMON_OWNER_REMOVE">
 			<part name="summonObjId" type="d"/>
 		</packet>
-		<packet id="0x99" name="SM_SUMMON_UPDATE"> <!-- 7.5 EU -->
+		<packet id="0x9B" name="SM_SUMMON_UPDATE">
 			<part name="level *check*" type="c"/>
 			<part name="modeId *check*" type="h"/>
 			<part name="unk" type="d"/>
@@ -6074,7 +6074,7 @@
 			<part name="playerName" type="S"/>
 			<part name="playerObjId" type="d"/>
 		</packet>
-		<packet id="0x9B" name="SM_LEGION_MEMBERLIST"> <!-- 7.5 EU -->
+		<packet id="0x9D" name="SM_LEGION_MEMBERLIST">
 			<part name="fisrt packet?" type="c"/>
 			<part name="memberSize" type="h" id="0"/>
 			<for id="0">
@@ -6147,10 +6147,10 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x9F5555" name="SM_TOLL_INFO">
+		<packet id="0x9F" name="SM_TOLL_INFO">
 			<part name="tollCount" type="Q"/>
 		</packet>
-		<packet id="0x9F" name="SM_MAIL_SERVICE"> <!-- 7.5 EU -->
+		<packet id="0xA1" name="SM_MAIL_SERVICE">
 			<part name="serviceId" type="c" id="0"/>
 			<switch id="0">
 				<case id="0">
@@ -6429,7 +6429,7 @@
 			<part name="skillLvl" type="c"/>
 			<part name="targetId" type="d"/>
 		</packet>
-		<packet id="0xA3155" name="SM_WINDSTREAM">
+		<packet id="0xA3" name="SM_WINDSTREAM">
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
@@ -7522,7 +7522,7 @@
 			<part name="decription" type="S"/>
 			<part name="unk" type="h"/>
 		</packet>
-		<packet id="0xAF000" name="SM_ICON_INFO">
+		<packet id="0xAF" name="SM_ICON_INFO">
 			<part name="buffId" type="d"/>
 			<part name="unk?" type="d"/>
 			<part name="display" type="c"/>
@@ -7561,7 +7561,7 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0xAF" name="SM_CHARACTER_SELECT"> <!-- 7.5 EU -->
+		<packet id="0xB1" name="SM_CHARACTER_SELECT">
 			<part name="type" type="c" id="0"/>
 			<switch id="0">
 				<case id="0"/>
@@ -7599,7 +7599,7 @@
 			</part>
 			<part name="action" type="c"/>
 		</packet>
-		<packet id="0xB5354" name="SM_CRAFT_UPDATE">
+		<packet id="0xB5" name="SM_CRAFT_UPDATE">
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -7734,7 +7734,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0xBB225" name="SM_PET_EMOTE">
+		<packet id="0xBB" name="SM_PET_EMOTE">
 			<part name="objectId" type="d"/>
 			<part name="emoteId" type="c" id="0"/>
 			<switch id="0">
@@ -7794,13 +7794,13 @@
 				<part name="teleportId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0xC50000" name="SM_USE_OBJECT">
+		<packet id="0xC5" name="SM_USE_OBJECT">
 			<part name="playerObjId" type="d"/>
 			<part name="targetObjId" type="d"/>
 			<part name="time" type="d"/>
 			<part name="actionType" type="c"/>
 		</packet>
-		<packet id="0xC6" name="SM_EMOTION_SWITCH"> <!-- 7.5 EU -->
+		<packet id="0xC6" name="SM_EMOTION_SWITCH">
 			<part name="npcObjId" type="d"/>
 			<part name="state" type="c">
 				<reader type="BitSet" name="creatureUpdates"/>
@@ -7810,7 +7810,7 @@
 			</part>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0xC5" name="SM_L2AUTH_LOGIN_CHECK"> <!-- 7.5 EU -->
+		<packet id="0xC7" name="SM_L2AUTH_LOGIN_CHECK">
 			<part name="result" type="d"/>
 			<part name="test data" type="b" size="580"/>
 			<part id="0" name="count" type="h"/>
@@ -8058,7 +8058,7 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0xC7" name="SM_CREATE_CHARACTER"> <!-- 7.5 EU -->
+		<packet id="0xC9" name="SM_CREATE_CHARACTER">
 			<part name="responseCode" type="d"/>
 			<part name="objectId" type="d"/>
 			<part name="characterName" type="Ss" size="52"/>
@@ -8229,12 +8229,12 @@
 			</part>
 			<part name="Spacer/Garbage/TODO ?" type="b" size="268"/>
 		</packet>
-		<packet id="0xCA" name="SM_DELETE_CHARACTER"> <!-- 7.5 EU -->
+		<packet id="0xCA" name="SM_DELETE_CHARACTER">
 			<part name="unk1" type="d"/>
 			<part name="objectId" type="d"/>
 			<part name="delete time[s]" type="d"/>
 		</packet>
-		<packet id="0xC9" name="SM_RESTORE_CHARACTER"> <!-- 7.5 EU -->
+		<packet id="0xCB" name="SM_RESTORE_CHARACTER">
 			<part name="unk1" type="d"/>
 			<part name="objectId" type="d"/>
 		</packet>
@@ -8245,7 +8245,7 @@
 			<part name="z" type="f"/>
 			<part name="heading" type="c"/>
 		</packet>
-		<packet id="0xCB" name="SM_LOOT_STATUS"> <!-- 7.5 EU -->
+		<packet id="0xCD" name="SM_LOOT_STATUS">
 			<part name="targetObjectId" type="d"/>
 			<part name="state" type="c"/>
 			<part name="unk" type="d"/>
@@ -8266,7 +8266,7 @@
 				<part name="is traidable?" type="c"/>
 			</for>
 		</packet>
-		<packet id="0xCD" name="SM_RECIPE_LIST"> <!-- 7.5 EU -->
+		<packet id="0xCF" name="SM_RECIPE_LIST">
 			<part name="count" type="h" id="0"/>
 			<for id="0">
 				<part name="id" type="d">
@@ -8280,7 +8280,7 @@
 			<part name="playerObjId" type="d"/>
 			<part name="subEffectId" type="d"/>
 		</packet>
-		<packet id="0xCF" name="SM_SIEGE_LOCATION_INFO"> <!-- 7.5 EU -->
+		<packet id="0xD1" name="SM_SIEGE_LOCATION_INFO">
 			<part name="infoType" type="c" id="0"/>
 			<switch id="0">
 				<case id="0">
@@ -8425,19 +8425,19 @@
 				<part name="shieldStatus?1:0" type="c"/>
 			</for>
 		</packet>
-		<packet id="0xDD" name="SM_HOUSE_TELEPORT">
+		<packet id="0xDD000" name="SM_HOUSE_TELEPORT">
 			<part name="address" type="d"/>
 			<part name="player" type="d"/>
 		</packet>
-		<packet id="0xDF8599" name="SM_FRIEND_RESPONSE">
+		<packet id="0xDE00" name="SM_FRIEND_RESPONSE">
 			<part name="player" type="S"/>
 			<part name="code" type="c"/>
 		</packet>
-		<packet id="0xDF00" name="SM_BLOCK_RESPONSE">
+		<packet id="0xDF" name="SM_BLOCK_RESPONSE">
 			<part name="playerName" type="S"/>
 			<part name="responseCode" type="c"/>
 		</packet>
-		<packet id="0xDF" name="SM_BLOCK_LIST"> <!-- 7.5 EU -->
+		<packet id="0xE1" name="SM_BLOCK_LIST">
 			<part name="blockCount" type="h" id="0"/>
 			<part name="unk" type="c"/>
 			<for id="0">
@@ -8449,7 +8449,7 @@
 			<part name="player" type="S"/>
 			<part name="code" type="c"/>
 		</packet>
-		<packet id="0xE1" name="SM_TOWNS_LIST"> <!-- 7.5 EU -->
+		<packet id="0xE3" name="SM_TOWNS_LIST">
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="town_id" type="d"/>
@@ -8463,11 +8463,11 @@
 			<part name="currentChannel" type="d"/>
 			<part name="instanceCount" type="d"/>
 		</packet>
-		<packet id="0xE7663" name="SM_CHAT_INIT">
+		<packet id="0xE7" name="SM_CHAT_INIT">
 			<part name="tokenLength" type="d" id="0"/>
 			<part name="token" type="b" sizeid="0"/>
 		</packet>
-		<packet id="0xE8" name="SM_MACRO_LIST"> <!-- 7.5 EU -->
+		<packet id="0xE8" name="SM_MACRO_LIST">
 			<part name="player objId" type="d"/>
 			<part name="unk(0x01)" type="c"/>
 			<part name="size(inversed)" type="h" id="0"/>
@@ -8476,7 +8476,7 @@
 				<part name="value" type="S"/>
 			</for>
 		</packet>
-		<packet id="0xE7" name="SM_MACRO_RESULT"> <!-- 7.5 EU -->
+		<packet id="0xE9" name="SM_MACRO_RESULT">
 			<part name="code" type="c"/>
 		</packet>
 		<packet id="0xEA" name="SM_NICKNAME_CHECK_RESPONSE">
@@ -8491,7 +8491,7 @@
 			<part name="z" type="f"/>
 			<part name="kisk==null?0x00:kiskObjectId" type="d"/>
 		</packet>
-		<packet id="0xEB" name="SM_RIFT_ANNOUNCE"> <!-- 7.5 EU -->
+		<packet id="0xED" name="SM_RIFT_ANNOUNCE">
 			<part name="unk" type="h"/>
 			<part name="actionId" type="c" id="1"/>
 			<switch id="1">
@@ -8548,7 +8548,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0xED" name="SM_ABYSS_RANK"> <!-- 7.5 EU -->
+		<packet id="0xEF" name="SM_ABYSS_RANK">
 			<part name="curAp" type="Q"/>
 			<part name="curGp" type="d"/>
 			<part name="curRank" type="d"/>
@@ -8569,7 +8569,7 @@
 			<part name="unk 5.3" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x169" name="SM_NEVIWIND_CANYON"> <!-- 7.5 EU -->
+		<packet id="0x16B" name="SM_NEVIWIND_CANYON"> <!-- 7.x EU -->
 			<part name="actionId?" type="c" id="1"/>
 			<switch id="1">
 				<case id="0">
@@ -8886,7 +8886,7 @@
 			<part name="0x00" type="d"/>
 			<part name="0x00" type="h"/>
 		</packet>
-		<packet id="0xFB999" name="SM_SHOW_BRAND">
+		<packet id="0xFB" name="SM_SHOW_BRAND">
 			<part name="CharMarkId's" type="h" id="0"/> <!-- There are 16 GRP Target Mark symbols (1,2,3,ZZZ etc) Offi writes them all @ once Emu only when Changed ?-->
 			<for id="0">
 				<part name="unk" type="d"/>
@@ -8894,7 +8894,7 @@
 				<part name="targetObjectId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0xFC" name="SM_ALLIANCE_READY_CHECK"> <!-- 5.6 EU -->
+		<packet id="0xFC" name="SM_ALLIANCE_READY_CHECK"> <!-- 7.5 EU -->
 			<part name="playerObjectId" type="d"/>
 			<part name="statusCode" type="c"/>
 		</packet>
@@ -8903,7 +8903,7 @@
 			<part name="buying modified price %" type="c"/>
 			<part name="tax" type="c"/>
 		</packet>
-		<packet id="0xFD" name="SM_TRADELIST"> <!-- 7.5 EU -->
+		<packet id="0xFF" name="SM_TRADELIST">
 			<part name="targetObjectId" type="d"/>
 			<part name="reward" type="c"/>
 			<part name="vendor buy price modifier" type="d"/>
@@ -8967,7 +8967,7 @@
 			<part name="unk" type="c"/>
 			<part name="weeksUntilPay" type="c"/>
 		</packet>
-		<packet id="0x107" name="SM_HOUSE_OWNER_INFO"> <!-- 7.5 EU -->
+		<packet id="0x109" name="SM_HOUSE_OWNER_INFO">
 			<part name="address" type="d"/>
 			<part name="buildingId" type="d"/>
 			<part name="buildingOwnerInfo" type="c">
@@ -9335,7 +9335,7 @@
 			<part name="unk 1" type="d"/>
 			<part name="unk 0" type="c"/>
 		</packet>
-		<packet id="0xB1" name="SM_FATIGUE"> <!-- 7.5 EU -->
+		<packet id="0xB3" name="SM_FATIGUE">
 			<part name="unk0" type="d"/>
 			<part name="unk0" type="c"/>
 			<part name="effect" type="c"/>
@@ -9352,7 +9352,7 @@
 			<part name="unk 0" type="d"/>
 			<part name="unk 0" type="d"/>
 		</packet>		
-		<packet id="0x1072258" name="SM_FAST_TRACK_MOVE">
+		<packet id="0x107" name="SM_FAST_TRACK_MOVE">
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
@@ -9406,7 +9406,7 @@
 				<part name="QuestId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x135558" name="SM_LEGION_SEARCH">
+		<packet id="0x135" name="SM_LEGION_SEARCH">
 			<part name="size" type="h" id="0"/>			
 			<for id="0">
 				<part name="LegionId" type="d"/>			
@@ -9419,7 +9419,7 @@
 				<part name="MinLevel" type="h"/>
 			</for>
 		</packet>
-		<packet id="0x135" name="SM_PLAYER_LEGION_JOIN_REQUEST_INFO"> <!-- 7.5 EU -->
+		<packet id="0x137" name="SM_PLAYER_LEGION_JOIN_REQUEST_INFO">
 			<part name="legionId" type="d"/>
 			<part name="legionName" type="S"/>
 		</packet>
@@ -9465,13 +9465,13 @@
 		<packet id="0x13E" name="________________SM_LEGION_JOIN_SETTING">
 			<part name="unk" type="h"/>
 		</packet>
-		<packet id="0x355555" name="________________SM_DUEL_REQUEST_CANCEL"> <!-- TODO -->
+		<packet id="0x35" name="________________SM_DUEL_REQUEST_CANCEL"> <!-- TODO -->
 			<part name="unk" type="d"/>
 			<part name="MsgId" type="d"/>
 			<part name="playerName" type="S"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x2F055" name="________________SM_BODYGARD"> <!-- Templer gives Groupmember Bodygard -->
+		<packet id="0x2F" name="________________SM_BODYGARD"> <!-- Templer gives Groupmember Bodygard -->
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -9484,7 +9484,7 @@
 		<packet id="0x30" name="________________SM_BODYGARD_END"> <!-- Bodygard on Groupmember ended -->
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x12F" name="SM_TERRITORY_LIST"> <!-- 7.5 EU -->
+		<packet id="0x131" name="SM_TERRITORY_LIST"> 
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="Territory ID" type="d">
@@ -9497,7 +9497,7 @@
 				<part name="Legion-Name" type="S"/>
 			</for>
 		</packet>
-		<packet id="0x122000" name="________________SM_TUNE_RESULT"> <!-- Tune Result - Weapon Attribut Reidentification -->
+		<packet id="0x122" name="________________SM_TUNE_RESULT"> <!-- Tune Result - Weapon Attribut Reidentification -->
 			<part name="itemObjId" type="d"/>
 			<part name="itemId(Scroll)" type="d">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/item/%s"/>
@@ -9553,7 +9553,7 @@
 			</for>
 		</packet>
 
-		<packet id="0x147" name="________________SM_LUNA_SYSTEM_INFO"> <!-- 7.5 EU -->
+		<packet id="0x149" name="________________SM_LUNA_SYSTEM_INFO">
 			<part name="actionId" type="c" id="0"/>
 			<switch id="0">
 				<case id="0">
@@ -9773,7 +9773,7 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x149" name="________________SM_LUCKY_DICE"> <!-- 7.5 EU TODO -->
+		<packet id="0x14B" name="________________SM_LUCKY_DICE"> <!-- 5.3 TODO -->
 			<part name="boardId" type="d"/> <!-- Board ID -->
 			<part name="unk" type="d"/> <!-- Platz auf dem ich derzeit stehe -->
 			<part name="unk" type="d">
@@ -9794,12 +9794,12 @@
 			<part name="unk" type="d"/>
 		</packet>
 
-		<packet id="0xEB222" name="________________SM_SPLIT_ITEM"> <!-- Split Items when Stack is Full -->
+		<packet id="0xEB" name="________________SM_SPLIT_ITEM"> <!-- Split Items when Stack is Full -->
 			<part name="unk" type="h"/>
 			<part name="itemId" type="d"/>
 			<part name="itemCount" type="Q"/>
 		</packet>
-		<packet id="0x14B" name="________________SM_MAGIC_CRAFT_ANIMATION"> <!-- 7.5 EU TODO -->
+		<packet id="0x14D" name="________________SM_MAGIC_CRAFT_ANIMATION"> <!-- 7.5 EU TODO -->
 			<part name="senderObjectId" type="d"/>
 			<part name="action" type="c"/>			
 		</packet>
@@ -9825,7 +9825,7 @@
 				<case id="default"/>
 			</switch>		
 		</packet>
-		<packet id="0x165" name="________________SM_EQUIPMENT_SETTING"> <!-- 7.5 EU TODO -->
+		<packet id="0x167" name="________________SM_EQUIPMENT_SETTING"> <!-- 7.5 EU TODO -->
 			<part name="unk" type="c" id="0"/>
 			<part name="unk" type="c"/>
 			<for id="0">
@@ -9856,7 +9856,7 @@
 				<part name="itemObjId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x1794444" name="________________SM_DAEVANION_SKILL_ENCHANT"> <!-- 6.5 TODO -->
+		<packet id="0x179" name="________________SM_DAEVANION_SKILL_ENCHANT"> <!-- 6.5 TODO -->
 			<part name="unk" type="d"/>
 			<part name="unk" type="h"/>
 			<part name="unk" type="d"/>
@@ -9881,7 +9881,7 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0xA3" name="________________SM_UNK_A5">
+		<packet id="0xA5" name="________________SM_UNK_A5">
 			<part name="value" type="c"/>
 			<part name="unk 0" type="h"/>
 		</packet>
@@ -9905,7 +9905,7 @@
 			</for>
 		</packet>
 		<packet id="0x121" name="________________SM_UNK_121"/>	
-		<packet id="0xFB" name="________________SM_UNK_FD"> <!-- 7.5 EU -->
+		<packet id="0xFD" name="________________SM_UNK_FD">
 			<part name="unk" type="h"/>
 			<part name="unk" type="c"/>
 		</packet>
@@ -9913,7 +9913,7 @@
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x131" name="________________SM_ABYSS_RANK_POINTS"> <!-- 7.5 EU -->
+		<packet id="0x133" name="________________SM_ABYSS_RANK_POINTS">
             <part name="TopAbyssRank9Point" type="d"/>
             <part name="unk" type="Q"/>
             <part name="TopAbyssRank8Point" type="d"/>
@@ -9954,7 +9954,7 @@
 		<packet id="0x100" name="SM_PLAYER_PROTECTION">
 			<part name="Value" type="d"/>
 		</packet>		
-		<packet id="0xBB" name="________________SM_UNK_BD"> <!-- 7.5 EU -->
+		<packet id="0xBD" name="________________SM_UNK_BD">
 			<part name="unk 0" type="h"/>
 		</packet>			
 		<packet id="0x16A" name="________________SM_UNK_16A"> <!-- TODO - New 5.6 -->
@@ -10017,7 +10017,7 @@
 			<part name="unk" type="S"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x157" name="________________SM_RANK_LIST"> <!-- 7.5 TODO Gold Arena Rank List -->
+		<packet id="0x159" name="________________SM_RANK_LIST"> <!-- 5.3 TODO Gold Arena Rank List -->
 			<part name="TableId" type="d"/>
 			<part name="server_switch" type="c"/>
 			<part name="unk 0" type="c"/>
@@ -10067,7 +10067,7 @@
 				<part name="z" type="f"/>
 			</for>
 		</packet>
-		<packet id="0x129" name="________________SM_UNK_12B"> <!-- 7.5 EU -->
+		<packet id="0x12B" name="________________SM_UNK_12B">
 			<part name="playerObjId" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
@@ -10290,7 +10290,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x170" name="________________SM_TRANSFORMATION"> <!-- 7.5 EU -->
+		<packet id="0x170" name="________________SM_TRANSFORMATION">
 			<part name="actionId" type="h" id="0">
 				<reader type="MultiValue" name="transformationAction"/>
 			</part>
@@ -10345,7 +10345,7 @@
 			<part name="unk" type="S"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x165555" name="________________SM_UNK_165"> <!-- 5.6 after SM_TITLE_INFO? -->
+		<packet id="0x165" name="________________SM_UNK_165"> <!-- 5.6 after SM_TITLE_INFO? -->
 			<part name="playerObjId" type="d"/>
 			<part name="unk" type="h"/>
 		</packet>
@@ -10354,13 +10354,13 @@
 			<part name="name" type="S"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x60" name="________________SM_UNK_60"> <!-- 7.5 EU after SM_BOOST_EVENTS -->
+		<packet id="0x60" name="________________SM_UNK_60"> <!-- 5.6 after SM_BOOST_EVENTS -->
 			<part name="unk" type="h"/>
 		</packet>
 		<packet id="0x15E" name="________________SM_UNK_15E">
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x14D" name="________________SM_UNK_14F">
+		<packet id="0x14F" name="________________SM_UNK_14F">
 			<part name="unk" type="c"/>
 		</packet>
 		<packet id="0x12D" name="________________SM_ATREIAN_PASSPORT">
@@ -10375,15 +10375,15 @@
 				<part name="hasCollected" type="c"/>
 			</for>
 		</packet>
-        <packet id="0x125" name="________________SM_UNK_127">
+        <packet id="0x127" name="________________SM_UNK_127">
             <part name="unk" type="h"/>
             <part name="unk" type="c"/>
         </packet>
-		<packet id="0x129999" name="________________SM_GAMEGUARD">
+		<packet id="0x129" name="________________SM_GAMEGUARD">
 			<part name="size" type="d"/>
 			<part name="size" type="b" size="143"/>
 		</packet>
-        <packet id="0x7D5555" name="________________SM_UNK_7D">
+        <packet id="0x7D" name="________________SM_UNK_7D">
 			<part name="unk" type="d" id="0"/>
 			<switch id="0">
 				<case id="24">
@@ -10401,7 +10401,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x173" name="________________SM_CUBIC_INFO"> <!-- 7.5 EU -->
+		<packet id="0x175" name="________________SM_CUBIC_INFO">
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="cubicId" type="d">
@@ -10440,10 +10440,10 @@
 		<packet id="0x136" name="________________SM_UNK_136">
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x1735866" name="________________SM_LUNA_INSTANCE">
+		<packet id="0x173" name="________________SM_LUNA_INSTANCE">
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x179" name="________________SM_LUGBUG_MISSION"> <!-- 7.5 EU TODO -->
+		<packet id="0x17B" name="________________SM_LUGBUG_MISSION"> <!-- 7.x TODO -->
 			<part name="date" type="d">
 				<reader type="UnixDate" />
 			</part>
@@ -10603,7 +10603,7 @@
 				<part name="unk" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x17B" name="________________SM_LUGBUG_MISSION_REWARD"> <!-- 7.5 EU TODO -->
+		<packet id="0x17B122" name="________________SM_LUGBUG_MISSION_REWARD"> <!-- 7.5 EU TODO -->
 			<part name="size" type="c" id="0"/>
 			<for id="0">
 				<part name="unk" type="d"/>
@@ -10799,7 +10799,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x186" name="________________SM_FIELD_FAME_SYSTEM"> <!-- 7.3 TODO -->
+		<packet id="0x186" name="________________SM_FIELD_FAME_SYSTEM"> <!-- 7.5 EU TODO -->
 			<part name="unk" type="c"/>
 			<part name="unk" type="d"/>
 			<part name="size" type="h" id="0"/>
@@ -10819,7 +10819,7 @@
 		<packet id="0xE0000" name="CM_GM_BOOKMARK"> 
 			<part name="command_and_name" type="S"/>
 		</packet>
-		<packet id="0x1D4" name="CM_CHALLENGE_LIST"> <!-- 7.2 EU -->
+		<packet id="0x1BF" name="CM_CHALLENGE_LIST"> <!-- 7.5 EU -->
 			<part name="action" type="c"/>
 			<part name="taskOwner" type="d"/>
 			<part name="ownerType" type="c"/>
@@ -10851,7 +10851,7 @@
 		<packet id="0x2F2" name="CM_PING"> <!-- 7.5 EU -->
 			<part name="unk" type="h"/>
 		</packet>
-		<packet id="0x18D" name="CM_MAY_LOGIN_INTO_GAME"/> <!-- 7.5 EU -->
+		<packet id="0x18D" name="CM_MAY_LOGIN_INTO_GAME"/> <!-- 7.x EU -->
 		<packet id="0xDE" name="CM_ENTER_WORLD"> <!-- 7.5 EU -->
 			<part name="objectId" type="d"/>
 		</packet>
@@ -10929,7 +10929,7 @@
 			</switch>
 		</packet>
 		<packet id="0xCA" name="CM_MAY_QUIT"/> <!-- 7.5 EU --> 
-		<packet id="0xB5" name="CM_UI_SETTINGS"> <!-- 7.2 EU -->
+		<packet id="0xDC" name="CM_UI_SETTINGS"> <!-- 7.5 EU -->
 			<part name="settingsType" type="c"/>
 			<part name="unk" type="h"/>
 			<part name="size" type="h" id="0"/>
@@ -10940,7 +10940,7 @@
 				<reader type="Boolean"/>
 			</part>
 		</packet>
-		<packet id="0xCC" name="CM_CASTSPELL"> <!-- 7.2 EU -->
+		<packet id="0xF7" name="CM_CASTSPELL"> <!-- 7.5 EU -->
 			<part name="spellId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
@@ -10978,7 +10978,7 @@
 			<part name="time" type="h"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0xCA4555" name="CM_CHAT_MESSAGE_PUBLIC"> <!-- 7.2 EU -->
+		<packet id="0xED" name="CM_CHAT_MESSAGE_PUBLIC"> <!-- 7.x EU -->
 			<part name="type" type="c"/>
 			<part name="message" type="S"/>
 		</packet>
@@ -11039,13 +11039,13 @@
 				<case id="default" comment="UNKNOWN"/>
 			</switch>
 		</packet>
-		<packet id="0x1BC00" name="CM_BONUS_TITLE"> <!-- 7.x EU -->
+		<packet id="0x1BC" name="CM_BONUS_TITLE"> <!-- 7.5 EU -->
 			<part name="titleId" type="h"/>
 		</packet>
-		<packet id="0x1D5" name="CM_TITLE_SET"> <!-- 7.2 EU -->
+		<packet id="0x152" name="CM_TITLE_SET"> <!-- 7.5 EU -->
 			<part name="titleId" type="h"/>
 		</packet>		
-		<packet id="0x2F6" name="CM_MOTION"> <!-- 7.2 EU -->
+		<packet id="0x109" name="CM_MOTION"> <!-- 7.5 EU -->
 			<part name="unk(4)" type="c"/>
 			<part name="motionId" type="h"/>
 			<part name="motionType" type="c"/>
@@ -11066,15 +11066,16 @@
 		<packet id="0x13B" name="CM_DELETE_ITEM"> <!-- 7.5 EU -->
 			<part name="objectId" type="d"/>
 		</packet>
-		<packet id="0xCB" name="CM_CHAT_MESSAGE_WHISPER"> <!-- 7.2 EU -->
+		<packet id="0xE2" name="CM_CHAT_MESSAGE_WHISPER"> <!-- 7.5 EU -->
 			<part name="name" type="S"/>
 			<part name="message" type="S"/>
 		</packet>
-		<packet id="0x13E" name="CM_PING_REQUEST"/> <!-- 7.x EU -->
+		<packet id="0x13E" name="CM_PING_REQUEST"> <!-- 7.5 EU -->
+		</packet>
 		<packet id="0x16B" name="CM_QUEST_SHARE"> <!-- 7.5 EU -->
 			<part name="questId" type="d"/>
 		</packet>
-		<packet id="0x14F" name="CM_PLAYER_SEARCH"> <!-- 7.2 EU --> 
+		<packet id="0x176" name="CM_PLAYER_SEARCH"> <!-- 7.5 EU --> 
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
@@ -11092,7 +11093,7 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x1D6" name="CM_SHOW_FRIENDLIST"/> <!-- 7.2 EU --> 
+		<packet id="0x1A9" name="CM_SHOW_FRIENDLIST"/> <!-- 7.5 EU --> 
 		<packet id="0x126" name="CM_DELETE_QUEST"> <!-- 7.5 EU -->
 			<part name="questId" type="d"/>
 		</packet>
@@ -11106,7 +11107,7 @@
 				<reader type="MultiValue" name="race"/>
 			</part>
 		</packet>
-		<packet id="0x13300" name="CM_PRIVATE_STORE"> 
+		<packet id="0x133" name="CM_PRIVATE_STORE"> 
 			<part name="itemCount" type="h" id="0"/>
 			<for id="0">
 				<part name="itemObjId" type="d"/>
@@ -11137,7 +11138,7 @@
 			<part name="targetObjectId" type="d"/>
 			<part name="type" type="c"/>
 		</packet>
-		<packet id="0x123" name="CM_SHOW_DIALOG"> <!-- 7.2 EU -->
+		<packet id="0x2FA" name="CM_SHOW_DIALOG"> <!-- 7.5 EU -->
 			<part name="targetObjectId" type="d"/>
 		</packet>
 		<packet id="0x184" name="CM_CHECK_NICKNAME"> <!-- 7.5 EU -->
@@ -11150,7 +11151,7 @@
 			<part name="unk" type="h"/>
 		</packet>
 		<!-- <packet id="0x1B3" name="CM_USE_PACK_ITEM"/> -->
-		<packet id="0x14400" name="CM_PRIVATE_STORE_NAME"> 
+		<packet id="0x144" name="CM_PRIVATE_STORE_NAME"> 
 			<part name="name" type="S"/>
 		</packet>
 		<packet id="0x16E" name="CM_CREATE_CHARACTER">  <!-- 7.5 EU -->
@@ -11271,7 +11272,7 @@
 		<packet id="0x187" name="CM_MACRO_DELETE"> <!-- 7.5 EU -->
 			<part name="macroPosition" type="c"/>
 		</packet>
-		<packet id="0x15F" name="CM_FRIEND_ADD"> <!-- 7.2 EU -->
+		<packet id="0x146" name="CM_FRIEND_ADD"> <!-- 7.5 EU -->
 			<part name="targetName" type="S"/>
 			<part name="message" type="S"/>
 		</packet>
@@ -11282,14 +11283,14 @@
 			<part name="unk" type="d"/>
 			<part name="isInTeam " type="c"/>
 		</packet>
-		<packet id="0x1A4" name="CM_CLIENT_COMMAND_ROLL"> <!-- 7.2 EU -->
+		<packet id="0x132" name="CM_CLIENT_COMMAND_ROLL"> <!-- 7.5 EU -->
 			<part name="maxRoll" type="d"/>
 		</packet>
-		<packet id="0x14A" name="CM_START_LOOT"> <!-- 7.2 EU -->
+		<packet id="0x16D" name="CM_START_LOOT"> <!-- 7.5 EU -->
 			<part name="targetObjectId" type="d"/>
 			<part name="action" type="c"/>
 		</packet>
-		<packet id="0x121" name="CM_DIALOG_SELECT"> <!-- 7.2 EU -->
+		<packet id="0x2F8" name="CM_DIALOG_SELECT"> <!-- 7.0 EU -->
 			<part name="targetObjectId" type="d"/>
 			<part name="dialogId" type="h"/>
 			<part name="extendedRewardIndex" type="h"/>
@@ -11298,10 +11299,10 @@
 			<part name="questId" type="d"/>
 			<part name="unk" type="h"/>
 		</packet>
-		<packet id="0x120" name="CM_CLOSE_DIALOG"> <!-- 7.2 EU -->
+		<packet id="0x2FB" name="CM_CLOSE_DIALOG"> <!-- 7.5 EU -->
 			<part name="targetObjectId" type="d"/>
 		</packet>
-		<packet id="0x125" name="CM_SET_NOTE"> <!-- 7.2 EU -->
+		<packet id="0x10C" name="CM_SET_NOTE"> <!-- 7.x EU -->
 			<part name="note" type="S"/>
 		</packet>
 		<packet id="0x113" name="CM_FIND_GROUP"> <!-- 7.5 EU -->
@@ -11371,7 +11372,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x122000" name="CM_BUY_ITEM"> <!-- 7.5 EU -->
+		<packet id="0x105" name="CM_BUY_ITEM"> <!-- 7.5 EU -->
 			<part name="sellerObjId" type="d"/>
 			<part name="action" type="h">
 				<reader type="MultiValue" name="tradeAction"/>
@@ -11390,7 +11391,7 @@
 			<part name="replaceStorageType" type="c"/>
 			<part name="replaceItemObjId" type="d"/>
 		</packet>
-		<packet id="0x170" name="CM_SEND_MAIL"> <!-- 7.2 EU -->
+		<packet id="0x14B" name="CM_SEND_MAIL"> <!-- 7.5 EU -->
 			<part name="recipientName" type="S"/>
 			<part name="title" type="S"/>
 			<part name="message" type="S"/>
@@ -11399,24 +11400,24 @@
 			<part name="kinahCount" type="Q"/>
 			<part name="express" type="c"/>
 		</packet>
-		<packet id="0x136" name="CM_READ_MAIL"> <!-- 7.2 EU -->
+		<packet id="0x149" name="CM_READ_MAIL"> <!-- 7.5 EU -->
 			<part name="mailObjId" type="d"/>
 		</packet>
-		<packet id="0x135" name="CM_DELETE_MAIL"> <!-- 7.2 EU -->
+		<packet id="0x15C" name="CM_DELETE_MAIL"> <!-- 7.5 EU -->
 			<part name="count" type="h" id="0"/>
 			<for id="0">
 				<part name="mailObjId" type="d"/>
 				<part name="unk" type="c"/>
 			</for>
 		</packet>
-		<packet id="0x152" name="CM_READ_EXPRESS_MAIL"> <!-- 7.2 EU -->
+		<packet id="0x175" name="CM_READ_EXPRESS_MAIL"> <!-- 7.5 EU -->
 			<part name="action" type="c"/>
 		</packet>
-		<packet id="0x134" name="CM_GET_MAIL_ATTACHMENT"> <!-- 7.2 EU -->
+		<packet id="0x15F" name="CM_GET_MAIL_ATTACHMENT"> <!-- 7.5 EU -->
 			<part name="mailObjId" type="d"/>
 			<part name="attachmentType(0:item, 1:kinah)" type="c"/>
 		</packet>
-		<packet id="0xD1" name="CM_EQUIP_ITEM"> <!-- 7.2 EU -->
+		<packet id="0xE8" name="CM_EQUIP_ITEM"> <!-- 7.5 EU -->
 			<part name="isUnequip" type="c">
 				<reader type="Boolean"/>
 			</part>
@@ -11425,29 +11426,29 @@
 			</part>
 			<part name="itemUniqueId" type="d"/>
 		</packet>
-		<packet id="0x140" name="CM_TELEPORT_SELECT"> <!-- 7.2 EU -->
+		<packet id="0x15B" name="CM_TELEPORT_SELECT"> <!-- 7.5 EU -->
 			<part name="targetObjId" type="d"/>
 			<part name="locId" type="d"/>
 			<part name="unk" type="h"/>
 		</packet>
-		<packet id="0x10D" name="CM_INVITE_TO_GROUP"> <!-- 7.2 EU --> 
+		<packet id="0x134" name="CM_INVITE_TO_GROUP"> <!-- 7.5 EU --> 
 			<part name="inviteType" type="c"/>
 			<part name="name" type="S"/>
 		</packet>
-		<packet id="0x110" name="CM_VIEW_PLAYER_DETAILS"> <!-- 7.2 EU --> 
+		<packet id="0x12B" name="CM_VIEW_PLAYER_DETAILS"> <!-- 7.5 EU --> 
 			<part name="targetObjId" type="d"/>
 		</packet>
-		<packet id="0x12E" name="CM_EXCHANGE_REQUEST"> <!-- 7.0 EU -->
+		<packet id="0x101" name="CM_EXCHANGE_REQUEST"> <!-- 7.5 EU -->
 			<part name="targetObjectId" type="d"/>
 		</packet>
-		<packet id="0x162577" name="CM_DUEL_REQUEST"> <!-- 7.2 EU -->
+		<packet id="0x145" name="CM_DUEL_REQUEST"> <!-- 7.5 EU -->
 			<part name="objectId" type="d"/>
 		</packet>
-		<packet id="0x16D" name="CM_LOOT_ITEM"> <!-- 7.5 EU -->
+		<packet id="0x162" name="CM_LOOT_ITEM"> <!-- 7.5 EU -->
 			<part name="targetObjectId" type="d"/>
 			<part name="index" type="c"/>
 		</packet>
-		<packet id="0x13D" name="CM_QUESTIONNAIRE"> <!-- 7.2 EU -->
+		<packet id="0x164" name="CM_QUESTIONNAIRE"> <!-- 7.5 EU -->
 			<part name="objectId" type="d"/>
 			<part name="itemSize" type="h" id="0"/>
 			<for id="0">
@@ -11455,16 +11456,16 @@
 			</for>
 			<part name="stringItemsId" type="S"/>
 		</packet>
-		<packet id="0xF0" name="CM_REVIVE"> <!-- 7.2 EU -->
+		<packet id="0xCB" name="CM_REVIVE"> <!-- 7.5 EU -->
 			<part name="reviveId" type="c"/>
 		</packet>
-		<packet id="0xCF" name="CM_ATTACK"> <!-- 7.2 EU -->
+		<packet id="0xF6" name="CM_ATTACK"> <!-- 7.x EU -->
 			<part name="targetObjId" type="d"/>
 			<part name="attackNo" type="c"/>
 			<part name="time" type="h"/>
 			<part name="type" type="c"/>
 		</packet>
-		<packet id="0x19F" name="CM_AUTO_GROUP"> <!-- 7.2 EU -->
+		<packet id="0x19F" name="CM_AUTO_GROUP"> <!-- 7.5 EU -->
 			<part name="instanceMaskId" type="d"/>
 			<part name="windowId" type="c"/>
 			<part name="entryRequestId" type="c"/>
@@ -11478,12 +11479,12 @@
 			<part name="movieId" type="h"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x131" name="CM_WINDSTREAM"> <!-- 7.2 EU -->
+		<packet id="0x108" name="CM_WINDSTREAM"> <!-- 7.5 EU -->
 			<part name="teleportId" type="d"/>
 			<part name="distance" type="d"/>
 			<part name="state" type="d"/>
 		</packet>
-		<packet id="0xC6" name="CM_OPEN_STATICDOOR"> <!-- 7.2 EU -->
+		<packet id="0xD200" name="CM_OPEN_STATICDOOR">
 			<part name="doorId" type="d"/>
 		</packet>
 		<packet id="0x18D00" name="CM_APPEARANCE">
@@ -11501,8 +11502,8 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x119" name="CM_STOP_TRAINING"/> <!-- 7.2 EU -->
-		<packet id="0x11D" name="CM_QUESTION_RESPONSE"> <!-- 7.3 EU --> 
+		<packet id="0x10900" name="CM_STOP_TRAINING"/>
+		<packet id="0x104" name="CM_QUESTION_RESPONSE"> <!-- 7.5 EU --> 
 			<part name="questionId" type="d">
 				<reader type="ClientString" real="true"/>
 			</part>
@@ -11564,7 +11565,7 @@
 				<part name="count" type="b" size="8"/>
 			</for>
 		</packet>
-		<packet id="0x2FE588" name="CM_GROUP_DATA_EXCHANGE"> <!-- 7.2 EU -->
+		<packet id="0x111" name="CM_GROUP_DATA_EXCHANGE"> <!-- 7.5 EU -->
 			<part name="action" type="c" id="0"/>
 			<switch id="0">
 				<case id="1">
@@ -11579,12 +11580,12 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x1A1" name="CM_SHOW_BRAND"> <!-- 7.2 EU -->
+		<packet id="0x178" name="CM_SHOW_BRAND"> <!-- 7.5 EU -->
 			<part name="action" type="d"/>
 			<part name="brandId" type="d"/>
 			<part name="targetObjectId" type="d"/>
 		</packet>
-		<packet id="0x1A5000" name="CM_DISTRIBUTION_SETTINGS"> <!-- 7.2 EU -->
+		<packet id="0x18C" name="CM_DISTRIBUTION_SETTINGS"> <!-- 7.5 EU -->
 			<part name="unk" type="d"/>
 			<part name="lootRuleType" type="d"/>
 			<part name="autodistribution" type="d"/>
@@ -11607,39 +11608,39 @@
 			<part name="locationId" type="c"/>
 			<part name="distance" type="d"/>
 		</packet>
-		<packet id="0x19A" name="CM_FRIEND_STATUS"> <!-- 7.2 EU -->
+		<packet id="0x17D" name="CM_FRIEND_STATUS"> <!-- 7.5 EU -->
 			<part name="status" type="c"/>
 		</packet>
-		<packet id="0x196" name="CM_BLOCK_ADD"> <!-- 7.2 EU -->
+		<packet id="0x169" name="CM_BLOCK_ADD"> <!-- 7.5 EU -->
 			<part name="targetName" type="S"/>
 			<part name="reason" type="S"/>
 		</packet>
-		<packet id="0x11F00" name="CM_INSTANCE_LEAVE"/>
-		<packet id="0x17E" name="CM_FUSION_WEAPONS"> <!-- 7.2 EU Fusion Weapon -->
+		<packet id="0x11F" name="CM_INSTANCE_LEAVE"/> <!-- 7.5 EU -->
+		<packet id="0x191" name="CM_FUSION_WEAPONS"> <!-- 7.5 EU Fusion Weapon -->
 			<part name="unk" type="d"/>
 			<part name="firstItemId" type="d"/>
 			<part name="secondItemId" type="d"/>
 		</packet>
-		<packet id="0x11700" name="CM_LEGION_WH_KINAH"> 
+		<packet id="0x117" name="CM_LEGION_WH_KINAH"> <!-- 7.5 EU -->
 			<part name="amount" type="Q"/>
 			<part name="operation" type="c"/>
 		</packet>
 		<packet id="0x1DA00" name="CM_LEGION_JOIN_REQUEST_CANCEL"> 
 			<part name="LegionID" type="d"/>
 		</packet>
-		<packet id="0xBA" name="CM_OBJECT_SEARCH"> <!-- 7.3 EU -->
+		<packet id="0xDD" name="CM_OBJECT_SEARCH"> <!-- 7.5 EU -->
 			<part name="npcId" type="d"/>
 		</packet>
-		<packet id="0x105" name="CM_ITEM_REMODEL"> <!-- 7.2 EU -->
+		<packet id="0x125" name="CM_ITEM_REMODEL"> <!-- 7.5 EU -->
 			<part name="npcId" type="d"/>
 			<part name="keepItemId" type="d"/>
 			<part name="extractItemId" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x11000" name="CM_RECIPE_DELETE"> 
+		<packet id="0x110" name="CM_RECIPE_DELETE"> <!-- 7.5 EU -->
 			<part name="recipeId" type="d"/>
 		</packet>
-		<packet id="0x12F" name="CM_EXCHANGE_ADD_ITEM"> <!-- 7.2 EU -->
+		<packet id="0x116" name="CM_EXCHANGE_ADD_ITEM"> <!-- 7.5 EU -->
 			<part name="itemObjId" type="d"/>
 			<part name="itemCount" type="d"/>
 		</packet>
@@ -11647,20 +11648,20 @@
 			<part name="itemCount" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x132" name="CM_EXCHANGE_LOCK"/> <!-- 7.2 EU -->
-		<packet id="0xBB" name="CM_CUSTOM_SETTINGS"> <!-- 7.2 EU -->
+		<packet id="0x115" name="CM_EXCHANGE_LOCK"/> <!-- 7.5 EU -->
+		<packet id="0xD2" name="CM_CUSTOM_SETTINGS"> <!-- 7.5 EU -->
 			<part name="display(1:show legion mantle,2:priority equipment,4:show helmet)" type="h"/>
 			<part name="dney(1:view detail player,2:trade,4:party/force,8:legion,16:friend,32:dual(pvp))" type="h"/>
 		</packet>
-		<packet id="0x133" name="CM_EXCHANGE_OK"/> <!-- 7.x EU -->
-		<packet id="0x130" name="CM_EXCHANGE_CANCEL"/> <!-- 7.2 EU -->
-		<packet id="0x16B354" name="CM_BROKER_LIST"> <!-- 7.2 EU -->
+		<packet id="0x10A" name="CM_EXCHANGE_OK"/> <!-- 7.5 EU -->
+		<packet id="0x10B" name="CM_EXCHANGE_CANCEL"/> <!-- 7.5 EU -->
+		<packet id="0x142" name="CM_BROKER_LIST"> <!-- 7.x EU -->
 			<part name="brokerId" type="d"/>
 			<part name="sortType(1:name, 2:level, 4:totalPrice, 6:price for piece)" type="c"/>
 			<part name="page" type="h"/>
 			<part name="listMask" type="h"/>
 		</packet>
-		<packet id="0x168" name="CM_BROKER_SEARCH"> <!-- 7.2 EU --> 
+		<packet id="0x143" name="CM_BROKER_SEARCH"> <!-- 7.5 EU --> 
 			<part name="brokerId" type="d"/>
 			<part name="sortType(1:name,2:level,4:totalPrice,6:price for piece" type="c"/>
 			<part name="page" type="h"/>
@@ -11670,35 +11671,35 @@
 				<part name="itemObjId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x156" name="CM_REGISTER_BROKER_ITEM"> <!-- 7.x EU -->
+		<packet id="0x156" name="CM_REGISTER_BROKER_ITEM"> <!-- 7.5 EU -->
 			<part name="brokerId" type="d"/>
 			<part name="itemUniqueId" type="d"/>
 			<part name="price" type="Q"/>
 			<part name="itemCount" type="Q"/>
 			<part name="partSale" type="c"/>
 		</packet>
-		<packet id="0x16C000" name="CM_BROKER_CANCEL_REGISTERED"> <!-- 7.2 EU -->
+		<packet id="0x157" name="CM_BROKER_CANCEL_REGISTERED"> <!-- 7.5 EU -->
 			<part name="npcId" type="d"/>
 			<part name="brokerItemId" type="d"/>
 		</packet>
-		<packet id="0x16E000" name="CM_BUY_BROKER_ITEM"> <!-- 7.2 EU -->
+		<packet id="0x141" name="CM_BUY_BROKER_ITEM"> <!-- 7.5 EU -->
 			<part name="brokerId" type="d"/>
 			<part name="itemUniqueId" type="d"/>
 			<part name="itemCount" type="Q"/>
 		</packet>
-		<packet id="0x16D4588" name="CM_BROKER_SETTLE_LIST"> <!-- 7.2 EU -->
+		<packet id="0x138" name="CM_BROKER_SETTLE_LIST"> <!-- 7.5 EU -->
 			<part name="npcId" type="d"/>
 		</packet>
-		<packet id="0x169" name="CM_BROKER_REGISTERED"> <!-- 7.2 EU -->
+		<packet id="0x140" name="CM_BROKER_REGISTERED"> <!-- 7.5 EU -->
 			<part name="npcId" type="d"/>
 		</packet>
-		<packet id="0x172" name="CM_BROKER_SETTLE_ACCOUNT"> <!-- 7.2 EU -->
+		<packet id="0x154" name="CM_BROKER_SETTLE_ACCOUNT"> <!-- 7.5 EU -->
 			<part name="npcId" type="d"/>
 		</packet>
-		<packet id="0x16F000" name="CM_BROKER_ADD_ITEM"> <!-- 7.2 EU -->
+		<packet id="0x13D" name="CM_BROKER_ADD_ITEM"> <!-- 7.5 EU -->
 			<part name="itemObjId" type="d"/>
 		</packet>
-		<packet id="0xBF" name="CM_LEGION_SEND_EMBLEM_INFO"> <!-- 7.2 EU -->
+		<packet id="0x2F1" name="CM_LEGION_SEND_EMBLEM_INFO"> <!-- 7.5 EU -->
 			<part name="legionId" type="d"/>
 		</packet>
 		<packet id="0x2F9" name="CM_LEGION_TABS"> <!-- 7.5 EU -->
@@ -11706,10 +11707,10 @@
 			<part name="page" type="c"/>
 		</packet>
 		<packet id="0x161" name="CM_SHOW_BLOCKLIST"/> <!-- 7.5 EU -->
-		<packet id="0x15C" name="CM_FRIEND_DEL"> <!-- 7.2 EU -->
+		<packet id="0x147" name="CM_FRIEND_DEL"> <!-- 7.5 EU -->
 			<part name="targetName" type="S"/>
 		</packet>
-		<packet id="0xC0" name="CM_PET_EMOTE"> <!-- 7.2 EU -->
+		<packet id="0xDB" name="CM_PET_EMOTE"> <!-- 7.5 EU -->
 			<part name="emoteId" type="c" id="0"/>
 			<switch id="0">
 				<case id="0">
@@ -11733,7 +11734,7 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x118" name="CM_LEGION"> <!-- 7.2 EU -->
+		<packet id="0x2F3" name="CM_LEGION"> <!-- 7.5 EU -->
 			<part name="exOpcode" type="c" id="0"/>
 			<switch id="0">
 				<case id="0x00" comment="Create Legion">
@@ -11808,17 +11809,17 @@
 				<case id="default" comment="UNKNOWN"/>
 			</switch>
 		</packet>
-		<packet id="0x19E" name="CM_CHAT_AUTH"> <!-- 7.2 EU -->
+		<packet id="0x171" name="CM_CHAT_AUTH"> <!-- 7.5 EU -->
 			<part name="objectId" type="d"/>
 			<part name="macAddress" type="b" size="6"/>
 		</packet>
-		<packet id="0x10C" name="CM_PLAYER_STATUS_INFO"> <!-- 7.2 EU -->
+		<packet id="0x137" name="CM_PLAYER_STATUS_INFO"> <!-- 7.5 EU -->
 			<part name="action" type="c"/>
 			<part name="playerObjId" type="d"/>
 			<part name="allianceGroupId" type="d"/>
 			<part name="secondObjectId" type="d"/>
 		</packet>
-		<packet id="0x18D0122" name="CM_RELEASE_OBJECT"> <!-- 7.2 EU -->
+		<packet id="0x1AD00" name="CM_RELEASE_OBJECT"> 
 			<part name="targetObjectId" type="d"/>
 		</packet>
 		<packet id="0x111bd" name="CM_CHALLENGE_CITY"> <!-- Todo -->
@@ -11847,8 +11848,8 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x15E" name="CM_MARK_FRIENDLIST"/> <!-- 7.2 EU Use House Statue/Friendlist -->
-		<packet id="0x17F" name="CM_BREAK_WEAPONS"> <!-- 7.2 EU Fusionierte Waffe wieder zerlegen -->
+		<packet id="0x14A" name="CM_MARK_FRIENDLIST"/> <!-- 7.5 EU Use House Statue/Friendlist -->
+		<packet id="0x1AB" name="CM_BREAK_WEAPONS"> <!-- 7.5 EU Fusionierte Waffe wieder zerlegen -->
 			<part name="unk" type="d"/>
 			<part name="weaponToBreakUniqueId" type="d"/>
 		</packet>
@@ -11879,14 +11880,14 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x1A3" name="CM_BLOCK_SET_REASON"> <!-- 7.2 EU -->
+		<packet id="0x17F" name="CM_BLOCK_SET_REASON"> <!-- 7.5 EU -->
 			<part name="targetName" type="S"/>
 			<part name="reason" type="S"/>
 		</packet>
-		<packet id="0x197144" name="CM_BLOCK_DEL"> <!-- 7.2 EU -->
+		<packet id="0x17E" name="CM_BLOCK_DEL"> <!-- 7.5 EU -->
 			<part name="targetName" type="S"/>
 		</packet>
-		<packet id="0x2F5" name="________________CM_MANASTONE"> <!-- 7.2 EU -->
+		<packet id="0x11C" name="________________CM_MANASTONE"> <!-- 7.x EU -->
 			<part name="actionType" type="h" id="0"/>
 			<switch id="0">
 				<case id="257" comment="ENCHANTMENT_STONE"> <!-- PVE Enchant -->
@@ -11917,7 +11918,7 @@
 				<case id="default" comment="UNKNOWN"/>
 			</switch>
 		</packet>
-		<packet id="0x1E71111" name="________________CM_ITEM_UPGRADE"> <!-- 7.2 EU -->
+		<packet id="0x1B300" name="________________CM_ITEM_UPGRADE">
 			<part name="senderObjectId" type="d"/>
 			<part name="upgradedItemObjectId" type="d"/>
 			<part name="resultItemId" type="d">
@@ -11930,7 +11931,7 @@
 			<part name="requireItemObjectId4" type="d"/>
 			<part name="requireItemObjectId5" type="d"/>
 		</packet>
-		<packet id="0x12A" name="CM_LEGION_MODIFY_EMBLEM"> <!-- 7.2 EU --> 
+		<packet id="0x10600" name="CM_LEGION_MODIFY_EMBLEM"> 
 			<part name="legionId" type="d"/>
 			<part name="emblemId" type="c"/>
 			<part name="emblemType" type="c"/>
@@ -11939,18 +11940,18 @@
 			<part name="green" type="c"/>
 			<part name="blue" type="c"/>
 		</packet>
-		<packet id="0x14C588" name="CM_LEGION_UPLOAD_INFO"> <!-- 7.2 EU -->
+		<packet id="0x16C00" name="CM_LEGION_UPLOAD_INFO">
 			<part name="totalSize" type="d"/>
 			<part name="unk(0xFF)" type="c"/>
 			<part name="red" type="c"/>
 			<part name="green" type="c"/>
 			<part name="blue" type="c"/>
 		</packet>
-		<packet id="0x14D" name="CM_LEGION_UPLOAD_EMBLEM"> <!-- 7.2 EU -->
+		<packet id="0x16D00" name="CM_LEGION_UPLOAD_EMBLEM"> 
 			<part name="size" type="d" id="1"/>
 			<part name="data" type="b" sizeid="1"/>
 		</packet>
-		<packet id="0xB6" name="CM_CHARACTER_EDIT"> <!-- 7.2 EU -->
+		<packet id="0xC2" name="CM_CHARACTER_EDIT"> <!-- 7.5 EU -->
 			<part name="objectId" type="d"/>
 			<part name="account" type="S"/>
 			<part name="characterName" type="S" size="52"/>
@@ -12069,14 +12070,14 @@
 			<part name="summonObjectId" type="d"/>
 			<part name="emotionTypeId" type="c"/>
 		</packet>
-		<packet id="0x17B" name="CM_SUMMON_ATTACK"> <!-- 7.2 EU -->
+		<packet id="0x192" name="CM_SUMMON_ATTACK"> <!-- 7.5 EU -->
 			<part name="summonObjectId" type="d"/>
 			<part name="targetObjectId" type="d"/>
 			<part name="unk" type="c"/>
 			<part name="time" type="h"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x179" name="CM_SUMMON_CASTSPELL"> <!-- 7.2 EU -->
+		<packet id="0x190" name="CM_SUMMON_CASTSPELL"> <!-- 7.5 EU -->
 			<part name="summonObjectId" type="d"/>
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
@@ -12098,14 +12099,14 @@
 			<part name="roll(0:Never Rolled, 1:Rolled)" type="d"/>
 			<part name="bid(0:No Bid else bid amount)" type="Q"/>
 		</packet>
-		<packet id="0x198" name="CM_CHANGE_CHANNEL"> <!-- 7.2 EU -->
+		<packet id="0x173" name="CM_CHANGE_CHANNEL"> <!-- 7.5 EU -->
 			<part name="channel" type="d"/>
 		</packet>
-		<packet id="0x192" name="CM_HOUSE_OPEN_DOOR"> <!-- 7.2 EU only Houses have Doors (not Appartments) -->
+		<packet id="0x1AE00" name="CM_HOUSE_OPEN_DOOR"> <!-- only Houses have Doors (not Appartments) -->
 			<part name="address" type="d"/>
 			<part name="entry/exit 0/1" type="c"/>
 		</packet>
-		<packet id="0x2FD777" name="CM_HOUSE_EDIT"> <!-- 7.2 EU -->
+		<packet id="0x124" name="CM_HOUSE_EDIT"> <!-- 7.5 EU -->
 			<part name="action" type="c" id="0">
 				<reader type="MultiValue" name="editAction"/>
 			</part>
@@ -12139,7 +12140,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x2F4" name="CM_HOUSE_SETTINGS"> <!-- 7.2 EU -->
+		<packet id="0x114" name="CM_HOUSE_SETTINGS"> <!-- 7.5 EU -->
 			<part name="visitPermisions" type="c">
 				<reader type="MultiValue" name="houseVisitPermisions"/>
 			</part>
@@ -12148,44 +12149,44 @@
 			</part>
 			<part name="signNotice" type="S"/>
 		</packet>
-		<packet id="0x18A" name="CM_GET_HOUSE_BIDS"/> <!-- 7.2 EU -->
+		<packet id="0x1AD" name="CM_GET_HOUSE_BIDS"/> <!-- 7.5 EU -->
 		<packet id="0x13400" name="CM_GROUP_DISTRIBUTION"> 
 			<part name="amount" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="partyType" type="c"/>
 		</packet>
-		<packet id="0x1A7" name="CM_RECONNECT_AUTH"/> <!-- 7.2 EU Select Server in Character Screen-->
-		<packet id="0xCD" name="CM_TOGGLE_SKILL_DEACTIVATE"> <!-- 7.2 EU deactivate the Rider Skill-->
+		<packet id="0x18E" name="CM_RECONNECT_AUTH"/> <!-- 7.5 EU -->
+		<packet id="0xED00" name="CM_TOGGLE_SKILL_DEACTIVATE">
 			<part name="skillId" type="h">
 				<reader type="UrlOpen" url="http://aioncodex.com/en/skill/%s"/>
 			</part>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x18E" name="CM_HOUSE_TELEPORT"> <!-- 7.2 EU -->
+		<packet id="0x1BA" name="CM_HOUSE_TELEPORT"> <!-- 7.5 EU -->
 			<part name="unk" type="c"/>
 			<part name="usingPlayerId" type="d"/>
 			<part name="destPlayerId" type="d"/>
 		</packet>
-		<packet id="0x2FA" name="CM_HOUSE_DECORATE"> <!-- 7.2 EU -->
+		<packet id="0x11600" name="CM_HOUSE_DECORATE">
 			<part name="objectId" type="d"/>
 			<part name="partId" type="d"/>
 			<part name="list_nr" type="h"/>
 		</packet>
-		<packet id="0x2F7" name="CM_HOUSE_KICK"> <!-- 7.2 EU -->
+		<packet id="0x10300" name="CM_HOUSE_KICK">
 			<part name="option" type="c"/>
 			<part name="unk" type="h"/>
 		</packet>
-		<packet id="0x128" name="CM_CHAT_GROUP_INFO"> <!-- 7.2 EU -->
+		<packet id="0x103" name="CM_CHAT_GROUP_INFO"> <!-- 7.5 EU -->
 			<part name="playerName" type="S"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x116" name="CM_CHAT_PLAYER_INFO"> <!-- 7.2 EU -->
+		<packet id="0xE9" name="CM_CHAT_PLAYER_INFO"> <!-- 7.5 EU -->
 			<part name="playerName" type="S"/>
 		</packet>
-		<packet id="0x18C" name="CM_USE_HOUSE_OBJECT"> <!-- 7.2 EU -->
+		<packet id="0x1AC" name="CM_USE_HOUSE_OBJECT"> <!-- 7.5 EU -->
 			<part name="itemObjectId" type="d"/>
 		</packet>
-		<packet id="0xC9" name="CM_HOUSE_SCRIPT"> <!-- 7.2 EU -->
+		<packet id="0xE0" name="CM_HOUSE_SCRIPT"> <!-- 7.5 EU -->
 			<part name="address" type="d"/>
 			<part name="index" type="c"/>
 			<part name="totalSize" type="h" id="0"/>
@@ -12200,41 +12201,42 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x189" name="CM_PLACE_BID"> <!-- 7.2 EU --> 
+		<packet id="0x1A0" name="CM_PLACE_BID"> <!-- 7.5 EU -->
 			<part name="entryIndex" type="d"/>
 			<part name="price" type="Q"/>
 		</packet>
-		<packet id="0xBE" name="CM_TELEPORT_DONE"/> <!-- 7.2 EU -->
-		<packet id="0x18F" name="CM_HOUSE_PAY_RENT"> <!-- 7.2 EU House Miete bezahlen -->
+		<packet id="0xD1" name="CM_TELEPORT_DONE"/> <!-- 7.5 EU -->
+		<packet id="0x1BB00" name="CM_HOUSE_PAY_RENT"> <!-- House Miete bezahlen -->
 			<part name="weekCount" type="c"/>
 		</packet>
-		<packet id="0x18B" name="CM_REGISTER_HOUSE"> <!-- 7.2 EU -->
+		<packet id="0x1A7" name="CM_REGISTER_HOUSE"> <!-- 7.5 EU -->
 			<part name="bidKinah" type="Q"/>
 			<part name="100000" type="Q"/>
 		</packet>
-		<packet id="0x1DA" name="CM_PLAYER_LISTENER"/> <!-- 7.2 EU -->
-		<packet id="0x1B6" name="CM_USE_CHARGE_SKILL"/>
-		<packet id="0x171255" name="CM_CHECK_MAIL_SIZE"> <!-- 7.2 EU -->
+		<packet id="0x1A800" name="CM_PLAYER_LISTENER"/>
+		<packet id="0x1B6" name="CM_USE_CHARGE_SKILL"/> <!-- 7.5 EU -->
+		<packet id="0x148" name="CM_CHECK_MAIL_SIZE"> <!-- 7.5 EU -->
 			<part name="onlyExpress" type="c"/>
 		</packet>
-		<packet id="0x181" name="CM_CHECK_MAIL_SIZE2"/> <!-- 7.2 EU -->
-		<packet id="0x11E" name="CM_LEGION_SEND_EMBLEM"> <!-- 7.2 EU -->
+		<packet id="0x198" name="CM_CHECK_MAIL_SIZE2"/> <!-- 7.5 EU -->
+		<packet id="0xE6" name="CM_LEGION_SEND_EMBLEM"> <!-- 7.5 EU -->
 			<part name="legionId" type="d"/>
 		</packet>
-		<packet id="0x19600" name="CM_REPORT_PLAYER"> <!-- 7.0 EU -->
-            <part name="read" type="b" size="1"/>
+		<packet id="0x196" name="CM_REPORT_PLAYER"> <!-- 7.5 EU -->
+            		<part name="read" type="b" size="1"/>
 			<part name="player" type="S"/>
 		</packet>
-		<packet id="0x1E1" name="CM_REPORT_CHAT"> <!-- 7.2 EU -->
+		<packet id="0x1BD" name="CM_REPORT_CHAT">
 			<part name="player" type="S"/>
 		</packet>
+		<packet id="0x13A" name="CM_HOUSE_TELEPORT_BACK"/>
 
 		<!-- New 4.7 EU -->
-		<packet id="0x1E6" name="CM_UPGRADE_ARCADE"> <!-- 7.2 EU -->
+		<packet id="0x1B9" name="CM_UPGRADE_ARCADE"> <!-- 7.5 EU -->
 			<part name="action" type="c"/>
 			<part name="sessionId" type="d"/>
 		</packet>
-		<packet id="0x1E0" name="CM_HOTSPOT_TELEPORT"> <!-- 7.2 EU -->
+		<packet id="0x1BB" name="CM_HOTSPOT_TELEPORT"> <!-- 7.5 EU -->
 			<part name="id" type="c" id="1"/>
 			<switch id="1">
 				<case id="1">
@@ -12246,10 +12248,10 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x187841" name="CM_DIRECT_ENTER_WORLD"> <!-- 7.2 EU -->
+		<packet id="0x19D00" name="CM_DIRECT_ENTER_WORLD"> 
 			<part name="accountId" type="d"/>
 		</packet>
-		<packet id="0x1AE" name="CM_FAST_TRACK_CHECK"> <!-- 7.0 EU -->
+		<packet id="0x1AE" name="CM_FAST_TRACK_CHECK"> <!-- 7.5 EU -->
 			<part name="accountId" type="d"/>
 		</packet> 
 		<packet id="0x191000" name="CM_FAST_TRACK"> <!-- Move to Normal Server -->
@@ -12266,12 +12268,12 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x1D8" name="CM_SELECTITEM_OK"> <!-- 7.2 EU -->
+		<packet id="0x1B3" name="CM_SELECTITEM_OK"> <!-- 7.5 EU -->
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="index" type="c"/>
 		</packet>
-		<packet id="0x1EB" name="CM_EXPAND_CUBE"> <!-- 7.2 EU -->
+		<packet id="0x1C2" name="CM_EXPAND_CUBE"> <!-- 7.5 EU -->
 			<part name="actionType" type="c" id="0" />
 			<switch id="0">
 				<case id="0x00" comment="Expand_Kinah"/>
@@ -12279,7 +12281,7 @@
 				<case id="default" comment="UNKNOWN" />
 			</switch>
 		</packet> 
-		<packet id="0x129" name="CM_FILE_VERIFY"> <!-- 7.2 EU -->
+		<packet id="0x100" name="CM_FILE_VERIFY"> <!-- 7.5 EU -->
 			<part name="unk" type="c" />
 			<part name="result" type="S" />
 		</packet>
@@ -12293,7 +12295,7 @@
 				<reader type="MultiValue" name="Stonespear_SiegeId"/>
 			</part>
 		</packet> 
-		<packet id="0x1DF" name="CM_FRIEND_EDIT"> <!-- 7.2 EU -->
+		<packet id="0x1C6" name="CM_FRIEND_EDIT"> <!-- 7.5 EU -->
 			<part name="playerName" type="S"/>
 			<part name="notice" type="S"/>
 		</packet>
@@ -12303,11 +12305,11 @@
 		<packet id="0x17D00" name="________________CM_SUBZONE_CHANGE"> <!-- TODO -->
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x1E8" name="CM_LEGION_SEARCH"> <!-- 7.2 EU -->
+		<packet id="0x1C3" name="CM_LEGION_SEARCH"> <!-- 7.x EU -->
 			<part name="type" type="c"/>
 			<part name="searchName" type="S"/>
 		</packet>
-		<packet id="0x1D9" name="CM_LEGION_JOIN_REQUEST"> 
+		<packet id="0x1D9" name="CM_LEGION_JOIN_REQUEST"> <!-- 7.5 EU -->
 			<part name="legionId" type="d"/>
 			<part name="legionName" type="S"/>
 			<part name="maybe joinType ?" type="c"/>
@@ -12323,27 +12325,27 @@
 		<packet id="0x18C000" name="CM_INTRUDER_SCAN">
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x191" name="CM_SECURITY_TOKEN"/> <!-- 7.2 EU -->
+		<packet id="0x1A8" name="CM_SECURITY_TOKEN"/> <!-- 7.5 EU -->
 		<!-- <packet id="0x11B" name="CM_11B_UNK"/> calls SM_98UNK direct after sm_character_list -->
 		<packet id="0x1B611" name="________________CM_ITEM_PURIFICATION"/> <!-- TODO -->
-		<packet id="0x1F0" name="CM_ENCHANTMENT_EXTRACTION"> <!-- 7.2 EU -->
+		<packet id="0x1C0" name="CM_ENCHANTMENT_EXTRACTION"> <!-- 7.5 EU -->
 			<part name="itemObjectId" type="d"/>
 		</packet>
-		<packet id="0x1DB" name="CM_TUNE">  <!-- 7.2 EU Item Identification? -->
+		<packet id="0x1B2" name="CM_TUNE"> <!-- 7.5 EU Item Identification? -->
 			<part name="itemObjectId" type="d"/>
 			<part name="tuningScrollId" type="d"/>
 		</packet>
-		<packet id="0x1CA00" name="________________CM_TUNE_RESULT"> <!-- New/TODO AionNA 5.0 - Tune Result -->
+		<packet id="0x1CA" name="________________CM_TUNE_RESULT"> <!-- 7.5 EU -->
 			<part name="objectId" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x1B4" name="CM_SELL_BROKEN_ITEMS"> <!-- 7.2 EU TODO Write Packet -->
+		<packet id="0x1D4" name="CM_SELL_BROKEN_ITEMS"> <!-- 7.5 EU -->
 			<part name="Items/Count" type="h" id="0"/>
 			<for id="0">
 				<part name="itemObjectId" type="d"/>
 			</for>
 		</packet>
-		<packet id="0x1DE" name="________________CM_LUNA_SYSTEM"><!-- 7.5 EU TODO -->
+		<packet id="0x1DE" name="________________CM_LUNA_SYSTEM"><!-- 7.5 EU -->
 			<part name="actionId" type="c" id="0"/>
 			<switch id="0">
 				<case id="0">
@@ -12370,7 +12372,7 @@
 				<case id="default"/>	
 			</switch>					
 		</packet>
-		<packet id="0x1CF" name="________________CM_LUNA_IDENTIFICATION"><!-- 7.2 EU TODO -->
+		<packet id="0x1FB" name="________________CM_LUNA_IDENTIFICATION"><!-- TODO -->
 			<part name="unk" type="d"/>
 			<part name="unk" type="h"/>
 		</packet>
@@ -12397,7 +12399,7 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x1D600" name="________________CM_SHUGO_SWEEP"> <!-- 5.1 TODO -->
+		<packet id="0x1D6" name="________________CM_SHUGO_SWEEP"> <!-- 5.1 TODO -->
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
 		</packet>
@@ -12421,12 +12423,12 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x122" name="CM_GF_WEBSHOP_TOKEN"/>
+		<packet id="0x122" name="CM_GF_WEBSHOP_TOKEN"/> <!-- 7.5 EU -->
 		<packet id="0x1EB00" name="________________CM_AUTO_UNION"> <!-- 5.3 TODO -->
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x10E" name="CM_TELEPORT_BACK"/> <!-- 7.2 EU -->
-		<packet id="0x1C7" name="________________CM_EQUIPMENT_SETTING_SAVE"> <!-- 7.2 EU TODO -->
+		<packet id="0x121" name="CM_TELEPORT_BACK"/> <!-- 7.5 EU -->
+		<packet id="0x1EE" name="________________CM_EQUIPMENT_SETTING_SAVE"> <!-- 7.5 EU TODO -->
 			<part name="slot" type="d" id="0"/>
 			<part name="checkboxes" type="d"/>
 			<switch id="0">
@@ -12457,14 +12459,14 @@
 				</case>
 			</switch>
 		</packet>
-		<packet id="0x1C4" name="________________CM_EQUIPMENT_SETTING_USE"> <!-- 7.2 EU NEW TODO -->
+		<packet id="0x1EF" name="________________CM_EQUIPMENT_SETTING_USE"> <!-- 7.5 EU NEW TODO -->
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x1BE" name="________________CM_AUTOMATIC_GOLDENSTAR"> <!-- 7.2 EU -->
+		<packet id="0x1D1" name="________________CM_AUTOMATIC_GOLDENSTAR"> <!-- 7.5 EU -->
 			<part name="itemObjectId" type="d"/>
 		</packet>
-		<packet id="0x1B9" name="________________CM_SKILL_ANIMATION"> <!-- 7.2 EU -->
+		<packet id="0x1D0" name="________________CM_SKILL_ANIMATION"> <!-- 7.x EU -->
 			<part name="skillId?" type="h"/>
 			<part name="activated/default (12/0)" type="h"/>
 		</packet>
@@ -12544,7 +12546,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x1ED" name="________________CM_MINIONS"> <!-- 7.2 EU -->
+		<packet id="0x1ED" name="________________CM_MINIONS"> <!-- 7.5 EU -->
 			<part name="Case/Switch" type="h" id="0"/>
 			<switch id="0">
 				<case id="0">
@@ -12634,7 +12636,7 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x1E3" name="________________CM_TRANSFORMATION"> <!-- 7.2 EU -->
+		<packet id="0x1E3" name="________________CM_TRANSFORMATION"> <!-- 7.5 EU -->
 			<part name="Case/Switch" type="h" id="0"/>
 			<switch id="0">
 				<case id="0">
@@ -12662,17 +12664,17 @@
 				<case id="default"/>
 			</switch>
 		</packet>
-		<packet id="0x1A8" name="________________CM_UNK_E3"/> <!-- 7.5 EU -->
-		<packet id="0x1C1" name="________________CM_CUBIC"> <!-- 7.2 EU -->
+		<packet id="0xE3" name="________________CM_UNK_E3"/> <!-- 7.x EU -->
+		<packet id="0x1D8" name="________________CM_CUBIC"> <!-- 7.5 EU -->
 			<part name="unk" type="d">
 				<reader type="MultiValue" name="cubics"/>
 			</part>
 		</packet>
-		<packet id="0x1CE" name="________________CM_LUNA_INSTANCE"> <!-- 7.2 EU Luna Instance Bonus -->
+		<packet id="0x1E1" name="________________CM_LUNA_INSTANCE"> <!-- 7.5 EU Luna Instance Bonus -->
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x1EA" name="________________CM_LUNA_INSTANCE_ENTRY"> <!-- 7.2 EU Luna Instance Entrys -->
+		<packet id="0x1CD" name="________________CM_LUNA_INSTANCE_ENTRY"> <!-- 7.5 EU Luna Instance Entrys -->
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
@@ -12682,20 +12684,20 @@
 		<packet id="0x1CD00" name="________________CM_UNK_1CD"> <!-- Assa? -->
 			<part name="objectId" type="d"/>
 		</packet>
-		<packet id="0x1E44444" name="________________CM_ATREIAN_PASSPORT"> <!-- 7.2 EU -->
+		<packet id="0x1CF" name="________________CM_ATREIAN_PASSPORT"> <!-- 7.5 EU -->
 			<part name="Passport_Id" type="d"/>
 		</packet>
-		<packet id="0x1D2" name="________________CM_STIGMA"> <!-- 7.2 EU -->
+		<packet id="0x1F5" name="________________CM_STIGMA"> <!-- 7.5 EU -->
 			<part name="add 0 / remove 1" type="c"/>
 			<part name="slot?" type="Q"/>
 			<part name="itemObjectId" type="d"/>
 		</packet>
-		<packet id="0x1D31111" name="________________CM_DAEVANION_SKILL_ENCHANT"> <!-- 7.2 EU -->
+		<packet id="0x1EA" name="________________CM_DAEVANION_SKILL_ENCHANT"> <!-- 7.5 EU -->
 			<part name="unk" type="h"/>
 			<part name="itemObjectId" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x1D0" name="________________CM_DAEVANION_SKILL_FUSION"> <!-- 7.2 EU -->
+		<packet id="0x1EB" name="________________CM_DAEVANION_SKILL_FUSION"> <!-- 7.5 EU -->
 			<part name="unk" type="d"/>
 			<part name="unk" type="h"/>
 			<part name="unk" type="d"/>
@@ -12703,23 +12705,23 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x1C3" name="________________CM_REMOVE_DYE"> <!-- 7.2 TODO -->
+		<packet id="0x1DA" name="________________CM_REMOVE_DYE"> <!-- 7.5 TODO -->
 			<part name="itemObjectId" type="d"/>
 		</packet>
-		<packet id="0x1E9" name="________________CM_LUGBUG_MISSION_REWARD"> <!-- 7.5 EU TODO -->
+		<packet id="0x1E9" name="________________CM_LUGBUG_MISSION_REWARD"> <!-- 7.5 TODO -->
 			<part name="questId" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x217" name="________________CM_LUGBUG_EVENT_REWARD"> <!-- 7.3 TODO -->
+		<packet id="0x217" name="________________CM_LUGBUG_EVENT_REWARD"> <!-- 7.5 TODO -->
 			<part name="questId" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x1BA" name="________________CM_LUCKY_DICE"> <!-- 7.2 EU -->
+		<packet id="0x1BA558" name="________________CM_LUCKY_DICE"> <!-- 7.2 EU -->
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
 		</packet>

@@ -22,7 +22,7 @@ package com.aionemu.packetsamurai.crypt;
 public class AionGame7_5_0_0Crypter extends AionGameCrypter {
 
     int decodeOpcodec(int op) {
-        return (op ^ 0xD8) - 217;
+        return (op ^ 0xD9) - 216;
         //0xD5 = 213 - 5.8
         //0xD7 = 215 - 6.0
         //0xD9 = 217 - 7.0
