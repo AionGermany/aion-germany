@@ -92,6 +92,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writeC(buf, item.getReductionLevel()); // Level Reduction
 		writeB(buf, new byte[40]); // TODO
 		writeD(buf, item.getItemSkinTemplate().getTemplateId());
+		writeB(buf, new byte[17]); //Temp Fix
 	}
 
 	/**
@@ -274,6 +275,6 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 
 	@Override
 	public int getSize() {
-		return 231; // 6.5
+		return 248; // 7.5
 	}
 }
