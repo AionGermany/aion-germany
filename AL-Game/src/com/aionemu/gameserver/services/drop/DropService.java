@@ -323,6 +323,7 @@ public class DropService {
 
 		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npcId);
 		DropNpc dropNpc = DropRegistrationService.getInstance().getDropRegistrationMap().get(npcId);
+		Npc npcID = (Npc) World.getInstance().findVisibleObject(npcId);
 		DropItem requestedItem = null;
 		// drop was unregistered
 		if (dropItems == null || dropNpc == null) {
@@ -339,7 +340,7 @@ public class DropService {
 		}
 
 		if (requestedItem == null) {
-			log.warn("Null requested index item: " + itemIndex + " npcId" + npcId + " player: " + player.getObjectId());
+			log.warn("Null requested index item: " + itemIndex + " npcId: " + npcID.getNpcId() + " player: " + player.getObjectId());
 			return;
 		}
 

@@ -1,3 +1,386 @@
+Changes from Ant 1.9.13 TO Ant 1.9.14
+=====================================
+
+Changes that could break older environments:
+-------------------------------------------
+
+ * ClearCase#runS has been augmented by a two arg-version and the
+   one-arg version will no longer be called. This may affect
+   subclasses that have overridden runS.
+
+Fixed bugs:
+-----------
+
+ * fetch.xml must retrieve runtime rather than compile dependencies for
+   mail task.
+   Bugzilla Report 62621
+
+ * augment task now throws a BuildException (as noted in its manual)
+   instead of a IllegalStateException in the absence of the "id" attribute.
+   Bugzilla Report 62655
+
+ * org.apache.tools.zip.ZipOutputStream would sometimes potentially use
+   an incorrect compression level for a zip entry. This is now fixed.
+   Bugzilla Report 62686
+
+ * cccheckout would ignore an error of the "ls checkout" command even
+   if failOnError was set to false.
+   Bugzilla Report 63071
+
+Other changes:
+--------------
+ * generatekey task now supports SubjectAlternativeName during key
+   generation.
+
+ * the <modified> selector has a new built-in algorithm 'lastmodified'
+   which computes a value based upon the lastmodified time of the file.
+
+ * signjar and verifyjar now support the -providerName, -providerClass
+   and -providerArg command line options of keytool via new attributes.
+   Bugzilla Report 65234
+
+ * signjar and verifyjar now supported nested <arg> elements for
+   command line arguments that are not supported explicitly by the
+   tasks via attributes.
+
+ * added several attributes to <javadoc> that support modules.
+   Bugzilla Report 62424
+
+ * Jsch library dependency has now been upgraded to 0.1.55. Jsch is
+   the library behind the sshexec and scp Ant tasks.
+   Github Pull Request #84
+
+ * ftp task manual has been updated to mention that the remote listing of
+   files honours the followsymlinks attribute.
+   Bugzilla Report 63226
+
+
+Changes from Ant 1.9.12 TO Ant 1.9.13
+=====================================
+
+Fixed bugs:
+-----------
+
+ * Fixes a regression in the "get" task where redirects
+   from a HTTP resource to a HTTPS resource started throwing
+   an exception.
+   Bugzilla Report 62499
+
+ * the new allowFilesToEscapeDest didn't work when set to false and
+   archive entries contained relative paths with so many ".."
+   segnments that the resulting path would go beyond the file system
+   root.
+   Bugzilla Report 62502
+
+Changes from Ant 1.9.11 TO Ant 1.9.12
+=====================================
+
+Changes that could break older environments:
+-------------------------------------------
+
+ * <unzip>, <unjar> and <untar> will no longer extract entries whose
+   names would make the created files be placed outside of the
+   destination directory anymore by default. A new attribute
+   allowFilesToEscapeDest can be used to override the behavior.
+   Another special case is when stripAbsolutePathSpec is false (which
+   no longer is the default) and the entry's name starts with a
+   (back)slash and allowFilesToEscapeDest hasn't been specified
+   explicitly, in this case the file may be created outside of the
+   dest directory as well.
+   In addition stripAbsolutePathSpec is now true by default.
+   Based on a recommendation by the Snyk Security Research Team.
+
+Fixed bugs:
+-----------
+
+ * Delay the class initialization of the test classes until they are
+   passed to JUnit. This way we can avoid that failing static initializers
+   from non-test classes are reported as error when the 'skipNonTests' option
+   is 'true'.
+   Bugzilla Report 60062
+
+ * The junit task when used with includeantruntime="no" was incorrectly
+   printing a warning about multiple versions of ant detected in path
+
+ * Default and SecureInputHandler will now raise an error when then
+   end of the input stream (usually System.in or System.console) are
+   reached before a valid input has been read.
+
+ * junitreport does not list testsuites that fail to start any tests
+   because of an exception inside the all-tests and alltests-errors frames.
+   Bugzilla Report 62443
+
+Other changes:
+--------------
+
+ * PumpStreamHandler now explicitly verifies the streams for output
+   and error are not null and will throw an exception if they
+   are. This way creating a PumpStreamHandler will fail early as
+   opposed to some obscure errors later when closing streams or
+   finishing threads might fail.
+   Bugzilla Report 62148
+
+ * <property> has a new attribute runtime which can be used to set
+   properties with values taken as snapshots from the
+   availableProcessors, freeMemory, maxMemory and totalMemory methods
+   of the Java Runtime class.
+
+ * <resourcelist> has a new basedir attribute that can be used to
+   resolve relative names and provides a root for the FileResources
+   generated.
+   Bugzilla Report 62379
+
+ * The <includesfile> and <excludesfile> nested elements of
+   <patternset> and <fileset> now support an encoding attribute that
+   can be used to specify the file's encoding.
+   Bugzilla Report 62379
+
+Changes from Ant 1.9.10 TO Ant 1.9.11
+=====================================
+
+Changes that could break older environments:
+-------------------------------------------
+
+ * Previous versions of Ant's copy task would throw a BuildException
+   if the "name" of the resource to copy was null. Starting
+   this version, the copy task instead silently skips such resources
+   and no longer throws an exception.
+   ant-dev list https://www.mail-archive.com/dev@ant.apache.org/msg46634.html
+
+Fixed bugs:
+-----------
+
+ * Fixed NullPointerException when a mappedresource is used in pathconvert
+   Bugzilla Report 62076
+
+ * Added a workaround for a bug in the jarsigner tool to <verifyjar>
+   which requires the -storepass command line argument when verifying
+   signatures using -strict together with a PKCS12 keystore. Unlike
+   when signing the jar it will not prompt for the keystore's password
+   and read it from standard input.
+   This means Ant will now pass the keystore's password on the command
+   line when using <verifyjar>, which poses a security risk you should
+   be aware of.
+   Bugzilla Report 62194
+
+Other changes:
+--------------
+
+ * when running on Java 11+ rmic will fail early if iiop or idl are
+   requested. Java11 removes support for CORBA and the switches have
+   been removed from the rmic tool.
+
+Changes from Ant 1.9.9 TO Ant 1.9.10
+====================================
+
+ * The Log4jListener is marked as deprecated as the required log4j library
+   (in version 1.x) is not maintained any more.
+
+Fixed bugs:
+-----------
+
+ * <genkey>'s <dname> child now skips <param>s that lack a key or
+   value.
+   Bugzilla Report 60767
+
+ * Fixed the issue where the SCP based tasks would try to change
+   the permissions on the parent directory of a transferred file,
+   instead of changing it on the transferred file itself.
+   Bugzilla Reports 59648 and 43271
+
+ * Fixed the issue where the source file being copied could end
+   up being corrupted if the target of the copy happened to be
+   the same source file (symlinked back to itself).
+   Bugzilla Report 60644
+
+ * Improvement to the Zip task for reduced memory usage in certain
+   cases. Thanks to Glen Lewis for reporting the issue and
+   suggesting the fix.
+   Bugzilla Report 19516
+
+ * Fixed an issue where the content redirected from output/error
+   streams of a process, could end up being truncated.
+   Bugzilla Report 58833, 58451
+
+ * <fileset>/<zipfileset>/<tarfileset> will now throw an exception
+   with a more useful error message when setFile is called twice on
+   the same instance.
+   Bugzilla Report 62071
+
+Other changes:
+--------------
+
+ * Added forceCsvQuoteChar option to <csv> task. When enabled the
+   values always get quoted.
+   Github Pull Request #32
+
+ * added "regexp" attribute to <linecontainsregexp>
+   Bugzilla Report 60968
+
+ * added a new magic property ant.tstamp.now that can be used to
+   override the current time/date used by <tstamp>.
+   Bugzilla Report 61079
+
+ * added Orion support to ejbjar
+   Github Pull Request #33
+
+ * SCP task, when configured to use SFTP protocol, now preserves last
+   modified timestamp on files that it uploads, if the
+   preserveLastModified attribute is set to true for that task
+   Bugzilla Report 58589
+
+ * zip and the related tasks can now set the modification time of all
+   entries to a fixed timestamp.
+   Github Pull Request #36
+
+ * Jsch library dependency has now been upgraded to 0.1.54. Jsch is
+   the library behind the sshexec and scp Ant tasks.
+   Bugzilla Report 61718
+
+ * Added a new <javaversion> condition.
+
+ * added "javac10+" as new supported value for javac's compiler attribute.
+
+ * javah has been removed from Java 10. The task will now throw an
+   exception if you try to use it while running Java 10 or newer.
+
+ * Updated Maven Ant Tasks, Jakarta Regexp and JUnit 4 to the latest
+   stable version (2.1.3, 1.4, and 4.12 respectively); updated
+   Java Mail API, JRuby and Jython to the latest Java 5 compatible
+   version (1.5.6, 1.6.8 and 2.5.3, respectively); added resolve targets
+   for Ivy and AntUnit to facilitate releases and updates, respectively.
+   Github Pull Request #50
+
+* Updated Commons Net to the latest Java 5 compatible version (2.2).
+
+Changes from Ant 1.9.8 TO Ant 1.9.9
+===================================
+
+Fixed bugs:
+-----------
+
+ * Ant 1.9.8 made Path#systemClasspath final which broke the Eclipse
+   integration.
+   Bugzilla Report 60582
+
+ * the wrapper script still didn't work on Solaris 10, but worked on
+   Solaris 11.
+   The "fixed" script should work in most cases but will not preserve
+   newlines present in command line arguments.
+   Bugzilla Report 60562
+
+Changes from Ant 1.9.7 TO Ant 1.9.8
+===================================
+
+Changes that could break older environments:
+-------------------------------------------
+
+ * <fileset>/<zipfileset>/<tarfileset> exhibited undefined
+   behavior when both the dir and file attribute have been used on the
+   same instance. This will now cause the build to fail.
+   Bugzilla Report 59402
+
+ * The ant.java.version property will now hold the value "9" rather
+   than "1.9" if running on Java 9.
+
+ * <rmic> will no longer allow the -Xnew option (or xmic compiler) to
+   be used when running on Java 9 since this option has been removed.
+   Bugzilla Report 59906
+
+Fixed bugs:
+-----------
+
+ * setDynamicAttribute on MacroInstance now lower-cases the attribute
+   name in order to allow users of the API to use the attributes names
+   they have specified.
+   Bugzilla Report 59339
+
+ * <get>'s quiet attribute was broken, it didn't suppress any messages.
+   Bugzilla Report 59379
+
+ * <zip>'s check whether an archive is already up-to-date failed on
+   NTFS filesystems and re-created archives more often than necessary.
+   Bugzilla Report 59562
+
+ * AntClassLoader didn't delegate to the parent loader for classes in
+   the "jdk" package or one of its subpackages. This hierarchy has
+   been introduced with Java 7.
+   Bugzilla Report 59556
+
+ * The ant wrapper script used on Unix-like operating systems only
+   worked on OSes where sed is GNU sed.
+   Bugzilla Report 59898
+
+ * <touch>'s default pattern as well as the default patterns used by
+   the <date> (resource) selectors depended on the JDK being used - or
+   rather the locale provider being used and the default locale
+   provider changed with Java 9.
+   They are now fixed and the documentation has been updated to
+   reflect the real patterns used rather than a non-formal description
+   of the expected format.
+   Bugzilla Report 59909
+
+ * Clarified the documentation of <get>'s retries attribute.
+   Bugzilla Report 59930
+
+ * The ant wrapper script failed if backticks were passed on the
+   command line.
+   Bugzilla Report 60150, 59445
+
+ * The report generated by <junitreport> could contain duplicate
+   characters in stack traces.
+   Bugzilla Report 58661
+
+Other changes:
+--------------
+
+ * <junit> now initializes the cause of the AssertionFailedError when
+   converting from AssertionError.
+   Bugzilla Report 58982
+
+ * <scp> now supports compression via the optional compressed attribute.
+   Bugzilla Report 47552
+
+ * <junit> now supports JDK9 modules
+   Github Pull Request #18
+
+ * a new implementation "builtin" has been added to <native2ascii> and
+   is the default when running on JDK9+ since the tool itself has been
+   removed from the JDK.
+   Bugzilla Report 59855
+
+ * added a new <native2asciifilter> filter that can perform non-ASCII
+   to Unicode-escape conversions.
+
+ * <rmic> defaults to the "forking" compiler on JDK 9+ as the
+   implementation class of rmic is not exported by its containing
+   module and thus not accessible to Ant without applying -XaddExports
+   magic.
+   Bugzilla Report 59860
+
+ * a new implementation "forking" has been added to <javah> and is
+   used as default when running on JDK9.
+
+ * support for javac's -h switch has been added with the
+   nativeheaderdir attribute.
+   Bugzilla Report 59905
+
+ * it is now possible to set features of the TraX factory used by <xslt>
+   and <junitreport>.
+
+ * it is now possible to use references to Ant types and classloaders
+   built around Ant <path>s as values for TraX factory attributes.
+
+ * <junitreport> now enables the feature
+   http://www.oracle.com/xml/jaxp/properties/enableExtensionFunctions
+   when run on Java 9 so the redirect extension function can be used
+   if when a SecurityManager is active.
+   Bugzilla Report 60060
+
+ * support for javac's --release switch introduced with Java9 has been
+   added.
+   Bugzilla Report 60172
+
 Changes from Ant 1.9.6 TO Ant 1.9.7
 ===================================
 
@@ -577,11 +960,11 @@ Fixed bugs:
 
  * Updated documentation to fix spelling errors / broken links.
    Bugzilla Reports 53215, 53291, 53202
-   
+
  * Unable to override system properties. It was not possible not to override
    system properties from the command line (or from a property file).
    Bugzilla Report 51792
-   
+
  * <javac> by default fails when run on JDK 8.
    Bugzilla Report 53347.
 
@@ -758,7 +1141,7 @@ Fixed bugs:
  * Exec task may mix the stderr and stdout output while logging it
    Bugzilla Report 50507.
 
- * Missing space between "finished" and timestamp in task/target 
+ * Missing space between "finished" and timestamp in task/target
    finish message from ProfileLogger.
    Bugzilla Report 51109.
 
@@ -772,10 +1155,10 @@ Fixed bugs:
    Bugzilla Report 42696.
 
  * quiet attribute added to the copy and move tasks, to be used together
-   with failonerror=false, so warnings won't get logged 
+   with failonerror=false, so warnings won't get logged
    Bugzilla Report 48789.
 
- * System.in was closed and not readable anymore by the DefaultInputHandler 
+ * System.in was closed and not readable anymore by the DefaultInputHandler
    when Ant is used via its Java API.
    Bugzilla Report 51161
 
@@ -939,10 +1322,10 @@ Changes that could break older environments:
 Fixed bugs:
 -----------
 
- * hostinfo now prefers addresses with a hostname over addresses without 
+ * hostinfo now prefers addresses with a hostname over addresses without
    a hostname, provided the addresses have the same scope.
    For local lookup, no IP address will be put in NAME / DOMAIN anymore.
-   For remote lookup, if a host name was provided and only an IP address is 
+   For remote lookup, if a host name was provided and only an IP address is
    found, the IP address will no longer overwrite the host name provided to the
    task.
    Bugzilla Report 49513
@@ -950,8 +1333,8 @@ Fixed bugs:
  * mmap-based file copy problems under JDK 1.4 on Linux.
    Bugzilla Report 49430.
 
- * The Sun JVM tries to mmap the entire file during a copy. 
-   For large files this is not feasible. 
+ * The Sun JVM tries to mmap the entire file during a copy.
+   For large files this is not feasible.
    We now explicitly request to copy at most 16 MiB per request.
    Bugzilla Report 49326.
 
@@ -1104,7 +1487,7 @@ Other changes:
    The wildcards are not expanded or even evaluated by Ant and will be
    used literally.  The resulting path may be unusable as a CLASSPATH
    for Java versions prior to Java6 and likely doesn't mean anything
-   when used in any other way than a CLASSPATH for a forked Java VM. 
+   when used in any other way than a CLASSPATH for a forked Java VM.
    Bugzilla Report 46842.
 
  * A new attribute allows targets to deal with nonexistent extension
@@ -1174,7 +1557,7 @@ Other changes:
    should also benefit any operation that scans directories in Ant.
    Bugzilla Report 50200.
 
-Changes from Ant 1.8.0 TO Ant 1.8.1 
+Changes from Ant 1.8.0 TO Ant 1.8.1
 ===================================
 
 Changes that could break older environments:
@@ -1234,7 +1617,7 @@ Fixed bugs:
    1.7.1
    Bugzilla Report 48853
 
- * ANT_CMD_LINE_ARGS are rippling through lower level Ant usage 
+ * ANT_CMD_LINE_ARGS are rippling through lower level Ant usage
    Bugzilla Report 48876
 
  * email : IO error sending mail with plain mimetype
@@ -1298,7 +1681,7 @@ Other changes:
    equals condition allowed Object args, but Ant 1.8.x+ property
    evaluation may yield values of any type.
 
- * BuildFileTest.assertPropertyUnset() fails with a slightly more 
+ * BuildFileTest.assertPropertyUnset() fails with a slightly more
    meaningful error message
    Bugzilla Report 48834
 
@@ -1338,7 +1721,7 @@ Fixed bugs:
  * stack traces were not reported at all by <junit/>
    when filtertrace="on", which is the default.
 
- * ant.bat can now also process the -noclasspath switch when it is 
+ * ant.bat can now also process the -noclasspath switch when it is
    the first switch on a command line.
    Bugzilla Report 48186.
 
@@ -1534,7 +1917,7 @@ Changes that could break older environments:
  * A new property syntax can be used to set attributes from
    references: ${ant.ref:some-reference}
 
-   In most cases this will yield the exact same result as 
+   In most cases this will yield the exact same result as
    ${toString:some-reference} - only when an attribute setter method
    accepts an object type other than string and the project's
    reference is an Object of matching type the new syntax will pass in
@@ -1571,12 +1954,12 @@ Fixed bugs:
  * RPM task needed an inserted space between the define and the value.
    Bugzilla Report 46659.
 
- * Got rid of deadlock between in, out and err in the Redirector. 
+ * Got rid of deadlock between in, out and err in the Redirector.
    Bugzilla Report 44544.
 
  * Caused by AssertionError no longer filtered.
    Bugzilla Report 45631.
- 
+
  * <zip> would sometimes recreate JARs unnecessarily.
    Bugzilla Report 45902.
 
@@ -1626,7 +2009,7 @@ Fixed bugs:
  * <sql> would fail if the executed statement didn't return a result
    set with some JDBC driver that dissalow Statement.getResultSet to
    be called in such a situation.
-   Bugzilla Report 36265 
+   Bugzilla Report 36265
 
  * if the executed statement in <sql> returned a result set and an
    update count, the count would be lost.
@@ -1833,7 +2216,7 @@ Fixed bugs:
    Bugzilla Report 29731.
 
  * <record> didn't work properly with nested builds.
-   Bugzilla Report 41368. 
+   Bugzilla Report 41368.
 
  * <jar> with filesetmanifest different from skip didn't work if the
    update attribute has been set to true.
@@ -1887,7 +2270,7 @@ Fixed bugs:
  * The tar task failed to recognize that the archive had to be
    (re-)created in some cases where the sources are filesystem based
    resources but not filesets.
-   Bugzilla Report 48035. 
+   Bugzilla Report 48035.
 
  * <sshexec>'s outputproperty was prefixed by the executed command
    when the command attribute has been used, breaking backwards
@@ -1908,8 +2291,8 @@ Other changes:
  * The get task now also follows redirects from http to https
    Bugzilla Report 47433
 
- * A HostInfo task was added performing information on hosts, including info on 
-   the host ant is running on. 
+ * A HostInfo task was added performing information on hosts, including info on
+   the host ant is running on.
    Bugzilla Reports 45861 and 31164.
 
  * There is now a FileProvider interface for resources that act as a source
@@ -2028,7 +2411,7 @@ Other changes:
    expression.
    Bugzilla Report 45284
 
- * Enhanced performance of Project.fireMessageLoggedEvent and DirectoryScanner 
+ * Enhanced performance of Project.fireMessageLoggedEvent and DirectoryScanner
    Bugzilla Reports 45651 and 45665
 
  * The package list location for offline links can now be specified as
@@ -2181,7 +2564,7 @@ Other changes:
    process proceed if an error occurs.
    Bugzilla Report 36260.
 
- * <xslt> has a new attribute failOnNoResources that can be used to 
+ * <xslt> has a new attribute failOnNoResources that can be used to
    make the build fail/continue if the collection of resources to
    transform is empty.
    Bugzilla Report 46274.
@@ -2428,7 +2811,7 @@ Changes that could break older environments:
   incoming (OutputStream) content.
 
 * <java> with fork now returns gives -1 instead of 0 as result when failonerror
-  is false and some exception (including timeout) occurs. Br 42377. 
+  is false and some exception (including timeout) occurs. Br 42377.
 
 * ant-type attribute has been marked as deprecated and a warning has been
   issued if it is encountered in the build file.
@@ -2504,7 +2887,7 @@ Fixed bugs:
 * Synchonization issues in PropertyHelper.  Bugzilla 41353.
 
 * <concat binary="true" append="true"> did not append.  Bugzilla 41399.
- 
+
 * -autoproxy turns Java1.5+ automatic proxy support on. Bugzilla 41904
 
 * Handle null result of system getProperty(). Bugzilla 42334.
@@ -2730,10 +3113,10 @@ Changes that could break older environments:
 * IContract optional task removed as the required library is no
   longer available.
 
-* Metamata (maudit, mmetrics, and mparse tasks) removed as the required 
+* Metamata (maudit, mmetrics, and mparse tasks) removed as the required
   library is no longer available.
 
-* Sitraka (jpcoverage, jpcovmerge, jpcovreport) tasks suppressed as the 
+* Sitraka (jpcoverage, jpcovmerge, jpcovreport) tasks suppressed as the
   required library is no longer available.
 
 * <fixcrlf> used \r (Mac) line endings on OS X, whose proper line separator

@@ -43,12 +43,13 @@ public final class PlayerMCList implements MCList<Player> {
 
 	public PlayerMCEntry[] getAllMC() {
 		ArrayList<PlayerMCEntry> list = new ArrayList<PlayerMCEntry>();
-		list.addAll(this.entry.values());
+		list.clear();
+		list.addAll(entry.values());
 		return (PlayerMCEntry[]) list.toArray(new PlayerMCEntry[list.size()]);
 	}
 
 	public PlayerMCEntry[] getBasicMC() {
-		return this.entry.values().toArray(new PlayerMCEntry[this.entry.size()]);
+		return entry.values().toArray(new PlayerMCEntry[entry.size()]);
 	}
 
 	@Override
@@ -56,26 +57,25 @@ public final class PlayerMCList implements MCList<Player> {
 		return add(crature, cubeid, rank, level, stat_value, category, PersistentState.NEW);
 	}
 
-	private synchronized boolean add(Player player, int cubeid, int rank, int level, int stat_value, int category,
-			PersistentState paramPersistentState) {
-		this.entry.put(cubeid, new PlayerMCEntry(cubeid, rank, level, stat_value, category, paramPersistentState));
+	private synchronized boolean add(Player player, int cubeid, int rank, int level, int stat_value, int category, PersistentState paramPersistentState) {
+		entry.put(cubeid, new PlayerMCEntry(cubeid, rank, level, stat_value, category, paramPersistentState));
 		DAOManager.getDAO(PlayerCubicsDAO.class).store(player.getObjectId(), cubeid, rank, level, stat_value, category);
 		return true;
 	}
 
 	@Override
 	public synchronized boolean remove(Player player, int cubeid) {
-		PlayerMCEntry playerMCEntry = this.entry.get(cubeid);
+		PlayerMCEntry playerMCEntry = entry.get(cubeid);
 		if (playerMCEntry != null) {
 			playerMCEntry.setPersistentState(PersistentState.DELETED);
-			this.entry.remove(cubeid);
+			entry.remove(cubeid);
 			DAOManager.getDAO(PlayerCubicsDAO.class).delete(player.getObjectId(), cubeid);
 		}
-		return this.entry != null;
+		return entry != null;
 	}
 
 	@Override
 	public int size() {
-		return this.entry.size();
+		return entry.size();
 	}
 }

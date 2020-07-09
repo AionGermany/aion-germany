@@ -263,6 +263,9 @@ public class _1006LastTest extends QuestHandler {
 						case SETPRO15: {
 							return setPlayerClass(env, qs, PlayerClass.RIDER);
 						}
+						case SETPRO16: {
+							return setPlayerClass(env, qs, PlayerClass.PAINTER);
+						}
 						default:
 							break;
 					}

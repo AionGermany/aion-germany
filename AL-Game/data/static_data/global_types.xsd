@@ -1051,6 +1051,46 @@
             <xs:enumeration value="IDBC_POL_LIGHT"/>
             <xs:enumeration value="IDBC_POL_DARK"/>
             <xs:enumeration value="PANDORARAID_WAVE_MONSTER"/>
+            <!-- New 7.0 -->
+            <xs:enumeration value="ATKGUARD_DARK"/>
+            <xs:enumeration value="ATKGUARD_LIGHT"/>
+            <xs:enumeration value="EVENT_OCT_BEHOLDER_REAL"/>
+            <xs:enumeration value="EVENT_OCT_DEBRIE_POLYMORPH"/>
+            <xs:enumeration value="IDF8_MISSION02_D"/>
+            <xs:enumeration value="IDF8_MISSION02_L"/>
+            <xs:enumeration value="IDF8_MISSION02_M"/>
+            <xs:enumeration value="LDF7_SEP_EVENT_D"/>
+            <xs:enumeration value="LDF7_SEP_EVENT_L"/>
+            <xs:enumeration value="LDF8_AGGRESSIVESINGLEMONSTER"/>
+            <xs:enumeration value="LDF8_FIELD_OBJECT_ALL"/>
+            <xs:enumeration value="LDF8_LEGA"/>
+            <xs:enumeration value="LDF8_NK"/>
+            <xs:enumeration value="LDF8_SNOOWA"/>
+            <xs:enumeration value="LDF8_SP_BUFF"/>
+            <xs:enumeration value="LDF8_STELLA_L_D"/>
+            <xs:enumeration value="LDF8_PC_POLYMORPH"/>
+            <!-- New 7.2 -->
+            <xs:enumeration value="LDF8_DEF_NAKI"/>
+            <xs:enumeration value="IDF8_HOUSE_BOSS"/>
+            <xs:enumeration value="IDF8_HOUSE_FIRE"/>
+            <xs:enumeration value="LDF5_LI_MOB_AGGRESSIVE"/>
+            <xs:enumeration value="LDF5_DA_MOB_AGGRESSIVE"/>
+            <xs:enumeration value="LDF5_LI_MOB"/>
+            <xs:enumeration value="LDF5_DA_MOB"/>
+            <xs:enumeration value="IDINFINITY_SLAYER"/>
+            <xs:enumeration value="IDINFINITY_TRAP"/>
+            <xs:enumeration value="IDINFINITY_ESSENCE"/>
+            <xs:enumeration value="PROTECTGUARD_DRAGON"/>
+            <xs:enumeration value="EVENT_V72_THEWAR"/>
+            <xs:enumeration value="EVENT_V72_THEWAR_BBOO"/>
+            <!-- New 7.3 -->
+            <xs:enumeration value="IDCUSTOMIZE_MONSTER"/>
+            <xs:enumeration value="IDCUSTOMIZE_NPC_D"/>
+            <xs:enumeration value="IDCUSTOMIZE_NPC_L"/>
+            <xs:enumeration value="LDF5B_GUARD_DA"/>
+            <xs:enumeration value="LDF5B_GUARD_LI"/>
+            <xs:enumeration value="UP3_URF_ENEMY"/>
+            <xs:enumeration value="UP3_URF_OBJ"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Base types -->
@@ -1067,6 +1107,7 @@
 			<xs:enumeration value="RIDER"/>
 			<xs:enumeration value="ARTIST"/>
 			<xs:enumeration value="BARD"/>
+			<xs:enumeration value="PAINTER"/>
 			<xs:enumeration value="GUNNER"/>
 			<xs:enumeration value="SORCERER"/>
 			<xs:enumeration value="SPIRIT_MASTER"/>

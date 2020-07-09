@@ -27,7 +27,7 @@ import ai.AggressiveNpcAI2;
 /**
  * @author FrozenKiller
  */
-@AIName("examscarecrow") // NPC: 836530 QUEST:60003
+@AIName("examscarecrow") // NPC: 836530, 806814 QUEST:60003, 70003
 public class ExamScareCrowAI2 extends AggressiveNpcAI2 {
 
 	int rewardCount = Rnd.get(3, 10);
@@ -42,13 +42,31 @@ public class ExamScareCrowAI2 extends AggressiveNpcAI2 {
 	protected void handleAttack(Creature creature) {
 		if (creature instanceof Player) {
 			Player player = (Player) creature;
-			if (player.getQuestStateList().hasQuest(60003) && player.getInventory().getItemCountByItemId(182216247) < 1) {
-				attackCount++;
-				if (attackCount == rewardCount) {
-					ItemService.addItem(player, 182216247, 1);
-					rewardCount = Rnd.get(3, 10);
-					attackCount = 0;
+			switch (player.getRace()) {
+				case ASMODIANS: {
+					if (player.getQuestStateList().hasQuest(70003) && player.getInventory().getItemCountByItemId(182216395) < 1) {
+						attackCount++;
+						if (attackCount == rewardCount) {
+							ItemService.addItem(player, 182216395, 1);
+							rewardCount = Rnd.get(3, 10);
+							attackCount = 0;
+						}
+					}
+					break;
 				}
+				case ELYOS: {
+					if (player.getQuestStateList().hasQuest(60003) && player.getInventory().getItemCountByItemId(182216247) < 1) {
+						attackCount++;
+						if (attackCount == rewardCount) {
+							ItemService.addItem(player, 182216247, 1);
+							rewardCount = Rnd.get(3, 10);
+							attackCount = 0;
+						}
+					}
+					break;
+				}
+				default:
+					break;
 			}
 		}
 	}

@@ -53,9 +53,9 @@ import javolution.util.FastList;
 public class MySQL5InventoryDAO extends InventoryDAO {
 
 	private static final Logger log = LoggerFactory.getLogger(MySQL5InventoryDAO.class);
-	public static final String SELECT_QUERY = "SELECT `item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `is_equiped`, `is_soul_bound`, `slot`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant` FROM `inventory` WHERE `item_owner`=? AND `item_location`=? AND `is_equiped`=?";
-	public static final String INSERT_QUERY = "INSERT INTO `inventory` (`item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `item_owner`, `is_equiped`, is_soul_bound, `slot`, `item_location`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	public static final String UPDATE_QUERY = "UPDATE inventory SET  item_count=?, item_color=?, color_expires=?, item_creator=?, expire_time=?, activation_count=?,item_owner=?, is_equiped=?, is_soul_bound=?, slot=?, item_location=?, enchant=?, item_skin=?, fusioned_item=?, optional_socket=?, optional_fusion_socket=?, charge=?, rnd_bonus=?, rnd_count=?, pack_count=?, authorize=?, is_packed=?, is_amplified=?, buff_skill=?, reduction_level=?, luna_reskin=?, isEnhance=?, enhanceSkillId=?, enhanceSkillEnchant=? WHERE item_unique_id=?";
+	public static final String SELECT_QUERY = "SELECT `item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `is_equiped`, `is_soul_bound`, `slot`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant`, `is_seal`, `skin_skill` FROM `inventory` WHERE `item_owner`=? AND `item_location`=? AND `is_equiped`=?";
+	public static final String INSERT_QUERY = "INSERT INTO `inventory` (`item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `item_owner`, `is_equiped`, is_soul_bound, `slot`, `item_location`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant`, `is_seal`, `skin_skill`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	public static final String UPDATE_QUERY = "UPDATE inventory SET  item_count=?, item_color=?, color_expires=?, item_creator=?, expire_time=?, activation_count=?,item_owner=?, is_equiped=?, is_soul_bound=?, slot=?, item_location=?, enchant=?, item_skin=?, fusioned_item=?, optional_socket=?, optional_fusion_socket=?, charge=?, rnd_bonus=?, rnd_count=?, pack_count=?, authorize=?, is_packed=?, is_amplified=?, buff_skill=?, reduction_level=?, luna_reskin=?, isEnhance=?, enhanceSkillId=?, enhanceSkillEnchant=?, is_seal=?, skin_skill=? WHERE item_unique_id=?";
 	public static final String DELETE_QUERY = "DELETE FROM inventory WHERE item_unique_id=?";
 	public static final String DELETE_CLEAN_QUERY = "DELETE FROM inventory WHERE item_owner=? AND item_location != 2"; // legion warehouse needs not to be excluded, since players and legions are IDAwareDAOs
 	public static final String SELECT_ACCOUNT_QUERY = "SELECT `account_id` FROM `players` WHERE `id`=?";
@@ -250,7 +250,9 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 		boolean isEnhance = rset.getBoolean("isEnhance");
 		int enhanceSkillId = rset.getInt("enhanceSkillId");
 		int enhanceSkillEnchant = rset.getInt("enhanceSkillEnchant");
-		Item item = new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, isEquiped == 1, isSoulBound == 1, slot, storage, enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, isPacked == 1, isAmplified == 1, amplificationSkill, reductionLevel, isLunaReskin == 1, isEnhance, enhanceSkillId, enhanceSkillEnchant);
+		int unSeal = rset.getInt("is_seal");
+		int skinSkill = rset.getInt("skin_skill");
+		Item item = new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, isEquiped == 1, isSoulBound == 1, slot, storage, enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, isPacked == 1, isAmplified == 1, amplificationSkill, reductionLevel, isLunaReskin == 1, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal, skinSkill);
 		return item;
 	}
 
@@ -415,7 +417,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(11, item.isSoulBound() ? 1 : 0);
 				stmt.setLong(12, item.getEquipmentSlot());
 				stmt.setInt(13, item.getItemLocation());
-				stmt.setInt(14, item.getEnchantLevel());
+				stmt.setInt(14, item.getItemTemplate().getMaxAuthorize() > 0 ? 0 : item.getEnchantOrAuthorizeLevel());
 				stmt.setInt(15, item.getItemSkinTemplate().getTemplateId());
 				stmt.setInt(16, item.getFusionedItemId());
 				stmt.setInt(17, item.getOptionalSocket());
@@ -424,7 +426,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(20, item.getBonusNumber());
 				stmt.setInt(21, item.getRandomCount());
 				stmt.setInt(22, item.getPackCount());
-				stmt.setInt(23, item.getAuthorize());
+				stmt.setInt(23, item.getItemTemplate().getMaxAuthorize() > 0 ? item.getEnchantOrAuthorizeLevel() : 0);
 				stmt.setBoolean(24, item.isPacked());
 				stmt.setBoolean(25, item.isAmplified());
 				stmt.setInt(26, item.getAmplificationSkill());
@@ -433,6 +435,8 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setBoolean(29, item.isEnhance());
 				stmt.setInt(30, item.getEnhanceSkillId());
 				stmt.setInt(31, item.getEnhanceEnchantLevel());
+				stmt.setInt(32, item.getUnSeal());
+				stmt.setInt(33, item.getItemSkinSkill());
 				stmt.addBatch();
 			}
 
@@ -471,7 +475,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(9, item.isSoulBound() ? 1 : 0);
 				stmt.setLong(10, item.getEquipmentSlot());
 				stmt.setInt(11, item.getItemLocation());
-				stmt.setInt(12, item.getEnchantLevel());
+				stmt.setInt(12, item.getItemTemplate().getMaxAuthorize() > 0 ? 0 : item.getEnchantOrAuthorizeLevel());
 				stmt.setInt(13, item.getItemSkinTemplate().getTemplateId());
 				stmt.setInt(14, item.getFusionedItemId());
 				stmt.setInt(15, item.getOptionalSocket());
@@ -480,7 +484,7 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(18, item.getBonusNumber());
 				stmt.setInt(19, item.getRandomCount());
 				stmt.setInt(20, item.getPackCount());
-				stmt.setInt(21, item.getAuthorize());
+				stmt.setInt(21, item.getItemTemplate().getMaxAuthorize() > 0 ? item.getEnchantOrAuthorizeLevel() : 0);
 				stmt.setBoolean(22, item.isPacked());
 				stmt.setBoolean(23, item.isAmplified());
 				stmt.setInt(24, item.getAmplificationSkill());
@@ -489,7 +493,9 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setBoolean(27, item.isEnhance());
 				stmt.setInt(28, item.getEnhanceSkillId());
 				stmt.setInt(29, item.getEnhanceEnchantLevel());
-				stmt.setInt(30, item.getObjectId());
+				stmt.setInt(30, item.getUnSeal());
+				stmt.setInt(31, item.getItemSkinSkill());
+				stmt.setInt(32, item.getObjectId());
 				stmt.addBatch();
 			}
 

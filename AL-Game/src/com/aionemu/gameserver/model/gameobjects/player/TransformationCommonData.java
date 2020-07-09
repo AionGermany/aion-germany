@@ -23,26 +23,100 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
 /**
  * @author Falke_34
  */
-public abstract class TransformationCommonData extends VisibleObjectTemplate implements IExpirable {
+public class TransformationCommonData extends VisibleObjectTemplate implements IExpirable {
 
-	private final int transformationId;
-	private final int transformationObjectId;
+	private int transformationId;
+	private final int transformationObjId;
+	private int masterObjectId;
+	private String transformationGrade;
+	private String name;
+	private int count;
 
-	public TransformationCommonData(int transformationId) {
-		this.transformationObjectId = IDFactory.getInstance().nextId();
+	public TransformationCommonData(int transformationId, int masterObjectId, String name, String grade, int count) {
+		this.transformationObjId = IDFactory.getInstance().nextId();
 		this.transformationId = transformationId;
-	}
-
-	public final int getTransformationId() {
-		return transformationId;
+		this.masterObjectId = masterObjectId;
+		this.name = name;
+		this.transformationGrade = grade;
+		this.count = count;
 	}
 
 	public int getObjectId() {
-		return transformationObjectId;
+		return transformationObjId;
+	}
+
+	public int getMasterObjectId() {
+		return masterObjectId;
+	}
+
+	public int getTransformationId() {
+		return transformationId;
+	}
+
+	public int setTransformationId(int transformationId) {
+		return this.transformationId = transformationId;
+	}
+
+	public String getTransformationGrade() {
+		return transformationGrade;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setGrade(String grade) {
+		this.transformationGrade = grade;
 	}
 
 	@Override
 	public int getTemplateId() {
 		return transformationId;
+	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public int getNameId() {
+		return 0;
+	}
+
+	public String getGrade() {
+		return transformationGrade;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	@Override
+	public int getExpireTime() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void expireEnd(Player player) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean canExpireNow() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void expireMessage(Player player, int time) {
+		// TODO Auto-generated method stub
+		
 	}
 }

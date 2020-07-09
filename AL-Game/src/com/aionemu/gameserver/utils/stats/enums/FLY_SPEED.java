@@ -37,6 +37,7 @@ public enum FLY_SPEED {
 	RIDER(9),
 	GUNNER(9),
 	ARTIST(9),
+	PAINTER(9),
 	BARD(9);
 
 	private int value;

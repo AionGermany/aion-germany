@@ -63,8 +63,8 @@ public class SM_UPDATE_PLAYER_APPEARANCE extends AionServerPacket {
 			writeD(item.getItemColor());
 			if (item.getItemTemplate().isAccessory()) {
 				if (item.getItemTemplate().isPlume()) {
-					float authorize = item.getAuthorize() / 5;
-					if (item.getAuthorize() >= 5) {
+					float authorize = item.getEnchantOrAuthorizeLevel() / 5;
+					if (item.getEnchantOrAuthorizeLevel() >= 5) {
 						authorize = authorize > 2.0F ? 2.0F : authorize;
 						writeD((int) authorize << 3);
 					}
@@ -73,10 +73,10 @@ public class SM_UPDATE_PLAYER_APPEARANCE extends AionServerPacket {
 					}
 				}
 				else if (item.getItemTemplate().isBracelet()) {
-					if (item.getAuthorize() >= 5 && item.getAuthorize() < 10) {
+					if (item.getEnchantOrAuthorizeLevel() >= 5 && item.getEnchantOrAuthorizeLevel() < 10) {
 						writeD(96);
 					}
-					else if (item.getAuthorize() >= 10) {
+					else if (item.getEnchantOrAuthorizeLevel() >= 10) {
 						writeD(160);
 					}
 					else {
@@ -84,11 +84,11 @@ public class SM_UPDATE_PLAYER_APPEARANCE extends AionServerPacket {
 					}
 				}
 				else {
-					writeD(item.getAuthorize() >= 5 ? 2 : 0);
+					writeD(item.getEnchantOrAuthorizeLevel() >= 5 ? 2 : 0);
 				}
 			}
 			else if ((item.getItemTemplate().isWeapon()) || (item.getItemTemplate().isTwoHandWeapon())) {
-				writeD(item.getEnchantLevel() == 15 ? 2 : item.getEnchantLevel() >= 20 ? 4 : 0);
+				writeD(item.getEnchantOrAuthorizeLevel() == 15 ? 2 : item.getEnchantOrAuthorizeLevel() >= 20 ? 4 : 0);
 			}
 			else {
 				writeD(0);

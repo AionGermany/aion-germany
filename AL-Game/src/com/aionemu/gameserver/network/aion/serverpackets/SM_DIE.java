@@ -51,5 +51,6 @@ public class SM_DIE extends AionServerPacket {
 		writeC(type);
 		writeC(invasion ? 0x80 : 0x00);
 		writeC(4);
+		writeC(0); //TODO Trainings Arena Revive
 	}
 }

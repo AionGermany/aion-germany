@@ -153,6 +153,13 @@ public class CmdChangeClass extends AbstractGMHandler {
 			admin.getController().upgradePlayer();
 			PacketSendUtility.sendMessage(admin, "You have successfuly switched class");
 		}
+		else if (ClassChoose.equalsIgnoreCase("painter")) {
+			classId = 17;
+			PlayerClass playerClass = PlayerClass.getPlayerClassById(classId);
+			admin.getCommonData().setPlayerClass(playerClass);
+			admin.getController().upgradePlayer();
+			PacketSendUtility.sendMessage(admin, "You have successfuly switched class");
+		}
 		else
 			PacketSendUtility.sendMessage(admin, "Invalid class switch chosen!");
 	}

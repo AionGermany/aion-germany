@@ -41,7 +41,6 @@ import com.aionemu.gameserver.configs.main.PeriodicSaveConfig;
 import com.aionemu.gameserver.configs.main.RateConfig;
 import com.aionemu.gameserver.configs.main.SecurityConfig;
 import com.aionemu.gameserver.dao.PlayerDAO;
-import com.aionemu.gameserver.dao.PlayerLunaShopDAO;
 import com.aionemu.gameserver.dao.PlayerPasskeyDAO;
 import com.aionemu.gameserver.dao.PlayerPunishmentsDAO;
 import com.aionemu.gameserver.dao.WeddingDAO;
@@ -90,6 +89,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_COOLDOWN;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEGION_JOIN_REQUEST_LIST;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_LUGBUG_MISSION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MACRO_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
@@ -119,6 +119,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_YOUTUBE_VIDEO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.AccessLevelEnum;
+import com.aionemu.gameserver.services.AtreianPassportService;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ClassChangeService;
@@ -137,6 +138,7 @@ import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.StigmaService;
 import com.aionemu.gameserver.services.SurveyService;
 import com.aionemu.gameserver.services.TownService;
+import com.aionemu.gameserver.services.TransformationService;
 import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
@@ -147,6 +149,7 @@ import com.aionemu.gameserver.services.events.EventService;
 import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.instance.InstanceService;
+import com.aionemu.gameserver.services.lugbug.LugbugEventService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.territory.TerritoryService;
@@ -361,7 +364,9 @@ public final class PlayerEnterWorldService {
 				if (pcd.isReadyForGoldenStarEnergy()) {
 					pcd.checkGoldenStarPercent();
 				}
-
+				if (pcd.isReadyForSilverStarEnergy()) {
+					pcd.checkSilverStarPercent();
+				}
 				if (pcd.isReadyForReposteEnergy()) {
 					pcd.updateMaxReposte();
 					// more than 4 hours offline = start counting Reposte Energy addition.
@@ -457,8 +462,6 @@ public final class PlayerEnterWorldService {
 
 			// SM_SKILL_ANIMATION
 			client.sendPacket(new SM_SKILL_ANIMATION(player));
-
-			DAOManager.getDAO(PlayerLunaShopDAO.class).load(player);
 
 			// SM_TITLE_INFO
 			// Seems crazy but this is correct on official server [Patch 4.9.1]
@@ -654,6 +657,12 @@ public final class PlayerEnterWorldService {
 
 			// SM_SHUGO_SWEEP
 			ShugoSweepService.getInstance().onLogin(player);
+			
+			// SM_CUBIC
+			PlayerCubicService.getInstance().onLogin(player);
+
+			// SM_LUGBUG_EVENT
+			LugbugEventService.getInstance().onLogin(player);
 
 			// SM_BROKER_SERVICE
 			BrokerService.getInstance().onPlayerLogin(player);
@@ -661,11 +670,20 @@ public final class PlayerEnterWorldService {
 			// SM_UNK_106
 			client.sendPacket(new SM_UNK_106());
 
+			// SM_ATREIAN_PASSPORT
+			AtreianPassportService.getInstance().onLogin(player);
+
 			// SM_HOUSE_OWNER_INFO
 			HousingService.getInstance().onPlayerLogin(player);
 
+			// SM_LUGBUG_MISSION
+			client.sendPacket(new SM_LUGBUG_MISSION());
+
 			// SM_RECIPE_LIST
 			client.sendPacket(new SM_RECIPE_LIST(player.getRecipeList().getRecipeList()));
+
+			// SM_Transformation
+			TransformationService.getInstance().onPlayerLogin(player);
 
 			// Welcome message
 			PacketSendUtility.sendWhiteMessage(player, serverName);
@@ -945,6 +963,9 @@ public final class PlayerEnterWorldService {
 
 			// EnchantService.getGloryShield(player);
 			LunaShopService.getInstance().onLogin(player);
+
+			player.getController().updateZone();
+			player.getController().updateNearbyQuests();
 		}
 		else
 			log.info("[DEBUG] enter world" + objectId + ", Player: " + player);

@@ -106,7 +106,8 @@ $lang = array(
         "bard" => "Bard",
         "engineer" => "Engineer",
         "gunner" => "Gunner",
-        "rider" => "Rider",       
+        "rider" => "Rider", 
+		"painter" => "Painter",
         
         // Abyss-anks
         "soldier" => "Soldier, Rank",

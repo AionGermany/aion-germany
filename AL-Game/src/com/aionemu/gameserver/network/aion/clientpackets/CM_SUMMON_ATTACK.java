@@ -34,11 +34,9 @@ public class CM_SUMMON_ATTACK extends AionClientPacket {
 	private static final Logger log = LoggerFactory.getLogger(CM_SUMMON_ATTACK.class);
 	private int summonObjId;
 	private int targetObjId;
-	@SuppressWarnings("unused")
-	private int unk1;
+	private int attackNo;
 	private int time;
-	@SuppressWarnings("unused")
-	private int unk3;
+	private int type;
 
 	public CM_SUMMON_ATTACK(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -48,9 +46,9 @@ public class CM_SUMMON_ATTACK extends AionClientPacket {
 	protected void readImpl() {
 		summonObjId = readD();
 		targetObjId = readD();
-		unk1 = readC();
+		attackNo = readC(); // AttackCounter
 		time = readH();
-		unk3 = readC();
+		type = readC();
 	}
 
 	@Override
@@ -70,7 +68,7 @@ public class CM_SUMMON_ATTACK extends AionClientPacket {
 
 		VisibleObject obj = summon.getKnownList().getObject(targetObjId);
 		if (obj != null && obj instanceof Creature) {
-			summon.getController().attackTarget((Creature) obj, time);
+			summon.getController().attackTarget((Creature) obj, attackNo, time, type);
 		}
 		else {
 			log.warn("summon attack on a wrong target on " + player.getName());

@@ -124,7 +124,9 @@ public class SkillTemplate {
 	protected boolean boostCastingTime = false;
 	@XmlAttribute(name = "stigma")
 	protected StigmaType stigmaType = StigmaType.NONE;
-	@XmlTransient
+    @XmlAttribute(name = "is_minion_skill")
+    protected boolean isminionSkill = false;
+    @XmlTransient
 	protected HashMap<Integer, Integer> effectIds = null;
 	@XmlAttribute(name="skill_group")
 	private String skill_group;
@@ -339,6 +341,10 @@ public class SkillTemplate {
 	public boolean isCharge() {
 		return activationAttribute == ActivationAttribute.CHARGE;
 	}
+
+    public boolean isMinionSkill() {
+        return isminionSkill;
+    }
 
 	/**
 	 * @param position

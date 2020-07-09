@@ -137,6 +137,9 @@ public class ClassChangeService {
 					case 4081:
 						setClass(player, PlayerClass.getPlayerClassById((byte) 16));
 						break;
+					case 4166:
+						setClass(player, PlayerClass.getPlayerClassById((byte) 17)); // 7.0
+						break;
 
 				}
 				completeQuest(player, 60100);
@@ -181,6 +184,9 @@ public class ClassChangeService {
 						break;
 					case 3911:
 						setClass(player, PlayerClass.getPlayerClassById((byte) 16));
+						break;
+					case 3932:
+						setClass(player, PlayerClass.getPlayerClassById((byte) 17)); // 7.0
 						break;
 				}
 				// Optimate @Enomine
@@ -252,7 +258,7 @@ public class ClassChangeService {
 					break;
 				}
 			case ARTIST:
-				if (playerClass == PlayerClass.BARD) {
+				if (playerClass == PlayerClass.BARD || playerClass == PlayerClass.PAINTER) {
 					break;
 				}
 			default:

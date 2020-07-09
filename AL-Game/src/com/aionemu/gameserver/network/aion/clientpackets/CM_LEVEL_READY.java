@@ -103,6 +103,7 @@ public class CM_LEVEL_READY extends AionClientPacket {
 			SiegeService.getInstance().onEnterSiegeWorld(activePlayer);
 		}
 
+		activePlayer.getController().updateZone();
 		activePlayer.getController().updateNearbyQuests();
 		WeatherService.getInstance().loadWeather(activePlayer);
 		// SM_NPC_INFO Bases,Tower

@@ -369,6 +369,8 @@ public class InstanceService {
 	}
 
 	public static void onEnterInstance(Player player) {
+		player.getController().updateZone();
+		player.getController().updateNearbyQuests();
 		player.getPosition().getWorldMapInstance().getInstanceHandler().onEnterInstance(player);
 		AutoGroupService.getInstance().onEnterInstance(player);
 		for (Item item : player.getInventory().getItems()) {

@@ -57,6 +57,13 @@
             <Pattern>%date %message%n</Pattern>
         </encoder>
     </appender>
+    <appender name="app_magic_craft" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/magic_craft.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
     <appender name="app_exchange" class="ch.qos.logback.core.FileAppender">
         <file>${logFolder}/exchange.log</file>
         <append>true</append>
@@ -128,6 +135,20 @@
             <Pattern>%date %message%n</Pattern>
         </encoder>
     </appender>
+    <appender name="app_lugbug_quest" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/lugbug_quests.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="app_lugbug_event_quest" class="ch.qos.logback.core.FileAppender">
+        <file>${logFolder}/lugbug_event_quests.log</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%date %message%n</Pattern>
+        </encoder>
+    </appender>
     <appender name="app_siege" class="ch.qos.logback.core.FileAppender">
         <file>${logFolder}/siege.log</file>
         <append>true</append>
@@ -186,6 +207,9 @@
     <logger name="CRAFT_LOG" additivity="false">
         <appender-ref ref="app_craft"/>
     </logger>
+    <logger name="MAGIC_CRAFT_LOG" additivity="false">
+        <appender-ref ref="app_magic_craft"/>
+    </logger>
     <logger name="EXCHANGE_LOG">
         <appender-ref ref="app_exchange"/>
     </logger>
@@ -227,6 +251,12 @@
     </logger>
     <logger name="QUEST_LOG" additivity="false">
         <appender-ref ref="app_quest"/>
+    </logger>
+    <logger name="LUGBUG_QUEST_LOG" additivity="false">
+        <appender-ref ref="app_event_quest"/>
+    </logger>
+    <logger name="LUGBUG_EVENT_QUEST_LOG" additivity="false">
+        <appender-ref ref="app_lugbug_event_quest"/>
     </logger>
     <logger name="GMITEMRESTRICTION">
         <appender-ref ref="app_gmitemrestriction"/>

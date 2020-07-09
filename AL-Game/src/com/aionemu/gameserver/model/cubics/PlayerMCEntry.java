@@ -24,7 +24,7 @@ public class PlayerMCEntry extends MCEntry {
 	private PersistentState persistentState;
 
 	public PlayerMCEntry(int cubeid, int rank, int level, int stat_value, int category,
-			PersistentState paramPersistentState) {
+		PersistentState paramPersistentState) {
 		super(cubeid, rank, level, stat_value, category);
 		this.persistentState = paramPersistentState;
 	}
@@ -36,21 +36,22 @@ public class PlayerMCEntry extends MCEntry {
 	public void setPersistentState(PersistentState persistentState) {
 		switch (persistentState) {
 		case DELETED:
-			if (this.persistentState == PersistentState.NEW) {
-				this.persistentState = PersistentState.NOACTION;
+			if (persistentState == PersistentState.NEW) {
+				persistentState = PersistentState.NOACTION;
 			} else {
-				this.persistentState = PersistentState.DELETED;
+				persistentState = PersistentState.DELETED;
 			}
 			break;
 		case UPDATE_REQUIRED:
-			if (this.persistentState != PersistentState.NEW) {
-				this.persistentState = PersistentState.UPDATE_REQUIRED;
+			if (persistentState != PersistentState.NEW) {
+				persistentState = PersistentState.UPDATE_REQUIRED;
 			}
 			break;
 		case NOACTION:
 			break;
 		default:
 			this.persistentState = persistentState;
+			break;
 		}
 	}
 }

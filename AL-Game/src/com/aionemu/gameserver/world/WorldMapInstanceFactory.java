@@ -35,7 +35,7 @@ public class WorldMapInstanceFactory {
 
 	public static WorldMapInstance createWorldMapInstance(WorldMap parent, int instanceId, int ownerId) {
 		WorldMapInstance worldMapInstance = null;
-		if (parent.getMapId() == WorldMapType.RESHANTA.getId() && parent.getMapId() == WorldMapType.BELUS.getId() && parent.getMapId() == WorldMapType.ASPIDA.getId() && parent.getMapId() == WorldMapType.ATANATOS.getId() && parent.getMapId() == WorldMapType.DISILLON.getId()) {
+		if (parent.getMapId() == WorldMapType.RESHANTA.getId()){
 			worldMapInstance = new WorldMap3DInstance(parent, instanceId);
 		}
 		else {

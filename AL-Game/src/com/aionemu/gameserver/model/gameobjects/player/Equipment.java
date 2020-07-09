@@ -779,6 +779,32 @@ public class Equipment {
 		}
 		return equippedItems;
 	}
+	
+	/**
+	 * @return List<Item>
+	 */
+	public List<Item> getEquippedItemsMajorStigma() {
+		List<Item> equippedItems = new ArrayList<Item>();
+		for (Item item : equipment.values()) {
+			if (ItemSlot.isMajorStigma(item.getEquipmentSlot())) {
+				equippedItems.add(item);
+			}
+		}
+		return equippedItems;
+	}
+	
+	/**
+	 * @return List<Item>
+	 */
+	public List<Item> getEquippedItemsSpecialStigma() {
+		List<Item> equippedItems = new ArrayList<Item>();
+		for (Item item : equipment.values()) {
+			if (ItemSlot.isSpecialStigma(item.getEquipmentSlot())) {
+				equippedItems.add(item);
+			}
+		}
+		return equippedItems;
+	}
 
 	/**
 	 * @return Number of parts equipped belonging to requested itemset

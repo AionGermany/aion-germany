@@ -26,6 +26,7 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.ManaStone;
 import com.aionemu.gameserver.model.stats.listeners.ItemEquipmentListener;
+import com.aionemu.gameserver.model.templates.item.ArmorType;
 import com.aionemu.gameserver.model.templates.item.GodstoneInfo;
 import com.aionemu.gameserver.model.templates.item.ItemCategory;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
@@ -274,7 +275,7 @@ public class Equip extends AdminCommand {
 	private void enchant(Player admin, Player player, int enchant) {
 		for (Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma()) {
 			if (isUpgradeble(targetItem)) {
-				if (targetItem.getEnchantLevel() == enchant) {
+				if (targetItem.getEnchantOrAuthorizeLevel() == enchant) {
 					continue;
 				}
 				if (enchant > 50) {
@@ -283,25 +284,35 @@ public class Equip extends AdminCommand {
 				if (enchant < 0) {
 					enchant = 0;
 				}
-
-				if (targetItem.getItemTemplate().isBracelet()) {
-					if (enchant > 10) {
-						targetItem.setOptionalSocket(3);
-						targetItem.setAuthorize(10);
+				
+				if (targetItem.getItemTemplate().getMaxAuthorize() > 0) {
+					if (targetItem.getItemTemplate().isBracelet()) {
+						if (enchant > 10) {
+							targetItem.setOptionalSocket(3);
+							targetItem.setEnchantOrAuthorizeLevel(10);
+						} else {
+							targetItem.setEnchantOrAuthorizeLevel(enchant);
+						}
+					} else if (enchant > targetItem.getItemTemplate().getMaxAuthorize()) {
+						targetItem.setEnchantOrAuthorizeLevel(targetItem.getItemTemplate().getMaxAuthorize());
+					} else {
+						targetItem.setEnchantOrAuthorizeLevel(enchant);
 					}
-					else {
-						targetItem.setAuthorize(enchant);
+				}
+				else if (targetItem.getItemTemplate().getArmorType() == ArmorType.WING) {
+					if (enchant > targetItem.getItemTemplate().getMaxEnchantLevel()) {
+						targetItem.setEnchantOrAuthorizeLevel(targetItem.getItemTemplate().getMaxEnchantLevel());
+					} else {
+						targetItem.setEnchantOrAuthorizeLevel(enchant);
 					}
 				}
 				else {
-					targetItem.setEnchantLevel(enchant);
+					targetItem.setEnchantOrAuthorizeLevel(enchant);
 				}
+				
 				if (targetItem.isEquipped()) {
 					player.getGameStats().updateStatsVisually();
-				}
-				ItemPacketService.updateItemAfterInfoChange(player, targetItem);
-
-				if (targetItem.isEquipped()) {
+					ItemPacketService.updateItemAfterInfoChange(player, targetItem);
 					player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
 				}
 			}
@@ -325,7 +336,7 @@ public class Equip extends AdminCommand {
 				if (plume < 0) {
 					plume = 0;
 				}
-				targetItem.setAuthorize(plume);
+				targetItem.setEnchantOrAuthorizeLevel(plume);
 				if (targetItem.isEquipped()) {
 					player.getGameStats().updateStatsVisually();
 				}
@@ -382,8 +393,14 @@ public class Equip extends AdminCommand {
 		if (item.getItemTemplate().isWeapon()) {
 			return true;
 		}
+		if (item.getItemTemplate().isAccessory()) {
+			return true;
+		}
 		if (item.getItemTemplate().getCategory() == ItemCategory.STIGMA) {
 			return false;
+		}
+		if (item.getItemTemplate().getArmorType() == ArmorType.WING) {
+			return true;
 		}
 		if (item.getItemTemplate().isArmor()) {
 			int at = item.getItemTemplate().getItemSlot();

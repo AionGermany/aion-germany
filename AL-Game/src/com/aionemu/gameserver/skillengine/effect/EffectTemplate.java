@@ -472,9 +472,8 @@ public abstract class EffectTemplate {
 	 * @param effect
 	 */
 	public void startEffect(Effect effect) {
+		
 	}
-
-	;
 
 	/**
 	 * @param effect

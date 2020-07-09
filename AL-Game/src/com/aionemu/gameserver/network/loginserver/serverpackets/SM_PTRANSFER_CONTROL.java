@@ -221,7 +221,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket {
 					writeD(item.isSoulBound() ? 1 : 0);
 					writeQ(item.getEquipmentSlot());
 					writeD(item.getItemLocation());
-					writeD(item.getEnchantLevel());
+					writeD(item.getEnchantOrAuthorizeLevel());
 					writeD(item.getItemSkinTemplate().getTemplateId());
 					writeD(item.getFusionedItemId());
 					writeD(item.getOptionalSocket());
@@ -263,7 +263,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket {
 					writeD(item.isSoulBound() ? 1 : 0);
 					writeQ(item.getEquipmentSlot());
 					writeD(item.getItemLocation());
-					writeD(item.getEnchantLevel());
+					writeD(item.getEnchantOrAuthorizeLevel());
 					writeD(item.getItemSkinTemplate().getTemplateId());
 					writeD(item.getFusionedItemId());
 					writeD(item.getOptionalSocket());

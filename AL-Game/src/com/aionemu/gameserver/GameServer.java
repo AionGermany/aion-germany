@@ -70,12 +70,14 @@ import com.aionemu.gameserver.network.loginserver.LoginServer;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.services.AdminService;
 import com.aionemu.gameserver.services.AnnouncementService;
+import com.aionemu.gameserver.services.AtreianPassportService;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChallengeTaskService;
 import com.aionemu.gameserver.services.DatabaseCleaningService;
 import com.aionemu.gameserver.services.DebugService;
 import com.aionemu.gameserver.services.DisputeLandService;
+import com.aionemu.gameserver.services.DynamicPortalService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FlyRingService;
 import com.aionemu.gameserver.services.GameTimeService;
@@ -114,6 +116,9 @@ import com.aionemu.gameserver.services.instance.RunatoriumRuinsService;
 import com.aionemu.gameserver.services.instance.RunatoriumService;
 import com.aionemu.gameserver.services.instance.SanctumBattlefieldService;
 import com.aionemu.gameserver.services.instance.SteelWallBastionBattlefieldService;
+import com.aionemu.gameserver.services.lugbug.LugbugEventService;
+import com.aionemu.gameserver.services.lugbug.LugbugQuestService;
+import com.aionemu.gameserver.services.lugbug.LugbugSpecialQuestService;
 import com.aionemu.gameserver.services.player.FatigueService;
 import com.aionemu.gameserver.services.player.LunaShopService;
 import com.aionemu.gameserver.services.player.PlayerCubicService;
@@ -236,14 +241,18 @@ public class GameServer {
 		World.getInstance();
 		Util.printSection(" ### Luna System ### ");
 		LunaShopService.getInstance().init();
-		//Util.printSection(" ### Minion System ### ");
-		//MinionService.getInstance().init();
 		Util.printSection(" ### Events Window System ### ");
 		EventWindowService.getInstance().initialize();
 		Util.printSsSection(" ### Shugo Sweep initialization ### ");
 		ShugoSweepService.getInstance().initShugoSweep();
+		Util.printSsSection(" ### Atreian Passport initialization ### ");
+		AtreianPassportService.getInstance().onStart();
 		Util.printSsSection(" ### Cubic initialization ### ");
         PlayerCubicService.getInstance();
+		Util.printSection(" ### Lugbug Quest System ### ");
+		LugbugEventService.getInstance().initialize();
+		LugbugQuestService.getInstance().initialize();
+		LugbugSpecialQuestService.getInstance().initialize();
 		Util.printSection(" ### GeoData ### ");
 		GeoService.getInstance().initializeGeo();
 		DropRegistrationService.getInstance();
@@ -275,6 +284,7 @@ public class GameServer {
 		SiegeService.getInstance().initSiegeLocations();
 		VortexService.getInstance().initVortexLocations();
 		RiftService.getInstance().initRiftLocations();
+		DynamicPortalService.getInstance().initDynamicPortalLocations();
 		Util.printSection(" ### Spawns ### ");
 		SpawnEngine.spawnAll();
 		if (EventsConfig.EVENT_ENABLED) {
@@ -284,7 +294,6 @@ public class GameServer {
 		if (EventsConfig.ENABLE_EVENT_SERVICE) {
 			EventService.getInstance().start();
 		}
-		
 		RiftService.getInstance().initRifts();
 		TemporarySpawnEngine.spawnAll();
 

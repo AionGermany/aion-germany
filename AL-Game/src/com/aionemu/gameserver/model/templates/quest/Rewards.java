@@ -36,7 +36,7 @@ public class Rewards {
 	@XmlAttribute
 	protected Integer gold;
 	@XmlAttribute
-	protected Integer exp;
+	protected Long exp;
 	@XmlAttribute(name = "reward_abyss_point")
 	protected Integer rewardAbyssPoint;
 	@XmlAttribute(name = "reward_glory_point")
@@ -110,7 +110,7 @@ public class Rewards {
 	 *
 	 * @return possible object is {@link Integer }
 	 */
-	public Integer getExp() {
+	public Long getExp() {
 		return exp;
 	}
 

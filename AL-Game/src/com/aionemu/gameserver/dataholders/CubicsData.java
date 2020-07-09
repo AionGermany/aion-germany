@@ -41,23 +41,23 @@ public class CubicsData {
 	private Map<Integer, CubicsTemplate> cubicsDataMap;
 
 	public CubicsData() {
-		this.cubicsData = (TIntObjectHashMap<CubicsTemplate>) new TIntObjectHashMap<CubicsTemplate>();
-		this.cubicsDataMap = new HashMap<Integer, CubicsTemplate>(1);
+		cubicsData = (TIntObjectHashMap<CubicsTemplate>) new TIntObjectHashMap<CubicsTemplate>();
+		cubicsDataMap = new HashMap<Integer, CubicsTemplate>(1);
 	}
 
-	void afterUnmarshal(final Unmarshaller u, final Object parent) {
-		for (final CubicsTemplate id : this.tlist) {
-			this.cubicsData.put(id.getId(), id);
-			this.cubicsDataMap.put(id.getId(), id);
+	void afterUnmarshal(Unmarshaller u, Object parent) {
+		for (CubicsTemplate id : tlist) {
+			cubicsData.put(id.getId(), id);
+			cubicsDataMap.put(id.getId(), id);
 		}
 	}
 
-	public CubicsTemplate getCubicsId(final int id) {
-		return (CubicsTemplate) this.cubicsData.get(id);
+	public CubicsTemplate getCubicsId(int id) {
+		return (CubicsTemplate) cubicsData.get(id);
 	}
 
 	public Map<Integer, CubicsTemplate> getAll() {
-		return this.cubicsDataMap;
+		return cubicsDataMap;
 	}
 
 	/**

@@ -52,29 +52,38 @@ public class _70004ReadinessToBecomeAnArchonSoldier extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+		
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
-			if (targetId == 806814) {
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1011);
-				case SELECT_QUEST_REWARD:
-					qs.setQuestVar(1);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return sendQuestDialog(env, 5);
-				default:
+			switch (targetId) {
+				case 806814: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1011);
+						}
+						case SET_SUCCEED: {
+							qs.setQuestVar(1);
+							qs.setStatus(QuestStatus.REWARD);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}
+						default: 
+							break;
+					}
 					break;
 				}
+				default:
+					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 806814) {
 				if (dialog == DialogAction.USE_OBJECT) {
 					return sendQuestDialog(env, 10002);
 				}
+				
 				return sendQuestEndDialog(env);
 			}
 		}

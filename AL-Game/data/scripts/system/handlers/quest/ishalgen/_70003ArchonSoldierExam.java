@@ -40,6 +40,7 @@ public class _70003ArchonSoldierExam extends QuestHandler {
 	public void register() {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(806814).addOnTalkEvent(questId); // Marko
+		qe.registerQuestNpc(836533).addOnTalkEvent(questId); // Exam Scarecrow
 	}
 
 	@Override
@@ -53,38 +54,46 @@ public class _70003ArchonSoldierExam extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
 		int targetId = env.getTargetId();
+		
 		if (qs == null) {
 			return false;
 		}
 
 		if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
+			
 			switch (targetId) {
-			case 806814:
-				switch (dialog) {
-				case QUEST_SELECT:
-					if (var == 0) {
-						return sendQuestDialog(env, 1011);
-					} else {
-						return sendQuestDialog(env, 1352);
+				case 806814: {
+					switch (dialog) {
+						case QUEST_SELECT: {
+							if (var == 0) {
+								return sendQuestDialog(env, 1011);
+							} else {
+								return sendQuestDialog(env, 1352);
+							}
+						}
+						case SETPRO1: {
+							qs.setQuestVar(1);
+							updateQuestStatus(env);
+							return closeDialogWindow(env);
+						}	
+						case CHECK_USER_HAS_QUEST_ITEM: {
+							if (QuestService.collectItemCheck(env,true)) {
+								qs.setQuestVar(2);
+								qs.setStatus(QuestStatus.REWARD);
+								updateQuestStatus(env);
+								return sendQuestDialog(env, 5);
+							} else {
+								return sendQuestDialog(env, 10001);
+							}
+						}
+						default: 
+							break;
 					}
-				case SETPRO1:
-					qs.setQuestVar(1);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
-				case CHECK_USER_HAS_QUEST_ITEM:
-					if (QuestService.collectItemCheck(env, true)) {
-						qs.setQuestVar(2);
-						qs.setStatus(QuestStatus.REWARD);
-						updateQuestStatus(env);
-						return sendQuestDialog(env, 5);
-					} else {
-						return sendQuestDialog(env, 10001);
-					}
-				default:
 					break;
 				}
-				break;
+				default:
+					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 806814) {
@@ -94,6 +103,7 @@ public class _70003ArchonSoldierExam extends QuestHandler {
 				return sendQuestEndDialog(env);
 			}
 		}
+
 		return false;
 	}
 }

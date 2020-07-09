@@ -24,6 +24,7 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_REMOVE_DYE extends AionClientPacket {
 
+	@SuppressWarnings("unused")
 	private int itemObjectId;
 
 	public CM_REMOVE_DYE(int opcode, State state, State... restStates) {

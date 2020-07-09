@@ -69,7 +69,11 @@
         <xs:attribute name="magic_accuracy" type="xs:int"/>
         <xs:attribute name="crit_spell" type="xs:int"/>
         <xs:attribute name="strike_resist" type="xs:int"/>
-        <xs:attribute name="spell_resist" type="xs:int"/>	
+        <xs:attribute name="spell_resist" type="xs:int"/>
+        <xs:attribute name="pvp_attack" type="xs:int"/>
+        <xs:attribute name="pvp_defense" type="xs:int"/>
+        <xs:attribute name="pve_attack" type="xs:int"/>
+        <xs:attribute name="pve_defense" type="xs:int"/>
     </xs:complexType>
     <xs:complexType name="CreatureSpeeds">
         <xs:attribute name="walk" type="xs:float"/>

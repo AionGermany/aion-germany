@@ -102,6 +102,8 @@ public class Item extends AionObject implements IExpirable, StatOwner {
     private boolean canEnhance = false;
     private int enhanceSkillId;
     private int enhanceEnchantLevel;
+	private int unSeal = 0;
+	private int SkinSkill = 0;
 
 	/**
 	 * Create simple item with minimum information
@@ -116,6 +118,9 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 		int optionSlotBonus = itemTemplate.getOptionSlotBonus();
 		if (optionSlotBonus != 0) {
 			optionalSocket = -1;
+		} 
+		if (this.itemTemplate.getSkinSkill() != 0) {
+			SkinSkill = itemTemplate.getSkinSkill();
 		}
 
         //add custom item set
@@ -146,7 +151,7 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	/**
 	 * This constructor should be called only from DAO while loading from DB
 	 */
-	public Item(int objId, int itemId, long itemCount, int itemColor, int colorExpires, String itemCreator, int expireTime, int activationCount, boolean isEquipped, boolean isSoulBound, long equipmentSlot, int itemLocation, int enchant, int itemSkin, int fusionedItem, int optionalSocket, int optionalFusionSocket, int charge, int randomBonus, int rndCount, int packCount, int authorize, boolean isPacked, boolean isAmplified, int amplificationSkill, int reductionLevel, boolean lunaReskin, boolean isEnhance, int enhanceSkillId, int enhanceEnchantLevel) {
+	public Item(int objId, int itemId, long itemCount, int itemColor, int colorExpires, String itemCreator, int expireTime, int activationCount, boolean isEquipped, boolean isSoulBound, long equipmentSlot, int itemLocation, int enchant, int itemSkin, int fusionedItem, int optionalSocket, int optionalFusionSocket, int charge, int randomBonus, int rndCount, int packCount, int authorize, boolean isPacked, boolean isAmplified, int amplificationSkill, int reductionLevel, boolean lunaReskin, boolean isEnhance, int enhanceSkillId, int enhanceEnchantLevel, int unSeal, int SkinSkill) {
 		super(objId);
 
 		this.itemTemplate = DataManager.ITEM_DATA.getItemTemplate(itemId);
@@ -186,6 +191,7 @@ public class Item extends AionObject implements IExpirable, StatOwner {
         this.canEnhance = isEnhance;
         this.enhanceSkillId = enhanceSkillId;
         this.enhanceEnchantLevel = enhanceEnchantLevel;
+        this.SkinSkill = SkinSkill;
 		updateChargeInfo(charge);
 	}
 
@@ -553,18 +559,26 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	}
 
 	/**
-	 * @return the echantLevel
+	 * @return the echantLevel or authorizeLevel
 	 */
-	public int getEnchantLevel() {
-		return enchantLevel;
+	public int getEnchantOrAuthorizeLevel() {
+		if (this.getItemTemplate().getMaxAuthorize() > 0) {
+			return authorize;
+		} else {
+			return enchantLevel;
+		}
 	}
 
 	/**
 	 * @param enchantLevel
 	 *            the echantLevel to set
 	 */
-	public void setEnchantLevel(int enchantLevel) {
-		this.enchantLevel = enchantLevel;
+	public void setEnchantOrAuthorizeLevel(int level) {
+		if (this.getItemTemplate().getMaxAuthorize() > 0) {
+			this.authorize = level;
+		} else {
+			this.enchantLevel = level;
+		}
 		setPersistentState(PersistentState.UPDATE_REQUIRED);
 	}
 
@@ -691,10 +705,7 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 				numSockets = getItemTemplate().getManastoneSlots();
 				numSockets += hasOptionalSocket() ? getOptionalSocket() : 0;
 			}
-			if (numSockets < 6) {
-				return numSockets;
-			}
-			return 6;
+			return numSockets;
 		}
 		return 0;
 	}
@@ -979,15 +990,6 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 		return packCount;
 	}
 
-	public void setAuthorize(int authorize) {
-		this.authorize = authorize;
-		setPersistentState(PersistentState.UPDATE_REQUIRED);
-	}
-
-	public int getAuthorize() {
-		return authorize;
-	}
-
 	public boolean isPacked() {
 		return isPacked;
 	}
@@ -1006,8 +1008,9 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	}
 
 	public int getAmplificationSkill() {
-		if (EnchantsConfig.ENCHANT_SKILL_ENABLE)
+		if (EnchantsConfig.ENCHANT_SKILL_ENABLE) {
 			return amplificationSkill;
+		}
 		return 0;
 	}
 
@@ -1055,4 +1058,28 @@ public class Item extends AionObject implements IExpirable, StatOwner {
     public void setEnhanceEnchantLevel(int enhanceEnchantLevel) {
         this.enhanceEnchantLevel = enhanceEnchantLevel;
     }
+
+	public boolean isSeal() {
+		if (unSeal == 1) {
+			return true;
+		}
+		return false;
+	}
+	
+	public int getUnSeal() {
+		return unSeal;
+	}
+	
+	public void setUnSeal(int unSeal) {
+		this.unSeal = unSeal;
+		setPersistentState(PersistentState.UPDATE_REQUIRED);
+	}
+
+	public void setItemSkinSkill(int skill) {
+		this.SkinSkill = skill;
+	}
+
+	public int getItemSkinSkill() {
+		return SkinSkill;
+	}
 }

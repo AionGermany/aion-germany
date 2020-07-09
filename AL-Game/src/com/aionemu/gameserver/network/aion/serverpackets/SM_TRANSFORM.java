@@ -35,6 +35,7 @@ public class SM_TRANSFORM extends AionServerPacket {
 	private int panelId;
 	private int itemId;
 	private int skillId = 0;
+	private int transformationId = 0;
 
 	public SM_TRANSFORM(Creature creature, boolean applyEffect) {
 		this.creature = creature;
@@ -82,6 +83,7 @@ public class SM_TRANSFORM extends AionServerPacket {
 		writeD(itemId); // ItemId
 		writeC(0); // 0 and 1
 		writeH(skillId);
+		writeD(transformationId);
 	}
 
 	/*

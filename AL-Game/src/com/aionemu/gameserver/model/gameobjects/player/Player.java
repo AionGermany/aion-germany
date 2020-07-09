@@ -321,6 +321,7 @@ public class Player extends Creature {
 	private boolean setMinionSpawned;
 	private EquipmentSettingList equipmentSettingList;
 	private PlayerMCList mc;
+	private TransformationList transformationList;
 
 	/**
 	 * Player Skill Skin List
@@ -377,6 +378,7 @@ public class Player extends Creature {
 		setLifeStats(new PlayerLifeStats(this));
 		absStatsHolder = new AbsoluteStatOwner(this, 0);
 		this.setMinionSpawned = false;
+		this.transformationList = new TransformationList(this);
 	}
 
 	public boolean isInPlayerMode(PlayerMode mode) {
@@ -503,6 +505,10 @@ public class Player extends Creature {
 
 	public boolean isMinionSpawned() {
 		return setMinionSpawned;
+	}
+
+	public boolean isMagicalTypeClass() {
+		return playerCommonData.getPlayerClass() == PlayerClass.ARTIST || playerCommonData.getPlayerClass() == PlayerClass.BARD || playerCommonData.getPlayerClass() == PlayerClass.CLERIC || playerCommonData.getPlayerClass() == PlayerClass.SORCERER || playerCommonData.getPlayerClass() == PlayerClass.SPIRIT_MASTER || playerCommonData.getPlayerClass() == PlayerClass.RIDER;
 	}
 
 	/**
@@ -3103,18 +3109,18 @@ public class Player extends Creature {
 	 * Add Tag Wedding
 	 */
 	public int getPartnerId() { 
-		return this.partnerId;
+		return partnerId;
 	}
 
 	/**
 	 * Cubics System
 	 */
 	public PlayerMCList getMonsterCubic() {
-		return this.mc;
+		return mc;
 	}
 
-	public void setMonsterCubic(PlayerMCList playerABList) {
-		this.mc = playerABList;
+	public void setMonsterCubic(PlayerMCList playerMcList) {
+		this.mc = playerMcList;
 	}
 
 	/**
@@ -3137,5 +3143,12 @@ public class Player extends Creature {
 
 	public void setCooperationRank(ArenaOfCooperationRank cr) {
 		this.cooperationRank = cr;
-	}	
+	}
+
+	/**
+	 * Transformation System
+	 */
+	public final TransformationList getTransformationList() {
+		return transformationList;
+	}
 }

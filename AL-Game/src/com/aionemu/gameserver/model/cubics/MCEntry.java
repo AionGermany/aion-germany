@@ -34,22 +34,22 @@ public class MCEntry {
 	}
 
 	public int getCubeId() {
-		return this.cubeid;
+		return cubeid;
 	}
 
 	public int getRank() {
-		return this.rank;
+		return rank;
 	}
 
 	public int getLevel() {
-		return this.level;
+		return level;
 	}
 
 	public int getStatValue() {
-		return this.stat_value;
+		return stat_value;
 	}
 
 	public int getCategory() {
-		return this.category;
+		return category;
 	}
 }

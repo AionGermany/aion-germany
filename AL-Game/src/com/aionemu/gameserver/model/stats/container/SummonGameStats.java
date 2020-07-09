@@ -338,4 +338,25 @@ public class SummonGameStats extends CreatureGameStats<Summon> {
 	public Stat2 getPvpDeff() {
 		return null;
 	}
+
+	// new 7.x
+	@Override
+	public Stat2 getPVPAttack() {
+		return null;
+	}
+
+	@Override
+	public Stat2 getPVPDefense() {
+		return null;
+	}
+
+	@Override
+	public Stat2 getPVEAttack() {
+		return null;
+	}
+
+	@Override
+	public Stat2 getPVEDefense() {
+		return null;
+	}
 }

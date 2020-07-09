@@ -196,7 +196,9 @@ public class MySQL5MailDAO extends MailDAO {
 					boolean isEnhance = rset.getBoolean("isEnhance");
 					int enhanceSkillId = rset.getInt("enhanceSkillId");
 					int enhanceSkillEnchant = rset.getInt("enhanceSkillEnchant");
-					Item item = new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, isEquiped == 1, isSoulBound == 1, slot, StorageType.MAILBOX.getId(), enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, isPacked == 1, isAmplified == 1, buffSkill, reductionLevel, isLunaReskin == 1, isEnhance, enhanceSkillId, enhanceSkillEnchant);
+					int unSeal = rset.getInt("is_seal");
+					int skinSkill = rset.getInt("skin_skill");
+					Item item = new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, isEquiped == 1, isSoulBound == 1, slot, StorageType.MAILBOX.getId(), enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, isPacked == 1, isAmplified == 1, buffSkill, reductionLevel, isLunaReskin == 1, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal, skinSkill);
 					item.setPersistentState(PersistentState.UPDATED);
 					mailboxItems.add(item);
 				}

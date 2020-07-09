@@ -70,7 +70,7 @@ public class GoTo extends AdminCommand {
 			goTo(player, WorldMapType.SANCTUM.getId(), 1322, 1511, 568);
 		}
 		else if (destination.equalsIgnoreCase("Kaisinel")) {
-			goTo(player, WorldMapType.KAISINEL.getId(), 2155, 1567, 1205);
+			goTo(player, WorldMapType.KAISINEL_ACADEMY.getId(), 2155, 1567, 1205);
 		}
 		else if (destination.equalsIgnoreCase("?poeta")) {
 			PacketSendUtility.sendMessage(player, "Poeta | Melponeh");
@@ -115,7 +115,7 @@ public class GoTo extends AdminCommand {
 			goTo(player, WorldMapType.PANDAEMONIUM.getId(), 1679, 1400, 195);
 		}
 		else if (destination.equalsIgnoreCase("Marchutan")) {
-			goTo(player, WorldMapType.MARCHUTAN.getId(), 1557, 1429, 266);
+			goTo(player, WorldMapType.MARCHUTAN_PRIORY.getId(), 1557, 1429, 266);
 		}
 		else if (destination.equalsIgnoreCase("?ishalgen")) {
 			PacketSendUtility.sendMessage(player, "Ishalgen | Anturon");
@@ -210,6 +210,22 @@ public class GoTo extends AdminCommand {
 			}
 			else if (player.getRace() == Race.ASMODIANS) {
 				goTo(player, 600200000, 2925.3015f, 2505.124f, 313.80035f, (byte) 90);
+			}
+		}
+		else if (destination.equalsIgnoreCase("dumaha") || destination.equalsIgnoreCase("Dumaha")) {
+			if (player.getRace() == Race.ELYOS) {
+				goTo(player, 600300000, 236.2123f, 184.28629f, 735.00195f, (byte) 30);
+			}
+			else if (player.getRace() == Race.ASMODIANS) {
+				goTo(player, 600300000, 206.73439f, 2832.7263f, 673.3695f, (byte) 30);
+			}
+		}
+		else if (destination.equalsIgnoreCase("katalam") || destination.equalsIgnoreCase("North Katalam")) {
+			if (player.getRace() == Race.ELYOS) {
+				goTo(player, 800030000, 446.51065f, 2632.1653f, 146.0f, (byte) 0);
+			}
+			else if (player.getRace() == Race.ASMODIANS) {
+				goTo(player, 800030000, 354.931f, 345.5465f, 274.19836f, (byte) 0);
 			}
 		}
 		/**
@@ -479,6 +495,24 @@ public class GoTo extends AdminCommand {
 		}
 		else if (destination.equalsIgnoreCase("senekta") || destination.equalsIgnoreCase("Senekta")) {
 			goTo(player, 302510000, 876.41376f, 567.6291f, 151.195f, (byte) 80);
+		}
+		else if (destination.equalsIgnoreCase("steelrake") || destination.equalsIgnoreCase("Steel Rake Fortress")) {
+			goTo(player, 302520000, 946.12317f, 890.967f, 120.74587f, (byte) 75);
+		}
+		else if (destination.equalsIgnoreCase("stella") || destination.equalsIgnoreCase("Stella Laboratory")) {
+			goTo(player, 302550000, 486.5162f, 253.22096f, 377.68323f, (byte) 60);
+		}
+		else if (destination.equalsIgnoreCase("stella_easy") || destination.equalsIgnoreCase("Stella Laboratory (easy)")) {
+			goTo(player, 302610000, 486.5162f, 253.22096f, 377.68323f, (byte) 60);
+		}
+		else if (destination.equalsIgnoreCase("manor") || destination.equalsIgnoreCase("Beninerk's Manor")) {
+			goTo(player, 302660000, 627.652f, 458.885f, 169.5f, (byte) 0);
+		}
+		else if (destination.equalsIgnoreCase("manor_easy") || destination.equalsIgnoreCase("Beninerk's Manor (easy)")) {
+			goTo(player, 302690000, 627.652f, 458.885f, 169.5f, (byte) 0);
+		}
+		else if (destination.equalsIgnoreCase("minium") || destination.equalsIgnoreCase("Minium Vault")) {
+			goTo(player, 302641000, 527.2168f, 121.103f, 175.90004f, (byte) 30);
 		}
 		else {
 			PacketSendUtility.sendMessage(player, "Could not find the specified destination !");

@@ -123,8 +123,10 @@ public class MySQL5BrokerDAO extends BrokerDAO {
 					boolean isEnhance = rset.getBoolean("isEnhance");
 					int enhanceSkillId = rset.getInt("enhanceSkillId");
 					int enhanceSkillEnchant = rset.getInt("enhanceSkillEnchant");
+					int unSeal = rset.getInt("is_seal");
+					int skinSkill = rset.getInt("skin_skill");
 
-					brokerItems.add(new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, false, false, slot, location, enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, false, isAmplified == 1, buffSkill, reductionLevel, false, isEnhance, enhanceSkillId, enhanceSkillEnchant));
+					brokerItems.add(new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, false, false, slot, location, enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, false, isAmplified == 1, buffSkill, reductionLevel, false, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal, skinSkill));
 				}
 			}
 		});

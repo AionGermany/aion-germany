@@ -64,9 +64,7 @@ public class _60004TheAttitudeToBecomeAGuardian extends QuestHandler {
 							return sendQuestDialog(env, 1011);
 						}
 						case SELECT_QUEST_REWARD: {
-							qs.setQuestVar(1);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
+							changeQuestStep(env, 0, 1, true);
 							return sendQuestDialog(env, 5);
 						}
 						default: 

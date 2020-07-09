@@ -81,7 +81,8 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 		FPHEAL(133),
 		REGULARHEAL(170),
 		REGULAR(189),
-		ATTACK(198); // Old 195 (5.4) 196 (5.6) 197 (5.8) 
+		LEECH_HP(200), // new 7.x - Painter Life Binding, Time Holding and Band of Rage
+		ATTACK(204); // Old 195 (5.4) 196 (5.6) 197 (5.8) 198 (6.5) 204(7.x)
 
 		private int value;
 
@@ -118,10 +119,10 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 	protected void writeImpl(AionConnection con) {
 		if (type.getValue() == 5 || type.getValue() == 7 || type.getValue() == 10) {
 			writeD(creature.getObjectId());
-			writeD(con.getActivePlayer().getObjectId());
+			writeD(attacker.getObjectId());
 		}
 		else {
-			writeD(con.getActivePlayer().getObjectId());
+			writeD(attacker.getObjectId());
 			writeD(0x00);
 		}
 		switch (type) {
@@ -132,6 +133,7 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 				break;
 			default:
 				writeD(value);
+				break;
 		}
 		writeC(type.getValue());
 		writeC(creature.getLifeStats().getHpPercentage());
@@ -145,35 +147,11 @@ public class SM_ATTACK_STATUS extends AionServerPacket {
 			}
 		} else {
 			writeH(0); // 5.3
-		} if (skillId != 0) {
+		} 
+		if (skillId != 0) {
 			writeH(logId);
 		} else {
 			writeH(LOG.ATTACK.getValue());
 		}
 	}
-	// logId
-	// depends on effecttemplate
-	// effecttemplate (TYPE) LOG.getValue()
-	// spellattack(hp) 1
-	// poison(hp) 25
-	// delaydamage(hp) 95
-	// bleed(hp) 26
-	// mp regen(natural_mp) 171
-	// hp regen(natural_hp) 171
-	// fp regen(natural_fp) 171
-	// fp pot(fp) 171
-	// prochp(hp) 171
-	// procmp(mp) 171
-	// heal_instant (regular) 171
-	// SpellAtkDrainInstantEffect(absorbed_mp) 24(refactoring shard)
-	// mpheal(mp) 4
-	// heal(hp) 3
-	// fpheal(fp) 133
-	// spellatkdrain(hp) 130
-	// falldmg (17) 170
-	// mpheal (19) 171
-	// hp as cost parameter(4) logId 170
-	// procatkinstant - (7) 92
-	// protecteffect on protector - (8) 171
-	// TODO find rest of logIds
 }

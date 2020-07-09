@@ -42,6 +42,7 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Gatherable;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.Kisk;
+import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.Pet;
 import com.aionemu.gameserver.model.gameobjects.StaticObject;
@@ -77,6 +78,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_HEADING_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEVEL_UPDATE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MINIONS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_NEARBY_QUESTS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_NPC_INFO;
@@ -86,6 +88,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_PROTECTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STANCE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PRIVATE_STORE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_QUEST_ACTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_RIDE_ROBOT;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_CANCEL;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_LIST;
@@ -94,6 +97,8 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TRANSFORM;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
+import com.aionemu.gameserver.questEngine.model.QuestState;
+import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.services.ClassChangeService;
 import com.aionemu.gameserver.services.DuelService;
@@ -109,6 +114,7 @@ import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
+import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.services.toypet.PetSpawnService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
@@ -202,6 +208,9 @@ public class PlayerController extends CreatureController<Player> {
 		else if (object instanceof Pet) {
 			PacketSendUtility.sendPacket(getOwner(), new SM_PET(3, (Pet) object));
 		}
+		else if (object instanceof Minion) {
+			PacketSendUtility.sendPacket(getOwner(), new SM_MINIONS(5));
+		}
 	}
 
 	private RobotInfo getRobotInfo(Player player) {
@@ -214,6 +223,9 @@ public class PlayerController extends CreatureController<Player> {
 		super.notSee(object, isOutOfRange);
 		if (object instanceof Pet) {
 			PacketSendUtility.sendPacket(getOwner(), new SM_PET(4, (Pet) object));
+		}
+		else if (object instanceof Minion) {
+			PacketSendUtility.sendPacket(getOwner(), new SM_MINIONS(6));
 		}
 		else {
 			PacketSendUtility.sendPacket(getOwner(), new SM_DELETE(object, isOutOfRange ? 0 : 15));
@@ -442,6 +454,10 @@ public class PlayerController extends CreatureController<Player> {
 		if (pet != null) {
 			PetSpawnService.dismissPet(player, true);
 		}
+		Minion minion = player.getMinion();
+		if (minion != null) {
+			MinionService.getInstance().despawnMinion(player, player.getMinionList().getLastUsed());
+		}
 		if (player.isInState(CreatureState.FLYING)) {
 			player.setIsFlyingBeforeDeath(true);
 		}
@@ -550,7 +566,7 @@ public class PlayerController extends CreatureController<Player> {
 	}
 
 	@Override
-	public void attackTarget(Creature target, int time) {
+	public void attackTarget(Creature target, int attackNo, int time, int type) {
 
 		PlayerGameStats gameStats = getOwner().getGameStats();
 
@@ -585,7 +601,7 @@ public class PlayerController extends CreatureController<Player> {
 		/**
 		 * notify attack observers
 		 */
-		super.attackTarget(target, time);
+		super.attackTarget(target, attackNo, time, type);
 
 	}
 
@@ -778,7 +794,7 @@ public class PlayerController extends CreatureController<Player> {
 	}
 
 	@Override
-	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex) {
+	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex, int unk) {
 		switch (dialogId) {
 			case 2:
 				PacketSendUtility.sendPacket(player, new SM_PRIVATE_STORE(getOwner().getStore(), player));
@@ -807,6 +823,26 @@ public class PlayerController extends CreatureController<Player> {
 
 		// Temporal
 		ClassChangeService.showClassChangeDialog(player);
+		
+		if (player.getLevel() == 14) {
+			switch (player.getRace()) {
+				case ELYOS: {
+					if (player.getQuestStateList().hasQuest(61601)) {
+						QuestState qs = player.getQuestStateList().getQuestState(61601);
+						if (qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 0) {
+							qs.setQuestVar(1);
+							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(61601, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+						}
+					}
+					break;
+				}
+				case ASMODIANS: {
+					// TODO
+				}
+				default:
+					break;
+			}
+		}
 
 		QuestEngine.getInstance().onLvlUp(new QuestEnv(null, player, 0, 0));
 		player.getController().updateZone();

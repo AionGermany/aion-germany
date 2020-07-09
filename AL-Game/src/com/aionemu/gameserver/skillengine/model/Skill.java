@@ -182,6 +182,26 @@ public class Skill {
 			return false;
 		}
 
+		if (effector instanceof Player) {
+			Player player = (Player) effector;
+			if (skillTemplate.isMinionSkill()) {
+				if (player.getMinion() == null) {
+					return false;
+				}
+				int energyUse = 0;
+				if (skillTemplate.getSkillId() == DataManager.MINION_DATA.getMinionTemplate(player.getMinion().getMinionId()).getSkill1()) {
+					energyUse = DataManager.MINION_DATA.getMinionTemplate(player.getMinion().getMinionId()).getSkill1Energy();
+				}
+				else if (skillTemplate.getSkillId() == DataManager.MINION_DATA.getMinionTemplate(player.getMinion().getMinionId()).getSkill2()) {
+					energyUse = DataManager.MINION_DATA.getMinionTemplate(player.getMinion().getMinionId()).getSkill2Energy();
+				}
+				if (player.getCommonData().getMinionSkillPoints() < energyUse) {
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAMILIAR_MSG_CANNOT_USE_FSKILL_BY_LACK_FENERGY);
+					return false;
+				}
+			}
+		}
+
 		if (!preCastCheck()) {
 			return false;
 		}

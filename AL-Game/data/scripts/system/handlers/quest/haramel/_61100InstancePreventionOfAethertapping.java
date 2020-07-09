@@ -17,6 +17,7 @@
 package quest.haramel;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
@@ -67,6 +68,7 @@ public class _61100InstancePreventionOfAethertapping extends QuestHandler {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		DialogAction dialog = env.getDialog();
+		Npc npc = (Npc) player.getTarget();
 		int targetId = env.getTargetId();
 
 		if (qs == null) {
@@ -101,7 +103,8 @@ public class _61100InstancePreventionOfAethertapping extends QuestHandler {
 							if (var == 1 && var1 < 2) {
 								qs.setQuestVarById(1, var1 + 1);
 								updateQuestStatus(env);
-								return true;
+								npc.getController().onDie(player);
+								return false;
 							} else {
 								qs.setQuestVar(2);
 								qs.setStatus(QuestStatus.REWARD);

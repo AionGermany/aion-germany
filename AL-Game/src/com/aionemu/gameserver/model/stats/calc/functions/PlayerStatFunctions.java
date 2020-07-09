@@ -48,6 +48,12 @@ public class PlayerStatFunctions {
 		FUNCTIONS.add(new AgilityModifierFunction(StatEnum.BLOCK, 0.25f));
 		FUNCTIONS.add(new AgilityModifierFunction(StatEnum.PARRY, 0.25f));
 		FUNCTIONS.add(new AgilityModifierFunction(StatEnum.EVASION, 0.3f));
+
+		// new 7.x
+		FUNCTIONS.add(new PvEAttackFunction());
+		FUNCTIONS.add(new PvEDefenseFunction());
+		FUNCTIONS.add(new PvPAttackFunction());
+		FUNCTIONS.add(new PvPDefenseFunction());
 	}
 
 	public static final List<IStatFunction> getFunctions() {

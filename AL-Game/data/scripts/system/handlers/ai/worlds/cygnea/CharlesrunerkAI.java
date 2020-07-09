@@ -19,7 +19,7 @@ package ai.worlds.cygnea;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import com.aionemu.commons.network.util.ThreadPoolManager;
+import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.ai2.AIName;

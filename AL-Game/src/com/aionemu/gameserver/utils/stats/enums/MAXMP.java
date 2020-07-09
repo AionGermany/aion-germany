@@ -37,6 +37,7 @@ public enum MAXMP {
 	RIDER(100),
 	GUNNER(100),
 	ARTIST(100),
+	PAINTER(100),
 	BARD(100);
 
 	private int value;

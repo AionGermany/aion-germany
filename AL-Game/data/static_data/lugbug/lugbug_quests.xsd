@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+
+    <xs:element name="lugbug_quests">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="lugbug_quest" type="LugbugTemplate" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="LugbugTemplate">
+		<xs:sequence>
+            <xs:element name="rewards" type="LugbugQuestRewards" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+		<xs:attribute name="quest_id" type="xs:int" use="required"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="name_id" type="xs:int" use="required"/>
+		<xs:attribute name="maxprogress" type="xs:int" use="required"/>
+		<xs:attribute name="completecond" type="xs:int"/>
+    </xs:complexType>
+
+	<xs:complexType name="LugbugQuestRewards">
+		<xs:attribute name="item_id" type="xs:int" use="required"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="amount" type="xs:int" use="required"/>
+	</xs:complexType>
+</xs:schema>

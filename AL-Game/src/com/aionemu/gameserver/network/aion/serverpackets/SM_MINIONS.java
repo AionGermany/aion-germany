@@ -39,53 +39,18 @@ public class SM_MINIONS extends AionServerPacket {
 	private int minionObjectId;
 	private int ItemId;
 	private long expireTime;
-//	private boolean asMaterial;
+	private int minionSkillPoints;
+	private boolean autoCharge;
+	//private boolean asMaterial;
 
 	public SM_MINIONS(int actionId) {
 		this.actionId = actionId;
 	}
 
-//	public SM_MINIONS(int actionId, int subType, int dopeAction, int minionObjectId, int ItemId2, int slot, int slot2, boolean isLooting) {
-//		this.actionId = actionId;
-//		switch (subType) {
-//			case 0: {
-//				switch (dopeAction) {
-//					case 0:
-//						this.dopeAction = 0;
-//						this.minionObjectId = minionObjectId;
-//						this.ItemId = ItemId2;
-//						this.dopeSlot = slot;
-//					case 2:
-//						this.dopeAction = 512;
-//						this.minionObjectId = minionObjectId;
-//						this.dopeSlot = slot;
-//						this.dopeSlot2 = slot2;
-//					case 1:
-//						this.dopeAction = 256;
-//						this.minionObjectId = minionObjectId;
-//						this.dopeSlot = slot;
-//					case 3:
-//						this.dopeAction = 768;
-//						this.minionObjectId = minionObjectId;
-//						this.ItemId = ItemId2;
-//						this.dopeSlot = slot;
-//					}
-//				}
-//				break;
-//			case 1:
-//				switch (dopeAction) {
-//				case 5: {
-//					this.minionObjectId = minionObjectId;
-//					this.isActing = isLooting;
-//				}
-//			}
-//		}
-//	}
-
 	public SM_MINIONS(boolean isLooting) {
 		this.actionId = 9;
 		this.isActing = isLooting;
-//		this.subType = 1;
+		//this.subType = 1;
 	}
 
 	public SM_MINIONS(int actionId, Collection<MinionCommonData> minions) {
@@ -93,9 +58,9 @@ public class SM_MINIONS extends AionServerPacket {
 		this.minions = minions;
 	}
 
-	public SM_MINIONS(int actionId, MinionCommonData minion) {
+	public SM_MINIONS(int actionId, MinionCommonData minionsCommonData) { // spawn
 		this.actionId = actionId;
-		this.minionsCommonData = minion;
+		this.minionsCommonData = minionsCommonData;
 	}
 	
 	public SM_MINIONS(int actionId, long expireTime) {
@@ -103,11 +68,11 @@ public class SM_MINIONS extends AionServerPacket {
 		this.expireTime = expireTime;
 	}
 
-//	public SM_MINIONS(int actionId, MinionCommonData minion, boolean asMaterial) {
-//		this.actionId = actionId;
-//		this.minionsCommonData = minion;
-//		this.asMaterial = asMaterial;
-//	}
+	public SM_MINIONS(int actionId, int minionSkillPoints, boolean autoCharge) {
+		this.actionId = actionId;
+		this.minionSkillPoints = minionSkillPoints;
+		this.autoCharge = autoCharge;
+	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
@@ -132,6 +97,10 @@ public class SM_MINIONS extends AionServerPacket {
 			break;
 		case 1: //Send player MinionList
 			writeC(0);
+			if (minions == null) {
+				writeH(0);
+				break;
+			}
 			writeH(minions != null ? minions.size() : 0);
 			for (MinionCommonData commonData : minions) {
 				writeD(commonData.getObjectId());
@@ -162,7 +131,7 @@ public class SM_MINIONS extends AionServerPacket {
 				writeC(0);
 			}
 			break;
-		case 2:
+		case 2: //Adopt
 			if (minionsCommonData == null) {
 				return;
 			}
@@ -178,21 +147,25 @@ public class SM_MINIONS extends AionServerPacket {
 			writeD(minionsCommonData.getBirthday());
 			writeB(new byte[34]);
 			break;
-//		case 2:
-//			if (minionsCommonData == null) {
-//				return;
-//			}
-//			writeH(asMaterial ? 1 : 0);
-//			writeD(minionsCommonData.getObjectId());
-//			break;
-		case 3: // Rename
+		//case 2:
+		//	if (minionsCommonData == null) {
+		//		return;
+		//	}
+		//	writeH(asMaterial ? 1 : 0);
+		//	writeD(minionsCommonData.getObjectId());
+		//	break;
+		case 3: // Delete
+			writeH(0);
+			writeD(minionsCommonData.getObjectId());
+			break;
+		case 4: // Rename
 			if (minionsCommonData == null) {
 				return;
 			}
 			writeD(minionsCommonData.getObjectId());
 			writeS(minionsCommonData.getName());
 			break;
-		case 4: // Lock / Unlock
+		case 5: // Lock / Unlock
 			if (minionsCommonData == null) {
 				return;
 			}
@@ -213,17 +186,21 @@ public class SM_MINIONS extends AionServerPacket {
 				return;
 			}
 			writeD(minionsCommonData.getObjectId());
-			writeC(1);
+			writeC(21);
 			break;
-//		case 7:
-//			if (minionsCommonData == null) {
-//				return;
-//			}
-//			writeD(minionsCommonData.getObjectId());
-//			writeD(minionsCommonData.getMinionLevel());
-//			writeD(minionsCommonData.getMinionGrowthPoint());
-//			break;
-		case 8:
+		case 8: // evolve
+			if (minionsCommonData == null) {
+				return;
+			}
+			writeD(minionsCommonData.getObjectId()); // minionobjectId
+			writeD(minionsCommonData.getMinionGrowthPoint()); // minion points
+			break;
+		//case 8:
+		//	writeH(1);
+		//	writeC(isActing ? 1 : 0);
+		//	break;
+		case 9:
+		case 10: // add bufffood and activate loot etc
 			switch (subType) {
 				case 0: {
 					switch (dopeAction) {
@@ -272,20 +249,14 @@ public class SM_MINIONS extends AionServerPacket {
 				}
 			}
 			break;
-		case 9:
-			writeH(1);
-			writeC(isActing ? 1 : 0);
-			break;
-		case 10:
-		case 11:
+		case 11: // use function
 			writeD((int) expireTime);
 			writeD(0);
+		case 12: // skill use or skill points 
+			writeD(minionSkillPoints); // Minion SkillPoints
+			writeC(autoCharge ? 1 : 0); // Auto Recharge
 			break;
-		case 12:
-			writeD(0);
-			writeC(0);
-			break;
-		case 13:
+		case 13: // auto function
 			writeC(0);
 			break;
 		case 14:

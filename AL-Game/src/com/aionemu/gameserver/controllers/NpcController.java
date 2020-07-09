@@ -323,6 +323,7 @@ public class NpcController extends CreatureController<Npc> {
 						int calculatedAp = StatFunctions.calculatePvEApGained(player, getOwner());
 						rewardAp *= calculatedAp;
 						if (rewardAp >= 1) {
+							player.getCommonData().addSilverStarEnergy(1500); // 0.15%
 							AbyssPointsService.addAp(player, getOwner(), (int) rewardAp);
 						}
 					}
@@ -358,7 +359,7 @@ public class NpcController extends CreatureController<Npc> {
 	}
 
 	@Override
-	public void onDialogSelect(int dialogId, final Player player, int questId, int extendedRewardIndex) {
+	public void onDialogSelect(int dialogId, final Player player, int questId, int extendedRewardIndex, int unk) {
 		QuestEnv env = new QuestEnv(getOwner(), player, questId, dialogId);
 		if (!MathUtil.isInRange(getOwner(), player, getOwner().getObjectTemplate().getTalkDistance() + 2) && !QuestEngine.getInstance().onDialog(env)) {
 			return;
@@ -446,6 +447,7 @@ public class NpcController extends CreatureController<Npc> {
 						int baseApReward = StatFunctions.calculatePvEApGained(member, getOwner());
 						int apRewardPerMember = Math.round(baseApReward * percentage / players.size());
 						if (apRewardPerMember > 0) {
+							member.getCommonData().addSilverStarEnergy(1500); // 0.15%
 							AbyssPointsService.addAp(member, getOwner(), apRewardPerMember);
 						}
 					}
@@ -464,6 +466,7 @@ public class NpcController extends CreatureController<Npc> {
 						int baseApReward = StatFunctions.calculatePvEApGained(member, getOwner());
 						int apRewardPerMember = Math.round(baseApReward * percentage / players.size());
 						if (apRewardPerMember > 0) {
+							member.getCommonData().addSilverStarEnergy(1500); // 0.15%
 							AbyssPointsService.addAp(member, getOwner(), apRewardPerMember);
 						}
 					}

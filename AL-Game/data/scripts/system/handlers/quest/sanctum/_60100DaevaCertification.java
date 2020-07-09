@@ -49,7 +49,7 @@ public class _60100DaevaCertification extends QuestHandler {
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 60000, false);
+		return defaultOnLvlUpEvent(env, 1006, false);
 	}
 
 	@Override

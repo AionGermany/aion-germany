@@ -44,13 +44,13 @@ public class AuthorizeAction extends AbstractItemAction {
 
 	@Override
 	public boolean canAct(Player player, Item parentItem, Item targetItem) {
-		if (targetItem.getItemTemplate().getAuthorize() == 0) {
+		if (targetItem.getItemTemplate().getMaxAuthorize() == 0) {
 			return false;
 		}
-		if (targetItem.getAuthorize() >= targetItem.getItemTemplate().getAuthorize()) {
+		if (targetItem.getEnchantOrAuthorizeLevel() >= targetItem.getItemTemplate().getMaxAuthorize()) {
 			return false;
 		}
-		if (targetItem.getItemTemplate().isBracelet() && targetItem.getAuthorize() >= 10) {
+		if (targetItem.getItemTemplate().isBracelet() && targetItem.getEnchantOrAuthorizeLevel() >= 10) {
 			return false;
 		}
 		return true;
@@ -81,7 +81,7 @@ public class AuthorizeAction extends AbstractItemAction {
 				if (player.getInventory().decreaseByItemId(parentItem.getItemId(), 1)) {
 					if (!isSuccess) {
 						success = false;
-						targetItem.setAuthorize(0);
+						targetItem.setEnchantOrAuthorizeLevel(0);
 						if (targetItem.getItemTemplate().isBracelet()) {
 							targetItem.setOptionalSocket(0);
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_AUTHORIZE_FAILED(targetItem.getNameId()));
@@ -95,14 +95,14 @@ public class AuthorizeAction extends AbstractItemAction {
 					}
 					else {
 						success = true;
-						targetItem.setAuthorize(targetItem.getAuthorize() + 1);
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_AUTHORIZE_SUCCEEDED(targetItem.getNameId(), targetItem.getAuthorize()));
+						targetItem.setEnchantOrAuthorizeLevel(targetItem.getEnchantOrAuthorizeLevel() + 1);
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_AUTHORIZE_SUCCEEDED(targetItem.getNameId(), targetItem.getEnchantOrAuthorizeLevel()));
 					}
 				}
 
 				// Add ManastoneSocket to Bracelet.
 				if (targetItem.getItemTemplate().isBracelet()) {
-					switch (targetItem.getAuthorize()) {
+					switch (targetItem.getEnchantOrAuthorizeLevel()) {
 						case 5:
 							targetItem.setOptionalSocket(1);
 							break;

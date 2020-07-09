@@ -37,7 +37,7 @@ public class CM_CUBIC extends AionClientPacket {
 	@Override
     protected void readImpl() {
         cubicId = readD(); // Id Cube
-        GameServer.log.info("ActionID: " + cubicId + ""); //For Debug 
+        GameServer.log.info("CubeId: " + cubicId + ""); //For Debug 
     }
 
 	@Override

@@ -19,33 +19,44 @@ package com.aionemu.gameserver.model.minion;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.stats.calc.StatOwner;
 import com.aionemu.gameserver.model.stats.calc.functions.IStatFunction;
 import com.aionemu.gameserver.model.stats.calc.functions.StatAddFunction;
-import com.aionemu.gameserver.model.stats.calc.functions.StatFunction;
+import com.aionemu.gameserver.model.stats.calc.functions.StatRateFunction;
+import com.aionemu.gameserver.model.templates.minion.MinionAttr;
 import com.aionemu.gameserver.model.templates.minion.MinionTemplate;
+import com.aionemu.gameserver.skillengine.change.Func;
 
 public class MinionBuff implements StatOwner {
+
 	private MinionTemplate mt;
 	private List<IStatFunction> functions = new ArrayList<IStatFunction>();
 
-	public void apply(Player player, int minionId) {
-		if (minionId == 0) {
+	public void apply(Player player) {
+		if (mt == null) {
 			return;
 		}
-		mt = DataManager.MINION_DATA.getMinionTemplate(minionId);
-		for (StatFunction statFunction : mt.getModifiers()) {
-//			if (player.getPlayerClass().getClassType(player).equals(statFunction.getClassType())) {
-				functions.add(new StatAddFunction(statFunction.getName(), statFunction.getValue(), true));
-//			}
+		List<MinionAttr> attribute = null;
+		if (player.isMagicalTypeClass()) {
+			attribute = mt.getMagicalAttr();
+		} else {
+			attribute = mt.getPhysicalAttr();
 		}
+		for (MinionAttr minionAttribute : attribute) {
+			if (minionAttribute.getFunc().equals(Func.PERCENT)) {
+				functions.add(new StatRateFunction(minionAttribute.getStat(), minionAttribute.getValue(), true));
+			} else {
+				functions.add(new StatAddFunction(minionAttribute.getStat(), minionAttribute.getValue(), true));
+			}
+		}
+		player.setBonus(true);
 		player.getGameStats().addEffect(this, functions);
 	}
 
 	public void end(Player player) {
 		functions.clear();
+		player.setBonus(false);
 		player.getGameStats().endEffect(this);
 	}
 }

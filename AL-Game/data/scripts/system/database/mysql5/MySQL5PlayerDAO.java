@@ -155,7 +155,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();
-			PreparedStatement stmt = con.prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, goldenstar_energy=?, growth_energy=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=?, bonus_type=?, bonus_buff_time=?, wardrobe_size=?, wardrobe_slot=?, luna_consume_count=?, muni_keys=?, luna_consume=?, toc_floor=?, minion_skill_points=?, minion_function_time=? WHERE id=?");
+			PreparedStatement stmt = con.prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, goldenstar_energy=?, silverstar_energy=?, growth_energy=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=?, bonus_type=?, bonus_buff_time=?, wardrobe_size=?, wardrobe_slot=?, luna_consume_count=?, muni_keys=?, luna_consume=?, toc_floor=?, minion_skill_points=?, minion_function_time=? WHERE id=?");
 
 			log.debug("[DAO: MySQL5PlayerDAO] storing player " + player.getObjectId() + " " + player.getName());
 			PlayerCommonData pcd = player.getCommonData();
@@ -184,35 +184,36 @@ public class MySQL5PlayerDAO extends PlayerDAO {
 			stmt.setInt(21, mails);
 			stmt.setLong(22, pcd.getCurrentReposteEnergy());
 			stmt.setLong(23, pcd.getGoldenStarEnergy());
-			stmt.setLong(24, pcd.getGrowthEnergy());
-			stmt.setInt(25, player.getCommonData().getBattleGroundPoints());
-			stmt.setInt(26, pcd.getMentorFlagTime());
-			stmt.setInt(27, pcd.isInitialGameStats());
+			stmt.setLong(24, pcd.getSilverStarEnergy());
+			stmt.setLong(25, pcd.getGrowthEnergy());
+			stmt.setInt(26, player.getCommonData().getBattleGroundPoints());
+			stmt.setInt(27, pcd.getMentorFlagTime());
+			stmt.setInt(28, pcd.isInitialGameStats());
 			if (player.getPosition().getWorldMapInstance() == null) {
 				log.error("Error saving player: " + player.getObjectId() + " " + player.getName() + ", world map instance is null. Setting world owner to 0. Position: " + player.getWorldId() + " " + player.getX() + " " + player.getY() + " " + player.getZ());
-				stmt.setInt(28, 0);
+				stmt.setInt(29, 0);
 			}
 			else {
-				stmt.setInt(28, player.getPosition().getWorldMapInstance().getOwnerId());
+				stmt.setInt(29, player.getPosition().getWorldMapInstance().getOwnerId());
 			}
-			stmt.setInt(29, pcd.getFatigue());
-			stmt.setInt(30, pcd.getFatigueRecover());
-			stmt.setInt(31, pcd.getFatigueReset());
-			stmt.setInt(32, pcd.getJoinRequestLegionId());
-			stmt.setString(33, pcd.getJoinRequestState().name());
-			stmt.setInt(34, player.getUpgradeArcade().getFrenzyPoints());
-			stmt.setInt(35, player.getUpgradeArcade().getFrenzyCount());
-			stmt.setString(36, player.getBonusTime().getStatus().toString());
-			stmt.setTimestamp(37, pcd.getBonusTime().getTime());
-			stmt.setInt(38, pcd.getWardrobeSize());
-			stmt.setInt(39, pcd.getWardrobeSlot());
-			stmt.setInt(40, pcd.getLunaConsumeCount());
-			stmt.setInt(41, pcd.getMuniKeys());
-			stmt.setInt(42, pcd.getLunaConsumePoint());
-			stmt.setInt(43, pcd.getFloor());
-			stmt.setInt(44, pcd.getMinionSkillPoints());
-			stmt.setTimestamp(45, pcd.getMinionFunctionTime());
-			stmt.setInt(46, player.getObjectId());
+			stmt.setInt(30, pcd.getFatigue());
+			stmt.setInt(31, pcd.getFatigueRecover());
+			stmt.setInt(32, pcd.getFatigueReset());
+			stmt.setInt(33, pcd.getJoinRequestLegionId());
+			stmt.setString(34, pcd.getJoinRequestState().name());
+			stmt.setInt(35, player.getUpgradeArcade().getFrenzyPoints());
+			stmt.setInt(36, player.getUpgradeArcade().getFrenzyCount());
+			stmt.setString(37, player.getBonusTime().getStatus().toString());
+			stmt.setTimestamp(38, pcd.getBonusTime().getTime());
+			stmt.setInt(39, pcd.getWardrobeSize());
+			stmt.setInt(40, pcd.getWardrobeSlot());
+			stmt.setInt(41, pcd.getLunaConsumeCount());
+			stmt.setInt(42, pcd.getMuniKeys());
+			stmt.setInt(43, pcd.getLunaConsumePoint());
+			stmt.setInt(44, pcd.getFloor());
+			stmt.setInt(45, pcd.getMinionSkillPoints());
+			stmt.setTimestamp(46, pcd.getMinionFunctionTime());
+			stmt.setInt(47, player.getObjectId());
 			stmt.execute();
 			stmt.close();
 		}
@@ -354,6 +355,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
 				cd.setDeathCount(resultSet.getInt("soul_sickness"));
 				cd.setCurrentReposteEnergy(resultSet.getLong("reposte_energy"));
 				cd.setGoldenStarEnergy(resultSet.getLong("goldenstar_energy"));
+				cd.setSilverStarEnergy(resultSet.getLong("silverstar_energy"));
 				cd.setGrowthEnergy(resultSet.getLong("growth_energy"));
 				cd.setBattleGroundPoints(resultSet.getInt("bg_points"));
 

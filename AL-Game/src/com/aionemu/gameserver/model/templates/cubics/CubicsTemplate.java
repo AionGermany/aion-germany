@@ -43,39 +43,34 @@ public class CubicsTemplate {
 	@XmlAttribute(name = "itemId")
 	private int itemId;
 
-	public CubicsTemplate() {
-		this.name = "";
-	}
-
 	public List<StatCoreList> getStatLists() {
-		if (this.core_list == null) {
-			this.core_list = new ArrayList<StatCoreList>();
+		if (core_list == null) {
+			core_list = new ArrayList<StatCoreList>();
 		}
-		return this.core_list;
+		return core_list;
 	}
 
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
 	public String getName() {
-		return this.name;
+		return name;
 	}
 
 	public int getCategory() {
-		return this.category;
+		return category;
 	}
 
 	public int getMaxRank() {
-		return this.maxRank;
+		return maxRank;
 	}
 
 	public QualityCoreType getQuality() {
-		return this.quality;
+		return quality;
 	}
 
 	public int getItemIdCubic() {
-		return this.itemId;
+		return itemId;
 	}
-
 }

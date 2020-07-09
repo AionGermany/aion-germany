@@ -37,6 +37,7 @@ public enum SPEED {
 	RIDER(6),
 	GUNNER(6),
 	ARTIST(6),
+	PAINTER(6),
 	BARD(6);
 
 	private int value;

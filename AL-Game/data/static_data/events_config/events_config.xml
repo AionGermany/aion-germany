@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs;Lost Ring Event</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -322,6 +322,354 @@
 					<spawn npc_id="838343" respawn_time="295">
 						<spot x="2647.22" y="496.07" z="319.56714" h="0"/>
 						<spot x="2886.41" y="2487.74" z="309.98938" h="60"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Capt’n Grogget’s Revenge" start="2019-05-29T00:00:00+00:00" end="2019-06-12T00:00:00+00:00">
+            <spawns>
+                <!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Wasseronerk ||| IDWaterworld_L_01_In -->
+					<spawn npc_id="837443" respawn_time="295">
+						<spot x="2667.5" y="485.9" z="323.51578" h="43"/>
+					</spawn>
+					<!-- Hatanerk ||| IDWaterworld_D_01_In -->
+					<spawn npc_id="837444" respawn_time="295">
+						<spot x="2908.9" y="2491.9" z="313.93933" h="75"/>
+					</spawn>
+					<!-- Katoshunerk ||| Event_NPC_L_waterworld_sell_E -->
+					<spawn npc_id="837680" respawn_time="295">
+						<spot x="2665.1" y="489.0" z="323.51572" h="30"/>
+					</spawn>
+					<!-- Katoshunerk ||| Event_NPC_D_waterworld_sell_E -->
+					<spawn npc_id="837681" respawn_time="295">
+						<spot x="2904.8" y="2492.7" z="313.93924" h="75"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="The Matryoshka Event" start="2019-07-24T00:00:00+00:00" end="2019-08-24T00:00:00+00:00">
+            <quests>
+                <maintainable>80744;80745;80746;80747;80748;80749</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- 1st Matryoshka ||| event_matryoshka_01 -->
+					<spawn npc_id="833622" respawn_time="295">
+						<spot x="1520.5" y="1507.4" z="565.913" h="81"/>
+					</spawn>
+					<!-- 2nd Matryoshka ||| event_matryoshka_02 -->
+					<spawn npc_id="833623" respawn_time="295">
+						<spot x="1520.05" y="1509.9" z="565.91284" h="63"/>
+					</spawn>
+					<!-- 3rd Matryoshka ||| event_matryoshka_03 -->
+					<spawn npc_id="833624" respawn_time="295">
+						<spot x="1519.7" y="1512.61" z="565.9143" h="63"/>
+					</spawn>
+					<!-- Smallest Matryoshka ||| event_matryoshka_04 -->
+					<spawn npc_id="833625" respawn_time="295">
+						<spot x="1519.56" y="1515.02" z="565.9147" h="63"/>
+					</spawn>
+                </spawn_map>
+				<!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- 1st Matryoshka ||| event_matryoshka_01 -->
+					<spawn npc_id="833622" respawn_time="295">
+						<spot x="1209.97" y="1406.89" z="208.125" h="6"/>
+					</spawn>
+					<!-- 2nd Matryoshka ||| event_matryoshka_02 -->
+					<spawn npc_id="833623" respawn_time="295">
+						<spot x="1210.98" y="1404.49" z="208.125" h="6"/>
+					</spawn>
+					<!-- 3rd Matryoshka ||| event_matryoshka_03 -->
+					<spawn npc_id="833624" respawn_time="295">
+						<spot x="1211.77" y="1402.44" z="208.125" h="6"/>
+					</spawn>
+					<!-- Smallest Matryoshka ||| event_matryoshka_04 -->
+					<spawn npc_id="833625" respawn_time="295">
+						<spot x="1212.45" y="1400.75" z="208.125" h="6"/>
+					</spawn>
+                </spawn_map>
+				<!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- 1st Matryoshka ||| event_matryoshka_01 -->
+					<spawn npc_id="833622" respawn_time="295">
+						<spot x="2651.7" y="502.7" z="319.55206" h="46"/>
+						<spot x="2888.2" y="2500.0" z="309.9822" h="60"/>
+					</spawn>
+					<!-- 2nd Matryoshka ||| event_matryoshka_02 -->
+					<spawn npc_id="833623" respawn_time="295">
+						<spot x="2647.0" y="498.5" z="319.56683" h="45"/>
+						<spot x="2886.0" y="2494.0" z="309.9854" h="59"/>
+					</spawn>
+					<!-- 3rd Matryoshka ||| event_matryoshka_03 -->
+					<spawn npc_id="833624" respawn_time="295">
+						<spot x="2644.2" y="496.2" z="319.55844" h="42"/>
+						<spot x="2886.2" y="2489.8" z="309.993" h="58"/>
+					</spawn>
+					<!-- Smallest Matryoshka ||| event_matryoshka_04 -->
+					<spawn npc_id="833625" respawn_time="295">
+						<spot x="2655.5" y="506.1" z="319.5606" h="49"/>
+						<spot x="2889.2" y="2504.2" z="309.9862" h="63"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="The Ice Sculpture Event" start="2019-07-31T00:00:00+00:00" end="2019-08-14T00:00:00+00:00">
+        <!-- Weda Skill: 5335, Kromede Skill: 5334, Grendal Skill: 5333 -->
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_l -->
+					<spawn npc_id="837649" respawn_time="295">
+						<spot x="1547.7" y="1511.6" z="565.9186" h="60"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_l -->
+					<spawn npc_id="837650" respawn_time="295">
+						<spot x="1545.3" y="1504.3" z="565.9183" h="45"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_l -->
+					<spawn npc_id="837651" respawn_time="295">
+						<spot x="1545.3" y="1519.0" z="565.9175" h="75"/>
+					</spawn>
+                </spawn_map>
+				<!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_d -->
+					<spawn npc_id="837652" respawn_time="295">
+						<spot x="1275.5" y="1364.3" z="204.5872" h="90"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_d -->
+					<spawn npc_id="837653" respawn_time="295">
+						<spot x="1281.8" y="1361.1" z="204.5872" h="75"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_d -->
+					<spawn npc_id="837654" respawn_time="295">
+						<spot x="1269.6" y="1361.4" z="204.58719" h="105"/>
+					</spawn>
+                </spawn_map>
+				<!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_l -->
+					<spawn npc_id="837649" respawn_time="295">
+						<spot x="2669.9" y="510.1" z="319.56436" h="60"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_l -->
+					<spawn npc_id="837650" respawn_time="295">
+						<spot x="2665.5" y="504.2" z="319.564" h="45"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_l -->
+					<spawn npc_id="837651" respawn_time="295">
+						<spot x="2669.7" y="516.9" z="319.564" h="75"/>
+					</spawn>
+					<!-- Kromede's Minion Ice Statue ||| event_cromede_minion_ap_buff_d -->
+					<spawn npc_id="837652" respawn_time="295">
+						<spot x="2896.9" y="2512.7" z="309.98798" h="66"/>
+					</spawn>
+					<!-- Grendal's Minion Ice Statue ||| event_grandal_minion_xp_buff_d -->
+					<spawn npc_id="837653" respawn_time="295">
+						<spot x="2896.0" y="2506.3" z="309.98752" h="51"/>
+					</spawn>
+					<!-- Weda's Minion Ice Statue ||| event_weatha_minion_dr_buff_d -->
+					<spawn npc_id="837654" respawn_time="295">
+						<spot x="2892.1" y="2517.1" z="309.9874" h="81"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <!-- TODO - Perma Event EU and NA -->
+        <event name="Windstream" start="2020-01-01T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+            <quests>
+                <maintainable>63405;63410;63415;63420;63425;63430;63435;63440;63445;63450;63455;73405;73410;73415;73420;73425;73430;73435;73440;73445;73450;73455</maintainable>
+            </quests>
+            <spawns>
+                <!-- Lakrum -->
+                <spawn_map map_id="600200000">
+					<!-- Risiel ||| NewServer_Event_NPC -->
+					<spawn npc_id="820475" respawn_time="295">
+						<spot x="2647.98" y="480.46" z="323.40546" h="0"/>
+						<spot x="2897.3" y="2474.4" z="313.829" h="20"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Hungry Hatchlings" start="2020-03-01T00:00:00+00:00" end="2020-03-31T00:00:00+00:00">
+            <spawns>
+                <!-- Dumaha -->
+                <spawn_map map_id="600300000">
+					<!-- Zudra ||| event_Rudra_Reward_upgrade_01 -->
+					<spawn npc_id="840621" respawn_time="295">
+						<spot x="935.1" y="1588.5" z="713.2346" h="37"/>
+						<spot x="935.1" y="1671.0" z="713.23456" h="89"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Rainbow Snake Festival" start="2020-04-01T00:00:00+00:00" end="2020-04-30T00:00:00+00:00">
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- Serpente Rumin ||| event_snake_l_1 -->
+					<spawn npc_id="832963" respawn_time="295">
+						<spot x="1454.0" y="1493.0" z="573.0719" h="60"/>
+					</spawn>
+					<!-- Ahas Rumin ||| event_snake_l_2 -->
+					<spawn npc_id="832964" respawn_time="295">
+						<spot x="1453.53" y="1491.37" z="573.0719" h="59"/>
+					</spawn>
+                </spawn_map>
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- Serpente Rumin ||| event_snake_d_1 -->
+					<spawn npc_id="832974" respawn_time="295">
+						<spot x="1308.0" y="1402.0" z="208.125" h="21"/>
+					</spawn>
+					<!-- Ahas Rumin ||| event_snake_d_2 -->
+					<spawn npc_id="832975" respawn_time="295">
+						<spot x="1306.39" y="1402.95" z="208.125" h="23"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Green Thumbs" start="2020-04-08T00:00:00+00:00" end="2020-04-30T00:00:00+00:00">
+            <spawns>
+                <!-- Dumaha -->
+                <spawn_map map_id="600300000">
+					<!-- Gretchen ||| LDF8_AIONFarm_Script_NPC -->
+					<spawn npc_id="820629" respawn_time="295">
+						<spot x="899.9" y="1627.4" z="713.23456" h="15"/>
+					</spawn>
+					<!-- Mumu Rang ||| LDF8_AIONFarm_AP_NPC -->
+					<spawn npc_id="820630" respawn_time="295">
+						<spot x="899.8" y="1632.9" z="713.23456" h="107"/>
+					</spawn>
+					<!-- Mumu Chen ||| LDF8_AIONFarm_Better_NPC -->
+					<spawn npc_id="820631" respawn_time="295">
+						<spot x="898.0" y="1631.9" z="713.23456" h="15"/>
+					</spawn>
+					<!-- Mumu Sang ||| LDF8_AIONFarm_Normal_NPC -->
+					<spawn npc_id="820632" respawn_time="295">
+						<spot x="898.0" y="1629.8" z="713.23456" h="3"/>
+					</spawn>
+					<!-- None ||| LDF8_AIONFarm_cart -->
+					<spawn npc_id="820633" respawn_time="295">
+						<spot x="897.0" y="1627.0" z="713.23456" h="45"/>
+					</spawn>
+					<!-- None ||| LDF8_AIONFarm_basket -->
+					<spawn npc_id="820647" respawn_time="295">
+						<spot x="897.0" y="1633.3" z="713.23456" h="10"/>
+						<spot x="897.4" y="1633.9" z="713.23456" h="20"/>
+						<spot x="897.8" y="1633.3" z="713.23456" h="0"/>
+					</spawn>
+					<!-- None ||| LDF8_AIONFarm_barrel -->
+					<spawn npc_id="820648" respawn_time="295">
+						<spot x="896.1" y="1631.7" z="713.23456" h="0"/>
+						<spot x="896.1" y="1630.7" z="713.23456" h="0"/>
+					</spawn>
+
+					<!-- Weedy Vine ||| LDF8_AIONFarm_Weed_NPC -->
+					<spawn npc_id="820642" respawn_time="295">
+						<spot x="1330.7" y="1246.7" z="611.70337" h="105"/>
+						<spot x="1197.0" y="1362.4" z="596.9125" h="105"/>
+						<spot x="1269.1" y="1315.8" z="590.8081" h="0"/>
+						<spot x="1228.0" y="1428.5" z="588.28125" h="75"/>
+						<spot x="1227.7" y="1321.1" z="588.2085" h="0"/>
+						<spot x="1201.5" y="942.7" z="611.6188" h="0"/>
+						<spot x="1245.7" y="982.6" z="600.5744" h="60"/>
+						<spot x="1281.8" y="1014.4" z="599.5" h="105"/>
+						<spot x="1249.1" y="1166.5" z="604.2391" h="30"/>
+						<spot x="1409.1" y="1058.8" z="614.7337" h="60"/>
+						<spot x="1685.3" y="1718.1" z="572.425" h="45"/>
+						<spot x="1599.8" y="1801.8" z="605.57556" h="0"/>
+						<spot x="1657.2" y="1833.7" z="610.1363" h="15"/>
+						<spot x="1591.0" y="1845.0" z="595.3125" h="105"/>
+						<spot x="1516.3" y="1963.2" z="570.5062" h="75"/>
+						<spot x="1530.8" y="2028.5" z="572.10785" h="60"/>
+						<spot x="1111.8" y="1886.3" z="580.7607" h="45"/>
+						<spot x="1049.0" y="1972.4" z="587.8875" h="60"/>
+						<spot x="1025.3" y="2183.3" z="587.6472" h="105"/>
+						<spot x="1057.3" y="2244.9" z="578.7419" h="0"/>
+						<spot x="1011.5" y="2345.3" z="560.53125" h="15"/>
+						<spot x="1039.8" y="2426.7" z="549.02936" h="30"/>
+						<spot x="1023.5" y="2504.3" z="543.4281" h="45"/>
+						<spot x="1032.8" y="2619.4" z="538.89" h="60"/>
+						<spot x="932.0" y="2636.6" z="538.26245" h="75"/>
+						<spot x="951.4" y="2711.7" z="545.0706" h="90"/>
+						<spot x="940.2" y="2766.9" z="546.1125" h="105"/>
+						<spot x="902.8" y="2818.2" z="549.5125" h="0"/>
+						<spot x="1003.1" y="2829.1" z="548.725" h="30"/>
+						<spot x="952.7" y="2860.3" z="546.2378" h="15"/>
+						<spot x="1245.2" y="2845.8" z="581.09503" h="105"/>
+						<spot x="1368.4" y="2818.5" z="585.4938" h="0"/>
+						<spot x="1351.2" y="2733.0" z="571.36255" h="15"/>
+						<spot x="1384.8" y="2633.2" z="573.32495" h="30"/>
+						<spot x="1422.3" y="2468.9" z="571.12067" h="60"/>
+						<spot x="1599.8" y="1801.8" z="605.57556" h="0"/>
+						<spot x="1307.7" y="1465.6" z="575.9313" h="30"/>
+						<spot x="1247.0" y="1578.8" z="571.325" h="15"/>
+						<spot x="1340.9" y="1586.8" z="577.5587" h="0"/>
+						<spot x="1206.6" y="1626.6" z="570.13873" h="45"/>
+						<spot x="1791.4" y="768.1" z="610.101" h="45"/>
+						<spot x="1292.1" y="2657.4" z="558.775" h="45"/>
+						<spot x="1201.5" y="2662.4" z="552.5688" h="75"/>
+						<spot x="1211.4" y="2768.4" z="565.9224" h="90"/>
+						<spot x="1023.5" y="2504.3" z="543.4281" h="45"/>
+						<spot x="1011.5" y="2345.3" z="560.53125" h="15"/>
+						<spot x="1025.3" y="2183.3" z="587.6472" h="105"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Lost Ring Event" start="2020-04-15T00:00:00+00:00" end="2020-05-13T00:00:00+00:00">
+            <spawns>
+                <!-- Dumaha -->
+                <spawn_map map_id="600300000">
+					<!-- Deino ||| LDF8_OP_RingWitch_01 -->
+					<spawn npc_id="820727" respawn_time="295">
+						<spot x="957.2" y="1632.0" z="713.23456" h="60"/>
+					</spawn>
+					<!-- Pamred ||| LDF8_OP_RingWitch_02 -->
+					<spawn npc_id="820728" respawn_time="295">
+						<spot x="957.2" y="1627.8" z="713.23456" h="60"/>
+					</spawn>
+					<!-- Enio ||| LDF8_OP_RingWitch_03 -->
+					<spawn npc_id="820729" respawn_time="295">
+						<spot x="956.3" y="1624.6" z="713.23456" h="45"/>
+					</spawn>
+					<!-- Kind Lover Angmu ||| LDF8_RingBird_02 -->
+					<spawn npc_id="820731" respawn_time="295">
+						<spot x="2706.0" y="2129.1" z="683.125" h="66"/>
+						<spot x="2658.0" y="2144.2" z="683.125" h="21"/>
+						<spot x="2615.4" y="2141.0" z="683.125" h="30"/>
+					</spawn>
+					<!-- Tamed Lover Angmu ||| LDF8_OP_RingDeco_01 -->
+					<spawn npc_id="820733" respawn_time="295">
+						<spot x="956.3" y="1635.2" z="713.23456" h="81"/>
+					</spawn>
+					<!-- None ||| LDF8_OP_RingDeco_02 -->
+					<spawn npc_id="820734" respawn_time="295">
+						<spot x="955.7" y="1630.0" z="713.23456" h="75"/>
+					</spawn>
+
+					<!-- Cursed Ribbit ||| Event_V72_RingFrog_01 -->
+					<spawn npc_id="858689" respawn_time="295">
+						<spot x="2775.5737" y="2033.9221" z="717.0718" h="83"/>
+						<spot x="2788.0" y="2062.6" z="717.2125" h="0"/>
+						<spot x="2803.4" y="2073.1" z="716.41064" h="100"/>
+						<spot x="2823.2" y="2064.4" z="713.86" h="80"/>
+						<spot x="2829.5" y="2064.6" z="713.0625" h="60"/>
+						<spot x="2803.4" y="2073.1" z="716.41064" h="100"/>
+					</spawn>
+					<!-- Cursed Ribbit ||| Event_V72_RingFrog_02 -->
+					<spawn npc_id="858690" respawn_time="295">
+						<spot x="2779.1" y="2065.0" z="717.125" h="10"/>
+						<spot x="2795.6" y="2063.1" z="717.2925" h="110"/>
+						<spot x="2824.7" y="2070.1" z="713.6625" h="70"/>
+						<spot x="2830.4" y="2061.2" z="712.975" h="90"/>
+						<spot x="2792.6" y="2092.3" z="714.3506" h="30"/>
+						<spot x="2792.6" y="2092.3" z="714.3506" h="30"/>
 					</spawn>
                 </spawn_map>
             </spawns>

@@ -237,7 +237,13 @@ public class ItemTemplate extends VisibleObjectTemplate {
 
     @XmlAttribute(name = "skill_enchant")
     private int skill_enchant;
+    
+    @XmlAttribute(name = "enchant_type")
+	private EnchantType enchantType;
 
+	@XmlAttribute(name = "skin_skill")
+	private int skin_skill;
+    
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	@XmlTransient
 	private boolean isQuestUpdateItem;
@@ -251,13 +257,13 @@ public class ItemTemplate extends VisibleObjectTemplate {
 			setItemId(Integer.parseInt(id));
 		}
 		String[] parts = restrict.split(",");
-		restricts = new int[17]; // 4.5
+		restricts = new int[18]; // 18 (7.x Painter)
 		for (int i = 0; i < parts.length; i++) {
 			restricts[i] = Integer.parseInt(parts[i]);
 		}
 		if (restrictMax != null) {
 			String[] partsMax = restrictMax.split(",");
-			restrictsMax = new byte[17];
+			restrictsMax = new byte[18]; // 18 (7.x Painter)
 			for (int i = 0; i < partsMax.length; i++) {
 				restrictsMax[i] = Byte.parseByte(partsMax[i]);
 			}
@@ -455,20 +461,12 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return itemId == ItemId.LUNA.value();
 	}
 
-	public boolean isOldStigma() {
-		return itemId > 140000004 && itemId < 140001103;
-	}
-
 	public boolean isStigma() {
-		return itemId > 140001101 && itemId < 140001493;
+		return itemId > 140001101 && itemId < 140001930;
 	}
 
 	public boolean isInertStigma() {
-		return itemId > 140001297 && itemId < 140001493;
-	}
-
-	public boolean isUpgradableStigma() {
-		return itemId > 140001101 && itemId < 140001298;
+		return name.endsWith("(damaged)");
 	}
 
 	public boolean isPlume() {
@@ -719,7 +717,7 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return category == ItemCategory.EARRINGS || category == ItemCategory.RINGS || category == ItemCategory.NECKLACE || category == ItemCategory.PLUME || category == ItemCategory.BRACELET || category == ItemCategory.BELT || category == ItemCategory.HELMET;
 	}
 
-	public int getAuthorize() {
+	public int getMaxAuthorize() {
 		return max_authorize;
 	}
 
@@ -758,4 +756,12 @@ public class ItemTemplate extends VisibleObjectTemplate {
     public int getSkillEnhance() {
         return skill_enchant;
     }
+    
+    public EnchantType getEnchantType() {
+		return enchantType;
+	}
+
+	public int getSkinSkill() {
+		return skin_skill;
+	}
 }

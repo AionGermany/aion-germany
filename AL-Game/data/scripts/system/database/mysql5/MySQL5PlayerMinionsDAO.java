@@ -179,7 +179,7 @@ public class MySQL5PlayerMinionsDAO extends PlayerMinionsDAO {
 	}
 
 	@Override
-	public void evolutionMinion(Player player, MinionCommonData minionCommonData) {
+	public void evolutionMinion(Player player, int minionId, MinionCommonData minionCommonData) {
 		Connection con = null;
 		try {
 			con = DatabaseFactory.getConnection();

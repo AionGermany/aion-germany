@@ -37,11 +37,11 @@ public class SM_CUBIC extends AionServerPacket {
         this.register = register;
     }
 
-	@Override
+    @Override
 	protected void writeImpl(AionConnection con) {
 		writeD(cubicId); // Cube
-        writeD(rank); // Rank
-        writeD(level); // Level
-        writeD(register); // Count of Cubic to Register
+		writeD(rank); // Rank
+		writeD(level); // Level
+		writeD(register); // Count of Cubic to Register
 	}
 }

@@ -38,7 +38,7 @@ public class StatCoreList {
 	protected int value;
 
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
 	public StatEnum getStat() {
@@ -46,10 +46,10 @@ public class StatCoreList {
 	}
 
 	public int getLevel() {
-		return this.level;
+		return level;
 	}
 
 	public int getValue() {
-		return this.value;
+		return value;
 	}
 }

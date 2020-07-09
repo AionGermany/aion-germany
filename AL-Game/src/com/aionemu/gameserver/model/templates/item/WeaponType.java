@@ -41,7 +41,8 @@ public enum WeaponType {
 	BOW(new int[] { 53 }, 2),
 	CANNON_2H(new int[] { 113 }, 2),
 	HARP_2H(new int[] { 114, 124 }, 2),
-	GUN_2H(new int[] {}, 2),
+	GUN_2H(new int[] { 113 }, 2),
+	SPRAY_2H(new int[] { 473 }, 2),
 	KEYBLADE_2H(new int[] { 115 }, 2),
 	KEYHAMMER_2H(new int[] {}, 2);
 

@@ -251,6 +251,18 @@ public class StaticData {
 	public ReviveWorldStartPointsData reviveWorldStartPoints;
 	@XmlElement(name = "instance_revive_start_points")
 	public ReviveInstanceStartPointsData reviveInstanceStartPoints;
+	@XmlElement(name = "enchant_chances")
+	public ItemEnchantChancesData itemEnchantChancesData;
+	@XmlElement(name = "dynamic_portal")
+	public DynamicPortalData dynamicPortalData;
+	@XmlElement(name = "lugbug_events")
+	public LugbugEventData lugbugEventData;
+	@XmlElement(name = "lugbug_quests")
+	public LugbugQuestData lugbugQuestData;
+	@XmlElement(name = "lugbug_special_quests")
+	public LugbugSpecialQuestData lugbugSpecialQuestData;
+	@XmlElement(name = "atreian_passports")
+	public AtreianPassportData atreianPassportData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -365,5 +377,11 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + transformationData.size() + " Transformation entries");
 		DataManager.log.info("[DataManager] Loaded " + reviveWorldStartPoints.size() + " Revive World Start Point entrys");
 		DataManager.log.info("[DataManager] Loaded " + reviveInstanceStartPoints.size() + " Revive Instance Start Point entrys");
+		DataManager.log.info("[DataManager] Loaded " + itemEnchantChancesData.size() + " Item Enchant Chances entrys");
+		DataManager.log.info("[DataManager] Loaded " + dynamicPortalData.size() + " Dynamic Portal entrys");
+		DataManager.log.info("[DataManager] Loaded " + lugbugEventData.size() + " Lugbug Event entrys");
+		DataManager.log.info("[DataManager] Loaded " + lugbugQuestData.size() + " Lugbug Quest entrys");
+		DataManager.log.info("[DataManager] Loaded " + lugbugSpecialQuestData.size() + " Lugbug Special Quest entrys");
+		DataManager.log.info("[DataManager] Loaded " + atreianPassportData.size() + " Atreian Passport entrys");
 	}
 }

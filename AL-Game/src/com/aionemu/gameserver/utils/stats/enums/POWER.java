@@ -37,6 +37,7 @@ public enum POWER {
 	RIDER(115),
 	GUNNER(100),
 	ARTIST(95),
+	PAINTER(100),
 	BARD(95);
 
 	private int value;

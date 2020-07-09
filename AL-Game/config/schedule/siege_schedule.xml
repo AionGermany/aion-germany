@@ -3,11 +3,16 @@
     <!-- Reshanta Core -->
     <!-- Divine Fortress -->
     <fortress id="1011">
-        <siegeTime>0 0 21 ? * SUN</siegeTime> <!-- 6.x -->
+        <siegeTime>0 0 21 ? * TUE,THU,SAT,SUN</siegeTime> <!-- 7.x -->
     </fortress>
 
     <!-- Lakrum -->
     <fortress id="1521">
-        <siegeTime>0 0 21 ? * TUE,THU,SAT</siegeTime> <!-- 6.x -->
+        <siegeTime>0 0 21 ? * TUE,THU,SAT,SUN</siegeTime> <!-- 7.x -->
+    </fortress>
+
+    <!-- Dumaha -->
+    <fortress id="1921">
+        <siegeTime>0 0 21 ? * TUE,THU,SAT,SUN</siegeTime> <!-- 7.x -->
     </fortress>
 </siege_schedule>

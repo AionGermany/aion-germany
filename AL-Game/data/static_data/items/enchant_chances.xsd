@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="enchant_chances">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="enchant_chance" type="EnchantChanceInfo" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="EnchantChanceInfo">
+        <xs:sequence>
+            <xs:element name="item" type="EnchantChanceData" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="quality" type="xs:string" use="required"/>
+        <xs:attribute name="target_quality" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="EnchantChanceData">
+        <xs:attribute name="level" type="xs:int" use="required"/>
+        <xs:attribute name="chance" type="xs:int" use="required"/>
+        <xs:attribute name="crit" type="xs:int" use="required"/>
+    </xs:complexType>
+</xs:schema>

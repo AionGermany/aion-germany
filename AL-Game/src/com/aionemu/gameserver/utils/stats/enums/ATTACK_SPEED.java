@@ -37,6 +37,7 @@ public enum ATTACK_SPEED {
 	RIDER(1500),
 	GUNNER(1500),
 	ARTIST(1500),
+	PAINTER(1500),
 	BARD(1500);
 
 	private int value;

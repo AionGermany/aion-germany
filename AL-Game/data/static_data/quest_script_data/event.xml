@@ -8,7 +8,13 @@
 				80575 [XML] [Event] Snow in Atreia (Elyos)
 				80576 [XML] [Event] Another Chance (Elyos)
 				80578 [XML] [Event] Snow in Atreia (Asmodians)
-				80579 [XML] [Event] Another Chance (Asmodians)  
+				80579 [XML] [Event] Another Chance (Asmodians)
+				80744 [XML] [Event] Draw Matryoshka (Elyos)
+				80745 [XML] [Event] Once More! (Elyos)
+				80746 [XML] [Event] Gift from Last Matryoshka (Elyos)
+				80747 [XML] [Event] Draw Matryoshka (Asmodians)
+				80748 [XML] [Event] Once More! (Asmodians)
+				80749 [XML] [Event] Gift from Last Matryoshka (Asmodians)
 				80975 [XML] [Event] Mission from the Milky Way League 1
 				80976 [XML] [Event] Mission from the Milky Way League 2
 				80977 [XML] [Event] Mission from the Milky Way League 3
@@ -26,5 +32,11 @@
     <item_collecting start_npc_ids="835996" id="80977"/>
     <item_collecting start_npc_ids="832042" id="80576"/>
     <item_collecting start_npc_ids="832042" id="80579"/>
+    <item_collecting start_npc_ids="833622" id="80744" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833623" id="80745" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007395"/>
+    <item_collecting start_npc_ids="833625" id="80746" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833622" id="80747" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833623" id="80748" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007395"/>
+    <item_collecting start_npc_ids="833625" id="80749" start_dialog_id="4762" start_dialog_id2="5"/>
     <!-- HUNTING QUESTS -->
 </quest_scripts>

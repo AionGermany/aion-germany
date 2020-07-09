@@ -57,12 +57,46 @@ public class Info extends AdminCommand {
 			float pvpAttackRatio = player.getGameStats().getStat(StatEnum.PVP_ATTACK_RATIO, 0).getCurrent();
 			float pvpDefenseRatio = player.getGameStats().getStat(StatEnum.PVP_DEFEND_RATIO, 0).getCurrent();
 
+			float pvpAttack = player.getGameStats().getStat(StatEnum.PVP_ATTACK, 0).getCurrent();
+			float pvpDefense = player.getGameStats().getStat(StatEnum.PVP_DEFENSE, 0).getCurrent();
+			float pveAttack = player.getGameStats().getStat(StatEnum.PVE_ATTACK, 0).getCurrent();
+			float pveDefense = player.getGameStats().getStat(StatEnum.PVE_DEFENSE, 0).getCurrent();
+
 			PacketSendUtility.sendMessage(admin, "[Info about " + player.getName() + "]" + "\nPlayer Id: " + player.getObjectId() + "\nMap ID: " + player.getWorldId() + "\nX: " + player.getCommonData().getPosition().getX() + " / Y: " + player.getCommonData().getPosition().getY() + " / Z: " + player.getCommonData().getPosition().getZ() + " / Heading: " + player.getCommonData().getPosition().getHeading() + "\n Town ID: " + TownService.getInstance().getTownResidence(player) + "\n Tribe: " + player.getTribe() + "\n TribeBase: " + player.getBaseTribe());
 
 			PacketSendUtility.sendMessage(admin,
-				"[Stats]" + "\nPvP attack: " + Math.round(pvpAttackRatio * 0.1f) + "%" + " (Enchant Bonus : " + Math.round(player.getGameStats().getPvpAttack().getCurrent() * 0.1f) + "%" + " )" + "\nPvP defend: " + Math.round(pvpDefenseRatio * 0.1f) + "%" + " (Enchant Bonus: " + Math.round(player.getGameStats().getPvpDeff().getCurrent() * 0.1f) + "%" + " )" + "\nHP: " + player.getLifeStats().getCurrentHp() + " / " + player.getGameStats().getMaxHp().getCurrent() + "\nMP: " + player.getLifeStats().getCurrentMp() + " / " + player.getGameStats().getMaxMp().getCurrent() + "\nDP: " + player.getCommonData().getDp() + " / " + player.getGameStats().getMaxDp().getCurrent() + "\nCast Time Boost: +" + (Math.round(player.getGameStats().getStat(StatEnum.BOOST_CASTING_TIME, 1000).getCurrent() * 0.1f - 100)) + "%" + "\nAttack Speed: " + Math.round(player.getGameStats().getAttackSpeed().getCurrent() * 0.001f) + "\nMovement Speed: " + player.getGameStats().getMovementSpeedFloat() + "\n----------Main Hand------------\nAttack: " + player.getGameStats().getMainHandPAttack().getCurrent() + "\nAccuracy: " + player.getGameStats().getMainHandPAccuracy().getCurrent() + "\nCritical: "
-					+ player.getGameStats().getMainHandPCritical().getCurrent() + "\n------------Off Hand------------\nAttack: " + player.getGameStats().getOffHandPAttack().getCurrent() + "\nAccuracy: " + player.getGameStats().getOffHandPAccuracy().getCurrent() + "\nCritical: " + player.getGameStats().getOffHandPCritical().getCurrent() + "\n-------------Main Hand Magical-------------\nAttack: " + player.getGameStats().getMainHandMAttack().getCurrent() + "\nMain Hand Accuracy: " + player.getGameStats().getMAccuracy().getCurrent() + "\nCritical: " + player.getGameStats().getMCritical().getCurrent() + "\nBoost: " + player.getGameStats().getMBoost().getCurrent() + "\n-------------Off Hand Magical-------------\nAttack: " + player.getGameStats().getOffHandMAttack().getCurrent() + "\nOff Hand Accuracy: " + player.getGameStats().getOffHandMAccuracy().getCurrent() + "\nCritical: " + player.getGameStats().getMCritical().getCurrent() + "\n-------------Protect--------------\nPhysical Defence: " + player.getGameStats().getPDef().getCurrent() + "\nBlock: " + player.getGameStats().getBlock().getCurrent() + "\nParry: " + player.getGameStats().getParry().getCurrent() + "\nEvasion: "
-					+ player.getGameStats().getEvasion().getCurrent() + "\nMagic Resist: " + player.getGameStats().getMResist().getCurrent() + "\nStrike Resist: " + player.getGameStats().getStrikeResist().getCurrent() + "\nStrike Fortitude: " + player.getGameStats().getStat(StatEnum.PHYSICAL_CRITICAL_DAMAGE_REDUCE, 0).getCurrent());
+				"[Stats]" + "\nPvP attack: " + Math.round(pvpAttackRatio * 0.1f) + "%" + " (Enchant Bonus : " + Math.round(player.getGameStats().getPvpAttack().getCurrent() * 0.1f) + "%" + " )" 
+						  + "\nPvP defend: " + Math.round(pvpDefenseRatio * 0.1f) + "%" + " (Enchant Bonus: " + Math.round(player.getGameStats().getPvpDeff().getCurrent() * 0.1f) + "%" + " )" 
+						  + "\nPvP attack: " + player.getGameStats().getPVPAttack().getCurrent()
+						  + "\nPvE attack: " + player.getGameStats().getPVEAttack().getCurrent()
+						  + "\nPvP defense: " + player.getGameStats().getPVPDefense().getCurrent() 
+						  + "\nPvE defense: " + player.getGameStats().getPVEDefense().getCurrent()
+						  + "\nHP: " + player.getLifeStats().getCurrentHp() + " / " + player.getGameStats().getMaxHp().getCurrent() 
+						  + "\nMP: " + player.getLifeStats().getCurrentMp() + " / " + player.getGameStats().getMaxMp().getCurrent() 
+						  + "\nDP: " + player.getCommonData().getDp() + " / " + player.getGameStats().getMaxDp().getCurrent() 
+						  + "\nCast Time Boost: +" + (Math.round(player.getGameStats().getStat(StatEnum.BOOST_CASTING_TIME, 1000).getCurrent() * 0.1f - 100)) + "%" 
+						  + "\nAttack Speed: " + Math.round(player.getGameStats().getAttackSpeed().getCurrent() * 0.001f) 
+						  + "\nMovement Speed: " + player.getGameStats().getMovementSpeedFloat() 
+						  + "\n----------Main Hand------------\nAttack: " + player.getGameStats().getMainHandPAttack().getCurrent() 
+						  + "\nAccuracy: " + player.getGameStats().getMainHandPAccuracy().getCurrent() 
+						  + "\nCritical: " + player.getGameStats().getMainHandPCritical().getCurrent() 
+						  + "\n------------Off Hand------------\nAttack: " + player.getGameStats().getOffHandPAttack().getCurrent() 
+						  + "\nAccuracy: " + player.getGameStats().getOffHandPAccuracy().getCurrent() 
+						  + "\nCritical: " + player.getGameStats().getOffHandPCritical().getCurrent() 
+						  + "\n-------------Main Hand Magical-------------\nAttack: " + player.getGameStats().getMainHandMAttack().getCurrent() 
+						  + "\nMain Hand Accuracy: " + player.getGameStats().getMAccuracy().getCurrent() 
+						  + "\nCritical: " + player.getGameStats().getMCritical().getCurrent() 
+						  + "\nBoost: " + player.getGameStats().getMBoost().getCurrent() 
+						  + "\n-------------Off Hand Magical-------------\nAttack: " + player.getGameStats().getOffHandMAttack().getCurrent() 
+						  + "\nOff Hand Accuracy: " + player.getGameStats().getOffHandMAccuracy().getCurrent() 
+						  + "\nCritical: " + player.getGameStats().getMCritical().getCurrent() 
+						  + "\n-------------Protect--------------\nPhysical Defence: " + player.getGameStats().getPDef().getCurrent() 
+						  + "\nBlock: " + player.getGameStats().getBlock().getCurrent() 
+						  + "\nParry: " + player.getGameStats().getParry().getCurrent() 
+						  + "\nEvasion: " + player.getGameStats().getEvasion().getCurrent() 
+						  + "\nMagic Resist: " + player.getGameStats().getMResist().getCurrent() 
+						  + "\nStrike Resist: " + player.getGameStats().getStrikeResist().getCurrent() 
+						  + "\nStrike Fortitude: " + player.getGameStats().getStat(StatEnum.PHYSICAL_CRITICAL_DAMAGE_REDUCE, 0).getCurrent());
 
 			for (int i = 0; i < 2; i++) {
 				NpcFaction faction = player.getNpcFactions().getActiveNpcFaction(i == 0);

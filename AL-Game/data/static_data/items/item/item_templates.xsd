@@ -155,6 +155,8 @@
 		<xs:attribute name="minion_ticket" type="xs:boolean" use="optional"/>
 		<xs:attribute name="is_cash_contract" type="xs:boolean" use="optional"/>
 		<xs:attribute name="skill_enchant" type="xs:int" use="optional"/>
+		<xs:attribute name="enchant_type" type="enchantType"/>
+		<xs:attribute name="skin_skill" type="xs:int" use="optional"/>
 	</xs:complexType>
 	<xs:simpleType name="itemSlot">
 		<xs:restriction base="xs:string">
@@ -229,6 +231,8 @@
 			<xs:element name="skill_enhance" type="SkillEnhanceAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="sweep" type="ShugoSweepAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="adoptminion" type="AdoptMinionAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="adopttransformation" type="AdoptTransformationAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="unseal" type="UnsealAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ShugoSweepAction">
@@ -421,6 +425,14 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+	<xs:complexType name="AdoptTransformationAction">
+        <xs:complexContent>
+            <xs:extension base="AbstractItemAction">
+                <xs:attribute name="transformation_id" type="xs:int" use="optional"/>
+				<xs:attribute name="tier_grade" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 	<xs:complexType name="ApExtractAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">
@@ -540,7 +552,14 @@
 				<xs:attribute name="count" type="xs:int"/>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>    
+	</xs:complexType>
+	<xs:complexType name="UnsealAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="action" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:simpleType name="equipType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ARMOR"/>
@@ -589,7 +608,7 @@
 			<xs:enumeration value="SHIELD"/>
 			<xs:enumeration value="WING"/>
 			<xs:enumeration value="PLUME"/>
-	    		<xs:enumeration value="ACCESSORY"/>
+	    	<xs:enumeration value="ACCESSORY"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="WeaponList">
@@ -615,6 +634,7 @@
 			<xs:enumeration value="GUN_2H"/>
 			<xs:enumeration value="KEYBLADE_2H"/>
 			<xs:enumeration value="KEYHAMMER_2H"/>
+			<xs:enumeration value="SPRAY_2H"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Category">
@@ -647,6 +667,7 @@
 			<xs:enumeration value="GUN"/>
 			<xs:enumeration value="CANNON"/>
 			<xs:enumeration value="KEYBLADE"/>
+			<xs:enumeration value="SPRAY"/>
 			<xs:enumeration value="JACKET"/>
 			<xs:enumeration value="PANTS"/>
 			<xs:enumeration value="SHARD"/>
@@ -714,5 +735,12 @@
 	</xs:simpleType>
 	<xs:simpleType name="StigmaSkillList">
 		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="enchantType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PVP"/>
+			<xs:enumeration value="PVE"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

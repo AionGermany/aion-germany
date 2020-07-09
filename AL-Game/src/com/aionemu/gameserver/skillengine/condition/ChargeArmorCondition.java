@@ -39,9 +39,10 @@ public class ChargeArmorCondition extends ChargeCondition {
 			for (Item item : effector.getEquipment().getEquippedItems()) {
 				if (item.getItemTemplate().isArmor() && item.getConditioningInfo() != null) {
 					item.getConditioningInfo().updateChargePoints(-value);
+					return true;
 				}
 			}
 		}
-		return true;
+		return false;
 	}
 }

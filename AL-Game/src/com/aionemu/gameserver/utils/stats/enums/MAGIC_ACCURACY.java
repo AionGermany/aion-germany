@@ -37,6 +37,7 @@ public enum MAGIC_ACCURACY {
 	RIDER(0),
 	GUNNER(0),
 	ARTIST(0),
+	PAINTER(0),
 	BARD(0);
 
 	private int value;

@@ -262,6 +262,11 @@
 			<!-- 5.6 -->
 			<xs:enumeration value="HIDDEN_PVE_ATTACK_RATIO"/>
 			<xs:enumeration value="HIDDEN_PVE_DEFEND_RATIO"/>
+			<!-- 7.x -->
+            <xs:enumeration value="PVP_ATTACK"/>
+            <xs:enumeration value="PVP_DEFENSE"/>
+            <xs:enumeration value="PVE_ATTACK"/>
+            <xs:enumeration value="PVE_DEFENSE"/>
         </xs:restriction>
     </xs:simpleType>
 

@@ -296,6 +296,7 @@ h6 {
                   </xsl:apply-templates>
                 </xsl:when>
                 <xsl:when test="$type = 'errors'">
+                  <xsl:apply-templates select=".//testsuite[error]" mode="alltests.error.row"/>
                   <xsl:apply-templates select=".//testcase[error]" mode="print.test">
                     <xsl:with-param name="show.class" select="'yes'"/>
                   </xsl:apply-templates>
@@ -306,6 +307,7 @@ h6 {
                   </xsl:apply-templates>
                 </xsl:when>
                 <xsl:otherwise>
+                  <xsl:apply-templates select=".//testsuite[error]" mode="alltests.error.row"/>
                   <xsl:apply-templates select=".//testcase" mode="print.test">
                     <xsl:with-param name="show.class" select="'yes'"/>
                   </xsl:apply-templates>
@@ -930,13 +932,13 @@ h6 {
 <xsl:template name="br-replace">
     <xsl:param name="word"/>
     <xsl:param name="splitlimit">32</xsl:param>
-    <xsl:variable name="secondhalflen" select="(string-length($word)+(string-length($word) mod 2)) div 2"/>
-    <xsl:variable name="secondhalfword" select="substring($word, $secondhalflen)"/>
+    <xsl:variable name="secondhalfstartindex" select="(string-length($word)+(string-length($word) mod 2)) div 2"/>
+    <xsl:variable name="secondhalfword" select="substring($word, $secondhalfstartindex)"/>
     <!-- When word is very big, a recursive replace is very heap/stack expensive, so subdivide on line break after middle of string -->
     <xsl:choose>
       <xsl:when test="(string-length($word) > $splitlimit) and (contains($secondhalfword, '&#xa;'))">
         <xsl:variable name="secondhalfend" select="substring-after($secondhalfword, '&#xa;')"/>
-        <xsl:variable name="firsthalflen" select="string-length($word) - $secondhalflen"/>
+        <xsl:variable name="firsthalflen" select="string-length($word) - string-length($secondhalfword)"/>
         <xsl:variable name="firsthalfword" select="substring($word, 1, $firsthalflen)"/>
         <xsl:variable name="firsthalfend" select="substring-before($secondhalfword, '&#xa;')"/>
         <xsl:call-template name="br-replace">
@@ -969,4 +971,18 @@ h6 {
     <xsl:param name="value"/>
     <xsl:value-of select="format-number($value,'0.00%')"/>
 </xsl:template>
+
+<xsl:template match="testsuite" mode="alltests.error.row">
+  <xsl:variable name="package.dir">
+    <xsl:if test="not(@package = '')"><xsl:value-of select="translate(@package,'.','/')"/><xsl:text>/</xsl:text></xsl:if>
+  </xsl:variable>
+  <xsl:variable name="class.href">
+    <xsl:value-of select="concat($package.dir, @id, '_', @name, '.html')"/>
+  </xsl:variable>
+  <tr class="Error">
+    <td><a href="{$class.href}"><xsl:value-of select="@name"/></a></td>
+    <td colspan="3"><xsl:apply-templates select="./error"/></td>
+  </tr>
+</xsl:template>
+
 </xsl:stylesheet>

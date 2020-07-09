@@ -30,7 +30,7 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ATTACK extends AionServerPacket {
 
-	private int attackno;
+	private int attackNo;
 	private int time;
 	private int type;
 	private int SimpleAttackType;
@@ -38,10 +38,10 @@ public class SM_ATTACK extends AionServerPacket {
 	private Creature attacker;
 	private Creature target;
 
-	public SM_ATTACK(Creature attacker, Creature target, int attackno, int time, int type, List<AttackResult> attackList) {
+	public SM_ATTACK(Creature attacker, Creature target, int attackNo, int time, int type, List<AttackResult> attackList) {
 		this.attacker = attacker;
 		this.target = target;
-		this.attackno = attackno;// empty
+		this.attackNo = attackNo;// empty
 		this.time = time;// empty
 		this.type = type;// empty
 		this.attackList = attackList;
@@ -54,7 +54,7 @@ public class SM_ATTACK extends AionServerPacket {
 	@Override
 	protected void writeImpl(AionConnection con) {
 		writeD(attacker.getObjectId());
-		writeC(attackno); // Attack Number e.g. 1, 2, 3, 5, ..., Max_Integer_Value
+		writeC(attackNo); // Attack Number e.g. 1, 2, 3, 5, ..., Max_Integer_Value
 		writeH(time); // unknown
 		writeC((byte) SimpleAttackType);// 0=Ground Attacks | 1=Air Attacks (v4.7.5.17)
 		writeC(type); // 0, 1, 2
@@ -111,9 +111,9 @@ public class SM_ATTACK extends AionServerPacket {
 		for (AttackResult attack : attackList) {
 			writeD(attack.getDamage());
 			writeC(attack.getAttackStatus().getId());
-
 			byte shieldType = (byte) attack.getShieldType();
 			writeC(shieldType);
+			writeB(new byte[16]); // TODO
 
 			/**
 			 * shield Type: 1: reflector 2: normal shield 8: protect effect (ex. skillId: 417 Bodyguard) TODO find out 4
@@ -138,6 +138,7 @@ public class SM_ATTACK extends AionServerPacket {
 					writeD(attack.getReflectedSkillId());
 					break;
 				default:
+					System.out.println("Default Called: ");
 					writeD(attack.getProtectorId());
 					writeD(attack.getProtectedDamage());
 					writeD(attack.getProtectedSkillId());

@@ -18,6 +18,8 @@ package com.aionemu.gameserver.model.gameobjects.player;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +35,9 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.team.legion.LegionJoinRequestState;
 import com.aionemu.gameserver.model.templates.BoundRadius;
 import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
+import com.aionemu.gameserver.model.templates.atreianpassport.AtreianPassportTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DP_INFO;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SILVER_STAR;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATUPDATE_DP;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATUPDATE_EXP;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
@@ -83,6 +87,10 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	private long reposteMax;
 	private long goldenStarEnergy;
 	private long goldenStarEnergyMax = 625000000;
+	private boolean GoldenStarBoost = false;
+	private long silverStarEnergy;
+	private long silverStarEnergyMax = 1000000;
+	private boolean SilverStarBoost = false;
 	private long growthEnergy;
 	private long growthEnergyMax;
 	private long salvationPoint;
@@ -104,18 +112,24 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 
 	private int lunaCoins = 0;
 	private int wardrobeSize = 256;
-	private boolean GoldenStarBoost = false;
 	private int lunaConsumePoint;
 	private int muni_keys;
 	private int consumeCount = 0;
 	private int wardrobeSlot;
 	private int floor;
-    private int minionSkillPoints;
-    private Timestamp minionFunctionTime;
+	private int minionSkillPoints;
+	private Timestamp minionFunctionTime;
+	private boolean minionAutoCharge;
 
 	//Shugo Sweep 5.1
 	private int goldenDice;
 	private int resetBoard;
+
+	//Atreian Passport
+	private int stamps = 0;
+	private int passportReward = 0;
+	public Map<Integer, AtreianPassport> atreianPassports = new HashMap<Integer, AtreianPassport>(1);
+	private AtreianPassport completedPassports;
 
 	// TODO: Move all function to playerService or Player class.
 	public PlayerCommonData(int objId) {
@@ -278,11 +292,21 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 			this.addGrowthEnergy(-growth * 5);// reduce
 		}
 
+		long silverstar = 0;
+		long silverstarBoost = 0;
+		if (this.isReadyForSilverStarEnergy() && this.getSilverStarEnergy() > 0) {
+			silverstar = reward;
+			this.addSilverStarEnergy(-silverstar);
+			if (SilverStarBoost) {
+				silverstarBoost = (long) ((reward / 100f) * 50);
+			}
+		}
+
 		if (this.getPlayer() != null) {
 			if (rewardType != null) {
 				if (this.getPlayer().getPosition().getMapId() != 302400000) { //TowerOfChallenge
 					if (rewardType == RewardType.HUNTING || rewardType == RewardType.GROUP_HUNTING || rewardType == RewardType.CRAFTING || rewardType == RewardType.GATHERING || rewardType == RewardType.MONSTER_BOOK) {
-						reward += repose + goldenstar + goldenstarboost + growth;
+						reward += repose + goldenstar + goldenstarboost + silverstar + silverstarBoost + growth;
 					}
 					else {
 						reward += repose;
@@ -470,6 +494,60 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 				else if (goldenStarEnergy <= 0) {
 					PacketSendUtility.sendPacket(getPlayer(), new SM_SYSTEM_MESSAGE(1403401));
 				}
+			}
+		}
+	}
+
+	/**
+	 * @Silver Star Energy
+	 */
+	public boolean isReadyForSilverStarEnergy() {
+		return this.level >= 45;
+	}
+
+	public void addSilverStarEnergy(long add) {
+		if (!isReadyForSilverStarEnergy()) {
+			return;
+		}
+		silverStarEnergy += add;
+		if (this.silverStarEnergy < 0) {
+			silverStarEnergy = 0;
+		} else if (silverStarEnergy > getMaxSilverStarEnergy()) {
+			silverStarEnergy = getMaxSilverStarEnergy();
+		}
+		checkSilverStarPercent();
+	}
+
+	public void setSilverStarEnergy(long value) {
+		silverStarEnergy = value;
+		checkSilverStarPercent();
+	}
+
+	public long getSilverStarEnergy() {
+		return isReadyForSilverStarEnergy() ? silverStarEnergy : 0;
+	}
+
+	public long getMaxSilverStarEnergy() {
+		return isReadyForSilverStarEnergy() ? silverStarEnergyMax : 0;
+	}
+
+	public void checkSilverStarPercent() {
+		if ((this.getPlayer() != null) && (isReadyForSilverStarEnergy())) {
+			int percent = (int) (silverStarEnergy * 100.0 / getMaxSilverStarEnergy());
+			if (!SilverStarBoost && percent > 50) {
+				SilverStarBoost = true;
+				PacketSendUtility.sendPacket(getPlayer(), new SM_SILVER_STAR());
+				PacketSendUtility.sendPacket(getPlayer(), new SM_SYSTEM_MESSAGE(1404029, 50));
+			} 
+			else if (SilverStarBoost && percent < 50) {
+				SilverStarBoost = false;
+				PacketSendUtility.sendPacket(getPlayer(), new SM_SILVER_STAR());
+				PacketSendUtility.sendPacket(getPlayer(), new SM_SYSTEM_MESSAGE(1404030, 50));
+			} 
+			else if (silverStarEnergy <= 0) {
+				PacketSendUtility.sendPacket(getPlayer(), new SM_SILVER_STAR());
+				PacketSendUtility.sendPacket(getPlayer(), new SM_SYSTEM_MESSAGE(1404031, 50));
+
 			}
 		}
 	}
@@ -664,14 +742,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 
 	public void setLastOnline(Timestamp timestamp) {
 		lastOnline = timestamp;
-	}
-
-	public Timestamp getLastStamp() {
-		return lastStamp;
-	}
-
-	public void setLastStamp(Timestamp timestamp) {
-		this.lastStamp = timestamp;
 	}
 
 	public int getLevel() {
@@ -1028,30 +1098,81 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	/**
 	 * @Tower of Challenge
 	 */
-    public void setFloor(final int floor) {
-        this.floor = floor;
-    }
+	public void setFloor(final int floor) {
+		this.floor = floor;
+	}
 
-    public int getFloor() {
-        return this.floor;
-    }
+	public int getFloor() {
+		return this.floor;
+	}
 
 	/**
 	 * @Minions
 	 */
-    public int getMinionSkillPoints() {
-        return minionSkillPoints;
-    }
-    
-    public void setMinionSkillPoints(int minionSkillPoints) {
-        this.minionSkillPoints = minionSkillPoints;
-    }
-    
-    public Timestamp getMinionFunctionTime() {
-        return minionFunctionTime;
-    }
-    
-    public void setMinionFunctionTime(Timestamp minionFunctionTime) {
-        this.minionFunctionTime = minionFunctionTime;
-    }
+	public int getMinionSkillPoints() {
+		return minionSkillPoints;
+	}
+
+	public void setMinionSkillPoints(int minionSkillPoints) {
+		this.minionSkillPoints = minionSkillPoints;
+	}
+
+	public Timestamp getMinionFunctionTime() {
+		return minionFunctionTime;
+	}
+
+	public void setMinionFunctionTime(Timestamp minionFunctionTime) {
+		this.minionFunctionTime = minionFunctionTime;
+	}
+
+	public boolean isMinionAutoCharge() {
+		return minionAutoCharge;
+	}
+
+	public void setMinionAutoCharge(boolean auto) {
+		this.minionAutoCharge = auto;
+	}
+
+	/**
+	 * @Atreian Passport
+	 */
+	public Timestamp getLastStamp() {
+		return lastStamp;
+	}
+
+	public void setLastStamp(Timestamp timestamp) {
+		lastStamp = timestamp;
+	}
+
+	public int getPassportStamps() {
+		return stamps;
+	}
+
+	public void setPassportStamps(int stamps) {
+		this.stamps = stamps;
+	}
+
+	public Map<Integer, AtreianPassport> getPlayerPassports() {
+		return atreianPassports;
+	}
+
+	public AtreianPassport getCompletedPassports() {
+		return completedPassports;
+	}
+
+	public void addToCompletedPassports(AtreianPassportTemplate atreianPassportTemplate) {
+		completedPassports.addPassport(atreianPassportTemplate.getId(), atreianPassportTemplate);
+	}
+
+	public void setCompletedPassports(AtreianPassport atreianPassport) {
+		completedPassports = atreianPassport;
+	}
+
+	public int getPassportReward() {
+		return passportReward;
+	}
+
+	public void setPassportReward(int passportReward) {
+		this.passportReward = passportReward;
+	}
 }

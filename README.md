@@ -1,7 +1,7 @@
 ![](http://falke34.bplaced.net/Splash01.png)
 
 # Aion EU Emulator
-### Version: 6.5
+### Version: 7.5
 
 **Client:** [Gameforge](https://de.aion.gameforge.com/website/download/) **+** [Launcher](https://github.com/AionGermany/aion-germany/blob/master/AL-Tools/AionLauncherEU_5.x.rar)
 
@@ -11,6 +11,10 @@ Launcher Settings (add this to your config File):
 -megaphone
 -aiontv
 ```
+
+**GeoViewer and Builder:** [Github](https://github.com/zzsort/monono2)
+
+**Geo Files (v7.3):** [MEGA](https://mega.nz/file/xKoDWJyL#uf_npX9rGt7t7bnq_RvRnpkGrTpwnYf637oWBBs247Q)
 
 **Help and Support:** [Aion EU Forum](http://falke34.bplaced.net)
 

@@ -22,13 +22,16 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author QuestGenerator by Mariella
+ * @rework FrozenKiller
  */
 public class _61600FlightTrainingSpreadYourWings extends QuestHandler {
 
 	private final static int questId = 61600;
+	private String[] rings = { "HEIRON_FORTRESS_210040000_1", "HEIRON_FORTRESS_210040000_2", "HEIRON_FORTRESS_210040000_3", "HEIRON_FORTRESS_210040000_4", "HEIRON_FORTRESS_210040000_5", "HEIRON_FORTRESS_210040000_6" };
 
 	public _61600FlightTrainingSpreadYourWings() {
 		super(questId);
@@ -36,10 +39,14 @@ public class _61600FlightTrainingSpreadYourWings extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerQuestNpc(203930).addOnQuestStart(questId); // Daedalus
-		qe.registerQuestNpc(203930).addOnTalkEvent(questId); // Daedalus
-		qe.registerQuestNpc(204513).addOnQuestStart(questId); // Amene
+		qe.registerQuestNpc(204505).addOnQuestStart(questId); // Sulates
+		qe.registerQuestNpc(204505).addOnTalkEvent(questId); // Sulates
+		qe.registerQuestNpc(203930).addOnTalkEvent(questId); // Daedalus		
 		qe.registerQuestNpc(204513).addOnTalkEvent(questId); // Amene
+		qe.registerOnQuestTimerEnd(questId);
+		for (String ring : rings) {
+			qe.registerOnPassFlyingRings(ring, questId);
+		}
 	}
 
 	@Override
@@ -55,7 +62,7 @@ public class _61600FlightTrainingSpreadYourWings extends QuestHandler {
 		int targetId = env.getTargetId();
 
 		if (qs == null || qs.getStatus() == QuestStatus.NONE ) {
-	  		if (targetId == 203930) {
+	  		if (targetId == 204505) {
 				switch (dialog) {
 					case QUEST_SELECT: {
 						return sendQuestDialog(env, 4762);
@@ -92,6 +99,7 @@ public class _61600FlightTrainingSpreadYourWings extends QuestHandler {
 						case SETPRO1: {
 							qs.setQuestVar(1);
 							updateQuestStatus(env);
+							QuestService.questTimerStart(env, 120);
 							return closeDialogWindow(env);
 						}
 						case FINISH_DIALOG: {
@@ -101,6 +109,7 @@ public class _61600FlightTrainingSpreadYourWings extends QuestHandler {
 							qs.setQuestVar(8);
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
+							QuestService.questTimerEnd(env);
 							return closeDialogWindow(env);
 						}
 						default: 
@@ -112,11 +121,57 @@ public class _61600FlightTrainingSpreadYourWings extends QuestHandler {
 					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 204513) {
-				return sendQuestEndDialog(env);
+			if (dialog == DialogAction.USE_OBJECT) {
+				return sendQuestDialog(env, 10002);
 			}
+			return sendQuestEndDialog(env);
 		}
 
+		return false;
+	}
+	
+	@Override
+	public boolean onPassFlyingRingEvent(QuestEnv env, String flyingRing) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			if (rings[0].equals(flyingRing)) {
+				changeQuestStep(env, 1, 2, false);
+				return true;
+			}
+			else if (rings[1].equals(flyingRing)) {
+				changeQuestStep(env, 2, 3, false);
+				return true;
+			}
+			else if (rings[2].equals(flyingRing)) {
+				changeQuestStep(env, 3, 4, false);
+				return true;
+			}
+			else if (rings[3].equals(flyingRing)) {
+				changeQuestStep(env, 4, 5, false);
+				return true;
+			}
+			else if (rings[4].equals(flyingRing)) {
+				changeQuestStep(env, 5, 6, false);
+				return true;
+			}
+			else if (rings[5].equals(flyingRing)) {
+				changeQuestStep(env, 6, 7, false);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	@Override
+	public boolean onQuestTimerEndEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			qs.setQuestVar(0);
+			updateQuestStatus(env);
+			return true;
+		}
 		return false;
 	}
 }

@@ -89,7 +89,6 @@ public class SM_SKILL_LIST extends AionServerPacket {
 				else {
 					writeD(0);
 				}
-				// writeC(entry.isStigma() ? 1 : 0); // stigma
 				if (entry.isStigma()) {
 					writeC(1);
 				}

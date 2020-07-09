@@ -55,4 +55,9 @@
         <hiddenstigma customids="SKILLN_PR_ETERNALSERVENT,SKILLN_PR_SUFFERMEMORY,SKILLN_PR_PAINLINKS" id="SKILLN_PR_PUNISHINGLIGHT" requiredid="SKILLN_PR_CALLLIGHTNING"/>
         <hiddenstigma id="SKILLN_PR_PROVOKESERVENT"/>
     </playerclass>
+    <playerclass classname="PAINTER">
+        <hiddenstigma customids="PA_PAINTBURST,PA_PAINTFOUNTAIN,PA_DRAWINGTHUNDER" id="PA_RUSHOFSLIME" requiredid="PA_HUGEHAMMER"/>
+        <hiddenstigma customids="PA_TARGETSELECTING,PA_CHARGINGPLASTER,PA_PAINTPUDDLE" id="PA_DRAWINGBLACKHOLE" requiredid="PA_PLASTERSHOOTER"/>
+        <hiddenstigma id="SKILLN_PA_ELECTRICPAINT"/>
+    </playerclass>
 </hidden_stigma_tree>

@@ -65,7 +65,7 @@ public class CM_READ_EXPRESS_MAIL extends AionClientPacket {
 				else if (player.isFlying()) {
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_POSTMAN_UNABLE_IN_FLIGHT);
 				}
-				else if (player.getController().hasTask(TaskId.EXPRESS_MAIL_USE)) {
+				else if (player.getController().hasScheduledTask(TaskId.EXPRESS_MAIL_USE)) {
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_POSTMAN_UNABLE_IN_COOLTIME);
 				}
 				else if (haveUnreadExpress) {

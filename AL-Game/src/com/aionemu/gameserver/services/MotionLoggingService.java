@@ -264,6 +264,7 @@ public class MotionLoggingService {
 			listofWeapons.add(new WeaponTypeWrapper(WeaponType.GUN_2H, null));
 			listofWeapons.add(new WeaponTypeWrapper(WeaponType.KEYBLADE_2H, null));
 			listofWeapons.add(new WeaponTypeWrapper(WeaponType.KEYHAMMER_2H, null));
+			listofWeapons.add(new WeaponTypeWrapper(WeaponType.SPRAY_2H, null));
 
 			// create MotionTime
 			MotionTime motion = new MotionTime();
@@ -362,6 +363,7 @@ public class MotionLoggingService {
 		list.put(WeaponType.GUN_2H, polearm);
 		list.put(WeaponType.KEYBLADE_2H, polearm);
 		list.put(WeaponType.KEYHAMMER_2H, polearm);
+		list.put(WeaponType.SPRAY_2H, polearm);
 		float staff[] = { 1000f, 2000f };
 		list.put(WeaponType.STAFF_2H, staff);
 		list.put(WeaponType.HARP_2H, staff);
