@@ -281,7 +281,7 @@ public class AionPacketHandlerFactory {
 		//addPacket(new CM_LUGBUG_EVENT_REWARD(0x217, State.IN_GAME)); // 7.5 TODO
 
 		// // /////////////////// GM PACKET ////////////////////
-		//addPacket(new CM_GM_COMMAND_SEND(0x115, State.IN_GAME)); // 7.2 EU
+		addPacket(new CM_GM_COMMAND_SEND(0x2FC, State.IN_GAME)); // 7.5 EU
 		//addPacket(new CM_GM_BOOKMARK(0x2FF, State.IN_GAME)); // 7.x EU
 
 		// // ////////////////// UNK PACKET ////////////////////
