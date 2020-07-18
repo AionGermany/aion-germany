@@ -693,6 +693,8 @@
 			<xs:enumeration value="NONE"/>
 			<xs:enumeration value="BRACELET"/>
 			<xs:enumeration value="ESTIMA"/>
+			<xs:enumeration value="ODIAN"/>
+			<xs:enumeration value="RUNE"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="itemType">
@@ -740,6 +742,8 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="PVP"/>
 			<xs:enumeration value="PVE"/>
+			<xs:enumeration value="DESTRUCTION"/>
+			<xs:enumeration value="GRIND"/>
 			<xs:enumeration value="NONE"/>
 		</xs:restriction>
 	</xs:simpleType>

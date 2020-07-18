@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-04-06 17:12 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-07-17 19:15 -->
 <item_sets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_sets.xsd">
     <itemset id="1" name="Cloth Armour Set (Test)">
         <itempart itemid="100900544"/>
@@ -18866,7 +18866,7 @@
         <itempart itemid="123003170"/>
         <partbonus count="4">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="252" bonus="true"/>
+                <add name="PVE_ATTACK" value="252" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="148" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -18878,30 +18878,30 @@
         <itempart itemid="123003171"/>
         <partbonus count="4">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="252" bonus="true"/>
+                <add name="PVE_ATTACK" value="252" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="148" bonus="true"/>
             </modifiers>
         </partbonus>
     </itemset>
-    <itemset id="715" name="Blinding Starlight Battle Feather Set">
+    <itemset id="715" name="STR_HARD_SET_ALL_F3_V75_WING_PHY">
         <itempart itemid="187010182"/>
         <itempart itemid="187105173"/>
         <itempart itemid="187205170"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="234" bonus="true"/>
-                <add name="PHYSICAL_ATTACK" value="227" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="190" bonus="true"/>
+                <add name="PHYSICAL_DEFENSE" value="375" bonus="true"/>
             </modifiers>
         </partbonus>
     </itemset>
-    <itemset id="716" name="Blinding Starlight Magic Feather Set">
+    <itemset id="716" name="STR_HARD_SET_ALL_F3_V75_WING_MAG">
         <itempart itemid="187010183"/>
         <itempart itemid="187105174"/>
         <itempart itemid="187205171"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="234" bonus="true"/>
-                <add name="MAGICAL_ATTACK" value="227" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="190" bonus="true"/>
+                <add name="MAGICAL_RESIST" value="375" bonus="true"/>
             </modifiers>
         </partbonus>
     </itemset>
@@ -18914,13 +18914,13 @@
         <itempart itemid="125101850"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -18934,13 +18934,13 @@
         <itempart itemid="125101849"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -18954,13 +18954,13 @@
         <itempart itemid="125101851"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -18974,13 +18974,13 @@
         <itempart itemid="125101852"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -18994,13 +18994,13 @@
         <itempart itemid="125101853"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -19014,13 +19014,13 @@
         <itempart itemid="125101854"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -19034,13 +19034,13 @@
         <itempart itemid="125101855"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="PHYSICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
@@ -19054,27 +19054,37 @@
         <itempart itemid="125101856"/>
         <partbonus count="3">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="185" bonus="true"/>
+                <add name="PVE_ATTACK" value="185" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="272" bonus="true"/>
             </modifiers>
         </partbonus>
         <partbonus count="6">
             <modifiers>
-                <add name="PVE_ATTACK_RATIO" value="344" bonus="true"/>
+                <add name="PVE_ATTACK" value="344" bonus="true"/>
                 <add name="MAGICAL_ATTACK" value="506" bonus="true"/>
             </modifiers>
         </partbonus>
     </itemset>
     <itemset id="725" name="Blinding Starlight Longsword Set">
         <itempart itemid="100050182"/>
-        <partbonus>
-            <modifiers />
+        <itempart itemid="120003174"/>
+        <itempart itemid="122003175"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK" value="420" bonus="true"/>
+                <add name="PHYSICAL_ATTACK" value="311" bonus="true"/>
+            </modifiers>
         </partbonus>
     </itemset>
     <itemset id="726" name="Blinding Starlight Mace Set">
         <itempart itemid="100150178"/>
-        <partbonus>
-            <modifiers />
+        <itempart itemid="120003175"/>
+        <itempart itemid="122003176"/>
+        <partbonus count="3">
+            <modifiers>
+                <add name="PVE_ATTACK" value="420" bonus="true"/>
+                <add name="MAGICAL_ATTACK" value="311" bonus="true"/>
+            </modifiers>
         </partbonus>
     </itemset>
     <itemset id="727" name="Blinding Starlight Dagger Set">
@@ -19147,6 +19157,28 @@
         <itempart itemid="102220107"/>
         <partbonus>
             <modifiers />
+        </partbonus>
+    </itemset>
+    <itemset id="739" name="STR_HARD_SET_ALL_F3_V75_ACC_PHY">
+        <itempart itemid="121003198"/>
+        <itempart itemid="120003198"/>
+        <itempart itemid="122003199"/>
+        <itempart itemid="123003194"/>
+        <partbonus count="4">
+            <modifiers>
+                <add name="PHYSICAL_ATTACK" value="335" bonus="true"/>
+            </modifiers>
+        </partbonus>
+    </itemset>
+    <itemset id="740" name="STR_HARD_SET_ALL_F3_V75_ACC_MAG">
+        <itempart itemid="121003199"/>
+        <itempart itemid="120003199"/>
+        <itempart itemid="122003200"/>
+        <itempart itemid="123003195"/>
+        <partbonus count="4">
+            <modifiers>
+                <add name="MAGICAL_ATTACK" value="335" bonus="true"/>
+            </modifiers>
         </partbonus>
     </itemset>
 </item_sets>

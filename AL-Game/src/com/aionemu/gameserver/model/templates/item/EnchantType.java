@@ -28,5 +28,7 @@ public enum EnchantType {
 
 	PVP,
 	PVE,
+	GRIND,
+	DESTRUCTION,
 	NONE
 }

@@ -79,5 +79,7 @@ public enum ItemCategory {
 	BRACELET,
 	ESTIMA,
 	SPRAY,
+	ODIAN,
+	RUNE,
 	NONE
 }

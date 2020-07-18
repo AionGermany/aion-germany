@@ -24,10 +24,20 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DAEVANION_SKILL_ENCHANT extends AionServerPacket {
 
+	private int skillLevel;
+	private int skillId;
+	private int newSkillLevel;
+
+	public SM_DAEVANION_SKILL_ENCHANT(int skillLevel, int skillId, int newSkillLevel) {
+		this.newSkillLevel = newSkillLevel;
+		this.skillId = skillId;
+		this.skillLevel = skillLevel;
+	}
+
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeD(1);
-		writeH(5263);
-		writeD(2);
+		writeD(skillLevel); // Skill Level
+		writeH(skillId); // Skill Id
+		writeD(newSkillLevel); // new Skill Level
 	}
 }

@@ -1015,10 +1015,10 @@
     <aggro>PC PC_DARK PC_DRAGON GENERAL GUARD GENERAL_DARK GUARD_DARK GENERAL_DRAGON GUARD_DRAGON USEALL MONSTER</aggro>
   </tribe>
   <tribe name="F4GUARD_LIGHT" base="GUARD">
-    <friend>F4RAID</friend>
+    <friend>F4RAID MONSTER</friend>
   </tribe>
   <tribe name="F4GUARD_DARK" base="GUARD_DARK">
-    <friend>F4RAID</friend>
+    <friend>F4RAID MONSTER</friend>
   </tribe>
   <tribe name="F4GUARD_DRAGON" base="GUARD_DRAGON">
     <friend>F4RAID</friend>
@@ -1028,8 +1028,9 @@
     <friend>F4GUARD_LIGHT F4GUARD_DARK GENERAL_ADADR GENERALDA_ALIDR F4GUARD_DRAGON GENERALDR_ALIDA GUARD GUARD_DARK</friend>
   </tribe>
   <tribe name="DRAMATA" base="MONSTER">
-    <aggro>PC GUARD GENERAL PC_DARK GUARD_DARK GENERAL_DARK</aggro>
+    <aggro>PC PC_DARK GUARD GENERAL GUARD_DARK GENERAL_DARK IDF8_DRAGON_ALTAR_RAID IDF7_WEAPON_OIL</aggro>
     <neutral>AGGRESSIVESUPPORTMONSTER</neutral>
+    <friend>DRAMATASLIME</friend>
     <support>DRAMATA</support>
   </tribe>
   <tribe name="DRAMATATIMERA" base="MONSTER" />
@@ -3897,7 +3898,7 @@
     <friend>IDBC_DARK IDBC_NPC_DARK</friend>
   </tribe>
   <tribe name="PANDORARAID_WAVE_MONSTER" base="MONSTER">
-    <aggro>PANDORARAID_ENERGY_LIGHT PANDORARAID_ENERGY_DARK</aggro>
+    <aggro>PANDORARAID_ENERGY_LIGHT PANDORARAID_ENERGY_DARK LDF8_LEGION_DIGGER_L LDF8_LEGION_DIGGER_D</aggro>
     <neutral>PC PC_DARK</neutral>
   </tribe>
   <tribe name="LDF7_SEP_EVENT_L" base="GENERAL" />
@@ -3911,11 +3912,11 @@
     <friend>GENERAL_DARK PC PC_DARK</friend>
   </tribe>
   <tribe name="IDF8_MISSION02_L" base="GENERAL">
-    <aggro>IDF8_MISSION02_M</aggro>
+    <aggro>IDF8_MISSION02_M DRAMATA</aggro>
     <friend>GENERAL GENERAL_DARK</friend>
   </tribe>
   <tribe name="IDF8_MISSION02_D" base="GENERAL_DARK">
-    <aggro>IDF8_MISSION02_M</aggro>
+    <aggro>IDF8_MISSION02_M DRAMATA</aggro>
     <friend>GENERAL GENERAL_DARK</friend>
   </tribe>
   <tribe name="IDF8_MISSION02_M" base="MONSTER">
@@ -4018,16 +4019,60 @@
     <aggro>PC PC_DARK IDCUSTOMIZE_NPC_L IDCUSTOMIZE_NPC_D GAB1_01_POINT_01 GAB1_01_POINT_02 GAB1_01_POINT_03 GAB1_01_POINT_04</aggro>
   </tribe>
   <tribe name="UP3_URF_ENEMY" base="MONSTER">
-    <aggro>PC PC_DARK UP3_URF_OBJ</aggro>
+    <aggro>PC PC_DARK UP3_URF_OBJ LDF8_LEGION_DIGGER_L LDF8_LEGION_DIGGER_D</aggro>
   </tribe>
   <tribe name="UP3_URF_OBJ" base="USEALL">
     <aggro>UP3_URF_ENEMY</aggro>
     <neutral>PC PC_DARK</neutral>
+  </tribe>
+  <tribe name="LDF8_LEGION_DIGGER_L" base="GENERAL">
+    <aggro>LDF8_LEGION_DIGGER_D LDF8_LEGION_DIGGER_N</aggro>
+    <none>PC PC_DARK PANDORARAID_WAVE_MONSTER AGGRESSIVESINGLEMONSTER LDF8_LEGION_ALL_ATK</none>
+  </tribe>
+  <tribe name="LDF8_LEGION_DIGGER_D" base="GENERAL_DARK">
+    <aggro>LDF8_LEGION_DIGGER_L LDF8_LEGION_DIGGER_N</aggro>
+    <none>PC PC_DARK PANDORARAID_WAVE_MONSTER AGGRESSIVESINGLEMONSTER LDF8_LEGION_ALL_ATK</none>
+  </tribe>
+  <tribe name="LDF8_LEGION_DIGGER_N" base="MONSTER">
+    <none>PC PC_DARK LDF8_LEGION_ALL_ATK</none>
+  </tribe>
+  <tribe name="LDF5_PANDAROONGS_POLYMORPH_L" base="PC">
+    <aggro>PC_DARK LDF5_PANDAROONGS_POLYMORPH_D</aggro>
+    <friend>LDF5_PANDAROONGS_ENTRANCE</friend>
+  </tribe>
+  <tribe name="LDF5_PANDAROONGS_POLYMORPH_D" base="PC_DARK">
+    <aggro>PC LDF5_PANDAROONGS_POLYMORPH_L</aggro>
+    <friend>LDF5_PANDAROONGS_ENTRANCE</friend>
+  </tribe>
+  <tribe name="LDF5_PANDAROONGS_ENTRANCE" base="MONSTER">
+    <friend>LDF5_PANDAROONGS_POLYMORPH_L LDF5_PANDAROONGS_POLYMORPH_D</friend>
+    <none>PC PC_DARK</none>
   </tribe>
   <tribe name="LDF5B_GUARD_LI" base="GENERAL">
     <aggro>PC_DARK</aggro>
   </tribe>
   <tribe name="LDF5B_GUARD_DA" base="GENERAL_DARK">
     <aggro>PC</aggro>
+  </tribe>
+  <tribe name="DRAMATASLIME" base="MONSTER">
+    <aggro>DRAMATA IDF7_WEAPON_OIL</aggro>
+    <friend>PC PC_DARK</friend>
+  </tribe>
+  <tribe name="IDF8_DRAGON_ALTAR_FOBJ" base="MONSTER">
+    <aggro>DRAMATA DRAMATASLIME</aggro>
+    <friend>PC PC_DARK</friend>
+  </tribe>
+  <tribe name="IDF8_DRAGON_ALTAR_RAID" base="MONSTER">
+    <aggro>DRAMATA DRAMATASLIME</aggro>
+  </tribe>
+  <tribe name="IDF8_DRAGON_ALTAR_USEALL" base="USEALL">
+    <aggro>DRAMATA DRAMATASLIME</aggro>
+  </tribe>
+  <tribe name="LDF8_LEGION_ALL_ATK" base="MONSTER">
+    <aggro>LDF8_LEGION_DIGGER_N PC PC_DARK UP3_URF_OBJ LDF8_LEGION_DIGGER_L LDF8_LEGION_DIGGER_D</aggro>
+  </tribe>
+  <tribe name="EVENT_V75_HAPPYSHUGO" base="MONSTER">
+    <hostile>PC PC_DARK</hostile>
+    <friend>EVENT_V75_HAPPYSHUGO</friend>
   </tribe>
 </tribe_relations>

@@ -18,18 +18,16 @@ package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
+import com.aionemu.gameserver.services.EnchantDaevanionSkillService;
 
 /**
  * @author Falke_34
  */
 public class CM_DAEVANION_SKILL_ENCHANT extends AionClientPacket {
 
-	@SuppressWarnings("unused")
-	private int unk;
-	@SuppressWarnings("unused")
-	private int itemObjectId1;
-	@SuppressWarnings("unused")
-	private int itemObjectId2;
+    private int skillId;
+    private int bookObjId;
+    private int materialObjId;
 
 	public CM_DAEVANION_SKILL_ENCHANT(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -37,12 +35,13 @@ public class CM_DAEVANION_SKILL_ENCHANT extends AionClientPacket {
 
 	@Override
 	protected void readImpl() {
-		unk = readH();
-		itemObjectId1 = readD();
-		itemObjectId2 = readD();
+		skillId = readH();
+		bookObjId = readD();
+		materialObjId = readD();
 	}
 
 	@Override
 	protected void runImpl() {
+		EnchantDaevanionSkillService.enchantDaevanionSkill(getConnection().getActivePlayer(), skillId, bookObjId, materialObjId);
 	}
 }

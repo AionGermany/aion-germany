@@ -481,6 +481,14 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		return category == ItemCategory.ESTIMA;
 	}
 
+	public boolean isOdian() {
+		return category == ItemCategory.ODIAN;
+	}
+
+	public boolean isRune() {
+		return category == ItemCategory.RUNE;
+	}
+
 	public void setItemId(int itemId) {
 		this.itemId = itemId;
 	}

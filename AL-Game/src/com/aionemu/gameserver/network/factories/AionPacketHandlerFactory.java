@@ -208,7 +208,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_REMOVE_ALTERED_STATE(0xF5, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_MAY_QUIT(0xCA, State.AUTHED, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_REPORT_PLAYER(0x196, State.IN_GAME)); // 7.5 EU
-		//addPacket(new CM_PLAYER_LISTENER(0x1DA, State.IN_GAME)); // 7.2 EU NOT SURE (TODO)
+		addPacket(new CM_PLAYER_LISTENER(0x2FE, State.IN_GAME)); // 7.5 EU NOT SURE (TODO)
 		addPacket(new CM_BONUS_TITLE(0xBC, State.IN_GAME)); // 7.5 EU
 		//addPacket(new CM_BUY_TRADE_IN_TRADE(0x113, State.IN_GAME)); // 5.6 (Machtkampf aufwertung)
 		addPacket(new CM_BREAK_WEAPONS(0x1AB, State.IN_GAME)); // 7.5 EU
@@ -278,7 +278,7 @@ public class AionPacketHandlerFactory {
 
 		// // ///////////////// LUGBUG QUESTS ///////////////////
 		//addPacket(new CM_LUGBUG_MISSION_REWARD(0x1E9, State.IN_GAME)); // 7.5 EU TODO
-		//addPacket(new CM_LUGBUG_EVENT_REWARD(0x217, State.IN_GAME)); // 7.5 TODO
+		addPacket(new CM_LUGBUG_EVENT_REWARD(0x3FE, State.IN_GAME)); // 7.5 TODO
 
 		// // /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0x2FC, State.IN_GAME)); // 7.5 EU

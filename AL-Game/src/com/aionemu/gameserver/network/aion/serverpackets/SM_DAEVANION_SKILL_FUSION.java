@@ -24,11 +24,20 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DAEVANION_SKILL_FUSION extends AionServerPacket {
 
+    @SuppressWarnings("unused")
+	private int count;
+    private int result;
+
+    public SM_DAEVANION_SKILL_FUSION(int count, int result) {
+        this.count = count;
+        this.result = result;
+    }
+
 	@Override
 	protected void writeImpl(AionConnection con) {
 		writeD(1);
-		writeD(169501779); //itemTemplateId
-		writeD(0); //itemTemplateId?
-		writeD(0); //itemTemplateId?
+		writeD(result); //itemTemplateId
+		writeD(result); //itemTemplateId?
+		writeD(result); //itemTemplateId?
 	}
 }

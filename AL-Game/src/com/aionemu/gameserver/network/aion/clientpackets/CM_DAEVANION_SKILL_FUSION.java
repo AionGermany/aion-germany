@@ -16,26 +16,19 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import java.util.ArrayList;
+
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
+import com.aionemu.gameserver.services.EnchantDaevanionSkillService;
 
 /**
  * @author Falke_34
  */
 public class CM_DAEVANION_SKILL_FUSION extends AionClientPacket {
 
-	@SuppressWarnings("unused")
-	private int unk;
-	@SuppressWarnings("unused")
-	private int count;
-	@SuppressWarnings("unused")
-	private int itemObjectId1;
-	@SuppressWarnings("unused")
-	private int itemObjectId2;
-	@SuppressWarnings("unused")
-	private int itemObjectId3;
-	@SuppressWarnings("unused")
-	private int itemObjectId4;
+    private ArrayList<Integer> sacrificeBook = new ArrayList<Integer>();
+    private int count;
 
 	public CM_DAEVANION_SKILL_FUSION(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
@@ -43,15 +36,14 @@ public class CM_DAEVANION_SKILL_FUSION extends AionClientPacket {
 
 	@Override
 	protected void readImpl() {
-		unk = readD();
+		readD();
 		count = readH();
-		itemObjectId1 = readD();
-		itemObjectId2 = readD();
-		itemObjectId3 = readD();
-		itemObjectId4 = readD();
-	}
+        for (int i = 0; i < count; ++i) {
+            sacrificeBook.add(readD());
+        }
+    }
 
-	@Override
-	protected void runImpl() {
-	}
+    protected void runImpl() {
+    	EnchantDaevanionSkillService.combineDaevanionBook(getConnection().getActivePlayer(), sacrificeBook);
+    }
 }

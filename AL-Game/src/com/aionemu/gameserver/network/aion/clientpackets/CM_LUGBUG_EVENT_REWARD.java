@@ -24,15 +24,17 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_LUGBUG_EVENT_REWARD extends AionClientPacket {
 
+    private int questId;
+    private long objectId;
+
 	public CM_LUGBUG_EVENT_REWARD(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 
 	@Override
 	protected void readImpl() {
-		readD(); // questId
-		readD();
-		readD();
+		questId = readD(); // questId
+		objectId = readQ(); // objectId
 		readC();
 	}
 

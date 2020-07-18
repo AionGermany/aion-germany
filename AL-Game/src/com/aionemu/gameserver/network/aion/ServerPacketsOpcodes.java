@@ -287,7 +287,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_MAC_ADDRESS.class, 0x168, idSet); // 7.5 EU
 		addPacketOpcode(SM_CHECK_MAIL_SIZE.class, 0x95, idSet);
 		addPacketOpcode(SM_MINIONS.class, 0x16C, idSet); // 7.5 EU
-		//addPacketOpcode(SM_EVENT_WINDOW.class, 0x13E, idSet);
+		addPacketOpcode(SM_EVENT_WINDOW.class, 0x13E, idSet); // 7.5 EU
 		addPacketOpcode(SM_EVENT_WINDOW_ITEMS.class, 0x154, idSet); // 7.5 EU
 		// ------------------FAST TRACK PACKETS----------------------//
 		addPacketOpcode(SM_SERVER_IDS.class, 0x116, idSet); // 7.5 EU
@@ -308,7 +308,7 @@ public class ServerPacketsOpcodes {
 		//addPacketOpcode(SM_BATTLEFIELD_UNION.class, 0x156, idSet); // 5.6 TODO
 		//addPacketOpcode(SM_BATTLEFIELD_UNION_POINTS.class, 0x157, idSet); // 5.6 TODO
 		// -------------------SHUGO SWEEP/LUCKY DICE----------------------//
-		//addPacketOpcode(SM_SHUGO_SWEEP.class, 0x14B, idSet); //5.8 EU
+		addPacketOpcode(SM_SHUGO_SWEEP.class, 0x14B, idSet); // 7.5 EU
 		addPacketOpcode(SM_YOUTUBE_VIDEO.class, 0x146, idSet);
 		// ----------------------DEAVANION SKILL-------------------------//
 		addPacketOpcode(SM_DAEVANION_SKILL_ENCHANT.class, 0x179, idSet); // 7.5 EU TODO

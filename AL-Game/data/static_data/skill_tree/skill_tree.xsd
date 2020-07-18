@@ -19,5 +19,7 @@
         <xs:attribute name="stigma" type="xs:boolean" default="false"/>
         <xs:attribute name="race" type="Race" use="required"/>
         <xs:attribute name="minLevel" type="xs:int" use="required"/>
+        <xs:attribute name="required_skill" type="xs:int" use="optional"/>
+        <xs:attribute name="daevanionEnchant" type="xs:boolean" default="false"/>
     </xs:complexType>
 </xs:schema>
