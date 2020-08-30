@@ -50,7 +50,7 @@ public class SM_INFLUENCE_RATIO extends AionServerPacket {
 		writeF(inf.getAbyssElyosInfluence());
 		writeF(inf.getAbyssAsmodiansInfluence());
 		writeF(inf.getAbyssBalaursInfluence());
-		writeD(600200000);
+		writeD(800050000);
 		writeF(0); //inf.getKaldorElyosInfluence());
 		writeF(1); //inf.getKaldorAsmodiansInfluence());
 		writeF(0); //inf.getKaldorBalaursInfluence());

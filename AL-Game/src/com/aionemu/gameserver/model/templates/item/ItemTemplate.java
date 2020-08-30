@@ -243,6 +243,12 @@ public class ItemTemplate extends VisibleObjectTemplate {
 
 	@XmlAttribute(name = "skin_skill")
 	private int skin_skill;
+
+    @XmlAttribute(name = "option_slot_max")
+    private int option_slot_max;
+
+    @XmlAttribute(name = "option_slot_add_count")
+    private int option_slot_add_count;
     
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	@XmlTransient
@@ -452,6 +458,10 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	public boolean isArmor() {
 		return equipmentType == EquipType.ARMOR;
 	}
+
+    public boolean isManaSlotOpen() {
+        return category == ItemCategory.MANA_SLOT_OPEN;
+    }
 
 	public boolean isKinah() {
 		return itemId == ItemId.KINAH.value();
@@ -772,4 +782,12 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	public int getSkinSkill() {
 		return skin_skill;
 	}
+
+    public int getMaxSlot() {
+        return option_slot_max;
+    }
+
+    public int getOptionSlotAddCount() {
+        return option_slot_add_count;
+    }
 }

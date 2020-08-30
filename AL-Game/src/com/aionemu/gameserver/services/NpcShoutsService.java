@@ -38,6 +38,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
+import com.aionemu.gameserver.world.WorldMap;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
@@ -209,14 +210,50 @@ public class NpcShoutsService {
 							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(isShout, msg, Obj, color));
 						}
 					});
-				}
-				else if (instance != null) {
-					instance.doOnAllPlayers(new Visitor<Player>() {
+                } else if (instance != null) {
+                    instance.doOnAllPlayers(new Visitor<Player>(){
 
-						@Override
-						public void visit(Player player) {
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(isShout, msg, Obj, color));
-						}
+                        @Override
+                        public void visit(Player player) {
+                            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(isShout, msg, Obj, color, new Object[0]));
+                        }
+                    });
+                }
+            }
+
+        }, delay);
+    }
+
+    public void sendMsg(WorldMap map, int msg, int Obj, boolean isShout, int color, int delay, int unk) {
+        sendMsg(null, map, msg, Obj, isShout, color, delay, unk);
+    }
+
+    public void sendMsg(WorldMap map, int msg, int delay, int unk) {
+        sendMsg(null, map, msg, 0, false, 25, delay, unk);
+    }
+
+    public void sendMsg(final Npc npc, final WorldMap map, final int msg, final int Obj, final boolean isShout, final int color, int delay, int unk) {
+        ThreadPoolManager.getInstance().schedule(new Runnable(){
+
+            @Override
+            public void run() {
+                if (npc != null && npc.isSpawned()) {
+                    npc.getKnownList().doOnAllPlayers(new Visitor<Player>(){
+
+                        @Override
+                        public void visit(Player player) {
+                            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(isShout, msg, Obj, color, new Object[0]));
+                        }
+                    });
+                } else if (map != null) {
+                    World.getInstance().doOnAllPlayers(new Visitor<Player>(){
+
+                        @Override
+                        public void visit(Player player) {
+                            if (player.getWorldId() == map.getMapId().intValue()) {
+                                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(isShout, msg, Obj, color, new Object[0]));
+                            }
+                        }
 					});
 				}
 			}

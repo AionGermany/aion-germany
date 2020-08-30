@@ -9462,7 +9462,7 @@
 				<reader type="Boolean"/>
 			</part>
 		</packet>
-		<packet id="0x13E" name="________________SM_LEGION_JOIN_SETTING">
+		<packet id="0x13E1111" name="________________SM_LEGION_JOIN_SETTING">
 			<part name="unk" type="h"/>
 		</packet>
 		<packet id="0x35" name="________________SM_DUEL_REQUEST_CANCEL"> <!-- TODO -->
@@ -9773,7 +9773,7 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x14B" name="________________SM_LUCKY_DICE"> <!-- 5.3 TODO -->
+		<packet id="0x14B" name="________________SM_SHUGO_SWEEP"> <!-- 5.3 TODO -->
 			<part name="boardId" type="d"/> <!-- Board ID -->
 			<part name="unk" type="d"/> <!-- Platz auf dem ich derzeit stehe -->
 			<part name="unk" type="d">
@@ -10071,6 +10071,9 @@
 			<part name="playerObjId" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
+		<packet id="0x13E" name="________________SM_EVENT_WINDOW">
+			<part name="unk" type="h"/>
+		</packet>
 		<packet id="0x154" name="________________SM_EVENT_WINDOW_ITEMS">
 			<part name="always 1" type="c"/>
 			<part name="activeEvents" type="h" id="1"/>
@@ -10296,8 +10299,8 @@
 			</part>
 			<switch id="0">
 				<case id="0">
-					<part name="unk" type="c"/>
-					<part name="unk" type="d"/>
+					<part name="last used Transformation" type="d"/>
+					<part name="unk 0" type="c"/>
 					<part name="unk" type="h" id="1"/>
 					<for id="1">
 						<part name="Transformation_Id" type="d">
@@ -10799,6 +10802,9 @@
 				<case id="default"/>
 			</switch>
 		</packet>
+		<packet id="0x185" name="________________SM_WORLD_PLAYTIME"> <!-- 7.5 EU TODO -->
+			<part name="playtime" type="d"/>
+		</packet>
 		<packet id="0x186" name="________________SM_FIELD_FAME_SYSTEM"> <!-- 7.5 EU TODO -->
 			<part name="unk 1" type="c"/>
 			<part name="max level?" type="d"/>
@@ -10811,8 +10817,16 @@
 				<part name="points lose" type="Q"/>
 			</for>
 		</packet>
-		<packet id="0x185" name="________________SM_0x185"> <!-- 7.5 EU TODO -->
-			<part name="unk" type="d"/>
+		<packet id="0x188" name="________________SM_RUNES"> <!-- 7.5 EU TODO -->
+			<part name="itemObjectId" type="d"/>
+			<part name="unk" type="h" id="0"/>
+			<for id="0">
+				<part name="trans skilId" type="h"/>
+				<part name="unk" type="c"/>
+			</for>
+		</packet>
+		<packet id="0x189" name="________________SM_ELIM_ENERGY"> <!-- 7.5 EU TODO -->
+			<part name="percent (62500 = 25%)" type="Q"/>
 		</packet>
 	</packetfamilly>
 	<!-- ============= -->
@@ -11861,7 +11875,7 @@
 			<part name="firstItemObjectId" type="d"/>
 			<part name="secondItemObjectId" type="d"/>
 		</packet>
-		<packet id="0x11300" name="CM_BUY_TRADE_IN_TRADE"> 
+		<packet id="0x12E" name="CM_BUY_TRADE_IN_TRADE"> <!-- 7.5 EU -->
 			<part name="sellerObjId" type="d"/>
 			<part name="buyMask" type="c"/>
 			<part name="itemId" type="d"/>
@@ -11890,7 +11904,7 @@
 		<packet id="0x17E" name="CM_BLOCK_DEL"> <!-- 7.5 EU -->
 			<part name="targetName" type="S"/>
 		</packet>
-		<packet id="0x11C" name="________________CM_MANASTONE"> <!-- 7.x EU -->
+		<packet id="0x11C" name="________________CM_MANASTONE"> <!-- 7.5 EU -->
 			<part name="actionType" type="h" id="0"/>
 			<switch id="0">
 				<case id="257" comment="ENCHANTMENT_STONE"> <!-- PVE Enchant -->
@@ -12216,7 +12230,7 @@
 			<part name="bidKinah" type="Q"/>
 			<part name="100000" type="Q"/>
 		</packet>
-		<packet id="0x1A800" name="CM_PLAYER_LISTENER"/>
+		<packet id="0x2FE" name="CM_PLAYER_LISTENER"/> <!-- 7.5 EU -->
 		<packet id="0x1B6" name="CM_USE_CHARGE_SKILL"/> <!-- 7.5 EU -->
 		<packet id="0x148" name="CM_CHECK_MAIL_SIZE"> <!-- 7.5 EU -->
 			<part name="onlyExpress" type="c"/>
@@ -12718,7 +12732,7 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 		</packet>
-		<packet id="0x217" name="________________CM_LUGBUG_EVENT_REWARD"> <!-- 7.5 TODO -->
+		<packet id="0x3FE" name="________________CM_LUGBUG_EVENT_REWARD"> <!-- 7.5 TODO -->
 			<part name="questId" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
@@ -12727,6 +12741,18 @@
 		<packet id="0x1BA558" name="________________CM_LUCKY_DICE"> <!-- 7.2 EU -->
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
+		</packet>
+		<packet id="0x3FC" name="________________CM_0x3FC"> <!-- 7.5 EU New -->
+			<part name="on / off" type="c"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
 		</packet>
 	</packetfamilly>
 </protocol>

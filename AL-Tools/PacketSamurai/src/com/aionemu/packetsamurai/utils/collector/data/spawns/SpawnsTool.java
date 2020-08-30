@@ -220,7 +220,8 @@ public class SpawnsTool {
 	
 	public static boolean isConquestNpc(int id)
 	{
-		if (ids_conquest.contains(id) || NpcsTool.getNpcTemplate(id).getNameDesc().toLowerCase().contains("f4_rotation"))
+		//if (ids_conquest.contains(id) || NpcsTool.getNpcTemplate(id).getNameDesc().toLowerCase().contains("f4_rotation"))
+		if (ids_conquest.contains(id) || NpcsTool.getNpcTemplate(id).getNameDesc().toLowerCase().contains("f4_treasure"))
 			return true;
 		return false;
 	}

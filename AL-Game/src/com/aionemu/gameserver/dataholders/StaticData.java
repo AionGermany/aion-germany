@@ -215,8 +215,6 @@ public class StaticData {
 	public ArcadeUpgradeData arcadeUpgradeData;
 	@XmlElement(name = "hidden_stigma_tree")
 	public HiddenStigmaTreeData hiddenStigmas;
-	@XmlElement(name = "world_buffs")
-	public WorldBuffData buffData;
 	@XmlElement(name = "players")
 	public PlayersAppearanceData playerAppearance;
 	@XmlElement(name = "service_bonusattrs")
@@ -358,7 +356,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + robotData.size() + " robot armor entries");
 		DataManager.log.info("[DataManager] Loaded " + xmlNpcDropData.size() + " custom npc drop data");
 		DataManager.log.info("[DataManager] Loaded " + hiddenStigmas.size() + " hidden stigmas entries");
-		DataManager.log.info("[DataManager] Loaded " + buffData.size() + " world buff map entries");
 		// DataManager.log.info("[DataManager] Loaded " + playerAppearance.size() + " Player Appearances");
 		DataManager.log.info("[DataManager] Loaded " + serviceBuffData.size() + " service bonus entries");
 		DataManager.log.info("[DataManager] Loaded " + playersBonusData.size() + " player bonus entries");

@@ -120,6 +120,7 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	private int minionSkillPoints;
 	private Timestamp minionFunctionTime;
 	private boolean minionAutoCharge;
+    private int worldPlayTime;
 
 	//Shugo Sweep 5.1
 	private int goldenDice;
@@ -1175,4 +1176,12 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	public void setPassportReward(int passportReward) {
 		this.passportReward = passportReward;
 	}
+
+    public void setWorldPlayTime(int playTime) {
+        this.worldPlayTime = playTime;
+    }
+
+    public int getWorldPlayTime() {
+        return worldPlayTime;
+    }
 }

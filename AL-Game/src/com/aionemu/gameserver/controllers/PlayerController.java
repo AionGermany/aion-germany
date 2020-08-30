@@ -107,7 +107,7 @@ import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.PvpService;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.services.SkillLearnService;
-import com.aionemu.gameserver.services.WorldBuffService;
+import com.aionemu.gameserver.services.WorldPlayTimeService;
 import com.aionemu.gameserver.services.abyss.AbyssService;
 import com.aionemu.gameserver.services.craft.CraftSkillUpdateService;
 import com.aionemu.gameserver.services.instance.InstanceService;
@@ -253,14 +253,13 @@ public class PlayerController extends CreatureController<Player> {
 			player.unsetPlayerMode(PlayerMode.RIDE);
 		}
 		if (zone.getZoneTemplate().getZoneType().equals(ZoneClassName.FORT) && (player.isInState(CreatureState.FLYING))) {
-			/**
-			 * If a player enter in zone "Panesterra Fortress" of while player flying, then the system will landing the player.
-			 */
 			switch (player.getWorldId()) {
-				case 400020000: // Belus.
-				case 400040000: // Aspida.
-				case 400050000: // Atanatos.
-				case 400060000: // Disillon.
+                case 210050000: 
+                case 220070000: 
+                case 400070000: 
+                case 800030000: 
+                case 800040000: 
+                case 800060000:
 					player.setFlyState(0);
 					player.getFlyController().endFly(true);
 					player.unsetState(CreatureState.FLYING);
@@ -270,70 +269,31 @@ public class PlayerController extends CreatureController<Player> {
 					break;
 			}
 		}
-		InstanceService.onEnterZone(player, zone);
+        player.getController().updateZone();
+        player.getController().updateNearbyQuests();
+        if (player.getPosition().isInstanceMap()) {
+            InstanceService.onEnterZone(player, zone);
+        } 
+        else {
+            player.getPosition().getWorld().getWorldMap(player.getWorldId()).getWorldHandler().onEnterZone(player, zone);
+        }
 		if (zone.getAreaTemplate().getZoneName() == null) {
 			log.error("No name found for a Zone in the map " + zone.getAreaTemplate().getWorldId());
 		}
 		else {
 			QuestEngine.getInstance().onEnterZone(new QuestEnv(null, player, 0, 0), zone.getAreaTemplate().getZoneName());
 		}
-		/**
-		 * For Protect City. If a opposite race player enter on these zone ==> return to "Bind Location"
-		 */
-		if (player.getAccessLevel() == 0) {
-			if (
-				// Beluslan
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("KURNGALFBERG_220040000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("RED_MANE_CAVERN_220040000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("BELUSLAN_FORTRESS_220040000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("HOARFROST_SHELTER_220040000")
-				||
-				// Gelkmaros
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("ANTAGOR_BATTLEFIELD_220070000")
-				||
-				// Enshar
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("DAWNBREAK_TEMPLE_220080000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("WHIRLPOOL_TEMPLE_220080000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("DRAGONREST_TEMPLE_220080000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("FATEBOUND_LEGION_OUTPOST_220080000")) {
-				switch (player.getRace()) {
-					case ELYOS:
-						TeleportService2.moveToBindLocation(player, true);
-						break;
-					default:
-						break;
-				}
-			}
-			else if (
-				// Heiron
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("HEIRONOPOLIS_210040000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("PATEMA_RUINS_210040000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("ARBOLUS_HAVEN_210040000")
-				||
-				// Inggison
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("CALMHEART_GROVE_210050000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("WILDHEART_GROVE_210050000")
-				||
-				// Cygnea
-				zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_OUTPOST_210070000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_HEADQUARTERS_210070000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_ADVANCE_POST_210070000")
-				|| zone.getAreaTemplate().getZoneName() == ZoneName.get("AEQUIS_DETACHMENT_POST_210070000")) {
-				switch (player.getRace()) {
-					case ASMODIANS:
-						TeleportService2.moveToBindLocation(player, true);
-						break;
-					default:
-						break;
-				}
-			}
-		}
 	}
 
 	@Override
 	public void onLeaveZone(ZoneInstance zone) {
 		Player player = getOwner();
-		InstanceService.onLeaveZone(player, zone);
+        if (player.getPosition().isInstanceMap()) {
+            InstanceService.onLeaveZone(player, zone);
+        } 
+        else {
+            player.getPosition().getWorld().getWorldMap(player.getWorldId()).getWorldHandler().onLeaveZone(player, zone);
+        }
 		ZoneName zoneName = zone.getAreaTemplate().getZoneName();
 		if (zoneName == null) {
 			log.warn("No name for zone template in " + zone.getAreaTemplate().getWorldId());
@@ -347,10 +307,11 @@ public class PlayerController extends CreatureController<Player> {
 	 */
 	// TODO [AT] move
 	public void onEnterWorld() {
-
+		Player player = getOwner();
 		InstanceService.onEnterInstance(getOwner());
 		TeleportService2.playerTransformation(getOwner());
-		WorldBuffService.getInstance().onEnterWorld(getOwner());
+		WorldPlayTimeService.getInstance().onEnterWorld(player);
+
 		if (getOwner().getPosition().getWorldMapInstance().getParent().isExceptBuff()) {
 			getOwner().getEffectController().removeAllEffects();
 		}
@@ -358,8 +319,7 @@ public class PlayerController extends CreatureController<Player> {
 		for (Effect ef : getOwner().getEffectController().getAbnormalEffects()) {
 			if (ef.isDeityAvatar()) {
 				// Remove abyss transformation if worldtype != "Abyss" && worldtype != "Balaurea" && worldtype != "Panesterra"
-				if (getOwner().getWorldType() != WorldType.ABYSS && getOwner().getWorldType() != WorldType.BALAUREA
-					&& getOwner().getWorldType() != WorldType.PANESTERRA || getOwner().isInInstance()) {
+				if (getOwner().getWorldType() != WorldType.ABYSS && getOwner().getWorldType() != WorldType.BALAUREA || getOwner().isInInstance()) {
 					ef.endEffect();
 					getOwner().getEffectController().clearEffect(ef);
 				}
@@ -656,6 +616,12 @@ public class PlayerController extends CreatureController<Player> {
 	public void useSkill(SkillTemplate template, int targetType, float x, float y, float z, int clientHitTime, int skillLevel) {
 		Player player = getOwner();
 		Skill skill = null;
+        if (player.isInInstance()) {
+            player.getPosition().getWorldMapInstance().getInstanceHandler().onSkillUse(player, template);
+        } 
+        else {
+            player.getPosition().getWorld().getWorldMap(player.getWorldId()).getWorldHandler().onSkillUse(player, template);
+        }		
 		skill = SkillEngine.getInstance().getSkillFor(player, template, player.getTarget());
 		if (skill == null && player.isTransformed()) {
 			SkillPanel panel = DataManager.PANEL_SKILL_DATA.getSkillPanel(player.getTransformModel().getPanelId());

@@ -21913,6 +21913,26 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 		return new SM_SYSTEM_MESSAGE(1401496, new DescriptionId(nameId));
 	}
 
+    public static SM_SYSTEM_MESSAGE STR_FAME_CHANGE_LEVEL_DONE(DescriptionId descriptionId, int Level) {
+        return new SM_SYSTEM_MESSAGE(1405970, descriptionId, Level);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_GET_FEXP(long value) {
+        return new SM_SYSTEM_MESSAGE(1405961, value);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTIONSLOT_SUCCEED(DescriptionId descriptionId) {
+        return new SM_SYSTEM_MESSAGE(1404666, descriptionId);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTIONSLOT_FAILED(DescriptionId descriptionId) {
+        return new SM_SYSTEM_MESSAGE(1404667, descriptionId);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTIONSLOT_CANCELED(int nameId) {
+        return new SM_SYSTEM_MESSAGE(1404668, new DescriptionId(nameId));
+    }
+
 	/**
 	 * Museum of Knowledge
 	 */
@@ -21987,6 +22007,8 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
     public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5_WarBox_01 = new SM_SYSTEM_MESSAGE(1405811);
     public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5_WarBox_02 = new SM_SYSTEM_MESSAGE(1405812);
     public static final SM_SYSTEM_MESSAGE STR_MSG_LDF5b_MSG_01 = new SM_SYSTEM_MESSAGE(1405870);
+
+	public static final SM_SYSTEM_MESSAGE STR_POPUP_ADDFEXP_USE_ITEM_FULL = new SM_SYSTEM_MESSAGE(1405970);
 
 	/**
 	 * Constructs new <tt>SM_SYSTEM_MESSAGE </tt> packet

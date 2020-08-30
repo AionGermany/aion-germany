@@ -280,7 +280,7 @@ public abstract class VisibleObject extends AionObject {
 	public float getVisibilityDistance() {
 		if (this instanceof Npc) {
 			NpcTemplate npcTemplate = (NpcTemplate) this.getObjectTemplate();
-			if (npcTemplate.getNpcTemplateType().equals(NpcTemplateType.FLAG) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.RAID_MONSTER)) {
+			if (npcTemplate.getNpcTemplateType().equals(NpcTemplateType.FLAG) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.GUARD) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.MONSTER) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.HOUSING) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.ABYSS_GUARD) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.RAID_MONSTER)) {
 				return Integer.MAX_VALUE;
 			}
 		}
@@ -290,7 +290,7 @@ public abstract class VisibleObject extends AionObject {
 	public float getMaxZVisibleDistance() {
 		if (this instanceof Npc) {
 			NpcTemplate npcTemplate = (NpcTemplate) this.getObjectTemplate();
-			if (npcTemplate.getNpcTemplateType().equals(NpcTemplateType.FLAG) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.RAID_MONSTER)) {
+			if (npcTemplate.getNpcTemplateType().equals(NpcTemplateType.FLAG) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.GUARD) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.MONSTER) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.HOUSING) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.ABYSS_GUARD) || npcTemplate.getNpcTemplateType().equals(NpcTemplateType.RAID_MONSTER)) {
 				return Integer.MAX_VALUE;
 			}
 		}

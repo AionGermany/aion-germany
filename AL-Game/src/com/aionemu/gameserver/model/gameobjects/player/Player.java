@@ -45,7 +45,6 @@ import com.aionemu.gameserver.model.Gender;
 import com.aionemu.gameserver.model.PlayerClass;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.TribeClass;
-import com.aionemu.gameserver.model.WorldBuff;
 import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.actions.PlayerActions;
 import com.aionemu.gameserver.model.actions.PlayerMode;
@@ -68,6 +67,7 @@ import com.aionemu.gameserver.model.gameobjects.player.FriendList.Status;
 import com.aionemu.gameserver.model.gameobjects.player.emotion.EmotionList;
 import com.aionemu.gameserver.model.gameobjects.player.equipmentsetting.EquipmentSettingList;
 import com.aionemu.gameserver.model.gameobjects.player.f2p.F2p;
+import com.aionemu.gameserver.model.gameobjects.player.fame.PlayerFame;
 import com.aionemu.gameserver.model.gameobjects.player.motion.MotionList;
 import com.aionemu.gameserver.model.gameobjects.player.npcFaction.NpcFactions;
 import com.aionemu.gameserver.model.gameobjects.player.ranking.ArenaOfCooperationRank;
@@ -275,7 +275,6 @@ public class Player extends Creature {
 	byte housingStatus = HousingFlags.BUY_STUDIO_ALLOWED.getId();
 	private int battleReturnMap;
 	private float[] battleReturnCoords;
-	private FastList<WorldBuff> worldBuff;
 	// This variables are for the FFA system
 	// This variables are for the custom RP and GM system
 	private boolean isGmMode = false;
@@ -299,6 +298,8 @@ public class Player extends Creature {
 	private boolean isInLiveParty = false;
 	// private int linkedSkill;
 	private PlayerConquererProtectorData conquerorProtectorData;
+	private Map<Integer, PlayerFame> playerFame;
+    private int worldPlayTime;	
 
 	private PlayerBonusTime bonusTime;
 	private boolean newPlayer = false;
@@ -2768,17 +2769,6 @@ public class Player extends Creature {
 	 * public int getLinkedSkill() { return linkedSkill; } public void setLinkedSkill(int skillId) { this.linkedSkill = skillId; }
 	 */
 
-	public FastList<WorldBuff> getWorldBuffList() {
-		return worldBuff;
-	}
-
-	public void addWorldBuff(WorldBuff buff) {
-		if (worldBuff == null) {
-			worldBuff = FastList.newInstance();
-		}
-		worldBuff.add(buff);
-	}
-
 	public void clearJoinRequest() {
 		playerCommonData.setJoinRequestLegionId(0);
 		playerCommonData.setJoinRequestState(LegionJoinRequestState.NONE);
@@ -3151,4 +3141,23 @@ public class Player extends Creature {
 	public final TransformationList getTransformationList() {
 		return transformationList;
 	}
+
+	/**
+	 * Field Fame System
+	 */
+    public Map<Integer, PlayerFame> getPlayerFame() {
+        return playerFame;
+    }
+
+    public void setPlayerFame(Map<Integer, PlayerFame> playerFame) {
+        this.playerFame = playerFame;
+    }
+
+    public int getWorldPlayTime() {
+        return worldPlayTime;
+    }
+
+    public void setWorldPlayTime(int playTime) {
+        this.worldPlayTime = playTime;
+    }
 }

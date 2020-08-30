@@ -200,7 +200,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_TELEPORT_DONE(0xD1, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_CHARACTER_EDIT(0xC2, State.AUTHED)); // 7.5 EU
 		addPacket(new CM_PLAYER_STATUS_INFO(0x137, State.IN_GAME)); // 7.5 EU (Mentor etc)
-		//addPacket(new CM_MANASTONE(0x2F5, State.IN_GAME)); // 7.2 EU
+		addPacket(new CM_MANASTONE(0x11C, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_FUSION_WEAPONS(0x191, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_ITEM_REMODEL(0x125, State.IN_GAME)); // 7.5 EU
 		//addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xCD, State.IN_GAME)); // 7.2 EU (Rider Skill deactivate)
@@ -210,7 +210,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_REPORT_PLAYER(0x196, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_PLAYER_LISTENER(0x2FE, State.IN_GAME)); // 7.5 EU NOT SURE (TODO)
 		addPacket(new CM_BONUS_TITLE(0xBC, State.IN_GAME)); // 7.5 EU
-		//addPacket(new CM_BUY_TRADE_IN_TRADE(0x113, State.IN_GAME)); // 5.6 (Machtkampf aufwertung)
+		addPacket(new CM_BUY_TRADE_IN_TRADE(0x12E, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_BREAK_WEAPONS(0x1AB, State.IN_GAME)); // 7.5 EU
 		//addPacket(new CM_CHARGE_ITEM(0x2F9, State.IN_GAME)); // 7.2 EU
 		addPacket(new CM_USE_CHARGE_SKILL(0x1B6, State.IN_GAME)); // 7.5

@@ -313,8 +313,6 @@ public class ServerPacketsOpcodes {
 		// ----------------------DEAVANION SKILL-------------------------//
 		addPacketOpcode(SM_DAEVANION_SKILL_ENCHANT.class, 0x179, idSet); // 7.5 EU TODO
 		addPacketOpcode(SM_DAEVANION_SKILL_FUSION.class, 0x17A, idSet); // 7.5 EU TODO
-		// ------------------DIMENSIONALHOURGLASS---------------------//
-		addPacketOpcode(SM_DIMENSIONAL_HOURGLASS.class, 0x183, idSet); // 7.5 EU
 		// ----------------------LUGBUG QUESTS-------------------------//
 		addPacketOpcode(SM_LUGBUG_MISSION.class, 0x17B, idSet); // 7.5 EU
 		addPacketOpcode(SM_LUGBUG_MISSION_COUNT.class, 0x17C, idSet); // 7.5 EU
@@ -353,7 +351,8 @@ public class ServerPacketsOpcodes {
 		
 		addPacketOpcode(SM_ATREIAN_PASSPORT.class, 0x12D, idSet); // 7.5 EU TODO
 		//addPacketOpcode(SM_REMOVE_DYE.class, 0x1DF, idSet); // 6.x TODO
-		//addPacketOpcode(SM_FIELD_FAME_SYSTEM.class, 0x186, idSet); // 7.5 EU TODO
+		addPacketOpcode(SM_WORLD_PLAYTIME.class, 0x185, idSet); // 7.5 EU
+		addPacketOpcode(SM_PLAYER_FAME.class, 0x186, idSet); // 7.5 EU
 		
 		// --------------------UNKNOWN PACKETS-----------------------//
 	}

@@ -51,6 +51,8 @@ public class Rewards {
 	protected Integer extendInventory;
 	@XmlAttribute(name = "extend_stigma")
 	protected Integer extendStigma;
+    @XmlAttribute(name= "fame_exp")
+    protected Integer fameExp;
 
 	/**
 	 * Gets the value of the selectableRewardItem property.
@@ -172,4 +174,11 @@ public class Rewards {
 	public Integer getExtendStigma() {
 		return extendStigma;
 	}
+
+	/**
+	 * @return the fameExp
+	 */
+    public Integer getFameExp() {
+        return fameExp;
+    }
 }

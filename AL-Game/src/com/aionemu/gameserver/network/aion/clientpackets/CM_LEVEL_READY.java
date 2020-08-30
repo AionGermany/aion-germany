@@ -34,9 +34,11 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_WINDSTREAM_ANNOUNCE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_YOUTUBE_VIDEO;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.BaseService;
+import com.aionemu.gameserver.services.DynamicFlagService;
 import com.aionemu.gameserver.services.FastTrackService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.TownService;
@@ -44,6 +46,7 @@ import com.aionemu.gameserver.services.WeatherService;
 import com.aionemu.gameserver.services.rift.RiftInformer;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.territory.TerritoryService;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapType;
 
@@ -103,14 +106,7 @@ public class CM_LEVEL_READY extends AionClientPacket {
 			SiegeService.getInstance().onEnterSiegeWorld(activePlayer);
 		}
 
-		activePlayer.getController().updateZone();
-		activePlayer.getController().updateNearbyQuests();
 		WeatherService.getInstance().loadWeather(activePlayer);
-		// SM_NPC_INFO Bases,Tower
-		BaseService.getInstance().onEnterBaseWorld(activePlayer);
-
-		// SM_RIFT_ANNOUNCE
-		RiftInformer.sendRiftsInfo(activePlayer);
 
 		// SM_UPGRADE_ARCADE
 		if (EventsConfig.ENABLE_EVENT_ARCADE && activePlayer.getLevel() >= 50) {
@@ -122,6 +118,7 @@ public class CM_LEVEL_READY extends AionClientPacket {
 		}
 
 		// SM_NEARBY_QUESTS
+		activePlayer.getController().updateZone();
 		activePlayer.getController().updateNearbyQuests();
 
 		if (activePlayer.isOnFastTrack()) {
@@ -133,9 +130,6 @@ public class CM_LEVEL_READY extends AionClientPacket {
 			}
 		}
 
-		/**
-		 * Loading weather for the player's region
-		 */
 		QuestEngine.getInstance().onEnterWorld(new QuestEnv(null, activePlayer, 0, 0));
 		activePlayer.getController().onEnterWorld();
 		// zone channel message (is this must be here?)
@@ -149,6 +143,7 @@ public class CM_LEVEL_READY extends AionClientPacket {
 		TerritoryService.getInstance().onEnterWorld(activePlayer);
 		// Base 4.3
 		BaseService.getInstance().onEnterBaseWorld(activePlayer);
+		DynamicFlagService.getInstance().onEnterWorld(activePlayer);
 		activePlayer.getEffectController().updatePlayerEffectIcons();
 		sendPacket(SM_CUBE_UPDATE.cubeSize(StorageType.CUBE, activePlayer));
 		TeleportService2.playerTransformation(activePlayer);
@@ -163,5 +158,6 @@ public class CM_LEVEL_READY extends AionClientPacket {
 			World.getInstance().spawn(summon);
 		}
 		activePlayer.setPortAnimation(2);
+		PacketSendUtility.sendPacket(activePlayer, new SM_YOUTUBE_VIDEO());
 	}
 }

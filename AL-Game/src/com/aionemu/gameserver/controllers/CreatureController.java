@@ -48,7 +48,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_MOVE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_CANCEL;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TARGET_SELECTED;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TARGET_UPDATE;
-import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.skillengine.model.ChargeSkill;
 import com.aionemu.gameserver.skillengine.model.HealType;
@@ -639,7 +638,6 @@ public abstract class CreatureController<T extends Creature> extends VisibleObje
 	@Override
 	public void onAfterSpawn() {
 		super.onAfterSpawn();
-		WorldBuffService.getInstance().onAfterSpawn(getOwner());
 		getOwner().revalidateZones();
 	}
 }

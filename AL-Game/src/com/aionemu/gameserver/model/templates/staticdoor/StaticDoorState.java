@@ -29,11 +29,11 @@ public enum StaticDoorState {
 	CLOSEABLE(1 << 2),
 	ONEWAY(1 << 3);
 
+	private int flag;
+
 	private StaticDoorState(int flag) {
 		this.flag = flag;
 	}
-
-	private int flag;
 
 	public int getFlag() {
 		return flag;

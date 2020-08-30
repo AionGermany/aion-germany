@@ -60,6 +60,11 @@ public class CM_PLAY_MOVIE_END extends AionClientPacket {
 	protected void runImpl() {
 		Player player = getConnection().getActivePlayer();
 		QuestEngine.getInstance().onMovieEnd(new QuestEnv(null, player, 0, 0), movieId);
-		player.getPosition().getWorldMapInstance().getInstanceHandler().onPlayMovieEnd(player, movieId);
+        if (player.getPosition().isInstanceMap()) {
+            player.getPosition().getWorldMapInstance().getInstanceHandler().onPlayMovieEnd(player, movieId);
+        } 
+        else {
+            player.getPosition().getWorld().getWorldMap(player.getWorldId()).getWorldHandler().onPlayMovieEnd(player, movieId);
+        }
 	}
 }

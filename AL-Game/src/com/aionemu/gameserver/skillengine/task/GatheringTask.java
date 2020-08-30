@@ -153,7 +153,10 @@ public class GatheringTask extends AbstractCraftTask {
 		ItemService.addItem(requestor, material.getItemid(), requestor.getRates().getGatheringCountRate());
 		if (requestor.isInInstance()) {
 			requestor.getPosition().getWorldMapInstance().getInstanceHandler().onGather(requestor, (Gatherable) responder);
-		}
+        } 
+        else {
+            requestor.getPosition().getWorld().getWorldMap(requestor.getWorldId()).getWorldHandler().onGather(requestor, (Gatherable) responder);
+        }
 		((Gatherable) responder).getController().rewardPlayer(requestor);
 		return true;
 	}

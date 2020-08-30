@@ -124,7 +124,6 @@ public final class DataManager {
 	public static RobotData ROBOT_DATA;
 	public static ArcadeUpgradeData ARCADE_UPGRADE_DATA;
 	public static HiddenStigmaTreeData HIDDEN_STIGMA_DATA;
-	public static WorldBuffData WORLD_BUFF_DATA;
 	public static PlayersAppearanceData PLAYER_APPEARANCE_DATA;
 	public static ServiceBuffData SERVICE_BUFF_DATA;
 	public static PlayersBonusData PLAYERS_BONUS_DATA;
@@ -258,7 +257,6 @@ public final class DataManager {
 		ROBOT_DATA = data.robotData;
 		ARCADE_UPGRADE_DATA = data.arcadeUpgradeData;
 		HIDDEN_STIGMA_DATA = data.hiddenStigmas;
-		WORLD_BUFF_DATA = data.buffData;
 		PLAYER_APPEARANCE_DATA = data.playerAppearance;
 		SERVICE_BUFF_DATA = data.serviceBuffData;
 		PLAYERS_BONUS_DATA = data.playersBonusData;

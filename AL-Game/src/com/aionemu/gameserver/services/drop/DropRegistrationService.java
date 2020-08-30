@@ -226,7 +226,10 @@ public class DropRegistrationService {
 
 		if (npc.getPosition().isInstanceMap()) {
 			npc.getPosition().getWorldMapInstance().getInstanceHandler().onDropRegistered(npc);
-		}
+        } 
+        else {
+            npc.getPosition().getWorld().getWorldMap(npc.getWorldId()).getWorldHandler().onDropRegistered(npc);
+        }
 		npc.getAi2().onGeneralEvent(AIEventType.DROP_REGISTERED);
 
 		for (Player p : dropPlayers) {

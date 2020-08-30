@@ -76,7 +76,9 @@ public class ItemActions {
 		@XmlElement(name = "sweep", type = ShugoSweepAction.class),
 		@XmlElement(name = "adoptminion", type = AdoptMinionAction.class),
 		@XmlElement(name = "unseal", type = UnSealAction.class),
-		@XmlElement(name = "adopttransformation", type = AdoptTransformationAction.class),})
+		@XmlElement(name = "adopttransformation", type = AdoptTransformationAction.class),
+		@XmlElement(name = "manastone_slot_expansion", type = ManastoneSlotExpansionAction.class),
+		@XmlElement(name = "fame_exp", type = FameAddExpAction.class),})
 
 	protected List<AbstractItemAction> itemActions;
 
@@ -255,6 +257,18 @@ public class ItemActions {
         for (AbstractItemAction action : itemActions) {
             if (action instanceof AdoptTransformationAction) {
 				return (AdoptTransformationAction) action;
+			}
+        }
+        return null;
+    }
+
+    public ManastoneSlotExpansionAction getMagmaticExpandSlot() {
+        if (itemActions == null) {
+            return null;
+        }
+        for (AbstractItemAction action : itemActions) {
+            if (action instanceof ManastoneSlotExpansionAction); {
+				return (ManastoneSlotExpansionAction) action;
 			}
         }
         return null;

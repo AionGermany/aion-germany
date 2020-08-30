@@ -96,7 +96,7 @@ import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.WeatherService;
 import com.aionemu.gameserver.services.WeddingService;
-import com.aionemu.gameserver.services.WorldBuffService;
+import com.aionemu.gameserver.services.WorldPlayTimeService;
 import com.aionemu.gameserver.services.abyss.AbyssRankUpdateService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
@@ -123,6 +123,7 @@ import com.aionemu.gameserver.services.player.FatigueService;
 import com.aionemu.gameserver.services.player.LunaShopService;
 import com.aionemu.gameserver.services.player.PlayerCubicService;
 import com.aionemu.gameserver.services.player.PlayerEventService;
+import com.aionemu.gameserver.services.player.PlayerFameService;
 import com.aionemu.gameserver.services.player.PlayerLimitService;
 import com.aionemu.gameserver.services.ranking.PlayerRankingUpdateService;
 import com.aionemu.gameserver.services.reward.OnlineBonus;
@@ -146,6 +147,7 @@ import com.aionemu.gameserver.utils.i18n.LanguageHandler;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 import com.aionemu.gameserver.utils.javaagent.JavaAgentUtils;
 import com.aionemu.gameserver.world.World;
+import com.aionemu.gameserver.world.WorldEngine;
 import com.aionemu.gameserver.world.geo.GeoService;
 import com.aionemu.gameserver.world.zone.ZoneService;
 
@@ -225,8 +227,10 @@ public class GameServer {
 
 		Lambda.enableJitting(true);
 		final GameEngine[] parallelEngines = new GameEngine[] { QuestEngine.getInstance(), InstanceEngine.getInstance(), AI2Engine.getInstance(), ChatProcessor.getInstance() };
+		final GameEngine[] worldEngines = new GameEngine[] { WorldEngine.getInstance() };
 
 		final CountDownLatch progressLatch = new CountDownLatch(parallelEngines.length);
+		final CountDownLatch progressLatch2 = new CountDownLatch(worldEngines.length);
 		initalizeLoggger();
 		initUtilityServicesAndConfig();
 		Util.printSection(" ### StaticData ### ");
@@ -273,6 +277,24 @@ public class GameServer {
 
 		try {
 			progressLatch.await();
+		}
+		catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+
+		for (int i = 0; i < worldEngines.length; i++) {
+			final int index = i;
+			ThreadPoolManager.getInstance().execute(new Runnable() {
+
+				@Override
+				public void run() {
+					worldEngines[index].load(progressLatch2);
+				}
+			});
+		}
+
+		try {
+			progressLatch2.await();
 		}
 		catch (InterruptedException e1) {
 			e1.printStackTrace();
@@ -362,7 +384,6 @@ public class GameServer {
 		 */
 		GarbageCollector.getInstance().start();
 		Util.printSsSection("Other Services");
-		WorldBuffService.getInstance();
 		// PetitionService.getInstance();
 		if (AIConfig.SHOUTS_ENABLE) {
 			NpcShoutsService.getInstance();
@@ -385,6 +406,8 @@ public class GameServer {
 		RoadService.getInstance();
 		AdminService.getInstance();
 		PlayerTransferService.getInstance();
+		Util.printSection(" ### Field Fame System ### ");
+		PlayerFameService.getInstance().init();
 		Util.printSection(" ### Housing ### ");
 		HousingBidService.getInstance().start();
 		MaintenanceTask.getInstance();
@@ -395,6 +418,7 @@ public class GameServer {
 		SupportService.getInstance();
 		HotspotTeleportService.getInstance();
 		TerritoryService.getInstance().init();
+		WorldPlayTimeService.getInstance().onStart();
 		if (MembershipConfig.ONLINE_BONUS_ENABLE)
 			OnlineBonus.getInstance();
 		RestartService.getInstance();

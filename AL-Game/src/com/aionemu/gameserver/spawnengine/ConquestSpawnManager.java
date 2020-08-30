@@ -53,7 +53,7 @@ public class ConquestSpawnManager {
 				// found = true;
 				int index = Rnd.get(0, (spawnpos.getValue().size() - 1));
 				final SpawnTemplate st = spawnpos.getValue().get(index);
-				int respawntime = 295;
+				int respawntime = 895;
 				ThreadPoolManager.getInstance().schedule(new Runnable() {
 
 					@Override
@@ -111,12 +111,14 @@ public class ConquestSpawnManager {
 		FastList<Integer> npc_gelk = new FastList<Integer>();
 		FastList<Integer> npc_ingg = new FastList<Integer>();
 
-		for (int i = 236307; i <= 236362; i++) // Npc Inggison
+		//for (int i = 236307; i <= 236362; i++) // Npc Inggison
+		for (int i = 661632; i <= 661655; i++) // Npc Inggison
 		{
 			npc_ingg.add(i);
 		}
 
-		for (int i = 236363; i <= 236418; i++) // Npc Gelkmaros
+		//for (int i = 236363; i <= 236418; i++) // Npc Gelkmaros
+		for (int i = 661934; i <= 661957; i++) // Npc Gelkmaros
 		{
 			npc_gelk.add(i);
 		}
@@ -142,7 +144,7 @@ public class ConquestSpawnManager {
 		// SpawnTemplate Gelkmaros
 		for (int id : npc_gelk) {
 			template_gelk.append("\t\t<!-- " + DataManager.NPC_DATA.getNpcTemplate(id).getName() + " -->\r\n");
-			template_gelk.append("\t\t<spawn npc_id=\"" + id + "\" respawn_time=\"295\" handler=\"CONQUEST\">\r\n");
+			template_gelk.append("\t\t<spawn npc_id=\"" + id + "\" respawn_time=\"895\" handler=\"CONQUEST\">\r\n");
 			template_gelk.append(spots_gelk);
 		}
 		template_gelk.append("\t</spawn_map>\r\n");
@@ -155,7 +157,7 @@ public class ConquestSpawnManager {
 		// SpawnTemplate Inggison
 		for (int id : npc_ingg) {
 			template_ingg.append("\t\t<!-- " + DataManager.NPC_DATA.getNpcTemplate(id).getName() + " -->\r\n");
-			template_ingg.append("\t\t<spawn npc_id=\"" + id + "\" respawn_time=\"295\" handler=\"CONQUEST\">\r\n");
+			template_ingg.append("\t\t<spawn npc_id=\"" + id + "\" respawn_time=\"895\" handler=\"CONQUEST\">\r\n");
 			template_ingg.append(spots_ingg);
 		}
 		template_ingg.append("\t</spawn_map>\r\n");

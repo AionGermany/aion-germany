@@ -24,6 +24,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
+import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 import com.aionemu.gameserver.model.templates.zone.ZoneClassName;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
@@ -193,7 +194,7 @@ public class PlayerRestrictions extends AbstractRestrictions {
 
 	@Override
 	public boolean canInviteToGroup(Player player, Player target) {
-		final com.aionemu.gameserver.model.team2.group.PlayerGroup group = player.getPlayerGroup2();
+		PlayerGroup group = player.getPlayerGroup2();
 
 		if (group != null && group.isFull()) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_CANT_ADD_NEW_MEMBER);
@@ -251,7 +252,7 @@ public class PlayerRestrictions extends AbstractRestrictions {
 			return false;
 		}
 
-		final com.aionemu.gameserver.model.team2.alliance.PlayerAlliance alliance = player.getPlayerAlliance2();
+		PlayerAlliance alliance = player.getPlayerAlliance2();
 		if (level < 10) {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_ALLIANCE_TOO_LOW_LEVEL_TO_INVITE("10"));
 			return false;
@@ -311,7 +312,7 @@ public class PlayerRestrictions extends AbstractRestrictions {
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_UNION_ONLY_INVITE_FORCE_MEMBER);
 			return false;
 		}
-		final com.aionemu.gameserver.model.team2.alliance.PlayerAlliance alliance = player.getPlayerAlliance2();
+		PlayerAlliance alliance = player.getPlayerAlliance2();
 		 if (target.isInLeague()) {
 			if (target.getPlayerAlliance2() == alliance) {
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_UNION_ALREADY_MY_UNION(target.getName()));

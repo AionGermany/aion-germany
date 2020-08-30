@@ -79,6 +79,7 @@ public enum ItemCategory {
 	BRACELET,
 	ESTIMA,
 	SPRAY,
+	MANA_SLOT_OPEN,
 	ODIAN,
 	RUNE,
 	NONE

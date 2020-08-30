@@ -141,6 +141,7 @@ import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.services.TransformationService;
 import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.WarehouseService;
+import com.aionemu.gameserver.services.WorldPlayTimeService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
@@ -955,6 +956,8 @@ public final class PlayerEnterWorldService {
 			if (CraftConfig.DELETE_EXCESS_CRAFT_ENABLE)
 				RelinquishCraftStatus.removeExcessCraftStatus(player, false);
 
+			WorldPlayTimeService.getInstance().onEnterWorld(player);
+			PlayerFameService.getInstance().onPlayerLogin(player);
 			PlayerTransferService.getInstance().onEnterWorld(player);
 			player.setPartnerId(DAOManager.getDAO(WeddingDAO.class).loadPartnerId(player));
 

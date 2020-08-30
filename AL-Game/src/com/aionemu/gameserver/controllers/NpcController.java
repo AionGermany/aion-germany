@@ -60,10 +60,10 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.DialogService;
 import com.aionemu.gameserver.services.RespawnService;
 import com.aionemu.gameserver.services.SiegeService;
-import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.drop.DropService;
+import com.aionemu.gameserver.services.player.PlayerFameService;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -177,8 +177,14 @@ public class NpcController extends CreatureController<Npc> {
 			if (owner.getAi2().poll(AIQuestion.SHOULD_REWARD)) {
 				this.doReward();
 			}
-			owner.getPosition().getWorldMapInstance().getInstanceHandler().onDie(owner);
-			owner.getAi2().onGeneralEvent(AIEventType.DIED);
+            if (owner.getPosition().isInstanceMap()) {
+                owner.getPosition().getWorldMapInstance().getInstanceHandler().onDie(owner);
+                owner.getAi2().onGeneralEvent(AIEventType.DIED);
+            } 
+            else {
+                owner.getPosition().getWorld().getWorldMap(owner.getWorldId()).getWorldHandler().onDie(owner);
+                owner.getAi2().onGeneralEvent(AIEventType.DIED);
+            }
 		}
 		finally { // always make sure npc is schedulled to respawn
 			if (owner.getAi2().poll(AIQuestion.SHOULD_DECAY)) {
@@ -208,8 +214,13 @@ public class NpcController extends CreatureController<Npc> {
 			if (owner.getAi2().poll(AIQuestion.SHOULD_REWARD)) {
 				this.doReward();
 			}
-			owner.getPosition().getWorldMapInstance().getInstanceHandler().onDie(owner);
-			owner.getAi2().onGeneralEvent(AIEventType.DIED);
+            if (owner.getPosition().isInstanceMap()) {
+                owner.getPosition().getWorldMapInstance().getInstanceHandler().onDie(owner);
+                owner.getAi2().onGeneralEvent(AIEventType.DIED);
+            } else {
+                owner.getPosition().getWorld().getWorldMap(owner.getWorldId()).getWorldHandler().onDie(owner);
+                owner.getAi2().onGeneralEvent(AIEventType.DIED);
+            }
 		}
 		finally { // always make sure npc is schedulled to respawn
 			if (owner.getAi2().poll(AIQuestion.SHOULD_DECAY)) {
@@ -287,37 +298,24 @@ public class NpcController extends CreatureController<Npc> {
 					QuestEngine.getInstance().onKill(new QuestEnv(getOwner(), player, 0, 0));
 					// When a player defeat a "Boss" all ppls on server see!!!
 					defeatNamedMsg(player);
-					// Reward XP Solo (New system, Exp Retail NA)
+
+					PlayerFameService.getInstance().addFameExp(player, 10 * getOwner().getLevel() / 2);
 					switch (player.getWorldId()) {
-						case 301540000: // Archives Of Eternity
-						case 301550000: // Cradle Of Eternity
-                    	case 301560000: // Museum of Knowledge
-						case 301600000: // Adma's Fall
-						case 301610000: // Theobomos Test Chamber
-						case 301620000: // Drakenseer's Lair
-						case 301630000: // Contaminated Underpath
-						case 301640000: // Secret Munitions Factory
-						case 301650000: // Ashunatal Dredgion
-						case 301660000: // Fallen Poeta
-						case 302100000: // Fissure Of Oblivion
-                        case 302340000: // Narakkalli
-                        case 302350000: // Neviwind Canyon
-                        case 302400000: // Tower of Challenge
-							player.getCommonData().addExp(Rnd.get(480000, 550000), RewardType.HUNTING, this.getOwner().getObjectTemplate().getNameId());
-							break;
-						case 210100000: // Iluma
-						case 220110000: // Norsvold
+						case 210050000:
+						case 220070000:
+						case 600010000:
 							AbyssPointsService.addAp(player, getOwner(), Rnd.get(60, 100));
-							player.getCommonData().addExp(Rnd.get(480000, 550000), RewardType.HUNTING, this.getOwner().getObjectTemplate().getNameId());
 							break;
-						case 600090000: // Kaldor
-						case 600100000: // Levinshor
-							player.getCommonData().addExp(Rnd.get(50000, 100000), RewardType.HUNTING, this.getOwner().getObjectTemplate().getNameId());
-							break;
-						default:
-							player.getCommonData().addExp(rewardXp, RewardType.HUNTING, this.getOwner().getObjectTemplate().getNameId());
+						case 600040000: 
+						case 800030000: 
+						case 800040000: 
+						case 800050000: 
+						case 800060000: 
+						case 800070000:
+							AbyssPointsService.addGp(player, Rnd.get(10, 60));
 							break;
 					}
+					player.getCommonData().addExp(rewardXp, RewardType.HUNTING, getOwner().getObjectTemplate().getNameId());
 					player.getCommonData().addDp(rewardDp);
 					if (getOwner().isRewardAP()) {
 						int calculatedAp = StatFunctions.calculatePvEApGained(player, getOwner());
@@ -413,7 +411,6 @@ public class NpcController extends CreatureController<Npc> {
 			onDelete();
 		}
 		super.onReturnHome();
-		WorldBuffService.getInstance().onReturnHome(getOwner());
 	}
 
 	@Override

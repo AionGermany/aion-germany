@@ -340,15 +340,10 @@ public class Npc extends Creature {
 		return walkerGroupShift;
 	}
 
-	@Override
-	public boolean isFlag() {
-		return getObjectTemplate().getNpcTemplateType().equals(NpcTemplateType.FLAG);
-	}
-
-	@Override
-	public boolean isRaidMonster() {
-		return getObjectTemplate().getNpcTemplateType().equals(NpcTemplateType.RAID_MONSTER);
-	}
+    @Override
+    public boolean isFlag() {
+        return getObjectTemplate().getNpcTemplateType() == NpcTemplateType.FLAG && getObjectTemplate().getNpcTemplateType() == NpcTemplateType.MONSTER && getObjectTemplate().getNpcTemplateType() == NpcTemplateType.RAID_MONSTER;
+    }
 
 	public boolean isBoss() {
 		return getObjectTemplate().getRating() == NpcRating.HERO || getObjectTemplate().getRating() == NpcRating.LEGENDARY;

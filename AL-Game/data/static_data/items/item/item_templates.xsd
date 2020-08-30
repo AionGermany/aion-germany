@@ -116,6 +116,8 @@
 		<xs:attribute name="attack_gap" type="xs:float" use="optional"/>
 		<xs:attribute name="slot" type="xs:int" use="optional"/>
 		<xs:attribute name="m_slots" type="xs:int"/>
+		<xs:attribute name="option_slot_max" type="xs:int" use="optional"/>
+		<xs:attribute name="option_slot_add_count" type="xs:int" use="optional"/>
 		<xs:attribute name="max_enchant" type="xs:int"/>
 		<xs:attribute name="max_enchant_bonus" type="xs:int"/>
 		<xs:attribute name="exceed_enchant" type="xs:boolean" default="false"/>
@@ -233,6 +235,8 @@
 			<xs:element name="adoptminion" type="AdoptMinionAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="adopttransformation" type="AdoptTransformationAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="unseal" type="UnsealAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="manastone_slot_expansion" type="ManastoneSlotExpansionAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fame_exp" type="FameAddExpAction" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ShugoSweepAction">
@@ -501,6 +505,13 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="FameAddExpAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction">
+				<xs:attribute name="value" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="PolishAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">
@@ -558,6 +569,11 @@
 			<xs:extension base="AbstractItemAction">
 				<xs:attribute name="action" type="xs:int"/>
 			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ManastoneSlotExpansionAction">
+		<xs:complexContent>
+			<xs:extension base="AbstractItemAction"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:simpleType name="equipType">
@@ -693,6 +709,7 @@
 			<xs:enumeration value="NONE"/>
 			<xs:enumeration value="BRACELET"/>
 			<xs:enumeration value="ESTIMA"/>
+			<xs:enumeration value="MANA_SLOT_OPEN"/>
 			<xs:enumeration value="ODIAN"/>
 			<xs:enumeration value="RUNE"/>
 		</xs:restriction>

@@ -59,7 +59,6 @@ import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.PunishmentService;
 import com.aionemu.gameserver.services.RepurchaseService;
 import com.aionemu.gameserver.services.SkillLearnService;
-import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropService;
 import com.aionemu.gameserver.services.events.EventWindowService;
@@ -128,7 +127,6 @@ public class PlayerLeaveWorldService {
 		}
 		InstanceService.onLogOut(player);
 		KiskService.getInstance().onLogout(player);
-		WorldBuffService.getInstance().onLogOut(player);
 		ConquerorsService.getInstance().onLogOut(player);
 		FatigueService.getInstance().onPlayerLogout(player);
 		player.getMoveController().abortMove();

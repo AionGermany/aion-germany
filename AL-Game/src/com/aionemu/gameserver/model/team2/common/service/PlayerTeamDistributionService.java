@@ -34,6 +34,7 @@ import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
+import com.aionemu.gameserver.services.player.PlayerFameService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.StatFunctions;
@@ -92,6 +93,8 @@ public class PlayerTeamDistributionService {
 					PacketSendUtility.sendPacket(member, new SM_STATS_INFO(member));
 				}
 			}
+			PlayerFameService.getInstance().addFameExp(member, 10 * owner.getLevel() / 2);
+
 			long rewardXp = expReward * bonus * member.getLevel() / (filteredStats.partyLvlSum * 100);
 			int rewardDp = StatFunctions.calculateGroupDPReward(member, owner);
 			float rewardAp = 1;
@@ -114,29 +117,14 @@ public class PlayerTeamDistributionService {
 			rewardAp *= damagePercent;
 			// Reward XP Group (New system, Exp Retail NA)
 			switch (member.getWorldId()) {
-				case 301540000: // Archives Of Eternity
-				case 301550000: // Cradle Of Eternity
-				case 301600000: // Adma's Fall
-				case 301610000: // Theobomos Test Chamber
-				case 301620000: // Drakenseer's Lair
-				case 301650000: // Ashunatal Dredgion
-				case 301660000: // Fallen Poeta
-					member.getCommonData().addExp(Rnd.get(480000, 550000), RewardType.GROUP_HUNTING, owner.getObjectTemplate().getNameId());
-					break;
-				case 210100000: // Iluma
-				case 220110000: // Norsvold
+				case 210050000:
+                case 220070000:
+                case 600010000:
 					AbyssPointsService.addAp(member, owner, Rnd.get(60, 100));
-					member.getCommonData().addExp(Rnd.get(480000, 550000), RewardType.GROUP_HUNTING, owner.getObjectTemplate().getNameId());
-					break;
-				case 600090000: // Kaldor
-				case 600100000: // Levinshor
-					member.getCommonData().addExp(Rnd.get(50000, 100000), RewardType.GROUP_HUNTING, owner.getObjectTemplate().getNameId());
-					break;
-				default:
-					member.getCommonData().addExp(rewardXp, RewardType.GROUP_HUNTING, owner.getObjectTemplate().getNameId());
 					break;
 			}
 
+			member.getCommonData().addExp(rewardXp, RewardType.GROUP_HUNTING, owner.getObjectTemplate().getNameId());
 			// DP reward
 			member.getCommonData().addDp(rewardDp);
 

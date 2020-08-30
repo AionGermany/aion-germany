@@ -87,6 +87,7 @@ import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.services.item.ItemService;
+import com.aionemu.gameserver.services.player.PlayerFameService;
 import com.aionemu.gameserver.services.reward.BonusService;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.MathUtil;
@@ -408,6 +409,9 @@ public final class QuestService {
 		}
 		// TODO - Creativity Points 5.x
 		if (rewards.getRewardCP() != null) {}
+        if (rewards.getFameExp() != null) {
+            PlayerFameService.getInstance().addFameExp(player, rewards.getFameExp().intValue());
+        }
 		if (rewards.getExtendInventory() != null) {
 			if (rewards.getExtendInventory() == 1) {
 				CubeExpandService.expand(player, false);

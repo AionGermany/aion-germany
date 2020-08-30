@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-02-20 22:07 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-08-07 11:20 -->
 <zones>
     <zone mapid="210010000" name="WZ_WEATHERZONE01_210010000" area_type="POLYGON" zone_type="WEATHER">
         <points bottom="0.1" top="600.099976">
@@ -765,30 +765,21 @@
             <point x="1005.0" y="1409.0"/>
         </points>
     </zone>
-    <zone mapid="300490000" name="WZ_WEATHERZONE01_300490000" area_type="POLYGON" zone_type="WEATHER">
-        <points bottom="163.146027" top="1163.145996">
-            <point x="2.25927" y="2.347305"/>
-            <point x="3065.283936" y="5.970327"/>
-            <point x="3063.549316" y="3065.662598"/>
-            <point x="2.883898" y="3069.625977"/>
-        </points>
-    </zone>
-    <zone mapid="300490000" name="WZ_WEATHERZONE02_BEACH_300490000" area_type="POLYGON" zone_type="WEATHER">
-        <points bottom="-24.703255" top="975.296753">
-            <point x="1233.232178" y="518.306763"/>
-            <point x="1079.912598" y="399.577362"/>
-            <point x="1144.703857" y="178.773376"/>
-            <point x="1248.144165" y="49.943848"/>
-            <point x="2316.588867" y="83.307587"/>
-            <point x="2234.923096" y="184.705841"/>
-            <point x="2169.078613" y="266.515228"/>
-            <point x="2073.483887" y="192.341003"/>
-            <point x="2001.850464" y="169.609833"/>
-            <point x="1795.873413" y="201.975891"/>
-            <point x="1727.623535" y="217.567352"/>
-            <point x="1595.185303" y="253.069855"/>
-            <point x="1486.698242" y="230.330139"/>
-            <point x="1357.717285" y="391.22998"/>
+    <zone mapid="300480000" name="WZ_WEATHER_SNOW_300480000" area_type="POLYGON" zone_type="WEATHER">
+        <points bottom="0.1" top="300.100006">
+            <point x="286.033783" y="363.338898"/>
+            <point x="260.838226" y="397.312103"/>
+            <point x="225.315521" y="433.845215"/>
+            <point x="224.799774" y="477.911682"/>
+            <point x="199.294022" y="497.511841"/>
+            <point x="214.768097" y="563.098755"/>
+            <point x="340.022949" y="581.095154"/>
+            <point x="512.256958" y="650.44989"/>
+            <point x="591.942383" y="629.277466"/>
+            <point x="577.699097" y="477.990631"/>
+            <point x="456.823608" y="465.672089"/>
+            <point x="305.921722" y="436.415588"/>
+            <point x="330.558777" y="355.190369"/>
         </points>
     </zone>
     <zone mapid="301390000" name="WZ_WEATHERZONE01_301390000" area_type="POLYGON" zone_type="WEATHER">

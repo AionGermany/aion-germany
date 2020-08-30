@@ -20,6 +20,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.GodstoneAction;
+import com.aionemu.gameserver.model.templates.item.actions.ManastoneSlotExpansionAction;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
@@ -27,10 +28,15 @@ import com.aionemu.gameserver.services.item.ItemSocketService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author ATracer, Wakizashi, Alcapwnd
  */
 public class CM_MANASTONE extends AionClientPacket {
+
+	Logger log = LoggerFactory.getLogger(CM_MANASTONE.class);
 
 	private int slotNum;
 	private int actionType;
@@ -64,6 +70,9 @@ public class CM_MANASTONE extends AionClientPacket {
 				readH();
 				readD(); //Old = npcObjId
 				break;
+		    default:
+				log.error("Unknown enchantment type? 0x" + Integer.toHexString(actionType).toUpperCase());
+			break;
 		}
 	}
 
@@ -75,8 +84,11 @@ public class CM_MANASTONE extends AionClientPacket {
 			case 1: // enchant stone
 			case 2: // add manastone
 				EnchantItemAction action = new EnchantItemAction();
+				ManastoneSlotExpansionAction action2 = new ManastoneSlotExpansionAction();
+
 				Item manastone = player.getInventory().getItemByObjId(stoneUniqueId);
 				Item targetItem = player.getEquipment().getEquippedItemByObjId(targetItemUniqueId);
+
 				if (targetItem == null) {
 					targetItem = player.getInventory().getItemByObjId(targetItemUniqueId);
 				}
@@ -89,6 +101,9 @@ public class CM_MANASTONE extends AionClientPacket {
 					}
 					action.act(player, manastone, targetItem, supplement, targetFusedSlot);
 				}
+                if (manastone.getItemTemplate().isManaSlotOpen() && action2.canAct(player, manastone, targetItem)) {
+                    action2.act(player, manastone, targetItem);
+                }
 				break;
 			case 3: // remove manastone
 				long price = PricesService.getPriceForService(65000, player.getRace());

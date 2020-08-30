@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<spawns>
+    <spawn_map map_id="800060000">
+		<dynamic_portal_spawn id="1">
+			<dynamic_portal_type dstate="OPEN">
+				<!-- Elyos Dimensional Rift ||| LDF8_toLDF5a_L -->
+				<spawn npc_id="839270" respawn_time="295">
+					<spot x="958.0436" y="1541.7207" z="715.8666" h="0"/>
+				</spawn>
+				<!-- Dimensional Rift ||| LDF5A_Junction_Teleport_Li -->
+				<spawn npc_id="838876" respawn_time="295">
+					<spot x="958.0436" y="1541.7207" z="715.8666" h="0"/>
+				</spawn>
+				<!-- Asmodian Dimensional Rift ||| LDF8_toLDF5a_D -->
+				<spawn npc_id="839271" respawn_time="295">
+					<spot x="958.0436" y="1718.7028" z="715.86664" h="0"/>
+				</spawn>
+				<!-- Dimensional Rift ||| LDF5A_Junction_Teleport_Da -->
+				<spawn npc_id="838877" respawn_time="295">
+					<spot x="958.0436" y="1718.7028" z="715.86664" h="0"/>
+				</spawn>
+			</dynamic_portal_type>
+			<dynamic_portal_type dstate="CLOSED">
+			</dynamic_portal_type>
+		</dynamic_portal_spawn>
+    </spawn_map>
+</spawns>

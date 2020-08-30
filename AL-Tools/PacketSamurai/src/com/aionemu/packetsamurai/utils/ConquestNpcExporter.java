@@ -290,7 +290,7 @@ public class ConquestNpcExporter {
 				NpcTemplate npc = NpcsTool.getNpcTemplate(spawn.npc_id);
 								
 				template_sb.append("\t\t<!-- "+npc.getName()+" ||| "+npc.getNameDesc()+" -->\r\n");
-				template_sb.append("\t\t<spawn npc_id=\""+npc.getNpcId()+"\" respawn_time=\""+(spawn.respawntime > 0 ? spawn.respawntime : "105")+"\" handler=\"CONQUEST\">"+(spawn.isNew ? " <!-- New -->" : "")+"\r\n");
+				template_sb.append("\t\t<spawn npc_id=\""+npc.getNpcId()+"\" respawn_time=\""+(spawn.respawntime > 0 ? spawn.respawntime : "895")+"\" handler=\"CONQUEST\">"+(spawn.isNew ? " <!-- New -->" : "")+"\r\n");
 				Map<Float, SpawnSpot> sp = new TreeMap<Float, SpawnSpot>();
 				for (SpawnSpot s :spawn.spots)
 				{
