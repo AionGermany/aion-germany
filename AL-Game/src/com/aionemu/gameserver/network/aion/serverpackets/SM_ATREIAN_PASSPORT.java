@@ -16,6 +16,8 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import java.util.Calendar;
+
 import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
@@ -39,9 +41,12 @@ public class SM_ATREIAN_PASSPORT extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeH(2011); // Year?
-		writeH(4); // Month?
-		writeH(14); // Day?
+		long tStamp = con.getActivePlayer().getPlayerAccount().getPlayerAccountData(con.getActivePlayer().getObjectId()).getPlayerCommonData().getCreationDate().getTime();
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(tStamp);
+		writeH(cal.get(Calendar.YEAR)); // Year?
+		writeH(cal.get(Calendar.MONTH)); // Month?
+		writeH(cal.get(Calendar.DAY_OF_MONTH)); // Day?
 		writeH(EventsConfig.ENABLE_ATREIAN_PASSPORT); // 1=on, 0=off
 		writeD(passportId); // Id
 		writeD(lastStampRecived);
