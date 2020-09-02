@@ -514,6 +514,9 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("minium") || destination.equalsIgnoreCase("Minium Vault")) {
 			goTo(player, 302641000, 527.2168f, 121.103f, 175.90004f, (byte) 30);
 		}
+		else if (destination.equalsIgnoreCase("event") || destination.equalsIgnoreCase("Aion Event 11th")) {
+			goTo(player, 600082000, 657.6f, 611.0f, 55.412617f, (byte) 0);
+		}
 		else {
 			PacketSendUtility.sendMessage(player, "Could not find the specified destination !");
 		}

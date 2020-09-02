@@ -50642,7 +50642,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1404769</id>
     <name>STR_MSG_LDF7_E_Raid_Named</name>
-    <body>The Raging Anomos has appeared.</body>
+    <body>Crazed Anomos has appeared.</body>
     <message_type>8</message_type>
     <display_type>1024</display_type>
   </string>
@@ -53681,7 +53681,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405194</id>
     <name>STR_MSG_IDSweep_03_01</name>
-    <body>You gathered strength successfully.</body>
+    <body>The Daeva Ranger’s energy has a sweet smell.</body>
     <message_type>8</message_type>
     <display_type>1024</display_type>
     <ment>score_alert_30s_fix</ment>
@@ -53689,7 +53689,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405195</id>
     <name>STR_MSG_IDSweep_03_02</name>
-    <body>Righteous Daeva Rangers! Special Attack activated!</body>
+    <body>The mellifluous odour weakens the enemy!</body>
     <message_type>8</message_type>
     <display_type>1024</display_type>
     <ment>score_alert_30s_fix</ment>
@@ -53776,14 +53776,14 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405206</id>
     <name>STR_MSG_IDSweep_03_S2_01</name>
-    <body>The Green and Black Rangers are preparing for the special attack.\nGather your strength to use the special attack!</body>
+    <body>The Green and Black Rangers are preparing for the special attack.\nGather your strength and spread a sweet armoa.</body>
     <message_type>0</message_type>
     <display_type>1024</display_type>
   </string>
   <string>
     <id>1405207</id>
     <name>STR_MSG_IDSweep_03_S2_02</name>
-    <body>Righteous Daeva Rangers! Special Attack activated!</body>
+    <body>The mellifluous odour weakens the enemy!</body>
     <message_type>0</message_type>
     <display_type>1024</display_type>
   </string>
@@ -57990,14 +57990,14 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405808</id>
     <name>STR_MSG_IDEvent_Def_h_lucky_01</name>
-    <body>Quacki has appeared in front of the last barrier entrance.</body>
+    <body>The Wildcat has appeared in front of the last barrier entrance.</body>
     <message_type>8</message_type>
     <display_type>1024</display_type>
   </string>
   <string>
     <id>1405809</id>
     <name>STR_MSG_IDEvent_Def_h_lucky_02</name>
-    <body>Quacko has appeared in front of the last barrier entrance.</body>
+    <body>The Wildcat has appeared in front of the last barrier entrance.</body>
     <message_type>8</message_type>
     <display_type>1024</display_type>
   </string>
@@ -60615,6 +60615,48 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>1</display_type>
   </string>
   <string>
+    <id>1406182</id>
+    <name>STR_MSG_Event_CM_buff_warrior_1to75</name>
+    <body>This blessing is only bestowed on Gladiators and Templars up to level 75.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406183</id>
+    <name>STR_MSG_Event_CM_buff_scout_1to75</name>
+    <body>This blessing is only bestowed on Rangers and Assassins up to level 75.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406184</id>
+    <name>STR_MSG_Event_CM_buff_mage_1to75</name>
+    <body>This blessing is only bestowed on Sorcerers and Spiritmasters up to level 75.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406185</id>
+    <name>STR_MSG_Event_CM_buff_cleric_1to75</name>
+    <body>This blessing is only bestowed on Clerics and Chanters up to level 75.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406186</id>
+    <name>STR_MSG_Event_CM_buff_engineer_1to75</name>
+    <body>This blessing is only bestowed on Gunners and Aethertechs up to level 75.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406187</id>
+    <name>STR_MSG_Event_CM_buff_artist_1to75</name>
+    <body>This blessing is only bestowed on Painters and Bards up to level 75.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
     <id>1406259</id>
     <name>STR_MSG_ITEM_SLOT_ODIAN_RESTORE_CANCEL</name>
     <body>The Odian slot reset for %0 has been cancelled.</body>
@@ -60660,6 +60702,27 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <id>1406265</id>
     <name>STR_MSG_CANNOT_USE_SLOT_RESTORE_ITEM_NOW</name>
     <body>You cannot use %0 while in this state.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406288</id>
+    <name>STR_MSG_WORLD_STIGMA_CANT_USE_ENCHANTED_OVER</name>
+    <body>You can only enchant %0 with Stigmas below level %1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406303</id>
+    <name>STR_MSG_AUTOHUNT_MSG_CAN_NOT_RIDE</name>
+    <body>You cannot level up during Combat Support.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406316</id>
+    <name>STR_AUTOHUNT_MSG_FORBIDDEN_COUNTRY</name>
+    <body>This function is not available in your region.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>

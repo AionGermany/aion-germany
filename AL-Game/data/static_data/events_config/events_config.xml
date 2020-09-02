@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs;Lost Ring Event</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs;Lost Ring Event;Aion Event 11th</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -670,6 +670,24 @@
 						<spot x="2830.4" y="2061.2" z="712.975" h="90"/>
 						<spot x="2792.6" y="2092.3" z="714.3506" h="30"/>
 						<spot x="2792.6" y="2092.3" z="714.3506" h="30"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Aion Event 11th" start="2020-09-02T00:00:00+00:00" end="2020-09-30T00:00:00+00:00">
+            <spawns>
+                <!-- Inggison -->
+                <spawn_map map_id="210050000">
+					<!-- AION Dreamscape Entrance ||| Aion_Event_11th_Entrance_L -->
+					<spawn npc_id="840578" respawn_time="295">
+						<spot x="1358.9" y="265.8" z="589.78625" h="53"/>
+					</spawn>
+                </spawn_map>
+                <!-- Gelkmaros -->
+                <spawn_map map_id="220070000">
+					<!-- AION Dreamscape Entrance ||| Aion_Event_11th_Entrance_D -->
+					<spawn npc_id="840580" respawn_time="295">
+						<spot x="1815.3" y="2911.4" z="548.5258" h="40"/>
 					</spawn>
                 </spawn_map>
             </spawns>
