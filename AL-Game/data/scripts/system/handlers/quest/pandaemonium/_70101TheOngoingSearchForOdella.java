@@ -17,14 +17,17 @@
 package quest.pandaemonium;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.teleport.TeleportService2;
 
 /**
- * @author QuestGenerator by Mariella
+ * @author Falke_34
  */
 public class _70101TheOngoingSearchForOdella extends QuestHandler {
 
@@ -36,71 +39,92 @@ public class _70101TheOngoingSearchForOdella extends QuestHandler {
 
 	@Override
 	public void register() {
+		qe.registerQuestNpc(798800).addOnTalkEvent(questId);
+		qe.registerQuestNpc(204191).addOnTalkEvent(questId);
+		qe.registerQuestNpc(806820).addOnTalkEvent(questId);
 		qe.registerOnLevelUp(questId);
-		qe.registerQuestNpc(798800).addOnTalkEvent(questId); // Agehia
-		qe.registerQuestNpc(204191).addOnTalkEvent(questId); // Doman
-		qe.registerQuestNpc(806820).addOnTalkEvent(questId); // Cheska 2
+		qe.registerOnEnterWorld(questId);
 	}
 
 	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 70000, false);
+	public boolean onEnterWorldEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null) {
+			env.setQuestId(questId);
+			QuestService.startQuest(env);
+		} else if (qs.getStatus() == QuestStatus.START) {
+			if (player.getWorldId() == 220040000) {
+				qs.setQuestVar(2);
+				qs.setStatus(QuestStatus.REWARD);
+				updateQuestStatus(env);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
-
+		final Player player = env.getPlayer();
+		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null) {
 			return false;
 		}
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-				case 798800: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1011);
-						}
-						case SETPRO1: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 204191: {
-					switch (dialog) {
-						// ToDo: check correct action for this npc
-						case USE_OBJECT: {
-							qs.setQuestVar(2);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
-							return false;
-						}
-						default: 
-							break;
-					}
-					break;
-				}
+		int targetId = env.getTargetId();
+		DialogAction action = env.getDialog();
+
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			if (targetId == 798800) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1011);
+				case SELECT_ACTION_1011:
+					return sendQuestDialog(env, 1012);
+				case SETPRO1:
+					qs.setQuestVar(1);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
 				default:
 					break;
+				}
+			} else if (targetId == 204919) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 2034);
+				case SELECT_ACTION_2035:
+					return sendQuestDialog(env, 2035);
+				case SET_SUCCEED:
+					qs.setQuestVar(3);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
 			}
+
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 806820) {
-				if (dialog == DialogAction.USE_OBJECT) {
+				switch (action) {
+				case USE_OBJECT:
 					return sendQuestDialog(env, 10002);
+				case SELECT_QUEST_REWARD:
+					return sendQuestDialog(env, 5);
+				case SELECTED_QUEST_NOREWARD:
+					TeleportService2.teleportTo(player, 120020000, 1518.9551f, 1400.9744f, 271.72427f, (byte) 70, TeleportAnimation.JUMP_ANIMATION);
+					return sendQuestEndDialog(env);
+				default:
+					break;
 				}
-				return sendQuestEndDialog(env);
 			}
-		}
 
+		}
 		return false;
+	}
+
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env);
 	}
 }

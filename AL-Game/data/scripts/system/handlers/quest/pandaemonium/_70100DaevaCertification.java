@@ -17,18 +17,22 @@
 package quest.pandaemonium;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.teleport.TeleportService2;
 
 /**
- * @author QuestGenerator by Mariella
+ * @author Falke_34
  */
 public class _70100DaevaCertification extends QuestHandler {
 
 	private final static int questId = 70100;
+	private final static int[] onTalkNpc = {};
 
 	public _70100DaevaCertification() {
 		super(questId);
@@ -36,103 +40,112 @@ public class _70100DaevaCertification extends QuestHandler {
 
 	@Override
 	public void register() {
+		for (int npc : onTalkNpc) {
+			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
+		}
+		qe.registerQuestNpc(203679).addOnTalkEvent(questId);
+		qe.registerQuestNpc(204182).addOnTalkEvent(questId);
+		qe.registerQuestNpc(204075).addOnTalkEvent(questId);
+		qe.registerQuestNpc(798800).addOnTalkEvent(questId);
+		qe.registerQuestNpc(730268).addOnTalkEvent(questId);
 		qe.registerOnLevelUp(questId);
-		qe.registerQuestNpc(203679).addOnTalkEvent(questId); // Osmar
-		qe.registerQuestNpc(204182).addOnTalkEvent(questId); // Heimdall
-		qe.registerQuestNpc(204075).addOnTalkEvent(questId); // Balder
-		qe.registerQuestNpc(730268).addOnTalkEvent(questId); // Convent of Marchutan Teleport Statue
-		qe.registerQuestNpc(798800).addOnTalkEvent(questId); // Agehia
+		qe.registerOnEnterWorld(questId);
 	}
 
 	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 70000, false);
+	public boolean onEnterWorldEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null) {
+			env.setQuestId(questId);
+			QuestService.startQuest(env);
+		} else if (qs.getStatus() == QuestStatus.START) {
+			if (player.getWorldId() == 120010000) {
+				changeQuestStep(env, 0, 1, false);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
-
+		final Player player = env.getPlayer();
+		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null) {
 			return false;
 		}
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-				case 203679: {
-					switch (dialog) {
-						// ToDo: check correct action for this npc
-						case USE_OBJECT: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
-							return false;
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 204182: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1352);
-						}
-						case SETPRO2: {
-							qs.setQuestVar(2);
-							updateQuestStatus(env);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 204075: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1693);
-						}
-						case SETPRO3: {
-							qs.setQuestVar(3);
-							updateQuestStatus(env);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 730268: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 2034);
-						}
-						case SET_SUCCEED: {
-							qs.setQuestVar(4);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
+		int targetId = env.getTargetId();
+		DialogAction action = env.getDialog();
+
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			if (targetId == 204182) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1693);
+				case SELECT_ACTION_1694:
+					return sendQuestDialog(env, 1694);
+				case SELECT_ACTION_1695:
+					return sendQuestDialog(env, 1695);
+				case SETPRO3:
+					qs.setQuestVar(2);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
 				default:
 					break;
+				}
+			} else if (targetId == 204075) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 2034);
+				case SELECT_ACTION_2035:
+					return sendQuestDialog(env, 2035);
+				case SET_SUCCEED:
+					qs.setQuestVar(3);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
+			} else if (targetId == 730268) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 2034);
+				case SELECT_ACTION_2035:
+					return sendQuestDialog(env, 2035);
+				case SET_SUCCEED:
+					qs.setQuestVar(4);
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
+					TeleportService2.teleportTo(player, 120020000, 1563.0f, 1424.0f, 265.70996f, (byte) 70, TeleportAnimation.BEAM_ANIMATION);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
 			}
+
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 798800) {
-				if (dialog == DialogAction.USE_OBJECT) {
+				switch (action) {
+				case USE_OBJECT:
 					return sendQuestDialog(env, 10002);
+				case SELECT_QUEST_REWARD:
+					return sendQuestDialog(env, 5);
+				case SELECTED_QUEST_REWARD1:
+				case SELECTED_QUEST_REWARD2:
+					return sendQuestEndDialog(env);
+				default:
+					break;
 				}
-				return sendQuestEndDialog(env);
 			}
-		}
 
+		}
 		return false;
+	}
+
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env);
 	}
 }

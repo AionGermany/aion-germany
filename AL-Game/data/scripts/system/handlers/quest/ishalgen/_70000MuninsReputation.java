@@ -22,6 +22,7 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author Falke_34
@@ -37,57 +38,72 @@ public class _70000MuninsReputation extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(806810).addOnTalkEvent(questId); // Old Friend Cheska
 		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
+        qe.registerOnEnterWorld(questId);
+        qe.registerOnLevelUp(questId);
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 2000, true);
+        return defaultOnLvlUpEvent(env);
 	}
 
-	@Override
-	public boolean onDialogEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
+    @Override
+    public boolean onEnterWorldEvent(QuestEnv env) {
+        Player player = env.getPlayer();
+        QuestState qs = player.getQuestStateList().getQuestState(questId);
+        if (qs == null) {
+            env.setQuestId(questId);
+            QuestService.startQuest(env);
+        }
+        return false;
+    }
 
-		if (qs == null) {
-			return false;
-		}
+    @Override
+    public boolean onDialogEvent(QuestEnv env) {
+        final Player player = env.getPlayer();
+        final QuestState qs = player.getQuestStateList().getQuestState(questId);
+        if (qs == null) {
+            return false;
+        }
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-				case 806810: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1011);
-						}
-						case SET_SUCCEED: {
-							qs.setQuestVar(1);
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
-							return closeDialogWindow(env);
-						}
-						default:
-							break;
-					}
-					break;
-				}
+        int targetId = env.getTargetId();
+        DialogAction action = env.getDialog();
+
+        if (qs != null && qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 0) {
+            if (targetId == 806810) {
+                switch (action) {
+                    case QUEST_SELECT:
+                        return sendQuestDialog(env, 1011);
+                    case SELECT_ACTION_1012:
+                        return sendQuestDialog(env, 1012);
+                    case SET_SUCCEED:
+                        qs.setQuestVar(1);
+                        qs.setStatus(QuestStatus.REWARD);
+                        updateQuestStatus(env);
+                        return closeDialogWindow(env);
 				default:
 					break;
-			}
-		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 203550) {
-				if (dialog == DialogAction.USE_OBJECT) {
-					return sendQuestDialog(env, 10002);
-				}
-				return sendQuestEndDialog(env);
-			}
-		}
-		
-		return false;
-	}
+                }
+            }
+        } else if ( qs.getStatus() == QuestStatus.REWARD ) {
+            if (targetId == 203550) {
+                switch (action) {
+                    case USE_OBJECT:
+                        return sendQuestDialog(env, 10002);
+                    case SELECT_QUEST_REWARD:
+                        return sendQuestDialog(env, 5);
+                    case SELECTED_QUEST_NOREWARD:
+                        return sendQuestEndDialog(env);
+				default:
+					break;
+                }
+            }
+
+        }
+        return false;
+    }
+
+
 }

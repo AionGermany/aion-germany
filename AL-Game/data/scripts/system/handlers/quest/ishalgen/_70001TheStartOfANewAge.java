@@ -22,6 +22,7 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author Falke_34
@@ -37,75 +38,124 @@ public class _70001TheStartOfANewAge extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(203550).addOnTalkEvent(questId); // Munin
-		qe.registerQuestNpc(806877).addOnTalkEvent(questId); // The History of Bygone Atreia
+		qe.registerQuestNpc(730079).addOnTalkEvent(questId); // The History of Bygone Atreia
 		qe.registerQuestNpc(806878).addOnTalkEvent(questId); // Records about the Day of the Storm
+        qe.registerQuestNpc(806877).addOnTalkEvent(questId);
+        qe.registerOnEnterWorld(questId);
+        qe.registerOnLevelUp(questId);
 	}
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 70000, false);
+        return defaultOnLvlUpEvent(env);
 	}
 
-	@Override
-	public boolean onDialogEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
-		if (qs == null) {
-			return false;
-		}
+    @Override
+    public boolean onEnterWorldEvent(QuestEnv env) {
+        Player player = env.getPlayer();
+        QuestState qs = player.getQuestStateList().getQuestState(questId);
+        if (qs == null) {
+            env.setQuestId(questId);
+            QuestService.startQuest(env);
+        }
+        return false;
+    }
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-			case 203550:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1011);
-				case SETPRO1:
-					qs.setQuestVar(1);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
+    @Override
+    public boolean onDialogEvent(QuestEnv env) {
+        Player player = env.getPlayer();
+        QuestState qs = player.getQuestStateList().getQuestState(questId);
+
+        if (qs == null) {
+            return false;
+        }
+
+        int targetId = env.getTargetId();
+        DialogAction action = env.getDialog();
+
+        if (qs != null && qs.getStatus() == QuestStatus.START ) {
+            if (targetId == 203550) {
+                switch (action) {
+                    case QUEST_SELECT:
+                        return sendQuestDialog(env, 1011);
+                    case SELECT_ACTION_1012:
+                        return sendQuestDialog(env, 1012);
+                    case SETPRO1:
+                        qs.setQuestVar(1);
+                        updateQuestStatus(env);
+                        return closeDialogWindow(env);
 				default:
 					break;
-				}
-				break;
-			case 806877:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1352);
-				case SETPRO2:
-					qs.setQuestVar(2);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
+                }
+            }
+            else if (targetId == 806877){
+                switch (action) {
+                    case QUEST_SELECT:
+                        return sendQuestDialog(env, 1352);
+                    case SELECT_ACTION_1353:
+                        return sendQuestDialog(env, 1353);
+                    case SELECT_ACTION_1354:
+                        return sendQuestDialog(env, 1354);
+                    case SELECT_ACTION_1355:
+                        return sendQuestDialog(env, 1355);
+                    case SELECT_ACTION_1356:
+                        return sendQuestDialog(env, 1356);
+                    case SELECT_ACTION_1357:
+                        return sendQuestDialog(env, 1357);
+                    case SELECT_ACTION_1358:
+                        return sendQuestDialog(env, 1358);
+                    case SETPRO2:
+                        qs.setQuestVar(2);
+                        updateQuestStatus(env);
+                        return closeDialogWindow(env);
 				default:
 					break;
-				}
-				break;
-			case 806878:
-				switch (dialog) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1693);
-				case SET_SUCCEED:
-					qs.setQuestVar(3);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return closeDialogWindow(env);
+                }
+            }
+            else if (targetId == 806878){
+                switch (action) {
+                    case QUEST_SELECT:
+                        return sendQuestDialog(env, 1693);
+                    case SELECT_ACTION_1694:
+                        return sendQuestDialog(env, 1694);
+                    case SELECT_ACTION_1695:
+                        return sendQuestDialog(env, 1695);
+                    case SELECT_ACTION_1696:
+                        return sendQuestDialog(env, 1696);
+                    case SELECT_ACTION_1697:
+                        return sendQuestDialog(env, 1697);
+                    case SELECT_ACTION_1698:
+                        return sendQuestDialog(env, 1698);
+                    case SELECT_ACTION_1699:
+                        return sendQuestDialog(env, 1699);
+                    case SELECT_ACTION_1700:
+                        return sendQuestDialog(env, 1700);
+                    case SET_SUCCEED:
+                        qs.setQuestVar(3);
+                        qs.setStatus(QuestStatus.REWARD);
+                        updateQuestStatus(env);
+                        return closeDialogWindow(env);
 				default:
 					break;
-				}
-				break;
-			}
-		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 203550) {
-				if (dialog == DialogAction.USE_OBJECT) {
-					return sendQuestDialog(env, 10002);
-				}
-				return sendQuestEndDialog(env);
-			}
-		}
-		return false;
-	}
+                }
+            }
+        }
+        else if ( qs.getStatus() == QuestStatus.REWARD ) {
+            if (targetId == 203550) {
+                switch (action) {
+                    case USE_OBJECT:
+                        return sendQuestDialog(env, 10002);
+                    case SELECT_QUEST_REWARD:
+                        return sendQuestDialog(env, 5);
+                    case SELECTED_QUEST_NOREWARD:
+                        return sendQuestEndDialog(env);
+				default:
+					break;
+                }
+            }
+
+        }
+        return false;
+    }
 }
