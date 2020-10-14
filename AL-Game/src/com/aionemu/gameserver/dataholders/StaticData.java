@@ -63,6 +63,8 @@ public class StaticData {
 	public ItemCustomSetData itemCustomSetData;
 	@XmlElement(name = "random_bonuses")
 	public ItemRandomBonusData itemRandomBonuses;
+	@XmlElement(name = "real_random_bonuses")
+	public ItemRealRandomBonusData itemRealRandomBonuses;
 	@XmlElement(name = "npc_templates")
 	public NpcData npcData;
 	@XmlElement(name = "npc_shouts")
@@ -274,6 +276,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + itemCleanup.size() + " item cleanup entries");
 		DataManager.log.info("[DataManager] Loaded " + itemData.size() + " item templates");
 		DataManager.log.info("[DataManager] Loaded " + itemRandomBonuses.size() + " item bonus templates");
+		DataManager.log.info("[DataManager] Loaded " + itemRealRandomBonuses.size() + " item real bonus templates");
 		DataManager.log.info("[DataManager] Loaded " + itemGroupsData.bonusSize() + " bonus item group templates");
 		DataManager.log.info("[DataManager] Loaded " + itemGroupsData.petFoodSize() + " pet food items");
 		DataManager.log.info("[DataManager] Loaded " + npcData.size() + " npc templates");

@@ -118,6 +118,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	@XmlAttribute(name = "rnd_bonus")
 	private int rnd_bonus = 0;
 
+	@XmlAttribute(name = "rnd_real_bonus")
+	private int real_rnd_bonus = 0;
+
 	@XmlAttribute(name = "rnd_count")
 	private int rnd_count = 0;
 
@@ -676,6 +679,13 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	 */
 	public int getRandomBonusId() {
 		return rnd_bonus;
+	}
+
+	/**
+	 * @return the real_rnd_bonus, 0 if no bonus exists
+	 */
+	public int getRealRndBonus() {
+		return real_rnd_bonus;
 	}
 
 	/**

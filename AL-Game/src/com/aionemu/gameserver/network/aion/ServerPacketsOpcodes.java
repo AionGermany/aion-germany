@@ -296,6 +296,7 @@ public class ServerPacketsOpcodes {
 		// -----------------LUNA SHOP PACKETS 5.1--------------------//
 		addPacketOpcode(SM_LUNA_SYSTEM_INFO.class, 0x149, idSet); // 7.5 EU
 		addPacketOpcode(SM_LUNA_SYSTEM.class, 0x14A, idSet);
+		addPacketOpcode(SM_LUNA_IDENTIFICATION.class, 0x177, idSet); // 7.5 EU
 		// ------------------MAGIC MORPH + CRAFT---------------------//
 		addPacketOpcode(SM_MAGIC_CRAFT_ANIMATION.class, 0x14D, idSet); // 7.5 EU TODO
 		addPacketOpcode(SM_MAGIC_CRAFT.class, 0x14C, idSet); // 7.5 EU TODO

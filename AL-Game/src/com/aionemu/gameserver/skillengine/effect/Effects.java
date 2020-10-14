@@ -205,7 +205,9 @@ public class Effects {
 	@XmlElement(name = "mpshield", type = MpShieldEffect.class), 
 	@XmlElement(name = "targetchange", type = TargetChangeEffect.class), 
 	@XmlElement(name = "xphealinstant", type = XPHealInstantEffect.class),
-	@XmlElement(name = "silverstar", type = SilverStarEffect.class) })
+	@XmlElement(name = "silverstar", type = SilverStarEffect.class),
+	@XmlElement(name = "worldplaytime", type = WorldPlayTimeEffect.class),
+	@XmlElement(name = "absolutefamepointhealinstant", type = AbsoluteFamePointHealInstantEffect.class) })
 
 	protected List<EffectTemplate> effects;
 	@XmlTransient

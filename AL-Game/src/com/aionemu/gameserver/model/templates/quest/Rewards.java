@@ -34,7 +34,7 @@ public class Rewards {
 	@XmlElement(name = "reward_item")
 	protected List<QuestItems> rewardItem;
 	@XmlAttribute
-	protected Integer gold;
+	protected Long gold;
 	@XmlAttribute
 	protected Long exp;
 	@XmlAttribute(name = "reward_abyss_point")
@@ -103,7 +103,7 @@ public class Rewards {
 	 *
 	 * @return possible object is {@link Integer }
 	 */
-	public Integer getGold() {
+	public Long getGold() {
 		return gold;
 	}
 

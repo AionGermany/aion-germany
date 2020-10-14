@@ -485,7 +485,7 @@ public final class PlayerEnterWorldService {
 			client.sendPacket(new SM_AFTER_TIME_CHECK()); // offi 4.9.1
 
 			// SM_FD_UNK 01 00 00
-			client.sendPacket(new SM_UNK_FD());// TODO
+			client.sendPacket(new SM_UNK_FD(2));// TODO
 
 			// SM_PACKAGE_INFO_NOTIFY
 			client.sendPacket(new SM_PACKAGE_INFO_NOTIFY(0));

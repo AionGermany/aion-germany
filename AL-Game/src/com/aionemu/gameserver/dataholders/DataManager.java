@@ -52,6 +52,7 @@ public final class DataManager {
 	public static SummonStatsData SUMMON_STATS_DATA;
 	public static ItemData ITEM_DATA;
 	public static ItemRandomBonusData ITEM_RANDOM_BONUSES;
+	public static ItemRealRandomBonusData ITEM_REAL_RANDOM_BONUSES;
 	public static TitleData TITLE_DATA;
 	public static PlayerInitialData PLAYER_INITIAL_DATA;
 	public static SkillData SKILL_DATA;
@@ -176,6 +177,7 @@ public final class DataManager {
 		ITEM_CLEAN_UP = data.itemCleanup;
 		ITEM_DATA = data.itemData;
 		ITEM_RANDOM_BONUSES = data.itemRandomBonuses;
+		ITEM_REAL_RANDOM_BONUSES = data.itemRealRandomBonuses;
 		NPC_DATA = data.npcData;
 		NPC_SHOUT_DATA = data.npcShoutData;
 		GATHERABLE_DATA = data.gatherableData;

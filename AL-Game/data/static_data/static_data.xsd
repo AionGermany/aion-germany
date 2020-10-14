@@ -15,6 +15,7 @@
     <xs:include schemaLocation="items/item/item_templates.xsd"/>
     <xs:include schemaLocation="items/item_custom_sets.xsd"/>
     <xs:include schemaLocation="items/item_random_bonuses.xsd"/>
+    <xs:include schemaLocation="items/item_real_random_bonuses.xsd"/>
     <xs:include schemaLocation="items/item_groups.xsd"/>
     <xs:include schemaLocation="items/assembly_items.xsd"/>
     <xs:include schemaLocation="npc_factions/npc_factions.xsd"/>
@@ -133,6 +134,7 @@
                 <xs:element ref="item_templates" minOccurs="0"/>
                 <xs:element ref="item_custom_sets" minOccurs="0"/>
                 <xs:element ref="random_bonuses" minOccurs="0"/>
+                <xs:element ref="real_random_bonuses" minOccurs="0"/>
                 <xs:element ref="item_groups" minOccurs="0"/>
                 <xs:element ref="assembly_items" minOccurs="0"/>
                 <xs:element ref="npc_factions" minOccurs="0"/>

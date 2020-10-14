@@ -24,9 +24,27 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_UNK_FD extends AionServerPacket {
 
+	//Test VIP Packet?
+	
+	int type;
+
+	public SM_UNK_FD(int type) {
+		this.type = type;
+	}
+
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeH(1);
-		writeC(0);
+		writeC(type);
+		switch (type) {
+		case 1:
+			writeH(0);
+			break;
+		case 2:
+			writeH(1);
+			writeC(2);
+			writeD(3000); //buffId
+			writeD(388306); //time
+			break;
+		}
 	}
 }

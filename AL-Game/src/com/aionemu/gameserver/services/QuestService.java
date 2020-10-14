@@ -124,7 +124,7 @@ public final class QuestService {
 			return false;
 		}
 		
-		if (template.getCategory() == QuestCategory.MISSION && qs.getCompleteCount() != 0) {
+		if (template.getCategory() == QuestCategory.EPISODE && template.getCategory() == QuestCategory.GUIDE && template.getCategory() == QuestCategory.MISSION && qs.getCompleteCount() != 0) {
 			return false; // prevent repeatable reward because of wrong quest handling
 		}
 		List<QuestItems> questItems = new ArrayList<QuestItems>();
@@ -216,7 +216,7 @@ public final class QuestService {
 			if (isLastRepeat && template.isUseSingleClassReward() || template.isUseRepeatedClassReward()) {
 				QuestItems classRewardItem = null;
 				PlayerClass playerClass = player.getCommonData().getPlayerClass();
-				int selRewIndex = dialogId != DialogAction.INSTANT_REWARD.id() ? dialogId - 8 : 0; // For now InstantReward = only 1 selectable reward TODO more ?
+				int selRewIndex = dialogId != DialogAction.QUEST_AUTO_REWARD.id() ? dialogId - 8 : 0; // For now InstantReward = only 1 selectable reward TODO more ?
 				switch (playerClass) {
 					case ASSASSIN: {
 						classRewardItem = getQuestItemsbyClass(id, template.getAssassinSelectableReward(), selRewIndex);

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="../modifiers.xsd"/>
+	<xs:element name="real_random_bonuses">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="real_random_bonus" type="RealItemRandomBonus" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="RealItemRandomBonus">
+		<xs:sequence>
+			<xs:element name="rnd_stat" type="BonusStat" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="rnd_count" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="BonusStat">
+		<xs:attribute name="name" type="modifiersenum" use="required"/>
+		<xs:attribute name="min_value" type="xs:int" use="required"/>
+		<xs:attribute name="max_value" type="xs:int" use="required"/>
+	</xs:complexType>
+</xs:schema>

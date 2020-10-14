@@ -40,7 +40,8 @@ public enum QuestCategory {
 	LEGION(0),
 	PRIMARY(0),
 	TUTORIAL(0),
-	GUIDE(0);
+	GUIDE(0), 
+	EPISODE(0);
 
 	private int id;
 

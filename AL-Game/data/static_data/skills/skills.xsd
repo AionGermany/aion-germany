@@ -225,6 +225,8 @@
             <xs:element name="stunalways" type="StunAlwaysEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="targetchange" type="TargetChangeEffect" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="silverstar" type="SilverStarEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="worldplaytime" type="WorldPlayTimeEffect" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="absolutefamepointhealinstant" type="AbsoluteFamePointHealInstantEffect" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Properties">
@@ -1429,6 +1431,20 @@
 		<xs:complexContent>
 			<xs:extension base="AbstractHealEffect">
 				<xs:attribute name="value2" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AbsoluteFamePointHealInstantEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect">
+				<xs:attribute name="points" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WorldPlayTimeEffect">
+		<xs:complexContent>
+			<xs:extension base="AbstractHealEffect">
+				<xs:attribute name="points" type="xs:int"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

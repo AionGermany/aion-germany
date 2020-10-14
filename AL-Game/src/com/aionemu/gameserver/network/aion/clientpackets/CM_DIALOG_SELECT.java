@@ -99,7 +99,7 @@ public class CM_DIALOG_SELECT extends AionClientPacket {
 			if (QuestEngine.getInstance().onDialog(new QuestEnv(null, player, questId, dialogId))) {
 				return;
 			}
-			if (questTemplate != null && dialogId == DialogAction.INSTANT_REWARD.id()) {
+			if (questTemplate != null && dialogId == DialogAction.QUEST_AUTO_REWARD.id()) {
 				QuestEnv env1 = new QuestEnv(null, player, questId, dialogId);
 				QuestService.finishQuest(env1);
 				if (questTemplate.getCategory() == QuestCategory.TUTORIAL) {
