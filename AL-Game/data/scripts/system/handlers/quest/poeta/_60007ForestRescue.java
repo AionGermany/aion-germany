@@ -17,12 +17,18 @@
 package quest.poeta;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.EmotionType;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.utils.PacketSendUtility;
+import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
  * @author QuestGenerator by Mariella
@@ -37,100 +43,125 @@ public class _60007ForestRescue extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(730008).addOnTalkEvent(questId); // Daminu
 		qe.registerQuestNpc(820002).addOnTalkEvent(questId); // Investigating Royer
 		qe.registerQuestNpc(820003).addOnTalkEvent(questId); // Implementer Royer
+		qe.registerQuestNpc(651867).addOnKillEvent(questId);
+		qe.registerQuestNpc(651848).addOnKillEvent(questId);
 		qe.registerQuestNpc(700030).addOnTalkEvent(questId); // Odium Cauldron
+		qe.registerQuestItem(182216249, questId); // Thin Flute Of Elim
+		qe.registerQuestItem(182216250, questId); // Daminu Flute
+		qe.registerOnLevelUp(questId);
+		qe.registerOnEnterWorld(questId);
 	}
 
 	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 60000, false);
-	}
-
-	@Override
-	public boolean onDialogEvent(QuestEnv env) {
+	public boolean onEnterWorldEvent(QuestEnv env) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
+		if (qs == null) {
+			env.setQuestId(questId);
+			QuestService.startQuest(env);
+		}
+		return false;
+	}
 
+	@Override
+	public boolean onDialogEvent(final QuestEnv env) {
+		final Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null) {
 			return false;
 		}
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-				case 730008: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1011);
-						}
-						case SETPRO1: {
-							changeQuestStep(env, 0, 1, false);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 820002: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1352);
-						}
-						case SETPRO2: {
-							changeQuestStep(env, 1, 2, false);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 820003: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1693);
-						}
-						case CHECK_USER_HAS_QUEST_ITEM: {
-							if (QuestService.collectItemCheck(env,true)) {
-								changeQuestStep(env, 2, 3, false);
-								return sendQuestDialog(env, 10000);
-							} else {
-								return sendQuestDialog(env, 10001);
+		int targetId = env.getTargetId();
+		DialogAction action = env.getDialog();
+
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			if (targetId == 730008) {
+				switch (action) {
+				case QUEST_SELECT:
+					final int targetObjectId = env.getVisibleObject().getObjectId();
+					PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 1));
+					PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_QUESTLOOT, 0, targetObjectId), true);
+					ThreadPoolManager.getInstance().schedule(new Runnable() {
+						@Override
+						public void run() {
+							if (player.getTarget() == null || player.getTarget().getObjectId() != targetObjectId) {
+								return;
 							}
+							PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.END_QUESTLOOT, 0, targetObjectId), true);
+							PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 2));
+							PacketSendUtility.sendPacket(env.getPlayer(), new SM_DIALOG_WINDOW(targetObjectId, 1011, env.getQuestId()));
 						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 700030: {
-					switch (dialog) {
-						case USE_OBJECT: {
-							changeQuestStep(env, 3, 4, true);
-							return false;
-						}
-						default: 
-							break;
-					}
-					break;
-				}
+					}, 3000);
+				case SETPRO1:
+					qs.setQuestVar(1);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
 				default:
 					break;
+				}
+			} else if (targetId == 820002) {
+				int var = qs.getQuestVarById(0);
+				if (var == 1) {
+					switch (action) {
+					case QUEST_SELECT:
+						return sendQuestDialog(env, 1352);
+					case SELECT_ACTION_1353:
+						return sendQuestDialog(env, 1353);
+					case SETPRO2:
+						qs.setQuestVar(2);
+						updateQuestStatus(env);
+						return closeDialogWindow(env);
+					case CHECK_USER_HAS_QUEST_ITEM:
+						return checkQuestItems(env, 2, 3, false, 10000, 10001);
+					default:
+						break;
+					}
+				} else if (var == 2) {
+
+				}
+			} else if (targetId == 820003) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1693);
+				case CHECK_USER_HAS_QUEST_ITEM:
+					return checkQuestItems(env, 2, 3, false, 10000, 10001);
+				default:
+					break;
+				}
+			} else if (targetId == 700030) {
+				switch (action) {
+				case USE_OBJECT:
+					qs.setQuestVar(4);
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820003) {
-				if (dialog == DialogAction.USE_OBJECT) {
+				switch (action) {
+				case USE_OBJECT:
 					return sendQuestDialog(env, 10002);
+				case SELECT_QUEST_REWARD:
+					return sendQuestDialog(env, 5);
+				case SELECTED_QUEST_NOREWARD:
+					return sendQuestEndDialog(env);
+				default:
+					break;
 				}
-				return sendQuestEndDialog(env);
 			}
-		}
 
+		}
 		return false;
+	}
+
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env);
 	}
 }

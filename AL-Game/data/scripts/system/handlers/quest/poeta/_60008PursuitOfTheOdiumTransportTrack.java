@@ -22,6 +22,7 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author QuestGenerator by Mariella
@@ -36,64 +37,80 @@ public class _60008PursuitOfTheOdiumTransportTrack extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(820010).addOnTalkEvent(questId); // First Odium Transport Track
 		qe.registerQuestNpc(820011).addOnTalkEvent(questId); // Second Odium Transport Track
 		qe.registerQuestNpc(203086).addOnTalkEvent(questId); // Ino
+		qe.registerOnLevelUp(questId);
+		qe.registerOnEnterWorld(questId);
 	}
 
 	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 60000, false);
-	}
-
-	@Override
-	public boolean onDialogEvent(QuestEnv env) {
+	public boolean onEnterWorldEvent(QuestEnv env) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
+		if (qs == null) {
+			env.setQuestId(questId);
+			QuestService.startQuest(env);
+		}
+		return false;
+	}
 
+	@Override
+	public boolean onDialogEvent(final QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null) {
 			return false;
 		}
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-				case 820010: {
-					switch (dialog) {
-						case USE_OBJECT: {
-							changeQuestStep(env, 0, 1, false);
-							return false;
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 820011: {
-					switch (dialog) {
-						case USE_OBJECT: {
-							changeQuestStep(env, 1, 2, true);
-							return false;
-						}
-						default: 
-							break;
-					}
-					break;
-				}
+		int targetId = env.getTargetId();
+		DialogAction action = env.getDialog();
+
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			if (targetId == 820010) {
+				switch (action) {
+				case QUEST_SELECT:
+					qs.setQuestVar(1);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				case USE_OBJECT:
+					changeQuestStep(env, 0, 1, false);
 				default:
 					break;
+				}
+			} else if (targetId == 820011) {
+				switch (action) {
+				case QUEST_SELECT:
+					qs.setQuestVar(2);
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				case USE_OBJECT:
+					changeQuestStep(env, 1, 2, true);
+				default:
+					break;
+				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 203086) {
-				if (dialog == DialogAction.USE_OBJECT) {
+				switch (action) {
+				case USE_OBJECT:
 					return sendQuestDialog(env, 10002);
+				case SELECT_QUEST_REWARD:
+					return sendQuestDialog(env, 5);
+				case SELECTED_QUEST_NOREWARD:
+					return sendQuestEndDialog(env);
+				default:
+					break;
 				}
-				return sendQuestEndDialog(env);
 			}
-		}
 
+		}
 		return false;
+	}
+
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env);
 	}
 }

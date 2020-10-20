@@ -27,8 +27,7 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
- * @author QuestGenerator by Mariella
- * @rework FrozenKiller
+ * @author FrozenKiller
  */
 public class _60101TheOngoingSearchForOdium extends QuestHandler {
 
@@ -46,6 +45,7 @@ public class _60101TheOngoingSearchForOdium extends QuestHandler {
 		qe.registerQuestNpc(203726).addOnTalkEvent(questId); // Polyidus
 		qe.registerQuestNpc(820016).addOnTalkEvent(questId); // Royer 2
 		qe.registerOnEnterZone(ZoneName.get("NEW_HEIRON_GATE_210040000"), questId);
+        qe.registerOnLogOut(questId);
 	}
 
 	@Override
@@ -71,77 +71,94 @@ public class _60101TheOngoingSearchForOdium extends QuestHandler {
 		return false;
 	}
 
-	@Override
-	public boolean onDialogEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
+    @Override
+    public boolean onLogOutEvent(QuestEnv env) {
+        final Player player = env.getPlayer();
+        final QuestState qs = player.getQuestStateList().getQuestState(questId);
+        if (qs == null){
+            return false;
+        }
+        int var = qs.getQuestVarById(0);
+        if (var <= 2) {
+            qs.setQuestVar(0);
+            updateQuestStatus(env);
+            return true;
+        }
+        return false;
+    }
 
-		if (qs == null) {
-			return false;
-		}
+    @Override
+    public boolean onDialogEvent(QuestEnv env) {
+        Player player = env.getPlayer();
+        QuestState qs = player.getQuestStateList().getQuestState(questId);
+        DialogAction dialog = env.getDialog();
+        int targetId = env.getTargetId();
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-				case 798600: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1011);
-						}
-						case SETPRO1: {
-							qs.setQuestVar(1);
-							updateQuestStatus(env);
-							TeleportService2.teleportTo(player, 110020000, 490.2671f, 499.5278f, 499.8765f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 805362: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1352);
-						}
-						case SETPRO2: {
-							qs.setQuestVar(2);
-							updateQuestStatus(env);
-							TeleportService2.teleportTo(player, 110010000, 1337.5769f, 1511.124f, 569.03876f, (byte) 57, TeleportAnimation.BEAM_ANIMATION);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 203726: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1693);
-						}
-						case SETPRO3: {
-							qs.setQuestVar(3);
-							updateQuestStatus(env);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
+        if (qs == null) {
+            return false;
+        }
+
+        if (qs.getStatus() == QuestStatus.START) {
+            switch (targetId) {
+                case 798600: {
+                    switch (dialog) {
+                        case QUEST_SELECT:
+                            return sendQuestDialog(env, 1011);
+                        case SETPRO1:
+                            qs.setQuestVar(1);
+                            updateQuestStatus(env);
+                            TeleportService2.teleportTo(player, 110020000, 483f, 497f, 499f, (byte) 69, TeleportAnimation.BEAM_ANIMATION);
+                            return closeDialogWindow(env);
+                        default:
+                            break;
+                    }
+                    break;
+                }
+                case 805362: {
+                    switch (dialog) {
+                        case QUEST_SELECT:
+                            return sendQuestDialog(env, 1352);
+                        case SETPRO2:
+                            qs.setQuestVar(2);
+                            updateQuestStatus(env);
+                            TeleportService2.teleportTo(player, 110010000, 1334.7222F, 1511.4169f, 569.03876f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
+                            return closeDialogWindow(env);
+                        default:
+                            break;
+                    }
+                    break;
+                }
+                case 203726: {
+                    switch (dialog) {
+                        case QUEST_SELECT:
+                            return sendQuestDialog(env, 1693);
+                        case SETPRO3:
+                            qs.setQuestVar(3);
+                            updateQuestStatus(env);
+                            return closeDialogWindow(env);
+                        default:
+                            break;
+                    }
+                    break;
+                }
+                default:
+                    break;
+            }
+        } else if (qs.getStatus() == QuestStatus.REWARD) {
+            if (targetId == 820016) {
+                switch (dialog) {
+                    case USE_OBJECT:
+                        return sendQuestDialog(env, 10002);
+                    case SELECT_QUEST_REWARD:
+                        return sendQuestDialog(env, 5);
+                    case SELECTED_QUEST_NOREWARD:
+                        return sendQuestEndDialog(env);
 				default:
 					break;
-			}
-		} else if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 820016) {
-				if (dialog == DialogAction.USE_OBJECT) {
-					return sendQuestDialog(env, 10002);
-				}
-				return sendQuestEndDialog(env);
-			}
-		}
-		return false;
-	}
+                }
+            }
+        }
+
+        return false;
+    }
 }

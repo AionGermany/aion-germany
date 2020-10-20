@@ -23,11 +23,11 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
- * @author QuestGenerator by Mariella
- * @rework FrozenKiller
+ * @author FrozenKiller
  */
 public class _60009HaramelsSecret extends QuestHandler {
 
@@ -47,7 +47,7 @@ public class _60009HaramelsSecret extends QuestHandler {
 		qe.registerQuestNpc(820006).addOnTalkEvent(questId); // Kasis
 		qe.registerQuestNpc(700834).addOnTalkEvent(questId); // Odella
 		qe.registerOnEnterWorld(questId);
-		qe.registerOnEnterZone(ZoneName.get("IDNOVICE_SENSORYAREA_Q60009A_300200000"), questId);
+		qe.registerOnEnterZone(ZoneName.get("HARAMEL_TOWER_300200000"), questId);
 		for (int mob : mobs) {
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -57,7 +57,7 @@ public class _60009HaramelsSecret extends QuestHandler {
 	public boolean onLvlUpEvent(QuestEnv env) {
 		return defaultOnLvlUpEvent(env, 60000, false);
 	}
-	
+
 	@Override
 	public boolean onEnterWorldEvent(QuestEnv env) {
 		Player player = env.getPlayer();
@@ -67,13 +67,14 @@ public class _60009HaramelsSecret extends QuestHandler {
 		}
 		if (qs.getStatus() == QuestStatus.START) {
 			if (qs.getQuestVarById(0) == 1 && player.getWorldId() == 300200000) {
-				changeQuestStep(env, 1, 2, false);
+				qs.setQuestVar(2);
+				updateQuestStatus(env);
 				return true;
 			}
 		}
 		return false;
 	}
-	
+
 	@Override
 	public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
 		Player player = env.getPlayer();
@@ -84,7 +85,7 @@ public class _60009HaramelsSecret extends QuestHandler {
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs != null && qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			if (var == 4 && zoneName == ZoneName.get("IDNOVICE_SENSORYAREA_Q60009A_300200000")) {
+			if (var == 4 && zoneName == ZoneName.get("HARAMEL_TOWER_300200000")) {
 				changeQuestStep(env, 4, 5, false); // 5
 				return true;
 			}
@@ -105,67 +106,72 @@ public class _60009HaramelsSecret extends QuestHandler {
 
 		if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
-				case 820012: {
-					switch (dialog) {
-						case USE_OBJECT: {
-							changeQuestStep(env, 0, 1, false);
-							return false;
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 820133: {
-					switch (dialog) {
-						case USE_OBJECT: {
-							return sendQuestDialog(env, 1693);
-						}
-						case SETPRO3: {
-							changeQuestStep(env, 2, 3, false);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-				}
-				case 700834: {
-					switch (dialog) {
-						case USE_OBJECT: {
-							return true;							
-						}
-						default: 
-							break;
-					}
-				}
-				case 799524: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							if (qs.getQuestVarById(0) == 6) {
-								return sendQuestDialog(env, 3057);
-							} else {
-								return sendQuestDialog(env, 3398);
-							}
-						}
-						case CHECK_USER_HAS_QUEST_ITEM: {
-							if (QuestService.collectItemCheck(env,true)) {
-								changeQuestStep(env, 6, 7, false);
-								return sendQuestDialog(env, 10000);
-							} else {
-								return sendQuestDialog(env, 10001);
-							}
-						}
-						case SETPRO8: {
-							changeQuestStep(env, 7, 8, false);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
+			case 820012: {
+				switch (dialog) {
+				case USE_OBJECT: {
+					qs.setQuestVar(1);
+					updateQuestStatus(env);
+					return false;
 				}
 				default:
 					break;
+				}
+				break;
+			}
+			case 820133: {
+				switch (dialog) {
+				case USE_OBJECT: {
+					return sendQuestDialog(env, 1693);
+				}
+				case SETPRO3: {
+					qs.setQuestVar(3);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				}
+				default:
+					break;
+				}
+			}
+			case 700834: {
+				switch (dialog) {
+				case USE_OBJECT: {
+					ItemService.addItem(player, 182216580, 1);
+					return true;
+				}
+				default:
+					break;
+				}
+			}
+			case 799524: {
+				switch (dialog) {
+				case QUEST_SELECT: {
+					if (qs.getQuestVarById(0) == 6) {
+						return sendQuestDialog(env, 3057);
+					} else {
+						return sendQuestDialog(env, 3398);
+					}
+				}
+				case CHECK_USER_HAS_QUEST_ITEM: {
+					if (QuestService.collectItemCheck(env, true)) {
+						qs.setQuestVar(7);
+						updateQuestStatus(env);
+						return sendQuestDialog(env, 10000);
+					} else {
+						return sendQuestDialog(env, 10001);
+					}
+				}
+				case SETPRO8: {
+					qs.setQuestVar(8);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				}
+				default:
+					break;
+				}
+				break;
+			}
+			default:
+				break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820006) {
@@ -175,7 +181,7 @@ public class _60009HaramelsSecret extends QuestHandler {
 
 		return false;
 	}
-	
+
 	@Override
 	public boolean onKillEvent(QuestEnv env) {
 		Player player = env.getPlayer();
@@ -189,18 +195,20 @@ public class _60009HaramelsSecret extends QuestHandler {
 			// (2) Step: 8, Count: 1, Mobs : 653218
 
 			switch (var) {
-				case 3: {
-					return defaultOnKillEvent(env, 653196, 3, 4, 0);
-				}
-				case 5: {
-					return defaultOnKillEvent(env, 653205, 5, 6, 0);
-				}
-				case 8: {
-					changeQuestStep(env, 8, 9, true);
-					return true;
-				}
-				default:
-					break;
+			case 3: {
+				return defaultOnKillEvent(env, 653196, 3, 4, 0);
+			}
+			case 5: {
+				return defaultOnKillEvent(env, 653205, 5, 6, 0);
+			}
+			case 8: {
+				qs.setQuestVar(9);
+				qs.setStatus(QuestStatus.REWARD);
+				updateQuestStatus(env);
+				return true;
+			}
+			default:
+				break;
 			}
 			return false;
 		}

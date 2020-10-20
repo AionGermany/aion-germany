@@ -17,6 +17,7 @@
 package quest.poeta;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
@@ -37,68 +38,103 @@ public class _60003TheStrengthToBecomeAGuardian extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(820006).addOnTalkEvent(questId); // Kasis
-		qe.registerQuestNpc(836530).addOnTalkEvent(questId); // Exam Scarecrow
+		qe.registerQuestNpc(856022).addOnTalkEvent(questId);
+		qe.registerQuestNpc(820134).addOnTalkEvent(questId);
+		qe.registerQuestNpc(820135).addOnTalkEvent(questId);
+		qe.registerQuestNpc(836530).addOnAttackEvent(questId);
+		qe.registerQuestItem(182216247, questId);
+		qe.registerOnLevelUp(questId);
+		qe.registerOnEnterWorld(questId);
 	}
 
 	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 60001, false);
+	public boolean onEnterWorldEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null) {
+			env.setQuestId(questId);
+			QuestService.startQuest(env);
+		}
+		return false;
+	}
+
+	@Override
+	public boolean onAttackEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		@SuppressWarnings("unused")
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		int targetId = 0;
+		if (env.getVisibleObject() instanceof Npc) {
+			targetId = ((Npc) env.getVisibleObject()).getNpcId();
+		}
+		if (targetId == 836530) {
+			giveQuestItem(env, 182216247, 1);
+			changeQuestStep(env, 0, 1, false);
+			return true;
+		}
+
+		return false;
 	}
 
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
-
 		if (qs == null) {
 			return false;
 		}
+		int targetId = env.getTargetId();
+		DialogAction action = env.getDialog();
 
-		if (qs.getStatus() == QuestStatus.START) {
-			int var = qs.getQuestVarById(0);
-			switch (targetId) {
-				case 820006: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							if (var == 0) {
-								return sendQuestDialog(env, 1011);
-							} else {
-								return sendQuestDialog(env, 1352);
-							}
-						}
-						case SETPRO1: {
-							changeQuestStep(env, 0, 1, false);
-							return closeDialogWindow(env);
-						}
-						case CHECK_USER_HAS_QUEST_ITEM: {
-							if (QuestService.collectItemCheck(env,true)) {
-								changeQuestStep(env, 1, 2, true);
-								return sendQuestDialog(env, 5);
-							} else {
-								return sendQuestDialog(env, 10001);
-							}
-						}
-						default: 
-							break;
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			if (targetId == 820006) {
+				int var = qs.getQuestVarById(0);
+				if (var == 0) {
+					switch (action) {
+					case QUEST_SELECT:
+						return sendQuestDialog(env, 1011);
+					case SELECT_ACTION_1012:
+						return sendQuestDialog(env, 1012);
+					case SETPRO1:
+						qs.setQuestVar(1);
+						updateQuestStatus(env);
+						return closeDialogWindow(env);
+					default:
+						break;
 					}
-					break;
+				} else if (var == 1) {
+					switch (action) {
+					case QUEST_SELECT:
+						return sendQuestDialog(env, 1352);
+					case CHECK_USER_HAS_QUEST_ITEM:
+						qs.setStatus(QuestStatus.REWARD);
+						return checkQuestItems(env, 1, 2, false, 10000, 10001);
+					default:
+						break;
+					}
 				}
-				default:
-					break;
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 820006) {
-				if (dialog == DialogAction.USE_OBJECT) {
+				switch (action) {
+				case USE_OBJECT:
 					return sendQuestDialog(env, 10002);
+				case SELECT_QUEST_REWARD:
+					return sendQuestDialog(env, 5);
+				case SELECTED_QUEST_NOREWARD:
+					return sendQuestEndDialog(env);
+				default:
+					break;
 				}
-				return sendQuestEndDialog(env);
 			}
-		}
 
+		}
 		return false;
+	}
+
+	@Override
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env);
 	}
 }

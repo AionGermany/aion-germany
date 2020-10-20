@@ -26,8 +26,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 
 /**
- * @author QuestGenerator by Mariella
- * @rework FrozenKiller
+ * @author FrozenKiller
  */
 public class _60100DaevaCertification extends QuestHandler {
 
@@ -49,7 +48,7 @@ public class _60100DaevaCertification extends QuestHandler {
 
 	@Override
 	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 1006, false);
+		return defaultOnLvlUpEvent(env, 60000, false);
 	}
 
 	@Override

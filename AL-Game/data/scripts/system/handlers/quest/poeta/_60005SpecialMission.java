@@ -22,15 +22,14 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 
 /**
- * @author QuestGenerator by Mariella
- * @rework FrozenKiller
+ * @author FrozenKiller
  */
 public class _60005SpecialMission extends QuestHandler {
 
 	private final static int questId = 60005;
-	private final static int[] mobs = { 651893, 651894 };
 
 	public _60005SpecialMission() {
 		super(questId);
@@ -38,109 +37,130 @@ public class _60005SpecialMission extends QuestHandler {
 
 	@Override
 	public void register() {
-		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(203067).addOnTalkEvent(questId); // Kalio
 		qe.registerQuestNpc(203065).addOnTalkEvent(questId); // Melampus
 		qe.registerQuestNpc(820001).addOnTalkEvent(questId); // Acting Royer
 		qe.registerQuestNpc(730007).addOnTalkEvent(questId); // Forest Protector Noah
-
-		for (int mob : mobs) {
-			qe.registerQuestNpc(mob).addOnKillEvent(questId);
-		}
+		qe.registerQuestNpc(651893).addOnKillEvent(questId);
+		qe.registerQuestNpc(651894).addOnKillEvent(questId);
+		qe.registerOnLevelUp(questId);
+		qe.registerOnEnterWorld(questId);
 	}
 
 	@Override
-	public boolean onLvlUpEvent(QuestEnv env) {
-		return defaultOnLvlUpEvent(env, 60000, false);
+	public boolean onEnterWorldEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null) {
+			env.setQuestId(questId);
+			QuestService.startQuest(env);
+		}
+		return false;
 	}
 
 	@Override
 	public boolean onDialogEvent(QuestEnv env) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		DialogAction dialog = env.getDialog();
-		int targetId = env.getTargetId();
-
 		if (qs == null) {
 			return false;
 		}
 
-		if (qs.getStatus() == QuestStatus.START) {
-			switch (targetId) {
-				case 203067: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1011);
-						}
-						case SETPRO1: {
-							changeQuestStep(env, 0, 1, false);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 203065: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 1352);
-						}
-						case SETPRO2: {
-							changeQuestStep(env, 1, 2, false);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
-				case 820001: {
-					switch (dialog) {
-						case QUEST_SELECT: {
-							return sendQuestDialog(env, 2034);
-						}
-						case SET_SUCCEED: {
-							changeQuestStep(env, 3, 4, true);
-							return closeDialogWindow(env);
-						}
-						default: 
-							break;
-					}
-					break;
-				}
+		int targetId = env.getTargetId();
+		DialogAction action = env.getDialog();
+
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			if (targetId == 203067) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1011);
+				case SELECT_ACTION_1012:
+					return sendQuestDialog(env, 1012);
+				case SELECT_ACTION_1013:
+					return sendQuestDialog(env, 1013);
+				case SETPRO1:
+					qs.setQuestVar(1);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
 				default:
 					break;
+				}
+			} else if (targetId == 203065) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 1352);
+				case SELECT_ACTION_1353:
+					return sendQuestDialog(env, 1353);
+				case SELECT_ACTION_1354:
+					return sendQuestDialog(env, 1354);
+				case SETPRO2:
+					qs.setQuestVar(2);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
+			} else if (targetId == 820001) {
+				switch (action) {
+				case QUEST_SELECT:
+					return sendQuestDialog(env, 2034);
+				case SELECT_ACTION_2035:
+					return sendQuestDialog(env, 2035);
+				case SELECT_ACTION_2036:
+					return sendQuestDialog(env, 2036);
+				case SET_SUCCEED:
+					qs.setQuestVar(4);
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
+					return closeDialogWindow(env);
+				default:
+					break;
+				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 730007) {
-				if (dialog == DialogAction.USE_OBJECT) {
+				switch (action) {
+				case USE_OBJECT:
 					return sendQuestDialog(env, 10002);
+				case SELECT_QUEST_REWARD:
+					return sendQuestDialog(env, 5);
+				case SELECTED_QUEST_NOREWARD:
+					return sendQuestEndDialog(env);
+				default:
+					break;
 				}
-				return sendQuestEndDialog(env);
+			}
+
+		}
+		return false;
+	}
+
+	@Override
+	public boolean onKillEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs != null && qs.getStatus() == QuestStatus.START) {
+			switch (env.getTargetId()) {
+			case 651893:
+			case 651894:
+				if (qs.getQuestVarById(1) < 2) {
+					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
+					updateQuestStatus(env);
+					return true;
+				} else if (qs.getQuestVarById(1) == 2) {
+					qs.setQuestVar(3);
+					updateQuestStatus(env);
+					return true;
+				}
+
 			}
 		}
 
 		return false;
 	}
+
 	@Override
-	public boolean onKillEvent(QuestEnv env) {
-		Player player = env.getPlayer();
-		QuestState qs = player.getQuestStateList().getQuestState(questId);
-
-		if (qs != null && qs.getStatus() == QuestStatus.START) {
-			int var = qs.getQuestVarById(0);
-			int var1 = qs.getQuestVarById(1);
-
-			// (0) Step: 2, Count: 3, Mobs : 651893, 651894
-
-			if (var == 2 && var1 < 2) {
-			   return defaultOnKillEvent(env, mobs, var1, var1 + 1, 1);
-			} else {
-				qs.setQuestVarById(1, 0);;
-				changeQuestStep(env, 2, 3, false);
-			}
-		}
-		return false;
+	public boolean onLvlUpEvent(QuestEnv env) {
+		return defaultOnLvlUpEvent(env);
 	}
 }

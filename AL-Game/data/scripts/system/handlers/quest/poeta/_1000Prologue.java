@@ -49,7 +49,7 @@ public class _1000Prologue extends QuestHandler {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null && player.getRace() == Race.ELYOS) {
-			if(QuestService.startQuest(env)) {
+			if (QuestService.startQuest(env)) {
 				PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(1, 1));
 				return true;
 			}
