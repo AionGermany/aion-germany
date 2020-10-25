@@ -51,7 +51,6 @@ public class SM_INVENTORY_INFO extends AionServerPacket {
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		// something wrong with cube part.
 		writeC(isFirstPacket ? 1 : 0);
 		writeC(cubeExpandsSize); // cube size from npc (so max 5 for now)
 		writeC(0);
@@ -67,6 +66,7 @@ public class SM_INVENTORY_INFO extends AionServerPacket {
 
 		writeD(item.getObjectId());
 		writeD(itemTemplate.getTemplateId());
+        writeH(36);
 		writeNameId(itemTemplate.getNameId());
 
 		ItemInfoBlob itemInfoBlob = ItemInfoBlob.getFullBlob(player, item);
