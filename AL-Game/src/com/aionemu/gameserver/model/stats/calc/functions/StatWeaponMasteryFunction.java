@@ -51,7 +51,7 @@ public class StatWeaponMasteryFunction extends StatRateFunction {
 				if (player.getEquipment().getMainHandWeaponType() == weaponType) {
 					super.apply(stat);
 				}
+				break;
 		}
-
 	}
 }

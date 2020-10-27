@@ -31,6 +31,7 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_UPDATE_ITEM;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.item.RealRandomBonusService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
@@ -62,53 +63,84 @@ public class CM_TUNE extends AionClientPacket {
 		if (item == null) {
 			return;
 		}
+		final int tunePrice = getTunePrices(item);
 		if (tuningScrollId != 0) {
-			final Item tuningItem = inventory.getItemByObjId(tuningScrollId);
+			Item tuningItem = inventory.getItemByObjId(tuningScrollId);
 			if (tuningItem == null) {
 				return;
 			}
 			TuningAction action = tuningItem.getItemSkinTemplate().getActions().getTuningAction();
 			if (action != null && action.canAct(player, tuningItem, item)) {
 				action.act(player, tuningItem, item);
-			}
-			return;
-		}
-		if (item.getOptionalSocket() != -1) {
-			return;
-		}
-		final int itemId = item.getItemId();
-		final ItemTemplate template = item.getItemTemplate();
-		final int nameId = template.getNameId();
-		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, item.getObjectId(), itemId, 5000, 0), true);
-		final ItemUseObserver observer = new ItemUseObserver() {
+            }
+        }
+        else {
+            if (item.getOptionalSocket() != -1 && item.getItemTemplate().getRandomBonusId() == 0 && item.getItemTemplate().getRealRndBonus() == 0) {
+                return;
+            }
+            int itemId = item.getItemId();
+            final ItemTemplate template = item.getItemTemplate();
+            final int nameId = template.getNameId();
+            PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), itemId, 5000, 9, 0));
+            final ItemUseObserver observer = new ItemUseObserver() {
 
-			@Override
-			public void abort() {
-				player.getController().cancelTask(TaskId.ITEM_USE);
-				player.removeItemCoolDown(template.getUseLimits().getDelayId());
-				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); // Item use cancel
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, itemObjectId, itemId, 0, 2), true);
-				player.getObserveController().removeObserver(this);
-			}
-		};
-		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
+                @Override
+                public void abort() {
+                    player.getController().cancelTask(TaskId.ITEM_USE);
+                    player.removeItemCoolDown(template.getUseLimits().getDelayId());
+                    PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(nameId)));
+                    PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemTemplate().getTemplateId(), 0, 11, 0));
+                    player.getObserveController().removeObserver(this);
+                }
+            };
+            player.getObserveController().attach(observer);
+            player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
 
-			@Override
-			public void run() {
-				if (item.getOptionalSocket() != -1) {
-					return;
-				}
-				player.getObserveController().removeObserver(observer);
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, itemObjectId, itemId, 0, 1), true);
+                @Override
+                public void run() {
+                    if (item.getOptionalSocket() != -1 && item.getItemTemplate().getRandomBonusId() == 0 && item.getItemTemplate().getRealRndBonus() == 0) {
+                        return;
+                    }
+                    if ((item.getRealRndBonus() != null || item.getRandomStats() != null) && !player.getInventory().tryDecreaseKinah(tunePrice)) {
+                        return;
+                    }
+                    player.getObserveController().removeObserver(observer);
+                    PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemTemplate().getTemplateId(), 0, 10, 0));
+                    item.setRandomStats(null);
+                    item.setBonusNumber(0);
+                    item.setRndBonus();
+                    if (item.getItemTemplate().getOptionSlotBonus() != 0) {
+                        item.setOptionalSocket(Rnd.get(0, item.getItemTemplate().getOptionSlotBonus()));
+                    }
+                    if (item.getRealRndBonus() == null) {
+                        RealRandomBonusService.setBonus(item);
+                    }
+                    else {
+                        RealRandomBonusService.rerollAllBonuses(player, item);
+                    }
+                    if (item.isEquipped()) {
+                        player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
+                    }
+                    else {
+                        player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
+                    }
+                    PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item));
+                    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new Object[] { new DescriptionId(nameId) }));
+                }
+            }, 5000));
+        }
+    }
 
-				item.setOptionalSocket(Rnd.get(0, item.getItemTemplate().getOptionSlotBonus()));
-				item.setRndBonus();
-				item.setPersistentState(PersistentState.UPDATE_REQUIRED);
-				PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item));
-				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new DescriptionId(nameId)));
-			}
-		}, 5000));
-
-	}
+    private int getTunePrices(Item item) {
+        switch (item.getItemTemplate().getItemQuality()) {
+            case FINALITY:
+                return 532364;
+            case RELIC:
+                return 133090;
+            case ANCIENT:
+                return 36616;
+            default:
+                return 36616;
+        }
+    }
 }

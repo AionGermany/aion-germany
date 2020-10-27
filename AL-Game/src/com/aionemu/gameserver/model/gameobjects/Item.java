@@ -26,8 +26,10 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.configs.main.EnchantsConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
+import com.aionemu.gameserver.dao.RealItemRndBonusDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.IExpirable;
@@ -39,6 +41,7 @@ import com.aionemu.gameserver.model.items.ItemMask;
 import com.aionemu.gameserver.model.items.ManaStone;
 import com.aionemu.gameserver.model.items.RandomBonusResult;
 import com.aionemu.gameserver.model.items.RandomStats;
+import com.aionemu.gameserver.model.items.RealRandomBonus;
 import com.aionemu.gameserver.model.items.storage.IStorage;
 import com.aionemu.gameserver.model.items.storage.ItemStorage;
 import com.aionemu.gameserver.model.items.storage.StorageType;
@@ -90,6 +93,7 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	private int bonusNumber = 0;
 	private List<StatFunction> currentModifiers;
 	private RandomStats randomStats;
+	private RealRandomBonus realRndBonus;
 	private int rndCount;
 	public static int MAX_BASIC_STONES = 6;
 	private int packCount;
@@ -193,6 +197,7 @@ public class Item extends AionObject implements IExpirable, StatOwner {
         this.enhanceEnchantLevel = enhanceEnchantLevel;
         this.SkinSkill = SkinSkill;
 		updateChargeInfo(charge);
+		DAOManager.getDAO(RealItemRndBonusDAO.class).loadRandomBonuses(this);
 	}
 
 	public final boolean setRndBonus() {
@@ -1082,4 +1087,12 @@ public class Item extends AionObject implements IExpirable, StatOwner {
 	public int getItemSkinSkill() {
 		return SkinSkill;
 	}
+
+    public RealRandomBonus getRealRndBonus() {
+        return realRndBonus;
+    }
+
+    public void setRealRndBonus(RealRandomBonus realRndBonus) {
+        this.realRndBonus = realRndBonus;
+    }
 }

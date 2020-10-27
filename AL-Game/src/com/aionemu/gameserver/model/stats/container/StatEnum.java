@@ -300,6 +300,15 @@ public enum StatEnum {
 		throw new IllegalArgumentException("Cannot find StatEnum for stone mask: " + mask);
 	}
 
+    public static StatEnum findByStringName(String name) {
+        for (StatEnum sEnum : values()) {
+            if (sEnum.name().equalsIgnoreCase(name)) {
+                return sEnum;
+            }
+        }
+        throw new IllegalArgumentException("Cannot find StatEnum by name: " + name);
+    }
+
 	public StatEnum getHandStat(long itemSlot) {
 		switch (this) {
 			case MAGICAL_ATTACK:

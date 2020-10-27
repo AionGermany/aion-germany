@@ -16,6 +16,8 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.dao.RealItemRndBonusDAO;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -55,6 +57,7 @@ public class CM_DELETE_ITEM extends AionClientPacket {
 			}
 			else {
 				inventory.delete(item, ItemDeleteType.DISCARD);
+				DAOManager.getDAO(RealItemRndBonusDAO.class).deleteAllRandomBonuses(item);
 			}
 		}
 	}

@@ -459,8 +459,7 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 	public Stat2 getMainHandPAccuracy() {
 		PlayerStatsTemplate pst = DataManager.PLAYER_STATS_DATA.getTemplate(owner.getPlayerClass(), owner.getLevel());
 		int base = pst.getMainHandAccuracy();
-		Equipment equipment = owner.getEquipment();
-		Item mainHandWeapon = equipment.getMainHandWeapon();
+		Item mainHandWeapon = owner.getEquipment().getMainHandWeapon();
 		if (mainHandWeapon != null) {
 			base += mainHandWeapon.getItemTemplate().getWeaponStats().getPhysicalAccuracy();
 		}
@@ -624,7 +623,7 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
 		base *= getWill().getCurrent() / 100f;
 		return getStat(StatEnum.REGEN_MP, base);
 	}
-
+	
 	@Override
 	public void updateStatInfo() {
 		PacketSendUtility.sendPacket(owner, new SM_STATS_INFO(owner));

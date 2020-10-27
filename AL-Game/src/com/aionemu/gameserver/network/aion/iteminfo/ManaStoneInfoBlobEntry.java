@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.items.IdianStone;
 import com.aionemu.gameserver.model.items.ItemStone;
 import com.aionemu.gameserver.model.items.ManaStone;
+import com.aionemu.gameserver.model.items.RealRandomBonusStat;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 
 /**
@@ -90,9 +91,33 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writeSkillBoost(buf); // 8-bytes
 		writeD(buf, item.isLunaReskin() ? 1 : 0); // Luna Reskin
 		writeC(buf, item.getReductionLevel()); // Level Reduction
-		writeB(buf, new byte[40]); // TODO
+		writeRandomBonus(buf); // TODO
 		writeD(buf, item.getItemSkinTemplate().getTemplateId());
 		writeB(buf, new byte[17]); //Temp Fix
+	}
+	
+	/**
+	 * Writes random Bonus data
+	 * 
+	 * @param item
+	 */
+	private void writeRandomBonus(ByteBuffer buf) { // TODO
+		Item item = ownerItem;
+		if (item.getRealRndBonus() == null) {
+			writeB(buf, new byte[40]);
+		} else {
+			final int size = (20 - (item.getRealRndBonus().getStats().size() * 2));
+			for (RealRandomBonusStat bonus : item.getRealRndBonus().getStats()) {
+				writeH(buf, bonus.getStat().getItemStoneMask());
+				System.out.println("Bonus STAT-ID: " + bonus.getStat().getItemStoneMask());
+			}
+			writeB(buf, new byte[size]);
+			for (RealRandomBonusStat bonus : item.getRealRndBonus().getStats()) {
+				writeH(buf, bonus.getValue());
+				System.out.println("Bonus VAL: " + bonus.getValue());
+			}
+			writeB(buf, new byte[size]);
+		}
 	}
 
 	/**
