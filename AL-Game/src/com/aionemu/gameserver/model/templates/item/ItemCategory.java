@@ -80,6 +80,8 @@ public enum ItemCategory {
 	ESTIMA,
 	SPRAY,
 	MANA_SLOT_OPEN,
+	GRIND_SLOT_OPEN,
+	GRIND_ENCHANT,
 	ODIAN,
 	RUNE,
 	NONE

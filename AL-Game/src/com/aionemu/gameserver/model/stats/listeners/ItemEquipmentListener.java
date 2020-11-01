@@ -36,7 +36,7 @@ import com.aionemu.gameserver.model.templates.item.WeaponType;
 import com.aionemu.gameserver.model.templates.itemset.FullBonus;
 import com.aionemu.gameserver.model.templates.itemset.ItemSetTemplate;
 import com.aionemu.gameserver.model.templates.itemset.PartBonus;
-import com.aionemu.gameserver.services.EnchantService;
+import com.aionemu.gameserver.services.enchant.EnchantService;
 import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.StigmaService;
 

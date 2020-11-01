@@ -56,4 +56,10 @@ public class EnchantsConfig {
 	 */
 	@Property(key = "gameserver.godstone.base", defaultValue = "1000")
 	public static int BASE_GODSTONE;
+
+	/**
+	 * Enchant Speed
+	 */
+    @Property(key="gameserver.enchant.cast.speed", defaultValue="4000")
+    public static int ENCHANT_SPEED;
 }

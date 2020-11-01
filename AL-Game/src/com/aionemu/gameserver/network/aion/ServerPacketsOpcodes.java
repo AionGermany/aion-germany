@@ -354,6 +354,7 @@ public class ServerPacketsOpcodes {
 		//addPacketOpcode(SM_REMOVE_DYE.class, 0x1DF, idSet); // 6.x TODO
 		addPacketOpcode(SM_WORLD_PLAYTIME.class, 0x185, idSet); // 7.5 EU
 		addPacketOpcode(SM_PLAYER_FAME.class, 0x186, idSet); // 7.5 EU
+		addPacketOpcode(SM_RUNES.class, 0x188, idSet); // 7.5 EU TODO
 		
 		// --------------------UNKNOWN PACKETS-----------------------//
 	}

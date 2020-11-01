@@ -35,6 +35,15 @@ public class SM_ITEM_USAGE_ANIMATION extends AionServerPacket {
 	private int time;
 	private int animationsId;
 
+	public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId, int animationsId, int unk) {
+		this.playerObjId = playerObjId;
+		this.targetObjId = 0;
+		this.itemObjId = itemObjId;
+		this.itemId = itemId;
+		this.time = 0;
+		this.animationsId = 1;
+	}
+
 	public SM_ITEM_USAGE_ANIMATION(int playerObjId, int itemObjId, int itemId) {
 		this.playerObjId = playerObjId;
 		this.targetObjId = 0;

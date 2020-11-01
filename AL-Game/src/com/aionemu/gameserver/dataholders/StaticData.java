@@ -65,6 +65,8 @@ public class StaticData {
 	public ItemRandomBonusData itemRandomBonuses;
 	@XmlElement(name = "real_random_bonuses")
 	public ItemRealRandomBonusData itemRealRandomBonuses;
+    @XmlElement(name = "grind_combines")
+    public GrindCombineData grindCombineData;
 	@XmlElement(name = "npc_templates")
 	public NpcData npcData;
 	@XmlElement(name = "npc_shouts")
@@ -279,6 +281,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + itemRealRandomBonuses.size() + " item real bonus templates");
 		DataManager.log.info("[DataManager] Loaded " + itemGroupsData.bonusSize() + " bonus item group templates");
 		DataManager.log.info("[DataManager] Loaded " + itemGroupsData.petFoodSize() + " pet food items");
+		DataManager.log.info("[DataManager] Loaded " + grindCombineData.size() + " grind combine items");
 		DataManager.log.info("[DataManager] Loaded " + npcData.size() + " npc templates");
 		DataManager.log.info("[DataManager] Loaded " + systemMailTemplates.size() + " system mail templates");
 		DataManager.log.info("[DataManager] Loaded " + npcShoutData.size() + " npc shout templates");

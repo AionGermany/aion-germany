@@ -31,8 +31,8 @@ public class PremiumOptionInfoBlobEntry extends ItemBlobEntry {
 
 	@Override
 	public void writeThisBlob(ByteBuffer buf) {
-		writeH(buf, ownerItem.getBonusNumber());
-		// writeC(buf, ownerItem.getRandomCount());
+		writeC(buf, ownerItem.getBonusNumber());
+		writeC(buf, ownerItem.getRandomCount());
 		writeC(buf, 0);
 	}
 

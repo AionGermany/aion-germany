@@ -18,6 +18,7 @@
     <xs:include schemaLocation="items/item_real_random_bonuses.xsd"/>
     <xs:include schemaLocation="items/item_groups.xsd"/>
     <xs:include schemaLocation="items/assembly_items.xsd"/>
+    <xs:include schemaLocation="items/grind_combines.xsd"/>
     <xs:include schemaLocation="npc_factions/npc_factions.xsd"/>
     <xs:include schemaLocation="npc_skills/npc_skills.xsd"/>
     <xs:include schemaLocation="npcs/npcs.xsd"/>
@@ -137,6 +138,7 @@
                 <xs:element ref="real_random_bonuses" minOccurs="0"/>
                 <xs:element ref="item_groups" minOccurs="0"/>
                 <xs:element ref="assembly_items" minOccurs="0"/>
+                <xs:element ref="grind_combines" minOccurs="0"/>
                 <xs:element ref="npc_factions" minOccurs="0"/>
                 <xs:element ref="npc_skill_templates" minOccurs="0"/>
                 <xs:element ref="npc_templates" minOccurs="0"/>

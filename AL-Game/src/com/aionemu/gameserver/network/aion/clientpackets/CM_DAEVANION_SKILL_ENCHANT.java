@@ -18,7 +18,7 @@ package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.EnchantDaevanionSkillService;
+import com.aionemu.gameserver.services.enchant.EnchantDaevanionBook;
 
 /**
  * @author Falke_34
@@ -42,6 +42,6 @@ public class CM_DAEVANION_SKILL_ENCHANT extends AionClientPacket {
 
 	@Override
 	protected void runImpl() {
-		EnchantDaevanionSkillService.enchantDaevanionSkill(getConnection().getActivePlayer(), skillId, bookObjId, materialObjId);
+		EnchantDaevanionBook.enchantDaevanionSkill(getConnection().getActivePlayer(), skillId, bookObjId, materialObjId);
 	}
 }

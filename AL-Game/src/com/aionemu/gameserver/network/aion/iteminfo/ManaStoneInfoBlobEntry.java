@@ -93,8 +93,19 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 		writeC(buf, item.getReductionLevel()); // Level Reduction
 		writeRandomBonus(buf); // TODO
 		writeD(buf, item.getItemSkinTemplate().getTemplateId());
-		writeB(buf, new byte[17]); //Temp Fix
+		writeGrind(buf);
 	}
+
+    private void writeGrind(ByteBuffer buf) {
+        Item item = ownerItem;
+        writeC(buf, item.getGrindSocket());
+        writeC(buf, item.getGrindColor());
+		writeQ(buf, 0);
+        writeC(buf, item.isContaminated() ? 1 : 0);
+        writeC(buf, 0);
+        writeC(buf, 0);
+        writeD(buf, 0);
+    }
 	
 	/**
 	 * Writes random Bonus data
@@ -109,7 +120,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 			final int size = (20 - (item.getRealRndBonus().getStats().size() * 2));
 			for (RealRandomBonusStat bonus : item.getRealRndBonus().getStats()) {
 				writeH(buf, bonus.getStat().getItemStoneMask());
-				System.out.println("Bonus STAT-ID: " + bonus.getStat().getItemStoneMask());
+				System.out.println("Bonus STAT-NAME: " + bonus.getStat().name() + " STAT-ID: " + bonus.getStat().getItemStoneMask());
 			}
 			writeB(buf, new byte[size]);
 			for (RealRandomBonusStat bonus : item.getRealRndBonus().getStats()) {
@@ -117,6 +128,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 				System.out.println("Bonus VAL: " + bonus.getValue());
 			}
 			writeB(buf, new byte[size]);
+			System.out.println("Size: " + size);
 		}
 	}
 
@@ -253,6 +265,10 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 				 // writeD(buf, 0); // PvE Defend Ratio
 					break;
 				default:
+					writeD(buf, 0);
+				    writeD(buf, 0);
+				    writeD(buf, 0);
+				    writeD(buf, 0);
 					break;
 			}
 				// Some Padding for future.

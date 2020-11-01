@@ -20,6 +20,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.GodstoneAction;
+import com.aionemu.gameserver.model.templates.item.actions.GrindSlotExpansionAction;
 import com.aionemu.gameserver.model.templates.item.actions.ManastoneSlotExpansionAction;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
@@ -44,6 +45,8 @@ public class CM_MANASTONE extends AionClientPacket {
 	private int stoneUniqueId;
 	private int targetItemUniqueId;
 	private int supplementUniqueId;
+	@SuppressWarnings("unused")
+	private int grindStone;
 
 	/**
 	 * @param opcode
@@ -70,6 +73,12 @@ public class CM_MANASTONE extends AionClientPacket {
 				readH();
 				readD(); //Old = npcObjId
 				break;
+            case 10:
+                grindStone = readD();
+                read();
+                break;
+            case 11: // TODO
+                break;
 		    default:
 				log.error("Unknown enchantment type? 0x" + Integer.toHexString(actionType).toUpperCase());
 			break;
@@ -85,6 +94,7 @@ public class CM_MANASTONE extends AionClientPacket {
 			case 2: // add manastone
 				EnchantItemAction action = new EnchantItemAction();
 				ManastoneSlotExpansionAction action2 = new ManastoneSlotExpansionAction();
+				GrindSlotExpansionAction action3 = new GrindSlotExpansionAction();
 
 				Item manastone = player.getInventory().getItemByObjId(stoneUniqueId);
 				Item targetItem = player.getEquipment().getEquippedItemByObjId(targetItemUniqueId);
@@ -103,6 +113,9 @@ public class CM_MANASTONE extends AionClientPacket {
 				}
                 if (manastone.getItemTemplate().isManaSlotOpen() && action2.canAct(player, manastone, targetItem)) {
                     action2.act(player, manastone, targetItem);
+                }
+                if (manastone.getItemTemplate().isGrindSlotOpen() && action3.canAct(player, manastone, targetItem)) {
+                    action3.act(player, manastone, targetItem);
                 }
 				break;
 			case 3: // remove manastone

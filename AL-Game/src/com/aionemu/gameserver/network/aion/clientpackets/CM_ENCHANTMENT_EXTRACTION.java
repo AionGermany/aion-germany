@@ -24,7 +24,7 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.EnchantService;
+import com.aionemu.gameserver.services.enchant.EnchantService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**

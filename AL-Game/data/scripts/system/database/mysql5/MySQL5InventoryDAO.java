@@ -53,9 +53,9 @@ import javolution.util.FastList;
 public class MySQL5InventoryDAO extends InventoryDAO {
 
 	private static final Logger log = LoggerFactory.getLogger(MySQL5InventoryDAO.class);
-	public static final String SELECT_QUERY = "SELECT `item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `is_equiped`, `is_soul_bound`, `slot`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant`, `is_seal`, `skin_skill` FROM `inventory` WHERE `item_owner`=? AND `item_location`=? AND `is_equiped`=?";
-	public static final String INSERT_QUERY = "INSERT INTO `inventory` (`item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `item_owner`, `is_equiped`, is_soul_bound, `slot`, `item_location`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant`, `is_seal`, `skin_skill`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	public static final String UPDATE_QUERY = "UPDATE inventory SET  item_count=?, item_color=?, color_expires=?, item_creator=?, expire_time=?, activation_count=?,item_owner=?, is_equiped=?, is_soul_bound=?, slot=?, item_location=?, enchant=?, item_skin=?, fusioned_item=?, optional_socket=?, optional_fusion_socket=?, charge=?, rnd_bonus=?, rnd_count=?, pack_count=?, authorize=?, is_packed=?, is_amplified=?, buff_skill=?, reduction_level=?, luna_reskin=?, isEnhance=?, enhanceSkillId=?, enhanceSkillEnchant=?, is_seal=?, skin_skill=? WHERE item_unique_id=?";
+	public static final String SELECT_QUERY = "SELECT `item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `is_equiped`, `is_soul_bound`, `slot`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant`, `is_seal`, `skin_skill`, `grind_socket`, `grind_color`, `grind_stone`, `grind_slot`, `contaminated` FROM `inventory` WHERE `item_owner`=? AND `item_location`=? AND `is_equiped`=?";
+	public static final String INSERT_QUERY = "INSERT INTO `inventory` (`item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `item_owner`, `is_equiped`, `is_soul_bound`, `slot`, `item_location`, `enchant`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `pack_count`, `authorize`, `is_packed`, `is_amplified`, `buff_skill`, `reduction_level`, `luna_reskin`, `isEnhance`, `enhanceSkillId`, `enhanceSkillEnchant`, `is_seal`, `skin_skill`, `grind_socket`, `grind_color`, `grind_stone`, `grind_slot`, `contaminated`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	public static final String UPDATE_QUERY = "UPDATE inventory SET  item_count=?, item_color=?, color_expires=?, item_creator=?, expire_time=?, activation_count=?,item_owner=?, is_equiped=?, is_soul_bound=?, slot=?, item_location=?, enchant=?, item_skin=?, fusioned_item=?, optional_socket=?, optional_fusion_socket=?, charge=?, rnd_bonus=?, rnd_count=?, pack_count=?, authorize=?, is_packed=?, is_amplified=?, buff_skill=?, reduction_level=?, luna_reskin=?, isEnhance=?, enhanceSkillId=?, enhanceSkillEnchant=?, is_seal=?, skin_skill=?, grind_socket=?, grind_color=?, grind_color=?, grind_slot=?, contaminated=? WHERE item_unique_id=?";
 	public static final String DELETE_QUERY = "DELETE FROM inventory WHERE item_unique_id=?";
 	public static final String DELETE_CLEAN_QUERY = "DELETE FROM inventory WHERE item_owner=? AND item_location != 2"; // legion warehouse needs not to be excluded, since players and legions are IDAwareDAOs
 	public static final String SELECT_ACCOUNT_QUERY = "SELECT `account_id` FROM `players` WHERE `id`=?";
@@ -252,7 +252,12 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 		int enhanceSkillEnchant = rset.getInt("enhanceSkillEnchant");
 		int unSeal = rset.getInt("is_seal");
 		int skinSkill = rset.getInt("skin_skill");
-		Item item = new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, isEquiped == 1, isSoulBound == 1, slot, storage, enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, isPacked == 1, isAmplified == 1, amplificationSkill, reductionLevel, isLunaReskin == 1, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal, skinSkill);
+		int grindSocket = rset.getInt("grind_socket");
+		int grindColor = rset.getInt("grind_color");
+		long grindStone = rset.getInt("grind_stone");
+		int grindSlot = rset.getInt("grind_slot");
+		boolean contaminated = rset.getBoolean("contaminated");
+		Item item = new Item(itemUniqueId, itemId, itemCount, itemColor, colorExpireTime, itemCreator, expireTime, activationCount, isEquiped == 1, isSoulBound == 1, slot, storage, enchant, itemSkin, fusionedItem, optionalSocket, optionalFusionSocket, charge, randomBonus, rndCount, packCount, max_authorize, isPacked == 1, isAmplified == 1, amplificationSkill, reductionLevel, isLunaReskin == 1, isEnhance, enhanceSkillId, enhanceSkillEnchant, unSeal, skinSkill, grindSocket, grindColor, grindStone, grindSlot, contaminated);
 		return item;
 	}
 
@@ -437,6 +442,11 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(31, item.getEnhanceEnchantLevel());
 				stmt.setInt(32, item.getUnSeal());
 				stmt.setInt(33, item.getItemSkinSkill());
+				stmt.setInt(34, item.getGrindSocket());
+				stmt.setInt(35, item.getGrindColor());
+				stmt.setLong(36, item.getGrindStone());
+				stmt.setInt(37, item.getGrindSlot());
+				stmt.setBoolean(38, item.isContaminated());
 				stmt.addBatch();
 			}
 
@@ -495,7 +505,12 @@ public class MySQL5InventoryDAO extends InventoryDAO {
 				stmt.setInt(29, item.getEnhanceEnchantLevel());
 				stmt.setInt(30, item.getUnSeal());
 				stmt.setInt(31, item.getItemSkinSkill());
-				stmt.setInt(32, item.getObjectId());
+				stmt.setInt(32, item.getGrindSocket());
+				stmt.setInt(33, item.getGrindColor());
+				stmt.setLong(34, item.getGrindStone());
+				stmt.setLong(35, item.getGrindSlot());
+				stmt.setBoolean(36, item.isContaminated());
+				stmt.setInt(37, item.getObjectId());
 				stmt.addBatch();
 			}
 

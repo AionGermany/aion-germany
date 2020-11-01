@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.EnchantDaevanionSkillService;
+import com.aionemu.gameserver.services.enchant.CombineDaevanionBook;
 
 /**
  * @author Falke_34
@@ -44,6 +44,6 @@ public class CM_DAEVANION_SKILL_FUSION extends AionClientPacket {
     }
 
     protected void runImpl() {
-    	EnchantDaevanionSkillService.combineDaevanionBook(getConnection().getActivePlayer(), sacrificeBook);
+    	CombineDaevanionBook.combineDaevanionBook(getConnection().getActivePlayer(), sacrificeBook);
     }
 }

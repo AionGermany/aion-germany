@@ -28,9 +28,9 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.actions.TuningAction;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_UPDATE_ITEM;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.item.ItemPacketService;
 import com.aionemu.gameserver.services.item.RealRandomBonusService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
@@ -78,10 +78,10 @@ public class CM_TUNE extends AionClientPacket {
             if (item.getOptionalSocket() != -1 && item.getItemTemplate().getRandomBonusId() == 0 && item.getItemTemplate().getRealRndBonus() == 0) {
                 return;
             }
-            int itemId = item.getItemId();
+            
             final ItemTemplate template = item.getItemTemplate();
             final int nameId = template.getNameId();
-            PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), itemId, 5000, 9, 0));
+            PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, item.getObjectId(), item.getItemId(), 5000, 9));
             final ItemUseObserver observer = new ItemUseObserver() {
 
                 @Override
@@ -89,7 +89,7 @@ public class CM_TUNE extends AionClientPacket {
                     player.getController().cancelTask(TaskId.ITEM_USE);
                     player.removeItemCoolDown(template.getUseLimits().getDelayId());
                     PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(nameId)));
-                    PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemTemplate().getTemplateId(), 0, 11, 0));
+                    PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , item.getObjectId(), item.getItemId(), 0, 11));
                     player.getObserveController().removeObserver(this);
                 }
             };
@@ -104,28 +104,26 @@ public class CM_TUNE extends AionClientPacket {
                     if ((item.getRealRndBonus() != null || item.getRandomStats() != null) && !player.getInventory().tryDecreaseKinah(tunePrice)) {
                         return;
                     }
-                    player.getObserveController().removeObserver(observer);
-                    PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemTemplate().getTemplateId(), 0, 10, 0));
+                    
                     item.setRandomStats(null);
                     item.setBonusNumber(0);
                     item.setRndBonus();
+                    
                     if (item.getItemTemplate().getOptionSlotBonus() != 0) {
                         item.setOptionalSocket(Rnd.get(0, item.getItemTemplate().getOptionSlotBonus()));
                     }
+                    
                     if (item.getRealRndBonus() == null) {
                         RealRandomBonusService.setBonus(item);
-                    }
-                    else {
+                    } else {
                         RealRandomBonusService.rerollAllBonuses(player, item);
                     }
-                    if (item.isEquipped()) {
-                        player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
-                    }
-                    else {
-                        player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
-                    }
-                    PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item));
+                    
+                    item.setPersistentState(PersistentState.UPDATE_REQUIRED);
+					player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
+					ItemPacketService.updateItemAfterInfoChange(player, item);
                     PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new Object[] { new DescriptionId(nameId) }));
+    				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , item.getObjectId(), item.getItemId(), 0, 1));
                 }
             }, 5000));
         }

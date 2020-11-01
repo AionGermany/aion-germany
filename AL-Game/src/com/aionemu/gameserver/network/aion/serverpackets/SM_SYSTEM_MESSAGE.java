@@ -21921,6 +21921,34 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
         return new SM_SYSTEM_MESSAGE(1405961, value);
     }
 
+    public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_ENCHANT_OP_ODIAN_SUCCEEDED(DescriptionId descriptionId) {
+        return new SM_SYSTEM_MESSAGE(1405920, descriptionId);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_ENCHANT_OP_RUNE_SUCCEEDED(DescriptionId descriptionId) {
+        return new SM_SYSTEM_MESSAGE(1405921, descriptionId);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_ENCHANT_GRIND_CANT_STATUS(DescriptionId descriptionId) {
+        return new SM_SYSTEM_MESSAGE(1405906, descriptionId);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_ENCHANT_GRIND_SUCCEEDED(DescriptionId descriptionId, int value0) {
+        return new SM_SYSTEM_MESSAGE(1405910, descriptionId, value0);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_ENCHANT_GRIND_CANCEL(int nameId) {
+        return new SM_SYSTEM_MESSAGE(1405911, new DescriptionId(nameId));
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_ENCHANT_GRIND_FAIL(DescriptionId descriptionId) {
+        return new SM_SYSTEM_MESSAGE(1405912, descriptionId);
+    }
+
+    public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_ENCHANT_GRIND_LIMIT(int nameId) {
+        return new SM_SYSTEM_MESSAGE(1405913, new DescriptionId(nameId));
+    }
+
     public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTIONSLOT_SUCCEED(DescriptionId descriptionId) {
         return new SM_SYSTEM_MESSAGE(1404666, descriptionId);
     }
