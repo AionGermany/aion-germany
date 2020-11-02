@@ -60,7 +60,7 @@ public class SM_PLAYER_SPAWN extends AionServerPacket {
 		writeF(player.getY()); // y
 		writeF(player.getZ()); // z
 		writeC(player.getHeading()); // heading
-		writeD(100);
+		writeD(2);
 		writeD(0); // TODO => can take some value but dunno what this info is atm
 		if ((player.getWorldId() == 300200000 || player.getWorldId() == 320100000 || player.getWorldId() == 320050000 || player.getWorldId() == 300030000)) {
 			writeD(2);

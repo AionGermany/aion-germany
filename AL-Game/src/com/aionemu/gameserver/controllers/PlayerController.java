@@ -865,10 +865,10 @@ public class PlayerController extends CreatureController<Player> {
 		if (!getOwner().isProtectionActive()) {
 			TeleportService2.playerTransformation(getOwner());
 			PacketSendUtility.broadcastPacket(getOwner(), new SM_PLAYER_PROTECTION(60));
-			PacketSendUtility.broadcastPacket(getOwner(), new SM_PLAYER_PROTECTION(60000));
 			getOwner().setVisualState(CreatureVisualState.BLINKING);
 			AttackUtil.cancelCastOn(getOwner());
 			AttackUtil.removeTargetFrom(getOwner());
+			PacketSendUtility.broadcastPacket(getOwner(), new SM_PLAYER_PROTECTION(60000));
 			PacketSendUtility.broadcastPacket(getOwner(), new SM_PLAYER_STATE(getOwner()), true);
 			Future<?> task = ThreadPoolManager.getInstance().schedule(new Runnable() {
 

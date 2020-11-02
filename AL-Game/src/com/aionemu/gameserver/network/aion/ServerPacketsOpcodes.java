@@ -88,7 +88,7 @@ public class ServerPacketsOpcodes {
 		addPacketOpcode(SM_QUESTION_WINDOW.class, 0x34, idSet);
 		//addPacketOpcode(SM_DUEL_REQUEST_CANCEL.class, 0x35, idSet);
 		addPacketOpcode(SM_ATTACK.class, 0x36, idSet); // 7.5 EU
-		addPacketOpcode(SM_MOVE.class, 0x35, idSet); // 7.5 EU
+		addPacketOpcode(SM_MOVE.class, 0x37, idSet); // 7.5 EU
 		addPacketOpcode(SM_HEADING_UPDATE.class, 0x39, idSet); // TODO! not used
 		addPacketOpcode(SM_TRANSFORM.class, 0x3A, idSet); // 7.5 EU
 		addPacketOpcode(SM_DIALOG_WINDOW.class, 0x3C, idSet);

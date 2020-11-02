@@ -22,6 +22,7 @@ import com.aionemu.gameserver.configs.main.MembershipConfig;
 import com.aionemu.gameserver.configs.main.WeddingsConfig;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.model.Gender;
+import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.actions.PlayerMode;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -332,9 +333,10 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		/**
 		 * Movement
 		 */
-		writeF(0);
-		writeF(0);
-		writeF(0);
+		writeB(new byte[12]);
+//		writeF(0);
+//		writeF(0);
+//		writeF(0);
 		writeF(player.getX());// x
 		writeF(player.getY());// y
 		writeF(player.getZ());// z
@@ -364,7 +366,7 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		writeD(player.getHouseOwnerId()); // 3.0
 		writeD(player.getBonusTime().getStatus().getId()); // Abbey Return Buff ID 1 -Normal, 2 - New, 3 Return
 		writeD(0x00);// unk 0x00 4.7 //TODO need to figure out
-		writeC(3);//raceId == 0 ? 5 : 3); // language asmo:3 ely:5
+		writeC(player.getRace() == Race.ELYOS ? 5 : 3); // language asmo:3 ely:5
 		/**
 		 * === Conqueror === 0x01 = Conquerers Will Lvl 1 (Buff you get for killing enemies from their home map) 0x02 = Furious Conquerers Will Lvl 2 (Buff you get for killing enemies from their home
 		 * map) 0x03 = Berserk Conquerers Will Lvl 3 (Buff you get for killing enemies from their home map) === Protector == 0x01 = Protector Lvl 1 0x02 = Protector Lvl 2 0x03 = Protector Lvl 3
@@ -394,6 +396,6 @@ public class SM_PLAYER_INFO extends AionServerPacket {
 		        writeC(0); // 4.9
 		        break;
 		    }
-		writeD(1000); // 5.4 found value 1000,2000 and 0
+		writeD(0);
 	}
 }

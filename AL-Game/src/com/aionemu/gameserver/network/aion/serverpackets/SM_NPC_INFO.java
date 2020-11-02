@@ -169,9 +169,9 @@ public class SM_NPC_INFO extends AionServerPacket {
 				writeH(0x00);
 			}
 			// we don't know weapon dimensions, just add 0.1
-			writeF(boundRadius.getFront() + 0.125f + (hasWeapon ? 0.1f : 0f));
 		}
-
+		
+		writeF(boundRadius.getFront() + 0.125f + (hasWeapon ? 0.1f : 0f));
 		writeF(npcTemplate.getHeight());
 		writeF(_npc.getGameStats().getMovementSpeedFloat());// speed
 
