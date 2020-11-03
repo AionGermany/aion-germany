@@ -18,6 +18,7 @@ package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.templates.item.actions.EnchantGrindingAction;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.GodstoneAction;
 import com.aionemu.gameserver.model.templates.item.actions.GrindSlotExpansionAction;
@@ -25,6 +26,7 @@ import com.aionemu.gameserver.model.templates.item.actions.ManastoneSlotExpansio
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.enchant.GrindCombineService;
 import com.aionemu.gameserver.services.item.ItemSocketService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -95,6 +97,7 @@ public class CM_MANASTONE extends AionClientPacket {
 				EnchantItemAction action = new EnchantItemAction();
 				ManastoneSlotExpansionAction action2 = new ManastoneSlotExpansionAction();
 				GrindSlotExpansionAction action3 = new GrindSlotExpansionAction();
+				EnchantGrindingAction action4 = new EnchantGrindingAction();
 
 				Item manastone = player.getInventory().getItemByObjId(stoneUniqueId);
 				Item targetItem = player.getEquipment().getEquippedItemByObjId(targetItemUniqueId);
@@ -116,6 +119,9 @@ public class CM_MANASTONE extends AionClientPacket {
                 }
                 if (manastone.getItemTemplate().isGrindSlotOpen() && action3.canAct(player, manastone, targetItem)) {
                     action3.act(player, manastone, targetItem);
+                }
+                if (manastone.getItemTemplate().isGrindEnchant() && action4.canAct(player, manastone, targetItem)) {
+                    action4.act(player, manastone, targetItem);
                 }
 				break;
 			case 3: // remove manastone
@@ -144,6 +150,11 @@ public class CM_MANASTONE extends AionClientPacket {
 				if (godAction.canAct(player, godStone, targetItemGod)) {
 					godAction.act(player, godStone, targetItemGod);
 				}
+				break;
+            case 10:
+                Item mat1 = player.getInventory().getItemByObjId(targetItemUniqueId);
+                Item mat2 = player.getInventory().getItemByObjId(grindStone);
+                GrindCombineService.combineGrind(player, mat1, mat2);
 				break;
 		}
 	}
