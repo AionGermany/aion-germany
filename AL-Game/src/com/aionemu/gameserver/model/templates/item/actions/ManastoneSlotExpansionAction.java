@@ -53,18 +53,21 @@ public class ManastoneSlotExpansionAction extends AbstractItemAction {
 	public void act(final Player player, final Item parentItem, final Item targetItem) {
 		final int manaSlot = targetItem.getOptionalSocket();
 		final int manaSlot2 = targetItem.getOptionalFusionSocket();
-		final boolean isSlotSuccess = Rnd.chance((int) 65);
+		final boolean isSlotSuccess = Rnd.chance(65);
+		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 2000, 12));
+
 		final ItemUseObserver observer = new ItemUseObserver() {
 
 			@Override
 			public void abort() {
 				player.getController().cancelTask(TaskId.ITEM_USE);
 				player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , parentItem.getObjectId(), parentItem.getItemId(), 0, 14));
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_CANCELED(targetItem.getNameId()));
 				player.getObserveController().removeObserver(this);
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, 14));
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_CANCELED(targetItem.getNameId()));
 			}
 		};
+		
 		player.getObserveController().attach(observer);
 		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
 
@@ -74,16 +77,12 @@ public class ManastoneSlotExpansionAction extends AbstractItemAction {
 					return;
 				}
 				if (isSlotSuccess) {
-					
 					if (targetItem.getOptionalSocket() >= targetItem.getItemTemplate().getMaxSlot()) {
 						targetItem.setOptionalFusionSocket(manaSlot2 + 1);
 					} else {
 						targetItem.setOptionalSocket(manaSlot + 1);
 					}
-
 					targetItem.setPersistentState(PersistentState.UPDATE_REQUIRED);
-					player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
-					ItemPacketService.updateItemAfterInfoChange(player, targetItem);
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_SUCCEED(new DescriptionId(targetItem.getNameId())));
 				} else {
 					player.getController().cancelTask(TaskId.ITEM_USE);
@@ -91,7 +90,9 @@ public class ManastoneSlotExpansionAction extends AbstractItemAction {
 					player.getObserveController().removeObserver(observer);
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_FAILED(new DescriptionId(targetItem.getNameId())));
 				}
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , parentItem.getObjectId(), parentItem.getItemId(), 0, isSlotSuccess ? 1 : 2));
+				player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
+				ItemPacketService.updateItemAfterInfoChange(player, targetItem);
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, isSlotSuccess ? 13 : 14));
 			}
 		}, 2000));
 	}

@@ -135,7 +135,7 @@ public class EnchantItemAction extends AbstractItemAction {
 				}
 				break;
 		}
-		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), EnchantsConfig.ENCHANT_CAST_DELAY, 0));
+		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), EnchantsConfig.ENCHANT_CAST_DELAY, 9));
 
 		final ItemUseObserver observer = new ItemUseObserver() {
 
@@ -144,7 +144,7 @@ public class EnchantItemAction extends AbstractItemAction {
 				player.getController().cancelTask(TaskId.ITEM_USE);
 				player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300457, new DescriptionId(targetItem.getNameId()))); // Enchant Item canceled
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, 2));
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, 11));
 				player.getObserveController().removeObserver(this);
 			}
 		};
@@ -205,7 +205,7 @@ public class EnchantItemAction extends AbstractItemAction {
 							break;
 					}
 				}
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isSuccess ? 1 : 2));
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isSuccess ? 1 : 2));
 			}
 		}, EnchantsConfig.ENCHANT_CAST_DELAY));
 	}

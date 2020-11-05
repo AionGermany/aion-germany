@@ -53,21 +53,21 @@ public class GrindSlotExpansionAction extends AbstractItemAction {
 	public void act(final Player player, final Item parentItem, final Item targetItem) {
 		final int grindSocket = targetItem.getGrindSocket();
 		final boolean isSlotSuccess = Rnd.chance(65);
-		System.out.println("Runen Erweiterung");
-		System.out.println("TargetItem: " + targetItem.getItemId());
-		System.out.println("ParentItem: " + parentItem.getItemId());
+		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 2000, 12));
+		
 		final ItemUseObserver observer = new ItemUseObserver() {
 
 			@Override
 			public void abort() {
 				player.getController().cancelTask(TaskId.ITEM_USE);
 				player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , parentItem.getObjectId(), parentItem.getItemId(), 0, 14));
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_CANCELED(targetItem.getNameId()));
 				player.getObserveController().removeObserver(this);
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, 14));
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_CANCELED(targetItem.getNameId()));
 				
 			}
 		};
+		
 		player.getObserveController().attach(observer);
 		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
 
@@ -77,7 +77,6 @@ public class GrindSlotExpansionAction extends AbstractItemAction {
 					return;
 				}
 				if (isSlotSuccess) {
-					System.out.println("SUCCESS");
 					if (targetItem.getItemTemplate().isOdianAccessory()) {
 						targetItem.setGrindColor(Rnd.get(1, 3));
 						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_ENCHANT_OP_ODIAN_SUCCEEDED(new DescriptionId(targetItem.getNameId())));
@@ -85,19 +84,17 @@ public class GrindSlotExpansionAction extends AbstractItemAction {
 						targetItem.setGrindColor(Rnd.get(11, 13));
 						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_ENCHANT_OP_RUNE_SUCCEEDED(new DescriptionId(targetItem.getNameId())));
 					}
-					
 					targetItem.setGrindSocket(grindSocket + 1);
 					targetItem.setPersistentState(PersistentState.UPDATE_REQUIRED);
-					player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
-					ItemPacketService.updateItemAfterInfoChange(player, targetItem);
 				} else {
-					System.out.println("FAIL");
 					player.getController().cancelTask(TaskId.ITEM_USE);
 					player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_FAILED(new DescriptionId(targetItem.getNameId())));
 					player.getObserveController().removeObserver(observer);
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GIVE_ITEM_OPTIONSLOT_FAILED(new DescriptionId(targetItem.getNameId())));
 				}
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , parentItem.getObjectId(), parentItem.getItemId(), 0, isSlotSuccess ? 1 : 2));
+				player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
+				ItemPacketService.updateItemAfterInfoChange(player, targetItem);
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, isSlotSuccess ? 13 : 14));
 			}
 		}, 2000));
 	}

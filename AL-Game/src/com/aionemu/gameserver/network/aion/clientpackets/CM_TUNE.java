@@ -119,11 +119,12 @@ public class CM_TUNE extends AionClientPacket {
                         RealRandomBonusService.rerollAllBonuses(player, item);
                     }
                     
+                    player.removeItemCoolDown(template.getUseLimits().getDelayId());
                     item.setPersistentState(PersistentState.UPDATE_REQUIRED);
 					player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
 					ItemPacketService.updateItemAfterInfoChange(player, item);
                     PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new Object[] { new DescriptionId(nameId) }));
-    				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , item.getObjectId(), item.getItemId(), 0, 1));
+    				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0 , item.getObjectId(), item.getItemId(), 0, 10));
                 }
             }, 5000));
         }
