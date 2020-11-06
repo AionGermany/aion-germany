@@ -34,7 +34,9 @@ public class ItemStone implements StatOwner {
 		MANASTONE,
 		GODSTONE,
 		FUSIONSTONE,
-		IDIANSTONE;
+		IDIANSTONE,
+        ODIANSTONE,
+        RUNESTONE;
 	}
 
 	/**
