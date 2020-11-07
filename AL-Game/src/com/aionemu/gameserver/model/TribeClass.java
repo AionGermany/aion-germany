@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlEnum;
 public enum TribeClass {
 
     /* <!-- new tribe enumeration (sorted by name) --> */
-    /* <!-- parsed by phpTools from Aion Germany Group (Mariella) at 2019-10-31 09:49 --> */
+    /* <!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-11-07 06:41 --> */
     AB1_AGGRESSIVESINGLEMONSTER,
     AB1_AGGRESSIVESUPPORTMONSTER,
     AB1_BOSS,
@@ -80,6 +80,8 @@ public enum TribeClass {
     ATKDRAKAN,
     ATKGUARD_DARK(Race.ASMODIANS),
     ATKGUARD_LIGHT(Race.ELYOS),
+    ATREIA_GARDEN_BADLARVA,
+    ATREIA_GARDEN_PLANTS,
     BAT_FAMILY_ELITE,
     BMDGUARDIAN,
     BMLGUARDIAN,
@@ -372,6 +374,8 @@ public enum TribeClass {
     IDBC_POL_LIGHT,
     IDCATACOMBS_DRAKE,
     IDCATACOMBS_DRAKE_SUM,
+    IDCATACOMBS_RUDRA_HINT_01,
+    IDCATACOMBS_RUDRA_HINT_02,
     IDCATACOMBS_TAROS,
     IDCUSTOMIZE_MONSTER,
     IDCUSTOMIZE_NPC_D,

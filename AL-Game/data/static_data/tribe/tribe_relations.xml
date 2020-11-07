@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-02-08 13:56 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-11-07 06:41 -->
 <tribe_relations>
   <tribe name="PC">
     <neutral>IDTRANSFORM_DRAGON_CINEMA</neutral>
@@ -1706,7 +1706,7 @@
     <neutral>VRITRA IDRUNEWP_VRITRA</neutral>
   </tribe>
   <tribe name="IDRUNEWP_ANCIENTARM" base="MONSTER">
-    <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT</aggro>
+    <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT ATREIA_GARDEN_PLANTS</aggro>
     <neutral>IDRUNEWP_ESCORT</neutral>
   </tribe>
   <tribe name="LDF5_DEBRIE" base="MONSTER">
@@ -4024,14 +4024,15 @@
   <tribe name="UP3_URF_OBJ" base="USEALL">
     <aggro>UP3_URF_ENEMY</aggro>
     <neutral>PC PC_DARK</neutral>
+    <none>LDF8_LEGION_ALL_ATK</none>
   </tribe>
   <tribe name="LDF8_LEGION_DIGGER_L" base="GENERAL">
     <aggro>LDF8_LEGION_DIGGER_D LDF8_LEGION_DIGGER_N</aggro>
-    <none>PC PC_DARK PANDORARAID_WAVE_MONSTER AGGRESSIVESINGLEMONSTER LDF8_LEGION_ALL_ATK</none>
+    <none>PC PC_DARK PANDORARAID_WAVE_MONSTER AGGRESSIVESINGLEMONSTER LDF8_LEGION_ALL_ATK UP3_URF_ENEMY</none>
   </tribe>
   <tribe name="LDF8_LEGION_DIGGER_D" base="GENERAL_DARK">
     <aggro>LDF8_LEGION_DIGGER_L LDF8_LEGION_DIGGER_N</aggro>
-    <none>PC PC_DARK PANDORARAID_WAVE_MONSTER AGGRESSIVESINGLEMONSTER LDF8_LEGION_ALL_ATK</none>
+    <none>PC PC_DARK PANDORARAID_WAVE_MONSTER AGGRESSIVESINGLEMONSTER LDF8_LEGION_ALL_ATK UP3_URF_ENEMY</none>
   </tribe>
   <tribe name="LDF8_LEGION_DIGGER_N" base="MONSTER">
     <none>PC PC_DARK LDF8_LEGION_ALL_ATK</none>
@@ -4074,5 +4075,17 @@
   <tribe name="EVENT_V75_HAPPYSHUGO" base="MONSTER">
     <hostile>PC PC_DARK</hostile>
     <friend>EVENT_V75_HAPPYSHUGO</friend>
+  </tribe>
+  <tribe name="IDCATACOMBS_RUDRA_HINT_01" base="USEALL">
+    <aggro>IDCATACOMBS_RUDRA_HINT_02</aggro>
+  </tribe>
+  <tribe name="IDCATACOMBS_RUDRA_HINT_02" base="MONSTER">
+    <aggro>IDCATACOMBS_RUDRA_HINT_01</aggro>
+  </tribe>
+  <tribe name="ATREIA_GARDEN_PLANTS" base="MONSTER">
+    <hostile>MONSTER AGGRESSIVEESCORT</hostile>
+  </tribe>
+  <tribe name="ATREIA_GARDEN_BADLARVA" base="MONSTER">
+    <aggro>ESCORT ATREIA_GARDEN_PLANTS</aggro>
   </tribe>
 </tribe_relations>

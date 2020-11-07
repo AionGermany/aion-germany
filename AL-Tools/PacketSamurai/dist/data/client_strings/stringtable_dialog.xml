@@ -20190,7 +20190,7 @@ But the reward will be suitably large!</body>
   <string>
     <id>913934</id>
     <name>STR_FAMILIAR_EVOLVE_UI_FAIL_ADD_PROB_ZERO</name>
-    <body>&lt;p align="CENTER"&gt;&lt;font color="808080"&gt;Additional chance of success on a failed evolution: (+0.0%)&lt;/font&gt;&lt;/p&gt;</body>
+    <body>&lt;p align="CENTER"&gt;No additional chance of success on a failed evolution.&lt;/p&gt;</body>
   </string>
   <string>
     <id>913935</id>
@@ -20393,6 +20393,16 @@ But the reward will be suitably large!</body>
     <body>Settings</body>
   </string>
   <string>
+    <id>913976</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TARGET_ENCHANT_BADGE</name>
+    <body>Enchantment Target</body>
+  </string>
+  <string>
+    <id>913977</id>
+    <name>STR_ENCHANT_ALL_DIALOG__TOOL_TITLE_ENCHANT_BADGE</name>
+    <body>Enchantment Material</body>
+  </string>
+  <string>
     <id>913978</id>
     <name>STR_AUTOHUNT_RESULT_DIALOG_TITLE</name>
     <body>Statistics</body>
@@ -20536,5 +20546,220 @@ But the reward will be suitably large!</body>
     <id>914006</id>
     <name>STR_AUTOHUNT_DIALOG_ETCSETTING_USEEXPEXTRACTION_TOOLTIP</name>
     <body>If your XP is above 90%, the Combat Experience Extractor in your inventory is used automatically.</body>
+  </string>
+  <string>
+    <id>914007</id>
+    <name>STR_REINVENT_DIALOG_INDEX</name>
+    <body>Lumiel’s Transmorph</body>
+  </string>
+  <string>
+    <id>914008</id>
+    <name>STR_REINVENT_DIALOG_TAB_INDEX_1</name>
+    <body>Tab 1</body>
+  </string>
+  <string>
+    <id>914009</id>
+    <name>STR_REINVENT_DIALOG_TAB_INDEX_2</name>
+    <body>Tab 2</body>
+  </string>
+  <string>
+    <id>914010</id>
+    <name>STR_REINVENT_DIALOG_TAB_INDEX_3</name>
+    <body>Tab 3</body>
+  </string>
+  <string>
+    <id>914011</id>
+    <name>STR_REINVENT_DIALOG_TAB_INDEX_4</name>
+    <body>Tab 4</body>
+  </string>
+  <string>
+    <id>914012</id>
+    <name>STR_REINVENT_DIALOG_TAB_INDEX_DEACTIVATE</name>
+    <body>-</body>
+  </string>
+  <string>
+    <id>914013</id>
+    <name>STR_REINVENT_DIALOG_INFO_TOOLTIP</name>
+    <body>1. Register an item from your inventory by right-clicking or dragging it to the Materials window.
+2. Press the button ‘Melt down material’ to use up the items in the Materials window and receive morph points.
+3. If you have enough morph points, you can perform the morph.
+4. 5 items will be displayed as a preview of the Morph result.</body>
+  </string>
+  <string>
+    <id>914014</id>
+    <name>STR_REINVENT_DIALOG_BTN_DETAIL</name>
+    <body>Morph information</body>
+  </string>
+  <string>
+    <id>914015</id>
+    <name>STR_REINVENT_DIALOG_MAT_IN_INFO</name>
+    <body>Melt down materials.</body>
+  </string>
+  <string>
+    <id>914016</id>
+    <name>STR_REINVENT_DIALOG_BTN_MAT_IN</name>
+    <body>Melt down material</body>
+  </string>
+  <string>
+    <id>914017</id>
+    <name>STR_REINVENT_DIALOG_BTN_DO</name>
+    <body>Perform Morph</body>
+  </string>
+  <string>
+    <id>914018</id>
+    <name>STR_REINVENT_DIALOG_BTN_RENEWAL</name>
+    <body>New Morph targets</body>
+  </string>
+  <string>
+    <id>914019</id>
+    <name>STR_REINVENT_DIALOG_BTN_RESULT</name>
+    <body>Select Morph target</body>
+  </string>
+  <string>
+    <id>914020</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_INDEX</name>
+    <body>Morph information</body>
+  </string>
+  <string>
+    <id>914021</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_MAT_LIST_INDEX</name>
+    <body>Details</body>
+  </string>
+  <string>
+    <id>914022</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_MAT_LIST_DESC</name>
+    <body>Materials, Odian and Polishing Stone</body>
+  </string>
+  <string>
+    <id>914023</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_MAT_LIST_TAB_1_DESC</name>
+    <body>Materials list - Tab 1</body>
+  </string>
+  <string>
+    <id>914024</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_MAT_LIST_TAB_2_DESC</name>
+    <body>Materials list - Tab 2</body>
+  </string>
+  <string>
+    <id>914025</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_MAT_LIST_TAB_3_DESC</name>
+    <body>Materials list - Tab 3</body>
+  </string>
+  <string>
+    <id>914026</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_MAT_LIST_TAB_4_DESC</name>
+    <body>Materials list - Tab 4</body>
+  </string>
+  <string>
+    <id>914027</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_REWARD_INDEX</name>
+    <body>Detailed Results</body>
+  </string>
+  <string>
+    <id>914028</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_REWARD_TAB_1</name>
+    <body>Rank 1</body>
+  </string>
+  <string>
+    <id>914029</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_REWARD_TAB_2</name>
+    <body>Rank 2</body>
+  </string>
+  <string>
+    <id>914030</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_REWARD_TAB_3</name>
+    <body>Rank 3</body>
+  </string>
+  <string>
+    <id>914031</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_REWARD_TAB_4</name>
+    <body>Rank 4</body>
+  </string>
+  <string>
+    <id>914032</id>
+    <name>STR_REINVENT_DETAIL_DIALOG_REWARD_TAB_5</name>
+    <body>Rank 5</body>
+  </string>
+  <string>
+    <id>914033</id>
+    <name>STR_REINVENT_DIALOG_MENU_TITLE</name>
+    <body>Lumiel’s Transmorph</body>
+  </string>
+  <string>
+    <id>914034</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_MAIN_TITLE</name>
+    <body>Item collection</body>
+  </string>
+  <string>
+    <id>914035</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_BUFF_TITLE</name>
+    <body>Restrict search for attributes</body>
+  </string>
+  <string>
+    <id>914036</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_LEVEL_TITLE</name>
+    <body>Level Reward</body>
+  </string>
+  <string>
+    <id>914037</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_MAIN_BUFF</name>
+    <body>Collection effect</body>
+  </string>
+  <string>
+    <id>914038</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_MAIN_ITEMINFO</name>
+    <body>Item information</body>
+  </string>
+  <string>
+    <id>914039</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_MAIN_SPAREITEM</name>
+    <body>Registrable item</body>
+  </string>
+  <string>
+    <id>914040</id>
+    <name>STR_REINVENT_RENEWAL_DIALOG_INDEX</name>
+    <body>New Morph targets</body>
+  </string>
+  <string>
+    <id>914041</id>
+    <name>STR_REINVENT_RENEWAL_DIALOG_DESC</name>
+    <body>&lt;p&gt;5 items will be displayed when creating new Morph targets.&lt;/p&gt;
+&lt;p&gt;The costs are displayed as follows.&lt;/p&gt;
+&lt;p&gt;Do you want to continue?&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>914042</id>
+    <name>STR_REINVENT_RENEWAL_DIALOG_MYMONEY</name>
+    <body>Kinah</body>
+  </string>
+  <string>
+    <id>914043</id>
+    <name>STR_REINVENT_RENEWAL_DIALOG_FEE</name>
+    <body>Cost of new Morph targets</body>
+  </string>
+  <string>
+    <id>914044</id>
+    <name>STR_REINVENT_DIALOG_POINT_INDEX</name>
+    <body>Morph Points</body>
+  </string>
+  <string>
+    <id>914045</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_TITLE_LEVEL</name>
+    <body>Collection level</body>
+  </string>
+  <string>
+    <id>914046</id>
+    <name>STR_ITEMCOLLECTION_DIALOG_NOTICE_DELETE</name>
+    <body>The item used to register will be deleted.</body>
+  </string>
+  <string>
+    <id>914047</id>
+    <name>STR_REINVENT_RENEWAL_ITEM_DIALOG_INDEX</name>
+    <body>New Morph targets</body>
+  </string>
+  <string>
+    <id>914048</id>
+    <name>STR_QUNAMARKET_DIALOG__WEEKLYRECOMMEND_TITLE</name>
+    <body>Weekly Recommendation</body>
   </string>
 </strings>
