@@ -84,5 +84,7 @@ public enum ItemCategory {
 	GRIND_ENCHANT,
 	ODIAN,
 	RUNE,
+    GLYPH,
+    GLYPH_ENCHANT,
 	NONE
 }

@@ -48,6 +48,7 @@ public enum ItemSlot {
 	SUB_OFF_HAND(1L << 18),
 	PLUME(1L << 19),
 	BRACELET(1L << 21),
+	GLYPH(1L << 23),
 
 	// combo
 	MAIN_OR_SUB(MAIN_HAND.slotIdMask | SUB_HAND.slotIdMask, true), // 3

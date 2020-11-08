@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.templates.item.actions.EnchantGlyphAction;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantGrindingAction;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.GodstoneAction;
@@ -99,6 +100,8 @@ public class CM_MANASTONE extends AionClientPacket {
 				ManastoneSlotExpansionAction action2 = new ManastoneSlotExpansionAction();
 				GrindSlotExpansionAction action3 = new GrindSlotExpansionAction();
 				EnchantGrindingAction action4 = new EnchantGrindingAction();
+				EnchantGlyphAction action5 = new EnchantGlyphAction();
+
 				Item manastone = player.getInventory().getItemByObjId(stoneUniqueId);
 				Item targetItem = player.getEquipment().getEquippedItemByObjId(targetItemUniqueId);
 
@@ -122,6 +125,12 @@ public class CM_MANASTONE extends AionClientPacket {
 					case GRIND_ENCHANT: {
 						if (action4.canAct(player, manastone, targetItem)) {
 							action4.act(player, manastone, targetItem);
+						}
+						break;
+					}
+					case GLYPH_ENCHANT: {
+						if (action5.canAct(player, manastone, targetItem)) {
+							action5.act(player, manastone, targetItem);
 						}
 						break;
 					}

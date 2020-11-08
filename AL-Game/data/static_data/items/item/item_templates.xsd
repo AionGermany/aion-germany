@@ -204,6 +204,7 @@
 			<xs:enumeration value="TORSO_GLOVE_FOOT_SHOULDER_LEG"/>
 			<xs:enumeration value="PLUME"/>
 			<xs:enumeration value="BRACELET"/>
+			<xs:enumeration value="GLYPH"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="AbstractItemAction" abstract="true"/>
@@ -657,6 +658,7 @@
 			<xs:enumeration value="WING"/>
 			<xs:enumeration value="PLUME"/>
 	    	<xs:enumeration value="ACCESSORY"/>
+	    	<xs:enumeration value="GLYPH"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="WeaponList">
@@ -746,6 +748,8 @@
 			<xs:enumeration value="ODIAN"/>
 			<xs:enumeration value="RUNE"/>
 			<xs:enumeration value="GRIND_SLOT_OPEN"/>
+			<xs:enumeration value="GLYPH"/>
+			<xs:enumeration value="GLYPH_ENCHANT"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="itemType">
@@ -781,6 +785,7 @@
 			<xs:enumeration value="WING"/>
 			<xs:enumeration value="PLUME"/>
 			<xs:enumeration value="BRACELET"/>
+			<xs:enumeration value="GLYPH"/>
 			<xs:enumeration value="OTHER"/>
 			<xs:enumeration value="ALL"/>
 			<xs:enumeration value="EVENT"/>

@@ -716,7 +716,7 @@ public class Equipment {
 		Item twoHanded = null;
 		for (Item item : equipment.values()) {
 			long slot = item.getEquipmentSlot();
-			if (!ItemSlot.isStigma(slot)) {
+			if (!ItemSlot.isStigma(slot) || slot > ItemSlot.GLYPH.getSlotIdMask()) {
 				if (slot <= ItemSlot.BRACELET.getSlotIdMask()) {
 					if (item.getItemTemplate().isTwoHandWeapon()) {
 						if (twoHanded != null) {

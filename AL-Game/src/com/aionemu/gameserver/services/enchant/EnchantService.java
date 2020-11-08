@@ -1583,4 +1583,38 @@ public class EnchantService {
 
 		ItemPacketService.updateItemAfterInfoChange(player, targetItem);
 	}
+
+    public static void enchantGlyphItemAct(Player player, Item parentItem, Item targetItem, int currentEnchant, boolean result) {
+        int EnchantKinah = EnchantService.EnchantKinah(targetItem);
+        currentEnchant = targetItem.getEnchantOrAuthorizeLevel();
+
+        if (!player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1)) {
+            return;
+        }
+        if (player.getInventory().getKinah() >= (long)EnchantKinah) {
+            player.getInventory().decreaseKinah(EnchantKinah);
+        }
+        if (player.getInventory().getKinah() < (long)EnchantKinah) {
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_MONEY);
+            return;
+        }
+        currentEnchant = result ? ++currentEnchant : 0;
+        targetItem.setEnchantOrAuthorizeLevel(currentEnchant);
+        if (targetItem.isEquipped()) {
+            player.getGameStats().updateStatsVisually();
+        }
+        ItemPacketService.updateItemAfterInfoChange(player, targetItem, ItemPacketService.ItemUpdateType.STATS_CHANGE);
+        if (targetItem.isEquipped()) {
+            player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
+        } 
+        else {
+            player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
+        }
+        if (result) {
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ENCHANT_ITEM_SUCCEED_NEW(new DescriptionId(targetItem.getNameId()), targetItem.getEnchantOrAuthorizeLevel()));
+        } 
+        else {
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_FAILED(new DescriptionId(targetItem.getNameId())));
+        }
+    }
 }

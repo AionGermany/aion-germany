@@ -36,7 +36,8 @@ public enum ArmorType {
 	ARROW(new int[] {}),
 	WING(new int[] {}),
 	PLUME(new int[] {}),
-	ACCESSORY(new int[] {});
+	ACCESSORY(new int[] {}),
+	GLYPH(new int[] {});
 
 	private int[] requiredSkills;
 

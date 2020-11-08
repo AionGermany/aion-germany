@@ -412,6 +412,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 		if (isBracelet()) {
 			return ArmorType.ACCESSORY;
 		}
+        if (isGlyph()) {
+            return ArmorType.GLYPH;
+        }
 		return armorType;
 	}
 
@@ -533,6 +536,14 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	public boolean isEstima() {
 		return category == ItemCategory.ESTIMA;
 	}
+
+    public boolean isGlyph() {
+        return category == ItemCategory.GLYPH;
+    }
+
+    public boolean isGlyphEnchant() {
+        return category == ItemCategory.GLYPH_ENCHANT;
+    }
 
 	public void setItemId(int itemId) {
 		this.itemId = itemId;

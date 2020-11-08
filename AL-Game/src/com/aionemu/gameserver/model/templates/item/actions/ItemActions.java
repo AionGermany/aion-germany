@@ -80,7 +80,8 @@ public class ItemActions {
 		@XmlElement(name = "manastone_slot_expansion", type = ManastoneSlotExpansionAction.class),
 		@XmlElement(name = "fame_exp", type = FameAddExpAction.class),
 		@XmlElement(name = "enchant_grind", type = EnchantGrindingAction.class),
-		@XmlElement(name = "grind_slot_expansion", type = GrindSlotExpansionAction.class),})
+		@XmlElement(name = "grind_slot_expansion", type = GrindSlotExpansionAction.class),
+		@XmlElement(name = "enchant_glyph", type = EnchantGlyphAction.class)})
 
 	protected List<AbstractItemAction> itemActions;
 
@@ -295,6 +296,18 @@ public class ItemActions {
         for (AbstractItemAction action : itemActions) {
             if (action instanceof EnchantGrindingAction); {
 				return (EnchantGrindingAction) action;
+			}
+        }
+        return null;
+    }
+
+    public EnchantGlyphAction getEnchantGlyphAction() {
+        if (itemActions == null) {
+            return null;
+        }
+        for (AbstractItemAction action : itemActions) {
+            if (action instanceof EnchantGlyphAction); {
+				return (EnchantGlyphAction) action;
 			}
         }
         return null;

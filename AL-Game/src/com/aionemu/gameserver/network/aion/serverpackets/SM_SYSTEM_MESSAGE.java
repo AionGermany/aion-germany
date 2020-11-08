@@ -9879,8 +9879,8 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	/**
 	 * You have cancelled the enchanting of %0.
 	 */
-	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_CANCELED(DescriptionId descriptionId) {
-		return new SM_SYSTEM_MESSAGE(1300457, descriptionId);
+	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_CANCELED(int value0) {
+		return new SM_SYSTEM_MESSAGE(1300457, value0);
 	}
 
 	/**

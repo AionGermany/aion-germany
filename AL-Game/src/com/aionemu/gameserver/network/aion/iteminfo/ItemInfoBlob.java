@@ -26,6 +26,7 @@ import com.aionemu.gameserver.model.stats.calc.functions.IStatFunction;
 import com.aionemu.gameserver.model.stats.calc.functions.StatFunction;
 import com.aionemu.gameserver.model.templates.item.ArmorType;
 import com.aionemu.gameserver.model.templates.item.EquipType;
+import com.aionemu.gameserver.model.templates.item.ItemCategory;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.PacketWriteHelper;
 
@@ -132,6 +133,10 @@ public class ItemInfoBlob extends PacketWriteHelper {
 			if (itemTemplate.isBracelet()) {
 				blob.addBlobEntry(ItemBlobType.BRACELET_INFO);
 			}
+
+            if (itemTemplate.getCategory() == ItemCategory.GLYPH) {
+                blob.addBlobEntry(ItemBlobType.GLYPH_INFO);
+            }
 
 			List<StatFunction> allModifiers = itemTemplate.getModifiers();
 			if (allModifiers != null) {
@@ -266,6 +271,13 @@ public class ItemInfoBlob extends PacketWriteHelper {
 				return new BraceletInfoBlobEntry();
 			}
 		},
+        GLYPH_INFO(0x15){ // 7.7
+
+            @Override
+            ItemBlobEntry newBlobEntry() {
+                return new GlyphInfoBlobEntry();
+            }
+        },
 		STAT_BONUSES(0x0A) {
 
 			@Override
