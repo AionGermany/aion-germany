@@ -124,6 +124,43 @@
         </portal_path>
     </portal_dialog>
 
+	<!-- Silentera Canyon Entry -->
+    <portal_dialog npc_id="730256">
+        <portal_path dialog="10000" loc_id="6000101">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+    <portal_dialog npc_id="730260">
+        <portal_path dialog="10000" loc_id="6000102">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+
+	<!-- Tiamaranta Eye Entry -->
+    <portal_dialog npc_id="840802">
+        <portal_path dialog="10000" loc_id="8000801">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+    <portal_dialog npc_id="840803">
+        <portal_path dialog="10000" loc_id="8000802">
+            <portal_req min_level="76"/>
+        </portal_path>
+    </portal_dialog>
+
+	<!-- Beshmundir Temple (easy) Entry -->
+    <portal_dialog npc_id="840731">
+        <portal_path dialog="10000" loc_id="3009200" instance="true">
+            <portal_req min_level="80"/>
+        </portal_path>
+    </portal_dialog>
+	<!-- Beshmundir Temple (normal) Entry -->
+    <portal_dialog npc_id="840731">
+        <portal_path dialog="10000" loc_id="3009100" instance="true">
+            <portal_req min_level="80"/>
+        </portal_path>
+    </portal_dialog>
+
     <!-- **************** PORTAL SCROLL **************** -->
     <!-- SCROLL TELEPORTS ELYOS -->
     <portal_scroll name="LC1_RETURN_AREA_1">

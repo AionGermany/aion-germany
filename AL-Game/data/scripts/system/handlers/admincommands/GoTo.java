@@ -228,6 +228,14 @@ public class GoTo extends AdminCommand {
 				goTo(player, 800030000, 354.931f, 345.5465f, 274.19836f, (byte) 0);
 			}
 		}
+		else if (destination.equalsIgnoreCase("tiamaranta") || destination.equalsIgnoreCase("Tiamarantas Eye")) {
+			if (player.getRace() == Race.ELYOS) {
+				goTo(player, 800080000, 755.5065f, 33.429764f, 1196.8103f, (byte) 0);
+			}
+			else if (player.getRace() == Race.ASMODIANS) {
+				goTo(player, 800080000, 753.0031f, 1503.2157f, 1196.8643f, (byte) 0);
+			}
+		}
 		/**
 		 * Quest Instance Maps
 		 */
@@ -433,8 +441,11 @@ public class GoTo extends AdminCommand {
 		else if (destination.equalsIgnoreCase("Esoterrace")) {
 			goTo(player, 300250000, 340, 452, 326);
 		}
-		else if (destination.equalsIgnoreCase("Beshmundir") || destination.equalsIgnoreCase("BT") || destination.equalsIgnoreCase("Beshmundir Temple")) {
-			goTo(player, 300170000, 1477, 249, 243);
+		else if (destination.equalsIgnoreCase("Besh normal") || destination.equalsIgnoreCase("Beshmundir Temple (normal)")) {
+			goTo(player, 300910000, 1320, 708, 243);
+		}
+		else if (destination.equalsIgnoreCase("Besh easy") || destination.equalsIgnoreCase("Beshmundir Temple (easy)")) {
+			goTo(player, 300920000, 1320, 708, 243);
 		}
 		else if (destination.equalsIgnoreCase("refuge") || destination.equalsIgnoreCase("Dragon Lord Refuge")) {
 			goTo(player, 300520000, 505, 526, 240);
@@ -516,6 +527,9 @@ public class GoTo extends AdminCommand {
 		}
 		else if (destination.equalsIgnoreCase("event") || destination.equalsIgnoreCase("Aion Event 11th")) {
 			goTo(player, 600082000, 657.6f, 611.0f, 55.412617f, (byte) 0);
+		}
+		else if (destination.equalsIgnoreCase("tempus") || destination.equalsIgnoreCase("Tempus Fugit")) {
+			goTo(player, 800070000, 686.13403f, 899.9208f, 358.04147f, (byte) 0);
 		}
 		else {
 			PacketSendUtility.sendMessage(player, "Could not find the specified destination !");

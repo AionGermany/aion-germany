@@ -59,7 +59,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_DUEL_REQUEST(0x145, State.IN_GAME)); // 7.5 EU
 		//addPacket(new CM_CRAFT(0x155, State.IN_GAME)); // 5.4 EU removed?
 		addPacket(new CM_QUESTION_RESPONSE(0x104, State.IN_GAME)); // 7.5 EU
-		//addPacket(new CM_OPEN_STATICDOOR(0xC6, State.IN_GAME)); // 7.2 EU
+		addPacket(new CM_OPEN_STATICDOOR(0xD9, State.IN_GAME)); // 7.7 EU
 		addPacket(new CM_SPLIT_ITEM(0x160, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_CUSTOM_SETTINGS(0xD2, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_PLAY_MOVIE_END(0x127, State.IN_GAME)); // 7.5 EU
@@ -249,7 +249,7 @@ public class AionPacketHandlerFactory {
 
 		// // /////////////////// NEW 4.7 //////////////////////
 		addPacket(new CM_HOTSPOT_TELEPORT(0x1BB, State.IN_GAME)); // 7.5 EU
-		//addPacket(new CM_ITEM_UPGRADE(0x1E7, State.IN_GAME)); // 7.2 EU
+		addPacket(new CM_ITEM_UPGRADE(0x1CE, State.IN_GAME)); // 7.7 EU
 		addPacket(new CM_UPGRADE_ARCADE(0x1B9, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_FILE_VERIFY(0x100, State.IN_GAME)); // 7.5 EU
 

@@ -30,10 +30,12 @@ public class WorldPlayTimeEffect extends EffectTemplate {
 
 	@Override
 	public void applyEffect(Effect effect) {
-		Player player;
-		if (effect.getEffected() instanceof Player && (player = (Player) effect.getEffected()).getCommonData().getWorldPlayTime() < 300) {
-			player.getCommonData().setWorldPlayTime(player.getCommonData().getWorldPlayTime() + points);
-			PacketSendUtility.sendPacket(player, new SM_WORLD_PLAYTIME(player));
-		}
-	}
+        if (effect.getEffected() instanceof Player) {
+            Player player = (Player) effect.getEffected();
+            if (player.getCommonData().getWorldPlayTime() < 300) {
+                player.getCommonData().setWorldPlayTime(player.getCommonData().getWorldPlayTime() + points);
+                PacketSendUtility.sendPacket(player, new SM_WORLD_PLAYTIME(player));
+            }
+        }
+    }
 }

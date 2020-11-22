@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs;Lost Ring Event;Aion Event 11th</active>
+    <active>The Moon Festival;The Spookily Super Halloween Event;Snow in Atreia;Hungry Magpie;Floral Magic;Capt’n Grogget’s Revenge;The Matryoshka Event;The Ice Sculpture Event;Windstream;Hungry Hatchlings;Rainbow Snake Festival;Green Thumbs;Lost Ring Event;Aion Event 11th;Tiamarantas Eye</active>
     <events>
         <event name="The Moon Festival" start="2018-10-01T00:00:00+00:00" end="2018-10-24T00:00:00+00:00">
             <event_drops>
@@ -688,6 +688,24 @@
 					<!-- AION Dreamscape Entrance ||| Aion_Event_11th_Entrance_D -->
 					<spawn npc_id="840580" respawn_time="295">
 						<spot x="1815.3" y="2911.4" z="548.5258" h="40"/>
+					</spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Tiamarantas Eye" start="2020-01-01T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+            <spawns>
+                <!-- Inggison -->
+                <spawn_map map_id="210050000">
+					<!-- Crooked Space-Time Rift ||| world_LF4_TiamatDown58_Teleport_01 -->
+					<spawn npc_id="840802" respawn_time="295">
+						<spot x="1325.5" y="233.8" z="595.8166" h="0"/>
+					</spawn>
+                </spawn_map>
+                <!-- Gelkmaros -->
+                <spawn_map map_id="220070000">
+					<!-- Crooked Space-Time Rift ||| world_DF4_TiamatDown58_Teleport_01 -->
+					<spawn npc_id="840803" respawn_time="295">
+						<spot x="1869.89" y="2879.9" z="554.9824" h="6"/>
 					</spawn>
                 </spawn_map>
             </spawns>

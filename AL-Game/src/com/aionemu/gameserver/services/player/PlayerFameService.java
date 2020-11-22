@@ -32,108 +32,113 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class PlayerFameService {
 
-    private static final Logger log = LoggerFactory.getLogger(PlayerFameService.class);
-    public int MAX_LEVEL = 9;
+	private static final Logger log = LoggerFactory.getLogger(PlayerFameService.class);
+	public int MAX_LEVEL = 9;
 
-    public void init() {
-        log.info("[PlayerFameService] loaded ...");
-    }
+	public void init() {
+		log.info("[PlayerFameService] loaded ...");
+	}
 
-    public void onResetWeekly() {
-        List<PlayerFame> famesReduce = this.getDao().weeklyFame();
-        for (PlayerFame fame : famesReduce) {
-            long reduce = Math.round(fame.getExp() * 0);
-            if (fame.getExp() - reduce <= 0) {
-                fame.setLevel(fame.getLevel() - 1);
-                long changeExp = this.getExpForLevel(fame.getLevel()) - Math.round((double)fame.getExp() * 0.015);
-                fame.setExp(changeExp);
-                this.getDao().reduceWeekly(fame);
-                continue;
-            }
-            fame.setExp(fame.getExp() - reduce);
-            this.getDao().reduceWeekly(fame);
-        }
-        log.info("[PlayerFameService] : Weekly Reduce Finish");
-    }
+	public void onResetWeekly() {
+		List<PlayerFame> famesReduce = getDao().weeklyFame();
+		for (PlayerFame fame : famesReduce) {
+			long reduce = Math.round((float) (fame.getExp() * 0));
+			if (fame.getExp() - reduce <= 0) {
+				fame.setLevel(fame.getLevel() - 1);
+				long changeExp = getExpForLevel(fame.getLevel()) - Math.round(fame.getExp() * 0.015);
+				fame.setExp(changeExp);
+				getDao().reduceWeekly(fame);
+			} 
+			else {
+				fame.setExp(fame.getExp() - reduce);
+				getDao().reduceWeekly(fame);
+			}
+		}
+		PlayerFameService.log.info("[PlayerFameService] : Weekly Reduce Finish");
+	}
 
-    public void recoverExpFame(Player player) {
-        PlayerFame fame = this.fameLevelByWorld(player, player.getWorldId());
-        if (fame != null) {
-            this.addFameExp(player, fame.getExpLoss());
-            fame.setExpLoss(0);
-            this.getDao().updatePlayerFame(player, fame);
-            PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
-        }
-    }
+	public void recoverExpFame(Player player) {
+		PlayerFame fame = fameLevelByWorld(player, player.getWorldId());
+		if (fame != null) {
+			addFameExp(player, fame.getExpLoss());
+			fame.setExpLoss(0);
+			getDao().updatePlayerFame(player, fame);
+			PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
+		}
+	}
 
-    public void onPlayerLogin(Player player) {
-        player.setPlayerFame(this.getDao().loadPlayerFame(player));
-        for (int i = 1; i < 7; ++i) {
-            if (player.getPlayerFame().containsKey(i)) continue;
-            PlayerFame fame = new PlayerFame(i, 1, 0, 0, player.getObjectId());
-            player.getPlayerFame().put(fame.getId(), fame);
-            this.getDao().addPlayerFame(player, fame);
-        }
-        PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
-    }
+	public void onPlayerLogin(Player player) {
+		player.setPlayerFame(getDao().loadPlayerFame(player));
+		for (int i = 1; i < 8; ++i) {
+			if (!player.getPlayerFame().containsKey(i)) {
+				PlayerFame fame = new PlayerFame(i, 1, 0, 0, player.getObjectId());
+				player.getPlayerFame().put(fame.getId(), fame);
+				getDao().addPlayerFame(player, fame);
+			}
+		}
+		PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
+	}
 
-    public void addFameExp(Player player, long points) {
-        for (PlayerFame playerFame : player.getPlayerFame().values()) {
-            if (player.getWorldId() != playerFame.getFameEnum().getWorldId()) continue;
-            long exp = playerFame.getExp();
-            if (playerFame.getLevel() == this.MAX_LEVEL && exp + points > this.getExpForLevel(playerFame.getLevel())) {
-                playerFame.setExp(this.getExpForLevel(9));
-                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GET_FEXP(playerFame.getLevel())); // Test
-                this.getDao().updatePlayerFame(player, playerFame);
-                continue;
-            }
-            if (exp + points >= this.getExpForLevel(playerFame.getLevel())) {
-                long diff = exp + points - this.getExpForLevel(playerFame.getLevel());
-                playerFame.setLevel(playerFame.getLevel() + 1);
-                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAME_CHANGE_LEVEL_DONE(playerFame.getFameEnum().getDescriptionId(), playerFame.getLevel())); // Test
-                playerFame.setExp(diff);
-                this.getDao().updatePlayerFame(player, playerFame);
-                continue;
-            }
-            playerFame.setExp(exp + points);
-            this.getDao().updatePlayerFame(player, playerFame);
-        }
-        PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
-    }
+	public void addFameExp(Player player, long points) {
+		for (PlayerFame playerFame : player.getPlayerFame().values()) {
+			if (player.getWorldId() == playerFame.getFameEnum().getWorldId()) {
+				long exp = playerFame.getExp();
+				if (playerFame.getLevel() == MAX_LEVEL && exp + points > this.getExpForLevel(playerFame.getLevel())) {
+					playerFame.setExp(getExpForLevel(9));
+					getDao().updatePlayerFame(player, playerFame);
+				} 
+				else if (exp + points >= getExpForLevel(playerFame.getLevel())) {
+					long diff = exp + points - getExpForLevel(playerFame.getLevel());
+					playerFame.setLevel(playerFame.getLevel() + 1);
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FAME_CHANGE_LEVEL_DONE(playerFame.getFameEnum().getDescriptionId(), playerFame.getLevel()));
+					playerFame.setExp(diff);
+					getDao().updatePlayerFame(player, playerFame);
+				} 
+				else {
+					playerFame.setExp(exp + points);
+					getDao().updatePlayerFame(player, playerFame);
+				}
+			}
+		}
+		PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
+	}
 
-    public void onPlayerDie(Player player) {
-        for (PlayerFame playerFame : player.getPlayerFame().values()) {
-            if (player.getWorldId() != playerFame.getFameEnum().getWorldId() || playerFame.getExp() == 0) continue;
-            int loss = Math.round(playerFame.getExp() * 0);
-            int unrecoverable = (int)((double)loss * 0.22222222);
-            int recoverable = loss - unrecoverable;
-            if (playerFame.getLevel() - loss < 0) {
-                playerFame.setExp(0);
-            } else {
-                playerFame.setExp(playerFame.getExp() - (long)loss);
-            }
-            playerFame.setExpLoss(playerFame.getExpLoss() + (long)recoverable);
-            this.getDao().updatePlayerFame(player, playerFame);
-        }
-        PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
-    }
+	public void onPlayerDie(Player player) {
+		for (PlayerFame playerFame : player.getPlayerFame().values()) {
+			if (player.getWorldId() == playerFame.getFameEnum().getWorldId() && playerFame.getExp() != 0) {
+				int loss = Math.round((float) (playerFame.getExp() * 0));
+				int unrecoverable = (int) (loss * 0.22222222);
+				int recoverable = loss - unrecoverable;
+				if (playerFame.getLevel() - loss < 0) {
+					playerFame.setExp(0);
+				} 
+				else {
+					playerFame.setExp(playerFame.getExp() - loss);
+				}
+				playerFame.setExpLoss(playerFame.getExpLoss() + recoverable);
+				getDao().updatePlayerFame(player, playerFame);
+			}
+		}
+		PacketSendUtility.sendPacket(player, new SM_PLAYER_FAME(player));
+	}
 
-    public PlayerFame fameLevelByWorld(Player player, int worldId) {
-        PlayerFame playerFame = null;
-        for (PlayerFame fame : player.getPlayerFame().values()) {
-            if (fame.getFameEnum().getWorldId() != worldId) continue;
-            playerFame = fame;
-        }
-        return playerFame;
-    }
+	public PlayerFame fameLevelByWorld(Player player, int worldId) {
+		PlayerFame playerFame = null;
+		for (PlayerFame fame : player.getPlayerFame().values()) {
+			if (fame.getFameEnum().getWorldId() == worldId) {
+				playerFame = fame;
+			}
+		}
+		return playerFame;
+	}
 
-    public long getExpForLevel(int level) {
-        return FameExp.getFameExp(level).getExp();
-    }
+	public long getExpForLevel(int level) {
+		return FameExp.getFameExp(level).getExp();
+	}
 
-    public PlayerFameDAO getDao() {
-        return DAOManager.getDAO(PlayerFameDAO.class);
-    }
+	public PlayerFameDAO getDao() {
+		return DAOManager.getDAO(PlayerFameDAO.class);
+	}
 
 	public static PlayerFameService getInstance() {
 		return NewSingletonHolder.INSTANCE;
@@ -144,4 +149,3 @@ public class PlayerFameService {
 		private static final PlayerFameService INSTANCE = new PlayerFameService();
 	}
 }
-
