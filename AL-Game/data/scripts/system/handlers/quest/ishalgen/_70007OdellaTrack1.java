@@ -92,7 +92,7 @@ public class _70007OdellaTrack1 extends QuestHandler {
 				default:
 					break;
 				}
-			} 
+			}
 			else if (targetId == 806811) {
 				switch (action) {
 				case QUEST_SELECT:
@@ -106,7 +106,7 @@ public class _70007OdellaTrack1 extends QuestHandler {
 				default:
 					break;
 				}
-			} 
+			}
 			else if (targetId == 806812) {
 				switch (action) {
 				case QUEST_SELECT:
@@ -116,16 +116,17 @@ public class _70007OdellaTrack1 extends QuestHandler {
 				default:
 					break;
 				}
-			} 
+			}
 			else if (targetId == 703485) {
 				switch (action) {
 				case USE_OBJECT:
-					changeQuestStep(env, 0, 4, true);
+					changeQuestStep(env, 3, 4, true);
+					return closeDialogWindow(env);
 				default:
 					break;
 				}
 			}
-		} 
+		}
 		else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 806812) {
 				switch (action) {
