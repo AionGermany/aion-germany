@@ -80,13 +80,13 @@ public class _70008OdellaTrack2 extends QuestHandler {
 					break;
 				}
 			} else if (targetId == 703487) {
-				switch (action) {
-				case USE_OBJECT:
-					changeQuestStep(env, 0, 2, true);
-				default:
-					break;
-				}
+			switch (action) {
+			case USE_OBJECT:
+				changeQuestStep(env, 1, 2, true);
+			default:
+				break;
 			}
+		}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 203552) {
 				switch (action) {
