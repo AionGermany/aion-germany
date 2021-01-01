@@ -48,7 +48,6 @@ public class CM_MANASTONE extends AionClientPacket {
 	private int stoneUniqueId;
 	private int targetItemUniqueId;
 	private int supplementUniqueId;
-	@SuppressWarnings("unused")
 	private int grindStone;
 
 	/**
@@ -81,7 +80,10 @@ public class CM_MANASTONE extends AionClientPacket {
 				grindStone = readD();
 				read();
 				break;
-			case 11:// TODO
+			case 11: // Runes Fusion
+				readD(); //itemObjectId
+				readD(); //itemObjectId
+				readD(); // unk 0
 				break;
 			default: 	
 				log.error("Unknown enchantment type? 0x" + Integer.toHexString(actionType).toUpperCase());

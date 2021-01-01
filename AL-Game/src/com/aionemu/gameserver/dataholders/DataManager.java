@@ -146,10 +146,14 @@ public final class DataManager {
 	public static ReviveInstanceStartPointsData REVIVE_INSTANCE_START_POINTS;
 	public static ItemEnchantChancesData ITEM_ENCHANT_CHANCES_DATA;
 	public static DynamicPortalData DYNAMIC_PORTAL_DATA;
-	public static LugbugEventData LUGBUG_EVENT_DATA;
-	public static LugbugQuestData LUGBUG_QUEST_DATA;
-	public static LugbugSpecialQuestData LUGBUG_SPECIAL_QUEST_DATA;
 	public static AtreianPassportData ATREIAN_PASSPORT_DATA;
+    public static AchievementData ACHIEVEMENT_DATA;
+    public static AchievementEventData ACHIEVEMENT_EVENT_DATA;
+    public static AchievementActionData ACHIEVEMENT_ACTION_DATA;
+    public static LumielMaterialData LUMIEL_MATERIAL_DATA;
+    public static LumielTemplateData LUMIEL_TEMPLATE_DATA;
+    public static CollectionData COLLECTION_TEMPLATE_DATA;
+    public static CollectionExpData COLLECTION_EXP_DATA;
 	private XmlDataLoader loader;
 
 	/**
@@ -281,10 +285,14 @@ public final class DataManager {
 		REVIVE_INSTANCE_START_POINTS = data.reviveInstanceStartPoints;
 		ITEM_ENCHANT_CHANCES_DATA = data.itemEnchantChancesData;
 		DYNAMIC_PORTAL_DATA = data.dynamicPortalData;
-		LUGBUG_EVENT_DATA = data.lugbugEventData;
-		LUGBUG_QUEST_DATA = data.lugbugQuestData;
-		LUGBUG_SPECIAL_QUEST_DATA = data.lugbugSpecialQuestData;
 		ATREIAN_PASSPORT_DATA = data.atreianPassportData;
+        ACHIEVEMENT_DATA = data.achievementData;
+        ACHIEVEMENT_EVENT_DATA = data.achievementEventData;
+        ACHIEVEMENT_ACTION_DATA = data.achievementActionData;
+        LUMIEL_MATERIAL_DATA = data.lumielMaterialData;
+        LUMIEL_TEMPLATE_DATA = data.lumielTemplateData;
+        COLLECTION_TEMPLATE_DATA = data.collectionTemplateData;
+        COLLECTION_EXP_DATA = data.collectionExpData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

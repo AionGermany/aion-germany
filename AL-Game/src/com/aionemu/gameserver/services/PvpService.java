@@ -35,12 +35,14 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.RewardType;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 import com.aionemu.gameserver.model.team2.group.PlayerGroup;
+import com.aionemu.gameserver.model.templates.achievement.AchievementActionType;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.item.ItemService;
+import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -309,6 +311,8 @@ public class PvpService {
 			}
 			member.getCommonData().addExp(memberXpGain, RewardType.PVP_KILL, victim.getName());
 			member.getCommonData().addDp(memberDpGain);
+			AchievementService.getInstance().onUpdateAchievementAction(member, 0, 1, AchievementActionType.PVP);
+
 			this.addKillFor(member.getObjectId(), victim.getObjectId());
 		}
 
@@ -386,6 +390,7 @@ public class PvpService {
 			AbyssPointsService.addAp(member, victim, memberApGain);
 			member.getCommonData().addExp(memberXpGain, RewardType.PVP_KILL, victim.getName());
 			member.getCommonData().addDp(memberDpGain);
+			AchievementService.getInstance().onUpdateAchievementAction(member, 0, 1, AchievementActionType.PVP);
 
 			this.addKillFor(member.getObjectId(), victim.getObjectId());
 		}
@@ -426,6 +431,7 @@ public class PvpService {
 		AbyssPointsService.addAp(winner, victim, apPlayerReward);
 		winner.getCommonData().addExp(xpPlayerReward, RewardType.PVP_KILL, victim.getName());
 		winner.getCommonData().addDp(dpPlayerReward);
+		AchievementService.getInstance().onUpdateAchievementAction(winner, 0, 1, AchievementActionType.PVP);
 		this.addKillFor(winner.getObjectId(), victim.getObjectId());
 		return true;
 	}

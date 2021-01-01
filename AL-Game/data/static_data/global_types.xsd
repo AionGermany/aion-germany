@@ -1233,4 +1233,12 @@
     <xs:simpleType name="StringListType">
         <xs:list itemType="xs:string"/>
     </xs:simpleType>
+	<xs:simpleType name="CollectionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="COMMON"/>
+			<xs:enumeration value="ANCIENT"/>
+			<xs:enumeration value="RELIC"/>
+			<xs:enumeration value="EVENT"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

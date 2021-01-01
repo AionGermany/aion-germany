@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../modifiers.xsd"/>
+    <xs:include schemaLocation="../stats/stats.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="collection_exp_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="collection_exp_template" type="CollectionExpTemplate" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="CollectionExpTemplate">
+        <xs:sequence>
+            <xs:element name="modifiers" type="Modifiers" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="level" type="xs:int" use="required"/>
+        <xs:attribute name="exp" type="xs:int" use="required"/>
+        <xs:attribute name="grade" type="CollectionType" use="required"/>
+    </xs:complexType>
+</xs:schema>

@@ -121,6 +121,7 @@ public class PlayerLeaveWorldService {
 		PetService.getInstance().onPlayerLogout(player);
 		BrokerService.getInstance().removePlayerCache(player);
 		ExchangeService.getInstance().cancelExchange(player);
+		PlayerCollectionService.getInstance().onLogout(player);
 		RepurchaseService.getInstance().removeRepurchaseItems(player);
 		if (AutoGroupConfig.AUTO_GROUP_ENABLE) {
 			AutoGroupService.getInstance().onPlayerLogOut(player);

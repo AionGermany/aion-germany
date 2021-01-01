@@ -29,11 +29,13 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.RewardType;
 import com.aionemu.gameserver.model.gameobjects.player.XPCape;
 import com.aionemu.gameserver.model.team2.TemporaryPlayerTeam;
+import com.aionemu.gameserver.model.templates.achievement.AchievementActionType;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
+import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.services.player.PlayerFameService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -93,6 +95,7 @@ public class PlayerTeamDistributionService {
 					PacketSendUtility.sendPacket(member, new SM_STATS_INFO(member));
 				}
 			}
+			AchievementService.getInstance().onUpdateAchievementAction(member, owner.getNpcId(), 1, AchievementActionType.HUNT);
 			PlayerFameService.getInstance().addFameExp(member, 10 * owner.getLevel() / 2);
 
 			long rewardXp = expReward * bonus * member.getLevel() / (filteredStats.partyLvlSum * 100);

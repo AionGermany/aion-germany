@@ -16,17 +16,21 @@
  */
 package com.aionemu.gameserver.services;
 
+import java.sql.Timestamp;
 import java.util.Calendar;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.ShutdownHook;
-import com.aionemu.gameserver.ShutdownHook.ShutdownMode;
-import com.aionemu.gameserver.configs.main.ShutdownConfig;
-import com.aionemu.gameserver.model.RestartFrequency;
+import com.aionemu.gameserver.dao.PlayerAchievementActionDAO;
+import com.aionemu.gameserver.dao.PlayerAchievementDAO;
+import com.aionemu.gameserver.dao.PlayerLunaShopDAO;
+import com.aionemu.gameserver.dao.PlayerShugoSweepDAO;
+import com.aionemu.gameserver.model.gameobjects.player.achievement.AchievementType;
+import com.aionemu.gameserver.services.player.PlayerFameService;
 
 /**
  * @author nrg
@@ -36,82 +40,53 @@ public class RestartService {
 
 	private static final Logger log = LoggerFactory.getLogger(RestartService.class);
 
-	public static final RestartService getInstance() {
-		log.info("Checking AutoShutdown Schedule...");
-		return SingletonHolder.instance;
-	}
-
-	private RestartService() {
-		log.info("Starting RestartService ...");
-		RestartFrequency rf;
-		try {
-			rf = RestartFrequency.valueOf(ShutdownConfig.GAMESERVER_SHUTDOWN_FREQUENCY);
-		}
-		catch (Exception e) {
-			log.warn("Could not find stated RestartFrequency. Using NEVER as default value!");
-			rf = RestartFrequency.NEVER;
-		}
-		setTimer(rf);
-
-	}
-
-	private void setTimer(RestartFrequency frequency) {
-		// get time to restart
-		String[] time = getRestartTime();
-		int hour = Integer.parseInt(time[0]);
-		int minute = Integer.parseInt(time[1]);
-
-		// calculate the correct time based on frequency
-		Calendar calendar = Calendar.getInstance();
-		calendar.set(Calendar.HOUR_OF_DAY, hour);
-		calendar.set(Calendar.MINUTE, minute);
-		calendar.set(Calendar.SECOND, 0);
-		boolean isMissed = calendar.getTimeInMillis() < System.currentTimeMillis();
-
-		// switch frequency
-		switch (frequency) {
-			case NEVER:
-				log.warn("Automatic restart/shutdown system disable.");
-				return;
-			case DAILY:
-				if (isMissed) // execute next day if we missed the time today (what is mostly the case)
-					calendar.add(Calendar.DAY_OF_YEAR, 1);
-				break;
-			case WEEKLY:
-				calendar.add(Calendar.WEEK_OF_YEAR, 1);
-				break;
-			case MONTHLY:
-				calendar.add(Calendar.MONTH, 1);
-		}
-		// Restart timer
-		Timer timer = new Timer();
-		timer.schedule(new TimerTask() {
+	public void onStart() {
+		Timestamp date = new Timestamp(System.currentTimeMillis());
+		final Calendar calendar = Calendar.getInstance();
+		calendar.setTimeInMillis(date.getTime());
+		String daily1 = "0 0 9 ? * * *";
+		String daily2 = "0 0 0/12 ? * * *";
+		CronService.getInstance().schedule(new Runnable() {
 
 			@Override
 			public void run() {
-				log.info("Shutdown task is triggered - shutting down gameserver!");
-				if (ShutdownConfig.HOOK_MODE_AUTO == 1) {
-					ShutdownHook.getInstance().doShutdown(ShutdownConfig.HOOK_DELAY_AUTO, ShutdownConfig.ANNOUNCE_INTERVAL_AUTO, ShutdownMode.SHUTDOWN);
+				if (calendar.get(7) == 4) {
+					DAOManager.getDAO(PlayerAchievementDAO.class).deleteAchievements(AchievementType.WEEKLY);
+					DAOManager.getDAO(PlayerAchievementActionDAO.class).deleteAchievementsActions(AchievementType.WEEKLY);
+					DAOManager.getDAO(PlayerAchievementDAO.class).deleteAchievements(AchievementType.DAILY);
+					DAOManager.getDAO(PlayerAchievementActionDAO.class).deleteAchievementsActions(AchievementType.DAILY);
+					DAOManager.getDAO(PlayerLunaShopDAO.class).delete();
+					DAOManager.getDAO(PlayerShugoSweepDAO.class).delete();
+				} 
+				else {
+					DAOManager.getDAO(PlayerAchievementDAO.class).deleteAchievements(AchievementType.DAILY);
+					DAOManager.getDAO(PlayerAchievementActionDAO.class).deleteAchievementsActions(AchievementType.DAILY);
+					DAOManager.getDAO(PlayerLunaShopDAO.class).delete();
+					DAOManager.getDAO(PlayerShugoSweepDAO.class).delete();
 				}
-				else if (ShutdownConfig.HOOK_MODE == 2) {
-					ShutdownHook.getInstance().doShutdown(ShutdownConfig.HOOK_DELAY_AUTO, ShutdownConfig.ANNOUNCE_INTERVAL_AUTO, ShutdownMode.RESTART);
+				if (calendar.get(7) == 2) {
+					PlayerFameService.getInstance().onResetWeekly();
 				}
+				int delay1 = 300;
+				log.info("Restart Achievement + Luna Shop + Shugo Sweep");
+				ShutdownHook.getInstance().doShutdown(delay1, 20, ShutdownHook.ShutdownMode.RESTART);
 			}
-		}, calendar.getTime());
-		log.info("Auto restart system started!");
-		log.info("Scheduled next shutdown for " + calendar.getTime().toString());
+		}, daily1);
+		CronService.getInstance().schedule(new Runnable() {
+
+			@Override
+			public void run() {
+				int delay2 = 300;
+				log.info("Restart Server Service");
+				ShutdownHook.getInstance().doShutdown(delay2, 20, ShutdownHook.ShutdownMode.RESTART);
+			}
+		}, daily2);
 	}
 
-	private String[] getRestartTime() {
-		String[] time;
-		if ((time = ShutdownConfig.GAMESERVER_SHUTDOWN_TIME.split(":")).length != 2) {
-			log.warn("You did not state a valid shutdown time. Using 5:00 AM as default value!");
-			return new String[] { "5", "0" };
-		}
-		return time;
+	public static RestartService getInstance() {
+		return SingletonHolder.instance;
 	}
 
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder {
 
 		protected static final RestartService instance = new RestartService();

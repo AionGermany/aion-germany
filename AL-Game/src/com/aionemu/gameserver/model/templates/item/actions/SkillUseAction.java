@@ -107,8 +107,28 @@ public class SkillUseAction extends AbstractItemAction {
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402615));
 				return false;
 			}
-
 		}
+        if (skill.getSkillId() == 13394) {
+            PlayerCommonData pcd = player.getCommonData();
+            if (pcd.getWorldPlayTime() >= 300) {
+                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANT_USE_ITEM(new DescriptionId(nameId)));
+                return false;
+            }
+        }
+        if (skill.getSkillId() == 13395) {
+            PlayerCommonData pcd = player.getCommonData();
+            if (pcd.getWorldPlayTime() >= 270) {
+                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANT_USE_ITEM(new DescriptionId(nameId)));
+                return false;
+            }
+        }
+        if (skill.getSkillId() == 13396) {
+            PlayerCommonData pcd = player.getCommonData();
+            if (pcd.getWorldPlayTime() >= 240) {
+                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANT_USE_ITEM(new DescriptionId(nameId)));
+                return false;
+            }
+        }
 		return skill.canUseSkill();
 	}
 

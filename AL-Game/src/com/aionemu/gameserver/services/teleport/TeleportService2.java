@@ -39,6 +39,7 @@ import com.aionemu.gameserver.model.gameobjects.player.BindPointPosition;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.items.storage.Storage;
+import com.aionemu.gameserver.model.templates.achievement.AchievementActionType;
 import com.aionemu.gameserver.model.templates.flypath.FlyPathEntry;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.portal.InstanceExit;
@@ -79,6 +80,7 @@ import com.aionemu.gameserver.services.FastTrackService;
 import com.aionemu.gameserver.services.PrivateStoreService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
+import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -472,6 +474,7 @@ public class TeleportService2 {
 			PacketSendUtility.broadcastPacketToLegion(player.getLegion(), new SM_LEGION_UPDATE_MEMBER(player, 0, ""));
 		}
 		sendWorldSwitchMessage(player, currentWorldId, worldId, isInstance);
+		AchievementService.getInstance().onUpdateAchievementAction(player, worldId, 1, AchievementActionType.ENTER_WORLD);
 	}
 
 	public static RobotInfo getRobotInfo(Player player) {
@@ -707,6 +710,7 @@ public class TeleportService2 {
 			return;
 		}
 		teleportTo(player, worldId, loc.getX(), loc.getY(), loc.getZ(), player.getHeading(), TeleportAnimation.BEAM_ANIMATION);
+		AchievementService.getInstance().onUpdateAchievementAction(player, worldId, 1, AchievementActionType.ENTER_WORLD);
 	}
 
 	public static void teleportWorldStartPoint(Player player, int worldId) {

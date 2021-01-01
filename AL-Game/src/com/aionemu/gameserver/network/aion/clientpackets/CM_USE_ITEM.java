@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.HouseObject;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.templates.achievement.AchievementActionType;
 import com.aionemu.gameserver.model.templates.item.actions.AbstractItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.IHouseObjectDyeAction;
 import com.aionemu.gameserver.model.templates.item.actions.InstanceTimeClear;
@@ -37,6 +38,7 @@ import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.HandlerResult;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
+import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
@@ -175,6 +177,8 @@ public class CM_USE_ITEM extends AionClientPacket {
 		if (useDelay > 0) {
 			player.addItemCoolDown(item.getItemTemplate().getUseLimits().getDelayId(), System.currentTimeMillis() + useDelay, useDelay / 1000);
 		}
+
+		AchievementService.getInstance().onUpdateAchievementAction(player, item.getItemId(), 1, AchievementActionType.ITEM_PLAY);
 
 		// notify item use observer
 		player.getObserveController().notifyItemuseObservers(item);

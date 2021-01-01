@@ -116,11 +116,11 @@ import com.aionemu.gameserver.services.instance.RunatoriumRuinsService;
 import com.aionemu.gameserver.services.instance.RunatoriumService;
 import com.aionemu.gameserver.services.instance.SanctumBattlefieldService;
 import com.aionemu.gameserver.services.instance.SteelWallBastionBattlefieldService;
-import com.aionemu.gameserver.services.lugbug.LugbugEventService;
-import com.aionemu.gameserver.services.lugbug.LugbugQuestService;
-import com.aionemu.gameserver.services.lugbug.LugbugSpecialQuestService;
+import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.services.player.FatigueService;
+import com.aionemu.gameserver.services.player.LumielTransformService;
 import com.aionemu.gameserver.services.player.LunaShopService;
+import com.aionemu.gameserver.services.player.PlayerCollectionService;
 import com.aionemu.gameserver.services.player.PlayerCubicService;
 import com.aionemu.gameserver.services.player.PlayerEventService;
 import com.aionemu.gameserver.services.player.PlayerFameService;
@@ -253,10 +253,6 @@ public class GameServer {
 		AtreianPassportService.getInstance().onStart();
 		Util.printSsSection(" ### Cubic initialization ### ");
         PlayerCubicService.getInstance();
-		Util.printSection(" ### Lugbug Quest System ### ");
-		LugbugEventService.getInstance().initialize();
-		LugbugQuestService.getInstance().initialize();
-		LugbugSpecialQuestService.getInstance().initialize();
 		Util.printSection(" ### GeoData ### ");
 		GeoService.getInstance().initializeGeo();
 		DropRegistrationService.getInstance();
@@ -406,8 +402,14 @@ public class GameServer {
 		RoadService.getInstance();
 		AdminService.getInstance();
 		PlayerTransferService.getInstance();
+        Util.printSection(" ### Lugbug Mission ### ");
+        AchievementService.getInstance().init();
 		Util.printSection(" ### Field Fame System ### ");
 		PlayerFameService.getInstance().init();
+        Util.printSection(" ### Lumiel Transformation ### ");
+        LumielTransformService.getInstance().init();
+        Util.printSection(" ### Item Collection ### ");
+        PlayerCollectionService.getInstance().init();
 		Util.printSection(" ### Housing ### ");
 		HousingBidService.getInstance().start();
 		MaintenanceTask.getInstance();
@@ -421,7 +423,7 @@ public class GameServer {
 		WorldPlayTimeService.getInstance().onStart();
 		if (MembershipConfig.ONLINE_BONUS_ENABLE)
 			OnlineBonus.getInstance();
-		RestartService.getInstance();
+		RestartService.getInstance().onStart();
 
 		Util.printSection(" ### System ### ");
 		System.gc();

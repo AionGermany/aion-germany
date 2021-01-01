@@ -64,6 +64,8 @@ import com.aionemu.gameserver.model.gameobjects.SummonedObject;
 import com.aionemu.gameserver.model.gameobjects.Trap;
 import com.aionemu.gameserver.model.gameobjects.player.AbyssRank.AbyssRankUpdateType;
 import com.aionemu.gameserver.model.gameobjects.player.FriendList.Status;
+import com.aionemu.gameserver.model.gameobjects.player.achievement.PlayerAchievement;
+import com.aionemu.gameserver.model.gameobjects.player.collection.PlayerCollection;
 import com.aionemu.gameserver.model.gameobjects.player.emotion.EmotionList;
 import com.aionemu.gameserver.model.gameobjects.player.equipmentsetting.EquipmentSettingList;
 import com.aionemu.gameserver.model.gameobjects.player.f2p.F2p;
@@ -323,6 +325,10 @@ public class Player extends Creature {
 	private EquipmentSettingList equipmentSettingList;
 	private PlayerMCList mc;
 	private TransformationList transformationList;
+	private PlayerCollection playerCollection;
+    private Map<Integer, PlayerAchievement> playerAchievements = new FastMap<Integer, PlayerAchievement>();
+    private Map<Integer, PlayerAchievement> playerEventAchievements = new FastMap<Integer, PlayerAchievement>();
+	private Map<Integer, LumielTransform> playerLumiel = new FastMap<Integer, LumielTransform>();
 
 	/**
 	 * Player Skill Skin List
@@ -3143,6 +3149,25 @@ public class Player extends Creature {
 	}
 
 	/**
+	 * Achievement System
+	 */
+    public Map<Integer, PlayerAchievement> getPlayerAchievements() {
+        return playerAchievements;
+    }
+
+    public void setPlayerAchievements(Map<Integer, PlayerAchievement> playerAchievements) {
+        this.playerAchievements = playerAchievements;
+    }
+
+    public Map<Integer, PlayerAchievement> getPlayerEventAchievements() {
+        return playerEventAchievements;
+    }
+
+    public void setPlayerEventAchievements(Map<Integer, PlayerAchievement> playerAchievements) {
+        this.playerEventAchievements = playerAchievements;
+    }
+
+	/**
 	 * Field Fame System
 	 */
     public Map<Integer, PlayerFame> getPlayerFame() {
@@ -3153,11 +3178,36 @@ public class Player extends Creature {
         this.playerFame = playerFame;
     }
 
+	/**
+	 * World Playtime System
+	 */
     public int getWorldPlayTime() {
         return worldPlayTime;
     }
 
     public void setWorldPlayTime(int playTime) {
         this.worldPlayTime = playTime;
+    }
+
+	/**
+	 * Lumiel Transformation
+	 */
+    public Map<Integer, LumielTransform> getPlayerLumiel() {
+        return playerLumiel;
+    }
+
+    public void setPlayerLumiel(Map<Integer, LumielTransform> playerLumiel) {
+        this.playerLumiel = playerLumiel;
+    }
+
+	/**
+	 * Player Collection
+	 */
+    public PlayerCollection getPlayerCollection() {
+        return playerCollection;
+    }
+
+    public void setPlayerCollection(PlayerCollection playerCollection) {
+        this.playerCollection = playerCollection;
     }
 }

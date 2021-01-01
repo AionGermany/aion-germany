@@ -278,8 +278,8 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_DAEVANION_SKILL_FUSION(0x1EB, State.IN_GAME)); // 7.5 TODO
 
 		// // ///////////////// LUGBUG QUESTS ///////////////////
-		//addPacket(new CM_LUGBUG_MISSION_REWARD(0x1E9, State.IN_GAME)); // 7.5 EU TODO
-		addPacket(new CM_LUGBUG_EVENT_REWARD(0x3FE, State.IN_GAME)); // 7.5 TODO
+		addPacket(new CM_ACHIEVEMENT_COMPLETE(0x1E9, State.IN_GAME)); // 7.5 EU TODO
+		addPacket(new CM_ACHIEVEMENT_COMPLETE_EVENT(0x3FE, State.IN_GAME)); // 7.5 TODO
 
 		// // /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0x2FC, State.IN_GAME)); // 7.5 EU
@@ -308,6 +308,8 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_ATREIAN_PASSPORT(0x1CF, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_STIGMA(0x1F5, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_REMOVE_DYE(0x1DA, State.IN_GAME)); // 7.5 EU TODO
+		addPacket(new CM_LUMIEL_TRANSFORM(0x3FD, State.IN_GAME)); // 7.7 EU TODO
+		addPacket(new CM_PLAYER_COLLECTION_REGISTER(0x3F2, State.IN_GAME)); // 7.7 EU TODO
 	}
 
 	public AionPacketHandler getPacketHandler() {

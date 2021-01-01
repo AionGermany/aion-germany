@@ -112,6 +112,7 @@ import com.aionemu.gameserver.services.abyss.AbyssService;
 import com.aionemu.gameserver.services.craft.CraftSkillUpdateService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemService;
+import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.toypet.MinionService;
@@ -841,6 +842,10 @@ public class PlayerController extends CreatureController<Player> {
 		if (level >= 66 && level <= 83) {
 			reachedPlayerLvl(player);
 		}
+        if (level >= 76) {
+            AchievementService.getInstance().onLeveUplPlayer(player);
+        }
+
 
 		player.getNpcFactions().onLevelUp();
 	}

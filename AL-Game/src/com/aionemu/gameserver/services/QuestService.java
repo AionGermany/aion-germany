@@ -56,6 +56,7 @@ import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 import com.aionemu.gameserver.model.team2.common.legacy.LootRuleType;
 import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 import com.aionemu.gameserver.model.templates.QuestTemplate;
+import com.aionemu.gameserver.model.templates.achievement.AchievementActionType;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.quest.CollectItem;
 import com.aionemu.gameserver.model.templates.quest.CollectItems;
@@ -87,6 +88,7 @@ import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.services.item.ItemService;
+import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.services.player.PlayerFameService;
 import com.aionemu.gameserver.services.reward.BonusService;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
@@ -457,6 +459,7 @@ public final class QuestService {
 		player.getController().updateZone();
 		player.getController().updateNearbyQuests();
 		QuestEngine.getInstance().onLvlUp(env);
+		AchievementService.getInstance().onUpdateAchievementAction(player, template.getId(), 1, AchievementActionType.QUEST);
 		if (template.getNpcFactionId() != 0) {
 			player.getNpcFactions().completeQuest(template);
 		}

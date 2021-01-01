@@ -1,421 +1,423 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Parsed via PacketSamurai AionGer-Edtion - [Thu Sep 06 16:08:44 CEST 2018] -->
+<!-- Parsed via PacketSamurai AionGer-Edtion - [Fri Jan 01 13:47:53 CET 2021] -->
+
+<!-- 
+Entry - 300190000 x=192.45245 y=219.82112 z=1098.3895 h=30
+Exit - 210050000 x=2873.0757 y=447.6068 z=327.58447 h=29
+
+add Item - 164000099 Taloc's Tears
+add Item - 160001286 Taloc Fruit
+-->
 <spawns>
 	<!-- Taloc's Hollow -->
 	<spawn_map map_id="300190000">
-		<!-- Komad Sentry ||| BIDElim_ComadeWi_Summon_52_Ae -->
-		<spawn npc_id="281514">
-			<spot x="498.3759" y="811.8175" z="1280.851" h="113"/>
-		</spawn>
 		<!-- BIDElim_EventE_NoshowNPC ||| BIDElim_EventE_NoshowNPC -->
-		<spawn npc_id="281533">
+		<spawn npc_id="281533" respawn_time="295">
 			<spot x="144.17682" y="374.4873" z="1138.2283" h="0"/>
 		</spawn>
 		<!-- BIDElim_EventF_NoshowNPC ||| BIDElim_EventF_NoshowNPC -->
-		<spawn npc_id="281534">
+		<spawn npc_id="281534" respawn_time="295">
 			<spot x="158.76" y="340.63" z="1124.8075" h="0"/>
 		</spawn>
 		<!-- BIDElim_RushA_NoshowNPC ||| BIDElim_RushA_NoshowNPC -->
-		<spawn npc_id="281613">
+		<spawn npc_id="281613" respawn_time="295">
 			<spot x="195.20819" y="295.5051" z="1106.8177" h="0"/>
 		</spawn>
 		<!-- BIDElim_RushB_NoshowNPC ||| BIDElim_RushB_NoshowNPC -->
-		<spawn npc_id="281614">
+		<spawn npc_id="281614" respawn_time="295">
 			<spot x="257.71753" y="702.78955" z="1169.5955" h="0"/>
 		</spawn>
 		<!-- BIDElim_ChangeA_NoshowNPC ||| BIDElim_ChangeA_NoshowNPC -->
-		<spawn npc_id="281644">
+		<spawn npc_id="281644" respawn_time="295">
 			<spot x="650.0" y="843.0" z="1305.0" h="0"/>
 		</spawn>
 		<!-- IDElim Windbox Invisible NPC ||| BIDElim_Windbox_NoshowNPC -->
-		<spawn npc_id="281817">
+		<spawn npc_id="281817" respawn_time="295">
 			<spot x="653.90076" y="839.1356" z="1305.0" h="0" static_id="9"/>
 		</spawn>
-		<!-- Mosqua Egg ||| BIDElim_Neutfly_Egg_51_n -->
-		<spawn npc_id="282006">
-			<spot x="663.3157" y="827.62506" z="1303.9021" h="0"/>
-			<spot x="659.4429" y="827.5411" z="1303.8558" h="0"/>
-			<spot x="660.5093" y="829.23627" z="1304.1613" h="0"/>
-			<spot x="662.57886" y="826.7499" z="1303.8256" h="0"/>
-		</spawn>
 		<!-- Accessory Destruction ||| BIDElim_MSmogEffect_NoshowNPC -->
-		<spawn npc_id="282008">
-			<spot x="266.70685" y="680.6733" z="1167.2369" h="116"/>
+		<spawn npc_id="282008" respawn_time="295">
+			<spot x="266.70685" y="680.6733" z="1167.2369" h="82"/>
 		</spawn>
 		<!-- Cleave Armour ||| BIDElim_PhySmogEffect_NoshowNPC -->
-		<spawn npc_id="282009">
-			<spot x="266.70685" y="680.6733" z="1167.2369" h="35"/>
-			<spot x="266.70685" y="680.6733" z="1167.2369" h="43"/>
+		<spawn npc_id="282009" respawn_time="295">
+			<spot x="263.4334" y="716.73004" z="1170.3693" h="52"/>
+			<spot x="292.02466" y="719.7132" z="1169.3982" h="86"/>
 		</spawn>
 		<!-- Taloc's Energy ||| BIDElim_HealingtoPC_NoshowNPC -->
-		<spawn npc_id="282058">
-			<spot x="653.81116" y="838.8437" z="1303.9279" h="23"/>
-			<spot x="654.4184" y="839.3387" z="1304.0394" h="0"/>
+		<spawn npc_id="282058" respawn_time="295">
+			<spot x="653.39417" y="838.3416" z="1303.9413" h="3"/>
+			<spot x="654.67096" y="838.83044" z="1304.0833" h="0"/>
 		</spawn>
 		<!-- MonsterAreaAttackNoshowNPC ||| BIDElim_AreaatktoMonster_NoshowNPC -->
-		<spawn npc_id="282059">
-			<spot x="598.28864" y="820.33215" z="1381.5077" h="0"/>
+		<spawn npc_id="282059" respawn_time="295">
+			<spot x="597.9478" y="819.22076" z="1381.5183" h="0"/>
 		</spawn>
 		<!-- BIDElim_NPCSpawnNoshowNPC_51_Ae ||| BIDElim_NPCSpawn_NoshowNPC -->
-		<spawn npc_id="282110">
+		<spawn npc_id="282110" respawn_time="295">
 			<spot x="471.07098" y="901.53326" z="1268.489" h="0"/>
 		</spawn>
 		<!-- BIDElim_Zone1BossChamberNotice_NoshowNPC ||| BIDElim_Notice_1F_Boss_NoshowNPC -->
-		<spawn npc_id="282122">
+		<spawn npc_id="282122" respawn_time="295">
 			<spot x="263.41696" y="703.11127" z="1169.6217" h="0"/>
 		</spawn>
 		<!-- BIDElim_MonsterAreaAttackNoshowNPC3_51_Ae ||| BIDElim_AreaatktoMonster_NoshowNPC3 -->
-		<spawn npc_id="282129">
-			<spot x="625.3289" y="851.5526" z="1380.8336" h="0"/>
+		<spawn npc_id="282129" respawn_time="295">
+			<spot x="626.27734" y="852.09784" z="1380.9011" h="0"/>
+		</spawn>
+		<!-- BIDElim_MonsterAreaAttackNoshowNPC4_51_Ae ||| BIDElim_AreaatktoMonster_NoshowNPC4 -->
+		<spawn npc_id="282130" respawn_time="295">
+			<spot x="610.63513" y="799.25256" z="1379.5458" h="106"/>
 		</spawn>
 		<!-- BIDElim_NoshowNPC_Zone1BossChamber_51_Ae ||| BIDElim_NoshowNPC_1FBoss_51_Ae -->
-		<spawn npc_id="282136">
-			<spot x="268.26126" y="680.8829" z="1167.1802" h="0"/>
-			<spot x="267.85205" y="680.9183" z="1167.2024" h="0"/>
-			<spot x="267.19446" y="680.2391" z="1167.2461" h="0"/>
+		<spawn npc_id="282136" respawn_time="295">
+			<spot x="263.53702" y="716.40765" z="1170.3077" h="0"/>
+			<spot x="267.28085" y="679.71747" z="1167.2264" h="0"/>
+			<spot x="292.18427" y="719.60657" z="1169.3813" h="0"/>
 		</spawn>
 		<!-- BIDElim_Zone1BossChamberCutScene_NoshowNPC_51_Ae ||| BIDElim_1FBossCutscene_NoshowNPC_51_Ae -->
-		<spawn npc_id="282138">
+		<spawn npc_id="282138" respawn_time="295">
 			<spot x="255.23828" y="657.527" z="1168.333" h="0"/>
 		</spawn>
 		<!-- BIDElim_Zone1CaspaFruitUseNotice_NoshowNPC ||| BIDElim_Notice_1F_KaspaFruit_NoshowNPC -->
-		<spawn npc_id="282149">
+		<spawn npc_id="282149" respawn_time="295">
 			<spot x="191.63254" y="249.15726" z="1101.745" h="90"/>
 		</spawn>
 		<!-- BIDElim_Zone1CaspaTearUseNotice_NoshowNPC ||| BIDElim_Notice_1F_KaspaTear_NoshowNPC -->
-		<spawn npc_id="282150">
+		<spawn npc_id="282150" respawn_time="295">
 			<spot x="193.13454" y="276.15466" z="1106.8839" h="90"/>
 		</spawn>
 		<!-- BIDElim_NPCSpawnNoshowNPC_51_Ae ||| BIDElim_1F_BossDoorOpen -->
-		<spawn npc_id="282476">
-			<spot x="255.91158" y="694.9762" z="1168.7014" h="0"/>
+		<spawn npc_id="282476" respawn_time="295">
+			<spot x="246.37227" y="692.97345" z="1169.0261" h="0"/>
 		</spawn>
 		<!-- BIDElim_NPCSpawnNoshowNPC_51_Ae ||| BIDElim_2F_BossDoorOpen -->
-		<spawn npc_id="282477">
-			<spot x="658.5679" y="823.9709" z="1303.9689" h="0"/>
+		<spawn npc_id="282477" respawn_time="295">
+			<spot x="663.2858" y="832.5107" z="1304.5168" h="0"/>
 		</spawn>
 		<!-- Drudge Sheluk ||| IDElim_1F_Sheluk_51_Ae -->
-		<spawn npc_id="653388">
-			<spot x="154.44843" y="348.7936" z="1129.615" h="11"/>
-			<spot x="295.202" y="702.6184" z="1168.6853" h="115"/>
+		<spawn npc_id="653388" respawn_time="295">
+			<spot x="152.90317" y="346.9867" z="1129.1383" h="0"/>
+			<spot x="293.40207" y="703.8534" z="1169.0503" h="0"/>
 		</spawn>
 		<!-- Drudge Sheluk ||| IDElim_1F_Sheluk_52_Ae -->
-		<spawn npc_id="653389">
-			<spot x="226.2659" y="544.9639" z="1151.8463" h="9"/>
-			<spot x="245.97728" y="685.64655" z="1168.4868" h="112"/>
+		<spawn npc_id="653389" respawn_time="295">
+			<spot x="224.98146" y="544.8623" z="1151.5695" h="13"/>
+			<spot x="254.89145" y="688.77875" z="1168.353" h="74"/>
 		</spawn>
 		<!-- Shishir ||| IDElim_1F_Sheluk_KeyNM_52_Ae -->
-		<spawn npc_id="653390">
-			<spot x="142.41388" y="384.94843" z="1139.4291" h="97"/>
+		<spawn npc_id="653390" respawn_time="295">
+			<spot x="144.28383" y="392.93765" z="1141.4711" h="117"/>
 		</spawn>
 		<!-- Ancient Octanus ||| IDElim_1F_Door_Octaside_51_Ae -->
-		<spawn npc_id="653391">
+		<spawn npc_id="653391" respawn_time="295">
 			<spot x="220.2567" y="303.56998" z="1108.0634" h="0"/>
 		</spawn>
 		<!-- Mask Arachna ||| IDElim_1F_Octaside_51_Ae -->
-		<spawn npc_id="653392">
-			<spot x="278.53357" y="732.0602" z="1173.0426" h="1"/>
+		<spawn npc_id="653392" respawn_time="295">
+			<spot x="278.51825" y="731.76776" z="1172.9805" h="117"/>
 		</spawn>
 		<!-- Mask Arachna ||| IDElim_1F_Octaside_52_Ae -->
-		<spawn npc_id="653393">
-			<spot x="216.27722" y="544.9088" z="1148.9442" h="16"/>
-			<spot x="238.67595" y="732.835" z="1172.5243" h="114"/>
+		<spawn npc_id="653393" respawn_time="295">
+			<spot x="216.63615" y="544.6621" z="1149.0486" h="7"/>
+			<spot x="238.65147" y="733.76984" z="1172.5779" h="7"/>
 		</spawn>
 		<!-- Fang Crynac ||| IDElim_1F_Criton_51_Ae -->
-		<spawn npc_id="653394">
-			<spot x="218.50629" y="317.4063" z="1109.785" h="0"/>
+		<spawn npc_id="653394" respawn_time="295">
+			<spot x="196.53902" y="331.67426" z="1116.861" h="57"/>
 		</spawn>
 		<!-- Fang Crynac ||| IDElim_1F_Criton_52_Ae -->
-		<spawn npc_id="653395">
-			<spot x="276.77426" y="685.234" z="1168.109" h="45"/>
+		<spawn npc_id="653395" respawn_time="295">
+			<spot x="280.96375" y="674.41296" z="1167.4044" h="66"/>
 		</spawn>
 		<!-- Emerald Sparkle ||| IDElim_1F_Spakle_51_Ae -->
-		<spawn npc_id="653396">
-			<spot x="221.81068" y="873.8359" z="1231.2614" h="33"/>
-			<spot x="261.76678" y="899.9469" z="1237.1868" h="114"/>
+		<spawn npc_id="653396" respawn_time="295">
+			<spot x="220.88353" y="870.2015" z="1230.5637" h="3"/>
+			<spot x="261.86197" y="900.4605" z="1237.2633" h="119"/>
 		</spawn>
 		<!-- Emerald Sparkle ||| IDElim_1F_Spakle_52_Ae -->
-		<spawn npc_id="653397">
-			<spot x="219.4162" y="801.7165" z="1207.5021" h="4"/>
-			<spot x="209.58487" y="829.7702" z="1218.1627" h="8"/>
+		<spawn npc_id="653397" respawn_time="295">
+			<spot x="219.45718" y="801.4052" z="1207.3936" h="1"/>
+			<spot x="207.75687" y="829.7883" z="1218.154" h="4"/>
 		</spawn>
 		<!-- Parasitic Clodworm ||| IDElim_1F_Clodworm_51_Ae -->
-		<spawn npc_id="653398">
-			<spot x="180.81966" y="302.78406" z="1108.6" h="0"/>
+		<spawn npc_id="653398" respawn_time="295">
 			<spot x="206.1033" y="296.06665" z="1106.6714" h="0"/>
-			<spot x="108.31355" y="440.6256" z="1134.6085" h="119"/>
-			<spot x="108.59504" y="449.94598" z="1133.7008" h="18"/>
-			<spot x="240.70045" y="545.8417" z="1153.9496" h="68"/>
-			<spot x="245.85126" y="542.15594" z="1154.9524" h="83"/>
-			<spot x="250.93834" y="566.4827" z="1154.6462" h="30"/>
-			<spot x="252.41318" y="567.7144" z="1154.8389" h="14"/>
+			<spot x="180.81966" y="302.78406" z="1108.6" h="0"/>
+			<spot x="106.346214" y="440.3586" z="1134.2714" h="0"/>
+			<spot x="107.38707" y="448.9678" z="1133.7506" h="0"/>
+			<spot x="243.31265" y="542.55743" z="1154.7635" h="35"/>
+			<spot x="245.47548" y="568.19104" z="1153.1692" h="61"/>
+			<spot x="245.84045" y="545.7289" z="1154.7572" h="84"/>
+			<spot x="249.38379" y="563.42035" z="1154.2085" h="10"/>
 		</spawn>
 		<!-- Parasitic Clodworm ||| IDElim_1F_EXP_Clodworm_51_Ae -->
-		<spawn npc_id="653399">
-			<spot x="171.80304" y="586.38715" z="1147.2744" h="31"/>
-			<spot x="175.07962" y="586.70886" z="1147.927" h="100"/>
-			<spot x="182.97847" y="584.36743" z="1149.6658" h="39"/>
-			<spot x="189.74406" y="584.557" z="1149.9764" h="66"/>
-			<spot x="177.77824" y="591.5405" z="1148.0568" h="85"/>
-			<spot x="186.12022" y="590.6922" z="1149.8641" h="72"/>
+		<spawn npc_id="653399" respawn_time="295">
+			<spot x="176.21193" y="584.7098" z="1148.427" h="107"/>
+			<spot x="171.75943" y="586.762" z="1147.2689" h="7"/>
+			<spot x="183.19875" y="583.87756" z="1149.7229" h="106"/>
+			<spot x="189.94962" y="585.1073" z="1150.0118" h="5"/>
+			<spot x="177.7901" y="591.325" z="1148.075" h="107"/>
+			<spot x="186.93236" y="592.3693" z="1149.9303" h="2"/>
 		</spawn>
 		<!-- Predatory Dionae ||| IDElim_1F_Dionaea_51_Ae -->
-		<spawn npc_id="653400">
-			<spot x="114.493515" y="432.28873" z="1135.432" h="33"/>
-			<spot x="138.28561" y="530.90234" z="1139.8575" h="17"/>
+		<spawn npc_id="653400" respawn_time="295">
+			<spot x="113.32701" y="440.93582" z="1134.6576" h="33"/>
+			<spot x="133.2639" y="521.1396" z="1141.9559" h="88"/>
 			<spot x="146.09387" y="533.81067" z="1138.6569" h="0"/>
 		</spawn>
 		<!-- Kinquid ||| IDElim_1F_ClodwormNM_52_Ae -->
-		<spawn npc_id="653401">
+		<spawn npc_id="653401" respawn_time="295">
 			<spot x="236.1543" y="708.5979" z="1170.8611" h="0"/>
 		</spawn>
-		<!-- Poisonous Sheluk ||| IDElim_2F_Sheluk_51_Ae -->
-		<spawn npc_id="653402">
-			<spot x="338.62585" y="907.1295" z="1241.9982" h="90"/>
-			<spot x="395.12067" y="957.2791" z="1250.5715" h="74"/>
-			<spot x="397.23892" y="949.0034" z="1250.1482" h="27"/>
-			<spot x="422.97726" y="959.7035" z="1264.2705" h="109"/>
-			<spot x="407.99063" y="847.5636" z="1269.0846" h="95"/>
+		<!-- Venemous Sheluk ||| IDElim_2F_Sheluk_51_Ae -->
+		<spawn npc_id="653402" respawn_time="295">
+			<spot x="338.94684" y="907.71594" z="1241.968" h="76"/>
+			<spot x="393.09583" y="940.8149" z="1250.7957" h="71"/>
+			<spot x="397.52817" y="960.1313" z="1250.4819" h="105"/>
+			<spot x="422.9179" y="959.6172" z="1264.2716" h="108"/>
+			<spot x="413.21045" y="854.9122" z="1268.8845" h="29"/>
 		</spawn>
-		<!-- Poisonous Sheluk ||| IDElim_2F_Sheluk_52_Ae -->
-		<spawn npc_id="653403">
-			<spot x="341.3469" y="943.25385" z="1244.0867" h="0"/>
-			<spot x="447.85825" y="905.3068" z="1269.376" h="111"/>
-			<spot x="450.54813" y="841.68005" z="1275.2166" h="95"/>
-			<spot x="534.3138" y="845.5672" z="1281.0323" h="42"/>
+		<!-- Venemous Sheluk ||| IDElim_2F_Sheluk_52_Ae -->
+		<spawn npc_id="653403" respawn_time="295">
+			<spot x="342.76575" y="943.7493" z="1244.2863" h="12"/>
+			<spot x="447.9884" y="905.9192" z="1269.4147" h="119"/>
+			<spot x="457.83997" y="839.4912" z="1275.4866" h="87"/>
+			<spot x="535.8943" y="843.86584" z="1281.1301" h="73"/>
 		</spawn>
 		<!-- Horned Arachna ||| IDElim_2F_Octaside_51_Ae -->
-		<spawn npc_id="653404">
-			<spot x="334.25464" y="926.2995" z="1242.5481" h="117"/>
-			<spot x="361.34152" y="931.3816" z="1250.5017" h="29"/>
+		<spawn npc_id="653404" respawn_time="295">
+			<spot x="334.34833" y="926.8681" z="1242.6096" h="2"/>
+			<spot x="360.46378" y="927.90674" z="1250.4935" h="107"/>
 			<spot x="378.03226" y="958.35406" z="1246.4451" h="76"/>
-			<spot x="449.8456" y="921.42865" z="1272.871" h="11"/>
-			<spot x="461.60165" y="880.72375" z="1271.5977" h="55"/>
+			<spot x="449.79834" y="919.76935" z="1272.8307" h="118"/>
+			<spot x="464.41367" y="879.8571" z="1271.5045" h="30"/>
 		</spawn>
 		<!-- Horned Arachna ||| IDElim_2F_Octaside_52_Ae -->
-		<spawn npc_id="653405">
-			<spot x="375.9944" y="902.2986" z="1256.9445" h="76"/>
-			<spot x="385.16107" y="863.67847" z="1264.5593" h="18"/>
-			<spot x="390.1956" y="979.84125" z="1250.1222" h="84"/>
+		<spawn npc_id="653405" respawn_time="295">
+			<spot x="379.49585" y="906.72034" z="1257.7561" h="118"/>
+			<spot x="382.9626" y="859.6667" z="1264.2811" h="76"/>
+			<spot x="392.32086" y="985.1976" z="1249.6345" h="21"/>
 		</spawn>
 		<!-- Greenleaf Sparkle ||| IDElim_2F_Spakle_51_Ae -->
-		<spawn npc_id="653406">
-			<spot x="324.9984" y="897.4666" z="1241.3135" h="74"/>
-			<spot x="350.0362" y="935.43097" z="1244.8773" h="58"/>
-			<spot x="361.54803" y="884.7026" z="1256.1594" h="114"/>
-			<spot x="389.9827" y="891.30804" z="1264.9254" h="57"/>
-			<spot x="458.7278" y="912.1356" z="1268.6373" h="58"/>
+		<spawn npc_id="653406" respawn_time="295">
+			<spot x="322.82617" y="898.21014" z="1241.1244" h="70"/>
+			<spot x="354.01266" y="935.8387" z="1245.2253" h="21"/>
+			<spot x="366.4786" y="886.1412" z="1256.3153" h="74"/>
+			<spot x="394.05884" y="899.0696" z="1266.5765" h="48"/>
+			<spot x="462.83792" y="909.0882" z="1268.2507" h="21"/>
 		</spawn>
 		<!-- Greenleaf Sparkle ||| IDElim_2F_Spakle_52_Ae -->
-		<spawn npc_id="653407">
-			<spot x="445.72256" y="880.8441" z="1273.9814" h="30"/>
-			<spot x="442.01187" y="858.45306" z="1274.5609" h="17"/>
-			<spot x="470.75168" y="858.9976" z="1272.6001" h="52"/>
-			<spot x="484.51477" y="859.35815" z="1270.9012" h="101"/>
-			<spot x="481.4193" y="839.0559" z="1270.8923" h="34"/>
+		<spawn npc_id="653407" respawn_time="295">
+			<spot x="445.98758" y="877.2122" z="1273.8971" h="18"/>
+			<spot x="443.0971" y="859.9008" z="1274.3569" h="102"/>
+			<spot x="470.19235" y="861.52856" z="1272.6223" h="85"/>
+			<spot x="476.65698" y="855.8945" z="1270.9485" h="78"/>
+			<spot x="482.74316" y="839.3045" z="1270.9155" h="46"/>
 		</spawn>
 		<!-- Flora Dionae ||| IDElim_2F_Dionaea_51_Ae -->
-		<spawn npc_id="653408">
-			<spot x="208.24196" y="828.79285" z="1217.8304" h="91"/>
-			<spot x="239.56267" y="887.5548" z="1234.927" h="71"/>
-			<spot x="266.86978" y="903.32" z="1237.4977" h="75"/>
-			<spot x="332.9393" y="919.0038" z="1241.6685" h="80"/>
-			<spot x="368.7475" y="881.096" z="1256.3264" h="22"/>
+		<spawn npc_id="653408" respawn_time="295">
+			<spot x="208.24785" y="832.34894" z="1218.9962" h="91"/>
+			<spot x="231.32481" y="881.5417" z="1233.3798" h="76"/>
+			<spot x="265.0453" y="901.6208" z="1237.2867" h="75"/>
+			<spot x="336.51392" y="924.8687" z="1242.4595" h="21"/>
+			<spot x="371.3267" y="886.78815" z="1256.2172" h="22"/>
 			<spot x="397.3804" y="915.8957" z="1258.3792" h="80"/>
-			<spot x="398.07303" y="860.686" z="1265.2732" h="103"/>
-			<spot x="407.7716" y="975.05884" z="1252.0709" h="10"/>
+			<spot x="396.69617" y="862.7667" z="1264.9536" h="42"/>
+			<spot x="400.4534" y="975.1418" z="1250.6227" h="57"/>
 		</spawn>
 		<!-- Flora Dionae ||| IDElim_2F_Dionaea_52_Ae -->
-		<spawn npc_id="653409">
+		<spawn npc_id="653409" respawn_time="295">
 			<spot x="382.46616" y="950.32764" z="1248.5118" h="52"/>
-			<spot x="433.8199" y="969.2249" z="1259.683" h="55"/>
-			<spot x="487.9512" y="889.7009" z="1270.2607" h="109"/>
-			<spot x="394.48676" y="827.0055" z="1270.6259" h="28"/>
-			<spot x="565.41675" y="839.4833" z="1285.4004" h="0"/>
+			<spot x="431.2022" y="970.0651" z="1258.9606" h="53"/>
+			<spot x="483.86673" y="892.52454" z="1269.7832" h="48"/>
+			<spot x="396.013" y="831.8086" z="1270.6519" h="23"/>
+			<spot x="547.4351" y="838.84" z="1281.8629" h="66"/>
 		</spawn>
 		<!-- Azure Mosqua ||| IDElim_2F_NeutWorkmanfly_51_Ae -->
-		<spawn npc_id="653410">
+		<spawn npc_id="653410" respawn_time="295">
 			<spot x="364.35928" y="917.3567" z="1250.0321" h="46"/>
-			<spot x="474.0297" y="823.45917" z="1271.017" h="83"/>
+			<spot x="475.5125" y="823.117" z="1271.0739" h="56"/>
 		</spawn>
 		<!-- Azure Mosqua ||| IDElim_2F_NeutWorkmanfly_52_Ae -->
-		<spawn npc_id="653411">
-			<spot x="411.11722" y="957.3119" z="1262.4407" h="107"/>
-			<spot x="513.48694" y="855.22406" z="1271.1973" h="14"/>
+		<spawn npc_id="653411" respawn_time="295">
+			<spot x="411.26328" y="957.5649" z="1262.4712" h="113"/>
+			<spot x="513.937" y="853.48975" z="1271.1508" h="13"/>
 		</spawn>
 		<!-- Neith ||| IDElim_2F_Octaside_KeyNM_52_Ae -->
-		<spawn npc_id="653412">
-			<spot x="509.90668" y="805.1516" z="1283.8387" h="76"/>
+		<spawn npc_id="653412" respawn_time="295">
+			<spot x="511.91394" y="805.6943" z="1284.1288" h="87"/>
 		</spawn>
 		<!-- Supraklaw Spotter ||| IDElim_2F_NeutWorkmanflyG_51_Ae -->
-		<spawn npc_id="653413">
-			<spot x="321.82605" y="890.6235" z="1249.8226" h="64"/>
-			<spot x="324.72104" y="886.53674" z="1250.2233" h="104"/>
-			<spot x="327.3102" y="881.8096" z="1250.2151" h="98"/>
-			<spot x="331.34177" y="885.0645" z="1249.1172" h="74"/>
-			<spot x="330.95435" y="880.82025" z="1249.8456" h="83"/>
+		<spawn npc_id="653413" respawn_time="295">
+			<spot x="324.83054" y="886.7302" z="1250.0592" h="2"/>
+			<spot x="327.12634" y="881.63416" z="1250.2727" h="100"/>
+			<spot x="324.11868" y="889.2428" z="1249.8126" h="104"/>
+			<spot x="331.27878" y="882.1775" z="1249.5619" h="111"/>
+			<spot x="334.38724" y="884.64606" z="1248.9792" h="117"/>
 			<spot x="422.17133" y="979.77997" z="1255.9731" h="90"/>
-			<spot x="437.8856" y="986.82947" z="1262.8121" h="2"/>
-			<spot x="432.60297" y="996.32764" z="1262.5784" h="6"/>
-			<spot x="446.08334" y="987.4082" z="1264.2146" h="114"/>
-			<spot x="446.13394" y="997.4573" z="1264.3142" h="116"/>
-			<spot x="458.5793" y="970.40405" z="1265.5768" h="111"/>
-			<spot x="457.87357" y="984.5087" z="1266.1724" h="8"/>
-			<spot x="455.95074" y="991.3003" z="1265.5433" h="103"/>
-			<spot x="497.62653" y="862.749" z="1272.7471" h="113"/>
-			<spot x="507.33606" y="861.36884" z="1274.8081" h="23"/>
-			<spot x="511.43" y="865.4745" z="1274.3826" h="105"/>
-			<spot x="513.4814" y="872.81354" z="1272.0615" h="30"/>
+			<spot x="437.80106" y="986.01184" z="1262.7574" h="112"/>
+			<spot x="433.39902" y="996.68555" z="1262.7778" h="12"/>
+			<spot x="446.06787" y="988.3117" z="1264.2192" h="9"/>
+			<spot x="446.13394" y="998.2339" z="1264.3606" h="4"/>
+			<spot x="458.69" y="971.1682" z="1265.6193" h="3"/>
+			<spot x="457.94162" y="984.12756" z="1266.1461" h="119"/>
+			<spot x="456.3751" y="992.5036" z="1265.5015" h="1"/>
+			<spot x="498.82803" y="860.0533" z="1272.8253" h="71"/>
+			<spot x="506.99463" y="859.3549" z="1275.2239" h="73"/>
+			<spot x="511.74045" y="875.1065" z="1271.9283" h="41"/>
+			<spot x="513.8171" y="864.2113" z="1275.0647" h="78"/>
 		</spawn>
 		<!-- Queen Mosqua ||| IDElim_2F_NeutWorkmanfly_Qeen_52_Ae -->
-		<spawn npc_id="653414">
-			<spot x="650.3184" y="819.9844" z="1302.7224" h="110"/>
+		<spawn npc_id="653414" respawn_time="295">
+			<spot x="676.74384" y="825.54974" z="1306.6046" h="18"/>
 		</spawn>
 		<!-- Gellmar ||| IDElim_1F_Clodworm_ItemNM_52_Ae -->
-		<spawn npc_id="653415">
-			<spot x="178.42712" y="581.4174" z="1149.8972" h="103"/>
+		<spawn npc_id="653415" respawn_time="295">
+			<spot x="179.24966" y="582.5231" z="1149.7977" h="97"/>
 		</spawn>
 		<!-- Komad Elite Watcher ||| IDElim_3F_KomadeWa_52_Ae -->
-		<spawn npc_id="653416">
-			<spot x="585.3263" y="846.01685" z="1381.9462" h="23"/>
-			<spot x="613.3809" y="820.654" z="1380.5974" h="63"/>
-			<spot x="619.4039" y="828.4093" z="1381.2416" h="88"/>
-			<spot x="675.2389" y="827.2165" z="1379.4698" h="24"/>
-			<spot x="647.9169" y="794.00305" z="1380.4647" h="6"/>
-			<spot x="689.481" y="817.322" z="1380.0529" h="6"/>
-			<spot x="624.78467" y="780.3348" z="1380.9916" h="94"/>
+		<spawn npc_id="653416" respawn_time="295">
+			<spot x="591.86127" y="843.40094" z="1382.2628" h="27"/>
+			<spot x="610.3907" y="819.82166" z="1380.3301" h="110"/>
+			<spot x="624.69727" y="836.0644" z="1381.6688" h="70"/>
+			<spot x="675.6013" y="830.16394" z="1379.798" h="41"/>
+			<spot x="651.92535" y="785.3095" z="1379.9501" h="9"/>
+			<spot x="618.65027" y="779.5592" z="1380.4779" h="34"/>
+			<spot x="686.3384" y="820.13873" z="1379.015" h="107"/>
 		</spawn>
 		<!-- Komad Elite Watchman ||| IDElim_3F_KomadeWa_53_Ae -->
-		<spawn npc_id="653417">
-			<spot x="587.02185" y="806.78766" z="1380.05" h="35"/>
+		<spawn npc_id="653417" respawn_time="295">
+			<spot x="584.5969" y="803.58075" z="1380.5352" h="73"/>
 			<spot x="640.9156" y="857.86774" z="1380.0283" h="90"/>
-			<spot x="636.3879" y="795.6339" z="1380.0825" h="4"/>
-			<spot x="663.91364" y="818.1003" z="1380.4187" h="10"/>
+			<spot x="629.6279" y="795.61066" z="1380.979" h="84"/>
+			<spot x="664.4659" y="818.24084" z="1380.3993" h="56"/>
 			<spot x="668.3758" y="779.9332" z="1379.7343" h="18"/>
 		</spawn>
 		<!-- Komad Shaman ||| IDElim_3F_KomadeWi_52_Ae -->
-		<spawn npc_id="653418">
-			<spot x="596.1065" y="843.27167" z="1382.0486" h="49"/>
-			<spot x="640.0935" y="827.2364" z="1380.3988" h="58"/>
-			<spot x="643.00885" y="840.475" z="1381.34" h="88"/>
+		<spawn npc_id="653418" respawn_time="295">
+			<spot x="599.2244" y="842.0266" z="1381.7435" h="37"/>
+			<spot x="634.73706" y="825.0643" z="1380.8615" h="88"/>
+			<spot x="642.6528" y="837.64374" z="1380.7795" h="2"/>
 			<spot x="644.30756" y="857.86774" z="1379.9905" h="90"/>
-			<spot x="643.1225" y="811.47125" z="1380.1157" h="59"/>
-			<spot x="687.79395" y="820.591" z="1379.3302" h="3"/>
+			<spot x="648.6844" y="811.6964" z="1380.3839" h="103"/>
+			<spot x="681.5966" y="823.93744" z="1378.3904" h="75"/>
 			<spot x="595.05035" y="789.5593" z="1382.8031" h="18"/>
+			<spot x="545.681" y="836.0857" z="1377.2924" h="42"/>
 		</spawn>
 		<!-- Komad Shaman ||| IDElim_3F_KomadeWi_53_Ae -->
-		<spawn npc_id="653419">
-			<spot x="578.264" y="823.4516" z="1381.0448" h="89"/>
-			<spot x="589.6118" y="806.06024" z="1379.8987" h="107"/>
+		<spawn npc_id="653419" respawn_time="295">
+			<spot x="581.89594" y="828.8969" z="1380.7119" h="38"/>
+			<spot x="588.83014" y="806.2982" z="1379.9443" h="106"/>
 			<spot x="666.59705" y="780.68463" z="1379.696" h="18"/>
 		</spawn>
 		<!-- Celestius ||| IDElim_3F_KomadeNM_53_Ae -->
-		<spawn npc_id="653420">
+		<spawn npc_id="653420" respawn_time="295">
 			<spot x="543.03" y="834.08" z="1377.2877" h="110"/>
 		</spawn>
 		<!-- Drudge Sheluk ||| IDElim_1F_RushSheluk_51_Ae -->
-		<spawn npc_id="653421">
+		<spawn npc_id="653421" respawn_time="295">
 			<spot x="173.02635" y="293.10074" z="1108.6403" h="0"/>
 		</spawn>
 		<!-- Mask Arachna ||| IDElim_1F_RushOctaside_52_Ae -->
-		<spawn npc_id="653424">
-			<spot x="157.8934" y="340.3588" z="1124.8408" h="0"/>
+		<spawn npc_id="653424" respawn_time="295">
+			<spot x="157.7816" y="340.27582" z="1124.8237" h="0"/>
 		</spawn>
 		<!-- Emerald Sparkle ||| IDElim_1F_RushSpakle_51_Ae -->
-		<spawn npc_id="653425">
+		<spawn npc_id="653425" respawn_time="295">
 			<spot x="225.46716" y="300.2633" z="1108.1027" h="0"/>
 		</spawn>
 		<!-- Sheluk Drone ||| IDElim_1F_EXPSheluk_51_Ae -->
-		<spawn npc_id="653427">
-			<spot x="129.18478" y="482.4492" z="1139.1948" h="86"/>
-			<spot x="101.57399" y="492.27148" z="1137.6976" h="85"/>
+		<spawn npc_id="653427" respawn_time="295">
+			<spot x="127.97754" y="481.9569" z="1139.126" h="119"/>
+			<spot x="101.3336" y="496.73236" z="1138.1412" h="16"/>
 		</spawn>
 		<!-- Vampiric Arachna ||| IDElim_1F_EXPOctaside_51_Ae -->
-		<spawn npc_id="653429">
-			<spot x="104.798996" y="492.92535" z="1138.0352" h="31"/>
+		<spawn npc_id="653429" respawn_time="295">
+			<spot x="108.26905" y="485.9464" z="1138.2164" h="9"/>
 		</spawn>
 		<!-- Vampiric Arachna ||| IDElim_1F_EXPOctaside_52_Ae -->
-		<spawn npc_id="653430">
-			<spot x="109.019455" y="507.65503" z="1140.5044" h="112"/>
+		<spawn npc_id="653430" respawn_time="295">
+			<spot x="110.24313" y="509.33926" z="1140.7053" h="12"/>
 		</spawn>
 		<!-- Radiant Sparkle ||| IDElim_1F_EXPSpakle_51_Ae -->
-		<spawn npc_id="653431">
-			<spot x="149.56487" y="555.20917" z="1138.7112" h="0"/>
-			<spot x="183.54411" y="554.4205" z="1139.7765" h="14"/>
-			<spot x="160.49294" y="576.9125" z="1141.1631" h="21"/>
+		<spawn npc_id="653431" respawn_time="295">
+			<spot x="147.80786" y="550.05133" z="1138.5944" h="95"/>
+			<spot x="183.37158" y="554.0709" z="1139.7601" h="21"/>
+			<spot x="158.63779" y="575.88324" z="1140.5449" h="24"/>
 		</spawn>
 		<!-- Tree Crynac ||| IDElim_1F_EXPCriton_51_Ae -->
-		<spawn npc_id="653433">
-			<spot x="143.85182" y="374.7777" z="1138.2477" h="0"/>
-			<spot x="120.06159" y="502.09137" z="1140.8369" h="4"/>
-			<spot x="165.45895" y="544.2312" z="1138.3602" h="6"/>
+		<spawn npc_id="653433" respawn_time="295">
+			<spot x="144.51341" y="375.4861" z="1138.3284" h="0"/>
+			<spot x="121.52748" y="499.69894" z="1140.9536" h="107"/>
+			<spot x="165.51335" y="542.7819" z="1138.3528" h="9"/>
 		</spawn>
 		<!-- Tree Crynac ||| IDElim_1F_EXPCriton_52_Ae -->
-		<spawn npc_id="653434">
-			<spot x="115.69669" y="471.47992" z="1136.962" h="80"/>
-			<spot x="169.09273" y="559.61835" z="1139.0684" h="106"/>
+		<spawn npc_id="653434" respawn_time="295">
+			<spot x="120.63352" y="479.38495" z="1138.3221" h="80"/>
+			<spot x="169.40906" y="563.51843" z="1140.2281" h="8"/>
 		</spawn>
 		<!-- Komad Sentry ||| IDElim_2F_KomadeWa_51_Ae -->
-		<spawn npc_id="653437">
+		<spawn npc_id="653437" respawn_time="295">
 			<spot x="353.27795" y="910.41394" z="1249.0823" h="46"/>
-			<spot x="453.95486" y="862.68536" z="1273.2019" h="41"/>
-			<spot x="476.0256" y="805.78174" z="1281.8943" h="29"/>
+			<spot x="454.63998" y="855.1183" z="1273.7415" h="70"/>
+			<spot x="476.0618" y="802.00323" z="1282.3065" h="64"/>
 		</spawn>
 		<!-- Komad Sentry ||| IDElim_2F_KomadeWa_52_Ae -->
-		<spawn npc_id="653438">
-			<spot x="429.09564" y="907.07086" z="1264.8164" h="113"/>
+		<spawn npc_id="653438" respawn_time="295">
+			<spot x="426.4934" y="908.0438" z="1264.8429" h="112"/>
 			<spot x="428.49063" y="890.1838" z="1269.093" h="106"/>
-			<spot x="461.62567" y="820.9479" z="1279.3712" h="32"/>
-			<spot x="480.16953" y="790.4299" z="1284.2039" h="60"/>
+			<spot x="454.68225" y="819.6008" z="1279.3254" h="75"/>
+			<spot x="485.2372" y="787.1462" z="1284.8374" h="44"/>
 		</spawn>
 		<!-- Komad Diviner ||| IDElim_2F_KomadeWi_51_Ae -->
-		<spawn npc_id="653439">
-			<spot x="386.99854" y="914.6446" z="1258.8207" h="64"/>
-			<spot x="417.88467" y="910.4271" z="1264.9908" h="113"/>
-			<spot x="435.8846" y="848.41156" z="1275.3668" h="8"/>
+		<spawn npc_id="653439" respawn_time="295">
+			<spot x="382.25076" y="913.1934" z="1258.747" h="38"/>
+			<spot x="417.02036" y="910.7589" z="1265.0099" h="113"/>
+			<spot x="432.94244" y="849.9448" z="1275.8167" h="72"/>
 		</spawn>
 		<!-- Komad Diviner ||| IDElim_2F_KomadeWi_52_Ae -->
-		<spawn npc_id="653440">
+		<spawn npc_id="653440" respawn_time="295">
 			<spot x="431.91388" y="900.2972" z="1268.9233" h="113"/>
-			<spot x="440.43726" y="829.79535" z="1276.785" h="76"/>
+			<spot x="445.18457" y="831.70514" z="1276.4552" h="60"/>
 		</spawn>
 		<!-- Cursed Tree Sheluk ||| IDElim_2F_ShelukG_51_Ae -->
-		<spawn npc_id="653441">
-			<spot x="369.40536" y="807.58527" z="1270.7472" h="33"/>
-			<spot x="392.80612" y="808.9425" z="1273.2091" h="102"/>
+		<spawn npc_id="653441" respawn_time="295">
+			<spot x="370.36655" y="805.5747" z="1271.308" h="97"/>
+			<spot x="391.1183" y="809.6823" z="1273.2311" h="93"/>
 		</spawn>
 		<!-- Cursed Tree Sheluk ||| IDElim_2F_ShelukG_52_Ae -->
-		<spawn npc_id="653442">
-			<spot x="393.5639" y="790.64" z="1273.3813" h="42"/>
+		<spawn npc_id="653442" respawn_time="295">
+			<spot x="385.79315" y="791.90216" z="1272.2513" h="39"/>
 		</spawn>
 		<!-- Striped Arachna ||| IDElim_2F_OctasideG_51_Ae -->
-		<spawn npc_id="653443">
-			<spot x="378.16772" y="789.55896" z="1270.3739" h="63"/>
-			<spot x="404.15997" y="801.12085" z="1273.8031" h="15"/>
+		<spawn npc_id="653443" respawn_time="295">
+			<spot x="376.09616" y="794.4766" z="1270.8099" h="49"/>
+			<spot x="402.00644" y="799.41144" z="1273.6738" h="2"/>
 		</spawn>
 		<!-- Striped Arachna ||| IDElim_2F_OctasideG_52_Ae -->
-		<spawn npc_id="653444">
-			<spot x="373.83356" y="818.3771" z="1269.7129" h="80"/>
+		<spawn npc_id="653444" respawn_time="295">
+			<spot x="366.14154" y="821.0155" z="1267.9464" h="38"/>
 		</spawn>
 		<!-- Veiled Sparkle ||| IDElim_2F_SpakleG_51_Ae -->
-		<spawn npc_id="653445">
-			<spot x="382.54565" y="841.34393" z="1271.5045" h="32"/>
-			<spot x="404.12265" y="788.97577" z="1274.1067" h="65"/>
+		<spawn npc_id="653445" respawn_time="295">
+			<spot x="389.01593" y="837.4511" z="1270.538" h="80"/>
+			<spot x="407.28128" y="789.51855" z="1274.2087" h="117"/>
 		</spawn>
 		<!-- Veiled Sparkle ||| IDElim_2F_SpakleG_52_Ae -->
-		<spawn npc_id="653446">
-			<spot x="376.94995" y="818.3111" z="1270.4146" h="17"/>
-			<spot x="373.91467" y="799.41766" z="1271.3911" h="77"/>
+		<spawn npc_id="653446" respawn_time="295">
+			<spot x="376.22446" y="810.30206" z="1270.5122" h="106"/>
+			<spot x="368.86993" y="798.25024" z="1271.2922" h="86"/>
 		</spawn>
 		<!-- Supraklaw Watcher ||| IDElim_2F_NeutWorkmanflyG_52_Ae -->
-		<spawn npc_id="653447">
-			<spot x="502.074" y="877.64935" z="1271.7249" h="16"/>
-			<spot x="497.36673" y="867.0239" z="1272.3441" h="65"/>
+		<spawn npc_id="653447" respawn_time="295">
+			<spot x="496.56152" y="865.33606" z="1272.5394" h="33"/>
+			<spot x="505.6322" y="875.8843" z="1271.7811" h="26"/>
 		</spawn>
 		<!-- Komad Elite Legionary ||| IDElim_3F_KomadeWaG_52_Ae -->
-		<spawn npc_id="653448">
-			<spot x="592.3493" y="819.71655" z="1380.9581" h="0"/>
+		<spawn npc_id="653448" respawn_time="295">
 			<spot x="600.6641" y="822.5298" z="1381.2921" h="66"/>
+			<spot x="592.3493" y="819.71655" z="1380.9581" h="0"/>
 			<spot x="619.4658" y="851.98175" z="1380.4829" h="0"/>
 			<spot x="629.18896" y="851.8523" z="1380.4794" h="60"/>
 			<spot x="615.328" y="798.16534" z="1378.8864" h="60"/>
@@ -426,10 +428,10 @@
 			<spot x="596.9956" y="788.22974" z="1383.1707" h="18"/>
 		</spawn>
 		<!-- Komad Elite Legionary ||| IDElim_3F_KomadeWaG_53_Ae -->
-		<spawn npc_id="653449">
+		<spawn npc_id="653449" respawn_time="295">
 			<spot x="595.73395" y="815.42706" z="1380.7235" h="20"/>
-			<spot x="625.83923" y="847.61414" z="1380.4818" h="30"/>
 			<spot x="608.8861" y="802.01495" z="1379.0531" h="106"/>
+			<spot x="625.83923" y="847.61414" z="1380.4818" h="30"/>
 			<spot x="626.9739" y="856.34106" z="1380.4791" h="80"/>
 			<spot x="612.3946" y="794.8494" z="1379.6469" h="33"/>
 			<spot x="676.8263" y="852.9245" z="1379.7909" h="23"/>
@@ -437,7 +439,7 @@
 			<spot x="680.5386" y="799.52155" z="1380.3943" h="76"/>
 		</spawn>
 		<!-- Komad Shaman ||| IDElim_3F_KomadeWiG_52_Ae -->
-		<spawn npc_id="653450">
+		<spawn npc_id="653450" respawn_time="295">
 			<spot x="596.0562" y="824.17145" z="1381.2258" h="100"/>
 			<spot x="600.5602" y="817.18616" z="1381.0431" h="43"/>
 			<spot x="622.44305" y="855.897" z="1380.4764" h="100"/>
@@ -445,7 +447,7 @@
 			<spot x="609.37695" y="795.05853" z="1379.6243" h="23"/>
 		</spawn>
 		<!-- Komad Shaman ||| IDElim_3F_KomadeWiG_53_Ae -->
-		<spawn npc_id="653451">
+		<spawn npc_id="653451" respawn_time="295">
 			<spot x="607.8037" y="849.8995" z="1381.4679" h="0"/>
 			<spot x="621.9739" y="848.4031" z="1380.4827" h="16"/>
 			<spot x="676.9739" y="860.52454" z="1380.1139" h="100"/>
@@ -453,112 +455,109 @@
 			<spot x="680.3881" y="793.72784" z="1380.9445" h="43"/>
 		</spawn>
 		<!-- Spawned Supraklaw ||| IDElim_2F_NeutQeen_Summon_51_An -->
-		<spawn npc_id="653452">
-			<spot x="626.118" y="866.6385" z="1297.9874" h="36"/>
-			<spot x="633.7138" y="869.9661" z="1299.1125" h="45"/>
-			<spot x="673.8083" y="811.1228" z="1303.3187" h="64"/>
-			<spot x="681.44037" y="869.04504" z="1305.813" h="47"/>
+		<spawn npc_id="653452" respawn_time="295">
+			<spot x="624.7827" y="867.0369" z="1297.8713" h="36"/>
+			<spot x="635.3065" y="864.841" z="1299.2717" h="74"/>
+			<spot x="673.54126" y="816.306" z="1303.7734" h="68"/>
+			<spot x="679.4946" y="869.12604" z="1305.6117" h="57"/>
 		</spawn>
 		<!-- Spawned Supraklaw ||| IDElim_2F_NeutQeen_Summon_52_An -->
-		<spawn npc_id="653453">
-			<spot x="632.5262" y="820.8199" z="1299.5302" h="61"/>
-			<spot x="630.2886" y="861.3772" z="1298.2249" h="50"/>
-			<spot x="635.8511" y="858.7371" z="1299.524" h="91"/>
-			<spot x="635.4893" y="874.95123" z="1299.654" h="36"/>
-			<spot x="644.654" y="819.969" z="1301.2224" h="49"/>
-			<spot x="650.3147" y="811.25867" z="1301.1859" h="27"/>
-			<spot x="647.5073" y="809.01404" z="1301.131" h="51"/>
-			<spot x="653.82245" y="883.74756" z="1304.0125" h="56"/>
-			<spot x="657.7517" y="873.5697" z="1303.4785" h="41"/>
-			<spot x="662.97516" y="872.91284" z="1303.8826" h="67"/>
-			<spot x="665.2515" y="876.77234" z="1304.7523" h="34"/>
-			<spot x="669.34216" y="807.64197" z="1302.9059" h="89"/>
-			<spot x="683.35895" y="817.6026" z="1305.8544" h="39"/>
-			<spot x="678.0024" y="875.0337" z="1306.2178" h="61"/>
-			<spot x="679.7949" y="874.8986" z="1306.3514" h="118"/>
-			<spot x="684.1162" y="871.1718" z="1306.2435" h="45"/>
-			<spot x="685.04065" y="813.28937" z="1305.7415" h="77"/>
+		<spawn npc_id="653453" respawn_time="295">
+			<spot x="634.1898" y="820.3806" z="1299.8083" h="62"/>
+			<spot x="632.0767" y="861.73" z="1298.6118" h="86"/>
+			<spot x="637.0979" y="858.96765" z="1299.7043" h="29"/>
+			<spot x="632.4634" y="876.89954" z="1299.4343" h="58"/>
+			<spot x="646.62366" y="818.9058" z="1301.3301" h="108"/>
+			<spot x="649.65485" y="814.883" z="1301.3367" h="36"/>
+			<spot x="649.5723" y="807.93933" z="1301.3179" h="34"/>
+			<spot x="664.3711" y="869.6627" z="1303.4303" h="86"/>
+			<spot x="655.8155" y="883.482" z="1304.4553" h="47"/>
+			<spot x="660.2657" y="872.8141" z="1303.6206" h="102"/>
+			<spot x="666.3826" y="879.82245" z="1305.3612" h="48"/>
+			<spot x="675.01587" y="808.61865" z="1303.548" h="31"/>
+			<spot x="679.05304" y="874.64996" z="1306.2936" h="4"/>
+			<spot x="683.81146" y="817.82654" z="1305.9242" h="93"/>
+			<spot x="682.24164" y="809.6893" z="1305.1067" h="56"/>
+			<spot x="682.1409" y="871.8065" z="1306.0354" h="64"/>
+			<spot x="684.9935" y="864.61035" z="1305.6534" h="86"/>
 		</spawn>
 		<!-- Thorny Vines ||| IDElim_Root_Door_02b -->
-		<spawn npc_id="700633">
+		<spawn npc_id="700633" respawn_time="295">
 			<spot x="164.81621" y="337.8464" z="1125.0" h="0" static_id="51"/>
 		</spawn>
 		<!-- Taloc's Soil ||| IDElim_Seed_Q11450 -->
-		<spawn npc_id="700634">
+		<spawn npc_id="700634" respawn_time="295">
 			<spot x="137.73903" y="550.59503" z="1138.8718" h="0"/>
 			<spot x="229.35056" y="589.5655" z="1155.7852" h="0"/>
 			<spot x="261.72125" y="731.1998" z="1172.5864" h="0"/>
 		</spawn>
 		<!-- Taloc's Knot ||| IDElim_Mark_Q11457 -->
-		<spawn npc_id="700635">
+		<spawn npc_id="700635" respawn_time="295">
 			<spot x="498.3539" y="895.5942" z="1272.0" h="0" static_id="94"/>
 		</spawn>
 		<!-- Research Journal ||| IDElim_Book_Q11461 -->
-		<spawn npc_id="700636">
+		<spawn npc_id="700636" respawn_time="295">
 			<spot x="545.98596" y="845.0159" z="1377.1038" h="90"/>
 		</spawn>
 		<!-- Huge Insect Egg ||| IDElim_Big_BugEgg -->
-		<spawn npc_id="700738">
+		<spawn npc_id="700738" respawn_time="295">
 			<spot x="653.92017" y="839.16266" z="1303.9491" h="0" static_id="90"/>
 		</spawn>
 		<!-- Cracked Huge Insect Egg ||| IDElim_Big_BugEgg_bro -->
-		<spawn npc_id="700739">
+		<spawn npc_id="700739" respawn_time="295">
 			<spot x="653.92017" y="839.16266" z="1303.9491" h="0" static_id="11"/>
 		</spawn>
 		<!-- Contaminated Fragment of Aion Tower ||| IDElim_AION_Piece_Pol -->
-		<spawn npc_id="700740">
+		<spawn npc_id="700740" respawn_time="295">
 			<spot x="634.21423" y="787.2128" z="1383.0" h="0" static_id="93"/>
 		</spawn>
 		<!-- Purified Fragment of Aion Tower ||| IDElim_AION_Piece_Cle -->
-		<spawn npc_id="700741">
+		<spawn npc_id="700741" respawn_time="295">
 			<spot x="634.21423" y="787.2128" z="1384.86" h="0" static_id="92"/>
 		</spawn>
 		<!-- Healing Plant ||| Heal_Plant -->
-		<spawn npc_id="700940">
+		<spawn npc_id="700940" respawn_time="295">
 			<spot x="171.85" y="564.59" z="1139.8505" h="0"/>
 			<spot x="398.35126" y="784.89355" z="1274.334" h="0"/>
 			<spot x="506.20425" y="883.86176" z="1272.048" h="0"/>
 		</spawn>
 		<!-- Concentrated Sap ||| Resin -->
-		<spawn npc_id="700943">
+		<spawn npc_id="700943" respawn_time="295">
 			<spot x="597.83" y="819.42" z="1381.049" h="0" static_id="171"/>
-			<spot x="677.20856" y="796.3238" z="1381.5769" h="0" static_id="175"/>
 		</spawn>
 		<!-- Concentrated Sap ||| IDElim_Resin2 -->
-		<spawn npc_id="700958">
+		<spawn npc_id="700958" respawn_time="295">
 			<spot x="612.4109" y="798.506" z="1378.9011" h="0" static_id="172"/>
-		</spawn>
-		<!-- Concentrated Sap ||| IDElim_Resin3 -->
-		<spawn npc_id="700959">
-			<spot x="679.3582" y="858.12225" z="1380.8242" h="0" static_id="174"/>
+			<spot x="677.20856" y="796.3238" z="1381.5769" h="0" static_id="175"/>
 		</spawn>
 		<!-- Concentrated Sap ||| IDElim_Resin4 -->
-		<spawn npc_id="700960">
+		<spawn npc_id="700960" respawn_time="295">
 			<spot x="624.81433" y="851.7526" z="1380.4752" h="0" static_id="173"/>
+			<spot x="679.3582" y="858.12225" z="1380.8242" h="0" static_id="174"/>
 		</spawn>
 		<!-- Writhing Cocoon ||| IDElim_Cocoon -->
-		<spawn npc_id="730232">
+		<spawn npc_id="730232" respawn_time="295">
 			<spot x="158.05388" y="381.3441" z="1138.7544" h="113" static_id="55"/>
 		</spawn>
 		<!-- Writhing Cocoon ||| IDElim_Cocoon_002 -->
-		<spawn npc_id="730233">
+		<spawn npc_id="730233" respawn_time="295">
 			<spot x="163.06665" y="377.0202" z="1137.8146" h="86" static_id="54"/>
 		</spawn>
 		<!-- Dorkin ||| Shulack_Elim_1 -->
-		<spawn npc_id="799502">
+		<spawn npc_id="799502" respawn_time="295">
 			<spot x="462.72635" y="794.35284" z="1283.3236" h="3"/>
 		</spawn>
 		<!-- Taloc's Mirage ||| CaspaGhost_01 -->
-		<spawn npc_id="799503">
+		<spawn npc_id="799503" respawn_time="295">
 			<spot x="548.0" y="811.0" z="1375.0" h="0"/>
 		</spawn>
 		<!-- Taloc's Soul ||| Caspa_Spirit -->
-		<spawn npc_id="799526">
+		<spawn npc_id="799526" respawn_time="295">
 			<spot x="199.74" y="235.64" z="1099.1833" h="90"/>
 		</spawn>
 		<!-- Hyas ||| Hyas -->
-		<spawn npc_id="799527">
-			<spot x="203.5938" y="818.9194" z="1214.2935" h="0"/>
+		<spawn npc_id="799527" respawn_time="295">
+			<spot x="202.9518" y="818.1144" z="1213.9493" h="0"/>
 		</spawn>
 	</spawn_map>
 </spawns>

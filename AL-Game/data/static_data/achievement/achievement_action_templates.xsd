@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="achievement_action_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="achievement_action_template" type="AchievementsActions" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="AchievementsActions">
+        <xs:sequence>
+            <xs:element name="required" type="AchievementRequired" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="rewards" type="ActionRewards" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="title" type="xs:int" use="optional"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="type" type="AchievementsActionsType"/>
+        <xs:attribute name="maxvalue" type="xs:int" use="required"/>
+		<xs:attribute name="exp" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="ActionRewards">
+        <xs:sequence>
+            <xs:element name="reward_item" type="ActionsItems" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="ap" type="xs:int"/>
+        <xs:attribute name="gp" type="xs:int"/>
+        <xs:attribute name="gold" type="xs:int"/>
+        <xs:attribute name="exp" type="xs:int"/>
+    </xs:complexType>
+    <xs:simpleType name="AchievementsActionsType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="QUEST"/>
+            <xs:enumeration value="HUNT"/>
+            <xs:enumeration value="HUNT_SIEGE"/>
+            <xs:enumeration value="COLLECT_ITEM"/>
+            <xs:enumeration value="ITEM_PLAY"/>
+            <xs:enumeration value="ENTER_WORLD"/>
+            <xs:enumeration value="PVP"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RequiredType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SPECIFIC"/>
+            <xs:enumeration value="ALL"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="AchievementRequired">
+        <xs:attribute name="type" type="RequiredType" use="optional"/>
+        <xs:attribute name="value" type="IntListType" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="ActionsItems">
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="count" type="xs:int" default="1"/>
+    </xs:complexType>
+</xs:schema>

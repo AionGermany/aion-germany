@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="achievement_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="achievement_template" type="Achievements" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Achievements">
+        <xs:sequence>
+            <xs:element name="rewards" type="AchievementRewards" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="actions" type="AchievementAction" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="title" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="type" type="AchievementType"/>
+        <xs:attribute name="repeat" type="AchievementRepeat"/>
+        <xs:attribute name="race" type="Race"/>
+        <xs:attribute name="minlevel" type="xs:int" use="required"/>
+        <xs:attribute name="maxlevel" type="xs:int" use="required"/>
+        <xs:attribute name="completecount" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="AchievementRewards">
+        <xs:sequence>
+            <xs:element name="reward_item" type="AchievementItems" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="ap" type="xs:int"/>
+        <xs:attribute name="gp" type="xs:int"/>
+        <xs:attribute name="gold" type="xs:int"/>
+        <xs:attribute name="exp" type="xs:int"/>
+    </xs:complexType>
+    <xs:simpleType name="AchievementType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DAILY"/>
+            <xs:enumeration value="WEEKLY"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AchievementRepeat">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MON"/>
+            <xs:enumeration value="TUE"/>
+            <xs:enumeration value="THU"/>
+            <xs:enumeration value="WED"/>
+            <xs:enumeration value="FRI"/>
+            <xs:enumeration value="SAT"/>
+            <xs:enumeration value="SUN"/>
+            <xs:enumeration value="ALL"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="AchievementAction">
+        <xs:attribute name="ids" type="IntListType"/>
+    </xs:complexType>
+    <xs:complexType name="AchievementItems">
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="count" type="xs:int" default="1"/>
+    </xs:complexType>
+</xs:schema>

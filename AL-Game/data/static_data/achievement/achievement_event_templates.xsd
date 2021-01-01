@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="achievement_event_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="achievement_event_template" type="AchievementsEvent" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="AchievementsEvent">
+        <xs:sequence>
+            <xs:element name="event_item" type="AchievementEventRewards" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="event_section" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="type" type="AchievementEventType"/>
+        <xs:attribute name="repeat" type="AchievementEventRepeat"/>
+        <xs:attribute name="race" type="Race"/>
+        <xs:attribute name="minlevel" type="xs:int" use="required"/>
+        <xs:attribute name="maxstage" type="xs:int" use="optional"/>
+        <xs:attribute name="action_id" type="xs:int" use="optional"/>
+        <xs:attribute name="active" type="xs:boolean" use="optional"/>
+        <xs:attribute name="complete_point" type="xs:int" use="optional"/>
+        <xs:attribute name="maxlevel" type="xs:int" use="required"/>
+        <xs:attribute name="start" type="xs:dateTime" use="required"/>
+        <xs:attribute name="end" type="xs:dateTime" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="AchievementEventRewards">
+        <xs:attribute name="item_id" type="xs:int"/>
+        <xs:attribute name="count" type="xs:int" default="1"/>
+        <xs:attribute name="stage" type="xs:int" />
+    </xs:complexType>
+    <xs:simpleType name="AchievementEventType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DAILY"/>
+            <xs:enumeration value="WEEKLY"/>
+            <xs:enumeration value="EVENT_MAIN"/>
+            <xs:enumeration value="EVENT_SUB"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AchievementEventRepeat">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MON"/>
+            <xs:enumeration value="TUE"/>
+            <xs:enumeration value="THU"/>
+            <xs:enumeration value="WED"/>
+            <xs:enumeration value="FRI"/>
+            <xs:enumeration value="SAT"/>
+            <xs:enumeration value="SUN"/>
+            <xs:enumeration value="ALL"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
