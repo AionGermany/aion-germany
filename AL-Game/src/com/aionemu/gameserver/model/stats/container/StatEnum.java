@@ -244,7 +244,32 @@ public enum StatEnum {
 	PVP_ATTACK,
 	PVP_DEFENSE,
 	PVE_ATTACK,
-	PVE_DEFENSE;
+	PVE_DEFENSE,
+
+	EXTRA_ERESHKIGAL_DAMAGE,
+	REDUCE_ERESHKIGAL_DAMAGE,
+	idf7_weapon_hard_boss_1st_atk,
+	idf7_weapon_hard_boss_2nd_atk,
+	idf7_weapon_hard_boss_3rd_atk,
+	idf7_weapon_hard_boss_final_atk,
+	bidldf8_lab_boss_04_atk,
+	idf8_house_hugerider_atk,
+	IDF7_Weapon_Hard_Boss_1st,
+	IDF7_Weapon_Hard_Boss_2nd,
+	IDF7_Weapon_Hard_Boss_3rd,
+	IDF7_Weapon_Hard_Boss_Final,
+	IDLDF8_Lab_Boss,
+	IDF8_House_HugeRider,
+	idseal_hard_boss_1st_atk,
+	idf8_Dragon_Altar_atk,
+	idseal_hard_boss_1st,
+	idf8_Dragon_Altar,
+	idseal_hard_boss_2nd_atk,
+	idseal_hard_boss_2nd,
+	cubic_stat_catacombs_3rd_atk,
+	cubic_stat_catacombs_3rd,
+	idseal_hard_boss_3rd_atk,
+	idseal_hard_boss_3rd;
 
 	// If STAT id = 135 - Shrewd Cloth Set oOo
 	// Checked up to 160 in 3.5

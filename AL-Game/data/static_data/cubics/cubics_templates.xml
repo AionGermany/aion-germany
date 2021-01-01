@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-04-06 10:00 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-11-22 11:03 -->
 <cubics_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cubics_templates.xsd">
     <cubics_template id="1" name="Gold Cubelet of Mosbear Life" quality="GOLD" maxRank="5" category="100" itemId="188200023">
         <core_list id="1" level="5" stat="MAXHP" value="429"/>
@@ -128,25 +128,25 @@
         <core_list id="5" level="100" stat="PHYSICAL_DEFENSE" value="106"/>
     </cubics_template>
     <cubics_template id="19" name="Gold Cubelet of Scolopen Defence" quality="GOLD" maxRank="5" category="106" itemId="188200041">
-        <core_list id="1" level="5" stat="MAGICAL_RESIST" value="33"/>
-        <core_list id="2" level="10" stat="MAGICAL_RESIST" value="47"/>
-        <core_list id="3" level="15" stat="MAGICAL_RESIST" value="67"/>
-        <core_list id="4" level="20" stat="MAGICAL_RESIST" value="101"/>
-        <core_list id="5" level="25" stat="MAGICAL_RESIST" value="144"/>
+        <core_list id="1" level="5" stat="MAGICAL_DEFEND" value="33"/>
+        <core_list id="2" level="10" stat="MAGICAL_DEFEND" value="47"/>
+        <core_list id="3" level="15" stat="MAGICAL_DEFEND" value="67"/>
+        <core_list id="4" level="20" stat="MAGICAL_DEFEND" value="101"/>
+        <core_list id="5" level="25" stat="MAGICAL_DEFEND" value="144"/>
     </cubics_template>
     <cubics_template id="20" name="Silver Cubelet of Scolopen Defence" quality="SILVER" maxRank="5" category="106" itemId="188200042">
-        <core_list id="1" level="10" stat="MAGICAL_RESIST" value="32"/>
-        <core_list id="2" level="20" stat="MAGICAL_RESIST" value="46"/>
-        <core_list id="3" level="30" stat="MAGICAL_RESIST" value="65"/>
-        <core_list id="4" level="40" stat="MAGICAL_RESIST" value="93"/>
-        <core_list id="5" level="50" stat="MAGICAL_RESIST" value="125"/>
+        <core_list id="1" level="10" stat="MAGICAL_DEFEND" value="32"/>
+        <core_list id="2" level="20" stat="MAGICAL_DEFEND" value="46"/>
+        <core_list id="3" level="30" stat="MAGICAL_DEFEND" value="65"/>
+        <core_list id="4" level="40" stat="MAGICAL_DEFEND" value="93"/>
+        <core_list id="5" level="50" stat="MAGICAL_DEFEND" value="125"/>
     </cubics_template>
     <cubics_template id="21" name="Bronze Cubelet of Scolopen Defence" quality="BRONZE" maxRank="5" category="106" itemId="188200043">
-        <core_list id="1" level="20" stat="MAGICAL_RESIST" value="26"/>
-        <core_list id="2" level="40" stat="MAGICAL_RESIST" value="36"/>
-        <core_list id="3" level="60" stat="MAGICAL_RESIST" value="52"/>
-        <core_list id="4" level="80" stat="MAGICAL_RESIST" value="74"/>
-        <core_list id="5" level="100" stat="MAGICAL_RESIST" value="106"/>
+        <core_list id="1" level="20" stat="MAGICAL_DEFEND" value="26"/>
+        <core_list id="2" level="40" stat="MAGICAL_DEFEND" value="36"/>
+        <core_list id="3" level="60" stat="MAGICAL_DEFEND" value="52"/>
+        <core_list id="4" level="80" stat="MAGICAL_DEFEND" value="74"/>
+        <core_list id="5" level="100" stat="MAGICAL_DEFEND" value="106"/>
     </cubics_template>
     <cubics_template id="22" name="Gold Cubelet of Malodor's Will" quality="GOLD" maxRank="5" category="107" itemId="188200044">
         <core_list id="1" level="5" stat="PHYSICAL_ACCURACY" value="47"/>
@@ -274,7 +274,6 @@
         <core_list id="4" level="80" stat="MAGICAL_RESIST" value="216"/>
         <core_list id="5" level="100" stat="MAGICAL_RESIST" value="308"/>
     </cubics_template>
-    <!-- New 6.5 Cubics with new Stats
     <cubics_template id="40" name="Ereshkigal Hunter's Gold Cubelet" quality="GOLD" maxRank="3" category="99" itemId="188200062">
         <core_list id="1" level="10" stat="EXTRA_ERESHKIGAL_DAMAGE" value="20"/>
         <core_list id="2" level="18" stat="EXTRA_ERESHKIGAL_DAMAGE" value="50"/>
@@ -294,23 +293,23 @@
         <core_list id="5" level="300" stat="EXTRA_ERESHKIGAL_DAMAGE" value="250"/>
     </cubics_template>
     <cubics_template id="43" name="Ereshkigal Expert's Gold Cubelet" quality="GOLD" maxRank="3" category="99" itemId="188200065">
-        <core_list id="1" level="10" stat="REDUCE_ERESHKIGAL_DAMAGE_1" value="0"/>
-        <core_list id="2" level="18" stat="REDUCE_ERESHKIGAL_DAMAGE_2" value="0"/>
-        <core_list id="3" level="26" stat="REDUCE_ERESHKIGAL_DAMAGE_3" value="0"/>
+        <core_list id="1" level="10" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="2" level="18" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="3" level="26" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
     </cubics_template>
     <cubics_template id="44" name="Ereshkigal Expert's Silver Cubelet" quality="SILVER" maxRank="4" category="99" itemId="188200066">
-        <core_list id="1" level="20" stat="REDUCE_ERESHKIGAL_DAMAGE_1" value="0"/>
-        <core_list id="2" level="35" stat="REDUCE_ERESHKIGAL_DAMAGE_2" value="0"/>
-        <core_list id="3" level="45" stat="REDUCE_ERESHKIGAL_DAMAGE_3" value="0"/>
-        <core_list id="4" level="80" stat="REDUCE_ERESHKIGAL_DAMAGE_4" value="0"/>
+        <core_list id="1" level="20" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="2" level="35" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="3" level="45" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="4" level="80" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
     </cubics_template>
     <cubics_template id="45" name="Ereshkigal Expert's Bronze Cubelet" quality="BRONZE" maxRank="5" category="99" itemId="188200067">
-        <core_list id="1" level="60" stat="REDUCE_ERESHKIGAL_DAMAGE_1" value="0"/>
-        <core_list id="2" level="120" stat="REDUCE_ERESHKIGAL_DAMAGE_2" value="0"/>
-        <core_list id="3" level="180" stat="REDUCE_ERESHKIGAL_DAMAGE_3" value="0"/>
-        <core_list id="4" level="240" stat="REDUCE_ERESHKIGAL_DAMAGE_4" value="0"/>
-        <core_list id="5" level="300" stat="REDUCE_ERESHKIGAL_DAMAGE_5" value="0"/>
-    </cubics_template> -->
+        <core_list id="1" level="60" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="2" level="120" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="3" level="180" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="4" level="240" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+        <core_list id="5" level="300" stat="REDUCE_ERESHKIGAL_DAMAGE" value="0"/>
+    </cubics_template>
     <cubics_template id="46" name="Platinum Cubelet of Mosbear Life" quality="PLATINUM" maxRank="5" category="100" itemId="188200068">
         <core_list id="1" level="5" stat="MAXHP" value="132"/>
         <core_list id="2" level="10" stat="MAXHP" value="189"/>
@@ -354,11 +353,11 @@
         <core_list id="5" level="25" stat="PHYSICAL_DEFENSE" value="42"/>
     </cubics_template>
     <cubics_template id="52" name="Platinum Cubelet of Scolopen Defence" quality="PLATINUM" maxRank="5" category="106" itemId="188200074">
-        <core_list id="1" level="5" stat="MAGICAL_RESIST" value="10"/>
-        <core_list id="2" level="10" stat="MAGICAL_RESIST" value="14"/>
-        <core_list id="3" level="15" stat="MAGICAL_RESIST" value="20"/>
-        <core_list id="4" level="20" stat="MAGICAL_RESIST" value="29"/>
-        <core_list id="5" level="25" stat="MAGICAL_RESIST" value="42"/>
+        <core_list id="1" level="5" stat="MAGICAL_DEFEND" value="10"/>
+        <core_list id="2" level="10" stat="MAGICAL_DEFEND" value="14"/>
+        <core_list id="3" level="15" stat="MAGICAL_DEFEND" value="20"/>
+        <core_list id="4" level="20" stat="MAGICAL_DEFEND" value="29"/>
+        <core_list id="5" level="25" stat="MAGICAL_DEFEND" value="42"/>
     </cubics_template>
     <cubics_template id="53" name="Platinum Cubelet of Malodor's Will" quality="PLATINUM" maxRank="5" category="107" itemId="188200075">
         <core_list id="1" level="5" stat="PHYSICAL_ACCURACY" value="15"/>
@@ -402,221 +401,400 @@
         <core_list id="4" level="20" stat="MAGICAL_RESIST" value="85"/>
         <core_list id="5" level="25" stat="MAGICAL_RESIST" value="121"/>
     </cubics_template>
-    <!-- New 7.x Cubics with new Stats    
-    <cubics_template id="59" name="?" quality="SILVER" maxRank="3" category="95" itemId="188200089">
+    <cubics_template id="59" name="Raging Yarkhan/Barkhan Hunter's Silver Cubelet" quality="SILVER" maxRank="3" category="95" itemId="188200089">
         <core_list id="1" level="10" stat="idf7_weapon_hard_boss_1st_atk" value="10"/>
         <core_list id="2" level="18" stat="idf7_weapon_hard_boss_1st_atk" value="20"/>
         <core_list id="3" level="26" stat="idf7_weapon_hard_boss_1st_atk" value="50"/>
     </cubics_template>
-    <cubics_template id="60" name="?" quality="GOLD" maxRank="4" category="95" itemId="188200090">
+    <cubics_template id="60" name="Raging Yarkhan/Barkhan Hunter's Gold Cubelet" quality="GOLD" maxRank="4" category="95" itemId="188200090">
         <core_list id="1" level="20" stat="idf7_weapon_hard_boss_1st_atk" value="10"/>
         <core_list id="2" level="35" stat="idf7_weapon_hard_boss_1st_atk" value="30"/>
         <core_list id="3" level="45" stat="idf7_weapon_hard_boss_1st_atk" value="60"/>
         <core_list id="4" level="80" stat="idf7_weapon_hard_boss_1st_atk" value="100"/>
     </cubics_template>
-    <cubics_template id="61" name="?" quality="PLATINUM" maxRank="5" category="95" itemId="188200091">
+    <cubics_template id="61" name="Raging Yarkhan/Barkhan Hunter's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="95" itemId="188200091">
         <core_list id="1" level="180" stat="idf7_weapon_hard_boss_1st_atk" value="40"/>
         <core_list id="2" level="180" stat="idf7_weapon_hard_boss_1st_atk" value="100"/>
         <core_list id="3" level="180" stat="idf7_weapon_hard_boss_1st_atk" value="170"/>
         <core_list id="4" level="180" stat="idf7_weapon_hard_boss_1st_atk" value="250"/>
         <core_list id="5" level="180" stat="idf7_weapon_hard_boss_1st_atk" value="350"/>
     </cubics_template>
-    <cubics_template id="62" name="?" quality="SILVER" maxRank="3" category="96" itemId="188200092">
+    <cubics_template id="62" name="Raging Prometun Hunter's Silver Cubelet" quality="SILVER" maxRank="3" category="96" itemId="188200092">
         <core_list id="1" level="10" stat="idf7_weapon_hard_boss_2nd_atk" value="10"/>
         <core_list id="2" level="18" stat="idf7_weapon_hard_boss_2nd_atk" value="20"/>
         <core_list id="3" level="26" stat="idf7_weapon_hard_boss_2nd_atk" value="50"/>
     </cubics_template>
-    <cubics_template id="63" name="?" quality="GOLD" maxRank="4" category="96" itemId="188200093">
+    <cubics_template id="63" name="Raging Prometun Hunter's Gold Cubelet" quality="GOLD" maxRank="4" category="96" itemId="188200093">
         <core_list id="1" level="20" stat="idf7_weapon_hard_boss_2nd_atk" value="10"/>
         <core_list id="2" level="35" stat="idf7_weapon_hard_boss_2nd_atk" value="30"/>
         <core_list id="3" level="45" stat="idf7_weapon_hard_boss_2nd_atk" value="60"/>
         <core_list id="4" level="80" stat="idf7_weapon_hard_boss_2nd_atk" value="100"/>
     </cubics_template>
-    <cubics_template id="64" name="?" quality="PLATINUM" maxRank="5" category="96" itemId="188200094">
+    <cubics_template id="64" name="Raging Prometun Hunter's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="96" itemId="188200094">
         <core_list id="1" level="180" stat="idf7_weapon_hard_boss_2nd_atk" value="40"/>
         <core_list id="2" level="180" stat="idf7_weapon_hard_boss_2nd_atk" value="100"/>
         <core_list id="3" level="180" stat="idf7_weapon_hard_boss_2nd_atk" value="170"/>
         <core_list id="4" level="180" stat="idf7_weapon_hard_boss_2nd_atk" value="250"/>
         <core_list id="5" level="180" stat="idf7_weapon_hard_boss_2nd_atk" value="350"/>
     </cubics_template>
-    <cubics_template id="65" name="?" quality="SILVER" maxRank="3" category="97" itemId="188200095">
+    <cubics_template id="65" name="Raging Tarukkan Hunter's Silver Cubelet" quality="SILVER" maxRank="3" category="97" itemId="188200095">
         <core_list id="1" level="10" stat="idf7_weapon_hard_boss_3rd_atk" value="10"/>
         <core_list id="2" level="18" stat="idf7_weapon_hard_boss_3rd_atk" value="20"/>
         <core_list id="3" level="26" stat="idf7_weapon_hard_boss_3rd_atk" value="50"/>
     </cubics_template>
-    <cubics_template id="66" name="?" quality="GOLD" maxRank="4" category="97" itemId="188200096">
+    <cubics_template id="66" name="Raging Tarukkan Hunter's Gold Cubelet" quality="GOLD" maxRank="4" category="97" itemId="188200096">
         <core_list id="1" level="20" stat="idf7_weapon_hard_boss_3rd_atk" value="10"/>
         <core_list id="2" level="35" stat="idf7_weapon_hard_boss_3rd_atk" value="30"/>
         <core_list id="3" level="45" stat="idf7_weapon_hard_boss_3rd_atk" value="60"/>
         <core_list id="4" level="80" stat="idf7_weapon_hard_boss_3rd_atk" value="100"/>
     </cubics_template>
-    <cubics_template id="67" name="?" quality="PLATINUM" maxRank="5" category="97" itemId="188200097">
+    <cubics_template id="67" name="Raging Tarukkan Hunter's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="97" itemId="188200097">
         <core_list id="1" level="180" stat="idf7_weapon_hard_boss_3rd_atk" value="40"/>
         <core_list id="2" level="180" stat="idf7_weapon_hard_boss_3rd_atk" value="100"/>
         <core_list id="3" level="180" stat="idf7_weapon_hard_boss_3rd_atk" value="170"/>
         <core_list id="4" level="180" stat="idf7_weapon_hard_boss_3rd_atk" value="250"/>
         <core_list id="5" level="180" stat="idf7_weapon_hard_boss_3rd_atk" value="350"/>
     </cubics_template>
-    <cubics_template id="68" name="?" quality="SILVER" maxRank="3" category="98" itemId="188200098">
+    <cubics_template id="68" name="Raging Prigga Hunter's Silver Cubelet" quality="SILVER" maxRank="3" category="98" itemId="188200098">
         <core_list id="1" level="10" stat="idf7_weapon_hard_boss_final_atk" value="10"/>
         <core_list id="2" level="18" stat="idf7_weapon_hard_boss_final_atk" value="20"/>
         <core_list id="3" level="26" stat="idf7_weapon_hard_boss_final_atk" value="50"/>
     </cubics_template>
-    <cubics_template id="69" name="?" quality="GOLD" maxRank="4" category="98" itemId="188200099">
+    <cubics_template id="69" name="Raging Prigga Hunter's Gold Cubelet" quality="GOLD" maxRank="4" category="98" itemId="188200099">
         <core_list id="1" level="20" stat="idf7_weapon_hard_boss_final_atk" value="10"/>
         <core_list id="2" level="35" stat="idf7_weapon_hard_boss_final_atk" value="30"/>
         <core_list id="3" level="45" stat="idf7_weapon_hard_boss_final_atk" value="60"/>
         <core_list id="4" level="80" stat="idf7_weapon_hard_boss_final_atk" value="100"/>
     </cubics_template>
-    <cubics_template id="70" name="?" quality="PLATINUM" maxRank="5" category="98" itemId="188200100">
+    <cubics_template id="70" name="Raging Prigga Hunter's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="98" itemId="188200100">
         <core_list id="1" level="180" stat="idf7_weapon_hard_boss_final_atk" value="40"/>
         <core_list id="2" level="180" stat="idf7_weapon_hard_boss_final_atk" value="100"/>
         <core_list id="3" level="180" stat="idf7_weapon_hard_boss_final_atk" value="170"/>
         <core_list id="4" level="180" stat="idf7_weapon_hard_boss_final_atk" value="250"/>
         <core_list id="5" level="180" stat="idf7_weapon_hard_boss_final_atk" value="350"/>
     </cubics_template>
-    <cubics_template id="71" name="?" quality="SILVER" maxRank="3" category="94" itemId="188200101">
+    <cubics_template id="71" name="Mob Leader Hunter's Silver Cubelet" quality="SILVER" maxRank="3" category="94" itemId="188200101">
         <core_list id="1" level="10" stat="bidldf8_lab_boss_04_atk" value="10"/>
         <core_list id="2" level="18" stat="bidldf8_lab_boss_04_atk" value="20"/>
         <core_list id="3" level="26" stat="bidldf8_lab_boss_04_atk" value="50"/>
     </cubics_template>
-    <cubics_template id="72" name="?" quality="GOLD" maxRank="4" category="94" itemId="188200102">
+    <cubics_template id="72" name="Mob Leader Hunter's Gold Cubelet" quality="GOLD" maxRank="4" category="94" itemId="188200102">
         <core_list id="1" level="20" stat="bidldf8_lab_boss_04_atk" value="10"/>
         <core_list id="2" level="35" stat="bidldf8_lab_boss_04_atk" value="30"/>
         <core_list id="3" level="45" stat="bidldf8_lab_boss_04_atk" value="60"/>
         <core_list id="4" level="80" stat="bidldf8_lab_boss_04_atk" value="100"/>
     </cubics_template>
-    <cubics_template id="73" name="?" quality="PLATINUM" maxRank="5" category="94" itemId="188200103">
+    <cubics_template id="73" name="Mob Leader Hunter's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="94" itemId="188200103">
         <core_list id="1" level="180" stat="bidldf8_lab_boss_04_atk" value="40"/>
         <core_list id="2" level="180" stat="bidldf8_lab_boss_04_atk" value="100"/>
         <core_list id="3" level="180" stat="bidldf8_lab_boss_04_atk" value="170"/>
         <core_list id="4" level="180" stat="bidldf8_lab_boss_04_atk" value="250"/>
         <core_list id="5" level="180" stat="bidldf8_lab_boss_04_atk" value="350"/>
     </cubics_template>
-    <cubics_template id="74" name="?" quality="SILVER" maxRank="3" category="93" itemId="188200104">
+    <cubics_template id="74" name="SVR-07 Hunter's Silver Cubelet" quality="SILVER" maxRank="3" category="93" itemId="188200104">
         <core_list id="1" level="10" stat="idf8_house_hugerider_atk" value="10"/>
         <core_list id="2" level="18" stat="idf8_house_hugerider_atk" value="20"/>
         <core_list id="3" level="26" stat="idf8_house_hugerider_atk" value="50"/>
     </cubics_template>
-    <cubics_template id="75" name="?" quality="GOLD" maxRank="4" category="93" itemId="188200105">
+    <cubics_template id="75" name="SVR-07 Hunter's Gold Cubelet" quality="GOLD" maxRank="4" category="93" itemId="188200105">
         <core_list id="1" level="20" stat="idf8_house_hugerider_atk" value="10"/>
         <core_list id="2" level="35" stat="idf8_house_hugerider_atk" value="30"/>
         <core_list id="3" level="45" stat="idf8_house_hugerider_atk" value="60"/>
         <core_list id="4" level="80" stat="idf8_house_hugerider_atk" value="100"/>
     </cubics_template>
-    <cubics_template id="76" name="?" quality="PLATINUM" maxRank="5" category="93" itemId="188200106">
+    <cubics_template id="76" name="SVR-07 Hunter's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="93" itemId="188200106">
         <core_list id="1" level="180" stat="idf8_house_hugerider_atk" value="40"/>
         <core_list id="2" level="180" stat="idf8_house_hugerider_atk" value="100"/>
         <core_list id="3" level="180" stat="idf8_house_hugerider_atk" value="170"/>
         <core_list id="4" level="180" stat="idf8_house_hugerider_atk" value="250"/>
         <core_list id="5" level="180" stat="idf8_house_hugerider_atk" value="350"/>
     </cubics_template>
-    <cubics_template id="77" name="?" quality="SILVER" maxRank="3" category="95" itemId="188200107">
-        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_1st_silver_step1" value="0"/>
-        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_1st_silver_step2" value="0"/>
-        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_1st_silver_step3" value="0"/>
+    <cubics_template id="77" name="Raging Yarkhan/Barkhan Expert's Silver Cubelet" quality="SILVER" maxRank="3" category="95" itemId="188200107">
+        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
     </cubics_template>
-    <cubics_template id="78" name="?" quality="GOLD" maxRank="4" category="95" itemId="188200108">
-        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_1st_gold_step1" value="0"/>
-        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_1st_gold_step2" value="0"/>
-        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_1st_gold_step3" value="0"/>
-        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_1st_gold_step4" value="0"/>
+    <cubics_template id="78" name="Raging Yarkhan/Barkhan Expert's Gold Cubelet" quality="GOLD" maxRank="4" category="95" itemId="188200108">
+        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
     </cubics_template>
-    <cubics_template id="79" name="?" quality="PLATINUM" maxRank="5" category="95" itemId="188200109">
-        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_1st_platinum_step1" value="0"/>
-        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_1st_platinum_step2" value="0"/>
-        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_1st_platinum_step3" value="0"/>
-        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_1st_platinum_step4" value="0"/>
-        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_1st_platinum_step5" value="0"/>
+    <cubics_template id="79" name="Raging Yarkhan/Barkhan Expert's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="95" itemId="188200109">
+        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
+        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_1st" value="0"/>
     </cubics_template>
-    <cubics_template id="80" name="?" quality="SILVER" maxRank="3" category="96" itemId="188200110">
-        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_2nd_silver_step1" value="0"/>
-        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_2nd_silver_step2" value="0"/>
-        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_2nd_silver_step3" value="0"/>
+    <cubics_template id="80" name="Raging Prometun Expert's Silver Cubelet" quality="SILVER" maxRank="3" category="96" itemId="188200110">
+        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
     </cubics_template>
-    <cubics_template id="81" name="?" quality="GOLD" maxRank="4" category="96" itemId="188200111">
-        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_2nd_gold_step1" value="0"/>
-        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_2nd_gold_step2" value="0"/>
-        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_2nd_gold_step3" value="0"/>
-        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_2nd_gold_step4" value="0"/>
+    <cubics_template id="81" name="Raging Prometun Expert's Gold Cubelet" quality="GOLD" maxRank="4" category="96" itemId="188200111">
+        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
     </cubics_template>
-    <cubics_template id="82" name="?" quality="PLATINUM" maxRank="5" category="96" itemId="188200112">
-        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_2nd_platinum_step1" value="0"/>
-        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_2nd_platinum_step2" value="0"/>
-        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_2nd_platinum_step3" value="0"/>
-        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_2nd_platinum_step4" value="0"/>
-        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_2nd_platinum_step5" value="0"/>
+    <cubics_template id="82" name="Raging Prometun Expert's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="96" itemId="188200112">
+        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
+        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_2nd" value="0"/>
     </cubics_template>
-    <cubics_template id="83" name="?" quality="SILVER" maxRank="3" category="97" itemId="188200113">
-        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_3rd_silver_step1" value="0"/>
-        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_3rd_silver_step2" value="0"/>
-        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_3rd_silver_step3" value="0"/>
+    <cubics_template id="83" name="Raging Tarukkan Expert's Silver Cubelet" quality="SILVER" maxRank="3" category="97" itemId="188200113">
+        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
     </cubics_template>
-    <cubics_template id="84" name="?" quality="GOLD" maxRank="4" category="97" itemId="188200114">
-        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_3rd_gold_step1" value="0"/>
-        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_3rd_gold_step2" value="0"/>
-        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_3rd_gold_step3" value="0"/>
-        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_3rd_gold_step4" value="0"/>
+    <cubics_template id="84" name="Raging Tarukkan Expert's Gold Cubelet" quality="GOLD" maxRank="4" category="97" itemId="188200114">
+        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
     </cubics_template>
-    <cubics_template id="85" name="?" quality="PLATINUM" maxRank="5" category="97" itemId="188200115">
-        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_3rd_platinum_step1" value="0"/>
-        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_3rd_platinum_step2" value="0"/>
-        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_3rd_platinum_step3" value="0"/>
-        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_3rd_platinum_step4" value="0"/>
-        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_3rd_platinum_step5" value="0"/>
+    <cubics_template id="85" name="Raging Tarukkan Expert's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="97" itemId="188200115">
+        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
+        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_3rd" value="0"/>
     </cubics_template>
-    <cubics_template id="86" name="?" quality="SILVER" maxRank="3" category="98" itemId="188200116">
-        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_Final_silver_step1" value="0"/>
-        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_Final_silver_step2" value="0"/>
-        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_Final_silver_step3" value="0"/>
+    <cubics_template id="86" name="Raging Prigga Expert's Silver Cubelet" quality="SILVER" maxRank="3" category="98" itemId="188200116">
+        <core_list id="1" level="10" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="2" level="18" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="3" level="26" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
     </cubics_template>
-    <cubics_template id="87" name="?" quality="GOLD" maxRank="4" category="98" itemId="188200117">
-        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_Final_gold_step1" value="0"/>
-        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_Final_gold_step2" value="0"/>
-        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_Final_gold_step3" value="0"/>
-        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_Final_gold_step4" value="0"/>
+    <cubics_template id="87" name="Raging Prigga Expert's Gold Cubelet" quality="GOLD" maxRank="4" category="98" itemId="188200117">
+        <core_list id="1" level="20" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="2" level="35" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="3" level="45" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="4" level="80" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
     </cubics_template>
-    <cubics_template id="88" name="?" quality="PLATINUM" maxRank="5" category="98" itemId="188200118">
-        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_Final_platinum_step1" value="0"/>
-        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_Final_platinum_step2" value="0"/>
-        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_Final_platinum_step3" value="0"/>
-        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_Final_platinum_step4" value="0"/>
-        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_Final_platinum_step5" value="0"/>
+    <cubics_template id="88" name="Raging Prigga Expert's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="98" itemId="188200118">
+        <core_list id="1" level="180" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="2" level="180" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="3" level="180" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="4" level="180" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
+        <core_list id="5" level="180" stat="IDF7_Weapon_Hard_Boss_Final" value="0"/>
     </cubics_template>
-    <cubics_template id="89" name="?" quality="SILVER" maxRank="3" category="94" itemId="188200119">
-        <core_list id="1" level="10" stat="IDLDF8_Lab_Boss_silver_step1" value="0"/>
-        <core_list id="2" level="18" stat="IDLDF8_Lab_Boss_silver_step2" value="0"/>
-        <core_list id="3" level="26" stat="IDLDF8_Lab_Boss_silver_step3" value="0"/>
+    <cubics_template id="89" name="Mob Leader Expert's Silver Cubelet" quality="SILVER" maxRank="3" category="94" itemId="188200119">
+        <core_list id="1" level="10" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="2" level="18" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="3" level="26" stat="IDLDF8_Lab_Boss" value="0"/>
     </cubics_template>
-    <cubics_template id="90" name="?" quality="GOLD" maxRank="4" category="94" itemId="188200120">
-        <core_list id="1" level="20" stat="IDLDF8_Lab_Boss_gold_step1" value="0"/>
-        <core_list id="2" level="35" stat="IDLDF8_Lab_Boss_gold_step2" value="0"/>
-        <core_list id="3" level="45" stat="IDLDF8_Lab_Boss_gold_step3" value="0"/>
-        <core_list id="4" level="80" stat="IDLDF8_Lab_Boss_gold_step4" value="0"/>
+    <cubics_template id="90" name="Mob Leader Expert's Gold Cubelet" quality="GOLD" maxRank="4" category="94" itemId="188200120">
+        <core_list id="1" level="20" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="2" level="35" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="3" level="45" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="4" level="80" stat="IDLDF8_Lab_Boss" value="0"/>
     </cubics_template>
-    <cubics_template id="91" name="?" quality="PLATINUM" maxRank="5" category="94" itemId="188200121">
-        <core_list id="1" level="180" stat="IDLDF8_Lab_Boss_platinum_step1" value="0"/>
-        <core_list id="2" level="180" stat="IDLDF8_Lab_Boss_platinum_step2" value="0"/>
-        <core_list id="3" level="180" stat="IDLDF8_Lab_Boss_platinum_step3" value="0"/>
-        <core_list id="4" level="180" stat="IDLDF8_Lab_Boss_platinum_step4" value="0"/>
-        <core_list id="5" level="180" stat="IDLDF8_Lab_Boss_platinum_step5" value="0"/>
+    <cubics_template id="91" name="Mob Leader Expert's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="94" itemId="188200121">
+        <core_list id="1" level="180" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="2" level="180" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="3" level="180" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="4" level="180" stat="IDLDF8_Lab_Boss" value="0"/>
+        <core_list id="5" level="180" stat="IDLDF8_Lab_Boss" value="0"/>
     </cubics_template>
-    <cubics_template id="92" name="?" quality="SILVER" maxRank="3" category="93" itemId="188200122">
-        <core_list id="1" level="10" stat="IDF8_House_HugeRider_silver_step1" value="0"/>
-        <core_list id="2" level="18" stat="IDF8_House_HugeRider_silver_step2" value="0"/>
-        <core_list id="3" level="26" stat="IDF8_House_HugeRider_silver_step3" value="0"/>
+    <cubics_template id="92" name="SVR-07 Expert's Silver Cubelet" quality="SILVER" maxRank="3" category="93" itemId="188200122">
+        <core_list id="1" level="10" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="2" level="18" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="3" level="26" stat="IDF8_House_HugeRider" value="0"/>
     </cubics_template>
-    <cubics_template id="93" name="?" quality="GOLD" maxRank="4" category="93" itemId="188200123">
-        <core_list id="1" level="20" stat="IDF8_House_HugeRider_gold_step1" value="0"/>
-        <core_list id="2" level="35" stat="IDF8_House_HugeRider_gold_step2" value="0"/>
-        <core_list id="3" level="45" stat="IDF8_House_HugeRider_gold_step3" value="0"/>
-        <core_list id="4" level="80" stat="IDF8_House_HugeRider_gold_step4" value="0"/>
+    <cubics_template id="93" name="SVR-07 Expert's Gold Cubelet" quality="GOLD" maxRank="4" category="93" itemId="188200123">
+        <core_list id="1" level="20" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="2" level="35" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="3" level="45" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="4" level="80" stat="IDF8_House_HugeRider" value="0"/>
     </cubics_template>
-    <cubics_template id="94" name="?" quality="PLATINUM" maxRank="5" category="93" itemId="188200124">
-        <core_list id="1" level="180" stat="IDF8_House_HugeRider_platinum_step1" value="0"/>
-        <core_list id="2" level="180" stat="IDF8_House_HugeRider_platinum_step2" value="0"/>
-        <core_list id="3" level="180" stat="IDF8_House_HugeRider_platinum_step3" value="0"/>
-        <core_list id="4" level="180" stat="IDF8_House_HugeRider_platinum_step4" value="0"/>
-        <core_list id="5" level="180" stat="IDF8_House_HugeRider_platinum_step5" value="0"/>
-    </cubics_template> -->
+    <cubics_template id="94" name="SVR-07 Expert's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="93" itemId="188200124">
+        <core_list id="1" level="180" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="2" level="180" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="3" level="180" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="4" level="180" stat="IDF8_House_HugeRider" value="0"/>
+        <core_list id="5" level="180" stat="IDF8_House_HugeRider" value="0"/>
+    </cubics_template>
+    <cubics_template id="95" name="Raging Magma/Heat Protector Hunter’s Silver Cubelet" quality="SILVER" maxRank="3" category="92" itemId="188200125">
+        <core_list id="1" level="10" stat="idseal_hard_boss_1st_atk" value="10"/>
+        <core_list id="2" level="18" stat="idseal_hard_boss_1st_atk" value="20"/>
+        <core_list id="3" level="26" stat="idseal_hard_boss_1st_atk" value="50"/>
+    </cubics_template>
+    <cubics_template id="96" name="Raging Magma/Heat Protector Hunter’s Gold Cubelet" quality="GOLD" maxRank="4" category="92" itemId="188200126">
+        <core_list id="1" level="20" stat="idseal_hard_boss_1st_atk" value="10"/>
+        <core_list id="2" level="35" stat="idseal_hard_boss_1st_atk" value="30"/>
+        <core_list id="3" level="45" stat="idseal_hard_boss_1st_atk" value="60"/>
+        <core_list id="4" level="80" stat="idseal_hard_boss_1st_atk" value="100"/>
+    </cubics_template>
+    <cubics_template id="97" name="Raging Magma/Heat Protector Hunter’s Platinum Cubelet" quality="PLATINUM" maxRank="5" category="92" itemId="188200127">
+        <core_list id="1" level="180" stat="idseal_hard_boss_1st_atk" value="40"/>
+        <core_list id="2" level="180" stat="idseal_hard_boss_1st_atk" value="100"/>
+        <core_list id="3" level="180" stat="idseal_hard_boss_1st_atk" value="170"/>
+        <core_list id="4" level="180" stat="idseal_hard_boss_1st_atk" value="250"/>
+        <core_list id="5" level="180" stat="idseal_hard_boss_1st_atk" value="350"/>
+    </cubics_template>
+    <cubics_template id="98" name="Mortasha Hunter's Silver Cubelet" quality="SILVER" maxRank="3" category="91" itemId="188200128">
+        <core_list id="1" level="10" stat="idf8_Dragon_Altar_atk" value="10"/>
+        <core_list id="2" level="18" stat="idf8_Dragon_Altar_atk" value="20"/>
+        <core_list id="3" level="26" stat="idf8_Dragon_Altar_atk" value="50"/>
+    </cubics_template>
+    <cubics_template id="99" name="Mortasha Hunter's Gold Cubelet" quality="GOLD" maxRank="4" category="91" itemId="188200129">
+        <core_list id="1" level="20" stat="idf8_Dragon_Altar_atk" value="10"/>
+        <core_list id="2" level="35" stat="idf8_Dragon_Altar_atk" value="30"/>
+        <core_list id="3" level="45" stat="idf8_Dragon_Altar_atk" value="60"/>
+        <core_list id="4" level="80" stat="idf8_Dragon_Altar_atk" value="100"/>
+    </cubics_template>
+    <cubics_template id="100" name="Mortasha Hunter's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="91" itemId="188200130">
+        <core_list id="1" level="180" stat="idf8_Dragon_Altar_atk" value="40"/>
+        <core_list id="2" level="180" stat="idf8_Dragon_Altar_atk" value="100"/>
+        <core_list id="3" level="180" stat="idf8_Dragon_Altar_atk" value="170"/>
+        <core_list id="4" level="180" stat="idf8_Dragon_Altar_atk" value="250"/>
+        <core_list id="5" level="180" stat="idf8_Dragon_Altar_atk" value="350"/>
+    </cubics_template>
+    <cubics_template id="101" name="Raging Magma/Heat Protector Expert’s Silver Cubelet" quality="SILVER" maxRank="3" category="92" itemId="188200131">
+        <core_list id="1" level="10" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="2" level="18" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="3" level="26" stat="idseal_hard_boss_1st" value="0"/>
+    </cubics_template>
+    <cubics_template id="102" name="Raging Magma/Heat Protector Expert’s Gold Cubelet" quality="GOLD" maxRank="4" category="92" itemId="188200132">
+        <core_list id="1" level="20" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="2" level="35" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="3" level="45" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="4" level="80" stat="idseal_hard_boss_1st" value="0"/>
+    </cubics_template>
+    <cubics_template id="103" name="Raging Magma/Heat Protector Expert’s Platinum Cubelet" quality="PLATINUM" maxRank="5" category="92" itemId="188200133">
+        <core_list id="1" level="180" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="2" level="180" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="3" level="180" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="4" level="180" stat="idseal_hard_boss_1st" value="0"/>
+        <core_list id="5" level="180" stat="idseal_hard_boss_1st" value="0"/>
+    </cubics_template>
+    <cubics_template id="104" name="Mortasha Expert's Silver Cubelet" quality="SILVER" maxRank="3" category="91" itemId="188200134">
+        <core_list id="1" level="10" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="2" level="18" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="3" level="26" stat="idf8_Dragon_Altar" value="0"/>
+    </cubics_template>
+    <cubics_template id="105" name="Mortasha Expert's Gold Cubelet" quality="GOLD" maxRank="4" category="91" itemId="188200135">
+        <core_list id="1" level="20" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="2" level="35" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="3" level="45" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="4" level="80" stat="idf8_Dragon_Altar" value="0"/>
+    </cubics_template>
+    <cubics_template id="106" name="Mortasha Expert's Platinum Cubelet" quality="PLATINUM" maxRank="5" category="91" itemId="188200136">
+        <core_list id="1" level="180" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="2" level="180" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="3" level="180" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="4" level="180" stat="idf8_Dragon_Altar" value="0"/>
+        <core_list id="5" level="180" stat="idf8_Dragon_Altar" value="0"/>
+    </cubics_template>
+    <cubics_template id="107" name="Raging Oris Hunter’s Silver Cubelet" quality="SILVER" maxRank="3" category="90" itemId="188200137">
+        <core_list id="1" level="10" stat="idseal_hard_boss_2nd_atk" value="10"/>
+        <core_list id="2" level="18" stat="idseal_hard_boss_2nd_atk" value="20"/>
+        <core_list id="3" level="26" stat="idseal_hard_boss_2nd_atk" value="50"/>
+    </cubics_template>
+    <cubics_template id="108" name="Raging Oris Hunter’s Gold Cubelet" quality="GOLD" maxRank="4" category="90" itemId="188200138">
+        <core_list id="1" level="20" stat="idseal_hard_boss_2nd_atk" value="10"/>
+        <core_list id="2" level="35" stat="idseal_hard_boss_2nd_atk" value="30"/>
+        <core_list id="3" level="45" stat="idseal_hard_boss_2nd_atk" value="60"/>
+        <core_list id="4" level="80" stat="idseal_hard_boss_2nd_atk" value="100"/>
+    </cubics_template>
+    <cubics_template id="109" name="Raging Oris Hunter’s Platinum Cubelet" quality="PLATINUM" maxRank="5" category="90" itemId="188200139">
+        <core_list id="1" level="180" stat="idseal_hard_boss_2nd_atk" value="40"/>
+        <core_list id="2" level="180" stat="idseal_hard_boss_2nd_atk" value="100"/>
+        <core_list id="3" level="180" stat="idseal_hard_boss_2nd_atk" value="170"/>
+        <core_list id="4" level="180" stat="idseal_hard_boss_2nd_atk" value="250"/>
+        <core_list id="5" level="180" stat="idseal_hard_boss_2nd_atk" value="350"/>
+    </cubics_template>
+    <cubics_template id="110" name="Raging Oris Expert’s Silver Cubelet" quality="SILVER" maxRank="3" category="90" itemId="188200140">
+        <core_list id="1" level="10" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="2" level="18" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="3" level="26" stat="idseal_hard_boss_2nd" value="0"/>
+    </cubics_template>
+    <cubics_template id="111" name="Raging Oris Expert’s Gold Cubelet" quality="GOLD" maxRank="4" category="90" itemId="188200141">
+        <core_list id="1" level="20" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="2" level="35" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="3" level="45" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="4" level="80" stat="idseal_hard_boss_2nd" value="0"/>
+    </cubics_template>
+    <cubics_template id="112" name="Raging Oris Expert’s Platinum Cubelet" quality="PLATINUM" maxRank="5" category="90" itemId="188200142">
+        <core_list id="1" level="180" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="2" level="180" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="3" level="180" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="4" level="180" stat="idseal_hard_boss_2nd" value="0"/>
+        <core_list id="5" level="180" stat="idseal_hard_boss_2nd" value="0"/>
+    </cubics_template>
+    <cubics_template id="113" name="Stormwing Hunter’s Silver Cubelet" quality="SILVER" maxRank="3" category="88" itemId="188200149">
+        <core_list id="1" level="10" stat="cubic_stat_catacombs_3rd_atk" value="10"/>
+        <core_list id="2" level="18" stat="cubic_stat_catacombs_3rd_atk" value="20"/>
+        <core_list id="3" level="26" stat="cubic_stat_catacombs_3rd_atk" value="50"/>
+    </cubics_template>
+    <cubics_template id="114" name="Stormwing Hunter’s Gold Cubelet" quality="GOLD" maxRank="4" category="88" itemId="188200150">
+        <core_list id="1" level="20" stat="cubic_stat_catacombs_3rd_atk" value="10"/>
+        <core_list id="2" level="35" stat="cubic_stat_catacombs_3rd_atk" value="30"/>
+        <core_list id="3" level="45" stat="cubic_stat_catacombs_3rd_atk" value="60"/>
+        <core_list id="4" level="80" stat="cubic_stat_catacombs_3rd_atk" value="100"/>
+    </cubics_template>
+    <cubics_template id="115" name="Stormwing Hunter’s Platinum Cubelet" quality="PLATINUM" maxRank="5" category="88" itemId="188200151">
+        <core_list id="1" level="180" stat="cubic_stat_catacombs_3rd_atk" value="40"/>
+        <core_list id="2" level="180" stat="cubic_stat_catacombs_3rd_atk" value="100"/>
+        <core_list id="3" level="180" stat="cubic_stat_catacombs_3rd_atk" value="170"/>
+        <core_list id="4" level="180" stat="cubic_stat_catacombs_3rd_atk" value="250"/>
+        <core_list id="5" level="180" stat="cubic_stat_catacombs_3rd_atk" value="350"/>
+    </cubics_template>
+    <cubics_template id="116" name="Stormwing Expert’s Silver Cubelet" quality="SILVER" maxRank="3" category="88" itemId="188200152">
+        <core_list id="1" level="10" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="2" level="24" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="3" level="34" stat="cubic_stat_catacombs_3rd" value="0"/>
+    </cubics_template>
+    <cubics_template id="117" name="Stormwing Expert’s Gold Cubelet" quality="GOLD" maxRank="4" category="88" itemId="188200153">
+        <core_list id="1" level="30" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="2" level="60" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="3" level="90" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="4" level="120" stat="cubic_stat_catacombs_3rd" value="0"/>
+    </cubics_template>
+    <cubics_template id="118" name="Stormwing Expert’s Platinum Cubelet Bundle" quality="PLATINUM" maxRank="5" category="88" itemId="188200154">
+        <core_list id="1" level="180" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="2" level="180" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="3" level="180" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="4" level="180" stat="cubic_stat_catacombs_3rd" value="0"/>
+        <core_list id="5" level="180" stat="cubic_stat_catacombs_3rd" value="0"/>
+    </cubics_template>
+    <cubics_template id="119" name="Raging Beritra Hunter’s Silver Cubelet" quality="SILVER" maxRank="3" category="89" itemId="188200143">
+        <core_list id="1" level="10" stat="idseal_hard_boss_3rd_atk" value="10"/>
+        <core_list id="2" level="18" stat="idseal_hard_boss_3rd_atk" value="20"/>
+        <core_list id="3" level="26" stat="idseal_hard_boss_3rd_atk" value="50"/>
+    </cubics_template>
+    <cubics_template id="120" name="Raging Beritra Hunter’s Gold Cubelet" quality="GOLD" maxRank="4" category="89" itemId="188200144">
+        <core_list id="1" level="20" stat="idseal_hard_boss_3rd_atk" value="10"/>
+        <core_list id="2" level="35" stat="idseal_hard_boss_3rd_atk" value="30"/>
+        <core_list id="3" level="45" stat="idseal_hard_boss_3rd_atk" value="60"/>
+        <core_list id="4" level="80" stat="idseal_hard_boss_3rd_atk" value="100"/>
+    </cubics_template>
+    <cubics_template id="121" name="Raging Beritra Hunter’s Platinum Cubelet" quality="PLATINUM" maxRank="5" category="89" itemId="188200145">
+        <core_list id="1" level="180" stat="idseal_hard_boss_3rd_atk" value="40"/>
+        <core_list id="2" level="180" stat="idseal_hard_boss_3rd_atk" value="100"/>
+        <core_list id="3" level="180" stat="idseal_hard_boss_3rd_atk" value="170"/>
+        <core_list id="4" level="180" stat="idseal_hard_boss_3rd_atk" value="250"/>
+        <core_list id="5" level="180" stat="idseal_hard_boss_3rd_atk" value="350"/>
+    </cubics_template>
+    <cubics_template id="122" name="Raging Beritra Expert’s Silver Cubelet" quality="SILVER" maxRank="3" category="89" itemId="188200146">
+        <core_list id="1" level="10" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="2" level="18" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="3" level="26" stat="idseal_hard_boss_3rd" value="0"/>
+    </cubics_template>
+    <cubics_template id="123" name="Raging Beritra Expert’s Gold Cubelet" quality="GOLD" maxRank="4" category="89" itemId="188200147">
+        <core_list id="1" level="20" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="2" level="35" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="3" level="45" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="4" level="80" stat="idseal_hard_boss_3rd" value="0"/>
+    </cubics_template>
+    <cubics_template id="124" name="Raging Beritra Expert’s Platinum Cubelet" quality="PLATINUM" maxRank="5" category="89" itemId="188200148">
+        <core_list id="1" level="180" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="2" level="180" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="3" level="180" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="4" level="180" stat="idseal_hard_boss_3rd" value="0"/>
+        <core_list id="5" level="180" stat="idseal_hard_boss_3rd" value="0"/>
+    </cubics_template>
 </cubics_templates>

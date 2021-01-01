@@ -64,7 +64,7 @@ public class PlayerCubicService implements StatOwner {
 		player.setMonsterCubic(DAOManager.getDAO(PlayerCubicsDAO.class).load(player));
 		maxMonsterCubic = player.getMonsterCubic().getAllMC();
 		
-		PacketSendUtility.sendPacket(player, new SM_CUBIC_INFO(94));
+		PacketSendUtility.sendPacket(player, new SM_CUBIC_INFO(124));
 		
 		for (PlayerMCEntry playerMonsterCubic : maxMonsterCubic) {
 			try {
@@ -77,7 +77,7 @@ public class PlayerCubicService implements StatOwner {
 			level.put(playerMonsterCubic.getCubeId(), playerMonsterCubic.getLevel());
 			statValue.put(playerMonsterCubic.getCubeId(), playerMonsterCubic.getStatValue());
 			
-			for (int cubicId = 1; cubicId <= 94; cubicId++) {
+			for (int cubicId = 1; cubicId <= 124; cubicId++) {
 				if (cubic.containsKey(cubicId)) { // Enviar los cubus obtenidos por el personaje
 					CubicsTemplate monsterCubic = DataManager.CUBICS_DATA.getCubicsId(cubicId);
 					long itemsCubicInBag = player.getInventory().getItemCountByItemId(monsterCubic.getItemIdCubic());
@@ -100,6 +100,54 @@ public class PlayerCubicService implements StatOwner {
 	private StatEnum getStatValueByCategory(int category) {
 		StatEnum statName = null;
 		switch (category) {
+		case 88:
+			statName = StatEnum.cubic_stat_catacombs_3rd_atk;
+			statName = StatEnum.cubic_stat_catacombs_3rd;
+			break;
+		case 89:
+			statName = StatEnum.idseal_hard_boss_3rd_atk;
+			statName = StatEnum.idseal_hard_boss_3rd;
+			break;	
+		case 90:
+			statName = StatEnum.idseal_hard_boss_2nd_atk;
+			statName = StatEnum.idseal_hard_boss_2nd;
+			break;
+		case 91:
+			statName = StatEnum.idf8_Dragon_Altar_atk;
+			statName = StatEnum.idf8_Dragon_Altar;
+			break;
+		case 92:
+			statName = StatEnum.idseal_hard_boss_1st_atk;
+			statName = StatEnum.idseal_hard_boss_1st;
+			break;	
+		case 93:
+			statName = StatEnum.idf8_house_hugerider_atk;
+			statName = StatEnum.IDF8_House_HugeRider;
+			break;
+		case 94:
+			statName = StatEnum.bidldf8_lab_boss_04_atk;
+			statName = StatEnum.IDLDF8_Lab_Boss;
+			break;
+		case 95:
+			statName = StatEnum.idf7_weapon_hard_boss_1st_atk;
+			statName = StatEnum.IDF7_Weapon_Hard_Boss_1st;
+			break;
+		case 96:
+			statName = StatEnum.idf7_weapon_hard_boss_2nd_atk;
+			statName = StatEnum.IDF7_Weapon_Hard_Boss_2nd;
+			break;			
+		case 97:
+			statName = StatEnum.idf7_weapon_hard_boss_3rd_atk;
+			statName = StatEnum.IDF7_Weapon_Hard_Boss_3rd;
+			break;	
+		case 98:
+			statName = StatEnum.idf7_weapon_hard_boss_final_atk;
+			statName = StatEnum.IDF7_Weapon_Hard_Boss_Final;
+			break;	
+		case 99:
+			statName = StatEnum.EXTRA_ERESHKIGAL_DAMAGE;
+			statName = StatEnum.REDUCE_ERESHKIGAL_DAMAGE;
+			break;
 		case 100:
 			statName = StatEnum.MAXHP;
 			break;
@@ -119,7 +167,7 @@ public class PlayerCubicService implements StatOwner {
 			statName = StatEnum.PHYSICAL_DEFENSE; // TODO .PHYSICALPOWERBOOSTRESIST; //Not Added in Src
 			break;
 		case 106:
-			statName = StatEnum.MAGICAL_RESIST; // TODO .MAGICALPOWERBOOSTRESIST; //Not Added in Src
+			statName = StatEnum.MAGICAL_DEFEND; // TODO .MAGICALPOWERBOOSTRESIST; //Not Added in Src
 			break;
 		case 107:
 			statName = StatEnum.PHYSICAL_ACCURACY;
