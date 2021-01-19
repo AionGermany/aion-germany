@@ -33,6 +33,7 @@ import com.aionemu.gameserver.model.templates.pet.PetFunction;
 import com.aionemu.gameserver.model.templates.pet.PetTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PET;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_WAREHOUSE_INFO;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.spawnengine.VisibleObjectSpawner;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
@@ -47,6 +48,9 @@ public class PetSpawnService {
 	 * @param petId
 	 */
 	public static final void summonPet(Player player, int petId, boolean isManualSpawn) {
+        if (player.getMinion() != null) {
+            MinionService.getInstance().despawnMinion(player, player.getMinion().getObjectId());
+        }
 		PetCommonData lastPetCommonData;
 
 		if (player.getPet() != null) {

@@ -33,6 +33,7 @@ import com.aionemu.gameserver.model.templates.achievement.AchievementActionType;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.player.AchievementService;
@@ -97,6 +98,9 @@ public class PlayerTeamDistributionService {
 			}
 			AchievementService.getInstance().onUpdateAchievementAction(member, owner.getNpcId(), 1, AchievementActionType.HUNT);
 			PlayerFameService.getInstance().addFameExp(member, 10 * owner.getLevel() / 2);
+			if (member.getMinion() != null) {
+				MinionService.getInstance().onUpdateEnergy(member, 50);
+			}
 
 			long rewardXp = expReward * bonus * member.getLevel() / (filteredStats.partyLvlSum * 100);
 			int rewardDp = StatFunctions.calculateGroupDPReward(member, owner);

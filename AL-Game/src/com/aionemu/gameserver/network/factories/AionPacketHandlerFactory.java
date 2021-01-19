@@ -203,7 +203,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MANASTONE(0x11C, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_FUSION_WEAPONS(0x191, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_ITEM_REMODEL(0x125, State.IN_GAME)); // 7.5 EU
-		//addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xCD, State.IN_GAME)); // 7.2 EU (Rider Skill deactivate)
+		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xF4, State.IN_GAME)); // 7.5 EU (Rider Skill deactivate)
 		addPacket(new CM_RECIPE_DELETE(0x110, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_REMOVE_ALTERED_STATE(0xF5, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_MAY_QUIT(0xCA, State.AUTHED, State.IN_GAME)); // 7.5 EU
@@ -262,8 +262,8 @@ public class AionPacketHandlerFactory {
 
 		// // ////////////////// LUNA SYSTEM /////////////////////
 		addPacket(new CM_LUNA_SYSTEM(0x1DE, State.IN_GAME)); // 7.5 EU
-		//addPacket(new CM_LUNA_INSTANCE(0x1E1, State.IN_GAME)); // 7.5 EU
-		//addPacket(new CM_LUNA_INSTANCE_ENTRY(0x1CD, State.IN_GAME)); // 7.5 EU
+		addPacket(new CM_LUNA_INSTANCE_BUFF(0x1E1, State.IN_GAME)); // 7.5 EU
+		addPacket(new CM_LUNA_INSTANCE_ENTRY(0x1CD, State.IN_GAME)); // 7.5 EU
 		addPacket(new CM_LUNA_IDENTIFICATION(0x1F6, State.IN_GAME)); // 7.5 EU
 
 		// // ////////////////// MAGIC CRAFT //////////////////
@@ -303,13 +303,14 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_SKILL_ANIMATION(0x1D0, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_MINIONS(0x1ED, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_NEVIWIND_CANYON(0x1EC, State.IN_GAME)); // 7.5 EU TODO
-		addPacket(new CM_TRANSFOMATION(0x1E3, State.IN_GAME)); // 7.5 EU TODO
+		addPacket(new CM_TRANSFORMATION(0x1E3, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_CUBIC(0x1D8, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_ATREIAN_PASSPORT(0x1CF, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_STIGMA(0x1F5, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_REMOVE_DYE(0x1DA, State.IN_GAME)); // 7.5 EU TODO
 		addPacket(new CM_LUMIEL_TRANSFORM(0x3FD, State.IN_GAME)); // 7.7 EU TODO
 		addPacket(new CM_PLAYER_COLLECTION_REGISTER(0x3F2, State.IN_GAME)); // 7.7 EU TODO
+		addPacket(new CM_COMBAT_SUPPORT(0x3FC, State.IN_GAME)); // 7.7 EU TODO
 	}
 
 	public AionPacketHandler getPacketHandler() {

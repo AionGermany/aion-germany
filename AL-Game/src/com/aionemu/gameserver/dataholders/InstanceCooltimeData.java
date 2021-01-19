@@ -44,6 +44,7 @@ public class InstanceCooltimeData {
 	protected List<InstanceCooltime> instanceCooltime;
 	private FastMap<Integer, InstanceCooltime> instanceCooltimes = new FastMap<Integer, InstanceCooltime>();
 	private HashMap<Integer, Integer> syncIdToMapId = new HashMap<Integer, Integer>();
+	private HashMap<Integer, Integer> syncId = new HashMap<Integer, Integer>();
 
 	/**
 	 * @param u
@@ -53,6 +54,7 @@ public class InstanceCooltimeData {
 		for (InstanceCooltime tmp : instanceCooltime) {
 			instanceCooltimes.put(tmp.getWorldId(), tmp);
 			syncIdToMapId.put(tmp.getId(), tmp.getWorldId());
+			syncId.put(tmp.getSyncId(), tmp.getWorldId());
 		}
 		instanceCooltime.clear();
 	}
@@ -75,6 +77,13 @@ public class InstanceCooltimeData {
 		}
 		return syncIdToMapId.get(syncId);
 	}
+
+    public int getSyncId(int id) {
+        if (!syncId.containsKey(id)) {
+            return 0;
+        }
+        return syncId.get(id);
+    }
 
 	public long getInstanceEntranceCooltimeById(Player player, int syncId) {
 		if (!syncIdToMapId.containsKey(syncId)) {

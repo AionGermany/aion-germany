@@ -414,6 +414,10 @@ public final class QuestService {
         if (rewards.getFameExp() != null) {
             PlayerFameService.getInstance().addFameExp(player, rewards.getFameExp().intValue());
         }
+        if (player.getMinion() != null) {
+            MinionService.getInstance().onUpdateEnergy(player, 50);
+            MinionService.getInstance().addMinionGrowth(player, 50);
+        }
 		if (rewards.getExtendInventory() != null) {
 			if (rewards.getExtendInventory() == 1) {
 				CubeExpandService.expand(player, false);

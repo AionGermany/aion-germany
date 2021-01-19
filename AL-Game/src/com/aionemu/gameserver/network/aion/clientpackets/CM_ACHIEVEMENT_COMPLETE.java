@@ -17,7 +17,7 @@
 package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.network.aion.AionClientPacket;
-import com.aionemu.gameserver.network.aion.AionConnection;
+import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.player.AchievementService;
 
 public class CM_ACHIEVEMENT_COMPLETE extends AionClientPacket {
@@ -26,7 +26,7 @@ public class CM_ACHIEVEMENT_COMPLETE extends AionClientPacket {
 	private long achievementObj;
 	private long actionObj;
 
-	public CM_ACHIEVEMENT_COMPLETE(int opcode, AionConnection.State state, AionConnection.State... restStates) {
+	public CM_ACHIEVEMENT_COMPLETE(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../modifiers.xsd"/>
+	<xs:element name="minions_list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="minion_list" type="MinionListTemplate" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="MinionListTemplate">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="minion_id" type="IntListType" use="required"/>
+	</xs:complexType>
+</xs:schema>

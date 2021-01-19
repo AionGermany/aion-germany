@@ -59,6 +59,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.DialogService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.RespawnService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
@@ -338,6 +339,10 @@ public class NpcController extends CreatureController<Npc> {
 							PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
 						}
 					}
+					if (player.getMinion() == null) {
+						continue;
+					}
+					MinionService.getInstance().onUpdateEnergy(player, 50);
 				}
 			}
 		}

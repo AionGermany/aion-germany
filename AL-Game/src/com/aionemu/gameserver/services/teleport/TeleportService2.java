@@ -77,10 +77,12 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.DisputeLandService;
 import com.aionemu.gameserver.services.DuelService;
 import com.aionemu.gameserver.services.FastTrackService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.PrivateStoreService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.services.player.AchievementService;
+import com.aionemu.gameserver.services.player.LunaShopService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -287,6 +289,7 @@ public class TeleportService2 {
 			if (summon != null) {
 				World.getInstance().setPosition(summon, pos.getMapId(), player.getInstanceId(), pos.getX(), pos.getY(), pos.getZ(), pos.getHeading());
 			}
+			MinionService.getInstance().onTeleportPlayer(player);
 			PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
 			PacketSendUtility.sendPacket(player, new SM_CHANNEL_INFO(player.getPosition()));
 			player.setPortAnimation(4); // Beam exit animation
@@ -301,6 +304,7 @@ public class TeleportService2 {
 			if (summon != null) {
 				World.getInstance().spawn(summon);
 			}
+			MinionService.getInstance().onTeleportPlayer(player);
 			player.getKnownList().clear();
 			player.updateKnownlist();
 			player.getController().updateZone();
@@ -483,13 +487,24 @@ public class TeleportService2 {
 	}
 
 	private static void sendWorldSwitchMessage(Player player, int oldWorld, int newWorld, boolean enteredInstance) {
-		if (enteredInstance && oldWorld != newWorld) {
-			if (!WorldMapType.getWorld(newWorld).isPersonal()) {
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_DUNGEON_OPENED_FOR_SELF(newWorld));
-			}
-			playerTransformation(player);
-		}
+		onEnterInstance(player, oldWorld, newWorld, enteredInstance);
 	}
+
+    private static void onEnterInstance(Player player, int oldWorld, int newWorld, boolean enteredInstance) {
+        if (enteredInstance && oldWorld != newWorld && !WorldMapType.getWorld(newWorld).isPersonal()) {
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_DUNGEON_OPENED_FOR_SELF(newWorld));
+            LunaShopService.getInstance().sendLunaInstanceBuff(player, player.getLevel());
+            AchievementService.getInstance().onUpdateAchievementAction(player, newWorld, 1, AchievementActionType.ENTER_WORLD);
+            if (player.getPortalCooldownList().getPortalCooldownItem(newWorld) == null) {
+                player.getPortalCooldownList().addPortalCooldown(newWorld, 1, DataManager.INSTANCE_COOLTIME_DATA.getInstanceEntranceCooltime(player, newWorld));
+            }
+            else {
+                player.getPortalCooldownList().addEntry(newWorld);
+                PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_DUNGEON_COUNT_USE, 20000);
+            }
+        }
+        playerTransformation(player);
+    }
 
 	/**
 	 * @param player

@@ -20,7 +20,7 @@ import java.util.Map;
 
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
-import com.aionemu.gameserver.network.aion.AionConnection;
+import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.player.LumielTransformService;
 
 import javolution.util.FastMap;
@@ -35,7 +35,7 @@ public class CM_LUMIEL_TRANSFORM extends AionClientPacket {
 	long count;
 	private Map<Integer, Long> matrials = new FastMap<Integer, Long>();
 
-	public CM_LUMIEL_TRANSFORM(int opcode, AionConnection.State state, AionConnection.State... restStates) {
+	public CM_LUMIEL_TRANSFORM(int opcode, State state, State... restStates) {
 		super(opcode, state, restStates);
 	}
 

@@ -267,4 +267,26 @@ public class ClassChangeService {
 		}
 		return true;
 	}
+
+    public static void onUpdateQuest15545(Player player) {
+        if (player.getQuestStateList().hasQuest(15545)) {
+            QuestState qs = player.getQuestStateList().getQuestState(15545);
+            if (qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 0) {
+                qs.setQuestVar(1);
+                qs.setStatus(QuestStatus.REWARD);
+                PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(15545, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+            }
+        }
+    }
+
+    public static void onUpdateQuest25545(Player player) {
+        if (player.getQuestStateList().hasQuest(25545)) {
+            QuestState qs = player.getQuestStateList().getQuestState(25545);
+            if (qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 0) {
+                qs.setQuestVar(1);
+                qs.setStatus(QuestStatus.REWARD);
+                PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(25545, qs.getStatus(), qs.getQuestVars().getQuestVars()));
+            }
+        }
+    }
 }

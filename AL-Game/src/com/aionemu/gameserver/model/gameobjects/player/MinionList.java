@@ -1,22 +1,8 @@
-/**
- * This file is part of Aion-Lightning <aion-lightning.org>.
- *
- *  Aion-Lightning is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  Aion-Lightning is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details. *
- *  You should have received a copy of the GNU General Public License
- *  along with Aion-Lightning.
- *  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.aionemu.gameserver.model.gameobjects.player;
 
+import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.List;
 
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.PlayerMinionsDAO;
@@ -28,47 +14,60 @@ import javolution.util.FastMap;
 
 public class MinionList {
 
-	private final Player player;
-	private int lastUsedObjId;
+	private Player player;
+	private int lastUsedMinionId;
 	private FastMap<Integer, MinionCommonData> minions = new FastMap<Integer, MinionCommonData>();
+	private int lastUsedObjId;
 
-	public MinionList(Player player) {
+	MinionList(Player player) {
 		this.player = player;
 		loadMinions();
 	}
 
 	public void loadMinions() {
-		for (MinionCommonData minionCommonData : DAOManager.getDAO(PlayerMinionsDAO.class).getPlayerMinions(player)) {
-			if (minionCommonData.getExpireTime() > 0) {
-				ExpireTimerTask.getInstance().addTask(minionCommonData, player);
+		List<MinionCommonData> playerMinions = DAOManager.getDAO(PlayerMinionsDAO.class).getPlayerMinions(player);
+		MinionCommonData lastUsedMinion = null;
+		for (MinionCommonData minion : playerMinions) {
+			if (minion.getExpireTime() > 0) {
+				ExpireTimerTask.getInstance().addTask(minion, player);
 			}
-			minions.put(minionCommonData.getObjectId(), minionCommonData);
+			minions.put(minion.getObjectId(), minion);
+			if (lastUsedMinion == null || minion.getDespawnTime().after(lastUsedMinion.getDespawnTime())) {
+				lastUsedMinion = minion;
+			}
+		}
+
+		if (lastUsedMinion != null) {
+			lastUsedMinionId = lastUsedMinion.getMinionId();
 		}
 	}
 
 	public Collection<MinionCommonData> getMinions() {
-		return (Collection<MinionCommonData>) minions.values();
-	}
-	
-	public void updateMinionsList() {
-		minions.clear();
-		for (MinionCommonData minionCommonData : DAOManager.getDAO(PlayerMinionsDAO.class).getPlayerMinions(player)) {
-				minions.put(minionCommonData.getObjectId(), minionCommonData);
-		}
-		if(minions !=null) {
-			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, player.getMinionList().getMinions()));
-		}
+		return minions.values();
 	}
 
-	public MinionCommonData getMinion(int minionObjId) {
-		return minions.get(minionObjId);
+	public MinionCommonData getMinion(int minionId) {
+		return minions.get(minionId);
 	}
 
-	public MinionCommonData addNewMinion(Player player, int minionId, String name, String grade, int level, int growthPoints) {
-		MinionCommonData minionCommonData = new MinionCommonData(minionId, player.getObjectId(), name, grade, level, 0);
+	public MinionCommonData getLastUsedMinion() {
+		return getMinion(lastUsedMinionId);
+	}
+
+	public void setLastUsedMinionId(int lastUsedMinionId) {
+		this.lastUsedMinionId = lastUsedMinionId;
+	}
+
+	public MinionCommonData addNewMinion(Player player, int minionId, String name, String grade, int level, int growth_points) {
+		return addNewMinion(player, minionId, name, grade, level, System.currentTimeMillis(), growth_points);
+	}
+
+	public MinionCommonData addNewMinion(Player player, int minionId, String name, String minionGrade, int level, long birthday, int growth_points) {
+		MinionCommonData minionCommonData = new MinionCommonData(minionId, player.getObjectId(), name, minionGrade, level, growth_points, true);
+		minionCommonData.setBirthday(new Timestamp(birthday));
+		minionCommonData.setDespawnTime(new Timestamp(System.currentTimeMillis()));
 		DAOManager.getDAO(PlayerMinionsDAO.class).insertPlayerMinion(minionCommonData);
-		DAOManager.getDAO(PlayerMinionsDAO.class).saveBirthday(minionCommonData);
-		minions.put(minionId, minionCommonData);
+		minions.put(minionCommonData.getObjectId(), minionCommonData);
 		return minionCommonData;
 	}
 
@@ -76,15 +75,31 @@ public class MinionList {
 		return minions.containsKey(minionId);
 	}
 
-	public void deleteMinion(int minionObjId) {
-		if (hasMinion(minionObjId)) {
-			DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, minionObjId);
-			minions.remove(minionObjId);
+	public void deleteMinion(int minionId) {
+		if (hasMinion(minionId)) {
+			minions.remove(minionId);
+			DAOManager.getDAO(PlayerMinionsDAO.class).removePlayerMinion(player, minionId);
 		}
 	}
 
-	public void setLastUsed(int lastUsedObjId) {
-		this.lastUsedObjId = lastUsedObjId;
+	public void disMissMinion(int minionId) {
+		if (minionId != 0) {
+			minions.remove(minionId);
+		}
+	}
+
+	public void updateMinionsList() {
+		minions.clear();
+		for (MinionCommonData minionCommonData : DAOManager.getDAO(PlayerMinionsDAO.class).getPlayerMinions(player)) {
+			minions.put(minionCommonData.getObjectId(), minionCommonData);
+		}
+		if (minions != null) {
+			PacketSendUtility.sendPacket(player, new SM_MINIONS(1, player.getMinionList().getMinions()));
+		}
+	}
+
+	public void setLastUsed(int objId) {
+		this.lastUsedObjId = objId;
 	}
 
 	public int getLastUsed() {

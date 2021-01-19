@@ -61,6 +61,17 @@ public class InstanceCooltime {
 	protected boolean enter_guild;
 	@XmlElement(name = "maxcount")
 	protected Integer max_count;
+    @XmlElement(name = "component")
+    protected int component;
+    @XmlElement(name = "component_count")
+    protected int componentCount;
+    @XmlElement(name = "price")
+    protected long price;
+    @XmlElement(name = "luna")
+    protected long luna;
+    @XmlElement(name = "sync_id")
+    protected int syncId;
+
 	@XmlAttribute(required = true)
 	protected int id;
 	@XmlAttribute(required = true)
@@ -201,4 +212,24 @@ public class InstanceCooltime {
 	public Race getRace() {
 		return race;
 	}
+
+    public int getComponent() {
+        return component;
+    }
+
+    public int getComponentCount() {
+        return componentCount;
+    }
+
+    public long getPrice() {
+        return price;
+    }
+
+    public long getLuna() {
+        return luna;
+    }
+
+    public int getSyncId() {
+        return syncId;
+    }
 }

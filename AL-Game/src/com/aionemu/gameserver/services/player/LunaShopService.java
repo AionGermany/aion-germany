@@ -34,6 +34,7 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
+import com.aionemu.gameserver.model.gameobjects.player.LunaBuffBonus;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerLunaShop;
 import com.aionemu.gameserver.model.items.storage.Storage;
@@ -42,6 +43,7 @@ import com.aionemu.gameserver.model.templates.luna.LunaConsumeRewardsTemplate;
 import com.aionemu.gameserver.model.templates.recipe.LunaComponent;
 import com.aionemu.gameserver.model.templates.recipe.LunaComponentElement;
 import com.aionemu.gameserver.model.templates.recipe.LunaTemplate;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_LUNA_INSTANCE_BUFF;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LUNA_SYSTEM;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LUNA_SYSTEM_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
@@ -681,6 +683,23 @@ public class LunaShopService {
 				return 40;
 		}
 	}
+
+    public void sendLunaInstanceBuff(Player player, int buffId) {
+        PacketSendUtility.sendPacket(player, new SM_LUNA_INSTANCE_BUFF(buffId, false));
+    }
+
+    public void buyLunaBuff(Player player, int buffId) {
+        if (player.getLunaAccount() < 20) {
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LUNA_NOT_ENOUGH_LUNA);
+            return;
+        }
+        player.setLunaAccount(player.getLunaAccount() - 20);
+        PacketSendUtility.sendPacket(player, new SM_LUNA_SYSTEM(0));
+        player.setLunaBuffBonus(new LunaBuffBonus(buffId));
+        player.getLunaBuffBonus().applyEffect(player);
+        PacketSendUtility.sendPacket(player, new SM_LUNA_INSTANCE_BUFF(buffId, true));
+        PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_QUNABUFF_SUCCEEDED, 3000);
+    }
 
 	public static LunaShopService getInstance() {
 		return NewSingletonHolder.INSTANCE;

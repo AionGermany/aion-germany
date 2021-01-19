@@ -67,6 +67,7 @@ public final class DataManager {
 	public static TribeRelationsData TRIBE_RELATIONS_DATA;
 	public static RecipeData RECIPE_DATA;
 	public static LunaData LUNA_DATA;
+	public static LunaBuffData LUNA_BUFF_DATA;
 	public static ChestData CHEST_DATA;
 	public static StaticDoorData STATICDOOR_DATA;
 	public static ItemSetData ITEM_SET_DATA;
@@ -141,7 +142,6 @@ public final class DataManager {
 	public static ItemSkillEnhanceData ITEM_SKILL_ENHANCE_DATA;
 	public static ShugoSweepRewardData SHUGO_SWEEP_REWARD_DATA;
 	public static CubicsData CUBICS_DATA;
-	public static TransformationData TRANSFORMATION_DATA;
 	public static ReviveWorldStartPointsData REVIVE_WORLD_START_POINTS;
 	public static ReviveInstanceStartPointsData REVIVE_INSTANCE_START_POINTS;
 	public static ItemEnchantChancesData ITEM_ENCHANT_CHANCES_DATA;
@@ -154,6 +154,10 @@ public final class DataManager {
     public static LumielTemplateData LUMIEL_TEMPLATE_DATA;
     public static CollectionData COLLECTION_TEMPLATE_DATA;
     public static CollectionExpData COLLECTION_EXP_DATA;
+    public static ItemMinionListData ITEM_MINION_LIST;
+	public static TransformBookData TRANSFORM_BOOK_DATA;
+	public static TransformCollectionData TRANSFORM_COLLECTION_DATA;
+    public static ItemTransformListData ITEM_TRANSFORM_LIST;
 	private XmlDataLoader loader;
 
 	/**
@@ -206,6 +210,7 @@ public final class DataManager {
 		TRIBE_RELATIONS_DATA = data.tribeRelationsData;
 		RECIPE_DATA = data.recipeData;
 		LUNA_DATA = data.lunaData;
+		LUNA_BUFF_DATA = data.lunaBuffData;
 		CHEST_DATA = data.chestData;
 		STATICDOOR_DATA = data.staticDoorData;
 		ITEM_SET_DATA = data.itemSetData;
@@ -280,7 +285,6 @@ public final class DataManager {
 		ITEM_SKILL_ENHANCE_DATA = data.itemSkillEnhance;
 		SHUGO_SWEEP_REWARD_DATA = data.shugoSweepsRewardData;
 		CUBICS_DATA = data.cubicsData;
-		TRANSFORMATION_DATA = data.transformationData;
 		REVIVE_WORLD_START_POINTS = data.reviveWorldStartPoints;
 		REVIVE_INSTANCE_START_POINTS = data.reviveInstanceStartPoints;
 		ITEM_ENCHANT_CHANCES_DATA = data.itemEnchantChancesData;
@@ -293,6 +297,10 @@ public final class DataManager {
         LUMIEL_TEMPLATE_DATA = data.lumielTemplateData;
         COLLECTION_TEMPLATE_DATA = data.collectionTemplateData;
         COLLECTION_EXP_DATA = data.collectionExpData;
+        ITEM_MINION_LIST = data.itemMinionList;
+        TRANSFORM_BOOK_DATA = data.transformBookData;
+        TRANSFORM_COLLECTION_DATA = data.transformCollectionData;
+        ITEM_TRANSFORM_LIST = data.itemTransformListData;
 		ITEM_DATA.cleanup();
 
 		// some sexy time message

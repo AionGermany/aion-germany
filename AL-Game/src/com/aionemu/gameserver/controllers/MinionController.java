@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.controllers;
 
+import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -53,16 +54,9 @@ public class MinionController extends VisibleObjectController<Minion> {
 				if (minion == null) {
 					throw new IllegalStateException("Minion is null");
 				}
-
-				int currentPoints = 0;
-				//boolean saved = false;
-
-				if (currentPoints < 9000) {
-					//PacketSendUtility.sendPacket(player, new SM_MINIONS(minion, 4, 0));
-				}
 			}
 			catch (Exception ex) {
-				//player.getController().cancelTask(TaskId.MINION_UPDATE);
+				player.getController().cancelTask(TaskId.MINION_UPDATE);
 			}
 		}
 	}

@@ -16,88 +16,50 @@
  */
 package com.aionemu.gameserver.model.templates.minion;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.aionemu.gameserver.model.templates.stats.*;
+import javax.xml.bind.annotation.*;
+import com.aionemu.gameserver.model.templates.*;
+import java.util.*;
+import com.aionemu.gameserver.model.stats.calc.functions.*;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-import com.aionemu.gameserver.model.stats.calc.functions.StatFunction;
-import com.aionemu.gameserver.model.templates.BoundRadius;
-import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
-
-/**
- * @author Falke_34
- */
 @XmlAccessorType(XmlAccessType.NONE)
-@XmlRootElement(name = "MinionTemplate")
+@XmlType(namespace = "", name = "MinionTemplate")
 public class MinionTemplate {
-
-	@XmlElement(name = "physical_attr")
-	protected List<MinionAttr> physicalAttr;
-
-	@XmlElement(name = "magical_attr")
-	protected List<MinionAttr> magicalAttr;
 
 	@XmlAttribute(name = "id", required = true)
 	private int id;
-
-	@XmlAttribute(name = "name", required = true)
+	@XmlAttribute(name = "name")
 	private String name;
-
-	@XmlAttribute(name = "nameid", required = true)
+	@XmlAttribute(name = "nameid")
 	private int name_id;
-
-	@XmlAttribute(name = "group_set", required = true)
-	private String groupSet;
-
 	@XmlAttribute(name = "grade")
 	private String grade;
-
+	@XmlAttribute(name = "grade_id")
+	private int gradeId;
 	@XmlAttribute(name = "level")
 	private int level;
-
-	@XmlAttribute(name = "skill01", required = true)
-	private int skill1;
-
-	@XmlAttribute(name = "skill01_energy", required = true)
-	private int skill1Energy;
-
-	@XmlAttribute(name = "skill02", required = true)
-	private int skill2;
-
-	@XmlAttribute(name = "skill02_energy", required = true)
-	private int skill2Energy;
-
 	@XmlAttribute(name = "growthPoints")
 	private int growthPoints;
-
 	@XmlAttribute(name = "growthMax")
 	private int growthMax;
-
 	@XmlAttribute(name = "growthCost")
 	private int growthCost;
-
 	@XmlElement(name = "modifiers", required = false)
 	private ModifiersTemplate modifiers;
-
+	@XmlElement(name = "actions")
+	private MinionActions actions;
 	@XmlElement(name = "minionstats")
 	private MinionStatsTemplate statsTemplate;
-
 	@XmlElement(name = "bound")
 	private BoundRadius bound;
-
-	@XmlAttribute(name = "itemId")
-	private int itemId;
-
-	@XmlAttribute(name = "evolvedNum")
-	private int evolvedNum;
-
-	@XmlAttribute(name = "evolvedCost")
-	private int evolvedCost;
+	@XmlElement(name = "evolved")
+	private MinionEvolved evolved;
+	@XmlElement(name = "nameId")
+	private int nameId;
+	@XmlElement(name = "physical_attr")
+	protected List<MinionAttr> physicalAttr;
+	@XmlElement(name = "magical_attr")
+	protected List<MinionAttr> magicalAttr;
 
 	public List<MinionAttr> getPhysicalAttr() {
 		if (physicalAttr == null) {
@@ -121,10 +83,6 @@ public class MinionTemplate {
 		return name;
 	}
 
-	public String getGroupSet() {
-		return groupSet;
-	}
-
 	public String getGrade() {
 		return grade;
 	}
@@ -133,32 +91,36 @@ public class MinionTemplate {
 		return level;
 	}
 
-	public int getSkill1() {
-		return skill1;
-	}
-
-	public int getSkill1Energy() {
-		return skill1Energy;
-	}
-
-	public int getSkill2() {
-		return skill2;
-	}
-
-	public int getSkill2Energy() {
-		return skill2Energy;
-	}
-
-	public int getGrowthPt() {
+	public int getGrowthPoints() {
 		return growthPoints;
 	}
 
-	public int getMaxGrowthValue() {
+	public int getGrowthMax() {
 		return growthMax;
 	}
 
 	public int getGrowthCost() {
 		return growthCost;
+	}
+
+	public BoundRadius getBoundRadius() {
+		return bound;
+	}
+
+	public MinionEvolved getEvolved() {
+		return evolved;
+	}
+
+	public MinionStatsTemplate getStatsTemplate() {
+		return statsTemplate;
+	}
+
+	public int getNameId() {
+		return nameId;
+	}
+
+	public int getGradeId() {
+		return gradeId;
 	}
 
 	public List<StatFunction> getModifiers() {
@@ -168,23 +130,7 @@ public class MinionTemplate {
 		return null;
 	}
 
-	public MinionStatsTemplate getStatsTemplate() {
-		return statsTemplate;
-	}
-
-	public BoundRadius getBoundRadius() {
-		return bound;
-	}
-
-	public int getItemId() {
-		return itemId;
-	}
-
-	public int getEvolvedNum() {
-		return evolvedNum;
-	}
-
-	public int getEvolvedCost() {
-		return evolvedCost;
+	public MinionActions getAction() {
+		return actions;
 	}
 }

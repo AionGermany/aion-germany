@@ -130,6 +130,7 @@ import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.services.HousingService;
 import com.aionemu.gameserver.services.KiskService;
 import com.aionemu.gameserver.services.LegionService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.PetitionService;
 import com.aionemu.gameserver.services.PunishmentService;
 import com.aionemu.gameserver.services.PunishmentService.PunishmentType;
@@ -153,7 +154,6 @@ import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.territory.TerritoryService;
-import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.services.toypet.PetService;
 import com.aionemu.gameserver.services.transfers.PlayerTransferService;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
@@ -607,7 +607,7 @@ public final class PlayerEnterWorldService {
 			PetService.getInstance().onPlayerLogin(player);
 
 			// SM_Minions
-			MinionService.getInstance().onPlayerLogin(player);
+			MinionService.getInstance().onLoggedIn(player);
 
 			// SM_DISPUTE_LAND
 			DisputeLandService.getInstance().onLogin(player);

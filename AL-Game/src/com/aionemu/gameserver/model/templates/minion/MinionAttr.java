@@ -16,13 +16,9 @@
  */
 package com.aionemu.gameserver.model.templates.minion;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-
-import com.aionemu.gameserver.model.stats.container.StatEnum;
-import com.aionemu.gameserver.skillengine.change.Func;
+import com.aionemu.gameserver.model.stats.container.*;
+import javax.xml.bind.annotation.*;
+import com.aionemu.gameserver.skillengine.change.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MinionAttr")
@@ -36,7 +32,7 @@ public class MinionAttr {
 	protected int value;
 
 	public StatEnum getStat() {
-		return stat;
+		return this.stat;
 	}
 
 	public void setStat(StatEnum value) {

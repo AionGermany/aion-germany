@@ -27,31 +27,31 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 
 	private int minionId;
 	private Timestamp birthday;
-	private int minionObjId = 0;
-	private int masterObjectId;
+	private int minionObjId;
+	private final int masterObjectId;
 	private String minionGrade;
 	private String name;
 	private int minionLevel;
-	private int miniongrowthpoint = 0;
-	private boolean lock = false;
-	private boolean IsBuffing = false;
+	private int growthPoints;
+	private boolean locked;
 	private boolean isLooting = false;
+	private boolean isBuffing = false;
 	MinionDopingBag dopingBag = null;
 	private Timestamp despawnTime;
-	private int minionSkillPoints;
-	private Timestamp minionFunctionTime;
+	private int expireTime;
 
-	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int miniongrowthpoint) {
-		this.minionObjId = IDFactory.getInstance().nextId();
+	public MinionCommonData(int minionId, int masterObjectId, String name, String minionGrade, int minionLevel, int growthPoints, boolean locked) {
+		if (minionObjId == 0) {
+			minionObjId = IDFactory.getInstance().nextId();
+		}
 		this.minionId = minionId;
 		this.masterObjectId = masterObjectId;
 		this.name = name;
 		this.minionGrade = minionGrade;
 		this.minionLevel = minionLevel;
-		this.miniongrowthpoint = miniongrowthpoint;
-		if (minionId > 980013) {
-			this.dopingBag = new MinionDopingBag();
-		}
+		this.growthPoints = growthPoints;
+		this.locked = locked;
+		this.dopingBag = new MinionDopingBag();
 	}
 
 	public void setObjectId(int minionObjId) {
@@ -66,12 +66,8 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 		return masterObjectId;
 	}
 
-	public int getMinionId() {
+	public final int getMinionId() {
 		return minionId;
-	}
-
-	public int setMinionId(int minionId) {
-		return this.minionId = minionId;
 	}
 
 	public String getMinionGrade() {
@@ -82,8 +78,8 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 		return minionLevel;
 	}
 
-	public int setMinionLevel(int minionLevel) {
-		return this.minionLevel = minionLevel;
+	public int getGrowthPoints() {
+		return growthPoints;
 	}
 
 	public int getBirthday() {
@@ -91,6 +87,10 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 			return 0;
 		}
 		return (int) (birthday.getTime() / 1000);
+	}
+
+	public boolean isLocked() {
+		return locked;
 	}
 
 	public Timestamp getBirthdayTimestamp() {
@@ -105,13 +105,22 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 		this.name = name;
 	}
 
+	public void setGrowthPoints(int growthPoints) {
+		this.growthPoints = growthPoints;
+	}
+
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
+
 	@Override
 	public int getExpireTime() {
-		return 0;
+		return expireTime;
 	}
 
 	@Override
 	public void expireEnd(Player player) {
+
 	}
 
 	@Override
@@ -120,7 +129,7 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	}
 
 	@Override
-	public void expireMessage(Player player, int n) {
+	public void expireMessage(Player player, int time) {
 	}
 
 	@Override
@@ -135,35 +144,16 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 
 	@Override
 	public int getNameId() {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	public int getMinionGrowthPoint() {
-		return miniongrowthpoint;
+	public Timestamp getDespawnTime() {
+		return despawnTime;
 	}
 
-	public void setMinionGrowthPoint(int miniongrowthpoint) {
-		this.miniongrowthpoint = miniongrowthpoint;
-	}
-
-	public boolean isLock() {
-		return lock;
-	}
-
-	public void setLock(boolean lock) {
-		this.lock = lock;
-	}
-
-	public MinionDopingBag getDopingBag() {
-		return this.dopingBag;
-	}
-
-	public boolean IsBuffing() {
-		return IsBuffing;
-	}
-
-	public void setIsBuffing(boolean isBuffing) {
-		IsBuffing = isBuffing;
+	public void setDespawnTime(Timestamp despawnTime) {
+		this.despawnTime = despawnTime;
 	}
 
 	public void setIsLooting(boolean isLooting) {
@@ -171,51 +161,18 @@ public class MinionCommonData extends VisibleObjectTemplate implements IExpirabl
 	}
 
 	public boolean isLooting() {
-		return this.isLooting;
+		return isLooting;
 	}
 
-	/**
-	 * @return the despawnTime
-	 */
-	public Timestamp getDespawnTime() {
-		return despawnTime;
+	public MinionDopingBag getDopingBag() {
+		return dopingBag;
 	}
 
-	/**
-	 * @param despawnTime
-	 *            the despawnTime to set
-	 */
-	public void setDespawnTime(Timestamp despawnTime) {
-		this.despawnTime = despawnTime;
+	public void setIsBuffing(boolean isBuffing) {
+		this.isBuffing = isBuffing;
 	}
 
-	/**
-	 * @return the minionSkillPoints
-	 */
-	public int getMinionSkillPoints() {
-		return minionSkillPoints;
-	}
-
-	/**
-	 * @param minionSkillPoints
-	 *            the minionSkillPoints to set
-	 */
-	public void setMinionSkillPoints(int minionSkillPoints) {
-		this.minionSkillPoints = minionSkillPoints;
-	}
-
-	/**
-	 * @return the minionFunctionTime
-	 */
-	public Timestamp getMinionFunctionTime() {
-		return minionFunctionTime;
-	}
-
-	/**
-	 * @param minionFunctionTime
-	 *            the minionFunctionTime to set
-	 */
-	public void setMinionFunctionTime(Timestamp minionFunctionTime) {
-		this.minionFunctionTime = minionFunctionTime;
+	public boolean isBuffing() {
+		return isBuffing;
 	}
 }

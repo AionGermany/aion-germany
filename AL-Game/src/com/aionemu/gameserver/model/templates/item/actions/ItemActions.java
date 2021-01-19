@@ -74,9 +74,7 @@ public class ItemActions {
 		@XmlElement(name = "luna", type = LunaChestAction.class), 
 		@XmlElement(name = "skill_enhance", type = SkillEnhanceAction.class),
 		@XmlElement(name = "sweep", type = ShugoSweepAction.class),
-		@XmlElement(name = "adoptminion", type = AdoptMinionAction.class),
 		@XmlElement(name = "unseal", type = UnSealAction.class),
-		@XmlElement(name = "adopttransformation", type = AdoptTransformationAction.class),
 		@XmlElement(name = "manastone_slot_expansion", type = ManastoneSlotExpansionAction.class),
 		@XmlElement(name = "fame_exp", type = FameAddExpAction.class),
 		@XmlElement(name = "enchant_grind", type = EnchantGrindingAction.class),
@@ -240,30 +238,6 @@ public class ItemActions {
 		}
 		return null;
 	}
-
-    public AdoptMinionAction getAdoptMinionAction() {
-        if (itemActions == null) {
-            return null;
-        }
-        for (AbstractItemAction action : itemActions) {
-            if (action instanceof AdoptMinionAction) {
-				return (AdoptMinionAction) action;
-			}
-        }
-        return null;
-    }
-
-    public AdoptTransformationAction getAdoptTransformationAction() {
-        if (itemActions == null) {
-            return null;
-        }
-        for (AbstractItemAction action : itemActions) {
-            if (action instanceof AdoptTransformationAction) {
-				return (AdoptTransformationAction) action;
-			}
-        }
-        return null;
-    }
 
     public ManastoneSlotExpansionAction getMagmaticExpandSlot() {
         if (itemActions == null) {

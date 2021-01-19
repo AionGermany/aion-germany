@@ -56,6 +56,7 @@ import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FindGroupService;
 import com.aionemu.gameserver.services.KiskService;
 import com.aionemu.gameserver.services.LegionService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.PunishmentService;
 import com.aionemu.gameserver.services.RepurchaseService;
 import com.aionemu.gameserver.services.SkillLearnService;
@@ -65,7 +66,6 @@ import com.aionemu.gameserver.services.events.EventWindowService;
 import com.aionemu.gameserver.services.events.ShugoSweepService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.summons.SummonsService;
-import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.services.toypet.PetService;
 import com.aionemu.gameserver.services.toypet.PetSpawnService;
 import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
@@ -183,9 +183,7 @@ public class PlayerLeaveWorldService {
 			SummonsService.doMode(SummonMode.RELEASE, summon, UnsummonType.LOGOUT);
 		}
 		PetSpawnService.dismissPet(player, true);
-		if(player.getMinion() != null) {
-			MinionService.getInstance().despawnMinion(player, player.getMinion().getObjectId());	
-		}
+		MinionService.getInstance().onLogout(player);
 
 		if (player.getPostman() != null) {
 			player.getPostman().getController().onDelete();

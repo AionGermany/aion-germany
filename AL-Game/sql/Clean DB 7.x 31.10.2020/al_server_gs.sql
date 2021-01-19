@@ -720,8 +720,9 @@ CREATE TABLE `players` (
   `muni_keys` int(11) NOT NULL DEFAULT '0',
   `luna_consume` int(11) NOT NULL DEFAULT '0',
   `toc_floor` int(11) NOT NULL DEFAULT '0',
-  `minion_skill_points` int(5) NOT NULL DEFAULT '0',
-  `minion_function_time` timestamp NULL DEFAULT NULL,
+  `minion_energy` int(11) NOT NULL DEFAULT '0',
+  `last_minion` int(11) NOT NULL DEFAULT '0',
+  `minion_function` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_unique` (`name`),
   KEY `account_id` (`account_id`)
@@ -1074,17 +1075,17 @@ CREATE TABLE `player_macrosses` (
 DROP TABLE IF EXISTS `player_minions`;
 CREATE TABLE `player_minions` (
   `player_id` int(11) NOT NULL,
-  `object_id` int(11) NOT NULL DEFAULT '0',
+  `object_id` int(11) NOT NULL AUTO_INCREMENT,
   `minion_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `grade` varchar(11) NOT NULL,
   `level` varchar(11) NOT NULL,
   `birthday` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `growthpoints` int(6) NOT NULL DEFAULT '0',
-  `is_locked` int(1) NOT NULL DEFAULT '0',
-  `buff_bag` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`player_id`,`object_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `growth_points` int(11) NOT NULL DEFAULT '0',
+  `is_lock` bigint(1) NOT NULL DEFAULT '1',
+  `despawn_time` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`object_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=79635 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of player_minions

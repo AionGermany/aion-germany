@@ -157,9 +157,13 @@
 		<xs:attribute name="highreform_groupset" type="xs:int" use="optional"/> <!-- TODO -->
 		<xs:attribute name="minion_ticket" type="xs:boolean" use="optional"/>
 		<xs:attribute name="is_cash_contract" type="xs:boolean" use="optional"/>
+		<xs:attribute name="minion_list" type="xs:int" use="optional"/>
 		<xs:attribute name="skill_enchant" type="xs:int" use="optional"/>
 		<xs:attribute name="enchant_type" type="enchantType"/>
 		<xs:attribute name="skin_skill" type="xs:int" use="optional"/>
+		<xs:attribute name="transform_list" type="xs:int" use="optional"/>
+		<xs:attribute name="transform_ticket" type="xs:boolean" use="optional"/>
+		<xs:attribute name="is_transform_contract" type="xs:boolean" use="optional"/>
 		<!-- NEW -->
 		<xs:attribute name="grind_color" type="xs:int"/>
 		<xs:attribute name="grind_tier" type="xs:int"/>
@@ -251,8 +255,6 @@
 			<xs:element name="skill_skin" type="SkillAnimationAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="skill_enhance" type="SkillEnhanceAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="sweep" type="ShugoSweepAction" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="adoptminion" type="AdoptMinionAction" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="adopttransformation" type="AdoptTransformationAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="unseal" type="UnsealAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="manastone_slot_expansion" type="ManastoneSlotExpansionAction" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="fame_exp" type="FameAddExpAction" minOccurs="0" maxOccurs="1"/>
@@ -449,22 +451,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="AdoptMinionAction">
-        <xs:complexContent>
-            <xs:extension base="AbstractItemAction">
-                <xs:attribute name="minion_id" type="xs:int" use="optional"/>
-				<xs:attribute name="tier_grade" type="xs:string" use="optional"/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-	<xs:complexType name="AdoptTransformationAction">
-        <xs:complexContent>
-            <xs:extension base="AbstractItemAction">
-                <xs:attribute name="transformation_id" type="xs:int" use="optional"/>
-				<xs:attribute name="tier_grade" type="xs:string" use="optional"/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 	<xs:complexType name="ApExtractAction">
 		<xs:complexContent>
 			<xs:extension base="AbstractItemAction">

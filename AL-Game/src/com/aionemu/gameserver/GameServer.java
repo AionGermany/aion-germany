@@ -83,6 +83,7 @@ import com.aionemu.gameserver.services.FlyRingService;
 import com.aionemu.gameserver.services.GameTimeService;
 import com.aionemu.gameserver.services.HousingBidService;
 import com.aionemu.gameserver.services.LimitedItemTradeService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.services.PeriodicSaveService;
 import com.aionemu.gameserver.services.RestartService;
@@ -402,6 +403,8 @@ public class GameServer {
 		RoadService.getInstance();
 		AdminService.getInstance();
 		PlayerTransferService.getInstance();
+		Util.printSection(" ### Minions ### ");
+		MinionService.getInstance().init();
         Util.printSection(" ### Lugbug Mission ### ");
         AchievementService.getInstance().init();
 		Util.printSection(" ### Field Fame System ### ");

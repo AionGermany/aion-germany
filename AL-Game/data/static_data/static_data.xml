@@ -103,6 +103,7 @@
     </quest_scripts>
     <import file="recipe/recipe_templates.xml"/>
     <import file="luna/luna_templates.xml"/>
+    <import file="luna/luna_bonusattr.xml"/>
     <import file="locations/rift/rift_locations.xml"/>
     <import file="roads/roads.xml"/>
     <import file="locations/siege/siege_locations.xml"/>
@@ -207,7 +208,8 @@
 	<import file="items/item_skill_enhances.xml"/>
 	<import file="events_config/shugo_sweep.xml"/>
 	<import file="cubics/cubics_templates.xml"/>
-	<import file="transformation/transformations.xml"/>
+	<import file="transform/transformbook_template.xml"/>
+	<import file="transform/transform_collection_templates.xml"/>
 	<import file="revive_start_points/revive_world_start_points.xml"/>
 	<import file="revive_start_points/instance_revive_start_points.xml"/>
 	<import file="items/enchant_chances.xml"/>
@@ -220,4 +222,6 @@
 	<import file="lumiel/lumiel_templates.xml"/>
 	<import file="collection/collection_templates.xml"/>
 	<import file="collection/collection_exp_templates.xml"/>
+	<import file="items/item_minions_list.xml"/>
+	<import file="items/item_transforms_list.xml"/>
 </ae_static_data>

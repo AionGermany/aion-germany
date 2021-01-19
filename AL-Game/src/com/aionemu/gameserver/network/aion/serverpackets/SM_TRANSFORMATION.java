@@ -16,90 +16,144 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import java.util.Collection;
+import java.util.List;
 
-import com.aionemu.gameserver.model.gameobjects.player.TransformationCommonData;
+import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.model.account.AccountTransfo;
+import com.aionemu.gameserver.model.account.AccountTransformList;
+import com.aionemu.gameserver.model.account.TransformCollection;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
+
+import javolution.util.FastList;
 
 /**
  * @author Falke_34, FrozenKiller
  */
 public class SM_TRANSFORMATION extends AionServerPacket {
 
-	private int actionId;
-	private Collection<TransformationCommonData> transformations;
-	private int transformationId;
-	private int transformationId1;
-	private int transformationId2;
-	private int transformationId3;
-	private int transformationId4;
-	private int transformationId5;
-	private int transformationId6;
-	private int transformationId7;
-	private int transformationId8;
-	private int transformationId9;
+	private int action;
+	private AccountTransformList transformList;
+	private int cardId;
+	private int result;
+	private Player player;
+	private int code;
+	List<Integer> deleteList;
+	List<AccountTransfo> createdTransform;
 
-	public SM_TRANSFORMATION(int actionId, Collection<TransformationCommonData> transformations) {
-		this.actionId = actionId;
-		this.transformations = transformations;
+	public SM_TRANSFORMATION(int action, Player player) {
+		this.deleteList = (List<Integer>) new FastList<Integer>();
+		this.createdTransform = (List<AccountTransfo>) new FastList<AccountTransfo>();
+		this.action = action;
+		this.transformList = player.getTransformList();
+		this.player = player;
 	}
 
-	public SM_TRANSFORMATION(int actionId, int transformationId) {
-		this.actionId = actionId;
-		this.transformationId = transformationId;
+	public SM_TRANSFORMATION(int action, Player player, int cardId, int result, int code) {
+		this.deleteList = (List<Integer>) new FastList<Integer>();
+		this.createdTransform = (List<AccountTransfo>) new FastList<AccountTransfo>();
+		this.action = action;
+		this.transformList = player.getTransformList();
+		this.cardId = cardId;
+		this.result = result;
+		this.player = player;
+		this.code = code;
+	}
+
+	public SM_TRANSFORMATION(List<AccountTransfo> createdTransform, int result, int code) {
+		this.deleteList = (List<Integer>) new FastList<Integer>();
+		this.createdTransform = (List<AccountTransfo>) new FastList<AccountTransfo>();
+		this.action = 1;
+		this.result = result;
+		this.code = code;
+		this.createdTransform = createdTransform;
+	}
+
+	public SM_TRANSFORMATION(int action, int cardId) {
+		this.deleteList = (List<Integer>) new FastList<Integer>();
+		this.createdTransform = (List<AccountTransfo>) new FastList<AccountTransfo>();
+		this.action = action;
+		this.cardId = cardId;
+	}
+
+	public SM_TRANSFORMATION(int action, List<Integer> deleteList) {
+		this.deleteList = (List<Integer>) new FastList<Integer>();
+		this.createdTransform = (List<AccountTransfo>) new FastList<AccountTransfo>();
+		this.action = action;
+		this.deleteList = deleteList;
 	}
 
 	@Override
 	protected void writeImpl(AionConnection con) {
-		writeH(actionId);
-		switch (actionId) {
-			case 0: { // List
-				writeC(0); // 43?
-				writeD(0); // 3836?
-				if (transformations != null) {
-					writeH(transformations.size());
-					for (TransformationCommonData commonData : transformations) {
-						writeD(commonData.getTransformationId());
-						writeD(commonData.getCount());
-					}
-				} else {
-					writeH(0);
+		writeH(action);
+		switch (action) {
+		case 0: {
+			writeD(player.getLastUsedTransformation());
+			writeC(0);
+			if (transformList != null && transformList.getTransformations().size() != 0) {
+				writeH(transformList.getTransformations().size());
+				for (AccountTransfo transfo : transformList.getTransformations()) {
+					writeD(transfo.getCardId());
+					writeD(transfo.getCount());
 				}
 				break;
 			}
-			case 1: { // Add
-				writeH(1);
-				writeD(transformationId);
-				writeD(transformationId1);
-				writeD(transformationId2);
-				writeD(transformationId3);
-				writeD(transformationId4);
-				writeD(transformationId5);
-				writeD(transformationId6);
-				writeD(transformationId7);
-				writeD(transformationId8);
-				writeD(transformationId9);
+			writeH(0);
+			break;
+		}
+		case 1: {
+			writeH(result);
+			switch (result) {
+			case 1: {
+				int count = 0;
+				for (AccountTransfo transfo2 : createdTransform) {
+					writeD(transfo2.getCardId());
+					++count;
+				}
+				for (int i = 0; i < 10 - count; ++i) {
+					writeD(0);
+				}
+				break;
+			}
+			case 3: {
+				writeD(cardId);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				writeD(0);
+				break;
+			}
+			}
+			writeD(code);
+			break;
+		}
+		case 2: {
+			writeH(deleteList.size());
+			for (Integer trans : deleteList) {
+				writeD((int) trans);
 				writeD(1);
+			}
+			break;
+		}
+		case 3: {
+			if (player.getTransformCollections().size() == 0) {
+				writeB(new byte[DataManager.TRANSFORM_COLLECTION_DATA.size() * 4]);
 				break;
 			}
-			case 2: { // Delete
-				writeH(1);
-				writeD(transformationId);
-				writeD(1);
-				break;
+			for (TransformCollection collection : player.getTransformCollections().values()) {
+				writeD(collection.getId());
 			}
-			case 3: { // ??
+			for (int diff = DataManager.TRANSFORM_COLLECTION_DATA.size() - player.getTransformCollections().size(), i = 0; i < diff; ++i) {
 				writeD(0);
-				writeD(0);
-				writeD(0);
-				writeD(0);
-				writeD(0);
-				writeD(0);
-				writeD(0);
-				writeD(0);
-				break;
 			}
+			break;
+		}
 		}
 	}
 }

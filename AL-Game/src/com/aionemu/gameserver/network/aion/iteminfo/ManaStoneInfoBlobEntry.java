@@ -120,15 +120,15 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
 			final int size = (20 - (item.getRealRndBonus().getStats().size() * 2));
 			for (RealRandomBonusStat bonus : item.getRealRndBonus().getStats()) {
 				writeH(buf, bonus.getStat().getItemStoneMask());
-				System.out.println("Bonus STAT-NAME: " + bonus.getStat().name() + " STAT-ID: " + bonus.getStat().getItemStoneMask());
+				//System.out.println("Bonus STAT-NAME: " + bonus.getStat().name() + " STAT-ID: " + bonus.getStat().getItemStoneMask());
 			}
 			writeB(buf, new byte[size]);
 			for (RealRandomBonusStat bonus : item.getRealRndBonus().getStats()) {
 				writeH(buf, bonus.getValue());
-				System.out.println("Bonus VAL: " + bonus.getValue());
+				//System.out.println("Bonus VAL: " + bonus.getValue());
 			}
 			writeB(buf, new byte[size]);
-			System.out.println("Size: " + size);
+			//System.out.println("Size: " + size);
 		}
 	}
 

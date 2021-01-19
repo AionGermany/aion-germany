@@ -17,7 +17,7 @@
 package admincommands;
 
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.services.toypet.MinionService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
@@ -35,7 +35,7 @@ public class Minion extends AdminCommand {
 		String command = params[0];
 		if ("add".equals(command)) {
 			final int itemObjId = Integer.parseInt(params[1]);
-			MinionService.getInstance().adoptMinion(player, null, itemObjId);
+			MinionService.getInstance().makeMinion(player, itemObjId);
 		}
 	}
 

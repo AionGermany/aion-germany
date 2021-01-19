@@ -104,6 +104,7 @@ import com.aionemu.gameserver.services.ClassChangeService;
 import com.aionemu.gameserver.services.DuelService;
 import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.services.LegionService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.PvpService;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.services.SkillLearnService;
@@ -115,7 +116,6 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.player.AchievementService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
-import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.services.toypet.PetSpawnService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
@@ -166,7 +166,7 @@ public class PlayerController extends CreatureController<Player> {
 			}
 			if (player.isTransformed()) {
 				TeleportService2.playerTransformation(getOwner());
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, player.getTransformedModelId(), true, player.getTransformedItemId()));
+				PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, player.getTransformedModelId(), true, player.getTransformedItemId(), player.getTransformedSkillId()));
 				PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, true));
 			}
 			if (player.isInPlayerMode(PlayerMode.RIDE)) {
@@ -176,6 +176,10 @@ public class PlayerController extends CreatureController<Player> {
 				LoggerFactory.getLogger(PlayerController.class).debug("Player " + getOwner().getName() + " sees " + object.getName() + " that has toypet");
 				PacketSendUtility.sendPacket(getOwner(), new SM_PET(3, player.getPet()));
 			}
+            else if (player.getMinion() != null) {
+                LoggerFactory.getLogger(PlayerController.class).debug("Player " + getOwner().getName() + " sees " + object.getName() + " that has Minion");
+                PacketSendUtility.broadcastPacketAndReceive(player, new SM_MINIONS(6, player.getMinion().getCommonData(), 0));
+            }
 			player.getEffectController().sendEffectIconsTo(getOwner());
 		}
 		else if (object instanceof Kisk) {

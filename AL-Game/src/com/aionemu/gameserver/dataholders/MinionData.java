@@ -42,9 +42,9 @@ public class MinionData {
 	private List<Integer> minionDataList = new ArrayList<Integer>();
 
 	void afterUnmarshal(final Unmarshaller unmarshaller, final Object o) {
-		for (MinionTemplate minionTemplate : minionTemplates) {
-			minionData.put(minionTemplate.getId(), minionTemplate);
-			minionDataList.add(minionTemplate.getId());
+		for (MinionTemplate minion : minionTemplates) {
+			minionData.put(minion.getId(), minion);
+			minionDataList.add(minion.getId());
 		}
 		minionTemplates.clear();
 		minionTemplates = null;
@@ -54,15 +54,11 @@ public class MinionData {
 		return minionData.size();
 	}
 
-	public MinionTemplate getMinionTemplate(int minionId) {
-		return minionData.get(minionId);
+	public MinionTemplate getMinionTemplate(int Id) {
+		return minionData.get(Id);
 	}
 
 	public List<Integer> getAll() {
 		return minionDataList;
 	}
-
-    public TIntObjectHashMap<MinionTemplate> getMinionData() {
-        return minionData;
-    }
 }

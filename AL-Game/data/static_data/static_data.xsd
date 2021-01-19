@@ -31,6 +31,7 @@
     <xs:include schemaLocation="quest_script_data/quest_script_data.xsd"/>
     <xs:include schemaLocation="recipe/recipe_templates.xsd"/>
     <xs:include schemaLocation="luna/luna_templates.xsd"/>
+    <xs:include schemaLocation="luna/luna_bonusattr.xsd"/>
     <xs:include schemaLocation="locations/rift/rift_locations.xsd"/>
     <xs:include schemaLocation="roads/roads.xsd"/>
     <xs:include schemaLocation="locations/siege/siege_locations.xsd"/>
@@ -107,7 +108,8 @@
 	<xs:include schemaLocation="items/item_skill_enhances.xsd"/>
 	<xs:include schemaLocation="events_config/shugo_sweep.xsd"/>
 	<xs:include schemaLocation="cubics/cubics_templates.xsd"/>
-	<xs:include schemaLocation="transformation/transformations.xsd"/>
+	<xs:include schemaLocation="transform/transformbook_template.xsd"/>
+	<xs:include schemaLocation="transform/transform_collection_templates.xsd"/>
 	<xs:include schemaLocation="revive_start_points/revive_world_start_points.xsd"/>
 	<xs:include schemaLocation="revive_start_points/instance_revive_start_points.xsd"/>
 	<xs:include schemaLocation="items/enchant_chances.xsd"/>
@@ -120,6 +122,8 @@
 	<xs:include schemaLocation="lumiel/lumiel_templates.xsd"/>
 	<xs:include schemaLocation="collection/collection_templates.xsd"/>
 	<xs:include schemaLocation="collection/collection_exp_templates.xsd"/>
+	<xs:include schemaLocation="items/item_minions_list.xsd"/>
+	<xs:include schemaLocation="items/item_transforms_list.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -155,6 +159,7 @@
                 <xs:element ref="quest_scripts" minOccurs="0"/>
                 <xs:element ref="recipe_templates" minOccurs="0"/>
                 <xs:element ref="luna_templates" minOccurs="0"/>
+                <xs:element ref="luna_bonusattrs" minOccurs="0"/>
                 <xs:element ref="rift_locations" minOccurs="0"/>
                 <xs:element ref="roads" minOccurs="0"/>
                 <xs:element ref="siege_locations" minOccurs="0"/>
@@ -231,7 +236,8 @@
 				<xs:element ref="item_skill_enhances" minOccurs="0"/>
 				<xs:element ref="shugo_sweeps" minOccurs="0"/>
 				<xs:element ref="cubics_templates" minOccurs="0"/>
-				<xs:element ref="transformations" minOccurs="0"/>
+				<xs:element ref="transform_book_templates" minOccurs="0"/>
+				<xs:element ref="transform_collection_templates" minOccurs="0"/>
 				<xs:element ref="revive_world_start_points" minOccurs="0"/>
 				<xs:element ref="instance_revive_start_points" minOccurs="0"/>
 				<xs:element ref="enchant_chances" minOccurs="0"/>
@@ -244,6 +250,8 @@
 				<xs:element ref="lumiel_templates" minOccurs="0"/>
 				<xs:element ref="collection_templates" minOccurs="0"/>
 				<xs:element ref="collection_exp_templates" minOccurs="0"/>
+				<xs:element ref="minions_list" minOccurs="0"/>
+				<xs:element ref="transforms_list" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

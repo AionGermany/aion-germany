@@ -105,8 +105,8 @@ public class CM_WINDSTREAM extends AionClientPacket {
 					player.setState(CreatureState.GLIDING);
 					player.getLifeStats().triggerFpReduce();
 
-					PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, player.getTransformedModelId(), true, player.getTransformedItemId()));
-					PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, true));
+					PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, player.getTransformedModelId(), true, player.getTransformedItemId(), player.getTransformedSkillId()));
+					PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, 0, true));
 					player.getEffectController().updatePlayerEffectIcons();
 				}
 				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, state == 2 ? EmotionType.WINDSTREAM_END : EmotionType.WINDSTREAM_EXIT, 0, 0), true);

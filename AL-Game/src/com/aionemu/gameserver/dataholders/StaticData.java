@@ -97,6 +97,8 @@ public class StaticData {
 	public RecipeData recipeData;
 	@XmlElement(name = "luna_templates")
 	public LunaData lunaData;
+	@XmlElement(name = "luna_bonusattrs")
+    public LunaBuffData lunaBuffData;
 	@XmlElement(name = "chest_templates")
 	public ChestData chestData;
 	@XmlElement(name = "staticdoor_templates")
@@ -247,8 +249,6 @@ public class StaticData {
 	public ShugoSweepRewardData shugoSweepsRewardData;
 	@XmlElement(name = "cubics_templates")
     public CubicsData cubicsData;
-	@XmlElement(name = "transformations")	
-	public TransformationData transformationData;
 	@XmlElement(name = "revive_world_start_points")
 	public ReviveWorldStartPointsData reviveWorldStartPoints;
 	@XmlElement(name = "instance_revive_start_points")
@@ -273,6 +273,14 @@ public class StaticData {
     public CollectionData collectionTemplateData;
     @XmlElement(name = "collection_exp_templates")
     public CollectionExpData collectionExpData;
+    @XmlElement(name = "minions_list")
+    public ItemMinionListData itemMinionList;
+    @XmlElement(name = "transform_book_templates")
+    public TransformBookData transformBookData;
+    @XmlElement(name = "transform_collection_templates")
+    public TransformCollectionData transformCollectionData;
+    @XmlElement(name = "transforms_list")
+    public ItemTransformListData itemTransformListData;
 
 	// JAXB callback
 	@SuppressWarnings("unused")
@@ -315,6 +323,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + tribeRelationsData.size() + " tribe relation entries");
 		DataManager.log.info("[DataManager] Loaded " + recipeData.size() + " recipe entries");
 		DataManager.log.info("[DataManager] Loaded " + lunaData.size() + " luna recipe entries");
+		DataManager.log.info("[DataManager] Loaded " + lunaBuffData.size() + " luna buff entries");
 		DataManager.log.info("[DataManager] Loaded " + chestData.size() + " chest locations");
 		DataManager.log.info("[DataManager] Loaded " + staticDoorData.size() + " static door locations");
 		DataManager.log.info("[DataManager] Loaded " + itemSetData.size() + " item set entries");
@@ -385,7 +394,6 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + itemSkillEnhance.size() + " Skill Boost entries");
 		DataManager.log.info("[DataManager] Loaded " + shugoSweepsRewardData.size() + " Shugo Sweep Reward entries");
 		DataManager.log.info("[DataManager] Loaded " + cubicsData.size() + " Cubics entries");
-		DataManager.log.info("[DataManager] Loaded " + transformationData.size() + " Transformation entries");
 		DataManager.log.info("[DataManager] Loaded " + reviveWorldStartPoints.size() + " Revive World Start Point entrys");
 		DataManager.log.info("[DataManager] Loaded " + reviveInstanceStartPoints.size() + " Revive Instance Start Point entrys");
 		DataManager.log.info("[DataManager] Loaded " + itemEnchantChancesData.size() + " Item Enchant Chances entrys");
@@ -398,5 +406,9 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + lumielTemplateData.size() + " Lumiel Template entrys");
 		DataManager.log.info("[DataManager] Loaded " + collectionTemplateData.size() + "Collection Template entrys");
 		DataManager.log.info("[DataManager] Loaded " + collectionExpData.size() + " Collection EXP entrys");
+		DataManager.log.info("[DataManager] Loaded " + itemMinionList.size() + " Minion List entrys");
+		DataManager.log.info("[DataManager] Loaded " + transformBookData.size() + " Transformation entrys");
+		DataManager.log.info("[DataManager] Loaded " + transformCollectionData.size() + " Transformation Collection entrys");
+		DataManager.log.info("[DataManager] Loaded " + itemTransformListData.size() + " Transformation List entrys");
 	}
 }

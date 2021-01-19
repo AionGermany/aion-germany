@@ -14,36 +14,45 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.model.templates.minion;
+package com.aionemu.gameserver.dataholders;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import com.aionemu.gameserver.model.templates.item.ItemMinionList;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MinionAttribute", propOrder = { "physicalAttr" })
-public class MinionAttribute {
+@XmlRootElement(name = "minions_list")
+public class ItemMinionListData {
 
-	@XmlElement(name = "physical_attr")
-	protected List<MinionAttr> physicalAttr;
-	@XmlElement(name = "magical_attr")
-	protected List<MinionAttr> magicalAttr;
+	@XmlElement(name = "minion_list", required = true)
+	protected List<ItemMinionList> minionlist;
+	@XmlTransient
+	private TIntObjectHashMap<ItemMinionList> custom = new TIntObjectHashMap<ItemMinionList>();
 
-	public List<MinionAttr> getPyhsicalAttr() {
-		if (this.physicalAttr == null) {
-			this.physicalAttr = new ArrayList<MinionAttr>();
-		}
-		return this.physicalAttr;
+	public ItemMinionList getMinionList(int id) {
+		return (ItemMinionList) custom.get(id);
 	}
 
-	public List<MinionAttr> getMagicalAttr() {
-		if (this.magicalAttr == null) {
-			this.magicalAttr = new ArrayList<MinionAttr>();
+	void afterUnmarshal(Unmarshaller u,  Object parent) {
+		for (ItemMinionList it : minionlist) {
+			getCustomMap().put(it.getId(), it);
 		}
-		return this.magicalAttr;
+	}
+
+	private TIntObjectHashMap<ItemMinionList> getCustomMap() {
+		return custom;
+	}
+
+	public int size() {
+		return custom.size();
 	}
 }

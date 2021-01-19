@@ -24,15 +24,15 @@ import java.util.Map;
 
 public abstract class PlayerFameDAO implements DAO {
 
-    public abstract Map<Integer, PlayerFame> loadPlayerFame(Player var1);
+    public abstract Map<Integer, PlayerFame> loadPlayerFame(Player player);
 
-    public abstract boolean addPlayerFame(Player var1, PlayerFame var2);
+    public abstract boolean addPlayerFame(Player player, PlayerFame fame);
 
-    public abstract boolean updatePlayerFame(Player var1, PlayerFame var2);
+    public abstract boolean updatePlayerFame(Player player, PlayerFame fame);
 
     public abstract List<PlayerFame> weeklyFame();
 
-    public abstract boolean reduceWeekly(PlayerFame var1);
+    public abstract boolean reduceWeekly(PlayerFame fame);
 
     public final String getClassName() {
         return PlayerFameDAO.class.getName();

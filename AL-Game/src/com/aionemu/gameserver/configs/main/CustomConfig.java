@@ -350,6 +350,9 @@ public class CustomConfig {
 	@Property(key = "gameserver.max.minion.list", defaultValue = "200")
 	public static int MAX_MINION_LIST;
 
+    @Property(key = "gameserver.combine.minion", defaultValue = "50")
+    public static float COMBINE_MINION;
+
 	// Dynamic Portal
 	@Property(key = "gameserver.dynamic.portal.enable", defaultValue = "true")
 	public static boolean DYNAMIC_PORTAL_ENABLED;

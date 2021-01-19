@@ -238,6 +238,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	@XmlAttribute(name = "is_cash_contract")
 	private boolean is_cash_contract;
 
+    @XmlAttribute(name = "minion_list")
+    private int minionList;
+
     @XmlAttribute(name = "skill_enchant")
     private int skill_enchant;
     
@@ -276,6 +279,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 
     @XmlAttribute(name = "rune_transform_table_id")
     private int runTransformTableId;
+
+    @XmlAttribute(name = "transform_list")
+    private int transformList;
 
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	@XmlTransient
@@ -514,17 +520,25 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	}
 
 	public boolean isStigma() {
-		return itemId > 140001101 && itemId < 140001930;
+		return category == ItemCategory.STIGMA; // return itemId > 140001101 && itemId < 140001930;
 	}
-
+    
+    public boolean isGrindEnchant() {
+        return category == ItemCategory.GRIND_ENCHANT;
+    }
+    
 	public boolean isInertStigma() {
 		return name.endsWith("(damaged)");
 	}
 
-    public boolean isGrindEnchant() {
-        return category == ItemCategory.GRIND_ENCHANT;
+    public boolean isTransformInvisible() {
+        return itemId == 190099001;
     }
-
+    
+    public boolean isTransform() {
+        return itemId == 190099000;
+    }
+    
 	public boolean isPlume() {
 		return category == ItemCategory.PLUME; // return itemId >= 187100015 && itemId <= 187100018;
 	}
@@ -556,6 +570,10 @@ public class ItemTemplate extends VisibleObjectTemplate {
 	public boolean isMinionCashContract() {
 		return this.is_cash_contract;
 	}
+
+    public int getMinionList() {
+        return this.minionList;
+    }
 
 	/**
 	 * @return id of the associated ItemSetTemplate or null if none
@@ -882,5 +900,9 @@ public class ItemTemplate extends VisibleObjectTemplate {
 
     public int getRunTransformTableId() {
         return runTransformTableId;
+    }
+
+    public int getTransformList() {
+        return transformList;
     }
 }

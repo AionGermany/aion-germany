@@ -40,6 +40,7 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.DynamicFlagService;
 import com.aionemu.gameserver.services.FastTrackService;
+import com.aionemu.gameserver.services.MinionService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.services.WeatherService;
@@ -157,6 +158,9 @@ public class CM_LEVEL_READY extends AionClientPacket {
 		if (summon != null && !summon.isSpawned()) {
 			World.getInstance().spawn(summon);
 		}
+        if (activePlayer.getCommonData().getLastMinion() != 0) {
+            MinionService.getInstance().spawnMinion(activePlayer, activePlayer.getCommonData().getLastMinion());
+        }
 		activePlayer.setPortAnimation(2);
 		PacketSendUtility.sendPacket(activePlayer, new SM_YOUTUBE_VIDEO());
 	}

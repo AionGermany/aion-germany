@@ -117,9 +117,9 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	private int consumeCount = 0;
 	private int wardrobeSlot;
 	private int floor;
-	private int minionSkillPoints;
-	private Timestamp minionFunctionTime;
-	private boolean minionAutoCharge;
+    private int minionEnergy;
+    private int lastMinion;
+    private Timestamp minionFunctionTime;
     private int worldPlayTime;
 
 	//Shugo Sweep 5.1
@@ -326,24 +326,19 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 					case GROUP_HUNTING:
 					case CRAFTING:
 					case GATHERING:
-					case MONSTER_BOOK:
-						if (this.getPlayer().getPosition().getMapId() != 302400000) { // TowerOfChallenge
-							if (npcNameId == 0) {// Exeption quest w/o reward npc
-								// You have gained %num1 XP.
-								PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP2(reward));
-							}
-							else { // You have gained %num1 XP from %0.
-								PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(npcNameId * 2 + 1), reward));
-								if (repose > 0) {
-									PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(2805577), repose));
-								}
-								if (growth > 0) {
-									PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(2806377), growth));
-								}
-								if (goldenstar > 0) {
-									PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(2806671), goldenstar));
-								}
-							}
+						if (npcNameId == 0) {// Exeption quest w/o reward npc
+							// You have gained %num1 XP.
+							PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP2(reward));
+						}
+						PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(npcNameId * 2 + 1), reward));
+						if (repose > 0) {
+							PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(2805577), repose));
+						}
+						if (growth > 0) {
+							PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(2806377), growth));
+						}
+						if (goldenstar > 0) {
+							PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId(2806671), goldenstar));
 						}
 						break;
 					case QUEST:
@@ -386,10 +381,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 						{
 							PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP(name, reward));
 						}
-						break;
-					case TOWER_OF_CHALLENGE_REWARD:
-							// You have gained %num1 XP.
-							PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP2(reward));
 						break;
 					default:
 						break;
@@ -1110,29 +1101,29 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	/**
 	 * @Minions
 	 */
-	public int getMinionSkillPoints() {
-		return minionSkillPoints;
-	}
-
-	public void setMinionSkillPoints(int minionSkillPoints) {
-		this.minionSkillPoints = minionSkillPoints;
-	}
-
-	public Timestamp getMinionFunctionTime() {
-		return minionFunctionTime;
-	}
-
-	public void setMinionFunctionTime(Timestamp minionFunctionTime) {
-		this.minionFunctionTime = minionFunctionTime;
-	}
-
-	public boolean isMinionAutoCharge() {
-		return minionAutoCharge;
-	}
-
-	public void setMinionAutoCharge(boolean auto) {
-		this.minionAutoCharge = auto;
-	}
+    public void setMinionEnergy(int energy) {
+        this.minionEnergy = energy;
+    }
+    
+    public int getMinionEnergy() {
+        return minionEnergy;
+    }
+    
+    public void setLastMinion(int id) {
+        this.lastMinion = id;
+    }
+    
+    public int getLastMinion() {
+        return lastMinion;
+    }
+    
+    public Timestamp getMinionFunctionTime() {
+        return minionFunctionTime;
+    }
+    
+    public void setMinionFunctionTime(Timestamp minionFunctionTime) {
+        this.minionFunctionTime = minionFunctionTime;
+    }
 
 	/**
 	 * @Atreian Passport

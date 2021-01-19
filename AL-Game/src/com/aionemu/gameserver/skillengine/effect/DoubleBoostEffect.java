@@ -62,7 +62,7 @@ public class DoubleBoostEffect extends EffectTemplate {
 		float y1 = (float) (Math.sin(Math.PI * direction + radian) * distance);
 		effector.getEffectController().updatePlayerEffectIcons();
 		PacketSendUtility.broadcastPacketAndReceive(effector, new SM_TRANSFORM(effector, true));
-		// PacketSendUtility.broadcastPacketAndReceive(effector, new SM_TRANSFORM(effector, effector.getTransformedModelId(), true, effector.getTransformedItemId()));
+		PacketSendUtility.broadcastPacketAndReceive(effector, new SM_TRANSFORM(effector, effector.getTransformedModelId(), true, effector.getTransformedItemId(), effector.getTransformedSkillId()));
 		byte intentions = (byte) (CollisionIntention.PHYSICAL.getId() | CollisionIntention.DOOR.getId());
 		Vector3f closestCollision = GeoService.getInstance().getClosestCollision(effector, effector.getX() + x1, effector.getY() + y1, effector.getZ(), false, intentions);
 		effect.getSkill().setTargetPosition(closestCollision.getX(), closestCollision.getY(), closestCollision.getZ(), effector.getHeading());

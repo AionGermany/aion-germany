@@ -529,22 +529,31 @@ public class VisibleObjectSpawner {
 	 * @param minionId
 	 * @return
 	 */
-	public static Minion spawnMinion(Player player, int minionObjId) {
-		MinionCommonData minionCommonData = player.getMinionList().getMinion(minionObjId);
-		MinionTemplate minionTemplate = DataManager.MINION_DATA.getMinionTemplate(minionCommonData.getMinionId());
-		MinionController controller = new MinionController();
-		Minion minion = new Minion(minionTemplate, controller, minionCommonData, player);
-		minion.setKnownlist(new PlayerAwareKnownList(minion));
-		player.setMinion(minion);
+    public static Minion spawnMinion(Player player, int minionObjId, int minionId) {
 
-		float x = player.getX() - 2;
-		float y = player.getY();
-		float z = player.getZ();
-		byte heading = player.getHeading();
-		int worldId = player.getWorldId();
-		int instanceId = player.getInstanceId();
-		SpawnTemplate spawn = SpawnEngine.createSpawnTemplate(worldId, minion.getMinionId(), x, y, z, heading);
-		SpawnEngine.bringIntoWorld(minion, spawn, instanceId);
-		return minion;
-	}
+        MinionCommonData mcd = player.getMinionList().getMinion(minionId);
+        if (mcd == null) {
+            return null;
+        }
+        MinionTemplate mt = DataManager.MINION_DATA.getMinionTemplate(minionObjId);
+        if (mt == null) {
+            return null;
+        }
+
+        MinionController controller = new MinionController();
+        Minion minion = new Minion(mt, controller, mcd, player);
+        minion.setKnownlist(new PlayerAwareKnownList(minion));
+        player.setMinion(minion);
+
+        float x = player.getX();
+        float y = player.getY();
+        float z = player.getZ();
+        byte heading = player.getHeading();
+        int worldId = player.getWorldId();
+        int instanceId = player.getInstanceId();
+        SpawnTemplate spawn = SpawnEngine.createSpawnTemplate(worldId, minionObjId, x, y, z, heading);
+
+        SpawnEngine.bringIntoWorld(minion, spawn, instanceId);
+        return minion;
+    }
 }
