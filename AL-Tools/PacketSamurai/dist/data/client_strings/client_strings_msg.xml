@@ -12196,7 +12196,7 @@
   <string>
     <id>1300762</id>
     <name>STR_MSG_FULL_INVENTORY</name>
-    <body>You cannot trade as your inventory is full. You can find cube expansions available in the [%shoplink].</body>
+    <body>You cannot trade as your inventory is full. Cube expansions are available in the shop.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -50706,7 +50706,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1404778</id>
     <name>STR_MSG_GET_ITEM_WORLDNOTICE2_UPGRADE</name>
-    <body>%0 received %4 from %2 in %WORLDNAME1% because of an upgrade by %3.</body>
+    <body>%0 upgraded %4 from %2 in %WORLDNAME1% and received %3 in exchange.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -52639,7 +52639,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405048</id>
     <name>STR_MSG_LDF8_fort_1921_fever_01</name>
-    <body>Stella has sent reinforcements. You will reach the Protector by using the teleporter at the Outer Fortress Gate.</body>
+    <body>You will reach the Head Priest using the teleport outside the altar.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>score_alert_30s_fix</ment>
@@ -52647,7 +52647,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405049</id>
     <name>STR_MSG_LDF8_fort_1921_fever_02</name>
-    <body>Stella has sent reinforcements. The Daevas near the Protector receive strong powers.</body>
+    <body>The Daeva near the Head Priest was bestowed with great power.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>score_alert_30s_fix</ment>
@@ -58060,7 +58060,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405818</id>
     <name>STR_FAMILIAR_AUTHORIZE_MSG_RESULT</name>
-    <body>The minion %0 has been upgraded to level %1.</body>
+    <body>Minion %0 has been awakened.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -59035,7 +59035,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1405957</id>
     <name>STR_MSG_IDEvent_Damage_01_MSG_02</name>
-    <body>Depending on the fragment you chose, you will get an Abyss Weapon with different attributes.</body>
+    <body>If you select a Light Crystal, you can receive a +15 Abyss Weapon.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -59499,7 +59499,7 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1406022</id>
     <name>STR_MSG_FAMILIAR_AUTHORIZE_GET</name>
-    <body>%0 has awakened minion %2 to level %1.</body>
+    <body>%0 has awakened the minion %2.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -60582,14 +60582,14 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
   <string>
     <id>1406176</id>
     <name>STR_MSG_v75_FieldDrop_Event_04</name>
-    <body>Exchange Meluna for gifts in the Inggison Illusion Fortress.</body>
+    <body>Exchange Melons for gifts in the Inggison Illusion Fortress.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1406177</id>
     <name>STR_MSG_v75_FieldDrop_Event_05</name>
-    <body>Exchange Meluna for gifts in the Gelkmaros Fortress.</body>
+    <body>Exchange Melons for gifts in the Gelkmaros Fortress.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -61319,6 +61319,13 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>3</display_type>
   </string>
   <string>
+    <id>1406284</id>
+    <name>STR_AUTOHUNT_MSG_MISMATCH</name>
+    <body>Cannot be registered in settings.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
     <id>1406285</id>
     <name>STR_MSG_LDF5a_legionWar_Begin</name>
     <body>The 2020 Legion War has begun.</body>
@@ -61335,6 +61342,13 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <ment>ab_danger_alert_fix</ment>
   </string>
   <string>
+    <id>1406287</id>
+    <name>STR_MSG_WATERWORLD_PVP_01_Warning</name>
+    <body>Attention! You must be careful before the attack on the Piqued Python.</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
     <id>1406288</id>
     <name>STR_MSG_WORLD_STIGMA_CANT_USE_ENCHANTED_OVER</name>
     <body>You can only enchant %0 with Stigmas below level %1.</body>
@@ -61342,9 +61356,58 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>3</display_type>
   </string>
   <string>
+    <id>1406298</id>
+    <name>STR_AUTOHUNT_MSG_MISMATCH_BUFF_SLOT</name>
+    <body>Cannot be registered in the settings slot for buff skills.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406299</id>
+    <name>STR_AUTOHUNT_MSG_MISMATCH_POTION_SLOT</name>
+    <body>Cannot be registered in the settings slot for healing potions.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406300</id>
+    <name>STR_AUTOHUNT_MSG_MISMATCH_NORMAL_POTION_SLOT</name>
+    <body>Cannot be registered in the settings slot for regeneration.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406301</id>
+    <name>STR_MSG_EVENT_INSTANCE_BUFF_SHUGO_SUCCESS</name>
+    <body>Kinahmon’s Cheering applied. While Kinahmon’s Cheering is active, lower level instances of Kinahmon’s Cheering are ignored.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406302</id>
+    <name>STR_MSG_INSTANCE_OPEN_IDWaterworld_ffa_pvp01</name>
+    <body>You can take part in [Event] Attack on the Coastal Mine.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
     <id>1406303</id>
     <name>STR_MSG_AUTOHUNT_MSG_CAN_NOT_RIDE</name>
     <body>You cannot level up during Combat Support.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406304</id>
+    <name>STR_AUTOHUNT_MSG_MISMATCH_SKILL_SLOT</name>
+    <body>Cannot be registered in the settings slot for normal skills.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406305</id>
+    <name>STR_MSG_BUFF_SUCCESSE</name>
+    <body>Buff applied.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -61359,6 +61422,62 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <body>Berserker Sunayaka appeared.</body>
   </string>
   <string>
+    <id>1406308</id>
+    <name>STR_MSG_FAMILIAR_CANNOT_AUTHORIZE_BY_MAXUNIT</name>
+    <body>You cannot awaken minions because you have reached the highest number of possible minions.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406309</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_NOGOLD</name>
+    <body>You do not have enough Kinah for an awakening.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406310</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_NOMINION</name>
+    <body>The number of minions being used as awakening material is too low.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406311</id>
+    <name>STR_MSG_FAMILIAR_CANNOT_AUTHORIZE</name>
+    <body>This minion cannot be awakened.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406312</id>
+    <name>STR_MSG_FAMILIAR_CANNOT_EVOLVE</name>
+    <body>Evolution is not possible with this minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406313</id>
+    <name>STR_MSG_FAMILIAR_AUTH_EQUIP_NOGOLD</name>
+    <body>You do not have enough Kinah to register a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406314</id>
+    <name>STR_MSG_FAMILIAR_AUTH_RELEASE_NOGOLD</name>
+    <body>You do not have enough Kinah to remove the secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406315</id>
+    <name>STR_MSG_EVENT_JIKIROON_WAKEUP</name>
+    <body>Guardling has appeared.</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
     <id>1406316</id>
     <name>STR_AUTOHUNT_MSG_FORBIDDEN_COUNTRY</name>
     <body>This function is not available in your region.</body>
@@ -61366,9 +61485,366 @@ You'll need &lt;font font_xml="v3_msgbox_money"&gt;%qina0&lt;/font&gt; for the s
     <display_type>3</display_type>
   </string>
   <string>
+    <id>1406324</id>
+    <name>STR_MSG_INSTANCE_MATCH_GIVEUP_CHECK</name>
+    <body>If you cancel the matching, the number of possible entries will be reduced by 1. Do you really want to cancel?</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406325</id>
+    <name>STR_MSG_INSTANCE_MATCH_GIVEUP_PENALTY</name>
+    <body>The waiting time for entry expired, so the number of possible entries was reduced by 1.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406326</id>
+    <name>STR_MSG_GET_ITEM_YORNUNG_EQUIP_BOX</name>
+    <body>%0 acquired %3 in Northring.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406327</id>
+    <name>STR_MSG_FAMILIAR_SUB_SLOT_EQUIP</name>
+    <body>The minion %0 was registered as a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406328</id>
+    <name>STR_MSG_FAMILIAR_SUB_SLOT_EQUIP_LACK_MONEY</name>
+    <body>Insufficient funds for registration as secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406329</id>
+    <name>STR_MSG_FAMILIAR_SUB_SLOT_RELEASE</name>
+    <body>The minion %0 has been removed as a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406330</id>
+    <name>STR_MSG_FAMILIAR_SUB_SLOT_RELEASE_LACK_MONEY</name>
+    <body>Insufficient funds for removal as secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
     <id>1406331</id>
     <name>STR_MSG_NormalDrop_Level_Fail</name>
     <body>Your level is too low to open this box.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406332</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_INVALID_IDS</name>
+    <body>Incorrect ID.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406333</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_INVALID_SLOT_INDEX</name>
+    <body>Incorrect slot for the registration.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406334</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_INVALID_USER</name>
+    <body>Cannot find the user.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406335</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_FIND_MAIN</name>
+    <body>The primary minion to be registered cannot be found.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406336</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_USE_MAIN</name>
+    <body>The primary minion could not be registered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406337</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_USE_SUMMON</name>
+    <body>A summoned minion cannot be registered as a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406338</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_FIND_SUB</name>
+    <body>The secondary minion to be registered cannot be found.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406339</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_USE_SUB</name>
+    <body>The secondary minion could not be registered.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406340</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_USE_SUB_SAFETY</name>
+    <body>A locked minion cannot be registered as a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406341</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_USE_SUB_HAS_SUB</name>
+    <body>You cannot use a minion registered as a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406342</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_ALREADY_USE_SLOT_INDEX</name>
+    <body>This slot is already in use.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406343</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_CANNOT_REMOVE_SUB</name>
+    <body>Removal as secondary minion failed so registration will not be performed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406344</id>
+    <name>STR_MSG_FAMILIAR_FESFRT_RESULT_FAIL_FAMILIAR_OPERATION</name>
+    <body>Error in processing on the server, registration failed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406345</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_INVALID_ID</name>
+    <body>Incorrect ID.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406346</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_INVALID_SLOT_INDEX</name>
+    <body>The removal slot is incorrect.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406347</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_INVALID_USER</name>
+    <body>Cannot find the user.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406348</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_MAX_FAMILIAR_NUM</name>
+    <body>You cannot remove minions if you have reached the highest number of possible minions.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406349</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_CANNOT_FIND_MAIN</name>
+    <body>Cannot find the primary minion to be removed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406350</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_CANNOT_USE_MAIN</name>
+    <body>Primary minion could not be removed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406351</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_CANNOT_USE_MAIN_NON_HAS_SUB</name>
+    <body>This minion was not registered as a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406352</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_CANNOT_USE_SUMMON</name>
+    <body>A summoned minion cannot be removed as a secondary minion.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406353</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_EMPTY_SLOT_INDEX</name>
+    <body>There is no registered minion in this slot.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406354</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_GET_SLOT_INDEX_FAMILIAR</name>
+    <body>Failed to retrieve information for the secondary minion registered to the slot.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406355</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_GET_SUB_FAMILIAR_ATTR</name>
+    <body>Failed to retrieve information for the secondary minion to be removed from the slot.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406356</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_UNEQUIP_FROM_MEM</name>
+    <body>Removal as secondary minion failed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406357</id>
+    <name>STR_MSG_FAMILIAR_FUSFRT_RESULT_FAIL_FAMILIAR_OPERATION</name>
+    <body>Error in processing on the server, removal failed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406358</id>
+    <name>STR_MSG_FAMILIAR_AUTH_FAIL_CANNOT_USE_SUMMON</name>
+    <body>A summoned minion cannot be awakened.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406359</id>
+    <name>STR_MSG_FAMILIAR_EVOLVE_FAIL_CANNOT_FIND_ITEM</name>
+    <body>Could not find the item information for the blessing material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406360</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_NUM_ERROR</name>
+    <body>The number of minions required for fusion material is incorrect.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406361</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_CANNOT_FIND</name>
+    <body>No minions could be found for fusion material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406362</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_FEED_ERROR</name>
+    <body>Minions for growth cannot be fused.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406363</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_AUTHFEED_ERROR</name>
+    <body>Minions for awakening cannot be fused.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406364</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_SUMMON_ERROR</name>
+    <body>Summoned minions cannot be fused.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406365</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_NOT_OWN_ERROR</name>
+    <body>You cannot fuse a minion you don’t own.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406366</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_SAFETY_ERROR</name>
+    <body>Locked minions cannot be fused.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406367</id>
+    <name>STR_MSG_FAMILIAR_COMPOSE_MATERIAL_HAS_SUB_ERROR</name>
+    <body>Minions registered as secondary minions cannot be fused.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406368</id>
+    <name>STR_MSG_FAMILIAR_CANNOT_AUTHORIZE_BY_STARGRADE</name>
+    <body>This minion cannot be awakened.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406369</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_MATERAIL_SUMMON_ERROR</name>
+    <body>A summoned minion cannot be used as awakening material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406370</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_MATERAIL_NOT_OWN_ERROR</name>
+    <body>A minion you do not own cannot be used as awakening material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406371</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_MATERAIL_SAFETY_ERROR</name>
+    <body>A locked minion cannot be used as awakening material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406372</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_MATERAIL_TIER_ERROR</name>
+    <body>Only Class S minions can be used as awakening material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406373</id>
+    <name>STR_MSG_FAMILIAR_AUTHORIZE_MATERAIL_HAS_SUB_ERROR</name>
+    <body>A minion registered as a secondary minion cannot be used as awakening material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406374</id>
+    <name>STR_MSG_FAMILIAR_GROWTH_FAIL_HAS_SUB_ERROR</name>
+    <body>A minion registered as a secondary minion cannot be used as growth material.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1406375</id>
+    <name>STR_MSG_FAMILIAR_DELETE_FAIL_HAS_SUB_ERROR</name>
+    <body>A minion registered as a secondary minion cannot be deleted. Please remove the secondary minion and try again.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>

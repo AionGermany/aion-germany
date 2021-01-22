@@ -7830,12 +7830,12 @@
   <string>
     <id>911454</id>
     <name>STR_WORLD_INFLUENCE_DIALOG__POPUP_RANK</name>
-    <body>Ranking list</body>
+    <body>Abyss Ranking</body>
   </string>
   <string>
     <id>911455</id>
     <name>STR_PLAYER_INFO_DIALOG__ABYSS_POPUP_RANK</name>
-    <body>Ranking list</body>
+    <body>Abyss Ranking</body>
   </string>
   <string>
     <id>911456</id>
@@ -17539,7 +17539,7 @@ You can sell or remove the item by double-clicking (or right-clicking), even if 
   <string>
     <id>913393</id>
     <name>STR_RANK_DIALOG</name>
-    <body>Ranking list</body>
+    <body>Ranking</body>
   </string>
   <string>
     <id>913394</id>
@@ -18004,7 +18004,7 @@ You can sell or remove the item by double-clicking (or right-clicking), even if 
   <string>
     <id>913489</id>
     <name>STR_RANK_INFO_DIALOG__RANK</name>
-    <body>Ranking list</body>
+    <body>Ranking</body>
   </string>
   <string>
     <id>913490</id>
@@ -18377,9 +18377,9 @@ You can sell or remove the item by double-clicking (or right-clicking), even if 
     <id>913564</id>
     <name>STR_FAMILIAR_DIALOG_LOCK_BUTOONTIP</name>
     <body>&lt;html&gt;
-&lt;font font_xml = "tooltip_guide_title“&gt;TIP&lt;/font&gt;
+&lt;font font_xml = "tooltip_guide_title"&gt;TIP&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;font font_xml = "tooltip_guide_body"&gt;Blocked minions and minions in the materials list are excluded automatically.&lt;/font&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;Locked minions are excluded from growth, fusion, levelling materials and the secondary minion list.&lt;/font&gt;
 &lt;/html&gt;</body>
   </string>
   <string>
@@ -18570,8 +18570,8 @@ You can sell or remove the item by double-clicking (or right-clicking), even if 
   <string>
     <id>913602</id>
     <name>STR_FAMILIAR_COMPOSE_TAB_BUTOONTIP</name>
-    <body>&lt;html&gt;&lt;font font_xml = "tooltip_guide_title"&gt;Minion Combination&lt;/font&gt;&lt;br&gt;&lt;br&gt;
-&lt;font font_xml = "tooltip_guide_body"&gt;1. If you &lt;font color="ff0000"&gt;successfully&lt;/font&gt; combine two or more minions at evolution level 4 &lt;font color="ffff00"&gt;(Class A, B, C)&lt;/font&gt;, you will receive one random minion of a higher class. &lt;font color="ff0000"&gt;If the fusion fails&lt;/font&gt;, you receive a random minion at evolution level 4.&lt;br&gt;2. If you fuse two or more &lt;font color="ffff00"&gt;(Class S)&lt;/font&gt; minions regardless of their evolution level, you will receive a random (Class S) minion.&lt;br&gt;3. The more minions you fuse, the higher the chances of success. There's a certain probability that you will receive a minion at evolution level 2 to 4. (A &lt;font color="ffff00"&gt;Class S&lt;/font&gt; minion only increases the probability of receiving a minion at evolution level 2 to 4.)&lt;/font&gt;&lt;/html&gt;</body>
+    <body>&lt;html&gt;&lt;font font_xml = "tooltip_guide_title"&gt;Combining Minions&lt;/font&gt;&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;1. If you successfully &lt;font color="ff0000"&gt;combine&lt;/font&gt; two or more minions at evolution level 4 &lt;font color="ffff00"&gt;(Class A, B, C)&lt;/font&gt;, you will receive one random minion of a higher class. &lt;font color="ff0000"&gt;If the fusion fails&lt;/font&gt;, you receive a random minion at evolution level 4.&lt;br&gt;2. If you fuse two or more &lt;font color="ffff00"&gt;(Class S)&lt;/font&gt; minions regardless of their evolution level, you will receive a random (Class S) minion.&lt;br&gt;3. The more minions you fuse, the higher the chances of success. There’s a certain probability that you will receive a minion between evolution levels 2 and 4. (A &lt;font color="ffff00"&gt;Class S&lt;/font&gt; minion only increases the probability of receiving a minion between evolution levels 2 and 4.)&lt;br&gt;4. A minion that has a secondary minion registered can be used as material once more after the secondary minion has been removed.&lt;/font&gt;&lt;/html&gt;</body>
   </string>
   <string>
     <id>913603</id>
@@ -20545,7 +20545,7 @@ But the reward will be suitably large!</body>
   <string>
     <id>914006</id>
     <name>STR_AUTOHUNT_DIALOG_ETCSETTING_USEEXPEXTRACTION_TOOLTIP</name>
-    <body>If your XP is above 90%, the Combat Experience Extractor in your inventory is used automatically.</body>
+    <body>If your XP is above 70%, the Combat Experience Extractor in your inventory is used automatically.</body>
   </string>
   <string>
     <id>914007</id>
@@ -20761,5 +20761,101 @@ But the reward will be suitably large!</body>
     <id>914048</id>
     <name>STR_QUNAMARKET_DIALOG__WEEKLYRECOMMEND_TITLE</name>
     <body>Weekly Recommendation</body>
+  </string>
+  <string>
+    <id>914049</id>
+    <name>STR_AUTOHUNT_DIALOG_ETCSETTING_CHASECAMERA</name>
+    <body>Automatically adjust camera view</body>
+  </string>
+  <string>
+    <id>914050</id>
+    <name>STR_AUTOHUNT_DIALOG_ETCSETTING_CHASECAMERA_TOOLTIP</name>
+    <body>If your character changes direction, the camera view is automatically adjusted to match the direction your character is looking.</body>
+  </string>
+  <string>
+    <id>914051</id>
+    <name>STR_AUTOHUNT_DIALOG_ETCSETTING_AUTO_SHOCKREFLECT</name>
+    <body>Automatically use Remove Shock</body>
+  </string>
+  <string>
+    <id>914052</id>
+    <name>STR_AUTOHUNT_DIALOG_ETCSETTING_AUTO_SHOCKREFLECT_TOOLTIP</name>
+    <body>If you’re in shock, the Remove Shock skill is used automatically.</body>
+  </string>
+  <string>
+    <id>914053</id>
+    <name>STR_AUTOHUNT_DIALOG_SKILL_NORMAL_TITLE</name>
+    <body>Normal skill settings</body>
+  </string>
+  <string>
+    <id>914054</id>
+    <name>STR_AUTOHUNT_DIALOG_SKILL_BUFF_TITLE</name>
+    <body>Buff skill settings</body>
+  </string>
+  <string>
+    <id>914055</id>
+    <name>STR_AUTOHUNT_DIALOG_HEAL_HP_TITLE</name>
+    <body>Settings for using potions based on HP level</body>
+  </string>
+  <string>
+    <id>914056</id>
+    <name>STR_AUTOHUNT_DIALOG_HEAL_MP_TITLE</name>
+    <body>Settings for using potions based on MP level</body>
+  </string>
+  <string>
+    <id>914057</id>
+    <name>STR_AUTOHUNT_DIALOG_HEAL_CURE_TITLE</name>
+    <body>Healing potion settings</body>
+  </string>
+  <string>
+    <id>914058</id>
+    <name>STR_AUTOHUNT_DIALOG_ECTSETTING_BATTLE_TITLE</name>
+    <body>Combat settings</body>
+  </string>
+  <string>
+    <id>914059</id>
+    <name>STR_AUTOHUNT_DIALOG_ECTSETTING_ITEM_TITLE</name>
+    <body>Item settings</body>
+  </string>
+  <string>
+    <id>914060</id>
+    <name>STR_AUTOHUNT_DIALOG_ECTSETTING_ECT_TITLE</name>
+    <body>Miscellaneous</body>
+  </string>
+  <string>
+    <id>914061</id>
+    <name>STR_GLOBAL_OPTION_DIALOG_TABFRAME_OPTION_SOUND_VIDEO</name>
+    <body>Video volume</body>
+  </string>
+  <string>
+    <id>914062</id>
+    <name>STR_DIALOG_ROLLTEXT_INPUT_TITLE</name>
+    <body>Enter megaphone message</body>
+  </string>
+  <string>
+    <id>914065</id>
+    <name>STR_DIALOG_FAMILIAR_AUTH_SELECT_DESC</name>
+    <body>Number of minions needed for the upgrade:</body>
+  </string>
+  <string>
+    <id>914066</id>
+    <name>STR_DIALOG_FAMILIAR_SUB_SLOT_TOOLTIP</name>
+    <body>&lt;html&gt;
+&lt;font font_xml = "tooltip_guide_title"&gt;Secondary Minion Slots&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;You can only register minions at &lt;font color="ffff00"&gt;evolution level 4&lt;/font&gt; in a secondary minion slot. When you register a secondary minion, the levelled minion will receive additional attributes and command secondary minion skills. When you register a levelled minion and a &lt;font color="ffff00"&gt;Class S minion of the same type&lt;/font&gt; as a secondary minion, the additional stats of attributes will increase.&lt;/font&gt;
+&lt;/html&gt;</body>
+  </string>
+  <string>
+    <id>914067</id>
+    <name>STR_DIALOG_FAMILIAR_SUB_EQUIP_TUTORIAL_TOOLTIP</name>
+    <body>&lt;html&gt;&lt;font font_xml = "tooltip_guide_title"&gt;Registering Secondary Minions&lt;/font&gt;&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;1. A secondary minion cannot be used until it is &lt;font color="ff0000"&gt;de-registered&lt;/font&gt;. De-registration consumes Kinah.&lt;br&gt;2. Secondary minions &lt;font color="ff0000"&gt;cannot be used as material for growth, levelling up or fusion&lt;/font&gt;. They also &lt;font color="ff0000"&gt;cannot be registered as secondary minions for other awakened minions&lt;/font&gt;.</body>
+  </string>
+  <string>
+    <id>914068</id>
+    <name>STR_DIALOG_FAMILIAR_SUB_RELEASE_TUTORIAL_TOOLTIP</name>
+    <body>&lt;html&gt;&lt;font font_xml = "tooltip_guide_title"&gt;Removing Secondary Minions&lt;/font&gt;&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;1. A secondary minion cannot be used until it is &lt;font color="ff0000"&gt;de-registered&lt;/font&gt;. De-registration consumes Kinah.&lt;br&gt;2. Secondary minions &lt;font color="ff0000"&gt;cannot be used as material for growth, levelling up or fusion&lt;/font&gt;. They also &lt;font color="ff0000"&gt;cannot be registered as secondary minions for other awakened minions&lt;/font&gt;.</body>
   </string>
 </strings>
