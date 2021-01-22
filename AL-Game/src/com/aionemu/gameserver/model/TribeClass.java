@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlEnum;
 public enum TribeClass {
 
     /* <!-- new tribe enumeration (sorted by name) --> */
-    /* <!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-11-07 06:41 --> */
+    /* <!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-22 10:25 --> */
     AB1_AGGRESSIVESINGLEMONSTER,
     AB1_AGGRESSIVESUPPORTMONSTER,
     AB1_BOSS,
@@ -667,9 +667,12 @@ public enum TribeClass {
     IDVRITRA_BASE_GI_BEACON,
     IDVRITRA_BASE_GI_CANNON,
     IDVRITRA_BASE_REBIRTH,
+    IDWATER_ESSENCE,
     IDWATER_MOB,
     IDWATER_NPC,
     IDWATER_PC,
+    IDWATER_SLAYER,
+    IDWATER_TRAP,
     IDYUN_ANCIENT,
     IDYUN_ANTIBOMBER,
     IDYUN_BOMBER,

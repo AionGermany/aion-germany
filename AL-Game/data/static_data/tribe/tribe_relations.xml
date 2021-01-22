@@ -4088,4 +4088,15 @@
   <tribe name="ATREIA_GARDEN_BADLARVA" base="MONSTER">
     <aggro>ESCORT ATREIA_GARDEN_PLANTS</aggro>
   </tribe>
+  <tribe name="IDWATER_SLAYER" base="MONSTER">
+    <aggro>PC PC_DARK</aggro>
+    <friend>IDWATER_SLAYER</friend>
+  </tribe>
+  <tribe name="IDWATER_TRAP" base="MONSTER">
+    <hostile>PC PC_DARK IDWATER_SLAYER</hostile>
+    <friend>IDWATER_TRAP</friend>
+  </tribe>
+  <tribe name="IDWATER_ESSENCE" base="MONSTER">
+    <support>PC PC_DARK IDWATER_SLAYER</support>
+  </tribe>
 </tribe_relations>
