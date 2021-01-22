@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-18 19:54 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-22 16:10 -->
 <transform_collection_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="transform_collection_templates.xsd">
     <transform_collection_template id="1">
         <physical_bonus name="PARRY" value="108"/>
@@ -326,5 +326,20 @@
         <physical_bonus name="MAXHP" value="6600"/>
         <magical_bonus name="MAXHP" value="6600"/>
         <required ids="982100 982101"/>
+    </transform_collection_template>
+    <transform_collection_template id="78">
+        <physical_bonus name="PHYSICAL_DEFENSE" value="152"/>
+        <magical_bonus name="PHYSICAL_DEFENSE" value="152"/>
+        <required ids="982103 982043 982032 982027"/>
+    </transform_collection_template>
+    <transform_collection_template id="79">
+        <physical_bonus name="MAGICAL_DEFEND" value="152"/>
+        <magical_bonus name="MAGICAL_DEFEND" value="152"/>
+        <required ids="982104 982048 982032 982031"/>
+    </transform_collection_template>
+    <transform_collection_template id="80">
+        <physical_bonus name="MAXHP" value="5000"/>
+        <magical_bonus name="MAXHP" value="5000"/>
+        <required ids="982103 982104"/>
     </transform_collection_template>
 </transform_collection_templates>

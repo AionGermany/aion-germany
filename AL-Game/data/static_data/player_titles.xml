@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2020-11-22 10:31 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-22 16:04 -->
 <player_titles>
     <title id="1" nameId="2201801" desc="Poeta's Protector" race="ELYOS">
         <modifiers>
@@ -3544,6 +3544,13 @@
             <rate name="ATTACK_SPEED" value="-3" bonus="true"/>
             <rate name="BOOST_CASTING_TIME" value="3" bonus="true"/>
             <add name="MAXHP" value="2000" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="506" nameId="3617299" desc="Autumn Dew" race="PC_ALL">
+        <modifiers>
+            <add name="MAXHP" value="200" bonus="true"/>
+            <add name="MAGICAL_RESIST" value="8" bonus="true"/>
+            <add name="PHYSICAL_DEFENSE" value="25" bonus="true"/>
         </modifiers>
     </title>
 </player_titles>

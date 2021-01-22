@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-18 19:54 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-22 16:10 -->
 <transforms_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_transforms_list.xsd">
     <!-- Transform Contract List -->
     <transform_list id="1" name="Normal Transformation" transform_id="982000 982001 982002 982003 982004 982005 982006 982007 982008 982009 982010 982011 982012 982013 982014 982015 982016 982017"/> <!-- 18 -->
     <transform_list id="2" name="Greater Transformation" transform_id="982018 982019 982020 982021 982022 982023 982024 982025 982026 982027 982028 982029 982030 982031 982051 982052"/> <!-- 16 -->
-    <transform_list id="3" name="Ancient Transformation" transform_id="982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982053 982054 982055 982056 982057 982058 982059 982066 982100 982101"/> <!-- 21 -->
+    <transform_list id="3" name="Ancient Transformation" transform_id="982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982053 982054 982055 982056 982057 982058 982059 982066 982100 982101 982103 982104"/> <!-- 23 -->
     <transform_list id="4" name="Legendary Transformation" transform_id="982043 982044 982045 982046 982047 982048 982049 982060 982061 982062 982063 982064 982065 982067 982068 982069 982070 982071 982072 982073 982078 982079 982080 982081 982082 982086 982087 982088 982089 982090 982091 982092 982093"/> <!-- 33 -->
     <transform_list id="5" name="Ultimate Transformation" transform_id="982050 982074 982094 982095"/> <!-- 4 -->
-    <transform_list id="6" name="Contract Transformation [Normal to Ancient]" transform_id="982000 982001 982002 982003 982004 982005 982006 982007 982008 982009 982010 982011 982012 982013 982014 982015 982016 982017 982018 982019 982020 982021 982022 982023 982024 982025 982026 982027 982028 982029 982030 982031 982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982051 982052 982053 982054 982055 982056 982057 982058 982059 982066 982100 982101"/> <!-- 55 -->
-    <transform_list id="7" name="Contract Transformation [Normal to Legendary]" transform_id="982000 982001 982002 982003 982004 982005 982006 982007 982008 982009 982010 982011 982012 982013 982014 982015 982016 982017 982018 982019 982020 982021 982022 982023 982024 982025 982026 982027 982028 982029 982030 982031 982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982043 982044 982045 982046 982047 982048 982049 982051 982052 982053 982054 982055 982056 982057 982058 982059 982060 982061 982062 982063 982064 982065 982066 982067 982068 982069 982070 982071 982072 982073 982078 982079 982080 982081 982082 982086 982087 982088 982089 982090 982091 982092 982093 982100 982101"/> <!-- 88 -->
+    <transform_list id="6" name="Contract Transformation [Normal to Ancient]" transform_id="982000 982001 982002 982003 982004 982005 982006 982007 982008 982009 982010 982011 982012 982013 982014 982015 982016 982017 982018 982019 982020 982021 982022 982023 982024 982025 982026 982027 982028 982029 982030 982031 982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982051 982052 982053 982054 982055 982056 982057 982058 982059 982066 982100 982101 982103 982104"/> <!-- 57 -->
+    <transform_list id="7" name="Contract Transformation [Normal to Legendary]" transform_id="982000 982001 982002 982003 982004 982005 982006 982007 982008 982009 982010 982011 982012 982013 982014 982015 982016 982017 982018 982019 982020 982021 982022 982023 982024 982025 982026 982027 982028 982029 982030 982031 982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982043 982044 982045 982046 982047 982048 982049 982051 982052 982053 982054 982055 982056 982057 982058 982059 982060 982061 982062 982063 982064 982065 982066 982067 982068 982069 982070 982071 982072 982073 982078 982079 982080 982081 982082 982086 982087 982088 982089 982090 982091 982092 982093 982100 982101 982103 982104"/> <!-- 90 -->
     <!-- Normal -->
     <transform_list id="8" name="Polar Bear Transformation" transform_id="982000"/>
     <transform_list id="9" name="Anubite Transformation" transform_id="982001"/>
@@ -67,49 +67,51 @@
     <transform_list id="60" name="Blurs of Colour Transformation" transform_id="982066"/>
     <transform_list id="61" name="Dr Murr Transformation" transform_id="982100"/>
     <transform_list id="62" name="Sister Meow Transformation" transform_id="982101"/>
+    <transform_list id="63" name="Hanbok Baa Transformation" transform_id="982103"/>
+    <transform_list id="64" name="Hanbok Moo Transformation" transform_id="982104"/>
     <!-- Legendary -->
-    <transform_list id="63" name="Hamerun Transformation" transform_id="982043"/>
-    <transform_list id="64" name="Bollvig Transformation" transform_id="982044"/>
-    <transform_list id="65" name="Kromede Transformation" transform_id="982045"/>
-    <transform_list id="66" name="Tahabata Transformation" transform_id="982046"/>
-    <transform_list id="67" name="Mastarius Transformation" transform_id="982047"/>
-    <transform_list id="68" name="Veille Transformation" transform_id="982048"/>
-    <transform_list id="69" name="Sita Transformation" transform_id="982049"/>
-    <transform_list id="70" name="Weda Transformation" transform_id="982060"/>
-    <transform_list id="71" name="Prigga Transformation" transform_id="982061"/>
-    <transform_list id="72" name="Grendal Transformation" transform_id="982062"/>
-    <transform_list id="73" name="Valiant Hanbok Pixel Transformation" transform_id="982063"/>
-    <transform_list id="74" name="Wise Hanbok Pixel Transformation" transform_id="982064"/>
-    <transform_list id="75" name="Cunning Hanbok Pixel Transformation" transform_id="982065"/>
-    <transform_list id="76" name="Irunin Transformation" transform_id="982067"/>
-    <transform_list id="77" name="Israphel's Apostle Transformation" transform_id="982068"/>
-    <transform_list id="78" name="Marchutan's Apostle Transformation" transform_id="982069"/>
-    <transform_list id="79" name="Zikel's Apostle Transformation" transform_id="982070"/>
-    <transform_list id="80" name="Kaisinel's Apostle Transformation" transform_id="982071"/>
-    <transform_list id="81" name="Siel's Apostle Transformation" transform_id="982072"/>
-    <transform_list id="82" name="Nezekan's Apostle Transformation" transform_id="982073"/>
-    <transform_list id="83" name="Raging Hanbok Pixel Transformation" transform_id="982078"/>
-    <transform_list id="84" name="Frightchamun Transformation" transform_id="982079"/>
-    <transform_list id="85" name="Jack Nox Transformation" transform_id="982080"/>
-    <transform_list id="86" name="Frankenshock Transformation" transform_id="982081"/>
-    <transform_list id="87" name="Vampirina Transformation" transform_id="982082"/>
-    <transform_list id="88" name="Ariel's Apostle Transformation" transform_id="982086"/>
-    <transform_list id="89" name="Azphel's Apostle Transformation" transform_id="982087"/>
-    <transform_list id="90" name="Yustiel's Apostle Transformation" transform_id="982088"/>
-    <transform_list id="91" name="Triniel's Apostle Transformation" transform_id="982089"/>
-    <transform_list id="92" name="Vaizel's Apostle Transformation" transform_id="982090"/>
-    <transform_list id="93" name="Lumiel's Apostle Transformation" transform_id="982091"/>
-    <transform_list id="94" name="Mouse Ranger Transformation" transform_id="982092"/>
-    <transform_list id="95" name="Keyboard Ranger Transformation" transform_id="982093"/>
+    <transform_list id="65" name="Hamerun Transformation" transform_id="982043"/>
+    <transform_list id="66" name="Bollvig Transformation" transform_id="982044"/>
+    <transform_list id="67" name="Kromede Transformation" transform_id="982045"/>
+    <transform_list id="68" name="Tahabata Transformation" transform_id="982046"/>
+    <transform_list id="69" name="Mastarius Transformation" transform_id="982047"/>
+    <transform_list id="70" name="Veille Transformation" transform_id="982048"/>
+    <transform_list id="71" name="Sita Transformation" transform_id="982049"/>
+    <transform_list id="72" name="Weda Transformation" transform_id="982060"/>
+    <transform_list id="73" name="Prigga Transformation" transform_id="982061"/>
+    <transform_list id="74" name="Grendal Transformation" transform_id="982062"/>
+    <transform_list id="75" name="Valiant Hanbok Pixel Transformation" transform_id="982063"/>
+    <transform_list id="76" name="Wise Hanbok Pixel Transformation" transform_id="982064"/>
+    <transform_list id="77" name="Cunning Hanbok Pixel Transformation" transform_id="982065"/>
+    <transform_list id="78" name="Irunin Transformation" transform_id="982067"/>
+    <transform_list id="79" name="Israphel's Apostle Transformation" transform_id="982068"/>
+    <transform_list id="80" name="Marchutan's Apostle Transformation" transform_id="982069"/>
+    <transform_list id="81" name="Zikel's Apostle Transformation" transform_id="982070"/>
+    <transform_list id="82" name="Kaisinel's Apostle Transformation" transform_id="982071"/>
+    <transform_list id="83" name="Siel's Apostle Transformation" transform_id="982072"/>
+    <transform_list id="84" name="Nezekan's Apostle Transformation" transform_id="982073"/>
+    <transform_list id="85" name="Raging Hanbok Pixel Transformation" transform_id="982078"/>
+    <transform_list id="86" name="Frightchamun Transformation" transform_id="982079"/>
+    <transform_list id="87" name="Jack Nox Transformation" transform_id="982080"/>
+    <transform_list id="88" name="Frankenshock Transformation" transform_id="982081"/>
+    <transform_list id="89" name="Vampirina Transformation" transform_id="982082"/>
+    <transform_list id="90" name="Ariel's Apostle Transformation" transform_id="982086"/>
+    <transform_list id="91" name="Azphel's Apostle Transformation" transform_id="982087"/>
+    <transform_list id="92" name="Yustiel's Apostle Transformation" transform_id="982088"/>
+    <transform_list id="93" name="Triniel's Apostle Transformation" transform_id="982089"/>
+    <transform_list id="94" name="Vaizel's Apostle Transformation" transform_id="982090"/>
+    <transform_list id="95" name="Lumiel's Apostle Transformation" transform_id="982091"/>
+    <transform_list id="96" name="Mouse Ranger Transformation" transform_id="982092"/>
+    <transform_list id="97" name="Keyboard Ranger Transformation" transform_id="982093"/>
     <!-- Ultimate -->
-    <transform_list id="96" name="Kaisinel Transformation" transform_id="982050"/>
-    <transform_list id="97" name="Marchutan Transformation" transform_id="982074"/>
-    <transform_list id="98" name="Ereshkigal Transformation" transform_id="982094"/>
-    <transform_list id="99" name="Tiamat Transformation" transform_id="982095"/>
+    <transform_list id="98" name="Kaisinel Transformation" transform_id="982050"/>
+    <transform_list id="99" name="Marchutan Transformation" transform_id="982074"/>
+    <transform_list id="100" name="Ereshkigal Transformation" transform_id="982094"/>
+    <transform_list id="101" name="Tiamat Transformation" transform_id="982095"/>
     <!-- Combine List -->
     <transform_list id="1000" name="Normal Combine" transform_id="982000 982001 982002 982003 982004 982005 982006 982007 982008 982009 982010 982011 982012 982013 982014 982015 982016 982017"/> <!-- 18 -->
     <transform_list id="1001" name="Greater Combine" transform_id="982018 982019 982020 982021 982022 982023 982024 982025 982026 982027 982028 982029 982030 982031 982051 982052"/> <!-- 16 -->
-    <transform_list id="1002" name="Ancient Combine" transform_id="982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982053 982054 982055 982056 982057 982058 982059 982066 982100 982101"/> <!-- 21 -->
+    <transform_list id="1002" name="Ancient Combine" transform_id="982032 982033 982034 982035 982036 982037 982038 982039 982040 982041 982042 982053 982054 982055 982056 982057 982058 982059 982066 982100 982101 982103 982104"/> <!-- 23 -->
     <transform_list id="1003" name="Legendary Combine" transform_id="982043 982044 982045 982046 982047 982048 982049 982060 982061 982062 982063 982064 982065 982067 982068 982069 982070 982071 982072 982073 982078 982079 982080 982081 982082 982086 982087 982088 982089 982090 982091 982092 982093"/> <!-- 33 -->
     <transform_list id="1004" name="Ultimate Combine" transform_id="982050 982074 982094 982095"/> <!-- 4 -->
 </transforms_list>
