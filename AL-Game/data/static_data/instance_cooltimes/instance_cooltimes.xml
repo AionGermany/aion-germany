@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-21 21:11 -->
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2021-01-24 14:09 -->
 <instance_cooltimes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_cooltimes.xsd">
     <!-- Indratu Fortress -->
     <instance_cooltime race="ELYOS" worldId="310090000" id="1">
@@ -147,7 +147,7 @@
         <enter_min_level_dark>49</enter_min_level_dark>
         <can_enter_mentor>true</can_enter_mentor>
         <maxcount>1</maxcount>
-        <luna>39</luna>        
+        <luna>10</luna>
         <sync_id>28</sync_id>
     </instance_cooltime>
     <!-- Taloc's Hollow -->
@@ -626,8 +626,8 @@
     </instance_cooltime>
     <!-- [Event] Secret Hellpath -->
     <instance_cooltime race="PC_ALL" worldId="301632000" id="184">
-        <type>RELATIVE</type>
-        <ent_cool_time>0</ent_cool_time>
+        <type>DAILY</type>
+        <ent_cool_time>900</ent_cool_time>
         <indun_type>NORMAL</indun_type>
         <max_member_light>1</max_member_light>
         <max_member_dark>1</max_member_dark>
@@ -636,6 +636,8 @@
         <alarm_unit_score>50000</alarm_unit_score>
         <can_enter_mentor>false</can_enter_mentor>
         <maxcount>1</maxcount>
+        <component>188600443</component>
+        <component_count>1</component_count>
         <sync_id>169</sync_id>
     </instance_cooltime>
     <!-- Prometun's Workshop (normal) -->
@@ -931,7 +933,7 @@
         <enter_min_level_light>80</enter_min_level_light>
         <enter_min_level_dark>80</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>8</maxcount>
+        <maxcount>4</maxcount>
         <luna>40</luna>
         <luna>60</luna>
         <luna>80</luna>
@@ -1055,8 +1057,12 @@
         <enter_min_level_light>80</enter_min_level_light>
         <enter_min_level_dark>80</enter_min_level_dark>
         <can_enter_mentor>false</can_enter_mentor>
-        <maxcount>8</maxcount>
-        <sync_id>195</sync_id>
+        <maxcount>4</maxcount>
+        <luna>40</luna>
+        <luna>60</luna>
+        <luna>80</luna>
+        <luna>110</luna>
+        <sync_id>203</sync_id>
     </instance_cooltime>
     <!-- [Event] Shattered Abyssal Splinter -->
     <instance_cooltime race="PC_ALL" worldId="302710000" id="222">
@@ -1203,6 +1209,19 @@
         <luna>80</luna>
         <luna>110</luna>
         <sync_id>216</sync_id>
+    </instance_cooltime>
+    <!-- [Event] Attack on the Coastal Mine -->
+    <instance_cooltime race="PC_ALL" worldId="300370000" id="234">
+        <type>RELATIVE</type>
+        <ent_cool_time>0</ent_cool_time>
+        <indun_type>NORMAL</indun_type>
+        <max_member_light>7</max_member_light>
+        <max_member_dark>7</max_member_dark>
+        <enter_min_level_light>80</enter_min_level_light>
+        <enter_min_level_dark>80</enter_min_level_dark>
+        <can_enter_mentor>false</can_enter_mentor>
+        <maxcount>1</maxcount>
+        <sync_id>217</sync_id>
     </instance_cooltime>
     <!-- Heliotropic Chamber -->
     <instance_cooltime race="PC_ALL" worldId="302750000" id="235">
