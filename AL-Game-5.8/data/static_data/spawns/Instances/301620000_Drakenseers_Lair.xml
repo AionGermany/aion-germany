@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spawns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- Drakenseers Lair created by Falke_34 -->
+	<spawn_map map_id="301620000">
+        <!-- Akhal the Oracle -->
+        <spawn npc_id="220518">
+            <spot x="298.75467" y="258.48706" z="319.67474" h="0"/>
+        </spawn>
+        <!-- Shieldtender Guardian -->
+        <spawn npc_id="220519">
+            <spot x="267.807" y="270.5522" z="318.5376" h="45"/>
+            <spot x="314.8238" y="285.6128" z="318.70117" h="45"/>
+            <spot x="295.46844" y="231.44893" z="319.1626" h="45"/>
+        </spawn>
+        <!-- Shieldtender Mage -->
+        <spawn npc_id="220520">
+            <spot x="267.8198" y="264.46463" z="318.77545" h="75"/>
+            <spot x="314.83658" y="279.5252" z="319.16318" h="75"/>
+            <spot x="295.48123" y="225.36137" z="318.60492" h="75"/>
+        </spawn>
+        <!-- Shieldtender Shadowwalker -->
+        <spawn npc_id="220521">
+            <spot x="273.02023" y="267.49036" z="319.13705" h="0"/>
+            <spot x="320.03702" y="282.55096" z="318.62112" h="0"/>
+            <spot x="300.68167" y="228.3871" z="318.80728" h="0"/>
+        </spawn>
+        <!--"BIDF6_Dragon_TimeCheck"-->
+        <spawn npc_id="857973">
+            <spot x="298.667" y="258.2731" z="319.67474" h="0"/>
+        </spawn>
+        <!--"BIDF6_Dragon_AreaSkill_NPC"-->
+        <spawn npc_id="857977">
+            <spot x="293.97867" y="256.54605" z="319.67474" h="0"/>
+        </spawn>
+		<!-- Shielding Conduit -->
+		<spawn npc_id="857974">
+			<spot x="270.13303" y="267.46167" z="318.85336"/>
+		</spawn>
+		<!-- Shielding Conduit -->
+		<spawn npc_id="857975">
+			<spot x="317.16614" y="282.5566" z="318.78625"/>
+		</spawn>
+		<!-- Shielding Conduit -->
+		<spawn npc_id="857976">
+			<spot x="297.90918" y="228.4704" z="318.86835"/>
+		</spawn>
+		<!--"IDF6_Dragon_Setting_Npc"-->
+		<spawn npc_id="703154">
+			<spot x="277.80756" y="344.10684" z="336.38193" h="33"/>
+		</spawn>
+		<!-- Drakenseer's Lair Exit -->
+		<spawn npc_id="806240">
+			<spot x="271.36472" y="356.42737" z="336.33664" static_id="2"/>
+		</spawn>
+	</spawn_map>
+</spawns>

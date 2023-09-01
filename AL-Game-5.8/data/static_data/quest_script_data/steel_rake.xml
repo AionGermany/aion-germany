@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-01-10 08:59 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+                3200 [SCRIPT] Price of Goodwill
+                3201 [XML] Snow Blessing
+                3202 [XML] [Instance] Delicious Wine
+                3203 [XML] [Instance] Taming Manual
+                3204 [XML] The Taming Manual
+                3205 [TODO] [Instance] The Revenge of the Black Cloud Merchants
+                3206 [XML] [Instance] Pirate's Hairpins
+                3207 [XML] [Instance] The Pirate's Logbook
+                3208 [SCRIPT] [Instance/Group] The Puzzling Blueprint
+                3209 [XML] [Instance/Group] A Spy on the Steel Rake
+                3210 [TODO] [Instance/Group] Rescuing Haorunerk
+                3211 [XML] [Instance/Group] The leaders of the Steel Rake
+                3212 [TODO] [Instance/Group] The Missing Cube Craftsman
+                3213 [XML] [Instance/Group] Himusus' Revenge
+                3214 [XML] [Instance/Group] The Pirates' Pouch
+                3215 [XML] [Instance/Group] The Theft
+                3216 [XML] [Instance/Group] For the Captain
+                3217 [SCRIPT] [Instance/Group] Imprisoned Guardian
+                3218 [XML] [Instance/Group] The Difficulties of Beauty
+                3219 [UNUSED] Key Item Hidden Quest 01 (Elyos)
+                3220 [UNUSED] Key Item Hidden Quest 02 (Elyos)
+                3978 [XML] [Instance/Coin] Mantutu's Lesson
+                3979 [XML] [Instance/Coin/Group] The Shugo's Dress
+                4200 [SCRIPT] A Suspicious Call
+                4201 [XML] Sandblossom Wine
+                4202 [XML] [Instance] Wine and Cheese
+                4203 [XML] [Instance] The Taming Manual
+                4204 [XML] Deliver the Taming Manual
+                4205 [TODO] [Instance] Attack on the Pirates
+                4206 [XML] [Instance] Pirate's Hats
+                4207 [XML] [Instance] The Steel Rake Logbook
+                4208 [SCRIPT] [Instance] Truth of the Bookmark
+                4209 [XML] [Instance/Group] The Spy
+                4210 [TODO] [Instance/Group] Missing Haorunerk
+                4211 [XML] [Instance/Group] The Firepower of the Steel Rake
+                4212 [TODO] [Instance/Group] Missing Sidrunerk
+                4213 [XML] [Instance/Group] Baba Hun's Streak of Bad Luck
+                4214 [XML] [Instance/Group] The Wheeling and Dealing of the Black Cloud Merchants
+                4215 [XML] [Instance/Group] Stolen Medicine
+                4216 [XML] [Instance/Group] The Gift
+                4217 [SCRIPT] [Instance/Group] The Imprisoned Executor
+                4218 [XML] [Instance/Group] Mysterious Amabille
+                4219 [UNUSED] Key Item Hidden Quest 01 (Asmodian)
+                4220 [UNUSED] Key Item Hidden Quest 02 (Asmodian)
+                4978 [XML] [Instance/Coin] Battle against Mantutu
+                4979 [XML] [Instance/Coin/Group] Shugos and Shulacks
+               80216 [XML] [Levelling] Captain of the Steel Rake
+               80225 [XML] [Levelling] Owner of the Steel Rake
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="3201" start_npc_ids="798318" end_npc_ids="203852"/>
+    <report_to id="3204" start_npc_ids="798319" end_npc_ids="279008" item_id="182209085"/>
+    <report_to id="3209" start_npc_ids="798320" end_npc_ids="798331"/>
+    <report_to id="3218" start_npc_ids="798321" end_npc_ids="798334" item_id="182209096"/>
+    <report_to_many id="4201" start_npc_ids="204282" end_npc_ids="204173">
+        <npc_infos npc_id="279009" var="0" quest_dialog="1352"/>
+        <npc_infos npc_id="204173" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to id="4204" start_npc_ids="204283" end_npc_ids="279008" item_id="182209100"/>
+    <report_to id="4209" start_npc_ids="204284" end_npc_ids="798331"/>
+    <report_to id="4218" start_npc_ids="204284" end_npc_ids="798334" item_id="182209111"/>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="3202" start_npc_ids="203852" action_item_ids="700523"/>
+    <item_collecting id="3203" start_npc_ids="798319"/>
+    <item_collecting id="3206" start_npc_ids="798321"/>
+    <item_collecting id="3207" start_npc_ids="798320" action_item_ids="700524"/>
+    <item_collecting id="3214" start_npc_ids="798321"/>
+    <item_collecting id="3215" start_npc_ids="203750"/>
+    <item_collecting id="3216" start_npc_ids="798318"/>
+    <item_collecting id="4202" start_npc_ids="204173" action_item_ids="700523"/>
+    <item_collecting id="4203" start_npc_ids="204283"/>
+    <item_collecting id="4206" start_npc_ids="204285"/>
+    <item_collecting id="4207" start_npc_ids="204284" action_item_ids="700524"/>
+    <item_collecting id="4214" start_npc_ids="204284"/>
+    <item_collecting id="4215" start_npc_ids="204072"/>
+    <item_collecting id="4216" start_npc_ids="204282"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="3211" start_npc_ids="798331" end_npc_ids="798332">
+        <monster var="1" npc_ids="215069" end_var="1"/>
+        <monster var="2" npc_ids="215070" end_var="1"/>
+        <monster var="3" npc_ids="215081" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="3213" start_npc_ids="203703" end_npc_ids="203735">
+        <monster var="0" npc_ids="214977 214978 214979 214980 214981 214982 214983 214984" end_var="20"/>
+    </monster_hunt>
+    <monster_hunt id="3978" start_npc_ids="798319">
+        <monster var="0" npc_ids="215079 219033" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="3979" start_npc_ids="798322">
+        <monster var="0" npc_ids="215081" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4211" start_npc_ids="798331">
+        <monster var="1" npc_ids="215069" end_var="1"/>
+        <monster var="2" npc_ids="215070" end_var="1"/>
+        <monster var="3" npc_ids="215081" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4213" start_npc_ids="204202">
+        <monster npc_ids="215032 215408" var="0" end_var="4"/>
+        <monster npc_ids="215410" var="1" end_var="4"/>
+    </monster_hunt>
+    <monster_hunt id="4978" start_npc_ids="204286">
+        <monster var="0" end_var="1" npc_ids="215079 219033"/>
+    </monster_hunt>
+    <monster_hunt id="4979" start_npc_ids="204283">
+        <monster var="0" end_var="1" npc_ids="215081"/>
+    </monster_hunt>
+	<monster_hunt id="80216" start_npc_ids="831024">
+		<monster var="0" npc_ids="215081" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="80225" start_npc_ids="831027">
+		<monster var="0" npc_ids="215081" end_var="1"/>
+	</monster_hunt>
+</quest_scripts>

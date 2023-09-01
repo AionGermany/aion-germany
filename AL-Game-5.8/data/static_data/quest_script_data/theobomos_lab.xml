@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+                3095 [SCRIPT] A Decisive Clue
+                3096 [SCRIPT] Examine the Extraction Devices
+                3097 [XML] Berserk Silikor
+                3098 [XML] The Theobomos Syndrome
+                3113 [XML] [Coin/Group] Triroan in the Lab
+                3123 [SCRIPT] [Instanced Dungeon/Group] The Sealed Lord
+                4115 [XML] Unidentifiable Fissure
+                4116 [XML] [Group] Into the Theobomos Lab
+                4117 [XML] [Coin/Group] Preemptive Strike
+                4118 [XML] [Group] Essence of Ancients
+                4119 [XML] [Group] Parqusha's Tormentor
+                4123 [SCRIPT] [Instanced Dungeon/Group] Liberating the Elements
+               14271 [XML] [Group] Research Party
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+	<report_to id="14271" start_npc_ids="798155" end_npc_ids="798225"/>
+    <report_to_many id="4115" start_npc_ids="205143" end_npc_ids="800421">
+        <npc_infos npc_id="205150" var="0" quest_dialog="1352"/>
+        <npc_infos npc_id="800421" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="4116" start_npc_ids="800421" end_npc_ids="205143"/>
+    <item_collecting id="4118" start_npc_ids="800421" end_npc_ids="205155"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="3097" start_npc_ids="798225">
+        <monster npc_ids="214668" var="0" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="3098" start_npc_ids="798225">
+        <monster npc_ids="214669" var="0" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="3113" start_npc_ids="205304">
+        <monster npc_ids="214669" var="0" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4117" start_npc_ids="800421" end_npc_ids="205150">
+        <monster var="0" npc_ids="214669" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4119" start_npc_ids="800421" end_npc_ids="205150">
+        <monster var="0" npc_ids="214662" end_var="1"/>
+    </monster_hunt>
+</quest_scripts>

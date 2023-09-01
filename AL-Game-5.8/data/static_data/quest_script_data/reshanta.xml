@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-02-14 12:47 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+                1717 [XML]    Silver for the Fountain
+                1718 [SCRIPT] Trading Down
+                1721 [SCRIPT] Meeting with the Brigade General
+                1722 [SCRIPT] Rastin's Homesickness
+                1724 [SCRIPT] Reaper Expertise
+                1725 [SCRIPT]   Centurion's Forgetfulness
+                1728 [XML]    [Group] Assassin Mokkurkalfi
+                1729 [XML]    Cursed Guardian
+                1730 [XML]    [Daily] Redeeming Ladacus
+                1732 [XML]    Dagger of Love
+                1734 [XML]    Pieces of Aether
+                1735 [XML]    Greater Aether
+                1741 [XML]    Twilight Battlefield
+                1742 [XML]    Immortal Soul
+                1743 [XML]    Undead Destroyer's Ring
+                1744 [XML]    Earning Some Green
+                1751 [XML]    Nemea's Research Sample
+                1752 [XML]    Daeva of Flame's Request
+                1753 [XML]    Rotron, who interrupts gathering
+                1754 [XML]    Stop the Unavarun Legion
+                1755 [XML]    Root of the Problem
+                1756 [XML]    [Daily] End of the Corrupted Elim
+                1770 [XML]    Battle against Basrash
+                1840 [XML]    Enemy in the Abyss
+                1841 [XML]    Exploration of the Esoterrace
+                1842 [XML]    A New Battle
+                1843 [XML]    Pain in the Fortress
+                1844 [XML]    The Twilight Battlefield Treasure Chamber
+                1848 [XML]    Rift Stones
+                1851 [SCRIPT] The Engineering Union Craftsmen of the Tigraki Workshop
+                1867 [XML]    [Emergency Command] Michalis' Order
+                1868 [SCRIPT]   The Stormy Isles
+                1869 [SCRIPT]   [Daily/Group] Defend the Landing Site
+                1870 [SCRIPT]   [Daily/Group] The Sealed Place
+                1872 [SCRIPT]   [Emergency Command] Annihilation of the Invaders of the Sulphur Fortress
+                1873 [SCRIPT]   [Emergency Command] Annihilation of the Invaders of Siel's Western Fortress
+                1874 [SCRIPT]   [Emergency Command] Annihilation of the Invaders of Siel's Eastern Fortress
+                1875 [SCRIPT]   [Emergency Command] Annihilation of the Invaders of the Stormy Isles
+                1876 [SCRIPT]   New mission for the annihilation of the Asmodian soldiers
+                1877 [SCRIPT]   [Emergency Command] Annihilation of the Level 9 Asmodian soldiers
+                1878 [SCRIPT]   [Emergency Command] Annihilation of the Level 8 Asmodian soldiers
+                1879 [SCRIPT]   [Emergency Command] Annihilation of the Level 7 Asmodian soldiers
+                1880 [SCRIPT]   [Emergency Command] Annihilation of the Level 6 Asmodian soldiers
+                1881 [SCRIPT]   [Emergency Command] Annihilation of the Level 5 Asmodian soldiers
+                1882 [SCRIPT]   [Emergency Command] Annihilation of the Level 4 Asmodian soldiers
+                1883 [SCRIPT]   [Emergency Command] Annihilation of the Level 3 Asmodian soldiers
+                1884 [SCRIPT]   [Emergency Command] Annihilation of the Level 2 Asmodian soldiers
+                1885 [SCRIPT]   [Emergency Command] Annihilation of the Level 1 Asmodian soldiers
+                1886 [SCRIPT]   [Emergency Command] Confrontation with Asmodian Officers
+                1887 [SCRIPT]   [Emergency Command] Confrontation with Asmodian Generals
+                1888 [SCRIPT]   Aurunerk's request
+                2717 [SCRIPT] Silver for the Fountain
+                2718 [SCRIPT] Trading Down
+                2721 [SCRIPT] Meeting with the Brigade General
+                2722 [SCRIPT] The Comforts of Home
+                2724 [SCRIPT] Missing In Action
+                2725 [XML]    Gone Native
+                2728 [XML]    [Group] Killing Ladacus
+                2729 [XML]    Mokkurkalfi's Supplies
+                2730 [XML]    [Daily] Pesky Draconutes
+                2731 [XML]    Recovered Documents
+                2733 [XML]    Gems From the Vortex
+                2734 [XML]    Greater Aether
+                2741 [XML]    Eerie Undead
+                2742 [XML]    Disrupting the Guardians
+                2743 [XML]    Fallen Warrior
+                2744 [XML]    Crystal Blue Persuasion
+                2751 [XML]    Lumping It
+                2753 [XML]    Neutralizing the Draconutes
+                2755 [XML]    Helping a Rescue Mission
+                2756 [XML]    How to Beat Fried Worms
+                2767 [TODO]   A Fruitful Partnership
+                2768 [TODO]   Battle against Basrash
+                2841 [SCRIPT] Exploration of the Esoterrace
+                2842 [SCRIPT] The Zephyr Island Treasure Chamber
+                2843 [SCRIPT] Operation: Annihilate
+                2844 [XML]    Simple but Difficult
+                2845 [XML]    The Twilight Battlefield Treasure Chamber
+                2849 [XML]    The Rift Cores
+                2852 [XML]    [Emergency Command] Votan's Order
+                2868 [TODO]   The Stormy Isles
+                2869 [TODO]   [Daily/Group] Defend the Landing Site
+                2870 [TODO]   [Daily/Group] The Sealed Place
+                2872 [TODO]   [Emergency Command] Elimination of the threat to the Sulphur Fortress
+                2873 [TODO]   [Emergency Command] Elimination of the threat to Siel's Western Fortress
+                2874 [TODO]   [Emergency Command] Elimination of the threat to Siel's Eastern Fortress
+                2875 [TODO]   [Emergency Command] Elimination of the threat to the Stormy Isles
+                2876 [TODO]   Mission to annihilate new Elyos soldiers
+                2877 [TODO]   [Emergency Command] Annihilation of the Level 9 Elyos soldiers
+                2878 [TODO]   [Emergency Command] Annihilation of the Level 8 Elyos soldiers
+                2879 [TODO]   [Emergency Command] Annihilation of the Level 7 Elyos soldiers
+                2880 [TODO]   [Emergency Command] Annihilation of the Level 6 Elyos soldiers
+                2881 [TODO]   [Emergency Command] Annihilation of the Level 5 Elyos soldiers
+                2882 [TODO]   [Emergency Command] Annihilation of the Level 4 Elyos soldiers
+                2883 [TODO]   [Emergency Command] Annihilation of the Level 3 Elyos soldiers
+                2884 [TODO]   [Emergency Command] Annihilation of the Level 2 Elyos soldiers
+                2885 [TODO]   [Emergency Command] Annihilation of the Level 1 Elyos soldiers
+                2886 [TODO]   [Emergency Command] Confrontation with Elyos Officers
+                2887 [TODO]   [Emergency Command] Confrontation with Elyos Generals
+                2888 [TODO]   Ickulnerk's request
+                3735 [TODO]   First news of victory after the battle against the Level 9 Asmodian soldiers
+                3736 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 8th Army
+                3737 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 7th Army
+                3738 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 6th Army
+                3739 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 5th Army
+                3740 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 4th Army
+                3741 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 3rd Army
+                3742 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 2nd Army
+                3743 [TODO]   First news of victory after the battle against the Asmodian soldiers from the 1st Army
+                3744 [TODO]   First news of victory after the battle against an Asmodian Officer
+                3745 [TODO]   First news of victory after the battle against an Asmodian General
+                4735 [TODO]   First news of victory after the battle against the Level 9 Elyos soldiers
+                4736 [TODO]   First news of victory after the battle against the Elyos soldiers from the 8th Army
+                4737 [TODO]   First news of victory after the battle against the Elyos soldiers from the 7th Army
+                4738 [TODO]   First news of victory after the battle against the Elyos soldiers from the 6th Army
+                4739 [TODO]   First news of victory after the battle against the Elyos soldiers from the 5th Army
+                4740 [TODO]   First news of victory after the battle against the Elyos soldiers from the 4th Army
+                4741 [TODO]   First news of victory after the battle against the Elyos soldiers from the 3rd Army
+                4742 [TODO]   First news of victory after the battle against the Elyos soldiers from the 2nd Army
+                4743 [TODO]   First news of victory after the battle against the Elyos soldiers from the 1st Army
+                4744 [TODO]   First news of victory after the battle against an Elyos Officer
+                4745 [TODO]   First news of victory after the battle against an Elyos General
+               13840 [TODO]   [League] Annihilation of the Guardian General of Siel's Western Fortress
+               13841 [TODO]   [Daily] Purge of the Left Wing Chamber
+               13842 [TODO]   [Emergency Command] Annihilation of the Protectors of Siel's Western Fortress
+               13843 [TODO]   [Urgent Order] Mission to recapture Siel's Western Fortress
+               13844 [TODO]   [League] Annihilation of the Guardian General of Siel's Eastern Fortress
+               13845 [TODO]   [Daily] Purge of the Right Wing Chamber
+               13846 [TODO]   [Emergency Command] Protector of Siel's Eastern Fortress
+               13847 [TODO]   [Emergency Command] Mission to recapture Siel's Eastern Fortress
+               13848 [TODO]   [League] Annihilation of the Protectors of the Sulphur Fortress
+               13849 [TODO]   [Daily] Purge of the Sulphur Tree Nest
+               13850 [TODO]   [Emergency Command] Annihilation of the Protectors of the Sulphur Fortress
+               13851 [TODO]   [Emergency Command] Mission to recapture the Sulphur Fortress
+               13860 [TODO]   [League] Annihilation of the Guardian General of the Krotan Refuge
+               13861 [TODO]   [Daily] Purge of the Krotan War Fortress
+               13862 [TODO]   [Emergency Command] Annihilation of the Protectors of the Krotan Refuge
+               13863 [TODO]   [Emergency Command] Mission to recapture the Krotan Refuge
+               13864 [TODO]   [League] Annihilation of the Guardian General of the Miren Fortress
+               13865 [TODO]   [Daily] Purge of the Miren Fortress
+               13866 [TODO]   [Emergency Command] Annihilation of the Protector of the Miren Fortress
+               13867 [TODO]   [Emergency Command] Mission to recapture the Miren Fortress
+               13868 [TODO]   [League] Annihilation of the Guardian General of the Kysis Fortress
+               13869 [TODO]   [Daily] Purge of the Kysis Fortress
+               13870 [TODO]   [Emergency Command] Annihilation of the Protectors of the Kysis Fortress
+               13871 [TODO]   [Emergency Command] Mission to recapture the Kysis Fortress
+               14040 [SCRIPT] Orders from Reshanta
+               14041 [SCRIPT] Basic knowledge about the Abyss
+               14042 [SCRIPT] Rescue Mission
+               14043 [SCRIPT] Learning the Balaur language
+               14044 [SCRIPT] Fragment of Remembrance 1
+               14045 [SCRIPT] Wings of rumours
+               14046 [SCRIPT] Fragment of Remembrance 2
+               14047 [SCRIPT] Fragment of Remembrance 3
+               23840 [TODO]   [League] Annihilation of the Guardian General of Siel's Western Fortress
+               23841 [TODO]   [Daily] Purge of the Left Wing Chamber
+               23842 [TODO]   [Emergency Command] Annihilation of the Protectors of Siel's Western Fortress
+               23843 [TODO]   [Urgent Order] Mission to recapture Siel's Western Fortress
+               23844 [TODO]   [League] Annihilation of the Guardian General of Siel's Eastern Fortress
+               23845 [TODO]   [Daily] Purge of the Right Wing Chamber
+               23846 [TODO]   [Emergency Command] Protector of Siel's Eastern Fortress
+               23847 [TODO]   [Emergency Command] Mission to recapture Siel's Eastern Fortress
+               23848 [TODO]   [League] Annihilation of the Protectors of the Sulphur Fortress
+               23849 [TODO]   [Daily] Purge of the Sulphur Tree Nest
+               23850 [TODO]   [Emergency Command] Annihilation of the Protectors of the Sulphur Fortress
+               23851 [TODO]   [Emergency Command] Mission to recapture the Sulphur Fortress
+               23860 [TODO]   [League] Annihilation of the Guardian General of the Krotan Refuge
+               23861 [TODO]   [Daily] Purge of the Krotan Refuge
+               23862 [TODO]   [Emergency Command] Annihilation of the Protectors of the Krotan Refuge
+               23863 [TODO]   [Emergency Command] Mission to recapture the Krotan Refuge
+               23864 [TODO]   [League] Annihilation of the Guardian General of the Miren Fortress
+               23865 [TODO]   [Daily] Purge of the Miren War Fortress
+               23866 [TODO]   [Emergency Command] Annihilation of the Protectors of the Miren Fortress
+               23867 [TODO]   [Emergency Command] Mission to recapture the Miren Fortress
+               23868 [TODO]   [League] Annihilation of the Guardian General of the Kysis Fortress
+               23869 [TODO]   [Daily] Purge of the Kysis Fortress
+               23870 [TODO]   [Emergency Command] Annihilation of the Protectors of the Kysis Fortress
+               23871 [TODO]   [Emergency Command] Mission to recapture the Kysis Fortress
+               24040 [SCRIPT] The Incantation of Governor Votan
+               24041 [SCRIPT] Abyss Training
+               24042 [SCRIPT] Rescue Mission
+               24043 [SCRIPT] Learn the Balaur language
+               24044 [SCRIPT] Prophecy of Ancient Times
+               24045 [SCRIPT] Test flight
+               24046 [SCRIPT] The Incantation of the Tribunal
+               38500 [XML]    Mint Condition
+               38501 [XML]    Black Cloud Numismatics
+               48500 [XML]    Going for Ward Tokens
+               48501 [XML]    The Great Trade-Off
+               80212 [XML]    [Levelling] Destroy the Nochsana Training Camp
+               80221 [XML]    [Levelling] Infiltrate the Nochsana Training Camp
+               80315 [TODO]   Why the Guardian shines
+               80316 [TODO]   The Guardian Heroes' Due (Attacker)
+               80317 [TODO]   The Guardian Heroes' Due (Mage)
+               80321 [TODO]   The cause of the Archon hero's radiance
+               80322 [TODO]   The Archon Heroes' Due (Attacker)
+               80323 [TODO]   The Archon Heroes' Due (Mage)
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="1729" start_npc_ids="278559" end_npc_ids="278593" item_id="182202132"/>
+    <report_to id="1732" start_npc_ids="278593" end_npc_ids="278592" item_id="182202104"/>
+    <report_to id="2729" start_npc_ids="278057" end_npc_ids="278091" item_id="182205601"/>
+    <report_to id="2731" start_npc_ids="278091" end_npc_ids="278088" item_id="182205602"/>
+    <report_to id="4701" start_npc_ids="278035" end_npc_ids="278016"/>
+    <report_to_many id="2725" start_npc_ids="278003" end_npc_ids="278086" end_dialog_id="1009">
+        <npc_infos npc_id="278091" var="0" quest_dialog="1352" close_dialog="10000"/>
+        <npc_infos npc_id="278086" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <fountain_rewards id="1717" start_npc_ids="730142"/>
+    <fountain_rewards id="2717" start_npc_ids="730143"/>
+    <item_collecting id="1730" start_npc_ids="278593" end_npc_ids="278593"/>
+    <item_collecting id="1734" start_npc_ids="278556"/>
+    <item_collecting id="1735" start_npc_ids="278556"/>
+    <item_collecting id="1743" start_npc_ids="279015" end_npc_ids="279015"/>
+    <item_collecting id="1744" start_npc_ids="279015"/>
+    <item_collecting id="1751" start_npc_ids="278588"/>
+    <item_collecting id="1848" start_npc_ids="278506"/>
+    <item_collecting id="2728" start_npc_ids="278000"/>
+    <item_collecting id="2733" start_npc_ids="278056"/>
+    <item_collecting id="2734" start_npc_ids="278056"/>
+    <item_collecting id="2741" start_npc_ids="278090"/>
+    <item_collecting id="2744" start_npc_ids="278090"/>
+    <item_collecting id="2751" start_npc_ids="278088"/>
+    <item_collecting id="2849" start_npc_ids="278006"/>
+    <item_collecting id="3704" start_npc_ids="278627" action_item_ids="700415"/>
+    <item_collecting id="4704" start_npc_ids="278126" action_item_ids="700415"/>
+    <item_collecting id="38500" start_npc_ids="278653"/>
+    <item_collecting id="38501" start_npc_ids="278654"/>
+    <item_collecting id="48500" start_npc_ids="278153"/>
+    <item_collecting id="48501" start_npc_ids="278654"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="1728" start_npc_ids="278515" end_npc_ids="278502">
+        <monster npc_ids="278091" var="0" end_var="1"/>
+    </monster_hunt> 
+    <monster_hunt id="1741" start_npc_ids="278591">
+        <monster npc_ids="252537" var="0" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="1742" start_npc_ids="278591">
+        <monster npc_ids="252518" var="0" end_var="5"/>
+        <monster npc_ids="252522" var="1" end_var="3"/>
+        <monster npc_ids="252535" var="2" end_var="2"/>
+    </monster_hunt>
+    <monster_hunt id="1752" start_npc_ids="278588">
+        <monster npc_ids="253711" var="0" end_var="3"/>
+        <monster npc_ids="253728" var="1" end_var="7"/>
+    </monster_hunt>
+    <monster_hunt id="1753" start_npc_ids="278589">
+        <monster npc_ids="253700" var="0" end_var="15"/>
+    </monster_hunt>
+    <monster_hunt id="1754" start_npc_ids="278589">
+        <monster npc_ids="253612" var="0" end_var="5"/>
+        <monster npc_ids="253619" var="1" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="1755" start_npc_ids="279000">
+        <monster npc_ids="253706" var="0" end_var="10"/>
+    </monster_hunt>
+    <monster_hunt id="1756" start_npc_ids="279000">
+        <monster npc_ids="253694" var="0" end_var="25"/>
+    </monster_hunt>
+    <monster_hunt id="1770" start_npc_ids="278531" start_dialog_id="4762" end_dialog_id="10002">
+        <monster npc_ids="256674" var="0" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="1840" start_npc_ids="271067">
+        <monster var="0" npc_ids="214754" end_var="44"/>
+    </monster_hunt>
+    <monster_hunt id="1841" start_npc_ids="266567">
+        <monster var="0" npc_ids="215447" end_var="39"/>
+    </monster_hunt>
+    <monster_hunt id="1842" start_npc_ids="268080">
+        <monster var="0" npc_ids="215122" end_var="80"/>
+        <monster var="1" npc_ids="215134" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="1843" start_npc_ids="269265">
+        <monster var="0" npc_ids="215166" end_var="80"/>
+        <monster var="1" npc_ids="215177" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="1844" start_npc_ids="270165">
+        <monster var="0" npc_ids="215208" end_var="80"/>
+        <monster var="1" npc_ids="215220" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="2730" start_npc_ids="278091">
+        <monster npc_ids="253739" var="0" end_var="5"/>
+        <monster npc_ids="253740" var="1" end_var="5"/>
+    </monster_hunt> 
+    <monster_hunt id="2742" start_npc_ids="278089">
+        <monster npc_ids="253004" var="0" end_var="5"/>
+        <monster npc_ids="253022" var="1" end_var="3"/>
+        <monster npc_ids="253026" var="2" end_var="2"/>
+    </monster_hunt>
+    <monster_hunt id="2743" start_npc_ids="278089">
+        <monster npc_ids="253001" var="0" end_var="10"/>
+    </monster_hunt>
+    <monster_hunt id="2753" start_npc_ids="278086">
+        <monster npc_ids="253614" var="0" end_var="5"/>
+        <monster npc_ids="253619" var="1" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="2755" start_npc_ids="278087">
+        <monster npc_ids="253700" var="0" end_var="5"/>
+        <monster npc_ids="253696" var="1" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="2756" start_npc_ids="278087">
+        <monster npc_ids="253687" var="0" end_var="5"/>
+        <monster npc_ids="253692" var="1" end_var="3"/>
+    </monster_hunt>
+    <monster_hunt id="2844" start_npc_ids="269266">
+        <monster var="0" npc_ids="215166" end_var="80"/>
+        <monster var="1" npc_ids="215177" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="2845" start_npc_ids="215220">
+        <monster var="0" npc_ids="215208" end_var="80"/>
+        <monster var="1" npc_ids="215220" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="3205" start_npc_ids="279010">
+        <monster var="0" npc_ids="215049" end_var="15"/>
+    </monster_hunt>
+    <monster_hunt id="3703" start_npc_ids="278517">
+        <monster npc_ids="290158" var="0" end_var="1"/>
+        <monster npc_ids="290157" var="1" end_var="1"/>
+        <monster npc_ids="290160" var="2" end_var="1"/>
+        <monster npc_ids="290159" var="3" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt id="3733" start_npc_ids="800518">
+        <monster npc_ids="290158" var="0" end_var="1"/>
+        <monster npc_ids="290157" var="1" end_var="1"/>
+        <monster npc_ids="290160" var="2" end_var="1"/>
+        <monster npc_ids="290159" var="3" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4703" start_npc_ids="278016">
+        <monster npc_ids="290158" var="0" end_var="1"/>
+        <monster npc_ids="290157" var="1" end_var="1"/>
+        <monster npc_ids="290160" var="2" end_var="1"/>
+        <monster npc_ids="290159" var="3" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="4733" start_npc_ids="800519">
+        <monster npc_ids="290158" var="0" end_var="1"/>
+        <monster npc_ids="290157" var="1" end_var="1"/>
+        <monster npc_ids="290160" var="2" end_var="1"/>
+        <monster npc_ids="290159" var="3" end_var="1"/>
+    </monster_hunt>
+    <kill_in_world id="1867" end_npc_ids="278501" worlds="400010000" amount="5" invasion_world="400010000"/>
+    <kill_in_world id="2852" end_npc_ids="278001" worlds="400010000" amount="5" invasion_world="400010000"/>
+</quest_scripts>

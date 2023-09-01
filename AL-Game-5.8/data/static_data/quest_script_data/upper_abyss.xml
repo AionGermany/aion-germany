@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+                1871 [SCRIPT] The Magos Landing Site
+                2871 [SCRIPT] The Tokanu Landing Site
+               15401 [SCRIPT] Support Redemption Landing
+               15402 [SCRIPT] Reinforce Redemption Landing
+               15403 [XML] [Weekly] Collect Intact Hitonium
+               15404 [XML] [Weekly] Collect Shattered Hitonium
+               15405 [XML] [Weekly] Collect Broken Hitonium
+               15406 [SCRIPT] [Weekly] Defeat the Ereshkigal Legion
+               15407 [SCRIPT] [Weekly] Defeat the Beritra Legion in the Ruins of Roah
+               15408 [SCRIPT] [Weekly] Defeat the Beritra Legion in Asteria
+               15409 [SCRIPT] [League] Defeat Terracrusher
+               15410 [SCRIPT] [League] Defeat Wurg the Glacier
+               15411 [SCRIPT] [Group] Protect the Ruins of Roah
+               15412 [SCRIPT] [Group] Protect Bloodburn Reach
+               15413 [SCRIPT] [Group] Protect Lake Asteria
+               15414 [SCRIPT] [Weekly] Protect Rattlefrost Outpost
+               15415 [SCRIPT] [Weekly] Protect Sliversleet Outpost
+               15416 [SCRIPT] [Weekly] Protect Coldforge Outpost
+               15417 [SCRIPT] [Weekly] Protect Shimmerfrost Outpost
+               15418 [SCRIPT] [Weekly] Protect Icehowl Outpost
+               15419 [SCRIPT] [Weekly] Protect Chillhaunt Outpost
+               15420 [SCRIPT] [Weekly] Protect Wildersage Artifact Outpost
+               15421 [SCRIPT] [Weekly] Protect Dauntless Artifact Outpost
+               15422 [SCRIPT] [Weekly] Protect Anchorbrak Artifact Outpost
+               15423 [SCRIPT] [Weekly] Protect Brokenblade Artifact Outpost
+               15424 [SCRIPT] [Weekly] Protect Sootguzzle Outpost
+               15425 [SCRIPT] [Weekly] Protect Flameruin Outpost
+               15426 [SCRIPT] [Weekly] Protect Stokebellow Outpost
+               15427 [SCRIPT] [Weekly] Protect Blazerack Outpost
+               15428 [SCRIPT] [Weekly] Protect Smoldergeist Outpost
+               15429 [SCRIPT] [Weekly] Protect Moltenspike Outpost
+               15430 [SCRIPT] [Weekly] Protect Moltenspike Outpost
+               15431 [SCRIPT] [Weekly] Shield Silversleet Outpost
+               15432 [SCRIPT] [Weekly] Shield Coldforge Outpost
+               15433 [SCRIPT] [Weekly] Shield Shimmerfrost Outpost
+               15434 [SCRIPT] [Weekly] Shield Icehowl Outpost
+               15435 [SCRIPT] [Weekly] Shield Chillhaunt Outpost
+               15436 [SCRIPT] [Weekly] Shield Wildersage Artifact Outpost
+               15437 [SCRIPT] [Weekly] Shield Dauntless Artifact Outpost
+               15438 [SCRIPT] [Weekly] Shield Anchorbrak Artifact Outpost
+               15439 [SCRIPT] [Weekly] Shield Brokenblade Artifact Outpost
+               15440 [SCRIPT] [Weekly] Shield Sootguzzle Outpost
+               15441 [SCRIPT] [Weekly] Shield Flameruin Outpost
+               15442 [SCRIPT] [Weekly] Shield Stokebellow Outpost
+               15443 [SCRIPT] [Weekly] Shield Blazerack Outpost
+               15444 [SCRIPT] [Weekly] Shield Smoldergeist Outpost
+               15445 [SCRIPT] [Weekly] Shield Moltenspike Outpost
+               15446 [SCRIPT] [Urgent Order] Segla's Request
+               15447 [SCRIPT] [Urgent Order] Rojanggas' Request
+               15448 [SCRIPT] [Urgent Order] Raska's Request
+               15449 [SCRIPT] [Urgent Order] Billaran's Request
+               15450 [SCRIPT] [Urgent Order] Mongros' Request
+               15451 [SCRIPT] [Urgent Order] Bokaiyu's Request
+               15452 [SCRIPT] [Urgent Order] Kodesnel's Request
+               15453 [SCRIPT] [Urgent Order] Dupor's Request
+               15454 [SCRIPT] [Urgent Order] Raros' Request
+               15464 [SCRIPT] [Urgent Order/Daily] Protect Redemption Landing
+               15465 [SCRIPT] [Urgent Order/Daily] Attack on Harbinger's Landing
+               15466 [SCRIPT] [Urgent Order] Protect the Upper Abyss
+               15471 [XML] [Landing Level 2/Weekly] Setting up the Outposts
+               15472 [XML] [Landing Level 2/Weekly] Scaling up for the Outposts
+               15473 [XML] [Landing Level 2/Weekly] Artifact Base Foundations
+               15474 [XML] [Landing Level 2/Weekly] Ruins of Roah Occupation
+               15475 [XML] [Landing Level 2/Weekly] Occupiers Groundwork
+               15476 [TODO] [Landing Level 4/Weekly] Enhance Base Accessibility
+               15477 [TODO] [Landing Level 4/Weekly] Improve Base Accessibility
+               15478 [TODO] [Landing Level 6/Weekly] Halting the Cold
+               15479 [TODO] [Landing Level 6/Weekly] Crystalline Hunt
+               15480 [TODO] [Landing Level 8/Weekly] Clearing a Path
+               25401 [SCRIPT] Harbinger's Hero
+               25402 [SCRIPT] Fixing the Landing
+               25403 [XML] [Weekly] Gather Hitonium Lumps
+               25404 [XML] [Weekly] Gather Hitonium Pieces
+               25405 [XML] [Weekly] Gather Hitonium Fragments
+               25406 [SCRIPT] [Weekly] Thwart the Ereshkigal Legion
+               25407 [SCRIPT] [Weekly] Thwart the Beritra Legion
+               25408 [SCRIPT] [Weekly] Handle the Remaining Beritra in Asteria
+               25409 [SCRIPT] [League] Defeat Terracrusher
+               25410 [SCRIPT] [League] Defeat Wurg the Glacier
+               25411 [SCRIPT] [Group] Handle the Intruder to Protect the Ancient City of Rhoo
+               25412 [SCRIPT] [Group] Handle the Intruder to Protect Triple Island
+               25413 [SCRIPT] [Group] Handle the Intruder to Protect Asteria
+               25414 [SCRIPT] [Weekly] Defend Rattlefrost Outpost
+               25415 [SCRIPT] [Weekly] Defend Sliversleet Outpost
+               25416 [SCRIPT] [Weekly] Defend Coldforge Outpost
+               25417 [SCRIPT] [Weekly] Defend Shimmerfrost Outpost
+               25418 [SCRIPT] [Weekly] Defend Icehowl Outpost
+               25419 [SCRIPT] [Weekly] Defend Chillhaunt Outpost
+               25420 [SCRIPT] [Weekly] Defend Wildersage Artifact Outpost
+               25421 [SCRIPT] [Weekly] Defend Dauntless Artifact Outpost
+               25422 [SCRIPT] [Weekly] Defend Anchorbrak Artifact Outpost
+               25423 [SCRIPT] [Weekly] Defend Brokenblade Artifact Outpost
+               25424 [SCRIPT] [Weekly] Defend Sootguzzle Outpost
+               25425 [SCRIPT] [Weekly] Defend Flameruin Outpost
+               25426 [SCRIPT] [Weekly] Defend Stokebellow Outpost
+               25427 [SCRIPT] [Weekly] Defend Blazerack Outpost
+               25428 [SCRIPT] [Weekly] Defend Smoldergeist Outpost
+               25429 [SCRIPT] [Weekly] Defend Moltenspike Outpost
+               25430 [SCRIPT] [Weekly] Secure Rattlefrost Outpost
+               25431 [SCRIPT] [Weekly] Secure Silversleet Outpost
+               25432 [SCRIPT] [Weekly] Secure Coldforge Outpost
+               25433 [SCRIPT] [Weekly] Secure Shimmerfrost Outpost
+               25434 [SCRIPT] [Weekly] Secure Icehowl Outpost
+               25435 [SCRIPT] [Weekly] Secure Chillhaunt Outpost
+               25436 [SCRIPT] [Weekly] Secure Wildersage Artifact Outpost
+               25437 [SCRIPT] [Weekly] Secure Dauntless Artifact Outpost
+               25438 [SCRIPT] [Weekly] Secure Anchorbrak Artifact Outpost
+               25439 [SCRIPT] [Weekly] Secure Brokenblade Artifact Outpost
+               25440 [SCRIPT] [Weekly] Secure Sootguzzle Outpost
+               25441 [SCRIPT] [Weekly] Secure Flameruin Outpost
+               25442 [SCRIPT] [Weekly] Secure Stokebellow Outpost
+               25443 [SCRIPT] [Weekly] Secure Blazerack Outpost
+               25444 [SCRIPT] [Weekly] Secure Smoldergeist Outpost
+               25445 [SCRIPT] [Weekly] Secure Moltenspike Outpost
+               25446 [SCRIPT] [Urgent Orders] Pierre's Request
+               25447 [SCRIPT] [Urgent Orders] Dukru's Request
+               25448 [SCRIPT] [Urgent Orders] Duar's Request
+               25449 [SCRIPT] [Urgent Orders] Pedesklo's Request
+               25450 [SCRIPT] [Urgent Orders] Belgrad's Request
+               25451 [SCRIPT] [Urgent Orders] Katmer's Request
+               25452 [SCRIPT] [Urgent Orders] Katmors' Request
+               25453 [SCRIPT] [Urgent Orders] Karne's Request
+               25454 [SCRIPT] [Urgent Orders] Markiar's Request
+               25464 [SCRIPT] [Urgent Orders/Daily] Protect Harbinger's Landing
+               25465 [SCRIPT] [Urgent Orders] Attack Redemption Landing
+               25466 [SCRIPT] [Urgent Order] Protect the Upper Abyss
+               25471 [XML] [Landing Level 2/Weekly] Outpost Footholds
+               25472 [XML] [Landing Level 2/Weekly] Taking the Outposts
+               25473 [XML] [Landing Level 2/Weekly] Artifact Occupation
+               25474 [XML] [Landing Level 2/Weekly] Ruins of Roah Occupation
+               25475 [XML] [Landing Level 2/Weekly] Gearing Up For Occupation
+               25476 [TODO] [Landing Level 4/Weekly] Boost Base Accessibility
+               25477 [TODO] [Landing Level 4/Weekly] Expand Base Accessibility
+               25478 [TODO] [Landing Level 6/Weekly] Thawing the Abyss
+               25479 [TODO] [Landing Level 6/Weekly] Shattering the Cold
+               25480 [TODO] [Landing Level 8/Weekly] Clearing the Way
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+	<item_collecting id="15403" start_npc_ids="805378" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="15404" start_npc_ids="805378" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="15405" start_npc_ids="805378" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="25403" start_npc_ids="805401" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="25404" start_npc_ids="805401" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="25405" start_npc_ids="805401" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <!-- HUNTING QUESTS -->
+	<monster_hunt id="15471" start_npc_ids="805798">
+		<monster var="0" npc_ids="883082 883106 883130 882980 882992 883004 883084 883108 883132 882982 882994 883006" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="15472" start_npc_ids="805798">
+		<monster var="0" npc_ids="883094 883118 883142 882986 882998 883010 883096 883120 883144 882988 883000 883012" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="15473" start_npc_ids="805798">
+		<monster var="0" npc_ids="268706 268707 268708 268709 268710 251480 251481 251482 251483 251484 251523 251524 251525 251526 251527 251566 251567 251568 251569 251570 268711 268712 268713 268714 268715 251450 251451 251452 251453 251454 251493 251494 251495 251496 251497 251536 251537 251538 251539 251540 883228 883240 883252 883264 883054 883060 883066 883072" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="15474" start_npc_ids="805798">
+		<monster var="0" npc_ids="883154 883166 883178 883016 883022 883028 883156 883168 883180 883018 883024 883030" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="15475" start_npc_ids="805798">
+		<monster var="0" npc_ids="883190 883202 883214 883034 883040 883046 883192 883204 883216 883036 883042 883048" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="25471" start_npc_ids="805815">
+		<monster var="0" npc_ids="883076 883100 883124 882980 882992 883004 883078 883102 883126 882982 882994 883006" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="25472" start_npc_ids="805815">
+		<monster var="0" npc_ids="883088 883112 883136 882986 882998 883010 883090 883114 883138 882988 883000 883012" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="25473" start_npc_ids="805815">
+		<monster var="0" npc_ids="268711 268712 268713 268714 268715 251450 251451 251452 251453 251454 251493 251494 251495 251496 251497 251536 251537 251538 251539 251540 268701 268702 268703 268704 268705 251467 251468 251469 251470 251471 251510 251511 251512 251513 251514 251553 251554 251555 251556 251557 883222 883234 883246 883258 883054 883060 883066 883072" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="25474" start_npc_ids="805815">
+		<monster var="0" npc_ids="883148 883160 883172 883016 883022 883028 883150 883162 883174 883018 883024 883030" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="25475" start_npc_ids="805815">
+		<monster var="0" npc_ids="883184 883196 883208 883034 883040 883046 883186 883198 883210 883036 883042 883048" end_var="1"/>
+	</monster_hunt>
+</quest_scripts>

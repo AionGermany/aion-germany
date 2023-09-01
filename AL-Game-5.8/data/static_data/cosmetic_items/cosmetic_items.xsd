@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="cosmetic_items">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cosmetic_item" type="CosmeticItemTemplate" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="CosmeticItemTemplate">
+        <xs:sequence>
+            <xs:element name="preset" type="Preset" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="cosmetic_name" type="xs:string" use="required"/>
+        <xs:attribute name="id" type="xs:int" use="optional"/>
+        <xs:attribute name="race" type="Race" default="PC_ALL"/>
+        <xs:attribute name="gender_permitted" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="Preset">
+        <xs:sequence>
+            <xs:element name="scale" type="xs:float" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hair_type" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="face_type" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hair_color" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="lip_color" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="eye_color" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="eye_color2" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="skin_color" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="210020000">
+        <base_spawn id="42"> <!-- Kaidan Watchpost -->
+            <simple_race race="ASMODIANS">
+                <!-- Asmodian Territory -->
+                <spawn npc_id="701800">
+                    <spot x="1811.875" y="1101.75" z="435.2568" h="15"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231551" handler="BOSS">
+                    <spot x="1817.8046" y="1106" z="435.60056" h="0"/>
+                </spawn>
+                <!-- Kaidan Assassin -->
+                <spawn npc_id="231607" handler="ATTACKER">
+                    <spot x="1816.6250" y="1106.2500" z="435.5107"/>
+                </spawn>
+                <!-- Asmodian Eltnen Inspector (possible for Quest?) -->
+                <spawn npc_id="231617" handler="ATTACKER">
+                    <spot x="1840.2500" y="1064.8750" z="432.3223" h="60"/>
+                </spawn>
+                <!-- Eltnen Infiltrator -->
+                <spawn npc_id="232065">
+                    <spot x="1798.75" y="1120" z="436.5" h="45"/>
+                    <spot x="1800.5" y="1107.5" z="436.125" h="15"/>
+                    <spot x="1823.5" y="1085.125" z="435.75" h="90"/>
+                    <spot x="1831.75" y="1090.875" z="435.75" h="105"/>
+                </spawn>
+                <!-- Dalla Administration Officer -->
+                <spawn npc_id="801167" respawn_time="295">
+                    <spot x="1821.25" y="1102.75" z="436.375" h="67"/>
+                </spawn>
+                <!-- Thorgil Warehouse Manager -->
+                <spawn npc_id="801166">
+                    <spot x="1801.875" y="1098.125" z="436.375" h="15"/>
+                </spawn>
+                <!-- Hrothgar General Goods Merchant -->
+                <spawn npc_id="801165">
+                    <spot x="1801.5" y="1104.25" z="436.375"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="1811.875" y="1101.75" z="435.2568" h="15"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231550" handler="BOSS">
+                    <spot x="1817.8046" y="1106" z="435.60056" h="0"/>
+                </spawn>
+                <!-- Elyos Eltnen Inspector (possible for Quest?) -->
+                <spawn npc_id="231616" handler="ATTACKER">
+                    <spot x="1840.2500" y="1064.8750" z="432.3223" h="60"/>
+                </spawn>
+                <!-- Kaidan Assassin -->
+                <spawn npc_id="231607" handler="ATTACKER">
+                    <spot x="1816.6250" y="1106.2500" z="435.5107"/>
+                </spawn>
+                <!-- Eltnen Defender -->
+                <spawn npc_id="232062">
+                    <spot x="1800.5" y="1107.5" z="436.125" h="15"/>
+                    <spot x="1831.75" y="1090.875" z="435.75" h="105"/>
+                    <spot x="1798.75" y="1120.0" z="434.25012" h="45"/>
+                    <spot x="1823.5" y="1085.125" z="433.14847" h="90"/>
+                </spawn>
+                <!-- Alcman Administration Officer -->
+                <spawn npc_id="801164" respawn_time="295">
+                    <spot x="1821.25" y="1102.75" z="436.375" h="67"/>
+                </spawn>
+                <!-- Apion Warehouse Manager -->
+                <spawn npc_id="801163">
+                    <spot x="1801.875" y="1098.125" z="436.375" h="15"/>
+                </spawn>
+                <!-- Aelius General Goods Merchant -->
+                <spawn npc_id="801162">
+                    <spot x="1801.5" y="1104.25" z="436.375"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Krall Territory -->
+                <spawn npc_id="701797">
+                    <spot x="1811.875" y="1101.75" z="435.2568" h="15"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231552" handler="BOSS">
+                    <spot x="1817.8046" y="1106" z="435.60056" h="0"/>
+                </spawn>
+                <!-- Kaidan Vanguard (Shieldcaptain) -->
+                <spawn npc_id="231599" handler="ATTACKER">
+                    <spot x="1840.2500" y="1064.8750" z="432.3223" h="60"/>
+                </spawn>
+                <!-- Kaidan Protector -->
+                <spawn npc_id="231579" respawn_time="295">
+                    <spot x="1823.5" y="1085.125" z="431.7520" h="90"/>
+                    <spot x="1800.5" y="1107.5" z="434.7188" h="15"/>
+                    <spot x="1831.75" y="1090.875" z="433.9434" h="105"/>
+                    <spot x="1798.75" y="1120" z="432.6875" h="45"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+        <base_spawn id="41"> <!-- Eracus Outpost -->
+            <simple_race race="ASMODIANS">
+                <!-- Asmodian Territory -->
+                <spawn npc_id="701800">
+                    <spot x="1010.0192" y="664.5961" z="309.7885" h="30"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231551" handler="BOSS">
+                    <spot x="1015.625" y="661.875" z="309.99072" h="60"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231606" handler="ATTACKER">
+                    <spot x="1013.875" y="661.875" z="310.75"/>
+                </spawn>
+                <!-- Asmodian Eltnen Inspector (possible for Quest?) -->
+                <spawn npc_id="231615" handler="ATTACKER">
+                    <spot x="982.75" y="701" z="304.83594" h="105"/>
+                </spawn>
+                <!-- Eltnen Infiltrator -->
+                <spawn npc_id="231586">
+                    <spot x="1000.375" y="663.625" z="307.3246" h="60"/>
+                    <spot x="1000.875" y="668.125" z="307.3246" h="60"/>
+                    <spot x="1012.8298" y="676.36615" z="306.99368" h="30"/>
+                    <spot x="1017.625" y="674.875" z="306.99368" h="30"/>
+                </spawn>
+                <!-- Hastein General Goods -->
+                <spawn npc_id="801159">
+                    <spot x="1019" y="665.5" z="310.75" h="30"/>
+                </spawn>
+                <!-- Tulus Warehouse Manager -->
+                <spawn npc_id="801160">
+                    <spot x="1005.5" y="661" z="310.75" h="15"/>
+                </spawn>
+                <!-- Donar Administration Officer -->
+                <spawn npc_id="801161">
+                    <spot x="1010.125" y="660.5" z="310.75" h="30"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="ELYOS">
+                <!-- Elyos Territory -->
+                <spawn npc_id="701799">
+                    <spot x="1010.0192" y="664.5961" z="309.7885" h="30"/>
+                </spawn>
+                <!-- Lepharist Assassin -->
+                <spawn npc_id="231606" handler="ATTACKER">
+                    <spot x="1013.875" y="661.875" z="310.75"/>
+                </spawn>
+                <!-- Elyos Eltnen Inspector (possible for Quest?) -->
+                <spawn npc_id="231614" handler="ATTACKER">
+                    <spot x="982.7500" y="701.0000" z="302.3125" h="105"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231550" handler="BOSS">
+                    <spot x="1015.625" y="661.875" z="309.99072" h="60"/>
+                </spawn>
+                <!-- Eltnen Sentinel -->
+                <spawn npc_id="231581">
+                    <spot x="1000.375" y="663.625" z="307.3246" h="60"/>
+                    <spot x="1000.875" y="668.125" z="307.3246" h="60"/>
+                    <spot x="1012.8298" y="676.36615" z="306.99368" h="30"/>
+                    <spot x="1017.625" y="674.875" z="306.99368" h="30"/>
+                </spawn>
+                <!-- Akron General Goods -->
+                <spawn npc_id="801156">
+                    <spot x="1019" y="665.5" z="310.75" h="30"/>
+                </spawn>
+                <!-- Karsinus Warehouse Manager -->
+                <spawn npc_id="801157">
+                    <spot x="1005.5" y="661" z="310.75" h="15"/>
+                </spawn>
+                <!-- Callias Administration Officer -->
+                <spawn npc_id="801158">
+                    <spot x="1010.125" y="660.5" z="310.75" h="30"/>
+                </spawn>
+            </simple_race>
+            <simple_race race="NPC">
+                <!-- Lepharist Territory -->
+                <spawn npc_id="701796">
+                    <spot x="1010.0192" y="664.5961" z="309.7885" h="30"/>
+                </spawn>
+                <!-- Territory Boss -->
+                <spawn npc_id="231549" handler="BOSS">
+                    <spot x="1015.625" y="661.875" z="309.99072" h="60"/>
+                </spawn>
+                <!-- Lepharist Vanguard (Shieldcaptain) -->
+                <spawn npc_id="231598" handler="ATTACKER">
+                    <spot x="981.9657" y="702.1578" z="302.24228" h="101"/>
+                </spawn>
+                <!-- Lepharist Protector -->
+                <spawn npc_id="231573" respawn_time="295">
+                    <spot x="1000.375" y="663.625" z="307.3246" h="60"/>
+                    <spot x="1000.875" y="668.125" z="307.3246" h="60"/>
+                    <spot x="1012.8298" y="676.36615" z="306.99368" h="30"/>
+                    <spot x="1017.625" y="674.875" z="306.99368" h="30"/>
+                </spawn>
+            </simple_race>
+        </base_spawn>
+    </spawn_map>
+</spawns>

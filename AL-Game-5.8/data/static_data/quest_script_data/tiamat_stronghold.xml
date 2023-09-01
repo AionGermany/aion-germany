@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY  MANY MANY TODO HERE
+                    10070 [SCRIPT] Kaisinel's Command
+                    10071 [SCRIPT] On the Trail of Israphel
+                    10072 [SCRIPT] The Truth Revealed
+                    10073 [SCRIPT] Shattered Alliance
+                    20070 [SCRIPT] Marchutan's Will
+                    20071 [SCRIPT] The Hunt for Israphel
+                    20072 [SCRIPT] Israphel's True Face
+                    30700 [SCRIPT] [Group] Race for the Relics
+                    30701 [SCRIPT] [Alliance] Ruin to the Dragon Lord Tiamat
+                    30702 [SCRIPT] [Group] Dredgion Control Center Assault
+                    30706 [XML] [Group] Ominous Prophet Vhasha
+                    30714 [XML] The Tahabata Legion's Future Plans
+                    30715 [SCRIPT] [Group] Impede the Dark Poeta Case
+                    30716 [XML] [Group] Savage Gauntlet Breakthrough
+                    30717 [XML] The Finer Things
+                    30718 [XML] [Group] Block the Defense Force's Access Route
+                    30719 [XML] Treachery's Reward
+                    30720 [XML] [Alliance] Music Box of Dragon Lords
+                    30750 [SCRIPT] [Group] The Fall of the Tiamat Stronghold
+                    30751 [SCRIPT] [Alliance] Death to the Dragon Lord Tiamat
+                    30752 [SCRIPT] [Group] Dredgion Control Center Infiltration
+                    30756 [XML] [Group] Ominous Prophet Vhasha
+                    30758 [SCRIPT] [Group] Surama the Loser
+                    30759 [SCRIPT] [Group] Find the Dragon Lord's Garden
+                    30760 [SCRIPT] [Group] Petrified Hero of the Asmodians
+                    30761 [SCRIPT] Apsu's Grudge
+                    30764 [XML] Poeta Orders?
+                    30765 [SCRIPT] [Group] Stop the Dark Poeta Case
+                    30766 [XML] [Group] Savage Gauntlet Destruction
+                    30767 [XML] An Asmodian Hero
+                    30768 [XML] [Group] Block the Defense Force's Access Route
+                    30769 [XML] To Steal from Tiamat
+            [END] SUMMARY
+    -->
+    <!-- ITEM ORDERS QUESTS -->
+    <item_order id="30720" start_item_id="182213272" end_npc_id="205886"/>
+    <!-- REPORTING QUESTS -->
+    <report_to id="30714" start_npc_ids="730703" end_npc_ids="800068"/>
+    <report_to id="30717" start_npc_ids="205843" end_npc_ids="205842"/>
+    <report_to id="30719" start_npc_ids="800438" end_npc_ids="800462"/>
+    <report_to id="30764" start_npc_ids="730703" end_npc_ids="800071"/>
+    <report_to id="30767" start_npc_ids="205865" end_npc_ids="205864"/>
+    <report_to id="30769" start_npc_ids="800438" end_npc_ids="800462"/>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="30706" start_npc_ids="800368" end_npc_ids="790001"/>
+    <item_collecting id="30756" start_npc_ids="800368" end_npc_ids="203550"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="30716" start_npc_ids="800423" end_npc_ids="205843">
+        <monster var="0" npc_ids="219398 219399 219400 219401 219402 219403" end_var="8"/>
+    </monster_hunt>
+    <monster_hunt id="30718" start_npc_ids="800424" end_npc_ids="800461">
+        <monster var="0" npc_ids="219369 219370 219371 219372 219373 219411" end_var="12"/>
+    </monster_hunt>
+    <monster_hunt id="30766" start_npc_ids="800423" end_npc_ids="205865">
+        <monster var="0" npc_ids="219398 219399 219400 219401 219402 219403" end_var="8"/>
+    </monster_hunt>
+    <monster_hunt id="30768" start_npc_ids="800424" end_npc_ids="800461">
+        <monster var="0" npc_ids="219369 219370 219371 219372 219373 219411" end_var="12"/>
+    </monster_hunt>
+</quest_scripts>

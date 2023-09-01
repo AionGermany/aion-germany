@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hidden_stigma_tree>
+    <playerclass classname="ASSASSIN">
+        <hiddenstigma customids="SKILLN_AS_EXPLOSIONPOISON,SKILLN_AS_ASSAULTSLASH,SKILLN_AS_CHAINSIGNETBURST" id="SKILLN_AS_RETURNATTACK" requiredid="SKILLN_AS_VENOMSLASH"/>
+        <hiddenstigma customids="SKILLN_AS_SENSEBOOST,SKILLN_AS_FLASHSLASH,SKILLN_AS_RUNNERSSTANCE" id="SKILLN_AS_WIDENEWBLINDINGBURST" requiredid="SKILLN_AS_BACKFOCUS"/>
+        <hiddenstigma id="SKILLN_AS_RESIGNETASSAULT"/>
+    </playerclass>
+    <playerclass classname="SPIRIT_MASTER">
+        <hiddenstigma customids="SKILLN_EL_HELLPAIN,SKILLN_EL_ENFEEBLEMENT,SKILLN_EL_MANAREVERSE" id="SKILLN_EL_SOULKING" requiredid="SKILLN_EL_HELLCURSE"/>
+        <hiddenstigma customids="SKILLN_EL_LIGHT_SLAVE_STORMSERVENT,SKILLN_EL_STIGMA_ORDER_DESTRUCTIMPACT,SKILLN_EL_ELEMENTALCHARGE" id="SKILLN_EL_SOULPROTECT" requiredid="SKILLN_EL_ENCHANTARMOR"/>
+        <hiddenstigma id="SKILLN_EL_ENERGYSINK"/>
+    </playerclass>
+    <playerclass classname="TEMPLAR">
+        <hiddenstigma customids="SKILLN_KN_RECOVER,SKILLN_KN_INVINSIBLESHIELD,SKILLN_KN_SENTINEL" id="SKILLN_KN_GODPUNISHMENT" requiredid="SKILLN_KN_INVINSIBLEPROTECT"/>
+        <hiddenstigma customids="SKILLN_KN_BRAINSTORM,SKILLN_KN_POWERSINK,SKILLN_KN_FORTITUDEWAVE" id="SKILLN_KN_SKILLREFLECTOR" requiredid="SKILLN_KN_DESTRUCTSHIELD"/>
+        <hiddenstigma id="SKILLN_KN_STANDINGSHIELD"/>
+    </playerclass>
+    <playerclass classname="BARD">
+        <hiddenstigma customids="SKILLN_BA_SONGOFWARMTH,SKILLN_BA_SONGOFMASSHEAL_1,SKILLN_BA_PLAYINGSTYLESCHANGEA" id="SKILLN_BA_MASSDISPEL" requiredid="SKILLN_BA_SONGOFBLESS"/>
+        <hiddenstigma customids="SKILLN_BA_PLAYINGSTYLESCHANGEB,SKILLN_BA_DELAYPARALYZE,SKILLN_BA_SONGOFPAIN" id="SKILLN_BA_ILLUSIONREQUIEM_1" requiredid="SKILLN_BA_SONGOFGALE"/>
+        <hiddenstigma id="SKILLN_BA_SONGOFILLUSION"/>
+    </playerclass>
+    <playerclass classname="RIDER">
+        <hiddenstigma customids="SKILLN_RI_MAGNETICFIELD,SKILLN_RI_SPEEDOVERDRIVE,SKILLN_RI_WEAPONSMASH" id="SKILLN_RI_EATHIUMCHARGE" requiredid="SKILLN_RI_EATHIUMWALL"/>
+        <hiddenstigma customids="SKILLN_RI_BINDINGSLAM,SKILLN_RI_RAPIDATTACK,SKILLN_RI_OVERCHARGE" id="SKILLN_RI_OVERLOADEXPLOSION" requiredid="SKILLN_RI_POWERSLAM"/>
+        <hiddenstigma id="SKILLN_RI_EATHIUMNET"/>
+    </playerclass>
+    <playerclass classname="SORCERER">
+        <hiddenstigma customids="SKILLN_WI_ILLUSIONSTORM,SKILLN_WI_SLEEPINGSTORM,SKILLN_WI_WINDCUTTER" id="SKILLN_WI_WINDSLEEP" requiredid="SKILLN_WI_ICYSHIELD"/>
+        <hiddenstigma customids="SKILLN_WI_ROCKFALL,SKILLN_WI_FLAMESTRIKE,SKILLN_WI_SUMMONTORNADO" id="SKILLN_WI_FIRESHIELD" requiredid="SKILLN_WI_ZEROPOINT"/>
+        <hiddenstigma id="SKILLN_WI_STONEBARRIER"/>
+    </playerclass>
+    <playerclass classname="GLADIATOR">
+        <hiddenstigma customids="SKILLN_FI_WHIRLDRAIN,SKILLN_FI_CHARGINGSHOCK,SKILLN_FI_KNEECRASH" id="SKILLN_FI_MOVEWHIRL" requiredid="SKILLN_FI_JUMPATTACK"/>
+        <hiddenstigma customids="SKILLN_FI_BURSERKLANCE,SKILLN_FI_SHARPNESSHIT,SKILLN_FI_TECHNICALCOUNTER" id="SKILLN_FI_BLADESHOCK_1" requiredid="SKILLN_FI_DRAINSWORD"/>
+        <hiddenstigma id="SKILLN_FI_WARFLAG"/>
+    </playerclass>
+    <playerclass classname="GUNNER">
+        <hiddenstigma customids="SKILLN_GU_ANTIGRAVITYCANNON,SKILLN_GU_EMPOWERMAGIC,SKILLN_GU_ARMORBREAK" id="SKILLN_GU_SUPPORTFIRE" requiredid="SKILLN_GU_MENTALICCANNON"/>
+        <hiddenstigma customids="SKILLN_GU_EMPOWERAMMO,SKILLN_GU_FIRECHAINREFRESH,SKILLN_GU_VEINSNIPE" id="SKILLN_GU_PURSUIT" requiredid="SKILLN_GU_SUNNINGSHOT"/>
+        <hiddenstigma id="SKILLN_GU_BLINDLYSHOT"/>
+    </playerclass>
+    <playerclass classname="RANGER">
+        <hiddenstigma customids="SKILLN_RA_SHADOWARROW,SKILLN_RA_MOVINGSHOT,SKILLN_RA_TRACKERMIND" id="SKILLN_RA_FASTHIDE" requiredid="SKILLN_RA_LIGHTNINGSHOT"/>
+        <hiddenstigma customids="SKILLN_RA_MASSEXPLOSIONARROW,SKILLN_RA_EXPLOSIONARROW,SKILLN_RA_HUNTERMIND" id="SKILLN_RA_HEAVYSNIPE" requiredid="SKILLN_RA_PAINARROW"/>
+        <hiddenstigma id="SKILLN_RA_SHOCKTRAP"/>
+    </playerclass>
+    <playerclass classname="CHANTER">
+        <hiddenstigma customids="SKILLN_CH_MOUNTAINCRASH,SKILLN_CH_SHOCKWAVE,SKILLN_CH_IMBUEPOWER" id="SKILLN_CH_TORNADO" requiredid="SKILLN_CH_SLOWCRASH"/>
+        <hiddenstigma customids="SKILLN_CH_IMPROVEDALLDEFEND,SKILLN_CH_BLESSPROTECT,SKILLN_CH_SURPERIORHEAL" id="SKILLN_CH_PHYSICALENHANCEMENT" requiredid="SKILLN_CH_IMPROVEDBODY"/>
+        <hiddenstigma id="SKILLN_CH_BRAND"/>
+    </playerclass>
+    <playerclass classname="CLERIC">
+        <hiddenstigma customids="SKILLN_PR_HEALINGSERVENT,SKILLN_PR_TRANQUILITY,SKILLN_PR_REGENERAITIONSHINE" id="SKILLN_PR_MASSRESTORELIFE" requiredid="SKILLN_PR_HEALERSHAND"/>
+        <hiddenstigma customids="SKILLN_PR_ETERNALSERVENT,SKILLN_PR_SUFFERMEMORY,SKILLN_PR_PAINLINKS" id="SKILLN_PR_PUNISHINGLIGHT" requiredid="SKILLN_PR_CALLLIGHTNING"/>
+        <hiddenstigma id="SKILLN_PR_PROVOKESERVENT"/>
+    </playerclass>
+</hidden_stigma_tree>

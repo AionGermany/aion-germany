@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-01-10 08:59 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    2000 [SCRIPT] Prologue
+                    2001 [SCRIPT] Thinking Ahead
+                    2002 [SCRIPT] Where's Rae?
+                    2003 [SCRIPT] Treasure of the Deceased
+                    2004 [SCRIPT] A Charmed Cube
+                    2005 [SCRIPT] Teaching a Lesson
+                    2006 [SCRIPT] Hit Them Where it Hurts
+                    2007 [SCRIPT] Where's Rae This Time?
+                    2100 [SCRIPT] Order of the Captain
+                    2101 [XML] On Your Feet!
+                    2102 [XML] A Bloody Task
+                    2103 [XML] The Sprigg Report
+                    2104 [XML] Meeting the Fruit Quota
+                    2105 [XML] Sparkle and Shine
+                    2106 [SCRIPT] Vanar's Flattery
+                    2107 [XML] Return to Sender
+                    2108 [XML] The Shinier the Better
+                    2109 [XML] Love in Bloom
+                    2110 [XML] Idle Hands
+                    2112 [XML] Urd's Request
+                    2113 [XML] Token of a Lost Love
+                    2114 [SCRIPT] The Insect Problem
+                    2115 [XML] Sap for Leather
+                    2116 [XML] A Treasure Map
+                    2117 [XML] Food Bandits
+                    2118 [XML] Up to no Good
+                    2119 [XML] Black Opal
+                    2120 [XML] A Brax Skin Rug
+                    2121 [XML] Checking on a Friend
+                    2122 [SCRIPT] Ashes to Ashes
+                    2123 [SCRIPT] The Imprisoned Gourmet
+                    2124 [XML] The Captain's Secret
+                    2125 [SCRIPT] The Robbery Plot
+                    2126 [XML] As Much as You Can Carry
+                    2127 [XML] Pearls Before Swine
+                    2128 [XML] A Good Tonic
+                    2129 [XML] Suspicious Activity
+                    2131 [XML] A Delivery of Leather
+                    2132 [SCRIPT] A New Skill
+                    2133 [XML] Azpha For Health And Well-being
+                    2134 [XML] Alfrigh's Request
+                    2135 [SCRIPT] For Love of Negi
+                    2136 [SCRIPT] The Lost Axe
+                    2137 [XML] A Cursed Opal
+                    2150 [SCRIPT] Brotherly Love
+                    2151 [SCRIPT] Swallowing Pride
+                    80622 [TODO] [Event] Just One New Thing
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="2101" start_npc_ids="203500" end_npc_ids="203504"/>
+    <report_to id="2103" start_npc_ids="203504" end_npc_ids="203501"/>
+    <report_to id="2110" start_npc_ids="203522" end_npc_ids="203533" item_id="182203110"/>
+    <report_to id="2115" start_npc_ids="203534" end_npc_ids="203515" item_id="182203114"/>
+    <report_to id="2121" start_npc_ids="203540" end_npc_ids="203547" item_id="182203119"/>
+    <report_to id="2131" start_npc_ids="203515" end_npc_ids="203542" item_id="182203129"/>
+    <report_to id="2137" start_npc_ids="203539" end_npc_ids="203541"/>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="2104" start_npc_ids="203502" action_item_ids="700124" end_npc_ids="203502"/>
+    <item_collecting id="2105" start_npc_ids="203502"/>
+    <item_collecting id="2108" start_npc_ids="798037"/>
+    <item_collecting id="2109" start_npc_ids="203532" action_item_ids="700125"/>
+    <item_collecting id="2112" start_npc_ids="790003"/>
+    <item_collecting id="2113" start_npc_ids="203534"/>
+    <item_collecting id="2116" start_npc_ids="203541" action_item_ids="700139"/>
+    <item_collecting id="2118" start_npc_ids="203539"/>
+    <item_collecting id="2119" start_npc_ids="203541" action_item_ids="700127"/>
+    <item_collecting id="2120" start_npc_ids="203542"/>
+    <item_collecting id="2124" start_npc_ids="203548"/>
+    <item_collecting id="2126" start_npc_ids="203544" action_item_ids="700129"/>
+    <item_collecting id="2127" start_npc_ids="203544"/>
+    <item_collecting id="2128" start_npc_ids="203543"/>
+    <item_collecting id="2133" start_npc_ids="203519"/>
+    <item_collecting id="2134" start_npc_ids="203543"/>
+    <!-- ITEM ORDERS QUESTS -->
+    <item_order start_item_id="182203107" talk_npc_id1="203516" end_npc_id="203512" id="2107"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="2102" start_npc_ids="203504">
+        <monster npc_ids="210363 210364" var="0" end_var="4"/>
+    </monster_hunt>
+    <monster_hunt id="2117" start_npc_ids="203540">
+        <monster npc_ids="210389" var="0" end_var="9"/>
+    </monster_hunt>
+    <monster_hunt id="2129" start_npc_ids="203552" end_npc_ids="203516">
+        <monster var="0" npc_ids="210408" end_var="1"/>
+        <monster var="1" npc_ids="210409" end_var="1"/>
+    </monster_hunt>
+</quest_scripts>

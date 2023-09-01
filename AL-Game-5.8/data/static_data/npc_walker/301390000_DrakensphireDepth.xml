@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">
+    <!-- how to get correct route id 300280000 + id for example if id = 26-> 30028000026 -->
+    <!-- Masionel, Despoina, Efrosini (Verteron)-->
+    <walker_template route_id="GUARD1" pool="1">
+        <routestep step="1" x="636.9694" y="884.0824" z="1600.7594" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="GUARD2" pool="1">
+        <routestep step="1" x="637.5881" y="886.68195" z="1600.7238" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="GUARD3" pool="1">
+        <routestep step="1" x="638.4884" y="890.34015" z="1600.6006" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="GUARD4" pool="1">
+        <routestep step="1" x="639.6865" y="895.2082" z="1600.4141" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="GUARD5" pool="1">
+        <routestep step="1" x="634.6396" y="884.38196" z="1600.7498" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="GUARD6" pool="1">
+        <routestep step="1" x="634.17944" y="886.869" z="1600.7133" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="GUARD7" pool="1">
+        <routestep step="1" x="633.2802" y="890.5802" z="1600.5966" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="GUARD8" pool="1">
+        <routestep step="1" x="632.02594" y="896.08276" z="1600.5029" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG11" pool="1">
+        <routestep step="1" x="635.1998" y="820.9779" z="1599.3429"/>
+        <routestep step="2" x="635.77734" y="842.79974" z="1600.0857"/>
+        <routestep step="3" x="635.9999" y="866.86224" z="1600.8934"/>
+        <routestep step="4" x="636.0794" y="882.483" z="1600.7802"/>
+        <routestep step="5" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG12" pool="1">
+        <routestep step="1" x="633.2226" y="819.9572" z="1599.4391"/>
+        <routestep step="2" x="633.41846" y="841.93286" z="1600.1035"/>
+        <routestep step="3" x="633.97217" y="866.03845" z="1600.8612"/>
+        <routestep step="4" x="634.9149" y="881.9599" z="1600.7849"/>
+        <routestep step="5" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG13" pool="1">
+        <routestep step="1" x="636.51917" y="820.0" z="1599.3469"/>
+        <routestep step="2" x="636.6129" y="842.0" z="1600.0886"/>
+        <routestep step="3" x="636.5156" y="865.9847" z="1600.8582"/>
+        <routestep step="4" x="636.85846" y="882.0043" z="1600.7887"/>
+        <routestep step="5" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+    <walker_template route_id="WAVEG21" pool="1">
+        <routestep step="1" x="615.31683" y="856.8647" z="1600.75"/>
+        <routestep step="2" x="635.61725" y="889.04004" z="1600.648"/>
+        <routestep step="3" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG22" pool="1">
+        <routestep step="1" x="613.55005" y="858.46625" z="1600.7833"/>
+        <routestep step="2" x="633.741" y="889.9168" z="1600.611"/>
+        <routestep step="3" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG23" pool="1">
+        <routestep step="1" x="616.81915" y="855.27966" z="1600.7313"/>
+        <routestep step="2" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+    <walker_template route_id="WAVEG31" pool="1">
+        <routestep step="1" x="656.14294" y="851.2924" z="1599.4696"/>
+        <routestep step="2" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG32" pool="1">
+        <routestep step="1" x="654.90027" y="849.5526" z="1599.5541"/>
+        <routestep step="2" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG33" pool="1">
+        <routestep step="1" x="657.2806" y="852.75" z="1599.4436"/>
+        <routestep step="2" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+    <walker_template route_id="WAVEG41" pool="1">
+        <routestep step="1" x="607.3895" y="876.77124" z="1599.862"/>
+        <routestep step="2" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG42" pool="1">
+        <routestep step="1" x="607.16315" y="879.37286" z="1599.8013"/>
+        <routestep step="2" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG43" pool="1">
+        <routestep step="1" x="607.5437" y="874.98157" z="1599.8762"/>
+        <routestep step="2" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+    <walker_template route_id="WAVEG51" pool="1">
+        <routestep step="1" x="661.34216" y="877.3978" z="1599.8739"/>
+        <routestep step="2" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG52" pool="1">
+        <routestep step="1" x="661.57404" y="875.1994" z="1599.8789"/>
+        <routestep step="2" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG53" pool="1">
+        <routestep step="1" x="661.3337" y="879.9201" z="1599.9714"/>
+        <routestep step="2" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+    <walker_template route_id="WAVEG61" pool="1">
+        <routestep step="1" x="615.2708" y="856.8943" z="1600.7555"/>
+        <routestep step="2" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG62" pool="1">
+        <routestep step="1" x="613.8034" y="858.3125" z="1600.7646"/>
+        <routestep step="2" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG63" pool="1">
+        <routestep step="1" x="616.92584" y="855.16364" z="1600.7301"/>
+        <routestep step="2" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+    <walker_template route_id="WAVEG71" pool="1">
+        <routestep step="1" x="653.5848" y="896.1606" z="1600.3276"/>
+        <routestep step="2" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG72" pool="1">
+        <routestep step="1" x="655.2823" y="894.28174" z="1600.3812"/>
+        <routestep step="2" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG73" pool="1">
+        <routestep step="1" x="652.14" y="897.9419" z="1600.5442"/>
+        <routestep step="2" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+    <walker_template route_id="WAVEG81" pool="1">
+        <routestep step="1" x="614.93304" y="896.64404" z="1600.0294"/>
+        <routestep step="2" x="635.991" y="888.7159" z="1600.6611" rest_time="180000"/>
+     </walker_template>
+     <walker_template route_id="WAVEG82" pool="1">
+        <routestep step="1" x="616.77716" y="898.44037" z="1600.1526"/>
+        <routestep step="2" x="636.8735" y="888.7992" z="1600.659" rest_time="180000"/>
+     </walker_template>
+    <walker_template route_id="WAVEG83" pool="1">
+        <routestep step="1" x="613.2188" y="895.0304" z="1600.1549"/>
+        <routestep step="2" x="634.85535" y="888.7897" z="1600.6567" rest_time="180000"/>
+    </walker_template>
+</npc_walker>

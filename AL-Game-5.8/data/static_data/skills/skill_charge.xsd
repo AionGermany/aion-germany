@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="skill_charge">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="charge" type="ChargeSkill"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ChargeSkill">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="skill" type="ChargedSkill"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="min_time" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="ChargedSkill">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="time" type="xs:int" use="required"/>
+    </xs:complexType>
+</xs:schema>

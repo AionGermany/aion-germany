@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
+    <!-- Elyos base -->
+    <zone zone_type="SUB" mapid="400010000" area_type="SPHERE" name="ASMODIANS_BASE_400010000">
+        <sphere x="878.6906" y="2950.4717" z="1646.4772" r="380"/>
+    </zone>
+
+    <!-- Asmodians base -->
+    <zone zone_type="SUB" mapid="400010000" area_type="SPHERE" name="ELYOS_BASE_400010000">
+        <sphere x="2979.622" y="906.5588" z="1540.2731" r="380"/>
+    </zone>
+
+    <!-- Core -->
+    <zone zone_type="ITEM_USE" mapid="400010000" area_type="SPHERE" name="CORE_400010000" priority="15">
+        <sphere x="2140.104" y="1925.5823" z="2300.7065" r="650"/>
+    </zone>
+
+    <!-- Core2 -->
+    <zone zone_type="ITEM_USE" mapid="400010000" area_type="SPHERE" name="CORE2_400010000" priority="10">
+        <sphere x="2140.104" y="1925.5823" z="2300.7065" r="450"/>
+    </zone>
+</zones>

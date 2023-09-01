@@ -1,0 +1,119 @@
+<poll>
+    <poll_introduction>
+        <![CDATA[<font color='4CB1E5'>Commands Admin</font>]]>
+    </poll_introduction>
+    <poll_title>
+        <font color='ffc519'></font>
+    </poll_title>
+    <questions>
+        <question>
+            <title>
+                <![CDATA[
+                //add [Optional : Charactername] [ItemID] [Quantity]<br>
+                    //adddrop [MobID] [ItemID] [Min] [Max] [Chance]<br>
+                        //addset [SetID]<br>
+                            //addskill [SkillID] [SkillLevel]<br>
+                                //addtitle [TitleID] [PlayerName]<br>
+                                    //addexp [Exp]<br>
+                                        //addtitle [Id] [PlayerName]<br>
+                                            //kinah [Player] [Quantity]<br>
+                                                //remove [Player] [ItemID] [Quantity]
+                                                <br>
+                                                    <br>
+                                                        //notice [Message]
+                                                        //announcefaction [Ely | Asmo] [Message]<br>
+                                                            //announce [Anonymous | Name] [Message]<br>
+                                                                //announcements [list]<br>
+                                                                    //announcements add [faction: ELYOS | ASMODIANS | ALL] [type: SYSTEM | WHITE | ORANGE | SHOUT | YELLOW] [delay in seconds] [message]<br>
+                                                                        //announcements delete [Id]<br>
+                                                                          //attrbonus [modifier] [value]<br>
+                                                                            //wc [Ely | Asm | All | Default] [Message]
+                                                                            <br>
+                                                                                <br>
+                                                                                    //ban [Player] [Account | Ip | Full] [Time in Minutes]<br>
+                                                                                        //unban [Player] [Account | Ip | Full]<br>
+                                                                                            //banchar [Player] [Days | 0] [Reason]<br>
+                                                                                                //unbanchar [Player]<br>
+                                                                                                    //banip [Ip] [Time in Minutes]<br>
+                                                                                                        //unbanip [Ip]<br>
+                                                                                                            //banmac [Mac] [Time in Minutes]<br>
+                                                                                                                //unbanmac [Mac]<br>
+                                                                                                                    //gag [Player] [Time in Minutes]<br>
+                                                                                                                        //ungag [Player]<br>
+                                                                                                                            //kick [Player]<br>
+                                                                                                                                //sprison [Player] [Time in Minutes] [Reason]<br>
+                                                                                                                                    //rprison [Player]
+                                                                                                                                    <br>
+                                                                                                                                        <br>
+                                                                                                                                            //appearance [Size | Voice | Hair | Face | Deco | Head size | Tattoo | Reset (to reset the appearance)] [Value]<br>
+                                                                                                                                                //bk [Add | Del | Tele | List]<br>
+                                                                                                                                                    //clear [Groups | Allys | Findgroup]<br>
+                                                                                                                                                        //status [Alliance | Group]<br>
+                                                                                                                                                            //cooldown<br>
+                                                                                                                                                                //delskill [Player] [All | SkillId]<br>
+                                                                                                                                                                    //dispel<br>
+                                                                                                                                                                        //dye [Dye color | Hex color | No]<br>
+                                                                                                                                                                            //enemy [Players | Npcs | All | Cancel]<br>
+                                                                                                                                                                                //neutral [Players | Npcs | All | Cancel]<br>
+                                                                                                                                                                                    //equip help [Socket | Enchant | Godstone]<br>
+                                                                                                                                                                                        //gameshop<br>
+                                                                                                                                                                                                //gmlist<br>
+                                                                                                                                                                                                    //goto [Location]<br>
+                                                                                                                                                                                                        //grouptome [Player]<br>
+                                                                                                                                                                                                        //heal [Dp]<br>
+                                                                                                                                                                                                        //invis<br>
+                                                                                                                                                                                                        //invul<br>
+                                                                                                                                                                                                        //kill [Target | All | [Range]]<br>
+                                                                                                                                                                                                        //legion<br>
+                                                                                                                                                                                                        //marry [Player 1] [Player 2]<br>
+                                                                                                                                                                                                        //morph [NPC Id | Cancel]<br>
+                                                                                                                                                                                                        //movie [Type] [Id]<br>
+                                                                                                                                                                                                        //online<br>
+                                                                                                                                                                                                        //passkeyreset [Player] [Passkey]<br>
+                                                                                                                                                                                                        //pet [Add [Pet Id] [Pet Name]<br>
+                                                                                                                                                                                                        //petition<br>
+                                                                                                                                                                                                        //playerinfo [Player] [Loc | Item | Group | Skill | Legion]<br>
+                                                                                                                                                                                                        //rename [Player] [New Name]<br>
+                                                                                                                                                                                                        //res [Target]<br>
+                                                                                                                                                                                                        //sysmail<br>
+                                                                                                                                                                                                        //teleportation<br>
+                                                                                                                                                                                                        //time [Dawn | Day | Dusk | Night | Desired hour (number)]<br>
+                                                                                                                                                                                                        //unstuck<br>
+                                                                                                                                                                                                        //skill [Skill Id] [Skill Level]<br>
+                                                                                                                                                                                                        //whisper [on for wispable | off for unwispable]
+                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                        //moveplayertoplayer [Character Name To Move] [Character Name Destination]<br>
+                                                                                                                                                                                                        //moveto [World Id] [X] [Y] [Z]<br>
+                                                                                                                                                                                                        //movetome [Player]<br>
+                                                                                                                                                                                                        //movetomeall [All | Elyos | Asmos]<br>
+                                                                                                                                                                                                        //movetonpc [Npc Id]<br>
+                                                                                                                                                                                                        //movetoplayer [Player]
+                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                        //spawn [Npc Id] [Respawn Time]<br>
+                                                                                                                                                                                                        //delete [Target]<br>
+                                                                                                                                                                                                        //info [Target]<br>
+                                                                                                                                                                                                        //dropinfo [Target]<br>
+                                                                                                                                                                                                        //removecd [Target]<br>
+                                                                                                                                                                                                        //npcskill [Target]
+                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                        //reload [Quest | Skill | Portal | Spawn | Commands | Drop | Gameshop]<br>
+                                                                                                                                                                                                        //raw [Name]<br>
+                                                                                                                                                                                                        //ranking [update]<br>
+                                                                                                                                                                                                        //skills<br>
+                                                                                                                                                                                                        //motion [HELP|analyze|savetosql|advanced|as]<br>
+                                                                                                                                                                                                        //promote [characterName] [accesslevel | membership] [mask]<br>
+                                                                                                                                                                                                        //revoke [characterName] [acceslevel | membership]<br>
+                                                                                                                                                                                                        //configure [set|show] [configname] [property] [newvalue]<br>
+                                                                                                                                                                                                        //channel [On | Off]<br>
+                                                                                                                                                                                                        //sys<br>
+                                                                                                                                                                                                        ]]>
+                                                                                                                                                                                                        </title>
+                                                                                                                                                                                                        <select>
+                                                                                                                                                                                                        <input type='radio'>Close the window</input>
+                                                                                                                                                                                                        </select>
+                                                                                                                                                                                                        </question>
+                                                                                                                                                                                                        </questions>
+                                                                                                                                                                                                        </poll>

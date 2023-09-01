@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                30061 [XML] Cache-ing in on Turmoil
+                30062 [XML] [Group] Preemptive Violence
+                30161 [XML] Hexway Hideout
+                30162 [XML] [Group] Better Our Hands Than Yours
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to_many id="30061" start_npc_ids="800165" end_npc_ids="799381">
+        <npc_infos npc_id="798927" var="0" quest_dialog="1352"/>
+        <npc_infos npc_id="799381" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="30161" start_npc_ids="800170" end_npc_ids="799383">
+        <npc_infos npc_id="799225" var="0" quest_dialog="1352"/>
+        <npc_infos npc_id="799383" var="1" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="30062" start_npc_ids="799382">
+        <monster var="0" npc_ids="219600 219601 219602 219603 219604 219634 219635 219636 219637 219638" end_var="10"/>
+        <monster var="1" npc_ids="219605 219606 219607 219608 219611 219612 219613 219614 219616" end_var="10"/>
+        <monster var="2" npc_ids="219610" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="30162" start_npc_ids="799384">
+        <monster var="0" npc_ids="219600 219601 219602 219603 219604 219634 219635 219636 219637 219638" end_var="10"/>
+        <monster var="1" npc_ids="219605 219606 219607 219608 219611 219612 219613 219614 219616" end_var="10"/>
+        <monster var="2" npc_ids="219610" end_var="1"/>
+    </monster_hunt>
+</quest_scripts>

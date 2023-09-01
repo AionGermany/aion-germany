@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+	<npc_drop npc_id="235643"> <!-- Indirunerk Jonakak´s Supply Box -->
+		<drop_group name="POTION" use_category="true" race="PC_ALL">
+			<drop item_id="162002031" chance="100" min_amount="2" max_amount="2" no_reduce="true" eachmember="true" name="Shugo Warrior's Minor Salve"/>
+			<drop item_id="162002032" chance="100" min_amount="2" max_amount="2" no_reduce="true" eachmember="true" name="Shugo Warrior's Greater Salve"/> <!--  -->
+			<!-- <drop item_id="162002033" chance="70" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Shugo Warrior's Minor Adrenaline"/> -->
+		</drop_group>
+	</npc_drop>
+    <npc_drop npc_id="832929"> <!-- Imperial Chest -->
+		<drop_group name="MEDAL" use_category="true" race="PC_ALL">
+            <drop item_id="186000242" chance="70" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ceramium Medal"/>
+            <drop item_id="186000236" chance="70" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Blood Mark"/>
+            <drop item_id="186000238" chance="80" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Conqueror's Mark"/>
+            <drop item_id="186000237" chance="80" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ancient Coin"/>
+		</drop_group>
+		<drop_group name="RELIC" use_category="true" race="PC_ALL">
+            <drop item_id="186000057" chance="85" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ancient Goblet"/>
+		</drop_group>
+		<drop_group name="SKIN" use_category="true" race="PC_ALL">
+            <drop item_id="110000022" chance="45" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Delegate's Tunic Skin"/>
+            <drop item_id="110101797" chance="35" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Forest Denku's Frillycoat"/>
+		</drop_group>
+	</npc_drop>
+    <npc_drop npc_id="832930"> <!-- Big Imperial Chest -->
+		<drop_group name="MEDAL" use_category="true" race="PC_ALL">
+            <drop item_id="186000242" chance="70" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ceramium Medal"/>
+            <drop item_id="186000236" chance="70" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Blood Mark"/>
+            <drop item_id="186000238" chance="80" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Conqueror's Mark"/>
+            <drop item_id="186000237" chance="80" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ancient Coin"/>
+		</drop_group>
+		<drop_group name="RELIC" use_category="true" race="PC_ALL">
+            <drop item_id="186000057" chance="85" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ancient Goblet"/>
+            <drop item_id="186000055" chance="85" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Major Ancient Goblet"/>
+            <drop item_id="186000051" chance="85" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Major Ancient Crown"/>
+		</drop_group>
+		<drop_group name="SKIN" use_category="true" race="PC_ALL">
+            <drop item_id="110900870" chance="45" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Burlesque Bunny"/>
+            <drop item_id="125045522" chance="45" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Fluffy Bunny Headpiece"/>
+            <drop item_id="110000022" chance="45" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Delegate's Tunic Skin"/>
+            <drop item_id="110101797" chance="35" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Forest Denku's Frillycoat"/>
+		</drop_group>
+		<drop_group name="CRAFT" use_category="true" race="PC_ALL">
+            <drop item_id="166030005" chance="22" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Tempering Solution"/>
+            <drop item_id="166020000" chance="22" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Omega Enchantment Stone"/>
+		</drop_group>
+		<drop_group name="GODSTONE" use_category="true" race="PC_ALL">
+            <drop item_id="188053614" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Illusion Godstone Bundle"/>
+		</drop_group>
+		<drop_group name="MOUNT" use_category="true" race="PC_ALL">
+            <drop item_id="190100150" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Shugo Jet"/>
+		</drop_group>
+		<drop_group name="WINGS" use_category="true" race="PC_ALL">
+            <drop item_id="187060170" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Blue Flame Feather"/>
+            <drop item_id="187060166" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Ice Flame Feather"/>
+		</drop_group>
+		<drop_group name="BELTS" use_category="true" race="PC_ALL">
+            <drop item_id="123001471" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Leather Belt"/>
+            <drop item_id="123001472" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Sash"/>
+		</drop_group>
+		<drop_group name="WEAPONS" use_category="true" race="PC_ALL">
+            <drop item_id="101901015" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Aethercannon"/>
+            <drop item_id="101701259" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Bow"/>
+            <drop item_id="101501244" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Cane"/>
+            <drop item_id="102100842" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Cipher-Blade"/>
+            <drop item_id="100201388" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Dagger"/>
+            <drop item_id="100901230" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Greatsword"/>
+            <drop item_id="102001089" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Harp"/>
+            <drop item_id="100101217" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Mace"/>
+            <drop item_id="100501208" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Orb"/>
+            <drop item_id="101801065" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Pistol"/>
+            <drop item_id="101301156" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Polearm"/>
+            <drop item_id="115001624" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Scale Shield"/>
+            <drop item_id="115001623" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shield"/>
+            <drop item_id="100601300" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Spellbook"/>
+            <drop item_id="101501243" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Staff"/>
+            <drop item_id="100001580" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Sword"/>
+            <drop item_id="100101218" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Warhammer"/>
+		</drop_group>
+		<drop_group name="ARMOR" use_category="true" race="PC_ALL">
+            <drop item_id="110101669" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Tunic"/>
+            <drop item_id="114101548" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shoes"/>
+            <drop item_id="112101454" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Pauldrons"/>
+            <drop item_id="113101516" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Leggings"/>
+            <drop item_id="111101501" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Gloves"/>
+            <drop item_id="114301683" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Boots"/>
+            <drop item_id="113301646" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Breeches"/>
+            <drop item_id="110301677" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Jerkin"/>
+            <drop item_id="112301554" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shoulderguards"/>
+            <drop item_id="111301615" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Vambrace"/>
+            <drop item_id="110601481" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Breastplate"/>
+            <drop item_id="111601444" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Gauntlets"/>
+            <drop item_id="113601427" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Greaves"/>
+            <drop item_id="114601432" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Sabatons"/>
+            <drop item_id="112601425" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shoulderplates"/>
+            <drop item_id="114501489" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Brogans"/>
+            <drop item_id="113501480" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Chausses"/>
+            <drop item_id="111501462" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Handguards"/>
+            <drop item_id="110501507" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Hauberk"/>
+            <drop item_id="112501404" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Spaulders"/>
+            <drop item_id="114501490" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Brogans"/>
+            <drop item_id="113501508" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Chausses"/>
+            <drop item_id="111501463" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Handguards"/>
+            <drop item_id="110501508" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Hauberk"/>
+            <drop item_id="112501432" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Spaulders"/>
+		</drop_group>
+	</npc_drop>
+    <npc_drop npc_id="832931"> <!-- Emperor's Premium Treasure Box -->
+		<drop_group name="MEDAL" use_category="true" race="PC_ALL">
+            <drop item_id="186000242" chance="70" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ceramium Medal"/>
+            <drop item_id="186000236" chance="70" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Blood Mark"/>
+            <drop item_id="186000238" chance="80" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Conqueror's Mark"/>
+            <drop item_id="186000237" chance="80" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ancient Coin"/>
+		</drop_group>
+		<drop_group name="MANASTONES" use_category="true" race="PC_ALL">
+            <drop item_id="188052646" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Composite Manastone Bundle"/>
+		</drop_group>
+		<drop_group name="RELIC" use_category="true" race="PC_ALL">
+            <drop item_id="186000057" chance="85" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Ancient Goblet"/>
+            <drop item_id="186000055" chance="85" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Major Ancient Goblet"/>
+            <drop item_id="186000051" chance="85" min_amount="1" max_amount="2" no_reduce="true" eachmember="true" name="Major Ancient Crown"/>
+		</drop_group>
+		<drop_group name="SKIN" use_category="true" race="PC_ALL">
+            <drop item_id="110900870" chance="45" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Burlesque Bunny"/>
+            <drop item_id="125045522" chance="45" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Fluffy Bunny Headpiece"/>
+            <drop item_id="110000022" chance="45" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Delegate's Tunic Skin"/>
+            <drop item_id="110101797" chance="35" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Forest Denku's Frillycoat"/>
+		</drop_group>
+		<drop_group name="CRAFT" use_category="true" race="PC_ALL">
+            <drop item_id="166030005" chance="22" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Tempering Solution"/>
+            <drop item_id="166020000" chance="22" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Omega Enchantment Stone"/>
+		</drop_group>
+		<drop_group name="GODSTONE" use_category="true" race="PC_ALL">
+            <drop item_id="188053614" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Illusion Godstone Bundle"/>
+		</drop_group>
+		<drop_group name="MOUNT" use_category="true" race="PC_ALL">
+            <drop item_id="190100150" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Shugo Jet"/>
+		</drop_group>
+		<drop_group name="WINGS" use_category="true" race="PC_ALL">
+            <drop item_id="187060170" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Blue Flame Feather"/>
+            <drop item_id="187060166" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Ice Flame Feather"/>
+		</drop_group>
+		<drop_group name="BELTS" use_category="true" race="PC_ALL">
+            <drop item_id="123001471" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Leather Belt"/>
+            <drop item_id="123001472" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Trillirunerk's Sash"/>
+		</drop_group>
+		<drop_group name="WEAPONS" use_category="true" race="PC_ALL">
+            <drop item_id="101901015" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Aethercannon"/>
+            <drop item_id="101701259" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Bow"/>
+            <drop item_id="101501244" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Cane"/>
+            <drop item_id="102100842" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Cipher-Blade"/>
+            <drop item_id="100201388" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Dagger"/>
+            <drop item_id="100901230" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Greatsword"/>
+            <drop item_id="102001089" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Harp"/>
+            <drop item_id="100101217" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Mace"/>
+            <drop item_id="100501208" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Orb"/>
+            <drop item_id="101801065" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Pistol"/>
+            <drop item_id="101301156" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Polearm"/>
+            <drop item_id="115001624" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Scale Shield"/>
+            <drop item_id="115001623" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shield"/>
+            <drop item_id="100601300" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Spellbook"/>
+            <drop item_id="101501243" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Staff"/>
+            <drop item_id="100001580" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Sword"/>
+            <drop item_id="100101218" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Warhammer"/>
+		</drop_group>
+		<drop_group name="ARMOR" use_category="true" race="PC_ALL">
+            <drop item_id="110101669" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Tunic"/>
+            <drop item_id="114101548" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shoes"/>
+            <drop item_id="112101454" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Pauldrons"/>
+            <drop item_id="113101516" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Leggings"/>
+            <drop item_id="111101501" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Gloves"/>
+            <drop item_id="114301683" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Boots"/>
+            <drop item_id="113301646" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Breeches"/>
+            <drop item_id="110301677" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Jerkin"/>
+            <drop item_id="112301554" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shoulderguards"/>
+            <drop item_id="111301615" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Vambrace"/>
+            <drop item_id="110601481" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Breastplate"/>
+            <drop item_id="111601444" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Gauntlets"/>
+            <drop item_id="113601427" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Greaves"/>
+            <drop item_id="114601432" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Sabatons"/>
+            <drop item_id="112601425" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Shoulderplates"/>
+            <drop item_id="114501489" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Brogans"/>
+            <drop item_id="113501480" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Chausses"/>
+            <drop item_id="111501462" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Handguards"/>
+            <drop item_id="110501507" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Hauberk"/>
+            <drop item_id="112501404" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Spaulders"/>
+            <drop item_id="114501490" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Brogans"/>
+            <drop item_id="113501508" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Chausses"/>
+            <drop item_id="111501463" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Handguards"/>
+            <drop item_id="110501508" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Hauberk"/>
+            <drop item_id="112501432" chance="32" min_amount="1" max_amount="1" no_reduce="true" eachmember="true" name="Sauro Commander's Magic Spaulders"/>
+		</drop_group>
+	</npc_drop>
+</npc_drops>

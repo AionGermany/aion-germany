@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="110010000">
+		<svs_spawn id="1">
+			<svs_type pstate="SVS">
+			    <!-- Sanctum To Belus -->
+				<spawn npc_id="730946">
+			        <spot x="1549.2291" y="1523.3173" z="565.9307" h="71"/>
+				</spawn>
+				<!-- Sanctum To Aspida -->
+				<spawn npc_id="730947">
+			        <spot x="1552.4954" y="1516.8232" z="565.93176" h="66"/>
+				</spawn>
+				<!-- Sanctum To Atanatos -->
+				<spawn npc_id="730948">
+			        <spot x="1552.3615" y="1506.3593" z="565.93256" h="56"/>
+				</spawn>
+				<!-- Sanctum To Disillon -->
+				<spawn npc_id="730949">
+			        <spot x="1549.3805" y="1499.8557" z="565.9328" h="48"/>
+				</spawn>
+			</svs_type>
+			<svs_type pstate="PEACE">
+			</svs_type>
+		</svs_spawn>
+    </spawn_map>
+</spawns>

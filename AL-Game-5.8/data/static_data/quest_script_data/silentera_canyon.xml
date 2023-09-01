@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    30051 [SCRIPT] Banishing the Shadowborn
+                    30052 [XML] Obtain Jotun Relics
+                    30053 [XML] Poison Paradise
+                    30054 [SCRIPT] Petrification and Pride
+                    30055 [SCRIPT] For My Wife
+                    30056 [SCRIPT] Dirvisia's Sorrow
+                    30057 [SCRIPT] Jotun Jaunt
+                    30151 [SCRIPT] Snuff the Sunsuckers
+                    30152 [XML] Important Relics
+                    30153 [XML] Poison Problem
+                    30154 [SCRIPT] Flesh to Stone
+                    30155 [SCRIPT] Stone to Flesh
+                    30156 [SCRIPT] Nep's Love
+                    30157 [SCRIPT] Vili's Mind
+                    30158 [SCRIPT] Jotun Junket
+                    38504 [XML] The Token of Iconrunerk
+                    38507 [XML] The Collector of Silentera
+                    48504 [XML] Shady Dealings?
+                    48507 [XML] A Special Deal
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="30052" start_npc_ids="799033" end_npc_ids="798929" action_item_ids="700568"/>
+    <item_collecting id="30152" start_npc_ids="799338" end_npc_ids="799227" action_item_ids="700568"/>
+    <item_collecting id="38504" start_npc_ids="799087"/>
+    <item_collecting id="38507" start_npc_ids="799087"/>
+    <item_collecting id="48504" start_npc_ids="799426"/>
+    <item_collecting id="48507" start_npc_ids="799426"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="30053" start_npc_ids="799031">
+        <monster var="0" npc_ids="216364" end_var="5"/>
+        <monster var="1" npc_ids="216365" end_var="5"/>
+        <monster var="2" npc_ids="216366" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="30153" start_npc_ids="799335">
+        <monster var="0" npc_ids="216364" end_var="5"/>
+        <monster var="1" npc_ids="216365" end_var="5"/>
+        <monster var="2" npc_ids="216366" end_var="5"/>
+    </monster_hunt>
+</quest_scripts>

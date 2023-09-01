@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+	<npc_drop npc_id="831786"> <!-- Common Treasure Box -->
+		<drop_group name="COINS" use_category="true" race="PC_ALL">
+			<drop item_id="186000143" chance="60.0" min_amount="100" max_amount="100" name="Kahrun's Symbol"/>
+			<drop item_id="186000130" chance="50.0" min_amount="1000" max_amount="1000" name="Crucible Insignia"/>
+			<drop item_id="186000199" chance="50.0" min_amount="10" max_amount="10" name="Legion Coin"/>
+			<drop item_id="186000201" chance="50.0" min_amount="5" max_amount="5" name="Protectorate Coin"/>
+			<drop item_id="186000147" chance="30.0" min_amount="10" max_amount="10" name="Mithril Medal"/>
+			<drop item_id="186000242" chance="30.0" min_amount="10" max_amount="10" name="Ceranium Medal"/>
+		</drop_group>
+		<drop_group name="COIN BOXES" use_category="true" race="PC_ALL">
+			<drop item_id="188052711" chance="35.0" min_amount="1" max_amount="1" name="[Event] Mithril Coin Box"/>
+			<drop item_id="188052698" chance="45.0" min_amount="1" max_amount="1" name="[Event] Platinum Coin Box"/>
+            <drop item_id="188052713" chance="55.0" min_amount="1" max_amount="1" name="[Event] Gold Coin Box"/>
+		</drop_group>
+		<drop_group name="CLOUD BOX" use_category="true" race="PC_ALL">
+			<drop item_id="188052709" chance="25.0" min_amount="1" max_amount="1" name="[Event] Cloud Box"/>
+		</drop_group>
+		<drop_group name="" use_category="false" race="PC_ALL">
+			<drop item_id="161000003" chance="35.0" min_amount="10" max_amount="10" name="Reviving Elemental Stone"/>
+		</drop_group>
+		<drop_group name="SCROLLS" use_category="true" race="PC_ALL">
+			<drop item_id="188052716" chance="30.0" min_amount="5" max_amount="5" name="[Event] Bag of Powerful Scrolls"/>
+		</drop_group>
+		<drop_group name="GODSTONE" use_category="true" race="PC_ALL">
+			<drop item_id="188052070" chance="20.0" min_amount="1" max_amount="1" name="[Event] Fabled Godstone Bundle"/>
+		</drop_group>
+		<drop_group name="SUPPLEMENTS" use_category="true" race="PC_ALL">
+			<drop item_id="188051216" chance="35.0" min_amount="1" max_amount="10" name="Greater Supplements Bag (Eternal)"/>
+			<drop item_id="188051213" chance="35.0" min_amount="1" max_amount="10" name="Greater Supplements Bag (Fabled)"/>
+		</drop_group>
+		<drop_group name="MANASTONES" use_category="true" race="PC_ALL">
+			<drop item_id="167000553" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Accuracy +27"/>
+			<drop item_id="167000557" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Block +27"/>
+			<drop item_id="167000558" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Crit Strike +17"/>
+			<drop item_id="167000554" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Evasion +17"/>
+			<drop item_id="167000563" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Healing Boost +3"/>
+			<drop item_id="167000551" chance="45.0" min_amount="100" max_amount="100" name="Manastone: HP +95"/>
+			<drop item_id="167000555" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Magic Boost +27"/>
+			<drop item_id="167000560" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Magical Accuracy +14"/>
+			<drop item_id="167000559" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Maximum Flight Time +7"/>
+			<drop item_id="167000552" chance="45.0" min_amount="100" max_amount="100" name="Manastone: MP +95"/>
+			<drop item_id="167000556" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Parry +27"/>
+			<drop item_id="167000561" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Resist Magic +14"/>
+			<drop item_id="167000518" chance="45.0" min_amount="100" max_amount="100" name="Manastone: Attack +5"/>
+			<drop item_id="188052185" chance="40.0" min_amount="1" max_amount="1" name="Composite Manastone Pouch"/>
+			<drop item_id="166150019" chance="20.0" min_amount="1" max_amount="1" name="100% Manastone Socketing Aid (Mythical)"/>
+			<drop item_id="166150018" chance="30.0" min_amount="1" max_amount="1" name="100% Manastone Socketing Aid (Eternal)"/>
+		</drop_group>
+		<drop_group name="ENCHANTMENT STONES" use_category="true" race="PC_ALL">
+			<drop item_id="166000100" chance="45.0" min_amount="10" max_amount="10" name="L100 Enchantment Stone"/>
+			<drop item_id="166000110" chance="45.0" min_amount="10" max_amount="10" name="L110 Enchantment Stone"/>
+			<drop item_id="166000120" chance="45.0" min_amount="10" max_amount="10" name="L120 Enchantment Stone"/>
+			<drop item_id="166000130" chance="45.0" min_amount="10" max_amount="10" name="L130 Enchantment Stone"/>
+		</drop_group>
+	</npc_drop>
+	<npc_drop npc_id="831785"> <!-- Premium Treasure Chest -->
+		<drop_group name="COINS" use_category="true" race="PC_ALL">
+			<drop item_id="186000143" chance="60.0" min_amount="100" max_amount="100" name="Kahrun's Symbol"/>
+			<drop item_id="186000130" chance="50.0" min_amount="1000" max_amount="1000" name="Crucible Insignia"/>
+			<drop item_id="186000199" chance="50.0" min_amount="10" max_amount="10" name="Legion Coin"/>
+			<drop item_id="186000201" chance="50.0" min_amount="5" max_amount="5" name="Protectorate Coin"/>
+			<drop item_id="186000147" chance="30.0" min_amount="10" max_amount="10" name="Mithril Medal"/>
+			<drop item_id="186000242" chance="30.0" min_amount="10" max_amount="10" name="Ceranium Medal"/>
+		</drop_group>
+		<drop_group name="MANASTONES" use_category="true" race="PC_ALL">
+			<drop item_id="167000553" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Accuracy +27"/>
+			<drop item_id="167000557" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Block +27"/>
+			<drop item_id="167000558" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Crit Strike +17"/>
+			<drop item_id="167000554" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Evasion +17"/>
+			<drop item_id="167000563" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Healing Boost +3"/>
+			<drop item_id="167000551" chance="50.0" min_amount="100" max_amount="100" name="Manastone: HP +95"/>
+			<drop item_id="167000555" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Magic Boost +27"/>
+			<drop item_id="167000560" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Magical Accuracy +14"/>
+			<drop item_id="167000559" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Maximum Flight Time +7"/>
+			<drop item_id="167000552" chance="50.0" min_amount="100" max_amount="100" name="Manastone: MP +95"/>
+			<drop item_id="167000556" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Parry +27"/>
+			<drop item_id="167000561" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Resist Magic +14"/>
+			<drop item_id="167000518" chance="50.0" min_amount="100" max_amount="100" name="Manastone: Attack +5"/>
+			<drop item_id="188052185" chance="45.0" min_amount="1" max_amount="1" name="Composite Manastone Pouch"/>
+			<drop item_id="166150019" chance="25.0" min_amount="1" max_amount="1" name="100% Manastone Socketing Aid (Mythical)"/>
+			<drop item_id="166150018" chance="35.0" min_amount="1" max_amount="1" name="100% Manastone Socketing Aid (Eternal)"/>
+		</drop_group>
+		<drop_group name="CLOUD BOX" use_category="true" race="PC_ALL">
+            <drop item_id="188052709" chance="30.0" min_amount="1" max_amount="1" name="[Event] Cloud Box"/>
+			<drop item_id="188052710" chance="25.0" min_amount="1" max_amount="1" name="[Event] Large Cloud Box"/>
+		</drop_group>
+		<drop_group name="SUPPLEMENTS" use_category="true" race="PC_ALL">
+			<drop item_id="188051216" chance="35.0" min_amount="1" max_amount="10" name="Greater Supplements Bag (Eternal)"/>
+			<drop item_id="188051213" chance="35.0" min_amount="1" max_amount="10" name="Greater Supplements Bag (Fabled)"/>
+		</drop_group>
+		<drop_group name="ENCHANTMENT STONES" use_category="true" race="PC_ALL">
+			<drop item_id="166000100" chance="50.0" min_amount="10" max_amount="10" name="L100 Enchantment Stone"/>
+			<drop item_id="166000110" chance="50.0" min_amount="10" max_amount="10" name="L110 Enchantment Stone"/>
+			<drop item_id="166000120" chance="50.0" min_amount="10" max_amount="10" name="L120 Enchantment Stone"/>
+			<drop item_id="166000130" chance="50.0" min_amount="10" max_amount="10" name="L130 Enchantment Stone"/>
+		</drop_group>
+		<drop_group name="GODSTONE" use_category="true" race="PC_ALL">
+			<drop item_id="188052070" chance="30.0" min_amount="1" max_amount="1" name="[Event] Fabled Godstone Bundle"/>
+		</drop_group>
+		<drop_group name="WINGS" use_category="true" race="PC_ALL">
+			<drop item_id="187000090" chance="15.0" min_amount="1" max_amount="1" name="Wings of the fifth Dragon Lord"/>
+		</drop_group>
+		<drop_group name="WEAPON BOX" use_category="true" race="PC_ALL">
+			<drop item_id="188052718" chance="15.0" min_amount="1" max_amount="1" name="Hyperion Weapon Box"/>
+			<drop item_id="188052075" chance="22.0" min_amount="1" max_amount="1" name="[Event] Tahabata Weapon Box"/>
+			<drop item_id="188052074" chance="20.0" min_amount="1" max_amount="1" name="[Event] Raksha Weapon Box"/>
+		</drop_group>
+		<drop_group name="SCROLLS" use_category="true" race="PC_ALL">
+			<drop item_id="166200009" chance="30.0" min_amount="1" max_amount="1" name="Scroll of Weapon Re-identification (mythical)"/>
+			<drop item_id="166200010" chance="30.0" min_amount="1" max_amount="1" name="Scroll of Armor Re-identification (mythical)"/>
+		</drop_group>
+	</npc_drop>
+</npc_drops>

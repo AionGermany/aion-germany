@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2018-04-21 11:46 -->
+<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">
+    <!-- SHA-Tag: 519EDC8AE629B159F646861A1E4BA6427AEAF7EC -->
+    <!-- NPC-IDs: 209383, 209387, 831013, 831014 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_GUARD_D_PARTY_3" pool="4" formation="SQUARE" rows="2,2">
+        <routestep step="1" x="772.25" y="1398.07" z="1199.86"/>
+        <routestep step="2" x="772.31" y="1459.69" z="1199.86"/>
+        <routestep step="3" x="772.18" y="1514.21" z="1199.86"/>
+        <routestep step="4" x="772.33" y="1459.69" z="1199.86"/>
+        <routestep step="5" x="772.25" y="1398.09" z="1199.86"/>
+    </walker_template>
+    <!-- SHA-Tag: FBB7D164F27B10BD3BC476ADF017524C3F5CB6FE -->
+    <!-- NPC-IDs: 218546, 218551 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_7" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="582.57" y="637.67" z="1204.23"/>
+        <routestep step="2" x="577.44" y="632.38" z="1204.13"/>
+        <routestep step="3" x="572.77" y="627.79" z="1204.13"/>
+        <routestep step="4" x="565.16" y="619.95" z="1204.23"/>
+        <routestep step="5" x="556.74" y="611.55" z="1204.13"/>
+        <routestep step="6" x="547.92" y="602.85" z="1204.13"/>
+        <routestep step="7" x="536.82" y="591.84" z="1204.23"/>
+        <routestep step="8" x="547.91" y="602.87" z="1204.13"/>
+        <routestep step="9" x="556.76" y="611.54" z="1204.13"/>
+        <routestep step="10" x="564.97" y="619.83" z="1204.13"/>
+        <routestep step="11" x="572.78" y="627.65" z="1204.13"/>
+        <routestep step="12" x="577.44" y="632.38" z="1204.13"/>
+        <routestep step="13" x="582.75" y="637.85" z="1204.23"/>
+    </walker_template>
+    <!-- SHA-Tag: 92876A4617947FB2B555546552B7DE00C5169097 -->
+    <!-- NPC-IDs: 218546, 218551 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_12" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="893.14" y="939.36" z="1204.23"/>
+        <routestep step="2" x="896.74" y="945.79" z="1204.13"/>
+        <routestep step="3" x="900.05" y="951.43" z="1204.13"/>
+        <routestep step="4" x="905.38" y="960.98" z="1204.23"/>
+        <routestep step="5" x="911.34" y="971.28" z="1204.13"/>
+        <routestep step="6" x="917.60" y="981.96" z="1204.13"/>
+        <routestep step="7" x="925.48" y="995.47" z="1204.23"/>
+        <routestep step="8" x="917.61" y="981.94" z="1204.13"/>
+        <routestep step="9" x="911.31" y="971.28" z="1204.13"/>
+        <routestep step="10" x="905.53" y="961.14" z="1204.13"/>
+        <routestep step="11" x="900.01" y="951.57" z="1204.13"/>
+        <routestep step="12" x="896.74" y="945.79" z="1204.13"/>
+        <routestep step="13" x="893.02" y="939.14" z="1204.23"/>
+    </walker_template>
+    <!-- SHA-Tag: 011F8547E29B2895ABDA51D2F11F1C7E8A646AFE -->
+    <!-- NPC-IDs: 218546, 218551 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_13" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="895.14" y="604.33" z="1204.23"/>
+        <routestep step="2" x="898.92" y="598.00" z="1204.13"/>
+        <routestep step="3" x="902.14" y="592.31" z="1204.13"/>
+        <routestep step="4" x="907.75" y="582.92" z="1204.23"/>
+        <routestep step="5" x="913.69" y="572.61" z="1204.13"/>
+        <routestep step="6" x="919.80" y="561.85" z="1204.13"/>
+        <routestep step="7" x="927.57" y="548.27" z="1204.23"/>
+        <routestep step="8" x="919.79" y="561.84" z="1204.13"/>
+        <routestep step="9" x="913.70" y="572.63" z="1204.13"/>
+        <routestep step="10" x="907.81" y="582.70" z="1204.13"/>
+        <routestep step="11" x="902.29" y="592.28" z="1204.13"/>
+        <routestep step="12" x="898.92" y="598.00" z="1204.13"/>
+        <routestep step="13" x="895.01" y="604.55" z="1204.23"/>
+    </walker_template>
+    <!-- SHA-Tag: 466994091DC521215B6DC43B3F52B29E495BA453 -->
+    <!-- NPC-IDs: 218546, 218551 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_9" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="581.84" y="896.57" z="1204.69"/>
+        <routestep step="2" x="576.55" y="901.70" z="1204.59"/>
+        <routestep step="3" x="571.97" y="906.37" z="1204.59"/>
+        <routestep step="4" x="564.12" y="913.99" z="1204.69"/>
+        <routestep step="5" x="555.72" y="922.41" z="1204.59"/>
+        <routestep step="6" x="547.02" y="931.22" z="1204.59"/>
+        <routestep step="7" x="536.01" y="942.32" z="1204.69"/>
+        <routestep step="8" x="547.04" y="931.23" z="1204.59"/>
+        <routestep step="9" x="555.71" y="922.38" z="1204.59"/>
+        <routestep step="10" x="564.01" y="914.18" z="1204.59"/>
+        <routestep step="11" x="571.82" y="906.36" z="1204.59"/>
+        <routestep step="12" x="576.55" y="901.70" z="1204.59"/>
+        <routestep step="13" x="582.02" y="896.39" z="1204.69"/>
+    </walker_template>
+    <!-- SHA-Tag: F617124C6F8BBEEC40E9AE15AF9FB39BDA7D7505 -->
+    <!-- NPC-IDs: 218547 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANCL_TIAMAT_60_AE_5" pool="1">
+        <routestep step="1" x="640.42" y="521.11" z="1209.86"/>
+        <routestep step="2" x="642.33" y="520.31" z="1209.86"/>
+        <routestep step="3" x="645.65" y="520.41" z="1209.86"/>
+        <routestep step="4" x="647.74" y="521.74" z="1209.86"/>
+        <routestep step="5" x="649.44" y="523.88" z="1209.86"/>
+        <routestep step="6" x="650.13" y="526.02" z="1209.86"/>
+        <routestep step="7" x="649.82" y="528.72" z="1209.86"/>
+        <routestep step="8" x="649.64" y="529.45" z="1209.86"/>
+        <routestep step="9" x="648.32" y="531.73" z="1209.86"/>
+        <routestep step="10" x="646.53" y="532.91" z="1209.86"/>
+        <routestep step="11" x="644.28" y="533.67" z="1209.86"/>
+        <routestep step="12" x="642.11" y="533.66" z="1209.86"/>
+        <routestep step="13" x="640.41" y="533.08" z="1209.86"/>
+        <routestep step="14" x="638.91" y="531.87" z="1209.86"/>
+        <routestep step="15" x="637.49" y="530.05" z="1209.86"/>
+        <routestep step="16" x="636.76" y="528.24" z="1209.86"/>
+        <routestep step="17" x="636.69" y="526.27" z="1209.86"/>
+        <routestep step="18" x="637.16" y="524.27" z="1209.86"/>
+        <routestep step="19" x="638.47" y="522.48" z="1209.80"/>
+        <routestep step="20" x="640.17" y="521.22" z="1209.86"/>
+    </walker_template>
+    <!-- SHA-Tag: 350D62585A77E5226B81155C6D5779A4F177A43A -->
+    <!-- NPC-IDs: 218547 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANCL_TIAMAT_60_AE_17" pool="1">
+        <routestep step="1" x="751.55" y="996.89" z="1209.55"/>
+        <routestep step="2" x="753.35" y="995.86" z="1209.55"/>
+        <routestep step="3" x="756.65" y="995.55" z="1209.55"/>
+        <routestep step="4" x="758.90" y="996.62" z="1209.55"/>
+        <routestep step="5" x="760.84" y="998.54" z="1209.55"/>
+        <routestep step="6" x="761.79" y="1000.58" z="1209.55"/>
+        <routestep step="7" x="761.80" y="1003.30" z="1209.55"/>
+        <routestep step="8" x="761.72" y="1004.05" z="1209.55"/>
+        <routestep step="9" x="760.68" y="1006.47" z="1209.55"/>
+        <routestep step="10" x="759.05" y="1007.86" z="1209.55"/>
+        <routestep step="11" x="756.91" y="1008.88" z="1209.55"/>
+        <routestep step="12" x="754.75" y="1009.14" z="1209.55"/>
+        <routestep step="13" x="753.00" y="1008.77" z="1209.55"/>
+        <routestep step="14" x="751.36" y="1007.75" z="1209.55"/>
+        <routestep step="15" x="749.73" y="1006.12" z="1209.55"/>
+        <routestep step="16" x="748.79" y="1004.41" z="1209.55"/>
+        <routestep step="17" x="748.48" y="1002.46" z="1209.55"/>
+        <routestep step="18" x="748.69" y="1000.43" z="1209.55"/>
+        <routestep step="19" x="749.79" y="998.49" z="1209.49"/>
+        <routestep step="20" x="751.32" y="997.03" z="1209.55"/>
+    </walker_template>
+    <!-- SHA-Tag: 0213E410C4F816F1B2708A768F2C3D9208137546 -->
+    <!-- NPC-IDs: 218547, 218548 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_8" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="626.92" y="592.06" z="1204.22"/>
+        <routestep step="2" x="621.70" y="586.75" z="1204.12"/>
+        <routestep step="3" x="617.03" y="582.16" z="1204.12"/>
+        <routestep step="4" x="609.41" y="574.32" z="1204.22"/>
+        <routestep step="5" x="601.00" y="565.91" z="1204.12"/>
+        <routestep step="6" x="592.18" y="557.22" z="1204.12"/>
+        <routestep step="7" x="581.08" y="546.20" z="1204.22"/>
+        <routestep step="8" x="592.17" y="557.23" z="1204.12"/>
+        <routestep step="9" x="601.02" y="565.90" z="1204.12"/>
+        <routestep step="10" x="609.23" y="574.20" z="1204.12"/>
+        <routestep step="11" x="617.04" y="582.01" z="1204.12"/>
+        <routestep step="12" x="621.70" y="586.75" z="1204.12"/>
+        <routestep step="13" x="627.05" y="592.18" z="1204.22"/>
+    </walker_template>
+    <!-- SHA-Tag: 728A0635F998B04A4B97AF7EEC62DF6E84DD980B -->
+    <!-- NPC-IDs: 218547, 218548 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_14" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="830.85" y="561.06" z="1204.22"/>
+        <routestep step="2" x="834.63" y="554.64" z="1204.12"/>
+        <routestep step="3" x="837.86" y="548.95" z="1204.12"/>
+        <routestep step="4" x="843.46" y="539.56" z="1204.22"/>
+        <routestep step="5" x="849.40" y="529.25" z="1204.12"/>
+        <routestep step="6" x="855.52" y="518.49" z="1204.12"/>
+        <routestep step="7" x="863.28" y="504.91" z="1204.22"/>
+        <routestep step="8" x="855.50" y="518.48" z="1204.12"/>
+        <routestep step="9" x="849.42" y="529.27" z="1204.12"/>
+        <routestep step="10" x="843.52" y="539.35" z="1204.12"/>
+        <routestep step="11" x="838.00" y="548.92" z="1204.12"/>
+        <routestep step="12" x="834.63" y="554.64" z="1204.12"/>
+        <routestep step="13" x="830.77" y="561.22" z="1204.22"/>
+    </walker_template>
+    <!-- SHA-Tag: 338EE60DD1E1BACAD93DAA26345AF710C7A19AD9 -->
+    <!-- NPC-IDs: 218547, 218548 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_10" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="625.46" y="943.24" z="1204.22"/>
+        <routestep step="2" x="620.15" y="948.47" z="1204.12"/>
+        <routestep step="3" x="615.56" y="953.13" z="1204.12"/>
+        <routestep step="4" x="607.72" y="960.75" z="1204.22"/>
+        <routestep step="5" x="599.31" y="969.17" z="1204.12"/>
+        <routestep step="6" x="590.62" y="977.98" z="1204.12"/>
+        <routestep step="7" x="579.60" y="989.09" z="1204.22"/>
+        <routestep step="8" x="590.63" y="977.99" z="1204.12"/>
+        <routestep step="9" x="599.30" y="969.14" z="1204.12"/>
+        <routestep step="10" x="607.60" y="960.94" z="1204.12"/>
+        <routestep step="11" x="615.41" y="953.12" z="1204.12"/>
+        <routestep step="12" x="620.15" y="948.47" z="1204.12"/>
+        <routestep step="13" x="625.58" y="943.12" z="1204.22"/>
+    </walker_template>
+    <!-- SHA-Tag: 60619C365FED9D97EB43F20E492A243A2BA0DED4 -->
+    <!-- NPC-IDs: 218547 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANCL_TIAMAT_60_AE_16" pool="1">
+        <routestep step="1" x="800.61" y="1026.25" z="1209.55"/>
+        <routestep step="2" x="802.41" y="1025.22" z="1209.55"/>
+        <routestep step="3" x="805.71" y="1024.91" z="1209.55"/>
+        <routestep step="4" x="807.96" y="1025.98" z="1209.55"/>
+        <routestep step="5" x="809.90" y="1027.90" z="1209.55"/>
+        <routestep step="6" x="810.85" y="1029.93" z="1209.55"/>
+        <routestep step="7" x="810.86" y="1032.66" z="1209.55"/>
+        <routestep step="8" x="810.78" y="1033.40" z="1209.55"/>
+        <routestep step="9" x="809.74" y="1035.83" z="1209.55"/>
+        <routestep step="10" x="808.11" y="1037.21" z="1209.55"/>
+        <routestep step="11" x="805.97" y="1038.24" z="1209.55"/>
+        <routestep step="12" x="803.81" y="1038.50" z="1209.55"/>
+        <routestep step="13" x="802.06" y="1038.13" z="1209.55"/>
+        <routestep step="14" x="800.42" y="1037.11" z="1209.55"/>
+        <routestep step="15" x="798.79" y="1035.48" z="1209.55"/>
+        <routestep step="16" x="797.85" y="1033.77" z="1209.55"/>
+        <routestep step="17" x="797.54" y="1031.82" z="1209.55"/>
+        <routestep step="18" x="797.76" y="1029.78" z="1209.55"/>
+        <routestep step="19" x="798.85" y="1027.85" z="1209.49"/>
+        <routestep step="20" x="800.38" y="1026.39" z="1209.55"/>
+    </walker_template>
+    <!-- SHA-Tag: 527DEFE53519CE132721A467FA8BA28189B55580 -->
+    <!-- NPC-IDs: 218547, 218548 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_DRAKAN_PARTY_11" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="837.16" y="969.84" z="1204.22"/>
+        <routestep step="2" x="840.83" y="976.33" z="1204.12"/>
+        <routestep step="3" x="844.15" y="981.97" z="1204.12"/>
+        <routestep step="4" x="849.48" y="991.51" z="1204.22"/>
+        <routestep step="5" x="855.44" y="1001.81" z="1204.12"/>
+        <routestep step="6" x="861.70" y="1012.49" z="1204.12"/>
+        <routestep step="7" x="869.58" y="1026.00" z="1204.22"/>
+        <routestep step="8" x="861.71" y="1012.48" z="1204.12"/>
+        <routestep step="9" x="855.41" y="1001.82" z="1204.12"/>
+        <routestep step="10" x="849.63" y="991.68" z="1204.12"/>
+        <routestep step="11" x="844.10" y="982.11" z="1204.12"/>
+        <routestep step="12" x="840.83" y="976.33" z="1204.12"/>
+        <routestep step="13" x="837.07" y="969.69" z="1204.22"/>
+    </walker_template>
+    <!-- SHA-Tag: 8FC488B9D30063C1D6EFC50DAC71AE04971E07BF -->
+    <!-- NPC-IDs: 219218 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANCL_TIAMAT_KEY_60_AN_2_2" pool="1">
+        <routestep step="1" x="308.79" y="766.99" z="1207.39"/>
+        <routestep step="2" x="309.88" y="762.18" z="1207.39"/>
+        <routestep step="3" x="312.43" y="758.34" z="1207.39"/>
+        <routestep step="4" x="316.15" y="755.83" z="1207.39"/>
+        <routestep step="5" x="321.04" y="754.78" z="1207.39"/>
+        <routestep step="6" x="325.93" y="755.83" z="1207.39"/>
+        <routestep step="7" x="329.78" y="758.42" z="1207.39"/>
+        <routestep step="8" x="332.04" y="762.02" z="1207.39"/>
+        <routestep step="9" x="333.25" y="766.91" z="1207.39"/>
+        <routestep step="10" x="332.12" y="771.89" z="1207.39"/>
+        <routestep step="11" x="329.61" y="775.78" z="1207.39"/>
+        <routestep step="12" x="325.85" y="778.20" z="1207.39"/>
+        <routestep step="13" x="320.96" y="779.16" z="1207.39"/>
+        <routestep step="14" x="316.06" y="777.87" z="1207.39"/>
+        <routestep step="15" x="312.47" y="775.52" z="1207.39"/>
+        <routestep step="16" x="309.83" y="771.97" z="1207.39"/>
+        <routestep step="17" x="308.79" y="767.00" z="1207.39"/>
+    </walker_template>
+    <!-- SHA-Tag: B66FB1F055E3E77C1E268B2F7EBBD8E9EFCCC887 -->
+    <!-- NPC-IDs: 219218 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANCL_TIAMAT_KEY_60_AN_1_1" pool="1">
+        <routestep step="1" x="1004.09" y="339.24" z="1209.90"/>
+        <routestep step="2" x="1007.77" y="342.53" z="1209.90"/>
+        <routestep step="3" x="1009.90" y="346.62" z="1209.90"/>
+        <routestep step="4" x="1010.29" y="351.09" z="1209.90"/>
+        <routestep step="5" x="1008.83" y="355.88" z="1209.90"/>
+        <routestep step="6" x="1005.55" y="359.65" z="1209.90"/>
+        <routestep step="7" x="1001.41" y="361.76" z="1209.90"/>
+        <routestep step="8" x="997.17" y="361.99" z="1209.90"/>
+        <routestep step="9" x="992.31" y="360.68" z="1209.90"/>
+        <routestep step="10" x="988.50" y="357.28" z="1209.90"/>
+        <routestep step="11" x="986.32" y="353.20" z="1209.90"/>
+        <routestep step="12" x="986.02" y="348.73" z="1209.90"/>
+        <routestep step="13" x="987.55" y="343.99" z="1209.90"/>
+        <routestep step="14" x="991.06" y="340.34" z="1209.90"/>
+        <routestep step="15" x="994.85" y="338.33" z="1209.90"/>
+        <routestep step="16" x="999.23" y="337.74" z="1209.90"/>
+        <routestep step="17" x="1004.09" y="339.24" z="1209.90"/>
+    </walker_template>
+    <!-- SHA-Tag: E8E0C5981315E54B13345DC821B98E2C9BE44CF4 -->
+    <!-- NPC-IDs: 219218 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANCL_TIAMAT_KEY_60_AN1_2" pool="1">
+        <routestep step="1" x="1317.95" y="767.42" z="1204.88"/>
+        <routestep step="2" x="1317.34" y="770.14" z="1204.88"/>
+        <routestep step="3" x="1315.89" y="772.32" z="1204.88"/>
+        <routestep step="4" x="1313.78" y="773.74" z="1204.88"/>
+        <routestep step="5" x="1311.01" y="774.33" z="1204.88"/>
+        <routestep step="6" x="1308.24" y="773.74" z="1204.88"/>
+        <routestep step="7" x="1306.06" y="772.27" z="1204.88"/>
+        <routestep step="8" x="1304.78" y="770.24" z="1204.88"/>
+        <routestep step="9" x="1304.10" y="767.47" z="1204.88"/>
+        <routestep step="10" x="1304.74" y="764.65" z="1204.88"/>
+        <routestep step="11" x="1306.16" y="762.44" z="1204.88"/>
+        <routestep step="12" x="1308.29" y="761.07" z="1204.88"/>
+        <routestep step="13" x="1311.06" y="760.53" z="1204.88"/>
+        <routestep step="14" x="1313.83" y="761.26" z="1204.88"/>
+        <routestep step="15" x="1315.87" y="762.59" z="1204.88"/>
+        <routestep step="16" x="1317.36" y="764.60" z="1204.88"/>
+        <routestep step="17" x="1317.95" y="767.41" z="1204.88"/>
+    </walker_template>
+    <!-- SHA-Tag: BCED55C734B72C1E0E2BFA63BA42502B2B82CD1A -->
+    <!-- NPC-IDs: 219218 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANCL_TIAMAT_KEY_60_AN_1_3" pool="1">
+        <routestep step="1" x="1002.27" y="1194.45" z="1212.39"/>
+        <routestep step="2" x="997.62" y="1196.07" z="1212.39"/>
+        <routestep step="3" x="993.00" y="1195.95" z="1212.39"/>
+        <routestep step="4" x="988.90" y="1194.12" z="1212.39"/>
+        <routestep step="5" x="985.42" y="1190.53" z="1212.39"/>
+        <routestep step="6" x="983.72" y="1185.82" z="1212.39"/>
+        <routestep step="7" x="983.88" y="1181.18" z="1212.39"/>
+        <routestep step="8" x="985.73" y="1177.36" z="1212.39"/>
+        <routestep step="9" x="989.24" y="1173.74" z="1212.39"/>
+        <routestep step="10" x="994.05" y="1172.06" z="1212.39"/>
+        <routestep step="11" x="998.68" y="1172.13" z="1212.39"/>
+        <routestep step="12" x="1002.73" y="1174.04" z="1212.39"/>
+        <routestep step="13" x="1006.14" y="1177.68" z="1212.39"/>
+        <routestep step="14" x="1007.64" y="1182.51" z="1212.39"/>
+        <routestep step="15" x="1007.56" y="1186.80" z="1212.39"/>
+        <routestep step="16" x="1005.94" y="1190.92" z="1212.39"/>
+        <routestep step="17" x="1002.28" y="1194.44" z="1212.39"/>
+    </walker_template>
+    <!-- SHA-Tag: 6C5D772299F28E48FE0349610DB47266C78FB47A -->
+    <!-- NPC-IDs: 218548 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_NOBLE_60_AE_19" pool="1">
+        <routestep step="1" x="1136.02" y="901.17" z="1185.46"/>
+        <routestep step="2" x="1140.33" y="896.86" z="1185.36"/>
+        <routestep step="3" x="1143.23" y="893.94" z="1185.46"/>
+        <routestep step="4" x="1140.29" y="896.85" z="1185.36"/>
+        <routestep step="5" x="1136.03" y="901.15" z="1185.46"/>
+    </walker_template>
+    <!-- SHA-Tag: 8AC9B2F0648B0C13647982553CAF62D51A4BB160 -->
+    <!-- NPC-IDs: 218548 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_NOBLE_60_AE_1" pool="1">
+        <routestep step="1" x="667.83" y="378.62" z="1185.46"/>
+        <routestep step="2" x="662.60" y="375.49" z="1185.36"/>
+        <routestep step="3" x="659.07" y="373.37" z="1185.46"/>
+        <routestep step="4" x="662.60" y="375.52" z="1185.36"/>
+        <routestep step="5" x="667.81" y="378.61" z="1185.46"/>
+    </walker_template>
+    <!-- SHA-Tag: AF21FB6B16F490F53EF78F05E23A8D8E4420A799 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_10" pool="1">
+        <routestep step="1" x="1156.73" y="626.59" z="1184.39"/>
+        <routestep step="2" x="1154.55" y="632.28" z="1184.29"/>
+        <routestep step="3" x="1152.72" y="637.30" z="1184.39"/>
+        <routestep step="4" x="1154.58" y="632.27" z="1184.29"/>
+        <routestep step="5" x="1156.72" y="626.61" z="1184.39"/>
+    </walker_template>
+    <!-- SHA-Tag: 5BE0A5A08FBD1A968551830ECF19B727DED5AA54 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_63" pool="1">
+        <routestep step="1" x="1341.59" y="996.15" z="1184.37"/>
+        <routestep step="2" x="1342.33" y="1005.66" z="1184.37"/>
+        <routestep step="3" x="1345.42" y="1012.06" z="1184.37"/>
+        <routestep step="4" x="1351.75" y="1016.97" z="1184.37"/>
+        <routestep step="5" x="1345.51" y="1012.14" z="1184.37"/>
+        <routestep step="6" x="1342.38" y="1005.66" z="1184.39"/>
+        <routestep step="7" x="1341.60" y="996.16" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: 5E6F3A540103DDD38CF79114C59BEFBAE30488A7 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_1" pool="1">
+        <routestep step="1" x="625.63" y="363.02" z="1184.39"/>
+        <routestep step="2" x="630.91" y="366.06" z="1184.29"/>
+        <routestep step="3" x="635.59" y="368.66" z="1184.39"/>
+        <routestep step="4" x="630.91" y="366.03" z="1184.29"/>
+        <routestep step="5" x="625.65" y="363.03" z="1184.39"/>
+    </walker_template>
+    <!-- SHA-Tag: E83D2C402FACAC25D2C488CDC019A37BA4B2B052 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_3" pool="1">
+        <routestep step="1" x="398.21" y="189.19" z="1184.37"/>
+        <routestep step="2" x="392.79" y="197.06" z="1184.37"/>
+        <routestep step="3" x="391.17" y="203.96" z="1184.37"/>
+        <routestep step="4" x="393.00" y="211.76" z="1184.37"/>
+        <routestep step="5" x="391.19" y="204.09" z="1184.37"/>
+        <routestep step="6" x="392.83" y="197.08" z="1184.39"/>
+        <routestep step="7" x="398.20" y="189.21" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: 08ED461725692AFD369CE163A287DAEB8F0E7040 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_6" pool="1">
+        <routestep step="1" x="405.70" y="1350.48" z="1184.37"/>
+        <routestep step="2" x="415.14" y="1351.89" z="1184.37"/>
+        <routestep step="3" x="422.07" y="1350.33" z="1184.37"/>
+        <routestep step="4" x="428.27" y="1345.26" z="1184.37"/>
+        <routestep step="5" x="422.17" y="1350.25" z="1184.37"/>
+        <routestep step="6" x="415.15" y="1351.84" z="1184.39"/>
+        <routestep step="7" x="405.72" y="1350.47" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: 9FA5B6936256E6615BD2CDE99CBFD002C2B8DD77 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_7" pool="1">
+        <routestep step="1" x="420.49" y="1307.55" z="1184.37"/>
+        <routestep step="2" x="411.08" y="1305.97" z="1184.37"/>
+        <routestep step="3" x="404.13" y="1307.41" z="1184.37"/>
+        <routestep step="4" x="397.83" y="1312.37" z="1184.37"/>
+        <routestep step="5" x="404.03" y="1307.48" z="1184.37"/>
+        <routestep step="6" x="411.07" y="1306.01" z="1184.39"/>
+        <routestep step="7" x="420.47" y="1307.55" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: 48BBD1ABCD553CE85C612B30F4486D3A2D5FC436 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_60" pool="1">
+        <routestep step="1" x="1326.78" y="492.42" z="1184.37"/>
+        <routestep step="2" x="1332.98" y="499.68" z="1184.37"/>
+        <routestep step="3" x="1339.23" y="503.04" z="1184.37"/>
+        <routestep step="4" x="1347.24" y="503.29" z="1184.37"/>
+        <routestep step="5" x="1339.35" y="503.05" z="1184.37"/>
+        <routestep step="6" x="1333.02" y="499.65" z="1184.39"/>
+        <routestep step="7" x="1326.80" y="492.43" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: 2EEC56B499883E3AF632A9C17540A84EE69E0824 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_59" pool="1">
+        <routestep step="1" x="1360.25" y="470.36" z="1184.37"/>
+        <routestep step="2" x="1353.45" y="463.66" z="1184.37"/>
+        <routestep step="3" x="1346.93" y="460.86" z="1184.37"/>
+        <routestep step="4" x="1338.93" y="461.31" z="1184.37"/>
+        <routestep step="5" x="1346.80" y="460.86" z="1184.37"/>
+        <routestep step="6" x="1353.41" y="463.69" z="1184.39"/>
+        <routestep step="7" x="1360.23" y="470.35" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: 05091EBDE903CFC9466DF60B339A1C9CAA9A644B -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_62" pool="1">
+        <routestep step="1" x="1386.51" y="1001.24" z="1184.37"/>
+        <routestep step="2" x="1385.77" y="991.72" z="1184.37"/>
+        <routestep step="3" x="1382.68" y="985.33" z="1184.37"/>
+        <routestep step="4" x="1376.35" y="980.42" z="1184.37"/>
+        <routestep step="5" x="1382.59" y="985.25" z="1184.37"/>
+        <routestep step="6" x="1385.72" y="991.72" z="1184.39"/>
+        <routestep step="7" x="1386.50" y="1001.22" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: 5F7633399E6EAA862686F77755865467AF1AF935 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_2" pool="1">
+        <routestep step="1" x="431.07" y="221.52" z="1184.37"/>
+        <routestep step="2" x="436.48" y="213.66" z="1184.37"/>
+        <routestep step="3" x="438.11" y="206.75" z="1184.37"/>
+        <routestep step="4" x="436.28" y="198.95" z="1184.37"/>
+        <routestep step="5" x="438.09" y="206.63" z="1184.37"/>
+        <routestep step="6" x="436.44" y="213.63" z="1184.39"/>
+        <routestep step="7" x="431.07" y="221.50" z="1184.37"/>
+    </walker_template>
+    <!-- SHA-Tag: DB4232124B374184BFD8B26565AF1AF15F224FA9 -->
+    <!-- NPC-IDs: 218544 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_60_AE_9" pool="1">
+        <routestep step="1" x="1164.68" y="866.15" z="1184.39"/>
+        <routestep step="2" x="1160.22" y="870.31" z="1184.29"/>
+        <routestep step="3" x="1156.38" y="874.02" z="1184.39"/>
+        <routestep step="4" x="1160.26" y="870.32" z="1184.29"/>
+        <routestep step="5" x="1164.66" y="866.17" z="1184.39"/>
+    </walker_template>
+    <!-- SHA-Tag: 4587A8B4F42559A74DEF2831D6B403E1467DDC4A -->
+    <!-- NPC-IDs: 219191 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_KEY_60_AE_3_1" pool="1">
+        <routestep step="1" x="984.33" y="766.72" z="1224.22"/>
+        <routestep step="2" x="985.41" y="761.91" z="1224.22"/>
+        <routestep step="3" x="987.97" y="758.06" z="1224.22"/>
+        <routestep step="4" x="991.69" y="755.55" z="1224.22"/>
+        <routestep step="5" x="996.58" y="754.51" z="1224.22"/>
+        <routestep step="6" x="1001.47" y="755.55" z="1224.22"/>
+        <routestep step="7" x="1005.32" y="758.14" z="1224.22"/>
+        <routestep step="8" x="1007.58" y="761.74" z="1224.22"/>
+        <routestep step="9" x="1008.79" y="766.63" z="1224.22"/>
+        <routestep step="10" x="1007.66" y="771.61" z="1224.22"/>
+        <routestep step="11" x="1005.15" y="775.50" z="1224.22"/>
+        <routestep step="12" x="1001.39" y="777.92" z="1224.22"/>
+        <routestep step="13" x="996.50" y="778.89" z="1224.22"/>
+        <routestep step="14" x="991.60" y="777.59" z="1224.22"/>
+        <routestep step="15" x="988.01" y="775.25" z="1224.22"/>
+        <routestep step="16" x="985.37" y="771.69" z="1224.22"/>
+        <routestep step="17" x="984.33" y="766.72" z="1224.22"/>
+    </walker_template>
+    <!-- SHA-Tag: 13590D34B8EE3F5E65EAB2401AAEEBF2585D7E75 -->
+    <!-- NPC-IDs: 219191 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_KEY_60_AE_3_2" pool="1">
+        <routestep step="1" x="1171.54" y="767.14" z="1205.68"/>
+        <routestep step="2" x="1172.63" y="762.33" z="1205.68"/>
+        <routestep step="3" x="1175.18" y="758.48" z="1205.68"/>
+        <routestep step="4" x="1178.90" y="755.97" z="1205.68"/>
+        <routestep step="5" x="1183.80" y="754.92" z="1205.68"/>
+        <routestep step="6" x="1188.69" y="755.97" z="1205.68"/>
+        <routestep step="7" x="1192.54" y="758.56" z="1205.68"/>
+        <routestep step="8" x="1194.80" y="762.16" z="1205.68"/>
+        <routestep step="9" x="1196.01" y="767.05" z="1205.68"/>
+        <routestep step="10" x="1194.88" y="772.03" z="1205.68"/>
+        <routestep step="11" x="1192.37" y="775.92" z="1205.68"/>
+        <routestep step="12" x="1188.61" y="778.34" z="1205.68"/>
+        <routestep step="13" x="1183.71" y="779.30" z="1205.68"/>
+        <routestep step="14" x="1178.82" y="778.01" z="1205.68"/>
+        <routestep step="15" x="1175.22" y="775.67" z="1205.68"/>
+        <routestep step="16" x="1172.59" y="772.11" z="1205.68"/>
+        <routestep step="17" x="1171.55" y="767.14" z="1205.68"/>
+    </walker_template>
+    <!-- SHA-Tag: 2D084E87624339B997E62066965CBDD556131C1D -->
+    <!-- NPC-IDs: 219191 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_KEY_60_AE_8_1" pool="1">
+        <routestep step="1" x="198.65" y="768.13" z="1207.39"/>
+        <routestep step="2" x="199.74" y="763.32" z="1207.39"/>
+        <routestep step="3" x="202.29" y="759.48" z="1207.39"/>
+        <routestep step="4" x="206.01" y="756.97" z="1207.39"/>
+        <routestep step="5" x="210.90" y="755.92" z="1207.39"/>
+        <routestep step="6" x="215.80" y="756.97" z="1207.39"/>
+        <routestep step="7" x="219.64" y="759.56" z="1207.39"/>
+        <routestep step="8" x="221.90" y="763.16" z="1207.39"/>
+        <routestep step="9" x="223.12" y="768.05" z="1207.39"/>
+        <routestep step="10" x="221.99" y="773.03" z="1207.39"/>
+        <routestep step="11" x="219.48" y="776.92" z="1207.39"/>
+        <routestep step="12" x="215.71" y="779.34" z="1207.39"/>
+        <routestep step="13" x="210.82" y="780.30" z="1207.39"/>
+        <routestep step="14" x="205.93" y="779.01" z="1207.39"/>
+        <routestep step="15" x="202.33" y="776.66" z="1207.39"/>
+        <routestep step="16" x="199.70" y="773.11" z="1207.39"/>
+        <routestep step="17" x="198.65" y="768.14" z="1207.39"/>
+    </walker_template>
+    <!-- SHA-Tag: 02856422677BBFFF4B8E91FD2A5B9C71E4F30C9F -->
+    <!-- NPC-IDs: 219191 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_KEY_60_AE_8_2" pool="1">
+        <routestep step="1" x="512.67" y="767.36" z="1224.22"/>
+        <routestep step="2" x="513.76" y="762.55" z="1224.22"/>
+        <routestep step="3" x="516.31" y="758.70" z="1224.22"/>
+        <routestep step="4" x="520.03" y="756.19" z="1224.22"/>
+        <routestep step="5" x="524.92" y="755.15" z="1224.22"/>
+        <routestep step="6" x="529.81" y="756.19" z="1224.22"/>
+        <routestep step="7" x="533.66" y="758.78" z="1224.22"/>
+        <routestep step="8" x="535.92" y="762.38" z="1224.22"/>
+        <routestep step="9" x="537.13" y="767.27" z="1224.22"/>
+        <routestep step="10" x="536.00" y="772.25" z="1224.22"/>
+        <routestep step="11" x="533.49" y="776.14" z="1224.22"/>
+        <routestep step="12" x="529.73" y="778.57" z="1224.22"/>
+        <routestep step="13" x="524.84" y="779.53" z="1224.22"/>
+        <routestep step="14" x="519.95" y="778.23" z="1224.22"/>
+        <routestep step="15" x="516.35" y="775.89" z="1224.22"/>
+        <routestep step="16" x="513.71" y="772.33" z="1224.22"/>
+        <routestep step="17" x="512.67" y="767.37" z="1224.22"/>
+    </walker_template>
+    <!-- SHA-Tag: D7B2F4BAD9E6EC8FF0675726C1B4E9062A185CD9 -->
+    <!-- NPC-IDs: 219191 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_KEY_60_AE_1_1" pool="1">
+        <routestep step="1" x="499.03" y="519.20" z="1209.90"/>
+        <routestep step="2" x="500.12" y="514.39" z="1209.90"/>
+        <routestep step="3" x="502.67" y="510.55" z="1209.90"/>
+        <routestep step="4" x="506.39" y="508.04" z="1209.90"/>
+        <routestep step="5" x="511.29" y="506.99" z="1209.90"/>
+        <routestep step="6" x="516.18" y="508.04" z="1209.90"/>
+        <routestep step="7" x="520.03" y="510.63" z="1209.90"/>
+        <routestep step="8" x="522.28" y="514.23" z="1209.90"/>
+        <routestep step="9" x="523.50" y="519.12" z="1209.90"/>
+        <routestep step="10" x="522.37" y="524.10" z="1209.90"/>
+        <routestep step="11" x="519.86" y="527.99" z="1209.90"/>
+        <routestep step="12" x="516.10" y="530.41" z="1209.90"/>
+        <routestep step="13" x="511.20" y="531.37" z="1209.90"/>
+        <routestep step="14" x="506.31" y="530.08" z="1209.90"/>
+        <routestep step="15" x="502.71" y="527.74" z="1209.90"/>
+        <routestep step="16" x="500.08" y="524.18" z="1209.90"/>
+        <routestep step="17" x="499.03" y="519.21" z="1209.90"/>
+    </walker_template>
+    <!-- SHA-Tag: 88088FF5FDBAD1B05AF27E36958D7B80FE36AC59 -->
+    <!-- NPC-IDs: 219191 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_KEY_60_AE_2_1" pool="1">
+        <routestep step="1" x="918.57" y="463.22" z="1209.90"/>
+        <routestep step="2" x="919.66" y="458.41" z="1209.90"/>
+        <routestep step="3" x="922.21" y="454.57" z="1209.90"/>
+        <routestep step="4" x="925.93" y="452.06" z="1209.90"/>
+        <routestep step="5" x="930.83" y="451.01" z="1209.90"/>
+        <routestep step="6" x="935.72" y="452.06" z="1209.90"/>
+        <routestep step="7" x="939.57" y="454.65" z="1209.90"/>
+        <routestep step="8" x="941.83" y="458.25" z="1209.90"/>
+        <routestep step="9" x="943.04" y="463.14" z="1209.90"/>
+        <routestep step="10" x="941.91" y="468.12" z="1209.90"/>
+        <routestep step="11" x="939.40" y="472.01" z="1209.90"/>
+        <routestep step="12" x="935.64" y="474.43" z="1209.90"/>
+        <routestep step="13" x="930.74" y="475.39" z="1209.90"/>
+        <routestep step="14" x="925.85" y="474.10" z="1209.90"/>
+        <routestep step="15" x="922.25" y="471.75" z="1209.90"/>
+        <routestep step="16" x="919.62" y="468.20" z="1209.90"/>
+        <routestep step="17" x="918.57" y="463.23" z="1209.90"/>
+    </walker_template>
+    <!-- SHA-Tag: 63AC0AF23CBE3EDB75226B77CA5E02139125E344 -->
+    <!-- NPC-IDs: 219191 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANFI_TIAMAT_KEY_60_AE_2_2" pool="1">
+        <routestep step="1" x="917.91" y="1070.07" z="1209.90"/>
+        <routestep step="2" x="918.99" y="1065.26" z="1209.90"/>
+        <routestep step="3" x="921.54" y="1061.41" z="1209.90"/>
+        <routestep step="4" x="925.27" y="1058.90" z="1209.90"/>
+        <routestep step="5" x="930.16" y="1057.86" z="1209.90"/>
+        <routestep step="6" x="935.05" y="1058.90" z="1209.90"/>
+        <routestep step="7" x="938.90" y="1061.50" z="1209.90"/>
+        <routestep step="8" x="941.16" y="1065.09" z="1209.90"/>
+        <routestep step="9" x="942.37" y="1069.99" z="1209.90"/>
+        <routestep step="10" x="941.24" y="1074.96" z="1209.90"/>
+        <routestep step="11" x="938.73" y="1078.85" z="1209.90"/>
+        <routestep step="12" x="934.97" y="1081.28" z="1209.90"/>
+        <routestep step="13" x="930.08" y="1082.24" z="1209.90"/>
+        <routestep step="14" x="925.18" y="1080.94" z="1209.90"/>
+        <routestep step="15" x="921.59" y="1078.60" z="1209.90"/>
+        <routestep step="16" x="918.95" y="1075.05" z="1209.90"/>
+        <routestep step="17" x="917.91" y="1070.08" z="1209.90"/>
+    </walker_template>
+    <!-- SHA-Tag: 30AA8CEA4F10D64C80C429D8B49B4838C5E928A6 -->
+    <!-- NPC-IDs: 218545 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_60_AE_26" pool="1">
+        <routestep step="1" x="773.66" y="539.57" z="1209.55"/>
+        <routestep step="2" x="774.82" y="537.86" z="1209.55"/>
+        <routestep step="3" x="777.66" y="536.13" z="1209.55"/>
+        <routestep step="4" x="780.14" y="536.11" z="1209.55"/>
+        <routestep step="5" x="782.73" y="536.98" z="1209.55"/>
+        <routestep step="6" x="784.47" y="538.39" z="1209.55"/>
+        <routestep step="7" x="785.68" y="540.83" z="1209.55"/>
+        <routestep step="8" x="785.93" y="541.54" z="1209.55"/>
+        <routestep step="9" x="786.07" y="544.17" z="1209.55"/>
+        <routestep step="10" x="785.21" y="546.13" z="1209.55"/>
+        <routestep step="11" x="783.73" y="547.99" z="1209.55"/>
+        <routestep step="12" x="781.91" y="549.17" z="1209.55"/>
+        <routestep step="13" x="780.17" y="549.61" z="1209.55"/>
+        <routestep step="14" x="778.25" y="549.41" z="1209.55"/>
+        <routestep step="15" x="776.07" y="548.66" z="1209.55"/>
+        <routestep step="16" x="774.47" y="547.53" z="1209.55"/>
+        <routestep step="17" x="773.34" y="545.92" z="1209.55"/>
+        <routestep step="18" x="772.64" y="544.00" z="1209.55"/>
+        <routestep step="19" x="772.77" y="541.78" z="1209.49"/>
+        <routestep step="20" x="773.51" y="539.79" z="1209.55"/>
+    </walker_template>
+    <!-- SHA-Tag: 1A6D282A25E5750EEC22BBC760168577013A2262 -->
+    <!-- NPC-IDs: 218545 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_60_AE_25" pool="1">
+        <routestep step="1" x="672.56" y="550.29" z="1209.81"/>
+        <routestep step="2" x="673.73" y="548.58" z="1209.81"/>
+        <routestep step="3" x="676.56" y="546.85" z="1209.81"/>
+        <routestep step="4" x="679.05" y="546.83" z="1209.81"/>
+        <routestep step="5" x="681.63" y="547.70" z="1209.81"/>
+        <routestep step="6" x="683.38" y="549.11" z="1209.81"/>
+        <routestep step="7" x="684.58" y="551.55" z="1209.81"/>
+        <routestep step="8" x="684.84" y="552.26" z="1209.81"/>
+        <routestep step="9" x="684.97" y="554.90" z="1209.81"/>
+        <routestep step="10" x="684.11" y="556.85" z="1209.81"/>
+        <routestep step="11" x="682.63" y="558.72" z="1209.81"/>
+        <routestep step="12" x="680.81" y="559.90" z="1209.81"/>
+        <routestep step="13" x="679.07" y="560.33" z="1209.81"/>
+        <routestep step="14" x="677.15" y="560.13" z="1209.81"/>
+        <routestep step="15" x="674.97" y="559.38" z="1209.81"/>
+        <routestep step="16" x="673.37" y="558.26" z="1209.81"/>
+        <routestep step="17" x="672.24" y="556.64" z="1209.81"/>
+        <routestep step="18" x="671.54" y="554.72" z="1209.81"/>
+        <routestep step="19" x="671.67" y="552.50" z="1209.75"/>
+        <routestep step="20" x="672.41" y="550.51" z="1209.81"/>
+    </walker_template>
+    <!-- SHA-Tag: 73A2220AC5325CE490023E615AAB57EB0C8DB389 -->
+    <!-- NPC-IDs: 219192 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_KEY_60_AE_1" pool="1">
+        <routestep step="1" x="1139.01" y="503.24" z="1184.89"/>
+        <routestep step="2" x="1147.56" y="504.01" z="1184.89"/>
+        <routestep step="3" x="1154.99" y="508.15" z="1184.89"/>
+        <routestep step="4" x="1159.99" y="514.32" z="1184.89"/>
+        <routestep step="5" x="1161.89" y="521.30" z="1184.89"/>
+        <routestep step="6" x="1161.43" y="529.94" z="1184.89"/>
+        <routestep step="7" x="1157.66" y="536.61" z="1184.89"/>
+        <routestep step="8" x="1161.41" y="529.93" z="1184.89"/>
+        <routestep step="9" x="1161.87" y="521.29" z="1184.89"/>
+        <routestep step="10" x="1159.97" y="514.33" z="1184.89"/>
+        <routestep step="11" x="1155.00" y="508.17" z="1184.89"/>
+        <routestep step="12" x="1147.53" y="504.00" z="1184.89"/>
+        <routestep step="13" x="1139.03" y="503.25" z="1184.89"/>
+    </walker_template>
+    <!-- SHA-Tag: 448E65D658ECCB169545343B6F6DD8F9A3AD7836 -->
+    <!-- NPC-IDs: 219192 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_KEY_60_AE_4" pool="1">
+        <routestep step="1" x="537.39" y="1178.52" z="1184.89"/>
+        <routestep step="2" x="529.61" y="1182.13" z="1184.89"/>
+        <routestep step="3" x="521.10" y="1182.26" z="1184.89"/>
+        <routestep step="4" x="513.69" y="1179.42" z="1184.89"/>
+        <routestep step="5" x="508.55" y="1174.32" z="1184.89"/>
+        <routestep step="6" x="504.63" y="1166.61" z="1184.89"/>
+        <routestep step="7" x="504.56" y="1158.95" z="1184.89"/>
+        <routestep step="8" x="504.65" y="1166.61" z="1184.89"/>
+        <routestep step="9" x="508.57" y="1174.32" z="1184.89"/>
+        <routestep step="10" x="513.70" y="1179.40" z="1184.89"/>
+        <routestep step="11" x="521.08" y="1182.25" z="1184.89"/>
+        <routestep step="12" x="529.64" y="1182.12" z="1184.89"/>
+        <routestep step="13" x="537.38" y="1178.52" z="1184.89"/>
+    </walker_template>
+    <!-- SHA-Tag: 132CE59B33680108BF0896DA15CF22BFAE68A076 -->
+    <!-- NPC-IDs: 219192 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_KEY_60_AE_5" pool="1">
+        <routestep step="1" x="503.77" y="373.07" z="1184.89"/>
+        <routestep step="2" x="505.71" y="364.71" z="1184.89"/>
+        <routestep step="3" x="510.85" y="357.92" z="1184.89"/>
+        <routestep step="4" x="517.66" y="353.84" z="1184.89"/>
+        <routestep step="5" x="524.83" y="352.93" z="1184.89"/>
+        <routestep step="6" x="533.32" y="354.58" z="1184.89"/>
+        <routestep step="7" x="539.40" y="359.25" z="1184.89"/>
+        <routestep step="8" x="533.31" y="354.60" z="1184.89"/>
+        <routestep step="9" x="524.82" y="352.94" z="1184.89"/>
+        <routestep step="10" x="517.66" y="353.85" z="1184.89"/>
+        <routestep step="11" x="510.87" y="357.92" z="1184.89"/>
+        <routestep step="12" x="505.70" y="364.74" z="1184.89"/>
+        <routestep step="13" x="503.78" y="373.05" z="1184.89"/>
+    </walker_template>
+    <!-- SHA-Tag: 96EE1652EF2C7942BAB69CCE29B801B6B0FCA890 -->
+    <!-- NPC-IDs: 219192 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_KEY_60_AE_3" pool="1">
+        <routestep step="1" x="1088.35" y="1096.12" z="1184.89"/>
+        <routestep step="2" x="1089.39" y="1104.64" z="1184.89"/>
+        <routestep step="3" x="1086.88" y="1112.77" z="1184.89"/>
+        <routestep step="4" x="1081.88" y="1118.94" z="1184.89"/>
+        <routestep step="5" x="1075.45" y="1122.25" z="1184.89"/>
+        <routestep step="6" x="1066.91" y="1123.60" z="1184.89"/>
+        <routestep step="7" x="1059.60" y="1121.29" z="1184.89"/>
+        <routestep step="8" x="1066.91" y="1123.57" z="1184.89"/>
+        <routestep step="9" x="1075.45" y="1122.23" z="1184.89"/>
+        <routestep step="10" x="1081.87" y="1118.93" z="1184.89"/>
+        <routestep step="11" x="1086.86" y="1112.78" z="1184.89"/>
+        <routestep step="12" x="1089.39" y="1104.60" z="1184.89"/>
+        <routestep step="13" x="1088.35" y="1096.13" z="1184.89"/>
+    </walker_template>
+    <!-- SHA-Tag: 56B175A9E76F7F0374AEE44F450E67CF7DF4DB85 -->
+    <!-- NPC-IDs: 219192 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_KEY_60_AE_2" pool="1">
+        <routestep step="1" x="1154.29" y="1003.82" z="1184.89"/>
+        <routestep step="2" x="1158.30" y="1011.40" z="1184.89"/>
+        <routestep step="3" x="1158.88" y="1019.90" z="1184.89"/>
+        <routestep step="4" x="1156.42" y="1027.44" z="1184.89"/>
+        <routestep step="5" x="1151.60" y="1032.84" z="1184.89"/>
+        <routestep step="6" x="1144.11" y="1037.16" z="1184.89"/>
+        <routestep step="7" x="1136.46" y="1037.63" z="1184.89"/>
+        <routestep step="8" x="1144.10" y="1037.14" z="1184.89"/>
+        <routestep step="9" x="1151.60" y="1032.82" z="1184.89"/>
+        <routestep step="10" x="1156.41" y="1027.44" z="1184.89"/>
+        <routestep step="11" x="1158.87" y="1019.91" z="1184.89"/>
+        <routestep step="12" x="1158.29" y="1011.37" z="1184.89"/>
+        <routestep step="13" x="1154.29" y="1003.83" z="1184.89"/>
+    </walker_template>
+    <!-- SHA-Tag: 40A3298981FFD84A4794DC6EA25E4F15AFD19E70 -->
+    <!-- NPC-IDs: 219192 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANSC_TIAMAT_KEY_60_AE_6" pool="1">
+        <routestep step="1" x="1058.35" y="412.85" z="1184.89"/>
+        <routestep step="2" x="1066.75" y="411.08" z="1184.89"/>
+        <routestep step="3" x="1075.07" y="412.87" z="1184.89"/>
+        <routestep step="4" x="1081.65" y="417.31" z="1184.89"/>
+        <routestep step="5" x="1085.51" y="423.43" z="1184.89"/>
+        <routestep step="6" x="1087.60" y="431.82" z="1184.89"/>
+        <routestep step="7" x="1085.94" y="439.31" z="1184.89"/>
+        <routestep step="8" x="1087.57" y="431.82" z="1184.89"/>
+        <routestep step="9" x="1085.49" y="423.43" z="1184.89"/>
+        <routestep step="10" x="1081.64" y="417.32" z="1184.89"/>
+        <routestep step="11" x="1075.08" y="412.88" z="1184.89"/>
+        <routestep step="12" x="1066.72" y="411.09" z="1184.89"/>
+        <routestep step="13" x="1058.37" y="412.85" z="1184.89"/>
+    </walker_template>
+    <!-- SHA-Tag: 10673272703372F043C35FDA96FAB4F93FF6CB34 -->
+    <!-- NPC-IDs: 218550 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_NOBLE_60_AE_2" pool="1">
+        <routestep step="1" x="659.62" y="1145.00" z="1185.31"/>
+        <routestep step="2" x="655.95" y="1149.87" z="1185.21"/>
+        <routestep step="3" x="653.17" y="1153.56" z="1185.31"/>
+        <routestep step="4" x="655.99" y="1149.87" z="1185.21"/>
+        <routestep step="5" x="659.61" y="1145.02" z="1185.31"/>
+    </walker_template>
+    <!-- SHA-Tag: 862BA0F243A2415062639E76D562CEE71EA9B424 -->
+    <!-- NPC-IDs: 218550 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_NOBLE_60_AE_7" pool="1">
+        <routestep step="1" x="872.49" y="967.04" z="1207.22"/>
+        <routestep step="2" x="876.13" y="973.54" z="1207.12"/>
+        <routestep step="3" x="879.44" y="979.18" z="1207.12"/>
+        <routestep step="4" x="884.77" y="988.73" z="1207.22"/>
+        <routestep step="5" x="890.73" y="999.03" z="1207.12"/>
+        <routestep step="6" x="894.74" y="1006.07" z="1207.22"/>
+        <routestep step="7" x="890.70" y="999.03" z="1207.12"/>
+        <routestep step="8" x="884.93" y="988.89" z="1207.12"/>
+        <routestep step="9" x="879.40" y="979.32" z="1207.12"/>
+        <routestep step="10" x="876.13" y="973.54" z="1207.12"/>
+        <routestep step="11" x="872.36" y="966.85" z="1207.22"/>
+    </walker_template>
+    <!-- SHA-Tag: C978F73B3A216EB38E94D87B44BA7FD9D649359B -->
+    <!-- NPC-IDs: 218550 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_NOBLE_60_AE_4" pool="1">
+        <routestep step="1" x="1127.71" y="642.11" z="1185.31"/>
+        <routestep step="2" x="1133.40" y="644.29" z="1185.21"/>
+        <routestep step="3" x="1137.72" y="645.95" z="1185.31"/>
+        <routestep step="4" x="1133.39" y="644.26" z="1185.21"/>
+        <routestep step="5" x="1127.73" y="642.11" z="1185.31"/>
+    </walker_template>
+    <!-- SHA-Tag: 1EB95E99DFF728628B7CF7B57BE19CFC0080A6BA -->
+    <!-- NPC-IDs: 218550 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_NOBLE_60_AE_8" pool="1">
+        <routestep step="1" x="878.39" y="556.45" z="1205.11"/>
+        <routestep step="2" x="882.20" y="550.04" z="1205.01"/>
+        <routestep step="3" x="885.43" y="544.35" z="1205.01"/>
+        <routestep step="4" x="891.03" y="534.96" z="1205.11"/>
+        <routestep step="5" x="896.97" y="524.65" z="1205.01"/>
+        <routestep step="6" x="901.07" y="517.65" z="1205.11"/>
+        <routestep step="7" x="896.99" y="524.67" z="1205.01"/>
+        <routestep step="8" x="891.10" y="534.74" z="1205.01"/>
+        <routestep step="9" x="885.57" y="544.32" z="1205.01"/>
+        <routestep step="10" x="882.20" y="550.04" z="1205.01"/>
+        <routestep step="11" x="878.29" y="556.65" z="1205.11"/>
+    </walker_template>
+    <!-- SHA-Tag: 0E815808D27112998615501C24689F23CD026B80 -->
+    <!-- NPC-IDs: 218550 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_NOBLE_60_AE_1" pool="1">
+        <routestep step="1" x="642.87" y="392.28" z="1185.31"/>
+        <routestep step="2" x="643.93" y="386.28" z="1185.21"/>
+        <routestep step="3" x="644.73" y="381.73" z="1185.31"/>
+        <routestep step="4" x="643.89" y="386.29" z="1185.21"/>
+        <routestep step="5" x="642.87" y="392.26" z="1185.31"/>
+    </walker_template>
+    <!-- SHA-Tag: FCE96035F6162DE9E36C6FB58C9FED87237C9E38 -->
+    <!-- NPC-IDs: 218550 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_NOBLE_60_AE_6" pool="1">
+        <routestep step="1" x="592.13" y="931.48" z="1204.46"/>
+        <routestep step="2" x="586.79" y="936.68" z="1204.36"/>
+        <routestep step="3" x="582.20" y="941.34" z="1204.36"/>
+        <routestep step="4" x="574.36" y="948.96" z="1204.46"/>
+        <routestep step="5" x="565.96" y="957.38" z="1204.36"/>
+        <routestep step="6" x="560.19" y="963.08" z="1204.46"/>
+        <routestep step="7" x="565.95" y="957.36" z="1204.36"/>
+        <routestep step="8" x="574.25" y="949.15" z="1204.36"/>
+        <routestep step="9" x="582.06" y="941.33" z="1204.36"/>
+        <routestep step="10" x="586.79" y="936.68" z="1204.36"/>
+        <routestep step="11" x="592.28" y="931.31" z="1204.46"/>
+    </walker_template>
+    <!-- SHA-Tag: 2215BE0A44435C86CDC371E6D7E1FF361427F20E -->
+    <!-- NPC-IDs: 218550 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_NOBLE_60_AE_3" pool="1">
+        <routestep step="1" x="1132.01" y="870.50" z="1185.31"/>
+        <routestep step="2" x="1136.75" y="874.34" z="1185.21"/>
+        <routestep step="3" x="1140.35" y="877.24" z="1185.31"/>
+        <routestep step="4" x="1136.76" y="874.30" z="1185.21"/>
+        <routestep step="5" x="1132.03" y="870.52" z="1185.31"/>
+    </walker_template>
+    <!-- SHA-Tag: D894FE60D1A65BE118900151372EEC4E035BF42B -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_18" pool="1">
+        <routestep step="1" x="692.54" y="990.48" z="1209.55"/>
+        <routestep step="2" x="693.71" y="988.76" z="1209.55"/>
+        <routestep step="3" x="696.54" y="987.04" z="1209.55"/>
+        <routestep step="4" x="699.03" y="987.01" z="1209.55"/>
+        <routestep step="5" x="701.62" y="987.89" z="1209.55"/>
+        <routestep step="6" x="703.36" y="989.30" z="1209.55"/>
+        <routestep step="7" x="704.57" y="991.74" z="1209.55"/>
+        <routestep step="8" x="704.82" y="992.45" z="1209.55"/>
+        <routestep step="9" x="704.95" y="995.08" z="1209.55"/>
+        <routestep step="10" x="704.10" y="997.04" z="1209.55"/>
+        <routestep step="11" x="702.62" y="998.90" z="1209.55"/>
+        <routestep step="12" x="700.79" y="1000.08" z="1209.55"/>
+        <routestep step="13" x="699.06" y="1000.51" z="1209.55"/>
+        <routestep step="14" x="697.14" y="1000.32" z="1209.55"/>
+        <routestep step="15" x="694.96" y="999.57" z="1209.55"/>
+        <routestep step="16" x="693.36" y="998.44" z="1209.55"/>
+        <routestep step="17" x="692.23" y="996.83" z="1209.55"/>
+        <routestep step="18" x="691.53" y="994.90" z="1209.55"/>
+        <routestep step="19" x="691.66" y="992.68" z="1209.49"/>
+        <routestep step="20" x="692.40" y="990.70" z="1209.55"/>
+    </walker_template>
+    <!-- SHA-Tag: 85810052D56216F7EBC1F6DA87D673E3A0F47EA8 -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_9" pool="1">
+        <routestep step="1" x="1152.72" y="896.29" z="1185.32"/>
+        <routestep step="2" x="1155.95" y="901.46" z="1185.22"/>
+        <routestep step="3" x="1158.17" y="905.01" z="1185.32"/>
+        <routestep step="4" x="1155.97" y="901.43" z="1185.22"/>
+        <routestep step="5" x="1152.73" y="896.31" z="1185.32"/>
+    </walker_template>
+    <!-- SHA-Tag: 6E11B8E93A63AB1BF866A6D0068A73D0944F8657 -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_12" pool="1">
+        <routestep step="1" x="1352.64" y="998.48" z="1184.53"/>
+        <routestep step="2" x="1352.99" y="995.01" z="1184.53"/>
+        <routestep step="3" x="1355.60" y="990.02" z="1184.53"/>
+        <routestep step="4" x="1359.20" y="987.81" z="1184.53"/>
+        <routestep step="5" x="1363.72" y="986.83" z="1184.53"/>
+        <routestep step="6" x="1367.49" y="987.35" z="1184.53"/>
+        <routestep step="7" x="1371.38" y="989.84" z="1184.53"/>
+        <routestep step="8" x="1372.36" y="990.66" z="1184.53"/>
+        <routestep step="9" x="1374.86" y="994.37" z="1184.53"/>
+        <routestep step="10" x="1375.32" y="997.96" z="1184.53"/>
+        <routestep step="11" x="1374.80" y="1001.97" z="1184.53"/>
+        <routestep step="12" x="1373.18" y="1005.27" z="1184.53"/>
+        <routestep step="13" x="1371.03" y="1007.42" z="1184.53"/>
+        <routestep step="14" x="1368.07" y="1008.81" z="1184.53"/>
+        <routestep step="15" x="1364.24" y="1009.62" z="1184.53"/>
+        <routestep step="16" x="1360.94" y="1009.38" z="1184.53"/>
+        <routestep step="17" x="1357.88" y="1008.03" z="1184.53"/>
+        <routestep step="18" x="1355.18" y="1005.84" z="1184.53"/>
+        <routestep step="19" x="1353.44" y="1002.50" z="1184.44"/>
+        <routestep step="20" x="1352.66" y="998.83" z="1184.53"/>
+    </walker_template>
+    <!-- SHA-Tag: 53A4D2AB48A4AF8C56328650D42DE301A328A8D4 -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_8" pool="1">
+        <routestep step="1" x="634.41" y="1167.59" z="1185.32"/>
+        <routestep step="2" x="629.08" y="1170.54" z="1185.22"/>
+        <routestep step="3" x="625.41" y="1172.57" z="1185.32"/>
+        <routestep step="4" x="629.11" y="1170.56" z="1185.22"/>
+        <routestep step="5" x="634.39" y="1167.60" z="1185.32"/>
+    </walker_template>
+    <!-- SHA-Tag: 45ABC1B0E2B9872CAB2885CA7BC4748610880918 -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_1" pool="1">
+        <routestep step="1" x="657.79" y="363.66" z="1185.32"/>
+        <routestep step="2" x="661.94" y="359.20" z="1185.22"/>
+        <routestep step="3" x="664.80" y="356.14" z="1185.32"/>
+        <routestep step="4" x="661.91" y="359.19" z="1185.22"/>
+        <routestep step="5" x="657.80" y="363.64" z="1185.32"/>
+    </walker_template>
+    <!-- SHA-Tag: 2396A874329B75A56964D9CBB5CB6F359BF5476D -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_7" pool="1">
+        <routestep step="1" x="402.09" y="1329.51" z="1184.53"/>
+        <routestep step="2" x="402.44" y="1326.03" z="1184.53"/>
+        <routestep step="3" x="405.05" y="1321.05" z="1184.53"/>
+        <routestep step="4" x="408.65" y="1318.84" z="1184.53"/>
+        <routestep step="5" x="413.17" y="1317.86" z="1184.53"/>
+        <routestep step="6" x="416.94" y="1318.38" z="1184.53"/>
+        <routestep step="7" x="420.83" y="1320.87" z="1184.53"/>
+        <routestep step="8" x="421.81" y="1321.68" z="1184.53"/>
+        <routestep step="9" x="424.31" y="1325.40" z="1184.53"/>
+        <routestep step="10" x="424.77" y="1328.99" z="1184.53"/>
+        <routestep step="11" x="424.25" y="1332.99" z="1184.53"/>
+        <routestep step="12" x="422.63" y="1336.30" z="1184.53"/>
+        <routestep step="13" x="420.48" y="1338.44" z="1184.53"/>
+        <routestep step="14" x="417.52" y="1339.84" z="1184.53"/>
+        <routestep step="15" x="413.70" y="1340.65" z="1184.53"/>
+        <routestep step="16" x="410.39" y="1340.41" z="1184.53"/>
+        <routestep step="17" x="407.33" y="1339.05" z="1184.53"/>
+        <routestep step="18" x="404.64" y="1336.86" z="1184.53"/>
+        <routestep step="19" x="402.89" y="1333.52" z="1184.44"/>
+        <routestep step="20" x="402.11" y="1329.86" z="1184.53"/>
+    </walker_template>
+    <!-- SHA-Tag: 98406E13AB20453C9DAA7B5C3CA62405D0E3D349 -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_16" pool="1">
+        <routestep step="1" x="1331.78" y="482.40" z="1184.53"/>
+        <routestep step="2" x="1332.13" y="478.93" z="1184.53"/>
+        <routestep step="3" x="1334.74" y="473.94" z="1184.53"/>
+        <routestep step="4" x="1338.34" y="471.74" z="1184.53"/>
+        <routestep step="5" x="1342.86" y="470.75" z="1184.53"/>
+        <routestep step="6" x="1346.63" y="471.27" z="1184.53"/>
+        <routestep step="7" x="1350.52" y="473.77" z="1184.53"/>
+        <routestep step="8" x="1351.50" y="474.58" z="1184.53"/>
+        <routestep step="9" x="1354.00" y="478.29" z="1184.53"/>
+        <routestep step="10" x="1354.46" y="481.89" z="1184.53"/>
+        <routestep step="11" x="1353.94" y="485.89" z="1184.53"/>
+        <routestep step="12" x="1352.32" y="489.19" z="1184.53"/>
+        <routestep step="13" x="1350.17" y="491.34" z="1184.53"/>
+        <routestep step="14" x="1347.21" y="492.73" z="1184.53"/>
+        <routestep step="15" x="1343.38" y="493.54" z="1184.53"/>
+        <routestep step="16" x="1340.08" y="493.31" z="1184.53"/>
+        <routestep step="17" x="1337.02" y="491.95" z="1184.53"/>
+        <routestep step="18" x="1334.33" y="489.76" z="1184.53"/>
+        <routestep step="19" x="1332.58" y="486.42" z="1184.44"/>
+        <routestep step="20" x="1331.80" y="482.76" z="1184.53"/>
+    </walker_template>
+    <!-- SHA-Tag: 3A1DA4AFEFD06888FEC5F5A66240542E9981023B -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_2" pool="1">
+        <routestep step="1" x="403.32" y="205.82" z="1184.53"/>
+        <routestep step="2" x="403.67" y="202.35" z="1184.53"/>
+        <routestep step="3" x="406.28" y="197.36" z="1184.53"/>
+        <routestep step="4" x="409.88" y="195.16" z="1184.53"/>
+        <routestep step="5" x="414.40" y="194.17" z="1184.53"/>
+        <routestep step="6" x="418.17" y="194.70" z="1184.53"/>
+        <routestep step="7" x="422.06" y="197.19" z="1184.53"/>
+        <routestep step="8" x="423.04" y="198.00" z="1184.53"/>
+        <routestep step="9" x="425.54" y="201.71" z="1184.53"/>
+        <routestep step="10" x="426.00" y="205.31" z="1184.53"/>
+        <routestep step="11" x="425.48" y="209.31" z="1184.53"/>
+        <routestep step="12" x="423.86" y="212.62" z="1184.53"/>
+        <routestep step="13" x="421.71" y="214.76" z="1184.53"/>
+        <routestep step="14" x="418.75" y="216.15" z="1184.53"/>
+        <routestep step="15" x="414.92" y="216.97" z="1184.53"/>
+        <routestep step="16" x="411.62" y="216.73" z="1184.53"/>
+        <routestep step="17" x="408.56" y="215.37" z="1184.53"/>
+        <routestep step="18" x="405.87" y="213.18" z="1184.53"/>
+        <routestep step="19" x="404.12" y="209.84" z="1184.44"/>
+        <routestep step="20" x="403.34" y="206.18" z="1184.53"/>
+    </walker_template>
+    <!-- SHA-Tag: 316F2F34E4CC1004893EDF2066A732C17A66AC0D -->
+    <!-- NPC-IDs: 218546 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_60_AE_13" pool="1">
+        <routestep step="1" x="1156.74" y="658.73" z="1185.32"/>
+        <routestep step="2" x="1160.50" y="663.53" z="1185.22"/>
+        <routestep step="3" x="1163.07" y="666.83" z="1185.32"/>
+        <routestep step="4" x="1160.51" y="663.50" z="1185.22"/>
+        <routestep step="5" x="1156.76" y="658.75" z="1185.32"/>
+    </walker_template>
+    <!-- SHA-Tag: 48E8648C4AB3D8FD355C4D503F02906419B37685 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_2_1" pool="1">
+        <routestep step="1" x="454.24" y="683.36" z="1209.87"/>
+        <routestep step="2" x="452.92" y="685.19" z="1209.87"/>
+        <routestep step="3" x="451.16" y="686.36" z="1209.87"/>
+        <routestep step="4" x="449.14" y="686.75" z="1209.87"/>
+        <routestep step="5" x="446.89" y="686.31" z="1209.87"/>
+        <routestep step="6" x="445.02" y="685.00" z="1209.87"/>
+        <routestep step="7" x="443.86" y="683.22" z="1209.87"/>
+        <routestep step="8" x="443.55" y="681.30" z="1209.87"/>
+        <routestep step="9" x="443.91" y="679.02" z="1209.87"/>
+        <routestep step="10" x="445.28" y="677.12" z="1209.87"/>
+        <routestep step="11" x="447.03" y="675.93" z="1209.87"/>
+        <routestep step="12" x="449.05" y="675.58" z="1209.87"/>
+        <routestep step="13" x="451.29" y="676.05" z="1209.87"/>
+        <routestep step="14" x="453.12" y="677.47" z="1209.87"/>
+        <routestep step="15" x="454.22" y="679.10" z="1209.87"/>
+        <routestep step="16" x="454.69" y="681.07" z="1209.87"/>
+        <routestep step="17" x="454.24" y="683.35" z="1209.87"/>
+    </walker_template>
+    <!-- SHA-Tag: 78AD7E3E8D2032CFED32797DC9D556D3D7744100 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_2_2" pool="1">
+        <routestep step="1" x="445.52" y="517.87" z="1209.95"/>
+        <routestep step="2" x="443.26" y="517.84" z="1209.95"/>
+        <routestep step="3" x="441.29" y="517.06" z="1209.95"/>
+        <routestep step="4" x="439.81" y="515.63" z="1209.95"/>
+        <routestep step="5" x="438.88" y="513.54" z="1209.95"/>
+        <routestep step="6" x="438.88" y="511.25" z="1209.95"/>
+        <routestep step="7" x="439.68" y="509.28" z="1209.95"/>
+        <routestep step="8" x="441.07" y="507.93" z="1209.95"/>
+        <routestep step="9" x="443.15" y="506.92" z="1209.95"/>
+        <routestep step="10" x="445.49" y="506.95" z="1209.95"/>
+        <routestep step="11" x="447.47" y="507.70" z="1209.95"/>
+        <routestep step="12" x="448.91" y="509.16" z="1209.95"/>
+        <routestep step="13" x="449.81" y="511.26" z="1209.95"/>
+        <routestep step="14" x="449.69" y="513.57" z="1209.95"/>
+        <routestep step="15" x="448.99" y="515.41" z="1209.95"/>
+        <routestep step="16" x="447.65" y="516.92" z="1209.95"/>
+        <routestep step="17" x="445.52" y="517.87" z="1209.95"/>
+    </walker_template>
+    <!-- SHA-Tag: 27D2A60EA868B4CD181C3491D015D8E05DC758BD -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_2_3" pool="1">
+        <routestep step="1" x="486.73" y="466.11" z="1209.95"/>
+        <routestep step="2" x="487.07" y="463.88" z="1209.95"/>
+        <routestep step="3" x="488.11" y="462.04" z="1209.95"/>
+        <routestep step="4" x="489.73" y="460.78" z="1209.95"/>
+        <routestep step="5" x="491.93" y="460.15" z="1209.95"/>
+        <routestep step="6" x="494.20" y="460.47" z="1209.95"/>
+        <routestep step="7" x="496.04" y="461.53" z="1209.95"/>
+        <routestep step="8" x="497.19" y="463.10" z="1209.95"/>
+        <routestep step="9" x="497.90" y="465.30" z="1209.95"/>
+        <routestep step="10" x="497.54" y="467.60" z="1209.95"/>
+        <routestep step="11" x="496.52" y="469.46" z="1209.95"/>
+        <routestep step="12" x="494.88" y="470.69" z="1209.95"/>
+        <routestep step="13" x="492.67" y="471.28" z="1209.95"/>
+        <routestep step="14" x="490.40" y="470.85" z="1209.95"/>
+        <routestep step="15" x="488.68" y="469.89" z="1209.95"/>
+        <routestep step="16" x="487.36" y="468.35" z="1209.95"/>
+        <routestep step="17" x="486.73" y="466.12" z="1209.95"/>
+    </walker_template>
+    <!-- SHA-Tag: 6F0DB3FE2841E0B921B083CF03CC89DA5BCBF8A2 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_2_4" pool="1">
+        <routestep step="1" x="567.34" y="676.14" z="1209.74"/>
+        <routestep step="2" x="562.20" y="670.85" z="1209.65"/>
+        <routestep step="3" x="557.54" y="666.26" z="1209.64"/>
+        <routestep step="4" x="549.92" y="658.42" z="1209.74"/>
+        <routestep step="5" x="541.50" y="650.01" z="1209.64"/>
+        <routestep step="6" x="532.69" y="641.32" z="1209.64"/>
+        <routestep step="7" x="521.58" y="630.31" z="1209.74"/>
+        <routestep step="8" x="532.68" y="641.34" z="1209.64"/>
+        <routestep step="9" x="541.53" y="650.00" z="1209.64"/>
+        <routestep step="10" x="549.73" y="658.30" z="1209.65"/>
+        <routestep step="11" x="557.55" y="666.12" z="1209.65"/>
+        <routestep step="12" x="562.20" y="670.85" z="1209.65"/>
+        <routestep step="13" x="567.52" y="676.32" z="1209.74"/>
+    </walker_template>
+    <!-- SHA-Tag: 9F931CE0F319EC48499E6B3FF9C121E0EA25E3CA -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_2_5" pool="1">
+        <routestep step="1" x="666.49" y="577.62" z="1209.80"/>
+        <routestep step="2" x="657.11" y="568.24" z="1209.80"/>
+        <routestep step="3" x="647.72" y="558.86" z="1209.80"/>
+        <routestep step="4" x="640.45" y="551.38" z="1209.80"/>
+        <routestep step="5" x="647.71" y="558.88" z="1209.80"/>
+        <routestep step="6" x="657.04" y="568.21" z="1209.80"/>
+        <routestep step="7" x="666.50" y="577.61" z="1209.80"/>
+    </walker_template>
+    <!-- SHA-Tag: D55EDC9BD3FE2FEDA8DE01C5E66393416ABB6645 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_2_8" pool="1">
+        <routestep step="1" x="488.81" y="1070.61" z="1209.80"/>
+        <routestep step="2" x="489.16" y="1068.37" z="1209.80"/>
+        <routestep step="3" x="490.20" y="1066.54" z="1209.80"/>
+        <routestep step="4" x="491.82" y="1065.27" z="1209.80"/>
+        <routestep step="5" x="494.02" y="1064.64" z="1209.80"/>
+        <routestep step="6" x="496.29" y="1064.96" z="1209.80"/>
+        <routestep step="7" x="498.13" y="1066.02" z="1209.80"/>
+        <routestep step="8" x="499.28" y="1067.59" z="1209.80"/>
+        <routestep step="9" x="499.99" y="1069.79" z="1209.80"/>
+        <routestep step="10" x="499.63" y="1072.10" z="1209.80"/>
+        <routestep step="11" x="498.61" y="1073.95" z="1209.80"/>
+        <routestep step="12" x="496.97" y="1075.18" z="1209.80"/>
+        <routestep step="13" x="494.76" y="1075.78" z="1209.80"/>
+        <routestep step="14" x="492.49" y="1075.34" z="1209.80"/>
+        <routestep step="15" x="490.77" y="1074.39" z="1209.80"/>
+        <routestep step="16" x="489.45" y="1072.85" z="1209.80"/>
+        <routestep step="17" x="488.82" y="1070.61" z="1209.80"/>
+    </walker_template>
+    <!-- SHA-Tag: 453052D77FAC51C388C2BEF3212951CD445DC4EF -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_2_9" pool="1">
+        <routestep step="1" x="436.30" y="1013.46" z="1209.96"/>
+        <routestep step="2" x="436.64" y="1011.23" z="1209.96"/>
+        <routestep step="3" x="437.68" y="1009.39" z="1209.96"/>
+        <routestep step="4" x="439.30" y="1008.13" z="1209.96"/>
+        <routestep step="5" x="441.51" y="1007.49" z="1209.96"/>
+        <routestep step="6" x="443.77" y="1007.81" z="1209.96"/>
+        <routestep step="7" x="445.61" y="1008.88" z="1209.96"/>
+        <routestep step="8" x="446.76" y="1010.45" z="1209.96"/>
+        <routestep step="9" x="447.47" y="1012.64" z="1209.96"/>
+        <routestep step="10" x="447.11" y="1014.95" z="1209.96"/>
+        <routestep step="11" x="446.09" y="1016.81" z="1209.96"/>
+        <routestep step="12" x="444.45" y="1018.04" z="1209.96"/>
+        <routestep step="13" x="442.25" y="1018.63" z="1209.96"/>
+        <routestep step="14" x="439.97" y="1018.20" z="1209.96"/>
+        <routestep step="15" x="438.25" y="1017.24" z="1209.96"/>
+        <routestep step="16" x="436.94" y="1015.70" z="1209.96"/>
+        <routestep step="17" x="436.30" y="1013.47" z="1209.96"/>
+    </walker_template>
+    <!-- SHA-Tag: B61E87B9CADED6F1482FB26F8C6A9CD504812F38 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_1_1" pool="1">
+        <routestep step="1" x="794.23" y="562.32" z="1209.80"/>
+        <routestep step="2" x="800.86" y="550.83" z="1209.80"/>
+        <routestep step="3" x="807.49" y="539.33" z="1209.80"/>
+        <routestep step="4" x="812.84" y="530.38" z="1209.80"/>
+        <routestep step="5" x="807.47" y="539.33" z="1209.80"/>
+        <routestep step="6" x="800.87" y="550.76" z="1209.80"/>
+        <routestep step="7" x="794.24" y="562.33" z="1209.80"/>
+    </walker_template>
+    <!-- SHA-Tag: 9B578A24706E01B32F8DF04A730F9DA1006598C4 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_1_2" pool="1">
+        <routestep step="1" x="924.35" y="406.94" z="1209.60"/>
+        <routestep step="2" x="924.84" y="404.74" z="1209.60"/>
+        <routestep step="3" x="926.01" y="402.98" z="1209.60"/>
+        <routestep step="4" x="927.72" y="401.83" z="1209.60"/>
+        <routestep step="5" x="929.96" y="401.35" z="1209.60"/>
+        <routestep step="6" x="932.20" y="401.83" z="1209.60"/>
+        <routestep step="7" x="933.96" y="403.02" z="1209.60"/>
+        <routestep step="8" x="934.99" y="404.66" z="1209.60"/>
+        <routestep step="9" x="935.55" y="406.90" z="1209.60"/>
+        <routestep step="10" x="935.03" y="409.18" z="1209.60"/>
+        <routestep step="11" x="933.88" y="410.96" z="1209.60"/>
+        <routestep step="12" x="932.16" y="412.07" z="1209.60"/>
+        <routestep step="13" x="929.92" y="412.52" z="1209.60"/>
+        <routestep step="14" x="927.68" y="411.92" z="1209.60"/>
+        <routestep step="15" x="926.03" y="410.85" z="1209.60"/>
+        <routestep step="16" x="924.82" y="409.22" z="1209.60"/>
+        <routestep step="17" x="924.35" y="406.95" z="1209.60"/>
+    </walker_template>
+    <!-- SHA-Tag: 83134B5EC781510956E0583F3991FDCEC6829B0B -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_1_3" pool="1">
+        <routestep step="1" x="915.60" y="631.01" z="1209.74"/>
+        <routestep step="2" x="919.38" y="624.68" z="1209.65"/>
+        <routestep step="3" x="922.61" y="618.98" z="1209.64"/>
+        <routestep step="4" x="928.21" y="609.60" z="1209.74"/>
+        <routestep step="5" x="934.15" y="599.29" z="1209.64"/>
+        <routestep step="6" x="940.27" y="588.52" z="1209.64"/>
+        <routestep step="7" x="948.03" y="574.95" z="1209.74"/>
+        <routestep step="8" x="940.25" y="588.52" z="1209.64"/>
+        <routestep step="9" x="934.17" y="599.31" z="1209.64"/>
+        <routestep step="10" x="928.27" y="609.38" z="1209.65"/>
+        <routestep step="11" x="922.75" y="618.96" z="1209.65"/>
+        <routestep step="12" x="919.38" y="624.68" z="1209.65"/>
+        <routestep step="13" x="915.48" y="631.23" z="1209.74"/>
+    </walker_template>
+    <!-- SHA-Tag: 13E413BAAFDE77A2D729BD399E2A4FD75AE8A87A -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_1_4" pool="1">
+        <routestep step="1" x="1061.34" y="534.93" z="1209.94"/>
+        <routestep step="2" x="1061.84" y="532.73" z="1209.94"/>
+        <routestep step="3" x="1063.01" y="530.96" z="1209.94"/>
+        <routestep step="4" x="1064.71" y="529.81" z="1209.94"/>
+        <routestep step="5" x="1066.95" y="529.34" z="1209.94"/>
+        <routestep step="6" x="1069.19" y="529.81" z="1209.94"/>
+        <routestep step="7" x="1070.95" y="531.00" z="1209.94"/>
+        <routestep step="8" x="1071.99" y="532.65" z="1209.94"/>
+        <routestep step="9" x="1072.54" y="534.89" z="1209.94"/>
+        <routestep step="10" x="1072.03" y="537.17" z="1209.94"/>
+        <routestep step="11" x="1070.88" y="538.95" z="1209.94"/>
+        <routestep step="12" x="1069.15" y="540.06" z="1209.94"/>
+        <routestep step="13" x="1066.91" y="540.50" z="1209.94"/>
+        <routestep step="14" x="1064.67" y="539.91" z="1209.94"/>
+        <routestep step="15" x="1063.03" y="538.83" z="1209.94"/>
+        <routestep step="16" x="1061.82" y="537.21" z="1209.94"/>
+        <routestep step="17" x="1061.34" y="534.93" z="1209.94"/>
+    </walker_template>
+    <!-- SHA-Tag: FD0B06BAC1E8D5026704CCE3238134A21CB5A0E0 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_1_5" pool="1">
+        <routestep step="1" x="1074.73" y="675.17" z="1209.97"/>
+        <routestep step="2" x="1075.22" y="672.97" z="1209.97"/>
+        <routestep step="3" x="1076.39" y="671.20" z="1209.97"/>
+        <routestep step="4" x="1078.10" y="670.05" z="1209.97"/>
+        <routestep step="5" x="1080.34" y="669.58" z="1209.97"/>
+        <routestep step="6" x="1082.58" y="670.05" z="1209.97"/>
+        <routestep step="7" x="1084.34" y="671.24" z="1209.97"/>
+        <routestep step="8" x="1085.37" y="672.89" z="1209.97"/>
+        <routestep step="9" x="1085.93" y="675.13" z="1209.97"/>
+        <routestep step="10" x="1085.41" y="677.41" z="1209.97"/>
+        <routestep step="11" x="1084.26" y="679.19" z="1209.97"/>
+        <routestep step="12" x="1082.54" y="680.30" z="1209.97"/>
+        <routestep step="13" x="1080.30" y="680.74" z="1209.97"/>
+        <routestep step="14" x="1078.06" y="680.15" z="1209.97"/>
+        <routestep step="15" x="1076.41" y="679.07" z="1209.97"/>
+        <routestep step="16" x="1075.20" y="677.45" z="1209.97"/>
+        <routestep step="17" x="1074.73" y="675.17" z="1209.97"/>
+    </walker_template>
+    <!-- SHA-Tag: A9FF7BC7C792670DE4B796C055C7BFB0A7AA3B09 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_1_8" pool="1">
+        <routestep step="1" x="928.40" y="1126.79" z="1209.98"/>
+        <routestep step="2" x="928.90" y="1124.59" z="1209.98"/>
+        <routestep step="3" x="930.07" y="1122.83" z="1209.98"/>
+        <routestep step="4" x="931.77" y="1121.68" z="1209.98"/>
+        <routestep step="5" x="934.01" y="1121.20" z="1209.98"/>
+        <routestep step="6" x="936.26" y="1121.68" z="1209.98"/>
+        <routestep step="7" x="938.02" y="1122.87" z="1209.98"/>
+        <routestep step="8" x="939.05" y="1124.51" z="1209.98"/>
+        <routestep step="9" x="939.61" y="1126.76" z="1209.98"/>
+        <routestep step="10" x="939.09" y="1129.03" z="1209.98"/>
+        <routestep step="11" x="937.94" y="1130.81" z="1209.98"/>
+        <routestep step="12" x="936.22" y="1131.93" z="1209.98"/>
+        <routestep step="13" x="933.98" y="1132.37" z="1209.98"/>
+        <routestep step="14" x="931.74" y="1131.77" z="1209.98"/>
+        <routestep step="15" x="930.09" y="1130.70" z="1209.98"/>
+        <routestep step="16" x="928.88" y="1129.07" z="1209.98"/>
+        <routestep step="17" x="928.40" y="1126.80" z="1209.98"/>
+    </walker_template>
+    <!-- SHA-Tag: DD5E4A84514569F9F03D816E6F05259064CC60C8 -->
+    <!-- NPC-IDs: 219193 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TDOWN_DRAKANWI_TIAMAT_KEY_60_AE_1_9" pool="1">
+        <routestep step="1" x="795.23" y="971.84" z="1209.80"/>
+        <routestep step="2" x="801.67" y="983.44" z="1209.80"/>
+        <routestep step="3" x="808.11" y="995.05" z="1209.80"/>
+        <routestep step="4" x="813.03" y="1004.24" z="1209.80"/>
+        <routestep step="5" x="808.12" y="995.03" z="1209.80"/>
+        <routestep step="6" x="801.72" y="983.49" z="1209.80"/>
+        <routestep step="7" x="795.23" y="971.85" z="1209.80"/>
+    </walker_template>
+    <!-- SHA-Tag: F89966FB976CBAF6BCF4716735CBB66A2AFDEC73 -->
+    <!-- NPC-IDs: 831013, 831014 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_GUARD_D_PARTY_4" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="736.01" y="1398.07" z="1199.86"/>
+        <routestep step="2" x="736.07" y="1459.69" z="1199.86"/>
+        <routestep step="3" x="735.94" y="1514.21" z="1199.86"/>
+        <routestep step="4" x="736.09" y="1459.69" z="1199.86"/>
+        <routestep step="5" x="736.01" y="1398.09" z="1199.86"/>
+    </walker_template>
+    <!-- SHA-Tag: 6464AB8DE342CDF0411B8DA9A0824B474403A36E -->
+    <!-- NPC-IDs: 831013, 831015 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_GUARD_L_PARTY_4" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="781.55" y="1287.90" z="1185.35"/>
+        <routestep step="2" x="777.66" y="1287.86" z="1185.25"/>
+        <routestep step="3" x="727.98" y="1287.82" z="1185.25"/>
+        <routestep step="4" x="724.54" y="1287.81" z="1185.35"/>
+        <routestep step="5" x="727.92" y="1287.80" z="1185.25"/>
+        <routestep step="6" x="777.66" y="1287.86" z="1185.25"/>
+        <routestep step="7" x="781.53" y="1287.90" z="1185.35"/>
+    </walker_template>
+    <!-- SHA-Tag: D066EAAB8CAA822525F64D41DDFF930016B0EB19 -->
+    <!-- NPC-IDs: 831015 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TIAMAT_GUARD_DA_FIGHTER_AH2_LV60_M_19" pool="1">
+        <routestep step="1" x="701.93" y="1287.48" z="1185.42"/>
+        <routestep step="2" x="707.57" y="1286.15" z="1185.42"/>
+        <routestep step="3" x="712.95" y="1286.86" z="1185.42"/>
+        <routestep step="4" x="717.51" y="1289.50" z="1185.42"/>
+        <routestep step="5" x="721.13" y="1294.12" z="1185.42"/>
+        <routestep step="6" x="722.55" y="1299.83" z="1185.42"/>
+        <routestep step="7" x="721.79" y="1305.22" z="1185.42"/>
+        <routestep step="8" x="719.16" y="1309.46" z="1185.42"/>
+        <routestep step="9" x="714.62" y="1313.26" z="1185.42"/>
+        <routestep step="10" x="708.78" y="1314.63" z="1185.42"/>
+        <routestep step="11" x="703.39" y="1313.98" z="1185.42"/>
+        <routestep step="12" x="698.89" y="1311.26" z="1185.42"/>
+        <routestep step="13" x="695.35" y="1306.59" z="1185.42"/>
+        <routestep step="14" x="694.20" y="1300.76" z="1185.42"/>
+        <routestep step="15" x="694.82" y="1295.75" z="1185.42"/>
+        <routestep step="16" x="697.22" y="1291.14" z="1185.42"/>
+        <routestep step="17" x="701.93" y="1287.48" z="1185.42"/>
+    </walker_template>
+    <!-- SHA-Tag: 6A16645C53E289AE0CB2BA0B4DF2E4DD75CC5A68 -->
+    <!-- NPC-IDs: 831010, 831011 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_GUARD_L_PARTY_1" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="735.48" y="29.80" z="1198.54"/>
+        <routestep step="2" x="735.53" y="91.42" z="1198.54"/>
+        <routestep step="3" x="735.41" y="145.94" z="1198.54"/>
+        <routestep step="4" x="735.56" y="91.42" z="1198.54"/>
+        <routestep step="5" x="735.48" y="29.82" z="1198.54"/>
+    </walker_template>
+    <!-- SHA-Tag: EF4A204F9F19A0FD0E7FF07F073952E9F98C1DF7 -->
+    <!-- NPC-IDs: 831010, 831011 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_GUARD_L_PARTY_2" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="772.25" y="29.80" z="1198.54"/>
+        <routestep step="2" x="772.31" y="91.42" z="1198.54"/>
+        <routestep step="3" x="772.18" y="145.94" z="1198.54"/>
+        <routestep step="4" x="772.33" y="91.42" z="1198.54"/>
+        <routestep step="5" x="772.25" y="29.82" z="1198.54"/>
+    </walker_template>
+    <!-- SHA-Tag: A3148B0AC9317C45FE1B78257E2BC19966DD6156 -->
+    <!-- NPC-IDs: 831010, 831012 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_GUARD_L_PARTY_3" pool="2" formation="SQUARE" rows="1,1">
+        <routestep step="1" x="781.55" y="244.56" z="1185.35"/>
+        <routestep step="2" x="781.45" y="244.55" z="1185.25"/>
+        <routestep step="3" x="725.10" y="244.46" z="1185.25"/>
+        <routestep step="4" x="724.54" y="244.47" z="1185.35"/>
+        <routestep step="5" x="725.09" y="244.46" z="1185.25"/>
+        <routestep step="6" x="781.45" y="244.55" z="1185.25"/>
+        <routestep step="7" x="781.53" y="244.56" z="1185.35"/>
+    </walker_template>
+    <!-- SHA-Tag: D7BE7DE0D2E20616A8C4F63CFB3DA318BC92D0B9 -->
+    <!-- NPC-IDs: 831012 -->
+    <walker_template route_id="TIAMAT_DOWN_PATH_TIAMAT_GUARD_LI_FIGHTER_AH2_LV60_M_2" pool="1">
+        <routestep step="1" x="701.93" y="220.00" z="1185.42"/>
+        <routestep step="2" x="707.57" y="218.68" z="1185.42"/>
+        <routestep step="3" x="712.95" y="219.39" z="1185.42"/>
+        <routestep step="4" x="717.51" y="222.02" z="1185.42"/>
+        <routestep step="5" x="721.13" y="226.65" z="1185.42"/>
+        <routestep step="6" x="722.55" y="232.36" z="1185.42"/>
+        <routestep step="7" x="721.79" y="237.75" z="1185.42"/>
+        <routestep step="8" x="719.16" y="241.99" z="1185.42"/>
+        <routestep step="9" x="714.62" y="245.79" z="1185.42"/>
+        <routestep step="10" x="708.78" y="247.16" z="1185.42"/>
+        <routestep step="11" x="703.39" y="246.51" z="1185.42"/>
+        <routestep step="12" x="698.89" y="243.79" z="1185.42"/>
+        <routestep step="13" x="695.35" y="239.12" z="1185.42"/>
+        <routestep step="14" x="694.20" y="233.28" z="1185.42"/>
+        <routestep step="15" x="694.82" y="228.28" z="1185.42"/>
+        <routestep step="16" x="697.22" y="223.67" z="1185.42"/>
+        <routestep step="17" x="701.93" y="220.01" z="1185.42"/>
+    </walker_template>
+</npc_walker>

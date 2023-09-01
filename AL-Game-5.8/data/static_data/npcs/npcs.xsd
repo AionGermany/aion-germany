@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../items/item_templates.xsd"/>
+    <xs:include schemaLocation="../stats/stats.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:include schemaLocation="../modifiers.xsd"/>
+    <xs:include schemaLocation="../global_types.xsd"/>
+    <xs:element name="npc_templates" type="npcTemplates"/>
+    <xs:complexType name="npcTemplates">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="npc_template" type="npcTemplate" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="npcTemplate">
+        <xs:sequence>
+            <xs:element name="stats" type="npcStatsTemplate"/>
+            <xs:element name="equipment" type="npcEquipmentList" minOccurs="0"/>
+            <xs:element name="kisk_stats" type="KiskStats" minOccurs="0"/>
+            <xs:element name="bound_radius" type="BoundRadius" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="talk_info" type="TalkInfo" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="massive_looting" type="MassiveLooting" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="npc_id" type="npcId" use="required"/>
+        <xs:attribute name="level" type="xs:short" use="required"/>
+        <xs:attribute name="name_id" type="xs:int" use="required"/>
+        <xs:attribute name="title_id" type="xs:int" default="0"/>
+        <xs:attribute name="name" type="xs:string" default=""/>
+        <xs:attribute name="name_desc" type="xs:string" default="" use="optional"/>
+        <xs:attribute name="height" type="xs:float" default="0"/>
+        <xs:attribute name="ammo_speed" type="xs:int"/>
+        <xs:attribute name="rating" type="NpcRating"/>
+        <xs:attribute name="rank" type="NpcRank"/>
+        <xs:attribute name="srange" type="xs:int" default="0"/>
+        <xs:attribute name="tribe" type="TribeClass"/>
+        <xs:attribute name="type" type="NpcTemplateType"/>
+        <xs:attribute name="ui_type" type="NpcUiType"/>
+        <xs:attribute name="abyss_type" type="AbyssType"/>
+        <xs:attribute name="ai" type="xs:string" default="dummy"/>
+        <xs:attribute name="race" type="Race"/>
+        <xs:attribute name="hpgauge" type="xs:int"/>
+        <xs:attribute name="arange" type="xs:int"/>
+        <xs:attribute name="arate" type="xs:int"/>
+        <xs:attribute name="adelay" type="xs:int" default="2000"/>
+        <xs:attribute name="state" type="xs:int"/>
+        <xs:attribute name="floatcorpse" type="xs:boolean" default="false"/>
+        <xs:attribute name="stare_range" type="xs:int" default="10"/>
+        <xs:attribute name="on_mist" type="xs:boolean"/>
+    </xs:complexType>
+    <xs:complexType name="npcStatsTemplate">
+        <xs:complexContent>
+            <xs:extension base="statsTemplate">
+                <xs:sequence/>
+                <xs:attribute name="maxXp" type="xs:int"/>
+                <xs:attribute name="accuracy" type="xs:int"/>
+                <xs:attribute name="power" type="xs:int"/>
+                <xs:attribute name="mresist" type="xs:int"/>
+                <xs:attribute name="mcrit" type="xs:int"/>
+                <xs:attribute name="pdef" type="xs:int"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="npcEquipmentList">
+        <xs:sequence>
+            <xs:element name="item" type="itemId" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="KiskStats">
+        <xs:sequence/>
+        <xs:attribute name="usemask" type="xs:int" use="required"/>
+        <xs:attribute name="members" type="xs:int" use="required"/>
+        <xs:attribute name="resurrects" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="BoundRadius">
+        <xs:attribute name="front" type="xs:float"/>
+        <xs:attribute name="side" type="xs:float"/>
+        <xs:attribute name="upper" type="xs:float"/>
+    </xs:complexType>
+    <xs:complexType name="TalkInfo">
+        <xs:attribute name="distance" type="xs:int"/>
+        <xs:attribute name="delay" type="xs:int"/>
+        <xs:attribute name="is_dialog" type="xs:boolean" default="false"/>
+        <xs:attribute name="func_dialogs" type="IntListType"/>
+        <xs:attribute name="subdialog_type" type="xs:string"/>
+    </xs:complexType>
+	<xs:complexType name="MassiveLooting">
+		<xs:attribute name="looting_num" type="xs:int"/>
+		<xs:attribute name="itemid" type="xs:int"/>
+		<xs:attribute name="min_level" type="xs:int"/>
+		<xs:attribute name="max_level" type="xs:int"/>
+	</xs:complexType>
+    <xs:simpleType name="NpcTemplateType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MERCENARY"/>
+            <xs:enumeration value="GENERAL"/>
+            <xs:enumeration value="GUARD"/>
+            <xs:enumeration value="SUMMON_PET"/>
+            <xs:enumeration value="ABYSS_GUARD"/>
+            <xs:enumeration value="MONSTER"/>
+            <xs:enumeration value="HOUSING"/>
+            <xs:enumeration value="FLAG"/>
+            <xs:enumeration value="RAID_MONSTER"/>
+            <xs:enumeration value="NONE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NpcUiType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="GENERAL"/>
+            <xs:enumeration value="MONSTER"/>
+            <xs:enumeration value="HIDDEN_MONSTER"/>
+            <xs:enumeration value="CRAFT"/>
+            <xs:enumeration value="BACKGROUND"/>
+            <xs:enumeration value="GENERAL_NOREACTION"/>
+            <xs:enumeration value="MONSTER_NAMEDISPLAY"/>
+            <xs:enumeration value="TRAP"/>
+            <xs:enumeration value="GROUPGATE"/>
+            <xs:enumeration value="GENERAL_NOROTATE"/>
+            <xs:enumeration value="GENERAL_ACT"/>
+            <xs:enumeration value="GENERAL_PATH_EXPANDED"/>
+            <xs:enumeration value="ATTACKABLE_OBJ"/>
+            <xs:enumeration value="GENERAL_NOROTATE_NOTITLE"/>
+            <xs:enumeration value="GENERAL_NO_MARKER"/>
+            <xs:enumeration value="GENERAL_NOROTATE_NOTALK"/>
+            <xs:enumeration value="MONSTER_NOTITLE"/>
+            <xs:enumeration value="BOOK"/>
+            <xs:enumeration value="CARRIER_NOTITLE_NOHP"/>
+            <xs:enumeration value="BINDING_STONE"/>
+            <xs:enumeration value="SUMMONED"/>
+            <xs:enumeration value="MONSTER_RAID"/>
+            <xs:enumeration value="MONSTER_SUBORDINATE"/>
+            <xs:enumeration value="ONLY_OVER_UI_TITLE"/>
+            <xs:enumeration value="GENERAL_NO_UI_RADAR"/>
+            <xs:enumeration value="CRAFT_UI_ALWAYS"/>
+            <xs:enumeration value="NO_TARGET_MARKER"/>
+            <xs:enumeration value="ATTACKABLE_OBJ_SP"/>
+            <xs:enumeration value="FOBJ_SP"/>
+            <xs:enumeration value="POLYMORPH_RIDE"/>
+            <xs:enumeration value="ONLY_ALWAYS_UI_TITLE"/>
+            <xs:enumeration value="GENERAL_NOHP"/>
+            <xs:enumeration value="NO_TARGET_MARKER_ONLYTITLE"/>
+            <xs:enumeration value="HOUSING_NPCOBJ_UI"/>
+            <xs:enumeration value="NO_RADER_MONSTER"/>
+            <xs:enumeration value="ATTACKABLE_POLY_RIDE"/>
+            <xs:enumeration value="NONEBUTROTATE"/>
+            <xs:enumeration value="FOBJ_NOTITLE"/>
+            <xs:enumeration value="DOOR_OBJ"/>
+            <xs:enumeration value="MONSTER_NO_RADAR"/>
+            <xs:enumeration value="ATTACKABLE_OBJ_UI_HIDDEN"/>
+            <xs:enumeration value="SEIREN"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AbyssType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SHIELDNPC_OFF"/>
+            <xs:enumeration value="RAID"/>
+            <xs:enumeration value="SHIELDNPC_ON"/>
+            <xs:enumeration value="DEFENDER"/>
+            <xs:enumeration value="BOSS"/>
+            <xs:enumeration value="DOOR"/>
+            <xs:enumeration value="GUARD"/>
+            <xs:enumeration value="TELEPORTER"/>
+            <xs:enumeration value="ETC"/>
+            <xs:enumeration value="ARTIFACT_EFFECT_CORE"/>
+            <xs:enumeration value="DOORREPAIR"/>
+            <xs:enumeration value="ARTIFACT"/>
+            <xs:enumeration value="NONE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NpcRank">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NOVICE"/>
+            <xs:enumeration value="DISCIPLINED"/>
+            <xs:enumeration value="SEASONED"/>
+            <xs:enumeration value="EXPERT"/>
+            <xs:enumeration value="VETERAN"/>
+            <xs:enumeration value="MASTER"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NpcRating">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="JUNK"/>
+            <xs:enumeration value="NORMAL"/>
+            <xs:enumeration value="ELITE"/>
+            <xs:enumeration value="HERO"/>
+            <xs:enumeration value="LEGENDARY"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="npcId">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="200000"/>
+            <xs:maxInclusive value="1000000"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

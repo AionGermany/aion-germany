@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="fly_rings">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fly_ring" type="FlyRing" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="FlyRing">
+        <xs:sequence>
+            <xs:element name="center" type="FlyRingPoint"/>
+            <xs:element name="left" type="FlyRingPoint"/>
+            <xs:element name="right" type="FlyRingPoint"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="map" type="xs:int"/>
+        <xs:attribute name="radius" type="xs:float"/>
+    </xs:complexType>
+    <xs:complexType name="FlyRingPoint">
+        <xs:attribute name="x" type="xs:float"/>
+        <xs:attribute name="y" type="xs:float"/>
+        <xs:attribute name="z" type="xs:float"/>
+    </xs:complexType>
+</xs:schema>

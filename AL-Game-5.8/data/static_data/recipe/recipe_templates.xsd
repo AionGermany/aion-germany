@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../skill_tree/skill_tree.xsd"/>
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="recipe_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="recipe_template" type="RecipeTemplate" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="RecipeTemplate">
+        <xs:sequence>
+            <xs:element name="component" type="Component" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="comboproduct" type="ComboProduct" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="max_production_count" type="xs:int"/>
+        <xs:attribute name="craft_delay_time" type="xs:int"/>
+        <xs:attribute name="craft_delay_id" type="xs:int"/>
+        <xs:attribute name="quantity" type="xs:int"/>
+        <xs:attribute name="productid" type="xs:int"/>
+        <xs:attribute name="autolearn" type="xs:int"/>
+        <xs:attribute name="dp" type="xs:int"/>
+        <xs:attribute name="skillpoint" type="xs:int"/>
+        <xs:attribute name="race" type="Race"/>
+        <xs:attribute name="skillid" type="xs:int"/>
+        <xs:attribute name="itemid" type="xs:int"/>
+        <xs:attribute name="nameid" type="xs:int"/>
+        <xs:attribute name="id" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="Component">
+        <xs:attribute name="itemid" type="xs:int"/>
+        <xs:attribute name="quantity" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="ComboProduct">
+        <xs:attribute name="itemid" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

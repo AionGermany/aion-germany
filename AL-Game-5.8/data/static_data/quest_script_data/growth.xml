@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                80369 [XML][Growth] Conversation With Protector Siz
+				80370 [XML][Growth] Conversation With Protector Jacques
+				80371 [XML][Growth] Conversation With Protector Paulcoes
+				80372 [XML][Growth] Conversation With Protector Kentro
+				80373 [XML][Growth] Converse With Bree
+				80374 [XML][Growth] Converse With Mione
+				80375 [XML][Growth] Converse With Nico
+				80376 [XML][Growth] Converse With Kentro				
+				80377 [XML][Growth] Converse With Mosswing
+				80378 [XML][Growth] Helping Eddval
+				80379 [XML][Growth] Helping Idmund
+				80380 [XML][Growth] Helping Ketil
+				80381 [XML][Growth] Helping Melnir
+				80382 [XML][Growth] Assisting Kolfrosta
+				80383 [XML][Growth] Assisting Geirrid
+				80384 [XML][Growth] Assisting Vaetild
+				80385 [XML][Growth] Assisting Melnir
+				80386 [XML][Growth] Assisting Mirian				
+				80387 [XML][Growth] Kralltumagna Balaur Blues
+				80388 [XML][Growth] Kralltumagna Kill Zone
+				80389 [XML][Growth] No No Nagarant
+				80390 [XML][Growth] Drafala's Fall
+				80391 [XML][Growth] Lahulahu Past Laugh
+				80392 [XML][Growth] The Pupukin Problem
+				80393 [XML][Growth] Shulack Sad Sack
+				80394 [XML][Growth] Drakan Back In Style
+				80395 [XML][Growth] Indratu Fortress Blues				
+				80396 [XML][Growth] Enmity At The Gates
+				80397 [XML][Growth] Death To Indratu!
+				80398 [XML][Growth] The Akbar Trap
+				80399 [XML][Growth] Cruelty To Kind Saraswati
+				80400 [XML][Growth] Lakshmi Tearful Goodbye
+				80401 [XML][Growth] Death To Nimbarka!
+				80402 [XML][Growth] Stonecold Killer
+				80403 [XML][Growth] Blasting In Blasted Lands
+				80404 [XML][Growth] Zombie Eggs				
+				80405 [XML][Growth] Bring Bree Proof
+				80406 [XML][Growth] It Takes A Village Out
+				80407 [XML][Growth] To The Bat Cave
+				80408 [XML][Growth] A Many Peded Thing
+				80409 [XML][Growth] Spider Down
+				80410 [XML][Growth] A Stone's Throw
+				80411 [XML][Growth] The Things We Leave Behind
+				80412 [XML][Growth] A Statuesque Monster				
+				80413 [XML][Growth] Unstable Experiments
+				80414 [XML][Growth] Instruction In Death
+				80415 [XML][Growth] Kindness Kills
+				80416 [XML][Growth] Beauty's Objective
+				80417 [XML][Growth] Commander Conquered
+				80418 [XML][Growth] Fraught Futures
+				80419 [XML][Growth] Spiritual Growths
+				80420 [XML][Growth] The Future Of Fungie
+				80421 [XML][Growth] Mind Over
+				80422 [XML][Growth] In The Lair Of The Drake
+				80423 [XML][Growth] Cleansing The Lair
+				80424 [XML][Growth] Bloody Balaur Rags
+				80425 [XML][Growth] Slaying The General				
+				80426 [XML][Growth] Shulack, I Need More Power!
+				80427 [XML][Growth] Unforeseen Problems
+				80428 [XML][Growth] Control Of The Ship
+				80429 [XML][Growth] Research Grant Canceled
+				80430 [XML][Growth] Lab Shut Down
+				80431 [XML][Growth] Hand Over The Keys
+				80432 [XML][Growth] Extreme Excommunication
+				80433 [XML][Growth] School's Out For Afrane
+				80434 [XML][Growth] Be Kind, Re-Grind
+				80435 [XML][Growth] Let The Beauty Out
+				80436 [XML][Growth] Full Battle Disarray
+				80437 [XML][Growth] Pest Control
+				80438 [XML][Growth] The Sap's The Thing
+				80439 [XML][Growth] From The Grave				
+				80440 [XML][Growth] The Wailing Dead
+				80441 [XML][Growth] Hostile Waters
+				80442 [XML][Growth] Lobnite's Last Night
+				80443 [XML][Growth] Battling Brohum
+				80444 [XML][Growth] Vampires Of Nahor
+				80445 [XML][Growth] Making A Path
+				80446 [XML][Growth] Palace Problems
+				80447 [XML][Growth] Crush The Cellatu
+				80448 [XML][Growth] Lords And Suspicions
+				80449 [XML][Growth] End Of Lesson
+				80450 [XML][Growth] Cruel To Kind
+				80451 [XML][Growth] A Beautiful End
+				80452 [XML][Growth] Nimbarka's Last Battle
+				80453 [XML][Growth] Future Strike
+				80454 [XML][Growth] Dark Tidings
+				80455 [XML][Growth] Doom Fungie
+				80456 [XML][Growth] Infernal Machines
+				80474 [XML][Growth/Weekly] Save Time And Effort
+            [END] SUMMARY    
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to start_npc_ids="831833" end_npc_ids="831837" id="80369"/>
+    <!-- [Growth] Conversation With Protector Jacques -->
+    <report_to start_npc_ids="831833" end_npc_ids="831838" id="80370"/>
+    <!-- [Growth] Conversation With Protector Paulcoes -->
+    <report_to start_npc_ids="831833" end_npc_ids="831839" id="80371"/>
+    <!-- [Growth] Conversation With Protector Kentro -->
+    <report_to start_npc_ids="831833" end_npc_ids="831840" id="80372"/>
+    <!-- [Growth] Converse With Bree -->
+    <report_to start_npc_ids="831834" end_npc_ids="831841" id="80373"/>
+    <!-- [Growth] Converse With Mione -->
+    <report_to start_npc_ids="831834" end_npc_ids="831842" id="80374"/>
+    <!-- [Growth] Converse With Nico -->
+    <report_to start_npc_ids="831834" end_npc_ids="831843" id="80375"/>
+    <!-- [Growth] Converse With Kentro -->
+    <report_to start_npc_ids="831834" end_npc_ids="831840" id="80376"/>
+    <!-- [Growth] Converse With Mosswing -->
+    <report_to start_npc_ids="831834" end_npc_ids="831844" id="80377"/>
+    <!-- [Growth] Helping Eddval -->
+    <report_to start_npc_ids="831835" end_npc_ids="831845" id="80378"/>
+    <!-- [Growth] Helping Idmund -->
+    <report_to start_npc_ids="831835" end_npc_ids="831846" id="80379"/>
+    <!-- [Growth] Helping Ketil -->
+    <report_to start_npc_ids="831835" end_npc_ids="831847" id="80380"/>
+    <!-- [Growth] Helping Melnir -->
+    <report_to start_npc_ids="831835" end_npc_ids="831848" id="80381"/>
+    <!-- [Growth] Assisting Kolfrosta -->
+    <report_to start_npc_ids="831836" end_npc_ids="831849" id="80382"/>
+    <!-- [Growth] Assisting Geirrid -->
+    <report_to start_npc_ids="831836" end_npc_ids="831850" id="80383"/>
+    <!-- [Growth] Assisting Vaetild -->
+    <report_to start_npc_ids="831836" end_npc_ids="831851" id="80384"/>
+    <!-- [Growth] Assisting Melnir -->
+    <report_to start_npc_ids="831836" end_npc_ids="831848" id="80385"/>
+    <!-- [Growth] Assisting Mirian -->
+    <report_to start_npc_ids="831836" end_npc_ids="831852" id="80386"/>
+    <!-- [Growth] Kralltumagna Balaur Blues -->
+    <monster_hunt id="80387" start_npc_ids="831837">
+        <monster var="0" npc_ids="219104 219105 219107 219108" end_var="10"/>
+        <monster var="0" npc_ids="219110 219120 219121 219122" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] Kralltumagna Kill Zone -->
+    <monster_hunt id="80388" start_npc_ids="831837">
+        <monster var="0" npc_ids="213994 213995" end_var="4"/>
+        <monster var="0" npc_ids="214070 214071" end_var="4"/>
+    </monster_hunt>
+    <!-- [Growth] No No Nagarant -->
+    <monster_hunt id="80389" start_npc_ids="831837">
+        <monster var="0" npc_ids="213994 213995" end_var="10"/>
+        <monster var="0" npc_ids="214070 214071" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] Drafala's Fall -->
+    <monster_hunt id="80390" start_npc_ids="831837">
+        <monster var="0" npc_ids="212588" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Lahulahu Past Laugh -->
+    <monster_hunt id="80391" start_npc_ids="831838">
+        <monster var="0" npc_ids="215080" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] The Pupukin Problem -->
+    <monster_hunt id="80392" start_npc_ids="831838">
+        <monster var="0" npc_ids="215070" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Shulack Sad Sack -->
+    <monster_hunt id="80393" start_npc_ids="831838">
+        <monster var="0" npc_ids="215080" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Drakan Back In Style -->
+    <monster_hunt id="80394" start_npc_ids="831839">
+        <monster var="0" npc_ids="214105 214106 214107 214108" end_var="10"/>
+        <monster var="0" npc_ids="214109 214110 214111 214112" end_var="10"/>
+        <monster var="0" npc_ids="214113 214114 214115 214116" end_var="10"/>
+        <monster var="0" npc_ids="214117 214118 214119 214120" end_var="10"/>
+        <monster var="0" npc_ids="214121 214122 214123 214124" end_var="10"/>
+        <monster var="0" npc_ids="214125 214126 214127 214128" end_var="10"/>
+        <monster var="0" npc_ids="214129 214130 214131" end_var="10"/>
+        <monster var="0" npc_ids="214160 214161" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] Indratu Fortress Blues -->
+    <monster_hunt id="80395" start_npc_ids="831839">
+        <monster var="0" npc_ids="214105 214106 214107 214108" end_var="4"/>
+        <monster var="0" npc_ids="214109 214110 214111 214112" end_var="4"/>
+        <monster var="0" npc_ids="214113 214114 214115 214116" end_var="4"/>
+        <monster var="0" npc_ids="214117 214118 214119 214120" end_var="4"/>
+        <monster var="0" npc_ids="214121 214122 214123 214124" end_var="4"/>
+        <monster var="0" npc_ids="214125 214126 214127 214128" end_var="4"/>
+        <monster var="0" npc_ids="214129 214130 214131" end_var="4"/>
+        <monster var="0" npc_ids="214160 214161" end_var="4"/>
+    </monster_hunt>
+    <!-- [Growth] Enmity At The Gates -->
+    <monster_hunt id="80396" start_npc_ids="831839">
+        <monster var="0" npc_ids="700372" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Death To Indratu! -->
+    <monster_hunt id="80397" start_npc_ids="831839">
+        <monster var="0" npc_ids="214159" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] The Akbar Trap -->
+    <monster_hunt id="80398" start_npc_ids="831840">
+        <monster var="0" npc_ids="213776" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Cruelty To Kind Saraswati -->
+    <monster_hunt id="80399" start_npc_ids="831840">
+        <monster var="0" npc_ids="213802" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Lakshmi Tearful Goodbye -->
+    <monster_hunt id="80400" start_npc_ids="831840">
+        <monster var="0" npc_ids="213778" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Death To Nimbarka! -->
+    <monster_hunt id="80401" start_npc_ids="831840">
+        <monster var="0" npc_ids="213779" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Stonecold Killer -->
+    <monster_hunt id="80402" start_npc_ids="831841">
+        <monster var="0" npc_ids="214286" end_var="4"/>
+        <monster var="1" npc_ids="214341" end_var="4"/>
+    </monster_hunt>
+    <!-- [Growth] Blasting In Blasted Lands -->
+    <monster_hunt id="80403" start_npc_ids="831841">
+        <monster var="0" npc_ids="214240 214241" end_var="7"/>
+        <monster var="1" npc_ids="214292 214293 214295 214296" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] Zombie Eggs -->
+    <monster_hunt id="80404" start_npc_ids="831841">
+        <monster var="0" npc_ids="214552" end_var="6"/>
+    </monster_hunt>
+    <!-- [Growth] Bring Bree Proof -->
+    <item_collecting start_npc_ids="831841" id="80405"/>
+    <!-- [Growth] It Takes A Village Out -->
+    <monster_hunt id="80406" start_npc_ids="831842">
+        <monster var="0" npc_ids="214297 214298 214299 214300" end_var="10"/>
+        <monster var="0" npc_ids="214301 214302 214303 214304" end_var="10"/>
+        <monster var="0" npc_ids="214305 214306 214307 214308" end_var="10"/>
+        <monster var="0" npc_ids="214702 214703 214704 214705" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] To The Bat Cave -->
+    <monster_hunt id="80407" start_npc_ids="831842">
+        <monster var="0" npc_ids="214548" end_var="3"/>
+    </monster_hunt>
+    <!-- [Growth] A Many Peded Thing -->
+    <monster_hunt id="80408" start_npc_ids="831842">
+        <monster var="0" npc_ids="214546" end_var="3"/>
+    </monster_hunt>
+    <!-- [Growth] Spider Down -->
+    <monster_hunt id="80409" start_npc_ids="831842">
+        <monster var="0" npc_ids="214543 214544" end_var="3"/>
+    </monster_hunt>
+    <!-- [Growth] A Stone's Throw -->
+    <monster_hunt id="80410" start_npc_ids="831843">
+        <monster var="0" npc_ids="214263 214264 214265" end_var="6"/>
+        <monster var="0" npc_ids="214266 214337 214338" end_var="6"/>
+    </monster_hunt>
+    <!-- [Growth] The Things We Leave Behind -->
+    <monster_hunt id="80411" start_npc_ids="831843">
+        <monster var="0" npc_ids="214615" end_var="1"/>
+        <monster var="1" npc_ids="214616" end_var="1"/>
+        <monster var="2" npc_ids="214617" end_var="1"/>
+        <monster var="3" npc_ids="214618" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] A Statuesque Monster -->
+    <monster_hunt id="80412" start_npc_ids="831843">
+        <monster var="0" npc_ids="215382" end_var="1"/>
+        <monster var="1" npc_ids="214670" end_var="3"/>
+    </monster_hunt>
+    <!-- [Growth] Unstable Experiments -->
+    <monster_hunt id="80413" start_npc_ids="831843">
+        <monster var="0" npc_ids="214669" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Instruction In Death -->
+    <monster_hunt id="80414" start_npc_ids="831840">
+        <monster var="0" npc_ids="213776" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Kindness Kills -->
+    <monster_hunt id="80415" start_npc_ids="831840">
+        <monster var="0" npc_ids="213802" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Beauty's Objective -->
+    <monster_hunt id="80416" start_npc_ids="831840">
+        <monster var="0" npc_ids="213778" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Commander Conquered -->
+    <monster_hunt id="80417" start_npc_ids="831840">
+        <monster var="0" npc_ids="213779" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Fraught Futures -->
+    <monster_hunt id="80418" start_npc_ids="831844">
+        <monster var="0" npc_ids="215226 215228 214832" end_var="6"/>
+        <monster var="0" npc_ids="214833 214834 214835" end_var="6"/>
+        <monster var="1" npc_ids="214843" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Spiritual Growths -->
+    <monster_hunt id="80419" start_npc_ids="831844">
+        <monster var="0" npc_ids="214849 214850 214851" end_var="3"/>
+        <monster var="1" npc_ids="215431" end_var="3"/>
+        <monster var="2" npc_ids="700520" end_var="2"/>
+    </monster_hunt>
+    <!-- [Growth] The Future Of Fungie -->
+    <monster_hunt id="80420" start_npc_ids="831844">
+        <monster var="0" npc_ids="214885" end_var="30"/>
+    </monster_hunt>
+    <!-- [Growth] Mind Over -->
+    <monster_hunt id="80421" start_npc_ids="831844">
+        <monster var="0" npc_ids="214895" end_var="1"/>
+        <monster var="1" npc_ids="214896" end_var="1"/>
+        <monster var="2" npc_ids="214897" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] In The Lair Of The Drake -->
+    <monster_hunt id="80422" start_npc_ids="831845">
+        <monster var="0" npc_ids="232997 232998" end_var="10"/>
+        <monster var="0" npc_ids="232999 233000" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] Cleansing The Lair -->
+    <monster_hunt id="80423" start_npc_ids="831845">
+        <monster var="0" npc_ids="233001 233002" end_var="10"/>
+        <monster var="0" npc_ids="233003 233004 233005" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] Bloody Balaur Rags -->
+    <item_collecting start_npc_ids="831845" id="80424"/>
+    <!-- [Growth] Slaying The General -->
+    <monster_hunt id="80425" start_npc_ids="831845">
+        <monster var="0" npc_ids="214026" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Shulack, I Need More Power! -->
+    <monster_hunt id="80426" start_npc_ids="831846">
+        <monster var="0" npc_ids="215080" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Unforeseen Problems -->
+    <monster_hunt id="80427" start_npc_ids="831846">
+        <monster var="0" npc_ids="215070" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Control Of The Ship -->
+    <monster_hunt id="80428" start_npc_ids="831846">
+        <monster var="0" npc_ids="215081" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Research Grant Canceled -->
+    <monster_hunt id="80429" start_npc_ids="831847">
+        <monster var="0" npc_ids="214027" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Lab Shut Down -->
+    <monster_hunt id="80430" start_npc_ids="831847">
+        <monster var="0" npc_ids="214099" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Hand Over The Keys -->
+    <monster_hunt id="80431" start_npc_ids="831847">
+        <monster var="0" npc_ids="214034" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Extreme Excommunication -->
+    <monster_hunt id="80432" start_npc_ids="831847">
+        <monster var="0" npc_ids="214028" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] School's Out For Afrane -->
+    <monster_hunt id="80433" start_npc_ids="831848">
+        <monster var="0" npc_ids="213776" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Be Kind, Re-Grind -->
+    <monster_hunt id="80434" start_npc_ids="831848">
+        <monster var="0" npc_ids="213802" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Let The Beauty Out -->
+    <monster_hunt id="80435" start_npc_ids="831848">
+        <monster var="0" npc_ids="213778" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Full Battle Disarray -->
+    <monster_hunt id="80436" start_npc_ids="831848">
+        <monster var="0" npc_ids="213779" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Pest Control -->
+    <monster_hunt id="80437" start_npc_ids="831849">
+        <monster var="0" npc_ids="214380 214381" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] The Sap's The Thing -->
+    <item_collecting start_npc_ids="831849" id="80438"/>
+    <!-- [Growth] From The Grave -->
+    <monster_hunt id="80439" start_npc_ids="831849">
+        <monster var="0" npc_ids="214375" end_var="2"/>
+        <monster var="1" npc_ids="214383" end_var="2"/>
+    </monster_hunt>
+    <!-- [Growth] The Wailing Dead -->
+    <monster_hunt id="80440" start_npc_ids="831849">
+        <monster var="0" npc_ids="214404 214405" end_var="3"/>
+        <monster var="1" npc_ids="214402 214403" end_var="10"/>
+    </monster_hunt>
+    <!-- [Growth] Hostile Waters -->
+    <monster_hunt id="80441" start_npc_ids="831850">
+        <monster var="0" npc_ids="214482 214483" end_var="7"/>
+    </monster_hunt>
+    <!-- [Growth] Lobnite's Last Night -->
+    <monster_hunt id="80442" start_npc_ids="831850">
+        <monster var="0" npc_ids="214484 214485" end_var="3"/>
+    </monster_hunt>
+    <!-- [Growth] Battling Brohum -->
+    <monster_hunt id="80443" start_npc_ids="831850">
+        <monster var="0" npc_ids="214462 214463" end_var="4"/>
+        <monster var="0" npc_ids="214464 214465 214466" end_var="4"/>
+    </monster_hunt>
+    <!-- [Growth] Vampires Of Nahor -->
+    <monster_hunt id="80444" start_npc_ids="831850">
+        <monster var="0" npc_ids="214435 214436" end_var="6"/>
+        <monster var="0" npc_ids="214437 214438" end_var="6"/>
+    </monster_hunt>
+    <!-- [Growth] Making A Path -->
+    <monster_hunt id="80445" start_npc_ids="831851">
+        <monster var="0" npc_ids="214413 214414" end_var="6"/>
+        <monster var="1" npc_ids="214422 214424" end_var="6"/>
+    </monster_hunt>
+    <!-- [Growth] Palace Problems -->
+    <monster_hunt id="80446" start_npc_ids="831851">
+        <monster var="0" npc_ids="231360" end_var="2"/>
+        <monster var="1" npc_ids="213374" end_var="3"/>
+    </monster_hunt>
+    <!-- [Growth] Crush The Cellatu -->
+    <monster_hunt id="80447" start_npc_ids="831851">
+        <monster var="0" npc_ids="214683" end_var="4"/>
+    </monster_hunt>
+    <!-- [Growth] Lords And Suspicions -->
+    <monster_hunt id="80448" start_npc_ids="831851">
+        <monster var="0" npc_ids="214696" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] End Of Lesson -->
+    <monster_hunt id="80449" start_npc_ids="831848">
+        <monster var="0" npc_ids="213776" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Cruel To Kind -->
+    <monster_hunt id="80450" start_npc_ids="831848">
+        <monster var="0" npc_ids="213802" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] A Beautiful End -->
+    <monster_hunt id="80451" start_npc_ids="831848">
+        <monster var="0" npc_ids="213778" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Nimbarka's Last Battle -->
+    <monster_hunt id="80452" start_npc_ids="831848">
+        <monster var="0" npc_ids="213779" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Future Strike -->
+    <monster_hunt id="80453" start_npc_ids="831852">
+        <monster var="0" npc_ids="215226 215228 214832" end_var="6"/>
+        <monster var="0" npc_ids="214833 214834 214835" end_var="6"/>
+        <monster var="1" npc_ids="214843" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth] Dark Tidings -->
+    <monster_hunt id="80454" start_npc_ids="831852">
+        <monster var="0" npc_ids="214849 214850 214851" end_var="3"/>
+        <monster var="1" npc_ids="215431" end_var="3"/>
+        <monster var="2" npc_ids="700520" end_var="2"/>
+    </monster_hunt>
+    <!-- [Growth] Doom Fungie -->
+    <monster_hunt id="80455" start_npc_ids="831852">
+        <monster var="0" npc_ids="214885" end_var="30"/>
+    </monster_hunt>
+    <!-- [Growth] Infernal Machines -->
+    <monster_hunt id="80456" start_npc_ids="831852">
+        <monster var="0" npc_ids="214895" end_var="1"/>
+        <monster var="1" npc_ids="214896" end_var="1"/>
+        <monster var="2" npc_ids="214897" end_var="1"/>
+    </monster_hunt>
+    <!-- [Growth/Weekly] Save Time And Effort -->
+    <item_collecting start_npc_ids="831870" id="80474"/>
+</quest_scripts>

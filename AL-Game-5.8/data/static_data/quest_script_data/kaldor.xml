@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-01-10 08:59 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               13800 [XML] The Discovery of Kaldor
+               13801 [SCRIPT] [Emergency Command] Alphion's request
+               13806 [XML] Defective Power Generators
+               13807 [XML] Flame Samples
+               13808 [XML] The Way to the Fortress
+               13809 [XML] Burnt Tracks
+               13810 [XML] Rune Records
+               13811 [XML] An Underestimated Danger
+               13812 [XML] Dark Plans
+               16922 [XML] A New Corridor
+               18978 [XML] Ominous Aetheric Field Shards
+               23800 [XML] Dispatch to Kaldor
+               23801 [SCRIPT] [Emergency Command] Pintor's Request
+               23806 [XML] Damaged Generator
+               23807 [XML] Ember Sample
+               23808 [XML] Head to the Fortress
+               23809 [XML] Scars of the Past
+               23810 [XML] Rune Relics
+               23811 [XML] Tiamat Veterans
+               23812 [XML] Sinister Plans
+               26922 [XML] Another Corridor
+               28978 [XML] Ominous Aetheric Field Shards
+        [END] SUMMARY
+    -->
+	<!-- REPORTING QUESTS -->
+	<report_to_many id="13800" start_npc_ids="800527" end_npc_ids="801163">
+		<npc_infos var="0" npc_id="800958" quest_dialog="1352"/>
+		<npc_infos var="1" npc_id="801163" quest_dialog="2375" close_dialog="1009"/>
+	</report_to_many> 
+	<report_to_many id="13809" start_npc_ids="802427" end_npc_ids="802427">
+		<npc_infos var="0" npc_id="730969" quest_dialog="1352"/>
+		<npc_infos var="1" npc_id="730970" quest_dialog="1693"/>
+		<npc_infos var="2" npc_id="730971" quest_dialog="2034"/>
+		<npc_infos var="3" npc_id="802427" quest_dialog="2375" close_dialog="1009"/>
+	</report_to_many>
+	<report_to_many id="23800" start_npc_ids="800529" end_npc_ids="802433">
+		<npc_infos var="0" npc_id="800980" quest_dialog="1352"/>
+		<npc_infos var="1" npc_id="802433" quest_dialog="2375" close_dialog="1009"/>
+	</report_to_many> 
+	<report_to_many id="23809" start_npc_ids="802429" end_npc_ids="802429">
+		<npc_infos var="0" npc_id="730969" quest_dialog="1352"/>
+		<npc_infos var="1" npc_id="730970" quest_dialog="1693"/>
+		<npc_infos var="2" npc_id="730971" quest_dialog="2034"/>
+		<npc_infos var="3" npc_id="802429" quest_dialog="2375" close_dialog="1009"/>
+	</report_to_many>
+	<report_to id="16922" start_npc_ids="802431" end_npc_ids="804628"/>
+	<report_to id="26922" start_npc_ids="802433" end_npc_ids="804628"/>
+	<!-- COLLECTING QUESTS -->
+	<item_collecting id="13806" start_npc_ids="802358" action_item_ids="702551"/>
+	<item_collecting id="13807" start_npc_ids="802432"/>
+	<item_collecting id="13810" start_npc_ids="802428"/>
+	<item_collecting id="23806" start_npc_ids="802362" action_item_ids="702552"/>
+	<item_collecting id="23807" start_npc_ids="802434"/>
+	<item_collecting id="23810" start_npc_ids="802430"/>
+	<item_collecting id="13812" start_npc_ids="802428"/>
+    <item_collecting id="18978" start_npc_ids="802431" end_npc_ids="805215"/>
+	<item_collecting id="23812" start_npc_ids="802430"/>
+    <item_collecting id="28978" start_npc_ids="802433" end_npc_ids="805218"/>
+	<!-- MONSTER HUNT QUESTS -->
+	<monster_hunt id="13808" start_npc_ids="802431">	
+		<monster var="0" npc_ids="234294 234530" end_var="5"/>
+		<monster var="1" npc_ids="234529" end_var="3"/>
+	</monster_hunt>
+	<monster_hunt id="13811" start_npc_ids="802427">	
+		<monster var="0" npc_ids="234659 234660 234661" end_var="5"/>
+	</monster_hunt>
+	<monster_hunt id="23808" start_npc_ids="802433">	
+		<monster var="0" npc_ids="234529" end_var="3"/>
+		<monster var="1" npc_ids="234294 234530" end_var="5"/>
+	</monster_hunt>
+	<monster_hunt id="23811" start_npc_ids="802429">	
+		<monster var="0" npc_ids="234659 234660 234661" end_var="5"/>
+	</monster_hunt>
+	<!-- KILL IN WORLD QUESTS -->
+</quest_scripts>

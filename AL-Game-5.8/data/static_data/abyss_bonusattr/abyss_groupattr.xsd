@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+	<xs:include schemaLocation="../modifiers.xsd"/>
+	<xs:element name="abyss_groupattrs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="abyss_groupattr" type="AbyssGroupAttr" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AbyssGroupAttr">
+		<xs:attribute name="buff_id" type="xs:int" use="required"/>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+		<xs:attribute name="world" type="IntListType"/>
+	</xs:complexType>
+</xs:schema>

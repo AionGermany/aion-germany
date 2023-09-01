@@ -1,0 +1,94 @@
+
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="players">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="player" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="appearance">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:int" name="skinRGB" use="optional"/>
+                      <xs:attribute type="xs:int" name="hairRGB" use="optional"/>
+                      <xs:attribute type="xs:int" name="eyeRGB" use="optional"/>
+                      <xs:attribute type="xs:int" name="lipRGB" use="optional"/>
+                      <xs:attribute type="xs:byte" name="face" use="optional"/>
+                      <xs:attribute type="xs:byte" name="hairShape" use="optional"/>
+                      <xs:attribute type="xs:byte" name="deco" use="optional"/>
+                      <xs:attribute type="xs:byte" name="tattoo" use="optional"/>
+                      <xs:attribute type="xs:byte" name="faceContour" use="optional"/>
+                      <xs:attribute type="xs:byte" name="expresion" use="optional"/>
+                      <xs:attribute type="xs:byte" name="unk1" use="optional"/>
+                      <xs:attribute type="xs:byte" name="jawLine" use="optional"/>
+                      <xs:attribute type="xs:byte" name="foreHead" use="optional"/>
+                      <xs:attribute type="xs:byte" name="eyeHeight" use="optional"/>
+                      <xs:attribute type="xs:byte" name="eyeSpace" use="optional"/>
+                      <xs:attribute type="xs:byte" name="eyeWidth" use="optional"/>
+                      <xs:attribute type="xs:byte" name="eyeSize" use="optional"/>
+                      <xs:attribute type="xs:byte" name="eyeShape" use="optional"/>
+                      <xs:attribute type="xs:byte" name="eyeAngle" use="optional"/>
+                      <xs:attribute type="xs:byte" name="browHeight" use="optional"/>
+                      <xs:attribute type="xs:byte" name="browAngle" use="optional"/>
+                      <xs:attribute type="xs:byte" name="browShape" use="optional"/>
+                      <xs:attribute type="xs:byte" name="nose" use="optional"/>
+                      <xs:attribute type="xs:byte" name="noseBridge" use="optional"/>
+                      <xs:attribute type="xs:byte" name="noseWidth" use="optional"/>
+                      <xs:attribute type="xs:byte" name="noseTip" use="optional"/>
+                      <xs:attribute type="xs:byte" name="cheek" use="optional"/>
+                      <xs:attribute type="xs:byte" name="lipHeight" use="optional"/>
+                      <xs:attribute type="xs:byte" name="mouthSize" use="optional"/>
+                      <xs:attribute type="xs:byte" name="lipSize" use="optional"/>
+                      <xs:attribute type="xs:byte" name="smile" use="optional"/>
+                      <xs:attribute type="xs:byte" name="lipShape" use="optional"/>
+                      <xs:attribute type="xs:byte" name="chinHeight" use="optional"/>
+                      <xs:attribute type="xs:byte" name="checkBones" use="optional"/>
+                      <xs:attribute type="xs:byte" name="earShape" use="optional"/>
+                      <xs:attribute type="xs:byte" name="headSize" use="optional"/>
+                      <xs:attribute type="xs:byte" name="neck" use="optional"/>
+                      <xs:attribute type="xs:byte" name="neckLength" use="optional"/>
+                      <xs:attribute type="xs:byte" name="shoulderSize" use="optional"/>
+                      <xs:attribute type="xs:byte" name="torso" use="optional"/>
+                      <xs:attribute type="xs:byte" name="chest" use="optional"/>
+                      <xs:attribute type="xs:byte" name="waist" use="optional"/>
+                      <xs:attribute type="xs:byte" name="hips" use="optional"/>
+                      <xs:attribute type="xs:byte" name="armThickness" use="optional"/>
+                      <xs:attribute type="xs:byte" name="handSize" use="optional"/>
+                      <xs:attribute type="xs:byte" name="legThickness" use="optional"/>
+                      <xs:attribute type="xs:byte" name="footSize" use="optional"/>
+                      <xs:attribute type="xs:byte" name="facialRatio" use="optional"/>
+                      <xs:attribute type="xs:byte" name="unk2" use="optional"/>
+                      <xs:attribute type="xs:byte" name="armLength" use="optional"/>
+                      <xs:attribute type="xs:byte" name="legLength" use="optional"/>
+                      <xs:attribute type="xs:byte" name="shoulders" use="optional"/>
+                      <xs:attribute type="xs:byte" name="faceShape" use="optional"/>
+                      <xs:attribute type="xs:float" name="height" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="items" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:int" name="itemTemplateId" use="optional"/>
+                      <xs:attribute type="xs:int" name="itemColor" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="gender" use="optional"/>
+            <xs:attribute type="xs:string" name="race" use="optional"/>
+            <xs:attribute type="xs:string" name="class" use="optional"/>
+            <xs:attribute type="xs:byte" name="level" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

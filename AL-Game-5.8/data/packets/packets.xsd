@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="packets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="packetType" name="packet" maxOccurs="unbounded" minOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute type="xs:long" name="delay" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="packetType">
+        <xs:sequence>
+            <xs:element type="partType" name="part" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="opcode" use="required"/>
+        <xs:attribute type="xs:long" name="delay" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="partType">
+        <xs:attribute type="partTypes" name="type" use="required"/>
+        <xs:attribute type="xs:string" name="value" use="required"/>
+        <xs:attribute type="xs:int" name="repeat" use="optional"/>
+    </xs:complexType>
+    <xs:simpleType name="partTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="d"/>
+            <xs:enumeration value="h"/>
+            <xs:enumeration value="c"/>
+            <xs:enumeration value="f"/>
+            <xs:enumeration value="e"/>
+            <xs:enumeration value="q"/>
+            <xs:enumeration value="s"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

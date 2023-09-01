@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+
+                    1988 [SCRIPT] A Meeting with a Sage
+                    1989 [SCRIPT] A Sage's Teachings
+                    1990 [SCRIPT] A Sage's Gift
+                    1993 [SCRIPT] Another Beginning
+                    1994 [SCRIPT] A New Choice
+                    2988 [SCRIPT] The Wise in Disguise
+                    2989 [SCRIPT] Ceremony of the Wise
+                    2990 [SCRIPT] Making the Daevanion Weapon
+                    2993 [SCRIPT] Another Beginning
+                    2994 [SCRIPT] A New Choice
+					15301 [SCRIPT] Two Steps Closer
+					15302 [SCRIPT] Hand in Glove
+					15303 [SCRIPT] Souled Shoulder
+					15304 [SCRIPT] Last Leg and Wit's End
+					15305 [SCRIPT] Buffed Shirt
+					15306 [SCRIPT] Wielding Power
+					15307 [XML] Kaisinel's Oath
+					15311 [SCRIPT] Kaisinel's Daevanion Shoes
+					15312 [SCRIPT] Kaisinel's Daevanion Gloves
+					15313 [SCRIPT] Kaisinel's Daevanion Pauldrons
+					15314 [SCRIPT] Kaisinel's Daevanion Leggings
+					15315 [SCRIPT] Kaisinel's Daevanion Tunic
+					15316 [SCRIPT] Kaisinel's Daevanion Weapon
+					15321 [SCRIPT] Supporting Kaisinel's Wings
+					15322 [SCRIPT] [Infiltration] Scouting Enshar
+					15323 [XML] Top Secret Order
+					15324 [SCRIPT] Unyielding Spirit
+					15325 [SCRIPT] [Group] Courageous Spirit
+					15326 [SCRIPT] [Infiltration] Overcoming Chaos
+					15334 [SCRIPT] Devoted Prayers
+					15335 [XML] Your Lucky Day
+					25301 [SCRIPT] First Steps as a Protector
+					25302 [SCRIPT] A Tenacious Spirit
+					25303 [SCRIPT] A Dedicated Protector
+					25304 [SCRIPT] Walk the Walk
+					25305 [SCRIPT] Guardian of Life
+					25306 [SCRIPT] Wielding Strength
+					25307 [XML] Marchutan's Oath
+					25311 [SCRIPT] Marchutan's Daevanion Shoes
+					25312 [SCRIPT] Marchutan's Daevanion Gloves
+					25313 [SCRIPT] Marchutan's Daevanion Spaulders
+					25314 [SCRIPT] Marchutan's Daevanion Leggings
+					25315 [SCRIPT] Marchutan's Daevanion Tunic
+					25316 [SCRIPT] Marchutan's Daevanion Weapon
+					25321 [SCRIPT] The Grace of the Mace
+					25322 [SCRIPT] [Infiltration] Through the Rift
+					25323 [XML] Endure and Report
+					25324 [SCRIPT] Tenacious Spree
+					25325 [SCRIPT] Threat the Farm
+					25326 [SCRIPT] [Infiltration] Controlling Chaos
+					25334 [SCRIPT] A Prayer of Devotion
+					25335 [XML] Lucky Break
+                    80290 [XML] Durable Daevanion Armor
+                    80291 [SCRIPT] Durable Daevanion Weapon
+                    80292 [SCRIPT] A New Challenge
+                    80293 [SCRIPT] New Adventure
+                    80294 [XML] Durable Daevanion Armor
+                    80295 [SCRIPT] Durable Daevanion Weapon
+                    80296 [SCRIPT] Out With the Old Armor
+                    80297 [SCRIPT] I'd Like This One, Instead!
+                    80310 [XML] The Protection of the Sage II
+                    80311 [XML] The Protection of the Sage II
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to_many id="80310" start_npc_ids="831384" end_npc_ids="831384">
+        <npc_infos var="0" npc_id="831384" quest_dialog="1003" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="80311" start_npc_ids="831387" end_npc_ids="831387">
+        <npc_infos var="0" npc_id="831387" quest_dialog="1003" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting start_npc_ids="831384" id="80290"/>
+    <item_collecting start_npc_ids="831387" id="80294"/>
+    <item_collecting start_npc_ids="805330" id="15323" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="805342" id="25323" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="805327" id="15307" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="805339" id="25307" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="805738" id="15335" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting start_npc_ids="805739" id="25335" start_dialog_id="4762" start_dialog_id2="1011"/>
+    <!-- HUNTING QUESTS -->
+</quest_scripts>

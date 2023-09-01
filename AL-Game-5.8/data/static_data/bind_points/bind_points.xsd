@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="bind_points">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="bind_point" type="bindPoint" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="bindPoint">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="npcid" type="xs:int"/>
+        <xs:attribute name="price" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

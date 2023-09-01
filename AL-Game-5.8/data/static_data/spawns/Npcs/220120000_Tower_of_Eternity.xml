@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spawns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- Tower of Eternity created by Falke_34 -->
+	<spawn_map map_id="220120000">
+		<!-- None ||| DF_Tower_SensoryArea_Q26800 -->
+		<spawn npc_id="206537" respawn_time="295">
+			<spot x="489.8007" y="499.52887" z="302.38846" h="0"/>
+		</spawn>
+		<!-- Corridor to the Room of the Wise ||| DF_Tower_FOBJ_Sage_Room_Q_Entrance -->
+		<spawn npc_id="731719" respawn_time="295">
+			<spot x="545.9626" y="499.98706" z="299.85013" h="60"/>
+		</spawn>
+		<!-- Exit from the Room of the Wise ||| DF_Tower_FOBJ_Sage_Room_Q_Exit -->
+		<spawn npc_id="731720" respawn_time="295">
+			<spot x="507.80725" y="499.9244" z="348.8464" h="60"/>
+		</spawn>
+		<!-- Entrance to the Library of Knowledge ||| IDEternity_01_D_Entrance -->
+		<spawn npc_id="806029" respawn_time="295">
+			<spot x="370.9665" y="514.2861" z="321.5991" static_id="9"/>
+		</spawn>
+		<!-- Entrance to the Garden of Knowledge ||| IDEternity_02_D_Entrance -->
+		<spawn npc_id="806031" respawn_time="295">
+			<spot x="371.95895" y="508.70117" z="354.9261" static_id="1"/>
+		</spawn>
+		<!-- Entrance to the Museum of Knowledge ||| IDEternity_03_D_Entrance -->
+		<spawn npc_id="806033" respawn_time="295">
+			<spot x="370.27295" y="502.34076" z="385.41144" static_id="3"/>
+		</spawn>
+		<!-- Magical Protective Circle ||| DF_Tower_Out_Portal -->
+		<spawn npc_id="806084" respawn_time="295">
+			<spot x="498.70068" y="500.00516" z="302.18674" static_id="11"/>
+		</spawn>
+		<!-- Epitana ||| DF_Tower_Enfitenta_E -->
+		<spawn npc_id="806233" respawn_time="295">
+			<spot x="474.8007" y="499.52887" z="302.38852"/>
+		</spawn>
+		<!-- Guardian of the Tower of Eternity ||| DF_Tower_Guard01_D_E -->
+		<spawn npc_id="806235" respawn_time="295">
+			<spot x="462.2735" y="510.73895" z="299.85013" h="60"/>
+			<spot x="462.2735" y="488.1953" z="299.85013" h="60"/>
+			<spot x="485.2805" y="492.9543" z="302.3885" h="10"/>
+			<spot x="485.2805" y="506.9543" z="302.3885" h="110"/>
+		</spawn>
+		<!-- Wizabo ||| DF_Tower_Wizabobo_E -->
+		<spawn npc_id="806296" respawn_time="295">
+			<spot x="498.57922" y="499.9218" z="348.7913" h="60"/>
+		</spawn>
+		<!-- Barota ||| DF6_Varotta_E -->
+		<spawn npc_id="806394" respawn_time="295">
+			<spot x="545.1003" y="502.2137" z="299.85013" h="65"/>
+		</spawn>
+	</spawn_map>
+</spawns>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="items/item_templates.xsd"/>
+    <xs:include schemaLocation="global_types.xsd"/>
+    <xs:element name="player_initial_data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="asmodian_spawn_location" type="spawnLocationType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="elyos_spawn_location" type="spawnLocationType" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="player_data" type="playerDataType" minOccurs="1" maxOccurs="8"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="playerDataType">
+        <xs:sequence>
+            <xs:element name="items" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:attribute name="id" type="itemId" use="required"/>
+                                <xs:attribute name="count" type="xs:int" use="required"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--<xs:element name="shortcuts" minOccurs="1" maxOccurs="1"/>-->
+        </xs:sequence>
+        <xs:attribute name="class" type="startingPlayerClass"/>
+    </xs:complexType>
+    <xs:complexType name="spawnLocationType">
+        <!-- TODO: remove map_id -->
+        <xs:attribute name="map_id" type="xs:int" use="required"/>
+        <xs:attribute name="x" type="xs:float" use="required"/>
+        <xs:attribute name="y" type="xs:float" use="required"/>
+        <xs:attribute name="z" type="xs:float" use="required"/>
+        <xs:attribute name="heading" type="xs:byte" use="required"/>
+    </xs:complexType>
+</xs:schema>

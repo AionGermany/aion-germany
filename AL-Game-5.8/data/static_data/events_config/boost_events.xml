@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Buff Id:
+    0 = Exp.
+    1 = Gather & Craft.
+    2 = Hunt & Arena Ap.
+    3 = Kinah.
+    4 = Drop.
+    5 = Soul Healing Price.
+    6 = Lost Ap Pvp.
+    7 = Ap Gain Pvp.
+    8 = Reward Instance.
+	
+	Buff Value:
+    150 = 50%
+    200 = 100%
+    250 = 150%
+    300 = 200%
+    400 = 300%
+-->
+
+<!-- !!! Do not change the seguence of buff_id it must be always 0,1,2,3 etc !!! -->
+<boost_events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="boost_events.xsd">
+	<boost_event id="1" buff_id="0" name="Boost Exp 50%" buff_value="150" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="2" buff_id="1" name="Boost Gather Craft 100%" buff_value="200" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="3" buff_id="2" name="Boost Hunt Arena Ap 150%" buff_value="250" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="4" buff_id="3" name="Boost Kinah 200%" buff_value="300" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="5" buff_id="4" name="Boost Drop 300%" buff_value="400" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="6" buff_id="5" name="Boost Soul Healing Price 300%" buff_value="400" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="7" buff_id="6" name="Boost Lost Ap Pvp 150%" buff_value="250" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="8" buff_id="7" name="Boost Ap Gain Pvp 200%" buff_value="300" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+	<boost_event id="9" buff_id="8" name="Boost Reward Instance 300%" buff_value="400" start="2017-01-01T00:00:00" end="2017-12-31T00:00:00"/>
+</boost_events>

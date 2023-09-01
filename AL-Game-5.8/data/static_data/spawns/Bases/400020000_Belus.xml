@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+	<spawn_map map_id="400020000">
+		<!-- [BELANI FORT] -->
+		<base_spawn id="118">
+			<simple_race race="ELYOS">
+				<!-- Elyos Flag -->
+				<spawn npc_id="802677">
+					<spot x="165.90549" y="196.31587" z="1532.1101" h="3"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802760">
+				    <spot x="720.0" y="900.0" z="1536.6903" h="26"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802782">
+				    <spot x="626.3518" y="811.00525" z="1496.9423" h="27"/>
+				</spawn>
+				<!-- Yvi Temple Flag -->
+				<spawn npc_id="802937">
+				    <spot x="572.8287" y="572.7892" z="1545.3778" h="14"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="277579" handler="CHIEF">
+				    <spot x="164.18071" y="195.96909" z="1491.0844" h="4"/>
+				</spawn>
+				<spawn npc_id="277579" handler="ATTACKER">
+				    <spot x="164.18071" y="195.96909" z="1491.0844" h="4"/>
+				</spawn>
+				<spawn npc_id="277624">
+					<spot x="212.68292" y="179.82774" z="1489.4727" h="36"/>
+					<spot x="219.83582" y="223.00371" z="1489.222" h="96"/>
+				</spawn>
+				<spawn npc_id="277644">
+				    <spot x="207.41098" y="198.20966" z="1489.1371" h="17"/>
+					<spot x="205.43799" y="206.55658" z="1489.0908" h="113"/>
+					<spot x="230.51906" y="199.41173" z="1489.4991" h="2"/>
+					<spot x="229.90942" y="210.99138" z="1489.4061" h="5"/>
+				</spawn>
+				<spawn npc_id="277664">
+				    <spot x="184.47812" y="224.95724" z="1489.6029" h="119"/>
+					<spot x="186.60231" y="168.57191" z="1490.1619" h="12"/>
+					<spot x="168.41312" y="242.51581" z="1498.5398" h="22"/>
+					<spot x="134.14534" y="217.14482" z="1499.4436" h="36"/>
+					<spot x="147.64282" y="170.86894" z="1497.4889" h="95"/>
+				</spawn>
+				<spawn npc_id="277684">
+				    <spot x="182.12706" y="209.42912" z="1490.234" h="113"/>
+					<spot x="184.90707" y="189.74092" z="1490.2423" h="14"/>
+					<spot x="200.1481" y="180.21861" z="1489.5592" h="23"/>
+					<spot x="198.6743" y="223.45915" z="1489.2955" h="107"/>
+					<spot x="197.23819" y="156.85477" z="1489.9387" h="109"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804204">
+				    <spot x="198.0" y="213.0" z="1489.2996" h="31"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_APSeller_Sub_Matter (Npc Normal lvl:65) -->
+				<spawn npc_id="804205">
+				    <spot x="203.94403" y="227.63846" z="1489.0487" h="87"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_SpecialBuyer (Npc Normal lvl:65) -->
+				<spawn npc_id="804206">
+				    <spot x="213.83359" y="223.3562" z="1489.059" h="79"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804207">
+				    <spot x="217.44814" y="182.66394" z="1489.6755" h="47"/>
+				</spawn>
+				<!-- Belani Security <Belus Occupier> -->
+				<spawn npc_id="802476">
+				    <spot x="165.7376" y="201.85103" z="1490.8433" h="93"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ASMODIANS">
+				<!-- Asmodian Flag Flag -->
+				<spawn npc_id="802687">
+					<spot x="165.90549" y="196.31587" z="1532.1101" h="3"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802764">
+				    <spot x="720.0" y="900.0" z="1536.6903" h="26"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802786">
+				    <spot x="626.3518" y="811.00525" z="1496.9423" h="27"/>
+				</spawn>
+				<!-- Yvi Temple Flag -->
+				<spawn npc_id="802937">
+				    <spot x="572.8287" y="572.7892" z="1545.3778" h="14"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="277576" handler="CHIEF">
+				    <spot x="164.18071" y="195.96909" z="1491.0844" h="4"/>
+				</spawn>
+				<spawn npc_id="277576" handler="ATTACKER">
+				    <spot x="164.18071" y="195.96909" z="1491.0844" h="4"/>
+				</spawn>
+				<spawn npc_id="277621">
+					<spot x="212.68292" y="179.82774" z="1489.4727" h="36"/>
+					<spot x="213.99576" y="223.6573" z="1489.0648" h="100"/>
+				</spawn>
+				<spawn npc_id="277641">
+				    <spot x="207.41098" y="198.20966" z="1489.1371" h="17"/>
+					<spot x="205.43799" y="206.55658" z="1489.0908" h="113"/>
+					<spot x="230.51906" y="199.41173" z="1489.4991" h="2"/>
+					<spot x="229.90942" y="210.99138" z="1489.4061" h="5"/>
+				</spawn>
+				<spawn npc_id="277661">
+				    <spot x="184.47812" y="224.95724" z="1489.6029" h="119"/>
+					<spot x="186.60231" y="168.57191" z="1490.1619" h="12"/>
+					<spot x="168.41312" y="242.51581" z="1498.5398" h="22"/>
+					<spot x="134.14534" y="217.14482" z="1499.4436" h="36"/>
+					<spot x="147.64282" y="170.86894" z="1497.4889" h="95"/>
+				</spawn>
+				<spawn npc_id="277681">
+				    <spot x="182.12706" y="209.42912" z="1490.234" h="113"/>
+					<spot x="184.90707" y="189.74092" z="1490.2423" h="14"/>
+					<spot x="200.1481" y="180.21861" z="1489.5592" h="23"/>
+					<spot x="198.6743" y="223.45915" z="1489.2955" h="107"/>
+					<spot x="197.23819" y="156.85477" z="1489.9387" h="109"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804204">
+				    <spot x="198.0" y="213.0" z="1489.2996" h="31"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_APSeller_Sub_Matter (Npc Normal lvl:65) -->
+				<spawn npc_id="804205">
+				    <spot x="203.94403" y="227.63846" z="1489.0487" h="87"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_SpecialBuyer (Npc Normal lvl:65) -->
+				<spawn npc_id="804206">
+				    <spot x="213.83359" y="223.3562" z="1489.059" h="79"/>
+				</spawn>
+				<!-- GAb1_01_Lv11_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804207">
+				    <spot x="217.44814" y="182.66394" z="1489.6755" h="47"/>
+				</spawn>
+				<!-- Belani Security <Belus Occupier> -->
+				<spawn npc_id="802476">
+				    <spot x="165.7376" y="201.85103" z="1490.8433" h="93"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- Balaur Flag Flag -->
+				<spawn npc_id="802692">
+					<spot x="165.90549" y="196.31587" z="1532.1101" h="3"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802780">
+				    <spot x="720.0" y="900.0" z="1536.6903" h="26"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802802">
+				    <spot x="626.3518" y="811.00525" z="1496.9423" h="27"/>
+				</spawn>
+				<!-- Yvi Temple Flag -->
+				<spawn npc_id="802937">
+				    <spot x="572.8287" y="572.7892" z="1545.3778" h="14"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="277580" handler="CHIEF">
+				    <spot x="164.18071" y="195.96909" z="1491.0844" h="4"/>
+				</spawn>
+				<spawn npc_id="277580" handler="ATTACKER">
+				    <spot x="164.18071" y="195.96909" z="1491.0844" h="4"/>
+				</spawn>
+				<spawn npc_id="277620">
+					<spot x="212.68292" y="179.82774" z="1489.4727" h="36"/>
+					<spot x="213.99576" y="223.6573" z="1489.0648" h="100"/>
+				</spawn>
+				<spawn npc_id="277640">
+				    <spot x="207.41098" y="198.20966" z="1489.1371" h="17"/>
+					<spot x="205.43799" y="206.55658" z="1489.0908" h="113"/>
+					<spot x="230.51906" y="199.41173" z="1489.4991" h="2"/>
+					<spot x="229.90942" y="210.99138" z="1489.4061" h="5"/>
+				</spawn>
+				<spawn npc_id="277660">
+				    <spot x="184.47812" y="224.95724" z="1489.6029" h="119"/>
+					<spot x="186.60231" y="168.57191" z="1490.1619" h="12"/>
+					<spot x="168.41312" y="242.51581" z="1498.5398" h="22"/>
+					<spot x="134.14534" y="217.14482" z="1499.4436" h="36"/>
+					<spot x="147.64282" y="170.86894" z="1497.4889" h="95"/>
+				</spawn>
+				<spawn npc_id="277680">
+				    <spot x="182.12706" y="209.42912" z="1490.234" h="113"/>
+					<spot x="184.90707" y="189.74092" z="1490.2423" h="14"/>
+					<spot x="200.1481" y="180.21861" z="1489.5592" h="23"/>
+					<spot x="198.6743" y="223.45915" z="1489.2955" h="107"/>
+					<spot x="197.23819" y="156.85477" z="1489.9387" h="109"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+		<!-- [BELFARTH FORT] -->
+		<base_spawn id="119">
+			<simple_race race="ELYOS">
+				<!-- Elyos Flag Flag -->
+				<spawn npc_id="802699">
+				    <spot x="198.67645" y="1881.7091" z="1532.1097" h="93"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802804">
+				    <spot x="900.0" y="1327.0" z="1536.2924" h="48"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802826">
+				    <spot x="810.7581" y="1421.6667" z="1496.8818" h="48"/>
+				</spawn>
+				<!-- Highland Temple Flag -->
+				<spawn npc_id="802960">
+				    <spot x="571.0" y="1476.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880135" handler="CHIEF">
+				    <spot x="198.2275" y="1884.1561" z="1491.0851" h="95"/>
+				</spawn>
+				<spawn npc_id="880135" handler="ATTACKER">
+				    <spot x="198.2275" y="1884.1561" z="1491.0851" h="95"/>
+				</spawn>
+				<spawn npc_id="880255">
+				    <spot x="182.10504" y="1835.185" z="1489.4601" h="8"/>
+					<spot x="228.10095" y="1834.923" z="1488.9672" h="73"/>
+				</spawn>
+				<spawn npc_id="880315">
+				    <spot x="201.19867" y="1841.6342" z="1489.1226" h="110"/>
+					<spot x="208.99121" y="1842.8177" z="1489.0992" h="84"/>
+					<spot x="201.66023" y="1817.0599" z="1489.502" h="92"/>
+					<spot x="213.54324" y="1818.3918" z="1489.4363" h="93"/>
+				</spawn>
+				<spawn npc_id="880375">
+				    <spot x="226.77907" y="1862.4539" z="1489.6495" h="86"/>
+					<spot x="241.85725" y="1877.37" z="1498.7341" h="105"/>
+					<spot x="220.60323" y="1911.614" z="1500.0677" h="29"/>
+					<spot x="173.66187" y="1900.1906" z="1497.5079" h="65"/>
+					<spot x="170.57802" y="1862.8125" z="1490.1794" h="104"/>
+				</spawn>
+				<spawn npc_id="880435">
+				    <spot x="212.08429" y="1865.7297" z="1490.2395" h="79"/>
+					<spot x="192.03937" y="1863.1624" z="1490.2477" h="108"/>
+					<spot x="159.30786" y="1852.2499" z="1489.8977" h="75"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804208">
+				    <spot x="217.21692" y="1846.4541" z="1489.1974" h="111"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_Material_2ST_PvE (Npc Normal lvl:65) -->
+				<spawn npc_id="804209">
+				    <spot x="230.04059" y="1842.1478" z="1489.0217" h="54"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_APSeller_Shop (Npc Normal lvl:65) -->
+				<spawn npc_id="804210">
+				    <spot x="223.34315" y="1834.4463" z="1489.0671" h="47"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804211">
+				    <spot x="186.81653" y="1829.7838" z="1489.4977" h="10"/>
+				</spawn>
+				<!-- Belfarth Security <Belus Occupier> -->
+				<spawn npc_id="802480">
+				    <spot x="204.11403" y="1881.9817" z="1490.8451" h="60"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ASMODIANS">
+				<!-- Asmodian Flag -->
+				<spawn npc_id="802709">
+				    <spot x="198.67645" y="1881.7091" z="1532.1097" h="93"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802808">
+				    <spot x="900.0" y="1327.0" z="1536.2924" h="48"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802830">
+				    <spot x="810.7581" y="1421.6667" z="1496.8818" h="48"/>
+				</spawn>
+				<!-- Highland Temple Flag -->
+				<spawn npc_id="802960">
+				    <spot x="571.0" y="1476.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880132" handler="CHIEF">
+				    <spot x="198.2275" y="1884.1561" z="1491.0851" h="95"/>
+				</spawn>
+				<spawn npc_id="880132" handler="ATTACKER">
+				    <spot x="198.2275" y="1884.1561" z="1491.0851" h="95"/>
+				</spawn>
+				<spawn npc_id="880252">
+				    <spot x="182.10504" y="1835.185" z="1489.4601" h="8"/>
+					<spot x="228.10095" y="1834.923" z="1488.9672" h="73"/>
+				</spawn>
+				<spawn npc_id="880312">
+				    <spot x="201.19867" y="1841.6342" z="1489.1226" h="110"/>
+					<spot x="208.99121" y="1842.8177" z="1489.0992" h="84"/>
+					<spot x="201.66023" y="1817.0599" z="1489.502" h="92"/>
+					<spot x="213.54324" y="1818.3918" z="1489.4363" h="93"/>
+				</spawn>
+				<spawn npc_id="880372">
+				    <spot x="226.77907" y="1862.4539" z="1489.6495" h="86"/>
+					<spot x="241.85725" y="1877.37" z="1498.7341" h="105"/>
+					<spot x="220.60323" y="1911.614" z="1500.0677" h="29"/>
+					<spot x="173.66187" y="1900.1906" z="1497.5079" h="65"/>
+					<spot x="170.57802" y="1862.8125" z="1490.1794" h="104"/>
+				</spawn>
+				<spawn npc_id="880432">
+				    <spot x="212.08429" y="1865.7297" z="1490.2395" h="79"/>
+					<spot x="192.03937" y="1863.1624" z="1490.2477" h="108"/>
+					<spot x="159.30786" y="1852.2499" z="1489.8977" h="75"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804208">
+				    <spot x="217.21692" y="1846.4541" z="1489.1974" h="111"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_Material_2ST_PvE (Npc Normal lvl:65) -->
+				<spawn npc_id="804209">
+				    <spot x="230.04059" y="1842.1478" z="1489.0217" h="54"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_APSeller_Shop (Npc Normal lvl:65) -->
+				<spawn npc_id="804210">
+				    <spot x="223.34315" y="1834.4463" z="1489.0671" h="47"/>
+				</spawn>
+				<!-- GAb1_01_Lv12_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804211">
+				    <spot x="186.81653" y="1829.7838" z="1489.4977" h="10"/>
+				</spawn>
+				<!-- Belfarth Security <Belus Occupier> -->
+				<spawn npc_id="802480">
+				    <spot x="204.11403" y="1881.9817" z="1490.8451" h="60"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- Balaur Flag Flag -->
+				<spawn npc_id="802715">
+				    <spot x="198.67645" y="1881.7091" z="1532.1097" h="93"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802824">
+				    <spot x="900.0" y="1327.0" z="1536.2924" h="48"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802846">
+				    <spot x="810.7581" y="1421.6667" z="1496.8818" h="48"/>
+				</spawn>
+				<!-- Highland Temple Flag -->
+				<spawn npc_id="802960">
+				    <spot x="571.0" y="1476.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880136" handler="CHIEF">
+				    <spot x="198.2275" y="1884.1561" z="1491.0851" h="95"/>
+				</spawn>
+				<spawn npc_id="880136" handler="ATTACKER">
+				    <spot x="198.2275" y="1884.1561" z="1491.0851" h="95"/>
+				</spawn>
+				<spawn npc_id="880256">
+				    <spot x="182.10504" y="1835.185" z="1489.4601" h="8"/>
+					<spot x="228.10095" y="1834.923" z="1488.9672" h="73"/>
+				</spawn>
+				<spawn npc_id="880316">
+				    <spot x="201.19867" y="1841.6342" z="1489.1226" h="110"/>
+					<spot x="208.99121" y="1842.8177" z="1489.0992" h="84"/>
+					<spot x="201.66023" y="1817.0599" z="1489.502" h="92"/>
+					<spot x="213.54324" y="1818.3918" z="1489.4363" h="93"/>
+				</spawn>
+				<spawn npc_id="880376">
+				    <spot x="226.77907" y="1862.4539" z="1489.6495" h="86"/>
+					<spot x="241.85725" y="1877.37" z="1498.7341" h="105"/>
+					<spot x="220.60323" y="1911.614" z="1500.0677" h="29"/>
+					<spot x="173.66187" y="1900.1906" z="1497.5079" h="65"/>
+					<spot x="170.57802" y="1862.8125" z="1490.1794" h="104"/>
+				</spawn>
+				<spawn npc_id="880436">
+				    <spot x="212.08429" y="1865.7297" z="1490.2395" h="79"/>
+					<spot x="192.03937" y="1863.1624" z="1490.2477" h="108"/>
+					<spot x="159.30786" y="1852.2499" z="1489.8977" h="75"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+		<!-- [BELING FORT] -->
+		<base_spawn id="120">
+			<simple_race race="ELYOS">
+				<!-- Elyos Flag Flag -->
+				<spawn npc_id="802721">
+				    <spot x="1888.5461" y="1846.9274" z="1532.1122" h="62"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802848">
+				    <spot x="1327.912" y="1147.9362" z="1536.709" h="31"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802870">
+				    <spot x="1421.4105" y="1236.0215" z="1496.3591" h="31"/>
+				</spawn>
+				<!-- Alpine Temple Flag -->
+				<spawn npc_id="802983">
+				    <spot x="1475.0" y="1475.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880155" handler="CHIEF">
+				    <spot x="1889.7548" y="1847.154" z="1491.0796" h="64"/>
+				</spawn>
+				<spawn npc_id="880155" handler="ATTACKER">
+				    <spot x="1889.7548" y="1847.154" z="1491.0796" h="64"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804212">
+				    <spot x="1851.9414" y="1829.2319" z="1489.2097" h="85"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_APSeller_Sub_Matter (Npc Normal lvl:65) -->
+				<spawn npc_id="804213">
+				    <spot x="1847.4681" y="1814.8563" z="1489.0287" h="24"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_SpecialBuyer_AP (Npc Normal lvl:65) -->
+				<spawn npc_id="804214">
+				    <spot x="1838.5742" y="1819.8818" z="1489.1051" h="18"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804215">
+				    <spot x="1834.8011" y="1856.3414" z="1489.4858" h="98"/>
+				</spawn>
+				<!-- Beling Security <Belus Occupier> -->
+				<spawn npc_id="802484">
+				    <spot x="1887.488" y="1840.8685" z="1490.8447" h="35"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ASMODIANS">
+				<!-- Asmodian Flag Flag -->
+				<spawn npc_id="802731">
+				    <spot x="1888.5461" y="1846.9274" z="1532.1122" h="62"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802852">
+				    <spot x="1327.912" y="1147.9362" z="1536.709" h="31"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802874">
+				    <spot x="1421.4105" y="1236.0215" z="1496.3591" h="31"/>
+				</spawn>
+				<!-- Alpine Temple Flag -->
+				<spawn npc_id="802983">
+				    <spot x="1475.0" y="1475.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880152" handler="CHIEF">
+				    <spot x="1889.7548" y="1847.154" z="1491.0796" h="64"/>
+				</spawn>
+				<spawn npc_id="880152" handler="ATTACKER">
+				    <spot x="1889.7548" y="1847.154" z="1491.0796" h="64"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804212">
+				    <spot x="1851.9414" y="1829.2319" z="1489.2097" h="85"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_APSeller_Sub_Matter (Npc Normal lvl:65) -->
+				<spawn npc_id="804213">
+				    <spot x="1847.4681" y="1814.8563" z="1489.0287" h="24"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_SpecialBuyer_AP (Npc Normal lvl:65) -->
+				<spawn npc_id="804214">
+				    <spot x="1838.5742" y="1819.8818" z="1489.1051" h="18"/>
+				</spawn>
+				<!-- GAb1_01_Lv13_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804215">
+				    <spot x="1834.8011" y="1856.3414" z="1489.4858" h="98"/>
+				</spawn>
+				<!-- Beling Security <Belus Occupier> -->
+				<spawn npc_id="802484">
+				    <spot x="1887.488" y="1840.8685" z="1490.8447" h="35"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- Balaur Flag Flag -->
+				<spawn npc_id="802737">
+				    <spot x="1888.5461" y="1846.9274" z="1532.1122" h="62"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802868">
+				    <spot x="1327.912" y="1147.9362" z="1536.709" h="31"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802890">
+				    <spot x="1421.4105" y="1236.0215" z="1496.3591" h="31"/>
+				</spawn>
+				<!-- Alpine Temple Flag -->
+				<spawn npc_id="802983">
+				    <spot x="1475.0" y="1475.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880156" handler="CHIEF">
+				    <spot x="1889.7548" y="1847.154" z="1491.0796" h="64"/>
+				</spawn>
+				<spawn npc_id="880156" handler="ATTACKER">
+				    <spot x="1889.7548" y="1847.154" z="1491.0796" h="64"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+		<!-- [BELSAL FORT] -->
+		<base_spawn id="121">
+			<simple_race race="ELYOS">
+				<!-- Elyos Flag Flag -->
+				<spawn npc_id="802743">
+				    <spot x="1853.8202" y="160.89095" z="1532.1158" h="33"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802892">
+				    <spot x="1147.7817" y="720.041" z="1536.5757" h="31"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802914">
+				    <spot x="1237.0" y="626.0" z="1496.5538" h="31"/>
+				</spawn>
+				<!-- Grandweir Temple Flag -->
+				<spawn npc_id="803006">
+				    <spot x="1475.0" y="571.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880175" handler="CHIEF">
+				    <spot x="1854.2219" y="159.1715" z="1491.0875" h="33"/>
+				</spawn>
+				<spawn npc_id="880175" handler="ATTACKER">
+				    <spot x="1854.2219" y="159.1715" z="1491.0875" h="33"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804216">
+				    <spot x="1835.0925" y="194.97168" z="1489.2312" h="54"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_Material_2ST_PvP (Npc Normal lvl:65) -->
+				<spawn npc_id="804217">
+				    <spot x="1822.8407" y="201.03099" z="1489.0198" h="116"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_APseller_ID (Npc Normal lvl:65) -->
+				<spawn npc_id="804218">
+				    <spot x="1828.2324" y="209.31584" z="1489.1038" h="107"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804219">
+				    <spot x="1864.7202" y="212.50052" z="1489.4688" h="71"/>
+				</spawn>
+				<!-- Belsal Security <Belus Occupier> -->
+				<spawn npc_id="802488">
+				    <spot x="1848.1967" y="160.80293" z="1490.848" h="4"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="ASMODIANS">
+				<!-- Asmodian Flag Flag -->
+				<spawn npc_id="802753">
+				    <spot x="1853.8202" y="160.89095" z="1532.1158" h="33"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802896">
+				    <spot x="1147.7817" y="720.041" z="1536.5757" h="31"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802918">
+				    <spot x="1237.0" y="626.0" z="1496.5538" h="31"/>
+				</spawn>
+				<!-- Grandweir Temple Flag -->
+				<spawn npc_id="803006">
+				    <spot x="1475.0" y="571.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880172" handler="CHIEF">
+				    <spot x="1854.2219" y="159.1715" z="1491.0875" h="33"/>
+				</spawn>
+				<spawn npc_id="880172" handler="ATTACKER">
+				    <spot x="1854.2219" y="159.1715" z="1491.0875" h="33"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_Seller_Goods (Npc Normal lvl:65) -->
+				<spawn npc_id="804216">
+				    <spot x="1835.0925" y="194.97168" z="1489.2312" h="54"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_Material_2ST_PvP (Npc Normal lvl:65) -->
+				<spawn npc_id="804217">
+				    <spot x="1822.8407" y="201.03099" z="1489.0198" h="116"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_APseller_ID (Npc Normal lvl:65) -->
+				<spawn npc_id="804218">
+				    <spot x="1828.2324" y="209.31584" z="1489.1038" h="107"/>
+				</spawn>
+				<!-- GAb1_01_Lv14_01_Warehouse (Npc Normal lvl:65) -->
+				<spawn npc_id="804219">
+				    <spot x="1864.7202" y="212.50052" z="1489.4688" h="71"/>
+				</spawn>
+				<!-- Belsal Security <Belus Occupier> -->
+				<spawn npc_id="802488">
+				    <spot x="1848.1967" y="160.80293" z="1490.848" h="4"/>
+				</spawn>
+			</simple_race>
+			<simple_race race="NPC">
+				<!-- Balaur Flag Flag -->
+				<spawn npc_id="802759">
+				    <spot x="1853.8202" y="160.89095" z="1532.1158" h="33"/>
+				</spawn>
+				<!-- Mirage Dance Flag -->
+				<spawn npc_id="802912">
+				    <spot x="1147.7817" y="720.041" z="1536.5757" h="31"/>
+				</spawn>
+				<!-- Chaos Wind Flag -->
+				<spawn npc_id="802934">
+				    <spot x="1237.0" y="626.0" z="1496.5538" h="31"/>
+				</spawn>
+				<!-- Grandweir Temple Flag -->
+				<spawn npc_id="803006">
+				    <spot x="1475.0" y="571.0" z="1545.3778" h="115"/>
+				</spawn>
+				<!-- Boss -->
+				<spawn npc_id="880176" handler="CHIEF">
+				    <spot x="1854.2219" y="159.1715" z="1491.0875" h="33"/>
+				</spawn>
+				<spawn npc_id="880176" handler="ATTACKER">
+				    <spot x="1854.2219" y="159.1715" z="1491.0875" h="33"/>
+				</spawn>
+			</simple_race>
+		</base_spawn>
+	</spawn_map>
+</spawns>

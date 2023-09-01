@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               80585 [XML] For entry into the Runadium (Bonus 1)
+               80586 [XML] For entry into the Runadium (Bonus 2)
+               80587 [SCRIPT] Find the Journal
+               80588 [XML] Preparation of the Runadium contenders
+               80589 [SCRIPT] A Vicarious Memento
+               80590 [XML] For entry into the Runadium (Bonus 1)
+               80591 [XML] For entry into the Runadium (Bonus 2)
+               80592 [XML] Defeat the Witch in the Runadium (Bonus)
+               80593 [XML] Preparation of the Runadium contenders
+               80594 [XML] Runarinerk's Runadium treasure
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to_many id="80593" start_npc_ids="832268" end_npc_ids="832268">
+        <npc_infos var="0" npc_id="832268" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+	<report_to_many id="80588" start_npc_ids="832268" end_npc_ids="832268">
+        <npc_infos var="0" npc_id="832268" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="80585" start_npc_ids="832268"/>
+    <item_collecting id="80586" start_npc_ids="832267"/>
+    <item_collecting id="80590" start_npc_ids="832268"/>
+    <item_collecting id="80591" start_npc_ids="832267"/>
+    <item_collecting id="80592" start_npc_ids="832268"/>
+    <item_collecting id="80594" start_npc_ids="832268"/>
+    <!-- HUNTING QUESTS -->
+    <!-- ITEM ORDERS QUESTS -->
+</quest_scripts>

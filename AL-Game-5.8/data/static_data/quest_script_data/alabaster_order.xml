@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+            [BEGIN] SUMMARY
+                    35007 [XML] Chasing a Memory
+                    35008 [XML] Documenting the Scraps
+                    35009 [XML] Destroy Ore Be Destroyed
+                    35010 [XML] Trou's Dream
+                    35011 [XML] Pluma Red Feather
+                    35014 [XML] The Detecting Eye
+                    35015 [XML] Protecting Your Members
+                    35016 [XML] Passing Stones
+                    35017 [XML] Where's Atropos?
+                    35018 [XML] The Shugo Stoolie
+                    35021 [XML] Guarding a Memory
+                    35022 [XML] Torn To Pieces
+                    35023 [XML] Destroy the Meteorite
+                    35024 [XML] The Long Password
+                    35025 [XML] Pass the Password
+                    35026 [XML] Iaetia's Observation
+                    35031 [XML] Aether Gems
+                    35032 [XML] Helping the Hungry
+                    35033 [XML] Holy Reconstruction!
+                    35034 [XML] Herbs and Remedies
+                    35035 [XML] Kill the Cracktooth!
+                    35036 [XML] We've Got Worms
+                    35037 [XML] Damn Dirty Troll Looters
+                    35038 [XML] Moonflower Mayhem
+                    35039 [XML] Gem of an Idea
+                    35040 [XML] Asking For Help
+                    35041 [XML] Holey Holy Grounds
+                    35042 [XML] The Ferilla Potion
+                    35043 [XML] Darken the Sparkies
+                    35044 [XML] Slaughtering Salt Fins
+                    35045 [XML] Aether for the Poor
+                    35046 [XML] Caloric Alms
+                    35047 [XML] Pre-construction
+                    35048 [XML] Potion Maker
+                    35049 [XML] Driven to Distraction
+                    35050 [XML] Vanquish Grim Puca
+                    35051 [XML] Causing Much Angrief
+                    35052 [XML] [Daily] Alabaster Orders
+                    35053 [XML] [Daily] Clam Power
+                    35054 [XML] [Daily] Hand Over Sandsalt Shards
+                    35055 [SCRIPT] [Daily] Cygnea Site Search
+                    35056 [SCRIPT] [Daily] Scouting Cygnea Sites
+                    35057 [SCRIPT] [Daily] Surveying Cygnea Sites
+                    35058 [XML] [Daily] Clean Out Seafin Vespines
+                    35059 [XML] [Daily] Silence the Shardjaws
+                    35060 [XML] [Daily] No More Malodors
+                    35061 [XML] [Daily] Away with the Skyrays
+                    35062 [XML] [Daily] Corask Control
+                    35063 [XML] [Daily] Malodor Galore
+                    35064 [XML] [Daily] No Room for Ghostshrooms
+                    35065 [XML] [Daily] Don't Forget the Frillnecks
+                    38000 [SCRIPT] Call of the Alabaster Order
+                    38003 [XML] Alabaster Order's Call
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="38003" start_npc_ids="203726" end_npc_ids="799803"/>
+    <report_to_many id="35010" end_npc_ids="799805">
+        <npc_infos var="0" npc_id="204560" quest_dialog="1352"/>
+        <npc_infos var="1" npc_id="799805" quest_dialog="2375" close_dialog="1009"/>
+        <npc_infos var="1" npc_id="799806" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="35011" end_npc_ids="799805">
+        <npc_infos var="0" npc_id="204504" quest_dialog="1352"/>
+        <npc_infos var="1" npc_id="799805" quest_dialog="2375" close_dialog="1009"/>
+        <npc_infos var="1" npc_id="799806" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="35017" end_npc_ids="799806">
+        <npc_infos var="0" npc_id="798155" quest_dialog="1352"/>
+        <npc_infos var="1" npc_id="799806" quest_dialog="2375" close_dialog="1009"/>
+        <npc_infos var="1" npc_id="799806" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="35018" end_npc_ids="799806">
+        <npc_infos var="0" npc_id="798135" quest_dialog="1352"/>
+        <npc_infos var="1" npc_id="799806" quest_dialog="2375" close_dialog="1009"/>
+        <npc_infos var="1" npc_id="799806" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="35024" end_npc_ids="799800 799801">
+        <npc_infos var="0" npc_id="798946" quest_dialog="1352"/>
+        <npc_infos var="1" npc_id="799800" quest_dialog="2375" close_dialog="1009"/>
+        <npc_infos var="1" npc_id="799801" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="35025" end_npc_ids="799800 799801">
+        <npc_infos var="0" npc_id="798972" quest_dialog="1352"/>
+        <npc_infos var="1" npc_id="799800" quest_dialog="2375" close_dialog="1009"/>
+        <npc_infos var="1" npc_id="799801" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <report_to_many id="35026" end_npc_ids="799800 799801">
+        <npc_infos var="0" npc_id="798996" quest_dialog="1352"/>
+        <npc_infos var="1" npc_id="799800" quest_dialog="2375" close_dialog="1009"/>
+        <npc_infos var="1" npc_id="799801" quest_dialog="2375" close_dialog="1009"/>
+    </report_to_many>
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="35007" start_npc_ids="0" end_npc_ids="799805" action_item_ids="700788"/>
+    <item_collecting id="35008" start_npc_ids="0" end_npc_ids="799805" action_item_ids="700789"/>
+    <item_collecting id="35014" start_npc_ids="0" end_npc_ids="799806" action_item_ids="700791"/>
+    <item_collecting id="35015" start_npc_ids="0" end_npc_ids="799806" action_item_ids="700792"/>
+    <item_collecting id="35021" start_npc_ids="0" end_npc_ids="799800 799801" action_item_ids="700765"/>
+    <item_collecting id="35022" start_npc_ids="0" end_npc_ids="799800 799801" action_item_ids="700766"/>
+    <item_collecting id="35031" start_npc_ids="0" end_npc_ids="799805"/>
+    <item_collecting id="35032" start_npc_ids="0" end_npc_ids="799805"/>
+    <item_collecting id="35033" start_npc_ids="0" end_npc_ids="799805"/>
+    <item_collecting id="35034" start_npc_ids="0" end_npc_ids="799805"/>
+    <item_collecting id="35039" start_npc_ids="0" end_npc_ids="799806"/>
+    <item_collecting id="35040" start_npc_ids="0" end_npc_ids="799806"/>
+    <item_collecting id="35041" start_npc_ids="0" end_npc_ids="799806"/>
+    <item_collecting id="35042" start_npc_ids="0" end_npc_ids="799806"/>
+    <item_collecting id="35045" start_npc_ids="0" end_npc_ids="799800 799801"/>
+    <item_collecting id="35046" start_npc_ids="0" end_npc_ids="799800 799801"/>
+    <item_collecting id="35047" start_npc_ids="0" end_npc_ids="799800 799801"/>
+    <item_collecting id="35048" start_npc_ids="0" end_npc_ids="799800 799801"/>
+	<item_collecting id="35053" start_npc_ids="0" end_npc_ids="804941" action_item_ids="702761"/>
+	<item_collecting id="35054" start_npc_ids="0" end_npc_ids="804941" action_item_ids="702762"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="35009" start_npc_ids="0" end_npc_ids="799805">
+        <monster end_var="3" var="0" npc_ids="700790"/>
+    </monster_hunt>
+    <monster_hunt id="35016" start_npc_ids="0" end_npc_ids="799806">
+        <monster end_var="3" var="0" npc_ids="700793"/>
+    </monster_hunt>
+    <monster_hunt id="35023" start_npc_ids="0" end_npc_ids="799800 799801">
+        <monster end_var="3" var="0" npc_ids="700767"/>
+    </monster_hunt>
+    <monster_hunt id="35035" start_npc_ids="0" end_npc_ids="799805">
+        <monster end_var="5" var="0" npc_ids="211049"/>
+    </monster_hunt>
+    <monster_hunt id="35036" start_npc_ids="0" end_npc_ids="799805">
+        <monster end_var="5" var="0" npc_ids="211060"/>
+    </monster_hunt>
+    <monster_hunt id="35037" start_npc_ids="0" end_npc_ids="799805">
+        <monster end_var="5" var="0" npc_ids="211944"/>
+    </monster_hunt>
+    <monster_hunt id="35038" start_npc_ids="0" end_npc_ids="799805">
+        <monster end_var="5" var="0" npc_ids="211895"/>
+    </monster_hunt>
+    <monster_hunt id="35043" start_npc_ids="0" end_npc_ids="799806">
+        <monster end_var="5" var="0" npc_ids="214165"/>
+    </monster_hunt>
+    <monster_hunt id="35044" start_npc_ids="0" end_npc_ids="799806">
+        <monster end_var="5" var="0" npc_ids="214252"/>
+    </monster_hunt>
+    <monster_hunt id="35049" start_npc_ids="0" end_npc_ids="799800 799801">
+        <monster end_var="5" var="0" npc_ids="215492"/>
+    </monster_hunt>
+    <monster_hunt id="35050" start_npc_ids="0" end_npc_ids="799800 799801">
+        <monster end_var="5" var="0" npc_ids="215595"/>
+    </monster_hunt>
+    <monster_hunt id="35051" start_npc_ids="0" end_npc_ids="799800 799801">
+        <monster end_var="5" var="0" npc_ids="215863"/>
+    </monster_hunt>
+	<monster_hunt id="35052" start_npc_ids="0" end_npc_ids="804941">
+        <monster end_var="5" var="0" npc_ids="702760"/>
+    </monster_hunt>
+    <monster_hunt id="35058" start_npc_ids="0" end_npc_ids="804941">
+        <monster end_var="10" var="0" npc_ids="235803"/>
+    </monster_hunt>
+    <monster_hunt id="35059" start_npc_ids="0" end_npc_ids="804942">
+        <monster end_var="10" var="0" npc_ids="235817"/>
+    </monster_hunt>    
+    <monster_hunt id="35060" start_npc_ids="0" end_npc_ids="804945">
+        <monster end_var="10" var="0" npc_ids="235861"/>
+    </monster_hunt>
+    <monster_hunt id="35061" start_npc_ids="0" end_npc_ids="804943">
+        <monster end_var="10" var="0" npc_ids="235874"/>
+    </monster_hunt>
+    <monster_hunt id="35062" start_npc_ids="0" end_npc_ids="804944">
+        <monster end_var="10" var="0" npc_ids="235878"/>
+    </monster_hunt>
+    <monster_hunt id="35063" start_npc_ids="0" end_npc_ids="804946">
+        <monster end_var="10" var="0" npc_ids="235899"/>
+    </monster_hunt>
+    <monster_hunt id="35064" start_npc_ids="0" end_npc_ids="804946">
+        <monster end_var="10" var="0" npc_ids="235902"/>
+    </monster_hunt>
+    <monster_hunt id="35065" start_npc_ids="0" end_npc_ids="804947">
+        <monster end_var="10" var="0" npc_ids="235943"/>
+    </monster_hunt>
+</quest_scripts>

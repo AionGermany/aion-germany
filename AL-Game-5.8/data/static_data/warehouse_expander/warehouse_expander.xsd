@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="warehouse_expander" type="warehouseExpander"/>
+    <xs:complexType name="warehouseExpander">
+        <xs:sequence>
+            <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="warehouse_npc" type="warehouseNpcTemplate" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="warehouseNpcTemplate">
+        <xs:sequence>
+            <xs:element name="expand" type="WarehouseExpand" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="WarehouseExpand">
+        <xs:attribute name="level" type="xs:int"/>
+        <xs:attribute name="price" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="ai_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ai" type="Ai" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Ai">
+        <xs:sequence>
+            <xs:element name="summons" type="Summons" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="bombs" type="Bombs" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="npcId" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="Summons">
+        <xs:sequence>
+            <xs:element name="percentage" type="Percentage" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Percentage">
+        <xs:sequence>
+            <xs:element name="summonGroup" type="SummonGroup" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="percent" type="xs:int" use="required"/>
+        <xs:attribute name="skillId" type="xs:int" use="optional"/>
+        <xs:attribute name="isIndividual" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="SummonGroup">
+        <xs:attribute name="npcId" type="xs:int" use="required"/>
+        <xs:attribute name="x" type="xs:float" use="optional"/>
+        <xs:attribute name="y" type="xs:float" use="optional"/>
+        <xs:attribute name="z" type="xs:float" use="optional"/>
+        <xs:attribute name="h" type="xs:byte" use="optional" default="0"/>
+        <xs:attribute name="count" type="xs:int" use="optional"/>
+        <xs:attribute name="minCount" type="xs:int" use="optional"/>
+        <xs:attribute name="maxCount" type="xs:int" use="optional"/>
+        <xs:attribute name="distance" type="xs:float" use="optional"/>
+        <xs:attribute name="schedule" type="xs:int" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="Bombs">
+        <xs:sequence>
+            <xs:element name="bomb" type="BombTemplate" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BombTemplate">
+        <xs:attribute name="skillId" type="xs:int" use="required"/>
+        <xs:attribute name="cd" type="xs:int" use="optional"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest_scripts>
+    <!--
+            [BEGIN] SUMMARY
+                    18300 [SCRIPT] Floating Death
+                    18301 [SCRIPT] My Prec-H-ious
+                    18302 [SCRIPT] First Priority
+                    18303 [SCRIPT] Making a Sur-can't-a
+                    18307 [XML] Relics Reclaimed
+                    18309 [XML] Crafty Control
+                    18310 [XML] They Killed Commander Barus!
+                    18312 [XML] [Daily] Surveillance Systems
+                    18313 [XML] Fortress Interrupted
+               	    18314 [TODO] [Instance] The Watcher's Spheres
+                    28300 [SCRIPT] Floating Doom
+                    28301 [SCRIPT] Power On
+                    28302 [SCRIPT] Document Saved
+                    28303 [SCRIPT] Char Bombom-Boom!
+                    28307 [XML] Reian Relics Reclaimed
+                    28309 [XML] Engineering Chains of Slavery
+                    28310 [XML] You Can't Keep A Bad Drakan Down
+                    28312 [XML] [Daily] Outrun a Resonator Network
+                    28313 [XML] A Wealthy Patron
+               	    28314 [TODO] [Instance] Watcher's Spheres
+            [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <item_collecting id="18307" start_npc_ids="799596" action_item_ids="700979"/>
+    <item_collecting id="28307" start_npc_ids="799596" action_item_ids="700979"/>
+    <item_collecting id="28312" start_npc_ids="799531" end_npc_ids="799531"/>
+    <!-- HUNTING QUESTS -->
+    <monster_hunt id="18309" start_npc_ids="799596">
+        <monster var="0" npc_ids="282277 282278 282279 282280 282281" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="18310" start_npc_ids="799530" end_npc_ids="799531">
+        <monster var="0" npc_ids="217382" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="18313" start_npc_ids="799531">
+        <monster var="0" npc_ids="217371" end_var="1"/>
+        <monster var="1" npc_ids="217373" end_var="1"/>
+        <monster var="2" npc_ids="217376 219183" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28309" start_npc_ids="799596">
+        <monster var="0" npc_ids="282277 282278 282279 282280 282281" end_var="5"/>
+    </monster_hunt>
+    <monster_hunt id="28310" start_npc_ids="799530" end_npc_ids="799531">
+        <monster var="0" npc_ids="217382" end_var="1"/>
+    </monster_hunt>
+    <monster_hunt id="28313" start_npc_ids="799531">
+        <monster var="0" npc_ids="217371" end_var="1"/>
+        <monster var="1" npc_ids="217373" end_var="1"/>
+        <monster var="2" npc_ids="217376 219183" end_var="1"/>
+    </monster_hunt>
+</quest_scripts>

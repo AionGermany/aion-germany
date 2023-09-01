@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../items/item_templates.xsd"/>
+    <xs:element name="decomposable_items">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="decomposable" type="DecomposableItem" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="DecomposableItem">
+        <xs:sequence>
+            <xs:element name="items" type="ExtractedItemsCollection" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="item_id" type="itemId" use="required"/>
+        <xs:attribute name="decomposable_name" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="ExtractedItemsCollection">
+        <xs:complexContent>
+            <xs:extension base="ResultedItemsCollection">
+                <xs:attribute name="chance" type="xs:float" use="optional" default="100"/>
+                <xs:attribute name="minlevel" type="xs:int" use="optional" default="0"/>
+                <xs:attribute name="maxlevel" type="xs:int" use="optional" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ResultedItem">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="optional"/>
+        <xs:attribute name="count" type="xs:int" use="optional" default="1"/>
+        <xs:attribute name="rnd_min" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="rnd_max" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="race" type="Race" use="optional" default="PC_ALL"/>
+        <xs:attribute name="player_class" type="playerClass" use="optional" default="ALL"/>
+    </xs:complexType>
+    <xs:complexType name="ResultedItemsCollection">
+        <xs:sequence>
+            <xs:element name="item" type="ResultedItem" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="random_item" type="RandomItem" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RandomItem">
+        <xs:attribute name="type" type="RandomType" use="required"/>
+        <xs:attribute name="count" type="xs:int" use="optional" default="1"/>
+        <xs:attribute name="rnd_min" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="rnd_max" type="xs:int" use="optional" default="0"/>
+        <xs:attribute name="race" type="Race" use="optional" default="PC_ALL"/>
+        <xs:attribute name="player_class" type="playerClass" use="optional" default="ALL"/>
+    </xs:complexType>
+    <xs:simpleType name="RandomType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ENCHANTMENT"/>
+            <xs:enumeration value="MANASTONE"/>
+            <xs:enumeration value="MANASTONE_COMMON_GRADE_10"/>
+            <xs:enumeration value="MANASTONE_COMMON_GRADE_20"/>
+            <xs:enumeration value="MANASTONE_COMMON_GRADE_30"/>
+            <xs:enumeration value="MANASTONE_COMMON_GRADE_40"/>
+            <xs:enumeration value="MANASTONE_COMMON_GRADE_50"/>
+            <xs:enumeration value="MANASTONE_COMMON_GRADE_60"/>
+            <xs:enumeration value="MANASTONE_COMMON_GRADE_70"/>
+            <xs:enumeration value="MANASTONE_RARE_GRADE_10"/>
+            <xs:enumeration value="MANASTONE_RARE_GRADE_20"/>
+            <xs:enumeration value="MANASTONE_RARE_GRADE_30"/>
+            <xs:enumeration value="MANASTONE_RARE_GRADE_40"/>
+            <xs:enumeration value="MANASTONE_RARE_GRADE_50"/>
+            <xs:enumeration value="MANASTONE_RARE_GRADE_60"/>
+            <xs:enumeration value="MANASTONE_RARE_GRADE_70"/>
+            <xs:enumeration value="MANASTONE_LEGEND_GRADE_10"/>
+            <xs:enumeration value="MANASTONE_LEGEND_GRADE_20"/>
+            <xs:enumeration value="MANASTONE_LEGEND_GRADE_30"/>
+            <xs:enumeration value="MANASTONE_LEGEND_GRADE_40"/>
+            <xs:enumeration value="MANASTONE_LEGEND_GRADE_50"/>
+            <xs:enumeration value="MANASTONE_LEGEND_GRADE_60"/>
+            <xs:enumeration value="MANASTONE_LEGEND_GRADE_70"/>
+            <xs:enumeration value="MANASTONE_EPIC_GRADE_50"/>
+            <xs:enumeration value="MANASTONE_EPIC_GRADE_60"/>
+            <xs:enumeration value="MANASTONE_EPIC_GRADE_70"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_CLOTHSET_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_LEATHERSET_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_CHAINSET_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_PLATESET_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_GLADIATOR_WEAPON_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_TEMPLAR_WEAPON_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_PRIEST_WEAPON_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_MAGE_WEAPON_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_SCOUT_WEAPON_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_BARD_WEAPON_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_RIDER_WEAPON_65"/>
+            <xs:enumeration value="FINE_SUPERB_BETRAYER_AETHERTECH_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_GLADIATOR_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_TEMPLAR_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_PRIEST_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_MAGE_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_SCOUT_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_BARD_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_RIDER_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_AETHERTECH_WEAPON_65"/>
+            <xs:enumeration value="KUNAX_CLOTHSET_65"/>
+            <xs:enumeration value="KUNAX_LEATHERSET_65"/>
+            <xs:enumeration value="KUNAX_CHAINSET_65"/>
+            <xs:enumeration value="KUNAX_PLATESET_65"/>
+            <xs:enumeration value="KUNAX_HELMET_CLOTH_65"/>
+            <xs:enumeration value="KUNAX_HELMET_LEATHER_65"/>
+            <xs:enumeration value="KUNAX_HELMET_CHAIN_65"/>
+            <xs:enumeration value="KUNAX_HELMET_PLATE_65"/>
+            <xs:enumeration value="KUNAX_ACCESSORY_MAGICAL_65"/>
+            <xs:enumeration value="KUNAX_ACCESSORY_PHYSICAL_65"/>
+            <xs:enumeration value="IDIAN_EPIC"/>
+            <xs:enumeration value="IDIAN_ICY_LEGEND"/>
+            <xs:enumeration value="IDIAN_CELESTIAL_EPIC"/>
+            <xs:enumeration value="IDIAN_TRIUMPHAL_EPIC"/>
+            <xs:enumeration value="IDIAN_GOLDEN_EPIC"/>
+            <xs:enumeration value="IDIAN_HARLOCK_EPIC"/>
+            <xs:enumeration value="IDIAN_INFUSED_EPIC"/>
+            <xs:enumeration value="IDIAN_TIDAL_UNIQUE"/>
+            <xs:enumeration value="IDIAN_NOBLE_TIDAL_EPIC"/>
+            <xs:enumeration value="IDIAN_BLAZING_FIGHTER_EPIC"/>
+            <xs:enumeration value="ANCIENTITEMS"/>
+            <xs:enumeration value="CHUNK_EARTH"/>
+            <xs:enumeration value="CHUNK_ROCK"/>
+            <xs:enumeration value="CHUNK_SAND"/>
+            <xs:enumeration value="CHUNK_GEMSTONE"/>
+            <xs:enumeration value="SCROLLS"/>
+            <xs:enumeration value="POTION"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

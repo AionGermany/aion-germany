@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="npc_skill_templates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="npcskills" type="NpcSkillList" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="NpcSkillList">
+        <xs:sequence>
+            <xs:element name="npcskill" type="NpcSkillTemplate" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="npcid" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="NpcSkillTemplate">
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="skillid" type="xs:int"/>
+        <xs:attribute name="skilllevel" type="xs:int"/>
+        <xs:attribute name="probability" type="xs:int"/>
+        <xs:attribute name="maxhp" type="xs:int"/>
+        <xs:attribute name="minhp" type="xs:int"/>
+        <xs:attribute name="maxtime" type="xs:int"/>
+        <xs:attribute name="mintime" type="xs:int"/>
+        <xs:attribute name="conjunction" type="ConjunctionType"/>
+        <xs:attribute name="cooldown" type="xs:int"/>
+        <xs:attribute name="useinspawned" type="xs:boolean"/>
+    </xs:complexType>
+    <xs:simpleType name="ConjunctionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AND"/>
+            <xs:enumeration value="OR"/>
+            <xs:enumeration value="XOR"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

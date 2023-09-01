@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+               18737 [XML] Where did Abiso Go?
+               18738 [TODO] Test Bomb, Test Bomb
+               18739 [XML] Urgent Deed: Get the Seed
+               18740 [XML] It's Alive?
+               18741 [XML] A Versed Order
+               18742 [XML] [Daily/Coin] Import the Report
+               18743 [XML] Not So Fast, Nasto
+               18744 [TODO] Info from Abiso
+               18745 [TODO] [Instanced Dungeon] Steal from the Stealers
+               28737 [XML] Suspicious Minds
+               28738 [TODO] Bombs for Everyone!
+               28739 [XML] Important Research
+               28740 [XML] It's a Dirty Job
+               28741 [XML] Securing the Route
+               28742 [XML] [Daily/Coin] A Flurry of Activity
+               28743 [XML] Take out the Mastermind
+               28744 [TODO] Proqura's Information
+               28745 [TODO] [Instanced Dungeon] Temporarily Stolen
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <report_to id="18737" start_npc_ids="804707" start_dialog_id="4762" start_dialog_id2="10002" end_npc_ids="206378"/>
+    <report_to id="28737" start_npc_ids="804732" start_dialog_id="4762" start_dialog_id2="10002" end_npc_ids="804717"/>
+    <!-- COLLECTING QUESTS -->
+	<item_collecting id="18739" start_npc_ids="804707"/>
+	<item_collecting id="18740" start_npc_ids="804707"/>
+    <item_collecting id="18742" start_npc_ids="206378 206379 206380" end_npc_ids="804707"/>
+	<item_collecting id="28739" start_npc_ids="804732"/>
+	<item_collecting id="28740" start_npc_ids="804732"/>
+    <item_collecting id="28742" start_npc_ids="206395 206396 206397" end_npc_ids="804732"/>
+    <!-- HUNTING QUESTS -->
+	<monster_hunt id="18741" start_npc_ids="804707">
+        <monster var="0" npc_ids="236018 236019 236020 236021 236096 236097 236098" end_var="50"/>
+    </monster_hunt>
+	<monster_hunt id="18743" start_npc_ids="206378 206379 206380" start_dialog_id="4762" end_dialog_id="10002" end_npc_ids="804707">
+        <monster var="0" npc_ids="236306" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt id="28741" start_npc_ids="804732">
+        <monster var="0" npc_ids="236018 236019 236020 236021 236096 236097 236098" end_var="50"/>
+    </monster_hunt>
+	<monster_hunt id="28743" start_npc_ids="206395 206396 206397" start_dialog_id="4762" end_dialog_id="10002" end_npc_ids="804732">
+        <monster var="0" npc_ids="236306" end_var="1"/>
+    </monster_hunt>
+</quest_scripts>

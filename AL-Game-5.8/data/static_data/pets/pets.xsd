@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pet" type="pet" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="pet">
+        <xs:sequence>
+            <xs:element name="petfunction" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="type" type="functionType"/>
+                    <xs:attribute name="id" type="xs:int"/>
+                    <xs:attribute name="slots" type="xs:int"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="petstats">
+                <xs:complexType>
+                    <xs:attribute name="reaction"/>
+                    <xs:attribute name="run_speed" type="xs:float"/>
+                    <xs:attribute name="walk_speed" type="xs:float"/>
+                    <xs:attribute name="height" type="xs:float"/>
+                    <xs:attribute name="altitude" type="xs:float"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="nameid" type="xs:int"/>
+        <xs:attribute name="condition_reward" type="xs:int"/>
+    </xs:complexType>
+    <xs:simpleType name="functionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FOOD"/>
+            <xs:enumeration value="WAREHOUSE"/>
+            <xs:enumeration value="BAG"/>
+            <xs:enumeration value="WING"/>
+            <xs:enumeration value="LOOT"/>
+            <xs:enumeration value="DOPING"/>
+			<xs:enumeration value="BUFF"/>
+			<xs:enumeration value="MERCHANT"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spawns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- Linkgate Foundry Quest created by Falke_34 -->
+	<spawn_map map_id="301340000">
+		<!-- Containment Barrier -->
+		<spawn npc_id="234193" respawn_time="295">
+			<spot x="218.7661" y="318.36484" z="392.36932" static_id="338"/>
+		</spawn>
+		<!-- Linkgate Lookout -->
+		<spawn npc_id="234680" respawn_time="295">
+			<spot x="233.40561" y="330.93774" z="392.46887" h="0"/>
+			<spot x="253.9309" y="329.28723" z="392.46954" h="60"/>
+		</spawn>
+		<!-- Linkgate Bruiser -->
+		<spawn npc_id="234681" respawn_time="295">
+			<spot x="185.0799" y="302.97568" z="392.50745" h="110"/>
+			<spot x="194.41551" y="290.68723" z="392.38702" h="30"/>
+		</spawn>
+		<!-- Secret Zone Invasion Corridor -->
+		<spawn npc_id="731532" respawn_time="295">
+			<spot x="209.29619" y="291.73572" z="395.40454" static_id="141"/>
+		</spawn>
+		<!-- Spy Ditono -->
+		<spawn npc_id="804556" respawn_time="295">
+			<spot x="198.59158" y="315.88727" z="392.50745" h="100"/>
+		</spawn>
+	</spawn_map>
+</spawns>

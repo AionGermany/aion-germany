@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="220020000">
+        <!-- Rift -->
+        <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Morheim -->
+            <spot x="453.8749" y="2308.0735" z="440.05774" h="50" anchor="MORHEIM_AM"/>
+            <spot x="771.07043" y="912.6148" z="330.0" h="50" anchor="MORHEIM_BM"/>
+            <spot x="227.90245" y="488.45413" z="438.0" h="23" anchor="MORHEIM_CM"/>
+            <spot x="1668.3763" y="1462.5992" z="165.0" h="30" anchor="MORHEIM_DM"/>
+            <spot x="1729.7098" y="1067.3568" z="124.0" h="40" anchor="MORHEIM_EM"/>
+            <spot x="2356.1938" y="2336.7283" z="115.1" h="113" anchor="MORHEIM_FM"/>
+            <spot x="2488.9436" y="657.68195" z="260.0" h="103" anchor="MORHEIM_GM"/>
+        </spawn>
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Morheim -->
+            <spot x="2320.1042" y="2844.4465" z="230.0" h="50" anchor="MORHEIM_AS"/>
+            <spot x="2579.92" y="2045.5675" z="121.00103" h="36" anchor="MORHEIM_BS"/>
+            <spot x="3022.943" y="881.2537" z="363.99762" h="90" anchor="MORHEIM_CS"/>
+            <spot x="1527.4956" y="1130.1305" z="155.0" h="113" anchor="MORHEIM_DS"/>
+            <spot x="563.9646" y="1910.2792" z="430.0" h="73" anchor="MORHEIM_ES"/>
+            <spot x="2303.2908" y="2623.705" z="211.49734" h="73" anchor="MORHEIM_FS"/>
+            <spot x="764.3181" y="1887.3486" z="366.0" h="36" anchor="MORHEIM_GS"/>
+        </spawn>
+
+        <!-- MORHEIM_AS -->
+        <rift_spawn id="2120">
+        </rift_spawn>
+        <!-- MORHEIM_BS -->
+        <rift_spawn id="2121">
+        </rift_spawn>
+        <!-- MORHEIM_CS -->
+        <rift_spawn id="2122">
+        </rift_spawn>
+        <!-- MORHEIM_DS -->
+        <rift_spawn id="2123">
+        </rift_spawn>
+        <!-- MORHEIM_ES -->
+        <rift_spawn id="2124">
+        </rift_spawn>
+        <!-- MORHEIM_FS -->
+        <rift_spawn id="2125">
+        </rift_spawn>
+        <!-- MORHEIM_GS -->
+        <rift_spawn id="2126">
+        </rift_spawn>
+    </spawn_map>
+</spawns>

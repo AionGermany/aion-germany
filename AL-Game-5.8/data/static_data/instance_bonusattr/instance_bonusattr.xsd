@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.1">
+    <xs:include schemaLocation="../modifiers.xsd"/>
+    <xs:element name="instance_bonusattrs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="instance_bonusattr" type="InstanceBonusAttr" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="InstanceBonusAttr">
+        <xs:sequence>
+            <xs:element name="penalty_attr" type="InstancePenaltyAttr" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="buff_id" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="InstancePenaltyAttr">
+        <xs:attribute name="stat" type="modifiersenum" use="required"/>
+        <xs:attribute name="func" type="StatFunc" use="required"/>
+        <xs:attribute name="value" type="xs:int" use="required"/>
+    </xs:complexType>
+</xs:schema>

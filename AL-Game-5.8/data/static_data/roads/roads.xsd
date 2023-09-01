@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+    <xs:include schemaLocation="../import.xsd"/>
+    <xs:element name="roads">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="road" type="Road" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Road">
+        <xs:sequence>
+            <xs:element name="center" type="RoadPoint"/>
+            <xs:element name="p1" type="RoadPoint"/>
+            <xs:element name="p2" type="RoadPoint"/>
+            <xs:element name="roadexit" type="RoadExit"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="map" type="xs:int"/>
+        <xs:attribute name="radius" type="xs:float"/>
+    </xs:complexType>
+    <xs:complexType name="RoadPoint">
+        <xs:attribute name="x" type="xs:float"/>
+        <xs:attribute name="y" type="xs:float"/>
+        <xs:attribute name="z" type="xs:float"/>
+    </xs:complexType>
+    <xs:complexType name="RoadExit">
+        <xs:attribute name="mapid" type="xs:int"/>
+        <xs:attribute name="x" type="xs:float"/>
+        <xs:attribute name="y" type="xs:float"/>
+        <xs:attribute name="z" type="xs:float"/>
+    </xs:complexType>
+</xs:schema>

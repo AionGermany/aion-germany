@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+
+	<!--
+		Author.....: GiGatR00n
+		v4.7.5.x (‎15/‎3/‎2015)
+	-->
+
+	<!-- Intelligence Supply Box (Idldf5_Fortress_Re_TreasureBox_A) -->
+	<npc_drop npc_id="702581">
+		<drop_group name="" use_category="false">
+			<drop item_id="164000314" chance="20.0" min_amount="1" max_amount="1"/> <!-- Devastation Bomb -->
+			<drop item_id="164000315" chance="20.0" min_amount="1" max_amount="1"/> <!-- Freeze Bomb -->
+			<drop item_id="164000316" chance="25.0" min_amount="1" max_amount="3"/> <!-- PvP Defense Scroll -->
+		</drop_group>
+	</npc_drop>
+
+	<!-- Intelligence Supply Box (Idldf5_Fortress_Re_TreasureBox_B) -->
+	<npc_drop npc_id="702582">
+		<drop_group name="" use_category="false">
+			<drop item_id="164000314" chance="15.0" min_amount="1" max_amount="1"/> <!-- Devastation Bomb -->
+			<drop item_id="164000315" chance="15.0" min_amount="1" max_amount="1"/> <!-- Freeze Bomb -->
+			<drop item_id="164000316" chance="20.0" min_amount="1" max_amount="2"/> <!-- PvP Defense Scroll -->
+		</drop_group>
+	</npc_drop>
+
+	<!-- Intelligence Supply Box (Idldf5_Fortress_Re_TreasureBox_C) -->
+	<npc_drop npc_id="702583">
+		<drop_group name="" use_category="false">
+			<drop item_id="164000314" chance="10.0" min_amount="1" max_amount="1"/> <!-- Devastation Bomb -->
+			<drop item_id="164000315" chance="10.0" min_amount="1" max_amount="1"/> <!-- Freeze Bomb -->
+			<drop item_id="164000316" chance="15.0" min_amount="1" max_amount="1"/> <!-- PvP Defense Scroll -->
+		</drop_group>
+	</npc_drop>
+</npc_drops>
