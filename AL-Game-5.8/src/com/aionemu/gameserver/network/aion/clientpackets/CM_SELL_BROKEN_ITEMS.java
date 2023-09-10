@@ -30,8 +30,8 @@ import com.aionemu.gameserver.services.TradeService;
 public class CM_SELL_BROKEN_ITEMS extends AionClientPacket {
 
 	private int amount;
-	private int itemId;
-	private long count;
+	private int itemObjId;
+	private int count;
 	private TradeList tradeListKinah;
 	private TradeList tradeListAp;
 
@@ -47,17 +47,16 @@ public class CM_SELL_BROKEN_ITEMS extends AionClientPacket {
 		amount = readH(); // total no of items
 
 		for (int i = 0; i < amount; i++) {
-			itemId = readD();
-			Item items = player.getInventory().getItemByObjId(itemId);
-			count = player.getInventory().getItemCountByItemId(items.getItemId());
+			itemObjId = readD();
 
-			Acquisition aquisition = player.getInventory().getItemByObjId(itemId).getItemTemplate().getAcquisition();
+			Acquisition aquisition = player.getInventory().getItemByObjId(itemObjId).getItemTemplate().getAcquisition();
+			count = (int) player.getInventory().getItemByObjId(itemObjId).getItemCount();
 
 			if (aquisition != null) {
-				tradeListAp.addSellItem(itemId, count);
+				tradeListAp.addSellItem(itemObjId, count);
 			}
 			else {
-				tradeListKinah.addSellItem(itemId, count);
+				tradeListKinah.addSellItem(itemObjId, count);
 			}
 		}
 	}

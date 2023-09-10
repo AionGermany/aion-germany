@@ -93,23 +93,31 @@ public class CM_CHAT_MESSAGE_WHISPER extends AionClientPacket {
 
 		if (receiver == null) {
 			sendPacket(SM_SYSTEM_MESSAGE.STR_NO_SUCH_USER(formatname));
+			return;
 		}
-		else if (!receiver.isWispable()) {
+		
+		if (!receiver.isWispable() && !sender.isGM()) {
 			PacketSendUtility.sendMessage(sender, "You can't talk with this gm.");
+			return;
 		}
-		else if (sender.getLevel() < CustomConfig.LEVEL_TO_WHISPER) {
+		
+		if (sender.getLevel() < CustomConfig.LEVEL_TO_WHISPER && sender.getF2p().getF2pAccount() == null && !sender.isGM()) {
 			sendPacket(SM_SYSTEM_MESSAGE.STR_CANT_WHISPER_LEVEL(String.valueOf(CustomConfig.LEVEL_TO_WHISPER)));
+			return;
 		}
-		else if (receiver.getBlockList().contains(sender.getObjectId())) {
+		
+		if (receiver.getBlockList().contains(sender.getObjectId())) {
 			sendPacket(SM_SYSTEM_MESSAGE.STR_YOU_EXCLUDED(receiver.getName()));
+			return;
 		}
-		else if ((!CustomConfig.SPEAKING_BETWEEN_FACTIONS) && (sender.getRace().getRaceId() != receiver.getRace().getRaceId()) && (sender.getAccessLevel() < AdminConfig.GM_LEVEL) && (receiver.getAccessLevel() < AdminConfig.GM_LEVEL)) {
+		
+		if ((!CustomConfig.SPEAKING_BETWEEN_FACTIONS) && (sender.getRace().getRaceId() != receiver.getRace().getRaceId()) && (sender.getAccessLevel() < AdminConfig.GM_LEVEL) && (receiver.getAccessLevel() < AdminConfig.GM_LEVEL)) {
 			sendPacket(SM_SYSTEM_MESSAGE.STR_NO_SUCH_USER(formatname));
+			return;
 		}
-		else {
-			if (RestrictionsManager.canChat(sender)) {
-				PacketSendUtility.sendPacket(receiver, new SM_MESSAGE(sender, NameRestrictionService.filterMessage(message), ChatType.WHISPER));
-			}
+		
+		if (RestrictionsManager.canChat(sender)) {
+			PacketSendUtility.sendPacket(receiver, new SM_MESSAGE(sender, NameRestrictionService.filterMessage(message), ChatType.WHISPER));
 		}
 	}
 }
