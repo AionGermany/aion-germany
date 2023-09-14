@@ -35,7 +35,6 @@ import com.aionemu.gameserver.dao.PlayerEffectsDAO;
 import com.aionemu.gameserver.dao.PlayerGameStatsDAO;
 import com.aionemu.gameserver.dao.PlayerLifeStatsDAO;
 import com.aionemu.gameserver.model.account.PlayerAccountData;
-import com.aionemu.gameserver.model.gameobjects.Summon;
 import com.aionemu.gameserver.model.gameobjects.player.BindPointPosition;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.StorageType;
@@ -179,11 +178,15 @@ public class PlayerLeaveWorldService {
 		else if (DuelService.getInstance().isDueling(player.getObjectId())) {
 			DuelService.getInstance().loseDuel(player);
 		}
-		Summon summon = player.getSummon();
-		if (summon != null) {
-			SummonsService.doMode(SummonMode.RELEASE, summon, UnsummonType.LOGOUT);
+		
+		if (player.getSummon() != null) {
+			SummonsService.doMode(SummonMode.RELEASE, player.getSummon(), UnsummonType.LOGOUT);
 		}
-		PetSpawnService.dismissPet(player, true);
+		
+		if (player.getPet() != null) {
+			PetSpawnService.dismissPet(player, true);
+		}
+		
 		if(player.getMinion() != null) {
 			MinionService.getInstance().despawnMinion(player, player.getMinion().getObjectId());	
 		}

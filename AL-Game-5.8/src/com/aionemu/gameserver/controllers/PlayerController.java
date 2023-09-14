@@ -42,6 +42,7 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Gatherable;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.Kisk;
+import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.Pet;
 import com.aionemu.gameserver.model.gameobjects.StaticObject;
@@ -49,6 +50,7 @@ import com.aionemu.gameserver.model.gameobjects.Summon;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.AbyssRank;
 import com.aionemu.gameserver.model.gameobjects.player.BindPointPosition;
+import com.aionemu.gameserver.model.gameobjects.player.MinionCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureVisualState;
@@ -78,6 +80,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_HEADING_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEVEL_UPDATE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_MINIONS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_NEARBY_QUESTS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_NPC_INFO;
@@ -111,6 +114,7 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
+import com.aionemu.gameserver.services.toypet.MinionService;
 import com.aionemu.gameserver.services.toypet.PetSpawnService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
@@ -177,6 +181,11 @@ public class PlayerController extends CreatureController<Player> {
 				LoggerFactory.getLogger(PlayerController.class).debug("Player " + getOwner().getName() + " sees " + object.getName() + " that has toypet");
 				PacketSendUtility.sendPacket(getOwner(), new SM_PET(3, player.getPet()));
 			}
+			if (player.getMinion() != null) {
+				LoggerFactory.getLogger(PlayerController.class).debug("Player " + getOwner().getName() + " sees " + object.getName() + " that has minion");
+				MinionCommonData commonData = player.getMinionList().getMinion(object.getObjectId());
+				PacketSendUtility.sendPacket(getOwner(), new SM_MINIONS(5, commonData));
+			}
 			player.getEffectController().sendEffectIconsTo(getOwner());
 		}
 		else if (object instanceof Kisk) {
@@ -210,6 +219,10 @@ public class PlayerController extends CreatureController<Player> {
 		else if (object instanceof Pet) {
 			PacketSendUtility.sendPacket(getOwner(), new SM_PET(3, (Pet) object));
 		}
+		else if (object instanceof Minion) {
+			MinionCommonData commonData = getOwner().getMinionList().getMinion(object.getObjectId());
+			PacketSendUtility.sendPacket(getOwner(), new SM_MINIONS(5, commonData));
+		}
 	}
 
 	private RobotInfo getRobotInfo(Player player) {
@@ -222,6 +235,10 @@ public class PlayerController extends CreatureController<Player> {
 		super.notSee(object, isOutOfRange);
 		if (object instanceof Pet) {
 			PacketSendUtility.sendPacket(getOwner(), new SM_PET(4, (Pet) object));
+		}
+		else if (object instanceof Minion) {
+			MinionCommonData commonData = getOwner().getMinionList().getMinion(object.getObjectId());
+			PacketSendUtility.sendPacket(getOwner(), new SM_MINIONS(6, commonData));
 		}
 		else {
 			PacketSendUtility.sendPacket(getOwner(), new SM_DELETE(object, isOutOfRange ? 0 : 15));
@@ -586,16 +603,27 @@ public class PlayerController extends CreatureController<Player> {
 		}
 
 		/**
-		 * Release summon
+		 * Release Summon
 		 */
 		Summon summon = player.getSummon();
 		if (summon != null) {
 			SummonsService.doMode(SummonMode.RELEASE, summon, UnsummonType.UNSPECIFIED);
 		}
+		/**
+		 * Release Pet
+		 */
 		Pet pet = player.getPet();
 		if (pet != null) {
 			PetSpawnService.dismissPet(player, true);
 		}
+		/**
+		 * Release Minion
+		 */
+		Minion minion = player.getMinion();
+		if (minion != null) {
+			MinionService.getInstance().despawnMinion(player, minion.getObjectId());
+		}
+		
 		if (player.isInState(CreatureState.FLYING)) {
 			player.setIsFlyingBeforeDeath(true);
 		}

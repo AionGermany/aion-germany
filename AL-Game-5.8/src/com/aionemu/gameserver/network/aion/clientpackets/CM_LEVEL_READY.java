@@ -18,6 +18,7 @@ package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.model.gameobjects.Minion;
 import com.aionemu.gameserver.model.gameobjects.Pet;
 import com.aionemu.gameserver.model.gameobjects.Summon;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -167,6 +168,11 @@ public class CM_LEVEL_READY extends AionClientPacket {
 		Summon summon = activePlayer.getSummon();
 		if (summon != null && !summon.isSpawned()) {
 			World.getInstance().spawn(summon);
+		}
+		// Minion
+		Minion minion = activePlayer.getMinion();
+		if (minion != null && !minion.isSpawned()) {
+			World.getInstance().spawn(minion);
 		}
 		activePlayer.setPortAnimation(2);
 	}
